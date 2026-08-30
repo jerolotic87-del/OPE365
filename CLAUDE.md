@@ -107,16 +107,73 @@ silencio ni elijas arbitrariamente.
 ## Modelo de datos (questions_all.json)
 
 Cada pregunta tiene: `id`, `sourceFile`, `bloque`, `tipo`
-(`opcion_unica`/`seleccion_multiple`/`verdadero_falso`/`emparejamiento`),
-`categoria` (`atajo`/`ruta`/`concepto`/`general`), `negativa` (bool),
-`enunciado`, `opciones` (`[{letter,text}]`), `respuesta` (letra o array de
-letras, o bool para V/F, o mapa para emparejamiento), `explicacion`,
-`contentHash`, `questionVersion`. Las de farol/atajo generadas llevan
-`"generado": true`.
+(`opcion_unica`/`seleccion_multiple`/`verdadero_falso`/`emparejamiento`/
+`relleno`), `categoria` (`atajo`/`ruta`/`concepto`/`general`), `negativa`
+(bool), `enunciado`, `opciones` (`[{letter,text}]`), `respuesta` (letra o
+array de letras, bool para V/F, mapa para emparejamiento, o array de
+strings para relleno — uno por hueco `[1]`,`[2]`... en el enunciado, cada
+entrada puede ser un string o un array de variantes aceptadas),
+`explicacion`, `contentHash`, `questionVersion`. Las de farol/atajo
+generadas llevan `"generado": true`.
+
+Campos aditivos de la taxonomía nueva (nulos por defecto, no todas las
+preguntas los tienen todavía): `section`/`topic`/`subtopic` (ver más
+abajo). Las preguntas importadas de un documento de integración (p.ej.
+Vista) además llevan `sourceQuestionId` (el ID original del documento,
+p.ej. `"Q-021"`) y `difficulty` (`"media"`/`"alta"`).
+
+**Añadir un tipo de ejercicio nuevo:** si alguna vez se añade un sexto
+tipo, buscar TODOS los sitios que enumeran los tipos existentes — no
+solo `EXERCISE_TYPES`/`TYPE_LABELS`/`evaluateAnswer`/`validateDataset`
+en `app.js`, sino también cualquier `<select>` o fila de pills en
+`views.js` que liste los tipos para filtrar (el asistente de práctica y
+"Repasar preguntas" ya derivan la lista de `O.TYPE_LABELS`
+dinámicamente por esto mismo — un array hardcodeado ahí se detectó como
+bug real la primera vez, probando la app en el navegador, no en jsdom).
+El `<select>` de tipo del asistente de multijugador es la única
+excepción deliberada: sigue limitado a los 4 tipos originales porque
+`relleno` no encaja en Duelo/Farol sin rediseñar esa mecánica.
 
 **`app.js` calcula content hash y registro de migración en cada carga** —
 si añades preguntas a mano, no hace falta tocar nada más, los contadores
 son dinámicos.
+
+## Taxonomía y flashcards
+
+El banco de preguntas está partido físicamente en `data/questions/*.json`
+por `sourceFile` (ver tabla de arriba), pero la app siempre ve un único
+banco lógico (`QUESTIONS`) — `build_data.py` los concatena según
+`data/questions/manifest.json` antes de generar `questions_all.json`.
+
+`data/taxonomy.json` define una jerarquía pedagógica independiente de
+`sourceFile`/`bloque` (que son procedencia, no temario):
+`section` (p.ej. `"vista"`) → `topic` (p.ej. `"zoom"`) → `subtopic` libre.
+Solo la sección `vista` tiene contenido clasificado por ahora — las otras
+9 (Interfaz, Archivo, Inicio...) están vacías a propósito, no reclasificar
+las 952 preguntas originales sin que se pida explícitamente.
+Caso especial a recordar: la pregunta de Vista Preliminar tiene
+`sourceFile:"vista.txt"` (procedencia) pero `section:"archivo"`,
+`topic:"imprimir"` (ubicación funcional real) — procedencia y taxonomía
+son campos independientes a propósito.
+
+Las flashcards son un recurso independiente de las preguntas, en
+`data/flashcards/*.json` → `flashcards_data.js` →
+`window.__OPE365_FLASHCARDS__` → `OPE.FLASHCARDS`. Cada una tiene
+`cardId` (p.ej. `"F-01"`, relativo a su fuente) y `canonicalId` calculado
+en runtime como `"<section>:<cardId>"` — usar siempre `canonicalId` para
+identificarlas (progreso, DOM, etc.), nunca `cardId` a secas, porque
+`cardId` puede repetirse entre secciones futuras. `questionRefs` es un
+enlace blando opcional hacia preguntas relacionadas — nunca uses
+flashcards como fuente de verdad de una pregunta ni al revés.
+
+Cuando se integre un documento de una pestaña nueva (Correspondencia,
+etc.), seguir el mismo patrón que Vista: comparar contra el banco
+existente antes de dar nada por "pregunta nueva" (ver
+`data/vista_integration_report.md` como plantilla de ese proceso —
+clasificación NUEVA/SOLAPAMIENTO/MEJORA/COMPLEMENTARIA/CONFLICTO),
+declarar cualquier hueco o contradicción de la fuente en vez de
+resolverla en silencio, y usar `sourceFile` nuevo (evita colisión de IDs
+por construcción, ya que el ID es `sourceFile-índice`).
 
 ## Arquitectura del motor (app.js)
 
@@ -163,13 +220,40 @@ de dar nada por bueno.
 
 ## Disciplina de pruebas
 
-Antes de este proyecto no había tests automatizados — se han ido
-construyendo con jsdom sobre la marcha. Patrón: crear un HTML mínimo con
-los scripts necesarios, cargarlo con `JSDOM`, simular clics/eventos, leer
-`OPE.getState()` / `OPE_MP...`. Para multijugador, usar
-`MP.createMockPair()` en vez de PeerJS real (jsdom no implementa WebRTC).
-No se puede verificar conectividad WebRTC real desde este tipo de sandbox
-— eso solo se prueba con dos navegadores reales.
+`tests/test_*.js` son pruebas jsdom que sí persisten en el repo (antes de
+la migración de arquitectura de ago-2026 se construían con este mismo
+patrón pero de forma ad hoc, sin guardarlas). Requieren
+`npm install` una vez (`package.json` solo trae `jsdom` como
+devDependency — nada de esto es una dependencia en runtime de la app).
+Patrón: `tests/fixture.html` como HTML mínimo, cargarlo con `JSDOM`,
+`window.eval()` de cada script en el orden real (`questions_data.js` →
+`taxonomy_data.js` → `flashcards_data.js` → `app.js` → `multiplayer.js`/
+`views.js`), simular clics/eventos reales (incluida la navegación vía
+`[data-goto]`, que es el único enganche público de `views.js` — `go()`/
+`render()` están cerradas dentro de su IIFE), leer `OPE.getState()`/
+`OPE_MP...`. Para multijugador, usar `MP.createMockPair()` en vez de
+PeerJS real (jsdom no implementa WebRTC). Ejecutar todos con
+`node tests/test_<nombre>.js` (sin runner, cada uno es un script
+autocontenido que sale con código 0/1).
+
+**No se puede verificar conectividad WebRTC real desde jsdom** — eso solo
+se prueba con dos navegadores reales.
+
+**Probar la app en un navegador real (no solo jsdom):** servir la carpeta
+(`python -m http.server <puerto> --directory <ruta>` — usar `--directory`
+explícito y un puerto propio para evitar arrancar sobre el directorio o
+puerto equivocado si hay otro servidor suelto por ahí) y dirigirla con
+Playwright headed (`npm install playwright` + `npx playwright install
+chromium`, no está en `package.json` a propósito por ser pesado — instalar
+aparte cuando haga falta). Ver `tests/manual_walkthrough*.mjs` y
+`tests/manual_driver.mjs` como referencia de ese patrón — no son parte
+del proyecto ni se ejecutan en CI, son herramientas puntuales de QA
+manual. **Esto encontró un bug real que jsdom no detectó**: dos
+selectores de tipo de ejercicio en `views.js` tenían la lista de tipos
+escrita a mano y no incluían "relleno" cuando se añadió — un test jsdom
+centrado en el tipo nuevo no lo habría visto porque nunca pasaba por esa
+UI de filtrado. Antes de dar una función de UI por probada, recorrerla de
+verdad en el navegador al menos una vez.
 
 ## Cómo pedir cosas en este proyecto (estilo del usuario)
 
