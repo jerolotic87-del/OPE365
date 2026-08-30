@@ -1,0 +1,2657 @@
+[
+  {
+    "id": "vista-1",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "verdadero_falso",
+    "enunciado": "El Modo de lectura visualiza el documento en cuatro páginas por pantalla dispuestas en forma de libro, ocultando las barras de herramientas y las reglas.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: el Modo de lectura muestra el documento en dos páginas por pantalla, no cuatro.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-008",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-008",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Modo de lectura"
+  },
+  {
+    "id": "vista-2",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Cuál es la función principal de la Vista Borrador en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Visualizar el documento tal como aparecerá en un navegador web"
+      },
+      {
+        "letter": "B",
+        "text": "Mostrar únicamente los títulos del documento para revisar su estructura"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar el documento como borrador para editar el texto rápidamente"
+      },
+      {
+        "letter": "D",
+        "text": "Presentar el documento en dos páginas en forma de libro para facilitar la lectura"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "La Vista Borrador está orientada a la edición rápida del texto.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-069",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-069",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Borrador"
+  },
+  {
+    "id": "vista-3",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "verdadero_falso",
+    "enunciado": "La Vista Esquema se utiliza para crear y editar esquemas, y muestra el contenido completo del documento organizado de forma jerárquica según los niveles de título.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: la Vista Esquema muestra sólo los títulos del documento, no el contenido completo.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-003",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-003",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Esquema"
+  },
+  {
+    "id": "vista-4",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "opcion_unica",
+    "enunciado": "Un usuario observa que los encabezados y pies de página de su documento han desaparecido de la pantalla, aunque el documento no ha sido modificado. ¿En qué vista está trabajando probablemente?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Diseño Web"
+      },
+      {
+        "letter": "B",
+        "text": "Modo de lectura"
+      },
+      {
+        "letter": "C",
+        "text": "Vista Borrador"
+      },
+      {
+        "letter": "D",
+        "text": "Vista Esquema"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "En Vista Borrador algunos elementos, como encabezados y pies de página, no son visibles.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-005",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-005",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Borrador"
+  },
+  {
+    "id": "vista-5",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "opcion_unica",
+    "enunciado": "Según la fuente de estudio, ¿cuál de las siguientes afirmaciones sobre los elementos no visibles en Vista Borrador es la más precisa?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "En Vista Borrador únicamente los encabezados no son visibles; los pies de página sí se muestran"
+      },
+      {
+        "letter": "B",
+        "text": "En Vista Borrador los encabezados y pies de página son los únicos elementos que no se muestran"
+      },
+      {
+        "letter": "C",
+        "text": "En Vista Borrador algunos elementos como encabezados o pies de página no son visibles, sin que la fuente excluya otros elementos adicionales"
+      },
+      {
+        "letter": "D",
+        "text": "En Vista Borrador los elementos no visibles son los mismos que en Vista Esquema"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "La fuente da encabezados/pies como ejemplo ('como'), no como lista cerrada -- pueden existir otros elementos no visibles.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-006",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-006",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Borrador"
+  },
+  {
+    "id": "vista-6",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "opcion_unica",
+    "enunciado": "Un usuario está preparando un documento para su publicación en una página web y quiere visualizarlo tal como aparecerá en un navegador, con los fondos y el texto ajustado a la ventana. ¿Qué vista debe activar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Diseño de impresión"
+      },
+      {
+        "letter": "B",
+        "text": "Vista Preliminar"
+      },
+      {
+        "letter": "C",
+        "text": "Modo de lectura"
+      },
+      {
+        "letter": "D",
+        "text": "Diseño Web"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Diseño Web muestra el documento como en un explorador: fondos con colores/texturas, texto ajustado a la ventana, gráficos como en web.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-009",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-009",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Diseño Web"
+  },
+  {
+    "id": "vista-7",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "opcion_unica",
+    "enunciado": "Un usuario quiere verificar los saltos de página y la distribución general del texto antes de imprimir, pudiendo ver varias páginas al mismo tiempo. ¿Qué vista debe usar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Diseño de impresión"
+      },
+      {
+        "letter": "B",
+        "text": "Modo de lectura"
+      },
+      {
+        "letter": "C",
+        "text": "Vista Esquema"
+      },
+      {
+        "letter": "D",
+        "text": "Vista Preliminar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Vista Preliminar muestra páginas completas a tamaño reducido para comprobar saltos, distribución y formato antes de imprimir.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-010",
+    "esCompletarBlank": false,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-010",
+    "difficulty": "alta",
+    "section": "archivo",
+    "topic": "imprimir",
+    "subtopic": "Vista Preliminar"
+  },
+  {
+    "id": "vista-8",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "verdadero_falso",
+    "enunciado": "Desde la vista Diseño de impresión únicamente se puede visualizar el documento tal como se imprimirá y observar los extremos de la hoja, sin posibilidad de modificar encabezados, pies de página ni márgenes.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: Diseño de impresión también permite definir/modificar encabezados y pies de página y ajustar márgenes.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-052",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-052",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Diseño de impresión"
+  },
+  {
+    "id": "vista-9",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "seleccion_multiple",
+    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre la vista Diseño de impresión son correctas según la fuente?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Permite visualizar la página tal y como se imprimirá"
+      },
+      {
+        "letter": "B",
+        "text": "Muestra el documento en dos páginas por pantalla en forma de libro"
+      },
+      {
+        "letter": "C",
+        "text": "Permite modificar encabezados y pies de página"
+      },
+      {
+        "letter": "D",
+        "text": "Es la vista predefinida en Word"
+      },
+      {
+        "letter": "E",
+        "text": "Muestra sólo los títulos del documento para facilitar la edición del esquema"
+      },
+      {
+        "letter": "F",
+        "text": "Permite ajustar márgenes"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "D",
+      "F"
+    ],
+    "explicacion": "B corresponde al Modo de lectura y E a la Vista Esquema.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-053",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-053",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Diseño de impresión"
+  },
+  {
+    "id": "vista-10",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "emparejamiento",
+    "enunciado": "Relaciona cada vista con su característica más diferenciadora:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Modo de lectura"
+        },
+        {
+          "id": "2",
+          "label": "Diseño de impresión"
+        },
+        {
+          "id": "3",
+          "label": "Diseño Web"
+        },
+        {
+          "id": "4",
+          "label": "Vista Esquema"
+        },
+        {
+          "id": "5",
+          "label": "Vista Borrador"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Muestra sólo los títulos del documento"
+        },
+        {
+          "id": "B",
+          "label": "El texto se ajusta a la ventana como en un explorador"
+        },
+        {
+          "id": "C",
+          "label": "Es la vista predefinida de Word"
+        },
+        {
+          "id": "D",
+          "label": "No muestra encabezados ni pies de página"
+        },
+        {
+          "id": "E",
+          "label": "Presenta el documento en dos páginas en forma de libro"
+        }
+      ],
+      "correct": {
+        "1": "E",
+        "2": "C",
+        "3": "B",
+        "4": "A",
+        "5": "D"
+      }
+    },
+    "respuesta": {
+      "1": "E",
+      "2": "C",
+      "3": "B",
+      "4": "A",
+      "5": "D"
+    },
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-051",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-051",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null
+  },
+  {
+    "id": "vista-11",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "emparejamiento",
+    "enunciado": "Relaciona cada atajo con la vista que activa:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ctrl + Alt + N"
+        },
+        {
+          "id": "2",
+          "label": "Ctrl + Alt + I"
+        },
+        {
+          "id": "3",
+          "label": "Ctrl + Alt + D"
+        },
+        {
+          "id": "4",
+          "label": "Ctrl + Alt + Q"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Diseño de impresión"
+        },
+        {
+          "id": "B",
+          "label": "Vista Esquema"
+        },
+        {
+          "id": "C",
+          "label": "Vista Borrador"
+        },
+        {
+          "id": "D",
+          "label": "Vista Preliminar"
+        }
+      ],
+      "correct": {
+        "1": "C",
+        "2": "D",
+        "3": "A",
+        "4": "B"
+      }
+    },
+    "respuesta": {
+      "1": "C",
+      "2": "D",
+      "3": "A",
+      "4": "B"
+    },
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-007",
+    "esCompletarBlank": false,
+    "categoria": "atajo",
+    "generado": false,
+    "sourceQuestionId": "Q-007",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null
+  },
+  {
+    "id": "vista-12",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Inmersivo",
+    "blockRange": null,
+    "tema": "Inmersivo",
+    "tipo": "opcion_unica",
+    "enunciado": "Un usuario se distrae con facilidad mientras redacta y desea que Word elimine todos los elementos visuales innecesarios del entorno para concentrarse exclusivamente en el contenido. ¿Qué herramienta debe activar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Immersive Reader"
+      },
+      {
+        "letter": "B",
+        "text": "Vista Borrador"
+      },
+      {
+        "letter": "C",
+        "text": "Concentración"
+      },
+      {
+        "letter": "D",
+        "text": "Vista Esquema"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Concentración elimina las distracciones del entorno de trabajo.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-011",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-011",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Concentración"
+  },
+  {
+    "id": "vista-13",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Inmersivo",
+    "blockRange": null,
+    "tema": "Inmersivo",
+    "tipo": "verdadero_falso",
+    "enunciado": "Immersive Reader es una herramienta de la pestaña Vista que permite mejorar la comprensión y la fluidez de lectura de los documentos Word.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: la fuente lo describe en plural -- es un conjunto de herramientas, no una única herramienta.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-012",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-012",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Lector inmersivo"
+  },
+  {
+    "id": "vista-14",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Inmersivo",
+    "blockRange": null,
+    "tema": "Inmersivo",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Cuál de las siguientes opciones describe correctamente la diferencia entre Concentración e Immersive Reader?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Concentración mejora la comprensión y fluidez lectora; Immersive Reader elimina las distracciones del entorno de trabajo"
+      },
+      {
+        "letter": "B",
+        "text": "Concentración oculta encabezados y pies de página; Immersive Reader ajusta el texto al ancho de la ventana"
+      },
+      {
+        "letter": "C",
+        "text": "Ambas herramientas eliminan distracciones pero Immersive Reader además ajusta el zoom automáticamente"
+      },
+      {
+        "letter": "D",
+        "text": "Concentración elimina las distracciones del entorno de trabajo; Immersive Reader proporciona un conjunto de herramientas para mejorar la comprensión y fluidez lectora"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-013",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-013",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": null
+  },
+  {
+    "id": "vista-15",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Inmersivo",
+    "blockRange": null,
+    "tema": "Inmersivo",
+    "tipo": "verdadero_falso",
+    "enunciado": "Las herramientas Concentración e Immersive Reader se encuentran en el Grupo Vistas de la pestaña Vista.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: pertenecen al Grupo Inmersivo, no al Grupo Vistas.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-063",
+    "esCompletarBlank": false,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-063",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": null
+  },
+  {
+    "id": "vista-16",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Movimiento de Página",
+    "blockRange": null,
+    "tema": "Movimiento de Página",
+    "tipo": "verdadero_falso",
+    "enunciado": "El Grupo Movimiento de Página permite desplazarse verticalmente por las páginas del documento utilizando la rueda del ratón o la barra de desplazamiento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: el desplazamiento que ofrece este grupo es horizontal.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-068",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-068",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "movimiento-pagina",
+    "subtopic": null
+  },
+  {
+    "id": "vista-17",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Movimiento de Página",
+    "blockRange": null,
+    "tema": "Movimiento de Página",
+    "tipo": "seleccion_multiple",
+    "enunciado": "¿Mediante qué medios permite desplazarse horizontalmente el Grupo Movimiento de Página?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Rueda del ratón"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl + rueda del ratón"
+      },
+      {
+        "letter": "C",
+        "text": "Barra de desplazamiento horizontal"
+      },
+      {
+        "letter": "D",
+        "text": "Barra de desplazamiento vertical"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-014",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-014",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "movimiento-pagina",
+    "subtopic": null
+  },
+  {
+    "id": "vista-18",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Mostrar",
+    "blockRange": null,
+    "tema": "Mostrar",
+    "tipo": "seleccion_multiple",
+    "enunciado": "¿Cuáles de los siguientes elementos pertenecen al Grupo Mostrar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Regla"
+      },
+      {
+        "letter": "B",
+        "text": "Panel de movimiento de página"
+      },
+      {
+        "letter": "C",
+        "text": "Líneas de la cuadrícula"
+      },
+      {
+        "letter": "D",
+        "text": "Panel de navegación"
+      },
+      {
+        "letter": "E",
+        "text": "Immersive Reader"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-015",
+    "esCompletarBlank": false,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-015",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "mostrar",
+    "subtopic": null
+  },
+  {
+    "id": "vista-19",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Mostrar",
+    "blockRange": null,
+    "tema": "Mostrar",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Cuál es la función del Grupo Mostrar en la pestaña Vista?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ampliar la vista del documento para mostrar más contenido en pantalla"
+      },
+      {
+        "letter": "B",
+        "text": "Mostrar las propiedades del documento activo"
+      },
+      {
+        "letter": "C",
+        "text": "Activar o desactivar la Regla, las Líneas de la cuadrícula y el Panel de navegación"
+      },
+      {
+        "letter": "D",
+        "text": "Cambiar el modo de visualización del documento"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-016",
+    "esCompletarBlank": false,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-016",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "mostrar",
+    "subtopic": null
+  },
+  {
+    "id": "vista-20",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Mostrar",
+    "blockRange": null,
+    "tema": "Mostrar",
+    "tipo": "emparejamiento",
+    "enunciado": "Relaciona cada elemento con su ruta completa:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Regla"
+        },
+        {
+          "id": "2",
+          "label": "Líneas de la cuadrícula"
+        },
+        {
+          "id": "3",
+          "label": "Panel de navegación"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Vista → Grupo Mostrar → Panel de navegación"
+        },
+        {
+          "id": "B",
+          "label": "Vista → Grupo Mostrar → Regla"
+        },
+        {
+          "id": "C",
+          "label": "Vista → Grupo Mostrar → Líneas de la cuadrícula"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "C",
+        "3": "A"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "C",
+      "3": "A"
+    },
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-017",
+    "esCompletarBlank": false,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-017",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "mostrar",
+    "subtopic": null
+  },
+  {
+    "id": "vista-21",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Zoom",
+    "blockRange": null,
+    "tema": "Zoom",
+    "tipo": "verdadero_falso",
+    "enunciado": "En el Grupo Zoom, el botón 100% y el botón Zoom (lupa) realizan la misma función, ya que ambos permiten ajustar el nivel de zoom del documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: el botón Zoom abre un cuadro de diálogo para configurar el porcentaje; el botón 100% lo aplica directamente sin diálogo.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-019",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-019",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Cuadro de diálogo"
+  },
+  {
+    "id": "vista-22",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Zoom",
+    "blockRange": null,
+    "tema": "Zoom",
+    "tipo": "seleccion_multiple",
+    "enunciado": "¿Cuáles de las siguientes acciones permiten ajustar el nivel de zoom del documento?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Botón Zoom (lupa) → abre el cuadro de diálogo Zoom"
+      },
+      {
+        "letter": "B",
+        "text": "Botón 100% → aplica zoom al 100% directamente"
+      },
+      {
+        "letter": "C",
+        "text": "Activar Vista Borrador"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl + rueda del ratón → ajusta el zoom de 10 en 10"
+      },
+      {
+        "letter": "E",
+        "text": "Activar Modo de lectura"
+      },
+      {
+        "letter": "F",
+        "text": "Seleccionar Una página / Varias páginas / Ancho de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D",
+      "F"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-060",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-060",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": null
+  },
+  {
+    "id": "vista-23",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Zoom",
+    "blockRange": null,
+    "tema": "Zoom",
+    "tipo": "opcion_unica",
+    "enunciado": "Al usar Ctrl + rueda del ratón, ¿en qué incremento se modifica el nivel de zoom?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "De 25 en 25"
+      },
+      {
+        "letter": "B",
+        "text": "De 100 en 100"
+      },
+      {
+        "letter": "C",
+        "text": "De 10 en 10"
+      },
+      {
+        "letter": "D",
+        "text": "De 1 en 1"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-020",
+    "esCompletarBlank": false,
+    "categoria": "atajo",
+    "generado": false,
+    "sourceQuestionId": "Q-020",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Valores"
+  },
+  {
+    "id": "vista-24",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Zoom",
+    "blockRange": null,
+    "tema": "Zoom",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Cuál de las siguientes opciones NO aparece como radio button en el cuadro de diálogo Zoom?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ancho del texto"
+      },
+      {
+        "letter": "B",
+        "text": "Toda la página"
+      },
+      {
+        "letter": "C",
+        "text": "Varias páginas"
+      },
+      {
+        "letter": "D",
+        "text": "Página completa"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Las opciones reales del diálogo son 200%/100%/25%, Ancho de página, Ancho del texto, Toda la página y Varias páginas -- 'Página completa' no existe como tal.",
+    "negativa": true,
+    "sourceIssue": "Conflicto de dato detectado en la Etapa 3 frente a la pregunta existente 1-96: 1-96 afirma que los porcentajes predefinidos del diálogo Zoom son 200/100/75%; este documento y esta misma pregunta asumen 200/100/25%. No resuelto -- pendiente de verificación contra Word 365 real o el PDF de la academia. No se ha modificado 1-96.",
+    "qnumInSource": "Q-021",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-021",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Cuadro de diálogo"
+  },
+  {
+    "id": "vista-25",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "verdadero_falso",
+    "enunciado": "En la fuente de estudio, la función Organizar todo recibe también el nombre de Mosaico.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-026",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-026",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Organizar todo"
+  },
+  {
+    "id": "vista-26",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Qué función realiza Cambiar ventanas y cómo se presenta en la cinta de opciones?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Abre una nueva ventana del mismo documento; aparece como botón simple"
+      },
+      {
+        "letter": "B",
+        "text": "Divide la ventana activa en dos paneles; aparece con icono de división horizontal"
+      },
+      {
+        "letter": "C",
+        "text": "Permite cambiar rápidamente a otra ventana de Word abierta; se presenta como menú desplegable"
+      },
+      {
+        "letter": "D",
+        "text": "Muestra todas las ventanas abiertas en mosaico; aparece con icono de cuadrícula"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-030",
+    "esCompletarBlank": false,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-030",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Cambiar ventanas"
+  },
+  {
+    "id": "vista-27",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "opcion_unica",
+    "enunciado": "Un usuario tiene abiertos el contrato original y el contrato revisado y desea verlos simultáneamente para identificar diferencias. ¿Qué función debe usar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Nueva ventana"
+      },
+      {
+        "letter": "B",
+        "text": "Dividir"
+      },
+      {
+        "letter": "C",
+        "text": "Organizar todo"
+      },
+      {
+        "letter": "D",
+        "text": "Ver en paralelo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-023",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-023",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Ver en paralelo"
+  },
+  {
+    "id": "vista-28",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Qué función permite compartir dos vistas del mismo documento en una única ventana y cuál es su atajo?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Nueva ventana — Alt + F11"
+      },
+      {
+        "letter": "B",
+        "text": "Ver en paralelo — Alt + F8"
+      },
+      {
+        "letter": "C",
+        "text": "Dividir — Alt + Ctrl + V"
+      },
+      {
+        "letter": "D",
+        "text": "Organizar todo — Ctrl + Alt + D"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-024",
+    "esCompletarBlank": false,
+    "categoria": "atajo",
+    "generado": false,
+    "sourceQuestionId": "Q-024",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Dividir"
+  },
+  {
+    "id": "vista-29",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "verdadero_falso",
+    "enunciado": "El Desplazamiento sincrónico puede activarse en cualquier momento, independientemente del estado de las demás opciones de visualización.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: solo puede activarse cuando Ver en paralelo está activo previamente.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-027",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-027",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Desplazamiento sincrónico"
+  },
+  {
+    "id": "vista-30",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "opcion_unica",
+    "enunciado": "Un usuario necesita que ambos documentos se desplacen al mismo tiempo al mover la barra de scroll. ¿Cuál es el orden correcto de activación?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Activar Desplazamiento sincrónico → después Ver en paralelo"
+      },
+      {
+        "letter": "B",
+        "text": "Activar Organizar todo → después Desplazamiento sincrónico"
+      },
+      {
+        "letter": "C",
+        "text": "Activar Ver en paralelo → después Desplazamiento sincrónico"
+      },
+      {
+        "letter": "D",
+        "text": "Activar Dividir → después Desplazamiento sincrónico"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-028",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-028",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Desplazamiento sincrónico"
+  },
+  {
+    "id": "vista-31",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "opcion_unica",
+    "enunciado": "Un usuario tiene dos documentos en Ver en paralelo pero una ventana ocupa el 70% y la otra el 30%. ¿Qué función usa para distribuirlas de forma equitativa?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Organizar todo"
+      },
+      {
+        "letter": "B",
+        "text": "Dividir"
+      },
+      {
+        "letter": "C",
+        "text": "Ver en paralelo"
+      },
+      {
+        "letter": "D",
+        "text": "Restablecer posición de la ventana"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-029",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-029",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Restablecer posición de la ventana"
+  },
+  {
+    "id": "vista-32",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "emparejamiento",
+    "enunciado": "Relaciona cada función con su descripción:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Nueva ventana"
+        },
+        {
+          "id": "2",
+          "label": "Dividir"
+        },
+        {
+          "id": "3",
+          "label": "Ver en paralelo"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Divide la pantalla en dos paneles dentro de una misma ventana"
+        },
+        {
+          "id": "B",
+          "label": "Abre una segunda ventana independiente del mismo documento"
+        },
+        {
+          "id": "C",
+          "label": "Coloca dos documentos distintos uno al lado del otro"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "A",
+        "3": "C"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "A",
+      "3": "C"
+    },
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-025",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-025",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null
+  },
+  {
+    "id": "vista-33",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "emparejamiento",
+    "enunciado": "Relaciona cada función con el número de documentos/ventanas que implica:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Nueva ventana"
+        },
+        {
+          "id": "2",
+          "label": "Organizar todo"
+        },
+        {
+          "id": "3",
+          "label": "Dividir"
+        },
+        {
+          "id": "4",
+          "label": "Ver en paralelo"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Todas las ventanas abiertas (sin límite)"
+        },
+        {
+          "id": "B",
+          "label": "Exactamente dos documentos distintos"
+        },
+        {
+          "id": "C",
+          "label": "Un único documento en dos paneles en la misma ventana"
+        },
+        {
+          "id": "D",
+          "label": "El mismo documento en dos ventanas independientes"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "A",
+        "3": "C",
+        "4": "B"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "A",
+      "3": "C",
+      "4": "B"
+    },
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-054",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-054",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null
+  },
+  {
+    "id": "vista-34",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "seleccion_multiple",
+    "enunciado": "¿Cuáles de las siguientes funciones requieren que haya más de una ventana o documento abierto para tener sentido funcional?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Organizar todo"
+      },
+      {
+        "letter": "B",
+        "text": "Dividir"
+      },
+      {
+        "letter": "C",
+        "text": "Ver en paralelo"
+      },
+      {
+        "letter": "D",
+        "text": "Desplazamiento sincrónico"
+      },
+      {
+        "letter": "E",
+        "text": "Cambiar ventanas"
+      },
+      {
+        "letter": "F",
+        "text": "Restablecer posición de la ventana"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "explicacion": "Dividir opera sobre una sola ventana, por eso queda fuera.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-056",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-056",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null
+  },
+  {
+    "id": "vista-35",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "verdadero_falso",
+    "enunciado": "La función Restablecer posición de la ventana puede usarse en cualquier momento para redistribuir de forma equitativa todas las ventanas de Word abiertas.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: presupone que las ventanas ya están en modo paralelo; no actúa sobre 'todas' las ventanas sin más.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-055",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-055",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Restablecer posición de la ventana"
+  },
+  {
+    "id": "vista-36",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Macros",
+    "blockRange": null,
+    "tema": "Macros",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Qué es una macro en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Un comando que ejecuta automáticamente una tarea predefinida en el documento"
+      },
+      {
+        "letter": "B",
+        "text": "Una plantilla de documento que automatiza el formato del texto"
+      },
+      {
+        "letter": "C",
+        "text": "Un atajo de teclado personalizado que ejecuta una secuencia de teclas"
+      },
+      {
+        "letter": "D",
+        "text": "Una serie de comandos e instrucciones que se agrupan como un mismo comando para completar una tarea automáticamente"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-031",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-031",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null
+  },
+  {
+    "id": "vista-37",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Macros",
+    "blockRange": null,
+    "tema": "Macros",
+    "tipo": "verdadero_falso",
+    "enunciado": "En Word 365, el atajo Alt + F8 abre Visual Basic y el atajo Alt + F11 abre el cuadro de diálogo Macros.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: están invertidos. Alt+F8 abre el diálogo Macros; Alt+F11 abre Visual Basic.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-036",
+    "esCompletarBlank": false,
+    "categoria": "atajo",
+    "generado": false,
+    "sourceQuestionId": "Q-036",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null
+  },
+  {
+    "id": "vista-38",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Macros",
+    "blockRange": null,
+    "tema": "Macros",
+    "tipo": "verdadero_falso",
+    "enunciado": "Según la definición de la fuente, una macro puede estar formada por un único comando siempre que su ejecución sea automática.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: la definición exige una 'serie' de comandos -- pluralidad, no un único comando.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-058",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-058",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null
+  },
+  {
+    "id": "vista-39",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Macros",
+    "blockRange": null,
+    "tema": "Macros",
+    "tipo": "opcion_unica",
+    "enunciado": "Según la fuente, ¿cuál es el propósito principal de crear y ejecutar macros en Word?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Automatizar cualquier tarea del documento, independientemente de su frecuencia de uso"
+      },
+      {
+        "letter": "B",
+        "text": "Automatizar las tareas que requieren acceso a Visual Basic para su ejecución"
+      },
+      {
+        "letter": "C",
+        "text": "Automatizar las tareas más usadas o frecuentes del documento"
+      },
+      {
+        "letter": "D",
+        "text": "Automatizar las tareas que no pueden realizarse con los comandos estándar de la cinta"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-033",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-033",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null
+  },
+  {
+    "id": "vista-40",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Macros",
+    "blockRange": null,
+    "tema": "Macros",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Cuáles son exactamente las opciones del submenú desplegable del botón Macros?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ver macros · Grabar macro... · Ejecutar macro"
+      },
+      {
+        "letter": "B",
+        "text": "Ver macros · Pausar grabación · Detener grabación"
+      },
+      {
+        "letter": "C",
+        "text": "Grabar macro... · Pausar grabación · Eliminar macro"
+      },
+      {
+        "letter": "D",
+        "text": "Ver macros · Grabar macro... · Pausar grabación"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-037",
+    "esCompletarBlank": false,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-037",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null
+  },
+  {
+    "id": "vista-41",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Macros",
+    "blockRange": null,
+    "tema": "Macros",
+    "tipo": "opcion_unica",
+    "enunciado": "En la captura del submenú de Macros, la opción Pausar grabación aparece en color gris. ¿Qué indica esto?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "La opción ha sido deshabilitada permanentemente en esta versión de Word"
+      },
+      {
+        "letter": "B",
+        "text": "La opción solo está disponible con una licencia de Word 365 para empresas"
+      },
+      {
+        "letter": "C",
+        "text": "La opción requiere que haya una grabación de macro activa para poder usarse"
+      },
+      {
+        "letter": "D",
+        "text": "La opción no está disponible en el estado actual mostrado en la captura"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-038",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-038",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null
+  },
+  {
+    "id": "vista-42",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Macros",
+    "blockRange": null,
+    "tema": "Macros",
+    "tipo": "seleccion_multiple",
+    "enunciado": "¿Cuáles de las siguientes características forman parte de la definición estructural de una macro?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Es una serie de comandos e instrucciones (pluralidad)"
+      },
+      {
+        "letter": "B",
+        "text": "Requiere conocimientos de programación en Visual Basic"
+      },
+      {
+        "letter": "C",
+        "text": "Los comandos se agrupan como un único comando (agrupación)"
+      },
+      {
+        "letter": "D",
+        "text": "Solo puede ejecutarse mediante el atajo Alt+F8"
+      },
+      {
+        "letter": "E",
+        "text": "Su objetivo es completar una tarea automáticamente (automatismo)"
+      },
+      {
+        "letter": "F",
+        "text": "Está limitada a las tareas disponibles en la cinta de opciones"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "E"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-064",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-064",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null
+  },
+  {
+    "id": "vista-43",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Macros",
+    "blockRange": null,
+    "tema": "Macros",
+    "tipo": "emparejamiento",
+    "enunciado": "Relaciona cada elemento del Grupo Macros con su función o atajo:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Alt + F8"
+        },
+        {
+          "id": "2",
+          "label": "Alt + F11"
+        },
+        {
+          "id": "3",
+          "label": "Grabar macro..."
+        },
+        {
+          "id": "4",
+          "label": "Pausar grabación"
+        },
+        {
+          "id": "5",
+          "label": "Ver macros"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Inicia el proceso de grabación de una nueva macro"
+        },
+        {
+          "id": "B",
+          "label": "Interrumpe temporalmente una grabación en curso"
+        },
+        {
+          "id": "C",
+          "label": "Abre el cuadro de diálogo para gestionar las macros existentes"
+        },
+        {
+          "id": "D",
+          "label": "Abre el entorno de programación Visual Basic"
+        },
+        {
+          "id": "E",
+          "label": "Permite visualizar y ejecutar las macros disponibles"
+        }
+      ],
+      "correct": {
+        "1": "C",
+        "2": "D",
+        "3": "A",
+        "4": "B",
+        "5": "E"
+      }
+    },
+    "respuesta": {
+      "1": "C",
+      "2": "D",
+      "3": "A",
+      "4": "B",
+      "5": "E"
+    },
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-057",
+    "esCompletarBlank": false,
+    "categoria": "atajo",
+    "generado": false,
+    "sourceQuestionId": "Q-057",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null
+  },
+  {
+    "id": "vista-44",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — SharePoint",
+    "blockRange": null,
+    "tema": "SharePoint",
+    "tipo": "relleno",
+    "enunciado": "SharePoint es una herramienta diseñada por [1] para la [2] y el [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Microsoft",
+      "gestión documental",
+      "trabajo en equipo"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-039",
+    "esCompletarBlank": true,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-039",
+    "difficulty": "media",
+    "section": "vista",
+    "topic": "sharepoint",
+    "subtopic": null
+  },
+  {
+    "id": "vista-45",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — SharePoint",
+    "blockRange": null,
+    "tema": "SharePoint",
+    "tipo": "seleccion_multiple",
+    "enunciado": "Según la fuente de estudio, ¿cuáles son las funciones de SharePoint? (Selecciona las dos opciones correctas)",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Gestión documental"
+      },
+      {
+        "letter": "B",
+        "text": "Almacenamiento de archivos en la nube"
+      },
+      {
+        "letter": "C",
+        "text": "Comunicación interna mediante mensajería"
+      },
+      {
+        "letter": "D",
+        "text": "Trabajo en equipo"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "D"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-040",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-040",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "sharepoint",
+    "subtopic": null
+  },
+  {
+    "id": "vista-46",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Integración y distinción",
+    "blockRange": null,
+    "tema": "Integración y distinción",
+    "tipo": "opcion_unica",
+    "enunciado": "¿En qué grupo de la pestaña Vista se encuentra la herramienta Immersive Reader?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Grupo Vistas"
+      },
+      {
+        "letter": "B",
+        "text": "Grupo Mostrar"
+      },
+      {
+        "letter": "C",
+        "text": "Grupo Inmersivo"
+      },
+      {
+        "letter": "D",
+        "text": "Grupo Ventana"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-042",
+    "esCompletarBlank": false,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-042",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": null
+  },
+  {
+    "id": "vista-47",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Integración y distinción",
+    "blockRange": null,
+    "tema": "Integración y distinción",
+    "tipo": "opcion_unica",
+    "enunciado": "¿En qué grupo de la pestaña Vista se encuentra la función Nueva ventana?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Grupo Vistas"
+      },
+      {
+        "letter": "B",
+        "text": "Grupo Zoom"
+      },
+      {
+        "letter": "C",
+        "text": "Grupo Inmersivo"
+      },
+      {
+        "letter": "D",
+        "text": "Grupo Ventana"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-043",
+    "esCompletarBlank": false,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-043",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Nueva ventana"
+  },
+  {
+    "id": "vista-48",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Integración y distinción",
+    "blockRange": null,
+    "tema": "Integración y distinción",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Cuál de las siguientes funciones no tiene atajo de teclado documentado en la fuente?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Diseño de impresión"
+      },
+      {
+        "letter": "B",
+        "text": "Vista Esquema"
+      },
+      {
+        "letter": "C",
+        "text": "Dividir"
+      },
+      {
+        "letter": "D",
+        "text": "Organizar todo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "",
+    "negativa": true,
+    "sourceIssue": null,
+    "qnumInSource": "Q-044",
+    "esCompletarBlank": false,
+    "categoria": "atajo",
+    "generado": false,
+    "sourceQuestionId": "Q-044",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Organizar todo"
+  },
+  {
+    "id": "vista-49",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Integración y distinción",
+    "blockRange": null,
+    "tema": "Integración y distinción",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Cuál de los siguientes atajos pertenece al Grupo Macros?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl + Alt + D"
+      },
+      {
+        "letter": "B",
+        "text": "Alt + Ctrl + V"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl + Alt + N"
+      },
+      {
+        "letter": "D",
+        "text": "Alt + F8"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-045",
+    "esCompletarBlank": false,
+    "categoria": "atajo",
+    "generado": false,
+    "sourceQuestionId": "Q-045",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null
+  },
+  {
+    "id": "vista-50",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Integración y distinción",
+    "blockRange": null,
+    "tema": "Integración y distinción",
+    "tipo": "verdadero_falso",
+    "enunciado": "En Word 365, la pestaña Vista se encuentra entre las pestañas Revisar y Ayuda.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: está entre Revisar y Programador.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-046",
+    "esCompletarBlank": false,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-046",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": null,
+    "subtopic": null
+  },
+  {
+    "id": "vista-51",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Integración y distinción",
+    "blockRange": null,
+    "tema": "Integración y distinción",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Cuál es la diferencia principal entre el Modo de lectura y la Vista Preliminar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El Modo de lectura solo muestra una página; la Vista Preliminar muestra todas a tamaño completo"
+      },
+      {
+        "letter": "B",
+        "text": "Ambas vistas son idénticas en función pero se acceden desde grupos distintos"
+      },
+      {
+        "letter": "C",
+        "text": "El Modo de lectura presenta el documento en dos páginas en forma de libro para facilitar la lectura; la Vista Preliminar muestra páginas completas a tamaño reducido para verificar formato y saltos de página"
+      },
+      {
+        "letter": "D",
+        "text": "El Modo de lectura oculta el texto y muestra solo imágenes; la Vista Preliminar muestra el documento en escala de grises"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-047",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-047",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null
+  },
+  {
+    "id": "vista-52",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Integración y distinción",
+    "blockRange": null,
+    "tema": "Integración y distinción",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Cuál es la diferencia de alcance entre Organizar todo y Ver en paralelo?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Organizar todo solo funciona con documentos guardados; Ver en paralelo funciona con cualquier documento"
+      },
+      {
+        "letter": "B",
+        "text": "Organizar todo muestra exactamente dos ventanas; Ver en paralelo muestra todas las abiertas"
+      },
+      {
+        "letter": "C",
+        "text": "Ambas funciones tienen el mismo alcance pero diferente disposición visual"
+      },
+      {
+        "letter": "D",
+        "text": "Organizar todo actúa sobre todas las ventanas abiertas; Ver en paralelo opera sobre exactamente dos documentos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-050",
+    "esCompletarBlank": false,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-050",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null
+  },
+  {
+    "id": "vista-53",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Integración y distinción",
+    "blockRange": null,
+    "tema": "Integración y distinción",
+    "tipo": "opcion_unica",
+    "enunciado": "Un usuario quiere usar una herramienta diseñada específicamente para mejorar la comprensión y la fluidez lectora. ¿Cuál debe activar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Concentración"
+      },
+      {
+        "letter": "B",
+        "text": "Vista Borrador"
+      },
+      {
+        "letter": "C",
+        "text": "Immersive Reader"
+      },
+      {
+        "letter": "D",
+        "text": "Vista Esquema"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-049",
+    "esCompletarBlank": false,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-049",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Lector inmersivo"
+  },
+  {
+    "id": "vista-54",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Integración y distinción",
+    "blockRange": null,
+    "tema": "Integración y distinción",
+    "tipo": "emparejamiento",
+    "enunciado": "Relaciona cada atajo con su acción:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ctrl + Alt + Q"
+        },
+        {
+          "id": "2",
+          "label": "Alt + F8"
+        },
+        {
+          "id": "3",
+          "label": "Ctrl + Alt + I"
+        },
+        {
+          "id": "4",
+          "label": "Alt + Ctrl + V"
+        },
+        {
+          "id": "5",
+          "label": "Ctrl + Alt + N"
+        },
+        {
+          "id": "6",
+          "label": "Alt + F11"
+        },
+        {
+          "id": "7",
+          "label": "Ctrl + Alt + D"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Abre Visual Basic"
+        },
+        {
+          "id": "B",
+          "label": "Activa Vista Borrador"
+        },
+        {
+          "id": "C",
+          "label": "Activa Diseño de impresión"
+        },
+        {
+          "id": "D",
+          "label": "Activa Vista Esquema"
+        },
+        {
+          "id": "E",
+          "label": "Divide la ventana en dos paneles"
+        },
+        {
+          "id": "F",
+          "label": "Abre el cuadro de diálogo Macros"
+        },
+        {
+          "id": "G",
+          "label": "Activa Vista Preliminar"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "F",
+        "3": "G",
+        "4": "E",
+        "5": "B",
+        "6": "A",
+        "7": "C"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "F",
+      "3": "G",
+      "4": "E",
+      "5": "B",
+      "6": "A",
+      "7": "C"
+    },
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-041",
+    "esCompletarBlank": false,
+    "categoria": "atajo",
+    "generado": false,
+    "sourceQuestionId": "Q-041",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": null,
+    "subtopic": null
+  },
+  {
+    "id": "vista-55",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Integración y distinción",
+    "blockRange": null,
+    "tema": "Integración y distinción",
+    "tipo": "emparejamiento",
+    "enunciado": "Relaciona cada grupo con su función general:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Grupo Vistas"
+        },
+        {
+          "id": "2",
+          "label": "Grupo Inmersivo"
+        },
+        {
+          "id": "3",
+          "label": "Grupo Mostrar"
+        },
+        {
+          "id": "4",
+          "label": "Grupo Zoom"
+        },
+        {
+          "id": "5",
+          "label": "Grupo Ventana"
+        },
+        {
+          "id": "6",
+          "label": "Grupo Macros"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Controla el nivel de ampliación de la vista"
+        },
+        {
+          "id": "B",
+          "label": "Gestiona apertura, organización y comparación de ventanas"
+        },
+        {
+          "id": "C",
+          "label": "Permite automatizar tareas mediante secuencias de comandos"
+        },
+        {
+          "id": "D",
+          "label": "Contiene los modos de visualización del documento"
+        },
+        {
+          "id": "E",
+          "label": "Activa o desactiva elementos de interfaz como regla y cuadrícula"
+        },
+        {
+          "id": "F",
+          "label": "Proporciona herramientas para mejorar concentración y lectura"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "F",
+        "3": "E",
+        "4": "A",
+        "5": "B",
+        "6": "C"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "F",
+      "3": "E",
+      "4": "A",
+      "5": "B",
+      "6": "C"
+    },
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-061",
+    "esCompletarBlank": false,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-061",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": null,
+    "subtopic": null
+  },
+  {
+    "id": "vista-56",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "relleno",
+    "enunciado": "La Vista Esquema se utiliza para [1] y [2] esquemas. Esta vista muestra [3] los [4] del documento y resulta de particular utilidad para [5].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "crear",
+      "editar",
+      "sólo",
+      "títulos",
+      "elaborar notas"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-004",
+    "esCompletarBlank": true,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-004",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Esquema"
+  },
+  {
+    "id": "vista-57",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Zoom",
+    "blockRange": null,
+    "tema": "Zoom",
+    "tipo": "relleno",
+    "enunciado": "El zoom mínimo es del [1]% y el máximo del [2]%. Con Ctrl + rueda del ratón, el zoom se modifica de [3] en [3] puntos porcentuales.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "10",
+      "500",
+      "10"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-022",
+    "esCompletarBlank": true,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-022",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Valores"
+  },
+  {
+    "id": "vista-58",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Zoom",
+    "blockRange": null,
+    "tema": "Zoom",
+    "tipo": "relleno",
+    "enunciado": "El Grupo [1] de la pestaña [2] permite acercar o alejar la vista. El botón [3] abre un cuadro de diálogo. El botón [4] aplica directamente el nivel de zoom. El mínimo es [5]% y el máximo [6]%.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Zoom",
+      "Vista",
+      "Zoom (lupa)",
+      "100%",
+      "10",
+      "500"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-062",
+    "esCompletarBlank": true,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-062",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": null
+  },
+  {
+    "id": "vista-59",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Ventana",
+    "blockRange": null,
+    "tema": "Ventana",
+    "tipo": "relleno",
+    "enunciado": "[1]: abre dos ventanas de Word para ver el mismo documento. [2]: en una única ventana comparte dos vistas del mismo documento. [3]: visualiza en paralelo dos documentos para compararlos. [4]: solo puede activarse cuando se hayan puesto dos documentos en paralelo.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Nueva ventana",
+      "Dividir",
+      "Ver en paralelo",
+      "Desplazamiento sincrónico"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-059",
+    "esCompletarBlank": true,
+    "categoria": "general",
+    "generado": false,
+    "sourceQuestionId": "Q-059",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null
+  },
+  {
+    "id": "vista-60",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Macros",
+    "blockRange": null,
+    "tema": "Macros",
+    "tipo": "relleno",
+    "enunciado": "Una macro es una [1] de comandos e instrucciones que se agrupan de forma conjunta como un mismo [2] para completar una tarea [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "serie",
+      "comando",
+      "automáticamente"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-032",
+    "esCompletarBlank": true,
+    "categoria": "concepto",
+    "generado": false,
+    "sourceQuestionId": "Q-032",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null
+  },
+  {
+    "id": "vista-61",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Vistas",
+    "blockRange": null,
+    "tema": "Vistas",
+    "tipo": "relleno",
+    "enunciado": "Escribe el atajo de teclado correspondiente a cada función: Diseño de impresión → [1]. Vista Esquema → [2]. Vista Borrador → [3]. Vista Preliminar → [4]. Dividir → [5].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Ctrl+Alt+D",
+      "Ctrl+Alt+Q",
+      "Ctrl+Alt+N",
+      "Ctrl+Alt+I",
+      "Alt+Ctrl+V"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-065",
+    "esCompletarBlank": true,
+    "categoria": "atajo",
+    "generado": false,
+    "sourceQuestionId": "Q-065",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null
+  },
+  {
+    "id": "vista-62",
+    "sourceFile": "vista.txt",
+    "sourcePage": null,
+    "bloque": "Vista — Integración y distinción",
+    "blockRange": null,
+    "tema": "Integración y distinción",
+    "tipo": "relleno",
+    "enunciado": "Indica el nombre exacto del grupo al que pertenece cada herramienta: Diseño de impresión → Grupo [1]. Immersive Reader → Grupo [2]. Líneas de la cuadrícula → Grupo [3]. Ver en paralelo → Grupo [4]. Macros (botón principal) → Grupo [5]. Propiedades (icono SharePoint) → Grupo [6]. Vertical / En paralelo → Grupo [7].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Vistas",
+      "Inmersivo",
+      "Mostrar",
+      "Ventana",
+      "Macros",
+      "SharePoint",
+      "Movimiento de Página"
+    ],
+    "explicacion": "",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "Q-048",
+    "esCompletarBlank": true,
+    "categoria": "ruta",
+    "generado": false,
+    "sourceQuestionId": "Q-048",
+    "difficulty": "alta",
+    "section": "vista",
+    "topic": null,
+    "subtopic": null
+  }
+]
