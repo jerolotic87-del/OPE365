@@ -225,7 +225,7 @@ function renderStudyHub(){
       <div class="section-title"><h3>Práctica</h3></div>
       <div class="action-grid">
         <button class="action-card" id="sh-tipo"><div class="ic">${icon('study')}</div><div class="t">Por tipo de ejercicio</div><div class="d">Opción única, V/F, multi, emparejar</div></button>
-        <button class="action-card" id="sh-tema"><div class="ic">${icon('search')}</div><div class="t">Por tema</div><div class="d">${O.ALL_TEMAS.length} temas del banco</div></button>
+        <button class="action-card" id="sh-tema"><div class="ic">${icon('search')}</div><div class="t">Por pestaña y grupo</div><div class="d">${O.TAXONOMY_SECTIONS.length} pestañas de la cinta</div></button>
         <button class="action-card" id="sh-errores"><div class="ic">${icon('errors')}</div><div class="t">Preguntas falladas</div><div class="d">${s.incorrect} pendientes</div></button>
         <button class="action-card" id="sh-marcadas"><div class="ic">${icon('bookmark')}</div><div class="t">Preguntas marcadas</div><div class="d">${s.markedCount} guardadas</div></button>
       </div>
@@ -336,6 +336,7 @@ function renderTestWizard(params){
     mode: params.mode || "practice",
     scope: "todo", // todo | tema | tipo | marcadas | errores
     source: "all", tema: "all", tipo: "all", categoria: "all",
+    section: "all", topic: "all",
     count: "20", qOrder: "aleatorio", shuffleOptions: true, minutes: "20",
     step: 1,
   };
@@ -407,10 +408,26 @@ function renderWizardWhat(){
   function renderScopeDetail(){
     const el = $("#wiz-scope-detail");
     if(wizardState.scope==="tema"){
-      el.innerHTML = `<div class="field"><label>Tema</label><select id="wiz-tema">${O.ALL_TEMAS.map(t=>`<option value="${O.escapeHtml(t)}" ${wizardState.tema===t?'selected':''}>${O.escapeHtml(t)}</option>`).join("")}</select></div>`;
-      $("#wiz-tema").value = wizardState.tema!=="all" ? wizardState.tema : O.ALL_TEMAS[0];
-      wizardState.tema = $("#wiz-tema").value;
-      $("#wiz-tema").addEventListener("change", ()=> wizardState.tema = $("#wiz-tema").value);
+      const sections = O.TAXONOMY_SECTIONS;
+      el.innerHTML = `
+        <div class="field"><label>Pestaña</label><select id="wiz-section">${sections.map(s=>`<option value="${s.id}">${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
+        <div class="field" style="margin-top:10px;"><label>Grupo</label><select id="wiz-topic"></select></div>
+      `;
+      if(wizardState.section==="all") wizardState.section = sections[0].id;
+      $("#wiz-section").value = wizardState.section;
+      function refreshTopicSelect(){
+        const sec = sections.find(s=>s.id===$("#wiz-section").value);
+        const topics = (sec && sec.topics) || [];
+        const topicSel = $("#wiz-topic");
+        topicSel.innerHTML = `<option value="all">Toda la pestaña${sec?" ("+O.escapeHtml(sec.name)+")":""}</option>` +
+          topics.map(t=>`<option value="${t.id}">${O.escapeHtml(t.name)}</option>`).join("");
+        topicSel.value = topics.some(t=>t.id===wizardState.topic) ? wizardState.topic : "all";
+        wizardState.topic = topicSel.value;
+      }
+      refreshTopicSelect();
+      wizardState.section = $("#wiz-section").value;
+      $("#wiz-section").addEventListener("change", ()=>{ wizardState.section=$("#wiz-section").value; wizardState.topic="all"; refreshTopicSelect(); });
+      $("#wiz-topic").addEventListener("change", ()=> wizardState.topic = $("#wiz-topic").value);
     } else if(wizardState.scope==="tipo"){
       el.innerHTML = `<div class="pill-row" id="wiz-tipo-pills">
         ${Object.entries(O.TYPE_LABELS).map(([v,l])=>`<button class="pill ${wizardState.tipo===v?'active':''}" data-v="${v}">${l}</button>`).join("")}
@@ -511,7 +528,8 @@ function wizardToConfig(){
     mode: wizardState.mode,
     scope: scope === "errores" ? "errores" : scope === "marcadas" ? "marcadas" : null,
     source: "all",
-    tema: wizardState.scope==="tema" ? wizardState.tema : "all",
+    section: wizardState.scope==="tema" ? wizardState.section : "all",
+    topic: wizardState.scope==="tema" ? wizardState.topic : "all",
     tipo: wizardState.scope==="tipo" ? wizardState.tipo : "all",
     categoria: wizardState.scope==="categoria" ? wizardState.categoria : "all",
     count: wizardState.count,
@@ -1010,7 +1028,7 @@ function renderReviewHub(params){
     <div class="view-head">
       <button class="btn btn-ghost btn-sm" data-goto="study" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Estudiar</button>
       <h1>Repasar preguntas</h1>
-      <p>Filtra por estado, tema, tipo o fuente. Consulta la respuesta correcta y la explicación.</p>
+      <p>Filtra por estado, pestaña, grupo, tipo o fuente. Consulta la respuesta correcta y la explicación.</p>
     </div>
     <div class="filter-bar">
       <select id="rv-estado">
@@ -1018,7 +1036,8 @@ function renderReviewHub(params){
         <option value="unanswered">Sin responder</option><option value="marcadas">Marcadas</option>
       </select>
       <select id="rv-source"><option value="all">Todas las páginas</option>${O.ALL_SOURCES.map(s=>`<option value="${s}">${s}</option>`).join("")}</select>
-      <select id="rv-tema"><option value="all">Todos los temas</option>${O.ALL_TEMAS.map(t=>`<option value="${O.escapeHtml(t)}">${O.escapeHtml(t)}</option>`).join("")}</select>
+      <select id="rv-section"><option value="all">Todas las pestañas</option>${O.TAXONOMY_SECTIONS.map(s=>`<option value="${s.id}">${O.escapeHtml(s.name)}</option>`).join("")}</select>
+      <select id="rv-topic"><option value="all">Todos los grupos</option></select>
       <select id="rv-tipo"><option value="all">Todos los tipos</option>${Object.entries(O.TYPE_LABELS).map(([v,l])=>`<option value="${v}">${l}</option>`).join("")}</select>
       <select id="rv-categoria"><option value="all">Rutas y atajos: todo</option><option value="atajo">Solo atajos</option><option value="ruta">Solo rutas</option><option value="concepto">Solo conceptos</option></select>
       <input type="search" id="rv-search" placeholder="Buscar…">
@@ -1027,10 +1046,21 @@ function renderReviewHub(params){
     <div id="rv-body"></div>
   </div>`;
   $("#rv-estado").value = f.estado;
-  ["#rv-estado","#rv-source","#rv-tema","#rv-tipo","#rv-categoria","#rv-search"].forEach(sel=> $(sel).addEventListener("input", refresh));
+  function refreshTopicOptions(){
+    const sec = O.TAXONOMY_SECTIONS.find(s=>s.id===$("#rv-section").value);
+    const topics = (sec && sec.topics) || [];
+    const topicSel = $("#rv-topic");
+    const prev = topicSel.value;
+    topicSel.innerHTML = `<option value="all">Todos los grupos</option>` + topics.map(t=>`<option value="${t.id}">${O.escapeHtml(t.name)}</option>`).join("");
+    topicSel.value = topics.some(t=>t.id===prev) ? prev : "all";
+  }
+  ["#rv-estado","#rv-source","#rv-tipo","#rv-categoria","#rv-search"].forEach(sel=> $(sel).addEventListener("input", refresh));
+  $("#rv-section").addEventListener("input", ()=>{ refreshTopicOptions(); refresh(); });
+  $("#rv-topic").addEventListener("input", refresh);
+  refreshTopicOptions();
   refresh();
   function refresh(){
-    reviewList = O.filterQuestions({ estado:$("#rv-estado").value, source:$("#rv-source").value, tema:$("#rv-tema").value, tipo:$("#rv-tipo").value, categoria:$("#rv-categoria").value, search:$("#rv-search").value.trim() });
+    reviewList = O.filterQuestions({ estado:$("#rv-estado").value, source:$("#rv-source").value, section:$("#rv-section").value, topic:$("#rv-topic").value, tipo:$("#rv-tipo").value, categoria:$("#rv-categoria").value, search:$("#rv-search").value.trim() });
     $("#rv-count").textContent = reviewList.length + " preguntas";
     const bodyEl = $("#rv-body");
     if(!reviewList.length){ bodyEl.innerHTML = `<div class="empty-state"><div class="glyph">${icon('search')}</div><p>No hay preguntas que coincidan con estos filtros.</p></div>`; return; }

@@ -148,13 +148,34 @@ banco lógico (`QUESTIONS`) — `build_data.py` los concatena según
 `data/taxonomy.json` define una jerarquía pedagógica independiente de
 `sourceFile`/`bloque` (que son procedencia, no temario):
 `section` (p.ej. `"vista"`) → `topic` (p.ej. `"zoom"`) → `subtopic` libre.
-Solo la sección `vista` tiene contenido clasificado por ahora — las otras
-9 (Interfaz, Archivo, Inicio...) están vacías a propósito, no reclasificar
-las 952 preguntas originales sin que se pida explícitamente.
+
+**Las 952 preguntas heredadas ya están reclasificadas** (ago-2026,
+`scripts/classify_taxonomy.py`) — no era solo Vista: interfaz 519,
+archivo 169, inicio 131, vista 121 (61 de vista.json + 60 del banco
+heredado que resultaron ser genuinamente de esa pestaña: dividir
+ventana, vista Esquema, atajos de macros...), insertar 47, revisar 9,
+referencias 8, correspondencia 7, disposición 3, diseño 0 (la única
+sección todavía sin preguntas reales). El script combina reglas por
+palabra clave (verificadas contra el contenido real de cada bloque, no
+adivinadas) con una reserva por bloque para enunciados sin palabra
+distintiva propia ("señale la afirmación que NO es correcta") — si
+hace falta reclasificar contenido nuevo más adelante, ese script es el
+patrón a seguir, no una lista `tema` en texto libre.
+
 Caso especial a recordar: la pregunta de Vista Preliminar tiene
 `sourceFile:"vista.txt"` (procedencia) pero `section:"archivo"`,
 `topic:"imprimir"` (ubicación funcional real) — procedencia y taxonomía
 son campos independientes a propósito.
+
+**El campo `tema` (texto libre, heredado) ya no se usa para navegar/
+filtrar en la UI** — el asistente de práctica ("Por pestaña y grupo") y
+"Repasar preguntas" usan `section`/`topic` vía selects en cascada
+(`O.TAXONOMY_SECTIONS`), no el desplegable plano de `O.ALL_TEMAS` que
+mezclaba 48 valores sin jerarquía. `tema` se conserva en los datos por
+procedencia y porque `renderProgress` todavía desglosa el rendimiento
+por él (`computeStats().byTema`) — no se ha tocado esa pantalla.
+Excepción deliberada: el selector de tipo/tema del asistente de
+**multijugador** sigue igual (zona estable, fuera de alcance).
 
 Las flashcards son un recurso independiente de las preguntas, en
 `data/flashcards/*.json` → `flashcards_data.js` →
