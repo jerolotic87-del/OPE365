@@ -39,19 +39,30 @@ async function main(){
   assert(!!vistaCard, "existe la tarjeta de la sección Vista");
   vistaCard.click();
   assert(window.document.querySelector("h1").textContent.trim()==="Vista", "el detalle muestra el nombre de la sección");
-  assert(window.document.getElementById("td-preguntas").textContent.includes("61"), "muestra 61 preguntas clasificadas en Vista");
+  // El total de "vista" ya no es solo vista.json (61): tras la
+  // reclasificación completa del banco heredado (ago-2026), también
+  // incluye preguntas de atajos del banco antiguo que son genuinamente
+  // de la pestaña Vista (dividir ventana, vista Esquema, etc.) -- se
+  // compara contra el recuento real vía computeTaxonomyStats en vez de
+  // hardcodear un número que ya no sería la verdad.
+  const vistaCount = O.filterQuestions({section:"vista"}).length;
+  assert(vistaCount > 61, `Vista incluye preguntas del banco heredado además de vista.json (${vistaCount} > 61)`);
+  assert(window.document.getElementById("td-preguntas").textContent.includes(String(vistaCount)), `muestra ${vistaCount} preguntas clasificadas en Vista`);
   assert(window.document.getElementById("td-flashcards").textContent.includes("46"), "muestra 46 flashcards en Vista");
   assert(window.document.getElementById("td-errores").textContent.includes("7"), "muestra 7 fichas de error en Vista");
 
   window.document.getElementById("td-preguntas").click();
-  assert(O.getSession() && O.getSession().questions.length===61, "iniciar 'Preguntas' arranca una sesión con las 61 preguntas de Vista");
+  assert(O.getSession() && O.getSession().questions.length===vistaCount, `iniciar 'Preguntas' arranca una sesión con las ${vistaCount} preguntas de Vista`);
 
   clickGoto("temario-detalle", {sectionId:"vista"});
   window.document.getElementById("td-errores").click();
   assert(window.document.getElementById("fc-card"), "iniciar 'Errores' abre la sesión de flashcards de error");
 
-  // Sección sin contenido clasificado todavía (estado vacío honesto)
-  clickGoto("temario-detalle", {sectionId:"interfaz"});
+  // Sección sin contenido clasificado todavía (estado vacío honesto).
+  // "diseno" es la única de las 10 que sigue a 0 tras la reclasificación
+  // completa del banco heredado -- el resto ya tienen preguntas reales.
+  assert(O.filterQuestions({section:"diseno"}).length === 0, "'diseno' sigue sin preguntas clasificadas (sanity check del propio test)");
+  clickGoto("temario-detalle", {sectionId:"diseno"});
   assert(window.document.querySelector(".empty-state"), "una sección sin preguntas clasificadas muestra el estado vacío");
   window.document.getElementById("td-preguntas").click();
   assert(O.Nav.view === "temario-detalle", "'Preguntas' en una sección vacía no rompe nada, se queda en la vista");

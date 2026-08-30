@@ -28,7 +28,10 @@
     ],
     "respuesta": "A",
     "explicacion": "Aplica de forma retroactiva las reglas de autoformato de Word (las mismas que se aplican mientras escribes) al texto ya existente en el documento.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato automático"
   },
   {
     "id": "gen-atajo-2",
@@ -59,7 +62,10 @@
     ],
     "respuesta": "D",
     "explicacion": "Alinea el contenido del párrafo con el margen izquierdo. Es la alineación predeterminada de un párrafo nuevo.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "parrafo",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-3",
@@ -90,7 +96,10 @@
     ],
     "respuesta": "C",
     "explicacion": "En la vista Esquema, oculta el texto subordinado bajo el título seleccionado, mostrando solo el título.",
-    "generado": true
+    "generado": true,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-4",
@@ -121,7 +130,10 @@
     ],
     "respuesta": "C",
     "explicacion": "Borra la siguiente palabra completa a la derecha del punto de inserción, sin necesidad de seleccionarla antes.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-5",
@@ -152,7 +164,10 @@
     ],
     "respuesta": "A",
     "explicacion": "En la vista Esquema, vuelve a mostrar el texto subordinado que estaba oculto bajo el título seleccionado.",
-    "generado": true
+    "generado": true,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-6",
@@ -183,7 +198,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Ejecuta el comando Autoformato sobre el texto seleccionado o el documento activo.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato automático"
   },
   {
     "id": "gen-atajo-7",
@@ -214,7 +232,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Elimina el formato manual aplicado directamente al párrafo (por ejemplo, sangrías), dejándolo con el formato base del estilo.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "parrafo",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-8",
@@ -245,7 +266,10 @@
     ],
     "respuesta": "D",
     "explicacion": "Abre la vista Backstage de Impresión, donde se configuran las opciones de impresión antes de enviar el documento a la impresora.",
-    "generado": true
+    "generado": true,
+    "section": "archivo",
+    "topic": "guardar",
+    "subtopic": "Autorrecuperación"
   },
   {
     "id": "gen-atajo-9",
@@ -276,7 +300,10 @@
     ],
     "respuesta": "D",
     "explicacion": "Activa la función de dictado por voz de Word, que transcribe lo que se dice en texto dentro del documento.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "voz",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-10",
@@ -307,7 +334,10 @@
     ],
     "respuesta": "A",
     "explicacion": "Abre o actualiza el cuadro de diálogo Contar palabras, con el número de palabras, caracteres, párrafos y líneas del documento.",
-    "generado": true
+    "generado": true,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-11",
@@ -338,7 +368,10 @@
     ],
     "respuesta": "A",
     "explicacion": "Mueve la selección al objeto flotante o elemento anterior dentro del documento.",
-    "generado": true
+    "generado": true,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-12",
@@ -369,7 +402,10 @@
     ],
     "respuesta": "A",
     "explicacion": "Mueve la selección al objeto flotante o elemento siguiente dentro del documento.",
-    "generado": true
+    "generado": true,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-13",
@@ -400,7 +436,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Abre el cuadro Pegado especial, que permite elegir el formato exacto con el que se pega el contenido del portapapeles.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-14",
@@ -431,7 +470,10 @@
     ],
     "respuesta": "C",
     "explicacion": "Pega el contenido del portapapeles como texto sin formato, descartando el formato de origen y adoptando el del destino.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-15",
@@ -462,7 +504,10 @@
     ],
     "respuesta": "D",
     "explicacion": "Abre el cuadro de diálogo Personalizar teclado, donde se pueden asignar, cambiar o quitar combinaciones de teclas a los comandos de Word.",
-    "generado": true
+    "generado": true,
+    "section": "interfaz",
+    "topic": "acceso-teclado-ayuda",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-16",
@@ -493,7 +538,10 @@
     ],
     "respuesta": "C",
     "explicacion": "Rehace la última acción que se había deshecho, restaurándola en el documento.",
-    "generado": true
+    "generado": true,
+    "section": "interfaz",
+    "topic": "deshacer-rehacer",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-17",
@@ -524,7 +572,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Selecciona todas las celdas, filas y columnas de la tabla en la que se encuentra el cursor.",
-    "generado": true
+    "generado": true,
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-18",
@@ -555,7 +606,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Vuelve a calcular y muestra el recuento actualizado de palabras, caracteres, párrafos y líneas del documento.",
-    "generado": true
+    "generado": true,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-19",
@@ -586,7 +640,10 @@
     ],
     "respuesta": "D",
     "explicacion": "Impide que el campo seleccionado se actualice; es una segunda combinación asignada a la misma función que Ctrl+3.",
-    "generado": true
+    "generado": true,
+    "section": "insertar",
+    "topic": "encabezado-pie",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-20",
@@ -617,7 +674,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Copia el contenido seleccionado al portapapeles; es la combinación más extendida para copiar, junto a la variante Ctrl+Insertar.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-21",
@@ -648,7 +708,10 @@
     ],
     "respuesta": "D",
     "explicacion": "Corta el contenido seleccionado y lo envía al portapapeles; es la combinación más extendida para cortar, junto a la variante Mayús+Supr.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-22",
@@ -679,7 +742,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Aplica o quita el formato de cursiva al texto seleccionado; es una segunda combinación asignada a la misma función que Ctrl+K.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-23",
@@ -710,7 +776,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Aplica el estilo Normal al párrafo activo; es una segunda combinación asignada a la misma función que Ctrl+Mayús+A.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "parrafo",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-24",
@@ -741,7 +810,10 @@
     ],
     "respuesta": "C",
     "explicacion": "Mueve el cursor al final de la columna activa dentro de una tabla; es una segunda combinación asignada a la misma función que Alt+Av Pág.",
-    "generado": true
+    "generado": true,
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-25",
@@ -772,7 +844,10 @@
     ],
     "respuesta": "D",
     "explicacion": "Mueve el cursor al final de la fila activa dentro de una tabla; es una segunda combinación asignada a la misma función que Alt+Fin.",
-    "generado": true
+    "generado": true,
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-26",
@@ -803,7 +878,10 @@
     ],
     "respuesta": "D",
     "explicacion": "Guarda el documento activo; es una segunda combinación asignada a la misma función que Ctrl+G.",
-    "generado": true
+    "generado": true,
+    "section": "archivo",
+    "topic": "guardar",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-27",
@@ -834,7 +912,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Guarda el documento activo; es una tercera combinación asignada a la misma función que Ctrl+G y Mayús+F12.",
-    "generado": true
+    "generado": true,
+    "section": "archivo",
+    "topic": "guardar",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-28",
@@ -865,7 +946,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Mueve el cursor al inicio de la columna activa dentro de una tabla; es una segunda combinación asignada a la misma función que Alt+Re Pág.",
-    "generado": true
+    "generado": true,
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-29",
@@ -896,7 +980,10 @@
     ],
     "respuesta": "D",
     "explicacion": "Mueve el cursor al inicio de la fila activa dentro de una tabla; es una segunda combinación asignada a la misma función que Alt+Inicio.",
-    "generado": true
+    "generado": true,
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-30",
@@ -927,7 +1014,10 @@
     ],
     "respuesta": "D",
     "explicacion": "Aplica o quita el formato de negrita al texto seleccionado; es una segunda combinación asignada a la misma función que Ctrl+N.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-31",
@@ -958,7 +1048,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Pega el contenido del portapapeles en la posición del cursor; es la combinación más extendida para pegar, junto a la variante Mayús+Insertar.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-32",
@@ -989,7 +1082,10 @@
     ],
     "respuesta": "C",
     "explicacion": "Rehace la última acción deshecha o repite la última acción realizada; es una segunda combinación asignada a la misma función que Ctrl+Y.",
-    "generado": true
+    "generado": true,
+    "section": "interfaz",
+    "topic": "deshacer-rehacer",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-33",
@@ -1020,7 +1116,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Rehace la última acción deshecha o repite la última acción realizada; es una tercera combinación asignada a la misma función que Ctrl+Y y F4.",
-    "generado": true
+    "generado": true,
+    "section": "interfaz",
+    "topic": "deshacer-rehacer",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-34",
@@ -1051,7 +1150,10 @@
     ],
     "respuesta": "D",
     "explicacion": "Selecciona la totalidad del contenido del documento; es una tercera combinación asignada a la misma función que Ctrl+E y Ctrl+Número 5.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-35",
@@ -1082,7 +1184,10 @@
     ],
     "respuesta": "C",
     "explicacion": "Aplica o quita el formato de subíndice al texto seleccionado; es una segunda combinación asignada a la misma función que Ctrl+Mayús+guion.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-36",
@@ -1113,7 +1218,10 @@
     ],
     "respuesta": "B",
     "explicacion": "Aplica o quita el subrayado simple al texto seleccionado; es una segunda combinación asignada a la misma función que Ctrl+S.",
-    "generado": true
+    "generado": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-37",
@@ -1144,7 +1252,10 @@
     ],
     "respuesta": "C",
     "explicacion": "Cambia el foco a la ventana de documento anterior cuando hay varios documentos abiertos; es una segunda combinación asignada a la misma función que Ctrl+Mayús+F6.",
-    "generado": true
+    "generado": true,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null
   },
   {
     "id": "gen-atajo-38",
@@ -1175,6 +1286,9 @@
     ],
     "respuesta": "C",
     "explicacion": "Cambia el foco a la siguiente ventana de documento cuando hay varios documentos abiertos; es una segunda combinación asignada a la misma función que Ctrl+F6.",
-    "generado": true
+    "generado": true,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null
   }
 ]
