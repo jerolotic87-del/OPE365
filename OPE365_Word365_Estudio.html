@@ -3033,7 +3033,7 @@ function renderWizardWhat(){
       $("#wiz-tema").addEventListener("change", ()=> wizardState.tema = $("#wiz-tema").value);
     } else if(wizardState.scope==="tipo"){
       el.innerHTML = `<div class="pill-row" id="wiz-tipo-pills">
-        ${[["opcion_unica","Opción única"],["verdadero_falso","V/F"],["seleccion_multiple","Selección múltiple"],["emparejamiento","Emparejamiento"]].map(([v,l])=>`<button class="pill ${wizardState.tipo===v?'active':''}" data-v="${v}">${l}</button>`).join("")}
+        ${Object.entries(O.TYPE_LABELS).map(([v,l])=>`<button class="pill ${wizardState.tipo===v?'active':''}" data-v="${v}">${l}</button>`).join("")}
       </div>`;
       if(wizardState.tipo==="all") wizardState.tipo="opcion_unica";
       $$("#wiz-tipo-pills .pill").forEach(p=>{
@@ -3639,7 +3639,7 @@ function renderReviewHub(params){
       </select>
       <select id="rv-source"><option value="all">Todas las páginas</option>${O.ALL_SOURCES.map(s=>`<option value="${s}">${s}</option>`).join("")}</select>
       <select id="rv-tema"><option value="all">Todos los temas</option>${O.ALL_TEMAS.map(t=>`<option value="${O.escapeHtml(t)}">${O.escapeHtml(t)}</option>`).join("")}</select>
-      <select id="rv-tipo"><option value="all">Todos los tipos</option><option value="opcion_unica">Opción única</option><option value="verdadero_falso">V/F</option><option value="seleccion_multiple">Multi-respuesta</option><option value="emparejamiento">Emparejar</option></select>
+      <select id="rv-tipo"><option value="all">Todos los tipos</option>${Object.entries(O.TYPE_LABELS).map(([v,l])=>`<option value="${v}">${l}</option>`).join("")}</select>
       <select id="rv-categoria"><option value="all">Rutas y atajos: todo</option><option value="atajo">Solo atajos</option><option value="ruta">Solo rutas</option><option value="concepto">Solo conceptos</option></select>
       <input type="search" id="rv-search" placeholder="Buscar…">
       <span class="chip" id="rv-count">0 preguntas</span>
