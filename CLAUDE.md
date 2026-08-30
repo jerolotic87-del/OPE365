@@ -6,26 +6,55 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. 952 preguntas, práctica/examen
-con corrección inmediata, compartir por código, desafíos asíncronos con
-resultado sellado, y dos modos multijugador en tiempo real (Duelo y Farol)
-sobre WebRTC vía PeerJS.
+de Word 365 de una oposición de ayuntamiento. 952 preguntas del banco
+original + un primer bloque de Vista integrado (61 preguntas, 46
+flashcards), práctica/examen con corrección inmediata, compartir por
+código, desafíos asíncronos con resultado sellado, un mazo de flashcards
+(frente/dorso, sin repetición espaciada todavía), y dos modos multijugador
+en tiempo real (Duelo y Farol) sobre WebRTC vía PeerJS.
 
 ## Estructura de archivos (desarrollo local)
 
 ```
 index.html          shell HTML — usa <script src> a los ficheros de abajo
 styles.css           todo el sistema de diseño (oscuro, tokens en :root)
-questions_data.js     banco de preguntas envuelto en window.__OPE365_DATA__
-                      (generado desde questions_all.json — regenerar tras
-                      editar el JSON, ver "Regenerar questions_data.js")
-questions_all.json    EL BANCO — fuente de verdad, 952 preguntas
 app.js                motor: modelo canónico, sesiones, PRNG con semilla,
-                       códigos de compartir, desafíos, estadísticas
+                       códigos de compartir, desafíos, estadísticas,
+                       flashcards (§10)
 multiplayer.js        Duelo y Farol: transporte PeerJS + máquina de estados
 views.js               toda la interfaz (router simple basado en funciones)
 peerjs.min.js          librería de terceros, no tocar
 atajos_oficial.json    tabla extraída de ATAJOS.docx (ver más abajo)
+
+--- artefactos generados (NO editar a mano, ver "Regenerar datos") ---
+questions_all.json     banco de preguntas concatenado — fuente de verdad
+                       en tiempo de ejecución, pero se genera desde
+                       data/questions/*.json
+questions_data.js      questions_all.json envuelto en window.__OPE365_DATA__
+taxonomy_data.js       data/taxonomy.json envuelto en window.__OPE365_TAXONOMY__
+flashcards_data.js     data/flashcards/*.json envuelto en
+                       window.__OPE365_FLASHCARDS__
+
+--- fuente editable de datos ---
+data/questions/*.json  el banco partido por sourceFile (1.json..8.json,
+                       atajos.json, vista.json, ...), con manifest.json
+                       fijando el orden de carga
+data/flashcards/*.json  flashcards por sección (vista.json, ...), con su
+                        propio manifest.json
+data/taxonomy.json     taxonomía pedagógica (section > topic > subtopic),
+                       configurable, independiente de sourceFile/bloque
+data/vista_integration_report.md  comparación pregunta-por-pregunta del
+                       banco de Vista contra el banco existente (Etapa 3
+                       de la migración de arquitectura, ago 2026)
+
+--- herramientas ---
+build_data.py          regenera questions_all.json/questions_data.js/
+                       taxonomy_data.js/flashcards_data.js desde data/ —
+                       ejecutar SIEMPRE tras tocar algo bajo data/
+build.py               empaqueta todo (incluidos los artefactos de
+                       arriba) en OPE365_Word365_Estudio.html
+tests/                 pruebas jsdom (node tests/test_*.js) — requieren
+                       `npm install` una vez (ver package.json)
 ```
 
 **Para desarrollar:** sirve la carpeta con un servidor local, no abras

@@ -12,10 +12,11 @@ Ejecuta esto después de editar app.js, views.js, multiplayer.js o
 styles.css, si quieres un único archivo para compartir (por ejemplo,
 mandárselo a alguien que no vaya a clonar la carpeta).
 
-Si lo que has editado es contenido de preguntas o taxonomía (cualquier
-cosa bajo data/), ejecuta antes `python3 build_data.py` para regenerar
-questions_all.json, questions_data.js y taxonomy_data.js — build.py lee
-esos artefactos generados, no data/ directamente.
+Si lo que has editado es contenido de preguntas, taxonomía o flashcards
+(cualquier cosa bajo data/), ejecuta antes `python3 build_data.py` para
+regenerar questions_all.json, questions_data.js, taxonomy_data.js y
+flashcards_data.js — build.py lee esos artefactos generados, no data/
+directamente.
 """
 import os
 
