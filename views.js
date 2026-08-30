@@ -47,7 +47,7 @@ const PRIMARY_TABS = [
 
 function groupForView(view){
   if(view==="home") return "home";
-  if(["study","running","review-hub","review-detail"].includes(view)) return "study";
+  if(["study","running","review-hub","review-detail","temario-detalle"].includes(view)) return "study";
   if(["tests","test-wizard","test-preview","results","challenges","challenge-create","challenge-detail","comparison","history","mp-setup","mp-lobby","mp-game"].includes(view)) return "tests";
   if(["flashcards","flashcards-study"].includes(view)) return "flashcards";
   if(view==="progress") return "progress";
@@ -97,6 +97,7 @@ function render(view, params){
   if(view==="mp-game") return renderMpGame();
   if(view==="flashcards") return renderFlashcardsHub(params);
   if(view==="flashcards-study") return renderFlashcardsStudy();
+  if(view==="temario-detalle") return renderTemarioDetalle(params);
   return renderHome();
 }
 
@@ -202,6 +203,7 @@ function renderChallengeCardHtml(c){
 --------------------------------------------------------------- */
 function renderStudyHub(){
   const s = O.computeStats();
+  const taxStats = O.computeTaxonomyStats();
   const saved = O.PROGRESS.currentSession;
   const hasContinue = saved && !saved.finished && saved.questionIds && saved.questionIds.length;
 
@@ -227,6 +229,17 @@ function renderStudyHub(){
         <button class="action-card" id="sh-errores"><div class="ic">${icon('errors')}</div><div class="t">Preguntas falladas</div><div class="d">${s.incorrect} pendientes</div></button>
         <button class="action-card" id="sh-marcadas"><div class="ic">${icon('bookmark')}</div><div class="t">Preguntas marcadas</div><div class="d">${s.markedCount} guardadas</div></button>
       </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title"><h3>Temario</h3></div>
+      <div class="action-grid">${O.TAXONOMY_SECTIONS.map(sec=>{
+        const st = taxStats[sec.id] || {questions:0, flashcards:0};
+        return `<button class="action-card" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
+          <div class="t">${O.escapeHtml(sec.name)}</div>
+          <div class="d">${st.questions} preguntas · ${st.flashcards} flashcards</div>
+        </button>`;
+      }).join("")}</div>
     </div>
 
     <div class="section-block">
@@ -1215,6 +1228,49 @@ function renderFlashcardsStudy(){
   $("#fc-next").addEventListener("click", ()=>{
     if(fcSession.index === fcSession.ids.length-1){ fcSession=null; O.toast("Sesión de flashcards terminada"); go("flashcards"); return; }
     fcSession.index++; fcSession.revealed=false; renderFlashcardsStudy();
+  });
+}
+
+/* ---------------------------------------------------------------
+   TEMARIO — detalle de una sección de la taxonomía (Preguntas /
+   Flashcards / Errores). La mayoría de secciones no tienen todavía
+   preguntas clasificadas (ver CLAUDE.md, Etapa 8): se muestra un
+   estado vacío honesto en vez de fallar o inventar contenido.
+--------------------------------------------------------------- */
+function renderTemarioDetalle(params){
+  const sectionId = params && params.sectionId;
+  const sec = O.TAXONOMY_SECTIONS.find(s=>s.id===sectionId);
+  if(!sec){ go("study"); return; }
+  const qCount = O.filterQuestions({section:sectionId}).length;
+  const fCount = O.filterFlashcards({section:sectionId}).length;
+  const errCount = O.filterFlashcards({section:sectionId, cardType:"error"}).length;
+  const topics = sec.topics || [];
+
+  mainEl().innerHTML = `
+  <div class="view">
+    <div class="view-head">
+      <button class="btn btn-ghost btn-sm" data-goto="study" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Estudiar</button>
+      <p class="eyebrow">Temario</p>
+      <h1>${O.escapeHtml(sec.name)}</h1>
+      ${topics.length ? `<p>${topics.map(t=>O.escapeHtml(t.name)).join(" · ")}</p>` : ``}
+    </div>
+    <div class="action-grid">
+      <button class="action-card" id="td-preguntas"><div class="ic">${icon('study')}</div><div class="t">Preguntas</div><div class="d">${qCount} clasificadas en esta sección</div></button>
+      <button class="action-card" id="td-flashcards"><div class="ic">${icon('cards')}</div><div class="t">Flashcards</div><div class="d">${fCount} tarjetas</div></button>
+      <button class="action-card" id="td-errores"><div class="ic">${icon('errors')}</div><div class="t">Errores frecuentes</div><div class="d">${errCount} fichas "NO CONFUNDIR"</div></button>
+    </div>
+    ${!qCount ? `<div class="empty-state" style="margin-top:var(--sp-6);"><p>Todavía no hay preguntas clasificadas en "${O.escapeHtml(sec.name)}". La taxonomía nueva convive con el banco existente sin reclasificarlo de golpe -- se irá completando sección a sección.</p></div>` : ``}
+  </div>`;
+
+  $("#td-preguntas").addEventListener("click", ()=>{
+    if(!qCount){ O.toast("Aún no hay preguntas clasificadas en esta sección"); return; }
+    const s2 = O.buildSession({mode:"practice", section:sectionId, count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
+    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No hay preguntas disponibles");
+  });
+  $("#td-flashcards").addEventListener("click", ()=> go("flashcards", {section:sectionId}));
+  $("#td-errores").addEventListener("click", ()=>{
+    const errs = O.filterFlashcards({section:sectionId, cardType:"error"});
+    if(errs.length) startFlashcardSession(errs.map(c=>c.canonicalId), 0); else O.toast("No hay fichas de error en esta sección");
   });
 }
 

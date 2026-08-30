@@ -373,6 +373,9 @@ function filterQuestions(opts){
     if(opts.tema && opts.tema!=="all" && q.tema!==opts.tema) return false;
     if(opts.tipo && opts.tipo!=="all" && q.tipo!==opts.tipo) return false;
     if(opts.categoria && opts.categoria!=="all" && q.categoria!==opts.categoria) return false;
+    if(opts.section && opts.section!=="all" && q.section!==opts.section) return false;
+    if(opts.topic && opts.topic!=="all" && q.topic!==opts.topic) return false;
+    if(opts.subtopic && opts.subtopic!=="all" && q.subtopic!==opts.subtopic) return false;
     if(opts.estado && opts.estado!=="all"){
       const st = getQuestionState(q.id);
       if(opts.estado==="marcadas"){ if(!isMarked(q.id)) return false; }
@@ -582,7 +585,8 @@ function composeSessionQuestion(qid, pres){
    nunca se reconstruyen así — ver shareableFromSession. */
 function resolveQuestionIds(config, rng){
   let pool = filterQuestions({
-    source: config.source, tema: config.tema, tipo: config.tipo, categoria: config.categoria
+    source: config.source, tema: config.tema, tipo: config.tipo, categoria: config.categoria,
+    section: config.section, topic: config.topic, subtopic: config.subtopic
   });
   if(config.scope === "errores"){
     pool = pool.filter(q=>{ const a=PROGRESS.answers[q.id]; return a && !a.correcta; });
@@ -1007,6 +1011,18 @@ function filterFlashcards(opts){
   });
 }
 
+// Recuento de preguntas/flashcards clasificadas por sección de la
+// taxonomía. La mayoría de secciones estarán a 0 hasta que se aborde
+// la reclasificación global (ver CLAUDE.md, Etapa 8 del plan) -- es
+// una foto honesta del estado actual, no un error.
+function computeTaxonomyStats(){
+  const stats = {};
+  TAXONOMY_SECTIONS.forEach(sec=>{ stats[sec.id] = { questions:0, flashcards:0 }; });
+  QUESTIONS.forEach(q=>{ if(q.section && stats[q.section]) stats[q.section].questions++; });
+  FLASHCARDS.forEach(c=>{ if(c.section && stats[c.section]) stats[c.section].flashcards++; });
+  return stats;
+}
+
 function computeFlashcardStats(){
   const total = FLASHCARDS.length;
   const dominadas = FLASHCARDS.filter(c=> getFlashcardState(c.canonicalId)==="dominada").length;
@@ -1035,6 +1051,7 @@ window.OPE = {
   completeChallengeAttempt, compareResults, shareCodeForReturnResult, importReturnedResult,
   FLASHCARDS, F_BY_ID, FLASHCARD_INTEGRITY_REPORT, FLASHCARD_TOPIC_REGISTRY,
   getFlashcardState, markFlashcardSeen, setFlashcardMastered, filterFlashcards, computeFlashcardStats,
+  computeTaxonomyStats,
 };
 
 })();
