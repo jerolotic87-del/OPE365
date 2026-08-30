@@ -539,6 +539,7 @@ function renderWizardPreview(){
 --------------------------------------------------------------- */
 let pendingMultiSelection = [];
 let pendingMatchSelection = { leftId:null, pairs:{} };
+let pendingBlankValues = [];
 
 function renderRunner(){
   const s = O.getSession();
@@ -646,8 +647,9 @@ function renderQuestionCard(q, s, isExam){
     </div>
   `;
 
-  pendingMultiSelection = (answeredAlready && Array.isArray(resp.answer)) ? resp.answer.slice() : [];
+  pendingMultiSelection = (answeredAlready && Array.isArray(resp.answer) && q.tipo==="seleccion_multiple") ? resp.answer.slice() : [];
   pendingMatchSelection = { leftId:null, pairs: (answeredAlready && resp.answer && q.tipo==="emparejamiento") ? Object.assign({},resp.answer) : {} };
+  pendingBlankValues = (q.tipo==="relleno") ? new Array(O.countBlanks(q.enunciado)).fill("") : [];
 
   renderQuestionBody(q, s, isExam, answeredAlready, resp);
 
@@ -715,6 +717,10 @@ function renderQuestionBody(q, s, isExam, answeredAlready, resp){
     renderMatchingBody(body, q, s, isExam, answeredAlready, resp);
     if(answeredAlready && !isExam) showFeedback(feedback, q, resp);
   }
+  else if(q.tipo==="relleno"){
+    renderBlankFillBody(body, q, s, isExam, answeredAlready, resp);
+    if(answeredAlready && !isExam) showFeedback(feedback, q, resp);
+  }
 }
 
 function optionResultClass(letter, q, resp){ if(letter===q.respuesta) return "correct"; if(resp && resp.answer===letter) return "incorrect"; return ""; }
@@ -757,6 +763,38 @@ function renderMatchingBody(body, q, s, isExam, answeredAlready, resp){
   if(chk) chk.addEventListener("click", ()=> submitAnswer(q, s, isExam, Object.assign({}, pendingMatchSelection.pairs)));
   const rst = $("#match-reset", body);
   if(rst) rst.addEventListener("click", ()=>{ pendingMatchSelection = {leftId:null, pairs:{}}; renderMatchingBody(body, q, s, isExam, false, null); });
+}
+
+function renderBlankFillBody(body, q, s, isExam, answeredAlready, resp){
+  const n = O.countBlanks(q.enunciado);
+  const values = answeredAlready ? (resp.answer||[]) : pendingBlankValues;
+  body.innerHTML = `<div class="blank-fill-wrap">${Array.from({length:n}).map((_,i)=>{
+    let cls = "blank-input";
+    if(answeredAlready){
+      const accepted = q.respuesta[i];
+      const variants = Array.isArray(accepted) ? accepted : [accepted];
+      const ok = variants.some(v => String(v).trim().toLowerCase()===String(values[i]||"").trim().toLowerCase());
+      cls += ok ? " correct" : " incorrect";
+    }
+    return `<label class="blank-field">
+      <span class="tagnum">[${i+1}]</span>
+      <input type="text" class="${cls}" data-blank="${i}" value="${O.escapeHtml(values[i]||"")}" ${answeredAlready?"disabled":""} autocomplete="off">
+      ${answeredAlready && !Array.isArray(q.respuesta[i]) ? `<span class="blank-correct">${O.escapeHtml(q.respuesta[i])}</span>` : ''}
+      ${answeredAlready && Array.isArray(q.respuesta[i]) ? `<span class="blank-correct">${O.escapeHtml(q.respuesta[i][0])}</span>` : ''}
+    </label>`;
+  }).join("")}</div>
+  ${!answeredAlready ? `<div style="margin-top:12px;">
+    <span class="chip">Rellena todos los huecos</span>
+    <button class="btn btn-primary btn-sm" id="blank-check" style="margin-left:8px;">Comprobar</button>
+  </div>` : ''}`;
+  if(answeredAlready) return;
+  $$("[data-blank]", body).forEach(input=>{
+    input.addEventListener("input", ()=>{ pendingBlankValues[Number(input.getAttribute("data-blank"))] = input.value; });
+  });
+  $("#blank-check", body).addEventListener("click", ()=>{
+    if(pendingBlankValues.some(v=>!v || !v.trim())){ O.toast("Rellena todos los huecos"); return; }
+    submitAnswer(q, s, isExam, pendingBlankValues.slice());
+  });
 }
 
 function showFeedback(el, q, resp){
@@ -1040,6 +1078,11 @@ function renderStaticAnswerBody(el, q){
     const correct = q.matching.correct;
     el.innerHTML = `<div class="match-wrap"><div class="match-col"><h4>Elementos</h4>${q.matching.left.map(l=>`<div class="match-item correct">${O.escapeHtml(l.label)} → ${correct[l.id]}</div>`).join("")}</div>
       <div class="match-col"><h4>Correspondencias</h4>${q.matching.right.map(r=>`<div class="match-item">${r.id}) ${O.escapeHtml(r.label)}</div>`).join("")}</div></div>`;
+  } else if(q.tipo==="relleno"){
+    el.innerHTML = `<div class="blank-fill-wrap">${q.respuesta.map((accepted,i)=>{
+      const text = Array.isArray(accepted) ? accepted[0] : accepted;
+      return `<label class="blank-field"><span class="tagnum">[${i+1}]</span><input type="text" class="blank-input correct" value="${O.escapeHtml(text)}" disabled></label>`;
+    }).join("")}</div>`;
   }
 }
 

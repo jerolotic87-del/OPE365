@@ -87,6 +87,9 @@ function validateDataset(list){
       if(typeof q.respuesta !== "boolean") ok = false;
     } else if(q.tipo === "emparejamiento"){
       if(!q.matching || !q.matching.left || !q.matching.left.length) ok = false;
+    } else if(q.tipo === "relleno"){
+      if(!Array.isArray(q.respuesta) || !q.respuesta.length) ok = false;
+      else if(countBlanks(q.enunciado) !== q.respuesta.length) ok = false;
     } else {
       ok = false;
     }
@@ -126,13 +129,29 @@ const EXERCISE_TYPES = Object.freeze({
   OPTION_MULTIPLE: "seleccion_multiple",
   TRUE_FALSE:      "verdadero_falso",
   MATCHING:        "emparejamiento",
+  FILL_BLANK:      "relleno",
 });
 const TYPE_LABELS = Object.freeze({
   opcion_unica:        "Opción única",
   seleccion_multiple:  "Selección múltiple",
   verdadero_falso:     "Verdadero / Falso",
   emparejamiento:      "Emparejamiento",
+  relleno:             "Relleno de huecos",
 });
+
+// Huecos numerados [1], [2]... dentro del enunciado de una pregunta de
+// tipo "relleno". q.respuesta es un array donde la posición i (0-based)
+// es la respuesta aceptada para el hueco [i+1] -- puede ser un string o
+// un array de variantes aceptadas para ese hueco.
+function countBlanks(enunciado){
+  const matches = String(enunciado||"").match(/\[\d+\]/g);
+  return matches ? new Set(matches).size : 0;
+}
+function normalizeBlankText(s){
+  return String(s==null?"":s).trim().toLowerCase()
+    .normalize("NFD").replace(/\p{Diacritic}/gu,"")
+    .replace(/\s+/g," ");
+}
 
 // Registro de categorías (dimensión ruta/atajo/concepto/general),
 // derivado de los valores ya presentes en los datos — no se inventa
@@ -231,6 +250,9 @@ function buildMigrationReport(){
           if(!rightIds.has(rv)) structuralIssues.push({id:q.id, issue:"referencia de emparejamiento huérfana: "+rv});
         });
       }
+    } else if(q.tipo===EXERCISE_TYPES.FILL_BLANK){
+      if(!Array.isArray(q.respuesta) || !q.respuesta.length) structuralIssues.push({id:q.id, issue:"relleno sin respuestas"});
+      else if(countBlanks(q.enunciado) !== q.respuesta.length) structuralIssues.push({id:q.id, issue:"número de huecos [N] no coincide con el número de respuestas"});
     } else {
       structuralIssues.push({id:q.id, issue:"tipo de ejercicio no reconocido: "+q.tipo});
     }
@@ -390,6 +412,13 @@ function evaluateAnswer(q, userAnswer){
     const correct = q.matching.correct;
     const keys = Object.keys(correct);
     return keys.every(k => userAnswer[k] === correct[k]);
+  }
+  if(q.tipo === "relleno"){
+    if(!Array.isArray(userAnswer) || userAnswer.length !== q.respuesta.length) return false;
+    return q.respuesta.every((accepted,i)=>{
+      const variants = Array.isArray(accepted) ? accepted : [accepted];
+      return variants.some(v => normalizeBlankText(v) === normalizeBlankText(userAnswer[i]));
+    });
   }
   return false;
 }
@@ -915,6 +944,7 @@ window.OPE = {
   TAXONOMY, TAXONOMY_SECTIONS,
   contentHash, MIGRATION_REPORT, RANDOMIZATION_ALGORITHM_VERSION,
   shuffle, seededShuffle, mulberry32, makeSeed, escapeHtml, renderBlank, fmtTime, fmtDate, toast, uid,
+  countBlanks,
   randomizeQuestionView, filterQuestions, getQuestionState, isMarked,
   evaluateAnswer, recordAnswer, computeStats, Timer,
   Nav, buildSession, buildSessionFromIds, buildSessionFromShareableConfig, resolveQuestionIds,
