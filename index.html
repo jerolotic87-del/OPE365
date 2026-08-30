@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="color-scheme" content="dark">
+<title>OPE365 · Estudio Word 365 para oposiciones</title>
+<meta name="description" content="Plataforma de estudio, tests, desafíos, duelo en vivo y farol para el temario de Word 365 de la oposición.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand"><span class="dot"></span>OPE365</div>
+      <nav class="primary-nav" id="primary-nav" role="tablist" aria-label="Navegación principal"></nav>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="search-btn" aria-label="Buscar" title="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+        <button class="icon-btn" id="settings-btn" aria-label="Ajustes y diagnóstico" title="Ajustes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9c.2.4.6.7 1 .7H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <main id="main-view"></main>
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Navegación principal"></nav>
+</div>
+<div class="toast" id="toast"></div>
+
+<!-- Carga el banco de preguntas como variable global antes que app.js.
+     Con servidor local (ver README) esto podría cambiarse a fetch(); se
+     deja como <script src> para que funcione también abriendo el HTML
+     directamente, sin problemas de CORS. -->
+<script src="questions_data.js"></script>
+<script src="app.js"></script>
+<script src="peerjs.min.js"></script>
+<script src="multiplayer.js"></script>
+<script src="views.js"></script>
+</body>
+</html>
