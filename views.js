@@ -30,6 +30,7 @@ const ICONS = {
   arrowL:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>',
   play:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l14 8-14 8V4z"/></svg>',
   clock:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
+  cards:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="14" height="14" rx="2"/><path d="M7 7V5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>',
 };
 function icon(name){ return ICONS[name] || ""; }
 
@@ -37,16 +38,18 @@ function icon(name){ return ICONS[name] || ""; }
    NAVEGACIÓN PRIMARIA
 --------------------------------------------------------------- */
 const PRIMARY_TABS = [
-  {id:"home",     label:"Inicio",    ic:"home"},
-  {id:"study",    label:"Estudiar",  ic:"study"},
-  {id:"tests",    label:"Tests",     ic:"tests"},
-  {id:"progress", label:"Progreso",  ic:"progress"},
+  {id:"home",       label:"Inicio",      ic:"home"},
+  {id:"study",      label:"Estudiar",    ic:"study"},
+  {id:"tests",      label:"Tests",       ic:"tests"},
+  {id:"flashcards", label:"Flashcards",  ic:"cards"},
+  {id:"progress",   label:"Progreso",    ic:"progress"},
 ];
 
 function groupForView(view){
   if(view==="home") return "home";
   if(["study","running","review-hub","review-detail"].includes(view)) return "study";
   if(["tests","test-wizard","test-preview","results","challenges","challenge-create","challenge-detail","comparison","history","mp-setup","mp-lobby","mp-game"].includes(view)) return "tests";
+  if(["flashcards","flashcards-study"].includes(view)) return "flashcards";
   if(view==="progress") return "progress";
   return "home";
 }
@@ -92,6 +95,8 @@ function render(view, params){
   if(view==="mp-setup") return renderMpSetup();
   if(view==="mp-lobby") return renderMpLobby();
   if(view==="mp-game") return renderMpGame();
+  if(view==="flashcards") return renderFlashcardsHub(params);
+  if(view==="flashcards-study") return renderFlashcardsStudy();
   return renderHome();
 }
 
@@ -1084,6 +1089,133 @@ function renderStaticAnswerBody(el, q){
       return `<label class="blank-field"><span class="tagnum">[${i+1}]</span><input type="text" class="blank-input correct" value="${O.escapeHtml(text)}" disabled></label>`;
     }).join("")}</div>`;
   }
+}
+
+/* ---------------------------------------------------------------
+   FLASHCARDS — hub filtrable + sesión de estudio (frente/dorso).
+   Recurso independiente del banco de preguntas (ver app.js §10).
+   Sesión de estudio deliberadamente no persistida entre recargas --
+   es un estado de página, no una sesión de examen: base simple para
+   ampliar más adelante (repetición espaciada, etc.), no todavía.
+--------------------------------------------------------------- */
+let fcList = [];
+let fcSession = null; // { ids:[canonicalId...], index:0, revealed:false }
+
+function priorityLabel(p){ return p==="alta" ? "★ Prioridad alta" : ""; }
+function cardTypeLabel(t){ return t==="error" ? "Error frecuente" : "Contenido"; }
+
+function renderFlashcardsHub(params){
+  const f = { section:(params&&params.section)||"all", estado:(params&&params.estado)||"all" };
+  const sections = Array.from(new Set(O.FLASHCARDS.map(c=>c.section))).sort();
+  mainEl().innerHTML = `
+  <div class="view">
+    <div class="view-head">
+      <h1>Flashcards</h1>
+      <p>Repasa hechos, rutas, atajos y distinciones clave en formato frente/dorso.</p>
+    </div>
+    <div class="filter-bar">
+      <select id="fc-section"><option value="all">Todas las secciones</option>${sections.map(s=>`<option value="${s}">${O.escapeHtml(s)}</option>`).join("")}</select>
+      <select id="fc-topic"><option value="all">Todos los temas</option></select>
+      <select id="fc-tipo"><option value="all">Todos los tipos</option><option value="contenido">Contenido</option><option value="error">Errores frecuentes</option></select>
+      <select id="fc-prioridad"><option value="all">Cualquier prioridad</option><option value="alta">Solo prioridad alta</option></select>
+      <select id="fc-estado"><option value="all">Todas</option><option value="pendiente">Pendientes</option><option value="dominada">Dominadas</option></select>
+      <input type="search" id="fc-search" placeholder="Buscar…">
+      <span class="chip" id="fc-count">0 tarjetas</span>
+    </div>
+    <div class="action-grid" style="margin-bottom:var(--sp-5);">
+      <button class="action-card" id="fc-study-filtered"><div class="t">Estudiar filtradas</div><div class="d">Empieza con el resultado actual de los filtros</div></button>
+      <button class="action-card" id="fc-study-pending"><div class="t">Solo pendientes</div><div class="d">Repasa las que aún no has dominado</div></button>
+    </div>
+    <div id="fc-body"></div>
+  </div>`;
+  $("#fc-section").value = f.section;
+  $("#fc-estado").value = f.estado;
+  function refreshTopics(){
+    const sec = $("#fc-section").value;
+    const topics = Array.from(new Set(O.FLASHCARDS.filter(c=> sec==="all"||c.section===sec).map(c=>c.topic).filter(Boolean))).sort();
+    const topicSel = $("#fc-topic");
+    const prev = topicSel.value;
+    topicSel.innerHTML = `<option value="all">Todos los temas</option>${topics.map(t=>`<option value="${t}">${O.escapeHtml(t)}</option>`).join("")}`;
+    topicSel.value = topics.includes(prev) ? prev : "all";
+  }
+  function currentFilters(){
+    return { section:$("#fc-section").value, topic:$("#fc-topic").value, cardType:$("#fc-tipo").value,
+      priority:$("#fc-prioridad").value, estado:$("#fc-estado").value, search:$("#fc-search").value.trim() };
+  }
+  function refresh(){
+    fcList = O.filterFlashcards(currentFilters());
+    $("#fc-count").textContent = fcList.length + " tarjetas";
+    const bodyEl = $("#fc-body");
+    if(!fcList.length){ bodyEl.innerHTML = `<div class="empty-state"><div class="glyph">${icon('cards')}</div><p>No hay flashcards que coincidan con estos filtros.</p></div>`; return; }
+    bodyEl.innerHTML = `<div class="qlist">${fcList.map((c,i)=>`
+      <button class="qlist-item" data-idx="${i}">
+        <span class="badge ${O.getFlashcardState(c.canonicalId)==='dominada'?'badge-correct':'badge-unanswered'}">${O.getFlashcardState(c.canonicalId)==='dominada'?'✓':'–'}</span>
+        <div style="flex:1;"><div class="qtext">${O.escapeHtml(truncate(c.front,150))}</div>
+        <div class="qmeta">${O.escapeHtml(c.topic||c.section)}${c.subtopic?" · "+O.escapeHtml(c.subtopic):""} · ${cardTypeLabel(c.cardType)}${c.priority==="alta"?" · ★":""}</div></div>
+      </button>`).join("")}</div>`;
+    $$(".qlist-item", bodyEl).forEach(btn=> btn.addEventListener("click", ()=> startFlashcardSession(fcList.map(c=>c.canonicalId), Number(btn.getAttribute("data-idx")))));
+  }
+  ["#fc-section"].forEach(sel=> $(sel).addEventListener("input", ()=>{ refreshTopics(); refresh(); }));
+  ["#fc-topic","#fc-tipo","#fc-prioridad","#fc-estado","#fc-search"].forEach(sel=> $(sel).addEventListener("input", refresh));
+  $("#fc-study-filtered").addEventListener("click", ()=>{ if(fcList.length) startFlashcardSession(fcList.map(c=>c.canonicalId), 0); else O.toast("No hay tarjetas con estos filtros"); });
+  $("#fc-study-pending").addEventListener("click", ()=>{
+    const pending = O.filterFlashcards(Object.assign(currentFilters(), {estado:"pendiente"}));
+    if(pending.length) startFlashcardSession(pending.map(c=>c.canonicalId), 0); else O.toast("No quedan tarjetas pendientes con estos filtros");
+  });
+  refreshTopics();
+  refresh();
+}
+
+function startFlashcardSession(ids, startIndex){
+  fcSession = { ids, index: startIndex||0, revealed:false };
+  go("flashcards-study");
+}
+
+function renderFlashcardsStudy(){
+  if(!fcSession || !fcSession.ids.length){ go("flashcards"); return; }
+  if(fcSession.index >= fcSession.ids.length) fcSession.index = fcSession.ids.length-1;
+  const c = O.F_BY_ID[fcSession.ids[fcSession.index]];
+  if(!c){ go("flashcards"); return; }
+  if(!fcSession.revealed) O.markFlashcardSeen(c.canonicalId);
+  const dominada = O.getFlashcardState(c.canonicalId)==="dominada";
+  mainEl().innerHTML = `
+  <div class="view view-narrow">
+    <div class="session-shell" style="max-width:640px;">
+      <div class="session-topbar">
+        <button class="exit" id="fc-exit">${icon('arrowL')} Salir</button>
+        <span class="counter">Tarjeta ${fcSession.index+1} de ${fcSession.ids.length}</span>
+      </div>
+      <div class="session-progress"><i style="width:${Math.round(((fcSession.index+1)/fcSession.ids.length)*100)}%"></i></div>
+      <div class="surface qcard flashcard-surface" id="fc-card" style="padding:var(--sp-7); text-align:center; cursor:pointer;">
+        <div class="qcard-meta" style="justify-content:center;">
+          <span class="tag tag-type">${cardTypeLabel(c.cardType)}</span>
+          ${c.priority==="alta" ? `<span class="tag">★ Prioridad alta</span>` : ''}
+          ${dominada ? `<span class="tag" style="color:var(--good);">Dominada</span>` : ''}
+        </div>
+        <h3 style="margin-top:var(--sp-5);">${O.escapeHtml(c.front)}</h3>
+        <div id="fc-back" class="${fcSession.revealed?'':'hidden'}" style="margin-top:var(--sp-5); padding-top:var(--sp-5); border-top:1px solid var(--border); color:var(--text-2);">${O.escapeHtml(c.back)}</div>
+        ${!fcSession.revealed ? `<p style="margin-top:var(--sp-5); font-size:12px; color:var(--text-3);">Toca la tarjeta para ver el dorso</p>` : ''}
+      </div>
+      <div class="action-grid" style="margin-top:var(--sp-5);">
+        <button class="action-card" id="fc-mastered"><div class="t">${dominada?'Quitar "dominada"':'Marcar dominada'}</div><div class="d">${dominada?'Volver a repasarla':'Ya me la sé'}</div></button>
+        <button class="action-card" id="fc-review-again"><div class="t">Repasar de nuevo</div><div class="d">Seguir estudiándola</div></button>
+      </div>
+      <div class="qnav-footer">
+        <button class="btn btn-outline btn-sm" id="fc-prev" ${fcSession.index===0?"disabled":""}>${icon('arrowL')}</button>
+        <span class="pos">${fcSession.index+1} / ${fcSession.ids.length}</span>
+        <button class="btn btn-primary btn-sm" id="fc-next">${fcSession.index===fcSession.ids.length-1?"Terminar":"Siguiente"}</button>
+      </div>
+    </div>
+  </div>`;
+  $("#fc-exit").addEventListener("click", ()=>{ fcSession=null; go("flashcards"); });
+  $("#fc-card").addEventListener("click", ()=>{ fcSession.revealed = !fcSession.revealed; renderFlashcardsStudy(); });
+  $("#fc-mastered").addEventListener("click", (e)=>{ e.stopPropagation(); O.setFlashcardMastered(c.canonicalId, !dominada); renderFlashcardsStudy(); });
+  $("#fc-review-again").addEventListener("click", (e)=>{ e.stopPropagation(); O.setFlashcardMastered(c.canonicalId, false); renderFlashcardsStudy(); });
+  $("#fc-prev").addEventListener("click", ()=>{ fcSession.index = Math.max(0, fcSession.index-1); fcSession.revealed=false; renderFlashcardsStudy(); });
+  $("#fc-next").addEventListener("click", ()=>{
+    if(fcSession.index === fcSession.ids.length-1){ fcSession=null; O.toast("Sesión de flashcards terminada"); go("flashcards"); return; }
+    fcSession.index++; fcSession.revealed=false; renderFlashcardsStudy();
+  });
 }
 
 /* ---------------------------------------------------------------

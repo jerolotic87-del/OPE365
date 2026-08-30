@@ -31,6 +31,7 @@ ICONS_SETTINGS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" str
 def main():
     data_raw = read("questions_all.json").replace("</script", "<\\/script")
     taxonomy_raw = read("taxonomy_data.js")
+    flashcards_raw = read("flashcards_data.js")
     css = read("styles.css")
     app_js = read("app.js")
     mp_js = read("multiplayer.js")
@@ -71,6 +72,9 @@ window.__OPE365_DATA__ = {data_raw};
 </script>
 <script>
 {taxonomy_raw}
+</script>
+<script>
+{flashcards_raw}
 </script>
 <script>
 {app_js}

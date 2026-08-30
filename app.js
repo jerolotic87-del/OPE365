@@ -51,7 +51,8 @@ function defaultProgress(){
       onboarded:false
     },
     currentSession: null,  // in-progress exam/practice session for recovery
-    challenges: {}          // challengeId -> registro de reto (ver sección 9)
+    challenges: {},          // challengeId -> registro de reto (ver sección 9)
+    flashcards: {}            // canonicalId -> {dominada, vecesVista, ultimaVez} (ver sección 10)
   };
 }
 let PROGRESS = loadProgress();
@@ -935,6 +936,84 @@ function compareResults(a, b){
 }
 
 /* ---------------------------------------------------------------
+   10. FLASHCARDS — recurso independiente del banco de preguntas.
+   Dataset propio (flashcards_data.js, generado desde data/flashcards/).
+   canonicalId = "<section>:<cardId>" evita colisiones entre secciones
+   futuras que reutilicen numeración tipo F-01. Estado de estudio
+   (dominada/vecesVista) vive en PROGRESS.flashcards, separado del
+   progreso de preguntas -- una flashcard nunca es una pregunta.
+   Base deliberadamente simple: sin repetición espaciada todavía.
+--------------------------------------------------------------- */
+const RAW_FLASHCARDS = window.__OPE365_FLASHCARDS__ || [];
+
+function validateFlashcards(list){
+  const report = { total:list.length, valid:0, invalid:0, invalidIds:[], duplicateIds:[] };
+  const seen = {};
+  const valid = [];
+  list.forEach(c=>{
+    let ok = true;
+    if(!c.cardId || !c.section || !c.front || !c.back) ok = false;
+    const canonical = c.section + ":" + c.cardId;
+    if(seen[canonical]) report.duplicateIds.push(canonical);
+    seen[canonical] = (seen[canonical]||0)+1;
+    if(ok){
+      c.canonicalId = canonical;
+      report.valid++;
+      valid.push(c);
+    } else {
+      report.invalid++;
+      report.invalidIds.push(canonical);
+    }
+  });
+  return { report, valid };
+}
+const { report: FLASHCARD_INTEGRITY_REPORT, valid: FLASHCARDS } = validateFlashcards(RAW_FLASHCARDS);
+const F_BY_ID = {}; FLASHCARDS.forEach(c=> F_BY_ID[c.canonicalId]=c);
+const FLASHCARD_TOPIC_REGISTRY = Array.from(new Set(FLASHCARDS.map(c=>c.topic).filter(Boolean))).sort();
+
+function getFlashcardState(cid){
+  const st = PROGRESS.flashcards[cid];
+  return (st && st.dominada) ? "dominada" : "pendiente";
+}
+function markFlashcardSeen(cid){
+  const prev = PROGRESS.flashcards[cid] || { dominada:false, vecesVista:0, ultimaVez:null };
+  PROGRESS.flashcards[cid] = Object.assign({}, prev, { vecesVista: prev.vecesVista+1, ultimaVez: Date.now() });
+  persist();
+}
+function setFlashcardMastered(cid, dominada){
+  const prev = PROGRESS.flashcards[cid] || { dominada:false, vecesVista:0, ultimaVez:null };
+  PROGRESS.flashcards[cid] = Object.assign({}, prev, { dominada: !!dominada });
+  persist();
+}
+
+function filterFlashcards(opts){
+  opts = opts || {};
+  return FLASHCARDS.filter(c=>{
+    if(opts.section && opts.section!=="all" && c.section!==opts.section) return false;
+    if(opts.topic && opts.topic!=="all" && c.topic!==opts.topic) return false;
+    if(opts.subtopic && opts.subtopic!=="all" && c.subtopic!==opts.subtopic) return false;
+    if(opts.cardType && opts.cardType!=="all" && c.cardType!==opts.cardType) return false;
+    if(opts.priority && opts.priority!=="all" && c.priority!==opts.priority) return false;
+    if(opts.estado && opts.estado!=="all"){
+      const st = getFlashcardState(c.canonicalId);
+      if(st!==opts.estado) return false;
+    }
+    if(opts.search){
+      const s = opts.search.toLowerCase();
+      const hay = (c.front+" "+c.back+" "+(c.topic||"")+" "+(c.subtopic||"")).toLowerCase();
+      if(!hay.includes(s)) return false;
+    }
+    return true;
+  });
+}
+
+function computeFlashcardStats(){
+  const total = FLASHCARDS.length;
+  const dominadas = FLASHCARDS.filter(c=> getFlashcardState(c.canonicalId)==="dominada").length;
+  return { total, dominadas, pendientes: total-dominadas };
+}
+
+/* ---------------------------------------------------------------
    EXPOSE
 --------------------------------------------------------------- */
 window.OPE = {
@@ -954,6 +1033,8 @@ window.OPE = {
   makeShareCode, parseShareCode, shareCodeForSession, shareCodeForQuestion, shareCodeForSelection,
   sessionFromTestPayload, createChallenge, importChallengeCode, sessionForChallenge,
   completeChallengeAttempt, compareResults, shareCodeForReturnResult, importReturnedResult,
+  FLASHCARDS, F_BY_ID, FLASHCARD_INTEGRITY_REPORT, FLASHCARD_TOPIC_REGISTRY,
+  getFlashcardState, markFlashcardSeen, setFlashcardMastered, filterFlashcards, computeFlashcardStats,
 };
 
 })();
