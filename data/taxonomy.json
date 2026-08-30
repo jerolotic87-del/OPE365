@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "note": "Taxonomía pedagógica global de OPE365. Independiente de sourceFile/bloque (que son procedencia, no temario). Los bloques sin 'topics' todavía no se han clasificado con criterio -- ver CLAUDE.md, Etapa 8 del plan de migración: no reclasificar las preguntas existentes de golpe, solo Vista por ahora.",
+  "sections": [
+    { "id": "interfaz", "name": "Interfaz", "order": 1, "topics": [] },
+    { "id": "archivo", "name": "Archivo", "order": 2, "topics": [
+      { "id": "imprimir", "name": "Imprimir", "subtopics": ["Vista Preliminar"],
+        "note": "Nodo creado durante la integración de Vista: la Vista Preliminar procede del corpus de Vista pero su ubicación funcional verificada es Archivo → Imprimir, no el Grupo Vistas. Ver VISTA_PROCESADA_PARA_OPE365.md §12." }
+    ] },
+    { "id": "inicio", "name": "Inicio", "order": 3, "topics": [] },
+    { "id": "insertar", "name": "Insertar", "order": 4, "topics": [] },
+    { "id": "diseno", "name": "Diseño", "order": 5, "topics": [] },
+    { "id": "disposicion", "name": "Disposición", "order": 6, "topics": [] },
+    { "id": "referencias", "name": "Referencias", "order": 7, "topics": [] },
+    { "id": "revisar", "name": "Revisar", "order": 8, "topics": [] },
+    { "id": "vista", "name": "Vista", "order": 9, "topics": [
+      { "id": "vistas", "name": "Vistas", "subtopics": [
+        "Modo de lectura", "Diseño de impresión", "Diseño Web", "Vista Esquema", "Vista Borrador"
+      ] },
+      { "id": "inmersivo", "name": "Inmersivo", "subtopics": [
+        "Concentración", "Lector inmersivo"
+      ] },
+      { "id": "movimiento-pagina", "name": "Movimiento de página", "subtopics": [] },
+      { "id": "mostrar", "name": "Mostrar", "subtopics": [
+        "Regla", "Líneas de la cuadrícula", "Panel de navegación"
+      ] },
+      { "id": "zoom", "name": "Zoom", "subtopics": [
+        "Valores", "Cuadro de diálogo"
+      ] },
+      { "id": "ventana", "name": "Ventana", "subtopics": [
+        "Nueva ventana", "Dividir", "Ver en paralelo", "Organizar todo",
+        "Desplazamiento sincrónico", "Restablecer posición de la ventana", "Cambiar ventanas"
+      ] },
+      { "id": "macros", "name": "Macros", "subtopics": [] },
+      { "id": "sharepoint", "name": "SharePoint", "subtopics": [] }
+    ] },
+    { "id": "correspondencia", "name": "Correspondencia", "order": 10, "topics": [] }
+  ]
+}

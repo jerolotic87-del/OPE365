@@ -65,6 +65,7 @@ function persist(){
    1. DATASET + VALIDACIÓN DE INTEGRIDAD
 --------------------------------------------------------------- */
 const RAW_QUESTIONS = window.__OPE365_DATA__ || [];
+const TAXONOMY = window.__OPE365_TAXONOMY__ || { version:0, sections:[] };
 
 function validateDataset(list){
   const report = { total:list.length, valid:0, invalid:0, invalidIds:[], bySource:{}, byType:{}, duplicateIds:[] };
@@ -193,6 +194,13 @@ QUESTIONS.forEach(q=>{
   const h = contentHash(q);
   if(q.contentHash !== h){ q.contentHash = h; changes.push("contentHash calculado"); }
   if(q.topicId === undefined){ q.topicId = q.tema ? TOPIC_ID_BY_NAME[q.tema] : null; changes.push("vinculada a registro de temas"); }
+  // Taxonomía pedagógica nueva (section/topic/subtopic), independiente de
+  // sourceFile/bloque/tema (que siguen siendo procedencia). Aditivo y
+  // nulo por defecto: no se reclasifica el banco existente de golpe,
+  // solo se garantiza que el campo exista para quien lo consulte.
+  if(q.section === undefined){ q.section = null; changes.push("section=null por defecto"); }
+  if(q.topic === undefined){ q.topic = null; changes.push("topic=null por defecto"); }
+  if(q.subtopic === undefined){ q.subtopic = null; changes.push("subtopic=null por defecto"); }
   if(changes.length){
     migrationLog.push({ originalId:q.id, canonicalId:q.id, changes, status:"MIGRATED" });
   }
@@ -250,6 +258,11 @@ function buildMigrationReport(){
   };
 }
 const MIGRATION_REPORT = buildMigrationReport();
+
+// Registro de taxonomía pedagógica (section > topic > subtopic), leído de
+// taxonomy_data.js. Ordenado por 'order'; el dato crudo también se expone
+// tal cual por si hace falta la forma original (notas, ids, etc.).
+const TAXONOMY_SECTIONS = (TAXONOMY.sections || []).slice().sort((a,b)=>(a.order||0)-(b.order||0));
 
 /* ---------------------------------------------------------------
    2. UTILIDADES
@@ -899,6 +912,7 @@ window.OPE = {
   STORE, storageIsLocal, PROGRESS, persist,
   QUESTIONS, Q_BY_ID, ALL_SOURCES, ALL_TEMAS, ALL_TYPES, ALL_CATEGORIAS, INTEGRITY_REPORT,
   EXERCISE_TYPES, TYPE_LABELS, CATEGORY_REGISTRY, CATEGORY_LABELS, TOPIC_REGISTRY, SOURCE_REGISTRY,
+  TAXONOMY, TAXONOMY_SECTIONS,
   contentHash, MIGRATION_REPORT, RANDOMIZATION_ALGORITHM_VERSION,
   shuffle, seededShuffle, mulberry32, makeSeed, escapeHtml, renderBlank, fmtTime, fmtDate, toast, uid,
   randomizeQuestionView, filterQuestions, getQuestionState, isMarked,

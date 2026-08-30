@@ -8,9 +8,14 @@ Uso:
     python3 build.py
 Genera: OPE365_Word365_Estudio.html en esta misma carpeta.
 
-Ejecuta esto después de editar questions_all.json, app.js, views.js,
-multiplayer.js o styles.css, si quieres un único archivo para compartir
-(por ejemplo, mandárselo a alguien que no vaya a clonar la carpeta).
+Ejecuta esto después de editar app.js, views.js, multiplayer.js o
+styles.css, si quieres un único archivo para compartir (por ejemplo,
+mandárselo a alguien que no vaya a clonar la carpeta).
+
+Si lo que has editado es contenido de preguntas o taxonomía (cualquier
+cosa bajo data/), ejecuta antes `python3 build_data.py` para regenerar
+questions_all.json, questions_data.js y taxonomy_data.js — build.py lee
+esos artefactos generados, no data/ directamente.
 """
 import os
 
@@ -25,6 +30,7 @@ ICONS_SETTINGS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" str
 
 def main():
     data_raw = read("questions_all.json").replace("</script", "<\\/script")
+    taxonomy_raw = read("taxonomy_data.js")
     css = read("styles.css")
     app_js = read("app.js")
     mp_js = read("multiplayer.js")
@@ -62,6 +68,9 @@ def main():
 
 <script>
 window.__OPE365_DATA__ = {data_raw};
+</script>
+<script>
+{taxonomy_raw}
 </script>
 <script>
 {app_js}
