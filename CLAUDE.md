@@ -7,8 +7,9 @@ tiene reglas de fuente estrictas que no son negociables.
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
 de Word 365 de una oposición de ayuntamiento. 952 preguntas del banco
-original + un primer bloque de Vista integrado (97 preguntas, 55
-flashcards), práctica/examen con corrección inmediata, compartir por
+original + bloques por pestaña integrados aparte: Vista (97 preguntas, 55
+flashcards) y Revisar (70 preguntas, 49 flashcards) —
+práctica/examen con corrección inmediata, compartir por
 código, desafíos asíncronos con resultado sellado, un mazo de flashcards
 (frente/dorso, sin repetición espaciada todavía), y dos modos multijugador
 en tiempo real (Duelo y Farol) sobre WebRTC vía PeerJS.
@@ -103,6 +104,12 @@ silencio ni elijas arbitrariamente.
   `"generado": true`) cubren atajos de `ATAJOS.docx` que no tenían ninguna
   pregunta, incluyendo variantes alternativas de un mismo comando
   (ej. Guardar tiene 3 atajos válidos, ahora las 3 tienen pregunta propia).
+- **`Alt+Mayús+F7` abre el Traductor** en un panel a la derecha —
+  confirmado por prueba en vivo del usuario (no aparece en `ATAJOS.docx`).
+  Lo usan `revision-2` y `revision-51`.
+- **`Ctrl+Mayús+E` activa/desactiva el control de cambios** ("Activar o
+  desactivar marcas de revisión" en `ATAJOS.docx`) — ya lo usaban
+  `8-121`/`8-154` del banco heredado y ahora también el bloque Revisar.
 
 ## Modelo de datos (questions_all.json)
 
@@ -155,10 +162,10 @@ archivo 169, inicio 131, vista 121 (61 de vista.json + 60 del banco
 heredado que resultaron ser genuinamente de esa pestaña: dividir
 ventana, vista Esquema, atajos de macros...), insertar 47, revisar 9,
 referencias 8, correspondencia 7, disposición 3, diseño 0 (la única
-sección todavía sin preguntas reales). Nota: `vista.json` creció después
-a 97 preguntas (correcciones del usuario, ago-2026), así que la sección
-`vista` ronda ahora las 157 — los recuentos de arriba son la foto del
-momento de la reclasificación, no un contador vivo. El script combina reglas por
+sección todavía sin preguntas reales). Nota: después (ago-2026) se
+integraron `vista.json` (97 preguntas → sección `vista` ~157) y
+`revision.json` (70 preguntas → sección `revisar` ~79); los recuentos de
+arriba son la foto del momento de la reclasificación, no un contador vivo. El script combina reglas por
 palabra clave (verificadas contra el contenido real de cada bloque, no
 adivinadas) con una reserva por bloque para enunciados sin palabra
 distintiva propia ("señale la afirmación que NO es correcta") — si

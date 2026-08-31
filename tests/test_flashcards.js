@@ -30,19 +30,23 @@ async function main(){
     b.remove();
   }
 
-  assert(O.FLASHCARDS.length === 55, "se cargan las 55 flashcards");
+  // Recuentos derivados de los datos (el banco de flashcards crece por
+  // secciones: vista, revision, ...), no hardcodeados.
+  const totalCards = O.FLASHCARDS.length;
+  const altaCards = O.FLASHCARDS.filter(c=>c.priority==="alta").length;
+  assert(totalCards >= 55, `se cargan las flashcards (${totalCards})`);
   assert(O.FLASHCARD_INTEGRITY_REPORT.invalid === 0, "0 flashcards inválidas");
 
   clickGoto("flashcards");
   const items = window.document.querySelectorAll(".qlist-item");
-  assert(items.length === 55, "el hub de flashcards lista las 55 sin filtros");
+  assert(items.length === totalCards, `el hub de flashcards lista las ${totalCards} sin filtros`);
 
   // Filtrar por prioridad alta
   const prioSel = window.document.getElementById("fc-prioridad");
   prioSel.value = "alta";
   prioSel.dispatchEvent(new window.Event("input"));
   const itemsAlta = window.document.querySelectorAll(".qlist-item");
-  assert(itemsAlta.length === 26, `filtro de prioridad alta da 26 tarjetas (obtenidas ${itemsAlta.length})`);
+  assert(itemsAlta.length === altaCards, `filtro de prioridad alta da ${altaCards} tarjetas (obtenidas ${itemsAlta.length})`);
 
   // Iniciar sesión desde la primera tarjeta filtrada
   itemsAlta[0].click();
@@ -59,10 +63,10 @@ async function main(){
   assert(O.getFlashcardState(firstCanonical)==="dominada", "marcar dominada actualiza el estado");
 
   window.document.getElementById("fc-next").click();
-  assert(window.document.querySelector(".pos").textContent.trim()==="2 / 26", "avanza a la siguiente tarjeta (2/26)");
+  assert(window.document.querySelector(".pos").textContent.trim()===`2 / ${altaCards}`, `avanza a la siguiente tarjeta (2/${altaCards})`);
 
   window.document.getElementById("fc-prev").click();
-  assert(window.document.querySelector(".pos").textContent.trim()==="1 / 26", "retrocede a la tarjeta anterior (1/26)");
+  assert(window.document.querySelector(".pos").textContent.trim()===`1 / ${altaCards}`, `retrocede a la tarjeta anterior (1/${altaCards})`);
 
   window.document.getElementById("fc-exit").click();
   assert(O.Nav.view === "flashcards", "salir vuelve al hub de flashcards");
