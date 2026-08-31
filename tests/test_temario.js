@@ -48,8 +48,10 @@ async function main(){
   const vistaCount = O.filterQuestions({section:"vista"}).length;
   assert(vistaCount > 61, `Vista incluye preguntas del banco heredado además de vista.json (${vistaCount} > 61)`);
   assert(window.document.getElementById("td-preguntas").textContent.includes(String(vistaCount)), `muestra ${vistaCount} preguntas clasificadas en Vista`);
-  assert(window.document.getElementById("td-flashcards").textContent.includes("46"), "muestra 46 flashcards en Vista");
-  assert(window.document.getElementById("td-errores").textContent.includes("7"), "muestra 7 fichas de error en Vista");
+  const vistaCards = O.FLASHCARDS.filter(c=> c.section==="vista");
+  const vistaErrores = vistaCards.filter(c=> c.cardType==="error").length;
+  assert(window.document.getElementById("td-flashcards").textContent.includes(String(vistaCards.length)), `muestra ${vistaCards.length} flashcards en Vista`);
+  assert(window.document.getElementById("td-errores").textContent.includes(String(vistaErrores)), `muestra ${vistaErrores} fichas de error en Vista`);
 
   window.document.getElementById("td-preguntas").click();
   assert(O.getSession() && O.getSession().questions.length===vistaCount, `iniciar 'Preguntas' arranca una sesión con las ${vistaCount} preguntas de Vista`);

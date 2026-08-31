@@ -30,19 +30,19 @@ async function main(){
     b.remove();
   }
 
-  assert(O.FLASHCARDS.length === 46, "se cargan las 46 flashcards");
+  assert(O.FLASHCARDS.length === 55, "se cargan las 55 flashcards");
   assert(O.FLASHCARD_INTEGRITY_REPORT.invalid === 0, "0 flashcards inválidas");
 
   clickGoto("flashcards");
   const items = window.document.querySelectorAll(".qlist-item");
-  assert(items.length === 46, "el hub de flashcards lista las 46 sin filtros");
+  assert(items.length === 55, "el hub de flashcards lista las 55 sin filtros");
 
   // Filtrar por prioridad alta
   const prioSel = window.document.getElementById("fc-prioridad");
   prioSel.value = "alta";
   prioSel.dispatchEvent(new window.Event("input"));
   const itemsAlta = window.document.querySelectorAll(".qlist-item");
-  assert(itemsAlta.length === 24, `filtro de prioridad alta da 24 tarjetas (obtenidas ${itemsAlta.length})`);
+  assert(itemsAlta.length === 26, `filtro de prioridad alta da 26 tarjetas (obtenidas ${itemsAlta.length})`);
 
   // Iniciar sesión desde la primera tarjeta filtrada
   itemsAlta[0].click();
@@ -59,10 +59,10 @@ async function main(){
   assert(O.getFlashcardState(firstCanonical)==="dominada", "marcar dominada actualiza el estado");
 
   window.document.getElementById("fc-next").click();
-  assert(window.document.querySelector(".pos").textContent.trim()==="2 / 24", "avanza a la siguiente tarjeta (2/24)");
+  assert(window.document.querySelector(".pos").textContent.trim()==="2 / 26", "avanza a la siguiente tarjeta (2/26)");
 
   window.document.getElementById("fc-prev").click();
-  assert(window.document.querySelector(".pos").textContent.trim()==="1 / 24", "retrocede a la tarjeta anterior (1/24)");
+  assert(window.document.querySelector(".pos").textContent.trim()==="1 / 26", "retrocede a la tarjeta anterior (1/26)");
 
   window.document.getElementById("fc-exit").click();
   assert(O.Nav.view === "flashcards", "salir vuelve al hub de flashcards");
