@@ -101,7 +101,11 @@ silencio ni elijas arbitrariamente.
   Ctrl+N/S/K para negrita/subrayado/cursiva, Ctrl+L=Reemplazar,
   Ctrl+H=Sangría, Ctrl+F=Sangría francesa, Ctrl+I=Ir a — **distinto del
   esquema internacional en inglés**. Confirmado por `ATAJOS.docx` +
-  PDF de la academia + prueba en vivo del usuario.
+  PDF de la academia + prueba en vivo del usuario. **Ctrl+F NO es
+  "sangría de primera línea"** (el banco `inicio.json` venía de aulaclic
+  con ese error; corregido en `inicio-250/251/252/264/275/276`). Otros de
+  sangría: `Ctrl+Mayús+H` = reducir sangría francesa, `Ctrl+Mayús+R` =
+  quitar toda la sangría (`atajos_oficial.json`).
 - **Ctrl+R no hace absolutamente nada** en esta instalación (Word 365
   español de España). No aparece en `ATAJOS.docx`. No es Ctrl+R quien
   alinea a la derecha — es Ctrl+D. Prueba en vivo del usuario.

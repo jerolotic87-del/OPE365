@@ -9263,7 +9263,7 @@
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Párrafo",
     "tipo": "opcion_unica",
-    "enunciado": "¿Qué atajo aplica o quita la sangría de primera línea en Word 365?",
+    "enunciado": "¿Qué atajo aplica o quita la sangría francesa en Word 365 (versión española)?",
     "opciones": [
       {
         "letter": "A",
@@ -9284,7 +9284,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "En la versión española de Word 365, Ctrl+F aplica o quita la sangría de primera línea al párrafo seleccionado. Ctrl+M abre el cuadro de diálogo Fuente. Ctrl+T centra el párrafo. Es importante no confundir Ctrl+F español con Ctrl+F inglés, que en la versión inglesa abre el cuadro de búsqueda.",
+    "explicacion": "En la versión española de Word 365, Ctrl+F aplica o quita la sangría francesa: la primera línea del párrafo se queda donde está y el resto de líneas se separan del margen izquierdo. Ctrl+M abre el cuadro de diálogo Fuente. Ctrl+T centra el párrafo. Ctrl+Mayús+F activa el campo de fuente en la cinta. (En la versión inglesa Ctrl+F abre el buscador.)",
     "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
@@ -9299,7 +9299,7 @@
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Párrafo",
     "tipo": "opcion_unica",
-    "enunciado": "¿Qué atajo aplica o quita la sangría francesa en Word 365?",
+    "enunciado": "¿Qué atajo reduce la sangría francesa de un párrafo en Word 365 (versión española)?",
     "opciones": [
       {
         "letter": "A",
@@ -9307,11 +9307,11 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl + Mayús + F"
+        "text": "Ctrl + F"
       },
       {
         "letter": "C",
-        "text": "Ctrl + F"
+        "text": "Ctrl + Mayús + F"
       },
       {
         "letter": "D",
@@ -9320,7 +9320,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "En la versión española de Word 365, Ctrl+Mayús+H aplica o quita la sangría francesa al párrafo seleccionado. Ctrl+F aplica la sangría de primera línea. Ctrl+Mayús+M quita la sangría izquierda. Estos atajos corresponden a la versión española y están verificados en fuentes de oposiciones españolas.",
+    "explicacion": "Ctrl+Mayús+H reduce la sangría francesa ya aplicada. Ctrl+F la aplica o la quita del todo. Ctrl+Mayús+F activa el campo de nombre de fuente en la cinta y Ctrl+Mayús+M el de tamaño de fuente: ninguno de los dos toca la sangría. Confirmado en atajos_oficial.json.",
     "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
@@ -9341,37 +9341,37 @@
       "left": [
         {
           "id": "1",
-          "label": "Ctrl + M"
+          "label": "Ctrl + H"
         },
         {
           "id": "2",
-          "label": "Ctrl + Mayús + M"
-        },
-        {
-          "id": "3",
           "label": "Ctrl + F"
         },
         {
-          "id": "4",
+          "id": "3",
           "label": "Ctrl + Mayús + H"
+        },
+        {
+          "id": "4",
+          "label": "Ctrl + Mayús + R"
         }
       ],
       "right": [
         {
           "id": "A",
-          "label": "Aumenta la sangría izquierda un nivel"
+          "label": "Aplica sangría (izquierda) al párrafo"
         },
         {
           "id": "B",
-          "label": "Disminuye la sangría izquierda un nivel"
+          "label": "Aplica o quita la sangría francesa"
         },
         {
           "id": "C",
-          "label": "Aplica o quita la sangría de primera línea"
+          "label": "Reduce la sangría francesa"
         },
         {
           "id": "D",
-          "label": "Aplica o quita la sangría francesa"
+          "label": "Quita toda la sangría del párrafo"
         },
         {
           "id": "E",
@@ -9391,7 +9391,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Ctrl+M aumenta la sangría izquierda un nivel. Ctrl+Mayús+M la disminuye. Ctrl+F aplica o quita la sangría de primera línea. Ctrl+Mayús+H aplica o quita la sangría francesa. El distractor E (Fuente) corresponde a Ctrl+M en otros contextos pero en el grupo Párrafo la función documentada es la sangría.",
+    "explicacion": "Ctrl+H aplica sangría izquierda. Ctrl+F aplica o quita la sangría francesa (primera línea fija, resto sangrado). Ctrl+Mayús+H reduce la sangría francesa. Ctrl+Mayús+R quita toda la sangría. El distractor E (abrir el cuadro Fuente) es Ctrl+M, que no es un atajo de sangría.",
     "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
@@ -9934,7 +9934,7 @@
       "C",
       "E"
     ],
-    "explicacion": "En la versión española de Word 365: Ctrl+N es negrita, Ctrl+K es cursiva, Ctrl+S es subrayado sencillo y Ctrl+B abre el panel de navegación. La opción D es incorrecta porque Ctrl+F en español aplica sangría de primera línea, no abre el buscador. Ctrl+F como buscar es el atajo de la versión inglesa.",
+    "explicacion": "En la versión española de Word 365: Ctrl+N es negrita, Ctrl+K es cursiva, Ctrl+S es subrayado sencillo y Ctrl+B abre el panel de navegación. La opción D es incorrecta porque Ctrl+F en español aplica la sangría francesa, no abre el buscador (eso es Ctrl+F en la versión inglesa).",
     "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
@@ -10314,7 +10314,7 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+F (español: sangría primera línea / inglés: buscar)"
+        "text": "Ctrl+F (español: sangría francesa / inglés: buscar)"
       },
       {
         "letter": "D",
@@ -10332,7 +10332,7 @@
       "C",
       "D"
     ],
-    "explicacion": "Los atajos A, B, C y D tienen comportamiento diferente entre versiones. Ctrl+E: español selecciona todo, inglés centra. Ctrl+B: español abre panel navegación, inglés aplica negrita. Ctrl+F: español aplica sangría de primera línea, inglés abre buscar. Ctrl+L: español abre Reemplazar, inglés alinea a la izquierda. El atajo E (Ctrl+Z) es universal y se comporta igual en ambas versiones: deshace la última acción. Fuentes: aulaclic.es y Scribd Ayto.Madrid.",
+    "explicacion": "Los atajos A, B, C y D tienen comportamiento diferente entre versiones. Ctrl+E: español selecciona todo, inglés centra. Ctrl+B: español abre el panel de navegación, inglés aplica negrita. Ctrl+F: español aplica la sangría francesa, inglés abre el buscador. Ctrl+L: español abre Reemplazar, inglés alinea a la izquierda. Ctrl+Z es universal: deshace en ambas versiones.",
     "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
@@ -10383,7 +10383,7 @@
         },
         {
           "id": "C",
-          "label": "Aplicar o quitar sangría de primera línea"
+          "label": "Aplicar o quitar la sangría francesa"
         },
         {
           "id": "D",
@@ -10413,7 +10413,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Versión española confirmada por aulaclic.es y Scribd Ayto.Madrid: Ctrl+E selecciona todo (inglés: centra). Ctrl+B abre navegación (inglés: negrita). Ctrl+F sangría primera línea (inglés: buscar). Ctrl+L reemplazar (inglés: alinear izquierda). Ctrl+T centra (inglés: tabulación). El distractor F (negrita) corresponde a Ctrl+N en español, no a ninguno de estos atajos.",
+    "explicacion": "Versión española de Word 365: Ctrl+E selecciona todo (inglés: centra). Ctrl+B abre navegación (inglés: negrita). Ctrl+F aplica la sangría francesa (inglés: buscar). Ctrl+L abre Reemplazar (inglés: alinear a la izquierda). Ctrl+T centra (inglés: tabulación). El distractor F (negrita) corresponde a Ctrl+N en español.",
     "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
