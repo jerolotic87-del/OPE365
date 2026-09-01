@@ -143,20 +143,25 @@ function renderHome(){
     <div class="section-block">
       <div class="section-title"><h3>Estudiar</h3></div>
       <div class="action-grid">
-        <button class="action-card" data-goto="test-wizard" data-params='{"mode":"practice"}'>
+        <button class="action-card" data-goto="practica">
           <div class="ic">${icon('study')}</div>
-          <div class="t">Práctica</div>
-          <div class="d">Corrección inmediata, a tu ritmo</div>
+          <div class="t">Practicar</div>
+          <div class="d">Configura una sesión en segundos</div>
         </button>
-        <button class="action-card" data-goto="test-wizard" data-params='{"mode":"exam"}'>
-          <div class="ic">${icon('tests')}</div>
-          <div class="t">Test</div>
-          <div class="d">Simulacro con tiempo y sin pistas</div>
+        <button class="action-card" data-goto="flashcards">
+          <div class="ic">${icon('cards')}</div>
+          <div class="t">Flashcards</div>
+          <div class="d">Repaso rápido frente/dorso</div>
         </button>
         <button class="action-card" id="home-errors">
           <div class="ic">${icon('errors')}</div>
           <div class="t">Repasar errores</div>
           <div class="d">${s.incorrect} preguntas falladas</div>
+        </button>
+        <button class="action-card" data-goto="mp-setup">
+          <div class="ic">${icon('challenge')}</div>
+          <div class="t">Duelo en vivo</div>
+          <div class="d">Reto en tiempo real con otra persona</div>
         </button>
       </div>
     </div>
@@ -289,21 +294,39 @@ const WIZARD_STEPS_PRACTICE = 3; // qué / cuántas / avanzado(preview)
 function wizardTotalSteps(){ return wizardState.mode==="exam" ? WIZARD_STEPS_EXAM : WIZARD_STEPS_PRACTICE; }
 
 function renderWizardStep(){
-  const total = wizardTotalSteps();
-  const dots = Array.from({length:total}).map((_,i)=>{
-    const n = i+1;
-    return `<div class="wizard-dot ${n<wizardState.step?'done':n===wizardState.step?'current':''}"></div>`;
-  }).join("");
+  const names = wizardState.mode==="exam"
+    ? ["Contenido","Preguntas","Tiempo","Resumen"]
+    : ["Contenido","Preguntas","Resumen"];
+  const stepper = names.map((nm,i)=>{
+    const n = i+1, cls = n<wizardState.step ? "done" : n===wizardState.step ? "current" : "";
+    return `<div class="wz-step ${cls}"><span class="wz-num">${n<wizardState.step?"✓":n}</span><span class="wz-lbl">${nm}</span></div>`;
+  }).join(`<span class="wz-sep"></span>`);
 
   mainEl().innerHTML = `
   <div class="view view-narrow">
     <div class="view-head">
       <button class="btn btn-ghost btn-sm" data-goto="${wizardState.mode==='exam'?'progress':'home'}" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Cancelar</button>
-      <h1>${wizardState.mode==="exam"?"Crear test":"Configurar práctica"}</h1>
+      <p class="eyebrow">Práctica</p>
+      <h1>Configura tu sesión</h1>
     </div>
-    <div class="wizard-steps">${dots}</div>
+    ${wizardState.step===1 ? `
+    <div class="segmented wz-mode" style="margin-bottom:var(--sp-5);">
+      <button class="seg ${wizardState.mode!=='exam'?'on':''}" data-mode="practice">Práctica</button>
+      <button class="seg ${wizardState.mode==='exam'?'on':''}" data-mode="exam">Examen</button>
+    </div>
+    <p class="wz-mode-hint">${wizardState.mode==='exam' ? 'Sin corrección ni explicaciones hasta el final; con cronómetro opcional.' : 'Corrección y explicación inmediata después de cada pregunta.'}</p>
+    ` : ``}
+    <div class="wz-stepper">${stepper}</div>
     <div id="wizard-body"></div>
   </div>`;
+
+  if(wizardState.step===1){
+    $$(".wz-mode .seg").forEach(b=> b.addEventListener("click", ()=>{
+      if(b.getAttribute("data-mode")===wizardState.mode) return;
+      wizardState.mode = b.getAttribute("data-mode");
+      renderWizardStep();
+    }));
+  }
 
   if(wizardState.step===1) renderWizardWhat();
   else if(wizardState.step===2) renderWizardCount();
@@ -322,12 +345,12 @@ function renderWizardWhat(){
     {id:"errores", t:"Preguntas falladas", d:"Repasar tus errores"},
   ];
   body.innerHTML = `
-    <p style="font-size:13px; color:var(--text-2); margin-bottom:var(--sp-4);">¿Qué quieres practicar?</p>
+    <h3 class="wz-q">¿Qué quieres practicar?</h3>
     <div class="choice-grid" id="wiz-scope">
       ${scopes.map(s=>`<button class="choice-card ${wizardState.scope===s.id?'selected':''}" data-scope="${s.id}"><div class="t">${s.t}</div><div class="d">${s.d}</div></button>`).join("")}
     </div>
-    <div id="wiz-scope-detail" style="margin-top:var(--sp-5);"></div>
-    <div style="margin-top:var(--sp-6);"><button class="btn btn-solid btn-block" id="wiz-next">Continuar ${icon('chevronR')}</button></div>
+    <div id="wiz-scope-detail"></div>
+    <div style="margin-top:var(--sp-6);"><button class="btn btn-solid btn-block btn-lg" id="wiz-next">Continuar ${icon('chevronR')}</button></div>
   `;
   renderScopeDetail();
   $$("#wiz-scope .choice-card").forEach(c=>{
@@ -342,11 +365,13 @@ function renderWizardWhat(){
 
   function renderScopeDetail(){
     const el = $("#wiz-scope-detail");
+    el.className = "";
     if(wizardState.scope==="tema"){
       const sections = O.TAXONOMY_SECTIONS;
+      el.className = "config-panel";
       el.innerHTML = `
         <div class="field"><label>Pestaña</label><select id="wiz-section">${sections.map(s=>`<option value="${s.id}">${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
-        <div class="field" style="margin-top:10px;"><label>Grupo</label><select id="wiz-topic"></select></div>
+        <div class="field" style="margin-bottom:0;"><label>Grupo</label><select id="wiz-topic"></select></div>
       `;
       if(wizardState.section==="all") wizardState.section = sections[0].id;
       $("#wiz-section").value = wizardState.section;
@@ -364,7 +389,8 @@ function renderWizardWhat(){
       $("#wiz-section").addEventListener("change", ()=>{ wizardState.section=$("#wiz-section").value; wizardState.topic="all"; refreshTopicSelect(); });
       $("#wiz-topic").addEventListener("change", ()=> wizardState.topic = $("#wiz-topic").value);
     } else if(wizardState.scope==="tipo"){
-      el.innerHTML = `<div class="pill-row" id="wiz-tipo-pills">
+      el.className = "config-panel";
+      el.innerHTML = `<label class="cp-label">Tipo de ejercicio</label><div class="pill-row" id="wiz-tipo-pills">
         ${Object.entries(O.TYPE_LABELS).map(([v,l])=>`<button class="pill ${wizardState.tipo===v?'active':''}" data-v="${v}">${l}</button>`).join("")}
       </div>`;
       if(wizardState.tipo==="all") wizardState.tipo="opcion_unica";
@@ -373,7 +399,8 @@ function renderWizardWhat(){
         p.addEventListener("click", ()=>{ wizardState.tipo=p.getAttribute("data-v"); $$("#wiz-tipo-pills .pill").forEach(x=>x.classList.remove("active")); p.classList.add("active"); });
       });
     } else if(wizardState.scope==="categoria"){
-      el.innerHTML = `<div class="pill-row" id="wiz-cat-pills">
+      el.className = "config-panel";
+      el.innerHTML = `<label class="cp-label">Dimensión</label><div class="pill-row" id="wiz-cat-pills">
         ${O.CATEGORY_REGISTRY.filter(c=>c.id!=="general").map(c=>`<button class="pill ${wizardState.categoria===c.id?'active':''}" data-v="${c.id}">${c.name}</button>`).join("")}
       </div>`;
       if(wizardState.categoria==="all") wizardState.categoria = O.CATEGORY_REGISTRY.find(c=>c.id!=="general").id;
@@ -391,36 +418,36 @@ function renderWizardCount(){
   const body = $("#wizard-body");
   const counts = [10,20,30,50,100,"todas"];
   body.innerHTML = `
-    <p style="font-size:13px; color:var(--text-2); margin-bottom:var(--sp-4);">¿Cuántas preguntas?</p>
-    <div class="pill-row" id="wiz-count-pills">
-      ${counts.map(c=>`<button class="pill ${String(wizardState.count)===String(c)?'active':''}" data-c="${c}">${c==="todas"?"Todas":c}</button>`).join("")}
+    <h3 class="wz-q">¿Cuántas preguntas?</h3>
+    <div class="segmented segmented-wrap" id="wiz-count-pills">
+      ${counts.map(c=>`<button class="seg ${String(wizardState.count)===String(c)?'on':''}" data-c="${c}">${c==="todas"?"Todas":c}</button>`).join("")}
     </div>
     <details class="advanced" style="margin-top:var(--sp-5);">
       <summary>Opciones avanzadas</summary>
-      <div class="config-grid" style="margin-top:var(--sp-4);">
+      <div class="config-panel" style="margin-top:var(--sp-3);">
         <div class="field"><label>Orden de preguntas</label><select id="wiz-order">
           <option value="aleatorio" ${wizardState.qOrder==='aleatorio'?'selected':''}>Aleatorio</option>
           <option value="fuente" ${wizardState.qOrder==='fuente'?'selected':''}>Orden de fuente</option>
           <option value="tematico" ${wizardState.qOrder==='tematico'?'selected':''}>Temático</option>
           <option value="dificultad" ${wizardState.qOrder==='dificultad'?'selected':''}>Por tipo de ejercicio</option>
         </select></div>
-        <div class="field"><label>Orden de respuestas</label><div class="pill-row" id="wiz-shuffle-pills">
-          <button class="pill ${wizardState.shuffleOptions?'active':''}" data-v="1">Aleatorio</button>
-          <button class="pill ${!wizardState.shuffleOptions?'active':''}" data-v="0">Original</button>
+        <div class="field" style="margin-bottom:0;"><label>Orden de respuestas</label><div class="segmented" id="wiz-shuffle-pills">
+          <button class="seg ${wizardState.shuffleOptions?'on':''}" data-v="1">Aleatorio</button>
+          <button class="seg ${!wizardState.shuffleOptions?'on':''}" data-v="0">Original</button>
         </div></div>
       </div>
     </details>
     <div style="margin-top:var(--sp-6); display:flex; gap:10px;">
       <button class="btn btn-outline" id="wiz-back">${icon('arrowL')}</button>
-      <button class="btn btn-solid btn-block" id="wiz-next">Continuar ${icon('chevronR')}</button>
+      <button class="btn btn-solid btn-block btn-lg" id="wiz-next">Continuar ${icon('chevronR')}</button>
     </div>
   `;
-  $$("#wiz-count-pills .pill").forEach(p=>{
-    p.addEventListener("click", ()=>{ wizardState.count=p.getAttribute("data-c"); $$("#wiz-count-pills .pill").forEach(x=>x.classList.remove("active")); p.classList.add("active"); });
+  $$("#wiz-count-pills .seg").forEach(p=>{
+    p.addEventListener("click", ()=>{ wizardState.count=p.getAttribute("data-c"); $$("#wiz-count-pills .seg").forEach(x=>x.classList.remove("on")); p.classList.add("on"); });
   });
   $("#wiz-order").addEventListener("change", ()=> wizardState.qOrder = $("#wiz-order").value);
-  $$("#wiz-shuffle-pills .pill").forEach(p=>{
-    p.addEventListener("click", ()=>{ wizardState.shuffleOptions = p.getAttribute("data-v")==="1"; $$("#wiz-shuffle-pills .pill").forEach(x=>x.classList.remove("active")); p.classList.add("active"); });
+  $$("#wiz-shuffle-pills .seg").forEach(p=>{
+    p.addEventListener("click", ()=>{ wizardState.shuffleOptions = p.getAttribute("data-v")==="1"; $$("#wiz-shuffle-pills .seg").forEach(x=>x.classList.remove("on")); p.classList.add("on"); });
   });
   $("#wiz-back").addEventListener("click", ()=>{ wizardState.step=1; renderWizardStep(); });
   $("#wiz-next").addEventListener("click", ()=>{ wizardState.step++; renderWizardStep(); });
@@ -429,18 +456,18 @@ function renderWizardCount(){
 function renderWizardTime(){
   const body = $("#wizard-body");
   body.innerHTML = `
-    <p style="font-size:13px; color:var(--text-2); margin-bottom:var(--sp-4);">¿Con tiempo o sin tiempo?</p>
+    <h3 class="wz-q">¿Con cronómetro?</h3>
     <div class="choice-grid" id="wiz-time-pills">
       <button class="choice-card ${wizardState.timed!==false?'selected':''}" data-v="timed"><div class="t">Con tiempo</div><div class="d">Simulacro real</div></button>
-      <button class="choice-card ${wizardState.timed===false?'selected':''}" data-v="free"><div class="t">Sin tiempo</div><div class="d">A tu ritmo, sin cronómetro</div></button>
+      <button class="choice-card ${wizardState.timed===false?'selected':''}" data-v="free"><div class="t">Sin tiempo</div><div class="d">A tu ritmo</div></button>
     </div>
-    <div class="field" id="wiz-minutes-field" style="margin-top:var(--sp-5); ${wizardState.timed===false?'display:none;':''}">
-      <label>Minutos</label>
-      <input type="number" id="wiz-minutes" value="${wizardState.minutes}" min="1" max="240">
+    <div class="config-panel" id="wiz-minutes-field" style="margin-top:var(--sp-4); ${wizardState.timed===false?'display:none;':''}">
+      <div class="field" style="margin-bottom:0;"><label>Minutos</label>
+      <input type="number" id="wiz-minutes" value="${wizardState.minutes}" min="1" max="240"></div>
     </div>
     <div style="margin-top:var(--sp-6); display:flex; gap:10px;">
       <button class="btn btn-outline" id="wiz-back">${icon('arrowL')}</button>
-      <button class="btn btn-solid btn-block" id="wiz-next">Continuar ${icon('chevronR')}</button>
+      <button class="btn btn-solid btn-block btn-lg" id="wiz-next">Continuar ${icon('chevronR')}</button>
     </div>
   `;
   wizardState.timed = wizardState.timed !== false;
@@ -484,17 +511,17 @@ function renderWizardPreview(){
   body.innerHTML = `
     <div class="test-preview">
       <div class="big">${n}</div>
-      <div class="sub">preguntas</div>
+      <div class="sub">preguntas${config.count!=="todas" && n<Number(config.count) ? " (todas las disponibles)" : ""}</div>
       <div class="meta-row">
+        <span>Modo: <b>${config.mode==="exam"?"Examen":"Práctica"}</b></span>
         <span>Tiempo: <b>${config.minutes ? config.minutes+" min" : "libre"}</b></span>
         <span>Tipos: <b>${typesInSet.size}</b></span>
-        <span>Modo: <b>${config.mode==="exam"?"Test":"Práctica"}</b></span>
       </div>
     </div>
     ${n===0 ? `<p style="text-align:center; color:var(--bad); font-size:13px; margin-top:var(--sp-4);">No hay preguntas disponibles con esta configuración.</p>` : ``}
     <div style="margin-top:var(--sp-6); display:flex; gap:10px;">
       <button class="btn btn-outline" id="wiz-back">${icon('arrowL')}</button>
-      <button class="btn btn-solid btn-block" id="wiz-start" ${n===0?'disabled':''}>${config.mode==="exam"?"Comenzar test":"Comenzar práctica"}</button>
+      <button class="btn btn-solid btn-block btn-lg" id="wiz-start" ${n===0?'disabled':''}>${icon('play')} ${config.mode==="exam"?"Empezar examen":"Empezar práctica"}</button>
     </div>
   `;
   $("#wiz-back").addEventListener("click", ()=>{ wizardState.step = wizardState.mode==="exam" ? 3 : 2; renderWizardStep(); });
@@ -1287,17 +1314,18 @@ function renderTemarioDetalle(params){
 --------------------------------------------------------------- */
 function renderProgress(){
   const s = O.computeStats();
+  const challenges = Object.values(O.PROGRESS.challenges||{});
+  const hist = O.PROGRESS.history.slice().reverse();
   mainEl().innerHTML = `
   <div class="view">
     <div class="view-head"><p class="eyebrow">Progreso</p><h1>Tu rendimiento</h1><p>Sigue tu avance y detecta tus puntos débiles antes del examen.</p></div>
+
     <div class="section-block">
       <div class="section-title"><h3>Rendimiento general</h3></div>
       <div class="stat-row">
-        <div class="stat-cell"><div class="num">${s.total}</div><div class="label">Total</div></div>
-        <div class="stat-cell accent"><div class="num">${s.answered}</div><div class="label">Respondidas</div></div>
+        <div class="stat-cell accent"><div class="num">${s.answered}</div><div class="label">Respondidas · de ${s.total}</div></div>
         <div class="stat-cell good"><div class="num">${s.correct}</div><div class="label">Acertadas</div></div>
         <div class="stat-cell bad"><div class="num">${s.incorrect}</div><div class="label">Falladas</div></div>
-        <div class="stat-cell"><div class="num">${s.unanswered}</div><div class="label">Sin responder</div></div>
         <div class="stat-cell accent"><div class="num">${s.markedCount}</div><div class="label">Marcadas</div></div>
       </div>
       <div style="display:flex; align-items:center; gap:14px; margin-top:var(--sp-4);">
@@ -1305,19 +1333,80 @@ function renderProgress(){
         <strong style="font-family:var(--font-mono); font-size:14px;">${s.accuracy}%</strong>
       </div>
     </div>
+
     <div class="section-block">
-      <div class="section-title"><h3>Por tema</h3></div>
+      <div class="section-title"><h3>Repasar</h3></div>
+      <div class="nav-list">
+        <button class="nav-row" id="pg-errores" ${s.incorrect?'':'disabled'}>
+          <span class="nr-ic">${icon('errors')}</span><span class="nr-title">Preguntas falladas</span>
+          <span class="nr-meta">${s.incorrect}</span><span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+        <button class="nav-row" id="pg-marcadas" ${s.markedCount?'':'disabled'}>
+          <span class="nr-ic">${icon('bookmark')}</span><span class="nr-title">Preguntas marcadas</span>
+          <span class="nr-meta">${s.markedCount}</span><span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title"><h3>Por grupo</h3></div>
       ${renderRankList(s.byTema)}
     </div>
+
     <div class="section-block">
-      <div class="section-title"><h3>Cobertura por fuente</h3></div>
-      <ul class="mini-list">${O.ALL_SOURCES.map(src=>{
-        const total = O.QUESTIONS.filter(q=>q.sourceFile===src).length;
-        const ans = O.QUESTIONS.filter(q=>q.sourceFile===src && O.PROGRESS.answers[q.id]).length;
-        return `<li><span class="mini-row-main">${src}</span><span class="mini-row-sub">${ans}/${total}</span></li>`;
-      }).join("")}</ul>
+      <div class="section-title"><h3>Cobertura por pestaña</h3></div>
+      <div class="progress-list">${O.TAXONOMY_SECTIONS.filter(sec=>{
+        return O.QUESTIONS.some(q=>q.section===sec.id);
+      }).map(sec=>{
+        const p = sectionProgress(sec.id);
+        return `<button class="progress-row" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
+          <div class="pr-main"><div class="pr-name">${O.escapeHtml(sec.name)}</div><div class="pr-meta">${p.answered} / ${p.total} vistas</div></div>
+          <div class="pr-bar"><div class="bar-track"><i style="width:${p.pct}%"></i></div></div>
+          <div class="pr-pct">${p.pct}%</div><span class="pr-chev">${icon('chevronR')}</span>
+        </button>`;
+      }).join("")}</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title"><h3>Retos y actividad</h3></div>
+      <div class="nav-list">
+        <button class="nav-row" data-goto="test-wizard" data-params='{"mode":"exam"}'>
+          <span class="nr-ic">${icon('tests')}</span><span class="nr-title">Crear examen</span><span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+        <button class="nav-row" data-goto="mp-setup">
+          <span class="nr-ic">${icon('challenge')}</span><span class="nr-title">Duelo en vivo</span>
+          <span class="nr-meta">tiempo real</span><span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+        <button class="nav-row" data-goto="challenges">
+          <span class="nr-ic">${icon('challenge')}</span><span class="nr-title">Desafíos asíncronos</span>
+          <span class="nr-meta">${challenges.length}</span><span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+        <button class="nav-row" data-goto="history">
+          <span class="nr-ic">${icon('history')}</span><span class="nr-title">Historial de sesiones</span>
+          <span class="nr-meta">${O.PROGRESS.history.length}</span><span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+        <button class="nav-row" id="pg-codigo">
+          <span class="nr-ic">${icon('code')}</span><span class="nr-title">Introducir código</span>
+          <span class="nr-meta">pregunta · test · reto</span><span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+      </div>
+      ${hist.length ? `<ul class="mini-list" style="margin-top:var(--sp-3);">${hist.slice(0,4).map(h=>`
+        <li><span class="mini-row-main">${h.mode==="exam"?"Examen":"Práctica"} · ${h.correct}/${h.total} (${h.accuracy}%)</span><span class="mini-row-sub">${O.fmtDate(h.finishedAt)}</span></li>
+      `).join("")}</ul>` : ``}
     </div>
   </div>`;
+
+  const errBtn = $("#pg-errores");
+  if(errBtn) errBtn.addEventListener("click", ()=>{
+    const s2 = O.buildSession({mode:"practice", scope:"errores", count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
+    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No tienes preguntas falladas pendientes");
+  });
+  const mkBtn = $("#pg-marcadas");
+  if(mkBtn) mkBtn.addEventListener("click", ()=>{
+    const s2 = O.buildSession({mode:"practice", scope:"marcadas", count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
+    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("Aún no has marcado ninguna pregunta");
+  });
+  $("#pg-codigo").addEventListener("click", openCodeImportModal);
 }
 function renderRankList(byTema){
   const rows = Object.entries(byTema).filter(([,v])=>v.answered>0).map(([k,v])=>({tema:k, pct:Math.round((v.correct/v.answered)*100), answered:v.answered}))
