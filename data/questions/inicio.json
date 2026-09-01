@@ -3553,7 +3553,7 @@
         },
         {
           "id": "2",
-          "label": "Ctrl + Mayús + 2"
+          "label": "Alt + Ctrl + 2"
         },
         {
           "id": "3",
@@ -3561,7 +3561,7 @@
         },
         {
           "id": "4",
-          "label": "Ctrl + Mayús + 4"
+          "label": "Ctrl + Mayús + A"
         }
       ],
       "right": [
@@ -3579,11 +3579,11 @@
         },
         {
           "id": "D",
-          "label": "Título 4"
+          "label": "Estilo Normal"
         },
         {
           "id": "E",
-          "label": "Título 5"
+          "label": "Título 4"
         }
       ],
       "correct": {
@@ -3599,7 +3599,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Los atajos Ctrl+Mayús+1, 2, 3 y 4 aplican respectivamente los estilos Título 1, Título 2, Título 3 y Título 4. Son atajos de teclado confirmados para la versión española de Word 365.",
+    "explicacion": "En esta instalación: Ctrl+Mayús+1 aplica Título 1 y Ctrl+Mayús+3 aplica Título 3, pero Título 2 es Alt+Ctrl+2 (Ctrl+Mayús+2 NO hace nada). Ctrl+Mayús+A aplica el estilo Normal. Distractor E: Título 4 no tiene atajo directo fiable.",
     "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
@@ -9353,7 +9353,7 @@
         },
         {
           "id": "4",
-          "label": "Ctrl + Mayús + R"
+          "label": "Ctrl + W"
         }
       ],
       "right": [
@@ -9371,7 +9371,7 @@
         },
         {
           "id": "D",
-          "label": "Quita toda la sangría del párrafo"
+          "label": "Quita el formato de párrafo, sangrías incluidas"
         },
         {
           "id": "E",
@@ -9391,7 +9391,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Ctrl+H aplica sangría izquierda. Ctrl+F aplica o quita la sangría francesa (primera línea fija, resto sangrado). Ctrl+Mayús+H reduce la sangría francesa. Ctrl+Mayús+R quita toda la sangría. El distractor E (abrir el cuadro Fuente) es Ctrl+M, que no es un atajo de sangría.",
+    "explicacion": "Ctrl+H aplica sangría izquierda. Ctrl+F aplica o quita la sangría francesa (primera línea fija, resto sangrado). Ctrl+Mayús+H reduce la sangría francesa. Ctrl+W quita todo el formato de párrafo, sangrías incluidas. Ojo: Ctrl+Mayús+R, al que la tabla oficial asigna 'quitar sangría', NO funciona en esta instalación. El distractor E (cuadro Fuente) es Ctrl+M.",
     "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
@@ -13071,7 +13071,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+1 aplica el estilo Título 1 al párrafo. Alt+Ctrl+1 también aplica el estilo Título 1 como atajo alternativo. Ctrl+1 aplica interlineado sencillo. Alt+Mayús+1 muestra solo los títulos de nivel 1 en la vista Esquema.",
+    "explicacion": "Ctrl+Mayús+1 aplica el estilo Título 1 al párrafo (prueba en vivo). Ctrl+1 aplica interlineado sencillo. Alt+Mayús+1 muestra solo los títulos de nivel 1 en la vista Esquema. Alt+Ctrl+1 no aparece en la tabla oficial de atajos.",
     "negativa": false,
     "sourceIssue": null,
     "qnumInSource": "272",
@@ -13501,28 +13501,28 @@
     "tema": "PREGUNTAS DE SÍNTESIS Y CONFUSIÓN ALTA",
     "tipo": "opcion_unica",
     "categoria": "atajo",
-    "enunciado": "¿Qué atajo quita la sangría del párrafo activo en Word 365?",
+    "enunciado": "En esta instalación de Word 365, ¿qué atajo elimina las sangrías de un párrafo (junto con el resto de su formato de párrafo)?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+R"
+        "text": "Ctrl+W"
       },
       {
         "letter": "B",
-        "text": "Ctrl+R"
+        "text": "Ctrl+Mayús+R"
       },
       {
         "letter": "C",
-        "text": "Ctrl+H"
+        "text": "Ctrl+R"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+H"
+        "text": "Ctrl+H"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+R quita la sangría del párrafo. Ctrl+R no aparece en la tabla oficial (atajos_oficial.json): no tiene acción asignada. Ctrl+H aplica sangría. Ctrl+Mayús+H reduce la sangría francesa.",
+    "explicacion": "Ctrl+W quita todo el formato de párrafo, sangrías incluidas (prueba en vivo). Ctrl+Mayús+R y Ctrl+R no hacen nada en esta versión, aunque la tabla oficial asigne a Ctrl+Mayús+R 'quitar sangría'. Ctrl+H aplica sangría, no la quita.",
     "negativa": false,
     "sourceIssue": null,
     "qnumInSource": "283",

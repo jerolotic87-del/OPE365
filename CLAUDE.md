@@ -111,6 +111,15 @@ silencio ni elijas arbitrariamente.
   el campo Tamaño. NO son atajos de sangría y NO activan la caja de la
   cinta: abren el diálogo. Prueba en vivo del usuario. Afectó a
   `inicio-25/251/354/355`.
+- **`Ctrl+Mayús+R` NO quita la sangría** en esta instalación, aunque
+  `atajos_oficial.json` le asigne "Quitar sangría". Para quitar sangrías
+  se usa `Ctrl+W` (quita todo el formato de párrafo). Prueba en vivo.
+  Afectó a `inicio-252/352`.
+- **Estilos de título** (prueba en vivo): `Ctrl+Mayús+1` → Título 1,
+  **`Alt+Ctrl+2` → Título 2** (`Ctrl+Mayús+2` NO hace nada),
+  `Ctrl+Mayús+3` → Título 3. El banco `inicio.json` nuevo tenía
+  `Ctrl+Mayús+2` → Título 2 (mal); corregido en `inicio-93/341`. El banco
+  heredado (`inicio-342/343`) ya lo tenía bien.
 - **Ctrl+R no hace absolutamente nada** en esta instalación (Word 365
   español de España). No aparece en `ATAJOS.docx`. No es Ctrl+R quien
   alinea a la derecha — es Ctrl+D. Prueba en vivo del usuario.
