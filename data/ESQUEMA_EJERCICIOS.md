@@ -1,5 +1,13 @@
 # Esquema de ejercicios OPE365 — para generar `data/questions/*.json`
 
+> **Nota (ago-2026):** el banco ya está normalizado. Formato canónico por
+> pregunta: `id` = `"<section>-<n>"`, `sourceFile` = `"<section>.json"`,
+> `bloque` = `"<Sección> — <Grupo>"`, `tema` = `"<Grupo>"` (todo derivado de
+> `data/taxonomy.json`). **No** uses `sourcePage`, `blockRange`,
+> `sourceIssue`, `qnumInSource`, `esCompletarBlank`, `versionIssue`,
+> `topicId` (se eliminaron). `generado` solo si es `true`. Para reclasificar
+> o reagrupar, mira `scripts/normalize_bank.py` como patrón.
+
 La app solo entiende **5 tipos** de ejercicio. Cualquier otro (`distincion`,
 `ordenacion`, `clasificacion`, etc.) hay que remapearlo a uno de estos o se
 descarta.
