@@ -81,3 +81,31 @@ Paso posterior a la reagrupación. `inicio.json`: 417 → 393.
 - **`categoria: "procedimiento"`** (80 preguntas, "¿qué botón/opción
   usar?") remapeada a **`ruta`** — el registro de `app.js` vuelve a ser
   exactamente `atajo/ruta/concepto/general`.
+
+## Normalización total del banco (`scripts/normalize_bank.py`)
+
+Último paso. 1381 → **1325 preguntas**.
+
+- **Borradas 56** verdadero/falso auto-generadas (`8vf-*`) que quedaban en
+  interfaz/archivo/insertar/referencias/revisar/vista/correspondencia (las
+  de inicio ya se habían borrado antes). Eran reescrituras mecánicas
+  "Afirmación para valorar: «¿...?» — Respuesta propuesta: X".
+- **`bloque` regenerado** para las 1325: `"<Sección> — <Grupo>"` a partir
+  de section+topic de la taxonomía. Se acabaron los `"1"`, `"AH"`, `"A"`,
+  `"Atajos oficiales (Personalizar teclado)"`, `"Inicio — Parrafo"` sin
+  tilde, etc. `tema` = `"<Grupo>"`.
+- **Campos muertos eliminados** en todas: `qnumInSource`, `sourcePage`,
+  `blockRange`, `sourceIssue`, `esCompletarBlank`, `versionIssue`,
+  `topicId`. `generado` solo se conserva cuando es `true` (73 preguntas).
+- **Orden de claves canónico** y `matching: null` explícito en todas.
+- **Taxonomía** (`data/taxonomy.json`):
+  - `inicio > parrafo` → 7 grupos: Marcas de formato, Alineación, Sangría,
+    Espaciado e interlineado, Bordes y sombreado, Listas/viñetas/numeración,
+    Tabulaciones. Las 25 preguntas heredadas de `topic:"parrafo"` se
+    reclasificaron por contenido (9 de ellas eran en realidad de `estilos`).
+  - `vista` y `revisar` → nuevo grupo `estructura` (14 preguntas que
+    estaban con `topic: null`: "¿en qué grupo está X?", ubicación de la
+    pestaña, recuentos).
+- `scripts/normalize_id_map.json` (21 ids desplazados por las bajas).
+
+Verificado: `verify_bank` OK, 6/6 tests jsdom, `build_data.py` + `build.py`.

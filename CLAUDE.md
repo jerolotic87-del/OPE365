@@ -6,13 +6,13 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. 952 preguntas del banco
-original + bloques por pestaña integrados aparte: Vista (97 preguntas, 55
-flashcards) y Revisar (70 preguntas, 49 flashcards) —
-práctica/examen con corrección inmediata, compartir por
-código, desafíos asíncronos con resultado sellado, un mazo de flashcards
-(frente/dorso, sin repetición espaciada todavía), y dos modos multijugador
-en tiempo real (Duelo y Farol) sobre WebRTC vía PeerJS.
+de Word 365 de una oposición de ayuntamiento. **1325 preguntas** y 104
+flashcards, todo el banco normalizado y agrupado por pestaña de la cinta
+(`data/questions/<section>.json`). Práctica/examen con corrección
+inmediata, compartir por código, desafíos asíncronos con resultado
+sellado, un mazo de flashcards (frente/dorso, sin repetición espaciada
+todavía), y dos modos multijugador en tiempo real (Duelo y Farol) sobre
+WebRTC vía PeerJS.
 
 ## Estructura de archivos (desarrollo local)
 
@@ -140,7 +140,7 @@ silencio ni elijas arbitrariamente.
   Lo usan `revision-2` y `revision-51`.
 - **`Ctrl+Mayús+E` activa/desactiva el control de cambios** ("Activar o
   desactivar marcas de revisión" en `ATAJOS.docx`) — ya lo usaban
-  `8-121`/`8-154` del banco heredado y ahora también el bloque Revisar.
+  el banco heredado (hoy `revisar-*`) y el bloque Revisar.
 - **`Ctrl+Mayús+S` = Subrayado** (prueba en vivo del usuario + coincide
   con `atajos_oficial.json`) y **`Ctrl+Mayús+W` = Panel Aplicar estilos**.
   El banco `inicio.json` nuevo venía de aulaclic diciendo que Ctrl+Mayús+S
@@ -195,36 +195,34 @@ app siempre ve un único banco lógico (`QUESTIONS`) — `build_data.py` los
 concatena según `data/questions/manifest.json` (ordenado por
 `taxonomy.order`) antes de generar `questions_all.json`.
 
-`data/taxonomy.json` define la jerarquía pedagógica. `bloque` sigue
-siendo procedencia (no temario), pero `sourceFile` ahora **coincide** con
-`section` — el troceo físico y el temario ya no son ejes independientes
-para el grueso del banco (excepción: una pregunta puede vivir en el
-archivo de su `section` aunque su procedencia fuese otra pestaña, p.ej.
-la de Vista Preliminar quedó en `archivo.json` con `bloque` "Vista …").
-Jerarquía: `section` (p.ej. `"vista"`) → `topic` (p.ej. `"zoom"`) →
-`subtopic` libre.
+`data/taxonomy.json` define la jerarquía `section` → `topic` → `subtopic`.
+**El banco está totalmente normalizado** (`scripts/normalize_bank.py`,
+one-shot, ago-2026): todas las preguntas tienen exactamente el mismo
+juego de campos y `sourceFile` = `<section>.json`, `id` = `<section>-<n>`,
+`bloque` = `"<Sección> — <Grupo>"` (derivado de la taxonomía),
+`tema` = `"<Grupo>"`. Campos muertos eliminados (`qnumInSource`,
+`sourcePage`, `blockRange`, `sourceIssue`, `esCompletarBlank`,
+`versionIssue`, `topicId`). `generado` solo aparece cuando es `true`.
+`difficulty` es opcional (solo en los bloques que lo traían). Excepción:
+una pregunta vive en el archivo de su `section` aunque su procedencia
+fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
+"Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
-**Todo el banco está clasificado y agrupado por `section`.** Recuento
-actual (`data/questions/<section>.json`, ago-2026): interfaz 519,
-inicio 417, archivo 170, vista 155, revisar 79, insertar 47,
-referencias 8, correspondencia 7, disposicion 3, diseno 0 (sin archivo,
-la única sección sin preguntas). La reclasificación del banco heredado
-(`scripts/classify_taxonomy.py`) combinó reglas por palabra clave
-(verificadas contra el contenido real, no adivinadas) con una reserva
-por bloque; la reagrupación física posterior es
-`scripts/regroup_by_section.py` (one-shot) + `scripts/regroup_id_map.json`
-(mapa id viejo→nuevo). Si hace falta reclasificar contenido nuevo, ese es
-el patrón a seguir, no una lista `tema` en texto libre.
+**Recuento actual** (`data/questions/<section>.json`, ago-2026):
+interfaz 516, inicio 393, archivo 133, vista 145, revisar 78, insertar 45,
+referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
+Total 1325. Historial: `data/questions_regroup_report.md`.
 
-**El campo `tema` (texto libre, heredado) ya no se usa para navegar/
-filtrar en la UI** — el asistente de práctica ("Por pestaña y grupo") y
-"Repasar preguntas" usan `section`/`topic` vía selects en cascada
-(`O.TAXONOMY_SECTIONS`), no el desplegable plano de `O.ALL_TEMAS` que
-mezclaba 48 valores sin jerarquía. `tema` se conserva en los datos por
-procedencia y porque `renderProgress` todavía desglosa el rendimiento
-por él (`computeStats().byTema`) — no se ha tocado esa pantalla.
-Excepción deliberada: el selector de tipo/tema del asistente de
-**multijugador** sigue igual (zona estable, fuera de alcance).
+Taxonomía: `inicio > parrafo` se abrió en 7 grupos
+(`parrafo-marcas`/`-alineacion`/`-sangria`/`-espaciado`/`-bordes`/
+`-listas`/`-tabulaciones`); `vista` y `revisar` tienen un grupo
+`estructura` (preguntas sobre grupos/ubicación de la pestaña).
+
+El campo `tema` ya no se usa para navegar (el asistente "Por pestaña y
+grupo" y "Repasar preguntas" usan `section`/`topic` vía
+`O.TAXONOMY_SECTIONS`); se conserva porque `computeStats().byTema`
+todavía desglosa el rendimiento por grupo en `renderProgress`. El
+selector del asistente de **multijugador** sigue igual (fuera de alcance).
 
 Las flashcards son un recurso independiente de las preguntas, en
 `data/flashcards/*.json` → `flashcards_data.js` →
