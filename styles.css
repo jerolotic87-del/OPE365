@@ -136,18 +136,40 @@ hr.div{ border:none; border-top:1px solid var(--border); margin:var(--sp-6) 0; }
 .hero-continue{
   border-radius:var(--radius-l); border:1px solid var(--border-2);
   background:linear-gradient(180deg, var(--raised), var(--surface));
-  padding:var(--sp-6); margin-bottom:var(--sp-7);
+  padding:var(--sp-6); margin-bottom:var(--sp-6);
   display:flex; align-items:center; justify-content:space-between; gap:var(--sp-5); flex-wrap:wrap;
 }
+.hero-continue.as-button{
+  appearance:none; width:100%; text-align:left; cursor:pointer; font:inherit; color:var(--text);
+  border-color:var(--accent-line); background:linear-gradient(180deg, var(--accent-dim), var(--raised));
+  transition:transform .12s var(--ease), box-shadow .16s var(--ease);
+}
+.hero-continue.as-button:hover{ transform:translateY(-1px); box-shadow:0 8px 24px -10px var(--accent-line); }
 .hero-continue .label{ font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-3); margin-bottom:6px; }
 .hero-continue h3{ margin:0 0 4px; font-size:18px; font-weight:700; }
 .hero-continue p{ margin:0; color:var(--text-2); font-size:13px; }
+.hero-continue .hc-go{ width:40px; height:40px; border-radius:50%; background:var(--accent); color:#06101F; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.hero-continue .hc-go svg{ width:17px; height:17px; }
+
+/* fila de estado compacta */
+.stat-strip{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border);
+  border:1px solid var(--border); border-radius:var(--radius-m); overflow:hidden; margin-bottom:var(--sp-7);
+}
+.stat-strip .ss-cell{ background:var(--surface); padding:var(--sp-4) var(--sp-3); text-align:center; }
+.stat-strip .ss-num{ font-family:var(--font-mono); font-size:22px; font-weight:700; color:var(--text); line-height:1; }
+.stat-strip .ss-num small{ font-size:13px; color:var(--text-2); }
+.stat-strip .ss-lbl{ margin-top:5px; font-size:10.5px; color:var(--text-3); line-height:1.3; }
+@media (max-width:520px){ .stat-strip{ grid-template-columns:repeat(2,1fr); } }
 
 .section-block{ margin-bottom:var(--sp-8); }
-.section-block > .section-title{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:var(--sp-4); }
+.section-block > .section-title{ display:flex; align-items:baseline; justify-content:space-between; gap:var(--sp-3); margin-bottom:var(--sp-4); }
 .section-title h3{ font-size:14px; font-weight:700; letter-spacing:.01em; margin:0; color:var(--text); }
+.section-title .section-hint{ font-size:11.5px; color:var(--text-3); }
 .section-title .link{ font-size:12.5px; color:var(--text-2); background:none; border:none; cursor:pointer; }
 .section-title .link:hover{ color:var(--accent-ink); }
+.action-card[disabled]{ opacity:.45; cursor:default; }
+.action-card[disabled]:hover{ transform:none; background:var(--surface); border-color:var(--border); }
 
 .action-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:var(--sp-3); }
 .action-card{
@@ -233,10 +255,15 @@ hr.div{ border:none; border-top:1px solid var(--border); margin:var(--sp-6) 0; }
 .bar-track.bad > i{ background:var(--bad); }
 
 .rank-list{ list-style:none; margin:0; padding:0; }
-.rank-list li{ display:grid; grid-template-columns:1fr auto 70px; align-items:center; gap:var(--sp-3); padding:9px 0; border-bottom:1px solid var(--border); font-size:13px; }
+.rank-list li{ display:grid; grid-template-columns:minmax(90px,1fr) minmax(60px,120px) 46px; align-items:center; gap:var(--sp-3); padding:9px 0; border-bottom:1px solid var(--border); font-size:13px; }
 .rank-list li:last-child{ border-bottom:none; }
 .rank-list .name{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.rank-list .rk-bar{ height:5px; border-radius:99px; background:var(--surface-2); overflow:hidden; }
+.rank-list .rk-bar > i{ display:block; height:100%; background:var(--accent); }
+.rank-list .rk-bar > i.bad{ background:var(--bad); } .rank-list .rk-bar > i.warn{ background:var(--warn); } .rank-list .rk-bar > i.good{ background:var(--good); }
 .rank-list .pct{ font-family:var(--font-mono); font-size:12.5px; color:var(--text-2); text-align:right; }
+.rank-list .pct.bad{ color:var(--bad); } .rank-list .pct.warn{ color:var(--warn); } .rank-list .pct.good{ color:var(--good); }
+.rank-foot{ font-size:11.5px; color:var(--text-3); margin:var(--sp-3) 0 0; }
 
 /* ---------------------------------------------------------------
    Botones

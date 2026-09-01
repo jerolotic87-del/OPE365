@@ -113,71 +113,86 @@ function badgeGlyph(qid){ const st=O.getQuestionState(qid); return st==="correct
 function toggleMark(qid){ if(O.PROGRESS.marked[qid]) delete O.PROGRESS.marked[qid]; else O.PROGRESS.marked[qid]=true; O.persist(); }
 
 /* ---------------------------------------------------------------
-   INICIO
+   INICIO — dashboard: continuar · estado · acciones
 --------------------------------------------------------------- */
+function dayKey(ts){ const d = new Date(ts); return d.getFullYear()+"-"+d.getMonth()+"-"+d.getDate(); }
+function studyStreak(){
+  const days = new Set();
+  Object.values(O.PROGRESS.answers||{}).forEach(a=>{ if(a && a.ultimaVez) days.add(dayKey(a.ultimaVez)); });
+  (O.PROGRESS.history||[]).forEach(h=>{ if(h && h.finishedAt) days.add(dayKey(h.finishedAt)); });
+  if(!days.size) return 0;
+  let streak = 0;
+  const d = new Date(); d.setHours(0,0,0,0);
+  if(!days.has(dayKey(d.getTime()))) d.setDate(d.getDate()-1);
+  while(days.has(dayKey(d.getTime()))){ streak++; d.setDate(d.getDate()-1); }
+  return streak;
+}
+
 function renderHome(){
   const s = O.computeStats();
+  const fc = O.computeFlashcardStats();
   const saved = O.PROGRESS.currentSession;
   const hasContinue = saved && !saved.finished && saved.questionIds && saved.questionIds.length;
   const pendingChallenges = Object.values(O.PROGRESS.challenges||{}).filter(c=>c.role==="recipient" && c.status!=="UNLOCKED" && c.status!=="COMPLETED");
-  const recent = O.PROGRESS.history.slice(-3).reverse();
+  const streak = studyStreak();
+  const last = O.PROGRESS.history.slice(-1)[0];
 
   mainEl().innerHTML = `
-  <div class="view">
+  <div class="view view-narrow">
     <div class="view-head">
-      <p class="eyebrow">Hola</p>
-      <h1>¿Qué quieres hacer hoy?</h1>
-      <p>Banco completo de ${s.total} preguntas de Word 365. ${s.answered} ya respondidas · ${s.accuracy}% de acierto.</p>
+      <p class="eyebrow">OPE365 · Word 365</p>
+      <h1>${hasContinue ? "Sigamos donde lo dejaste" : "¿Qué estudiamos hoy?"}</h1>
     </div>
 
     ${hasContinue ? `
-    <div class="hero-continue">
+    <button class="hero-continue as-button" id="home-continue">
       <div>
         <div class="label">Continuar</div>
-        <h3>Retoma tu sesión en curso</h3>
-        <p>${Object.keys(saved.responses||{}).length} de ${saved.questionIds.length} preguntas respondidas · ${saved.mode==="exam"?"Examen":"Práctica"}</p>
+        <h3>${saved.mode==="exam"?"Examen":"Práctica"} en curso</h3>
+        <p>${Object.keys(saved.responses||{}).length} de ${saved.questionIds.length} preguntas respondidas</p>
       </div>
-      <button class="btn btn-solid" id="home-continue">Continuar ${icon('chevronR')}</button>
-    </div>` : ``}
+      <span class="hc-go">${icon('play')}</span>
+    </button>` : ``}
+
+    <div class="stat-strip">
+      <div class="ss-cell"><div class="ss-num">${streak}</div><div class="ss-lbl">día${streak===1?'':'s'} de racha</div></div>
+      <div class="ss-cell"><div class="ss-num">${s.accuracy}<small>%</small></div><div class="ss-lbl">precisión</div></div>
+      <div class="ss-cell"><div class="ss-num">${s.incorrect}</div><div class="ss-lbl">falladas</div></div>
+      <div class="ss-cell"><div class="ss-num">${fc.pendientes}</div><div class="ss-lbl">flashcards</div></div>
+    </div>
 
     <div class="section-block">
-      <div class="section-title"><h3>Estudiar</h3></div>
+      <div class="section-title"><h3>Empezar</h3></div>
       <div class="action-grid">
         <button class="action-card" data-goto="practica">
-          <div class="ic">${icon('study')}</div>
-          <div class="t">Practicar</div>
+          <div class="ic">${icon('study')}</div><div class="t">Practicar</div>
           <div class="d">Configura una sesión en segundos</div>
         </button>
         <button class="action-card" data-goto="flashcards">
-          <div class="ic">${icon('cards')}</div>
-          <div class="t">Flashcards</div>
-          <div class="d">Repaso rápido frente/dorso</div>
+          <div class="ic">${icon('cards')}</div><div class="t">Flashcards</div>
+          <div class="d">${fc.pendientes} pendientes de repaso</div>
         </button>
-        <button class="action-card" id="home-errors">
-          <div class="ic">${icon('errors')}</div>
-          <div class="t">Repasar errores</div>
+        <button class="action-card" id="home-errors" ${s.incorrect?'':'disabled'}>
+          <div class="ic">${icon('errors')}</div><div class="t">Repasar errores</div>
           <div class="d">${s.incorrect} preguntas falladas</div>
         </button>
         <button class="action-card" data-goto="mp-setup">
-          <div class="ic">${icon('challenge')}</div>
-          <div class="t">Duelo en vivo</div>
+          <div class="ic">${icon('challenge')}</div><div class="t">Duelo en vivo</div>
           <div class="d">Reto en tiempo real con otra persona</div>
         </button>
       </div>
     </div>
 
-    <div class="section-block">
-      <div class="section-title"><h3>Progreso reciente</h3>${recent.length?`<button class="link" data-goto="progress">Ver todo</button>`:''}</div>
-      ${recent.length ? `<ul class="mini-list">${recent.map(h=>`
-        <li><span class="mini-row-main">${h.mode==="exam"?"Test":"Práctica"} · ${h.correct}/${h.total} (${h.accuracy}%)</span><span class="mini-row-sub">${O.fmtDate(h.finishedAt)}</span></li>
-      `).join("")}</ul>` : `<div class="empty-panel"><div class="glyph">${icon('progress')}</div><h4>Aún no hay actividad</h4><p>Completa tu primera sesión para ver aquí tu evolución.</p></div>`}
-    </div>
-
-    <div class="section-block">
-      <div class="section-title"><h3>Desafíos pendientes</h3>${pendingChallenges.length?`<button class="link" data-goto="challenges">Ver todos</button>`:''}</div>
-      ${pendingChallenges.length ? `<div style="display:flex; flex-direction:column; gap:8px;">${pendingChallenges.slice(0,3).map(c=>renderChallengeCardHtml(c)).join("")}</div>` :
-        `<div class="empty-panel"><div class="glyph">${icon('challenge')}</div><h4>Todavía no tienes desafíos</h4><p>Comparte un test con otra persona y podréis comparar resultados.</p><button class="btn btn-outline btn-sm" data-goto="challenges">Ver desafíos</button></div>`}
-    </div>
+    ${(pendingChallenges.length || last) ? `<div class="nav-list" style="margin-top:var(--sp-2);">
+      ${pendingChallenges.length ? `<button class="nav-row" data-goto="challenges">
+        <span class="nr-ic">${icon('challenge')}</span>
+        <span class="nr-title">${pendingChallenges.length} desafío${pendingChallenges.length===1?'':'s'} pendiente${pendingChallenges.length===1?'':'s'}</span>
+        <span class="nr-chev">${icon('chevronR')}</span></button>` : ``}
+      ${last ? `<button class="nav-row" data-goto="progress">
+        <span class="nr-ic">${icon('progress')}</span>
+        <span class="nr-title">Última sesión: ${last.mode==="exam"?"examen":"práctica"} ${last.correct}/${last.total} (${last.accuracy}%)</span>
+        <span class="nr-meta">${O.fmtDate(last.finishedAt)}</span><span class="nr-chev">${icon('chevronR')}</span></button>` : ``}
+    </div>` : ``}
   </div>`;
 
   if(hasContinue){
@@ -186,12 +201,12 @@ function renderHome(){
       O.setSession(hydrated); O.saveSessionSnapshot(); go("running");
     });
   }
-  $("#home-errors").addEventListener("click", ()=>{
+  const errBtn = $("#home-errors");
+  if(errBtn) errBtn.addEventListener("click", ()=>{
     const s2 = O.buildSession({mode:"practice", scope:"errores", count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
     if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); }
     else O.toast("No tienes preguntas falladas pendientes");
   });
-  $$("[data-challenge-open]").forEach(el=> el.addEventListener("click", ()=> go("challenge-detail",{challengeId:el.getAttribute("data-challenge-open")})));
 }
 
 function renderChallengeCardHtml(c){
@@ -1413,7 +1428,7 @@ function renderProgress(){
     </div>
 
     <div class="section-block">
-      <div class="section-title"><h3>Por grupo</h3></div>
+      <div class="section-title"><h3>Rendimiento por grupo</h3><span class="section-hint">los más flojos primero</span></div>
       ${renderRankList(s.byTema)}
     </div>
 
@@ -1473,10 +1488,19 @@ function renderProgress(){
   $("#pg-codigo").addEventListener("click", openCodeImportModal);
 }
 function renderRankList(byTema){
-  const rows = Object.entries(byTema).filter(([,v])=>v.answered>0).map(([k,v])=>({tema:k, pct:Math.round((v.correct/v.answered)*100), answered:v.answered}))
+  const rows = Object.entries(byTema).filter(([,v])=>v.answered>=2)
+    .map(([k,v])=>({tema:k, pct:Math.round((v.correct/v.answered)*100), answered:v.answered}))
     .sort((a,b)=>a.pct-b.pct);
-  if(!rows.length) return `<p style="font-size:13px;color:var(--text-2);">Responde algunas preguntas para ver tu rendimiento por tema.</p>`;
-  return `<ul class="rank-list">${rows.map(r=>`<li><span class="name">${O.escapeHtml(r.tema)}</span><span class="mini-row-sub">${r.answered} resp.</span><span class="pct">${r.pct}%</span></li>`).join("")}</ul>`;
+  if(!rows.length) return `<p style="font-size:13px;color:var(--text-2);">Responde al menos 2 preguntas de un grupo para ver tu rendimiento aquí.</p>`;
+  const shown = rows.slice(0,10);
+  const strong = rows.filter(r=>r.pct>=80).length;
+  const tone = p => p<60 ? "bad" : p<80 ? "warn" : "good";
+  return `<ul class="rank-list">${shown.map(r=>`<li>
+      <span class="name">${O.escapeHtml(r.tema)}</span>
+      <span class="rk-bar"><i class="${tone(r.pct)}" style="width:${r.pct}%"></i></span>
+      <span class="pct ${tone(r.pct)}">${r.pct}%</span>
+    </li>`).join("")}</ul>
+    ${rows.length>10 || strong ? `<p class="rank-foot">${rows.length>10?`+${rows.length-10} grupos más · `:''}${strong} grupo${strong===1?'':'s'} por encima del 80%.</p>` : ``}`;
 }
 
 /* ---------------------------------------------------------------
