@@ -16,10 +16,9 @@ async function main() {
   page.on('pageerror', err => consoleErrors.push('[pageerror] ' + err.message));
 
   await page.goto(BASE, { waitUntil: 'load' });
-  await page.getByText('Estudiar', { exact: true }).first().click();
-  await page.locator('#sh-tipo').click();
+  await page.locator('#primary-nav .nav-btn', { hasText: 'Práctica' }).click();
   await page.waitForSelector('#wiz-scope-detail', { timeout: 10000 });
-  await page.getByText('Tipo de ejercicio', { exact: true }).first().click();
+  await page.locator('[data-scope="tipo"]').click();
   await page.waitForSelector('#wiz-tipo-pills .pill', { timeout: 10000 });
 
   const pillLabels = await page.locator('#wiz-tipo-pills .pill').allTextContents();

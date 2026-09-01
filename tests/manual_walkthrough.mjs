@@ -31,9 +31,9 @@ async function main() {
   await page.waitForSelector('#primary-nav .nav-btn', { timeout: 10000 });
   await shot(page, 'home');
 
-  console.log('--- 2) Estudiar -> bloque Temario ---');
-  await page.getByText('Estudiar', { exact: true }).first().click();
-  await page.waitForSelector('.section-title:has-text("Temario")', { timeout: 10000 });
+  console.log('--- 2) Temario ---');
+  await page.locator('#primary-nav .nav-btn', { hasText: 'Temario' }).click();
+  await page.waitForSelector('.progress-row', { timeout: 10000 });
   await shot(page, 'estudiar-temario');
 
   console.log('--- 3) Temario -> sección Vista ---');

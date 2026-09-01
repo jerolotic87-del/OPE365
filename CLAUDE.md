@@ -24,7 +24,12 @@ app.js                motor: modelo canónico, sesiones, PRNG con semilla,
                        códigos de compartir, desafíos, estadísticas,
                        flashcards (§10)
 multiplayer.js        Duelo y Farol: transporte PeerJS + máquina de estados
-views.js               toda la interfaz (router simple basado en funciones)
+views.js               toda la interfaz (router simple basado en funciones).
+                       Rediseño ago-2026: 5 áreas (Inicio · Temario ·
+                       Práctica · Flashcards · Progreso), ver
+                       docs/UI_REDISENO.md. El router `go(view,params)` +
+                       la delegación global `[data-goto]` NO se tocan
+                       (los tests y multiplayer dependen de ellos).
 peerjs.min.js          librería de terceros, no tocar
 atajos_oficial.json    tabla extraída de ATAJOS.docx (ver más abajo)
 

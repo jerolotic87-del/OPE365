@@ -1401,15 +1401,15 @@ function renderProgress(){
 
     <div class="section-block">
       <div class="section-title"><h3>Rendimiento general</h3></div>
-      <div class="stat-row">
-        <div class="stat-cell accent"><div class="num">${s.answered}</div><div class="label">Respondidas · de ${s.total}</div></div>
-        <div class="stat-cell good"><div class="num">${s.correct}</div><div class="label">Acertadas</div></div>
-        <div class="stat-cell bad"><div class="num">${s.incorrect}</div><div class="label">Falladas</div></div>
-        <div class="stat-cell accent"><div class="num">${s.markedCount}</div><div class="label">Marcadas</div></div>
+      <div class="stat-strip">
+        <div class="ss-cell"><div class="ss-num">${s.answered}</div><div class="ss-lbl">de ${s.total} respondidas</div></div>
+        <div class="ss-cell"><div class="ss-num" style="color:var(--good);">${s.correct}</div><div class="ss-lbl">acertadas</div></div>
+        <div class="ss-cell"><div class="ss-num" style="color:var(--bad);">${s.incorrect}</div><div class="ss-lbl">falladas</div></div>
+        <div class="ss-cell"><div class="ss-num" style="color:var(--accent-ink);">${s.markedCount}</div><div class="ss-lbl">marcadas</div></div>
       </div>
       <div style="display:flex; align-items:center; gap:14px; margin-top:var(--sp-4);">
         <div class="bar-track" style="flex:1;"><i style="width:${s.accuracy}%"></i></div>
-        <strong style="font-family:var(--font-mono); font-size:14px;">${s.accuracy}%</strong>
+        <strong style="font-family:var(--font-mono); font-size:14px;">${s.accuracy}% acierto</strong>
       </div>
     </div>
 

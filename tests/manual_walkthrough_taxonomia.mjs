@@ -16,10 +16,10 @@ async function main() {
   page.on('pageerror', err => consoleErrors.push('[pageerror] ' + err.message));
 
   await page.goto(BASE, { waitUntil: 'load' });
-  await page.getByText('Estudiar', { exact: true }).first().click();
+  await page.locator('#primary-nav .nav-btn', { hasText: 'Temario' }).click();
   await page.screenshot({ path: path.join(SHOT_DIR, '30-estudiar-temario-completo.png') });
 
-  await page.locator('#sh-tema').click();
+  await page.locator('#primary-nav .nav-btn', { hasText: 'Práctica' }).click();
   await page.waitForSelector('[data-scope="tema"]', { timeout: 10000 });
   await page.locator('[data-scope="tema"]').click();
   await page.screenshot({ path: path.join(SHOT_DIR, '31-wizard-pestana-grupo.png') });
