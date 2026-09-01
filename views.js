@@ -1149,11 +1149,65 @@ function formatCardText(raw){
   }
   if(t.includes(" · ")){
     const segs = t.split(" · ").map(s=>s.trim()).filter(Boolean);
-    const listy = segs.length >= 4 && segs.every(s=>
-      s.length <= 44 && !/[.:]\s/.test(s) && !/^(Atajo|OJO|Nota|aulaClic|Tu temario|Requiere|Ctrl|Alt)\b/i.test(s));
+    const listy = segs.length >= 3 && segs.every(s=>
+      s.length <= 46 && !/[.:]\s/.test(s) && !/[.:]$/.test(s)
+      && !/^(Atajo|OJO|Nota|aulaClic|Tu temario|Requiere|Ctrl|Alt|Mayús|Windows|F\d)\b/i.test(s));
     if(listy) return cardListMarkup(segs, false);
   }
   return `<p>${O.escapeHtml(t)}</p>`;
+}
+
+/* Un atajo de teclado: "Ctrl + Alt + D", "F7", "Alt+Mayús+F7", "Ctrl+(" … */
+function isShortcutish(s){
+  s = String(s||"").trim().replace(/^Atajos?\s*[:.]?\s*/i, "").replace(/[.;]\s*$/,"");
+  if(!s || s.length > 46) return false;
+  const KEY = /^(ctrl|alt|mayús|mayus|shift|windows|win|cmd|opt|f\d{1,2}|esc|tab|supr|intro|entrar|retroceso|inicio|fin|re\s?pág|av\s?pág|espacio|barra espaciadora|insertar|borrar|arriba|abajo|izquierda|derecha|corchete|numérico|núm\s?\d+|número\s?\d+)$/i;
+  const parts = s.split(/\s*\+\s*/).map(x=>x.trim()).filter(Boolean);
+  if(!parts.length) return false;
+  const ok = parts.every(p => KEY.test(p) || p.length <= 3);
+  return ok && (parts.length >= 2 || KEY.test(parts[0]));
+}
+
+/* Separa el dorso de una flashcard en Respuesta / Explicación / Atajo. */
+function parseCardBack(raw){
+  let t = String(raw==null?"":raw).trim();
+  let atajo = null;
+
+  const am = t.match(/\bAtajos?\s*[:.]\s*([^.]+?)\.?\s*$/i);
+  if(am && isShortcutish(am[1])){
+    atajo = am[1].trim().replace(/[.;]\s*$/,"");
+    t = t.slice(0, am.index).replace(/[·\s]+$/,"").trim();
+  }
+  if(!atajo && t.includes(" · ")){
+    const segs = t.split(" · ").map(s=>s.trim());
+    if(segs.length >= 2 && isShortcutish(segs[segs.length-1]) && !isShortcutish(segs[0])){
+      atajo = segs.pop().replace(/[.;]\s*$/,"");
+      t = segs.join(" · ");
+    }
+  }
+
+  let respuesta = t, explicacion = null;
+  const hasList = /\n/.test(t)
+    || /(?:^|[\s(])\d+[.)]\s[\s\S]*?(?:\s)\d+[.)]\s/.test(t)
+    || (t.includes(" · ") && t.split(" · ").length >= 4);
+  if(!hasList){
+    const m = t.match(/^([^.:]{6,110}[.:])\s+([A-ZÁÉÍÓÚÑ¿"'(¡].{12,})$/);
+    if(m && !isShortcutish(m[2])){
+      respuesta = m[1].replace(/[.:]\s*$/,"").trim();
+      explicacion = m[2].trim();
+    }
+  }
+  return { respuesta, explicacion, atajo };
+}
+
+function renderCardBack(raw){
+  const { respuesta, explicacion, atajo } = parseCardBack(raw);
+  const row = (tag, tagCls, bodyCls, body) =>
+    `<div class="ans-row"><span class="ans-tag ${tagCls}">${tag}</span><div class="ans-body ${bodyCls}">${body}</div></div>`;
+  let out = row("R", "at-r", "ans-r", formatCardText(respuesta));
+  if(explicacion) out += row("E", "at-e", "ans-e", formatCardText(explicacion));
+  if(atajo) out += row("A", "at-a", "ans-a", `<span class="ans-kbd">${O.escapeHtml(atajo)}</span>`);
+  return `<div class="ans-block">${out}</div>`;
 }
 
 function sectionName(id){ const s = O.TAXONOMY_SECTIONS.find(x=>x.id===id); return s ? s.name : id; }
@@ -1307,8 +1361,7 @@ function renderFlashcardsStudy(){
             <div class="ff-hint">Mostrar respuesta</div>
           </div>
           <div class="flip-face flip-back" id="fc-back">
-            <div class="fb-label">Respuesta</div>
-            <div class="fb-text">${formatCardText(c.back)}</div>
+            <div class="fb-text">${renderCardBack(c.back)}</div>
           </div>
         </div>
       </button>
