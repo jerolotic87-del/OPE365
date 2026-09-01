@@ -1,5 +1,5 @@
-// Prueba jsdom de la navegación de temario por taxonomía (Etapa 8):
-// hub Estudiar -> tarjeta de sección -> detalle -> Preguntas/Flashcards/Errores.
+// Prueba jsdom de la navegación de temario por taxonomía:
+// área Temario -> fila de sección -> detalle -> Practicar/Flashcards/Errores.
 "use strict";
 const fs = require("fs");
 const path = require("path");
@@ -30,13 +30,13 @@ async function main(){
     b.remove();
   }
 
-  clickGoto("study");
+  clickGoto("temario");
   const sectionCards = window.document.querySelectorAll('[data-goto="temario-detalle"]');
-  assert(sectionCards.length === 10, `el hub Estudiar lista las 10 secciones del temario (obtenidas ${sectionCards.length})`);
+  assert(sectionCards.length === 10, `el área Temario lista las 10 secciones (obtenidas ${sectionCards.length})`);
 
-  // Sección "vista" (con contenido real) vía click directo en su tarjeta
+  // Sección "vista" (con contenido real) vía click directo en su fila
   const vistaCard = Array.from(sectionCards).find(b=> b.getAttribute("data-params").includes('"vista"'));
-  assert(!!vistaCard, "existe la tarjeta de la sección Vista");
+  assert(!!vistaCard, "existe la fila de la sección Vista");
   vistaCard.click();
   assert(window.document.querySelector("h1").textContent.trim()==="Vista", "el detalle muestra el nombre de la sección");
   // El total de "vista" ya no es solo vista.json (61): tras la

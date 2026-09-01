@@ -175,6 +175,51 @@ hr.div{ border:none; border-top:1px solid var(--border); margin:var(--sp-6) 0; }
 .mini-row-main{ color:var(--text); }
 .mini-row-sub{ color:var(--text-3); font-family:var(--font-mono); font-size:11.5px; }
 
+/* ---------------------------------------------------------------
+   Listas (navegación / progreso) — sustituyen a las rejillas de
+   tarjetas cuando el contenido es una LISTA, no una decisión
+--------------------------------------------------------------- */
+.breadcrumb{ display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--text-3); margin-bottom:var(--sp-4); }
+.breadcrumb button{ appearance:none; background:none; border:none; cursor:pointer; color:var(--text-2); font:inherit; padding:0; }
+.breadcrumb button:hover{ color:var(--accent-ink); }
+.breadcrumb b{ color:var(--text); font-weight:600; }
+
+.progress-list{ display:flex; flex-direction:column; border:1px solid var(--border); border-radius:var(--radius-m); overflow:hidden; background:var(--surface); }
+.progress-row{
+  appearance:none; cursor:pointer; text-align:left; width:100%; background:transparent; border:none;
+  border-bottom:1px solid var(--border); color:var(--text);
+  display:grid; grid-template-columns:1fr 160px 44px 18px; align-items:center; gap:var(--sp-4);
+  padding:14px var(--sp-5); transition:background .13s var(--ease);
+}
+.progress-row:last-child{ border-bottom:none; }
+.progress-row:hover{ background:var(--surface-2); }
+.progress-row .pr-name{ font-weight:600; font-size:14px; }
+.progress-row .pr-meta{ font-size:11.5px; color:var(--text-3); margin-top:2px; }
+.progress-row .pr-pct{ font-family:var(--font-mono); font-size:12.5px; color:var(--text-2); text-align:right; }
+.progress-row .pr-chev{ color:var(--text-3); display:flex; }
+.progress-row .pr-chev svg{ width:15px; height:15px; }
+.progress-row.is-empty{ opacity:.55; }
+@media (max-width:640px){
+  .progress-row{ grid-template-columns:1fr 44px 16px; gap:var(--sp-3); padding:13px var(--sp-4); }
+  .progress-row .pr-bar{ display:none; }
+}
+
+.nav-list{ display:flex; flex-direction:column; border:1px solid var(--border); border-radius:var(--radius-m); overflow:hidden; background:var(--surface); }
+.nav-row{
+  appearance:none; cursor:pointer; text-align:left; width:100%; background:transparent; border:none;
+  border-bottom:1px solid var(--border); color:var(--text); font:inherit;
+  display:flex; align-items:center; gap:var(--sp-3); padding:13px var(--sp-4); transition:background .13s var(--ease);
+}
+.nav-row:last-child{ border-bottom:none; }
+.nav-row:hover:not([disabled]){ background:var(--surface-2); }
+.nav-row[disabled]{ opacity:.4; cursor:default; }
+.nav-row .nr-ic{ display:flex; color:var(--text-2); }
+.nav-row .nr-ic svg{ width:16px; height:16px; }
+.nav-row .nr-title{ font-weight:600; font-size:13.5px; flex:1; }
+.nav-row .nr-meta{ font-family:var(--font-mono); font-size:12px; color:var(--text-3); }
+.nav-row .nr-chev{ color:var(--text-3); display:flex; }
+.nav-row .nr-chev svg{ width:15px; height:15px; }
+
 .empty-panel{ text-align:center; padding:var(--sp-8) var(--sp-5); color:var(--text-2); border:1px dashed var(--border-2); border-radius:var(--radius-m); }
 .empty-panel .glyph{ font-size:22px; margin-bottom:var(--sp-2); color:var(--text-3); }
 .empty-panel h4{ margin:0 0 4px; color:var(--text); font-size:14px; }
@@ -2651,6 +2696,7 @@ const ICONS = {
   play:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l14 8-14 8V4z"/></svg>',
   clock:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
   cards:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="14" height="14" rx="2"/><path d="M7 7V5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>',
+  layers:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>',
 };
 function icon(name){ return ICONS[name] || ""; }
 
@@ -2659,18 +2705,20 @@ function icon(name){ return ICONS[name] || ""; }
 --------------------------------------------------------------- */
 const PRIMARY_TABS = [
   {id:"home",       label:"Inicio",      ic:"home"},
-  {id:"study",      label:"Estudiar",    ic:"study"},
-  {id:"tests",      label:"Tests",       ic:"tests"},
+  {id:"temario",    label:"Temario",     ic:"layers"},
+  {id:"practica",   label:"Práctica",    ic:"study"},
   {id:"flashcards", label:"Flashcards",  ic:"cards"},
   {id:"progress",   label:"Progreso",    ic:"progress"},
 ];
 
 function groupForView(view){
   if(view==="home") return "home";
-  if(["study","running","review-hub","review-detail","temario-detalle"].includes(view)) return "study";
-  if(["tests","test-wizard","test-preview","results","challenges","challenge-create","challenge-detail","comparison","history","mp-setup","mp-lobby","mp-game"].includes(view)) return "tests";
+  if(["temario","temario-detalle"].includes(view)) return "temario";
+  if(["practica","study","test-wizard","test-preview","running","results",
+      "review-hub","review-detail","mp-setup","mp-lobby","mp-game"].includes(view)) return "practica";
   if(["flashcards","flashcards-study"].includes(view)) return "flashcards";
-  if(view==="progress") return "progress";
+  if(["progress","tests","challenges","challenge-create","challenge-detail",
+      "comparison","history"].includes(view)) return "progress";
   return "home";
 }
 
@@ -2701,8 +2749,9 @@ window.addEventListener("click", (e)=>{
 function render(view, params){
   params = params || {};
   if(view==="home") return renderHome();
-  if(view==="study") return renderStudyHub();
-  if(view==="tests") return renderTestsHub();
+  if(view==="temario") return renderTemario();
+  if(view==="practica" || view==="study") return renderTestWizard(params.mode ? params : {mode:"practice"});
+  if(view==="tests") return renderProgress();
   if(view==="progress") return renderProgress();
   if(view==="test-wizard") return renderTestWizard(params);
   if(view==="running") return renderRunner();
@@ -2787,7 +2836,7 @@ function renderHome(){
     <div class="section-block">
       <div class="section-title"><h3>Desafíos pendientes</h3>${pendingChallenges.length?`<button class="link" data-goto="challenges">Ver todos</button>`:''}</div>
       ${pendingChallenges.length ? `<div style="display:flex; flex-direction:column; gap:8px;">${pendingChallenges.slice(0,3).map(c=>renderChallengeCardHtml(c)).join("")}</div>` :
-        `<div class="empty-panel"><div class="glyph">${icon('challenge')}</div><h4>Todavía no tienes desafíos</h4><p>Comparte un test con otra persona y podréis comparar resultados.</p><button class="btn btn-outline btn-sm" data-goto="tests">Crear desafío</button></div>`}
+        `<div class="empty-panel"><div class="glyph">${icon('challenge')}</div><h4>Todavía no tienes desafíos</h4><p>Comparte un test con otra persona y podréis comparar resultados.</p><button class="btn btn-outline btn-sm" data-goto="challenges">Ver desafíos</button></div>`}
     </div>
   </div>`;
 
@@ -2819,116 +2868,47 @@ function renderChallengeCardHtml(c){
 }
 
 /* ---------------------------------------------------------------
-   ESTUDIAR
+   TEMARIO — biblioteca de contenido: las 10 pestañas de Word 365
+   como una lista con progreso, no una rejilla de tarjetas.
 --------------------------------------------------------------- */
-function renderStudyHub(){
-  const s = O.computeStats();
-  const taxStats = O.computeTaxonomyStats();
-  const saved = O.PROGRESS.currentSession;
-  const hasContinue = saved && !saved.finished && saved.questionIds && saved.questionIds.length;
-
-  mainEl().innerHTML = `
-  <div class="view">
-    <div class="view-head">
-      <p class="eyebrow">Estudiar</p>
-      <h1>Elige qué practicar</h1>
-      <p>Corrección inmediata y explicación tras cada respuesta.</p>
-    </div>
-
-    ${hasContinue ? `
-    <div class="hero-continue">
-      <div><div class="label">Continuar</div><h3>Retomar tu última sesión</h3><p>${Object.keys(saved.responses||{}).length} / ${saved.questionIds.length} respondidas</p></div>
-      <button class="btn btn-solid" id="study-continue">Continuar</button>
-    </div>` : ``}
-
-    <div class="section-block">
-      <div class="section-title"><h3>Práctica</h3></div>
-      <div class="action-grid">
-        <button class="action-card" id="sh-tipo"><div class="ic">${icon('study')}</div><div class="t">Por tipo de ejercicio</div><div class="d">Opción única, V/F, multi, emparejar</div></button>
-        <button class="action-card" id="sh-tema"><div class="ic">${icon('search')}</div><div class="t">Por pestaña y grupo</div><div class="d">${O.TAXONOMY_SECTIONS.length} pestañas de la cinta</div></button>
-        <button class="action-card" id="sh-errores"><div class="ic">${icon('errors')}</div><div class="t">Preguntas falladas</div><div class="d">${s.incorrect} pendientes</div></button>
-        <button class="action-card" id="sh-marcadas"><div class="ic">${icon('bookmark')}</div><div class="t">Preguntas marcadas</div><div class="d">${s.markedCount} guardadas</div></button>
-      </div>
-    </div>
-
-    <div class="section-block">
-      <div class="section-title"><h3>Temario</h3></div>
-      <div class="action-grid">${O.TAXONOMY_SECTIONS.map(sec=>{
-        const st = taxStats[sec.id] || {questions:0, flashcards:0};
-        return `<button class="action-card" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
-          <div class="t">${O.escapeHtml(sec.name)}</div>
-          <div class="d">${st.questions} preguntas · ${st.flashcards} flashcards</div>
-        </button>`;
-      }).join("")}</div>
-    </div>
-
-    <div class="section-block">
-      <div class="section-title"><h3>Tests</h3></div>
-      <div class="action-grid">
-        <button class="action-card" data-goto="test-wizard" data-params='{"mode":"exam"}'><div class="ic">${icon('tests')}</div><div class="t">Crear test</div><div class="d">Con tiempo, sin pistas</div></button>
-        <button class="action-card" data-goto="tests"><div class="ic">${icon('history')}</div><div class="t">Mis tests</div><div class="d">Historial y desafíos</div></button>
-        <button class="action-card" data-goto="challenges"><div class="ic">${icon('challenge')}</div><div class="t">Desafíos</div><div class="d">Compite con otra persona</div></button>
-      </div>
-    </div>
-  </div>`;
-
-  if(hasContinue){
-    $("#study-continue").addEventListener("click", ()=>{
-      const hydrated = O.hydrateSession(saved);
-      O.setSession(hydrated); O.saveSessionSnapshot(); go("running");
-    });
-  }
-  $("#sh-tipo").addEventListener("click", ()=> go("test-wizard",{mode:"practice", step:"tipo"}));
-  $("#sh-tema").addEventListener("click", ()=> go("test-wizard",{mode:"practice", step:"tema"}));
-  $("#sh-errores").addEventListener("click", ()=>{
-    const s2 = O.buildSession({mode:"practice", scope:"errores", count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
-    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No tienes preguntas falladas pendientes");
-  });
-  $("#sh-marcadas").addEventListener("click", ()=>{
-    const s2 = O.buildSession({mode:"practice", scope:"marcadas", count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
-    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("Aún no has marcado ninguna pregunta");
-  });
+function sectionProgress(sid){
+  const qs = O.QUESTIONS.filter(q=>q.section===sid);
+  const total = qs.length;
+  let answered=0, correct=0;
+  qs.forEach(q=>{ const a=O.PROGRESS.answers[q.id]; if(a){ answered++; if(a.correcta) correct++; } });
+  return { total, answered, correct, pct: total ? Math.round((answered/total)*100) : 0 };
 }
 
-/* ---------------------------------------------------------------
-   TESTS (hub: crear / mis tests / desafíos / historial)
---------------------------------------------------------------- */
-function renderTestsHub(){
-  const hist = O.PROGRESS.history.filter(h=>h.mode==="exam").slice(-5).reverse();
-  const challenges = Object.values(O.PROGRESS.challenges||{}).sort((a,b)=>b.createdAt-a.createdAt).slice(0,4);
+function renderTemario(){
+  const taxStats = O.computeTaxonomyStats();
+  const globalAnswered = O.TAXONOMY_SECTIONS.reduce((n,s)=> n + sectionProgress(s.id).answered, 0);
+  const globalTotal = O.QUESTIONS.length;
 
   mainEl().innerHTML = `
   <div class="view">
     <div class="view-head">
-      <p class="eyebrow">Tests</p>
-      <h1>Simulacros y desafíos</h1>
-      <p>Crea un test, compártelo tal cual con otra persona o lanza un desafío con resultado oculto.</p>
+      <p class="eyebrow">Temario</p>
+      <h1>Explora Word 365 por pestañas</h1>
+      <p>${O.TAXONOMY_SECTIONS.length} pestañas de la cinta · ${globalAnswered} de ${globalTotal} preguntas vistas.</p>
     </div>
 
-    <div class="action-grid" style="margin-bottom:var(--sp-8);">
-      <button class="action-card" data-goto="test-wizard" data-params='{"mode":"exam"}'><div class="ic">${icon('tests')}</div><div class="t">Crear test</div><div class="d">Configura y empieza</div></button>
-      <button class="action-card" data-goto="mp-setup"><div class="ic">${icon('challenge')}</div><div class="t">Duelo en vivo</div><div class="d">Reto en tiempo real con otra persona</div></button>
-      <button class="action-card" data-goto="challenges"><div class="ic">${icon('challenge')}</div><div class="t">Desafíos</div><div class="d">${challenges.length} en total</div></button>
-      <button class="action-card" data-goto="history"><div class="ic">${icon('history')}</div><div class="t">Historial</div><div class="d">${O.PROGRESS.history.length} sesiones completadas</div></button>
-      <button class="action-card" id="th-codigo"><div class="ic">${icon('code')}</div><div class="t">Introducir código</div><div class="d">Pregunta, selección, test o reto</div></button>
-    </div>
-
-    <div class="section-block">
-      <div class="section-title"><h3>Tests recientes</h3>${hist.length?`<button class="link" data-goto="history">Ver todo</button>`:''}</div>
-      ${hist.length ? `<ul class="mini-list">${hist.map(h=>`
-        <li><span class="mini-row-main">${h.correct}/${h.total} (${h.accuracy}%)</span><span class="mini-row-sub">${O.fmtDate(h.finishedAt)}</span></li>
-      `).join("")}</ul>` : `<div class="empty-panel"><div class="glyph">${icon('tests')}</div><h4>Todavía no has completado ningún test</h4><p>Crea tu primer test para verlo aquí.</p></div>`}
-    </div>
-
-    <div class="section-block">
-      <div class="section-title"><h3>Desafíos</h3>${challenges.length?`<button class="link" data-goto="challenges">Ver todos</button>`:''}</div>
-      ${challenges.length ? `<div style="display:flex; flex-direction:column; gap:8px;">${challenges.map(c=>renderChallengeCardHtml(c)).join("")}</div>` :
-        `<div class="empty-panel"><div class="glyph">${icon('challenge')}</div><h4>Todavía no tienes desafíos</h4><p>Comparte un test con otra persona y podréis comparar resultados.</p></div>`}
+    <div class="progress-list">
+      ${O.TAXONOMY_SECTIONS.map(sec=>{
+        const st = taxStats[sec.id] || {questions:0, flashcards:0};
+        const p = sectionProgress(sec.id);
+        const empty = st.questions === 0;
+        return `<button class="progress-row${empty?' is-empty':''}" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
+          <div class="pr-main">
+            <div class="pr-name">${O.escapeHtml(sec.name)}</div>
+            <div class="pr-meta">${st.questions} pregunta${st.questions===1?'':'s'}${st.flashcards?` · ${st.flashcards} flashcard${st.flashcards===1?'':'s'}`:''}</div>
+          </div>
+          <div class="pr-bar"><div class="bar-track"><i style="width:${p.pct}%"></i></div></div>
+          <div class="pr-pct">${empty?'—':p.pct+'%'}</div>
+          <span class="pr-chev">${icon('chevronR')}</span>
+        </button>`;
+      }).join("")}
     </div>
   </div>`;
-
-  $("#th-codigo").addEventListener("click", openCodeImportModal);
-  $$("[data-challenge-open]").forEach(el=> el.addEventListener("click", ()=> go("challenge-detail",{challengeId:el.getAttribute("data-challenge-open")})));
 }
 
 function renderHistory(){
@@ -2936,7 +2916,7 @@ function renderHistory(){
   mainEl().innerHTML = `
   <div class="view view-narrow">
     <div class="view-head">
-      <button class="btn btn-ghost btn-sm" data-goto="tests" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Tests</button>
+      <button class="btn btn-ghost btn-sm" data-goto="progress" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Progreso</button>
       <h1>Historial</h1>
       <p>${hist.length} sesiones completadas.</p>
     </div>
@@ -2983,7 +2963,7 @@ function renderWizardStep(){
   mainEl().innerHTML = `
   <div class="view view-narrow">
     <div class="view-head">
-      <button class="btn btn-ghost btn-sm" data-goto="${wizardState.mode==='exam'?'tests':'study'}" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Cancelar</button>
+      <button class="btn btn-ghost btn-sm" data-goto="${wizardState.mode==='exam'?'progress':'home'}" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Cancelar</button>
       <h1>${wizardState.mode==="exam"?"Crear test":"Configurar práctica"}</h1>
     </div>
     <div class="wizard-steps">${dots}</div>
@@ -3265,7 +3245,7 @@ function confirmExitSession(){
     </div>
   `, (root)=>{
     root.querySelector("#exit-cancel").addEventListener("click", closeModal);
-    root.querySelector("#exit-confirm").addEventListener("click", ()=>{ closeModal(); go(O.getSession().mode==="exam"?"tests":"study"); });
+    root.querySelector("#exit-confirm").addEventListener("click", ()=>{ closeModal(); go(O.getSession().mode==="exam"?"progress":"home"); });
   });
 }
 
@@ -3646,7 +3626,7 @@ function renderReviewHub(params){
   mainEl().innerHTML = `
   <div class="view">
     <div class="view-head">
-      <button class="btn btn-ghost btn-sm" data-goto="study" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Estudiar</button>
+      <button class="btn btn-ghost btn-sm" data-goto="practica" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Práctica</button>
       <h1>Repasar preguntas</h1>
       <p>Filtra por estado, pestaña, grupo, tipo o fuente. Consulta la respuesta correcta y la explicación.</p>
     </div>
@@ -3890,34 +3870,77 @@ function renderFlashcardsStudy(){
 function renderTemarioDetalle(params){
   const sectionId = params && params.sectionId;
   const sec = O.TAXONOMY_SECTIONS.find(s=>s.id===sectionId);
-  if(!sec){ go("study"); return; }
+  if(!sec){ go("temario"); return; }
   const qCount = O.filterQuestions({section:sectionId}).length;
   const fCount = O.filterFlashcards({section:sectionId}).length;
   const errCount = O.filterFlashcards({section:sectionId, cardType:"error"}).length;
-  const topics = sec.topics || [];
+  const p = sectionProgress(sectionId);
+  const topics = (sec.topics || []).map(t=>({ ...t, n: O.filterQuestions({section:sectionId, topic:t.id}).length }));
 
-  mainEl().innerHTML = `
-  <div class="view">
-    <div class="view-head">
-      <button class="btn btn-ghost btn-sm" data-goto="study" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Estudiar</button>
-      <p class="eyebrow">Temario</p>
-      <h1>${O.escapeHtml(sec.name)}</h1>
-      ${topics.length ? `<p>${topics.map(t=>O.escapeHtml(t.name)).join(" · ")}</p>` : ``}
-    </div>
-    <div class="action-grid">
-      <button class="action-card" id="td-preguntas"><div class="ic">${icon('study')}</div><div class="t">Preguntas</div><div class="d">${qCount} clasificadas en esta sección</div></button>
-      <button class="action-card" id="td-flashcards"><div class="ic">${icon('cards')}</div><div class="t">Flashcards</div><div class="d">${fCount} tarjetas</div></button>
-      <button class="action-card" id="td-errores"><div class="ic">${icon('errors')}</div><div class="t">Errores frecuentes</div><div class="d">${errCount} fichas "NO CONFUNDIR"</div></button>
-    </div>
-    ${!qCount ? `<div class="empty-state" style="margin-top:var(--sp-6);"><p>Todavía no hay preguntas clasificadas en "${O.escapeHtml(sec.name)}". La taxonomía nueva convive con el banco existente sin reclasificarlo de golpe -- se irá completando sección a sección.</p></div>` : ``}
-  </div>`;
-
-  $("#td-preguntas").addEventListener("click", ()=>{
-    if(!qCount){ O.toast("Aún no hay preguntas clasificadas en esta sección"); return; }
+  const practiceSection = ()=>{
     const s2 = O.buildSession({mode:"practice", section:sectionId, count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
     if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No hay preguntas disponibles");
-  });
-  $("#td-flashcards").addEventListener("click", ()=> go("flashcards", {section:sectionId}));
+  };
+  const practiceTopic = (topicId)=>{
+    const s2 = O.buildSession({mode:"practice", section:sectionId, topic:topicId, count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
+    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No hay preguntas en este grupo");
+  };
+
+  mainEl().innerHTML = `
+  <div class="view view-narrow">
+    <nav class="breadcrumb"><button data-goto="temario">Temario</button><span>/</span><b>${O.escapeHtml(sec.name)}</b></nav>
+    <div class="view-head">
+      <h1>${O.escapeHtml(sec.name)}</h1>
+      <p>${qCount} pregunta${qCount===1?'':'s'} · ${fCount} flashcard${fCount===1?'':'s'}${p.total?` · ${p.pct}% vistas`:''}</p>
+      ${p.total ? `<div class="bar-track" style="margin-top:var(--sp-3);max-width:280px;"><i style="width:${p.pct}%"></i></div>` : ``}
+    </div>
+
+    ${qCount ? `
+    <button class="btn btn-solid btn-lg btn-block" id="td-preguntas" style="margin-bottom:var(--sp-6);">
+      ${icon('play')} Practicar esta pestaña · ${qCount}
+    </button>
+
+    ${topics.length ? `
+    <div class="section-block">
+      <div class="section-title"><h3>Grupos</h3></div>
+      <div class="nav-list">
+        ${topics.map(t=>`<button class="nav-row" data-topic="${t.id}" ${t.n?'':'disabled'}>
+          <span class="nr-title">${O.escapeHtml(t.name)}</span>
+          <span class="nr-meta">${t.n}</span>
+          <span class="nr-chev">${icon('chevronR')}</span>
+        </button>`).join("")}
+      </div>
+    </div>` : ``}
+    ` : `
+    <span id="td-preguntas" hidden>${qCount} preguntas</span>
+    <div class="empty-state">
+      <div class="glyph">${icon('layers')}</div>
+      <p>Todavía no hay preguntas de "${O.escapeHtml(sec.name)}" en el banco.</p>
+    </div>`}
+
+    <div class="section-block">
+      <div class="section-title"><h3>Repaso</h3></div>
+      <div class="nav-list">
+        <button class="nav-row" id="td-flashcards" ${fCount?'':'disabled'}>
+          <span class="nr-ic">${icon('cards')}</span>
+          <span class="nr-title">Flashcards</span>
+          <span class="nr-meta">${fCount}</span>
+          <span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+        <button class="nav-row" id="td-errores" ${errCount?'':'disabled'}>
+          <span class="nr-ic">${icon('errors')}</span>
+          <span class="nr-title">Errores frecuentes</span>
+          <span class="nr-meta">${errCount}</span>
+          <span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+      </div>
+    </div>
+  </div>`;
+
+  const tdP = $("#td-preguntas");
+  if(tdP && tdP.tagName === "BUTTON") tdP.addEventListener("click", practiceSection);
+  $$(".nav-row[data-topic]").forEach(btn=> btn.addEventListener("click", ()=> practiceTopic(btn.getAttribute("data-topic"))));
+  $("#td-flashcards").addEventListener("click", ()=>{ if(fCount) go("flashcards", {section:sectionId}); });
   $("#td-errores").addEventListener("click", ()=>{
     const errs = O.filterFlashcards({section:sectionId, cardType:"error"});
     if(errs.length) startFlashcardSession(errs.map(c=>c.canonicalId), 0); else O.toast("No hay fichas de error en esta sección");
@@ -4105,7 +4128,7 @@ function renderChallengesList(){
   mainEl().innerHTML = `
   <div class="view view-narrow">
     <div class="view-head">
-      <button class="btn btn-ghost btn-sm" data-goto="tests" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Tests</button>
+      <button class="btn btn-ghost btn-sm" data-goto="progress" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Progreso</button>
       <h1>Mis desafíos</h1>
       <p>Compite con otra persona: mismo test, resultado comparado.</p>
     </div>
@@ -4426,7 +4449,7 @@ function renderMpSetup(){
   mainEl().innerHTML = `
   <div class="view view-narrow">
     <div class="view-head">
-      <button class="btn btn-ghost btn-sm" data-goto="tests" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Tests</button>
+      <button class="btn btn-ghost btn-sm" data-goto="home" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Inicio</button>
       <p class="eyebrow">Duelo en vivo</p>
       <h1>Reta a alguien en tiempo real</h1>
       <p>Necesitáis conexión a internet los dos. Cada uno responde desde su propio dispositivo, al mismo tiempo.</p>

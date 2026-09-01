@@ -30,8 +30,7 @@ async function main(){
     b.remove();
   }
 
-  clickGoto("study");
-  window.document.getElementById("sh-tema").click();
+  clickGoto("practica");
   window.document.querySelector('[data-scope="tema"]').click();
 
   const sectionSel = window.document.getElementById("wiz-section");
