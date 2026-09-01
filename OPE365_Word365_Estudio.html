@@ -534,6 +534,21 @@ details.meta-panel summary{ cursor:pointer; font-size:11.5px; color:var(--text-3
 .ff-hint{ margin-top:var(--sp-5); font-size:11.5px; color:var(--text-3); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.08em; }
 .fb-label{ font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-ink); font-family:var(--font-mono); margin-bottom:var(--sp-3); }
 .fb-text{ font-size:15.5px; line-height:1.6; color:var(--text); }
+.ff-text > p, .fb-text > p{ margin:0; }
+
+/* listas dentro de una flashcard: en columna, no seguidas */
+.card-list{
+  text-align:left; margin:0; padding:0; list-style-position:inside;
+  display:inline-block; font-size:14.5px; line-height:1.55;
+}
+.card-list li{ margin:5px 0; padding-left:2px; }
+.card-list.cols{
+  display:block; width:100%; max-width:440px; margin:0 auto;
+  columns:2 150px; column-gap:var(--sp-6);
+}
+.card-list.cols li{ break-inside:avoid; }
+.ff-text .card-list{ font-size:16px; font-weight:600; }
+@media (max-width:440px){ .card-list.cols{ columns:1; } }
 
 .fc-verdict{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:var(--sp-4); transition:opacity .2s var(--ease); }
 .fc-verdict.is-hidden{ opacity:0; pointer-events:none; }
@@ -3911,6 +3926,38 @@ let fcSession = null; // { ids:[canonicalId...], index:0, revealed:false }
 function priorityLabel(p){ return p==="alta" ? "★ Prioridad alta" : ""; }
 function cardTypeLabel(t){ return t==="error" ? "Error frecuente" : "Contenido"; }
 
+/* Formatea el texto de una flashcard: si contiene una enumeración
+   ("1. .. 2. .."), saltos de línea, o una lista corta separada por " · ",
+   la renderiza como lista (en 2 columnas si son muchos ítems cortos).
+   En cualquier otro caso, un párrafo normal. */
+function cardListMarkup(items, ordered){
+  const cols = items.length >= 6 && items.every(i=>i.length <= 32);
+  const tag = ordered ? "ol" : "ul";
+  return `<${tag} class="card-list${cols?' cols':''}">${items.map(i=>`<li>${O.escapeHtml(i)}</li>`).join("")}</${tag}>`;
+}
+function formatCardText(raw){
+  const t = String(raw==null?"":raw).trim();
+  if(!t) return "";
+  if(t.includes("\n")){
+    const lines = t.split(/\n+/).map(s=>s.trim()).filter(Boolean);
+    if(lines.length >= 2){
+      const num = lines.every(l=>/^\(?\d+[.)]/.test(l));
+      return cardListMarkup(lines.map(l=> num ? l.replace(/^\(?\d+[.)]\s*/,"") : l), num);
+    }
+  }
+  const numParts = t.split(/(?=(?:^|[\s(])\d+[.)]\s)/).map(s=>s.trim()).filter(Boolean);
+  if(numParts.length >= 3 && numParts.every(p=>/^\(?\d+[.)]\s/.test(p))){
+    return cardListMarkup(numParts.map(p=>p.replace(/^\(?\d+[.)]\s*/,"").replace(/[.;]\s*$/,"")), true);
+  }
+  if(t.includes(" · ")){
+    const segs = t.split(" · ").map(s=>s.trim()).filter(Boolean);
+    const listy = segs.length >= 4 && segs.every(s=>
+      s.length <= 44 && !/[.:]\s/.test(s) && !/^(Atajo|OJO|Nota|aulaClic|Tu temario|Requiere|Ctrl|Alt)\b/i.test(s));
+    if(listy) return cardListMarkup(segs, false);
+  }
+  return `<p>${O.escapeHtml(t)}</p>`;
+}
+
 function sectionName(id){ const s = O.TAXONOMY_SECTIONS.find(x=>x.id===id); return s ? s.name : id; }
 
 let fcHubState = { section:"all", tab:"repaso" };
@@ -4058,12 +4105,12 @@ function renderFlashcardsStudy(){
               ${c.priority==="alta" ? `<span class="tag">★ Prioridad alta</span>` : ''}
               ${dominada ? `<span class="tag" style="color:var(--good);border-color:var(--good-line);">Dominada</span>` : ''}
             </div>
-            <div class="ff-text">${O.escapeHtml(c.front)}</div>
+            <div class="ff-text">${formatCardText(c.front)}</div>
             <div class="ff-hint">Mostrar respuesta</div>
           </div>
           <div class="flip-face flip-back" id="fc-back">
             <div class="fb-label">Respuesta</div>
-            <div class="fb-text">${O.escapeHtml(c.back)}</div>
+            <div class="fb-text">${formatCardText(c.back)}</div>
           </div>
         </div>
       </button>

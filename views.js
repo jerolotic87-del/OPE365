@@ -1124,6 +1124,38 @@ let fcSession = null; // { ids:[canonicalId...], index:0, revealed:false }
 function priorityLabel(p){ return p==="alta" ? "★ Prioridad alta" : ""; }
 function cardTypeLabel(t){ return t==="error" ? "Error frecuente" : "Contenido"; }
 
+/* Formatea el texto de una flashcard: si contiene una enumeración
+   ("1. .. 2. .."), saltos de línea, o una lista corta separada por " · ",
+   la renderiza como lista (en 2 columnas si son muchos ítems cortos).
+   En cualquier otro caso, un párrafo normal. */
+function cardListMarkup(items, ordered){
+  const cols = items.length >= 6 && items.every(i=>i.length <= 32);
+  const tag = ordered ? "ol" : "ul";
+  return `<${tag} class="card-list${cols?' cols':''}">${items.map(i=>`<li>${O.escapeHtml(i)}</li>`).join("")}</${tag}>`;
+}
+function formatCardText(raw){
+  const t = String(raw==null?"":raw).trim();
+  if(!t) return "";
+  if(t.includes("\n")){
+    const lines = t.split(/\n+/).map(s=>s.trim()).filter(Boolean);
+    if(lines.length >= 2){
+      const num = lines.every(l=>/^\(?\d+[.)]/.test(l));
+      return cardListMarkup(lines.map(l=> num ? l.replace(/^\(?\d+[.)]\s*/,"") : l), num);
+    }
+  }
+  const numParts = t.split(/(?=(?:^|[\s(])\d+[.)]\s)/).map(s=>s.trim()).filter(Boolean);
+  if(numParts.length >= 3 && numParts.every(p=>/^\(?\d+[.)]\s/.test(p))){
+    return cardListMarkup(numParts.map(p=>p.replace(/^\(?\d+[.)]\s*/,"").replace(/[.;]\s*$/,"")), true);
+  }
+  if(t.includes(" · ")){
+    const segs = t.split(" · ").map(s=>s.trim()).filter(Boolean);
+    const listy = segs.length >= 4 && segs.every(s=>
+      s.length <= 44 && !/[.:]\s/.test(s) && !/^(Atajo|OJO|Nota|aulaClic|Tu temario|Requiere|Ctrl|Alt)\b/i.test(s));
+    if(listy) return cardListMarkup(segs, false);
+  }
+  return `<p>${O.escapeHtml(t)}</p>`;
+}
+
 function sectionName(id){ const s = O.TAXONOMY_SECTIONS.find(x=>x.id===id); return s ? s.name : id; }
 
 let fcHubState = { section:"all", tab:"repaso" };
@@ -1271,12 +1303,12 @@ function renderFlashcardsStudy(){
               ${c.priority==="alta" ? `<span class="tag">★ Prioridad alta</span>` : ''}
               ${dominada ? `<span class="tag" style="color:var(--good);border-color:var(--good-line);">Dominada</span>` : ''}
             </div>
-            <div class="ff-text">${O.escapeHtml(c.front)}</div>
+            <div class="ff-text">${formatCardText(c.front)}</div>
             <div class="ff-hint">Mostrar respuesta</div>
           </div>
           <div class="flip-face flip-back" id="fc-back">
             <div class="fb-label">Respuesta</div>
-            <div class="fb-text">${O.escapeHtml(c.back)}</div>
+            <div class="fb-text">${formatCardText(c.back)}</div>
           </div>
         </div>
       </button>

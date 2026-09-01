@@ -525,6 +525,21 @@ details.meta-panel summary{ cursor:pointer; font-size:11.5px; color:var(--text-3
 .ff-hint{ margin-top:var(--sp-5); font-size:11.5px; color:var(--text-3); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.08em; }
 .fb-label{ font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-ink); font-family:var(--font-mono); margin-bottom:var(--sp-3); }
 .fb-text{ font-size:15.5px; line-height:1.6; color:var(--text); }
+.ff-text > p, .fb-text > p{ margin:0; }
+
+/* listas dentro de una flashcard: en columna, no seguidas */
+.card-list{
+  text-align:left; margin:0; padding:0; list-style-position:inside;
+  display:inline-block; font-size:14.5px; line-height:1.55;
+}
+.card-list li{ margin:5px 0; padding-left:2px; }
+.card-list.cols{
+  display:block; width:100%; max-width:440px; margin:0 auto;
+  columns:2 150px; column-gap:var(--sp-6);
+}
+.card-list.cols li{ break-inside:avoid; }
+.ff-text .card-list{ font-size:16px; font-weight:600; }
+@media (max-width:440px){ .card-list.cols{ columns:1; } }
 
 .fc-verdict{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:var(--sp-4); transition:opacity .2s var(--ease); }
 .fc-verdict.is-hidden{ opacity:0; pointer-events:none; }
