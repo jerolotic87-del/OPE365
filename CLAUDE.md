@@ -102,12 +102,17 @@ silencio ni elijas arbitrariamente.
   Ctrl+H=Sangría, Ctrl+F=Sangría francesa, Ctrl+I=Ir a — **distinto del
   esquema internacional en inglés**. Confirmado por `ATAJOS.docx` +
   PDF de la academia + prueba en vivo del usuario.
-- **Ctrl+R no tiene ninguna acción asignada** en esta instalación (no
-  aparece en `ATAJOS.docx`). No es Ctrl+R quien alinea a la derecha — es
-  Ctrl+D.
+- **Ctrl+R no hace absolutamente nada** en esta instalación (Word 365
+  español de España). No aparece en `ATAJOS.docx`. No es Ctrl+R quien
+  alinea a la derecha — es Ctrl+D. Prueba en vivo del usuario.
 - **Ctrl+W quita el formato de párrafo** (sangrías, etc.), NO cierra el
-  documento — confirmado por prueba en vivo del usuario, aunque
-  `ATAJOS.docx` lo lista de forma contradictoria bajo ambas cosas.
+  documento — prueba en vivo del usuario, aunque `ATAJOS.docx` lo lista de
+  forma contradictoria bajo ambas cosas.
+- **Cerrar documentos y Word** (prueba en vivo del usuario):
+  - **Ctrl+F4** cierra el documento activo y NO cierra Word.
+  - **Alt+F4** va cerrando los documentos abiertos uno a uno; cuando solo
+    queda uno, al volver a pulsarlo cierra el programa.
+  - Ctrl+W NO cierra nada (ver arriba).
 - 38 preguntas nuevas (`gen-atajo-1` a `gen-atajo-38`, campo
   `"generado": true`) cubren atajos de `ATAJOS.docx` que no tenían ninguna
   pregunta, incluyendo variantes alternativas de un mismo comando
@@ -118,12 +123,11 @@ silencio ni elijas arbitrariamente.
 - **`Ctrl+Mayús+E` activa/desactiva el control de cambios** ("Activar o
   desactivar marcas de revisión" en `ATAJOS.docx`) — ya lo usaban
   `8-121`/`8-154` del banco heredado y ahora también el bloque Revisar.
-- **`Ctrl+Mayús+S` = Subrayado** y **`Ctrl+Mayús+W` = Panel Aplicar
-  estilos** (así en `atajos_oficial.json`). El banco `inicio.json` nuevo
-  venía de aulaclic diciendo que Ctrl+Mayús+S "abre Aplicar estilo" —
-  corregido a favor de `atajos_oficial.json` (nivel 2). Afectó a
-  `inicio-13`, `inicio-90`, `inicio-91` (respuesta C→B) y `inicio-92`. Si
-  el usuario prueba en vivo lo contrario, eso manda.
+- **`Ctrl+Mayús+S` = Subrayado** (prueba en vivo del usuario + coincide
+  con `atajos_oficial.json`) y **`Ctrl+Mayús+W` = Panel Aplicar estilos**.
+  El banco `inicio.json` nuevo venía de aulaclic diciendo que Ctrl+Mayús+S
+  "abre Aplicar estilo" — corregido. Afectó a `inicio-13`, `inicio-90`,
+  `inicio-91` (respuesta C→B) y `inicio-92`.
 
 ## Modelo de datos (questions_all.json)
 
