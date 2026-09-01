@@ -37,11 +37,19 @@ flashcards_data.js     data/flashcards/*.json envuelto en
                        window.__OPE365_FLASHCARDS__
 
 --- fuente editable de datos ---
-data/questions/*.json  el banco partido por sourceFile (1.json..8.json,
-                       atajos.json, vista.json, ...), con manifest.json
-                       fijando el orden de carga
-data/flashcards/*.json  flashcards por sección (vista.json, ...), con su
-                        propio manifest.json
+data/questions/*.json  el banco partido en UN ARCHIVO POR PESTAÑA/section
+                       (interfaz, archivo, inicio, insertar, disposicion,
+                       referencias, revisar, vista, correspondencia — sin
+                       diseno, que no tiene preguntas), con manifest.json
+                       fijando el orden de carga. Cada pregunta lleva
+                       id="<section>-<n>" y sourceFile="<section>.json";
+                       la procedencia fina está en `bloque` y
+                       `sourceQuestionId` (id original del documento).
+data/flashcards/*.json  flashcards por sección (vista.json, revisar.json),
+                        con su propio manifest.json
+data/questions_regroup_report.md  reagrupación ago-2026: qué se movió de
+                       1.json..8.json/atajos.json al esquema por pestaña
+                       (mapa id viejo→nuevo en scripts/regroup_id_map.json)
 data/taxonomy.json     taxonomía pedagógica (section > topic > subtopic),
                        configurable, independiente de sourceFile/bloque
 data/vista_integration_report.md  comparación pregunta-por-pregunta del
@@ -110,6 +118,12 @@ silencio ni elijas arbitrariamente.
 - **`Ctrl+Mayús+E` activa/desactiva el control de cambios** ("Activar o
   desactivar marcas de revisión" en `ATAJOS.docx`) — ya lo usaban
   `8-121`/`8-154` del banco heredado y ahora también el bloque Revisar.
+- **`Ctrl+Mayús+S` = Subrayado** y **`Ctrl+Mayús+W` = Panel Aplicar
+  estilos** (así en `atajos_oficial.json`). El banco `inicio.json` nuevo
+  venía de aulaclic diciendo que Ctrl+Mayús+S "abre Aplicar estilo" —
+  corregido a favor de `atajos_oficial.json` (nivel 2). Afectó a
+  `inicio-13`, `inicio-90`, `inicio-91` (respuesta C→B) y `inicio-92`. Si
+  el usuario prueba en vivo lo contrario, eso manda.
 
 ## Modelo de datos (questions_all.json)
 
@@ -121,13 +135,19 @@ array de letras, bool para V/F, mapa para emparejamiento, o array de
 strings para relleno — uno por hueco `[1]`,`[2]`... en el enunciado, cada
 entrada puede ser un string o un array de variantes aceptadas),
 `explicacion`, `contentHash`, `questionVersion`. Las de farol/atajo
-generadas llevan `"generado": true`.
+generadas llevan `"generado": true`. `contentHash` se calcula en runtime
+(`app.js`) y **no** depende de `id` ni de `sourceFile` — renumerar no lo
+altera.
 
-Campos aditivos de la taxonomía nueva (nulos por defecto, no todas las
-preguntas los tienen todavía): `section`/`topic`/`subtopic` (ver más
-abajo). Las preguntas importadas de un documento de integración (p.ej.
-Vista) además llevan `sourceQuestionId` (el ID original del documento,
-p.ej. `"Q-021"`) y `difficulty` (`"media"`/`"alta"`).
+`section`/`topic`/`subtopic`: taxonomía pedagógica; **ya no hay nulos**,
+todo el banco está clasificado y físicamente agrupado por `section`
+(ago-2026). `sourceFile` = `"<section>.json"` e `id` = `"<section>-<n>"`.
+`sourceQuestionId` guarda el id original del documento de procedencia
+(`"Q-021"`, `"P-0001"`, o el id heredado `"8-121"` para las reagrupadas);
+`bloque` conserva el agrupador de procedencia legible. `difficulty`
+(`"media"`/`"alta"`) es opcional. `categoria` sigue siendo exactamente
+`atajo`/`ruta`/`concepto`/`general` (las ~80 de "¿qué botón/opción usar?"
+del banco nuevo de Inicio se mapearon a `ruta`).
 
 **Añadir un tipo de ejercicio nuevo:** si alguna vez se añade un sexto
 tipo, buscar TODOS los sitios que enumeran los tipos existentes — no
@@ -148,34 +168,31 @@ son dinámicos.
 ## Taxonomía y flashcards
 
 El banco de preguntas está partido físicamente en `data/questions/*.json`
-por `sourceFile` (ver tabla de arriba), pero la app siempre ve un único
-banco lógico (`QUESTIONS`) — `build_data.py` los concatena según
-`data/questions/manifest.json` antes de generar `questions_all.json`.
+con **un archivo por pestaña** (= `section`; ver tabla de arriba), pero la
+app siempre ve un único banco lógico (`QUESTIONS`) — `build_data.py` los
+concatena según `data/questions/manifest.json` (ordenado por
+`taxonomy.order`) antes de generar `questions_all.json`.
 
-`data/taxonomy.json` define una jerarquía pedagógica independiente de
-`sourceFile`/`bloque` (que son procedencia, no temario):
-`section` (p.ej. `"vista"`) → `topic` (p.ej. `"zoom"`) → `subtopic` libre.
+`data/taxonomy.json` define la jerarquía pedagógica. `bloque` sigue
+siendo procedencia (no temario), pero `sourceFile` ahora **coincide** con
+`section` — el troceo físico y el temario ya no son ejes independientes
+para el grueso del banco (excepción: una pregunta puede vivir en el
+archivo de su `section` aunque su procedencia fuese otra pestaña, p.ej.
+la de Vista Preliminar quedó en `archivo.json` con `bloque` "Vista …").
+Jerarquía: `section` (p.ej. `"vista"`) → `topic` (p.ej. `"zoom"`) →
+`subtopic` libre.
 
-**Las 952 preguntas heredadas ya están reclasificadas** (ago-2026,
-`scripts/classify_taxonomy.py`) — no era solo Vista: interfaz 519,
-archivo 169, inicio 131, vista 121 (61 de vista.json + 60 del banco
-heredado que resultaron ser genuinamente de esa pestaña: dividir
-ventana, vista Esquema, atajos de macros...), insertar 47, revisar 9,
-referencias 8, correspondencia 7, disposición 3, diseño 0 (la única
-sección todavía sin preguntas reales). Nota: después (ago-2026) se
-integraron `vista.json` (97 preguntas → sección `vista` ~157) y
-`revision.json` (70 preguntas → sección `revisar` ~79); los recuentos de
-arriba son la foto del momento de la reclasificación, no un contador vivo. El script combina reglas por
-palabra clave (verificadas contra el contenido real de cada bloque, no
-adivinadas) con una reserva por bloque para enunciados sin palabra
-distintiva propia ("señale la afirmación que NO es correcta") — si
-hace falta reclasificar contenido nuevo más adelante, ese script es el
-patrón a seguir, no una lista `tema` en texto libre.
-
-Caso especial a recordar: la pregunta de Vista Preliminar tiene
-`sourceFile:"vista.txt"` (procedencia) pero `section:"archivo"`,
-`topic:"imprimir"` (ubicación funcional real) — procedencia y taxonomía
-son campos independientes a propósito.
+**Todo el banco está clasificado y agrupado por `section`.** Recuento
+actual (`data/questions/<section>.json`, ago-2026): interfaz 519,
+inicio 417, archivo 170, vista 155, revisar 79, insertar 47,
+referencias 8, correspondencia 7, disposicion 3, diseno 0 (sin archivo,
+la única sección sin preguntas). La reclasificación del banco heredado
+(`scripts/classify_taxonomy.py`) combinó reglas por palabra clave
+(verificadas contra el contenido real, no adivinadas) con una reserva
+por bloque; la reagrupación física posterior es
+`scripts/regroup_by_section.py` (one-shot) + `scripts/regroup_id_map.json`
+(mapa id viejo→nuevo). Si hace falta reclasificar contenido nuevo, ese es
+el patrón a seguir, no una lista `tema` en texto libre.
 
 **El campo `tema` (texto libre, heredado) ya no se usa para navegar/
 filtrar en la UI** — el asistente de práctica ("Por pestaña y grupo") y
@@ -203,8 +220,10 @@ existente antes de dar nada por "pregunta nueva" (ver
 `data/vista_integration_report.md` como plantilla de ese proceso —
 clasificación NUEVA/SOLAPAMIENTO/MEJORA/COMPLEMENTARIA/CONFLICTO),
 declarar cualquier hueco o contradicción de la fuente en vez de
-resolverla en silencio, y usar `sourceFile` nuevo (evita colisión de IDs
-por construcción, ya que el ID es `sourceFile-índice`).
+resolverla en silencio. El ID es `<section>-<índice>` y `sourceFile` =
+`<section>.json`, así que una pestaña nueva no colisiona por
+construcción; si integras un documento de una pestaña que ya tiene
+archivo, añádele preguntas a ese archivo renumerando la cola.
 
 ## Arquitectura del motor (app.js)
 

@@ -1,15 +1,27 @@
 [
   {
-    "id": "revision-1",
-    "sourceFile": "revision.json",
+    "id": "revisar-1",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Ortografía",
     "tipo": "opcion_unica",
     "enunciado": "¿Qué combinación de teclas abre el panel Editor en Word 365?",
     "opciones": [
-      { "letter": "A", "text": "Alt + F7" },
-      { "letter": "B", "text": "Mayús + F7" },
-      { "letter": "C", "text": "Windows + F7" },
-      { "letter": "D", "text": "Ctrl + Mayús + E" }
+      {
+        "letter": "A",
+        "text": "Alt + F7"
+      },
+      {
+        "letter": "B",
+        "text": "Mayús + F7"
+      },
+      {
+        "letter": "C",
+        "text": "Windows + F7"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl + Mayús + E"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -24,34 +36,92 @@
     "sourceQuestionId": "Q-001"
   },
   {
-    "id": "revision-2",
-    "sourceFile": "revision.json",
+    "id": "revisar-2",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Atajos",
     "tipo": "emparejamiento",
     "enunciado": "Relaciona cada atajo con su función. Cada letra se usa una sola vez.",
     "opciones": [],
     "matching": {
       "left": [
-        { "id": "1", "label": "F7" },
-        { "id": "2", "label": "Alt + F7" },
-        { "id": "3", "label": "Mayús + F7" },
-        { "id": "4", "label": "Ctrl + Mayús + G" },
-        { "id": "5", "label": "Ctrl + Alt + A" },
-        { "id": "6", "label": "Ctrl + Mayús + E" },
-        { "id": "7", "label": "Alt + Mayús + F7" }
+        {
+          "id": "1",
+          "label": "F7"
+        },
+        {
+          "id": "2",
+          "label": "Alt + F7"
+        },
+        {
+          "id": "3",
+          "label": "Mayús + F7"
+        },
+        {
+          "id": "4",
+          "label": "Ctrl + Mayús + G"
+        },
+        {
+          "id": "5",
+          "label": "Ctrl + Alt + A"
+        },
+        {
+          "id": "6",
+          "label": "Ctrl + Mayús + E"
+        },
+        {
+          "id": "7",
+          "label": "Alt + Mayús + F7"
+        }
       ],
       "right": [
-        { "id": "A", "label": "Nuevo comentario" },
-        { "id": "B", "label": "Sinónimos" },
-        { "id": "C", "label": "Control de cambios" },
-        { "id": "D", "label": "Editor" },
-        { "id": "E", "label": "Error ortográfico siguiente" },
-        { "id": "F", "label": "Contar palabras" },
-        { "id": "G", "label": "Traducir" }
+        {
+          "id": "A",
+          "label": "Nuevo comentario"
+        },
+        {
+          "id": "B",
+          "label": "Sinónimos"
+        },
+        {
+          "id": "C",
+          "label": "Control de cambios"
+        },
+        {
+          "id": "D",
+          "label": "Editor"
+        },
+        {
+          "id": "E",
+          "label": "Error ortográfico siguiente"
+        },
+        {
+          "id": "F",
+          "label": "Contar palabras"
+        },
+        {
+          "id": "G",
+          "label": "Traducir"
+        }
       ],
-      "correct": { "1": "D", "2": "E", "3": "B", "4": "F", "5": "A", "6": "C", "7": "G" }
+      "correct": {
+        "1": "D",
+        "2": "E",
+        "3": "B",
+        "4": "F",
+        "5": "A",
+        "6": "C",
+        "7": "G"
+      }
     },
-    "respuesta": { "1": "D", "2": "E", "3": "B", "4": "F", "5": "A", "6": "C", "7": "G" },
+    "respuesta": {
+      "1": "D",
+      "2": "E",
+      "3": "B",
+      "4": "F",
+      "5": "A",
+      "6": "C",
+      "7": "G"
+    },
     "explicacion": "F7 abre el Editor; Alt+F7 salta al siguiente error; Mayús+F7 abre Sinónimos; Ctrl+Mayús+G Contar palabras; Ctrl+Alt+A Nuevo comentario; Ctrl+Mayús+E Control de cambios; Alt+Mayús+F7 Traducir. Todos confirmados en Word 365.",
     "categoria": "atajo",
     "negativa": false,
@@ -63,8 +133,8 @@
     "sourceQuestionId": "Q-002"
   },
   {
-    "id": "revision-3",
-    "sourceFile": "revision.json",
+    "id": "revisar-3",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Atajos",
     "tipo": "verdadero_falso",
     "enunciado": "En Word 365, Alt + F7 abre el panel Editor completo.",
@@ -82,14 +152,17 @@
     "sourceQuestionId": "Q-003"
   },
   {
-    "id": "revision-4",
-    "sourceFile": "revision.json",
+    "id": "revisar-4",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Comentarios",
     "tipo": "relleno",
     "enunciado": "El atajo para insertar un nuevo comentario es [1]. El de Control de cambios es [2].",
     "opciones": [],
     "matching": null,
-    "respuesta": ["Ctrl + Alt + A", "Ctrl + Mayús + E"],
+    "respuesta": [
+      "Ctrl + Alt + A",
+      "Ctrl + Mayús + E"
+    ],
     "explicacion": "Nuevo comentario: Ctrl+Alt+A. Control de cambios: Ctrl+Mayús+E.",
     "categoria": "atajo",
     "negativa": false,
@@ -101,16 +174,28 @@
     "sourceQuestionId": "Q-004"
   },
   {
-    "id": "revision-5",
-    "sourceFile": "revision.json",
+    "id": "revisar-5",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Seguimiento",
     "tipo": "opcion_unica",
     "enunciado": "Un usuario quiere activar el Control de cambios usando el teclado. ¿Qué atajo debe usar?",
     "opciones": [
-      { "letter": "A", "text": "Ctrl + Alt + A" },
-      { "letter": "B", "text": "Alt + F7" },
-      { "letter": "C", "text": "Ctrl + Mayús + E" },
-      { "letter": "D", "text": "Alt + Mayús + F7" }
+      {
+        "letter": "A",
+        "text": "Ctrl + Alt + A"
+      },
+      {
+        "letter": "B",
+        "text": "Alt + F7"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl + Mayús + E"
+      },
+      {
+        "letter": "D",
+        "text": "Alt + Mayús + F7"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -125,16 +210,28 @@
     "sourceQuestionId": "Q-005"
   },
   {
-    "id": "revision-6",
-    "sourceFile": "revision.json",
+    "id": "revisar-6",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Voz",
     "tipo": "opcion_unica",
     "enunciado": "¿Qué función activa el atajo Alt + Ctrl + Espacio en Word 365?",
     "opciones": [
-      { "letter": "A", "text": "Insertar un espacio de no separación" },
-      { "letter": "B", "text": "Leer en voz alta el texto y resaltar cada palabra" },
-      { "letter": "C", "text": "Activar el modo de concentración" },
-      { "letter": "D", "text": "Abrir el panel de Control de cambios" }
+      {
+        "letter": "A",
+        "text": "Insertar un espacio de no separación"
+      },
+      {
+        "letter": "B",
+        "text": "Leer en voz alta el texto y resaltar cada palabra"
+      },
+      {
+        "letter": "C",
+        "text": "Activar el modo de concentración"
+      },
+      {
+        "letter": "D",
+        "text": "Abrir el panel de Control de cambios"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -149,14 +246,16 @@
     "sourceQuestionId": "Q-006"
   },
   {
-    "id": "revision-7",
-    "sourceFile": "revision.json",
+    "id": "revisar-7",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Grupos",
     "tipo": "relleno",
     "enunciado": "Los comandos Editor, Sinónimos y Contar palabras se encuentran en el grupo [1] de la Pestaña Revisar.",
     "opciones": [],
     "matching": null,
-    "respuesta": ["Revisión"],
+    "respuesta": [
+      "Revisión"
+    ],
     "explicacion": "El grupo se llama 'Revisión' (no 'Revisar'). Es el grupo principal de la pestaña.",
     "categoria": "ruta",
     "negativa": false,
@@ -168,21 +267,44 @@
     "sourceQuestionId": "Q-007"
   },
   {
-    "id": "revision-8",
-    "sourceFile": "revision.json",
+    "id": "revisar-8",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Comentarios",
     "tipo": "seleccion_multiple",
     "enunciado": "¿Cuáles de los siguientes comandos pertenecen al grupo Comentarios de la Pestaña Revisar? (Selecciona todos los correctos.)",
     "opciones": [
-      { "letter": "A", "text": "Nuevo comentario" },
-      { "letter": "B", "text": "Control de cambios" },
-      { "letter": "C", "text": "Mostrar comentarios" },
-      { "letter": "D", "text": "Anterior" },
-      { "letter": "E", "text": "Panel de revisiones" },
-      { "letter": "F", "text": "Siguiente" }
+      {
+        "letter": "A",
+        "text": "Nuevo comentario"
+      },
+      {
+        "letter": "B",
+        "text": "Control de cambios"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar comentarios"
+      },
+      {
+        "letter": "D",
+        "text": "Anterior"
+      },
+      {
+        "letter": "E",
+        "text": "Panel de revisiones"
+      },
+      {
+        "letter": "F",
+        "text": "Siguiente"
+      }
     ],
     "matching": null,
-    "respuesta": ["A", "C", "D", "F"],
+    "respuesta": [
+      "A",
+      "C",
+      "D",
+      "F"
+    ],
     "explicacion": "Control de cambios y Panel de revisiones pertenecen al grupo Seguimiento, no a Comentarios.",
     "categoria": "ruta",
     "negativa": false,
@@ -194,40 +316,122 @@
     "sourceQuestionId": "Q-008"
   },
   {
-    "id": "revision-9",
-    "sourceFile": "revision.json",
+    "id": "revisar-9",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Grupos",
     "tipo": "emparejamiento",
     "enunciado": "Empareja cada comando u opción con el grupo de la Pestaña Revisar en el que se encuentra. Cada letra se usa una sola vez.",
     "opciones": [],
     "matching": {
       "left": [
-        { "id": "1", "label": "Leer en voz alta" },
-        { "id": "2", "label": "Comprobar accesibilidad" },
-        { "id": "3", "label": "Control de cambios" },
-        { "id": "4", "label": "Aceptar" },
-        { "id": "5", "label": "Comparar" },
-        { "id": "6", "label": "Nuevo comentario" },
-        { "id": "7", "label": "Restringir edición" },
-        { "id": "8", "label": "Sinónimos" },
-        { "id": "9", "label": "Ocultar entrada de lápiz" },
-        { "id": "10", "label": "Traducir" }
+        {
+          "id": "1",
+          "label": "Leer en voz alta"
+        },
+        {
+          "id": "2",
+          "label": "Comprobar accesibilidad"
+        },
+        {
+          "id": "3",
+          "label": "Control de cambios"
+        },
+        {
+          "id": "4",
+          "label": "Aceptar"
+        },
+        {
+          "id": "5",
+          "label": "Comparar"
+        },
+        {
+          "id": "6",
+          "label": "Nuevo comentario"
+        },
+        {
+          "id": "7",
+          "label": "Restringir edición"
+        },
+        {
+          "id": "8",
+          "label": "Sinónimos"
+        },
+        {
+          "id": "9",
+          "label": "Ocultar entrada de lápiz"
+        },
+        {
+          "id": "10",
+          "label": "Traducir"
+        }
       ],
       "right": [
-        { "id": "A", "label": "Accesibilidad" },
-        { "id": "B", "label": "Cambios" },
-        { "id": "C", "label": "Comentarios" },
-        { "id": "D", "label": "Comparar" },
-        { "id": "E", "label": "Entrada de lápiz" },
-        { "id": "F", "label": "Proteger" },
-        { "id": "G", "label": "Revisión" },
-        { "id": "H", "label": "Seguimiento" },
-        { "id": "I", "label": "Voz" },
-        { "id": "J", "label": "Idioma" }
+        {
+          "id": "A",
+          "label": "Accesibilidad"
+        },
+        {
+          "id": "B",
+          "label": "Cambios"
+        },
+        {
+          "id": "C",
+          "label": "Comentarios"
+        },
+        {
+          "id": "D",
+          "label": "Comparar"
+        },
+        {
+          "id": "E",
+          "label": "Entrada de lápiz"
+        },
+        {
+          "id": "F",
+          "label": "Proteger"
+        },
+        {
+          "id": "G",
+          "label": "Revisión"
+        },
+        {
+          "id": "H",
+          "label": "Seguimiento"
+        },
+        {
+          "id": "I",
+          "label": "Voz"
+        },
+        {
+          "id": "J",
+          "label": "Idioma"
+        }
       ],
-      "correct": { "1": "I", "2": "A", "3": "H", "4": "B", "5": "D", "6": "C", "7": "F", "8": "G", "9": "E", "10": "J" }
+      "correct": {
+        "1": "I",
+        "2": "A",
+        "3": "H",
+        "4": "B",
+        "5": "D",
+        "6": "C",
+        "7": "F",
+        "8": "G",
+        "9": "E",
+        "10": "J"
+      }
     },
-    "respuesta": { "1": "I", "2": "A", "3": "H", "4": "B", "5": "D", "6": "C", "7": "F", "8": "G", "9": "E", "10": "J" },
+    "respuesta": {
+      "1": "I",
+      "2": "A",
+      "3": "H",
+      "4": "B",
+      "5": "D",
+      "6": "C",
+      "7": "F",
+      "8": "G",
+      "9": "E",
+      "10": "J"
+    },
     "explicacion": "Cada comando pertenece a su grupo: Voz, Accesibilidad, Seguimiento, Cambios, Comparar, Comentarios, Proteger, Revisión, Entrada de lápiz e Idioma.",
     "categoria": "ruta",
     "negativa": false,
@@ -239,8 +443,8 @@
     "sourceQuestionId": "Q-009"
   },
   {
-    "id": "revision-10",
-    "sourceFile": "revision.json",
+    "id": "revisar-10",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Seguimiento vs. Cambios",
     "tipo": "verdadero_falso",
     "enunciado": "En la Pestaña Revisar de Word 365, el comando Aceptar (para aceptar cambios) se encuentra en el grupo Seguimiento, junto con el Control de cambios.",
@@ -258,8 +462,8 @@
     "sourceQuestionId": "Q-010"
   },
   {
-    "id": "revision-11",
-    "sourceFile": "revision.json",
+    "id": "revisar-11",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Entrada de lápiz",
     "tipo": "verdadero_falso",
     "enunciado": "El comando Ocultar entrada de lápiz se encuentra en un grupo cuya etiqueta es 'Entrada de lápiz', independiente del grupo Proteger.",
@@ -277,16 +481,28 @@
     "sourceQuestionId": "Q-011"
   },
   {
-    "id": "revision-12",
-    "sourceFile": "revision.json",
+    "id": "revisar-12",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Voz",
     "tipo": "opcion_unica",
     "enunciado": "¿Cuál es el comportamiento del comando Leer en voz alta según Word 365?",
     "opciones": [
-      { "letter": "A", "text": "Lee el documento completo desde el principio y genera un archivo de audio" },
-      { "letter": "B", "text": "Lee el texto en voz alta y resalta cada palabra mientras lo lee" },
-      { "letter": "C", "text": "Lee solo el párrafo donde está situado el cursor" },
-      { "letter": "D", "text": "Lee el texto seleccionado y lo convierte en un comentario de voz" }
+      {
+        "letter": "A",
+        "text": "Lee el documento completo desde el principio y genera un archivo de audio"
+      },
+      {
+        "letter": "B",
+        "text": "Lee el texto en voz alta y resalta cada palabra mientras lo lee"
+      },
+      {
+        "letter": "C",
+        "text": "Lee solo el párrafo donde está situado el cursor"
+      },
+      {
+        "letter": "D",
+        "text": "Lee el texto seleccionado y lo convierte en un comentario de voz"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -301,16 +517,28 @@
     "sourceQuestionId": "Q-012"
   },
   {
-    "id": "revision-13",
-    "sourceFile": "revision.json",
+    "id": "revisar-13",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Accesibilidad",
     "tipo": "opcion_unica",
     "enunciado": "¿Para qué sirve el comando Comprobar accesibilidad?",
     "opciones": [
-      { "letter": "A", "text": "Verificar que el documento cumple las normas ortográficas" },
-      { "letter": "B", "text": "Detectar y corregir contenido de difícil acceso para personas con discapacidad" },
-      { "letter": "C", "text": "Restringir la edición del documento a usuarios sin permisos" },
-      { "letter": "D", "text": "Comprobar si el documento es compatible con versiones anteriores" }
+      {
+        "letter": "A",
+        "text": "Verificar que el documento cumple las normas ortográficas"
+      },
+      {
+        "letter": "B",
+        "text": "Detectar y corregir contenido de difícil acceso para personas con discapacidad"
+      },
+      {
+        "letter": "C",
+        "text": "Restringir la edición del documento a usuarios sin permisos"
+      },
+      {
+        "letter": "D",
+        "text": "Comprobar si el documento es compatible con versiones anteriores"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -325,16 +553,28 @@
     "sourceQuestionId": "Q-013"
   },
   {
-    "id": "revision-14",
-    "sourceFile": "revision.json",
+    "id": "revisar-14",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
     "tipo": "opcion_unica",
     "enunciado": "Un usuario necesita impedir que otros editen o cambien el formato de un documento, sin bloquear a autores específicos. ¿Qué opción del grupo Proteger debe usar?",
     "opciones": [
-      { "letter": "A", "text": "Bloquear autores" },
-      { "letter": "B", "text": "Control de cambios" },
-      { "letter": "C", "text": "Restringir edición" },
-      { "letter": "D", "text": "Ocultar entrada de lápiz" }
+      {
+        "letter": "A",
+        "text": "Bloquear autores"
+      },
+      {
+        "letter": "B",
+        "text": "Control de cambios"
+      },
+      {
+        "letter": "C",
+        "text": "Restringir edición"
+      },
+      {
+        "letter": "D",
+        "text": "Ocultar entrada de lápiz"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -349,16 +589,28 @@
     "sourceQuestionId": "Q-014"
   },
   {
-    "id": "revision-15",
-    "sourceFile": "revision.json",
+    "id": "revisar-15",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
     "tipo": "opcion_unica",
     "enunciado": "¿En qué se diferencia Bloquear autores de Restringir edición en Word 365?",
     "opciones": [
-      { "letter": "A", "text": "Bloquear autores limita la edición de todo el documento; Restringir edición solo afecta al texto seleccionado" },
-      { "letter": "B", "text": "Bloquear autores evita cambios en el texto seleccionado; Restringir edición limita la edición y el formato de todo el documento" },
-      { "letter": "C", "text": "Bloquear autores activa el registro de cambios por autor; Restringir edición oculta las revisiones" },
-      { "letter": "D", "text": "Bloquear autores requiere contraseña; Restringir edición funciona sin contraseña" }
+      {
+        "letter": "A",
+        "text": "Bloquear autores limita la edición de todo el documento; Restringir edición solo afecta al texto seleccionado"
+      },
+      {
+        "letter": "B",
+        "text": "Bloquear autores evita cambios en el texto seleccionado; Restringir edición limita la edición y el formato de todo el documento"
+      },
+      {
+        "letter": "C",
+        "text": "Bloquear autores activa el registro de cambios por autor; Restringir edición oculta las revisiones"
+      },
+      {
+        "letter": "D",
+        "text": "Bloquear autores requiere contraseña; Restringir edición funciona sin contraseña"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -373,8 +625,8 @@
     "sourceQuestionId": "Q-015"
   },
   {
-    "id": "revision-16",
-    "sourceFile": "revision.json",
+    "id": "revisar-16",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Entrada de lápiz",
     "tipo": "verdadero_falso",
     "enunciado": "El comando Ocultar entrada de lápiz elimina definitivamente las entradas de lápiz del documento.",
@@ -392,16 +644,28 @@
     "sourceQuestionId": "Q-016"
   },
   {
-    "id": "revision-17",
-    "sourceFile": "revision.json",
+    "id": "revisar-17",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Seguimiento",
     "tipo": "opcion_unica",
     "enunciado": "Un usuario observa que cada modificación que realiza aparece marcada con un color diferente, indicando el nombre del autor y la fecha. ¿Qué función está activa?",
     "opciones": [
-      { "letter": "A", "text": "Mostrar revisiones" },
-      { "letter": "B", "text": "Panel de revisiones" },
-      { "letter": "C", "text": "Control de cambios" },
-      { "letter": "D", "text": "Comparar" }
+      {
+        "letter": "A",
+        "text": "Mostrar revisiones"
+      },
+      {
+        "letter": "B",
+        "text": "Panel de revisiones"
+      },
+      {
+        "letter": "C",
+        "text": "Control de cambios"
+      },
+      {
+        "letter": "D",
+        "text": "Comparar"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -416,16 +680,28 @@
     "sourceQuestionId": "Q-017"
   },
   {
-    "id": "revision-18",
-    "sourceFile": "revision.json",
+    "id": "revisar-18",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Idioma",
     "tipo": "opcion_unica",
     "enunciado": "¿Para qué sirve el comando Idioma en el grupo Idioma de la Pestaña Revisar?",
     "opciones": [
-      { "letter": "A", "text": "Traducir el documento a otro idioma" },
-      { "letter": "B", "text": "Cambiar el idioma de la interfaz de Word" },
-      { "letter": "C", "text": "Elegir el idioma en el que se quiere corregir el documento" },
-      { "letter": "D", "text": "Insertar caracteres especiales de otros idiomas" }
+      {
+        "letter": "A",
+        "text": "Traducir el documento a otro idioma"
+      },
+      {
+        "letter": "B",
+        "text": "Cambiar el idioma de la interfaz de Word"
+      },
+      {
+        "letter": "C",
+        "text": "Elegir el idioma en el que se quiere corregir el documento"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar caracteres especiales de otros idiomas"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -440,25 +716,46 @@
     "sourceQuestionId": "Q-018"
   },
   {
-    "id": "revision-19",
-    "sourceFile": "revision.json",
+    "id": "revisar-19",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Corrector visual",
     "tipo": "emparejamiento",
     "enunciado": "Relaciona cada marca visual con lo que señala Word 365. Una de las marcas de la derecha no tiene correspondencia.",
     "opciones": [],
     "matching": {
       "left": [
-        { "id": "1", "label": "Línea ondulada roja" },
-        { "id": "2", "label": "Doble línea azul" }
+        {
+          "id": "1",
+          "label": "Línea ondulada roja"
+        },
+        {
+          "id": "2",
+          "label": "Doble línea azul"
+        }
       ],
       "right": [
-        { "id": "A", "label": "Error gramatical o palabra con distinto significado" },
-        { "id": "B", "label": "Error ortográfico o palabra no encontrada" },
-        { "id": "C", "label": "Formato incompatible con el estilo del párrafo" }
+        {
+          "id": "A",
+          "label": "Error gramatical o palabra con distinto significado"
+        },
+        {
+          "id": "B",
+          "label": "Error ortográfico o palabra no encontrada"
+        },
+        {
+          "id": "C",
+          "label": "Formato incompatible con el estilo del párrafo"
+        }
       ],
-      "correct": { "1": "B", "2": "A" }
+      "correct": {
+        "1": "B",
+        "2": "A"
+      }
     },
-    "respuesta": { "1": "B", "2": "A" },
+    "respuesta": {
+      "1": "B",
+      "2": "A"
+    },
     "explicacion": "Línea roja = ortografía/no encontrada. Doble azul = gramática/distinto significado. 'Formato incompatible' no está declarado.",
     "categoria": "concepto",
     "negativa": false,
@@ -470,16 +767,28 @@
     "sourceQuestionId": "Q-019"
   },
   {
-    "id": "revision-20",
-    "sourceFile": "revision.json",
+    "id": "revisar-20",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Corrector visual",
     "tipo": "opcion_unica",
     "enunciado": "Una palabra aparece subrayada con una línea ondulada roja. ¿Qué indica esta marca?",
     "opciones": [
-      { "letter": "A", "text": "Posible error gramatical o significado ambiguo" },
-      { "letter": "B", "text": "Estilo de carácter personalizado" },
-      { "letter": "C", "text": "Error ortográfico o palabra no encontrada en el diccionario" },
-      { "letter": "D", "text": "Palabra duplicada en el mismo párrafo" }
+      {
+        "letter": "A",
+        "text": "Posible error gramatical o significado ambiguo"
+      },
+      {
+        "letter": "B",
+        "text": "Estilo de carácter personalizado"
+      },
+      {
+        "letter": "C",
+        "text": "Error ortográfico o palabra no encontrada en el diccionario"
+      },
+      {
+        "letter": "D",
+        "text": "Palabra duplicada en el mismo párrafo"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -494,8 +803,8 @@
     "sourceQuestionId": "Q-020"
   },
   {
-    "id": "revision-21",
-    "sourceFile": "revision.json",
+    "id": "revisar-21",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Corrector visual",
     "tipo": "verdadero_falso",
     "enunciado": "En Word 365, la doble línea azul marca únicamente errores gramaticales.",
@@ -513,21 +822,44 @@
     "sourceQuestionId": "Q-021"
   },
   {
-    "id": "revision-22",
-    "sourceFile": "revision.json",
+    "id": "revisar-22",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Accesibilidad",
     "tipo": "seleccion_multiple",
     "enunciado": "¿Cuáles de las siguientes opciones forman parte del submenú desplegable de Comprobar accesibilidad? (Son 4 respuestas correctas.)",
     "opciones": [
-      { "letter": "A", "text": "Texto alternativo" },
-      { "letter": "B", "text": "Concentración" },
-      { "letter": "C", "text": "Agregar al diccionario" },
-      { "letter": "D", "text": "Panel de navegación" },
-      { "letter": "E", "text": "Opciones: accesibilidad" },
-      { "letter": "F", "text": "Leer en voz alta" }
+      {
+        "letter": "A",
+        "text": "Texto alternativo"
+      },
+      {
+        "letter": "B",
+        "text": "Concentración"
+      },
+      {
+        "letter": "C",
+        "text": "Agregar al diccionario"
+      },
+      {
+        "letter": "D",
+        "text": "Panel de navegación"
+      },
+      {
+        "letter": "E",
+        "text": "Opciones: accesibilidad"
+      },
+      {
+        "letter": "F",
+        "text": "Leer en voz alta"
+      }
     ],
     "matching": null,
-    "respuesta": ["A", "B", "D", "E"],
+    "respuesta": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
     "explicacion": "El submenú de Comprobar accesibilidad contiene: Comprobar accesibilidad, Texto alternativo, Panel de navegación, Concentración y Opciones: accesibilidad. Agregar al diccionario pertenece al corrector; Leer en voz alta al grupo Voz.",
     "categoria": "ruta",
     "negativa": false,
@@ -539,16 +871,28 @@
     "sourceQuestionId": "Q-022"
   },
   {
-    "id": "revision-23",
-    "sourceFile": "revision.json",
+    "id": "revisar-23",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Comparar",
     "tipo": "opcion_unica",
     "enunciado": "¿Cuál es la diferencia entre Comparar... y Combinar... en el menú del comando Comparar?",
     "opciones": [
-      { "letter": "A", "text": "Comparar integra revisiones de varios autores; Combinar confronta dos versiones" },
-      { "letter": "B", "text": "Comparar muestra los cambios en el Panel de revisiones; Combinar los muestra en el cuerpo" },
-      { "letter": "C", "text": "Comparar confronta dos versiones (estilo jurídico); Combinar integra revisiones de varios autores" },
-      { "letter": "D", "text": "Comparar activa Control de cambios; Combinar requiere activarlo manualmente" }
+      {
+        "letter": "A",
+        "text": "Comparar integra revisiones de varios autores; Combinar confronta dos versiones"
+      },
+      {
+        "letter": "B",
+        "text": "Comparar muestra los cambios en el Panel de revisiones; Combinar los muestra en el cuerpo"
+      },
+      {
+        "letter": "C",
+        "text": "Comparar confronta dos versiones (estilo jurídico); Combinar integra revisiones de varios autores"
+      },
+      {
+        "letter": "D",
+        "text": "Comparar activa Control de cambios; Combinar requiere activarlo manualmente"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -563,16 +907,28 @@
     "sourceQuestionId": "Q-023"
   },
   {
-    "id": "revision-24",
-    "sourceFile": "revision.json",
+    "id": "revisar-24",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Comparar",
     "tipo": "opcion_unica",
     "enunciado": "Un responsable ha recibido el mismo documento revisado por tres autores diferentes y necesita integrar todas las revisiones en un único documento. ¿Qué opción debe usar?",
     "opciones": [
-      { "letter": "A", "text": "Comparar..." },
-      { "letter": "B", "text": "Mostrar documentos de origen" },
-      { "letter": "C", "text": "Combinar..." },
-      { "letter": "D", "text": "Control de cambios" }
+      {
+        "letter": "A",
+        "text": "Comparar..."
+      },
+      {
+        "letter": "B",
+        "text": "Mostrar documentos de origen"
+      },
+      {
+        "letter": "C",
+        "text": "Combinar..."
+      },
+      {
+        "letter": "D",
+        "text": "Control de cambios"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -587,8 +943,8 @@
     "sourceQuestionId": "Q-024"
   },
   {
-    "id": "revision-25",
-    "sourceFile": "revision.json",
+    "id": "revisar-25",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Traducir",
     "tipo": "verdadero_falso",
     "enunciado": "La opción Traducir documento del menú Traducir modifica directamente el documento actual, sustituyendo el texto original por la traducción.",
@@ -606,16 +962,28 @@
     "sourceQuestionId": "Q-025"
   },
   {
-    "id": "revision-26",
-    "sourceFile": "revision.json",
+    "id": "revisar-26",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
     "tipo": "opcion_unica",
     "enunciado": "Ordena los siguientes elementos del panel Restringir edición en la secuencia correcta (de arriba a abajo):",
     "opciones": [
-      { "letter": "A", "text": "C → D → B → A" },
-      { "letter": "B", "text": "D → C → B → A" },
-      { "letter": "C", "text": "D → B → C → A" },
-      { "letter": "D", "text": "B → C → D → A" }
+      {
+        "letter": "A",
+        "text": "C → D → B → A"
+      },
+      {
+        "letter": "B",
+        "text": "D → C → B → A"
+      },
+      {
+        "letter": "C",
+        "text": "D → B → C → A"
+      },
+      {
+        "letter": "D",
+        "text": "B → C → D → A"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -630,8 +998,8 @@
     "sourceQuestionId": "Q-026"
   },
   {
-    "id": "revision-27",
-    "sourceFile": "revision.json",
+    "id": "revisar-27",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
     "tipo": "verdadero_falso",
     "enunciado": "En el panel Restringir edición, el botón 'Sí, aplicar la protección' está siempre disponible desde que se abre el panel.",
@@ -649,21 +1017,44 @@
     "sourceQuestionId": "Q-027"
   },
   {
-    "id": "revision-28",
-    "sourceFile": "revision.json",
+    "id": "revisar-28",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Corrector",
     "tipo": "seleccion_multiple",
     "enunciado": "¿Cuáles de las siguientes opciones están disponibles en el panel de corrección ortográfica de Word 365?",
     "opciones": [
-      { "letter": "A", "text": "Omitir una vez" },
-      { "letter": "B", "text": "Ignorar todo" },
-      { "letter": "C", "text": "Eliminar la palabra del documento" },
-      { "letter": "D", "text": "Agregar al diccionario" },
-      { "letter": "E", "text": "Configuración" },
-      { "letter": "F", "text": "Marcar la palabra como correcta permanentemente" }
+      {
+        "letter": "A",
+        "text": "Omitir una vez"
+      },
+      {
+        "letter": "B",
+        "text": "Ignorar todo"
+      },
+      {
+        "letter": "C",
+        "text": "Eliminar la palabra del documento"
+      },
+      {
+        "letter": "D",
+        "text": "Agregar al diccionario"
+      },
+      {
+        "letter": "E",
+        "text": "Configuración"
+      },
+      {
+        "letter": "F",
+        "text": "Marcar la palabra como correcta permanentemente"
+      }
     ],
     "matching": null,
-    "respuesta": ["A", "B", "D", "E"],
+    "respuesta": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
     "explicacion": "Las opciones del corrector son Omitir una vez, Ignorar todo, Agregar al diccionario y Configuración.",
     "categoria": "concepto",
     "negativa": false,
@@ -675,14 +1066,18 @@
     "sourceQuestionId": "Q-028"
   },
   {
-    "id": "revision-29",
-    "sourceFile": "revision.json",
+    "id": "revisar-29",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Configuración",
     "tipo": "relleno",
     "enunciado": "Las opciones de configuración de la ortografía en Word 365 se establecen desde [1] → [2] → [3].",
     "opciones": [],
     "matching": null,
-    "respuesta": ["Archivo", "Opciones", "Revisión"],
+    "respuesta": [
+      "Archivo",
+      "Opciones",
+      "Revisión"
+    ],
     "explicacion": "La ruta es Archivo → Opciones → Revisión.",
     "categoria": "ruta",
     "negativa": false,
@@ -694,16 +1089,28 @@
     "sourceQuestionId": "Q-029"
   },
   {
-    "id": "revision-30",
-    "sourceFile": "revision.json",
+    "id": "revisar-30",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
     "tipo": "opcion_unica",
     "enunciado": "Un administrador necesita limitar la edición y el formato que otros usuarios pueden aplicar a un documento. Según la Pestaña Revisar, ¿cuál es la ruta correcta?",
     "opciones": [
-      { "letter": "A", "text": "Archivo → Información → Proteger documento → Restringir edición" },
-      { "letter": "B", "text": "Revisar → Proteger → Proteger ▼ → Restringir edición" },
-      { "letter": "C", "text": "Revisar → Seguimiento → Control de cambios ▼ → Restringir" },
-      { "letter": "D", "text": "Revisar → Cambios → Aceptar ▼ → Opciones de edición" }
+      {
+        "letter": "A",
+        "text": "Archivo → Información → Proteger documento → Restringir edición"
+      },
+      {
+        "letter": "B",
+        "text": "Revisar → Proteger → Proteger ▼ → Restringir edición"
+      },
+      {
+        "letter": "C",
+        "text": "Revisar → Seguimiento → Control de cambios ▼ → Restringir"
+      },
+      {
+        "letter": "D",
+        "text": "Revisar → Cambios → Aceptar ▼ → Opciones de edición"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -718,14 +1125,18 @@
     "sourceQuestionId": "Q-030"
   },
   {
-    "id": "revision-31",
-    "sourceFile": "revision.json",
+    "id": "revisar-31",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Traducir",
     "tipo": "relleno",
     "enunciado": "Para traducir únicamente el texto seleccionado usando el Traductor de Microsoft, la ruta es: Revisar → [1] → [2] ▼ → [3].",
     "opciones": [],
     "matching": null,
-    "respuesta": ["Idioma", "Traducir", "Traducir selección"],
+    "respuesta": [
+      "Idioma",
+      "Traducir",
+      "Traducir selección"
+    ],
     "explicacion": "La ruta es Revisar → Idioma → Traducir ▼ → Traducir selección.",
     "categoria": "ruta",
     "negativa": false,
@@ -737,23 +1148,54 @@
     "sourceQuestionId": "Q-031"
   },
   {
-    "id": "revision-32",
-    "sourceFile": "revision.json",
+    "id": "revisar-32",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Contar palabras",
     "tipo": "seleccion_multiple",
     "enunciado": "¿Qué estadísticas proporciona exactamente el cuadro de diálogo Contar palabras en Word 365? (Son 6 respuestas correctas.)",
     "opciones": [
-      { "letter": "A", "text": "Páginas" },
-      { "letter": "B", "text": "Palabras" },
-      { "letter": "C", "text": "Imágenes" },
-      { "letter": "D", "text": "Caracteres (sin espacios)" },
-      { "letter": "E", "text": "Caracteres (con espacios)" },
-      { "letter": "F", "text": "Párrafos" },
-      { "letter": "G", "text": "Tablas" },
-      { "letter": "H", "text": "Líneas" }
+      {
+        "letter": "A",
+        "text": "Páginas"
+      },
+      {
+        "letter": "B",
+        "text": "Palabras"
+      },
+      {
+        "letter": "C",
+        "text": "Imágenes"
+      },
+      {
+        "letter": "D",
+        "text": "Caracteres (sin espacios)"
+      },
+      {
+        "letter": "E",
+        "text": "Caracteres (con espacios)"
+      },
+      {
+        "letter": "F",
+        "text": "Párrafos"
+      },
+      {
+        "letter": "G",
+        "text": "Tablas"
+      },
+      {
+        "letter": "H",
+        "text": "Líneas"
+      }
     ],
     "matching": null,
-    "respuesta": ["A", "B", "D", "E", "F", "H"],
+    "respuesta": [
+      "A",
+      "B",
+      "D",
+      "E",
+      "F",
+      "H"
+    ],
     "explicacion": "Contar palabras muestra Páginas, Palabras, Caracteres (sin/con espacios), Párrafos y Líneas.",
     "categoria": "concepto",
     "negativa": false,
@@ -765,16 +1207,28 @@
     "sourceQuestionId": "Q-032"
   },
   {
-    "id": "revision-33",
-    "sourceFile": "revision.json",
+    "id": "revisar-33",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Contar palabras",
     "tipo": "opcion_unica",
     "enunciado": "¿Qué efecto tiene marcar la casilla 'Incluir cuadros de texto, notas al pie y notas al final' en el cuadro Contar palabras?",
     "opciones": [
-      { "letter": "A", "text": "Excluye esos elementos del recuento" },
-      { "letter": "B", "text": "Incluye esos elementos en las estadísticas" },
-      { "letter": "C", "text": "Abre un panel con el recuento específico" },
-      { "letter": "D", "text": "Activa la revisión ortográfica de los cuadros de texto" }
+      {
+        "letter": "A",
+        "text": "Excluye esos elementos del recuento"
+      },
+      {
+        "letter": "B",
+        "text": "Incluye esos elementos en las estadísticas"
+      },
+      {
+        "letter": "C",
+        "text": "Abre un panel con el recuento específico"
+      },
+      {
+        "letter": "D",
+        "text": "Activa la revisión ortográfica de los cuadros de texto"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -789,16 +1243,28 @@
     "sourceQuestionId": "Q-033"
   },
   {
-    "id": "revision-34",
-    "sourceFile": "revision.json",
+    "id": "revisar-34",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Editor",
     "tipo": "opcion_unica",
     "enunciado": "¿Cuáles son las secciones principales del panel Editor en Word 365?",
     "opciones": [
-      { "letter": "A", "text": "Ortografía, Gramática y Vocabulario" },
-      { "letter": "B", "text": "Correcciones, Refinamientos y Similitud" },
-      { "letter": "C", "text": "Revisión, Estilo y Claridad" },
-      { "letter": "D", "text": "Idioma, Formato y Puntuación" }
+      {
+        "letter": "A",
+        "text": "Ortografía, Gramática y Vocabulario"
+      },
+      {
+        "letter": "B",
+        "text": "Correcciones, Refinamientos y Similitud"
+      },
+      {
+        "letter": "C",
+        "text": "Revisión, Estilo y Claridad"
+      },
+      {
+        "letter": "D",
+        "text": "Idioma, Formato y Puntuación"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -813,8 +1279,8 @@
     "sourceQuestionId": "Q-034"
   },
   {
-    "id": "revision-35",
-    "sourceFile": "revision.json",
+    "id": "revisar-35",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Comentarios",
     "tipo": "verdadero_falso",
     "enunciado": "Los comandos Anterior, Siguiente y Eliminar del grupo Comentarios están siempre activos en la Pestaña Revisar.",
@@ -832,16 +1298,28 @@
     "sourceQuestionId": "Q-035"
   },
   {
-    "id": "revision-36",
-    "sourceFile": "revision.json",
+    "id": "revisar-36",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Comentarios",
     "tipo": "opcion_unica",
     "enunciado": "¿Qué hace el comando Mostrar comentarios en Word 365?",
     "opciones": [
-      { "letter": "A", "text": "Imprime todos los comentarios" },
-      { "letter": "B", "text": "Exporta los comentarios a un archivo" },
-      { "letter": "C", "text": "Muestra u oculta todos los comentarios" },
-      { "letter": "D", "text": "Convierte los comentarios en texto normal" }
+      {
+        "letter": "A",
+        "text": "Imprime todos los comentarios"
+      },
+      {
+        "letter": "B",
+        "text": "Exporta los comentarios a un archivo"
+      },
+      {
+        "letter": "C",
+        "text": "Muestra u oculta todos los comentarios"
+      },
+      {
+        "letter": "D",
+        "text": "Convierte los comentarios en texto normal"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -856,16 +1334,28 @@
     "sourceQuestionId": "Q-036"
   },
   {
-    "id": "revision-37",
-    "sourceFile": "revision.json",
+    "id": "revisar-37",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Cambios",
     "tipo": "opcion_unica",
     "enunciado": "Un usuario recibe un documento con múltiples revisiones de otros autores y necesita ir revisándolas para aceptarlas o rechazarlas. ¿En qué grupo encontrará las herramientas?",
     "opciones": [
-      { "letter": "A", "text": "Seguimiento" },
-      { "letter": "B", "text": "Cambios" },
-      { "letter": "C", "text": "Comparar" },
-      { "letter": "D", "text": "Proteger" }
+      {
+        "letter": "A",
+        "text": "Seguimiento"
+      },
+      {
+        "letter": "B",
+        "text": "Cambios"
+      },
+      {
+        "letter": "C",
+        "text": "Comparar"
+      },
+      {
+        "letter": "D",
+        "text": "Proteger"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -880,16 +1370,28 @@
     "sourceQuestionId": "Q-037"
   },
   {
-    "id": "revision-38",
-    "sourceFile": "revision.json",
+    "id": "revisar-38",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Traducir",
     "tipo": "opcion_unica",
     "enunciado": "¿Cuáles son las dos pestañas que ofrece el panel Traductor de Word 365?",
     "opciones": [
-      { "letter": "A", "text": "Origen y Destino" },
-      { "letter": "B", "text": "Selección y Documento" },
-      { "letter": "C", "text": "Traducir y Revisar" },
-      { "letter": "D", "text": "Insertar y Cancelar" }
+      {
+        "letter": "A",
+        "text": "Origen y Destino"
+      },
+      {
+        "letter": "B",
+        "text": "Selección y Documento"
+      },
+      {
+        "letter": "C",
+        "text": "Traducir y Revisar"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar y Cancelar"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -904,8 +1406,8 @@
     "sourceQuestionId": "Q-038"
   },
   {
-    "id": "revision-39",
-    "sourceFile": "revision.json",
+    "id": "revisar-39",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Seguimiento vs. Cambios",
     "tipo": "verdadero_falso",
     "enunciado": "El grupo Seguimiento permite controlar los cambios, mientras que el grupo Cambios permite moverse por las modificaciones para aceptarlas o rechazarlas.",
@@ -923,16 +1425,28 @@
     "sourceQuestionId": "Q-039"
   },
   {
-    "id": "revision-40",
-    "sourceFile": "revision.json",
+    "id": "revisar-40",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Editor",
     "tipo": "opcion_unica",
     "enunciado": "En el panel Editor, la sección Refinamientos muestra algunas categorías con una marca de verificación y otras con un número. ¿Qué significa cada estado?",
     "opciones": [
-      { "letter": "A", "text": "✓ = categoría desactivada; número = reglas activas" },
-      { "letter": "B", "text": "✓ = sugerencias pendientes; número = resueltas" },
-      { "letter": "C", "text": "✓ = sin sugerencias pendientes; número = sugerencias pendientes" },
-      { "letter": "D", "text": "✓ = revisada manualmente; número = prioridad" }
+      {
+        "letter": "A",
+        "text": "✓ = categoría desactivada; número = reglas activas"
+      },
+      {
+        "letter": "B",
+        "text": "✓ = sugerencias pendientes; número = resueltas"
+      },
+      {
+        "letter": "C",
+        "text": "✓ = sin sugerencias pendientes; número = sugerencias pendientes"
+      },
+      {
+        "letter": "D",
+        "text": "✓ = revisada manualmente; número = prioridad"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -947,16 +1461,28 @@
     "sourceQuestionId": "Q-040"
   },
   {
-    "id": "revision-41",
-    "sourceFile": "revision.json",
+    "id": "revisar-41",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Corrector",
     "tipo": "opcion_unica",
     "enunciado": "¿Cómo se comporta el corrector ortográfico al encontrar varios errores?",
     "opciones": [
-      { "letter": "A", "text": "Muestra todos los errores en una lista para corregir en cualquier orden" },
-      { "letter": "B", "text": "Abre un cuadro con la primera palabra mal escrita y, tras resolver, pasa a la siguiente" },
-      { "letter": "C", "text": "Marca todas las palabras erróneas y espera a que el usuario haga clic en cada una" },
-      { "letter": "D", "text": "Corrige automáticamente todos los errores sin intervención" }
+      {
+        "letter": "A",
+        "text": "Muestra todos los errores en una lista para corregir en cualquier orden"
+      },
+      {
+        "letter": "B",
+        "text": "Abre un cuadro con la primera palabra mal escrita y, tras resolver, pasa a la siguiente"
+      },
+      {
+        "letter": "C",
+        "text": "Marca todas las palabras erróneas y espera a que el usuario haga clic en cada una"
+      },
+      {
+        "letter": "D",
+        "text": "Corrige automáticamente todos los errores sin intervención"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -971,16 +1497,28 @@
     "sourceQuestionId": "Q-041"
   },
   {
-    "id": "revision-42",
-    "sourceFile": "revision.json",
+    "id": "revisar-42",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Sinónimos",
     "tipo": "opcion_unica",
     "enunciado": "¿Cuál de las siguientes afirmaciones sobre el comando Sinónimos en Word 365 es correcta?",
     "opciones": [
-      { "letter": "A", "text": "Se encuentra en el grupo Idioma y se activa con Mayús + F7" },
-      { "letter": "B", "text": "Se encuentra en el grupo Revisión y se activa con Alt + F7" },
-      { "letter": "C", "text": "Se encuentra en el grupo Revisión y se activa con Mayús + F7" },
-      { "letter": "D", "text": "Se encuentra en el grupo Voz y se activa con Ctrl + Mayús + G" }
+      {
+        "letter": "A",
+        "text": "Se encuentra en el grupo Idioma y se activa con Mayús + F7"
+      },
+      {
+        "letter": "B",
+        "text": "Se encuentra en el grupo Revisión y se activa con Alt + F7"
+      },
+      {
+        "letter": "C",
+        "text": "Se encuentra en el grupo Revisión y se activa con Mayús + F7"
+      },
+      {
+        "letter": "D",
+        "text": "Se encuentra en el grupo Voz y se activa con Ctrl + Mayús + G"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -995,16 +1533,28 @@
     "sourceQuestionId": "Q-042"
   },
   {
-    "id": "revision-43",
-    "sourceFile": "revision.json",
+    "id": "revisar-43",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Traductor",
     "tipo": "opcion_unica",
     "enunciado": "En el panel Traductor, ¿qué función realiza el botón Insertar?",
     "opciones": [
-      { "letter": "A", "text": "Abre el documento traducido en una nueva ventana" },
-      { "letter": "B", "text": "Envía la traducción a la nube para revisión" },
-      { "letter": "C", "text": "Inserta la traducción en el documento en la posición del cursor" },
-      { "letter": "D", "text": "Guarda la traducción como un archivo de texto" }
+      {
+        "letter": "A",
+        "text": "Abre el documento traducido en una nueva ventana"
+      },
+      {
+        "letter": "B",
+        "text": "Envía la traducción a la nube para revisión"
+      },
+      {
+        "letter": "C",
+        "text": "Inserta la traducción en el documento en la posición del cursor"
+      },
+      {
+        "letter": "D",
+        "text": "Guarda la traducción como un archivo de texto"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -1019,8 +1569,8 @@
     "sourceQuestionId": "Q-043"
   },
   {
-    "id": "revision-44",
-    "sourceFile": "revision.json",
+    "id": "revisar-44",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Grupos",
     "tipo": "relleno",
     "enunciado": "La Pestaña Revisar contiene [1] grupos. Escribe el nombre de cada uno: [2], [3], [4], [5], [6], [7], [8], [9], [10], [11].",
@@ -1050,8 +1600,8 @@
     "sourceQuestionId": "Q-044"
   },
   {
-    "id": "revision-45",
-    "sourceFile": "revision.json",
+    "id": "revisar-45",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Traducir",
     "tipo": "verdadero_falso",
     "enunciado": "La opción Preferencias de Traductor... del menú Traducir realiza una traducción directa del documento con la configuración predeterminada.",
@@ -1069,20 +1619,39 @@
     "sourceQuestionId": "Q-045"
   },
   {
-    "id": "revision-46",
-    "sourceFile": "revision.json",
+    "id": "revisar-46",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
     "tipo": "seleccion_multiple",
     "enunciado": "¿Cuáles de los siguientes son pasos numerados del panel Restringir edición? (Selecciona todos los correctos.)",
     "opciones": [
-      { "letter": "A", "text": "Restricciones de formato" },
-      { "letter": "B", "text": "Aplicar contraseña de acceso" },
-      { "letter": "C", "text": "Restricciones de edición" },
-      { "letter": "D", "text": "Seleccionar usuarios autorizados" },
-      { "letter": "E", "text": "Comenzar a aplicar" }
+      {
+        "letter": "A",
+        "text": "Restricciones de formato"
+      },
+      {
+        "letter": "B",
+        "text": "Aplicar contraseña de acceso"
+      },
+      {
+        "letter": "C",
+        "text": "Restricciones de edición"
+      },
+      {
+        "letter": "D",
+        "text": "Seleccionar usuarios autorizados"
+      },
+      {
+        "letter": "E",
+        "text": "Comenzar a aplicar"
+      }
     ],
     "matching": null,
-    "respuesta": ["A", "C", "E"],
+    "respuesta": [
+      "A",
+      "C",
+      "E"
+    ],
     "explicacion": "Los pasos son (1) Restricciones de formato, (2) Restricciones de edición, (3) Comenzar a aplicar.",
     "categoria": "ruta",
     "negativa": false,
@@ -1094,8 +1663,8 @@
     "sourceQuestionId": "Q-046"
   },
   {
-    "id": "revision-47",
-    "sourceFile": "revision.json",
+    "id": "revisar-47",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Atajos",
     "tipo": "verdadero_falso",
     "enunciado": "Windows + F7 es una alternativa válida a F7 para abrir el panel Editor.",
@@ -1113,14 +1682,18 @@
     "sourceQuestionId": "Q-047"
   },
   {
-    "id": "revision-48",
-    "sourceFile": "revision.json",
+    "id": "revisar-48",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Traducir",
     "tipo": "relleno",
     "enunciado": "El menú desplegable del comando Traducir contiene exactamente tres opciones: [1], [2], [3].",
     "opciones": [],
     "matching": null,
-    "respuesta": ["Traducir selección", "Traducir documento", "Preferencias de Traductor..."],
+    "respuesta": [
+      "Traducir selección",
+      "Traducir documento",
+      "Preferencias de Traductor..."
+    ],
     "explicacion": "Las tres opciones son Traducir selección, Traducir documento y Preferencias de Traductor...",
     "categoria": "ruta",
     "negativa": false,
@@ -1132,16 +1705,28 @@
     "sourceQuestionId": "Q-048"
   },
   {
-    "id": "revision-49",
-    "sourceFile": "revision.json",
+    "id": "revisar-49",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Corrector",
     "tipo": "opcion_unica",
     "enunciado": "Un usuario quiere que Word nunca más marque un término como error en ningún documento futuro. ¿Qué opción debe elegir?",
     "opciones": [
-      { "letter": "A", "text": "Omitir una vez" },
-      { "letter": "B", "text": "Ignorar todo" },
-      { "letter": "C", "text": "Agregar al diccionario" },
-      { "letter": "D", "text": "Configuración" }
+      {
+        "letter": "A",
+        "text": "Omitir una vez"
+      },
+      {
+        "letter": "B",
+        "text": "Ignorar todo"
+      },
+      {
+        "letter": "C",
+        "text": "Agregar al diccionario"
+      },
+      {
+        "letter": "D",
+        "text": "Configuración"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -1156,14 +1741,17 @@
     "sourceQuestionId": "Q-049"
   },
   {
-    "id": "revision-50",
-    "sourceFile": "revision.json",
+    "id": "revisar-50",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Ortografía",
     "tipo": "relleno",
     "enunciado": "Según Word 365, la revisión ortográfica consiste en comprobar que las [1] de nuestro texto no son [2].",
     "opciones": [],
     "matching": null,
-    "respuesta": ["palabras", "erróneas"],
+    "respuesta": [
+      "palabras",
+      "erróneas"
+    ],
     "explicacion": "Definición literal de la fuente: 'comprobar que las palabras de nuestro texto no son erróneas'.",
     "categoria": "concepto",
     "negativa": false,
@@ -1175,33 +1763,90 @@
     "sourceQuestionId": "Q-050"
   },
   {
-    "id": "revision-51",
-    "sourceFile": "revision.json",
+    "id": "revisar-51",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Atajos",
     "tipo": "emparejamiento",
     "enunciado": "Empareja cada atajo con el grupo de la Pestaña Revisar al que pertenece el comando que activa. Cada letra puede usarse más de una vez.",
     "opciones": [],
     "matching": {
       "left": [
-        { "id": "1", "label": "F7" },
-        { "id": "2", "label": "Alt + F7" },
-        { "id": "3", "label": "Mayús + F7" },
-        { "id": "4", "label": "Ctrl + Mayús + G" },
-        { "id": "5", "label": "Alt + Ctrl + Espacio" },
-        { "id": "6", "label": "Alt + Mayús + F7" },
-        { "id": "7", "label": "Ctrl + Alt + A" },
-        { "id": "8", "label": "Ctrl + Mayús + E" }
+        {
+          "id": "1",
+          "label": "F7"
+        },
+        {
+          "id": "2",
+          "label": "Alt + F7"
+        },
+        {
+          "id": "3",
+          "label": "Mayús + F7"
+        },
+        {
+          "id": "4",
+          "label": "Ctrl + Mayús + G"
+        },
+        {
+          "id": "5",
+          "label": "Alt + Ctrl + Espacio"
+        },
+        {
+          "id": "6",
+          "label": "Alt + Mayús + F7"
+        },
+        {
+          "id": "7",
+          "label": "Ctrl + Alt + A"
+        },
+        {
+          "id": "8",
+          "label": "Ctrl + Mayús + E"
+        }
       ],
       "right": [
-        { "id": "A", "label": "Comentarios" },
-        { "id": "B", "label": "Idioma" },
-        { "id": "C", "label": "Revisión" },
-        { "id": "D", "label": "Seguimiento" },
-        { "id": "E", "label": "Voz" }
+        {
+          "id": "A",
+          "label": "Comentarios"
+        },
+        {
+          "id": "B",
+          "label": "Idioma"
+        },
+        {
+          "id": "C",
+          "label": "Revisión"
+        },
+        {
+          "id": "D",
+          "label": "Seguimiento"
+        },
+        {
+          "id": "E",
+          "label": "Voz"
+        }
       ],
-      "correct": { "1": "C", "2": "C", "3": "C", "4": "C", "5": "E", "6": "B", "7": "A", "8": "D" }
+      "correct": {
+        "1": "C",
+        "2": "C",
+        "3": "C",
+        "4": "C",
+        "5": "E",
+        "6": "B",
+        "7": "A",
+        "8": "D"
+      }
     },
-    "respuesta": { "1": "C", "2": "C", "3": "C", "4": "C", "5": "E", "6": "B", "7": "A", "8": "D" },
+    "respuesta": {
+      "1": "C",
+      "2": "C",
+      "3": "C",
+      "4": "C",
+      "5": "E",
+      "6": "B",
+      "7": "A",
+      "8": "D"
+    },
     "explicacion": "F7, Alt+F7, Mayús+F7 y Ctrl+Mayús+G están en Revisión; Alt+Ctrl+Espacio en Voz; Alt+Mayús+F7 en Idioma; Ctrl+Alt+A en Comentarios; Ctrl+Mayús+E en Seguimiento.",
     "categoria": "atajo",
     "negativa": false,
@@ -1213,28 +1858,62 @@
     "sourceQuestionId": "Q-051"
   },
   {
-    "id": "revision-52",
-    "sourceFile": "revision.json",
+    "id": "revisar-52",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Corrector",
     "tipo": "emparejamiento",
     "enunciado": "Relaciona cada opción del corrector ortográfico con su efecto.",
     "opciones": [],
     "matching": {
       "left": [
-        { "id": "1", "label": "Omitir una vez" },
-        { "id": "2", "label": "Ignorar todo" },
-        { "id": "3", "label": "Agregar al diccionario" },
-        { "id": "4", "label": "Configuración" }
+        {
+          "id": "1",
+          "label": "Omitir una vez"
+        },
+        {
+          "id": "2",
+          "label": "Ignorar todo"
+        },
+        {
+          "id": "3",
+          "label": "Agregar al diccionario"
+        },
+        {
+          "id": "4",
+          "label": "Configuración"
+        }
       ],
       "right": [
-        { "id": "A", "label": "Añade la palabra al diccionario interno" },
-        { "id": "B", "label": "Ignora la incidencia solo en esta ocasión" },
-        { "id": "C", "label": "Ignora todas las apariciones de esa palabra en la revisión actual" },
-        { "id": "D", "label": "Accede a los ajustes del corrector" }
+        {
+          "id": "A",
+          "label": "Añade la palabra al diccionario interno"
+        },
+        {
+          "id": "B",
+          "label": "Ignora la incidencia solo en esta ocasión"
+        },
+        {
+          "id": "C",
+          "label": "Ignora todas las apariciones de esa palabra en la revisión actual"
+        },
+        {
+          "id": "D",
+          "label": "Accede a los ajustes del corrector"
+        }
       ],
-      "correct": { "1": "B", "2": "C", "3": "A", "4": "D" }
+      "correct": {
+        "1": "B",
+        "2": "C",
+        "3": "A",
+        "4": "D"
+      }
     },
-    "respuesta": { "1": "B", "2": "C", "3": "A", "4": "D" },
+    "respuesta": {
+      "1": "B",
+      "2": "C",
+      "3": "A",
+      "4": "D"
+    },
     "explicacion": "Omitir una vez ignora solo esa aparición; Ignorar todo ignora todas las apariciones en la sesión; Agregar al diccionario añade permanentemente; Configuración abre ajustes.",
     "categoria": "concepto",
     "negativa": false,
@@ -1246,29 +1925,68 @@
     "sourceQuestionId": "Q-052"
   },
   {
-    "id": "revision-53",
-    "sourceFile": "revision.json",
+    "id": "revisar-53",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Submenús",
     "tipo": "emparejamiento",
     "enunciado": "Relaciona cada opción de submenú con el comando que la contiene.",
     "opciones": [],
     "matching": {
       "left": [
-        { "id": "1", "label": "Texto alternativo" },
-        { "id": "2", "label": "Traducir selección" },
-        { "id": "3", "label": "Combinar..." },
-        { "id": "4", "label": "Bloquear autores" },
-        { "id": "5", "label": "Concentración" }
+        {
+          "id": "1",
+          "label": "Texto alternativo"
+        },
+        {
+          "id": "2",
+          "label": "Traducir selección"
+        },
+        {
+          "id": "3",
+          "label": "Combinar..."
+        },
+        {
+          "id": "4",
+          "label": "Bloquear autores"
+        },
+        {
+          "id": "5",
+          "label": "Concentración"
+        }
       ],
       "right": [
-        { "id": "A", "label": "Comparar" },
-        { "id": "B", "label": "Comprobar accesibilidad" },
-        { "id": "C", "label": "Proteger" },
-        { "id": "D", "label": "Traducir" }
+        {
+          "id": "A",
+          "label": "Comparar"
+        },
+        {
+          "id": "B",
+          "label": "Comprobar accesibilidad"
+        },
+        {
+          "id": "C",
+          "label": "Proteger"
+        },
+        {
+          "id": "D",
+          "label": "Traducir"
+        }
       ],
-      "correct": { "1": "B", "2": "D", "3": "A", "4": "C", "5": "B" }
+      "correct": {
+        "1": "B",
+        "2": "D",
+        "3": "A",
+        "4": "C",
+        "5": "B"
+      }
     },
-    "respuesta": { "1": "B", "2": "D", "3": "A", "4": "C", "5": "B" },
+    "respuesta": {
+      "1": "B",
+      "2": "D",
+      "3": "A",
+      "4": "C",
+      "5": "B"
+    },
     "explicacion": "Texto alternativo y Concentración están en el submenú de Comprobar accesibilidad; Traducir selección en Traducir; Combinar en Comparar; Bloquear autores en Proteger.",
     "categoria": "ruta",
     "negativa": false,
@@ -1280,30 +1998,76 @@
     "sourceQuestionId": "Q-053"
   },
   {
-    "id": "revision-54",
-    "sourceFile": "revision.json",
+    "id": "revisar-54",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Seguimiento",
     "tipo": "emparejamiento",
     "enunciado": "Clasifica cada elemento en el grupo correcto. Indica el grupo (SEG = Seguimiento, CAM = Cambios, COM = Comparar).",
     "opciones": [],
     "matching": {
       "left": [
-        { "id": "1", "label": "Control de cambios" },
-        { "id": "2", "label": "Aceptar" },
-        { "id": "3", "label": "Combinar..." },
-        { "id": "4", "label": "Panel de revisiones" },
-        { "id": "5", "label": "Mostrar revisiones" },
-        { "id": "6", "label": "Comparar..." },
-        { "id": "7", "label": "Todas las revisiones" }
+        {
+          "id": "1",
+          "label": "Control de cambios"
+        },
+        {
+          "id": "2",
+          "label": "Aceptar"
+        },
+        {
+          "id": "3",
+          "label": "Combinar..."
+        },
+        {
+          "id": "4",
+          "label": "Panel de revisiones"
+        },
+        {
+          "id": "5",
+          "label": "Mostrar revisiones"
+        },
+        {
+          "id": "6",
+          "label": "Comparar..."
+        },
+        {
+          "id": "7",
+          "label": "Todas las revisiones"
+        }
       ],
       "right": [
-        { "id": "SEG", "label": "Seguimiento" },
-        { "id": "CAM", "label": "Cambios" },
-        { "id": "COM", "label": "Comparar" }
+        {
+          "id": "SEG",
+          "label": "Seguimiento"
+        },
+        {
+          "id": "CAM",
+          "label": "Cambios"
+        },
+        {
+          "id": "COM",
+          "label": "Comparar"
+        }
       ],
-      "correct": { "1": "SEG", "2": "CAM", "3": "COM", "4": "SEG", "5": "SEG", "6": "COM", "7": "SEG" }
+      "correct": {
+        "1": "SEG",
+        "2": "CAM",
+        "3": "COM",
+        "4": "SEG",
+        "5": "SEG",
+        "6": "COM",
+        "7": "SEG"
+      }
     },
-    "respuesta": { "1": "SEG", "2": "CAM", "3": "COM", "4": "SEG", "5": "SEG", "6": "COM", "7": "SEG" },
+    "respuesta": {
+      "1": "SEG",
+      "2": "CAM",
+      "3": "COM",
+      "4": "SEG",
+      "5": "SEG",
+      "6": "COM",
+      "7": "SEG"
+    },
     "explicacion": "Control de cambios, Panel de revisiones, Mostrar revisiones y Todas las revisiones están en Seguimiento. Aceptar en Cambios. Combinar y Comparar en Comparar.",
     "categoria": "ruta",
     "negativa": false,
@@ -1315,16 +2079,28 @@
     "sourceQuestionId": "Q-054"
   },
   {
-    "id": "revision-55",
-    "sourceFile": "revision.json",
+    "id": "revisar-55",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Contar palabras",
     "tipo": "opcion_unica",
     "enunciado": "Ordena las siguientes estadísticas en el orden exacto en que aparecen en el cuadro Contar palabras (de arriba a abajo): Páginas, Palabras, Caracteres (sin espacios), Caracteres (con espacios), Párrafos, Líneas.",
     "opciones": [
-      { "letter": "A", "text": "A → B → C → D → E → F" },
-      { "letter": "B", "text": "C → E → A → F → D → B" },
-      { "letter": "C", "text": "C → A → E → B → D → F" },
-      { "letter": "D", "text": "E → C → A → D → F → B" }
+      {
+        "letter": "A",
+        "text": "A → B → C → D → E → F"
+      },
+      {
+        "letter": "B",
+        "text": "C → E → A → F → D → B"
+      },
+      {
+        "letter": "C",
+        "text": "C → A → E → B → D → F"
+      },
+      {
+        "letter": "D",
+        "text": "E → C → A → D → F → B"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -1339,14 +2115,18 @@
     "sourceQuestionId": "Q-055"
   },
   {
-    "id": "revision-56",
-    "sourceFile": "revision.json",
+    "id": "revisar-56",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Corrector visual",
     "tipo": "relleno",
     "enunciado": "Word marca con una línea ondulada de color [1] los errores ortográficos. Los posibles errores gramaticales y palabras con distinto significado se marcan con una [2] línea [3].",
     "opciones": [],
     "matching": null,
-    "respuesta": ["rojo", "doble", "azul"],
+    "respuesta": [
+      "rojo",
+      "doble",
+      "azul"
+    ],
     "explicacion": "Línea ondulada roja para ortografía; doble línea azul para gramática/distinto significado.",
     "categoria": "concepto",
     "negativa": false,
@@ -1358,8 +2138,8 @@
     "sourceQuestionId": "Q-056"
   },
   {
-    "id": "revision-57",
-    "sourceFile": "revision.json",
+    "id": "revisar-57",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Traducir",
     "tipo": "verdadero_falso",
     "enunciado": "Las pestañas del panel Traductor (Selección y Documento) se corresponden con las opciones Traducir selección y Traducir documento del menú Traducir.",
@@ -1377,20 +2157,39 @@
     "sourceQuestionId": "Q-057"
   },
   {
-    "id": "revision-58",
-    "sourceFile": "revision.json",
+    "id": "revisar-58",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
     "tipo": "seleccion_multiple",
     "enunciado": "¿Cuáles de las siguientes afirmaciones sobre el grupo Proteger son correctas?",
     "opciones": [
-      { "letter": "A", "text": "Contiene el comando Proteger con un menú desplegable" },
-      { "letter": "B", "text": "Bloquear autores evita cambios en el texto seleccionado" },
-      { "letter": "C", "text": "Restringir edición elimina permanentemente los comentarios" },
-      { "letter": "D", "text": "El panel Restringir edición se organiza en tres pasos numerados" },
-      { "letter": "E", "text": "Bloquear autores limita el formato del documento completo" }
+      {
+        "letter": "A",
+        "text": "Contiene el comando Proteger con un menú desplegable"
+      },
+      {
+        "letter": "B",
+        "text": "Bloquear autores evita cambios en el texto seleccionado"
+      },
+      {
+        "letter": "C",
+        "text": "Restringir edición elimina permanentemente los comentarios"
+      },
+      {
+        "letter": "D",
+        "text": "El panel Restringir edición se organiza en tres pasos numerados"
+      },
+      {
+        "letter": "E",
+        "text": "Bloquear autores limita el formato del documento completo"
+      }
     ],
     "matching": null,
-    "respuesta": ["A", "B", "D"],
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
     "explicacion": "A, B y D son correctas. C es falsa (Restringir edición no elimina comentarios) y E es falsa (Bloquear autores actúa sobre el texto seleccionado, no sobre todo el documento).",
     "categoria": "concepto",
     "negativa": false,
@@ -1402,14 +2201,16 @@
     "sourceQuestionId": "Q-058"
   },
   {
-    "id": "revision-59",
-    "sourceFile": "revision.json",
+    "id": "revisar-59",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Voz",
     "tipo": "relleno",
     "enunciado": "El comando Leer en voz alta lee el texto en voz alta y [1] cada palabra mientras lo lee.",
     "opciones": [],
     "matching": null,
-    "respuesta": ["resalta"],
+    "respuesta": [
+      "resalta"
+    ],
     "explicacion": "La fuente declara que resalta cada palabra mientras lo lee.",
     "categoria": "concepto",
     "negativa": false,
@@ -1421,8 +2222,8 @@
     "sourceQuestionId": "Q-059"
   },
   {
-    "id": "revision-60",
-    "sourceFile": "revision.json",
+    "id": "revisar-60",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
     "tipo": "verdadero_falso",
     "enunciado": "El panel Restringir edición se abre al seleccionar la opción 'Restringir edición' en el menú desplegable de Proteger.",
@@ -1440,16 +2241,28 @@
     "sourceQuestionId": "Q-060"
   },
   {
-    "id": "revision-61",
-    "sourceFile": "revision.json",
+    "id": "revisar-61",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Seguimiento",
     "tipo": "opcion_unica",
     "enunciado": "¿En qué grupo de la Pestaña Revisar se encuentra el comando Panel de revisiones?",
     "opciones": [
-      { "letter": "A", "text": "Cambios" },
-      { "letter": "B", "text": "Comparar" },
-      { "letter": "C", "text": "Seguimiento" },
-      { "letter": "D", "text": "Comentarios" }
+      {
+        "letter": "A",
+        "text": "Cambios"
+      },
+      {
+        "letter": "B",
+        "text": "Comparar"
+      },
+      {
+        "letter": "C",
+        "text": "Seguimiento"
+      },
+      {
+        "letter": "D",
+        "text": "Comentarios"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -1464,8 +2277,8 @@
     "sourceQuestionId": "Q-061"
   },
   {
-    "id": "revision-62",
-    "sourceFile": "revision.json",
+    "id": "revisar-62",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Seguimiento",
     "tipo": "verdadero_falso",
     "enunciado": "Mostrar revisiones y Panel de revisiones son dos comandos distintos que pertenecen al grupo Seguimiento.",
@@ -1483,16 +2296,28 @@
     "sourceQuestionId": "Q-062"
   },
   {
-    "id": "revision-63",
-    "sourceFile": "revision.json",
+    "id": "revisar-63",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Editor",
     "tipo": "opcion_unica",
     "enunciado": "¿Qué permite hacer la sección Similitud del panel Editor en Word 365?",
     "opciones": [
-      { "letter": "A", "text": "Buscar sinónimos para mejorar el vocabulario" },
-      { "letter": "B", "text": "Comparar el documento con otras versiones guardadas" },
-      { "letter": "C", "text": "Comprobar la similitud con orígenes en línea" },
-      { "letter": "D", "text": "Detectar palabras repetidas en el mismo párrafo" }
+      {
+        "letter": "A",
+        "text": "Buscar sinónimos para mejorar el vocabulario"
+      },
+      {
+        "letter": "B",
+        "text": "Comparar el documento con otras versiones guardadas"
+      },
+      {
+        "letter": "C",
+        "text": "Comprobar la similitud con orígenes en línea"
+      },
+      {
+        "letter": "D",
+        "text": "Detectar palabras repetidas en el mismo párrafo"
+      }
     ],
     "matching": null,
     "respuesta": "C",
@@ -1507,8 +2332,8 @@
     "sourceQuestionId": "Q-063"
   },
   {
-    "id": "revision-64",
-    "sourceFile": "revision.json",
+    "id": "revisar-64",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Traductor",
     "tipo": "verdadero_falso",
     "enunciado": "En el panel Traductor, el control ⇅ intercambia los idiomas de origen y destino.",
@@ -1526,31 +2351,82 @@
     "sourceQuestionId": "Q-064"
   },
   {
-    "id": "revision-65",
-    "sourceFile": "revision.json",
+    "id": "revisar-65",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Grupos",
     "tipo": "emparejamiento",
     "enunciado": "Clasifica cada comando en su grupo correcto. Escribe SEG (Seguimiento), COM (Comentarios) o CAM (Cambios).",
     "opciones": [],
     "matching": {
       "left": [
-        { "id": "1", "label": "Control de cambios" },
-        { "id": "2", "label": "Nuevo comentario" },
-        { "id": "3", "label": "Aceptar" },
-        { "id": "4", "label": "Mostrar revisiones" },
-        { "id": "5", "label": "Eliminar (comentario)" },
-        { "id": "6", "label": "Panel de revisiones" },
-        { "id": "7", "label": "Anterior (comentario)" },
-        { "id": "8", "label": "Todas las revisiones" }
+        {
+          "id": "1",
+          "label": "Control de cambios"
+        },
+        {
+          "id": "2",
+          "label": "Nuevo comentario"
+        },
+        {
+          "id": "3",
+          "label": "Aceptar"
+        },
+        {
+          "id": "4",
+          "label": "Mostrar revisiones"
+        },
+        {
+          "id": "5",
+          "label": "Eliminar (comentario)"
+        },
+        {
+          "id": "6",
+          "label": "Panel de revisiones"
+        },
+        {
+          "id": "7",
+          "label": "Anterior (comentario)"
+        },
+        {
+          "id": "8",
+          "label": "Todas las revisiones"
+        }
       ],
       "right": [
-        { "id": "SEG", "label": "Seguimiento" },
-        { "id": "COM", "label": "Comentarios" },
-        { "id": "CAM", "label": "Cambios" }
+        {
+          "id": "SEG",
+          "label": "Seguimiento"
+        },
+        {
+          "id": "COM",
+          "label": "Comentarios"
+        },
+        {
+          "id": "CAM",
+          "label": "Cambios"
+        }
       ],
-      "correct": { "1": "SEG", "2": "COM", "3": "CAM", "4": "SEG", "5": "COM", "6": "SEG", "7": "COM", "8": "SEG" }
+      "correct": {
+        "1": "SEG",
+        "2": "COM",
+        "3": "CAM",
+        "4": "SEG",
+        "5": "COM",
+        "6": "SEG",
+        "7": "COM",
+        "8": "SEG"
+      }
     },
-    "respuesta": { "1": "SEG", "2": "COM", "3": "CAM", "4": "SEG", "5": "COM", "6": "SEG", "7": "COM", "8": "SEG" },
+    "respuesta": {
+      "1": "SEG",
+      "2": "COM",
+      "3": "CAM",
+      "4": "SEG",
+      "5": "COM",
+      "6": "SEG",
+      "7": "COM",
+      "8": "SEG"
+    },
     "explicacion": "Control de cambios, Mostrar revisiones, Panel de revisiones y Todas las revisiones están en Seguimiento. Nuevo comentario, Eliminar y Anterior en Comentarios. Aceptar en Cambios.",
     "categoria": "ruta",
     "negativa": false,
@@ -1562,20 +2438,39 @@
     "sourceQuestionId": "Q-065"
   },
   {
-    "id": "revision-66",
-    "sourceFile": "revision.json",
+    "id": "revisar-66",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Corrector",
     "tipo": "seleccion_multiple",
     "enunciado": "Al pulsar el botón de más opciones (···) junto a una sugerencia del corrector, ¿qué opciones aparecen en el menú contextual?",
     "opciones": [
-      { "letter": "A", "text": "Ignorar" },
-      { "letter": "B", "text": "Agregar al diccionario" },
-      { "letter": "C", "text": "Mostrar menú contextual" },
-      { "letter": "D", "text": "Mostrar sinónimos" },
-      { "letter": "E", "text": "Traducir palabra" }
+      {
+        "letter": "A",
+        "text": "Ignorar"
+      },
+      {
+        "letter": "B",
+        "text": "Agregar al diccionario"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar menú contextual"
+      },
+      {
+        "letter": "D",
+        "text": "Mostrar sinónimos"
+      },
+      {
+        "letter": "E",
+        "text": "Traducir palabra"
+      }
     ],
     "matching": null,
-    "respuesta": ["A", "C", "D"],
+    "respuesta": [
+      "A",
+      "C",
+      "D"
+    ],
     "explicacion": "El menú contextual contiene Ignorar, Mostrar menú contextual y Mostrar sinónimos. Agregar al diccionario está en el panel principal.",
     "categoria": "concepto",
     "negativa": false,
@@ -1587,16 +2482,28 @@
     "sourceQuestionId": "Q-066"
   },
   {
-    "id": "revision-67",
-    "sourceFile": "revision.json",
+    "id": "revisar-67",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Corrector",
     "tipo": "opcion_unica",
     "enunciado": "Un usuario corrige un documento y encuentra la palabra 'WordArt' marcada como error. Sabe que aparece 20 veces y no quiere que se marque en ninguna durante esta revisión. ¿Qué opción debe elegir?",
     "opciones": [
-      { "letter": "A", "text": "Omitir una vez" },
-      { "letter": "B", "text": "Ignorar todo" },
-      { "letter": "C", "text": "Agregar al diccionario" },
-      { "letter": "D", "text": "Configuración" }
+      {
+        "letter": "A",
+        "text": "Omitir una vez"
+      },
+      {
+        "letter": "B",
+        "text": "Ignorar todo"
+      },
+      {
+        "letter": "C",
+        "text": "Agregar al diccionario"
+      },
+      {
+        "letter": "D",
+        "text": "Configuración"
+      }
     ],
     "matching": null,
     "respuesta": "B",
@@ -1611,28 +2518,62 @@
     "sourceQuestionId": "Q-067"
   },
   {
-    "id": "revision-68",
-    "sourceFile": "revision.json",
+    "id": "revisar-68",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Comentarios",
     "tipo": "emparejamiento",
     "enunciado": "Relaciona cada comando del grupo Comentarios con su función declarada.",
     "opciones": [],
     "matching": {
       "left": [
-        { "id": "1", "label": "Nuevo comentario" },
-        { "id": "2", "label": "Eliminar" },
-        { "id": "3", "label": "Anterior / Siguiente" },
-        { "id": "4", "label": "Mostrar comentarios" }
+        {
+          "id": "1",
+          "label": "Nuevo comentario"
+        },
+        {
+          "id": "2",
+          "label": "Eliminar"
+        },
+        {
+          "id": "3",
+          "label": "Anterior / Siguiente"
+        },
+        {
+          "id": "4",
+          "label": "Mostrar comentarios"
+        }
       ],
       "right": [
-        { "id": "A", "label": "Muestra u oculta todos los comentarios" },
-        { "id": "B", "label": "Inserta un nuevo comentario" },
-        { "id": "C", "label": "Elimina el comentario seleccionado" },
-        { "id": "D", "label": "Salta de un comentario a otro" }
+        {
+          "id": "A",
+          "label": "Muestra u oculta todos los comentarios"
+        },
+        {
+          "id": "B",
+          "label": "Inserta un nuevo comentario"
+        },
+        {
+          "id": "C",
+          "label": "Elimina el comentario seleccionado"
+        },
+        {
+          "id": "D",
+          "label": "Salta de un comentario a otro"
+        }
       ],
-      "correct": { "1": "B", "2": "C", "3": "D", "4": "A" }
+      "correct": {
+        "1": "B",
+        "2": "C",
+        "3": "D",
+        "4": "A"
+      }
     },
-    "respuesta": { "1": "B", "2": "C", "3": "D", "4": "A" },
+    "respuesta": {
+      "1": "B",
+      "2": "C",
+      "3": "D",
+      "4": "A"
+    },
     "explicacion": "Nuevo comentario inserta; Eliminar borra el seleccionado; Anterior/Siguiente navegan; Mostrar comentarios muestra/oculta todos.",
     "categoria": "concepto",
     "negativa": false,
@@ -1644,16 +2585,28 @@
     "sourceQuestionId": "Q-068"
   },
   {
-    "id": "revision-69",
-    "sourceFile": "revision.json",
+    "id": "revisar-69",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Accesibilidad",
     "tipo": "opcion_unica",
     "enunciado": "Además de la cinta, ¿desde qué otra ubicación se puede acceder a Comprobar accesibilidad?",
     "opciones": [
-      { "letter": "A", "text": "Archivo → Información → Comprobar si hay problemas" },
-      { "letter": "B", "text": "Barra de estado (parte inferior)" },
-      { "letter": "C", "text": "Archivo → Opciones → Accesibilidad" },
-      { "letter": "D", "text": "Inicio → Edición → Buscar" }
+      {
+        "letter": "A",
+        "text": "Archivo → Información → Comprobar si hay problemas"
+      },
+      {
+        "letter": "B",
+        "text": "Barra de estado (parte inferior)"
+      },
+      {
+        "letter": "C",
+        "text": "Archivo → Opciones → Accesibilidad"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio → Edición → Buscar"
+      }
     ],
     "matching": null,
     "respuesta": "A",
@@ -1668,8 +2621,8 @@
     "sourceQuestionId": "Q-069"
   },
   {
-    "id": "revision-70",
-    "sourceFile": "revision.json",
+    "id": "revisar-70",
+    "sourceFile": "revisar.json",
     "bloque": "Revisar — Atajos",
     "tipo": "verdadero_falso",
     "enunciado": "En Word 365, F7 abre el corrector tradicional llamado 'Ortografía y gramática', no el panel Editor moderno.",
@@ -1685,5 +2638,357 @@
     "tema": "Atajos",
     "difficulty": "media",
     "sourceQuestionId": "Q-070"
+  },
+  {
+    "id": "revisar-71",
+    "sourceFile": "revisar.json",
+    "sourcePage": "8",
+    "bloque": "AG",
+    "blockRange": null,
+    "tema": "ATAJOS CRUZADOS – PREGUNTAS DE TRAMPA",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "enunciado": "¿Cuál de los siguientes atajos activa o desactiva el seguimiento de cambios en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Mayús+E"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+E"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Mayús+T"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Ctrl+E"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+Mayús+E activa o desactiva el control de cambios. Ctrl+E selecciona todo el documento. Ctrl+Mayús+T no tiene función asignada para seguimiento. Alt+Ctrl+E no tiene esa función asignada.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "121",
+    "esCompletarBlank": false,
+    "generado": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "sourceQuestionId": "8-121"
+  },
+  {
+    "id": "revisar-72",
+    "sourceFile": "revisar.json",
+    "sourcePage": "8",
+    "bloque": "AH",
+    "blockRange": null,
+    "tema": "PREGUNTAS DE SÍNTESIS Y CONFUSIÓN ALTA",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "enunciado": "¿Qué atajo activa o desactiva el seguimiento de marcas de revisión en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Mayús+E"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+E"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+E"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+R"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+Mayús+E activa o desactiva el control de cambios. Ctrl+E selecciona todo el documento. Alt+Ctrl+E no tiene esa función. Ctrl+Mayús+R no tiene función asignada para seguimiento de cambios.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "154",
+    "esCompletarBlank": false,
+    "generado": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "sourceQuestionId": "8-154"
+  },
+  {
+    "id": "revisar-73",
+    "sourceFile": "revisar.json",
+    "sourcePage": "8",
+    "bloque": "AH",
+    "blockRange": null,
+    "tema": "PREGUNTAS DE SÍNTESIS Y CONFUSIÓN ALTA",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "enunciado": "¿Qué atajo lleva el cursor al siguiente error ortográfico en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+F7"
+      },
+      {
+        "letter": "B",
+        "text": "F7"
+      },
+      {
+        "letter": "C",
+        "text": "Mayús+F7"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+F7"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+F7 va al siguiente error ortográfico detectado. F7 abre el panel completo de Ortografía y gramática. Mayús+F7 abre el diccionario de sinónimos. Ctrl+F7 mueve la ventana del documento.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "198",
+    "esCompletarBlank": false,
+    "generado": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "sourceQuestionId": "8-198"
+  },
+  {
+    "id": "revisar-74",
+    "sourceFile": "revisar.json",
+    "sourcePage": "8",
+    "bloque": "AH",
+    "blockRange": null,
+    "tema": "PREGUNTAS DE SÍNTESIS Y CONFUSIÓN ALTA",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "enunciado": "¿Qué atajo abre la revisión ortográfica completa en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "F7"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+F7"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+F7"
+      },
+      {
+        "letter": "D",
+        "text": "Mayús+F7"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "F7 abre el panel completo de Ortografía y gramática. Alt+F7 va al siguiente error ortográfico sin abrir el panel. Ctrl+F7 activa el modo de mover la ventana del documento. Mayús+F7 abre el diccionario de sinónimos.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "212",
+    "esCompletarBlank": false,
+    "generado": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "sourceQuestionId": "8-212"
+  },
+  {
+    "id": "revisar-75",
+    "sourceFile": "revisar.json",
+    "sourcePage": "8",
+    "bloque": "AH",
+    "blockRange": null,
+    "tema": "PREGUNTAS DE SÍNTESIS Y CONFUSIÓN ALTA",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "enunciado": "¿Qué atajo abre el diccionario de sinónimos en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Mayús+F7"
+      },
+      {
+        "letter": "B",
+        "text": "F7"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+F7"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+F7"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Mayús+F7 abre el diccionario de sinónimos. F7 abre la revisión ortográfica completa. Alt+F7 va al siguiente error ortográfico. Ctrl+Mayús+F7 actualiza el origen vinculado al documento.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "213",
+    "esCompletarBlank": false,
+    "generado": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "sourceQuestionId": "8-213"
+  },
+  {
+    "id": "revisar-76",
+    "sourceFile": "revisar.json",
+    "sourcePage": "8",
+    "bloque": "AH",
+    "blockRange": null,
+    "tema": "PREGUNTAS DE SÍNTESIS Y CONFUSIÓN ALTA",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "enunciado": "¿Qué atajo activa la herramienta Revisar ortografía y gramática en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "F7"
+      },
+      {
+        "letter": "B",
+        "text": "F8"
+      },
+      {
+        "letter": "C",
+        "text": "F9"
+      },
+      {
+        "letter": "D",
+        "text": "F6"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "F7 activa la revisión ortográfica y gramatical. F8 activa el modo de selección extendida. F9 actualiza los campos del documento. F6 activa el panel siguiente.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "218",
+    "esCompletarBlank": false,
+    "generado": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "sourceQuestionId": "8-218"
+  },
+  {
+    "id": "revisar-77",
+    "sourceFile": "revisar.json",
+    "sourcePage": "8",
+    "bloque": "AH",
+    "blockRange": null,
+    "tema": "PREGUNTAS DE SÍNTESIS Y CONFUSIÓN ALTA",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "enunciado": "¿Qué atajo activa la lectura en voz alta del documento enWord 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Ctrl+Espacio"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Espacio"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Alt+Mayús+Espacio"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Mayús+Espacio"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Ctrl+Espacio activa la lectura en voz alta del documento. Alt+Espacio abre el menú del icono del programa en la barra de título. Ctrl+Alt+Mayús+Espacio no tiene función asignada para lectura en voz alta. Alt+Mayús+Espacio no tiene función asignada para lectura en voz alta.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "232",
+    "esCompletarBlank": false,
+    "generado": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "sourceQuestionId": "8-232"
+  },
+  {
+    "id": "revisar-78",
+    "sourceFile": "revisar.json",
+    "sourcePage": "8",
+    "bloque": "AH",
+    "blockRange": null,
+    "tema": "PREGUNTAS DE SÍNTESIS Y CONFUSIÓN ALTA",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "enunciado": "¿Qué atajo abre la tarjeta moderna de revisión en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+F12"
+      },
+      {
+        "letter": "B",
+        "text": "F12"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+F12"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Ctrl+F12"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+F12 abre la tarjeta moderna de revisión. F12 abre el cuadro de diálogo Guardar como. Ctrl+F12 abre el cuadro de diálogo Abrir. Alt+Ctrl+F12 no tiene función asignada para la tarjeta de revisión.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "323",
+    "esCompletarBlank": false,
+    "generado": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": null,
+    "sourceQuestionId": "8-323"
+  },
+  {
+    "id": "revisar-79",
+    "sourceFile": "revisar.json",
+    "sourcePage": "8",
+    "bloque": "AH",
+    "blockRange": null,
+    "tema": "PREGUNTAS DE SÍNTESIS Y CONFUSIÓN ALTA",
+    "tipo": "verdadero_falso",
+    "categoria": "atajo",
+    "enunciado": "Afirmación para valorar: «¿Qué atajo abre la revisión ortográfica completa en Word 365?» — Respuesta propuesta: Mayús+F7.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "F7 abre el panel completo de Ortografía y gramática. Alt+F7 va al siguiente error ortográfico sin abrir el panel. Ctrl+F7 activa el modo de mover la ventana del documento. Mayús+F7 abre el diccionario de sinónimos.",
+    "negativa": false,
+    "sourceIssue": null,
+    "qnumInSource": "212-vf",
+    "esCompletarBlank": false,
+    "generado": true,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "sourceQuestionId": "8vf-16"
   }
 ]
