@@ -38,8 +38,10 @@ async function main(){
   assert(O.FLASHCARD_INTEGRITY_REPORT.invalid === 0, "0 flashcards inválidas");
 
   clickGoto("flashcards");
+  // La experiencia principal es el repaso; la tabla vive en la pestaña "Todas".
+  window.document.querySelector('.segmented .seg[data-tab="todas"]').click();
   const items = window.document.querySelectorAll(".qlist-item");
-  assert(items.length === totalCards, `el hub de flashcards lista las ${totalCards} sin filtros`);
+  assert(items.length === totalCards, `la pestaña "Todas" lista las ${totalCards} tarjetas sin filtros`);
 
   // Filtrar por prioridad alta
   const prioSel = window.document.getElementById("fc-prioridad");
@@ -51,18 +53,17 @@ async function main(){
   // Iniciar sesión desde la primera tarjeta filtrada
   itemsAlta[0].click();
   assert(window.document.getElementById("fc-card"), "se muestra la tarjeta de estudio");
-  assert(window.document.getElementById("fc-back").classList.contains("hidden"), "el dorso empieza oculto");
+  assert(!window.document.getElementById("fc-card").classList.contains("flipped"), "la tarjeta empieza sin revelar");
 
   window.document.getElementById("fc-card").click();
-  assert(!window.document.getElementById("fc-back").classList.contains("hidden"), "al tocar la tarjeta se revela el dorso");
+  assert(window.document.getElementById("fc-card").classList.contains("flipped"), "al tocar la tarjeta se gira y revela el dorso");
 
   const firstCanonical = O.FLASHCARDS.find(c=>c.priority==="alta").canonicalId;
   assert(O.PROGRESS.flashcards[firstCanonical] && O.PROGRESS.flashcards[firstCanonical].vecesVista >= 1, "se registra que se ha visto la tarjeta");
 
-  window.document.getElementById("fc-mastered").click();
-  assert(O.getFlashcardState(firstCanonical)==="dominada", "marcar dominada actualiza el estado");
-
-  window.document.getElementById("fc-next").click();
+  // "La recordaba" marca dominada y avanza automáticamente a la siguiente
+  window.document.getElementById("fc-knew").click();
+  assert(O.getFlashcardState(firstCanonical)==="dominada", "'La recordaba' marca la tarjeta como dominada");
   assert(window.document.querySelector(".pos").textContent.trim()===`2 / ${altaCards}`, `avanza a la siguiente tarjeta (2/${altaCards})`);
 
   window.document.getElementById("fc-prev").click();

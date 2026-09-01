@@ -1109,66 +1109,114 @@ let fcSession = null; // { ids:[canonicalId...], index:0, revealed:false }
 function priorityLabel(p){ return p==="alta" ? "★ Prioridad alta" : ""; }
 function cardTypeLabel(t){ return t==="error" ? "Error frecuente" : "Contenido"; }
 
+function sectionName(id){ const s = O.TAXONOMY_SECTIONS.find(x=>x.id===id); return s ? s.name : id; }
+
+let fcHubState = { section:"all", tab:"repaso" };
+
 function renderFlashcardsHub(params){
-  const f = { section:(params&&params.section)||"all", estado:(params&&params.estado)||"all" };
-  const sections = Array.from(new Set(O.FLASHCARDS.map(c=>c.section))).sort();
-  mainEl().innerHTML = `
-  <div class="view">
-    <div class="view-head">
-      <h1>Flashcards</h1>
-      <p>Repasa hechos, rutas, atajos y distinciones clave en formato frente/dorso.</p>
-    </div>
-    <div class="filter-bar">
-      <select id="fc-section"><option value="all">Todas las secciones</option>${sections.map(s=>`<option value="${s}">${O.escapeHtml(s)}</option>`).join("")}</select>
-      <select id="fc-topic"><option value="all">Todos los temas</option></select>
-      <select id="fc-tipo"><option value="all">Todos los tipos</option><option value="contenido">Contenido</option><option value="error">Errores frecuentes</option></select>
-      <select id="fc-prioridad"><option value="all">Cualquier prioridad</option><option value="alta">Solo prioridad alta</option></select>
-      <select id="fc-estado"><option value="all">Todas</option><option value="pendiente">Pendientes</option><option value="dominada">Dominadas</option></select>
-      <input type="search" id="fc-search" placeholder="Buscar…">
-      <span class="chip" id="fc-count">0 tarjetas</span>
-    </div>
-    <div class="action-grid" style="margin-bottom:var(--sp-5);">
-      <button class="action-card" id="fc-study-filtered"><div class="t">Estudiar filtradas</div><div class="d">Empieza con el resultado actual de los filtros</div></button>
-      <button class="action-card" id="fc-study-pending"><div class="t">Solo pendientes</div><div class="d">Repasa las que aún no has dominado</div></button>
-    </div>
-    <div id="fc-body"></div>
-  </div>`;
-  $("#fc-section").value = f.section;
-  $("#fc-estado").value = f.estado;
-  function refreshTopics(){
-    const sec = $("#fc-section").value;
-    const topics = Array.from(new Set(O.FLASHCARDS.filter(c=> sec==="all"||c.section===sec).map(c=>c.topic).filter(Boolean))).sort();
-    const topicSel = $("#fc-topic");
-    const prev = topicSel.value;
-    topicSel.innerHTML = `<option value="all">Todos los temas</option>${topics.map(t=>`<option value="${t}">${O.escapeHtml(t)}</option>`).join("")}`;
-    topicSel.value = topics.includes(prev) ? prev : "all";
+  if(params && params.section) fcHubState.section = params.section;
+  if(params && params.tab) fcHubState.tab = params.tab;
+  const secList = O.TAXONOMY_SECTIONS.filter(s=> O.FLASHCARDS.some(c=>c.section===s.id));
+
+  function drawHub(){
+    const sec = fcHubState.section;
+    const total = O.filterFlashcards({section:sec}).length;
+    const pend = O.filterFlashcards({section:sec, estado:"pendiente"}).length;
+
+    mainEl().innerHTML = `
+    <div class="view view-narrow">
+      <div class="view-head">
+        <p class="eyebrow">Flashcards</p>
+        <h1>Repaso rápido</h1>
+        <p>Hechos, rutas y atajos en formato frente/dorso. Toca la tarjeta para girarla.</p>
+      </div>
+      <div class="chip-row" id="fc-chips">
+        <button class="chip-btn ${sec==='all'?'on':''}" data-sec="all">Todas</button>
+        ${secList.map(s=>`<button class="chip-btn ${sec===s.id?'on':''}" data-sec="${s.id}">${O.escapeHtml(s.name)}</button>`).join("")}
+      </div>
+      <div class="segmented segmented-wrap" style="margin:var(--sp-5) 0;">
+        <button class="seg ${fcHubState.tab==='repaso'?'on':''}" data-tab="repaso">Repaso</button>
+        <button class="seg ${fcHubState.tab==='todas'?'on':''}" data-tab="todas">Todas · ${total}</button>
+      </div>
+      <div id="fc-tab"></div>
+    </div>`;
+
+    $$("#fc-chips .chip-btn").forEach(b=> b.addEventListener("click", ()=>{ fcHubState.section=b.getAttribute("data-sec"); drawHub(); }));
+    $$('.segmented .seg[data-tab]').forEach(b=> b.addEventListener("click", ()=>{ fcHubState.tab=b.getAttribute("data-tab"); drawHub(); }));
+
+    if(fcHubState.tab==="todas") drawTodas(sec);
+    else drawRepaso(sec, total, pend);
   }
-  function currentFilters(){
-    return { section:$("#fc-section").value, topic:$("#fc-topic").value, cardType:$("#fc-tipo").value,
-      priority:$("#fc-prioridad").value, estado:$("#fc-estado").value, search:$("#fc-search").value.trim() };
+
+  function drawRepaso(sec, total, pend){
+    const el = $("#fc-tab");
+    if(!total){ el.innerHTML = `<div class="empty-state"><div class="glyph">${icon('cards')}</div><p>No hay flashcards en esta selección.</p></div>`; return; }
+    el.innerHTML = `
+      <button class="fc-cta" id="fc-repasar">
+        <div>
+          <div class="fc-cta-t">${pend ? 'Repasar' : 'Repasar de nuevo'}</div>
+          <div class="fc-cta-d">${pend ? pend+' pendiente'+(pend===1?'':'s') : 'las '+total+' ya están dominadas'}</div>
+        </div>
+        <span class="fc-cta-go">${icon('play')}</span>
+      </button>
+      ${(pend && pend<total) ? `<button class="btn btn-ghost btn-block btn-sm" id="fc-repasar-todas" style="margin-top:var(--sp-3);">Repasar las ${total} de nuevo</button>` : ``}
+      <div class="section-block" style="margin-top:var(--sp-7);">
+        <div class="section-title"><h3>Dominadas por pestaña</h3></div>
+        <div class="progress-list">
+          ${secList.map(s=>{
+            const t = O.filterFlashcards({section:s.id}).length;
+            const p = O.filterFlashcards({section:s.id, estado:'pendiente'}).length;
+            const pc = t ? Math.round(((t-p)/t)*100) : 0;
+            return `<button class="progress-row" data-secjump="${s.id}">
+              <div class="pr-main"><div class="pr-name">${O.escapeHtml(s.name)}</div><div class="pr-meta">${t-p} / ${t} dominadas</div></div>
+              <div class="pr-bar"><div class="bar-track good"><i style="width:${pc}%"></i></div></div>
+              <div class="pr-pct">${pc}%</div><span class="pr-chev">${icon('chevronR')}</span>
+            </button>`;
+          }).join("")}
+        </div>
+      </div>`;
+    $("#fc-repasar").addEventListener("click", ()=>{
+      const ids = O.filterFlashcards({section:sec, estado: pend ? "pendiente" : "all"}).map(c=>c.canonicalId);
+      if(ids.length) startFlashcardSession(ids, 0); else O.toast("No hay tarjetas para repasar");
+    });
+    const allBtn = $("#fc-repasar-todas");
+    if(allBtn) allBtn.addEventListener("click", ()=> startFlashcardSession(O.filterFlashcards({section:sec}).map(c=>c.canonicalId), 0));
+    $$("[data-secjump]").forEach(b=> b.addEventListener("click", ()=>{ fcHubState.section=b.getAttribute("data-secjump"); fcHubState.tab="repaso"; drawHub(); }));
   }
-  function refresh(){
-    fcList = O.filterFlashcards(currentFilters());
-    $("#fc-count").textContent = fcList.length + " tarjetas";
-    const bodyEl = $("#fc-body");
-    if(!fcList.length){ bodyEl.innerHTML = `<div class="empty-state"><div class="glyph">${icon('cards')}</div><p>No hay flashcards que coincidan con estos filtros.</p></div>`; return; }
-    bodyEl.innerHTML = `<div class="qlist">${fcList.map((c,i)=>`
-      <button class="qlist-item" data-idx="${i}">
-        <span class="badge ${O.getFlashcardState(c.canonicalId)==='dominada'?'badge-correct':'badge-unanswered'}">${O.getFlashcardState(c.canonicalId)==='dominada'?'✓':'–'}</span>
-        <div style="flex:1;"><div class="qtext">${O.escapeHtml(truncate(c.front,150))}</div>
-        <div class="qmeta">${O.escapeHtml(c.topic||c.section)}${c.subtopic?" · "+O.escapeHtml(c.subtopic):""} · ${cardTypeLabel(c.cardType)}${c.priority==="alta"?" · ★":""}</div></div>
-      </button>`).join("")}</div>`;
-    $$(".qlist-item", bodyEl).forEach(btn=> btn.addEventListener("click", ()=> startFlashcardSession(fcList.map(c=>c.canonicalId), Number(btn.getAttribute("data-idx")))));
+
+  function drawTodas(sec){
+    const el = $("#fc-tab");
+    el.innerHTML = `
+      <div class="filter-bar">
+        <select id="fc-prioridad"><option value="all">Cualquier prioridad</option><option value="alta">Solo prioridad alta</option></select>
+        <select id="fc-estado"><option value="all">Todas</option><option value="pendiente">Pendientes</option><option value="dominada">Dominadas</option></select>
+        <select id="fc-tipo"><option value="all">Todos los tipos</option><option value="contenido">Contenido</option><option value="error">Errores frecuentes</option></select>
+        <input type="search" id="fc-search" placeholder="Buscar…">
+        <span class="chip" id="fc-count"></span>
+      </div>
+      <div id="fc-body"></div>`;
+    function currentFilters(){
+      return { section:sec, cardType:$("#fc-tipo").value, priority:$("#fc-prioridad").value,
+        estado:$("#fc-estado").value, search:$("#fc-search").value.trim() };
+    }
+    function refresh(){
+      fcList = O.filterFlashcards(currentFilters());
+      $("#fc-count").textContent = fcList.length + " tarjeta" + (fcList.length===1?"":"s");
+      const bodyEl = $("#fc-body");
+      if(!fcList.length){ bodyEl.innerHTML = `<div class="empty-state"><div class="glyph">${icon('cards')}</div><p>Sin resultados.</p></div>`; return; }
+      bodyEl.innerHTML = `<div class="qlist">${fcList.map((c,i)=>`
+        <button class="qlist-item" data-idx="${i}">
+          <span class="badge ${O.getFlashcardState(c.canonicalId)==='dominada'?'badge-correct':'badge-unanswered'}">${O.getFlashcardState(c.canonicalId)==='dominada'?'✓':'–'}</span>
+          <div style="flex:1;"><div class="qtext">${O.escapeHtml(truncate(c.front,150))}</div>
+          <div class="qmeta">${O.escapeHtml(c.topic||c.section)}${c.subtopic?" · "+O.escapeHtml(c.subtopic):""} · ${cardTypeLabel(c.cardType)}${c.priority==="alta"?" · ★":""}</div></div>
+        </button>`).join("")}</div>`;
+      $$(".qlist-item", bodyEl).forEach(btn=> btn.addEventListener("click", ()=> startFlashcardSession(fcList.map(c=>c.canonicalId), Number(btn.getAttribute("data-idx")))));
+    }
+    ["#fc-prioridad","#fc-estado","#fc-tipo","#fc-search"].forEach(s=> $(s).addEventListener("input", refresh));
+    refresh();
   }
-  ["#fc-section"].forEach(sel=> $(sel).addEventListener("input", ()=>{ refreshTopics(); refresh(); }));
-  ["#fc-topic","#fc-tipo","#fc-prioridad","#fc-estado","#fc-search"].forEach(sel=> $(sel).addEventListener("input", refresh));
-  $("#fc-study-filtered").addEventListener("click", ()=>{ if(fcList.length) startFlashcardSession(fcList.map(c=>c.canonicalId), 0); else O.toast("No hay tarjetas con estos filtros"); });
-  $("#fc-study-pending").addEventListener("click", ()=>{
-    const pending = O.filterFlashcards(Object.assign(currentFilters(), {estado:"pendiente"}));
-    if(pending.length) startFlashcardSession(pending.map(c=>c.canonicalId), 0); else O.toast("No quedan tarjetas pendientes con estos filtros");
-  });
-  refreshTopics();
-  refresh();
+
+  drawHub();
 }
 
 function startFlashcardSession(ids, startIndex){
@@ -1183,44 +1231,60 @@ function renderFlashcardsStudy(){
   if(!c){ go("flashcards"); return; }
   if(!fcSession.revealed) O.markFlashcardSeen(c.canonicalId);
   const dominada = O.getFlashcardState(c.canonicalId)==="dominada";
+  const total = fcSession.ids.length, idx = fcSession.index, last = idx===total-1;
+  const revealed = fcSession.revealed;
+
+  function advance(){
+    if(last){ fcSession=null; O.toast("Repaso terminado"); go("flashcards"); return; }
+    fcSession.index++; fcSession.revealed=false; renderFlashcardsStudy();
+  }
+
   mainEl().innerHTML = `
   <div class="view view-narrow">
-    <div class="session-shell" style="max-width:640px;">
+    <div class="session-shell fc-study" style="max-width:600px;">
       <div class="session-topbar">
         <button class="exit" id="fc-exit">${icon('arrowL')} Salir</button>
-        <span class="counter">Tarjeta ${fcSession.index+1} de ${fcSession.ids.length}</span>
+        <span class="counter">${O.escapeHtml(sectionName(c.section))} · ${idx+1} / ${total}</span>
       </div>
-      <div class="session-progress"><i style="width:${Math.round(((fcSession.index+1)/fcSession.ids.length)*100)}%"></i></div>
-      <div class="surface qcard flashcard-surface" id="fc-card" style="padding:var(--sp-7); text-align:center; cursor:pointer;">
-        <div class="qcard-meta" style="justify-content:center;">
-          <span class="tag tag-type">${cardTypeLabel(c.cardType)}</span>
-          ${c.priority==="alta" ? `<span class="tag">★ Prioridad alta</span>` : ''}
-          ${dominada ? `<span class="tag" style="color:var(--good);">Dominada</span>` : ''}
+      <div class="session-progress"><i style="width:${Math.round(((idx+1)/total)*100)}%"></i></div>
+
+      <button class="flip-card ${revealed?'flipped':''}" id="fc-card" aria-label="${revealed?'Ocultar respuesta':'Mostrar respuesta'}">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="ff-tags">
+              <span class="tag tag-type">${cardTypeLabel(c.cardType)}</span>
+              ${c.priority==="alta" ? `<span class="tag">★ Prioridad alta</span>` : ''}
+              ${dominada ? `<span class="tag" style="color:var(--good);border-color:var(--good-line);">Dominada</span>` : ''}
+            </div>
+            <div class="ff-text">${O.escapeHtml(c.front)}</div>
+            <div class="ff-hint">Mostrar respuesta</div>
+          </div>
+          <div class="flip-face flip-back" id="fc-back">
+            <div class="fb-label">Respuesta</div>
+            <div class="fb-text">${O.escapeHtml(c.back)}</div>
+          </div>
         </div>
-        <h3 style="margin-top:var(--sp-5);">${O.escapeHtml(c.front)}</h3>
-        <div id="fc-back" class="${fcSession.revealed?'':'hidden'}" style="margin-top:var(--sp-5); padding-top:var(--sp-5); border-top:1px solid var(--border); color:var(--text-2);">${O.escapeHtml(c.back)}</div>
-        ${!fcSession.revealed ? `<p style="margin-top:var(--sp-5); font-size:12px; color:var(--text-3);">Toca la tarjeta para ver el dorso</p>` : ''}
+      </button>
+
+      <div class="fc-verdict ${revealed?'':'is-hidden'}">
+        <button class="btn btn-outline btn-lg btn-block" id="fc-forgot">No la recordaba</button>
+        <button class="btn btn-solid btn-lg btn-block" id="fc-knew">La recordaba</button>
       </div>
-      <div class="action-grid" style="margin-top:var(--sp-5);">
-        <button class="action-card" id="fc-mastered"><div class="t">${dominada?'Quitar "dominada"':'Marcar dominada'}</div><div class="d">${dominada?'Volver a repasarla':'Ya me la sé'}</div></button>
-        <button class="action-card" id="fc-review-again"><div class="t">Repasar de nuevo</div><div class="d">Seguir estudiándola</div></button>
-      </div>
+
       <div class="qnav-footer">
-        <button class="btn btn-outline btn-sm" id="fc-prev" ${fcSession.index===0?"disabled":""}>${icon('arrowL')}</button>
-        <span class="pos">${fcSession.index+1} / ${fcSession.ids.length}</span>
-        <button class="btn btn-primary btn-sm" id="fc-next">${fcSession.index===fcSession.ids.length-1?"Terminar":"Siguiente"}</button>
+        <button class="btn btn-ghost btn-sm" id="fc-prev" ${idx===0?"disabled":""}>${icon('arrowL')} Anterior</button>
+        <span class="pos">${idx+1} / ${total}</span>
+        <button class="btn btn-ghost btn-sm" id="fc-next">${last?"Terminar":"Saltar"} ${icon('chevronR')}</button>
       </div>
     </div>
   </div>`;
+
   $("#fc-exit").addEventListener("click", ()=>{ fcSession=null; go("flashcards"); });
   $("#fc-card").addEventListener("click", ()=>{ fcSession.revealed = !fcSession.revealed; renderFlashcardsStudy(); });
-  $("#fc-mastered").addEventListener("click", (e)=>{ e.stopPropagation(); O.setFlashcardMastered(c.canonicalId, !dominada); renderFlashcardsStudy(); });
-  $("#fc-review-again").addEventListener("click", (e)=>{ e.stopPropagation(); O.setFlashcardMastered(c.canonicalId, false); renderFlashcardsStudy(); });
-  $("#fc-prev").addEventListener("click", ()=>{ fcSession.index = Math.max(0, fcSession.index-1); fcSession.revealed=false; renderFlashcardsStudy(); });
-  $("#fc-next").addEventListener("click", ()=>{
-    if(fcSession.index === fcSession.ids.length-1){ fcSession=null; O.toast("Sesión de flashcards terminada"); go("flashcards"); return; }
-    fcSession.index++; fcSession.revealed=false; renderFlashcardsStudy();
-  });
+  $("#fc-knew").addEventListener("click", ()=>{ O.setFlashcardMastered(c.canonicalId, true); advance(); });
+  $("#fc-forgot").addEventListener("click", ()=>{ O.setFlashcardMastered(c.canonicalId, false); advance(); });
+  $("#fc-prev").addEventListener("click", ()=>{ fcSession.index = Math.max(0, idx-1); fcSession.revealed=false; renderFlashcardsStudy(); });
+  $("#fc-next").addEventListener("click", advance);
 }
 
 /* ---------------------------------------------------------------
