@@ -106,6 +106,11 @@ silencio ni elijas arbitrariamente.
   con ese error; corregido en `inicio-250/251/252/264/275/276`). Otros de
   sangría: `Ctrl+Mayús+H` = reducir sangría francesa, `Ctrl+Mayús+R` =
   quitar toda la sangría (`atajos_oficial.json`).
+- **`Ctrl+M`** abre el cuadro de diálogo Fuente con el foco en el campo
+  Fuente (nombre); **`Ctrl+Mayús+M`** abre el mismo cuadro con el foco en
+  el campo Tamaño. NO son atajos de sangría y NO activan la caja de la
+  cinta: abren el diálogo. Prueba en vivo del usuario. Afectó a
+  `inicio-25/251/354/355`.
 - **Ctrl+R no hace absolutamente nada** en esta instalación (Word 365
   español de España). No aparece en `ATAJOS.docx`. No es Ctrl+R quien
   alinea a la derecha — es Ctrl+D. Prueba en vivo del usuario.
