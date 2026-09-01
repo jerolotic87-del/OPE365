@@ -109,3 +109,17 @@ Paso posterior a la reagrupación. `inicio.json`: 417 → 393.
 - `scripts/normalize_id_map.json` (21 ids desplazados por las bajas).
 
 Verificado: `verify_bank` OK, 6/6 tests jsdom, `build_data.py` + `build.py`.
+
+## Flashcards de Inicio (`scripts/integrate_inicio_flashcards.py`)
+
+`data/flashcards/inicio.json` (116 tarjetas, aportadas por el usuario) →
+mazo total **220** (inicio 116, vista 55, revisar 49).
+
+- `priority` "media" → "normal" (32 tarjetas), para igualar al resto.
+- `questionRefs`: 94 remapeados al id actual `inicio-N` vía
+  `sourceQuestionId`; 23 refs internas del borrador (`E##`, `F##`,
+  `P78/92/94/111`) descartadas — `questionRefs` es enlace blando opcional.
+- `inicio.json` añadido a `data/flashcards/manifest.json` en orden de
+  taxonomía (inicio, revisar, vista).
+
+`canonicalId` sin colisiones, 0 `questionRefs` rotas, 6/6 tests.

@@ -6,8 +6,9 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **1325 preguntas** y 104
-flashcards, todo el banco normalizado y agrupado por pestaña de la cinta
+de Word 365 de una oposición de ayuntamiento. **1325 preguntas** y **220
+flashcards** (inicio 116, vista 55, revisar 49), todo el banco
+normalizado y agrupado por pestaña de la cinta
 (`data/questions/<section>.json`). Práctica/examen con corrección
 inmediata, compartir por código, desafíos asíncronos con resultado
 sellado, un mazo de flashcards (frente/dorso, sin repetición espaciada
@@ -45,8 +46,10 @@ data/questions/*.json  el banco partido en UN ARCHIVO POR PESTAÑA/section
                        id="<section>-<n>" y sourceFile="<section>.json";
                        la procedencia fina está en `bloque` y
                        `sourceQuestionId` (id original del documento).
-data/flashcards/*.json  flashcards por sección (vista.json, revisar.json),
-                        con su propio manifest.json
+data/flashcards/*.json  flashcards por sección (inicio.json, revisar.json,
+                        vista.json), con su propio manifest.json. `priority`
+                        ∈ alta|normal; `questionRefs` = ids `<section>-N`
+                        (enlace blando, opcional)
 data/questions_regroup_report.md  reagrupación ago-2026: qué se movió de
                        1.json..8.json/atajos.json al esquema por pestaña
                        (mapa id viejo→nuevo en scripts/regroup_id_map.json)
