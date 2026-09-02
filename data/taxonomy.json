@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "note": "Taxonomía pedagógica global de OPE365. Independiente de sourceFile/bloque (que son procedencia, no temario). Reclasificación completa del banco heredado (952 preguntas) hecha en ago-2026 a partir de un análisis sourceFile por sourceFile del contenido real -- ver commits de esa fecha para el detalle de cómo se asignó cada bloque/tema/atajo.",
   "sections": [
     {
@@ -477,11 +477,14 @@
       "topics": [
         {
           "id": "revision-ortografica",
-          "name": "Revisión ortográfica y gramatical",
+          "name": "Revisión — ortografía, editor y sinónimos",
           "subtopics": [
+            "Editor",
+            "Ortografía y gramática",
             "Sinónimos",
             "Contar palabras"
-          ]
+          ],
+          "ribbonGroup": "Revisión"
         },
         {
           "id": "accesibilidad",
@@ -527,6 +530,17 @@
           "id": "comentarios",
           "name": "Comentarios",
           "subtopics": []
+        },
+        {
+          "id": "revision-marcado",
+          "name": "Revisión — marcas y visualización",
+          "ribbonGroup": "Revisión",
+          "subtopics": [
+            "Filtrar todo el marcado",
+            "Todas las revisiones",
+            "Mostrar revisiones",
+            "Panel de revisiones"
+          ]
         },
         {
           "id": "entrada-lapiz",

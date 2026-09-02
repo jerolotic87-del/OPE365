@@ -264,6 +264,12 @@ resultados, Referencias→Tabla de autoridades) y `referencias > titulos-indice`
 partido en `titulos` + `indice` — todo aditivo, ninguna pregunta cambió de
 `topic` (esos grupos estaban a 0 preguntas). El campo `ribbonGroup` en un
 topic es opcional; `populateTopicSelect`/`topicName` en views.js lo usan.
+Taxonomía v5: la pestaña Revisar tiene **dos** grupos de cinta llamados
+literalmente "Revisión" — el de corrección (`revision-ortografica`) y el de
+visualización del marcado (`revision-marcado`: Filtrar todo el marcado /
+Todas las revisiones / Mostrar revisiones / Panel de revisiones); ambos
+llevan `ribbonGroup:"Revisión"`. Las 4 flashcards de ese grupo se movieron
+de `seguimiento` a `revision-marcado`.
 
 El campo `tema` ya no se usa para navegar (el asistente "Por pestaña y
 grupo" y "Repasar preguntas" usan `section`/`topic` vía
