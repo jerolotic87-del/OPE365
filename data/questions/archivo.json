@@ -8187,5 +8187,293 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Configuración de caché → Eliminar los archivos almacenados en caché. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-232",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-idioma",
+    "subtopic": "Idioma",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-idi-02",
+    "generado": true,
+    "enunciado": "Necesitas que la interfaz de Word se muestre en francés porque vas a ceder el equipo a un compañero francófono. ¿Dónde añades el francés como idioma de visualización de Office?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Idioma para mostrar ▸ Subir / Bajar"
+      },
+      {
+        "letter": "B",
+        "text": "Idioma para mostrar ▸ Agregar un idioma"
+      },
+      {
+        "letter": "C",
+        "text": "Corrección e idiomas de creación ▸ Almacenar mis idiomas de creación en la nube para mi cuenta"
+      },
+      {
+        "letter": "D",
+        "text": "Idioma para mostrar ▸ Idioma para mostrar de Office"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Idioma para mostrar de Office → Agregar un idioma. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-233",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-idioma",
+    "subtopic": "Idioma",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-idi-03",
+    "generado": true,
+    "enunciado": "Tienes varios idiomas de visualización instalados y la interfaz aparece en inglés porque está el primero de la lista. Quieres que el español ocupe la primera posición. ¿Dónde cambias ese orden?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Corrección e idiomas de creación ▸ Quitar"
+      },
+      {
+        "letter": "B",
+        "text": "Corrección e idiomas de creación ▸ Instalar otros teclados desde la configuración de Windows"
+      },
+      {
+        "letter": "C",
+        "text": "Idioma para mostrar ▸ Idioma para mostrar de Office"
+      },
+      {
+        "letter": "D",
+        "text": "Idioma para mostrar ▸ Subir / Bajar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Idioma para mostrar de Office → Subir / Bajar. La interfaz usa el primer idioma DISPONIBLE de la lista, así que reordenar con Subir/Bajar es lo que decide en qué idioma se ve."
+  },
+  {
+    "id": "archivo-234",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-idioma",
+    "subtopic": "Idioma",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-idi-04",
+    "generado": true,
+    "enunciado": "Tienes varios idiomas de visualización en la lista y quieres marcar uno directamente como preferido para que pase al primer puesto sin reordenar a mano. ¿Dónde lo haces?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Idioma para mostrar ▸ Establecer como Preferido"
+      },
+      {
+        "letter": "B",
+        "text": "Idioma para mostrar ▸ Idioma para mostrar de Office"
+      },
+      {
+        "letter": "C",
+        "text": "Corrección e idiomas de creación ▸ Almacenar mis idiomas de creación en la nube para mi cuenta"
+      },
+      {
+        "letter": "D",
+        "text": "Idioma para mostrar ▸ Agregar un idioma"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Idioma para mostrar de Office → Establecer como Preferido. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-235",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-idioma",
+    "subtopic": "Idioma",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-idi-05",
+    "generado": true,
+    "enunciado": "Redactas un documento en catalán pero el corrector lo revisa en español y marca como errores palabras catalanas correctas. ¿Dónde añades el catalán como idioma de creación para que la revisión funcione?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Idioma para mostrar ▸ Agregar un idioma"
+      },
+      {
+        "letter": "B",
+        "text": "Corrección e idiomas de creación ▸ Quitar"
+      },
+      {
+        "letter": "C",
+        "text": "Idioma para mostrar ▸ Subir / Bajar"
+      },
+      {
+        "letter": "D",
+        "text": "Corrección e idiomas de creación ▸ Corrección e idiomas de creación de Office"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Corrección e idiomas de creación de Office. Atajo/ruta alternativa: Revisar ▸ Idioma ▸ Establecer idioma de corrección. Idioma para mostrar = interfaz (menús, botones, cinta). Idioma de creación = corrector ortográfico, gramatical y diccionario del documento. Son independientes. Atajo alternativo para el texto SELECCIONADO: Revisar ▸ Idioma ▸ Establecer idioma de corrección, o el indicador de idioma de la barra de estado (aulaClic)."
+  },
+  {
+    "id": "archivo-236",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-idioma",
+    "subtopic": "Idioma",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-idi-07",
+    "generado": true,
+    "enunciado": "Tienes varios idiomas de creación instalados que ya no usas y quieres eliminar uno de la lista para mantenerla limpia. ¿Dónde lo haces?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Corrección e idiomas de creación ▸ Agregar un idioma..."
+      },
+      {
+        "letter": "B",
+        "text": "Corrección e idiomas de creación ▸ Establecer como Preferido"
+      },
+      {
+        "letter": "C",
+        "text": "Corrección e idiomas de creación ▸ Quitar"
+      },
+      {
+        "letter": "D",
+        "text": "Idioma para mostrar ▸ Idioma para mostrar de Office"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Corrección e idiomas de creación de Office → Quitar. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-237",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-idioma",
+    "subtopic": "Idioma",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-idi-08",
+    "generado": true,
+    "enunciado": "Tienes varios idiomas de creación y el que aparece como preferido no es el español de España, así que el corrector usa otro diccionario. ¿Dónde estableces el español de España como idioma de creación preferido?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Corrección e idiomas de creación ▸ Establecer como Preferido"
+      },
+      {
+        "letter": "B",
+        "text": "Corrección e idiomas de creación ▸ Instalar otros teclados desde la configuración de Windows"
+      },
+      {
+        "letter": "C",
+        "text": "Corrección e idiomas de creación ▸ Agregar un idioma..."
+      },
+      {
+        "letter": "D",
+        "text": "Idioma para mostrar ▸ Establecer como Preferido"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Corrección e idiomas de creación de Office → Establecer como Preferido. El idioma de creación preferido aparece en negrita al inicio de la lista y es el que usan por defecto el corrector ortográfico y gramatical."
+  },
+  {
+    "id": "archivo-238",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-idioma",
+    "subtopic": "Idioma",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-idi-09",
+    "generado": true,
+    "enunciado": "Usas Word en varios equipos y cada vez que cambias de ordenador tienes que reconfigurar los idiomas de creación. ¿Dónde activas la sincronización de esa configuración con tu cuenta?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Corrección e idiomas de creación ▸ Agregar un idioma..."
+      },
+      {
+        "letter": "B",
+        "text": "Idioma para mostrar ▸ Agregar un idioma"
+      },
+      {
+        "letter": "C",
+        "text": "Corrección e idiomas de creación ▸ Establecer como Preferido"
+      },
+      {
+        "letter": "D",
+        "text": "Corrección e idiomas de creación ▸ Almacenar mis idiomas de creación en la nube para mi cuenta"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Corrección e idiomas de creación de Office → Almacenar mis idiomas de creación en la nube para mi cuenta. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-239",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-idioma",
+    "subtopic": "Idioma",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-idi-10",
+    "generado": true,
+    "enunciado": "Has añadido el francés como idioma de creación en Word pero no tienes el teclado francés en Windows y necesitas escribir sus caracteres especiales. ¿Dónde, desde las opciones de idioma de Word, accedes a la configuración de teclados de Windows?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Corrección e idiomas de creación ▸ Agregar un idioma..."
+      },
+      {
+        "letter": "B",
+        "text": "Corrección e idiomas de creación ▸ Establecer como Preferido"
+      },
+      {
+        "letter": "C",
+        "text": "Corrección e idiomas de creación ▸ Quitar"
+      },
+      {
+        "letter": "D",
+        "text": "Corrección e idiomas de creación ▸ Instalar otros teclados desde la configuración de Windows"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Corrección e idiomas de creación de Office → Instalar otros teclados desde la configuración de Windows. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
   }
 ]
