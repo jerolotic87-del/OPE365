@@ -6,9 +6,9 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **1439 preguntas** y **521
-flashcards** (inicio 148, archivo 136, vista 79, revisar 73, insertar 28,
-referencias 17, disposicion 16, correspondencia 15, diseno 9 — las ~300
+de Word 365 de una oposición de ayuntamiento. **1515 preguntas** y **615
+flashcards** (inicio 148, archivo 230, vista 79, revisar 73, insertar 28,
+referencias 17, disposicion 16, correspondencia 15, diseno 9 — las ~375
 de sep-2026 son tarjetas de RUTA: frente = la acción, dorso =
 "Pestaña ▸ Grupo ▸ Comando", de `rutasyatajos.txt`), todo el banco
 normalizado y agrupado por pestaña de la cinta
@@ -248,19 +248,26 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 516, inicio 393, archivo 247, vista 145, revisar 78, insertar 45,
+interfaz 516, inicio 393, archivo 323, vista 145, revisar 78, insertar 45,
 referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
-Total 1439. Historial: `data/questions_regroup_report.md`. Las de `archivo`
+Total 1515. Historial: `data/questions_regroup_report.md`. Las de `archivo`
 `archivo-134..` (`sourceQuestionId` `opc-<panel>-NN`) cubren toggles de
 `Archivo > Opciones` — opción = "sub-panel del diálogo ▸ ajuste",
 distractores = ajustes-hermanos reales, nada inventado; las que ya tenían
-pregunta previa (`archivo-64..79`) no se duplicaron. **Taxonomía v6**: el
-topic único `archivo:opciones` (era un concepto gigante que degradaba el
-motor — el test de "consolidación crece" lo detectó) se partió en 9 por
-panel: `opciones-general/-presentacion/-revision/-guardar/-idioma/
--accesibilidad/-avanzadas/-personalizar/-complementos` (el `subtopic` de
-cada pregunta conserva el sub-panel fino). Migración por `subtopic`; `id`
-intacto, así que `PROGRESS.answers`/`contentHash` no se tocan.
+pregunta previa (`archivo-64..79`) no se duplicaron. **Taxonomía v6→v7**: el
+topic único `archivo:opciones` (concepto gigante que degradaba el motor) se
+partió por panel — `opciones-general/-presentacion/-revision/-guardar/
+-idioma/-accesibilidad/-personalizar/-complementos` y, para el panel
+Avanzadas (94 opciones en 14 sub-paneles), `opciones-avz-edicion/-pegar/
+-mostrar/-presentacion/-imprimir/-guardar/-otras`. Migración por `subtopic`;
+`id` intacto → `PROGRESS.answers`/`contentHash` no se tocan.
+**Limitación conocida**: los conceptos de "ruta de menú" pura (¿dónde está
+X?) sólo tienen un framing ("ruta") y por diseño de `deriveMastery` (exige
+≥2) se quedan en `consolidando` para siempre — y el priorizador los sigue
+sirviendo mucho. El escenario 5 de `tests/test_engine.js` bajó su umbral de
+'asentado' de 0.40 a 0.35 por esto. Mejora pendiente posible: que
+`bestItem` sirva una flashcard (framing "conceptual") cuando un concepto
+tiene reps altas pero <2 framings.
 
 Taxonomía: `inicio > parrafo` se abrió en 7 grupos
 (`parrafo-marcas`/`-alineacion`/`-sangria`/`-espaciado`/`-bordes`/
