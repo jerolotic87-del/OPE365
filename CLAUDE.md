@@ -6,9 +6,9 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **1342 preguntas** y **407
-flashcards** (inicio 148, vista 79, revisar 73, insertar 28, archivo 22,
-disposicion 16, referencias 17, correspondencia 15, diseno 9 — las ~187
+de Word 365 de una oposición de ayuntamiento. **1355 preguntas** y **423
+flashcards** (inicio 148, vista 79, revisar 73, archivo 38, insertar 28,
+referencias 17, disposicion 16, correspondencia 15, diseno 9 — las ~203
 de sep-2026 son tarjetas de RUTA: frente = la acción, dorso =
 "Pestaña ▸ Grupo ▸ Comando", de `rutasyatajos.txt`), todo el banco
 normalizado y agrupado por pestaña de la cinta
@@ -248,13 +248,14 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 516, inicio 393, archivo 150, vista 145, revisar 78, insertar 45,
+interfaz 516, inicio 393, archivo 163, vista 145, revisar 78, insertar 45,
 referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
-Total 1342. Historial: `data/questions_regroup_report.md`. Las 17 últimas
-de `archivo` (`archivo-134..150`, `sourceQuestionId` `opc-gen-NN`) cubren
-toggles de `Archivo > Opciones > General` (interfaz de usuario, personalizar
-copia, privacidad) — distractores = opciones-hermanas reales del mismo panel,
-nada inventado.
+Total 1355. Historial: `data/questions_regroup_report.md`. Las 30 últimas
+de `archivo` (`archivo-134..163`, `sourceQuestionId` `opc-gen-NN` /
+`opc-pres-NN`) cubren toggles de `Archivo > Opciones > General` y
+`> Presentación` — distractores = opciones-hermanas reales del mismo panel,
+nada inventado; las que ya tenían pregunta previa (`archivo-64..71`) no se
+duplicaron.
 
 Taxonomía: `inicio > parrafo` se abrió en 7 grupos
 (`parrafo-marcas`/`-alineacion`/`-sangria`/`-espaciado`/`-bordes`/
