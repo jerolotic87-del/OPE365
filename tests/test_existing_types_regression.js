@@ -18,6 +18,7 @@ async function main(){
   runScript(read("questions_data.js"));
   runScript(read("taxonomy_data.js"));
   runScript(read("app.js"));
+  runScript(read("content-overrides.js"));
   runScript(read("engine.js"));
   runScript(read("engine-bridge.js"));
   runScript(read("views.js"));

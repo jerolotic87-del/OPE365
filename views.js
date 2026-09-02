@@ -34,6 +34,7 @@ const ICONS = {
   layers:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>',
   check:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
   target:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>',
+  pencil:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>',
 };
 function icon(name){ return ICONS[name] || ""; }
 
@@ -828,8 +829,12 @@ function renderQuestionCard(q, s, isExam){
         <span class="tag tag-type">${tipoLabel(q.tipo)}</span>
         ${q.categoria && q.categoria!=="general" ? `<span class="tag">${categoriaLabel(q.categoria)}</span>` : ''}
         ${q.negativa ? '<span class="tag tag-neg">⚠ Negativa</span>' : ''}
+        ${O.ContentEdit && O.ContentEdit.has("q", q.id) ? '<span class="tag tag-edit">✎ corregida</span>' : ''}
       </div>
-      <button class="star ${marked?"on":""}" id="q-star">★</button>
+      <div class="qcard-actions">
+        <button class="qedit" id="q-edit" title="Editar o corregir esta pregunta" aria-label="Editar pregunta">${icon('pencil')}</button>
+        <button class="star ${marked?"on":""}" id="q-star" aria-label="Marcar pregunta">★</button>
+      </div>
     </div>
     <h3>${O.renderBlank(q.enunciado)}</h3>
     <div id="q-body"></div>
@@ -860,6 +865,8 @@ function renderQuestionCard(q, s, isExam){
     e.currentTarget.classList.toggle("on");
     if(isExam) renderNavGrid();
   });
+  const qEditBtn = $("#q-edit");
+  if(qEditBtn) qEditBtn.addEventListener("click", ()=> openEditQuestionModal(q.id));
   $("#q-prev").addEventListener("click", ()=>{
     s.current = Math.max(0, s.current-1); O.saveSessionSnapshot();
     renderQuestionCard(s.questions[s.current], s, isExam); if(isExam) renderNavGrid();
@@ -1299,7 +1306,10 @@ function buildReviewDetailHtml(q){
         ${q.categoria&&q.categoria!=="general"?`<span class="tag">${categoriaLabel(q.categoria)}</span>`:''}
         ${q.negativa?'<span class="tag tag-neg">Pregunta negativa</span>':''}
       </div>
-      <button class="star ${O.isMarked(q.id)?"on":""}" id="rd-star" data-star="${q.id}">★</button>
+      <div class="qcard-actions">
+        <button class="qedit" id="rd-edit" title="Editar o corregir esta pregunta" aria-label="Editar pregunta">${icon('pencil')}</button>
+        <button class="star ${O.isMarked(q.id)?"on":""}" id="rd-star" data-star="${q.id}">★</button>
+      </div>
     </div>
     <h3>${O.renderBlank(q.enunciado)}</h3>
     <div id="rd-body"></div>
@@ -1318,6 +1328,8 @@ function wireReviewDetail(root){
   const q = reviewList[reviewIndex];
   renderStaticAnswerBody(root.querySelector("#rd-body"), q);
   root.querySelector("#rd-star").addEventListener("click",(e)=>{ toggleMark(q.id); e.target.classList.toggle("on"); });
+  const rdEdit = root.querySelector("#rd-edit");
+  if(rdEdit) rdEdit.addEventListener("click", ()=>{ closeModal(); openEditQuestionModal(q.id, ()=> openReviewDetail()); });
   root.querySelector("#rd-prev").addEventListener("click", ()=>{ reviewIndex=(reviewIndex-1+reviewList.length)%reviewList.length; closeModal(); openReviewDetail(); });
   root.querySelector("#rd-next").addEventListener("click", ()=>{ reviewIndex=(reviewIndex+1)%reviewList.length; closeModal(); openReviewDetail(); });
 }
@@ -1579,6 +1591,7 @@ function renderFlashcardsStudy(){
       <div class="session-topbar">
         <button class="exit" id="fc-exit">${icon('arrowL')} Salir</button>
         <span class="counter">${O.escapeHtml(sectionName(c.section))} · ${idx+1} / ${total}</span>
+        <button class="qedit" id="fc-edit" title="Editar o corregir esta flashcard" aria-label="Editar flashcard">${icon('pencil')}</button>
       </div>
       <div class="session-progress"><i style="width:${Math.round(((idx+1)/total)*100)}%"></i></div>
 
@@ -1623,6 +1636,8 @@ function renderFlashcardsStudy(){
   }
   $("#fc-exit").addEventListener("click", ()=>{ fcSession=null; if(O.LEB) O.LEB.recalcNow(); go("flashcards"); });
   $("#fc-card").addEventListener("click", ()=>{ fcSession.revealed = !fcSession.revealed; renderFlashcardsStudy(); });
+  const fcEditBtn = $("#fc-edit");
+  if(fcEditBtn) fcEditBtn.addEventListener("click", ()=> openEditFlashcardModal(c.canonicalId));
   $("#fc-no").addEventListener("click", ()=> rate("no"));
   $("#fc-hard").addEventListener("click", ()=> rate("dificil"));
   $("#fc-yes").addEventListener("click", ()=> rate("si"));
@@ -1807,6 +1822,202 @@ function openExamPlanModal(){
       O.toast(examDate ? "Plan actualizado" : "Minutos y días guardados");
     });
   });
+}
+
+/* ---------------------------------------------------------------
+   EDITAR CONTENIDO — corregir una pregunta o flashcard sin tocar
+   el código. Guarda en PROGRESS.contentOverrides (solo este
+   dispositivo); exportable desde Ajustes.
+--------------------------------------------------------------- */
+function afterContentEdit(onDone){
+  if(O.LEB) O.LEB.recalcNow();
+  if(O.Nav.view === "running"){ const s = O.getSession(); if(s) O.setSession(O.hydrateSession(s)); }
+  closeModal();
+  if(onDone) onDone();
+  else go(O.Nav.view, O.Nav.params);
+}
+
+function respuestaControl(q, cur){
+  if(q.tipo === "opcion_unica"){
+    return `<select id="edit-resp" class="edit-field">${q.opciones.map(o=>`<option value="${o.letter}" ${cur===o.letter?'selected':''}>${o.letter}) ${O.escapeHtml(truncate(o.text,40))}</option>`).join("")}</select>`;
+  }
+  if(q.tipo === "verdadero_falso"){
+    const isT = cur===true || cur==="true";
+    return `<div class="segmented" id="edit-resp-tf"><button type="button" class="seg ${isT?'on':''}" data-v="true">Verdadero</button><button type="button" class="seg ${!isT?'on':''}" data-v="false">Falso</button></div>`;
+  }
+  if(q.tipo === "seleccion_multiple"){
+    const arr = Array.isArray(cur) ? cur : [];
+    return `<div class="edit-multi" id="edit-resp-multi">${q.opciones.map(o=>`<label class="echk"><input type="checkbox" value="${o.letter}" ${arr.includes(o.letter)?'checked':''}> ${o.letter}) ${O.escapeHtml(truncate(o.text,44))}</label>`).join("")}</div>`;
+  }
+  return `<p style="font-size:12px;color:var(--text-3);">La respuesta de este tipo de ejercicio no se edita aquí — usa la nota para reportar el problema.</p>`;
+}
+
+function openEditQuestionModal(qid, onDone){
+  const q = O.Q_BY_ID[qid];
+  if(!q || !O.ContentEdit){ O.toast("No se puede editar esta pregunta"); return; }
+  const orig = O.ContentEdit.original("q", qid);
+  const editsResp = ["opcion_unica","verdadero_falso","seleccion_multiple"].includes(q.tipo);
+  const editsOpts = ["opcion_unica","seleccion_multiple"].includes(q.tipo) && Array.isArray(q.opciones);
+  const hasOv = O.ContentEdit.has("q", qid);
+
+  showModal(`
+    <h3>Editar pregunta</h3>
+    <p class="edit-id">${qid} · ${tipoLabel(q.tipo)}${q.bloque?` · ${O.escapeHtml(q.bloque)}`:''}</p>
+    <div class="field"><label>Enunciado</label>
+      <textarea id="edit-enun" rows="3" class="edit-field">${O.escapeHtml(orig.enunciado||"")}</textarea></div>
+    ${editsOpts ? `<div class="field"><label>Opciones</label>
+      <div class="edit-opts">${q.opciones.map(o=>`<div class="eopt"><span class="eopt-l">${o.letter}</span>
+        <input type="text" data-opt="${o.letter}" class="edit-field" value="${O.escapeHtml(((orig.opciones||[]).find(x=>x.letter===o.letter)||{}).text||"")}"></div>`).join("")}</div></div>` : ''}
+    ${editsResp ? `<div class="field"><label>Respuesta correcta</label>${respuestaControl(q, orig.respuesta)}</div>` : ''}
+    <div class="field"><label>Explicación</label>
+      <textarea id="edit-expl" rows="3" class="edit-field">${O.escapeHtml(orig.explicacion||"")}</textarea></div>
+    <label class="echk" style="margin-bottom:var(--sp-4);"><input type="checkbox" id="edit-neg" ${orig.negativa?'checked':''}> Es una pregunta negativa (pide la opción FALSA / EXCEPTO)</label>
+    <div class="field"><label>Nota / motivo (opcional)</label>
+      <input type="text" id="edit-nota" class="edit-field" value="${O.escapeHtml(orig.nota||"")}" placeholder="p. ej. la correcta es B, no C — comprobado en Word"></div>
+    <p class="edit-warn">Se guarda solo en este dispositivo. Para volcarlo al banco: Ajustes → Correcciones de contenido → Exportar.</p>
+    <div class="actions" style="flex-wrap:wrap;">
+      ${hasOv ? `<button class="btn btn-ghost btn-sm" id="edit-revert">Descartar corrección</button>` : ''}
+      <button class="btn btn-ghost" id="edit-cancel">Cancelar</button>
+      <button class="btn btn-solid" id="edit-save">Guardar corrección</button>
+    </div>
+  `, (root)=>{
+    root.querySelectorAll("#edit-resp-tf .seg").forEach(b=> b.addEventListener("click", ()=>{
+      root.querySelectorAll("#edit-resp-tf .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on");
+    }));
+    root.querySelector("#edit-cancel").addEventListener("click", ()=> afterContentEdit(onDone));
+    const rev = root.querySelector("#edit-revert");
+    if(rev) rev.addEventListener("click", ()=>{ O.ContentEdit.revert("q", qid); O.toast("Corrección descartada"); afterContentEdit(onDone); });
+    root.querySelector("#edit-save").addEventListener("click", ()=>{
+      const patch = {};
+      const eq = (a,b)=> JSON.stringify(a) === JSON.stringify(b);
+      const nu = root.querySelector("#edit-enun").value.trim();
+      if(!eq(nu, orig.enunciado||"")) patch.enunciado = nu;
+      if(editsOpts){
+        const nOpts = q.opciones.map(o=>({ letter:o.letter, text: root.querySelector(`[data-opt="${o.letter}"]`).value }));
+        const oOpts = q.opciones.map(o=>({ letter:o.letter, text: ((orig.opciones||[]).find(x=>x.letter===o.letter)||{}).text||"" }));
+        if(!eq(nOpts, oOpts)) patch.opciones = nOpts;
+      }
+      if(editsResp){
+        let nr, ori = orig.respuesta;
+        if(q.tipo === "opcion_unica"){ nr = root.querySelector("#edit-resp").value; }
+        else if(q.tipo === "verdadero_falso"){ nr = root.querySelector("#edit-resp-tf .seg.on").getAttribute("data-v") === "true"; ori = (ori===true||ori==="true"); }
+        else { nr = [...root.querySelectorAll("#edit-resp-multi input:checked")].map(i=>i.value).sort(); ori = Array.isArray(ori)?ori.slice().sort():[]; }
+        if(!eq(nr, ori)) patch.respuesta = nr;
+      }
+      const ne = root.querySelector("#edit-expl").value.trim();
+      if(!eq(ne, orig.explicacion||"")) patch.explicacion = ne;
+      const nn = root.querySelector("#edit-neg").checked;
+      if(nn !== !!orig.negativa) patch.negativa = nn;
+      const nota = root.querySelector("#edit-nota").value.trim();
+      if(nota) patch.nota = nota;
+      if(!Object.keys(patch).length){ O.toast("No has cambiado nada"); afterContentEdit(onDone); return; }
+      if(q.tipo === "seleccion_multiple" && patch.respuesta && !patch.respuesta.length){ O.toast("Marca al menos una respuesta correcta"); return; }
+      O.ContentEdit.apply("q", qid, patch);
+      O.toast("Corrección guardada");
+      afterContentEdit(onDone);
+    });
+  }, {wide:true});
+}
+
+function openEditFlashcardModal(canonicalId, onDone){
+  const f = O.F_BY_ID[canonicalId];
+  if(!f || !O.ContentEdit){ O.toast("No se puede editar esta flashcard"); return; }
+  const orig = O.ContentEdit.original("fc", canonicalId);
+  const hasOv = O.ContentEdit.has("fc", canonicalId);
+
+  showModal(`
+    <h3>Editar flashcard</h3>
+    <p class="edit-id">${canonicalId} · ${cardTypeLabel(f.cardType)}${f.topic?` · ${O.escapeHtml(f.topic)}`:''}</p>
+    <div class="field"><label>Frente</label>
+      <textarea id="fc-edit-front" rows="3" class="edit-field">${O.escapeHtml(orig.front||"")}</textarea></div>
+    <div class="field"><label>Dorso</label>
+      <textarea id="fc-edit-back" rows="6" class="edit-field">${O.escapeHtml(orig.back||"")}</textarea>
+      <span class="edit-hint">Puedes usar "R: … / E: … / A: …" para respuesta, explicación y atajo, o "- " al principio de línea para listas.</span></div>
+    <div class="field"><label>Prioridad</label>
+      <div class="segmented" id="fc-edit-prio">
+        <button type="button" class="seg ${orig.priority==='alta'?'on':''}" data-v="alta">Alta</button>
+        <button type="button" class="seg ${orig.priority!=='alta'?'on':''}" data-v="normal">Normal</button>
+      </div></div>
+    <div class="field"><label>Nota / motivo (opcional)</label>
+      <input type="text" id="fc-edit-nota" class="edit-field" value="${O.escapeHtml(orig.nota||"")}" placeholder="qué estaba mal"></div>
+    <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes para volcarlo al banco.</p>
+    <div class="actions" style="flex-wrap:wrap;">
+      ${hasOv ? `<button class="btn btn-ghost btn-sm" id="fc-edit-revert">Descartar corrección</button>` : ''}
+      <button class="btn btn-ghost" id="fc-edit-cancel">Cancelar</button>
+      <button class="btn btn-solid" id="fc-edit-save">Guardar corrección</button>
+    </div>
+  `, (root)=>{
+    root.querySelectorAll("#fc-edit-prio .seg").forEach(b=> b.addEventListener("click", ()=>{
+      root.querySelectorAll("#fc-edit-prio .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on");
+    }));
+    root.querySelector("#fc-edit-cancel").addEventListener("click", ()=> afterContentEdit(onDone));
+    const rev = root.querySelector("#fc-edit-revert");
+    if(rev) rev.addEventListener("click", ()=>{ O.ContentEdit.revert("fc", canonicalId); O.toast("Corrección descartada"); afterContentEdit(onDone); });
+    root.querySelector("#fc-edit-save").addEventListener("click", ()=>{
+      const patch = {};
+      const nf = root.querySelector("#fc-edit-front").value.trim();
+      const nb = root.querySelector("#fc-edit-back").value.trim();
+      const np = root.querySelector("#fc-edit-prio .seg.on").getAttribute("data-v");
+      const nn = root.querySelector("#fc-edit-nota").value.trim();
+      if(nf !== (orig.front||"")) patch.front = nf;
+      if(nb !== (orig.back||"")) patch.back = nb;
+      if(np !== (orig.priority||"normal")) patch.priority = np;
+      if(nn) patch.nota = nn;
+      if(!Object.keys(patch).length){ O.toast("No has cambiado nada"); afterContentEdit(onDone); return; }
+      O.ContentEdit.apply("fc", canonicalId, patch);
+      O.toast("Corrección guardada");
+      afterContentEdit(onDone);
+    });
+  }, {wide:true});
+}
+
+function openContentEditsModal(){
+  if(!O.ContentEdit){ return; }
+  const items = O.ContentEdit.list();
+  const rows = items.length ? items.map(it=>`
+    <div class="ce-row">
+      <div class="ce-main">
+        <div class="ce-label">${O.escapeHtml(it.label)}${it.label.length>=70?'…':''}</div>
+        <div class="ce-meta">${it.kind==="fc"?"Flashcard":"Pregunta"} ${it.id} · ${it.fields.length?it.fields.map(f=>({enunciado:"enunciado",opciones:"opciones",respuesta:"respuesta",explicacion:"explicación",negativa:"negativa",front:"frente",back:"dorso",priority:"prioridad"}[f]||f)).join(", "):"solo nota"}${it.note?` · «${O.escapeHtml(it.note)}»`:''}</div>
+      </div>
+      <div class="ce-acts">
+        <button class="btn btn-ghost btn-sm" data-ce-edit="${it.kind}:${it.id}">Editar</button>
+        <button class="btn btn-ghost btn-sm" data-ce-revert="${it.kind}:${it.id}">Descartar</button>
+      </div>
+    </div>`).join("") : `<p style="font-size:13px;color:var(--text-2);">No has corregido nada todavía. Usa el lápiz ✎ en cualquier pregunta o flashcard.</p>`;
+
+  showModal(`
+    <h3>Correcciones de contenido</h3>
+    <p>${items.length} corrección${items.length===1?'':'es'} guardada${items.length===1?'':'s'} en este dispositivo. Se aplican al abrir la app.</p>
+    <div class="ce-list">${rows}</div>
+    ${items.length?`<div class="field" style="margin-top:var(--sp-4);"><label>Exportar (JSON para volcar al banco)</label>
+      <textarea id="ce-export" rows="6" readonly class="edit-field" style="font-family:var(--font-mono);font-size:11px;"></textarea></div>` : ''}
+    <div class="actions" style="flex-wrap:wrap;">
+      ${items.length?`<button class="btn btn-ghost btn-sm" id="ce-copy">Copiar JSON</button>
+      <button class="btn btn-danger btn-sm" id="ce-clear">Descartar todas</button>` : ''}
+      <button class="btn btn-ghost" id="ce-close">Cerrar</button>
+    </div>
+  `, (root)=>{
+    const ta = root.querySelector("#ce-export");
+    if(ta) ta.value = O.ContentEdit.exportJSON();
+    root.querySelector("#ce-close").addEventListener("click", closeModal);
+    const copy = root.querySelector("#ce-copy");
+    if(copy) copy.addEventListener("click", ()=> copyToClipboard(O.ContentEdit.exportJSON()));
+    const clr = root.querySelector("#ce-clear");
+    if(clr) clr.addEventListener("click", ()=> confirmDanger("Descartar todas las correcciones",
+      "El contenido volverá al original del banco. No se puede deshacer.",
+      ()=>{ O.ContentEdit.clearAll(); if(O.LEB) O.LEB.recalcNow(); closeModal(); go(O.Nav.view); O.toast("Correcciones descartadas"); }));
+    root.querySelectorAll("[data-ce-edit]").forEach(b=> b.addEventListener("click", ()=>{
+      const [kind,id] = b.getAttribute("data-ce-edit").split(/:(.+)/);
+      closeModal();
+      if(kind==="fc") openEditFlashcardModal(id, openContentEditsModal); else openEditQuestionModal(id, openContentEditsModal);
+    }));
+    root.querySelectorAll("[data-ce-revert]").forEach(b=> b.addEventListener("click", ()=>{
+      const [kind,id] = b.getAttribute("data-ce-revert").split(/:(.+)/);
+      O.ContentEdit.revert(kind, id); if(O.LEB) O.LEB.recalcNow();
+      closeModal(); openContentEditsModal();
+    }));
+  }, {wide:true});
 }
 
 function renderProgress(){
@@ -2338,6 +2549,13 @@ function openSettingsModal(){
       <p>IDs duplicados: <strong>${mr.duplicateIds.length}</strong> · Cobertura contentHash: <strong>${mr.contentHashCoverage}%</strong> · Generadas: <strong>${mr.generatedCount}</strong></p>
     </div>
     <hr class="div">
+    <p style="font-weight:700; font-size:13px; margin-bottom:8px;">Correcciones de contenido</p>
+    <p style="font-size:12px;color:var(--text-2);margin-bottom:8px;">Si ves un error en una pregunta o flashcard, corrígelo con el lápiz ✎. ${O.ContentEdit?O.ContentEdit.count():0} corrección(es) guardada(s).</p>
+    <div class="actions" style="justify-content:flex-start;margin-bottom:16px;">
+      <button class="btn btn-outline btn-sm" id="open-content-edits">Ver / exportar correcciones</button>
+    </div>
+
+    <hr class="div">
     <p style="font-weight:700; font-size:13px; margin-bottom:8px;">Borrado de datos</p>
     <div class="actions" style="justify-content:flex-start; flex-wrap:wrap;">
       <button class="btn btn-outline btn-sm" id="reset-current">Reiniciar test actual</button>
@@ -2347,6 +2565,8 @@ function openSettingsModal(){
     <div class="actions" style="margin-top:16px;"><button class="btn btn-ghost" id="close-settings">Cerrar</button></div>
   `, (root)=>{
     root.querySelector("#close-settings").addEventListener("click", closeModal);
+    const ceBtn = root.querySelector("#open-content-edits");
+    if(ceBtn) ceBtn.addEventListener("click", ()=>{ closeModal(); openContentEditsModal(); });
     root.querySelector("#reset-current").addEventListener("click", ()=> confirmDanger(
       "Reiniciar test actual","Se perderán las respuestas de la sesión en curso.",
       ()=>{ O.setSession(null); O.saveSessionSnapshot(); closeModal(); go("home"); O.toast("Test actual reiniciado"); }

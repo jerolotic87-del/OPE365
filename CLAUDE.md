@@ -314,6 +314,19 @@ archivo, añádele preguntas a ese archivo renumerando la cola.
   (una lente distinta) y para el badge/filtro de flashcards. No lo confundas
   con el dominio real, que sale del motor.
 
+- **`content-overrides.js` (`OPE.ContentEdit`)** — permite corregir una
+  pregunta/flashcard desde la app (botón ✎ en el runner, en el repaso y en
+  el estudio de flashcards). Guarda un patch por id en
+  `PROGRESS.contentOverrides` (solo campos cambiados: enunciado, opciones,
+  respuesta, explicación, negativa / front, back, priority — nada
+  estructural) y lo aplica EN SITIO a `Q_BY_ID`/`F_BY_ID` **antes de
+  engine.js**, en cada carga. Reversible (`revert` restaura el original
+  snapshotado en memoria). Exportable a JSON desde Ajustes → "Correcciones de
+  contenido" para volcarlo a `data/`. `id`/`section`/`topic` no se editan, así
+  que `PROGRESS.answers`, los conceptos del motor y `contentHash` (runtime)
+  no se ven afectados. Se carga entre app.js y engine.js. Test:
+  `tests/test_content_edit.js`.
+
 ## Arquitectura de sesiones y compartir (app.js)
 
 - Semillas deterministas (`mulberry32`, versionado como
@@ -366,9 +379,9 @@ patrón pero de forma ad hoc, sin guardarlas). Requieren
 devDependency — nada de esto es una dependencia en runtime de la app).
 Patrón: `tests/fixture.html` como HTML mínimo, cargarlo con `JSDOM`,
 `window.eval()` de cada script en el orden real (`questions_data.js` →
-`taxonomy_data.js` → `flashcards_data.js` → `app.js` → `engine.js` →
-`engine-bridge.js` → `multiplayer.js` → `views.js`), simular clics/eventos
-reales (incluida la navegación vía
+`taxonomy_data.js` → `flashcards_data.js` → `app.js` → `content-overrides.js`
+→ `engine.js` → `engine-bridge.js` → `multiplayer.js` → `views.js`), simular
+clics/eventos reales (incluida la navegación vía
 `[data-goto]`, que es el único enganche público de `views.js` — `go()`/
 `render()` están cerradas dentro de su IIFE), leer `OPE.getState()`/
 `OPE_MP...`. Para multijugador, usar `MP.createMockPair()` en vez de

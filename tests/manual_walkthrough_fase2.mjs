@@ -113,6 +113,21 @@ try {
   ok(hasFb || true, 'Feedback renderiza (' + (hasFb ? 'sí' : 'tipo sin opción simple') + ')');
   if (hasFb) { await shot('05-feedback'); const more = page.locator('.fb-more'); if (await more.count()) await more.click(); }
 
+  // editar contenido desde el runner
+  await page.locator('#q-edit').click();
+  await page.waitForSelector('#edit-save');
+  ok(await seen('#edit-enun'), 'Editor de pregunta abre desde el ✎ del runner');
+  await page.fill('#edit-nota', 'revisado en QA automatizado');
+  await page.fill('#edit-expl', 'Explicación corregida por QA.');
+  await page.locator('#edit-save').click();
+  await page.waitForTimeout(150);
+  const edited = await page.evaluate(() => {
+    const O = window.OPE, s = O.getSession(), q = s.questions[s.current];
+    return O.Q_BY_ID[q.id].explicacion === 'Explicación corregida por QA.' && O.ContentEdit.count() === 1;
+  });
+  ok(edited, 'La corrección se aplica al objeto canónico y queda registrada');
+  await shot('05b-edit-modal');
+
   await click('[data-goto="flashcards"]');
   await page.waitForSelector('.fc-cta, .empty-state');
   await click('.segmented .seg[data-tab="todas"]');

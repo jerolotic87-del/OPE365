@@ -35,6 +35,7 @@ def main():
     flashcards_raw = read("flashcards_data.js")
     css = read("styles.css")
     app_js = read("app.js")
+    content_overrides_js = read("content-overrides.js")
     engine_js = read("engine.js")
     engine_bridge_js = read("engine-bridge.js")
     mp_js = read("multiplayer.js")
@@ -81,6 +82,9 @@ window.__OPE365_DATA__ = {data_raw};
 </script>
 <script>
 {app_js}
+</script>
+<script>
+{content_overrides_js}
 </script>
 <script>
 {engine_js}

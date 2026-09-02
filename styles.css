@@ -539,6 +539,42 @@ details.advanced summary:hover{ color:var(--text); }
 .star{ margin-left:auto; flex-shrink:0; font-size:15px; color:var(--text-3); background:none; border:none; cursor:pointer; padding:2px; }
 .star.on{ color:var(--warn); }
 
+/* editar / corregir contenido */
+.qcard-actions{ display:flex; align-items:center; gap:4px; flex-shrink:0; }
+.qedit{
+  appearance:none; background:none; border:1px solid transparent; cursor:pointer; color:var(--text-3);
+  width:28px; height:28px; border-radius:7px; display:flex; align-items:center; justify-content:center;
+  transition:color .13s, border-color .13s, background .13s;
+}
+.qedit:hover{ color:var(--accent-ink); border-color:var(--border-2); background:var(--surface-2); }
+.qedit svg{ width:15px; height:15px; }
+.session-topbar .qedit{ margin-left:auto; }
+.tag-edit{ background:var(--accent-dim); color:var(--accent-ink); border-color:var(--accent-line); }
+
+.edit-field{ width:100%; padding:9px 11px; border:1px solid var(--border); border-radius:var(--radius-s);
+  background:var(--surface); color:var(--text); font-family:inherit; font-size:13px; line-height:1.5; resize:vertical; }
+.edit-field:focus{ outline:none; border-color:var(--accent-line); }
+.edit-id{ font-family:var(--font-mono); font-size:11px; color:var(--text-3); margin:-4px 0 var(--sp-4); }
+.edit-hint{ display:block; font-size:11px; color:var(--text-3); margin-top:5px; }
+.edit-warn{ font-size:11px; color:var(--text-3); background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--radius-s); padding:8px 10px; margin:var(--sp-3) 0 var(--sp-4); line-height:1.5; }
+.edit-opts{ display:flex; flex-direction:column; gap:6px; }
+.eopt{ display:flex; align-items:center; gap:8px; }
+.eopt-l{ font-family:var(--font-mono); font-size:11px; font-weight:700; width:20px; height:20px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center; border-radius:5px; background:var(--surface-2); color:var(--text-2); border:1px solid var(--border); }
+.echk{ display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--text-2); cursor:pointer; }
+.echk input{ accent-color:var(--accent); }
+.edit-multi{ display:flex; flex-direction:column; gap:6px; }
+
+.ce-list{ display:flex; flex-direction:column; border:1px solid var(--border); border-radius:var(--radius-s);
+  overflow:hidden; margin-bottom:var(--sp-3); max-height:320px; overflow-y:auto; }
+.ce-row{ display:flex; align-items:center; gap:var(--sp-3); padding:10px 12px; border-bottom:1px solid var(--border); }
+.ce-row:last-child{ border-bottom:none; }
+.ce-main{ flex:1; min-width:0; }
+.ce-label{ font-size:12.5px; color:var(--text); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.ce-meta{ font-size:10.5px; color:var(--text-3); margin-top:2px; font-family:var(--font-mono); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.ce-acts{ display:flex; gap:2px; flex-shrink:0; }
+
 /* ---------------------------------------------------------------
    Sesión de estudio — la pregunta domina
 --------------------------------------------------------------- */

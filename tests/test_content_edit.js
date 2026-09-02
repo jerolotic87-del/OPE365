@@ -1,0 +1,104 @@
+/* ============================================================
+   OPE365 · Correcciones de contenido en la app (jsdom)
+   Verifica que editar una pregunta/flashcard desde la interfaz:
+   - parchea el objeto canónico en sitio (runner, evaluación, motor)
+   - persiste y se re-aplica al recargar
+   - se puede deshacer (revert restaura el original)
+   - exporta un JSON con solo los campos cambiados
+     node tests/test_content_edit.js
+============================================================ */
+"use strict";
+const fs = require("fs");
+const path = require("path");
+const { JSDOM } = require("jsdom");
+const ROOT = path.join(__dirname, "..");
+const read = n => fs.readFileSync(path.join(ROOT, n), "utf-8");
+const SCRIPTS = ["questions_data.js","taxonomy_data.js","flashcards_data.js","app.js",
+  "content-overrides.js","engine.js","engine-bridge.js","peerjs.min.js","multiplayer.js","views.js"];
+
+function boot(storage){
+  const dom = new JSDOM(read("tests/fixture.html"), { runScripts:"dangerously", url:"http://localhost/",
+    beforeParse(w){ if(storage) w.localStorage.setItem("ope365_v1", storage); } });
+  const w = dom.window;
+  SCRIPTS.forEach(f=> w.eval(read(f)));
+  w.document.dispatchEvent(new w.Event("DOMContentLoaded"));
+  return w;
+}
+
+let fail = 0;
+const ok = (c,m)=>{ console.log((c?"  OK  ":"  XX  ")+m); if(!c) fail++; };
+
+(function main(){
+  let w = boot();
+  const O = w.OPE, D = w.document;
+  ok(!!O.ContentEdit, "OPE.ContentEdit disponible");
+
+  // ---- editar una pregunta de opción única ----
+  const q = O.QUESTIONS.find(x=> x.tipo==="opcion_unica" && x.opciones && x.opciones.length>=3);
+  const qid = q.id;
+  const origResp = q.respuesta, origExpl = q.explicacion, origOpt0 = q.opciones[0].text;
+  const newResp = q.opciones.find(o=> o.letter !== origResp).letter;
+
+  O.ContentEdit.apply("q", qid, { respuesta:newResp, explicacion:"EXPLICACIÓN CORREGIDA", opciones:[{letter:q.opciones[0].letter, text:"OPCIÓN 0 CORREGIDA"}], nota:"la correcta es "+newResp });
+  ok(O.Q_BY_ID[qid].respuesta === newResp, "respuesta canónica parcheada en sitio");
+  ok(O.Q_BY_ID[qid].explicacion === "EXPLICACIÓN CORREGIDA", "explicación canónica parcheada");
+  ok(O.Q_BY_ID[qid].opciones[0].text === "OPCIÓN 0 CORREGIDA", "texto de opción parcheado (emparejado por letra)");
+  ok(O.Q_BY_ID[qid].opciones.length === q.opciones.length, "no se altera el nº de opciones");
+  ok(O.evaluateAnswer(O.Q_BY_ID[qid], newResp) === true, "evaluateAnswer usa la respuesta corregida");
+  ok(O.evaluateAnswer(O.Q_BY_ID[qid], origResp) === false, "la respuesta original ahora es incorrecta");
+  ok(O.ContentEdit.count() === 1, "se registra 1 corrección");
+
+  // ---- persiste ----
+  O.persist();
+  const saved = w.localStorage.getItem("ope365_v1");
+  const parsed = JSON.parse(saved);
+  ok(parsed.contentOverrides && parsed.contentOverrides.q[qid], "la corrección se persiste en localStorage");
+  ok(parsed.contentOverrides.q[qid].respuesta === newResp && !("tipo" in parsed.contentOverrides.q[qid]),
+     "el patch guardado solo lleva los campos cambiados (+ ts/nota)");
+
+  // ---- se re-aplica al recargar ----
+  w = boot(saved);
+  const O2 = w.OPE;
+  ok(O2.Q_BY_ID[qid].respuesta === newResp, "tras recargar, la corrección sigue aplicada");
+  ok(O2.Q_BY_ID[qid].explicacion === "EXPLICACIÓN CORREGIDA", "tras recargar, la explicación corregida persiste");
+
+  // ---- exportar ----
+  const exp = JSON.parse(O2.ContentEdit.exportJSON());
+  ok(exp.preguntas && exp.preguntas[qid] && exp.preguntas[qid].respuesta === newResp, "exportJSON incluye el patch de la pregunta");
+
+  // ---- revertir ----
+  O2.ContentEdit.revert("q", qid);
+  ok(O2.Q_BY_ID[qid].respuesta === origResp, "revert restaura la respuesta original");
+  ok(O2.Q_BY_ID[qid].explicacion === origExpl, "revert restaura la explicación original");
+  ok(O2.Q_BY_ID[qid].opciones[0].text === origOpt0, "revert restaura el texto de la opción");
+  ok(O2.ContentEdit.count() === 0, "tras revert no quedan correcciones");
+  O2.persist();
+  ok(!JSON.parse(w.localStorage.getItem("ope365_v1")).contentOverrides.q[qid], "revert también limpia el almacenamiento");
+
+  // ---- flashcard ----
+  w = boot();
+  const O3 = w.OPE;
+  const fcid = O3.FLASHCARDS[0].canonicalId;
+  const origFront = O3.F_BY_ID[fcid].front;
+  O3.ContentEdit.apply("fc", fcid, { front:"FRENTE CORREGIDO", priority:"alta" });
+  ok(O3.F_BY_ID[fcid].front === "FRENTE CORREGIDO", "flashcard: frente parcheado");
+  ok(O3.F_BY_ID[fcid].priority === "alta", "flashcard: prioridad parcheada");
+  O3.ContentEdit.revert("fc", fcid);
+  ok(O3.F_BY_ID[fcid].front === origFront, "flashcard: revert restaura el frente");
+
+  // ---- botón ✎ presente en el runner ----
+  const D3 = w.document;
+  const s = O3.buildSession({mode:"practice",count:3,qOrder:"aleatorio",source:"all",tema:"all",tipo:"all",categoria:"all",section:"all",topic:"all",shuffleOptions:true});
+  O3.setSession(s); O3.saveSessionSnapshot();
+  const btn = D3.createElement("button"); btn.setAttribute("data-goto","running"); D3.body.appendChild(btn);
+  btn.dispatchEvent(new w.MouseEvent("click",{bubbles:true})); btn.remove();
+  ok(!!D3.getElementById("q-edit"), "el runner muestra el botón ✎ de editar");
+
+  // ---- huérfano seguro: id inexistente ----
+  const bad = JSON.stringify({ contentOverrides:{ q:{ "no-existe-999":{respuesta:"A",ts:1} }, fc:{} }, answers:{}, marked:{}, history:[], settings:{}, challenges:{}, flashcards:{} });
+  w = boot(bad);
+  ok(w.OPE.QUESTIONS.length === 1325, "un override sobre un id inexistente no rompe la carga");
+
+  console.log(`\n${fail} fallo(s)`);
+  process.exit(fail ? 1 : 0);
+})();
