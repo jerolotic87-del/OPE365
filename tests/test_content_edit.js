@@ -64,7 +64,7 @@ const ok = (c,m)=>{ console.log((c?"  OK  ":"  XX  ")+m); if(!c) fail++; };
 
   // ---- exportar ----
   const exp = JSON.parse(O2.ContentEdit.exportJSON());
-  ok(exp.preguntas && exp.preguntas[qid] && exp.preguntas[qid].respuesta === newResp, "exportJSON incluye el patch de la pregunta");
+  ok(exp.correcciones && exp.correcciones.preguntas && exp.correcciones.preguntas[qid] && exp.correcciones.preguntas[qid].respuesta === newResp, "exportJSON incluye el patch de la pregunta");
 
   // ---- revertir ----
   O2.ContentEdit.revert("q", qid);
@@ -93,6 +93,46 @@ const ok = (c,m)=>{ console.log((c?"  OK  ":"  XX  ")+m); if(!c) fail++; };
   const btn = D3.createElement("button"); btn.setAttribute("data-goto","running"); D3.body.appendChild(btn);
   btn.dispatchEvent(new w.MouseEvent("click",{bubbles:true})); btn.remove();
   ok(!!D3.getElementById("q-edit"), "el runner muestra el botón ✎ de editar");
+
+  // ---- CREAR contenido propio (con imagen) ----
+  w = boot();
+  const O4 = w.OPE;
+  const IMG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==";
+  const nq0 = O4.QUESTIONS.length;
+  const sec = O4.TAXONOMY_SECTIONS.find(s=>s.topics && s.topics.length);
+  const qid2 = O4.ContentEdit.createQuestion({
+    tipo:"opcion_unica", enunciado:"¿A qué comando corresponde esta imagen?",
+    opciones:[{letter:"A",text:"Negrita"},{letter:"B",text:"Cursiva"},{letter:"C",text:"Subrayado"},{letter:"D",text:"Tachado"}],
+    respuesta:"B", explicacion:"Es el icono de cursiva.", categoria:"concepto",
+    section:sec.id, topic:sec.topics[0].id, imagen:IMG,
+  });
+  ok(O4.QUESTIONS.length === nq0 + 1, "createQuestion añade la pregunta al banco en memoria");
+  ok(O4.Q_BY_ID[qid2] && O4.Q_BY_ID[qid2].imagen === IMG, "la pregunta creada lleva la imagen (data URI)");
+  ok(O4.evaluateAnswer(O4.Q_BY_ID[qid2], "B") === true, "evaluateAnswer funciona sobre la pregunta creada");
+  ok(O4.LE.CONCEPT_OF_Q[qid2] === sec.id+":"+sec.topics[0].id, "el motor asocia la pregunta creada a su concepto");
+  ok(O4.ContentEdit.isUser("q", qid2) && O4.ContentEdit.userCount() === 1, "queda registrada como contenido propio");
+
+  const fcid2 = O4.ContentEdit.createFlashcard({ front:"¿Qué es este icono?", back:"R: Pegado especial", section:sec.id, topic:sec.topics[0].id, imagen:IMG, priority:"alta" });
+  ok(O4.F_BY_ID[fcid2] && O4.F_BY_ID[fcid2].imagen === IMG, "createFlashcard añade la flashcard con imagen");
+  ok(O4.LE.CONCEPT_OF_CARD[fcid2] === sec.id+":"+sec.topics[0].id, "el motor asocia la flashcard creada a su concepto");
+
+  // ---- persiste y sobrevive a la recarga ----
+  O4.persist();
+  const s4 = w.localStorage.getItem("ope365_v1");
+  w = boot(s4);
+  const O5 = w.OPE;
+  ok(O5.Q_BY_ID[qid2] && O5.Q_BY_ID[qid2].imagen === IMG, "tras recargar, la pregunta creada sigue en el banco");
+  ok(O5.F_BY_ID[fcid2], "tras recargar, la flashcard creada sigue en el banco");
+  ok(O5.LE.CONCEPT_OF_Q[qid2], "tras recargar, el concepto del motor incluye la pregunta creada");
+  const exp5 = JSON.parse(O5.ContentEdit.exportJSON());
+  ok(exp5.creadas && exp5.creadas.preguntas.length === 1 && exp5.creadas.flashcards.length === 1, "exportJSON separa 'creadas' de 'correcciones'");
+
+  // ---- eliminar ----
+  O5.ContentEdit.deleteUserItem("q", qid2);
+  ok(!O5.Q_BY_ID[qid2] && O5.QUESTIONS.every(x=>x.id!==qid2), "deleteUserItem quita la pregunta del banco");
+  O5.ContentEdit.deleteUserItem("fc", fcid2);
+  ok(!O5.F_BY_ID[fcid2], "deleteUserItem quita la flashcard del banco");
+  ok(O5.ContentEdit.userCount() === 0, "no queda contenido propio tras borrar");
 
   // ---- huérfano seguro: id inexistente ----
   const bad = JSON.stringify({ contentOverrides:{ q:{ "no-existe-999":{respuesta:"A",ts:1} }, fc:{} }, answers:{}, marked:{}, history:[], settings:{}, challenges:{}, flashcards:{} });

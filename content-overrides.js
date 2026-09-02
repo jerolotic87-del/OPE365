@@ -24,8 +24,8 @@ const O = window.OPE;
 if(!O){ console.warn("content-overrides.js: OPE no disponible"); return; }
 
 /* campos editables por seguridad — nada estructural (tipo, matching, huecos) */
-const Q_FIELDS  = ["enunciado","explicacion","negativa","respuesta","opciones"];
-const FC_FIELDS = ["front","back","priority"];
+const Q_FIELDS  = ["enunciado","explicacion","negativa","respuesta","opciones","imagen"];
+const FC_FIELDS = ["front","back","priority","imagen"];
 
 /* originales de los campos tocados (solo memoria; se reconstruye en cada carga) */
 const _orig = { q:{}, fc:{} };
@@ -145,13 +145,15 @@ function list(){
 // JSON exportable para volcar al banco
 function exportJSON(){
   const c = store();
+  const u = ustore();
   return JSON.stringify({
-    _comentario: "OPE365 · correcciones de contenido hechas en la app. " +
-                 "Cada entrada es un patch por id: solo los campos cambiados. " +
-                 "Aplicar sobre data/questions/*.json y data/flashcards/*.json.",
+    _comentario: "OPE365 · contenido editado y creado en la app. " +
+                 "'correcciones' = patch por id (solo campos cambiados) sobre el banco. " +
+                 "'creadas' = preguntas/flashcards nuevas (van a data/questions|flashcards/*.json). " +
+                 "La imagen es un data URI incrustado.",
     exportadoEl: new Date().toISOString(),
-    preguntas: c.q,
-    flashcards: c.fc,
+    correcciones: { preguntas: c.q, flashcards: c.fc },
+    creadas: { preguntas: u.q, flashcards: u.fc },
   }, null, 2);
 }
 
@@ -166,16 +168,191 @@ function original(kind, id){
   const obj = objFor(kind, id);
   if(!obj) return null;
   const base = {};
-  fieldsFor(kind).concat(["nota"]).forEach(f=>{
+  fieldsFor(kind).concat(["nota","imagen"]).forEach(f=>{
     base[f] = (orig && f in orig) ? deep(orig[f]) : deep(obj[f]);
   });
   return base;
 }
 
-O.ContentEdit = { applyAll, apply, revert, get, has, count, list, exportJSON, clearAll, original,
-                  Q_FIELDS, FC_FIELDS };
+/* ============================================================
+   CONTENIDO PROPIO — preguntas y flashcards creadas por el usuario
+   (p. ej. "¿a qué comando corresponde esta imagen?"). Viven en
+   PROGRESS.userContent y se FUSIONAN con el banco canónico
+   (OPE.QUESTIONS / OPE.FLASHCARDS) antes de engine.js, así que el
+   motor las trata como cualquier otra pregunta de su section:topic.
+   La imagen se guarda como data URI en el propio objeto.
+============================================================ */
+function ustore(){
+  if(!O.PROGRESS.userContent) O.PROGRESS.userContent = { q:[], fc:[] };
+  const u = O.PROGRESS.userContent;
+  if(!Array.isArray(u.q))  u.q  = [];
+  if(!Array.isArray(u.fc)) u.fc = [];
+  return u;
+}
+const _mergedIds = { q:{}, fc:{} };
 
-// aplicar de inmediato al cargar (antes que engine.js)
+function mergeQuestion(q){
+  if(!q || !q.id || _mergedIds.q[q.id]) return;
+  if(!O.Q_BY_ID[q.id]){ O.QUESTIONS.push(q); O.Q_BY_ID[q.id] = q; }
+  _mergedIds.q[q.id] = true;
+}
+function mergeFlashcard(c){
+  if(!c || !c.cardId || !c.section) return;
+  c.canonicalId = c.canonicalId || (c.section + ":" + c.cardId);
+  if(_mergedIds.fc[c.canonicalId]) return;
+  if(!O.F_BY_ID[c.canonicalId]){ O.FLASHCARDS.push(c); O.F_BY_ID[c.canonicalId] = c; }
+  _mergedIds.fc[c.canonicalId] = true;
+}
+function mergeUserContent(){
+  const u = ustore();
+  u.q.forEach(mergeQuestion);
+  u.fc.forEach(mergeFlashcard);
+}
+
+/* engancha una pregunta recién creada al grafo de conceptos del motor
+   (solo hace falta para las creadas EN CALIENTE; al recargar ya entran
+   por CONCEPTS) */
+function registerWithEngine(q){
+  const LE = O.LE;
+  if(!LE || !q || !q.section || !q.topic) return;
+  const cid = q.section + ":" + q.topic;
+  const meta = LE.CONCEPT_BY_ID[cid];
+  if(!meta) return;
+  if(meta.questionIds.indexOf(q.id) === -1){ meta.questionIds.push(q.id); meta.size = meta.questionIds.length; }
+  LE.CONCEPT_OF_Q[q.id] = cid;
+  const fr = LE.framingOf(q);
+  if(meta.framings.indexOf(fr) === -1) meta.framings.push(fr);
+}
+function registerCardWithEngine(c){
+  const LE = O.LE;
+  if(!LE || !c || !c.section || !c.topic) return;
+  const cid = c.section + ":" + c.topic;
+  const meta = LE.CONCEPT_BY_ID[cid];
+  if(!meta) return;
+  if(meta.flashcardIds.indexOf(c.canonicalId) === -1) meta.flashcardIds.push(c.canonicalId);
+  LE.CONCEPT_OF_CARD[c.canonicalId] = cid;
+}
+
+function uid(prefix){
+  return prefix + "-" + Date.now().toString(36) + Math.random().toString(36).slice(2,5);
+}
+
+/* crea una pregunta propia. data: {tipo, enunciado, opciones:[{letter,text}],
+   respuesta, explicacion, categoria, section, topic, imagen} */
+function createQuestion(data){
+  const q = {
+    id: uid("usr-q"),
+    sourceFile: "usuario", bloque: "Creada por ti", sourceQuestionId: null,
+    tipo: data.tipo === "verdadero_falso" ? "verdadero_falso" : "opcion_unica",
+    categoria: data.categoria || "general",
+    negativa: false,
+    section: data.section, topic: data.topic, subtopic: null,
+    tema: data.tema || null,
+    enunciado: String(data.enunciado || "").trim(),
+    matching: null,
+    explicacion: String(data.explicacion || "").trim(),
+    creado: true,
+  };
+  if(data.imagen) q.imagen = data.imagen;
+  if(q.tipo === "verdadero_falso"){
+    q.opciones = [];
+    q.respuesta = data.respuesta === true || data.respuesta === "true";
+  } else {
+    q.opciones = (data.opciones || []).map((o,i)=>({ letter:o.letter || "ABCDEF"[i], text:String(o.text||"").trim() }))
+      .filter(o=>o.text);
+    q.respuesta = data.respuesta;
+  }
+  ustore().q.push(q);
+  mergeQuestion(q);
+  registerWithEngine(q);
+  O.persist();
+  return q.id;
+}
+
+/* crea una flashcard propia. data: {front, back, priority, cardType,
+   section, topic, imagen} */
+function createFlashcard(data){
+  const section = data.section;
+  const c = {
+    cardId: uid("U").replace(/-/g,"").toUpperCase().slice(0,10),
+    section, topic: data.topic || null, subtopic: null,
+    cardType: data.cardType === "error" ? "error" : "contenido",
+    priority: data.priority === "alta" ? "alta" : "normal",
+    front: String(data.front || "").trim(),
+    back: String(data.back || "").trim(),
+    sourceRefs: [], knowledgeRefs: [], questionRefs: [],
+    creado: true,
+  };
+  if(data.imagen) c.imagen = data.imagen;
+  c.canonicalId = section + ":" + c.cardId;
+  ustore().fc.push(c);
+  mergeFlashcard(c);
+  registerCardWithEngine(c);
+  O.persist();
+  return c.canonicalId;
+}
+
+function updateUserItem(kind, id, patch){
+  const u = ustore();
+  const arr = kind === "fc" ? u.fc : u.q;
+  const idx = kind === "fc" ? arr.findIndex(x=>x.canonicalId === id) : arr.findIndex(x=>x.id === id);
+  if(idx < 0) return false;
+  const item = arr[idx];
+  Object.keys(patch).forEach(k=>{ if(k === "id" || k === "canonicalId" || k === "cardId") return; item[k] = patch[k]; });
+  // reflejar en el objeto canónico fusionado (misma ref, pero por si acaso)
+  const canon = kind === "fc" ? O.F_BY_ID[id] : O.Q_BY_ID[id];
+  if(canon && canon !== item) Object.assign(canon, item);
+  O.persist();
+  return true;
+}
+
+function deleteUserItem(kind, id){
+  const u = ustore();
+  if(kind === "fc"){
+    u.fc = u.fc.filter(x=>x.canonicalId !== id);
+    const i = O.FLASHCARDS.findIndex(x=>x.canonicalId === id);
+    if(i >= 0) O.FLASHCARDS.splice(i,1);
+    delete O.F_BY_ID[id];
+    delete _mergedIds.fc[id];
+    if(O.LE){ delete O.LE.CONCEPT_OF_CARD[id];
+      Object.values(O.LE.CONCEPT_BY_ID).forEach(m=>{ const k=m.flashcardIds.indexOf(id); if(k>=0) m.flashcardIds.splice(k,1); }); }
+  } else {
+    u.q = u.q.filter(x=>x.id !== id);
+    const i = O.QUESTIONS.findIndex(x=>x.id === id);
+    if(i >= 0) O.QUESTIONS.splice(i,1);
+    delete O.Q_BY_ID[id];
+    delete _mergedIds.q[id];
+    if(O.LE){ delete O.LE.CONCEPT_OF_Q[id];
+      Object.values(O.LE.CONCEPT_BY_ID).forEach(m=>{ const k=m.questionIds.indexOf(id); if(k>=0){ m.questionIds.splice(k,1); m.size=m.questionIds.length; } }); }
+  }
+  // limpiar cualquier progreso/override asociado
+  if(O.PROGRESS.answers) delete O.PROGRESS.answers[id];
+  if(O.PROGRESS.flashcards) delete O.PROGRESS.flashcards[id];
+  if(bagFor("q")[id]) delete bagFor("q")[id];
+  if(bagFor("fc")[id]) delete bagFor("fc")[id];
+  O.persist();
+}
+
+function isUser(kind, id){
+  const u = ustore();
+  return kind === "fc" ? u.fc.some(x=>x.canonicalId === id) : u.q.some(x=>x.id === id);
+}
+function listUser(){
+  const u = ustore();
+  return [].concat(
+    u.q.map(q=>({ kind:"q", id:q.id, label:(q.enunciado||"(sin enunciado)").slice(0,70), tipo:q.tipo, hasImg:!!q.imagen, section:q.section, topic:q.topic })),
+    u.fc.map(c=>({ kind:"fc", id:c.canonicalId, label:(c.front||"(sin frente)").slice(0,70), tipo:"flashcard", hasImg:!!c.imagen, section:c.section, topic:c.topic }))
+  );
+}
+function userCount(){ const u = ustore(); return u.q.length + u.fc.length; }
+
+O.ContentEdit = { applyAll, apply, revert, get, has, count, list, exportJSON, clearAll, original,
+                  Q_FIELDS, FC_FIELDS,
+                  createQuestion, createFlashcard, updateUserItem, deleteUserItem,
+                  isUser, listUser, userCount };
+
+// al cargar (antes que engine.js): fusionar contenido propio y aplicar correcciones
+mergeUserContent();
 applyAll();
 
 })();

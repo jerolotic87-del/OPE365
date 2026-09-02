@@ -575,6 +575,31 @@ details.advanced summary:hover{ color:var(--text); }
 .ce-meta{ font-size:10.5px; color:var(--text-3); margin-top:2px; font-family:var(--font-mono); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .ce-acts{ display:flex; gap:2px; flex-shrink:0; }
 
+/* imagen del ejercicio (pregunta / flashcard) — centrada, tamaño natural */
+.q-image{ margin:0 0 var(--sp-4); display:flex; justify-content:center; }
+.q-image img{
+  max-width:100%; max-height:240px; width:auto; height:auto;
+  border-radius:var(--radius-s); border:1px solid var(--border);
+  background:#fff; padding:8px; image-rendering:auto;
+}
+.qcard .q-image{ margin-top:var(--sp-2); }
+.flip-front .q-image img{ max-height:180px; }
+
+/* subida de imagen en los formularios */
+.img-field{ display:flex; align-items:center; gap:var(--sp-4); }
+.img-prev{ width:96px; height:96px; flex-shrink:0; border:1px solid var(--border); border-radius:var(--radius-s);
+  background:var(--surface); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.img-prev img{ max-width:100%; max-height:100%; object-fit:contain; }
+.img-empty{ font-size:10.5px; color:var(--text-3); }
+.img-btns{ display:flex; flex-direction:column; gap:6px; }
+
+/* opciones al crear una pregunta */
+.uq-opts{ display:flex; flex-direction:column; gap:7px; }
+.uq-opt{ display:flex; align-items:center; gap:8px; }
+.uq-opt input[type="radio"]{ accent-color:var(--good); flex-shrink:0; width:16px; height:16px; }
+.uq-opt input[type="text"]{ flex:1; }
+.uq-opt input[type="radio"]:checked ~ .eopt-l{ background:var(--good-dim); color:var(--good); border-color:var(--good-line); }
+
 /* ---------------------------------------------------------------
    Sesión de estudio — la pregunta domina
 --------------------------------------------------------------- */

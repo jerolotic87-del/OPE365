@@ -42,6 +42,7 @@ const ok = (c, m) => { step++; console.log((c ? '  OK  ' : '  XX  ') + m); if (!
 const shot = n => page.screenshot({ path: join(SHOTS, n + '.png'), fullPage: true });
 const click = async (sel) => { await page.locator(sel).first().click({ timeout: 6000 }); };
 const seen = (sel) => page.locator(sel).first().isVisible().catch(() => false);
+const nav = v => page.evaluate(view => { const b = document.createElement('button'); b.dataset.goto = view; document.body.appendChild(b); b.click(); b.remove(); }, v);
 
 try {
   await page.goto(`http://localhost:${PORT}/index.html`, { waitUntil: 'networkidle' });
@@ -127,6 +128,39 @@ try {
   });
   ok(edited, 'La corrección se aplica al objeto canónico y queda registrada');
   await shot('05b-edit-modal');
+
+  // crear una pregunta con imagen
+  await click('[data-goto="practica"]');
+  await page.waitForSelector('#in-create');
+  await click('#in-create');
+  await page.waitForSelector('#uq-save');
+  const PNG = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHElEQVR42mNkYPhfz0AEYBxVSF+Fo6NKGWgAAI5cA/2M0z8pAAAAAElFTkSuQmCC','base64');
+  await page.setInputFiles('#imgf-input', { name:'comando.png', mimeType:'image/png', buffer: PNG });
+  await page.waitForSelector('#imgf-prev img');
+  await page.fill('#uq-enun', '¿A qué comando de Word corresponde este icono?');
+  await page.fill('[data-uopt="A"]', 'Negrita');
+  await page.fill('[data-uopt="B"]', 'Cursiva');
+  await page.fill('[data-uopt="C"]', 'Subrayado');
+  await page.fill('[data-uopt="D"]', 'Resaltado');
+  await page.check('input[name="uq-correct"][value="B"]');
+  await page.fill('#uq-expl', 'Es el icono de cursiva (Ctrl+K en Word 365 español).');
+  await shot('09a-crear-pregunta-con-imagen');
+  await click('#uq-save');
+  await page.waitForTimeout(200);
+  const created = await page.evaluate(() => {
+    const O = window.OPE;
+    const q = O.QUESTIONS.find(x => x.id && x.id.startsWith('usr-q') && x.imagen);
+    if (!q) return null;
+    const s = O.buildSession({ mode:'practice', section:q.section, topic:q.topic, count:'todas', qOrder:'aleatorio', source:'all', tema:'all', tipo:'all', categoria:'all', shuffleOptions:false });
+    const idx = s.questions.findIndex(x => x.id === q.id);
+    s.current = Math.max(0, idx); O.setSession(s); O.saveSessionSnapshot();
+    return { id:q.id, inSession: idx };
+  });
+  ok(created && created.id, 'La pregunta creada (con imagen) entra en el banco y en una sesión');
+  await nav('running');
+  await page.waitForSelector('#runner-qcard');
+  ok(await seen('.q-image img'), 'La imagen se muestra centrada en la pregunta');
+  await shot('09b-pregunta-con-imagen-en-runner');
 
   await click('[data-goto="flashcards"]');
   await page.waitForSelector('.fc-cta, .empty-state');

@@ -108,6 +108,68 @@ function render(view, params){
   return renderHome();
 }
 
+function qImageHtml(src){
+  if(!src) return "";
+  return `<figure class="q-image"><img src="${src}" alt="Imagen del ejercicio"></figure>`;
+}
+/* lee un archivo de imagen, lo reduce (máx 520px) y comprime a data URI */
+function readImageFile(file, cb){
+  if(!file || !/^image\//.test(file.type||"")){ O.toast("Selecciona un archivo de imagen"); return; }
+  const reader = new FileReader();
+  reader.onerror = ()=> O.toast("No se ha podido leer el archivo");
+  reader.onload = ()=>{
+    const img = new Image();
+    img.onerror = ()=> O.toast("No se ha podido interpretar la imagen");
+    img.onload = ()=>{
+      const MAX = 520;
+      let w = img.naturalWidth || img.width, h = img.naturalHeight || img.height;
+      if(!w || !h){ cb(reader.result); return; }
+      if(w > MAX || h > MAX){ const k = MAX/Math.max(w,h); w = Math.round(w*k); h = Math.round(h*k); }
+      let out;
+      try{
+        const cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+        cv.getContext("2d").drawImage(img, 0, 0, w, h);
+        out = cv.toDataURL("image/webp", 0.85);
+        if(!/^data:image\/webp/.test(out)) out = cv.toDataURL("image/png");
+        if(out.length > 300*1024) out = cv.toDataURL("image/jpeg", 0.72);
+      }catch(e){ out = reader.result; }   // sin canvas (raro): usar original
+      if(out.length > 700*1024){ O.toast("La imagen sigue siendo muy grande — usa una más pequeña"); return; }
+      cb(out);
+    };
+    img.src = reader.result;
+  };
+  reader.readAsDataURL(file);
+}
+function imageFieldHtml(current){
+  return `<div class="field"><label>Imagen (opcional)</label>
+    <div class="img-field">
+      <div class="img-prev" id="imgf-prev">${current ? `<img src="${current}" alt="">` : `<span class="img-empty">sin imagen</span>`}</div>
+      <div class="img-btns">
+        <label class="btn btn-outline btn-sm" style="cursor:pointer;">Subir imagen<input type="file" id="imgf-input" accept="image/*" style="display:none;"></label>
+        <button type="button" class="btn btn-ghost btn-sm" id="imgf-clear" ${current?'':'hidden'}>Quitar</button>
+      </div>
+    </div>
+    <span class="edit-hint">Ideal para iconos de comandos de Word — se reduce y comprime automáticamente.</span></div>`;
+}
+function wireImageField(root, initial){
+  const state = { val: initial || null };
+  const prev = root.querySelector("#imgf-prev");
+  const clr = root.querySelector("#imgf-clear");
+  const inp = root.querySelector("#imgf-input");
+  if(inp) inp.addEventListener("change", (e)=>{
+    const f = e.target.files && e.target.files[0];
+    if(f) readImageFile(f, (uri)=>{ state.val = uri; prev.innerHTML = `<img src="${uri}" alt="">`; if(clr) clr.hidden = false; });
+  });
+  if(clr) clr.addEventListener("click", ()=>{ state.val = null; prev.innerHTML = `<span class="img-empty">sin imagen</span>`; clr.hidden = true; });
+  return state;
+}
+function populateTopicSelect(sel, secId, chosen){
+  const sec = O.TAXONOMY_SECTIONS.find(s=>s.id===secId);
+  const topics = (sec && sec.topics) || [];
+  sel.innerHTML = topics.map(t=>`<option value="${t.id}">${O.escapeHtml(t.name)}</option>`).join("") || `<option value="">(sin grupos)</option>`;
+  if(chosen && topics.some(t=>t.id===chosen)) sel.value = chosen;
+}
+
 function tipoLabel(t){ return O.TYPE_LABELS[t] || t; }
 function categoriaLabel(c){ return O.CATEGORY_LABELS[c] || c; }
 function truncate(s,n){ return s.length>n ? s.slice(0,n-1)+"…" : s; }
@@ -446,6 +508,12 @@ function renderPracticeHub(){
           <span class="in-d">${cs.incorrect} pregunta${cs.incorrect===1?'':'s'} fallada${cs.incorrect===1?'':'s'}</span></span>
         <span class="in-go">${icon('chevronR')}</span>
       </button>
+      <button class="intent" id="in-create">
+        <span class="in-ic">${icon('pencil')}</span>
+        <span class="in-body"><span class="in-t">Crear una pregunta</span>
+          <span class="in-d">Con imagen (icono de comando) y 4 opciones — se añade a tu banco</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
       <button class="intent" data-goto="mp-setup">
         <span class="in-ic">${icon('challenge')}</span>
         <span class="in-body"><span class="in-t">Duelo en vivo</span>
@@ -456,6 +524,7 @@ function renderPracticeHub(){
   </div>`;
 
   const smart = $("#in-smart"); if(smart) smart.addEventListener("click", ()=> startSmartStudy(hm?hm.minutesPerDay:20));
+  $("#in-create").addEventListener("click", ()=> openUserQuestionModal(null, ()=> go("practica")));
   const rev = $("#in-review"); if(rev) rev.addEventListener("click", ()=> startReviewStudy(hm?hm.minutesPerDay:20));
   $("#in-tema").addEventListener("click", ()=> go("practica", {mode:"practice", step:"tema"}));
   $("#in-test").addEventListener("click", ()=> go("practica", {mode:"exam"}));
@@ -836,6 +905,7 @@ function renderQuestionCard(q, s, isExam){
         <button class="star ${marked?"on":""}" id="q-star" aria-label="Marcar pregunta">★</button>
       </div>
     </div>
+    ${qImageHtml(q.imagen)}
     <h3>${O.renderBlank(q.enunciado)}</h3>
     <div id="q-body"></div>
     <div id="q-feedback"></div>
@@ -866,7 +936,10 @@ function renderQuestionCard(q, s, isExam){
     if(isExam) renderNavGrid();
   });
   const qEditBtn = $("#q-edit");
-  if(qEditBtn) qEditBtn.addEventListener("click", ()=> openEditQuestionModal(q.id));
+  if(qEditBtn) qEditBtn.addEventListener("click", ()=>{
+    if(O.ContentEdit && O.ContentEdit.isUser("q", q.id)) openUserQuestionModal(q.id);
+    else openEditQuestionModal(q.id);
+  });
   $("#q-prev").addEventListener("click", ()=>{
     s.current = Math.max(0, s.current-1); O.saveSessionSnapshot();
     renderQuestionCard(s.questions[s.current], s, isExam); if(isExam) renderNavGrid();
@@ -1311,6 +1384,7 @@ function buildReviewDetailHtml(q){
         <button class="star ${O.isMarked(q.id)?"on":""}" id="rd-star" data-star="${q.id}">★</button>
       </div>
     </div>
+    ${qImageHtml(q.imagen)}
     <h3>${O.renderBlank(q.enunciado)}</h3>
     <div id="rd-body"></div>
     <div class="feedback-box ${a? (a.correcta?"ok":"bad") : "ok"}" style="margin-top:16px;">
@@ -1329,7 +1403,11 @@ function wireReviewDetail(root){
   renderStaticAnswerBody(root.querySelector("#rd-body"), q);
   root.querySelector("#rd-star").addEventListener("click",(e)=>{ toggleMark(q.id); e.target.classList.toggle("on"); });
   const rdEdit = root.querySelector("#rd-edit");
-  if(rdEdit) rdEdit.addEventListener("click", ()=>{ closeModal(); openEditQuestionModal(q.id, ()=> openReviewDetail()); });
+  if(rdEdit) rdEdit.addEventListener("click", ()=>{
+    closeModal();
+    if(O.ContentEdit && O.ContentEdit.isUser("q", q.id)) openUserQuestionModal(q.id, ()=> openReviewDetail());
+    else openEditQuestionModal(q.id, ()=> openReviewDetail());
+  });
   root.querySelector("#rd-prev").addEventListener("click", ()=>{ reviewIndex=(reviewIndex-1+reviewList.length)%reviewList.length; closeModal(); openReviewDetail(); });
   root.querySelector("#rd-next").addEventListener("click", ()=>{ reviewIndex=(reviewIndex+1)%reviewList.length; closeModal(); openReviewDetail(); });
 }
@@ -1475,6 +1553,7 @@ function renderFlashcardsHub(params){
         <p class="eyebrow">Flashcards</p>
         <h1>Repaso rápido</h1>
         <p>Hechos, rutas y atajos en formato frente/dorso. Toca la tarjeta para girarla.</p>
+        <button class="btn btn-outline btn-sm" id="fc-create" style="margin-top:var(--sp-3);">${icon('pencil')} Crear flashcard (con imagen)</button>
       </div>
       <div class="chip-row" id="fc-chips">
         <button class="chip-btn ${sec==='all'?'on':''}" data-sec="all">Todas</button>
@@ -1489,6 +1568,8 @@ function renderFlashcardsHub(params){
 
     $$("#fc-chips .chip-btn").forEach(b=> b.addEventListener("click", ()=>{ fcHubState.section=b.getAttribute("data-sec"); drawHub(); }));
     $$('.segmented .seg[data-tab]').forEach(b=> b.addEventListener("click", ()=>{ fcHubState.tab=b.getAttribute("data-tab"); drawHub(); }));
+    const fcCreate = $("#fc-create");
+    if(fcCreate) fcCreate.addEventListener("click", ()=> openUserFlashcardModal(null, ()=> go("flashcards")));
 
     if(fcHubState.tab==="todas") drawTodas(sec);
     else drawRepaso(sec, total, pend);
@@ -1603,6 +1684,7 @@ function renderFlashcardsStudy(){
               ${c.priority==="alta" ? `<span class="tag">★ Prioridad alta</span>` : ''}
               ${dominada ? `<span class="tag" style="color:var(--good);border-color:var(--good-line);">Dominada</span>` : ''}
             </div>
+            ${qImageHtml(c.imagen)}
             <div class="ff-text">${formatCardText(c.front)}</div>
             <div class="ff-hint">Mostrar respuesta</div>
           </div>
@@ -1637,7 +1719,10 @@ function renderFlashcardsStudy(){
   $("#fc-exit").addEventListener("click", ()=>{ fcSession=null; if(O.LEB) O.LEB.recalcNow(); go("flashcards"); });
   $("#fc-card").addEventListener("click", ()=>{ fcSession.revealed = !fcSession.revealed; renderFlashcardsStudy(); });
   const fcEditBtn = $("#fc-edit");
-  if(fcEditBtn) fcEditBtn.addEventListener("click", ()=> openEditFlashcardModal(c.canonicalId));
+  if(fcEditBtn) fcEditBtn.addEventListener("click", ()=>{
+    if(O.ContentEdit && O.ContentEdit.isUser("fc", c.canonicalId)) openUserFlashcardModal(c.canonicalId, ()=> renderFlashcardsStudy());
+    else openEditFlashcardModal(c.canonicalId);
+  });
   $("#fc-no").addEventListener("click", ()=> rate("no"));
   $("#fc-hard").addEventListener("click", ()=> rate("dificil"));
   $("#fc-yes").addEventListener("click", ()=> rate("si"));
@@ -1971,41 +2056,226 @@ function openEditFlashcardModal(canonicalId, onDone){
   }, {wide:true});
 }
 
+/* ---- CREAR / EDITAR CONTENIDO PROPIO (con imagen) ---------------- */
+function openUserQuestionModal(editId, onDone){
+  if(!O.ContentEdit || !O.ContentEdit.createQuestion){ O.toast("No disponible"); return; }
+  const ex = editId ? O.Q_BY_ID[editId] : null;
+  const tax = O.TAXONOMY_SECTIONS.filter(s=>s.topics && s.topics.length);
+  const secId0 = ex && ex.section ? ex.section : tax[0].id;
+  const topId0 = ex && ex.topic ? ex.topic : "";
+  const tipo0 = ex && ex.tipo === "verdadero_falso" ? "verdadero_falso" : "opcion_unica";
+  const opts0 = (ex && ex.opciones && ex.opciones.length) ? ["A","B","C","D"].map(L=>{ const o=ex.opciones.find(x=>x.letter===L); return o?o.text:""; }) : ["","","",""];
+  const resp0 = ex ? ex.respuesta : "A";
+
+  showModal(`
+    <h3>${ex ? "Editar pregunta creada" : "Crear una pregunta"}</h3>
+    <p class="edit-id">${ex ? ex.id : "nueva · creada por ti"}</p>
+    ${imageFieldHtml(ex && ex.imagen)}
+    <div class="field"><label>Tipo</label>
+      <div class="segmented" id="uq-tipo">
+        <button type="button" class="seg ${tipo0!=='verdadero_falso'?'on':''}" data-v="opcion_unica">Opción única</button>
+        <button type="button" class="seg ${tipo0==='verdadero_falso'?'on':''}" data-v="verdadero_falso">Verdadero / Falso</button>
+      </div></div>
+    <div class="field"><label>Pregunta</label>
+      <textarea id="uq-enun" rows="2" class="edit-field" placeholder="¿A qué comando corresponde esta imagen?">${ex?O.escapeHtml(ex.enunciado||""):""}</textarea></div>
+    <div class="field" id="uq-opts-wrap"><label>Opciones (marca la correcta)</label>
+      <div class="uq-opts">${["A","B","C","D"].map((L,i)=>`
+        <label class="uq-opt"><input type="radio" name="uq-correct" value="${L}" ${resp0===L?'checked':''}>
+          <span class="eopt-l">${L}</span>
+          <input type="text" class="edit-field" data-uopt="${L}" value="${O.escapeHtml(opts0[i]||"")}"></label>`).join("")}</div></div>
+    <div class="field" id="uq-tf-wrap" hidden><label>Respuesta correcta</label>
+      <div class="segmented" id="uq-tf"><button type="button" class="seg ${resp0===true?'on':''}" data-v="true">Verdadero</button><button type="button" class="seg ${resp0!==true?'on':''}" data-v="false">Falso</button></div></div>
+    <div class="field"><label>Explicación</label>
+      <textarea id="uq-expl" rows="2" class="edit-field">${ex?O.escapeHtml(ex.explicacion||""):""}</textarea></div>
+    <div class="config-grid">
+      <div class="field"><label>Pestaña de la cinta</label><select id="uq-sec" class="edit-field">${tax.map(s=>`<option value="${s.id}" ${s.id===secId0?'selected':''}>${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
+      <div class="field"><label>Grupo</label><select id="uq-top" class="edit-field"></select></div>
+    </div>
+    <div class="field"><label>Categoría</label><select id="uq-cat" class="edit-field">
+      ${["general","atajo","ruta","concepto"].map(c=>`<option value="${c}" ${ex&&ex.categoria===c?'selected':''}>${c==="ruta"?"Ruta / menú":c[0].toUpperCase()+c.slice(1)}</option>`).join("")}</select></div>
+    <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes para incorporarla al banco.</p>
+    <div class="actions" style="flex-wrap:wrap;">
+      ${ex?`<button class="btn btn-danger btn-sm" id="uq-delete">Eliminar</button>`:''}
+      <button class="btn btn-ghost" id="uq-cancel">Cancelar</button>
+      <button class="btn btn-solid" id="uq-save">${ex?"Guardar":"Crear pregunta"}</button>
+    </div>
+  `, (root)=>{
+    const imgState = wireImageField(root, ex && ex.imagen);
+    let tipo = tipo0;
+    const optsWrap = root.querySelector("#uq-opts-wrap"), tfWrap = root.querySelector("#uq-tf-wrap");
+    function syncTipo(){ optsWrap.hidden = tipo === "verdadero_falso"; tfWrap.hidden = tipo !== "verdadero_falso"; }
+    syncTipo();
+    root.querySelectorAll("#uq-tipo .seg").forEach(b=> b.addEventListener("click", ()=>{
+      root.querySelectorAll("#uq-tipo .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on");
+      tipo = b.getAttribute("data-v"); syncTipo();
+    }));
+    root.querySelectorAll("#uq-tf .seg").forEach(b=> b.addEventListener("click", ()=>{
+      root.querySelectorAll("#uq-tf .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on");
+    }));
+    const secSel = root.querySelector("#uq-sec"), topSel = root.querySelector("#uq-top");
+    populateTopicSelect(topSel, secSel.value, topId0);
+    secSel.addEventListener("change", ()=> populateTopicSelect(topSel, secSel.value, null));
+
+    root.querySelector("#uq-cancel").addEventListener("click", ()=> afterContentEdit(onDone));
+    const del = root.querySelector("#uq-delete");
+    if(del) del.addEventListener("click", ()=> confirmDanger("Eliminar pregunta creada",
+      "Se borra de tus sesiones. No se puede deshacer.",
+      ()=>{ O.ContentEdit.deleteUserItem("q", ex.id); if(O.LEB) O.LEB.recalcNow(); closeModal(); (onDone||(()=>go("practica")))(); O.toast("Pregunta eliminada"); }));
+
+    root.querySelector("#uq-save").addEventListener("click", ()=>{
+      const enun = root.querySelector("#uq-enun").value.trim();
+      if(!enun && !imgState.val){ O.toast("Escribe la pregunta o añade una imagen"); return; }
+      const data = {
+        tipo, enunciado: enun || "¿A qué corresponde esta imagen?",
+        explicacion: root.querySelector("#uq-expl").value.trim(),
+        categoria: root.querySelector("#uq-cat").value,
+        section: secSel.value, topic: topSel.value || (O.TAXONOMY_SECTIONS.find(s=>s.id===secSel.value).topics[0]||{}).id,
+        imagen: imgState.val || null,
+      };
+      if(tipo === "verdadero_falso"){
+        const on = root.querySelector("#uq-tf .seg.on");
+        data.respuesta = on && on.getAttribute("data-v") === "true";
+      } else {
+        const opts = ["A","B","C","D"].map(L=>({ letter:L, text: root.querySelector(`[data-uopt="${L}"]`).value.trim() })).filter(o=>o.text);
+        if(opts.length < 2){ O.toast("Pon al menos 2 opciones"); return; }
+        const chosen = root.querySelector("input[name='uq-correct']:checked");
+        const cl = chosen ? chosen.value : "A";
+        if(!opts.some(o=>o.letter===cl)){ O.toast("La opción marcada como correcta está vacía"); return; }
+        data.opciones = opts; data.respuesta = cl;
+      }
+      if(ex) O.ContentEdit.updateUserItem("q", ex.id, data);
+      else O.ContentEdit.createQuestion(data);
+      if(O.LEB) O.LEB.recalcNow();
+      O.toast(ex ? "Pregunta actualizada" : "Pregunta creada");
+      closeModal();
+      if(onDone) onDone(); else go(O.Nav.view === "running" ? "home" : O.Nav.view, O.Nav.params);
+    });
+  }, {wide:true});
+}
+
+function openUserFlashcardModal(editId, onDone){
+  if(!O.ContentEdit || !O.ContentEdit.createFlashcard){ O.toast("No disponible"); return; }
+  const ex = editId ? O.F_BY_ID[editId] : null;
+  const tax = O.TAXONOMY_SECTIONS.filter(s=>s.topics && s.topics.length);
+  const secId0 = ex && ex.section ? ex.section : tax[0].id;
+
+  showModal(`
+    <h3>${ex ? "Editar flashcard creada" : "Crear una flashcard"}</h3>
+    <p class="edit-id">${ex ? ex.canonicalId : "nueva · creada por ti"}</p>
+    ${imageFieldHtml(ex && ex.imagen)}
+    <div class="field"><label>Frente (pregunta)</label>
+      <textarea id="uf-front" rows="2" class="edit-field" placeholder="¿A qué comando corresponde esta imagen?">${ex?O.escapeHtml(ex.front||""):""}</textarea></div>
+    <div class="field"><label>Dorso (respuesta)</label>
+      <textarea id="uf-back" rows="4" class="edit-field">${ex?O.escapeHtml(ex.back||""):""}</textarea>
+      <span class="edit-hint">Puedes usar "R: … / E: … / A: …" para respuesta, explicación y atajo.</span></div>
+    <div class="config-grid">
+      <div class="field"><label>Pestaña de la cinta</label><select id="uf-sec" class="edit-field">${tax.map(s=>`<option value="${s.id}" ${s.id===secId0?'selected':''}>${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
+      <div class="field"><label>Grupo</label><select id="uf-top" class="edit-field"></select></div>
+    </div>
+    <div class="field"><label>Prioridad</label>
+      <div class="segmented" id="uf-prio">
+        <button type="button" class="seg ${ex&&ex.priority==='alta'?'on':''}" data-v="alta">Alta</button>
+        <button type="button" class="seg ${!ex||ex.priority!=='alta'?'on':''}" data-v="normal">Normal</button>
+      </div></div>
+    <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes para incorporarla al banco.</p>
+    <div class="actions" style="flex-wrap:wrap;">
+      ${ex?`<button class="btn btn-danger btn-sm" id="uf-delete">Eliminar</button>`:''}
+      <button class="btn btn-ghost" id="uf-cancel">Cancelar</button>
+      <button class="btn btn-solid" id="uf-save">${ex?"Guardar":"Crear flashcard"}</button>
+    </div>
+  `, (root)=>{
+    const imgState = wireImageField(root, ex && ex.imagen);
+    const secSel = root.querySelector("#uf-sec"), topSel = root.querySelector("#uf-top");
+    populateTopicSelect(topSel, secSel.value, ex && ex.topic);
+    secSel.addEventListener("change", ()=> populateTopicSelect(topSel, secSel.value, null));
+    root.querySelectorAll("#uf-prio .seg").forEach(b=> b.addEventListener("click", ()=>{
+      root.querySelectorAll("#uf-prio .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on");
+    }));
+    root.querySelector("#uf-cancel").addEventListener("click", ()=> afterContentEdit(onDone));
+    const del = root.querySelector("#uf-delete");
+    if(del) del.addEventListener("click", ()=> confirmDanger("Eliminar flashcard creada",
+      "No se puede deshacer.",
+      ()=>{ O.ContentEdit.deleteUserItem("fc", ex.canonicalId); if(O.LEB) O.LEB.recalcNow(); closeModal(); (onDone||(()=>go("flashcards")))(); O.toast("Flashcard eliminada"); }));
+    root.querySelector("#uf-save").addEventListener("click", ()=>{
+      const front = root.querySelector("#uf-front").value.trim();
+      const back = root.querySelector("#uf-back").value.trim();
+      if(!back){ O.toast("Escribe la respuesta (dorso)"); return; }
+      if(!front && !imgState.val){ O.toast("Escribe el frente o añade una imagen"); return; }
+      const data = {
+        front: front || "¿A qué corresponde esta imagen?", back,
+        priority: (root.querySelector("#uf-prio .seg.on")||{}).getAttribute ? root.querySelector("#uf-prio .seg.on").getAttribute("data-v") : "normal",
+        section: secSel.value, topic: topSel.value || null,
+        imagen: imgState.val || null,
+      };
+      if(ex) O.ContentEdit.updateUserItem("fc", ex.canonicalId, data);
+      else O.ContentEdit.createFlashcard(data);
+      if(O.LEB) O.LEB.recalcNow();
+      O.toast(ex ? "Flashcard actualizada" : "Flashcard creada");
+      closeModal();
+      if(onDone) onDone(); else go("flashcards");
+    });
+  }, {wide:true});
+}
+
 function openContentEditsModal(){
   if(!O.ContentEdit){ return; }
+  const FLBL = {enunciado:"enunciado",opciones:"opciones",respuesta:"respuesta",explicacion:"explicación",negativa:"negativa",imagen:"imagen",front:"frente",back:"dorso",priority:"prioridad"};
   const items = O.ContentEdit.list();
-  const rows = items.length ? items.map(it=>`
+  const users = O.ContentEdit.listUser ? O.ContentEdit.listUser() : [];
+  const anyExport = items.length || users.length;
+
+  const editRows = items.length ? items.map(it=>`
     <div class="ce-row">
       <div class="ce-main">
         <div class="ce-label">${O.escapeHtml(it.label)}${it.label.length>=70?'…':''}</div>
-        <div class="ce-meta">${it.kind==="fc"?"Flashcard":"Pregunta"} ${it.id} · ${it.fields.length?it.fields.map(f=>({enunciado:"enunciado",opciones:"opciones",respuesta:"respuesta",explicacion:"explicación",negativa:"negativa",front:"frente",back:"dorso",priority:"prioridad"}[f]||f)).join(", "):"solo nota"}${it.note?` · «${O.escapeHtml(it.note)}»`:''}</div>
+        <div class="ce-meta">${it.kind==="fc"?"Flashcard":"Pregunta"} ${it.id} · ${it.fields.length?it.fields.map(f=>FLBL[f]||f).join(", "):"solo nota"}${it.note?` · «${O.escapeHtml(it.note)}»`:''}</div>
       </div>
       <div class="ce-acts">
         <button class="btn btn-ghost btn-sm" data-ce-edit="${it.kind}:${it.id}">Editar</button>
         <button class="btn btn-ghost btn-sm" data-ce-revert="${it.kind}:${it.id}">Descartar</button>
       </div>
-    </div>`).join("") : `<p style="font-size:13px;color:var(--text-2);">No has corregido nada todavía. Usa el lápiz ✎ en cualquier pregunta o flashcard.</p>`;
+    </div>`).join("") : `<p style="font-size:12.5px;color:var(--text-2);padding:10px 12px;">Sin correcciones. Usa el lápiz ✎ en cualquier pregunta o flashcard.</p>`;
+
+  const userRows = users.length ? users.map(it=>`
+    <div class="ce-row">
+      <div class="ce-main">
+        <div class="ce-label">${it.hasImg?'🖼 ':''}${O.escapeHtml(it.label)}${it.label.length>=70?'…':''}</div>
+        <div class="ce-meta">${it.kind==="fc"?"Flashcard":(it.tipo==="verdadero_falso"?"Pregunta V/F":"Pregunta")} · ${O.escapeHtml(sectionName(it.section))}</div>
+      </div>
+      <div class="ce-acts">
+        <button class="btn btn-ghost btn-sm" data-cu-edit="${it.kind}:${it.id}">Editar</button>
+        <button class="btn btn-ghost btn-sm" data-cu-del="${it.kind}:${it.id}">Eliminar</button>
+      </div>
+    </div>`).join("") : `<p style="font-size:12.5px;color:var(--text-2);padding:10px 12px;">Aún no has creado ninguna pregunta ni flashcard propia.</p>`;
 
   showModal(`
-    <h3>Correcciones de contenido</h3>
-    <p>${items.length} corrección${items.length===1?'':'es'} guardada${items.length===1?'':'s'} en este dispositivo. Se aplican al abrir la app.</p>
-    <div class="ce-list">${rows}</div>
-    ${items.length?`<div class="field" style="margin-top:var(--sp-4);"><label>Exportar (JSON para volcar al banco)</label>
+    <h3>Tu contenido</h3>
+    <p style="font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-2);margin:var(--sp-4) 0 6px;">Creadas por ti (${users.length})</p>
+    <div class="ce-list">${userRows}</div>
+    <div class="actions" style="justify-content:flex-start;margin:8px 0 var(--sp-4);">
+      <button class="btn btn-outline btn-sm" id="cu-new-q">+ Pregunta</button>
+      <button class="btn btn-outline btn-sm" id="cu-new-fc">+ Flashcard</button>
+    </div>
+    <p style="font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-2);margin:var(--sp-5) 0 6px;">Correcciones al banco (${items.length})</p>
+    <div class="ce-list">${editRows}</div>
+    ${anyExport?`<div class="field" style="margin-top:var(--sp-4);"><label>Exportar (JSON para volcar al banco)</label>
       <textarea id="ce-export" rows="6" readonly class="edit-field" style="font-family:var(--font-mono);font-size:11px;"></textarea></div>` : ''}
     <div class="actions" style="flex-wrap:wrap;">
-      ${items.length?`<button class="btn btn-ghost btn-sm" id="ce-copy">Copiar JSON</button>
-      <button class="btn btn-danger btn-sm" id="ce-clear">Descartar todas</button>` : ''}
+      ${anyExport?`<button class="btn btn-ghost btn-sm" id="ce-copy">Copiar JSON</button>` : ''}
+      ${items.length?`<button class="btn btn-danger btn-sm" id="ce-clear">Descartar correcciones</button>` : ''}
       <button class="btn btn-ghost" id="ce-close">Cerrar</button>
     </div>
   `, (root)=>{
     const ta = root.querySelector("#ce-export");
     if(ta) ta.value = O.ContentEdit.exportJSON();
     root.querySelector("#ce-close").addEventListener("click", closeModal);
+    root.querySelector("#cu-new-q").addEventListener("click", ()=>{ closeModal(); openUserQuestionModal(null, openContentEditsModal); });
+    root.querySelector("#cu-new-fc").addEventListener("click", ()=>{ closeModal(); openUserFlashcardModal(null, openContentEditsModal); });
     const copy = root.querySelector("#ce-copy");
     if(copy) copy.addEventListener("click", ()=> copyToClipboard(O.ContentEdit.exportJSON()));
     const clr = root.querySelector("#ce-clear");
     if(clr) clr.addEventListener("click", ()=> confirmDanger("Descartar todas las correcciones",
-      "El contenido volverá al original del banco. No se puede deshacer.",
+      "El contenido del banco vuelve al original. Tus preguntas creadas NO se tocan. No se puede deshacer.",
       ()=>{ O.ContentEdit.clearAll(); if(O.LEB) O.LEB.recalcNow(); closeModal(); go(O.Nav.view); O.toast("Correcciones descartadas"); }));
     root.querySelectorAll("[data-ce-edit]").forEach(b=> b.addEventListener("click", ()=>{
       const [kind,id] = b.getAttribute("data-ce-edit").split(/:(.+)/);
@@ -2015,6 +2285,16 @@ function openContentEditsModal(){
     root.querySelectorAll("[data-ce-revert]").forEach(b=> b.addEventListener("click", ()=>{
       const [kind,id] = b.getAttribute("data-ce-revert").split(/:(.+)/);
       O.ContentEdit.revert(kind, id); if(O.LEB) O.LEB.recalcNow();
+      closeModal(); openContentEditsModal();
+    }));
+    root.querySelectorAll("[data-cu-edit]").forEach(b=> b.addEventListener("click", ()=>{
+      const [kind,id] = b.getAttribute("data-cu-edit").split(/:(.+)/);
+      closeModal();
+      if(kind==="fc") openUserFlashcardModal(id, openContentEditsModal); else openUserQuestionModal(id, openContentEditsModal);
+    }));
+    root.querySelectorAll("[data-cu-del]").forEach(b=> b.addEventListener("click", ()=>{
+      const [kind,id] = b.getAttribute("data-cu-del").split(/:(.+)/);
+      O.ContentEdit.deleteUserItem(kind, id); if(O.LEB) O.LEB.recalcNow();
       closeModal(); openContentEditsModal();
     }));
   }, {wide:true});
@@ -2549,10 +2829,10 @@ function openSettingsModal(){
       <p>IDs duplicados: <strong>${mr.duplicateIds.length}</strong> · Cobertura contentHash: <strong>${mr.contentHashCoverage}%</strong> · Generadas: <strong>${mr.generatedCount}</strong></p>
     </div>
     <hr class="div">
-    <p style="font-weight:700; font-size:13px; margin-bottom:8px;">Correcciones de contenido</p>
-    <p style="font-size:12px;color:var(--text-2);margin-bottom:8px;">Si ves un error en una pregunta o flashcard, corrígelo con el lápiz ✎. ${O.ContentEdit?O.ContentEdit.count():0} corrección(es) guardada(s).</p>
+    <p style="font-weight:700; font-size:13px; margin-bottom:8px;">Tu contenido</p>
+    <p style="font-size:12px;color:var(--text-2);margin-bottom:8px;">Corrige errores con el lápiz ✎, o crea tus propias preguntas y flashcards (con imagen). ${O.ContentEdit?(O.ContentEdit.userCount()+O.ContentEdit.count()):0} elemento(s) tuyo(s), se aplican al abrir la app.</p>
     <div class="actions" style="justify-content:flex-start;margin-bottom:16px;">
-      <button class="btn btn-outline btn-sm" id="open-content-edits">Ver / exportar correcciones</button>
+      <button class="btn btn-outline btn-sm" id="open-content-edits">Ver / crear / exportar</button>
     </div>
 
     <hr class="div">
