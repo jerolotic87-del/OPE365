@@ -247,6 +247,10 @@ i.dot{ display:inline-block; width:8px; height:8px; border-radius:50%; margin-ri
 .day-btn.on{ background:var(--accent-dim); color:var(--accent-ink); border-color:var(--accent-line); }
 input[type="date"]{ color-scheme:dark; }
 
+.mini-warn{ color:var(--warn); font-weight:600; }
+.pr-emptydash{ font-size:11px; color:var(--text-3); }
+.progress-row .pr-bar .mastery-bar{ width:100%; }
+
 .hero-continue{
   border-radius:var(--radius-l); border:1px solid var(--border-2);
   background:linear-gradient(180deg, var(--raised), var(--surface));

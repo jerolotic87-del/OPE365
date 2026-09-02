@@ -256,6 +256,10 @@ i.dot{ display:inline-block; width:8px; height:8px; border-radius:50%; margin-ri
 .day-btn.on{ background:var(--accent-dim); color:var(--accent-ink); border-color:var(--accent-line); }
 input[type="date"]{ color-scheme:dark; }
 
+.mini-warn{ color:var(--warn); font-weight:600; }
+.pr-emptydash{ font-size:11px; color:var(--text-3); }
+.progress-row .pr-bar .mastery-bar{ width:100%; }
+
 .hero-continue{
   border-radius:var(--radius-l); border:1px solid var(--border-2);
   background:linear-gradient(180deg, var(--raised), var(--surface));
@@ -4627,42 +4631,41 @@ function renderChallengeCardHtml(c){
 }
 
 /* ---------------------------------------------------------------
-   TEMARIO — biblioteca de contenido: las 10 pestañas de Word 365
-   como una lista con progreso, no una rejilla de tarjetas.
+   TEMARIO — las pestañas de Word 365 como una lista con el estado
+   de dominio real de cada bloque (del motor), no una rejilla.
 --------------------------------------------------------------- */
-function sectionProgress(sid){
-  const qs = O.QUESTIONS.filter(q=>q.section===sid);
-  const total = qs.length;
-  let answered=0, correct=0;
-  qs.forEach(q=>{ const a=O.PROGRESS.answers[q.id]; if(a){ answered++; if(a.correcta) correct++; } });
-  return { total, answered, correct, pct: total ? Math.round((answered/total)*100) : 0 };
-}
 
 function renderTemario(){
   const taxStats = O.computeTaxonomyStats();
-  const globalAnswered = O.TAXONOMY_SECTIONS.reduce((n,s)=> n + sectionProgress(s.id).answered, 0);
-  const globalTotal = O.QUESTIONS.length;
+  const bd = O.LEB ? O.LEB.masteryBreakdown() : null;
 
   mainEl().innerHTML = `
   <div class="view">
     <div class="view-head">
-      <p class="eyebrow">Temario</p>
-      <h1>Explora Word 365 por pestañas</h1>
-      <p>${O.TAXONOMY_SECTIONS.length} pestañas de la cinta · ${globalAnswered} de ${globalTotal} preguntas vistas.</p>
+      <p class="eyebrow">Temario · Word 365 de la cinta</p>
+      <h1>¿Cómo voy por cada parte?</h1>
+      ${bd ? `<p>${bd.asentado} de ${bd.total} bloques asentados${bd.debido+bd.atrasado?` · ${bd.debido+bd.atrasado} a repasar`:''}.</p>`
+           : `<p>${O.TAXONOMY_SECTIONS.length} pestañas de la cinta de Word 365.</p>`}
     </div>
 
     <div class="progress-list">
       ${O.TAXONOMY_SECTIONS.map(sec=>{
         const st = taxStats[sec.id] || {questions:0, flashcards:0};
-        const p = sectionProgress(sec.id);
+        const scm = O.LEB ? O.LEB.sectionConceptsModel(sec.id) : null;
         const empty = st.questions === 0;
+        const barB = scm ? { total:scm.total,
+          asentado:scm.topics.filter(t=>t.mastery==="asentado").length,
+          consolidando:scm.topics.filter(t=>t.mastery==="consolidando").length,
+          aprendiendo:scm.topics.filter(t=>t.mastery==="aprendiendo").length,
+          nuevo:scm.topics.filter(t=>!t.seen).length } : null;
+        const repaso = scm ? scm.repaso : 0;
         return `<button class="progress-row${empty?' is-empty':''}" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
           <div class="pr-main">
             <div class="pr-name">${O.escapeHtml(sec.name)}</div>
-            <div class="pr-meta">${st.questions} pregunta${st.questions===1?'':'s'}${st.flashcards?` · ${st.flashcards} flashcard${st.flashcards===1?'':'s'}`:''}</div>
+            <div class="pr-meta">${scm && scm.total ? `${scm.total} bloque${scm.total===1?'':'s'} · ` : ''}${st.questions} pregunta${st.questions===1?'':'s'}${repaso?` · <span class="mini-warn">${repaso} a repasar</span>`:''}</div>
           </div>
-          <div class="pr-bar"><div class="bar-track"><i style="width:${p.pct}%"></i></div></div>
-          <div class="pr-pct">${empty?'—':p.pct+'%'}</div>
+          <div class="pr-bar">${barB && barB.total ? masteryBarHtml(barB) : (empty ? '<span class="pr-emptydash">sin preguntas</span>' : '<div class="bar-track"></div>')}</div>
+          <div class="pr-pct">${scm && scm.total ? Math.round((barB.asentado/barB.total)*100)+'%' : '—'}</div>
           <span class="pr-chev">${icon('chevronR')}</span>
         </button>`;
       }).join("")}
@@ -5828,8 +5831,11 @@ function renderTemarioDetalle(params){
   const qCount = O.filterQuestions({section:sectionId}).length;
   const fCount = O.filterFlashcards({section:sectionId}).length;
   const errCount = O.filterFlashcards({section:sectionId, cardType:"error"}).length;
-  const p = sectionProgress(sectionId);
-  const topics = (sec.topics || []).map(t=>({ ...t, n: O.filterQuestions({section:sectionId, topic:t.id}).length }));
+  const scm = O.LEB ? O.LEB.sectionConceptsModel(sectionId) : null;
+  const topics = (sec.topics || []).map(t=>{
+    const cv = scm ? scm.topics.find(x=>x.topicId===t.id) : null;
+    return { ...t, n: O.filterQuestions({section:sectionId, topic:t.id}).length, cv };
+  });
 
   const practiceSection = ()=>{
     const s2 = O.buildSession({mode:"practice", section:sectionId, count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
@@ -5840,29 +5846,46 @@ function renderTemarioDetalle(params){
     if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No hay preguntas en este grupo");
   };
 
+  const asentadoN = scm ? scm.asentado : 0;
+  const repasoN = scm ? scm.repaso : 0;
+  const barB = scm ? { total:scm.total,
+    asentado:scm.topics.filter(t=>t.mastery==="asentado").length,
+    consolidando:scm.topics.filter(t=>t.mastery==="consolidando").length,
+    aprendiendo:scm.topics.filter(t=>t.mastery==="aprendiendo").length,
+    nuevo:scm.topics.filter(t=>!t.seen).length } : null;
+
   mainEl().innerHTML = `
   <div class="view view-narrow">
     <nav class="breadcrumb"><button data-goto="temario">Temario</button><span>/</span><b>${O.escapeHtml(sec.name)}</b></nav>
     <div class="view-head">
       <h1>${O.escapeHtml(sec.name)}</h1>
-      <p>${qCount} pregunta${qCount===1?'':'s'} · ${fCount} flashcard${fCount===1?'':'s'}${p.total?` · ${p.pct}% vistas`:''}</p>
-      ${p.total ? `<div class="bar-track" style="margin-top:var(--sp-3);max-width:280px;"><i style="width:${p.pct}%"></i></div>` : ``}
+      <p>${scm&&scm.total?`${scm.total} bloque${scm.total===1?'':'s'} · `:''}${qCount} pregunta${qCount===1?'':'s'} · ${fCount} flashcard${fCount===1?'':'s'}</p>
+      ${barB && barB.total ? `<div style="margin-top:var(--sp-3);max-width:320px;">${masteryBarHtml(barB)}
+        <div class="lp-legend" style="margin-top:7px;"><span>${asentadoN} asentado${asentadoN===1?'':'s'} de ${scm.total}</span>${repasoN?`<span class="mini-warn">${repasoN} a repasar</span>`:''}</div></div>` : ``}
     </div>
 
     ${qCount ? `
     <button class="btn btn-solid btn-lg btn-block" id="td-preguntas" style="margin-bottom:var(--sp-6);">
-      ${icon('play')} Practicar esta pestaña · ${qCount}
+      ${icon('play')} Practicar toda la pestaña · ${qCount}
     </button>
 
     ${topics.length ? `
     <div class="section-block">
-      <div class="section-title"><h3>Grupos</h3></div>
+      <div class="section-title"><h3>Bloques</h3><span class="section-hint">tu estado en cada uno</span></div>
       <div class="nav-list">
-        ${topics.map(t=>`<button class="nav-row" data-topic="${t.id}" ${t.n?'':'disabled'}>
-          <span class="nr-title">${O.escapeHtml(t.name)}</span>
-          <span class="nr-meta">${t.n}</span>
+        ${topics.map(t=>{
+          const cv = t.cv;
+          const tone = cv && cv.seen ? cv.masteryTone : "neutral";
+          const stlbl = cv ? (cv.seen ? cv.masteryLabel : "Sin empezar") : "";
+          return `<button class="nav-row concept-row" data-topic="${t.id}" ${t.n?'':'disabled'}>
+          <span class="state-pip tone-${tone}"></span>
+          <span class="nr-body">
+            <span class="nr-title">${O.escapeHtml(t.name)}</span>
+            <span class="nr-reason">${stlbl}${cv && cv.reviewLabel?` · <span class="mini-warn">${cv.reviewLabel}</span>`:''} · ${t.n} pregunta${t.n===1?'':'s'}</span>
+          </span>
           <span class="nr-chev">${icon('chevronR')}</span>
-        </button>`).join("")}
+        </button>`;
+        }).join("")}
       </div>
     </div>` : ``}
     ` : `
