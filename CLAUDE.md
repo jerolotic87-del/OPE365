@@ -6,9 +6,9 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **1431 preguntas** y **510
-flashcards** (inicio 148, archivo 125, vista 79, revisar 73, insertar 28,
-referencias 17, disposicion 16, correspondencia 15, diseno 9 — las ~289
+de Word 365 de una oposición de ayuntamiento. **1439 preguntas** y **521
+flashcards** (inicio 148, archivo 136, vista 79, revisar 73, insertar 28,
+referencias 17, disposicion 16, correspondencia 15, diseno 9 — las ~300
 de sep-2026 son tarjetas de RUTA: frente = la acción, dorso =
 "Pestaña ▸ Grupo ▸ Comando", de `rutasyatajos.txt`), todo el banco
 normalizado y agrupado por pestaña de la cinta
@@ -248,9 +248,9 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 516, inicio 393, archivo 239, vista 145, revisar 78, insertar 45,
+interfaz 516, inicio 393, archivo 247, vista 145, revisar 78, insertar 45,
 referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
-Total 1431. Historial: `data/questions_regroup_report.md`. Las de `archivo`
+Total 1439. Historial: `data/questions_regroup_report.md`. Las de `archivo`
 `archivo-134..` (`sourceQuestionId` `opc-<panel>-NN`) cubren toggles de
 `Archivo > Opciones` — opción = "sub-panel del diálogo ▸ ajuste",
 distractores = ajustes-hermanos reales, nada inventado; las que ya tenían

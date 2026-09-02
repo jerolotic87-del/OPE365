@@ -8475,5 +8475,293 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Corrección e idiomas de creación de Office → Instalar otros teclados desde la configuración de Windows. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-240",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-accesibilidad",
+    "subtopic": "Accesibilidad",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-acc-02",
+    "generado": true,
+    "enunciado": "Mientras editas quieres que Word muestre en el margen izquierdo una notificación visual cuando detecte un problema de accesibilidad (p. ej. imagen sin texto alternativo), sin abrir ningún panel. ¿Dónde lo activas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Opciones de presentación de la aplicación ▸ Mostrar la pantalla Inicio cuando se inicie esta aplicación"
+      },
+      {
+        "letter": "B",
+        "text": "Que el documento sea accesible a otras personas ▸ Mostrar el estado de accesibilidad alineado con el documento"
+      },
+      {
+        "letter": "C",
+        "text": "Texto alternativo ▸ Habilitar la opción para generar texto alternativo mediante IA"
+      },
+      {
+        "letter": "D",
+        "text": "Que el documento sea accesible a otras personas ▸ Mostrar el estado de accesibilidad del Asistente de accesibilidad en la barra de estado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Que el documento sea accesible a otras personas → Mostrar el estado de accesibilidad alineado con el documento. No tiene atajo de teclado (ninguna opción de este bloque figura en la tabla oficial)."
+  },
+  {
+    "id": "archivo-241",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-accesibilidad",
+    "subtopic": "Accesibilidad",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-acc-04",
+    "generado": true,
+    "enunciado": "Has activado las notificaciones sonoras y quieres cambiar el esquema de sonidos entre el clásico y el moderno. ¿Dónde lo configuras?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Opciones de notificación ▸ Combinación de sonidos"
+      },
+      {
+        "letter": "B",
+        "text": "Opciones de notificación ▸ Notificar con un sonido"
+      },
+      {
+        "letter": "C",
+        "text": "Opciones de notificación ▸ Notificar con una animación"
+      },
+      {
+        "letter": "D",
+        "text": "Opciones de presentación de la aplicación ▸ Estilo de información en pantalla"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de notificación → Combinación de sonidos. Este desplegable solo está disponible si \"Notificar con un sonido\" está activada."
+  },
+  {
+    "id": "archivo-242",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-accesibilidad",
+    "subtopic": "Accesibilidad",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-acc-05",
+    "generado": true,
+    "enunciado": "Usas Word con tecnología de asistencia y quieres que muestre indicaciones visuales animadas al completar una acción (p. ej. al pegar o eliminar contenido). ¿Dónde activas esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Opciones de presentación de la aplicación ▸ Mostrar teclas de método abreviado en la información en pantalla"
+      },
+      {
+        "letter": "B",
+        "text": "Opciones de notificación ▸ Notificar con un sonido"
+      },
+      {
+        "letter": "C",
+        "text": "Opciones de notificación ▸ Combinación de sonidos"
+      },
+      {
+        "letter": "D",
+        "text": "Opciones de notificación ▸ Notificar con una animación"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de notificación → Notificar con una animación. No tiene atajo de teclado (ninguna opción de este bloque figura en la tabla oficial)."
+  },
+  {
+    "id": "archivo-243",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-accesibilidad",
+    "subtopic": "Accesibilidad",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-acc-06",
+    "generado": true,
+    "enunciado": "Al pasar el ratón por los botones de la cinta quieres que Word muestre una descripción detallada de cada función. ¿Dónde configuras si esas descripciones se ven con detalle, breves o no se ven (desde Accesibilidad)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Opciones de presentación del documento ▸ Expandir todos los títulos al abrir un documento"
+      },
+      {
+        "letter": "B",
+        "text": "Opciones de presentación de la aplicación ▸ Mostrar teclas de método abreviado en la información en pantalla"
+      },
+      {
+        "letter": "C",
+        "text": "Opciones de presentación de la aplicación ▸ Mostrar la pantalla Inicio cuando se inicie esta aplicación"
+      },
+      {
+        "letter": "D",
+        "text": "Opciones de presentación de la aplicación ▸ Estilo de información en pantalla"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de presentación de la aplicación → Estilo de información en pantalla. El mismo ajuste está también en Archivo ▸ Opciones ▸ General ▸ Opciones de interfaz de usuario ▸ Estilo de información en pantalla: las dos rutas controlan lo mismo."
+  },
+  {
+    "id": "archivo-244",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-accesibilidad",
+    "subtopic": "Accesibilidad",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-acc-07",
+    "generado": true,
+    "enunciado": "Al pasar el ratón por los botones de la cinta quieres que en la ventana emergente aparezca también el atajo de teclado de cada función. ¿Dónde activas esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Opciones de presentación de la aplicación ▸ Estilo de información en pantalla"
+      },
+      {
+        "letter": "B",
+        "text": "Opciones de presentación de la aplicación ▸ Mostrar la pantalla Inicio cuando se inicie esta aplicación"
+      },
+      {
+        "letter": "C",
+        "text": "Opciones de presentación de la aplicación ▸ Mostrar teclas de método abreviado en la información en pantalla"
+      },
+      {
+        "letter": "D",
+        "text": "Opciones de navegación con el teclado ▸ Usar el orden de lectura para la navegación con tecla de dirección"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de presentación de la aplicación → Mostrar teclas de método abreviado en la información en pantalla. No tiene atajo de teclado (ninguna opción de este bloque figura en la tabla oficial)."
+  },
+  {
+    "id": "archivo-245",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-accesibilidad",
+    "subtopic": "Accesibilidad",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-acc-08",
+    "generado": true,
+    "enunciado": "Cada vez que abres Word quieres que aparezca la pantalla de inicio con plantillas y recientes en lugar de un documento en blanco. ¿Dónde activas esa pantalla inicial (desde Accesibilidad)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Opciones de presentación de la aplicación ▸ Mostrar la pantalla Inicio cuando se inicie esta aplicación"
+      },
+      {
+        "letter": "B",
+        "text": "Que el documento sea accesible a otras personas ▸ Mostrar el estado de accesibilidad alineado con el documento"
+      },
+      {
+        "letter": "C",
+        "text": "Opciones de presentación de la aplicación ▸ Estilo de información en pantalla"
+      },
+      {
+        "letter": "D",
+        "text": "Opciones de presentación de la aplicación ▸ Mostrar teclas de método abreviado en la información en pantalla"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de presentación de la aplicación → Mostrar la pantalla Inicio cuando se inicie esta aplicación. El mismo ajuste está también en Archivo ▸ Opciones ▸ General ▸ Opciones de inicio: las dos rutas controlan lo mismo."
+  },
+  {
+    "id": "archivo-246",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-accesibilidad",
+    "subtopic": "Accesibilidad",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-acc-10",
+    "generado": true,
+    "enunciado": "Trabajas con documentos cuyos títulos suelen guardarse contraídos y cada vez que los abres tienes que expandirlos uno a uno. ¿Dónde activas que todos los títulos aparezcan siempre expandidos al abrir, sea cual sea el estado en que se guardaron?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Opciones de presentación de la aplicación ▸ Estilo de información en pantalla"
+      },
+      {
+        "letter": "B",
+        "text": "Texto alternativo ▸ Habilitar la opción para generar texto alternativo mediante IA"
+      },
+      {
+        "letter": "C",
+        "text": "Opciones de notificación ▸ Notificar con una animación"
+      },
+      {
+        "letter": "D",
+        "text": "Opciones de presentación del documento ▸ Expandir todos los títulos al abrir un documento"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de presentación del documento → Expandir todos los títulos al abrir un documento. Por defecto los títulos ya se expanden al abrir; esta opción fuerza que se expandan SIEMPRE, aunque el usuario los hubiera contraído antes de cerrar. Ruta alternativa de menú (no atajo): clic derecho en un título ▸ Expandir o contraer ▸ Expandir todos los títulos."
+  },
+  {
+    "id": "archivo-247",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-accesibilidad",
+    "subtopic": "Accesibilidad",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-acc-11",
+    "generado": true,
+    "enunciado": "Usas un lector de pantalla y al navegar con las teclas de dirección por un documento con objetos flotantes el cursor salta en un orden que no coincide con el orden visual de lectura. ¿Dónde activas que la navegación con teclado siga el orden de lectura del documento?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Opciones de notificación ▸ Notificar con un sonido"
+      },
+      {
+        "letter": "B",
+        "text": "Que el documento sea accesible a otras personas ▸ Mostrar el estado de accesibilidad del Asistente de accesibilidad en la barra de estado"
+      },
+      {
+        "letter": "C",
+        "text": "Opciones de navegación con el teclado ▸ Usar el orden de lectura para la navegación con tecla de dirección"
+      },
+      {
+        "letter": "D",
+        "text": "Opciones de notificación ▸ Combinación de sonidos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de navegación con el teclado → Usar el orden de lectura para la navegación con tecla de dirección. No tiene atajo de teclado (ninguna opción de este bloque figura en la tabla oficial)."
   }
 ]
