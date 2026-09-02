@@ -6,9 +6,9 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **1355 preguntas** y **423
-flashcards** (inicio 148, vista 79, revisar 73, archivo 38, insertar 28,
-referencias 17, disposicion 16, correspondencia 15, diseno 9 — las ~203
+de Word 365 de una oposición de ayuntamiento. **1410 preguntas** y **481
+flashcards** (inicio 148, archivo 96, vista 79, revisar 73, insertar 28,
+referencias 17, disposicion 16, correspondencia 15, diseno 9 — las ~261
 de sep-2026 son tarjetas de RUTA: frente = la acción, dorso =
 "Pestaña ▸ Grupo ▸ Comando", de `rutasyatajos.txt`), todo el banco
 normalizado y agrupado por pestaña de la cinta
@@ -248,14 +248,14 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 516, inicio 393, archivo 163, vista 145, revisar 78, insertar 45,
+interfaz 516, inicio 393, archivo 218, vista 145, revisar 78, insertar 45,
 referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
-Total 1355. Historial: `data/questions_regroup_report.md`. Las 30 últimas
-de `archivo` (`archivo-134..163`, `sourceQuestionId` `opc-gen-NN` /
-`opc-pres-NN`) cubren toggles de `Archivo > Opciones > General` y
-`> Presentación` — distractores = opciones-hermanas reales del mismo panel,
-nada inventado; las que ya tenían pregunta previa (`archivo-64..71`) no se
-duplicaron.
+Total 1410. Historial: `data/questions_regroup_report.md`. Las 85 últimas
+de `archivo` (`archivo-134..218`, `sourceQuestionId` `opc-gen/pres/rev-NN`)
+cubren toggles de `Archivo > Opciones` (General, Presentación, Revisión —
+Autocorrección/Autoformato/corrector) — distractores = opciones-hermanas
+reales del mismo sub-panel del diálogo, nada inventado; las que ya tenían
+pregunta previa (`archivo-64..75`) no se duplicaron.
 
 Taxonomía: `inicio > parrafo` se abrió en 7 grupos
 (`parrafo-marcas`/`-alineacion`/`-sangria`/`-espaciado`/`-bordes`/

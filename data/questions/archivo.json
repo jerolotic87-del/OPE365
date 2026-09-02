@@ -5739,5 +5739,1985 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Opciones de impresión → Actualizar datos vinculados antes de imprimir. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-164",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-01",
+    "generado": true,
+    "enunciado": "Acabas de escribir una URL y Word la ha convertido en hipervínculo. Aparece un icono junto al texto pero desaparece antes de que puedas usarlo. ¿Dónde activarías que ese botón de control se muestre siempre al aplicar una autocorrección?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autocorrección ▸ Reemplazar texto mientras escribe"
+      },
+      {
+        "letter": "B",
+        "text": "Autocorrección ▸ Usar automáticamente las sugerencias del corrector ortográfico"
+      },
+      {
+        "letter": "C",
+        "text": "Autocorrección ▸ Mostrar los botones de las opciones de Autocorrección"
+      },
+      {
+        "letter": "D",
+        "text": "Autocorrección ▸ Poner en mayúscula la primera letra de una oración"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autocorrección → Mostrar los botones de las opciones de Autocorrección. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-165",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-02",
+    "generado": true,
+    "enunciado": "Un compañero te pasa un documento con palabras como \"ELección\" o \"PRoceso\", con dos mayúsculas al inicio. ¿Dónde activarías que Word lo corrija automáticamente al escribir?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autocorrección ▸ Reemplazar texto mientras escribe"
+      },
+      {
+        "letter": "B",
+        "text": "Autocorrección ▸ Corregir DOs MAyúsculas SEguidas"
+      },
+      {
+        "letter": "C",
+        "text": "Autocorrección ▸ Corregir el uso accidental de bLOQ MAyÚS"
+      },
+      {
+        "letter": "D",
+        "text": "Autocorrección ▸ Mostrar los botones de las opciones de Autocorrección"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autocorrección → Corregir DOs MAyúsculas SEguidas. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-166",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-03",
+    "generado": true,
+    "enunciado": "Escribes deprisa y olvidas poner mayúscula al inicio de cada frase. ¿Dónde activarías que Word lo corrija automáticamente?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autocorrección ▸ Poner en mayúscula los nombres de días"
+      },
+      {
+        "letter": "B",
+        "text": "Autocorrección ▸ Mostrar los botones de las opciones de Autocorrección"
+      },
+      {
+        "letter": "C",
+        "text": "Autocorrección ▸ Usar automáticamente las sugerencias del corrector ortográfico"
+      },
+      {
+        "letter": "D",
+        "text": "Autocorrección ▸ Poner en mayúscula la primera letra de una oración"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autocorrección → Poner en mayúscula la primera letra de una oración. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-167",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-04",
+    "generado": true,
+    "enunciado": "Rellenas una tabla y Word no pone automáticamente mayúscula al inicio del texto de cada celda. ¿Dónde activarías esa corrección automática?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autocorrección ▸ Poner en mayúscula la primera letra de celdas de tablas"
+      },
+      {
+        "letter": "B",
+        "text": "Autocorrección ▸ Mostrar los botones de las opciones de Autocorrección"
+      },
+      {
+        "letter": "C",
+        "text": "Autocorrección ▸ Poner en mayúscula los nombres de días"
+      },
+      {
+        "letter": "D",
+        "text": "Autocorrección ▸ Poner en mayúscula la primera letra de una oración"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autocorrección → Poner en mayúscula la primera letra de celdas de tablas. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-168",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-05",
+    "generado": true,
+    "enunciado": "Al escribir \"lunes\" o \"martes\" en minúscula quieres que Word los corrija con mayúscula inicial. ¿Dónde lo activarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autocorrección ▸ Reemplazar texto mientras escribe"
+      },
+      {
+        "letter": "B",
+        "text": "Autocorrección ▸ Corregir el uso accidental de bLOQ MAyÚS"
+      },
+      {
+        "letter": "C",
+        "text": "Autocorrección ▸ Mostrar los botones de las opciones de Autocorrección"
+      },
+      {
+        "letter": "D",
+        "text": "Autocorrección ▸ Poner en mayúscula los nombres de días"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autocorrección → Poner en mayúscula los nombres de días. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-169",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-06",
+    "generado": true,
+    "enunciado": "Tenías el bloqueo de mayúsculas activado sin darte cuenta y has escrito \"hOLA bUENOS dÍAS\". ¿Dónde activarías que Word detecte y corrija ese error automáticamente?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autocorrección ▸ Corregir DOs MAyúsculas SEguidas"
+      },
+      {
+        "letter": "B",
+        "text": "Autocorrección ▸ Reemplazar texto mientras escribe"
+      },
+      {
+        "letter": "C",
+        "text": "Autocorrección ▸ Usar automáticamente las sugerencias del corrector ortográfico"
+      },
+      {
+        "letter": "D",
+        "text": "Autocorrección ▸ Corregir el uso accidental de bLOQ MAyÚS"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autocorrección → Corregir el uso accidental de bLOQ MAyÚS. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-170",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-07",
+    "generado": true,
+    "enunciado": "Quieres que al escribir (c) Word lo sustituya automáticamente por ©. ¿Dónde configurarías esa sustitución automática de texto?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autocorrección ▸ Corregir DOs MAyúsculas SEguidas"
+      },
+      {
+        "letter": "B",
+        "text": "Autocorrección ▸ Mostrar los botones de las opciones de Autocorrección"
+      },
+      {
+        "letter": "C",
+        "text": "Autocorrección ▸ Reemplazar texto mientras escribe"
+      },
+      {
+        "letter": "D",
+        "text": "Autocorrección ▸ Corregir el uso accidental de bLOQ MAyÚS"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autocorrección → Reemplazar texto mientras escribe. Atajo relacionado: Ctrl+Z. Para deshacer una autocorrección puntual justo cuando ocurre: Ctrl+Z la revierte al momento."
+  },
+  {
+    "id": "archivo-171",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-08",
+    "generado": true,
+    "enunciado": "Quieres que cuando Word detecte un error ortográfico aplique directamente la primera sugerencia del corrector sin que la elijas tú. ¿Dónde lo activarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autocorrección ▸ Usar automáticamente las sugerencias del corrector ortográfico"
+      },
+      {
+        "letter": "B",
+        "text": "Autocorrección ▸ Mostrar los botones de las opciones de Autocorrección"
+      },
+      {
+        "letter": "C",
+        "text": "Autocorrección ▸ Corregir el uso accidental de bLOQ MAyÚS"
+      },
+      {
+        "letter": "D",
+        "text": "Autocorrección ▸ Reemplazar texto mientras escribe"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autocorrección → Usar automáticamente las sugerencias del corrector ortográfico. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-172",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-09",
+    "generado": true,
+    "enunciado": "Redactas un documento técnico y quieres que códigos como \\int o \\infty se conviertan en sus símbolos incluso fuera de una ecuación. ¿Dónde lo activarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autocorrección ▸ Mostrar los botones de las opciones de Autocorrección"
+      },
+      {
+        "letter": "B",
+        "text": "Autocorrección ▸ Corregir el uso accidental de bLOQ MAyÚS"
+      },
+      {
+        "letter": "C",
+        "text": "Autocorrección ▸ Poner en mayúscula la primera letra de una oración"
+      },
+      {
+        "letter": "D",
+        "text": "Autocorrección matemática ▸ Utilizar las reglas de Autocorrección matemática fuera de las áreas matemáticas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autocorrección matemática → Utilizar las reglas de Autocorrección matemática fuera de las áreas matemáticas. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-173",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-10",
+    "generado": true,
+    "enunciado": "Quieres revisar o añadir sustituciones de símbolos matemáticos que Word aplica al escribir dentro de ecuaciones. ¿Dónde gestionarías esa lista?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autocorrección ▸ Mostrar los botones de las opciones de Autocorrección"
+      },
+      {
+        "letter": "B",
+        "text": "Autocorrección ▸ Poner en mayúscula la primera letra de una oración"
+      },
+      {
+        "letter": "C",
+        "text": "Autocorrección ▸ Corregir DOs MAyúsculas SEguidas"
+      },
+      {
+        "letter": "D",
+        "text": "Autocorrección matemática ▸ Reemplazar texto mientras escribe"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autocorrección matemática → Reemplazar texto mientras escribe. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-174",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-11",
+    "generado": true,
+    "enunciado": "Al entrecomillar texto Word cambia las comillas rectas por curvas y prefieres mantener las rectas para no romper un fragmento de código. ¿Dónde desactivarías esa sustitución al escribir?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Rutas de red e Internet por hipervínculos"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Guiones (--) con guión largo (—)"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Ordinales (1º) por superíndice"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Reemplazar mientras escribe → \"Comillas rectas\" con \"comillas tipográficas\". No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-175",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-12",
+    "generado": true,
+    "enunciado": "Escribes 1/2 y Word lo convierte en ½; quieres desactivar esa sustitución para un documento técnico. ¿Dónde lo harías (al escribir)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Ordinales (1º) por superíndice"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Fracciones (1/2) por carácter de fracción (½)"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Rutas de red e Internet por hipervínculos"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Guiones (--) con guión largo (—)"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Reemplazar mientras escribe → Fracciones (1/2) por carácter de fracción (½). No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-176",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-13",
+    "generado": true,
+    "enunciado": "Quieres que al escribir una palabra entre asteriscos Word la ponga en negrita, y entre guiones bajos en cursiva, sin aplicar el formato a mano. ¿Dónde lo activarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Guiones (--) con guión largo (—)"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ *Negrita* y _cursiva_ por formato real"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Fracciones (1/2) por carácter de fracción (½)"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Ordinales (1º) por superíndice"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Reemplazar mientras escribe → *Negrita* y _cursiva_ por formato real. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-177",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-14",
+    "generado": true,
+    "enunciado": "Cada vez que escribes una dirección web Word la convierte en hipervínculo azul y prefieres que no lo haga. ¿Dónde desactivarías esa conversión al escribir?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Ordinales (1º) por superíndice"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Rutas de red e Internet por hipervínculos"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Markdown para título, negrita, cursiva y tachado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Reemplazar mientras escribe → Rutas de red e Internet por hipervínculos. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-178",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-15",
+    "generado": true,
+    "enunciado": "Quieres que al escribir con sintaxis Markdown Word aplique automáticamente título, negrita, cursiva o tachado. ¿Dónde lo activarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Rutas de red e Internet por hipervínculos"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Guiones (--) con guión largo (—)"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Markdown para título, negrita, cursiva y tachado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Reemplazar mientras escribe → Markdown para título, negrita, cursiva y tachado. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-179",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-16",
+    "generado": true,
+    "enunciado": "Al escribir \"1º\" quieres que la \"o\" quede automáticamente en superíndice. ¿Dónde activarías esa sustitución al escribir?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Rutas de red e Internet por hipervínculos"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ *Negrita* y _cursiva_ por formato real"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Ordinales (1º) por superíndice"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Reemplazar mientras escribe → Ordinales (1º) por superíndice. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-180",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-17",
+    "generado": true,
+    "enunciado": "Al escribir dos guiones seguidos -- entre palabras quieres que Word los convierta en un guión largo —. ¿Dónde activarías esa sustitución al escribir?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Guiones (--) con guión largo (—)"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Markdown para título, negrita, cursiva y tachado"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Ordinales (1º) por superíndice"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Reemplazar mientras escribe → Guiones (--) con guión largo (—). No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-181",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-18",
+    "generado": true,
+    "enunciado": "Escribes * y un espacio al inicio de una línea y Word crea una lista con viñetas; quieres desactivarlo. ¿Dónde lo harías (al escribir)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Tablas"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Listas automáticas con números"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Estilos de títulos integrados"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Listas automáticas con viñetas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Aplicar mientras escribe → Listas automáticas con viñetas. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-182",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-19",
+    "generado": true,
+    "enunciado": "Escribes 1. y un espacio al inicio de una línea y Word inicia una lista numerada; quieres desactivarlo. ¿Dónde lo harías (al escribir)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Tablas"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Estilos de títulos integrados"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Listas automáticas con números"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Líneas de borde"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Aplicar mientras escribe → Listas automáticas con números. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-183",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-20",
+    "generado": true,
+    "enunciado": "Escribes tres guiones --- en una línea y al pulsar Entrar Word dibuja una línea horizontal; quieres desactivarlo. ¿Dónde lo harías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Líneas de borde"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Listas automáticas con viñetas"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Listas automáticas con números"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Tablas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Aplicar mientras escribe → Líneas de borde. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-184",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-21",
+    "generado": true,
+    "enunciado": "Escribes +---+---+ al inicio de una línea y al pulsar Entrar Word crea una tabla; quieres desactivarlo. ¿Dónde lo harías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Tablas"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Listas automáticas con números"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Estilos de títulos integrados"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Listas automáticas con viñetas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Aplicar mientras escribe → Tablas. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-185",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-22",
+    "generado": true,
+    "enunciado": "Quieres que al escribir una línea corta sin puntuación final y pulsar Entrar dos veces Word aplique un estilo de título. ¿Dónde activarías esa función (al escribir)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Listas automáticas con números"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Estilos de títulos integrados"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Listas automáticas con viñetas"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Tablas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Aplicar mientras escribe → Estilos de títulos integrados. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-186",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-23",
+    "generado": true,
+    "enunciado": "Construyes una lista y quieres que cada nuevo elemento herede automáticamente el formato del anterior. ¿Dónde activarías esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Establecer la primera sangría y la sangría izquierda con tabulaciones y retrocesos"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Dar al primer elemento de las listas el formato del anterior"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Markdown para título, negrita, cursiva y tachado"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Estilos de títulos integrados"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Mientras escribe, automáticamente → Dar al primer elemento de las listas el formato del anterior. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-187",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-24",
+    "generado": true,
+    "enunciado": "Quieres sangrar la primera línea de un párrafo con Tab y quitarla con Retroceso, sin usar la regla ni el menú. ¿Dónde activarías esa función?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ Establecer la primera sangría y la sangría izquierda con tabulaciones y retrocesos"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Líneas de borde"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Listas automáticas con viñetas"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Guiones (--) con guión largo (—)"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Mientras escribe, automáticamente → Establecer la primera sangría y la sangría izquierda con tabulaciones y retrocesos. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-188",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-25",
+    "generado": true,
+    "enunciado": "Has formateado a mano varios párrafos parecidos a un título integrado y quieres que Word aplique ese estilo integrado automáticamente. ¿Dónde activarías esa función?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato mientras escribe ▸ Definir estilos basándose en el formato personal"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato mientras escribe ▸ Guiones (--) con guión largo (—)"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Rutas de red e Internet por hipervínculos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato mientras escribe → Mientras escribe, automáticamente → Definir estilos basándose en el formato personal. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-189",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-26",
+    "generado": true,
+    "enunciado": "Quieres ejecutar el comando Autoformato sobre un documento ya escrito para que aplique estilos de título a los párrafos cortos sin puntuación. ¿Dónde activarías esa opción del Autoformato?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ Estilos de lista"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ Estilos de títulos integrados"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ Listas automáticas con viñetas"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ Otros estilos de párrafo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Aplicar → Estilos de títulos integrados. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-190",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-27",
+    "generado": true,
+    "enunciado": "Al ejecutar Autoformato sobre un documento existente quieres que Word cree listas con viñetas donde corresponda. ¿Dónde activarías esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ Otros estilos de párrafo"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ Estilos de lista"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ Listas automáticas con viñetas"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ Estilos de títulos integrados"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Aplicar → Listas automáticas con viñetas. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-191",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-28",
+    "generado": true,
+    "enunciado": "Al aplicar Autoformato quieres que Word aplique también estilos de lista a los elementos que los requieran. ¿Dónde activarías esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ Otros estilos de párrafo"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ Estilos de títulos integrados"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ Estilos de lista"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ Listas automáticas con viñetas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Aplicar → Estilos de lista. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-192",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-29",
+    "generado": true,
+    "enunciado": "Al ejecutar Autoformato quieres que Word aplique otros estilos de párrafo además de títulos y listas. ¿Dónde lo activarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ Estilos de títulos integrados"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ Listas automáticas con viñetas"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ Otros estilos de párrafo"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ Estilos de lista"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Aplicar → Otros estilos de párrafo. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-193",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-30",
+    "generado": true,
+    "enunciado": "Tienes un documento ya escrito con comillas rectas y quieres que al ejecutar Autoformato Word las sustituya todas por comillas tipográficas. ¿Dónde activarías esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ Guiones (--) con guión largo (—)"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ Fracciones (1/2) por carácter de fracción (½)"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ Rutas de red e Internet por hipervínculos"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Reemplazar → \"Comillas rectas\" con \"comillas tipográficas\". No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-194",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-31",
+    "generado": true,
+    "enunciado": "Tienes ordinales como \"1o\" y \"2o\" sin superíndice y quieres corregirlos todos de una vez con Autoformato. ¿Dónde activarías esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ *Negrita* y _cursiva_ por formato real"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ Guiones (--) con guión largo (—)"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ Rutas de red e Internet por hipervínculos"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ Ordinales (1º) por superíndice"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Reemplazar → Ordinales (1º) por superíndice. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-195",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-32",
+    "generado": true,
+    "enunciado": "Tienes fracciones como 1/2 y 3/4 y quieres convertirlas todas de una vez a su carácter especial con Autoformato. ¿Dónde activarías esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ Rutas de red e Internet por hipervínculos"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ Fracciones (1/2) por carácter de fracción (½)"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ *Negrita* y _cursiva_ por formato real"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Reemplazar → Fracciones (1/2) por carácter de fracción (½). No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-196",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-33",
+    "generado": true,
+    "enunciado": "Tu documento tiene -- en varios sitios y quieres reemplazarlos todos por guiones largos con Autoformato. ¿Dónde lo activarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ *Negrita* y _cursiva_ por formato real"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ Guiones (--) con guión largo (—)"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ Rutas de red e Internet por hipervínculos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Reemplazar → Guiones (--) con guión largo (—). No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-197",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-34",
+    "generado": true,
+    "enunciado": "Tienes texto entre asteriscos y guiones bajos que quieres convertir de una vez a negrita y cursiva reales con Autoformato. ¿Dónde activarías esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ *Negrita* y _cursiva_ por formato real"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ Rutas de red e Internet por hipervínculos"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ Ordinales (1º) por superíndice"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Reemplazar → *Negrita* y _cursiva_ por formato real. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-198",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-35",
+    "generado": true,
+    "enunciado": "Tu documento tiene varias URLs en texto plano y quieres convertirlas todas a hipervínculos de una vez con Autoformato. ¿Dónde activarías esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ Rutas de red e Internet por hipervínculos"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ Fracciones (1/2) por carácter de fracción (½)"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ *Negrita* y _cursiva_ por formato real"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ Ordinales (1º) por superíndice"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Reemplazar → Rutas de red e Internet por hipervínculos. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-199",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-36",
+    "generado": true,
+    "enunciado": "Al aplicar Autoformato quieres que los estilos que ya aplicaste a mano se conserven y no se sobrescriban. ¿Dónde activarías esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ Otros estilos de párrafo"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ Documentos de correo electrónico de texto sin formato"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ Estilos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Conservar → Estilos. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-200",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-37",
+    "generado": true,
+    "enunciado": "Quieres que Autoformato se aplique también a los documentos de correo electrónico en texto sin formato. ¿Dónde activarías esa opción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato ▸ Documentos de correo electrónico de texto sin formato"
+      },
+      {
+        "letter": "B",
+        "text": "Autoformato ▸ Estilos de títulos integrados"
+      },
+      {
+        "letter": "C",
+        "text": "Autoformato ▸ Guiones (--) con guión largo (—)"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato ▸ Otros estilos de párrafo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Autoformato → Siempre aplicar Autoformato → Documentos de correo electrónico de texto sin formato. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-201",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-38",
+    "generado": true,
+    "enunciado": "Al hacer clic derecho sobre una fecha quieres que aparezcan opciones como crear una tarea o evento de calendario. ¿Dónde activarías esa funcionalidad?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoformato mientras escribe ▸ \"Comillas rectas\" con \"comillas tipográficas\""
+      },
+      {
+        "letter": "B",
+        "text": "Acciones ▸ Habilitar acciones adicionales en el menú contextual"
+      },
+      {
+        "letter": "C",
+        "text": "Autocorrección ▸ Corregir el uso accidental de bLOQ MAyÚS"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ *Negrita* y _cursiva_ por formato real"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Acciones → Habilitar acciones adicionales en el menú contextual. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-202",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-39",
+    "generado": true,
+    "enunciado": "Has activado las acciones del menú contextual pero solo quieres las de fecha y hora, no las de nombres de persona ni lugares. ¿Dónde activas o desactivas cada tipo de acción?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autocorrección ▸ Reemplazar texto mientras escribe"
+      },
+      {
+        "letter": "B",
+        "text": "Autocorrección ▸ Poner en mayúscula los nombres de días"
+      },
+      {
+        "letter": "C",
+        "text": "Acciones ▸ Acciones disponibles"
+      },
+      {
+        "letter": "D",
+        "text": "Autoformato mientras escribe ▸ Fracciones (1/2) por carácter de fracción (½)"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Opciones de Autocorrección... → Acciones → Acciones disponibles. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-203",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-40",
+    "generado": true,
+    "enunciado": "Tu documento tiene siglas como \"AENA\" o \"RENFE\" y el corrector las marca como errores. ¿Dónde le dirías a Word que ignore las palabras en mayúsculas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Exigir mayúsculas acentuadas en francés"
+      },
+      {
+        "letter": "B",
+        "text": "Sugerir solo del diccionario principal"
+      },
+      {
+        "letter": "C",
+        "text": "Modos del francés"
+      },
+      {
+        "letter": "D",
+        "text": "Omitir palabras en MAYÚSCULAS"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Omitir palabras en MAYÚSCULAS. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-204",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-41",
+    "generado": true,
+    "enunciado": "Tu documento tiene referencias como \"Informe34c\" o \"Expediente2024\" y el corrector las marca como errores. ¿Dónde configurarías Word para que las ignore?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Omitir palabras que contengan números"
+      },
+      {
+        "letter": "B",
+        "text": "Modos del español"
+      },
+      {
+        "letter": "C",
+        "text": "Modos del francés"
+      },
+      {
+        "letter": "D",
+        "text": "Marcar palabras repetidas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Omitir palabras que contengan números. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-205",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-42",
+    "generado": true,
+    "enunciado": "El corrector marca como errores las URLs y direcciones de correo de tu documento. ¿Dónde le dirías a Word que las omita?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Omitir palabras en MAYÚSCULAS"
+      },
+      {
+        "letter": "B",
+        "text": "Modos del francés"
+      },
+      {
+        "letter": "C",
+        "text": "Marcar palabras repetidas"
+      },
+      {
+        "letter": "D",
+        "text": "Omitir archivos y direcciones de Internet"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Omitir archivos y direcciones de Internet. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-206",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-43",
+    "generado": true,
+    "enunciado": "Has escrito \"de de camino\" sin darte cuenta. ¿Dónde activarías que Word detecte y marque las palabras repetidas consecutivas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Modos del francés"
+      },
+      {
+        "letter": "B",
+        "text": "Diccionarios personalizados..."
+      },
+      {
+        "letter": "C",
+        "text": "Omitir archivos y direcciones de Internet"
+      },
+      {
+        "letter": "D",
+        "text": "Marcar palabras repetidas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Marcar palabras repetidas. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-207",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-44",
+    "generado": true,
+    "enunciado": "Tu documento tiene partes en francés y quieres que el corrector marque las mayúsculas francesas que deberían llevar tilde y no la llevan. ¿Dónde lo activarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Exigir mayúsculas acentuadas en francés"
+      },
+      {
+        "letter": "B",
+        "text": "Omitir archivos y direcciones de Internet"
+      },
+      {
+        "letter": "C",
+        "text": "Diccionarios personalizados..."
+      },
+      {
+        "letter": "D",
+        "text": "Modos del francés"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Exigir mayúsculas acentuadas en francés. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-208",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-45",
+    "generado": true,
+    "enunciado": "El corrector tarda mucho porque consulta todos los diccionarios personalizados. ¿Dónde lo limitarías para que solo use el diccionario principal?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Sugerir solo del diccionario principal"
+      },
+      {
+        "letter": "B",
+        "text": "Diccionarios personalizados..."
+      },
+      {
+        "letter": "C",
+        "text": "Omitir palabras en MAYÚSCULAS"
+      },
+      {
+        "letter": "D",
+        "text": "Exigir mayúsculas acentuadas en francés"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Sugerir solo del diccionario principal. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-209",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-48",
+    "generado": true,
+    "enunciado": "Tienes un documento con partes en francés y quieres que el corrector acepte tanto la ortografía tradicional como la de la reforma. ¿Dónde lo configurarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Marcar palabras repetidas"
+      },
+      {
+        "letter": "B",
+        "text": "Exigir mayúsculas acentuadas en francés"
+      },
+      {
+        "letter": "C",
+        "text": "Modos del francés"
+      },
+      {
+        "letter": "D",
+        "text": "Omitir palabras que contengan números"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Modos del francés. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-210",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-49",
+    "generado": true,
+    "enunciado": "Tienes un fragmento en portugués de Brasil y quieres que el corrector use la ortografía posterior a la reforma. ¿Dónde lo configurarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Exigir mayúsculas acentuadas en francés"
+      },
+      {
+        "letter": "B",
+        "text": "Modos del portugués brasileño"
+      },
+      {
+        "letter": "C",
+        "text": "Marcar palabras repetidas"
+      },
+      {
+        "letter": "D",
+        "text": "Omitir archivos y direcciones de Internet"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Modos del portugués brasileño. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-211",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-51",
+    "generado": true,
+    "enunciado": "Quieres que Word subraye en tiempo real los errores gramaticales mientras escribes. ¿Dónde activarías esa función?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Palabras que se confunden frecuentemente"
+      },
+      {
+        "letter": "B",
+        "text": "Marcar errores gramaticales mientras escribe"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar estadísticas de legibilidad"
+      },
+      {
+        "letter": "D",
+        "text": "Configuración... ▸ Cuadro de diálogo Gramática"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Marcar errores gramaticales mientras escribe. Atajo relacionado: F7. F7 abre el panel de revisión manualmente."
+  },
+  {
+    "id": "archivo-212",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-52",
+    "generado": true,
+    "enunciado": "Word no te avisa cuando escribes \"haber\" por \"a ver\" o \"echo\" por \"hecho\". ¿Dónde activarías la detección de esas confusiones frecuentes?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Volver a revisar documento"
+      },
+      {
+        "letter": "B",
+        "text": "Palabras que se confunden frecuentemente"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar estadísticas de legibilidad"
+      },
+      {
+        "letter": "D",
+        "text": "Estilo de escritura"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Palabras que se confunden frecuentemente. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-213",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-53",
+    "generado": true,
+    "enunciado": "Al terminar la revisión ortográfica quieres que Word muestre un resumen con el índice de legibilidad y el número de oraciones y párrafos. ¿Dónde lo activarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Palabras que se confunden frecuentemente"
+      },
+      {
+        "letter": "B",
+        "text": "Configuración... ▸ Cuadro de diálogo Gramática"
+      },
+      {
+        "letter": "C",
+        "text": "Marcar errores gramaticales mientras escribe"
+      },
+      {
+        "letter": "D",
+        "text": "Mostrar estadísticas de legibilidad"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Mostrar estadísticas de legibilidad. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-214",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-54",
+    "generado": true,
+    "enunciado": "Quieres que el Editor no solo corrija errores gramaticales sino que sugiera mejoras de estilo y claridad. ¿Dónde cambias el nivel de revisión de solo gramática a gramática y mejoras?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Revisar ortografía mientras se escribe"
+      },
+      {
+        "letter": "B",
+        "text": "Marcar errores gramaticales mientras escribe"
+      },
+      {
+        "letter": "C",
+        "text": "Estilo de escritura"
+      },
+      {
+        "letter": "D",
+        "text": "Mostrar estadísticas de legibilidad"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Estilo de escritura. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-215",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-55",
+    "generado": true,
+    "enunciado": "El Editor te marca dequeísmo y leísmo constantemente y quieres revisar qué comprobaciones gramaticales concretas están activas para ajustarlas. ¿Dónde accedes a esa lista detallada?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Volver a revisar documento"
+      },
+      {
+        "letter": "B",
+        "text": "Estilo de escritura"
+      },
+      {
+        "letter": "C",
+        "text": "Configuración... ▸ Cuadro de diálogo Gramática"
+      },
+      {
+        "letter": "D",
+        "text": "Mostrar estadísticas de legibilidad"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Configuración... → Cuadro de diálogo Gramática. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-216",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-56",
+    "generado": true,
+    "enunciado": "Has ignorado varios errores en una revisión anterior y ahora quieres que Word los vuelva a marcar todos como si fuera la primera vez. ¿Dónde lo harías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Marcar errores gramaticales mientras escribe"
+      },
+      {
+        "letter": "B",
+        "text": "Volver a revisar documento"
+      },
+      {
+        "letter": "C",
+        "text": "Estilo de escritura"
+      },
+      {
+        "letter": "D",
+        "text": "Configuración... ▸ Cuadro de diálogo Gramática"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Volver a revisar documento. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-217",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-57",
+    "generado": true,
+    "enunciado": "Vas a compartir un borrador y no quieres que los destinatarios vean los subrayados rojos de ortografía, pero sí en tus demás documentos. ¿Dónde lo configurarías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Marcar errores gramaticales mientras escribe"
+      },
+      {
+        "letter": "B",
+        "text": "Omitir archivos y direcciones de Internet"
+      },
+      {
+        "letter": "C",
+        "text": "Exigir mayúsculas acentuadas en francés"
+      },
+      {
+        "letter": "D",
+        "text": "Excepciones para: [documento] ▸ Ocultar errores de ortografía solo en este documento"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Excepciones para: [documento] → Ocultar errores de ortografía solo en este documento. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-218",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Revisión",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-rev-58",
+    "generado": true,
+    "enunciado": "Igual que el caso anterior pero con los subrayados de gramática: quieres ocultarlos solo en el documento actual. ¿Dónde lo harías?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Excepciones para: [documento] ▸ Ocultar errores de gramática solo en este documento"
+      },
+      {
+        "letter": "B",
+        "text": "Volver a revisar documento"
+      },
+      {
+        "letter": "C",
+        "text": "Diccionarios personalizados..."
+      },
+      {
+        "letter": "D",
+        "text": "Exigir mayúsculas acentuadas en francés"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Excepciones para: [documento] → Ocultar errores de gramática solo en este documento. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
   }
 ]
