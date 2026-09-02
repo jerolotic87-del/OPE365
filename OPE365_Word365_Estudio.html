@@ -1880,9 +1880,10 @@ window.OPE = {
 /* ============================================================
    OPE365 · Motor de aprendizaje (Learning Engine)
    ------------------------------------------------------------
-   Fase 1: motor + priorizador + generador de sesión + capa de
-   examen. SIN interfaz. Se valida con tests/sim.js antes de
-   integrar ninguna pantalla.
+   Fase 1 + endurecimiento. Motor + priorizador + generador de
+   sesión + capa de examen. SIN interfaz. Se valida con
+   tests/sim.js y tests/test_engine.js antes de integrar
+   ninguna pantalla.
 
    Documentos de diseño:
      docs/plan-inteligente.html   — arquitectura
@@ -1890,9 +1891,18 @@ window.OPE = {
                                     parámetro etiquetado
 
    No toca app.js. Lee/escribe claves nuevas en OPE.PROGRESS
-   (plan, events, concepts) y llama a OPE.persist().
-   Todo el tiempo entra por un parámetro `now` (ms) para que la
-   simulación controle el reloj.
+   (plan, events, concepts, qstate, fcstate) con guardas de init
+   y llama a OPE.persist(). Todo el tiempo entra por un parámetro
+   `now` (ms) para que la simulación controle el reloj.
+
+   MODELO DE ESTADO (endurecido) — dos ejes independientes:
+     masteryStatus : nuevo · aprendiendo · consolidando · asentado
+     reviewState   : futuro · debido · atrasado
+   Un concepto puede ser  asentado + atrasado  a la vez: que toque
+   repasarlo NO significa que se haya dejado de saber. 'asentado'
+   sólo se abandona ante evidencia ACTUAL de pérdida (un fallo
+   reciente o el acierto reciente por debajo del umbral).
+   `status` se conserva como valor compuesto legado para compat.
 ============================================================ */
 (function(){
 "use strict";
@@ -1900,40 +1910,50 @@ const O = window.OPE;
 if(!O){ console.warn("engine.js: window.OPE no disponible"); return; }
 
 const DAY = 86400000;
+const HOUR = 3600000;
 function save(){ if(!O.LE || !O.LE._noPersist) O.persist(); }
 
 /* ============================================================
    PARÁMETROS — la "tabla de honestidad" en forma de código.
    Categorías:  PRINCIPIO (ciencia) · PRODUCTO (decisión) ·
                 HEURÍSTICA (punto de partida) · CALIBRABLE
-   Solo se tocan aquí, nunca desde la interfaz.
+   Sólo se tocan aquí, nunca desde la interfaz.
 ============================================================ */
 const P = {
   // — "asentado": evidencia suficiente de dominio ACTUAL (reversible).
   //   PRODUCTO. Umbral conservador para preparación de oposición.
-  //   3 recuperaciones (Rawson) + 4 condiciones como hipótesis inicial.
-  masteryReps:        3,      // recuperaciones correctas
-  masterySpanDays:    3,      // separación temporal real (primera→última)
+  //   3 recuperaciones (Rawson) + condiciones adicionales.
+  masteryReps:        3,      // recuperaciones correctas en días DISTINTOS
+  masterySpanDays:    3,      // separación temporal real (primera→última), días
   masteryInterval:    7,      // intervalo alcanzado, días
   masteryAcc:         0.8,    // acierto en las últimas 5 recuperaciones
   masteryFramings:    2,      // nº de framings distintos acertados (transferencia)
   masteryConfidence:  0.45,   // confianza mínima del diagnóstico para declarar 'asentado'
+  //   histéresis: una vez 'asentado', sólo se pierde con evidencia actual
+  masteryDropAcc:     0.6,    // si el acierto reciente cae por debajo → 'consolidando'
 
   // — retención objetivo. PRODUCTO. Solo configurable aquí.
-  //   0.90 = priorizar no olvidar sobre eficiencia.
+  //   0.90 = priorizar no olvidar sobre eficiencia. NO es una constante
+  //   científica descubierta para este usuario: es una decisión de producto
+  //   calibrable a la luz de simulación y datos reales.
   targetRetention:    0.90,
 
   // — curva de olvido. HEURÍSTICA. R(t)=2^(-kR·t/interval); kR fija R=target en t=interval.
   get kR(){ return -Math.log2(this.targetRetention); },   // ≈ 0.152 para 0.90
 
   // — progresión de intervalos. HEURÍSTICA (rango de SM-2 / FSRS; valores nuestros).
-  interval0:   { again: 1, hard: 2, good: 3 },   // primera revisión, días
-  growth:      2.2,     // multiplicador tras un "good"
-  hardFactor:  0.35,    // "hard" crece (growth-1)·hardFactor
-  lapseFactor: 0.4,     // "again": interval ·= lapseFactor
+  firstInterval:   2,   // primera revisión tras un acierto, días. NO depende de la
+                        // rapidez de la respuesta (eso influye a partir de la 2ª rep).
+  lapseFactor:     0.4, // "again": interval ·= lapseFactor
+  growth:          2.2, // multiplicador tras un "good" espaciado
+  hardFactor:      0.35,// "hard" crece (growth-1)·hardFactor
   spacingBonusMin: 0.8, // recuperar tras hueco < intervalo previo vale menos
   spacingBonusMax: 1.4, // recuperar tras hueco largo vale más (efecto de espaciado, PRINCIPIO)
-  difficultyDamp: 0.15, // amortigua el crecimiento en conceptos intrínsecamente duros
+  difficultyDamp:  0.15,// amortigua el crecimiento en conceptos intrínsecamente duros
+  sameSessionHours: 10, // dos recuperaciones dentro de este margen = misma sesión:
+                        //   cuentan como recuperación pero NO espacian (no se puede
+                        //   "espaciar" dentro del mismo día). Esto hace que dos
+                        //   eventos del mismo instante sean conmutativos.
   intervalMin: 1, intervalMax: 365,
 
   // — capa de examen. PRODUCTO.
@@ -1941,13 +1961,21 @@ const P = {
   defaultHorizonDays: 90,   // horizonte operativo si aún no hay fecha
 
   // — anti-repetición. PRODUCTO.
-  minRepeatSessions:  3,    // una pregunta no se repite en N sesiones
-  minRepeatHours:    20,
+  minRepeatSessions:  3,    // un ítem no se repite en N sesiones consecutivas
+  minRepeatHours:    20,    // ni dentro de esta ventana horaria
   maxSilenceDays:    21,    // ningún concepto con contenido más de N días sin aparecer
+  maxPerConceptLong: 3,     // veces que un concepto puede aparecer en una sesión larga
+  maxPerConceptShort: 2,    // …y en una sesión corta (≤12 ítems)
 
-  // — ritmo. HEURÍSTICA (se sustituye por la media móvil real).
-  secPerQuestion: 28,
-  secPerFlashcard: 14,
+  // — ritmo / duración de sesión. HEURÍSTICA (se sustituye por la media móvil real).
+  secPerQuestion:   28,     // por defecto hasta tener ≥8 medidas reales
+  secPerFlashcard:  14,
+  secObservedMin:   12, secObservedMax: 120,
+  sessionMinItems:  3,
+  minSecPerItemHard: 8,     // nadie responde más rápido que esto: sólo evita divisiones absurdas
+  //   tolerancia de duración: una sesión de M min debe caer en [M·lo, M·hi]
+  //   salvo que se agote el contenido disponible.
+  sessionDurLo: 0.70, sessionDurHi: 1.25,
 
   // — pesos del priorizador. CALIBRABLE (empiezan como juicio).
   //   Cada fase modula estos multiplicadores (ver phaseProfile).
@@ -2032,23 +2060,26 @@ function conceptDifficulty(conceptId){
 }
 
 /* ============================================================
-   ESTADO — PROGRESS.concepts / events / plan / qstate
+   ESTADO — PROGRESS.concepts / events / plan / qstate / fcstate
 ============================================================ */
 function store(){
   const pr = O.PROGRESS;
   if(!pr.concepts) pr.concepts = {};
   if(!pr.events)   pr.events   = [];
   if(!pr.qstate)   pr.qstate   = {};
-  if(!pr.plan)     pr.plan     = null;
+  if(!pr.fcstate)  pr.fcstate  = {};
+  if(!("plan" in pr)) pr.plan  = null;
   return pr;
 }
 function dayNum(ms){ return Math.floor(ms / DAY); }
+function clamp(x,a,b){ return Math.max(a, Math.min(b, x)); }
 
 function newConcept(){
   return { interval:0, lastReview:null, nextReview:null,
     reps:0, correctReps:0, lapses:0, recall:[], framingsCorrect:[],
     correctRepDays:[], examPerf:[], firstSeen:null,
-    status:"nuevo", diagConfidence:0 };
+    masteryStatus:"nuevo", reviewState:"futuro", status:"nuevo",
+    diagConfidence:0, examDeficit:false };
 }
 function getConcept(id){
   const pr = store();
@@ -2062,54 +2093,81 @@ function retrievability(c, now){
   const t = Math.max(0, (now - c.lastReview) / DAY);
   return Math.pow(2, -P.kR * t / c.interval);
 }
-function clamp(x,a,b){ return Math.max(a, Math.min(b, x)); }
-function recentAcc(c){ return c.recall.length ? c.recall.filter(Boolean).length / c.recall.length : 0; }
-function spanDays(c){
-  if(c.correctRepDays.length < 2) return 0;
-  return c.correctRepDays[c.correctRepDays.length-1] - c.correctRepDays[0];
+function recentAcc(c){
+  const r = (c && c.recall) || [];
+  return r.length ? r.filter(Boolean).length / r.length : 0;
 }
-function memoryOK(c, now){ return retrievability(c, now||Date.now()) >= 0.75 || c.interval >= P.masteryInterval; }
+function spanDays(c){
+  const d = (c && c.correctRepDays) || [];
+  return d.length < 2 ? 0 : d[d.length-1] - d[0];
+}
+function memoryOK(c, now){ return retrievability(c, now||Date.now()) >= 0.75 || (c && c.interval >= P.masteryInterval); }
 // transferencia: el estado no guarda su propio id, así que recibe (estado, conceptId)
 function transferScoreOf(state, conceptId){
   const avail = (CONCEPT_BY_ID[conceptId] && CONCEPT_BY_ID[conceptId].framings.length) || 1;
-  return clamp(state.framingsCorrect.length / Math.max(2, avail), 0, 1);
+  return clamp(((state.framingsCorrect||[]).length) / Math.max(2, avail), 0, 1);
 }
 
-/* estado derivado — SIEMPRE recalculado, por eso "asentado" es reversible */
-function deriveStatus(c, now){
-  if(!c.reps) return "nuevo";
+/* ---- EJE 1: dominio del concepto (independiente de si toca repasar) ---- */
+function deriveMastery(c){
+  if(!c || !c.reps) return "nuevo";
   const acc = recentAcc(c);
-  const asentado =
-       c.correctReps      >= P.masteryReps
-    && c.correctRepDays.length >= P.masteryReps
-    && spanDays(c)        >= P.masterySpanDays
-    && c.interval         >= P.masteryInterval
-    && acc                >= P.masteryAcc
-    && c.framingsCorrect.length >= P.masteryFramings
-    && (c.diagConfidence || 0)  >= P.masteryConfidence;   // sin datos suficientes no se declara dominio
-  if(asentado){
-    // si el recuerdo estimado ha caído demasiado, el concepto vuelve a
-    // necesitar consolidación aunque la evidencia histórica siga ahí
-    if(retrievability(c, now) < 0.5) return "consolidando";
-    return (c.nextReview && c.nextReview > now) ? "repaso" : "asentado";
+  const meets =
+       (c.correctReps||0)            >= P.masteryReps
+    && (c.correctRepDays||[]).length >= P.masteryReps
+    && spanDays(c)                   >= P.masterySpanDays
+    && (c.interval||0)               >= P.masteryInterval
+    && acc                           >= P.masteryAcc
+    && (c.framingsCorrect||[]).length>= P.masteryFramings
+    && (c.diagConfidence||0)         >= P.masteryConfidence;
+  if(meets) return "asentado";
+  if(c.masteryStatus === "asentado"){
+    // ya estaba asentado: sólo se abandona ante evidencia ACTUAL de pérdida.
+    // Que haya vencido para repaso, o que el intervalo se haya recortado por
+    // matemática de agenda, NO cuenta como pérdida de dominio.
+    const lapsedRecently = (c.recall||[]).slice(-2).includes(false);
+    if(lapsedRecently || acc < P.masteryDropAcc) return "consolidando";
+    return "asentado";
   }
-  if(c.correctReps >= 1 && acc >= 0.5) return "consolidando";
+  if((c.correctReps||0) >= 1 && acc >= 0.5) return "consolidando";
   return "aprendiendo";
 }
+/* ---- EJE 2: estado de repaso (puramente temporal) ---- */
+function deriveReviewState(c, now){
+  if(!c || !c.nextReview) return "futuro";
+  if(now < c.nextReview) return "futuro";
+  const over = (now - c.nextReview) / ((c.interval||1) * DAY);
+  return over > 0.5 ? "atrasado" : "debido";
+}
+/* valor compuesto legado (compat con lecturas antiguas) */
+function legacyStatus(c){
+  if(!c || !c.reps) return "nuevo";
+  if(c.masteryStatus === "asentado") return c.reviewState === "futuro" ? "asentado" : "repaso";
+  return c.masteryStatus;
+}
+
 /* confianza del diagnóstico (INTERNA, 0..1): cuánto se fía el motor de conocer
    el verdadero estado del concepto. Sube con volumen de respuestas, variedad de
-   framings y dispersión temporal. Nunca se muestra al usuario. */
+   framings y dispersión temporal. Nunca se muestra al usuario; sirve para no
+   tomar decisiones agresivas con pocos datos. */
 function deriveConfidence(c){
-  const vol   = clamp((c.reps + (c.examPerf||[]).length * 2) / 10, 0, 1);
-  const varia = clamp((c.framingsCorrect||[]).length / 4, 0, 1);
+  const vol   = clamp(((c.reps||0) + ((c.examPerf||[]).length) * 2) / 10, 0, 1);
+  const varia = clamp(((c.framingsCorrect||[]).length) / 4, 0, 1);
   const disp  = clamp(spanDays(c) / 21, 0, 1);
   return clamp(0.45 * vol + 0.35 * varia + 0.20 * disp, 0, 1);
+}
+/* recalcula los tres campos derivados de un concepto */
+function refreshDerived(c, now){
+  c.diagConfidence = deriveConfidence(c);
+  c.masteryStatus  = deriveMastery(c);
+  c.reviewState    = deriveReviewState(c, now);
+  c.status         = legacyStatus(c);
 }
 
 /* ============================================================
    REGISTRO DE EVENTOS + ACTUALIZACIÓN DEL MODELO
 ============================================================ */
-function gradeFromAnswer(correct, ms, conceptId){
+function gradeFromAnswer(correct, ms){
   if(!correct) return "again";
   if(ms && ms > 3200) return "hard";   // acierto lento
   return "good";
@@ -2122,45 +2180,54 @@ function gradeFromFlashcard(rating){   // 'no'|'dificil'|'si'
 function recordEvent(ev){
   const pr = store();
   const now = ev.ts || Date.now();
+  const isExam = ev.kind === "exam";
+  const itemKind = ev.kind === "fc" ? "fc" : "q";
   const conceptId = ev.concept
-    || (ev.kind === "fc" ? CONCEPT_OF_CARD[ev.ref] : CONCEPT_OF_Q[ev.ref]);
+    || (itemKind === "fc" ? CONCEPT_OF_CARD[ev.ref] : CONCEPT_OF_Q[ev.ref]);
   const framing = ev.framing
-    || (ev.kind === "q" && O.Q_BY_ID[ev.ref] ? framingOf(O.Q_BY_ID[ev.ref]) : "conceptual");
+    || (itemKind === "q" && O.Q_BY_ID[ev.ref] ? framingOf(O.Q_BY_ID[ev.ref]) : "conceptual");
 
   pr.events.push({ ts:now, kind:ev.kind, ref:ev.ref, concept:conceptId,
     framing, grade:ev.grade, correct:!!ev.correct, ms:ev.ms||null,
     confidence:ev.confidence||null });
   if(pr.events.length > 4000) pr.events = pr.events.slice(-3000);
 
-  // estado ligero de la pregunta (antirrepetición + señal de competencia)
-  if(ev.kind === "q" && ev.ref){
-    const qs = pr.qstate[ev.ref] || { seen:0, correct:0, wrong:0, last:0 };
-    qs.seen++; qs.last = now; ev.correct ? qs.correct++ : qs.wrong++;
-    pr.qstate[ev.ref] = qs;
+  // estado ligero del ítem (anti-repetición + señal de competencia) — preguntas y fichas
+  const bag = itemKind === "fc" ? pr.fcstate : pr.qstate;
+  if(ev.ref){
+    const s = bag[ev.ref] || { seen:0, correct:0, wrong:0, last:0 };
+    s.seen++; s.last = now; ev.correct ? s.correct++ : s.wrong++;
+    bag[ev.ref] = s;
   }
 
-  if(!conceptId){ save(); return; }
-  updateConceptState(conceptId, ev.grade, framing, ev.kind === "exam", now);
+  if(conceptId) updateConceptState(conceptId, ev.grade, framing, isExam, now);
   save();
 }
 
 function updateConceptState(conceptId, grade, framing, isExam, now){
   const c = getConcept(conceptId);
   const prevInterval = c.interval || 0;
+  const sameSession = c.lastReview != null && (now - c.lastReview) < P.sameSessionHours * HOUR;
 
   if(grade === "again"){
     c.interval = Math.max(P.intervalMin, (c.interval || 1) * P.lapseFactor);
     c.lapses++;
     c.recall.push(false);
   } else {
-    const gap = prevInterval > 0 && c.lastReview
-      ? ((now - c.lastReview) / DAY) / prevInterval : 1;
-    const spacingBonus = clamp(gap, P.spacingBonusMin, P.spacingBonusMax);
-    const gr = grade === "hard" ? (1 + (P.growth - 1) * P.hardFactor) : P.growth;
-    const diffFactor = 1 - P.difficultyDamp * (conceptDifficulty(conceptId) - 0.5) * 2;
-    c.interval = c.interval
-      ? c.interval * gr * spacingBonus * diffFactor
-      : P.interval0[grade];
+    if(!prevInterval){
+      // primera recuperación: intervalo fijo, no depende de la rapidez
+      c.interval = P.firstInterval;
+    } else if(!sameSession){
+      const gap = c.lastReview ? ((now - c.lastReview) / DAY) / prevInterval : 1;
+      const spacingBonus = clamp(gap, P.spacingBonusMin, P.spacingBonusMax);
+      const gr = grade === "hard" ? (1 + (P.growth - 1) * P.hardFactor) : P.growth;
+      const diffFactor = 1 - P.difficultyDamp * (conceptDifficulty(conceptId) - 0.5) * 2;
+      // un acierto NUNCA acorta el intervalo (a lo sumo lo hace crecer poco: "hard")
+      c.interval = Math.max(prevInterval, prevInterval * gr * spacingBonus * diffFactor);
+    }
+    // sameSession con intervalo ya existente: el intervalo NO cambia — no se puede
+    // espaciar dentro de la misma sesión. Así dos eventos del mismo instante son
+    // conmutativos (mismo resultado en cualquier orden).
     c.correctReps++;
     c.recall.push(true);
     if(framing && !c.framingsCorrect.includes(framing)) c.framingsCorrect.push(framing);
@@ -2175,8 +2242,7 @@ function updateConceptState(conceptId, grade, framing, isExam, now){
   c.nextReview = now + c.interval * DAY;
   if(!c.firstSeen) c.firstSeen = now;
   if(isExam) c.examPerf = c.examPerf.concat(grade !== "again").slice(-12);
-  c.diagConfidence = deriveConfidence(c);   // antes de deriveStatus: lo condiciona
-  c.status = deriveStatus(c, now);
+  refreshDerived(c, now);
 }
 
 /* Siembra el estado de conceptos desde el progreso ya existente
@@ -2205,8 +2271,11 @@ function seedFromLegacy(now){
       updateConceptState(cid, e.correct ? "good" : "again", e.framing, false, e.ts);
     });
   });
-  // el estado sembrado nace algo inestable: recorta intervalos largos
-  Object.values(pr.concepts).forEach(c=>{ if(c.interval > 10) c.interval = 10 * (1 + Math.random()*0); c.nextReview = c.lastReview + c.interval*DAY; });
+  // el estado sembrado nace inestable: recorta intervalos largos (determinista)
+  Object.values(pr.concepts).forEach(c=>{
+    if(c.interval > 10){ c.interval = 10; c.nextReview = c.lastReview + c.interval*DAY; }
+    refreshDerived(c, now);
+  });
   pr._seeded = true;
   save();
 }
@@ -2221,7 +2290,8 @@ function setPlan(opts){
     minutesPerDay: opts.minutesPerDay || 20,
     weekdays: opts.weekdays || [1,2,3,4,5],     // 0=domingo … 6=sábado
     objetivo: opts.objetivo || "consolidar",
-    createdAt: Date.now(), lastRecalc: Date.now(),
+    createdAt: (pr.plan && pr.plan.createdAt) || Date.now(),
+    lastRecalc: Date.now(),
   };
   save();
   return pr.plan;
@@ -2239,20 +2309,30 @@ function planCtx(now){
 function countStudyDays(fromMs, toMs, weekdays){
   let n = 0;
   for(let d = dayNum(fromMs); d < dayNum(toMs); d++){
-    const wd = new Date(d*DAY).getUTCDay();
-    if(weekdays.includes(wd)) n++;
+    if(weekdays.includes(new Date(d*DAY).getUTCDay())) n++;
   }
   return Math.max(0, n);
 }
 function observedSecPerItem(kind){
   const pr = store();
-  const evs = pr.events.filter(e=> e.kind === (kind==="fc"?"fc":"q") && e.ms).slice(-60);
-  if(evs.length < 8) return kind==="fc" ? P.secPerFlashcard : P.secPerQuestion;
+  const want = kind === "fc" ? "fc" : "q";
+  const evs = pr.events.filter(e=> e.kind === want && e.ms).slice(-60);
+  if(evs.length < 8) return want === "fc" ? P.secPerFlashcard : P.secPerQuestion;
   const avg = evs.reduce((s,e)=> s + e.ms/1000, 0) / evs.length;
-  return clamp(avg, 12, 120);
+  return clamp(avg, P.secObservedMin, P.secObservedMax);
 }
+/* Nº de ítems para un presupuesto de minutos. Objetivo aproximado, no tope duro:
+   se usa el ritmo real observado; el único límite es una densidad máxima
+   (maxItemsPerMinute) para no comprimir la sesión hasta lo irreal. */
 function itemsForMinutes(minutes){
-  return clamp(Math.round(minutes * 60 / observedSecPerItem("q")), 3, 50);
+  const sec = observedSecPerItem("q");
+  const raw = Math.round(minutes * 60 / sec);
+  const ceil = Math.round(minutes * 60 / P.minSecPerItemHard);   // sólo evita cifras absurdas
+  return clamp(raw, P.sessionMinItems, Math.max(P.sessionMinItems, ceil));
+}
+/* duración estimada (min) de una sesión de n ítems al ritmo observado */
+function estimatedMinutes(nItems){
+  return Math.round(nItems * observedSecPerItem("q") / 60);
 }
 
 /* ============================================================
@@ -2266,7 +2346,8 @@ function conceptPriority(conceptId, ctx){
   const sizeNorm = meta ? meta.size / MAX_SIZE : 0;
 
   if(!c || !c.reps){
-    return { score: w.cobertura * 1 + w.importancia * sizeNorm, status:"nuevo" };
+    return { score: w.cobertura * 1 + w.importancia * sizeNorm,
+             masteryStatus:"nuevo", reviewState:"futuro", status:"nuevo" };
   }
   const R = retrievability(c, ctx.now);
   const overdue = c.nextReview ? clamp((ctx.now - c.nextReview) / (c.interval*DAY || DAY), 0, 1.5) : 0;
@@ -2284,16 +2365,21 @@ function conceptPriority(conceptId, ctx){
     + w.importancia * sizeNorm
     + lowConf;
 
-  if((c.status === "asentado" || c.status === "repaso") && c.nextReview > ctx.now){
-    score -= w.stableDamp * (1 - overdue);
+  // amortiguar sólo lo que está DOMINADO y aún no vencido; si está dominado pero
+  // debido/atrasado, se deja subir por 'atraso' (repasar lo que sabes también toca).
+  if(c.masteryStatus === "asentado"){
+    if(c.reviewState === "futuro") score -= w.stableDamp;
+    else if(c.reviewState === "debido") score -= w.stableDamp * 0.3;
   }
-  return { score: Math.max(0, score), status:c.status, R, overdue, examP };
+  return { score: Math.max(0, score), masteryStatus:c.masteryStatus, reviewState:c.reviewState,
+           status:c.status, R, overdue, examP };
 }
 
-/* nº de recuperaciones que faltan para "asentado" */
+/* nº de recuperaciones que faltan para 'asentado' (o 1 refresco si ya asentado
+   pero vencido, de cara a la fecha de examen) */
 function neededRetrievals(c){
   if(!c || !c.reps) return P.masteryReps;
-  if(c.status === "asentado" || c.status === "repaso") return 0;
+  if(c.masteryStatus === "asentado") return c.reviewState === "futuro" ? 0 : 1;
   const recall = c.recall || [];
   const acc = recall.length ? recall.filter(Boolean).length / recall.length : 0;
   let missing = Math.max(0, P.masteryReps - (c.correctReps || 0));
@@ -2309,16 +2395,14 @@ function examPressure(conceptId, ctx){
   if(!need) return 0;
   const studyDays = countStudyDays(ctx.now, ctx.criticalMs, ctx.plan.weekdays);
   if(studyDays <= 0) return 3;
-  // reparto: cada concepto "posee" una fracción del tiempo ∝ nº de conceptos activos
   const activeConcepts = CONCEPTS.filter(x=>{
     const st = pr.concepts[x.id];
-    return !st || st.status !== "asentado";
+    return !st || st.masteryStatus !== "asentado";
   }).length || 1;
   const opportunities = studyDays / Math.max(1, activeConcepts / itemsForMinutes(ctx.plan.minutesPerDay));
   return clamp(need / Math.max(1, opportunities), 0, 3);
 }
 
-/* conceptos vencidos, ordenados por prioridad */
 function rankedConcepts(ctx){
   return CONCEPTS.map(c=>{
     const p = conceptPriority(c.id, ctx);
@@ -2334,167 +2418,207 @@ function dueConcepts(ctx){
 }
 
 /* ============================================================
-   SELECCIÓN DE PREGUNTA PARA UN CONCEPTO
+   SELECCIÓN DE ÍTEM PARA UN CONCEPTO
 ============================================================ */
-function recentlySeen(qid, ctx){
+function recentlySeen(ref, kind, ctx){
   const pr = store();
-  const qs = pr.qstate[qid];
-  if(!qs) return false;
-  if(ctx.now - qs.last < P.minRepeatHours*3600000) return true;
-  // ¿en alguna de las últimas N sesiones?
+  const st = (kind === "fc" ? pr.fcstate : pr.qstate)[ref];
+  if(!st) return false;
+  if(ctx.now - st.last < P.minRepeatHours * HOUR) return true;
   const sessTs = (pr._recentSessionStarts || []).slice(-P.minRepeatSessions);
-  return sessTs.some(ts => qs.last >= ts);
+  return sessTs.some(ts => st.last >= ts);
 }
-function bestQuestion(conceptId, ctx, avoid){
+/* devuelve {kind,id,framing} o null. Prefiere preguntas; cae a flashcard sólo si
+   no queda pregunta utilizable. Respeta anti-repetición para AMBOS tipos. */
+function bestItem(conceptId, ctx, avoid){
   const meta = CONCEPT_BY_ID[conceptId]; if(!meta) return null;
   const pr = store();
   const c = pr.concepts[conceptId];
-  let pool = meta.questionIds.filter(id => O.Q_BY_ID[id] && !avoid.has(id));
-  if(!pool.length) return null;
-  let fresh = pool.filter(id => !recentlySeen(id, ctx));
-  if(fresh.length) pool = fresh;
 
-  // preferir un framing aún no acertado si el concepto ya se repitió
-  if(c && c.correctReps >= 2){
-    const unseen = pool.filter(id => !(c.framingsCorrect||[]).includes(framingOf(O.Q_BY_ID[id])));
-    if(unseen.length) pool = unseen;
+  let qpool = meta.questionIds.filter(id => O.Q_BY_ID[id] && !avoid.has(id));
+  const qfresh = qpool.filter(id => !recentlySeen(id, "q", ctx));
+  let usePool = qfresh.length ? qfresh : qpool;
+  if(usePool.length){
+    if(c && c.correctReps >= 2){
+      const unseen = usePool.filter(id => !(c.framingsCorrect||[]).includes(framingOf(O.Q_BY_ID[id])));
+      if(unseen.length) usePool = unseen;
+    }
+    const acc = c ? recentAcc(c) : 0.5;
+    const wantHard = acc >= 0.8 && c && c.correctReps >= 2;
+    const rk = { baja: wantHard?2:0, media:1, alta: wantHard?0:2 };
+    usePool = usePool.slice().sort((a,b)=>{
+      const da = rk[O.Q_BY_ID[a].difficulty] ?? 1, db = rk[O.Q_BY_ID[b].difficulty] ?? 1;
+      if(da !== db) return da - db;
+      return ((pr.qstate[a]||{}).seen||0) - ((pr.qstate[b]||{}).seen||0);
+    });
+    const id = usePool[0];
+    return { kind:"q", id, framing:framingOf(O.Q_BY_ID[id]) };
   }
-  // dificultad acorde: si el usuario falla el concepto, preferir fácil; si lo domina, difícil
-  const acc = c ? recentAcc(c) : 0.5;
-  const wantHard = acc >= 0.8 && c && c.correctReps >= 2;
-  const rank = { baja: wantHard?2:0, media:1, alta: wantHard?0:2 };
-  pool = pool.slice().sort((a,b)=>{
-    const da = rank[O.Q_BY_ID[a].difficulty] ?? 1, db = rank[O.Q_BY_ID[b].difficulty] ?? 1;
-    if(da !== db) return da - db;
-    const sa = (pr.qstate[a]||{}).seen||0, sb = (pr.qstate[b]||{}).seen||0;
-    return sa - sb;   // desempate: la menos vista
-  });
-  return pool[0];
+
+  let fpool = meta.flashcardIds.filter(id => !avoid.has(id));
+  const ffresh = fpool.filter(id => !recentlySeen(id, "fc", ctx));
+  const fp = ffresh.length ? ffresh : fpool;
+  if(fp.length){
+    fp.sort((a,b)=> ((pr.fcstate[a]||{}).seen||0) - ((pr.fcstate[b]||{}).seen||0));
+    return { kind:"fc", id:fp[0], framing:"conceptual" };
+  }
+  return null;
 }
 
 /* ============================================================
    GENERADOR DE SESIÓN
+   Pasada 1 = AMPLITUD (un ítem por concepto, por prioridad).
+   Pasada 2 = PROFUNDIDAD (repetir conceptos de alta prioridad:
+              transferencia pendiente, recuperación en curso,
+              presión de examen) — hasta maxPerConcept veces.
+   Reordenado final: nunca dos ítems seguidos del mismo concepto
+   salvo que sea inevitable.
 ============================================================ */
 function buildSmartSession(minutes, ctx){
   ctx = ctx || planCtx();
   const pr = store();
   const n = itemsForMinutes(minutes);
-  const mix = ctx.profile.mix;
-  const target = {
-    repaso:   Math.round(n * mix.repaso),
-    refuerzo: Math.round(n * mix.refuerzo),
-    mixto:    Math.round(n * mix.mixto),
-    examen:   Math.round(n * mix.examen),
-  };
+  const prof = ctx.profile;
+  const maxPer = n <= 12 ? P.maxPerConceptShort : P.maxPerConceptLong;
 
   const ranked = rankedConcepts(ctx);
   const due = new Set(dueConcepts(ctx));
   const avoid = new Set();
-  const items = [];
-  const usedConcepts = new Set();
+  const perConcept = {};
+  let items = [];
 
-  function take(conceptId, bucket, isExam){
-    const qid = bestQuestion(conceptId, ctx, avoid);
-    if(qid){
-      avoid.add(qid);
-      const q = O.Q_BY_ID[qid];
-      items.push({ kind:"q", ref:qid, concept:conceptId, framing:framingOf(q), bucket, isExam:!!isExam });
-      usedConcepts.add(conceptId);
-      return true;
-    }
-    // sin pregunta libre → probar flashcard del concepto
-    const meta = CONCEPT_BY_ID[conceptId];
-    const card = meta && meta.flashcardIds.find(cid => !avoid.has(cid));
-    if(card){
-      avoid.add(card);
-      items.push({ kind:"fc", ref:card, concept:conceptId, framing:"conceptual", bucket, isExam:false });
-      usedConcepts.add(conceptId);
-      return true;
-    }
-    return false;
+  function pick(conceptId, bucket, isExam){
+    if((perConcept[conceptId]||0) >= maxPer) return false;
+    const it = bestItem(conceptId, ctx, avoid);
+    if(!it) return false;
+    avoid.add(it.id);
+    items.push({ kind:it.kind, ref:it.id, concept:conceptId, framing:it.framing, bucket, isExam:!!isExam });
+    perConcept[conceptId] = (perConcept[conceptId]||0) + 1;
+    return true;
   }
 
-  // 0. RESCATE — ningún concepto ya visto puede pasar de maxSilenceDays sin reaparecer
-  const silent = CONCEPTS.filter(c=>{
+  // ---- PASADA 1 · AMPLITUD -------------------------------------------------
+  // 0. rescate anti-silencio (concepto ya visto > maxSilenceDays sin aparecer)
+  CONCEPTS.filter(c=>{
     const st = pr.concepts[c.id];
     return st && st.lastReview && (ctx.now - st.lastReview) > P.maxSilenceDays * DAY;
-  }).sort((a,b)=> pr.concepts[a.id].lastReview - pr.concepts[b.id].lastReview);
-  for(const c of silent){
-    if(items.length >= n - 1) break;
-    take(c.id, "repaso");
-  }
+  }).sort((a,b)=> pr.concepts[a.id].lastReview - pr.concepts[b.id].lastReview)
+    .forEach(c=>{ if(items.length < n) pick(c.id, "repaso"); });
 
-  // 1. REPASO — conceptos vencidos por prioridad
+  // 1. repaso: conceptos vencidos, por prioridad
   const dueRanked = ranked.filter(r => due.has(r.id));
-  for(const r of dueRanked){ if(items.filter(i=>i.bucket==="repaso").length >= target.repaso) break; take(r.id,"repaso"); }
-
-  // 2. REFUERZO — más error reciente + baja consolidación
+  for(const r of dueRanked){
+    if(items.filter(i=>i.bucket==="repaso").length >= Math.round(n*prof.mix.repaso)) break;
+    if(!perConcept[r.id]) pick(r.id, "repaso");
+  }
+  // 2. refuerzo: error reciente + sin dominio
   const weak = ranked.filter(r => {
     const st = pr.concepts[r.id];
-    return st && st.reps && recentAcc(st) < 0.7 && st.status !== "asentado";
-  }).slice(0, 8);
-  for(const r of weak){ if(items.filter(i=>i.bucket==="refuerzo").length >= target.refuerzo) break; take(r.id,"refuerzo"); }
-
-  // 3. MIXTO — interleaving: vencidos restantes + algún concepto nuevo, barajado entre secciones
-  const mixPool = [];
-  ranked.forEach(r => { if(!usedConcepts.has(r.id)){
-    const st = pr.concepts[r.id];
-    if(!st || st.status === "nuevo"){ if(ctx.profile.newAllowed) mixPool.push(r.id); }
-    else if(r.score > 0.15) mixPool.push(r.id);
-  }});
-  // barajar por sección para forzar identificación
-  const bySec = {};
-  mixPool.forEach(id => (bySec[id.split(":")[0]] = bySec[id.split(":")[0]] || []).push(id));
-  // recorrido round-robin por secciones, acotado a mixPool.length pasos
-  const secs = Object.keys(bySec);
-  for(let step = 0, si = 0; step < mixPool.length && secs.length; step++, si++){
-    if(items.filter(i=>i.bucket==="mixto").length >= target.mixto) break;
-    const k = si % secs.length;
-    const id = (bySec[secs[k]] || []).shift();
-    if(id) take(id, "mixto");
-    if(!bySec[secs[k]] || !bySec[secs[k]].length){ secs.splice(k, 1); si--; }
+    return st && st.reps && recentAcc(st) < 0.7 && st.masteryStatus !== "asentado";
+  });
+  for(const r of weak){
+    if(items.filter(i=>i.bucket==="refuerzo").length >= Math.round(n*prof.mix.refuerzo)) break;
+    if(!perConcept[r.id]) pick(r.id, "refuerzo");
   }
-
-  // 4. EXAMEN — bloque cronometrado, sin feedback, distribución equilibrada
-  if(target.examen > 0){
-    const examConcepts = shuffleDet(CONCEPTS.map(c=>c.id).filter(id => {
-      const st = pr.concepts[id]; return st && st.reps;   // solo lo ya estudiado
+  // 3. mixto: interleaving nuevo + prioridad media, barajado entre secciones
+  const mixBySec = {};
+  ranked.forEach(r=>{
+    if(perConcept[r.id]) return;
+    const st = pr.concepts[r.id];
+    const isNew = !st || st.masteryStatus === "nuevo";
+    if(isNew && !prof.newAllowed) return;
+    if(!isNew && r.score <= 0.12) return;
+    (mixBySec[r.id.split(":")[0]] = mixBySec[r.id.split(":")[0]] || []).push(r.id);
+  });
+  {
+    const secs = Object.keys(mixBySec);
+    const mixTarget = Math.round(n * prof.mix.mixto);
+    for(let step=0, si=0; step < ranked.length && secs.length && items.length < n; step++, si++){
+      if(items.filter(i=>i.bucket==="mixto").length >= mixTarget) break;
+      const k = si % secs.length;
+      const id = mixBySec[secs[k]].shift();
+      if(id) pick(id, "mixto");
+      if(!mixBySec[secs[k]] || !mixBySec[secs[k]].length){ secs.splice(k, 1); si--; }
+    }
+  }
+  // 4. examen: bloque sin feedback, sólo contenido ya estudiado
+  const examTarget = Math.round(n * prof.mix.examen);
+  if(examTarget > 0){
+    const pool = shuffleDet(CONCEPTS.map(c=>c.id).filter(id=>{
+      const st = pr.concepts[id]; return st && st.reps;
     }), ctx.now);
-    for(const id of examConcepts){
-      if(items.filter(i=>i.bucket==="examen").length >= target.examen) break;
-      take(id, "examen", true);
+    for(const id of pool){
+      if(items.filter(i=>i.bucket==="examen").length >= examTarget) break;
+      pick(id, "examen", true);
     }
   }
 
-  // rellenar hasta n si falta (con lo siguiente en prioridad)
-  for(const r of ranked){
-    if(items.length >= n) break;
-    if(usedConcepts.has(r.id)) continue;
-    if(!ctx.profile.newAllowed){ const st=pr.concepts[r.id]; if(!st||!st.reps) continue; }
-    take(r.id, "mixto");
+  // ---- PASADA 2 · PROFUNDIDAD --------------------------------------------
+  const deepen = ranked.filter(r=>{
+    const st = pr.concepts[r.id];
+    if(!st || !st.reps) return false;
+    const transferPend = memoryOK(st, ctx.now) && transferScoreOf(st, r.id) < 0.75;
+    const learning = st.masteryStatus === "aprendiendo" || st.masteryStatus === "consolidando";
+    const examUrg = ctx.hasExam && examPressure(r.id, ctx) > 0.5;
+    return (transferPend || learning || examUrg) && r.score > 0.15;
+  });
+  for(let guard = 0; items.length < n && guard < n * 3; guard++){
+    let added = false;
+    for(const r of deepen){
+      if(items.length >= n) break;
+      if((perConcept[r.id]||0) >= maxPer) continue;
+      if(pick(r.id, "profundizar")) added = true;
+    }
+    if(!added) break;
   }
 
-  // registrar inicio de sesión (para antirrepetición entre sesiones)
+  // ---- RELLENO por prioridad si aún falta ------------------------------
+  for(const r of ranked){
+    if(items.length >= n) break;
+    if(!prof.newAllowed){ const st = pr.concepts[r.id]; if(!st || !st.reps) continue; }
+    pick(r.id, "mixto");
+  }
+
+  // ---- REORDENAR: nunca dos ítems seguidos del mismo concepto ----------
+  items = spreadByConcept(items).slice(0, n);
+
   pr._recentSessionStarts = (pr._recentSessionStarts || []).concat(ctx.now).slice(-10);
   save();
 
-  const goal = sessionGoal(items, ctx);
+  const consecutive = countConsecutive(items);
   return {
-    items: items.slice(0, n),
-    minutes, estItems:n, phase: ctx.profile.name,
-    mix: countBuckets(items), goal,
-    concepts: [...usedConcepts],
-    topPriority: dueRanked[0] || weak[0] || ranked.find(r=>usedConcepts.has(r.id)) || null,
+    items, minutes, estItems:n, estMinutes: estimatedMinutes(items.length),
+    phase: prof.name, mix: countBuckets(items), goal: sessionGoal(items, ctx),
+    concepts: [...new Set(items.map(i=>i.concept))],
+    maxPerConcept: maxPer,
+    deepened: items.filter(i=>i.bucket==="profundizar").length,
+    consecutiveSameConcept: consecutive,
+    topPriority: ranked.find(r=>perConcept[r.id]) || null,
   };
 }
+function spreadByConcept(items){
+  const rest = items.slice();
+  const out = [];
+  while(rest.length){
+    let idx = rest.findIndex(it => !out.length || it.concept !== out[out.length-1].concept);
+    if(idx === -1) idx = 0;              // inevitable: sólo queda un concepto
+    out.push(rest.splice(idx, 1)[0]);
+  }
+  return out;
+}
+function countConsecutive(items){
+  let n = 0;
+  for(let i=1;i<items.length;i++) if(items[i].concept === items[i-1].concept) n++;
+  return n;
+}
 function countBuckets(items){
-  const c = { repaso:0, refuerzo:0, mixto:0, examen:0 };
-  items.forEach(i=> c[i.bucket]++);
+  const c = { repaso:0, refuerzo:0, mixto:0, examen:0, profundizar:0 };
+  items.forEach(i=> c[i.bucket] = (c[i.bucket]||0) + 1);
   return c;
 }
 function sessionGoal(items, ctx){
   const consolidables = new Set(items.filter(i=>i.bucket==="repaso"||i.bucket==="refuerzo").map(i=>i.concept)).size;
-  const transfer = items.filter(i=> i.bucket==="mixto" && ["caso","ruta","discriminacion"].includes(i.framing)).length;
+  const transfer = items.filter(i=> (i.bucket==="mixto"||i.bucket==="profundizar") && ["caso","ruta","discriminacion"].includes(i.framing)).length;
   if(items.length <= 12) return `Consolidar ${consolidables} concepto${consolidables===1?"":"s"}.`;
   if(items.length <= 26) return `Recuperar ${consolidables} conceptos${transfer?` + ${transfer} de transferencia`:""}.`;
   return "Sesión completa + diagnóstico.";
@@ -2538,25 +2662,25 @@ function backlogPlan(ctx){
 /* ============================================================
    COBERTURA / PREPARACIÓN — 5 dimensiones, sin colapsar
 ============================================================ */
-// índice eventos-por-concepto, memoizado por longitud del log (evita O(eventos·conceptos))
-let _idxCache = { len:-1, map:null };
+// índice eventos-por-concepto, memoizado por identidad+longitud del log
+let _idxCache = { arr:null, len:-1, map:null };
 function eventsByConcept(){
   const pr = store();
-  if(_idxCache.len === pr.events.length && _idxCache.map) return _idxCache.map;
+  if(_idxCache.arr === pr.events && _idxCache.len === pr.events.length && _idxCache.map) return _idxCache.map;
   const map = {};
   pr.events.forEach(e=>{ if(e.concept) (map[e.concept] = map[e.concept] || []).push(e); });
-  _idxCache = { len: pr.events.length, map };
+  _idxCache = { arr: pr.events, len: pr.events.length, map };
   return map;
 }
 function conceptDimensions(conceptId, now, idx){
   now = now || Date.now();
   const c = store().concepts[conceptId];
   const meta = CONCEPT_BY_ID[conceptId];
-  if(!c || !c.reps) return { memoria:0, competencia:0, transferencia:0, cobertura:0, examen:null, confianza:0, status:"nuevo" };
+  if(!c || !c.reps) return { memoria:0, competencia:0, transferencia:0, cobertura:0,
+                             examen:null, confianza:0, masteryStatus:"nuevo", reviewState:"futuro", status:"nuevo" };
   const evAll = (idx || eventsByConcept())[conceptId] || [];
   const R = retrievability(c, now);
   const memoria = clamp(R * (c.interval >= P.masteryInterval ? 1 : c.interval / P.masteryInterval), 0, 1);
-  // competencia: acierto en framings exigentes
   const hardFr = ["caso","ruta","discriminacion"];
   const evs = evAll.filter(e=> e.kind !== "exam" && hardFr.includes(e.framing));
   const competencia = evs.length ? evs.filter(e=>e.correct).length / evs.length : (c.correctReps>=2 ? 0.5 : 0.2);
@@ -2564,25 +2688,28 @@ function conceptDimensions(conceptId, now, idx){
   const seen = new Set(evAll.filter(e=>e.kind==="q").map(e=>e.ref));
   const cobertura = meta ? clamp(seen.size / Math.min(meta.size, 8), 0, 1) : 0;
   const examen = c.examPerf.length ? c.examPerf.filter(Boolean).length / c.examPerf.length : null;
-  return { memoria, competencia, transferencia, cobertura, examen, confianza:c.diagConfidence, status:c.status };
+  return { memoria, competencia, transferencia, cobertura, examen,
+           confianza:c.diagConfidence, masteryStatus:c.masteryStatus, reviewState:c.reviewState, status:c.status };
 }
 function overview(now){
   now = now || Date.now();
   const pr = store();
   const total = CONCEPTS.length;
-  let seen=0, recuperado=0, asentado=0, atencion=0, sumInterval=0, nInterval=0;
+  let seen=0, recuperado=0, asentado=0, asentadoPendiente=0, atencion=0, atrasados=0, nInterval=0;
   const dims = { memoria:0, competencia:0, transferencia:0, cobertura:0 };
   let examSum=0, examN=0, wsum=0;
   const idx = eventsByConcept();
+  const intervals = [];
   CONCEPTS.forEach(c=>{
     const st = pr.concepts[c.id];
     const w = c.size;
     if(st && st.reps){
       seen++;
       if(st.correctReps >= 1) recuperado++;
-      if(st.status === "asentado" || st.status === "repaso") asentado++;
-      if(st.status === "aprendiendo" || (st.reps && recentAcc(st) < 0.6)) atencion++;
-      sumInterval += st.interval; nInterval++;
+      if(st.masteryStatus === "asentado"){ asentado++; if(st.reviewState !== "futuro") asentadoPendiente++; }
+      if(st.masteryStatus === "aprendiendo" || (st.reps && recentAcc(st) < 0.6)) atencion++;
+      if(st.reviewState === "atrasado") atrasados++;
+      intervals.push(st.interval); nInterval++;
       const d = conceptDimensions(c.id, now, idx);
       dims.memoria += d.memoria*w; dims.competencia += d.competencia*w;
       dims.transferencia += d.transferencia*w; dims.cobertura += d.cobertura*w;
@@ -2594,8 +2721,9 @@ function overview(now){
   return {
     conceptsTotal: total,
     cobertura: seen/total, recuperado: recuperado/total, consolidacion: asentado/total,
-    necesitanAtencion: atencion, pendientes: total - seen,
-    estabilidadMediaDias: nInterval ? median(CONCEPTS.map(c=>pr.concepts[c.id]).filter(Boolean).map(s=>s.interval)) : 0,
+    asentados: asentado, asentadosPendientesDeRepaso: asentadoPendiente,
+    necesitanAtencion: atencion, atrasados, pendientes: total - seen,
+    estabilidadMediaDias: nInterval ? median(intervals) : 0,
     dimensiones: {
       memoria: norm("memoria"), competencia: norm("competencia"),
       transferencia: norm("transferencia"), cobertura: norm("cobertura"),
@@ -2622,29 +2750,35 @@ function examReadiness(ctx, minutesOverride){
   const minutes = minutesOverride || ctx.plan.minutesPerDay;
   const endMs = ctx.hasExam ? ctx.criticalMs : ctx.horizonMs;
   const studyDays = countStudyDays(ctx.now, endMs, ctx.plan.weekdays);
+  const daysAvailToCritical = ctx.hasExam ? countStudyDays(ctx.now, ctx.criticalMs, ctx.plan.weekdays) : Infinity;
   const itemsPerDay = itemsForMinutes(minutes);
   const capacity = studyDays * itemsPerDay;
 
   let demand = 0;
+  const deficits = [];
   CONCEPTS.forEach(c=>{
     const st = pr.concepts[c.id];
-    demand += neededRetrievals(st);
-    // repasos proyectados: si el concepto está vivo, ~1 revisión por cada "interval" en la ventana
+    const need = neededRetrievals(st);
+    demand += need;
     if(st && st.interval){
       const daysWindow = studyDays * (7 / Math.max(1, ctx.plan.weekdays.length));
       demand += clamp(daysWindow / Math.max(P.masteryInterval, st.interval), 0, 6);
     }
+    // déficit real: no caben 'need' recuperaciones (≥1 día de separación) antes de la fecha crítica
+    if(ctx.hasExam && need > 0 && (daysAvailToCritical < need || (st && st.examDeficit)))
+      deficits.push(c.id);
   });
   const coverageProjection = demand > 0 ? Math.min(1, capacity / demand) : 1;
+  const feasible = coverageProjection >= 0.95 && deficits.length === 0;
   return {
     studyDays, itemsPerDay, capacity, demand: Math.round(demand),
-    coverageProjection,
-    feasible: coverageProjection >= 0.95,
+    coverageProjection, feasible,
+    deficits, deficitCount: deficits.length,
     daysLeft: ctx.daysLeft,
     hint: minutesOverride ? null : (function(){
-      const more = examReadiness(ctx, minutes + 10).coverageProjection;
-      return more - coverageProjection > 0.03
-        ? `Con ${minutes+10} min/día pasarías de ${Math.round(coverageProjection*100)}% a ${Math.round(more*100)}%.`
+      const more = examReadiness(ctx, minutes + 10);
+      return more.coverageProjection - coverageProjection > 0.03
+        ? `Con ${minutes+10} min/día pasarías de ${Math.round(coverageProjection*100)}% a ${Math.round(more.coverageProjection*100)}%.`
         : null;
     })(),
   };
@@ -2656,24 +2790,30 @@ function examReadiness(ctx, minutesOverride){
 function recalc(now){
   const pr = store();
   now = now || Date.now();
+  const ctx = planCtx(now);
+
   Object.keys(pr.concepts).forEach(id=>{
     const c = pr.concepts[id];
-    c.diagConfidence = deriveConfidence(c);
-    c.status = deriveStatus(c, now);
+    if(c.masteryStatus == null) c.masteryStatus = "nuevo";   // backfill de estados antiguos
+    refreshDerived(c, now);
   });
-  // capa de examen: comprimir revisiones que caen después de la fecha crítica
-  const ctx = planCtx(now);
+
+  // capa de examen: garantía dura de que ninguna recuperación NECESARIA queda
+  // programada después de la fecha crítica; si no cabe, se marca déficit (no se oculta).
   if(ctx.hasExam){
+    const daysAvail = Math.max(1, countStudyDays(now, ctx.criticalMs, ctx.plan.weekdays));
     CONCEPTS.forEach(c=>{
       const st = pr.concepts[c.id];
       if(!st) return;
       const need = neededRetrievals(st);
-      if(!need) return;
-      const daysAvail = Math.max(1, countStudyDays(now, ctx.criticalMs, ctx.plan.weekdays));
-      if(st.nextReview > ctx.criticalMs || st.interval > daysAvail){
-        st.nextReview = now + (daysAvail / (need + 1)) * DAY;
-        st.interval = Math.min(st.interval, Math.max(1, daysAvail / (need + 1)));
-      }
+      if(!need){ st.examDeficit = false; return; }
+      st.examDeficit = daysAvail < need;   // no caben ni con 1 día de separación
+      const soonest = now + Math.max(1, daysAvail / (need + 1)) * DAY;
+      st.nextReview = Math.min(st.nextReview || Infinity, soonest);
+      if(st.nextReview > ctx.criticalMs) st.nextReview = ctx.criticalMs - DAY;  // GARANTÍA
+      st.interval = Math.min(st.interval || soonest/DAY, Math.max(1, daysAvail / (need + 1)));
+      st.reviewState = deriveReviewState(st, now);
+      st.status = legacyStatus(st);
     });
   }
   if(pr.plan) pr.plan.lastRecalc = now;
@@ -2681,30 +2821,33 @@ function recalc(now){
 }
 
 /* ============================================================
-   API — construir una sesión ejecutable (reutiliza el motor actual)
+   API — construir una sesión ejecutable
 ============================================================ */
 function smartSessionRun(minutes, now){
   const ctx = planCtx(now);
   const plan = buildSmartSession(minutes, ctx);
-  const qIds = plan.items.filter(i=>i.kind==="q").map(i=>i.ref);
-  const cardIds = plan.items.filter(i=>i.kind==="fc").map(i=>i.ref);
-  const hasExamBucket = plan.items.some(i=>i.isExam);
-  return { plan, qIds, cardIds, hasExamBucket };
+  return {
+    plan,
+    qIds:    plan.items.filter(i=>i.kind==="q").map(i=>i.ref),
+    cardIds: plan.items.filter(i=>i.kind==="fc").map(i=>i.ref),
+    hasExamBucket: plan.items.some(i=>i.isExam),
+  };
 }
 
 /* ============================================================
    EXPONER
 ============================================================ */
 O.LE = {
-  P, DAY,
+  P, DAY, FRAMINGS,
   CONCEPTS, CONCEPT_BY_ID, CONCEPT_OF_Q, CONCEPT_OF_CARD, framingOf, conceptDifficulty,
   store, seedFromLegacy, setPlan, planCtx,
   recordEvent, updateConceptState, gradeFromAnswer, gradeFromFlashcard,
-  getConcept, retrievability, recentAcc, deriveStatus, deriveConfidence,
+  getConcept, retrievability, recentAcc, spanDays,
+  deriveMastery, deriveReviewState, deriveConfidence, refreshDerived,
   conceptPriority, rankedConcepts, dueConcepts, neededRetrievals, examPressure,
-  bestQuestion, buildSmartSession, smartSessionRun, backlogPlan,
+  bestItem, buildSmartSession, smartSessionRun, backlogPlan,
   conceptDimensions, overview, examReadiness, recalc,
-  countStudyDays, itemsForMinutes,
+  countStudyDays, itemsForMinutes, observedSecPerItem, estimatedMinutes,
 };
 
 })();

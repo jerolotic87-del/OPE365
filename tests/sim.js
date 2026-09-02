@@ -160,6 +160,9 @@ function simulate(env, user, days, startMs){
       session: rec && {
         items: rec.items.length, phase: rec.phase, goal: rec.goal,
         mix: rec.mix, concepts: rec.concepts.length,
+        estMinutes: rec.estMinutes, maxPerConcept: rec.maxPerConcept,
+        deepened: rec.deepened, consecutiveSameConcept: rec.consecutiveSameConcept,
+        fcCount: rec.items.filter(i=>i.kind==="fc").length,
       },
       answers,
       overview: {
@@ -171,7 +174,7 @@ function simulate(env, user, days, startMs){
       readiness: {
         studyDays: rd.studyDays, capacity: rd.capacity, demand: rd.demand,
         cobertura: round(rd.coverageProjection), feasible: rd.feasible,
-        daysLeft: rd.daysLeft,
+        daysLeft: rd.daysLeft, deficitCount: rd.deficitCount, deficits: rd.deficits,
       },
     });
   }
@@ -183,7 +186,10 @@ function simulate(env, user, days, startMs){
     return {
       id: c.id, name: c.name, size: c.size,
       status: st.status || "nuevo",
+      mastery: st.masteryStatus || "nuevo",
+      review: st.reviewState || "futuro",
       interval: round(st.interval || 0),
+      examDeficit: !!st.examDeficit,
       correctReps: st.correctReps || 0,
       framings: (st.framingsCorrect || []).length,
       spanDays: st.correctRepDays && st.correctRepDays.length > 1
