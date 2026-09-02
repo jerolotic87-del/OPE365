@@ -30,6 +30,8 @@ async function main(){
   runScript(read("taxonomy_data.js"));
   runScript(read("flashcards_data.js"));
   runScript(read("app.js"));
+  runScript(read("engine.js"));
+  runScript(read("engine-bridge.js"));
   runScript(read("multiplayer.js"));
 
   const O = window.OPE;

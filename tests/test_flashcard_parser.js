@@ -13,7 +13,7 @@ function read(name){ return fs.readFileSync(path.join(ROOT, name), "utf-8"); }
 async function main(){
   const dom = new JSDOM(read("tests/fixture.html"), { runScripts: "dangerously", url: "http://localhost/" });
   const { window: w } = dom;
-  ["questions_data.js","taxonomy_data.js","flashcards_data.js","app.js","views.js"].forEach(f=> w.eval(read(f)));
+  ["questions_data.js","taxonomy_data.js","flashcards_data.js","app.js","engine.js","engine-bridge.js","views.js"].forEach(f=> w.eval(read(f)));
   const O = w.OPE, D = w.document;
   let failures = 0;
   function assert(cond, msg){ if(!cond){ failures++; console.error("FALLO:", msg); } else console.log("OK:", msg); }

@@ -36,6 +36,7 @@ def main():
     css = read("styles.css")
     app_js = read("app.js")
     engine_js = read("engine.js")
+    engine_bridge_js = read("engine-bridge.js")
     mp_js = read("multiplayer.js")
     views_js = read("views.js")
     peerjs_js = read("peerjs.min.js")
@@ -83,6 +84,9 @@ window.__OPE365_DATA__ = {data_raw};
 </script>
 <script>
 {engine_js}
+</script>
+<script>
+{engine_bridge_js}
 </script>
 <script>
 {peerjs_js}

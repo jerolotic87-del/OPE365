@@ -664,6 +664,7 @@ function renderQuestionCard(q, s, isExam){
   pendingMatchSelection = { leftId:null, pairs: (answeredAlready && resp.answer && q.tipo==="emparejamiento") ? Object.assign({},resp.answer) : {} };
   pendingBlankValues = (q.tipo==="relleno") ? new Array(O.countBlanks(q.enunciado)).fill("") : [];
 
+  if(!answeredAlready && O.LEB) O.LEB.markShown();   // arranca el cronómetro de la pregunta
   renderQuestionBody(q, s, isExam, answeredAlready, resp);
 
   $("#q-star").addEventListener("click", (e)=>{
@@ -821,7 +822,10 @@ function showFeedback(el, q, resp){
 function submitAnswer(q, s, isExam, answer){
   const correct = O.evaluateAnswer(q, answer);
   s.responses[s.current] = { answer, correct, submitted:true };
-  if(!isExam){ O.recordAnswer(q, answer, correct); }
+  if(!isExam){
+    O.recordAnswer(q, answer, correct);
+    if(O.LEB) O.LEB.recordQuestion(q, correct, false);   // alimenta el motor de aprendizaje
+  }
   O.saveSessionSnapshot();
   renderQuestionCard(q, s, isExam);
   if(isExam) renderNavGrid();
@@ -832,7 +836,16 @@ function finishPracticeSession(s){
   O.PROGRESS.history.push(Object.assign({mode:"practice", finishedAt:Date.now(), config:s.config}, summary));
   s.finished = true;
   O.saveSessionSnapshot(); O.persist();
-  O.toast("Sesión de práctica completada");
+  if(O.LEB) O.LEB.recalcNow();
+
+  // sesión inteligente con flashcards en el plan → encadenar el repaso de fichas
+  if(s.smart && Array.isArray(s.smartCardIds) && s.smartCardIds.length){
+    const cards = s.smartCardIds.slice();
+    O.toast(`Preguntas hechas · ahora ${cards.length} flashcard${cards.length===1?'':'s'} del plan`);
+    startFlashcardSession(cards, 0);
+    return;
+  }
+  O.toast("Sesión completada");
   go("home");
 }
 
@@ -894,6 +907,7 @@ function renderResults(){
   const timer = O.getActiveTimer(); if(timer) timer.stop();
 
   s.questions.forEach((q,i)=>{ const r=s.responses[i]; if(r) O.recordAnswer(q, r.answer, r.correct); });
+  if(O.LEB) O.LEB.recordExamSession(s);   // registro en bloque en el motor (kind: examen)
   const summary = O.summarizeSession(s);
 
   const byTema = {}, byTipo = {};
@@ -1336,7 +1350,7 @@ function renderFlashcardsStudy(){
   const revealed = fcSession.revealed;
 
   function advance(){
-    if(last){ fcSession=null; O.toast("Repaso terminado"); go("flashcards"); return; }
+    if(last){ fcSession=null; if(O.LEB) O.LEB.recalcNow(); O.toast("Repaso terminado"); go("flashcards"); return; }
     fcSession.index++; fcSession.revealed=false; renderFlashcardsStudy();
   }
 
@@ -1366,9 +1380,10 @@ function renderFlashcardsStudy(){
         </div>
       </button>
 
-      <div class="fc-verdict ${revealed?'':'is-hidden'}">
-        <button class="btn btn-outline btn-lg btn-block" id="fc-forgot">No la recordaba</button>
-        <button class="btn btn-solid btn-lg btn-block" id="fc-knew">La recordaba</button>
+      <div class="fc-verdict fc-verdict-3 ${revealed?'':'is-hidden'}">
+        <button class="btn btn-outline btn-lg btn-block fc-grade fc-grade-no" id="fc-no">No la recordaba</button>
+        <button class="btn btn-outline btn-lg btn-block fc-grade fc-grade-hard" id="fc-hard">Con dificultad</button>
+        <button class="btn btn-solid btn-lg btn-block fc-grade fc-grade-yes" id="fc-yes">La recordaba</button>
       </div>
 
       <div class="qnav-footer">
@@ -1379,10 +1394,19 @@ function renderFlashcardsStudy(){
     </div>
   </div>`;
 
-  $("#fc-exit").addEventListener("click", ()=>{ fcSession=null; go("flashcards"); });
+  if(O.LEB) O.LEB.markShown();
+  function rate(rating){
+    if(O.LEB) O.LEB.recordFlashcard(c.canonicalId, rating);   // alimenta el motor de aprendizaje
+    // el flag "dominada" (badge + filtros) sigue el veredicto claro; "dificil" no lo cambia
+    if(rating === "si") O.setFlashcardMastered(c.canonicalId, true);
+    else if(rating === "no") O.setFlashcardMastered(c.canonicalId, false);
+    advance();
+  }
+  $("#fc-exit").addEventListener("click", ()=>{ fcSession=null; if(O.LEB) O.LEB.recalcNow(); go("flashcards"); });
   $("#fc-card").addEventListener("click", ()=>{ fcSession.revealed = !fcSession.revealed; renderFlashcardsStudy(); });
-  $("#fc-knew").addEventListener("click", ()=>{ O.setFlashcardMastered(c.canonicalId, true); advance(); });
-  $("#fc-forgot").addEventListener("click", ()=>{ O.setFlashcardMastered(c.canonicalId, false); advance(); });
+  $("#fc-no").addEventListener("click", ()=> rate("no"));
+  $("#fc-hard").addEventListener("click", ()=> rate("dificil"));
+  $("#fc-yes").addEventListener("click", ()=> rate("si"));
   $("#fc-prev").addEventListener("click", ()=>{ fcSession.index = Math.max(0, idx-1); fcSession.revealed=false; renderFlashcardsStudy(); });
   $("#fc-next").addEventListener("click", advance);
 }
@@ -1970,6 +1994,7 @@ function confirmDanger(title, msg, onConfirm){
    INICIALIZACIÓN
 --------------------------------------------------------------- */
 function init(){
+  if(O.LEB) O.LEB.boot();   // arranca el motor de aprendizaje (siembra + recalc)
   document.getElementById("settings-btn").addEventListener("click", openSettingsModal);
   document.getElementById("search-btn").addEventListener("click", openSearchModal);
 

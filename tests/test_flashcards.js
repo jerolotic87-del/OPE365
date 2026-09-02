@@ -17,6 +17,8 @@ async function main(){
   runScript(read("taxonomy_data.js"));
   runScript(read("flashcards_data.js"));
   runScript(read("app.js"));
+  runScript(read("engine.js"));
+  runScript(read("engine-bridge.js"));
   runScript(read("views.js"));
 
   const O = window.OPE;
@@ -61,9 +63,11 @@ async function main(){
   const firstCanonical = O.FLASHCARDS.find(c=>c.priority==="alta").canonicalId;
   assert(O.PROGRESS.flashcards[firstCanonical] && O.PROGRESS.flashcards[firstCanonical].vecesVista >= 1, "se registra que se ha visto la tarjeta");
 
-  // "La recordaba" marca dominada y avanza automáticamente a la siguiente
-  window.document.getElementById("fc-knew").click();
+  // "La recordaba" marca dominada, registra evento en el motor y avanza
+  window.document.getElementById("fc-yes").click();
   assert(O.getFlashcardState(firstCanonical)==="dominada", "'La recordaba' marca la tarjeta como dominada");
+  assert(O.PROGRESS.events && O.PROGRESS.events.some(e=>e.kind==="fc" && e.ref===firstCanonical), "la valoración de la flashcard genera un evento en el motor de aprendizaje");
+  assert(O.PROGRESS.concepts && Object.keys(O.PROGRESS.concepts).length >= 1, "el evento de flashcard actualiza el estado de al menos un concepto");
   assert(window.document.querySelector(".pos").textContent.trim()===`2 / ${altaCards}`, `avanza a la siguiente tarjeta (2/${altaCards})`);
 
   window.document.getElementById("fc-prev").click();
