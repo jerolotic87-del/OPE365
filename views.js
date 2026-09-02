@@ -1355,7 +1355,6 @@ function renderStaticAnswerBody(el, q){
 let fcList = [];
 let fcSession = null; // { ids:[canonicalId...], index:0, revealed:false }
 
-function priorityLabel(p){ return p==="alta" ? "★ Prioridad alta" : ""; }
 function cardTypeLabel(t){ return t==="error" ? "Error frecuente" : "Contenido"; }
 
 /* Formatea el texto de una flashcard: si contiene una enumeración
