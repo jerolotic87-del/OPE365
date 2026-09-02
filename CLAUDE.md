@@ -6,9 +6,9 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **1410 preguntas** y **481
-flashcards** (inicio 148, archivo 96, vista 79, revisar 73, insertar 28,
-referencias 17, disposicion 16, correspondencia 15, diseno 9 — las ~261
+de Word 365 de una oposición de ayuntamiento. **1423 preguntas** y **499
+flashcards** (inicio 148, archivo 114, vista 79, revisar 73, insertar 28,
+referencias 17, disposicion 16, correspondencia 15, diseno 9 — las ~279
 de sep-2026 son tarjetas de RUTA: frente = la acción, dorso =
 "Pestaña ▸ Grupo ▸ Comando", de `rutasyatajos.txt`), todo el banco
 normalizado y agrupado por pestaña de la cinta
@@ -248,14 +248,16 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 516, inicio 393, archivo 218, vista 145, revisar 78, insertar 45,
+interfaz 516, inicio 393, archivo 231, vista 145, revisar 78, insertar 45,
 referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
-Total 1410. Historial: `data/questions_regroup_report.md`. Las 85 últimas
-de `archivo` (`archivo-134..218`, `sourceQuestionId` `opc-gen/pres/rev-NN`)
-cubren toggles de `Archivo > Opciones` (General, Presentación, Revisión —
-Autocorrección/Autoformato/corrector) — distractores = opciones-hermanas
-reales del mismo sub-panel del diálogo, nada inventado; las que ya tenían
-pregunta previa (`archivo-64..75`) no se duplicaron.
+Total 1423. Historial: `data/questions_regroup_report.md`. Las 98 últimas
+de `archivo` (`archivo-134..231`, `sourceQuestionId` `opc-gen/pres/rev/guar-NN`)
+cubren toggles de `Archivo > Opciones` (General, Presentación, Revisión,
+Guardar) — distractores = opciones-hermanas reales del mismo sub-panel del
+diálogo, nada inventado; las que ya tenían pregunta previa (`archivo-64..79`)
+no se duplicaron. Pendiente: subdividir `archivo:opciones` (~145 preguntas
+bajo un solo topic) en un topic por panel cuando se acabe de integrar
+Opciones — el motor lo trata hoy como un único concepto.
 
 Taxonomía: `inicio > parrafo` se abrió en 7 grupos
 (`parrafo-marcas`/`-alineacion`/`-sangria`/`-espaciado`/`-bordes`/

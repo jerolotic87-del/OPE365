@@ -7719,5 +7719,473 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Excepciones para: [documento] → Ocultar errores de gramática solo en este documento. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-219",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-03",
+    "generado": true,
+    "enunciado": "Has sufrido cierres inesperados y perdido trabajo porque el intervalo de autorrecuperación era muy largo. ¿Dónde lo reduces para que Word guarde una copia de recuperación con más frecuencia?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Mostrar sitios adicionales para guardar, incluso si fuera necesario iniciar sesión"
+      },
+      {
+        "letter": "B",
+        "text": "Guardar documentos ▸ Ubicación predeterminada de plantillas personales"
+      },
+      {
+        "letter": "C",
+        "text": "Guardar documentos ▸ Archivos de autoguardado almacenados en la nube de forma predeterminada en Word"
+      },
+      {
+        "letter": "D",
+        "text": "Guardar documentos ▸ Guardar información de Autorrecuperación cada X minutos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Guardar información de Autorrecuperación cada X minutos. Se recomienda 5 minutos o menos para minimizar la pérdida en caso de fallo."
+  },
+  {
+    "id": "archivo-220",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-04",
+    "generado": true,
+    "enunciado": "Cerraste un documento sin guardar y al reabrirlo Word no ofreció ninguna versión recuperada. ¿Dónde te aseguras de que Word conserva siempre la última versión de autorrecuperación aunque se cierre sin guardar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Conservar la última versión recuperada automáticamente cuando cierro sin guardar"
+      },
+      {
+        "letter": "B",
+        "text": "Guardar documentos ▸ Archivos de autoguardado almacenados en la nube de forma predeterminada en Word"
+      },
+      {
+        "letter": "C",
+        "text": "Guardar documentos ▸ Ubicación predeterminada de archivos locales"
+      },
+      {
+        "letter": "D",
+        "text": "Guardar documentos ▸ Guardar archivos en formato"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Conservar la última versión recuperada automáticamente cuando cierro sin guardar. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-221",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-05",
+    "generado": true,
+    "enunciado": "Tras un fallo del sistema quieres localizar a mano los archivos temporales de autorrecuperación de Word. ¿Dónde consultas o cambias la carpeta donde los guarda?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Guardar en PC de forma predeterminada"
+      },
+      {
+        "letter": "B",
+        "text": "Guardar documentos ▸ Guardar archivos en formato"
+      },
+      {
+        "letter": "C",
+        "text": "Guardar documentos ▸ Ubicación predeterminada de archivos locales"
+      },
+      {
+        "letter": "D",
+        "text": "Guardar documentos ▸ Ubicación de archivo con Autorrecuperación"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Ubicación de archivo con Autorrecuperación. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-222",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-06",
+    "generado": true,
+    "enunciado": "Cada vez que usas el atajo de guardar, Word abre la pantalla completa del Backstage en lugar de guardar directamente. ¿Dónde activas que los atajos de guardar y abrir actúen sin pasar por esa pantalla?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Ubicación predeterminada de archivos locales"
+      },
+      {
+        "letter": "B",
+        "text": "Guardar documentos ▸ Guardar en PC de forma predeterminada"
+      },
+      {
+        "letter": "C",
+        "text": "Guardar documentos ▸ Ubicación predeterminada de plantillas personales"
+      },
+      {
+        "letter": "D",
+        "text": "Guardar documentos ▸ No mostrar el Backstage al abrir o guardar archivos con los métodos abreviados de teclado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → No mostrar el Backstage al abrir o guardar archivos con los métodos abreviados de teclado. Atajo relacionado: Ctrl+G. Atajos de guardado de esta instalación: Ctrl+G / Mayús+F12 / Alt+Mayús+F2 (Guardar), F12 (Guardar como)."
+  },
+  {
+    "id": "archivo-223",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-07",
+    "generado": true,
+    "enunciado": "Al guardar un documento no aparecen en la lista de ubicaciones los sitios de SharePoint ni otras cuentas de nube de tu organización. ¿Dónde activas que esos sitios se muestren aunque requieran iniciar sesión?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Guardar archivos en formato"
+      },
+      {
+        "letter": "B",
+        "text": "Guardar documentos ▸ Guardar información de Autorrecuperación cada X minutos"
+      },
+      {
+        "letter": "C",
+        "text": "Guardar documentos ▸ Mostrar sitios adicionales para guardar, incluso si fuera necesario iniciar sesión"
+      },
+      {
+        "letter": "D",
+        "text": "Guardar documentos ▸ No mostrar el Backstage al abrir o guardar archivos con los métodos abreviados de teclado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Mostrar sitios adicionales para guardar, incluso si fuera necesario iniciar sesión. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-224",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-08",
+    "generado": true,
+    "enunciado": "Cada vez que guardas un documento nuevo, Word te lleva a OneDrive y tienes que navegar a mano hasta tu disco local. ¿Dónde configuras que la ubicación predeterminada sea siempre tu PC?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Guardar en PC de forma predeterminada"
+      },
+      {
+        "letter": "B",
+        "text": "Guardar documentos ▸ Ubicación de archivo con Autorrecuperación"
+      },
+      {
+        "letter": "C",
+        "text": "Guardar documentos ▸ Guardar archivos en formato"
+      },
+      {
+        "letter": "D",
+        "text": "Guardar documentos ▸ Ubicación predeterminada de plantillas personales"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Guardar en PC de forma predeterminada. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-225",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-10",
+    "generado": true,
+    "enunciado": "Has creado varias plantillas propias pero no aparecen en la sección \"Personal\" de la pantalla de inicio. ¿Dónde le indicas a Word en qué carpeta están para que las muestre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Guardar archivos en formato"
+      },
+      {
+        "letter": "B",
+        "text": "Guardar documentos ▸ Conservar la última versión recuperada automáticamente cuando cierro sin guardar"
+      },
+      {
+        "letter": "C",
+        "text": "Guardar documentos ▸ Guardar información de Autorrecuperación cada X minutos"
+      },
+      {
+        "letter": "D",
+        "text": "Guardar documentos ▸ Ubicación predeterminada de plantillas personales"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Ubicación predeterminada de plantillas personales. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-226",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-11",
+    "generado": true,
+    "enunciado": "Trabajas con archivos extraídos de una biblioteca de SharePoint y necesitas saber en qué carpeta local se guardan mientras los editas sin conexión. ¿Dónde consultas o cambias esa ubicación?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Conservar la última versión recuperada automáticamente cuando cierro sin guardar"
+      },
+      {
+        "letter": "B",
+        "text": "Guardar documentos ▸ Mostrar sitios adicionales para guardar, incluso si fuera necesario iniciar sesión"
+      },
+      {
+        "letter": "C",
+        "text": "Edición sin conexión ▸ Ubicación de borradores del servidor"
+      },
+      {
+        "letter": "D",
+        "text": "Guardar documentos ▸ Ubicación predeterminada de plantillas personales"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Opciones de edición sin conexión para los archivos del servidor de administración de documentos → Ubicación de borradores del servidor. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-227",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-13",
+    "generado": true,
+    "enunciado": "Has activado la incrustación de fuentes pero el archivo pesa demasiado. ¿Dónde activas incrustar solo los caracteres que realmente aparecen en el documento para reducir el tamaño?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Guardar archivos en formato"
+      },
+      {
+        "letter": "B",
+        "text": "Mantener la fidelidad al compartir este documento ▸ Incrustar solo los caracteres utilizados en el documento (recomendado para reducir el tamaño del archivo)"
+      },
+      {
+        "letter": "C",
+        "text": "Guardar documentos ▸ No mostrar el Backstage al abrir o guardar archivos con los métodos abreviados de teclado"
+      },
+      {
+        "letter": "D",
+        "text": "Mantener la fidelidad al compartir este documento ▸ No incrustar fuentes del sistema comunes"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Mantener la fidelidad al compartir este documento → Incrustar solo los caracteres utilizados en el documento (recomendado para reducir el tamaño del archivo). Reduce el tamaño, pero limita que otros editen el documento con esa fuente."
+  },
+  {
+    "id": "archivo-228",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-14",
+    "generado": true,
+    "enunciado": "Has activado la incrustación de fuentes y el archivo ocupa más de lo esperado porque incrusta también fuentes estándar que todo equipo ya tiene. ¿Dónde activas excluir esas fuentes comunes?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Conservar la última versión recuperada automáticamente cuando cierro sin guardar"
+      },
+      {
+        "letter": "B",
+        "text": "Mantener la fidelidad al compartir este documento ▸ No incrustar fuentes del sistema comunes"
+      },
+      {
+        "letter": "C",
+        "text": "Configuración de caché ▸ Eliminar los archivos almacenados en caché"
+      },
+      {
+        "letter": "D",
+        "text": "Guardar documentos ▸ Mostrar sitios adicionales para guardar, incluso si fuera necesario iniciar sesión"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Mantener la fidelidad al compartir este documento → No incrustar fuentes del sistema comunes. Activarla REDUCE el tamaño (no lo aumenta): al activarla Word deja de incrustar las fuentes del sistema."
+  },
+  {
+    "id": "archivo-229",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-15",
+    "generado": true,
+    "enunciado": "Los archivos de la caché de documentos de Office ocupan demasiado espacio en disco. ¿Dónde reduces el número de días que se conservan?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Ubicación predeterminada de archivos locales"
+      },
+      {
+        "letter": "B",
+        "text": "Guardar documentos ▸ Guardar en PC de forma predeterminada"
+      },
+      {
+        "letter": "C",
+        "text": "Mantener la fidelidad al compartir este documento ▸ No incrustar fuentes del sistema comunes"
+      },
+      {
+        "letter": "D",
+        "text": "Configuración de caché ▸ Días durante los que se conservarán los archivos de Caché de documentos de Office"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Configuración de caché → Días durante los que se conservarán los archivos de Caché de documentos de Office. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-230",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-16",
+    "generado": true,
+    "enunciado": "Por privacidad quieres que Word borre los archivos de la caché cada vez que cierres un documento, sin esperar a que caduquen. ¿Dónde lo activas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardar documentos ▸ Ubicación predeterminada de archivos locales"
+      },
+      {
+        "letter": "B",
+        "text": "Guardar documentos ▸ Guardar información de Autorrecuperación cada X minutos"
+      },
+      {
+        "letter": "C",
+        "text": "Configuración de caché ▸ Eliminar los archivos de Caché de documentos de Office cuando se cierren"
+      },
+      {
+        "letter": "D",
+        "text": "Mantener la fidelidad al compartir este documento ▸ Incrustar solo los caracteres utilizados en el documento (recomendado para reducir el tamaño del archivo)"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Configuración de caché → Eliminar los archivos de Caché de documentos de Office cuando se cierren. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-231",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones",
+    "subtopic": "Guardar",
+    "tema": "Opciones",
+    "sourceQuestionId": "opc-guar-17",
+    "generado": true,
+    "enunciado": "La caché de documentos de Office se ha corrompido y Word no sincroniza con la nube. Quieres limpiarla manualmente ya mismo. ¿Dónde ejecutas esa limpieza desde las opciones de Word?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Configuración de caché ▸ Eliminar los archivos almacenados en caché"
+      },
+      {
+        "letter": "B",
+        "text": "Guardar documentos ▸ No mostrar el Backstage al abrir o guardar archivos con los métodos abreviados de teclado"
+      },
+      {
+        "letter": "C",
+        "text": "Guardar documentos ▸ Archivos de autoguardado almacenados en la nube de forma predeterminada en Word"
+      },
+      {
+        "letter": "D",
+        "text": "Guardar documentos ▸ Conservar la última versión recuperada automáticamente cuando cierro sin guardar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Configuración de caché → Eliminar los archivos almacenados en caché. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
   }
 ]
