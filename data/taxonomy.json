@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "note": "Taxonomía pedagógica global de OPE365. Independiente de sourceFile/bloque (que son procedencia, no temario). Reclasificación completa del banco heredado (952 preguntas) hecha en ago-2026 a partir de un análisis sourceFile por sourceFile del contenido real -- ver commits de esa fecha para el detalle de cómo se asignó cada bloque/tema/atajo.",
   "sections": [
     {
@@ -172,23 +172,49 @@
           ]
         },
         {
-          "id": "opciones",
-          "name": "Opciones",
-          "subtopics": [
-            "General",
-            "Presentación",
-            "Revisión",
-            "Guardar",
-            "Idioma",
-            "Accesibilidad",
-            "Avanzadas — Edición",
-            "Avanzadas — Mostrar contenido",
-            "Avanzadas — Pantalla",
-            "Avanzadas — Impresión",
-            "Avanzadas — General",
-            "Personalizar cinta y acceso rápido",
-            "Complementos y centro de confianza"
-          ]
+          "id": "opciones-general",
+          "name": "Opciones — General",
+          "subtopics": []
+        },
+        {
+          "id": "opciones-presentacion",
+          "name": "Opciones — Presentación",
+          "subtopics": []
+        },
+        {
+          "id": "opciones-revision",
+          "name": "Opciones — Revisión",
+          "subtopics": []
+        },
+        {
+          "id": "opciones-guardar",
+          "name": "Opciones — Guardar",
+          "subtopics": []
+        },
+        {
+          "id": "opciones-idioma",
+          "name": "Opciones — Idioma",
+          "subtopics": []
+        },
+        {
+          "id": "opciones-accesibilidad",
+          "name": "Opciones — Accesibilidad",
+          "subtopics": []
+        },
+        {
+          "id": "opciones-avanzadas",
+          "name": "Opciones — Avanzadas",
+          "subtopics": []
+        },
+        {
+          "id": "opciones-personalizar",
+          "name": "Opciones — Personalizar cinta y acceso rápido",
+          "subtopics": []
+        },
+        {
+          "id": "opciones-complementos",
+          "name": "Opciones — Complementos y centro de confianza",
+          "subtopics": []
         }
       ]
     },

@@ -250,14 +250,17 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 516, inicio 393, archivo 231, vista 145, revisar 78, insertar 45,
 referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
-Total 1423. Historial: `data/questions_regroup_report.md`. Las 98 últimas
-de `archivo` (`archivo-134..231`, `sourceQuestionId` `opc-gen/pres/rev/guar-NN`)
-cubren toggles de `Archivo > Opciones` (General, Presentación, Revisión,
-Guardar) — distractores = opciones-hermanas reales del mismo sub-panel del
-diálogo, nada inventado; las que ya tenían pregunta previa (`archivo-64..79`)
-no se duplicaron. Pendiente: subdividir `archivo:opciones` (~145 preguntas
-bajo un solo topic) en un topic por panel cuando se acabe de integrar
-Opciones — el motor lo trata hoy como un único concepto.
+Total 1423. Historial: `data/questions_regroup_report.md`. Las de `archivo`
+`archivo-134..` (`sourceQuestionId` `opc-<panel>-NN`) cubren toggles de
+`Archivo > Opciones` — opción = "sub-panel del diálogo ▸ ajuste",
+distractores = ajustes-hermanos reales, nada inventado; las que ya tenían
+pregunta previa (`archivo-64..79`) no se duplicaron. **Taxonomía v6**: el
+topic único `archivo:opciones` (era un concepto gigante que degradaba el
+motor — el test de "consolidación crece" lo detectó) se partió en 9 por
+panel: `opciones-general/-presentacion/-revision/-guardar/-idioma/
+-accesibilidad/-avanzadas/-personalizar/-complementos` (el `subtopic` de
+cada pregunta conserva el sub-panel fino). Migración por `subtopic`; `id`
+intacto, así que `PROGRESS.answers`/`contentHash` no se tocan.
 
 Taxonomía: `inicio > parrafo` se abrió en 7 grupos
 (`parrafo-marcas`/`-alineacion`/`-sangria`/`-espaciado`/`-bordes`/
