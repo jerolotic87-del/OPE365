@@ -33,6 +33,8 @@ async function main(){
   }
 
   clickGoto("practica");
+  assert(!!window.document.getElementById("in-tema"), "Práctica muestra primero la elección de qué hacer");
+  window.document.getElementById("in-tema").click();   // "Practicar un tema" → asistente
   window.document.querySelector('[data-scope="tema"]').click();
 
   const sectionSel = window.document.getElementById("wiz-section");

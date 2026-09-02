@@ -260,6 +260,28 @@ input[type="date"]{ color-scheme:dark; }
 .pr-emptydash{ font-size:11px; color:var(--text-3); }
 .progress-row .pr-bar .mastery-bar{ width:100%; }
 
+/* Práctica — lista de intenciones */
+.intent-list{ display:flex; flex-direction:column; gap:10px; }
+.intent{
+  appearance:none; cursor:pointer; font:inherit; text-align:left; width:100%; color:var(--text);
+  display:flex; align-items:center; gap:var(--sp-4); padding:var(--sp-4) var(--sp-5);
+  border:1px solid var(--border); border-radius:var(--radius-m); background:var(--surface);
+  transition:border-color .14s var(--ease), background .14s, transform .1s var(--ease);
+}
+.intent:hover:not([disabled]){ border-color:var(--border-2); background:var(--surface-2); transform:translateY(-1px); }
+.intent[disabled]{ opacity:.45; cursor:default; }
+.intent.primary{ border-color:var(--accent-line); background:linear-gradient(135deg,var(--accent-dim),var(--surface) 70%); }
+.intent.primary:hover:not([disabled]){ border-color:var(--accent); box-shadow:0 10px 28px -14px var(--accent-line); }
+.intent .in-ic{ width:38px; height:38px; border-radius:10px; background:var(--surface-2); color:var(--accent-ink);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.intent.primary .in-ic{ background:var(--accent); color:#06101F; }
+.intent .in-ic svg{ width:18px; height:18px; }
+.intent .in-body{ flex:1; min-width:0; display:flex; flex-direction:column; gap:3px; }
+.intent .in-t{ font-weight:700; font-size:14.5px; }
+.intent .in-d{ font-size:12px; color:var(--text-2); line-height:1.4; }
+.intent .in-go{ color:var(--text-3); display:flex; flex-shrink:0; }
+.intent .in-go svg{ width:16px; height:16px; }
+
 .hero-continue{
   border-radius:var(--radius-l); border:1px solid var(--border-2);
   background:linear-gradient(180deg, var(--raised), var(--surface));
@@ -589,11 +611,42 @@ details.advanced summary:hover{ color:var(--text); }
 .blank-input.incorrect{ border-color:var(--bad-line); background:var(--bad-dim); }
 .blank-correct{ font-size:12px; color:var(--good); font-family:var(--font-mono); }
 
-.feedback-box{ margin-top:var(--sp-5); padding:14px 16px; border-radius:var(--radius-m); font-size:13.5px; line-height:1.6; border:1px solid var(--border); }
-.feedback-box.ok{ background:var(--good-dim); border-color:var(--good-line); color:var(--good); }
-.feedback-box.bad{ background:var(--bad-dim); border-color:var(--bad-line); color:var(--bad); }
-.feedback-box strong{ display:block; margin-bottom:4px; font-size:14px; }
-.feedback-box .expl{ color:var(--text-2); margin-top:6px; }
+/* feedback tras responder — enseña, sin tapar la pregunta */
+.fb{ margin-top:var(--sp-5); border-radius:var(--radius-m); border:1px solid var(--border); overflow:hidden; }
+.fb-ok{ border-color:var(--good-line); background:var(--good-dim); }
+.fb-bad{ border-color:var(--bad-line); background:var(--bad-dim); }
+.fb-head{ display:flex; align-items:center; gap:10px; padding:12px 14px; flex-wrap:wrap; }
+.fb-mark{ width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-weight:800; font-size:12px; }
+.fb-ok .fb-mark{ background:var(--good); color:#06231A; }
+.fb-bad .fb-mark{ background:var(--bad); color:#2B0D07; }
+.fb-mark svg{ width:13px; height:13px; }
+.fb-verdict{ font-weight:700; font-size:14px; }
+.fb-ok .fb-verdict{ color:var(--good); } .fb-bad .fb-verdict{ color:var(--bad); }
+.fb-right{ font-size:12.5px; color:var(--text-2); }
+.fb-right b{ color:var(--text); }
+.fb-gist{ margin:0; padding:0 14px 12px; font-size:13px; line-height:1.6; color:var(--text); }
+.fb-more{ border-top:1px solid var(--border); }
+.fb-more summary{ cursor:pointer; padding:10px 14px; font-size:12px; font-weight:600; color:var(--text-2); user-select:none; list-style:none; display:flex; align-items:center; gap:6px; }
+.fb-more summary::before{ content:"›"; font-size:15px; transition:transform .15s var(--ease); display:inline-block; }
+.fb-more[open] summary::before{ transform:rotate(90deg); }
+.fb-more summary:hover{ color:var(--text); }
+.fb-more-body{ padding:2px 14px 14px; font-size:13px; line-height:1.65; color:var(--text-2); }
+kbd{
+  display:inline-block; font-family:var(--font-mono); font-size:11.5px; font-weight:600; line-height:1.4;
+  color:var(--accent-ink); background:var(--surface-2); border:1px solid var(--border-2);
+  border-bottom-width:2px; border-radius:5px; padding:1px 6px; white-space:nowrap; margin:0 1px;
+}
+.fb-bad kbd, .fb-ok kbd{ background:var(--raised); }
+
+/* flashcards: 3 grados de valoración */
+.fc-verdict-3{ grid-template-columns:repeat(3,1fr); }
+.fc-grade-no.btn-outline{ border-color:var(--bad-line); color:var(--bad); }
+.fc-grade-no.btn-outline:hover{ background:var(--bad-dim); }
+.fc-grade-hard.btn-outline{ border-color:rgba(227,178,60,.4); color:var(--warn); }
+.fc-grade-hard.btn-outline:hover{ background:var(--warn-dim); }
+.fc-grade-yes{ background:var(--good); border-color:var(--good); color:#06231A; }
+.fc-grade-yes:hover{ filter:brightness(1.08); }
+@media (max-width:520px){ .fc-verdict-3{ grid-template-columns:1fr; } }
 
 details.meta-panel{ margin-top:var(--sp-4); }
 details.meta-panel summary{ cursor:pointer; font-size:11.5px; color:var(--text-3); font-family:var(--font-mono); padding:6px 0; user-select:none; }
@@ -4330,6 +4383,8 @@ const ICONS = {
   clock:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
   cards:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="14" height="14" rx="2"/><path d="M7 7V5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>',
   layers:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>',
+  check:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
+  target:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>',
 };
 function icon(name){ return ICONS[name] || ""; }
 
@@ -4383,7 +4438,7 @@ function render(view, params){
   params = params || {};
   if(view==="home") return renderHome();
   if(view==="temario") return renderTemario();
-  if(view==="practica" || view==="study") return renderTestWizard(params.mode ? params : {mode:"practice"});
+  if(view==="practica" || view==="study") return params.mode || params.step ? renderTestWizard(params) : renderPracticeHub();
   if(view==="tests") return renderProgress();
   if(view==="progress") return renderProgress();
   if(view==="test-wizard") return renderTestWizard(params);
@@ -4689,6 +4744,83 @@ function renderHistory(){
 }
 
 /* ---------------------------------------------------------------
+   PRÁCTICA — elige primero QUÉ quieres hacer; luego solo lo relevante
+--------------------------------------------------------------- */
+function renderPracticeHub(){
+  const hm = O.LEB ? O.LEB.homeModel() : null;
+  const started = !!(hm && hm.anyData);
+  const preview = started ? O.LEB.smartPreview(hm.minutesPerDay) : null;
+  const plan = O.LEB ? O.LEB.getPlan() : null;
+  const cs = O.computeStats();
+
+  mainEl().innerHTML = `
+  <div class="view view-narrow">
+    <div class="view-head">
+      <p class="eyebrow">Práctica</p>
+      <h1>¿Qué quieres hacer?</h1>
+    </div>
+    <div class="intent-list">
+      <button class="intent primary" id="in-smart">
+        <span class="in-ic">${icon('study')}</span>
+        <span class="in-body"><span class="in-t">Estudiar ahora</span>
+          <span class="in-d">${started ? `Sesión guiada · ≈${preview.estMinutes} min · ${preview.questions} pregunta${preview.questions===1?'':'s'}${preview.cards?` + ${preview.cards} flashcard${preview.cards===1?'':'s'}`:''}` : 'Sesión guiada por tu progreso — empieza por lo esencial'}</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+      ${started ? `<button class="intent" id="in-review">
+        <span class="in-ic">${icon('history')}</span>
+        <span class="in-body"><span class="in-t">Repasar lo pendiente</span>
+          <span class="in-d">${hm.dueTotal?`${hm.dueTotal} bloque${hm.dueTotal===1?'':'s'} tocan repaso${hm.atrasadoTotal?` · ${hm.atrasadoTotal} atrasado${hm.atrasadoTotal===1?'':'s'}`:''}`:'Nada pendiente ahora mismo'}</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>` : ``}
+      <button class="intent" id="in-tema">
+        <span class="in-ic">${icon('layers')}</span>
+        <span class="in-body"><span class="in-t">Practicar un tema</span>
+          <span class="in-d">Elige pestaña y grupo, tipo de ejercicio o dificultad</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+      <button class="intent" id="in-exam-plan">
+        <span class="in-ic">${icon('target')}</span>
+        <span class="in-body"><span class="in-t">Preparar el examen</span>
+          <span class="in-d">${plan && plan.examDate ? `Examen puesto · recta final guiada` : 'Pon tu fecha real y el motor recalcula el plan'}</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+      <button class="intent" id="in-test">
+        <span class="in-ic">${icon('tests')}</span>
+        <span class="in-body"><span class="in-t">Hacer un test / simulacro</span>
+          <span class="in-d">Sin corrección hasta el final, con cronómetro opcional</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+      <button class="intent" id="in-errors" ${cs.incorrect?'':'disabled'}>
+        <span class="in-ic">${icon('errors')}</span>
+        <span class="in-body"><span class="in-t">Repasar mis errores</span>
+          <span class="in-d">${cs.incorrect} pregunta${cs.incorrect===1?'':'s'} fallada${cs.incorrect===1?'':'s'}</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+      <button class="intent" data-goto="mp-setup">
+        <span class="in-ic">${icon('challenge')}</span>
+        <span class="in-body"><span class="in-t">Duelo en vivo</span>
+          <span class="in-d">Reto en tiempo real con otra persona</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+    </div>
+  </div>`;
+
+  const smart = $("#in-smart"); if(smart) smart.addEventListener("click", ()=> startSmartStudy(hm?hm.minutesPerDay:20));
+  const rev = $("#in-review"); if(rev) rev.addEventListener("click", ()=> startReviewStudy(hm?hm.minutesPerDay:20));
+  $("#in-tema").addEventListener("click", ()=> go("practica", {mode:"practice", step:"tema"}));
+  $("#in-test").addEventListener("click", ()=> go("practica", {mode:"exam"}));
+  $("#in-exam-plan").addEventListener("click", ()=>{
+    if(plan && plan.examDate) startSmartStudy(hm?hm.minutesPerDay:20);
+    else openExamPlanModal();
+  });
+  const err = $("#in-errors");
+  if(err) err.addEventListener("click", ()=>{
+    const s2 = O.buildSession({mode:"practice", scope:"errores", count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
+    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No tienes preguntas falladas pendientes");
+  });
+}
+
+/* ---------------------------------------------------------------
    ASISTENTE DE CREACIÓN DE TEST — divulgación progresiva
 --------------------------------------------------------------- */
 let wizardState = {};
@@ -4727,8 +4859,8 @@ function renderWizardStep(){
   mainEl().innerHTML = `
   <div class="view view-narrow">
     <div class="view-head">
-      <button class="btn btn-ghost btn-sm" data-goto="${wizardState.mode==='exam'?'progress':'home'}" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Cancelar</button>
-      <p class="eyebrow">Práctica</p>
+      <button class="btn btn-ghost btn-sm" data-goto="practica" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Volver</button>
+      <p class="eyebrow">${wizardState.mode==='exam'?'Test / simulacro':'Práctica'}</p>
       <h1>Configura tu sesión</h1>
     </div>
     ${wizardState.step===1 ? `
@@ -5056,8 +5188,8 @@ function renderQuestionCard(q, s, isExam){
     <details class="meta-panel">
       <summary>Detalles de la pregunta</summary>
       <div class="meta-grid">
-        <div><b>Tema</b>${O.escapeHtml(q.tema||"—")}</div>
-        <div><b>Fuente</b>${q.sourceFile} (pregunta ${q.qnumInSource||"—"})</div>
+        <div><b>Bloque</b>${O.escapeHtml(q.bloque||q.tema||"—")}</div>
+        <div><b>Origen</b>${O.escapeHtml(q.sourceFile||"—")}${q.sourceQuestionId?` · ${O.escapeHtml(q.sourceQuestionId)}`:''}</div>
       </div>
     </details>
     <div class="qnav-footer">
@@ -5218,12 +5350,44 @@ function renderBlankFillBody(body, q, s, isExam, answeredAlready, resp){
   });
 }
 
+/* limpia marcadores de fuente del tipo "=== BLOQUE 13 (Selección múltiple) ===" */
+function cleanExplic(s){
+  return String(s||"")
+    .replace(/={2,}\s*BLOQUE[\s\S]*$/i, "")
+    .replace(/={2,}[^=]*={2,}/g, " ")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+/* resalta atajos de teclado (Ctrl+…, Alt+…, F1-F12) como <kbd> */
+function kbdify(html){
+  return html.replace(/\b((?:Ctrl|Alt|Mayús|Shift|Windows|Win|Tab|Esc|Supr|Intro|Enter|Retroceso|AltGr|F(?:1[0-2]|[1-9]))(?:\s*\+\s*(?:Ctrl|Alt|Mayús|Shift|Win|Tab|F(?:1[0-2]|[1-9])|[A-Za-zÑñ0-9ÁÉÍÓÚáéíóú↑↓←→]|Flecha\s\w+))*)\b/g,
+    m => `<kbd>${m.replace(/\s*\+\s*/g," + ")}</kbd>`);
+}
+function correctAnswerText(q){
+  if(q.tipo==="opcion_unica"){ const o=(q.opciones||[]).find(o=>o.letter===q.respuesta); return o?`${o.letter}) ${o.text}`:q.respuesta; }
+  if(q.tipo==="verdadero_falso") return q.respuesta===true||q.respuesta==="true" ? "Verdadero" : "Falso";
+  if(q.tipo==="seleccion_multiple") return (q.respuesta||[]).map(l=>{ const o=(q.opciones||[]).find(o=>o.letter===l); return o?o.letter:l; }).join(", ");
+  return null;
+}
 function showFeedback(el, q, resp){
-  el.innerHTML = `<div class="feedback-box ${resp.correct?"ok":"bad"}">
-    <strong>${resp.correct?"Correcto":"Incorrecto"}</strong>
-    ${q.explicacion ? `<div class="expl">${O.escapeHtml(q.explicacion)}</div>` : ''}
-    ${q.sourceIssue ? `<div class="issue-warn">Incidencia detectada en la fuente original</div>` : ''}
-  </div>`;
+  const full = cleanExplic(q.explicacion);
+  const gistCut = full.length > 150 ? full.slice(0, full.slice(0,150).lastIndexOf(" ")>80 ? full.slice(0,150).lastIndexOf(" ") : 150).trim() + "…" : full;
+  const hasMore = full.length > gistCut.length + 1;
+  const label = q.categoria==="atajo" ? "Ver atajo y explicación completa"
+              : q.categoria==="ruta"  ? "Ver ruta y explicación completa"
+              : "Ver explicación completa";
+  const rightTxt = !resp.correct ? correctAnswerText(q) : null;
+  el.innerHTML = `
+    <div class="fb ${resp.correct?'fb-ok':'fb-bad'}">
+      <div class="fb-head">
+        <span class="fb-mark">${resp.correct?icon('check'):'✕'}</span>
+        <span class="fb-verdict">${resp.correct?'Correcto':'Incorrecto'}</span>
+        ${rightTxt ? `<span class="fb-right">Correcta: <b>${O.escapeHtml(rightTxt)}</b></span>` : ''}
+      </div>
+      ${gistCut ? `<p class="fb-gist">${kbdify(O.escapeHtml(gistCut))}</p>` : ''}
+      ${hasMore ? `<details class="fb-more"><summary>${label}</summary>
+        <div class="fb-more-body">${kbdify(O.escapeHtml(full))}</div></details>` : ''}
+    </div>`;
 }
 
 function submitAnswer(q, s, isExam, answer){

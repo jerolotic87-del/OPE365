@@ -32,6 +32,8 @@ const ICONS = {
   clock:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
   cards:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="14" height="14" rx="2"/><path d="M7 7V5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>',
   layers:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>',
+  check:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
+  target:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>',
 };
 function icon(name){ return ICONS[name] || ""; }
 
@@ -85,7 +87,7 @@ function render(view, params){
   params = params || {};
   if(view==="home") return renderHome();
   if(view==="temario") return renderTemario();
-  if(view==="practica" || view==="study") return renderTestWizard(params.mode ? params : {mode:"practice"});
+  if(view==="practica" || view==="study") return params.mode || params.step ? renderTestWizard(params) : renderPracticeHub();
   if(view==="tests") return renderProgress();
   if(view==="progress") return renderProgress();
   if(view==="test-wizard") return renderTestWizard(params);
@@ -391,6 +393,83 @@ function renderHistory(){
 }
 
 /* ---------------------------------------------------------------
+   PRÁCTICA — elige primero QUÉ quieres hacer; luego solo lo relevante
+--------------------------------------------------------------- */
+function renderPracticeHub(){
+  const hm = O.LEB ? O.LEB.homeModel() : null;
+  const started = !!(hm && hm.anyData);
+  const preview = started ? O.LEB.smartPreview(hm.minutesPerDay) : null;
+  const plan = O.LEB ? O.LEB.getPlan() : null;
+  const cs = O.computeStats();
+
+  mainEl().innerHTML = `
+  <div class="view view-narrow">
+    <div class="view-head">
+      <p class="eyebrow">Práctica</p>
+      <h1>¿Qué quieres hacer?</h1>
+    </div>
+    <div class="intent-list">
+      <button class="intent primary" id="in-smart">
+        <span class="in-ic">${icon('study')}</span>
+        <span class="in-body"><span class="in-t">Estudiar ahora</span>
+          <span class="in-d">${started ? `Sesión guiada · ≈${preview.estMinutes} min · ${preview.questions} pregunta${preview.questions===1?'':'s'}${preview.cards?` + ${preview.cards} flashcard${preview.cards===1?'':'s'}`:''}` : 'Sesión guiada por tu progreso — empieza por lo esencial'}</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+      ${started ? `<button class="intent" id="in-review">
+        <span class="in-ic">${icon('history')}</span>
+        <span class="in-body"><span class="in-t">Repasar lo pendiente</span>
+          <span class="in-d">${hm.dueTotal?`${hm.dueTotal} bloque${hm.dueTotal===1?'':'s'} tocan repaso${hm.atrasadoTotal?` · ${hm.atrasadoTotal} atrasado${hm.atrasadoTotal===1?'':'s'}`:''}`:'Nada pendiente ahora mismo'}</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>` : ``}
+      <button class="intent" id="in-tema">
+        <span class="in-ic">${icon('layers')}</span>
+        <span class="in-body"><span class="in-t">Practicar un tema</span>
+          <span class="in-d">Elige pestaña y grupo, tipo de ejercicio o dificultad</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+      <button class="intent" id="in-exam-plan">
+        <span class="in-ic">${icon('target')}</span>
+        <span class="in-body"><span class="in-t">Preparar el examen</span>
+          <span class="in-d">${plan && plan.examDate ? `Examen puesto · recta final guiada` : 'Pon tu fecha real y el motor recalcula el plan'}</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+      <button class="intent" id="in-test">
+        <span class="in-ic">${icon('tests')}</span>
+        <span class="in-body"><span class="in-t">Hacer un test / simulacro</span>
+          <span class="in-d">Sin corrección hasta el final, con cronómetro opcional</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+      <button class="intent" id="in-errors" ${cs.incorrect?'':'disabled'}>
+        <span class="in-ic">${icon('errors')}</span>
+        <span class="in-body"><span class="in-t">Repasar mis errores</span>
+          <span class="in-d">${cs.incorrect} pregunta${cs.incorrect===1?'':'s'} fallada${cs.incorrect===1?'':'s'}</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+      <button class="intent" data-goto="mp-setup">
+        <span class="in-ic">${icon('challenge')}</span>
+        <span class="in-body"><span class="in-t">Duelo en vivo</span>
+          <span class="in-d">Reto en tiempo real con otra persona</span></span>
+        <span class="in-go">${icon('chevronR')}</span>
+      </button>
+    </div>
+  </div>`;
+
+  const smart = $("#in-smart"); if(smart) smart.addEventListener("click", ()=> startSmartStudy(hm?hm.minutesPerDay:20));
+  const rev = $("#in-review"); if(rev) rev.addEventListener("click", ()=> startReviewStudy(hm?hm.minutesPerDay:20));
+  $("#in-tema").addEventListener("click", ()=> go("practica", {mode:"practice", step:"tema"}));
+  $("#in-test").addEventListener("click", ()=> go("practica", {mode:"exam"}));
+  $("#in-exam-plan").addEventListener("click", ()=>{
+    if(plan && plan.examDate) startSmartStudy(hm?hm.minutesPerDay:20);
+    else openExamPlanModal();
+  });
+  const err = $("#in-errors");
+  if(err) err.addEventListener("click", ()=>{
+    const s2 = O.buildSession({mode:"practice", scope:"errores", count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
+    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No tienes preguntas falladas pendientes");
+  });
+}
+
+/* ---------------------------------------------------------------
    ASISTENTE DE CREACIÓN DE TEST — divulgación progresiva
 --------------------------------------------------------------- */
 let wizardState = {};
@@ -429,8 +508,8 @@ function renderWizardStep(){
   mainEl().innerHTML = `
   <div class="view view-narrow">
     <div class="view-head">
-      <button class="btn btn-ghost btn-sm" data-goto="${wizardState.mode==='exam'?'progress':'home'}" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Cancelar</button>
-      <p class="eyebrow">Práctica</p>
+      <button class="btn btn-ghost btn-sm" data-goto="practica" style="margin-bottom:var(--sp-4);">${icon('arrowL')} Volver</button>
+      <p class="eyebrow">${wizardState.mode==='exam'?'Test / simulacro':'Práctica'}</p>
       <h1>Configura tu sesión</h1>
     </div>
     ${wizardState.step===1 ? `
@@ -758,8 +837,8 @@ function renderQuestionCard(q, s, isExam){
     <details class="meta-panel">
       <summary>Detalles de la pregunta</summary>
       <div class="meta-grid">
-        <div><b>Tema</b>${O.escapeHtml(q.tema||"—")}</div>
-        <div><b>Fuente</b>${q.sourceFile} (pregunta ${q.qnumInSource||"—"})</div>
+        <div><b>Bloque</b>${O.escapeHtml(q.bloque||q.tema||"—")}</div>
+        <div><b>Origen</b>${O.escapeHtml(q.sourceFile||"—")}${q.sourceQuestionId?` · ${O.escapeHtml(q.sourceQuestionId)}`:''}</div>
       </div>
     </details>
     <div class="qnav-footer">
@@ -920,12 +999,44 @@ function renderBlankFillBody(body, q, s, isExam, answeredAlready, resp){
   });
 }
 
+/* limpia marcadores de fuente del tipo "=== BLOQUE 13 (Selección múltiple) ===" */
+function cleanExplic(s){
+  return String(s||"")
+    .replace(/={2,}\s*BLOQUE[\s\S]*$/i, "")
+    .replace(/={2,}[^=]*={2,}/g, " ")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+/* resalta atajos de teclado (Ctrl+…, Alt+…, F1-F12) como <kbd> */
+function kbdify(html){
+  return html.replace(/\b((?:Ctrl|Alt|Mayús|Shift|Windows|Win|Tab|Esc|Supr|Intro|Enter|Retroceso|AltGr|F(?:1[0-2]|[1-9]))(?:\s*\+\s*(?:Ctrl|Alt|Mayús|Shift|Win|Tab|F(?:1[0-2]|[1-9])|[A-Za-zÑñ0-9ÁÉÍÓÚáéíóú↑↓←→]|Flecha\s\w+))*)\b/g,
+    m => `<kbd>${m.replace(/\s*\+\s*/g," + ")}</kbd>`);
+}
+function correctAnswerText(q){
+  if(q.tipo==="opcion_unica"){ const o=(q.opciones||[]).find(o=>o.letter===q.respuesta); return o?`${o.letter}) ${o.text}`:q.respuesta; }
+  if(q.tipo==="verdadero_falso") return q.respuesta===true||q.respuesta==="true" ? "Verdadero" : "Falso";
+  if(q.tipo==="seleccion_multiple") return (q.respuesta||[]).map(l=>{ const o=(q.opciones||[]).find(o=>o.letter===l); return o?o.letter:l; }).join(", ");
+  return null;
+}
 function showFeedback(el, q, resp){
-  el.innerHTML = `<div class="feedback-box ${resp.correct?"ok":"bad"}">
-    <strong>${resp.correct?"Correcto":"Incorrecto"}</strong>
-    ${q.explicacion ? `<div class="expl">${O.escapeHtml(q.explicacion)}</div>` : ''}
-    ${q.sourceIssue ? `<div class="issue-warn">Incidencia detectada en la fuente original</div>` : ''}
-  </div>`;
+  const full = cleanExplic(q.explicacion);
+  const gistCut = full.length > 150 ? full.slice(0, full.slice(0,150).lastIndexOf(" ")>80 ? full.slice(0,150).lastIndexOf(" ") : 150).trim() + "…" : full;
+  const hasMore = full.length > gistCut.length + 1;
+  const label = q.categoria==="atajo" ? "Ver atajo y explicación completa"
+              : q.categoria==="ruta"  ? "Ver ruta y explicación completa"
+              : "Ver explicación completa";
+  const rightTxt = !resp.correct ? correctAnswerText(q) : null;
+  el.innerHTML = `
+    <div class="fb ${resp.correct?'fb-ok':'fb-bad'}">
+      <div class="fb-head">
+        <span class="fb-mark">${resp.correct?icon('check'):'✕'}</span>
+        <span class="fb-verdict">${resp.correct?'Correcto':'Incorrecto'}</span>
+        ${rightTxt ? `<span class="fb-right">Correcta: <b>${O.escapeHtml(rightTxt)}</b></span>` : ''}
+      </div>
+      ${gistCut ? `<p class="fb-gist">${kbdify(O.escapeHtml(gistCut))}</p>` : ''}
+      ${hasMore ? `<details class="fb-more"><summary>${label}</summary>
+        <div class="fb-more-body">${kbdify(O.escapeHtml(full))}</div></details>` : ''}
+    </div>`;
 }
 
 function submitAnswer(q, s, isExam, answer){
