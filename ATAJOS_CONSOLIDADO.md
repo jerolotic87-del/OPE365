@@ -330,6 +330,8 @@ Probados en el Word 365 real del usuario. Si la tabla oficial dice otra cosa, es
 - **Estilos de título**: `Ctrl+Mayús+1/3` → Título 1/3, pero Título 2 es `Alt+Ctrl+2` (`Ctrl+Mayús+2` no hace nada). La tabla oficial etiqueta `Alt+Ctrl+2` solo como «Estilo».
 - **Ctrl+R**: no aparece en la tabla oficial y no hace nada en esta instalación.
 - **Alt+Mayús+F7** (Traductor): verificado en vivo, no aparece en la tabla oficial.
+- **Abrir «Opciones de Word»**: NO hay atajo en esta instalación. Solo `Archivo > Opciones` con el ratón, o navegando con `Alt` por las KeyTips de la cinta.
+- **Ctrl+Entrar**: en la tabla oficial es «Salto de página». DENTRO del cuadro de un comentario moderno (con «Habilitar comentarios modernos» activo) equivale a **Publicar el comentario** — el botón «Publicar». Verificado en vivo. El comentario se inserta con `Alt+Ctrl+A`.
 - **Esquema de localización**: esta instalación usa el esquema clásico español (Ctrl+Q/T/D/J alineación; Ctrl+N/S/K negrita/subrayado/cursiva; Ctrl+L reemplazar; Ctrl+I ir a). Distinto del esquema internacional en inglés.
 - **Guardar**: `Ctrl+G`, `Mayús+F12`, `Alt+Mayús+F2`. **Abrir**: `Ctrl+F12`, `Alt+Ctrl+F2` (`Ctrl+A` abre Backstage→Abrir). **Imprimir**: `Ctrl+P`, `Ctrl+F2`, `Ctrl+Mayús+F12`, `Alt+Ctrl+I`.
 

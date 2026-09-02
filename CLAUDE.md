@@ -6,11 +6,11 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **1325 preguntas** y **385
-flashcards** (inicio 148, vista 79, revisar 73, insertar 28, disposicion 16,
-correspondencia 15, referencias 17, diseno 9 — las 165 nuevas de sep-2026
-son tarjetas de RUTA: frente = la acción, dorso = "Pestaña ▸ Grupo ▸ Comando",
-de `rutasyatajos.txt §6`), todo el banco
+de Word 365 de una oposición de ayuntamiento. **1342 preguntas** y **407
+flashcards** (inicio 148, vista 79, revisar 73, insertar 28, archivo 22,
+disposicion 16, referencias 17, correspondencia 15, diseno 9 — las ~187
+de sep-2026 son tarjetas de RUTA: frente = la acción, dorso =
+"Pestaña ▸ Grupo ▸ Comando", de `rutasyatajos.txt`), todo el banco
 normalizado y agrupado por pestaña de la cinta
 (`data/questions/<section>.json`). Práctica/examen con corrección
 inmediata, compartir por código, desafíos asíncronos con resultado
@@ -247,10 +247,14 @@ una pregunta vive en el archivo de su `section` aunque su procedencia
 fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
-**Recuento actual** (`data/questions/<section>.json`, ago-2026):
-interfaz 516, inicio 393, archivo 133, vista 145, revisar 78, insertar 45,
+**Recuento actual** (`data/questions/<section>.json`, sep-2026):
+interfaz 516, inicio 393, archivo 150, vista 145, revisar 78, insertar 45,
 referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
-Total 1325. Historial: `data/questions_regroup_report.md`.
+Total 1342. Historial: `data/questions_regroup_report.md`. Las 17 últimas
+de `archivo` (`archivo-134..150`, `sourceQuestionId` `opc-gen-NN`) cubren
+toggles de `Archivo > Opciones > General` (interfaz de usuario, personalizar
+copia, privacidad) — distractores = opciones-hermanas reales del mismo panel,
+nada inventado.
 
 Taxonomía: `inicio > parrafo` se abrió en 7 grupos
 (`parrafo-marcas`/`-alineacion`/`-sangria`/`-espaciado`/`-bordes`/

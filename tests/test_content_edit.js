@@ -158,7 +158,7 @@ const ok = (c,m)=>{ console.log((c?"  OK  ":"  XX  ")+m); if(!c) fail++; };
   // ---- huérfano seguro: id inexistente ----
   const bad = JSON.stringify({ contentOverrides:{ q:{ "no-existe-999":{respuesta:"A",ts:1} }, fc:{} }, answers:{}, marked:{}, history:[], settings:{}, challenges:{}, flashcards:{} });
   w = boot(bad);
-  ok(w.OPE.QUESTIONS.length === 1325, "un override sobre un id inexistente no rompe la carga");
+  ok(w.OPE.QUESTIONS.length === w.__OPE365_DATA__.length, "un override sobre un id inexistente no rompe la carga");
 
   console.log(`\n${fail} fallo(s)`);
   process.exit(fail ? 1 : 0);
