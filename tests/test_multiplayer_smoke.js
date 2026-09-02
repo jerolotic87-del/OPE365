@@ -72,9 +72,14 @@ async function main(){
     onPhase:(p, extra)=>{ guestPhase = p; if(p==="round") guestRoundQ = extra.question; },
   });
 
-  hostGame.hostSetConfig({ rounds:1, seconds:15, tema:"all", tipo:"all", categoria:"all", raceMode:false });
+  hostGame.hostSetConfig({ rounds:1, seconds:15, section:"all", topic:"all", tipo:"all", categoria:"all", raceMode:false });
   await waitFor(()=> hostPhase==="lobby_ready" && guestPhase==="lobby_ready", 3000);
   assert(true, "config del duelo llega a ambos lados (lobby_ready)");
+
+  const hIds = hostGame.getState().config.questionIds, gIds = guestGame.getState().config.questionIds;
+  assert(Array.isArray(hIds) && hIds.length === 1, "el host fija la lista exacta de ids (config.questionIds)");
+  assert(JSON.stringify(hIds) === JSON.stringify(gIds), "el invitado usa la MISMA lista de ids que el host (no la reconstruye)");
+  assert(hostGame.getState().questions.every(q=>q.tipo !== "relleno"), "el tablero de duelo excluye preguntas de tipo relleno");
 
   hostGame.confirmReady();
   guestGame.confirmReady();
@@ -82,9 +87,9 @@ async function main(){
   assert(!!hostRoundQ && !!guestRoundQ, "ambos lados reciben la pregunta de la ronda");
   assert(hostRoundQ.id === guestRoundQ.id, "host e invitado ven exactamente la misma pregunta (misma semilla)");
 
-  // Este smoke test debe funcionar igual sin importar qué tipo de
-  // pregunta tocó por semilla -- incluida una de tipo "relleno" nueva,
-  // que es precisamente la superficie que se tocó en esta migración.
+  // Debe funcionar sea cual sea el tipo que tocó por semilla. El duelo
+  // ya NO incluye "relleno" (no hay UI para teclear huecos a reloj), pero
+  // dejamos la rama por si el filtro cambiara.
   const q = hostRoundQ;
   let hostAnswer;
   if(q.tipo === "opcion_unica") hostAnswer = q.respuesta;

@@ -190,6 +190,17 @@ try {
   await shot('10-mi-contenido-publicar');
   await page.evaluate(() => window.OPE.GHS.forget());
 
+  // Duelo en vivo: la configuración de contenido usa Pestaña -> Grupo (no el tema plano viejo)
+  await nav('mp-setup');
+  await page.waitForSelector('#mp-role-pick');
+  await page.locator('[data-role="host"]').click();
+  await page.waitForSelector('#mp-mode-fields .advanced');
+  await page.locator('#mp-mode-fields .advanced summary').click();
+  await page.selectOption('#mp-scope', 'pestana');
+  ok(await seen('#mp-section') && await seen('#mp-topic'), 'Duelo: contenido por Pestaña + Grupo (selector actualizado)');
+  ok((await page.locator('#mp-tema').count()) === 0, 'Duelo: ya no existe el desplegable de "tema" plano');
+  await shot('11-duelo-config-contenido');
+
   await click('[data-goto="flashcards"]');
   await page.waitForSelector('.fc-cta, .empty-state');
   await click('.segmented .seg[data-tab="todas"]');

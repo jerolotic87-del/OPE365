@@ -361,13 +361,29 @@ function createDuelGame(session){
     emitPhase("lobby_ready", {rounds:questions.length, config});
   }
   function buildBoard(){
-    const engineCfg = {
-      source:"all", tema: config.tema||"all", tipo: config.tipo||"all", categoria: config.categoria||"all",
-      qOrder:"aleatorio", count: config.rounds, shuffleOptions:true, mode:"duel", minutes:null,
-    };
-    const built = O.buildSessionFromShareableConfig(engineCfg, seed);
-    questions = built ? built.questions : [];
     roundDuration = (Number(config.seconds)||10) * 1000;
+    // El HOST fija la lista EXACTA de ids y la mete en el config; el
+    // invitado la usa tal cual. Así el tablero no depende de que los dos
+    // dispositivos tengan un banco idéntico (contenido propio creado en
+    // uno solo hacía divergir la reconstrucción "determinista").
+    let ids = config.questionIds;
+    if(!Array.isArray(ids)){
+      let pool = O.filterQuestions({
+        section: config.section || "all", topic: config.topic || "all",
+        tema: config.tema || "all", tipo: config.tipo || "all", categoria: config.categoria || "all",
+      }).filter(q=>
+        q.tipo !== "relleno"          // no hay UI para escribir huecos en un duelo a reloj
+        && !q.creado                  // el contenido propio de un jugador no lo tiene el otro
+        && !/^usr-/.test(q.id || "")
+      );
+      pool = O.seededShuffle(pool, O.mulberry32((seed >>> 0)));
+      const n = Math.min(Number(config.rounds) || 15, pool.length);
+      ids = pool.slice(0, n).map(q=>q.id);
+      config.questionIds = ids;
+    }
+    ids = ids.filter(id=> O.Q_BY_ID[id]);
+    const built = ids.length ? O.buildSessionFromIds(ids, { mode:"duel", shuffleOptions:true }, seed >>> 0) : null;
+    questions = built ? built.questions : [];
   }
 
   function handleMsg(msg){
@@ -431,6 +447,11 @@ function createDuelGame(session){
 
   function checkBothReady(){
     if(readyFlags.mine && readyFlags.rival && session.getRole()==="host"){
+      if(!questions.length){
+        readyFlags = {mine:false, rival:false};
+        emitPhase("no_content", {});
+        return;
+      }
       const startAt = Date.now() + 3200; // 3·2·1·¡YA!
       session.send({type:"start_countdown", startAt});
       emitPhase("countdown", {startAtLocal:startAt});
@@ -626,6 +647,7 @@ function createDuelGame(session){
       myScore=0; rivalScore=0; myCombo=0; rivalCombo=0; myCorrect=0; rivalCorrect=0; roundHistory=[];
       readyFlags = {mine:false, rival:false};
       seed = newSeed ? O.makeSeed() : seed;
+      if(config) delete config.questionIds;   // re-resolver el tablero desde cero
       buildBoard();
       session.send({type:"config", config, seed});
       emitPhase("lobby_ready", {rounds:questions.length, config});

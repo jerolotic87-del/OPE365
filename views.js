@@ -3211,7 +3211,7 @@ document.addEventListener("DOMContentLoaded", init);
    sin conexión; esta es la única parte que la necesita.
 ================================================================ */
 const MP = window.OPE_MP;
-let mpSetupState = { role:null, name:"", mode:"duelo", preset:"clasica", rounds:15, seconds:10, scope:"todo", tema:"all", tipo:"all", categoria:"all", joinCode:"", raceMode:false };
+let mpSetupState = { role:null, name:"", mode:"duelo", preset:"clasica", rounds:15, seconds:10, scope:"todo", section:"all", topic:"all", tipo:"all", categoria:"all", joinCode:"", raceMode:false };
 let mpSession = null, mpDuel = null, mpPoker = null, mpGameMode = "duelo";
 let mpConnPhase = "idle";
 let mpDuelPhase = "idle";
@@ -3324,11 +3324,12 @@ function renderMpModeFields(){
       <summary>Contenido y tipos de ejercicio</summary>
       <div class="config-grid" style="margin-top:var(--sp-4);">
         <div class="field"><label>Contenido</label><select id="mp-scope">
-          <option value="todo" ${mpSetupState.scope==='todo'?'selected':''}>Todo</option>
-          <option value="tema" ${mpSetupState.scope==='tema'?'selected':''}>Por tema</option>
+          <option value="todo" ${mpSetupState.scope==='todo'?'selected':''}>Todo el temario</option>
+          <option value="pestana" ${mpSetupState.scope==='pestana'?'selected':''}>Por pestaña y grupo</option>
           <option value="categoria" ${mpSetupState.scope==='categoria'?'selected':''}>Por categoría (rutas/atajos)</option>
         </select></div>
-        <div class="field" id="mp-tema-field" style="${mpSetupState.scope==='tema'?'':'display:none;'}"><label>Tema</label><select id="mp-tema">${O.ALL_TEMAS.map(t=>`<option value="${O.escapeHtml(t)}" ${mpSetupState.tema===t?'selected':''}>${O.escapeHtml(t)}</option>`).join("")}</select></div>
+        <div class="field" id="mp-sec-field" style="${mpSetupState.scope==='pestana'?'':'display:none;'}"><label>Pestaña</label><select id="mp-section">${O.TAXONOMY_SECTIONS.filter(s=>s.topics&&s.topics.length).map(s=>`<option value="${s.id}" ${mpSetupState.section===s.id?'selected':''}>${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
+        <div class="field" id="mp-top-field" style="${mpSetupState.scope==='pestana'?'':'display:none;'}"><label>Grupo</label><select id="mp-topic"></select></div>
         <div class="field" id="mp-cat-field" style="${mpSetupState.scope==='categoria'?'':'display:none;'}"><label>Categoría</label><select id="mp-categoria">${O.CATEGORY_REGISTRY.filter(c=>c.id!=='general').map(c=>`<option value="${c.id}" ${mpSetupState.categoria===c.id?'selected':''}>${c.name}</option>`).join("")}</select></div>
         <div class="field"><label>Tipo de ejercicio</label><select id="mp-tipo">
           <option value="all" ${mpSetupState.tipo==='all'?'selected':''}>Todos</option>
@@ -3338,6 +3339,7 @@ function renderMpModeFields(){
           <option value="emparejamiento" ${mpSetupState.tipo==='emparejamiento'?'selected':''}>Emparejamiento</option>
         </select></div>
       </div>
+      <p style="font-size:11px;color:var(--text-3);margin-top:8px;">El duelo omite las preguntas de rellenar huecos y el contenido que hayas creado tú (tu rival no lo tiene).</p>
     </details>
   `;
   $$("#mp-format-grid .choice-card").forEach(c=>{
@@ -3358,12 +3360,25 @@ function renderMpModeFields(){
   const roundsInput = $("#mp-rounds"), secondsInput = $("#mp-seconds");
   if(roundsInput) roundsInput.addEventListener("input", ()=> mpSetupState.rounds = Number(roundsInput.value)||15);
   if(secondsInput) secondsInput.addEventListener("input", ()=> mpSetupState.seconds = Number(secondsInput.value)||10);
+  const secSel = $("#mp-section"), topSel = $("#mp-topic");
+  if(secSel && topSel){
+    if(!O.TAXONOMY_SECTIONS.some(s=>s.id===mpSetupState.section)) mpSetupState.section = secSel.value;
+    populateTopicSelect(topSel, mpSetupState.section, mpSetupState.topic);
+    mpSetupState.topic = topSel.value || "all";
+    secSel.addEventListener("change", ()=>{
+      mpSetupState.section = secSel.value;
+      populateTopicSelect(topSel, mpSetupState.section, null);
+      mpSetupState.topic = topSel.value || "all";
+    });
+    topSel.addEventListener("change", ()=> mpSetupState.topic = topSel.value || "all");
+  }
   $("#mp-scope").addEventListener("change", ()=>{
     mpSetupState.scope = $("#mp-scope").value;
-    $("#mp-tema-field").style.display = mpSetupState.scope==="tema" ? "" : "none";
+    const pest = mpSetupState.scope==="pestana";
+    $("#mp-sec-field").style.display = pest ? "" : "none";
+    $("#mp-top-field").style.display = pest ? "" : "none";
     $("#mp-cat-field").style.display = mpSetupState.scope==="categoria" ? "" : "none";
   });
-  const temaSel = $("#mp-tema"); if(temaSel) temaSel.addEventListener("change", ()=> mpSetupState.tema = temaSel.value);
   const catSel = $("#mp-categoria"); if(catSel) catSel.addEventListener("change", ()=> mpSetupState.categoria = catSel.value);
   $("#mp-tipo").addEventListener("change", ()=> mpSetupState.tipo = $("#mp-tipo").value);
 }
@@ -3429,7 +3444,8 @@ function mpCreateGameEngine(isHost){
     if(isHost){
       mpDuel.hostSetConfig({
         rounds: mpSetupState.rounds, seconds: mpSetupState.seconds,
-        tema: mpSetupState.scope==="tema" ? mpSetupState.tema : "all",
+        section: mpSetupState.scope==="pestana" ? mpSetupState.section : "all",
+        topic: mpSetupState.scope==="pestana" ? mpSetupState.topic : "all",
         tipo: mpSetupState.tipo, categoria: mpSetupState.scope==="categoria" ? mpSetupState.categoria : "all",
         raceMode: !!mpSetupState.raceMode,
       });
@@ -3452,6 +3468,7 @@ function mpWireDuelHandlers(){
         setTimeout(()=>{ if(mpDuel) mpDuel.advanceIfHost(); }, 2200);
       }
       if(p === "finished") mpFinalExtra = extra;
+      if(p === "no_content"){ O.toast("No hay preguntas con esa configuración — ajusta el contenido"); go("mp-setup"); return; }
       if(p === "round" || p === "lobby_ready" || p === "countdown" || p === "round_end" || p === "finished"){
         if(O.Nav.view !== "mp-game" && (p==="round"||p==="round_end"||p==="finished"||p==="countdown")) go("mp-game");
         else mpRerenderCurrentMpView();
@@ -3521,17 +3538,20 @@ function renderMpLobby(){
   if(mpDuelPhase === "lobby_ready"){
     const rounds = mpDuel.getState().questions.length;
     const cfg = mpDuel.getState().config || {};
+    const noQ = rounds === 0;
     view.innerHTML = `
     <div class="view view-narrow">
       <div class="test-preview">
         <div class="big">${rounds}</div>
-        <div class="sub">rondas · ${cfg.seconds||10} s por pregunta</div>
+        <div class="sub">${noQ ? 'sin preguntas con esta configuración' : `rondas · ${cfg.seconds||10} s por pregunta`}</div>
       </div>
       <p style="text-align:center; color:var(--text-2); font-size:13px; margin-top:var(--sp-4);">Jugando contra <strong style="color:var(--text);">${O.escapeHtml(mpSession.getRivalName())}</strong></p>
-      <button class="btn btn-solid btn-block" id="mp-im-ready" style="margin-top:var(--sp-6);">Estoy listo</button>
-      <button class="btn btn-ghost btn-block" id="mp-exit" style="margin-top:10px;">Salir</button>
+      ${noQ ? `<p style="text-align:center;color:var(--bad);font-size:12.5px;margin-top:8px;">El host debe volver a la configuración y elegir otro contenido.</p>` : ''}
+      <button class="btn btn-solid btn-block" id="mp-im-ready" style="margin-top:var(--sp-6);" ${noQ?'disabled':''}>Estoy listo</button>
+      <button class="btn btn-ghost btn-block" id="mp-exit" style="margin-top:10px;">${noQ?'Volver a configurar':'Salir'}</button>
     </div>`;
-    $("#mp-im-ready").addEventListener("click", (e)=>{ mpDuel.confirmReady(); e.target.disabled=true; e.target.textContent="Esperando al rival…"; });
+    const rb = $("#mp-im-ready");
+    if(rb && !noQ) rb.addEventListener("click", (e)=>{ mpDuel.confirmReady(); e.target.disabled=true; e.target.textContent="Esperando al rival…"; });
     $("#mp-exit").addEventListener("click", mpExitToSetup);
     return;
   }
@@ -3831,7 +3851,7 @@ function mpWirePokerHandlers(){
 }
 
 function pokerCardPool(){
-  return O.QUESTIONS.filter(q=> q.categoria==="atajo" && q.tipo==="opcion_unica" && !q.negativa);
+  return O.QUESTIONS.filter(q=> q.categoria==="atajo" && q.tipo==="opcion_unica" && !q.negativa && !q.creado && !/^usr-/.test(q.id||""));
 }
 function pokerSuggestDeck(excludeIds){
   const excl = new Set(excludeIds||[]);
