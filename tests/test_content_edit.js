@@ -86,8 +86,15 @@ const ok = (c,m)=>{ console.log((c?"  OK  ":"  XX  ")+m); if(!c) fail++; };
   O3.ContentEdit.revert("fc", fcid);
   ok(O3.F_BY_ID[fcid].front === origFront, "flashcard: revert restaura el frente");
 
-  // ---- botón ✎ presente en el runner ----
+  // ---- vista "Mi contenido" ----
   const D3 = w.document;
+  { const b=D3.createElement("button"); b.setAttribute("data-goto","mi-contenido"); D3.body.appendChild(b);
+    b.dispatchEvent(new w.MouseEvent("click",{bubbles:true})); b.remove(); }
+  ok(O3.Nav.view === "mi-contenido" && !!D3.querySelector("#mc-new-q") && !!D3.querySelector("#mc-new-fc"),
+     "la vista 'Mi contenido' se abre con los botones de crear");
+  ok(D3.querySelectorAll(".mc-row").length === 0, "sin contenido propio la lista está vacía");
+
+  // ---- botón ✎ presente en el runner ----
   const s = O3.buildSession({mode:"practice",count:3,qOrder:"aleatorio",source:"all",tema:"all",tipo:"all",categoria:"all",section:"all",topic:"all",shuffleOptions:true});
   O3.setSession(s); O3.saveSessionSnapshot();
   const btn = D3.createElement("button"); btn.setAttribute("data-goto","running"); D3.body.appendChild(btn);
@@ -112,6 +119,17 @@ const ok = (c,m)=>{ console.log((c?"  OK  ":"  XX  ")+m); if(!c) fail++; };
   ok(O4.LE.CONCEPT_OF_Q[qid2] === sec.id+":"+sec.topics[0].id, "el motor asocia la pregunta creada a su concepto");
   ok(O4.ContentEdit.isUser("q", qid2) && O4.ContentEdit.userCount() === 1, "queda registrada como contenido propio");
 
+  // selección múltiple
+  const qid3 = O4.ContentEdit.createQuestion({
+    tipo:"seleccion_multiple", enunciado:"¿Cuáles son formatos de fuente?",
+    opciones:[{letter:"A",text:"Negrita"},{letter:"B",text:"Interlineado"},{letter:"C",text:"Cursiva"},{letter:"D",text:"Sangría"}],
+    respuesta:["C","A"], explicacion:"Negrita y cursiva son formato de fuente.",
+    section:sec.id, topic:sec.topics[0].id,
+  });
+  ok(O4.Q_BY_ID[qid3].tipo === "seleccion_multiple" && Array.isArray(O4.Q_BY_ID[qid3].respuesta), "createQuestion soporta selección múltiple (respuesta como array ordenado)");
+  ok(JSON.stringify(O4.Q_BY_ID[qid3].respuesta) === JSON.stringify(["A","C"]), "la respuesta múltiple se guarda ordenada");
+  ok(O4.evaluateAnswer(O4.Q_BY_ID[qid3], ["A","C"]) === true, "evaluateAnswer valida la selección múltiple creada");
+
   const fcid2 = O4.ContentEdit.createFlashcard({ front:"¿Qué es este icono?", back:"R: Pegado especial", section:sec.id, topic:sec.topics[0].id, imagen:IMG, priority:"alta" });
   ok(O4.F_BY_ID[fcid2] && O4.F_BY_ID[fcid2].imagen === IMG, "createFlashcard añade la flashcard con imagen");
   ok(O4.LE.CONCEPT_OF_CARD[fcid2] === sec.id+":"+sec.topics[0].id, "el motor asocia la flashcard creada a su concepto");
@@ -125,14 +143,17 @@ const ok = (c,m)=>{ console.log((c?"  OK  ":"  XX  ")+m); if(!c) fail++; };
   ok(O5.F_BY_ID[fcid2], "tras recargar, la flashcard creada sigue en el banco");
   ok(O5.LE.CONCEPT_OF_Q[qid2], "tras recargar, el concepto del motor incluye la pregunta creada");
   const exp5 = JSON.parse(O5.ContentEdit.exportJSON());
-  ok(exp5.creadas && exp5.creadas.preguntas.length === 1 && exp5.creadas.flashcards.length === 1, "exportJSON separa 'creadas' de 'correcciones'");
+  ok(exp5.creadas && exp5.creadas.preguntas.length === 2 && exp5.creadas.flashcards.length === 1, "exportJSON separa 'creadas' de 'correcciones'");
 
   // ---- eliminar ----
+  const n5 = O5.ContentEdit.userCount();
   O5.ContentEdit.deleteUserItem("q", qid2);
   ok(!O5.Q_BY_ID[qid2] && O5.QUESTIONS.every(x=>x.id!==qid2), "deleteUserItem quita la pregunta del banco");
   O5.ContentEdit.deleteUserItem("fc", fcid2);
   ok(!O5.F_BY_ID[fcid2], "deleteUserItem quita la flashcard del banco");
-  ok(O5.ContentEdit.userCount() === 0, "no queda contenido propio tras borrar");
+  O5.ContentEdit.deleteUserItem("q", qid3);
+  ok(O5.ContentEdit.userCount() === n5 - 3, "userCount baja tras borrar cada elemento");
+  ok(O5.ContentEdit.userCount() === 0, "no queda contenido propio tras borrar todo");
 
   // ---- huérfano seguro: id inexistente ----
   const bad = JSON.stringify({ contentOverrides:{ q:{ "no-existe-999":{respuesta:"A",ts:1} }, fc:{} }, answers:{}, marked:{}, history:[], settings:{}, challenges:{}, flashcards:{} });

@@ -53,7 +53,7 @@ function groupForView(view){
   if(view==="home") return "home";
   if(["temario","temario-detalle"].includes(view)) return "temario";
   if(["practica","study","test-wizard","test-preview","running","results",
-      "review-hub","review-detail","mp-setup","mp-lobby","mp-game"].includes(view)) return "practica";
+      "review-hub","review-detail","mi-contenido","mp-setup","mp-lobby","mp-game"].includes(view)) return "practica";
   if(["flashcards","flashcards-study"].includes(view)) return "flashcards";
   if(["progress","tests","challenges","challenge-create","challenge-detail",
       "comparison","history"].includes(view)) return "progress";
@@ -105,6 +105,7 @@ function render(view, params){
   if(view==="flashcards") return renderFlashcardsHub(params);
   if(view==="flashcards-study") return renderFlashcardsStudy();
   if(view==="temario-detalle") return renderTemarioDetalle(params);
+  if(view==="mi-contenido") return renderMyContent();
   return renderHome();
 }
 
@@ -510,8 +511,8 @@ function renderPracticeHub(){
       </button>
       <button class="intent" id="in-create">
         <span class="in-ic">${icon('pencil')}</span>
-        <span class="in-body"><span class="in-t">Crear una pregunta</span>
-          <span class="in-d">Con imagen (icono de comando) y 4 opciones — se añade a tu banco</span></span>
+        <span class="in-body"><span class="in-t">Mi contenido</span>
+          <span class="in-d">Crea tus propias preguntas y flashcards (con imagen), edítalas y expórtalas${O.ContentEdit&&O.ContentEdit.userCount()?` · ${O.ContentEdit.userCount()} creada${O.ContentEdit.userCount()===1?'':'s'}`:''}</span></span>
         <span class="in-go">${icon('chevronR')}</span>
       </button>
       <button class="intent" data-goto="mp-setup">
@@ -524,7 +525,7 @@ function renderPracticeHub(){
   </div>`;
 
   const smart = $("#in-smart"); if(smart) smart.addEventListener("click", ()=> startSmartStudy(hm?hm.minutesPerDay:20));
-  $("#in-create").addEventListener("click", ()=> openUserQuestionModal(null, ()=> go("practica")));
+  $("#in-create").addEventListener("click", ()=> go("mi-contenido"));
   const rev = $("#in-review"); if(rev) rev.addEventListener("click", ()=> startReviewStudy(hm?hm.minutesPerDay:20));
   $("#in-tema").addEventListener("click", ()=> go("practica", {mode:"practice", step:"tema"}));
   $("#in-test").addEventListener("click", ()=> go("practica", {mode:"exam"}));
@@ -537,6 +538,101 @@ function renderPracticeHub(){
     const s2 = O.buildSession({mode:"practice", scope:"errores", count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
     if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No tienes preguntas falladas pendientes");
   });
+}
+
+/* ---------------------------------------------------------------
+   MI CONTENIDO — crear/editar/eliminar/exportar preguntas y
+   flashcards propias (con imagen). Se fusionan con el banco y el
+   motor las trata como una pregunta más de su pestaña/grupo.
+--------------------------------------------------------------- */
+function renderMyContent(){
+  const CE = O.ContentEdit;
+  const users = CE && CE.listUser ? CE.listUser() : [];
+  const qs = users.filter(u=>u.kind==="q");
+  const fcs = users.filter(u=>u.kind==="fc");
+  const edits = CE ? CE.count() : 0;
+
+  const itemRow = (it)=>{
+    const canonical = it.id;
+    const obj = it.kind==="fc" ? O.F_BY_ID[canonical] : O.Q_BY_ID[canonical];
+    const img = obj && obj.imagen;
+    return `<div class="mc-row" data-mc="${it.kind}:${canonical}">
+      <div class="mc-thumb">${img?`<img src="${img}" alt="">`:`<span>${it.kind==="fc"?icon('cards'):icon('tests')}</span>`}</div>
+      <div class="mc-main">
+        <div class="mc-label">${O.escapeHtml(it.label)}${it.label.length>=70?'…':''}</div>
+        <div class="mc-meta">${it.kind==="fc"?"Flashcard":(it.tipo==="verdadero_falso"?"V/F":it.tipo==="seleccion_multiple"?"Selección múltiple":"Opción única")} · ${O.escapeHtml(sectionName(it.section))}${it.topic?` · ${O.escapeHtml(topicName(it.section, it.topic))}`:''}</div>
+      </div>
+      <div class="mc-acts">
+        <button class="btn btn-ghost btn-sm" data-mc-edit="${it.kind}:${canonical}">Editar</button>
+        <button class="btn btn-ghost btn-sm" data-mc-del="${it.kind}:${canonical}">Eliminar</button>
+      </div>
+    </div>`;
+  };
+
+  mainEl().innerHTML = `
+  <div class="view view-narrow">
+    <nav class="breadcrumb"><button data-goto="practica">Práctica</button><span>/</span><b>Mi contenido</b></nav>
+    <div class="view-head">
+      <p class="eyebrow">Mi contenido</p>
+      <h1>Tus preguntas y flashcards</h1>
+      <p>Crea material desde cero — con imagen de un icono de comando si quieres. Entra en tu banco y el motor lo programa como cualquier otra pregunta de esa pestaña.</p>
+    </div>
+
+    <div class="mc-cta-row">
+      <button class="cta-hero as-button primary" id="mc-new-q" style="margin-bottom:0;">
+        <div class="cta-body"><div class="cta-kicker">Test</div><div class="cta-title">Nueva pregunta</div>
+          <div class="cta-sub">Opción única · selección múltiple · V/F · con imagen</div></div>
+        <span class="cta-go">${icon('pencil')}</span>
+      </button>
+      <button class="cta-hero as-button" id="mc-new-fc" style="margin-bottom:0;">
+        <div class="cta-body"><div class="cta-kicker">Flashcard</div><div class="cta-title">Nueva flashcard</div>
+          <div class="cta-sub">Frente / dorso · con imagen</div></div>
+        <span class="cta-go">${icon('pencil')}</span>
+      </button>
+    </div>
+
+    ${qs.length ? `<div class="section-block" style="margin-top:var(--sp-7);">
+      <div class="section-title"><h3>Preguntas creadas</h3><span class="section-hint">${qs.length}</span></div>
+      <div class="mc-list">${qs.map(itemRow).join("")}</div>
+    </div>` : ``}
+
+    ${fcs.length ? `<div class="section-block">
+      <div class="section-title"><h3>Flashcards creadas</h3><span class="section-hint">${fcs.length}</span></div>
+      <div class="mc-list">${fcs.map(itemRow).join("")}</div>
+    </div>` : ``}
+
+    ${!users.length ? `<div class="empty-panel" style="margin-top:var(--sp-7);">
+      <p>Aún no has creado nada. Pulsa "Nueva pregunta" o "Nueva flashcard" para empezar.</p>
+    </div>` : ``}
+
+    <div class="section-block" style="margin-top:var(--sp-7);">
+      <div class="section-title"><h3>Exportar / correcciones</h3></div>
+      <div class="nav-list">
+        <button class="nav-row" id="mc-export">
+          <span class="nr-ic">${icon('code')}</span>
+          <span class="nr-title">Exportar todo tu contenido (JSON)</span>
+          <span class="nr-meta">${users.length + edits}</span><span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+      </div>
+      <p style="font-size:11.5px;color:var(--text-3);margin-top:8px;">Incluye tus creaciones y las correcciones que hayas hecho al banco (lápiz ✎). Pásalo para incorporarlo a data/ de forma permanente.</p>
+    </div>
+  </div>`;
+
+  $("#mc-new-q").addEventListener("click", ()=> openUserQuestionModal(null, ()=> go("mi-contenido")));
+  $("#mc-new-fc").addEventListener("click", ()=> openUserFlashcardModal(null, ()=> go("mi-contenido")));
+  $("#mc-export").addEventListener("click", ()=> openContentEditsModal());
+  $$("[data-mc-edit]").forEach(b=> b.addEventListener("click", ()=>{
+    const [kind,id] = b.getAttribute("data-mc-edit").split(/:(.+)/);
+    if(kind==="fc") openUserFlashcardModal(id, ()=> go("mi-contenido"));
+    else openUserQuestionModal(id, ()=> go("mi-contenido"));
+  }));
+  $$("[data-mc-del]").forEach(b=> b.addEventListener("click", ()=>{
+    const [kind,id] = b.getAttribute("data-mc-del").split(/:(.+)/);
+    confirmDanger("Eliminar", "No se puede deshacer.", ()=>{
+      O.ContentEdit.deleteUserItem(kind, id); if(O.LEB) O.LEB.recalcNow();
+      closeModal(); go("mi-contenido"); O.toast("Eliminado");
+    });
+  }));
 }
 
 /* ---------------------------------------------------------------
@@ -1534,6 +1630,11 @@ function renderCardBack(raw){
 }
 
 function sectionName(id){ const s = O.TAXONOMY_SECTIONS.find(x=>x.id===id); return s ? s.name : id; }
+function topicName(secId, topId){
+  const s = O.TAXONOMY_SECTIONS.find(x=>x.id===secId);
+  const t = s && (s.topics||[]).find(x=>x.id===topId);
+  return t ? t.name : (topId||"");
+}
 
 let fcHubState = { section:"all", tab:"repaso" };
 
@@ -2056,35 +2157,37 @@ function openEditFlashcardModal(canonicalId, onDone){
   }, {wide:true});
 }
 
-/* ---- CREAR / EDITAR CONTENIDO PROPIO (con imagen) ---------------- */
+/* ---- CREAR / EDITAR CONTENIDO PROPIO ---------------------------- */
 function openUserQuestionModal(editId, onDone){
   if(!O.ContentEdit || !O.ContentEdit.createQuestion){ O.toast("No disponible"); return; }
   const ex = editId ? O.Q_BY_ID[editId] : null;
   const tax = O.TAXONOMY_SECTIONS.filter(s=>s.topics && s.topics.length);
   const secId0 = ex && ex.section ? ex.section : tax[0].id;
   const topId0 = ex && ex.topic ? ex.topic : "";
-  const tipo0 = ex && ex.tipo === "verdadero_falso" ? "verdadero_falso" : "opcion_unica";
-  const opts0 = (ex && ex.opciones && ex.opciones.length) ? ["A","B","C","D"].map(L=>{ const o=ex.opciones.find(x=>x.letter===L); return o?o.text:""; }) : ["","","",""];
-  const resp0 = ex ? ex.respuesta : "A";
+  const tipo0 = ex && ["verdadero_falso","seleccion_multiple"].includes(ex.tipo) ? ex.tipo : "opcion_unica";
+  const opts0 = (ex && ex.opciones && ex.opciones.length) ? ["A","B","C","D","E"].map(L=>{ const o=ex.opciones.find(x=>x.letter===L); return o?o.text:""; }) : ["","","","",""];
+  const correct0 = new Set(ex ? (Array.isArray(ex.respuesta) ? ex.respuesta : [ex.respuesta]) : ["A"]);
 
   showModal(`
-    <h3>${ex ? "Editar pregunta creada" : "Crear una pregunta"}</h3>
-    <p class="edit-id">${ex ? ex.id : "nueva · creada por ti"}</p>
-    ${imageFieldHtml(ex && ex.imagen)}
+    <h3>${ex ? "Editar pregunta" : "Nueva pregunta"}</h3>
+    <p class="edit-id">${ex ? ex.id : "creada por ti"}</p>
     <div class="field"><label>Tipo</label>
       <div class="segmented" id="uq-tipo">
-        <button type="button" class="seg ${tipo0!=='verdadero_falso'?'on':''}" data-v="opcion_unica">Opción única</button>
+        <button type="button" class="seg ${tipo0==='opcion_unica'?'on':''}" data-v="opcion_unica">Opción única</button>
+        <button type="button" class="seg ${tipo0==='seleccion_multiple'?'on':''}" data-v="seleccion_multiple">Selección múltiple</button>
         <button type="button" class="seg ${tipo0==='verdadero_falso'?'on':''}" data-v="verdadero_falso">Verdadero / Falso</button>
       </div></div>
+    ${imageFieldHtml(ex && ex.imagen)}
     <div class="field"><label>Pregunta</label>
-      <textarea id="uq-enun" rows="2" class="edit-field" placeholder="¿A qué comando corresponde esta imagen?">${ex?O.escapeHtml(ex.enunciado||""):""}</textarea></div>
-    <div class="field" id="uq-opts-wrap"><label>Opciones (marca la correcta)</label>
-      <div class="uq-opts">${["A","B","C","D"].map((L,i)=>`
-        <label class="uq-opt"><input type="radio" name="uq-correct" value="${L}" ${resp0===L?'checked':''}>
+      <textarea id="uq-enun" rows="2" class="edit-field" placeholder="Escribe el enunciado…">${ex?O.escapeHtml(ex.enunciado||""):""}</textarea></div>
+    <div class="field" id="uq-opts-wrap"><label id="uq-opts-label">Opciones (marca la correcta)</label>
+      <div class="uq-opts">${["A","B","C","D","E"].map((L,i)=>`
+        <label class="uq-opt"><input type="checkbox" class="uq-correct" data-l="${L}" ${correct0.has(L)?'checked':''}>
           <span class="eopt-l">${L}</span>
-          <input type="text" class="edit-field" data-uopt="${L}" value="${O.escapeHtml(opts0[i]||"")}"></label>`).join("")}</div></div>
+          <input type="text" class="edit-field" data-uopt="${L}" value="${O.escapeHtml(opts0[i]||"")}" placeholder="${i>=2?'(opcional)':''}"></label>`).join("")}</div></div>
     <div class="field" id="uq-tf-wrap" hidden><label>Respuesta correcta</label>
-      <div class="segmented" id="uq-tf"><button type="button" class="seg ${resp0===true?'on':''}" data-v="true">Verdadero</button><button type="button" class="seg ${resp0!==true?'on':''}" data-v="false">Falso</button></div></div>
+      <div class="segmented" id="uq-tf"><button type="button" class="seg ${ex&&ex.respuesta===true?'on':''}" data-v="true">Verdadero</button><button type="button" class="seg ${!ex||ex.respuesta!==true?'on':''}" data-v="false">Falso</button></div></div>
+    <label class="echk" style="margin-bottom:var(--sp-4);"><input type="checkbox" id="uq-neg" ${ex&&ex.negativa?'checked':''}> Pregunta negativa (pide la opción FALSA / EXCEPTO)</label>
     <div class="field"><label>Explicación</label>
       <textarea id="uq-expl" rows="2" class="edit-field">${ex?O.escapeHtml(ex.explicacion||""):""}</textarea></div>
     <div class="config-grid">
@@ -2093,7 +2196,7 @@ function openUserQuestionModal(editId, onDone){
     </div>
     <div class="field"><label>Categoría</label><select id="uq-cat" class="edit-field">
       ${["general","atajo","ruta","concepto"].map(c=>`<option value="${c}" ${ex&&ex.categoria===c?'selected':''}>${c==="ruta"?"Ruta / menú":c[0].toUpperCase()+c.slice(1)}</option>`).join("")}</select></div>
-    <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes para incorporarla al banco.</p>
+    <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes → Mi contenido para incorporarla al banco.</p>
     <div class="actions" style="flex-wrap:wrap;">
       ${ex?`<button class="btn btn-danger btn-sm" id="uq-delete">Eliminar</button>`:''}
       <button class="btn btn-ghost" id="uq-cancel">Cancelar</button>
@@ -2103,14 +2206,27 @@ function openUserQuestionModal(editId, onDone){
     const imgState = wireImageField(root, ex && ex.imagen);
     let tipo = tipo0;
     const optsWrap = root.querySelector("#uq-opts-wrap"), tfWrap = root.querySelector("#uq-tf-wrap");
-    function syncTipo(){ optsWrap.hidden = tipo === "verdadero_falso"; tfWrap.hidden = tipo !== "verdadero_falso"; }
-    syncTipo();
-    root.querySelectorAll("#uq-tipo .seg").forEach(b=> b.addEventListener("click", ()=>{
-      root.querySelectorAll("#uq-tipo .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on");
-      tipo = b.getAttribute("data-v"); syncTipo();
+    const optsLabel = root.querySelector("#uq-opts-label");
+    const boxes = [...root.querySelectorAll(".uq-correct")];
+    function syncTipo(){
+      optsWrap.hidden = tipo === "verdadero_falso";
+      tfWrap.hidden = tipo !== "verdadero_falso";
+      optsLabel.textContent = tipo === "seleccion_multiple" ? "Opciones (marca TODAS las correctas)" : "Opciones (marca la correcta)";
+      if(tipo === "opcion_unica"){
+        const first = boxes.find(b=>b.checked);
+        boxes.forEach(b=> b.checked = b === first);
+      }
+    }
+    boxes.forEach(b=> b.addEventListener("change", ()=>{
+      if(tipo === "opcion_unica" && b.checked) boxes.forEach(x=>{ if(x!==b) x.checked = false; });
     }));
-    root.querySelectorAll("#uq-tf .seg").forEach(b=> b.addEventListener("click", ()=>{
-      root.querySelectorAll("#uq-tf .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on");
+    syncTipo();
+    root.querySelectorAll("#uq-tipo .seg").forEach(bt=> bt.addEventListener("click", ()=>{
+      root.querySelectorAll("#uq-tipo .seg").forEach(x=>x.classList.remove("on")); bt.classList.add("on");
+      tipo = bt.getAttribute("data-v"); syncTipo();
+    }));
+    root.querySelectorAll("#uq-tf .seg").forEach(bt=> bt.addEventListener("click", ()=>{
+      root.querySelectorAll("#uq-tf .seg").forEach(x=>x.classList.remove("on")); bt.classList.add("on");
     }));
     const secSel = root.querySelector("#uq-sec"), topSel = root.querySelector("#uq-top");
     populateTopicSelect(topSel, secSel.value, topId0);
@@ -2118,9 +2234,9 @@ function openUserQuestionModal(editId, onDone){
 
     root.querySelector("#uq-cancel").addEventListener("click", ()=> afterContentEdit(onDone));
     const del = root.querySelector("#uq-delete");
-    if(del) del.addEventListener("click", ()=> confirmDanger("Eliminar pregunta creada",
+    if(del) del.addEventListener("click", ()=> confirmDanger("Eliminar pregunta",
       "Se borra de tus sesiones. No se puede deshacer.",
-      ()=>{ O.ContentEdit.deleteUserItem("q", ex.id); if(O.LEB) O.LEB.recalcNow(); closeModal(); (onDone||(()=>go("practica")))(); O.toast("Pregunta eliminada"); }));
+      ()=>{ O.ContentEdit.deleteUserItem("q", ex.id); if(O.LEB) O.LEB.recalcNow(); closeModal(); (onDone||(()=>go("mi-contenido")))(); O.toast("Pregunta eliminada"); }));
 
     root.querySelector("#uq-save").addEventListener("click", ()=>{
       const enun = root.querySelector("#uq-enun").value.trim();
@@ -2129,26 +2245,28 @@ function openUserQuestionModal(editId, onDone){
         tipo, enunciado: enun || "¿A qué corresponde esta imagen?",
         explicacion: root.querySelector("#uq-expl").value.trim(),
         categoria: root.querySelector("#uq-cat").value,
+        negativa: root.querySelector("#uq-neg").checked,
         section: secSel.value, topic: topSel.value || (O.TAXONOMY_SECTIONS.find(s=>s.id===secSel.value).topics[0]||{}).id,
         imagen: imgState.val || null,
       };
       if(tipo === "verdadero_falso"){
-        const on = root.querySelector("#uq-tf .seg.on");
-        data.respuesta = on && on.getAttribute("data-v") === "true";
+        data.respuesta = (root.querySelector("#uq-tf .seg.on")||{}).getAttribute
+          ? root.querySelector("#uq-tf .seg.on").getAttribute("data-v") === "true" : false;
       } else {
-        const opts = ["A","B","C","D"].map(L=>({ letter:L, text: root.querySelector(`[data-uopt="${L}"]`).value.trim() })).filter(o=>o.text);
+        const opts = ["A","B","C","D","E"].map(L=>({ letter:L, text: root.querySelector(`[data-uopt="${L}"]`).value.trim() })).filter(o=>o.text);
         if(opts.length < 2){ O.toast("Pon al menos 2 opciones"); return; }
-        const chosen = root.querySelector("input[name='uq-correct']:checked");
-        const cl = chosen ? chosen.value : "A";
-        if(!opts.some(o=>o.letter===cl)){ O.toast("La opción marcada como correcta está vacía"); return; }
-        data.opciones = opts; data.respuesta = cl;
+        const chosen = boxes.filter(b=>b.checked && opts.some(o=>o.letter===b.getAttribute("data-l"))).map(b=>b.getAttribute("data-l"));
+        if(!chosen.length){ O.toast("Marca la opción correcta"); return; }
+        if(tipo === "opcion_unica" && chosen.length > 1){ O.toast("En 'opción única' solo puede haber una correcta"); return; }
+        data.opciones = opts;
+        data.respuesta = tipo === "seleccion_multiple" ? chosen.sort() : chosen[0];
       }
       if(ex) O.ContentEdit.updateUserItem("q", ex.id, data);
       else O.ContentEdit.createQuestion(data);
       if(O.LEB) O.LEB.recalcNow();
       O.toast(ex ? "Pregunta actualizada" : "Pregunta creada");
       closeModal();
-      if(onDone) onDone(); else go(O.Nav.view === "running" ? "home" : O.Nav.view, O.Nav.params);
+      if(onDone) onDone(); else go(O.Nav.view === "running" ? "mi-contenido" : O.Nav.view, O.Nav.params);
     });
   }, {wide:true});
 }
@@ -2222,7 +2340,6 @@ function openContentEditsModal(){
   const FLBL = {enunciado:"enunciado",opciones:"opciones",respuesta:"respuesta",explicacion:"explicación",negativa:"negativa",imagen:"imagen",front:"frente",back:"dorso",priority:"prioridad"};
   const items = O.ContentEdit.list();
   const users = O.ContentEdit.listUser ? O.ContentEdit.listUser() : [];
-  const anyExport = items.length || users.length;
 
   const editRows = items.length ? items.map(it=>`
     <div class="ce-row">
@@ -2236,32 +2353,18 @@ function openContentEditsModal(){
       </div>
     </div>`).join("") : `<p style="font-size:12.5px;color:var(--text-2);padding:10px 12px;">Sin correcciones. Usa el lápiz ✎ en cualquier pregunta o flashcard.</p>`;
 
-  const userRows = users.length ? users.map(it=>`
-    <div class="ce-row">
-      <div class="ce-main">
-        <div class="ce-label">${it.hasImg?'🖼 ':''}${O.escapeHtml(it.label)}${it.label.length>=70?'…':''}</div>
-        <div class="ce-meta">${it.kind==="fc"?"Flashcard":(it.tipo==="verdadero_falso"?"Pregunta V/F":"Pregunta")} · ${O.escapeHtml(sectionName(it.section))}</div>
-      </div>
-      <div class="ce-acts">
-        <button class="btn btn-ghost btn-sm" data-cu-edit="${it.kind}:${it.id}">Editar</button>
-        <button class="btn btn-ghost btn-sm" data-cu-del="${it.kind}:${it.id}">Eliminar</button>
-      </div>
-    </div>`).join("") : `<p style="font-size:12.5px;color:var(--text-2);padding:10px 12px;">Aún no has creado ninguna pregunta ni flashcard propia.</p>`;
-
   showModal(`
-    <h3>Tu contenido</h3>
-    <p style="font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-2);margin:var(--sp-4) 0 6px;">Creadas por ti (${users.length})</p>
-    <div class="ce-list">${userRows}</div>
-    <div class="actions" style="justify-content:flex-start;margin:8px 0 var(--sp-4);">
-      <button class="btn btn-outline btn-sm" id="cu-new-q">+ Pregunta</button>
-      <button class="btn btn-outline btn-sm" id="cu-new-fc">+ Flashcard</button>
+    <h3>Exportar tu contenido</h3>
+    <p>${users.length} creada${users.length===1?'':'s'} · ${items.length} corrección${items.length===1?'':'es'}. Se aplican al abrir la app.</p>
+    <div class="field" style="margin-top:var(--sp-4);"><label>JSON para volcar al banco (data/)</label>
+      <textarea id="ce-export" rows="7" readonly class="edit-field" style="font-family:var(--font-mono);font-size:11px;"></textarea></div>
+    <div class="actions" style="justify-content:flex-start;flex-wrap:wrap;margin-bottom:var(--sp-4);">
+      <button class="btn btn-solid btn-sm" id="ce-copy">Copiar JSON</button>
+      <button class="btn btn-ghost btn-sm" id="ce-goto-mc">Ir a "Mi contenido"</button>
     </div>
-    <p style="font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-2);margin:var(--sp-5) 0 6px;">Correcciones al banco (${items.length})</p>
+    <p style="font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-2);margin:var(--sp-4) 0 6px;">Correcciones al banco (${items.length})</p>
     <div class="ce-list">${editRows}</div>
-    ${anyExport?`<div class="field" style="margin-top:var(--sp-4);"><label>Exportar (JSON para volcar al banco)</label>
-      <textarea id="ce-export" rows="6" readonly class="edit-field" style="font-family:var(--font-mono);font-size:11px;"></textarea></div>` : ''}
     <div class="actions" style="flex-wrap:wrap;">
-      ${anyExport?`<button class="btn btn-ghost btn-sm" id="ce-copy">Copiar JSON</button>` : ''}
       ${items.length?`<button class="btn btn-danger btn-sm" id="ce-clear">Descartar correcciones</button>` : ''}
       <button class="btn btn-ghost" id="ce-close">Cerrar</button>
     </div>
@@ -2269,10 +2372,8 @@ function openContentEditsModal(){
     const ta = root.querySelector("#ce-export");
     if(ta) ta.value = O.ContentEdit.exportJSON();
     root.querySelector("#ce-close").addEventListener("click", closeModal);
-    root.querySelector("#cu-new-q").addEventListener("click", ()=>{ closeModal(); openUserQuestionModal(null, openContentEditsModal); });
-    root.querySelector("#cu-new-fc").addEventListener("click", ()=>{ closeModal(); openUserFlashcardModal(null, openContentEditsModal); });
-    const copy = root.querySelector("#ce-copy");
-    if(copy) copy.addEventListener("click", ()=> copyToClipboard(O.ContentEdit.exportJSON()));
+    root.querySelector("#ce-copy").addEventListener("click", ()=> copyToClipboard(O.ContentEdit.exportJSON()));
+    root.querySelector("#ce-goto-mc").addEventListener("click", ()=>{ closeModal(); go("mi-contenido"); });
     const clr = root.querySelector("#ce-clear");
     if(clr) clr.addEventListener("click", ()=> confirmDanger("Descartar todas las correcciones",
       "El contenido del banco vuelve al original. Tus preguntas creadas NO se tocan. No se puede deshacer.",
@@ -2285,16 +2386,6 @@ function openContentEditsModal(){
     root.querySelectorAll("[data-ce-revert]").forEach(b=> b.addEventListener("click", ()=>{
       const [kind,id] = b.getAttribute("data-ce-revert").split(/:(.+)/);
       O.ContentEdit.revert(kind, id); if(O.LEB) O.LEB.recalcNow();
-      closeModal(); openContentEditsModal();
-    }));
-    root.querySelectorAll("[data-cu-edit]").forEach(b=> b.addEventListener("click", ()=>{
-      const [kind,id] = b.getAttribute("data-cu-edit").split(/:(.+)/);
-      closeModal();
-      if(kind==="fc") openUserFlashcardModal(id, openContentEditsModal); else openUserQuestionModal(id, openContentEditsModal);
-    }));
-    root.querySelectorAll("[data-cu-del]").forEach(b=> b.addEventListener("click", ()=>{
-      const [kind,id] = b.getAttribute("data-cu-del").split(/:(.+)/);
-      O.ContentEdit.deleteUserItem(kind, id); if(O.LEB) O.LEB.recalcNow();
       closeModal(); openContentEditsModal();
     }));
   }, {wide:true});
@@ -2829,10 +2920,11 @@ function openSettingsModal(){
       <p>IDs duplicados: <strong>${mr.duplicateIds.length}</strong> · Cobertura contentHash: <strong>${mr.contentHashCoverage}%</strong> · Generadas: <strong>${mr.generatedCount}</strong></p>
     </div>
     <hr class="div">
-    <p style="font-weight:700; font-size:13px; margin-bottom:8px;">Tu contenido</p>
-    <p style="font-size:12px;color:var(--text-2);margin-bottom:8px;">Corrige errores con el lápiz ✎, o crea tus propias preguntas y flashcards (con imagen). ${O.ContentEdit?(O.ContentEdit.userCount()+O.ContentEdit.count()):0} elemento(s) tuyo(s), se aplican al abrir la app.</p>
-    <div class="actions" style="justify-content:flex-start;margin-bottom:16px;">
-      <button class="btn btn-outline btn-sm" id="open-content-edits">Ver / crear / exportar</button>
+    <p style="font-weight:700; font-size:13px; margin-bottom:8px;">Mi contenido</p>
+    <p style="font-size:12px;color:var(--text-2);margin-bottom:8px;">Crea tus preguntas y flashcards (con imagen) o corrige el banco con el lápiz ✎. ${O.ContentEdit?(O.ContentEdit.userCount()+" creada(s), "+O.ContentEdit.count()+" corrección(es)"):""}.</p>
+    <div class="actions" style="justify-content:flex-start;margin-bottom:16px;flex-wrap:wrap;">
+      <button class="btn btn-outline btn-sm" id="goto-my-content">Abrir "Mi contenido"</button>
+      <button class="btn btn-ghost btn-sm" id="open-content-edits">Exportar JSON</button>
     </div>
 
     <hr class="div">
@@ -2847,6 +2939,8 @@ function openSettingsModal(){
     root.querySelector("#close-settings").addEventListener("click", closeModal);
     const ceBtn = root.querySelector("#open-content-edits");
     if(ceBtn) ceBtn.addEventListener("click", ()=>{ closeModal(); openContentEditsModal(); });
+    const mcBtn = root.querySelector("#goto-my-content");
+    if(mcBtn) mcBtn.addEventListener("click", ()=>{ closeModal(); go("mi-contenido"); });
     root.querySelector("#reset-current").addEventListener("click", ()=> confirmDanger(
       "Reiniciar test actual","Se perderán las respuestas de la sesión en curso.",
       ()=>{ O.setSession(null); O.saveSessionSnapshot(); closeModal(); go("home"); O.toast("Test actual reiniciado"); }

@@ -596,9 +596,28 @@ details.advanced summary:hover{ color:var(--text); }
 /* opciones al crear una pregunta */
 .uq-opts{ display:flex; flex-direction:column; gap:7px; }
 .uq-opt{ display:flex; align-items:center; gap:8px; }
-.uq-opt input[type="radio"]{ accent-color:var(--good); flex-shrink:0; width:16px; height:16px; }
+.uq-opt input.uq-correct{ accent-color:var(--good); flex-shrink:0; width:16px; height:16px; }
 .uq-opt input[type="text"]{ flex:1; }
-.uq-opt input[type="radio"]:checked ~ .eopt-l{ background:var(--good-dim); color:var(--good); border-color:var(--good-line); }
+.uq-opt input.uq-correct:checked ~ .eopt-l{ background:var(--good-dim); color:var(--good); border-color:var(--good-line); }
+
+/* Mi contenido */
+.mc-cta-row{ display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-3); }
+@media (max-width:560px){ .mc-cta-row{ grid-template-columns:1fr; } }
+.mc-cta-row .cta-hero{ padding:var(--sp-5); }
+.mc-cta-row .cta-title{ font-size:16px; }
+.mc-cta-row .cta-go{ width:36px; height:36px; }
+.mc-list{ display:flex; flex-direction:column; border:1px solid var(--border); border-radius:var(--radius-m); overflow:hidden; background:var(--surface); }
+.mc-row{ display:flex; align-items:center; gap:var(--sp-3); padding:10px var(--sp-4); border-bottom:1px solid var(--border); }
+.mc-row:last-child{ border-bottom:none; }
+.mc-thumb{ width:44px; height:44px; flex-shrink:0; border-radius:var(--radius-s); border:1px solid var(--border);
+  background:#fff; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.mc-thumb img{ max-width:100%; max-height:100%; object-fit:contain; }
+.mc-thumb span{ color:var(--text-3); display:flex; }
+.mc-thumb span svg{ width:16px; height:16px; }
+.mc-main{ flex:1; min-width:0; }
+.mc-label{ font-size:13px; color:var(--text); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.mc-meta{ font-size:10.5px; color:var(--text-3); margin-top:2px; font-family:var(--font-mono); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.mc-acts{ display:flex; gap:2px; flex-shrink:0; }
 
 /* ---------------------------------------------------------------
    Sesión de estudio — la pregunta domina

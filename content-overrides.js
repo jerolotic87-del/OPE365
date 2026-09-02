@@ -240,12 +240,13 @@ function uid(prefix){
 /* crea una pregunta propia. data: {tipo, enunciado, opciones:[{letter,text}],
    respuesta, explicacion, categoria, section, topic, imagen} */
 function createQuestion(data){
+  const TIPOS = ["opcion_unica","verdadero_falso","seleccion_multiple"];
   const q = {
     id: uid("usr-q"),
     sourceFile: "usuario", bloque: "Creada por ti", sourceQuestionId: null,
-    tipo: data.tipo === "verdadero_falso" ? "verdadero_falso" : "opcion_unica",
+    tipo: TIPOS.indexOf(data.tipo) >= 0 ? data.tipo : "opcion_unica",
     categoria: data.categoria || "general",
-    negativa: false,
+    negativa: !!data.negativa,
     section: data.section, topic: data.topic, subtopic: null,
     tema: data.tema || null,
     enunciado: String(data.enunciado || "").trim(),
@@ -260,7 +261,9 @@ function createQuestion(data){
   } else {
     q.opciones = (data.opciones || []).map((o,i)=>({ letter:o.letter || "ABCDEF"[i], text:String(o.text||"").trim() }))
       .filter(o=>o.text);
-    q.respuesta = data.respuesta;
+    q.respuesta = q.tipo === "seleccion_multiple"
+      ? (Array.isArray(data.respuesta) ? data.respuesta.slice().sort() : [])
+      : data.respuesta;
   }
   ustore().q.push(q);
   mergeQuestion(q);

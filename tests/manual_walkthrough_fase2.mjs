@@ -129,10 +129,13 @@ try {
   ok(edited, 'La corrección se aplica al objeto canónico y queda registrada');
   await shot('05b-edit-modal');
 
-  // crear una pregunta con imagen
-  await click('[data-goto="practica"]');
+  // crear una pregunta con imagen desde "Mi contenido"
+  await nav('practica');
   await page.waitForSelector('#in-create');
   await click('#in-create');
+  await page.waitForSelector('#mc-new-q');
+  ok(await seen('#mc-new-q') && await seen('#mc-new-fc'), 'Práctica → "Mi contenido" con crear pregunta/flashcard');
+  await click('#mc-new-q');
   await page.waitForSelector('#uq-save');
   const PNG = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHElEQVR42mNkYPhfz0AEYBxVSF+Fo6NKGWgAAI5cA/2M0z8pAAAAAElFTkSuQmCC','base64');
   await page.setInputFiles('#imgf-input', { name:'comando.png', mimeType:'image/png', buffer: PNG });
@@ -142,7 +145,7 @@ try {
   await page.fill('[data-uopt="B"]', 'Cursiva');
   await page.fill('[data-uopt="C"]', 'Subrayado');
   await page.fill('[data-uopt="D"]', 'Resaltado');
-  await page.check('input[name="uq-correct"][value="B"]');
+  await page.check('.uq-correct[data-l="B"]');
   await page.fill('#uq-expl', 'Es el icono de cursiva (Ctrl+K en Word 365 español).');
   await shot('09a-crear-pregunta-con-imagen');
   await click('#uq-save');
