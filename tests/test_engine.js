@@ -49,7 +49,7 @@ async function main(){
   // ══ 2 · Anti-repetición ════════════════════════════════════════════════════
   head(2, "Anti-repetición · un ítem no reaparece en la sesión siguiente [validado]");
   const gap = maxRepeatWithinSessions(r, env);
-  ok(gap >= 2 || gap === Infinity, `separación mínima de repetición (conceptos con >3 preguntas) = ${gap}`);
+  ok(gap >= 2 || gap === Infinity, `separación mínima de repetición (conceptos con >6 preguntas) = ${gap}`);
   const sameDay = Object.values(r.seenQ).some(days => days.some((d,i)=> i>0 && d === days[i-1]));
   ok(!sameDay, "ninguna pregunta se repite el mismo día");
 

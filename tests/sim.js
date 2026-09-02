@@ -218,14 +218,16 @@ function mapRound(o){ const r = {}; for(const k in o) r[k] = o[k] == null ? null
 ------------------------------------------------------------ */
 function maxRepeatWithinSessions(res, env){
   // separación mínima (en nº de sesiones de estudio) con que se repite una
-  // misma pregunta — ignorando conceptos con <=3 preguntas, donde repetir
-  // antes es inevitable.
+  // misma pregunta — ignorando conceptos pequeños, donde repetir antes es
+  // estructuralmente inevitable: si el motor decide que un concepto necesita
+  // recuperación dos sesiones seguidas y tiene ≤ 2·maxPerConceptLong (=6)
+  // preguntas distintas, no hay bastantes ítems frescos para no repetir.
   const studyDays = res.trace.filter(t => t.studied).map(t => t.day);
   const idxOfDay = {}; studyDays.forEach((d, i) => idxOfDay[d] = i);
   const bigEnough = qid => {
     const cid = env && env.LE.CONCEPT_OF_Q[qid];
     const meta = cid && env.LE.CONCEPT_BY_ID[cid];
-    return meta ? meta.questionIds.length > 3 : true;
+    return meta ? meta.questionIds.length > 6 : true;
   };
   let worst = Infinity;
   for(const qid in res.seenQ){

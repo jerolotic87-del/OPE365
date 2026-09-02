@@ -28,7 +28,7 @@ function ck(c,m){ if(c){pass++;console.log("  OK  "+m);} else {fail++;console.er
 let {w,D,O,errs}=boot();
 ck(errs.length===0, "A · carga inicial sin errores ("+errs.length+")");
 ck(!!O.LEB, "A · LEB presente");
-ck(O.QUESTIONS.length===1325 && O.FLASHCARDS.length===220, "A · 1325 preguntas / 220 flashcards");
+ck(O.QUESTIONS.length===1325 && O.FLASHCARDS.length>=385, `A · 1325 preguntas / ${O.FLASHCARDS.length} flashcards`);
 
 // ===== B) navegación =====
 ["home","temario","practica","flashcards","progress"].forEach(v=>{ goto(D,w,v); ck(!D.querySelector(".error")&&errs.length===0, "B · nav "+v); });

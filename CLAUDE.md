@@ -6,8 +6,11 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **1325 preguntas** y **220
-flashcards** (inicio 116, vista 55, revisar 49), todo el banco
+de Word 365 de una oposición de ayuntamiento. **1325 preguntas** y **385
+flashcards** (inicio 148, vista 79, revisar 73, insertar 28, disposicion 16,
+correspondencia 15, referencias 17, diseno 9 — las 165 nuevas de sep-2026
+son tarjetas de RUTA: frente = la acción, dorso = "Pestaña ▸ Grupo ▸ Comando",
+de `rutasyatajos.txt §6`), todo el banco
 normalizado y agrupado por pestaña de la cinta
 (`data/questions/<section>.json`). Práctica/examen con corrección
 inmediata, compartir por código, desafíos asíncronos con resultado
@@ -75,10 +78,12 @@ data/questions/*.json  el banco partido en UN ARCHIVO POR PESTAÑA/section
                        id="<section>-<n>" y sourceFile="<section>.json";
                        la procedencia fina está en `bloque` y
                        `sourceQuestionId` (id original del documento).
-data/flashcards/*.json  flashcards por sección (inicio.json, revisar.json,
-                        vista.json), con su propio manifest.json. `priority`
-                        ∈ alta|normal; `questionRefs` = ids `<section>-N`
-                        (enlace blando, opcional)
+data/flashcards/*.json  flashcards por sección (inicio, insertar, diseno,
+                        disposicion, referencias, revisar, vista,
+                        correspondencia), con su propio manifest.json.
+                        `priority` ∈ alta|normal; `questionRefs` = ids
+                        `<section>-N` (enlace blando, opcional). Las tarjetas
+                        de ruta llevan `sourceRefs` = ["rutasyatajos.txt §6 …"]
 data/questions_regroup_report.md  reagrupación ago-2026: qué se movió de
                        1.json..8.json/atajos.json al esquema por pestaña
                        (mapa id viejo→nuevo en scripts/regroup_id_map.json)

@@ -1,5 +1,5 @@
 // Prueba jsdom del parser de dorsos de flashcard (renderCardBack):
-// para las 220 tarjetas comprueba que al descomponer el dorso en
+// para todas las tarjetas del banco comprueba que al descomponer el dorso en
 // Respuesta / Explicación / Atajo y aplicar el formato de lista NO se
 // pierde ni se inventa contenido, y que la estructura es válida.
 "use strict";
