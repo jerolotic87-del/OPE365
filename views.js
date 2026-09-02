@@ -1608,32 +1608,189 @@ function renderTemarioDetalle(params){
 }
 
 /* ---------------------------------------------------------------
-   PROGRESO
+   PROGRESO — traduce el estado del motor a preguntas útiles
 --------------------------------------------------------------- */
+const DIM_META = {
+  memoria:        { label:"Memoria",             q:"¿Lo recuerdo?" },
+  competencia:    { label:"Competencia",         q:"¿Sé aplicarlo?" },
+  transferencia:  { label:"Transferencia",       q:"¿Lo reconozco en cualquier forma?" },
+  cobertura:      { label:"Cobertura",           q:"¿He visto suficiente variedad?" },
+  rendimientoExamen:{ label:"Rendimiento en examen", q:"¿Cómo respondo sin ayuda?" },
+};
+function renderDimensions(dims){
+  return `<div class="dim-list">${Object.keys(DIM_META).map(k=>{
+    const v = dims[k];
+    const m = DIM_META[k];
+    if(v == null) return `<div class="dim-row is-empty">
+      <div class="dim-name">${m.label}<span class="dim-q">${m.q}</span></div>
+      <div class="dim-track"><i style="width:0%"></i></div>
+      <div class="dim-val">aún sin datos</div></div>`;
+    const pct = Math.round(v*100);
+    const tone = pct<40 ? "bad" : pct<70 ? "warn" : "good";
+    return `<div class="dim-row">
+      <div class="dim-name">${m.label}<span class="dim-q">${m.q}</span></div>
+      <div class="dim-track"><i class="${tone}" style="width:${pct}%"></i></div>
+      <div class="dim-val">${pct}%</div></div>`;
+  }).join("")}</div>`;
+}
+
+function fmtDateInput(ms){
+  if(!ms) return "";
+  const d = new Date(ms); const p = n=> String(n).padStart(2,"0");
+  return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;
+}
+function openExamPlanModal(){
+  const plan = O.LEB ? (O.LEB.getPlan() || {}) : {};
+  const wd = plan.weekdays || [1,2,3,4,5];
+  const dayNames = ["D","L","M","X","J","V","S"];
+  showModal(`
+    <h3>Plan de estudio</h3>
+    <p>El motor ajusta las sesiones a tu fecha de examen y a los minutos que dedicas cada día.</p>
+    <div class="field"><label>Fecha del examen (opcional)</label>
+      <input type="date" id="ep-date" value="${fmtDateInput(plan.examDate)}"></div>
+    <div class="field"><label>Minutos al día</label>
+      <input type="number" id="ep-min" min="5" max="180" step="5" value="${plan.minutesPerDay||20}"></div>
+    <div class="field" style="margin-bottom:0;"><label>Días que estudias</label>
+      <div class="day-pick" id="ep-days">${dayNames.map((n,i)=>`<button type="button" class="day-btn ${wd.includes(i)?'on':''}" data-d="${i}">${n}</button>`).join("")}</div>
+    </div>
+    <div class="actions" style="margin-top:var(--sp-5);">
+      ${plan.examDate?`<button class="btn btn-ghost" id="ep-clear">Quitar fecha</button>`:``}
+      <button class="btn btn-ghost" id="ep-cancel">Cancelar</button>
+      <button class="btn btn-solid" id="ep-save">Guardar</button>
+    </div>
+  `, (root)=>{
+    const days = new Set(wd);
+    root.querySelectorAll("#ep-days .day-btn").forEach(btn=> btn.addEventListener("click", ()=>{
+      const d = Number(btn.getAttribute("data-d"));
+      if(days.has(d)) days.delete(d); else days.add(d);
+      btn.classList.toggle("on");
+    }));
+    root.querySelector("#ep-cancel").addEventListener("click", closeModal);
+    const clr = root.querySelector("#ep-clear");
+    if(clr) clr.addEventListener("click", ()=>{ O.LEB.clearExamDate(); closeModal(); go(O.Nav.view); O.toast("Fecha de examen eliminada"); });
+    root.querySelector("#ep-save").addEventListener("click", ()=>{
+      const dv = root.querySelector("#ep-date").value;
+      const examDate = dv ? new Date(dv + "T09:00:00").getTime() : null;
+      const minutesPerDay = Math.max(5, Math.min(180, Number(root.querySelector("#ep-min").value)||20));
+      const weekdays = [...days].sort();
+      O.LEB.setPlan({ examDate, minutesPerDay, weekdays: weekdays.length?weekdays:[1,2,3,4,5] });
+      closeModal(); go(O.Nav.view);
+      O.toast(examDate ? "Plan actualizado" : "Minutos y días guardados");
+    });
+  });
+}
+
 function renderProgress(){
   const s = O.computeStats();
+  const pm = O.LEB ? O.LEB.progressModel() : null;
   const challenges = Object.values(O.PROGRESS.challenges||{});
   const hist = O.PROGRESS.history.slice().reverse();
+  const b = pm ? pm.breakdown : null;
+  const hasEngineData = !!(pm && O.PROGRESS.events && O.PROGRESS.events.length);
+
   mainEl().innerHTML = `
   <div class="view">
-    <div class="view-head"><p class="eyebrow">Progreso</p><h1>Tu rendimiento</h1><p>Sigue tu avance y detecta tus puntos débiles antes del examen.</p></div>
+    <div class="view-head"><p class="eyebrow">Progreso</p><h1>Tu preparación</h1>
+      <p>Dominio y repaso son cosas distintas. Aquí ves cada una por separado.</p></div>
 
+    ${hasEngineData ? `
     <div class="section-block">
-      <div class="section-title"><h3>Rendimiento general</h3></div>
-      <div class="stat-strip">
-        <div class="ss-cell"><div class="ss-num">${s.answered}</div><div class="ss-lbl">de ${s.total} respondidas</div></div>
-        <div class="ss-cell"><div class="ss-num" style="color:var(--good);">${s.correct}</div><div class="ss-lbl">acertadas</div></div>
-        <div class="ss-cell"><div class="ss-num" style="color:var(--bad);">${s.incorrect}</div><div class="ss-lbl">falladas</div></div>
-        <div class="ss-cell"><div class="ss-num" style="color:var(--accent-ink);">${s.markedCount}</div><div class="ss-lbl">marcadas</div></div>
-      </div>
-      <div style="display:flex; align-items:center; gap:14px; margin-top:var(--sp-4);">
-        <div class="bar-track" style="flex:1;"><i style="width:${s.accuracy}%"></i></div>
-        <strong style="font-family:var(--font-mono); font-size:14px;">${s.accuracy}% acierto</strong>
+      <div class="section-title"><h3>¿Qué domino?</h3><span class="section-hint">${pm.ov.veredicto}</span></div>
+      <div class="learn-panel">
+        <div class="lp-row">
+          ${masteryBarHtml(b)}
+          <div class="dom-grid">
+            <div class="dom-cell tone-settled"><span class="dom-n">${b.asentado}</span><span class="dom-l">Asentado</span></div>
+            <div class="dom-cell tone-consolid"><span class="dom-n">${b.consolidando}</span><span class="dom-l">Consolidando</span></div>
+            <div class="dom-cell tone-learn"><span class="dom-n">${b.aprendiendo}</span><span class="dom-l">Aprendiendo</span></div>
+            <div class="dom-cell tone-neutral"><span class="dom-n">${b.nuevo}</span><span class="dom-l">Sin empezar</span></div>
+          </div>
+          <p class="lp-note">"Asentado" = evidencia suficiente de que lo dominas <b>ahora</b>. No es permanente y no significa "no volver a verlo".</p>
+        </div>
       </div>
     </div>
 
     <div class="section-block">
-      <div class="section-title"><h3>Repasar</h3></div>
+      <div class="section-title"><h3>¿Qué tengo pendiente de repaso?</h3></div>
+      <div class="learn-panel">
+        <div class="lp-row lp-review">
+          <p class="lp-review-line">
+            <b class="${b.debido+b.atrasado?'':'muted'}">${b.debido+b.atrasado}</b> bloque${b.debido+b.atrasado===1?'':'s'} tocan repaso${b.atrasado?` · <b class="warn">${b.atrasado} atrasado${b.atrasado===1?'':'s'}</b>`:''}.
+            ${b.asentadoPendiente?`<span class="lp-note">${b.asentadoPendiente} de ellos siguen <b>asentados</b> — solo toca refrescarlos.</span>`:''}
+          </p>
+          <button class="btn btn-primary btn-sm" id="pg-repasar" ${b.debido+b.atrasado?'':'disabled'} style="margin-top:var(--sp-3);">${icon('history')} Repasar lo pendiente</button>
+        </div>
+      </div>
+    </div>
+
+    ${pm.escaping.length ? `
+    <div class="section-block">
+      <div class="section-title"><h3>¿Qué se me está escapando?</h3><span class="section-hint">errores recientes o repaso vencido</span></div>
+      <div class="nav-list">
+        ${pm.escaping.map(e=>`<button class="nav-row concept-row" data-concept="${e.id}">
+          <span class="state-pip tone-${e.masteryTone}"></span>
+          <span class="nr-body"><span class="nr-title">${O.escapeHtml(e.name)}</span>
+          <span class="nr-reason">${e.masteryLabel}${e.reviewLabel?` · ${e.reviewLabel}`:''}</span></span>
+          <span class="nr-chev">${icon('chevronR')}</span>
+        </button>`).join("")}
+      </div>
+    </div>` : ``}
+
+    <div class="section-block">
+      <div class="section-title"><h3>Cómo estás en cada faceta</h3></div>
+      ${renderDimensions(pm.ov.dimensiones)}
+    </div>
+
+    <div class="section-block">
+      <div class="section-title"><h3>¿Cómo voy respecto al examen?</h3>
+        <button class="link" id="pg-plan">${pm.hasExam?'Cambiar plan':'Poner fecha'}</button></div>
+      ${pm.hasExam ? `
+      <div class="exam-strip ${pm.exam.sinDeficit?'is-ok':'is-warn'}">
+        <div class="es-top"><span class="es-days">${pm.exam.daysLeft} día${pm.exam.daysLeft===1?'':'s'}</span>
+          <span class="es-label">· ${pm.exam.studyDays} días de estudio · fase ${phaseLabel(pm.exam.phase)}</span></div>
+        ${pm.exam.sinDeficit
+          ? `<p class="es-msg">Sin déficit: todo lo que estudies llega a repasarse antes del examen con tu ritmo actual. <span class="es-note">Es una comprobación de agenda, no una predicción de nota.</span></p>`
+          : `<p class="es-msg"><b>${pm.exam.deficitCount} bloque${pm.exam.deficitCount===1?'':'s'}</b> no llega${pm.exam.deficitCount===1?'':'n'} a asegurarse a tiempo.
+             <span class="es-list">${pm.exam.deficitConcepts.slice(0,10).map(n=>O.escapeHtml(n)).join(" · ")}${pm.exam.deficitConcepts.length>10?` +${pm.exam.deficitConcepts.length-10}`:''}</span>
+             ${pm.exam.hint?`<span class="es-note">${O.escapeHtml(pm.exam.hint)}</span>`:''}</p>`}
+      </div>` : `
+      <div class="empty-panel">
+        <p>Sin fecha de examen. El motor trabaja con un <b>horizonte de 90 días</b> y prioriza construir base. Pon tu fecha real cuando la tengas y recalculará el plan.</p>
+        <button class="btn btn-outline btn-sm" id="pg-plan2">Poner fecha de examen</button>
+      </div>`}
+    </div>` : `
+    <div class="section-block">
+      <div class="empty-panel">
+        <p>Todavía no has estudiado lo suficiente para un diagnóstico. Haz una sesión guiada desde Inicio y aquí verás tu dominio, tu repaso y tu preparación de examen.</p>
+        <button class="btn btn-solid btn-sm" data-goto="home">Ir a Inicio</button>
+      </div>
+    </div>`}
+
+    <div class="section-block">
+      <div class="section-title"><h3>Cobertura por pestaña</h3><span class="section-hint">bloques asentados / total</span></div>
+      <div class="progress-list">${(pm ? pm.sections : []).map(sec=>`
+        <button class="progress-row" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
+          <div class="pr-main"><div class="pr-name">${O.escapeHtml(sec.name)}</div>
+            <div class="pr-meta">${sec.asentado} asentado${sec.asentado===1?'':'s'} · ${sec.enProgreso} en curso · ${sec.nuevo} sin empezar${sec.repaso?` · ${sec.repaso} a repasar`:''}</div></div>
+          <div class="pr-bar"><div class="bar-track good"><i style="width:${sec.pct}%"></i></div></div>
+          <div class="pr-pct">${sec.pct}%</div><span class="pr-chev">${icon('chevronR')}</span>
+        </button>`).join("") || `<p style="font-size:13px;color:var(--text-2);padding:var(--sp-4);">Aún sin datos por pestaña.</p>`}</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title"><h3>Precisión al responder</h3><span class="section-hint">de lo que contestas, cuánto aciertas</span></div>
+      <div class="stat-strip">
+        <div class="ss-cell"><div class="ss-num">${s.answered}</div><div class="ss-lbl">de ${s.total} respondidas</div></div>
+        <div class="ss-cell"><div class="ss-num" style="color:var(--good);">${s.correct}</div><div class="ss-lbl">acertadas</div></div>
+        <div class="ss-cell"><div class="ss-num" style="color:var(--bad);">${s.incorrect}</div><div class="ss-lbl">falladas</div></div>
+        <div class="ss-cell"><div class="ss-num">${s.accuracy}<small>%</small></div><div class="ss-lbl">precisión</div></div>
+      </div>
+      <div class="section-title" style="margin-top:var(--sp-5);"><h3 style="font-size:12.5px;">Por grupo · los más flojos primero</h3></div>
+      ${renderRankList(s.byTema)}
+    </div>
+
+    <div class="section-block">
+      <div class="section-title"><h3>Repasar por lista</h3></div>
       <div class="nav-list">
         <button class="nav-row" id="pg-errores" ${s.incorrect?'':'disabled'}>
           <span class="nr-ic">${icon('errors')}</span><span class="nr-title">Preguntas falladas</span>
@@ -1647,29 +1804,10 @@ function renderProgress(){
     </div>
 
     <div class="section-block">
-      <div class="section-title"><h3>Rendimiento por grupo</h3><span class="section-hint">los más flojos primero</span></div>
-      ${renderRankList(s.byTema)}
-    </div>
-
-    <div class="section-block">
-      <div class="section-title"><h3>Cobertura por pestaña</h3></div>
-      <div class="progress-list">${O.TAXONOMY_SECTIONS.filter(sec=>{
-        return O.QUESTIONS.some(q=>q.section===sec.id);
-      }).map(sec=>{
-        const p = sectionProgress(sec.id);
-        return `<button class="progress-row" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
-          <div class="pr-main"><div class="pr-name">${O.escapeHtml(sec.name)}</div><div class="pr-meta">${p.answered} / ${p.total} vistas</div></div>
-          <div class="pr-bar"><div class="bar-track"><i style="width:${p.pct}%"></i></div></div>
-          <div class="pr-pct">${p.pct}%</div><span class="pr-chev">${icon('chevronR')}</span>
-        </button>`;
-      }).join("")}</div>
-    </div>
-
-    <div class="section-block">
       <div class="section-title"><h3>Retos y actividad</h3></div>
       <div class="nav-list">
         <button class="nav-row" data-goto="test-wizard" data-params='{"mode":"exam"}'>
-          <span class="nr-ic">${icon('tests')}</span><span class="nr-title">Crear examen</span><span class="nr-chev">${icon('chevronR')}</span>
+          <span class="nr-ic">${icon('tests')}</span><span class="nr-title">Crear examen manual</span><span class="nr-chev">${icon('chevronR')}</span>
         </button>
         <button class="nav-row" data-goto="mp-setup">
           <span class="nr-ic">${icon('challenge')}</span><span class="nr-title">Duelo en vivo</span>
@@ -1694,6 +1832,10 @@ function renderProgress(){
     </div>
   </div>`;
 
+  const repasarBtn = $("#pg-repasar");
+  if(repasarBtn) repasarBtn.addEventListener("click", ()=> startReviewStudy());
+  $$(".concept-row").forEach(r=> r.addEventListener("click", ()=> practiceConcept(r.getAttribute("data-concept"))));
+  [$("#pg-plan"), $("#pg-plan2")].forEach(el=>{ if(el) el.addEventListener("click", openExamPlanModal); });
   const errBtn = $("#pg-errores");
   if(errBtn) errBtn.addEventListener("click", ()=>{
     const s2 = O.buildSession({mode:"practice", scope:"errores", count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});

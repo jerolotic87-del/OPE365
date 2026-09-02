@@ -214,7 +214,38 @@ i.dot{ display:inline-block; width:8px; height:8px; border-radius:50%; margin-ri
 .concept-row .nr-body{ flex:1; display:flex; flex-direction:column; gap:2px; min-width:0; }
 .concept-row .nr-title{ flex:none; }
 .concept-row .nr-reason{ font-size:11px; color:var(--text-3); }
-.section-title .link{ font-size:12px; }
+.section-title .link{ font-size:12px; background:none; border:none; cursor:pointer; color:var(--text-2); font:inherit; padding:0; }
+.section-title .link:hover{ color:var(--accent-ink); }
+
+/* Progreso — dominio en cuadrícula */
+.dom-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius-s); overflow:hidden; margin:var(--sp-3) 0; }
+.dom-cell{ background:var(--surface); padding:var(--sp-3) var(--sp-2); text-align:center; }
+.dom-cell .dom-n{ display:block; font-family:var(--font-mono); font-size:20px; font-weight:700; color:var(--tone,var(--text)); line-height:1; }
+.dom-cell .dom-l{ display:block; margin-top:5px; font-size:10px; color:var(--text-3); }
+@media (max-width:480px){ .dom-grid{ grid-template-columns:repeat(2,1fr); } }
+
+/* Progreso — 5 dimensiones */
+.dim-list{ display:flex; flex-direction:column; border:1px solid var(--border); border-radius:var(--radius-m); overflow:hidden; background:var(--surface); }
+.dim-row{ display:grid; grid-template-columns:minmax(0,1.3fr) minmax(80px,1fr) 66px; align-items:center; gap:var(--sp-4); padding:12px var(--sp-5); border-bottom:1px solid var(--border); }
+.dim-row:last-child{ border-bottom:none; }
+.dim-row.is-empty{ opacity:.55; }
+.dim-name{ font-size:13px; font-weight:600; color:var(--text); }
+.dim-name .dim-q{ display:block; font-size:10.5px; font-weight:400; color:var(--text-3); margin-top:2px; }
+.dim-track{ height:6px; border-radius:99px; background:var(--surface-2); overflow:hidden; }
+.dim-track > i{ display:block; height:100%; background:var(--accent); }
+.dim-track > i.bad{ background:var(--bad); } .dim-track > i.warn{ background:var(--warn); } .dim-track > i.good{ background:var(--good); }
+.dim-val{ font-family:var(--font-mono); font-size:12px; color:var(--text-2); text-align:right; }
+@media (max-width:560px){
+  .dim-row{ grid-template-columns:1fr 52px; grid-template-areas:"name val" "track track"; row-gap:8px; }
+  .dim-name{ grid-area:name; } .dim-val{ grid-area:val; } .dim-track{ grid-area:track; }
+}
+
+/* selector de días (plan de examen) */
+.day-pick{ display:flex; gap:6px; }
+.day-btn{ appearance:none; cursor:pointer; font:inherit; font-size:12.5px; font-weight:700; width:36px; height:36px;
+  border-radius:8px; border:1px solid var(--border); background:var(--surface); color:var(--text-3); }
+.day-btn.on{ background:var(--accent-dim); color:var(--accent-ink); border-color:var(--accent-line); }
+input[type="date"]{ color-scheme:dark; }
 
 .hero-continue{
   border-radius:var(--radius-l); border:1px solid var(--border-2);
