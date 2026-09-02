@@ -1,0 +1,525 @@
+<title>OPE365 Memory Engine</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#FBFBFD; --surface:#FFFFFF; --surface-2:#F4F5F8;
+    --ink:#14161C; --ink-soft:#565E6E; --ink-faint:#8A93A3;
+    --rule:#E4E7EE; --rule-strong:#CDD2DD;
+    --accent:#2F63D8; --accent-soft:#EAF0FC;
+    --principle:#227449; --principle-soft:#E4F1E9;
+    --product:#2F63D8; --product-soft:#EAF0FC;
+    --heur:#B45309; --heur-soft:#FBF0DE;
+    --calib:#5B4BC4; --calib-soft:#EEECFA;
+    --risk:#B4241F; --risk-soft:#F8E7E6;
+    --measure:66ch;
+    --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --serif:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+    --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0A1120; --surface:#111A2E; --surface-2:#16213A;
+      --ink:#EAF1FB; --ink-soft:#9DB0CB; --ink-faint:#6B7C99;
+      --rule:rgba(150,178,214,.16); --rule-strong:rgba(150,178,214,.3);
+      --accent:#6BA1FF; --accent-soft:rgba(91,155,255,.12);
+      --principle:#5CC79B; --principle-soft:rgba(92,199,155,.13);
+      --product:#6BA1FF; --product-soft:rgba(91,155,255,.12);
+      --heur:#E7B15A; --heur-soft:rgba(231,177,90,.13);
+      --calib:#A99BF0; --calib-soft:rgba(169,155,240,.13);
+      --risk:#F0847B; --risk-soft:rgba(240,132,123,.13);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0A1120; --surface:#111A2E; --surface-2:#16213A;
+    --ink:#EAF1FB; --ink-soft:#9DB0CB; --ink-faint:#6B7C99;
+    --rule:rgba(150,178,214,.16); --rule-strong:rgba(150,178,214,.3);
+    --accent:#6BA1FF; --accent-soft:rgba(91,155,255,.12);
+    --principle:#5CC79B; --principle-soft:rgba(92,199,155,.13);
+    --product:#6BA1FF; --product-soft:rgba(91,155,255,.12);
+    --heur:#E7B15A; --heur-soft:rgba(231,177,90,.13);
+    --calib:#A99BF0; --calib-soft:rgba(169,155,240,.13);
+    --risk:#F0847B; --risk-soft:rgba(240,132,123,.13);
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--ground); color:var(--ink); font-family:var(--serif); font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:920px; margin:0 auto; padding:0 24px 120px; }
+  header.top{ border-bottom:1px solid var(--rule-strong); padding:40px 24px 26px; max-width:920px; margin:0 auto; }
+  .kicker{ font-family:var(--mono); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 14px; }
+  header.top h1{ font-family:var(--sans); font-weight:600; font-size:clamp(29px,5vw,42px); line-height:1.09; letter-spacing:-.02em; margin:0 0 16px; text-wrap:balance; }
+  header.top .lede{ font-size:19px; color:var(--ink-soft); margin:0; max-width:60ch; }
+  .meta-row{ display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:22px; font-family:var(--mono); font-size:12px; color:var(--ink-faint); }
+  .meta-row b{ color:var(--ink-soft); font-weight:500; }
+  section{ margin-top:64px; }
+  .sec-head{ display:flex; align-items:baseline; gap:14px; margin-bottom:8px; border-bottom:1px solid var(--rule); padding-bottom:10px; }
+  .sec-num{ font-family:var(--mono); font-size:13px; color:var(--accent); font-weight:500; flex-shrink:0; }
+  h2{ font-family:var(--sans); font-weight:600; font-size:24px; letter-spacing:-.015em; margin:0; text-wrap:balance; }
+  h3{ font-family:var(--sans); font-weight:600; font-size:16.5px; margin:34px 0 8px; letter-spacing:-.01em; }
+  h4{ font-family:var(--sans); font-weight:600; font-size:14px; margin:24px 0 6px; color:var(--ink-soft); }
+  p{ margin:0 0 16px; max-width:var(--measure); }
+  .sub{ color:var(--ink-soft); font-size:15px; max-width:var(--measure); margin:2px 0 22px; }
+  strong{ font-weight:500; color:var(--ink); font-family:var(--sans); font-size:.96em; }
+  em{ color:var(--ink-soft); }
+  code{ font-family:var(--mono); font-size:.82em; background:var(--surface-2); padding:.12em .4em; border-radius:4px; color:var(--ink); }
+  a{ color:var(--accent); text-underline-offset:2px; }
+  ul,ol{ max-width:var(--measure); padding-left:1.3em; margin:0 0 16px; }
+  li{ margin:6px 0; } li::marker{ color:var(--ink-faint); }
+  .formula{ font-family:var(--mono); font-size:13px; line-height:1.75; background:var(--surface-2); border:1px solid var(--rule); border-left:3px solid var(--calib); border-radius:6px; padding:16px 18px; margin:16px 0; overflow-x:auto; color:var(--ink); }
+  .formula .c{ color:var(--ink-faint); }
+
+  /* properties checklist */
+  .props{ counter-reset:pr; display:flex; flex-direction:column; gap:2px; margin:22px 0; }
+  .prop{ counter-increment:pr; display:grid; grid-template-columns:30px 1fr; gap:14px; padding:13px 16px; background:var(--surface); border:1px solid var(--rule); }
+  .prop + .prop{ border-top:0; }
+  .prop:first-child{ border-radius:8px 8px 0 0; } .prop:last-child{ border-radius:0 0 8px 8px; }
+  .prop::before{ content:counter(pr); font-family:var(--mono); font-size:12px; color:var(--accent); }
+  .prop p{ margin:0; font-size:15px; line-height:1.5; }
+  .prop b{ font-family:var(--sans); font-weight:600; font-size:14px; }
+
+  /* dimension cards */
+  .dims{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:24px 0; }
+  @media(max-width:680px){ .dims{ grid-template-columns:1fr; } }
+  .dim{ background:var(--surface); border:1px solid var(--rule); border-radius:9px; padding:16px 18px; }
+  .dim .dn{ font-family:var(--sans); font-weight:600; font-size:14px; letter-spacing:.02em; text-transform:uppercase; }
+  .dim .dq{ font-style:italic; color:var(--ink-soft); font-size:14px; margin:4px 0 8px; }
+  .dim .dh{ font-size:13.5px; color:var(--ink-soft); line-height:1.5; }
+  .dim .dh code{ font-size:.8em; }
+
+  /* parameter honesty table */
+  .params{ display:flex; flex-direction:column; gap:0; margin:22px 0; border:1px solid var(--rule-strong); border-radius:9px; overflow:hidden; }
+  .param{ padding:16px 18px; background:var(--surface); border-bottom:1px solid var(--rule); }
+  .param:last-child{ border-bottom:0; }
+  .param .ph{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-bottom:8px; }
+  .param .pname{ font-family:var(--mono); font-size:13px; font-weight:500; color:var(--ink); }
+  .param .pval{ font-family:var(--mono); font-size:12px; color:var(--ink-soft); }
+  .cat{ font-family:var(--mono); font-size:9.5px; letter-spacing:.05em; padding:3px 7px; border-radius:5px; white-space:nowrap; }
+  .c-pr{ background:var(--principle-soft); color:var(--principle); }
+  .c-pd{ background:var(--product-soft); color:var(--product); }
+  .c-he{ background:var(--heur-soft); color:var(--heur); }
+  .c-ca{ background:var(--calib-soft); color:var(--calib); }
+  .param dl{ margin:0; display:grid; grid-template-columns:78px 1fr; gap:3px 12px; font-size:14px; }
+  .param dt{ font-family:var(--sans); font-weight:600; font-size:11.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-faint); padding-top:2px; }
+  .param dd{ margin:0; color:var(--ink-soft); }
+
+  /* checklist for "asentado" */
+  .checklist{ background:var(--surface); border:1px solid var(--rule); border-radius:9px; padding:6px 18px; margin:16px 0; }
+  .checklist .ci{ display:grid; grid-template-columns:20px 1fr; gap:12px; padding:11px 0; border-bottom:1px solid var(--rule); font-size:15px; }
+  .checklist .ci:last-child{ border-bottom:0; }
+  .checklist .ci .bx{ width:16px; height:16px; border:1.5px solid var(--rule-strong); border-radius:4px; margin-top:2px; }
+  .checklist .ci b{ font-family:var(--sans); font-weight:600; font-size:14px; }
+  .checklist .ci span{ color:var(--ink-soft); }
+
+  /* scenario grid */
+  .scen{ display:grid; grid-template-columns:1fr 1fr; gap:2px; margin:22px 0; background:var(--rule); border:1px solid var(--rule); border-radius:8px; overflow:hidden; }
+  @media(max-width:680px){ .scen{ grid-template-columns:1fr; } }
+  .sc{ background:var(--surface); padding:13px 15px; }
+  .sc .st{ font-family:var(--sans); font-weight:600; font-size:13.5px; }
+  .sc .sd{ font-size:13px; color:var(--ink-soft); margin-top:3px; line-height:1.42; }
+
+  .tbl-scroll{ overflow-x:auto; margin:20px 0; }
+  table{ border-collapse:collapse; width:100%; font-size:14px; min-width:480px; }
+  th,td{ text-align:left; padding:10px 13px; border-bottom:1px solid var(--rule); vertical-align:top; }
+  thead th{ font-family:var(--sans); font-weight:600; font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); border-bottom:1px solid var(--rule-strong); }
+  td:first-child{ font-family:var(--sans); font-weight:500; font-size:13px; color:var(--ink); }
+  tbody tr:last-child td{ border-bottom:0; }
+
+  .callout{ border-left:3px solid var(--accent); background:var(--accent-soft); padding:14px 18px; border-radius:0 7px 7px 0; margin:20px 0; font-size:15px; }
+  .callout b{ font-family:var(--sans); }
+
+  footer{ margin-top:80px; padding-top:24px; border-top:1px solid var(--rule-strong); font-family:var(--mono); font-size:12px; color:var(--ink-faint); }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+  @media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+</style>
+
+<header class="top">
+  <p class="kicker">Fase 2 de diseño · el motor de aprendizaje · antes de escribir código</p>
+  <h1>OPE365 Memory Engine</h1>
+  <p class="lede">Un motor adaptativo con comportamiento verificable — no "implementar FSRS". Cada número lleva etiqueta: principio, decisión de producto, heurística inicial o parámetro a calibrar. Ninguna heurística se presenta como verdad científica.</p>
+  <div class="meta-row">
+    <span><b>Documento previo:</b> Plan Inteligente (arquitectura aprobada conceptualmente)</span>
+    <span><b>Esta fase:</b> el motor de las capas 3–5</span>
+    <span><b>Aprobar antes de:</b> escribir código</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <div class="sec-head"><span class="sec-num">01</span><h2>Qué es este motor, y qué no es</h2></div>
+  <p>La primera propuesta se apoyaba demasiado en "adoptamos FSRS" y saltaba directamente a pesos concretos (<code>.4</code>, <code>1.2</code>, <code>3.1</code>, <code>8.2</code>) sin decir que eran una elección de ingeniería, no una verdad para este banco. Corrección: el objetivo no es el scheduler perfecto de Anki. El objetivo es un motor con <strong>diez propiedades comprobables</strong>, construido con la matemática más simple que las consiga, y con cada parámetro nombrado, justificado y calibrable.</p>
+
+  <div class="props">
+    <div class="prop"><p><b>Nunca abandona un concepto importante.</b> Ningún concepto con contenido puede pasar más de <code>maxSilencio</code> días sin aparecer si hay tiempo para verlo, y todos tienen que llegar a "asentado" antes del examen — o el motor lo avisa con honestidad.</p></div>
+    <div class="prop"><p><b>Nunca lo repite innecesariamente.</b> Un concepto estable y no vencido no se selecciona. Una pregunta vista en la última sesión o en 24 h no se repite salvo que sea la única opción para un fallo.</p></div>
+    <div class="prop"><p><b>Reacciona a los fallos.</b> Un fallo acorta el intervalo del concepto, aumenta su prioridad y programa una recuperación cercana — pero no dispara "P1 · P1 · P1".</p></div>
+    <div class="prop"><p><b>Reacciona a los aciertos.</b> Un acierto tras un hueco real alarga el intervalo (efecto de espaciado); dos aciertos en la misma sesión valen mucho menos que dos separados en días.</p></div>
+    <div class="prop"><p><b>Distingue dominar una pregunta de dominar el concepto.</b> Acertar <code>P1</code> repetidamente sin acertar variantes no marca el concepto como asentado.</p></div>
+    <div class="prop"><p><b>Busca transferencia.</b> Cuando un concepto ya se recuperó varias veces con el mismo tipo de pregunta, el generador prefiere una variante (ruta → caso → discriminación → atajo) que aún no se haya visto.</p></div>
+    <div class="prop"><p><b>Tiene en cuenta la fecha del examen.</b> Los intervalos se comprimen para caber; la prioridad sube conforme se agotan las oportunidades reales.</p></div>
+    <div class="prop"><p><b>Se adapta al tiempo disponible.</b> "Tengo 15 minutos" → una sesión con un objetivo concreto, no un recuento de preguntas.</p></div>
+    <div class="prop"><p><b>Se recupera si el usuario deja de estudiar.</b> Volver tras 10 días produce una sesión de rescate y un mensaje tranquilo, nunca "147 pendientes".</p></div>
+    <div class="prop"><p><b>Es comprobable mediante simulación.</b> Un usuario sintético con "competencia real" por concepto permite verificar las 9 propiedades anteriores en 16 escenarios antes de tocar la UI.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">02</span><h2>Cinco dimensiones independientes — no un porcentaje</h2></div>
+  <p class="sub">Nada de una fórmula de "Preparación" con pesos inventados. Cinco indicadores que se miden por separado, se muestran por separado, y solo llevan debajo un veredicto cualitativo. Más adelante, con datos reales, se estudiará cuáles predicen el rendimiento en simulacros — <em>entonces</em> se podrá combinar con fundamento.</p>
+
+  <div class="dims">
+    <div class="dim"><div class="dn">Memoria</div><div class="dq">¿Recuerda el concepto después de tiempo?</div><div class="dh">Del modelo de decaimiento: retrievabilidad estimada hoy + intervalo alcanzado. Sube con recuperaciones espaciadas, baja con lapsos.</div></div>
+    <div class="dim"><div class="dn">Competencia</div><div class="dq">¿Sabe aplicarlo, no solo reconocerlo?</div><div class="dh">Acierto en tipos exigentes (caso práctico, discriminación, ruta) frente a reconocimiento (conceptual, V/F) del mismo concepto.</div></div>
+    <div class="dim"><div class="dn">Transferencia</div><div class="dq">¿Aguanta una variante nueva?</div><div class="dh">Nº de framings distintos del concepto acertados / framings intentados. Detecta memorización de pregunta.</div></div>
+    <div class="dim"><div class="dn">Cobertura</div><div class="dq">¿Ha trabajado el contenido?</div><div class="dh">Conceptos vistos / 61, y dentro de cada concepto, fracción de su espacio de variantes tocada.</div></div>
+    <div class="dim"><div class="dn">Rendimiento de examen</div><div class="dq">¿Funciona bajo presión?</div><div class="dh">Acierto en preguntas de este concepto cuando aparecieron en sesiones <code>mode:exam</code> (sin feedback, cronometradas).</div></div>
+  </div>
+
+  <p>En pantalla: cuatro o cinco barras con su nombre real, y debajo <em>"Preparación estimada: buena"</em>. Nunca <em>"recuerdas el 93 %"</em>.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">03</span><h2>Estados y eventos</h2></div>
+  <h4>Evento (append-only, nunca se sobrescribe)</h4>
+  <div class="formula">
+{ ts, kind:'q'|'fc'|'exam', ref, concept, framing, grade, correct, ms, confidence? }
+<span class="c">grade ∈ {again, hard, good}   framing ∈ {conceptual, ruta, caso, discriminacion, atajo, vf}</span>
+  </div>
+  <h4>Estado por concepto (61) — deriva de los eventos, cacheado</h4>
+  <div class="formula">
+interval      <span class="c">// días hasta la próxima revisión — ES el calendario</span>
+lastReview, nextReview
+reps, correctReps, lapses
+recall[]      <span class="c">// resultados de las últimas 5 recuperaciones (para tasa reciente)</span>
+framingsCorrect: Set   <span class="c">// para transferencia</span>
+firstSeen, spanDays    <span class="c">// separación temporal real entre recuperaciones</span>
+examPerf[]    <span class="c">// resultados en sesiones de examen</span>
+  </div>
+  <h4>Estado por pregunta — ligero</h4>
+  <div class="formula">seen, correct, wrong, lastSeen   <span class="c">// para antirrepetición y para sumar al concepto</span></div>
+  <div class="callout"><b>Dificultad — tres cosas distintas.</b> <code>dificultad_pregunta</code> (¿está mal redactada o exige razonar? — se estima de la tasa de fallo agregada) · <code>dificultad_concepto</code> (¿es intrínsecamente duro? — media de la dificultad de sus preguntas, ajustada) · <code>dificultad_usuario</code> (¿le cuesta a <em>este</em> usuario? — su acierto en el concepto). Fallar tres veces <code>P1</code> (fácil) señala <em>baja competencia del usuario</em> en el concepto, no que P1 sea difícil.</div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">04</span><h2>El modelo de memoria — lo más simple que funciona</h2></div>
+  <p>Un solo escalar por concepto: <code>interval</code> (días hasta la próxima revisión). La retrievabilidad se <em>deriva</em>, no se almacena. Es SM-2 con un bonus de espaciado — inspirado en FSRS, sin sus 17 parámetros.</p>
+  <div class="formula">
+R(t) = 2 ^ ( −0.152 · t / interval )      <span class="c">// t = días desde lastReview</span>
+       <span class="c">// en t = interval → R = 0.90 (la retención objetivo)</span>
+
+<span class="c">// al recuperar, con hueco real g = díasDesdeÚltima / intervalPrevio</span>
+bonusEspaciado = clamp(g, 0.8, 1.4)        <span class="c">// recuperar tras un hueco largo vale más</span>
+
+grade=good :  interval ← interval · crecimiento · bonusEspaciado · factorDificultad
+grade=hard :  interval ← interval · (1 + (crecimiento−1)·0.35) · bonusEspaciado
+grade=again:  interval ← max(1, interval · factorLapso) ;  lapses++
+
+<span class="c">// concepto nuevo</span>
+interval0 = { again: 1, hard: 2, good: 3 } [grade]
+
+nextReview = lastReview + interval
+  </div>
+  <p class="sub">Progresión típica (todo "good", crecimiento 2.2, sin lapsos): <code>3 → 6.6 → 15 → 33 → 72 días</code>. Con un lapso a mitad, vuelve a <code>~13</code> y sigue. El usuario nunca ve estos números — ve "Recuerdo estimado: alto · próximo repaso: jueves".</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">05</span><h2>Evidencia de dominio — una lista, no una fórmula</h2></div>
+  <p>Sustituye a "≥ 2 recuperaciones correctas". Un concepto está <strong>asentado</strong> cuando se cumplen <em>todas</em> estas condiciones. Cada una es comprobable y explicable; los umbrales son decisiones de producto, no ciencia.</p>
+  <div class="checklist">
+    <div class="ci"><span class="bx"></span><span><b>≥ 2 recuperaciones correctas</b> — no una única sesión perfecta.</span></div>
+    <div class="ci"><span class="bx"></span><span><b>separadas ≥ 3 días</b> (<code>spanDays</code>) — espaciado real, no dos aciertos seguidos.</span></div>
+    <div class="ci"><span class="bx"></span><span><b>intervalo ≥ 7 días</b> — ha sobrevivido a un hueco con sentido.</span></div>
+    <div class="ci"><span class="bx"></span><span><b>acierto reciente ≥ 80 %</b> (últimas 5) — no está fallando ahora.</span></div>
+    <div class="ci"><span class="bx"></span><span><b>≥ 2 framings distintos acertados</b> — transferencia, no memorización de una pregunta.</span></div>
+  </div>
+  <p>Los estados intermedios salen de qué condiciones faltan: <em>necesita atención</em> (falla acierto reciente), <em>en consolidación</em> (1 recuperación o intervalo corto), <em>bien asentado</em> (todas), <em>repaso programado</em> (asentado + <code>nextReview</code> en calendario).</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">06</span><h2>Capa de examen y motor de preparación</h2></div>
+  <h4>Regla dura</h4>
+  <div class="formula">
+fechaCrítica = fechaExamen − 2 días           <span class="c">// colchón (decisión de producto)</span>
+todo concepto con contenido debe estar "asentado" en fechaCrítica
+   — o como mínimo: ≥2 recuperaciones espaciadas
+
+recuperacionesQueFaltan(c) = huecos de la lista "asentado" que aún no se cumplen
+díasDisponibles(c)         = días de estudio entre hoy y fechaCrítica
+
+si nextReview(c) > fechaCrítica  ó  recuperacionesQueFaltan(c) > díasDisponibles·cuota(c):
+    comprimir → nextReview = hoy + díasDisponibles / (recuperacionesQueFaltan + 1)
+    y subir prioridad
+
+presiónExamen(c) = recuperacionesQueFaltan(c) / max(1, díasDisponibles(c))
+                   <span class="c">// 0 = holgado · ≥1 = en riesgo</span>
+  </div>
+  <h4>Motor de preparación — proyección diaria</h4>
+  <div class="formula">
+capacidad = díasEstudioRestantes · ítemsPorSesión
+demanda   = Σ recuperacionesQueFaltan(c) + repasosProyectados(ventana)
+proyecciónCobertura = min(1, capacidad / demanda)
+
+<span class="c">// se muestra con las asunciones a la vista, como estimación:</span>
+"Al ritmo actual (20 min/día) cubrirás ~91 % del contenido prioritario."
+"Con 30 min/día subirías a ~98 %."     <span class="c">// se recalcula min/día + 10</span>
+  </div>
+  <div class="callout"><b>Sin fecha de examen todavía:</b> el motor usa un horizonte por defecto (90 días) y funciona igual; la regla dura y la compresión se activan en cuanto el usuario fija la fecha, y entonces recalcula.</div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">07</span><h2>Priorizador — factores nombrados, pesos con etiqueta</h2></div>
+  <p>Cada concepto recibe una puntuación = suma de factores normalizados 0–1 por un peso. <strong>Los pesos son decisiones de producto, no verdades</strong> — viven en un archivo de configuración con un comentario en cada uno, no en la interfaz.</p>
+  <div class="formula">
+puntuación(c) =
+    w_olvido    · (1 − R(hoy))            <span class="c">// riesgo de olvido (concepto ya visto)</span>
+  + w_atraso    · clamp((hoy − nextReview)/interval, 0, 1)
+  + w_error     · (fallosEnÚltimas5 / 5)
+  + w_examen    · min(presiónExamen, 1)
+  + w_cobertura · [nunca visto]
+  + w_transfer  · (1 − transferScore)      <span class="c">// solo si Memoria ya es alta</span>
+  + w_import    · tamañoConceptoNormalizado
+
+filtro duro (no peso): excluir todo lo visto en la última sesión o en 24 h,
+                       salvo que no quede ninguna otra opción
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>Peso</th><th>Defecto</th><th>Se mueve con la fase…</th></tr></thead>
+    <tbody>
+      <tr><td>w_olvido</td><td>1.0</td><td>constante — el olvido siempre importa</td></tr>
+      <tr><td>w_atraso</td><td>0.7</td><td>sube cerca del examen</td></tr>
+      <tr><td>w_error</td><td>0.9</td><td>sube mucho en los últimos 7 días</td></tr>
+      <tr><td>w_examen</td><td>0 → 2.5</td><td>0 a 30+ días, crece hasta 2.5 en la última semana</td></tr>
+      <tr><td>w_cobertura</td><td>1.2 → 0</td><td>alto al principio, cae a 0 en los últimos 3 días (nada nuevo)</td></tr>
+      <tr><td>w_transfer</td><td>0.4 → 1.0</td><td>sube a partir de los 14 días</td></tr>
+      <tr><td>w_import</td><td>0.3</td><td>constante (manual en el futuro)</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">08</span><h2>Generador de sesión — objetivo, no recuento</h2></div>
+  <div class="formula">
+ítems ≈ minutos·60 / segPorÍtem      <span class="c">// segPorÍtem = media móvil real; arranca 28 s / 14 s fc</span>
+
+cubos (fracción de ítems, según fase — ver documento 1 §07):
+  repaso    → conceptos vencidos, priorizador; flashcards cubren los que tienen tarjeta
+  refuerzo  → 3–5 conceptos con más error reciente + baja consolidación
+  mixto     → vencidos + alguno nuevo, barajados entre secciones (interleaving)
+  examen    → bloque cronometrado sin feedback, distribución equilibrada
+
+por concepto seleccionado → mejor pregunta:
+  1. no vista en las últimas N sesiones
+  2. si el concepto ya se repitió → framing nuevo (conceptual→ruta→caso→discriminación→atajo)
+  3. dificultad acorde a dificultad_usuario del concepto
+  </div>
+  <h4>El objetivo que ve el usuario</h4>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>Tiempo</th><th>Se le dice…</th></tr></thead>
+    <tbody>
+      <tr><td>10 min</td><td>"Objetivo: consolidar 6 conceptos."</td></tr>
+      <tr><td>30 min</td><td>"Objetivo: recuperar 12 conceptos + 8 preguntas de transferencia."</td></tr>
+      <tr><td>60 min</td><td>"Objetivo: sesión completa + diagnóstico."</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Al terminar: <em>"Hoy has consolidado 5 conceptos"</em>, no <em>"has hecho 37 preguntas"</em>.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">09</span><h2>Recuperación de atrasos</h2></div>
+  <div class="formula">
+si vencidos > capacidadDeHoy · 1.5:
+    seleccionar las N de mayor (riesgoOlvido · importancia)   <span class="c">// las que más se pierden</span>
+    reprogramar el resto repartido en los próximos días (nunca todo de golpe)
+    mensaje: "Has estado unos días sin estudiar. No pasa nada.
+              Hemos priorizado tus repasos más importantes."
+  </div>
+  <p>Nunca aparece un contador de "147 pendientes". El plan se rehace y sigue.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">10</span><h2>Estrategia de transferencia</h2></div>
+  <p>Cada concepto tiene preguntas en varios <code>framing</code> (derivado de <code>tipo</code> + <code>categoria</code> + heurística sobre el enunciado). Escalera de dificultad cognitiva:</p>
+  <div class="formula">
+1 reconocimiento   ¿qué comando permite…?          (conceptual / vf)
+2 ruta             ¿dónde accederías para…?         (categoria: ruta)
+3 situación        estás trabajando con…            (caso práctico)
+4 discriminación   ¿cuál NO conseguiría…?           (negativa / seleccion_multiple)
+5 transferencia    contexto nuevo                   (framing menos visto)
+  </div>
+  <p><strong>Marca de memorización superficial:</strong> si <code>correctReps ≥ 3</code> todos en framing 1 y el primer intento en framing 2–4 falla → el concepto <em>no</em> avanza a "asentado" y el generador prioriza framings altos. No se muestra nada negativo al usuario; simplemente cambian las preguntas.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">11</span><h2>Tabla de honestidad de parámetros</h2></div>
+  <p class="sub">Lo que pediste: cada número con su categoría, por qué existe, qué lo respalda, su riesgo y cómo se calibrará. <span class="cat c-pr">PRINCIPIO</span> <span class="cat c-pd">PRODUCTO</span> <span class="cat c-he">HEURÍSTICA</span> <span class="cat c-ca">CALIBRABLE</span></p>
+
+  <div class="params">
+    <div class="param">
+      <div class="ph"><span class="pname">Espaciado &gt; masificado; recuperar &gt; releer</span><span class="cat c-pr">PRINCIPIO</span></div>
+      <dl><dt>Por qué</dt><dd>Es el cimiento de todo el motor.</dd>
+      <dt>Evidencia</dt><dd>Meta-análisis amplios (Cepeda 2006; Roediger &amp; Karpicke 2006; Dunlosky 2013 — "alta utilidad").</dd>
+      <dt>Riesgo</dt><dd>Bajo. Es de lo más replicado en psicología del aprendizaje.</dd>
+      <dt>Calibrar</dt><dd>No se calibra — se asume.</dd></dl>
+    </div>
+    <div class="param">
+      <div class="ph"><span class="pname">Relearning sucesivo (varias recuperaciones espaciadas)</span><span class="cat c-pr">PRINCIPIO</span></div>
+      <dl><dt>Por qué</dt><dd>El dominio duradero necesita varios ciclos correcto-con-hueco, no uno.</dd>
+      <dt>Evidencia</dt><dd>Rawson &amp; Dunlosky (2011–2018), específicamente sobre retención a semanas/meses.</dd>
+      <dt>Riesgo</dt><dd>Bajo. El <em>número</em> exacto (2) sí es discutible → ver siguiente fila.</dd>
+      <dt>Calibrar</dt><dd>El principio no; el umbral sí.</dd></dl>
+    </div>
+    <div class="param">
+      <div class="ph"><span class="pname">"asentado" = 2 recuperaciones · 3 días · intervalo 7 · 80 % · 2 framings</span><span class="cat c-pd">PRODUCTO</span></div>
+      <dl><dt>Por qué</dt><dd>Define cuándo el motor deja de insistir en un concepto. Umbral conservador para preparación de examen.</dd>
+      <dt>Evidencia</dt><dd>Ninguna que diga "exactamente estos 5 números". Rawson usa 3 recuperaciones; se elige 2 + condiciones extra para no sobreentrenar.</dd>
+      <dt>Riesgo</dt><dd>Medio. Si es laxo, marca dominio falso; si es estricto, no se cubre el temario. Es la fila más importante de revisar.</dd>
+      <dt>Calibrar</dt><dd>Con datos: ¿los conceptos "asentados" según esta lista aciertan &gt;85 % en simulacros posteriores? Si no, endurecer.</dd></dl>
+    </div>
+    <div class="param">
+      <div class="ph"><span class="pname">Curva de olvido R(t) = 2^(−0.152·t/interval)</span><span class="cat c-he">HEURÍSTICA</span></div>
+      <dl><dt>Por qué</dt><dd>Necesitamos <em>alguna</em> curva monótona decreciente. La exponencial es la más simple y ampliamente usada; 0.152 fija R=0.90 en t=interval.</dd>
+      <dt>Evidencia</dt><dd>El olvido es aproximadamente exponencial/potencial (Ebbinghaus; Wixted). La forma exacta y el 0.152 son elección.</dd>
+      <dt>Riesgo</dt><dd>Medio-bajo. Se usa para ordenar prioridad, no para prometer un %. Un error aquí desplaza el calendario, no lo rompe.</dd>
+      <dt>Calibrar</dt><dd>Ajustar el exponente para que el acierto observado al llegar <code>nextReview</code> ≈ retención objetivo.</dd></dl>
+    </div>
+    <div class="param">
+      <div class="ph"><span class="pname">Retención objetivo = 0.90</span><span class="cat c-pd">PRODUCTO</span></div>
+      <dl><dt>Por qué</dt><dd>Preparación de oposición → se prioriza no olvidar sobre eficiencia. Anki por defecto usa 0.90; FSRS recomienda 0.80–0.95.</dd>
+      <dt>Evidencia</dt><dd>Trade-off conocido: más alto = más repasos, menos olvido. 0.90 es un punto medio-alto razonable.</dd>
+      <dt>Riesgo</dt><dd>Bajo. Si genera demasiada carga, se baja a 0.85.</dd>
+      <dt>Calibrar</dt><dd>Según si el plan resulta factible en el tiempo del usuario.</dd></dl>
+    </div>
+    <div class="param">
+      <div class="ph"><span class="pname">crecimiento = 2.2 · factorLapso = 0.4 · bonusEspaciado ∈ [0.8, 1.4]</span><span class="cat c-he">HEURÍSTICA</span></div>
+      <dl><dt>Por qué</dt><dd>Producen una progresión de intervalos sensata (3→7→15→33→72). Valores en el rango de SM-2 / FSRS.</dd>
+      <dt>Evidencia</dt><dd>Rango tomado de algoritmos probados; los valores puntuales son nuestros.</dd>
+      <dt>Riesgo</dt><dd>Medio. Demasiado alto → conceptos que reaparecen tarde; demasiado bajo → sobrecarga. Acotado por la capa de examen.</dd>
+      <dt>Calibrar</dt><dd>Minimizar el error de predicción "¿acertará la próxima recuperación?" sobre el historial real, una vez haya ~50 sesiones.</dd></dl>
+    </div>
+    <div class="param">
+      <div class="ph"><span class="pname">interval0 = {again:1, hard:2, good:3} días</span><span class="cat c-he">HEURÍSTICA</span></div>
+      <dl><dt>Por qué</dt><dd>Un concepto recién visto debe volver pronto. 1–3 días es el rango habitual de "learning steps".</dd>
+      <dt>Evidencia</dt><dd>Práctica estándar; sin respaldo específico para OPE365.</dd>
+      <dt>Riesgo</dt><dd>Bajo. Solo afecta a la primera revisión.</dd>
+      <dt>Calibrar</dt><dd>Igual que la fila anterior.</dd></dl>
+    </div>
+    <div class="param">
+      <div class="ph"><span class="pname">colchón pre-examen = 2 días · maxSilencio · cuotas de cubos por fase</span><span class="cat c-pd">PRODUCTO</span></div>
+      <dl><dt>Por qué</dt><dd>Decisiones de estrategia de examen. El colchón evita que la última revisión caiga el día del examen; las cuotas reflejan "construir → consolidar → simular".</dd>
+      <dt>Evidencia</dt><dd>Práctica de preparación de exámenes; los ratios (45/30/25…) son juicio.</dd>
+      <dt>Riesgo</dt><dd>Bajo-medio. Cambian la mezcla, no la corrección.</dd>
+      <dt>Calibrar</dt><dd>Con feedback del usuario y evolución de simulacros.</dd></dl>
+    </div>
+    <div class="param">
+      <div class="ph"><span class="pname">pesos del priorizador (w_olvido, w_error, w_examen…)</span><span class="cat c-ca">CALIBRABLE</span></div>
+      <dl><dt>Por qué</dt><dd>Determinan qué se estudia primero. Empiezan como juicio informado.</dd>
+      <dt>Evidencia</dt><dd>Ninguna. Son la palanca de producto por excelencia.</dd>
+      <dt>Riesgo</dt><dd>Medio. Un desequilibrio produce sesiones raras (todo repaso, o todo error). Los tests de simulación lo detectan.</dd>
+      <dt>Calibrar</dt><dd>Regresión: ¿qué combinación de factores predice mejor el fallo en la siguiente aparición? Ajustar pesos hacia esa señal.</dd></dl>
+    </div>
+    <div class="param">
+      <div class="ph"><span class="pname">las 5 dimensiones NO se combinan en un %</span><span class="cat c-pd">PRODUCTO</span></div>
+      <dl><dt>Por qué</dt><dd>No hay base para elegir los pesos de una fórmula de "Preparación". Mostrarlas por separado es más honesto y más accionable.</dd>
+      <dt>Evidencia</dt><dd>—</dd>
+      <dt>Riesgo</dt><dd>Ninguno de fiabilidad. Riesgo de UX: cinco barras piden más lectura que una. Se mitiga con el veredicto cualitativo debajo.</dd>
+      <dt>Calibrar</dt><dd>Cuando haya suficientes pares (dimensiones, nota de simulacro), regresión para ver si una combinación predice bien — <em>entonces</em> se puede ofrecer un índice único, etiquetado como derivado de datos.</dd></dl>
+    </div>
+    <div class="param">
+      <div class="ph"><span class="pname">"Recuerdo estimado: alto/medio/bajo" (no "N días de memoria")</span><span class="cat c-pd">PRODUCTO</span></div>
+      <dl><dt>Por qué</dt><dd>"12 días de memoria" se lee como una garantía que el modelo no puede dar. Tres niveles + "próximo repaso: jueves" comunican lo mismo sin prometer.</dd>
+      <dt>Evidencia</dt><dd>—</dd>
+      <dt>Riesgo</dt><dd>Ninguno.</dd>
+      <dt>Calibrar</dt><dd>Cortes de nivel (alto = R&gt;0.85, etc.) revisables.</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">12</span><h2>Estrategia de validación por simulación</h2></div>
+  <p>Antes de tocar la UI: un arnés de simulación. Un usuario sintético = <code>{ competenciaReal[concepto] ∈ [0,1], tasaOlvido, minutosDía, díasSemana, fechaExamen }</code>. Cada día simulado: el motor genera la sesión recomendada → cada ítem se "responde" muestreando de <code>competenciaReal · retrievabilidadActual</code> → los eventos se registran → el estado se recalcula.</p>
+
+  <div class="scen">
+    <div class="sc"><div class="st">1 · Usuario nuevo</div><div class="sd">Sin historial. Comprueba: onboarding, primeras sesiones sensatas, cobertura crece.</div></div>
+    <div class="sc"><div class="st">2 · Acierta casi todo</div><div class="sd">Intervalos crecen, sesiones se acortan, no hay repetición inútil, "asentado" se alcanza sin sobreentrenar.</div></div>
+    <div class="sc"><div class="st">3 · Falla mucho</div><div class="sd">No entra en espiral de 500 repasos; los intervalos se recortan pero se reparten; mensajes no punitivos.</div></div>
+    <div class="sc"><div class="st">4 · Irregular</div><div class="sd">Estudia 2 días, para 3. Cada regreso → sesión de rescate coherente, plan recalculado.</div></div>
+    <div class="sc"><div class="st">5 · 10 min/día</div><div class="sd">Sesiones factibles (≤ ítems que caben). El motor de preparación avisa si no se cubrirá todo.</div></div>
+    <div class="sc"><div class="st">6 · 60 min/día</div><div class="sd">Sesión completa + diagnóstico; cobertura acelerada; no se satura de contenido nuevo (&lt;30 %/sesión).</div></div>
+    <div class="sc"><div class="st">7 · Examen a 180 días</div><div class="sd">Sin simulacros al principio; construcción + consolidación; interleaving progresivo.</div></div>
+    <div class="sc"><div class="st">8 · Examen a 60 días</div><div class="sd">Mezcla equilibrada; primeros simulacros hacia el día 45.</div></div>
+    <div class="sc"><div class="st">9 · Examen a 30 días</div><div class="sd">w_examen empieza a subir; compresión de intervalos activa en conceptos lentos.</div></div>
+    <div class="sc"><div class="st">10 · Examen a 14 días</div><div class="sd">Simulacros semanales; refuerzo domina; nada cae después del examen.</div></div>
+    <div class="sc"><div class="st">11 · Examen a 7 días</div><div class="sd">Sin contenido nuevo salvo laguna crítica; consolidación + errores + simulacros.</div></div>
+    <div class="sc"><div class="st">12 · Examen mañana</div><div class="sd">Estrategia de emergencia: solo prioridad máxima, errores recientes, alta-confianza-fallada, un mini simulacro. Nunca "repasa las 1.500".</div></div>
+    <div class="sc"><div class="st">13 · Vuelve tras 10 días</div><div class="sd">Recuperación de atrasos: N prioritarias hoy, resto reprogramado; sin contador de pendientes.</div></div>
+    <div class="sc"><div class="st">14 · Memoriza P1, falla variantes</div><div class="sd"><code>transferScore</code> se queda bajo; el concepto no llega a "asentado"; el generador insiste en framings 2–5.</div></div>
+    <div class="sc"><div class="st">15 · Concepto dominado, variante nunca vista</div><div class="sd">No se repite la pregunta básica; aparece la variante; si la falla, el concepto baja de "asentado".</div></div>
+    <div class="sc"><div class="st">16 · Cientos de revisiones atrasadas</div><div class="sd">Priorización por riesgo·importancia; carga diaria limitada; nunca sesión imposible.</div></div>
+  </div>
+
+  <h4>Aserciones que todo escenario debe pasar</h4>
+  <ul>
+    <li>ninguna pregunta repetida dentro de <code>minRepeatGap</code> ni por posición de la respuesta</li>
+    <li>ningún concepto con contenido &gt; <code>maxSilencio</code> días sin aparecer si había tiempo</li>
+    <li>todo concepto llega a ≥2 recuperaciones espaciadas antes de <code>fechaCrítica</code>, o el motor lo marca como "no llega" explícitamente</li>
+    <li>nº de ítems de la sesión ≤ <code>maxÍtems(minutos)</code> — jamás una sesión imposible</li>
+    <li>cambiar la fecha del examen o reducir el tiempo → el recálculo produce un plan factible o un aviso honesto, nunca un plan roto</li>
+    <li>la corrección funciona con cualquier orden de opciones</li>
+  </ul>
+  <p>Salida por escenario: una traza legible — qué conceptos y preguntas elige cada día, cuándo vuelven, y el estado tras acierto / fallo / cambio de fecha.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">13</span><h2>Casos límite</h2></div>
+  <ul>
+    <li><strong>Concepto con 3 preguntas y todas casi iguales:</strong> <code>framingsCorrect</code> no llega a 2 → nunca "asentado" solo por repetición; el motor lo reconoce y baja su exigencia de transferencia (no puede pedir lo que no existe), pero lo señala en cobertura como "poco material".</li>
+    <li><strong>Concepto sin flashcards:</strong> el cubo "repaso" usa preguntas; no se rompe nada.</li>
+    <li><strong>Sección <code>diseno</code> (0 preguntas):</strong> excluida del recuento de 61 conceptos con contenido.</li>
+    <li><strong>Usuario sin <code>localStorage</code>:</strong> el motor corre en memoria (ya soportado); el plan no persiste pero la sesión del día funciona.</li>
+    <li><strong>Banco actualizado (ids que desaparecen):</strong> los eventos huérfanos se ignoran al recalcular; el estado del concepto sobrevive.</li>
+    <li><strong>Fecha de examen en el pasado:</strong> se trata como "modo repaso continuo" + aviso.</li>
+    <li><strong>Dos sesiones el mismo día:</strong> la segunda no repite lo de la primera; cuenta para el objetivo diario, no lo duplica.</li>
+  </ul>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">14</span><h2>Los 12 entregables — estado</h2></div>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>#</th><th>Entregable</th><th>En este documento</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Modelo conceptual</td><td>§01 (propiedades) + §02 (dimensiones)</td></tr>
+      <tr><td>2</td><td>Estados</td><td>§03</td></tr>
+      <tr><td>3</td><td>Eventos</td><td>§03</td></tr>
+      <tr><td>4</td><td>Scheduler / memoria</td><td>§04 + §05 (evidencia)</td></tr>
+      <tr><td>5</td><td>Priorizador</td><td>§07</td></tr>
+      <tr><td>6</td><td>Generador de sesión</td><td>§08</td></tr>
+      <tr><td>7</td><td>Planificador</td><td>§06 (motor de preparación) + doc 1 §09</td></tr>
+      <tr><td>8</td><td>Estrategia de deadline</td><td>§06</td></tr>
+      <tr><td>9</td><td>Recuperación de atrasos</td><td>§09</td></tr>
+      <tr><td>10</td><td>Transferencia</td><td>§10</td></tr>
+      <tr><td>11</td><td>Validación</td><td>§12</td></tr>
+      <tr><td>12</td><td>Casos límite</td><td>§13</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">15</span><h2>Qué necesito de ti para pasar a código</h2></div>
+  <ol>
+    <li><strong>La fila más discutible</strong> (§11): ¿te vale la lista de "asentado" (2 rec · 3 días · intervalo 7 · 80 % · 2 framings) como punto de partida conservador, o quieres 3 recuperaciones à la Rawson?</li>
+    <li><strong>Retención objetivo:</strong> ¿0.90 (más repasos, menos olvido — recomendado para oposición) u 0.85?</li>
+    <li><strong>Orden de implementación:</strong> ¿arnés de simulación primero (validar el motor a ciegas, sin UI) y luego integrar — recomendado — o motor + UI en paralelo?</li>
+    <li><strong>Fecha de examen:</strong> ¿la tienes ya para sembrar los escenarios, o construyo con horizonte por defecto de 90 días?</li>
+  </ol>
+  <p>Con eso, el primer paso de código es el arnés de simulación + el modelo de memoria + el priorizador, todo con tests de los 16 escenarios y <em>sin una sola pantalla nueva</em>. La UI llega cuando las trazas de simulación son correctas.</p>
+</section>
+
+<footer>
+  OPE365 Memory Engine · fase 2 de diseño · las fórmulas son propuestas con etiqueta, no verdades · aprobar antes de implementar
+</footer>
+
+</div>

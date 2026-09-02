@@ -1,0 +1,469 @@
+<title>Plan Inteligente OPE365</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#FBFBFD; --surface:#FFFFFF; --surface-2:#F4F5F8;
+    --ink:#14161C; --ink-soft:#565E6E; --ink-faint:#8A93A3;
+    --rule:#E4E7EE; --rule-strong:#CDD2DD;
+    --accent:#2F63D8; --accent-soft:#EAF0FC;
+    --now:#B45309; --now-soft:#FBF0DE;
+    --ok:#227449; --ok-soft:#E4F1E9;
+    --risk:#B4241F; --risk-soft:#F8E7E6;
+    --sched:#5B4BC4; --sched-soft:#EEECFA;
+    --measure:66ch;
+    --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --serif:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+    --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0A1120; --surface:#111A2E; --surface-2:#16213A;
+      --ink:#EAF1FB; --ink-soft:#9DB0CB; --ink-faint:#6B7C99;
+      --rule:rgba(150,178,214,.16); --rule-strong:rgba(150,178,214,.3);
+      --accent:#6BA1FF; --accent-soft:rgba(91,155,255,.12);
+      --now:#E7B15A; --now-soft:rgba(231,177,90,.13);
+      --ok:#5CC79B; --ok-soft:rgba(92,199,155,.13);
+      --risk:#F0847B; --risk-soft:rgba(240,132,123,.13);
+      --sched:#A99BF0; --sched-soft:rgba(169,155,240,.13);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0A1120; --surface:#111A2E; --surface-2:#16213A;
+    --ink:#EAF1FB; --ink-soft:#9DB0CB; --ink-faint:#6B7C99;
+    --rule:rgba(150,178,214,.16); --rule-strong:rgba(150,178,214,.3);
+    --accent:#6BA1FF; --accent-soft:rgba(91,155,255,.12);
+    --now:#E7B15A; --now-soft:rgba(231,177,90,.13);
+    --ok:#5CC79B; --ok-soft:rgba(92,199,155,.13);
+    --risk:#F0847B; --risk-soft:rgba(240,132,123,.13);
+    --sched:#A99BF0; --sched-soft:rgba(169,155,240,.13);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--serif); font-size:17px; line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:920px; margin:0 auto; padding:0 24px 120px; }
+
+  /* ---- masthead ---- */
+  header.top{
+    border-bottom:1px solid var(--rule-strong);
+    padding:40px 24px 26px; max-width:920px; margin:0 auto;
+  }
+  .kicker{
+    font-family:var(--mono); font-size:11.5px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 14px;
+  }
+  header.top h1{
+    font-family:var(--sans); font-weight:600; font-size:clamp(30px,5vw,44px);
+    line-height:1.08; letter-spacing:-.02em; margin:0 0 16px; text-wrap:balance;
+  }
+  header.top .lede{
+    font-size:19px; color:var(--ink-soft); margin:0; max-width:60ch;
+  }
+  .meta-row{
+    display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:22px;
+    font-family:var(--mono); font-size:12px; color:var(--ink-faint);
+  }
+  .meta-row b{ color:var(--ink-soft); font-weight:500; }
+
+  /* ---- structure ---- */
+  section{ margin-top:64px; }
+  .sec-head{ display:flex; align-items:baseline; gap:14px; margin-bottom:8px; border-bottom:1px solid var(--rule); padding-bottom:10px; }
+  .sec-num{ font-family:var(--mono); font-size:13px; color:var(--accent); font-weight:500; flex-shrink:0; }
+  h2{ font-family:var(--sans); font-weight:600; font-size:24px; letter-spacing:-.015em; margin:0; text-wrap:balance; }
+  h3{ font-family:var(--sans); font-weight:600; font-size:16.5px; margin:34px 0 8px; letter-spacing:-.01em; }
+  p{ margin:0 0 16px; max-width:var(--measure); }
+  .sub{ color:var(--ink-soft); font-size:15px; max-width:var(--measure); margin:2px 0 22px; }
+  strong{ font-weight:500; color:var(--ink); font-family:var(--sans); font-size:.96em; }
+  em{ color:var(--ink-soft); }
+  code{ font-family:var(--mono); font-size:.82em; background:var(--surface-2); padding:.12em .4em; border-radius:4px; color:var(--ink); }
+  a{ color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
+  ul,ol{ max-width:var(--measure); padding-left:1.3em; margin:0 0 16px; }
+  li{ margin:6px 0; }
+  li::marker{ color:var(--ink-faint); }
+  hr.rule{ border:0; border-top:1px solid var(--rule); margin:40px 0; }
+
+  /* ---- verdict list (audit) ---- */
+  .findings{ display:flex; flex-direction:column; gap:2px; margin:22px 0; }
+  .finding{
+    display:grid; grid-template-columns:82px 1fr; gap:16px; align-items:start;
+    padding:16px 18px; background:var(--surface); border:1px solid var(--rule);
+  }
+  .finding + .finding{ border-top:0; }
+  .finding:first-child{ border-radius:8px 8px 0 0; }
+  .finding:last-child{ border-radius:0 0 8px 8px; }
+  .finding .tag{
+    font-family:var(--mono); font-size:9.5px; font-weight:500; letter-spacing:.05em;
+    padding:3px 7px; display:inline-flex; align-items:center; justify-content:center;
+    border-radius:5px; margin-top:2px; white-space:nowrap;
+  }
+  @media(max-width:600px){ .finding{ grid-template-columns:1fr; gap:8px; } }
+  .t-keep{ background:var(--ok-soft); color:var(--ok); }
+  .t-fix{ background:var(--now-soft); color:var(--now); }
+  .t-gap{ background:var(--risk-soft); color:var(--risk); }
+  .t-new{ background:var(--sched-soft); color:var(--sched); }
+  .finding p{ margin:0; font-size:15.5px; line-height:1.55; }
+  .finding p .h{ font-family:var(--sans); font-weight:600; font-size:14.5px; display:block; margin-bottom:2px; letter-spacing:-.005em; }
+
+  /* ---- layer stack diagram ---- */
+  .stack{ display:flex; flex-direction:column; gap:5px; margin:26px 0 10px; }
+  .layer{
+    display:grid; grid-template-columns:34px 150px 1fr; gap:16px; align-items:center;
+    padding:13px 16px; background:var(--surface); border:1px solid var(--rule); border-radius:7px;
+    font-size:14.5px;
+  }
+  .layer .n{ font-family:var(--mono); color:var(--accent); font-size:13px; }
+  .layer .nm{ font-family:var(--sans); font-weight:600; font-size:14px; letter-spacing:-.005em; }
+  .layer .ds{ color:var(--ink-soft); font-size:13.5px; line-height:1.4; }
+  .layer.hl{ border-color:var(--accent); background:var(--accent-soft); }
+  .stack-note{ font-family:var(--mono); font-size:11.5px; color:var(--ink-faint); text-align:center; margin-top:4px; letter-spacing:.02em; }
+
+  /* ---- exam timeline band ---- */
+  .timeline{ display:grid; grid-template-columns:repeat(6,1fr); gap:0; margin:24px 0; border:1px solid var(--rule-strong); border-radius:8px; overflow:hidden; }
+  .phase{ padding:14px 12px; border-right:1px solid var(--rule); background:var(--surface); }
+  .phase:last-child{ border-right:0; }
+  .phase .d{ font-family:var(--mono); font-size:11px; color:var(--accent); letter-spacing:.03em; }
+  .phase .lb{ font-family:var(--sans); font-weight:600; font-size:13px; margin:5px 0 4px; }
+  .phase .mx{ font-size:12px; color:var(--ink-soft); line-height:1.42; }
+  @media(max-width:720px){ .timeline{ grid-template-columns:1fr 1fr; } .phase{ border-bottom:1px solid var(--rule); } }
+
+  /* ---- comparison table ---- */
+  .tbl-scroll{ overflow-x:auto; margin:22px 0; }
+  table{ border-collapse:collapse; width:100%; font-size:14.5px; min-width:520px; }
+  th,td{ text-align:left; padding:11px 14px; border-bottom:1px solid var(--rule); vertical-align:top; }
+  thead th{ font-family:var(--sans); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); border-bottom:1px solid var(--rule-strong); }
+  td:first-child{ font-family:var(--sans); font-weight:500; font-size:13.5px; color:var(--ink); width:34%; }
+  .tbl-scroll td:nth-child(2){ color:var(--ink-soft); }
+  tbody tr:last-child td{ border-bottom:0; }
+
+  /* ---- formula block ---- */
+  .formula{
+    font-family:var(--mono); font-size:13px; line-height:1.75;
+    background:var(--surface-2); border:1px solid var(--rule); border-left:3px solid var(--sched);
+    border-radius:6px; padding:16px 18px; margin:16px 0; overflow-x:auto;
+    color:var(--ink);
+  }
+  .formula .c{ color:var(--ink-faint); }
+
+  /* ---- semaphore ---- */
+  .sem{ display:flex; flex-direction:column; gap:8px; margin:20px 0; }
+  .sem-row{ display:grid; grid-template-columns:130px 1fr; gap:16px; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--rule); }
+  .sem-row:last-child{ border-bottom:0; }
+  .sem-row .s{ font-family:var(--sans); font-weight:600; font-size:14px; display:flex; align-items:center; gap:9px; }
+  .dot{ width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+  .sem-row .x{ font-size:14px; color:var(--ink-soft); }
+
+  /* ---- mockup ---- */
+  .mock{
+    background:var(--surface); border:1px solid var(--rule-strong); border-radius:12px;
+    padding:26px 24px; margin:24px 0; max-width:400px; box-shadow:0 1px 2px rgba(20,22,28,.04);
+  }
+  .mock .m-k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+  .mock .m-h{ font-family:var(--sans); font-weight:600; font-size:20px; margin:6px 0 3px; letter-spacing:-.01em; }
+  .mock .m-t{ font-family:var(--mono); font-size:13px; color:var(--accent); margin-bottom:16px; }
+  .mock .m-line{ display:flex; justify-content:space-between; font-size:14px; padding:7px 0; border-bottom:1px solid var(--rule); }
+  .mock .m-line:last-of-type{ border-bottom:0; }
+  .mock .m-line span:last-child{ font-family:var(--mono); color:var(--ink-soft); }
+  .mock .m-prio{ margin:14px 0; padding:12px 14px; background:var(--now-soft); border-radius:8px; font-size:13.5px; }
+  .mock .m-prio b{ font-family:var(--sans); color:var(--now); display:block; margin-bottom:2px; }
+  .mock .m-btn{ margin-top:16px; text-align:center; background:var(--accent); color:#fff; font-family:var(--sans); font-weight:600; font-size:14px; padding:12px; border-radius:8px; }
+  :root[data-theme="dark"] .mock .m-btn, :root:not([data-theme="light"]) .mock .m-btn{ color:#06101F; }
+
+  /* ---- priority chips (P0/P1/P2) ---- */
+  .prio-block{ margin:20px 0; }
+  .prio-head{ font-family:var(--mono); font-size:12px; letter-spacing:.08em; display:inline-flex; align-items:center; gap:8px; padding:4px 10px; border-radius:5px; margin-bottom:10px; }
+  .p0{ background:var(--risk-soft); color:var(--risk); }
+  .p1{ background:var(--now-soft); color:var(--now); }
+  .p2{ background:var(--surface-2); color:var(--ink-soft); }
+  .prio-block ol{ margin-top:6px; }
+
+  /* ---- q&a ---- */
+  .qa{ margin:20px 0; }
+  .qa dt{ font-family:var(--sans); font-weight:600; font-size:15.5px; margin-top:22px; letter-spacing:-.005em; }
+  .qa dd{ margin:6px 0 0; color:var(--ink-soft); font-size:15.5px; max-width:var(--measure); }
+
+  footer{ margin-top:80px; padding-top:24px; border-top:1px solid var(--rule-strong); font-family:var(--mono); font-size:12px; color:var(--ink-faint); }
+
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:3px; }
+  @media (prefers-reduced-motion:reduce){ *{ animation:none!important; transition:none!important; } }
+</style>
+
+<header class="top">
+  <p class="kicker">Auditoría + propuesta de arquitectura · antes de implementar</p>
+  <h1>Convertir OPE365 en un entrenador que decide qué estudiar</h1>
+  <p class="lede">El usuario aporta la fecha del examen, el tiempo del que dispone y sus respuestas. El sistema decide el resto: qué concepto toca, cuándo repetirlo, qué sesión montar y cómo llegar cubierto al examen. La interfaz se reduce a un botón.</p>
+  <div class="meta-row">
+    <span><b>Banco:</b> 1.325 preguntas · 220 flashcards</span>
+    <span><b>Taxonomía:</b> 10 pestañas · 61 grupos</span>
+    <span><b>Motor:</b> app.js · sin backend · localStorage</span>
+    <span><b>Estado:</b> pendiente de tu aprobación</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <div class="sec-head"><span class="sec-num">01</span><h2>Qué hay hoy — auditoría sin adornos</h2></div>
+  <p class="sub">Aplicación de página única. Toda la lógica vive en <code>app.js</code> (<code>window.OPE</code>, ~55 funciones); la UI en <code>views.js</code> (router propio + delegación <code>[data-goto]</code>); el estado en una sola clave de <code>localStorage</code>, <code>ope365_v1</code>. Las sesiones son deterministas: se guardan como <code>questionIds[]</code> + una permutación, nunca el texto duplicado.</p>
+
+  <div class="findings">
+    <div class="finding"><span class="tag t-keep">OK</span><p><span class="h">Cimientos sólidos que se conservan</span>Taxonomía <code>section → topic → subtopic</code> ya construida y revisada — es la jerarquía de conceptos que necesita el scheduler, gratis. PRNG con semilla (<code>mulberry32</code>) + respuesta correcta identificada por letra canónica y posición barajada por sesión: el antispoiler del punto 47 <em>ya está resuelto</em>. <code>resolveQuestionIds()</code> / <code>buildSession()</code> son la primitiva de "arma una sesión con estos filtros". El runner de examen (cronómetro, cuadrícula de navegación, pausa, revisión) funciona.</p></div>
+    <div class="finding"><span class="tag t-keep">OK</span><p><span class="h">Contenido reutilizable</span>5 tipos de ejercicio, <code>categoria</code> (atajo/ruta/concepto/general), <code>difficulty</code> en el 34 % de preguntas, y <code>questionRefs</code> en 197 de 220 flashcards: el enlace flashcard ↔ pregunta ya existe. Ese enlace es el germen del grafo de conocimiento del punto 21.</p></div>
+    <div class="finding"><span class="tag t-fix">CORREGIR</span><p><span class="h">El registro de aprendizaje es demasiado pobre</span><code>PROGRESS.answers[qid]</code> guarda <code>{correcta, intentos, ultimaVez}</code> y <em>sobrescribe</em> en cada intento. No hay historial por intento, ni marca de tiempo de cada respuesta, ni tiempo de respuesta, ni confianza. Sin un log de eventos no se puede calcular espaciado ni estabilidad. <strong>Es el primer arreglo.</strong></p></div>
+    <div class="finding"><span class="tag t-fix">CORREGIR</span><p><span class="h">Las flashcards no se programan</span>El estado es binario: <code>{dominada, vecesVista, ultimaVez}</code>. Una tarjeta marcada "dominada" <em>no vuelve nunca</em>. El botón "No la recordaba / La recordaba" no calcula ningún intervalo. Es el problema exacto del punto 12.</p></div>
+    <div class="finding"><span class="tag t-fix">CORREGIR</span><p><span class="h">"Progreso" mide en superficie</span>Precisión global y ranking por grupo. No distingue <em>visto</em> de <em>recuperado</em> de <em>consolidado</em> de <em>inestable</em>. No hay cobertura del temario ni dominio por concepto real.</p></div>
+    <div class="finding"><span class="tag t-gap">FALTA</span><p><span class="h">No existe conciencia de la fecha del examen</span>Ningún componente sabe cuándo es el examen. Un scheduler tradicional podría decir "vuelve en 34 días" con el examen a 20. Inaceptable (puntos 12–15).</p></div>
+    <div class="finding"><span class="tag t-gap">FALTA</span><p><span class="h">No hay "¿qué estudio ahora?"</span>Preguntas, flashcards y falladas son tres flujos manuales separados. El usuario decide todo. No hay plan, ni sesión automática, ni siguiente mejor acción.</p></div>
+    <div class="finding"><span class="tag t-gap">FALTA</span><p><span class="h">La racha cuenta días, no aprendizaje</span>Premia abrir la app, no recuperar contenido (contra los puntos 37–38).</p></div>
+  </div>
+
+  <h3>Lo que NO hay que añadir</h3>
+  <p>Chatbot genérico, ranking mundial, monedas/tienda, 50 insignias, biblioteca de teoría, calendario gigante, confianza obligatoria en cada pregunta, parámetros de FSRS en la interfaz, una 6ª sección de navegación. El listado del punto 58, entero.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">02</span><h2>La unidad que se programa: el concepto, no la pregunta</h2></div>
+  <p>El scheduler no programa preguntas — programa <strong>conocimientos</strong> (punto 42). La unidad natural en este banco es <code>section:topic</code>: <strong>61 conceptos</strong> ("Inicio · Párrafo", "Insertar · Tablas", "Disposición · Saltos de sección"…), cada uno con entre 3 y ~90 preguntas y, en 25 de ellos, también flashcards. <code>subtopic</code> (216 valores) es demasiado fino para programar; se usa solo para elegir la mejor pregunta dentro del concepto.</p>
+  <p>Cada concepto acumula un estado de memoria. Cada pregunta acumula un estado ligero (<code>vista, acierto, fallo, últimaVez</code>) que sirve para tres cosas: sumar al dominio del concepto, no repetir la misma pregunta, y detectar memorización — si el usuario acierta siempre <code>P1</code> pero falla <code>P2</code>/<code>P3</code> del mismo concepto, el concepto no está dominado aunque la pregunta lo parezca (puntos 20, 44).</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">03</span><h2>Arquitectura en 8 capas</h2></div>
+  <p class="sub">Todo cliente. Aditivo: el estado nuevo cuelga de <code>PROGRESS</code> bajo claves nuevas (<code>events</code>, <code>concepts</code>, <code>plan</code>). El motor actual (<code>app.js</code>) y sus contratos no se tocan; se amplían.</p>
+  <div class="stack">
+    <div class="layer"><span class="n">1</span><span class="nm">Contenido</span><span class="ds">Preguntas, flashcards, conceptos, rutas, atajos. Ya existe.</span></div>
+    <div class="layer"><span class="n">2</span><span class="nm">Log de eventos</span><span class="ds"><code>{qid|cardId, concepto, resultado, grado, ms, confianza, ts}</code> — append-only. Nada se sobrescribe.</span></div>
+    <div class="layer"><span class="n">3</span><span class="nm">Estado de aprendizaje</span><span class="ds">Por concepto: estabilidad, dificultad, retrievabilidad, próxima revisión, nº recuperaciones correctas, lapsos.</span></div>
+    <div class="layer hl"><span class="n">4</span><span class="nm">Scheduler</span><span class="ds">Cuándo revisar cada concepto. FSRS adaptado + <strong>capa de fecha de examen</strong>.</span></div>
+    <div class="layer hl"><span class="n">5</span><span class="nm">Priorizador</span><span class="ds">Qué revisar primero. Puntuación dinámica: olvido, atraso, errores, urgencia de examen, cobertura, transferencia.</span></div>
+    <div class="layer hl"><span class="n">6</span><span class="nm">Generador de sesión</span><span class="ds">"Tengo 20 minutos" → mezcla de repaso / refuerzo / mixto / examen ajustada al tiempo y a la fase.</span></div>
+    <div class="layer"><span class="n">7</span><span class="nm">Generador de plan</span><span class="ds">Reparte el trabajo hasta el examen. Estima si el ritmo actual llega. Recalcula tras cada sesión.</span></div>
+    <div class="layer"><span class="n">8</span><span class="nm">UX</span><span class="ds">Traduce todo lo anterior a una frase: <em>"Esto es lo que te conviene estudiar ahora."</em></span></div>
+  </div>
+  <p class="stack-note">capas 4–7 = el cerebro · capa 8 = todo lo que ve el usuario</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">04</span><h2>El scheduler — FSRS adaptado, sin exponer nada</h2></div>
+  <p>Se adopta la <strong>curva de olvido y las fórmulas de estabilidad de FSRS</strong> (el algoritmo de Anki moderno, contrastado), con los pesos <strong>fijos en valores sensatos</strong> — no optimizador de 17 parámetros, no ajustes de usuario. Re-ajustables más adelante desde datos agregados. El usuario nunca ve un intervalo ni un parámetro.</p>
+
+  <h3>Estado por concepto</h3>
+  <div class="formula">
+S  <span class="c">— estabilidad, en días: cuánto aguanta el recuerdo</span>
+D  <span class="c">— dificultad intrínseca, 1–10</span>
+last, due, reps, lapses
+R(t) = (1 + t / (9·S)) ^ -1   <span class="c">— retrievabilidad hoy (t = días desde last)</span>
+  </div>
+
+  <h3>Al responder</h3>
+  <p>Cada recuperación produce un <strong>grado</strong> que el usuario da con lenguaje natural, no con números:</p>
+  <div class="formula">
+pregunta acertada           → good
+pregunta fallada            → again   <span class="c">(lapso)</span>
+pregunta acertada pero lenta / baja confianza → hard
+flashcard: "No la recordaba / Con dificultad / La recordaba" → again / hard / good
+  </div>
+  <div class="formula">
+<span class="c">// concepto nuevo</span>
+S ← S0[grado]          <span class="c">// again .4 · hard 1.2 · good 3.1 · easy 8.2 días</span>
+D ← 5 − (grado − 3)
+
+<span class="c">// repaso</span>
+D ← clamp(D − 0.1·(grado−3), 1, 10)  luego revierte suavemente hacia 5
+si again:  S ← S_lapso(D, S)   <span class="c">// S encoge, lapses++</span>
+si no:     S ← S · (1 + f(D) · (e^(0.05·(1−R)) − 1) · bonus_grado)
+due ← last + 9·S·(1/0.9 − 1)   <span class="c">// vuelve cuando R baje a ~0.90</span>
+  </div>
+
+  <h3>La capa de fecha de examen — el punto crítico</h3>
+  <p>Encima del scheduler estándar, una regla dura: <strong>ningún concepto puede tener su próxima revisión después del examen</strong>, y todo concepto debe llegar a <strong>≥ 2 recuperaciones correctas espaciadas</strong> (relearning sucesivo, punto 3) antes de <code>examen − 2 días</code>.</p>
+  <div class="formula">
+oportunidades(c) = huecos de estudio entre hoy y el examen
+                   donde c caería vencido  ≈ díasRestantes / intervaloMedio
+
+si la Kª revisión necesaria de c cae después del examen:
+    comprimir → repartir las revisiones que faltan
+                uniformemente en los días que quedan
+
+urgenciaExamen(c) = clamp( (K_objetivo − reps_correctas) / max(1, oportunidades), 0, 3 )
+  </div>
+  <p class="sub">Así, un concepto "dominado pero con estabilidad baja" a 18 días del examen no recibe "vuelve en 30 días": el sistema ve que solo quedan 2 oportunidades reales y lo reprograma.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">05</span><h2>El priorizador — qué va primero</h2></div>
+  <p>Cada concepto recibe una puntuación dinámica. <strong>No es "los que más fallas"</strong> — eso sobreentrena cuatro preguntas. Es una suma ponderada, y los pesos <code>w</code> cambian según la fase (sección 7).</p>
+  <div class="formula">
+puntuación(c) =
+    100·(1−R)·w_olvido          <span class="c">// riesgo de olvido (solo conceptos ya vistos)</span>
+  +  60·(atraso/S)·w_atraso
+  +  50·tasaFalloReciente·w_error
+  +  40·urgenciaExamen·w_examen
+  +  35·[nunca visto]·w_cobertura
+  +  25·brechaTransferencia·w_transfer   <span class="c">// acierta la pregunta, falla variantes</span>
+  +  peso_importancia(c)          <span class="c">// tamaño del concepto / peso manual futuro</span>
+  −  80·[visto en la última sesión]·w_reciente
+  −  40·[estable y no vencido]·w_estable
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">06</span><h2>El generador de sesión — "tengo X minutos"</h2></div>
+  <p>Entrada: minutos disponibles. El sistema estima el nº de ítems (<code>minutos·60 / segundos_por_ítem</code>, media móvil del historial real — arranca en 28 s pregunta / 14 s flashcard) y reparte según la fase:</p>
+
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>Cubo</th><th>Qué es</th><th>Selección</th></tr></thead>
+    <tbody>
+      <tr><td>Repaso</td><td>Conceptos vencidos, recuperación pura</td><td>Priorizador, orden de vencimiento. Flashcards cubren aquí los conceptos que tienen tarjeta.</td></tr>
+      <tr><td>Refuerzo</td><td>Puntos débiles del momento</td><td>3–5 conceptos con más error reciente y baja consolidación.</td></tr>
+      <tr><td>Mixto</td><td>Interleaving (punto 26)</td><td>Conceptos vencidos + alguno nuevo, barajados entre secciones para obligar a identificar qué se aplica.</td></tr>
+      <tr><td>Examen</td><td>Bloque cronometrado sin feedback</td><td>Distribución equilibrada, dificultad respetada, nada visto en las últimas horas.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Dentro de cada cubo, por cada concepto se elige <strong>la mejor pregunta disponible</strong>: no vista recientemente y, si el concepto ya se repitió, prefiriendo una <em>variante</em> nunca vista (otro <code>tipo</code>, otra <code>categoria</code> — conceptual → ruta → caso práctico → atajo) para comprobar transferencia (puntos 20, 42). Antirrepetición: nada mostrado en las últimas N sesiones ni en 24 h, salvo un fallo que sea la única opción.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">07</span><h2>Estrategia por recta final</h2></div>
+  <p class="sub">No es una tabla rígida — es cómo se mueven los pesos del priorizador y la mezcla de la sesión. La transición es continua.</p>
+  <div class="timeline">
+    <div class="phase"><span class="d">30+ días</span><span class="lb">Construir</span><span class="mx">45 % repaso · 30 % refuerzo · 25 % mixto · sin simulacros</span></div>
+    <div class="phase"><span class="d">14–30 días</span><span class="lb">Consolidar</span><span class="mx">40 · 25 · 25 · 10 % examen</span></div>
+    <div class="phase"><span class="d">7–14 días</span><span class="lb">Mezclar</span><span class="mx">35 · 30 · 20 · 15 % + 1 simulacro completo/semana</span></div>
+    <div class="phase"><span class="d">3–7 días</span><span class="lb">Simular</span><span class="mx">30 · 35 · 15 · 20 % · simulacros + errores</span></div>
+    <div class="phase"><span class="d">1–2 días</span><span class="lb">Asegurar</span><span class="mx">40 % repaso · 40 % errores recientes · sin contenido nuevo salvo laguna crítica</span></div>
+    <div class="phase"><span class="d">Víspera</span><span class="lb">Aflojar</span><span class="mx">Repaso ligero de errores importantes y alta-confianza-fallada. Sin saturar.</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">08</span><h2>Cobertura y preparación — métricas honestas</h2></div>
+  <p>Nada de "recuerdas el 93 %". Cinco estados por concepto, y un semáforo discreto (sin colores chillones):</p>
+  <div class="sem">
+    <div class="sem-row"><span class="s"><span class="dot" style="background:var(--ink-faint)"></span>Pendiente</span><span class="x">Nunca estudiado.</span></div>
+    <div class="sem-row"><span class="s"><span class="dot" style="background:var(--risk)"></span>Necesita atención</span><span class="x">Visto pero con fallos recientes o retrievabilidad baja.</span></div>
+    <div class="sem-row"><span class="s"><span class="dot" style="background:var(--now)"></span>En consolidación</span><span class="x">1 recuperación correcta; estabilidad aún corta.</span></div>
+    <div class="sem-row"><span class="s"><span class="dot" style="background:var(--ok)"></span>Bien asentado</span><span class="x">≥ 2 recuperaciones espaciadas, estabilidad ≥ 7 días.</span></div>
+    <div class="sem-row"><span class="s"><span class="dot" style="background:var(--accent)"></span>Repaso programado</span><span class="x">Dominado, con próxima revisión ya en el calendario.</span></div>
+  </div>
+  <div class="formula">
+Cobertura     = conceptos vistos / 61
+Recuperado    = conceptos con ≥1 recuperación correcta / 61
+Consolidación = conceptos "bien asentado" / 61
+Estabilidad   = mediana de S  →  se muestra como "≈ N días de memoria"
+Preparación   = 0.25·Cobertura + 0.35·Consolidación
+              + 0.20·rendimiento en simulacros + 0.20·transferencia
+              <span class="c">// etiquetado "estimación", con explicación al tocar</span>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">09</span><h2>La pantalla que sustituye a "¿qué hago?"</h2></div>
+  <p>Inicio deja de ser un panel de estadísticas. Responde cuatro preguntas y ofrece un botón. El plan se recalcula tras cada sesión, cada simulacro, cada cambio de fecha y tras varios días sin estudiar (punto 66). Perder un día no rompe nada: <em>"Te has retrasado un poco. Hemos reorganizado tu plan."</em></p>
+
+  <div class="mock" role="img" aria-label="Maqueta de la pantalla de inicio">
+    <div class="m-k">Tu estudio de hoy</div>
+    <div class="m-h">Buenas, Jesús</div>
+    <div class="m-t">⏱ 24 min · 25 preguntas · examen en 18 días</div>
+    <div class="m-line"><span>Repaso</span><span>12</span></div>
+    <div class="m-line"><span>Refuerzo de puntos débiles</span><span>8</span></div>
+    <div class="m-line"><span>Práctica mixta</span><span>5</span></div>
+    <div class="m-prio"><b>Prioridad: Saltos de sección</b>Es uno de los conceptos que más estás fallando y aún no está consolidado.</div>
+    <div class="m-btn">ESTUDIAR AHORA</div>
+  </div>
+
+  <p>Debajo, una banda de preparación: <code>Cobertura 91 % · Consolidación 76 % · Simulacros 2/3 · 18 días</code> + una frase accionable — <em>"Vas bien, pero necesitas reforzar 3 áreas."</em> Al terminar la sesión, no "17/20": <em>"Has mejorado en Párrafo. Necesitas trabajar Saltos de sección. Mañana: 16 min. Hemos programado tus próximos repasos."</em></p>
+
+  <h3>Configuración inicial — tres campos</h3>
+  <p>Fecha del examen · minutos al día (10 / 20 / 30 / 45 / 60 / personalizado) · días de la semana. Nivel y objetivo, opcionales. Nada más.</p>
+
+  <h3>Navegación</h3>
+  <p>Se mantiene la de 5 áreas del rediseño reciente. <strong>Inicio</strong> pasa a ser "Plan inteligente / Tu estudio de hoy". <strong>Tests</strong>, <strong>Flashcards</strong> y <strong>Progreso</strong> siguen accesibles para quien quiera conducir a mano — pero ya no es obligatorio. Simulacros gana entidad propia dentro de Tests.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">10</span><h2>Modelo de datos — todo aditivo</h2></div>
+  <div class="tbl-scroll">
+  <table>
+    <thead><tr><th>Clave nueva en <code>PROGRESS</code></th><th>Forma</th></tr></thead>
+    <tbody>
+      <tr><td><code>plan</code></td><td><code>{examDate, minutesPerDay, weekdays[], objetivo, createdAt, lastRecalc}</code></td></tr>
+      <tr><td><code>events</code></td><td><code>[{ts, kind:'q'|'fc'|'exam', ref, concept, grade, correct, ms, confidence?}]</code> append-only</td></tr>
+      <tr><td><code>concepts</code></td><td><code>{ [conceptId]: {S, D, last, due, reps, correctReps, lapses, seenVariants[]} }</code></td></tr>
+      <tr><td><code>qstate</code></td><td><code>{ [qid]: {seen, correct, wrong, last} }</code> — deriva de <code>events</code>, cacheado</td></tr>
+      <tr><td><code>sims</code></td><td><code>[{ts, score, byConcept{}, durationSec}]</code> — histórico de simulacros para tendencia</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><code>answers</code>, <code>marked</code>, <code>history</code>, <code>challenges</code>, <code>flashcards</code> siguen igual y siguen alimentándose — el sistema nuevo los <em>lee</em> y además escribe <code>events</code>. Migración: al abrir por primera vez con el plan activo, se siembran <code>concepts</code> a partir de <code>answers</code>/<code>flashcards</code> existentes (un intento previo cuenta como una recuperación de baja estabilidad).</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">11</span><h2>Tus 10 preguntas, en corto</h2></div>
+  <dl class="qa">
+    <dt>1 · Qué hay</dt><dd>Motor determinista sólido, taxonomía-jerarquía ya hecha, banco grande y limpio, UI de 5 áreas recién rediseñada. Cero espaciado, cero conciencia de examen, cero "qué estudio ahora".</dd>
+    <dt>2 · Qué conservo</dt><dd>Todo el motor, el runner, el antispoiler, la persistencia, la navegación, retos y duelo, la taxonomía como grafo de conceptos, <code>questionRefs</code> como enlace flashcard↔pregunta.</dd>
+    <dt>3 · Qué cambio</dt><dd>Inicio → "Tu estudio de hoy". Flashcards → botón de 3 grados que alimenta el scheduler. Progreso → cobertura/dominio/estabilidad en vez de solo precisión. La racha premia recuperación, no visitas.</dd>
+    <dt>4 · Qué elimino</dt><dd>Nada de golpe. Se ocultan estadísticas que no llevan a una decisión. "Preguntas falladas" como flujo manual pierde protagonismo (el sistema ya las reprograma solo).</dd>
+    <dt>5 · Qué añado</dt><dd>Las capas 2–7: log de eventos, estado por concepto, scheduler con deadline, priorizador, generador de sesión, generador de plan. Y la config de 3 campos.</dd>
+    <dt>6 · El scheduler</dt><dd>FSRS adaptado con pesos fijos, por concepto (61), grado derivado de la respuesta o del botón de flashcard. Sección 04.</dd>
+    <dt>7 · La fecha del examen</dt><dd>Capa dura sobre el scheduler: ninguna revisión después del examen; ≥2 recuperaciones espaciadas por concepto antes de <code>examen−2d</code>; compresión de intervalos cuando no caben. Sección 04.</dd>
+    <dt>8 · El plan inteligente</dt><dd>No es un calendario. Es: capacidad (días·min) vs demanda (conceptos por introducir + repasos proyectados) → "a tu ritmo llegas al X %" + objetivo de hoy + prioridades. Recalcula siempre.</dd>
+    <dt>9 · Integrar tests + flashcards + errores + simulacros</dt><dd>Todos son <em>eventos de recuperación</em> sobre conceptos. Un fallo en un test y un "no la recordaba" en una flashcard mueven el mismo estado. El simulacro además guarda <code>byConcept</code> y dispara recálculo. Los errores del simulacro entran automáticamente en las siguientes sesiones (punto 25).</dd>
+    <dt>10 · MVP de mayor impacto</dt><dd>Config (3 campos) → log de eventos + estado por concepto + FSRS-lite → scheduler con deadline + priorizador → generador de sesión → Inicio = "Tu estudio de hoy" + banda de preparación → las 3 fuentes alimentando el mismo estado → recálculo tras cada sesión. Con eso ya <em>"la app decide qué estudiar"</em>. Lo demás es afinado.</dd>
+  </dl>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">12</span><h2>Plan de implementación priorizado</h2></div>
+
+  <div class="prio-block">
+    <span class="prio-head p0">P0 · imprescindible — el MVP</span>
+    <ol>
+      <li><strong>Onboarding del plan</strong> — 3 campos, guardado en <code>PROGRESS.plan</code>.</li>
+      <li><strong>Log de eventos</strong> — <code>recordEvent()</code>; el runner y las flashcards lo llaman. Siembra desde el estado actual.</li>
+      <li><strong>Estado por concepto + FSRS-lite</strong> — <code>updateConcept(conceptId, grade)</code>, retrievabilidad bajo demanda.</li>
+      <li><strong>Scheduler con deadline + priorizador</strong> — <code>conceptPriority()</code>, <code>dueConcepts()</code>, capa de examen.</li>
+      <li><strong>Generador de sesión</strong> — <code>buildSmartSession(minutes)</code> reutilizando <code>buildSessionFromIds</code>.</li>
+      <li><strong>Inicio = "Tu estudio de hoy"</strong> + banda de preparación + [ESTUDIAR AHORA].</li>
+      <li><strong>Recálculo</strong> tras sesión / simulacro / cambio de fecha / racha rota.</li>
+    </ol>
+  </div>
+
+  <div class="prio-block">
+    <span class="prio-head p1">P1 · muy importante</span>
+    <ol start="8">
+      <li>Transferencia: selección de variantes + marca de "memorización superficial".</li>
+      <li>Interleaving adaptativo (cubo mixto real, no barajado indiscriminado).</li>
+      <li>Confianza opcional (flashcards, repaso, conceptos débiles) → detectar "alta confianza + error".</li>
+      <li>Progreso rehecho: cobertura / dominio / estabilidad / tendencia de simulacros.</li>
+      <li>Simulacros como diagnóstico: <code>byConcept</code>, comparación con anteriores, feedback accionable.</li>
+      <li>Recuperación de atrasos: "12 prioritarias hoy, 18 reprogramadas".</li>
+    </ol>
+  </div>
+
+  <div class="prio-block">
+    <span class="prio-head p2">P2 · prescindible por ahora</span>
+    <ol start="14">
+      <li>IA para generar variantes de preguntas (sin alterar el banco oficial).</li>
+      <li>Analítica de calidad de preguntas (tasa de fallo anómala, distractores).</li>
+      <li>Gamificación reorientada a constancia / dominio / recuperación.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">13</span><h2>Pruebas del algoritmo</h2></div>
+  <p>Tests automatizados (jsdom, el patrón del proyecto) con estados de <code>PROGRESS</code> sembrados para los 15 escenarios del punto 63 — usuario nuevo, acierta todo, falla todo, irregular, 10 vs 60 min/día, examen a 90 / 30 / 7 días / mañana, muchos atrasos, pocas preguntas, concepto dominado con variantes nunca vistas, pregunta sobre-repetida, acierta original pero falla variantes. Cada uno comprueba que la sesión generada es coherente, no imposible, no repite por posición, y respeta la fecha del examen.</p>
+</section>
+
+<footer>
+  OPE365 · documento de arquitectura · para aprobar antes de escribir código · las fórmulas son la propuesta, no la última palabra
+</footer>
+
+</div>
