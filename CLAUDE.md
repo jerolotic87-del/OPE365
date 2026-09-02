@@ -20,16 +20,37 @@ WebRTC vía PeerJS.
 ```
 index.html          shell HTML — usa <script src> a los ficheros de abajo
 styles.css           todo el sistema de diseño (oscuro, tokens en :root)
-app.js                motor: modelo canónico, sesiones, PRNG con semilla,
-                       códigos de compartir, desafíos, estadísticas,
-                       flashcards (§10)
+app.js                base: modelo canónico, sesiones, PRNG con semilla,
+                       códigos de compartir, desafíos, estadísticas crudas
+                       (computeStats), flashcards legado (§10). NO cambiar
+                       contratos.
+engine.js             MOTOR DE APRENDIZAJE (window.OPE.LE). Repetición
+                       espaciada propia (no FSRS), priorizador, generador de
+                       sesión, capa de examen. Dos ejes de estado INDEPENDIENTES:
+                       masteryStatus (nuevo·aprendiendo·consolidando·asentado)
+                       y reviewState (futuro·debido·atrasado). 'asentado' NO se
+                       pierde por vencer el intervalo. Todo el tiempo entra por
+                       un `now` param. Parámetros en el objeto `P` (tabla de
+                       honestidad: PRINCIPIO/PRODUCTO/HEURÍSTICA/CALIBRABLE),
+                       nunca en la UI. Validado con tests/sim.js + 20 escenarios.
+engine-bridge.js      PUENTE motor↔UI (window.OPE.LEB). ÚNICO punto por el que
+                       views.js habla con el motor. La UI no calcula
+                       prioridades/intervalos/estados: todo sale de LEB, y LEB
+                       de LE. boot()=siembra+recalc; recordQuestion/
+                       recordFlashcard/recordExamSession alimentan el motor;
+                       startSmartSession/startReviewSession/startConceptSession;
+                       homeModel/progressModel/sectionConceptsModel = view-models.
 multiplayer.js        Duelo y Farol: transporte PeerJS + máquina de estados
 views.js               toda la interfaz (router simple basado en funciones).
-                       Rediseño ago-2026: 5 áreas (Inicio · Temario ·
-                       Práctica · Flashcards · Progreso), ver
-                       docs/UI_REDISENO.md. El router `go(view,params)` +
-                       la delegación global `[data-goto]` NO se tocan
-                       (los tests y multiplayer dependen de ellos).
+                       5 áreas (Inicio · Temario · Práctica · Flashcards ·
+                       Progreso). El router `go(view,params)` + la delegación
+                       global `[data-goto]` NO se tocan (tests y multiplayer
+                       dependen de ellos). Inicio = "¿qué estudio ahora?" con
+                       LEB.homeModel; Práctica = elección de intención antes
+                       del asistente; el feedback de pregunta muestra una línea
+                       + explicación plegada (categoría real, no campos
+                       inventados); flashcards = 3 grados → LEB.recordFlashcard.
+                       Toda llamada a LEB va guardada con `if(O.LEB)`.
 peerjs.min.js          librería de terceros, no tocar
 atajos_oficial.json    tabla extraída de ATAJOS.docx (ver más abajo)
 
@@ -68,10 +89,12 @@ data/vista_integration_report.md  comparación pregunta-por-pregunta del
 build_data.py          regenera questions_all.json/questions_data.js/
                        taxonomy_data.js/flashcards_data.js desde data/ —
                        ejecutar SIEMPRE tras tocar algo bajo data/
-build.py               empaqueta todo (incluidos los artefactos de
-                       arriba) en OPE365_Word365_Estudio.html
-tests/                 pruebas jsdom (node tests/test_*.js) — requieren
-                       `npm install` una vez (ver package.json)
+build.py               empaqueta todo (incl. engine.js + engine-bridge.js, en
+                       ese orden tras app.js) en OPE365_Word365_Estudio.html
+tests/                 jsdom (node tests/test_*.js) + tests/test_engine.js
+                       (20 escenarios del motor) + tests/test_ui_integration.js
+                       (flujos motor↔UI). `npm install` una vez.
+                       tests/manual_walkthrough_fase2.mjs = QA en Chromium real.
 ```
 
 **Para desarrollar:** sirve la carpeta con un servidor local, no abras
@@ -253,7 +276,45 @@ resolverla en silencio. El ID es `<section>-<índice>` y `sourceFile` =
 construcción; si integras un documento de una pestaña que ya tiene
 archivo, añádele preguntas a ese archivo renumerando la cola.
 
-## Arquitectura del motor (app.js)
+## Motor de aprendizaje (engine.js + engine-bridge.js)
+
+- **`engine.js` (`OPE.LE`)** es un motor de repetición espaciada + priorización
+  propio (inspirado en FSRS, NO una copia). Un **concepto** = `section:topic`
+  con contenido (~61). Modelo escalar: `R(t)=2^(-kR·t/interval)`, `kR` fija
+  `R=targetRetention` (0.90, PRODUCTO, solo en `P`) en `t=interval`.
+- **Dos ejes de estado INDEPENDIENTES** (no los mezcles nunca en la UI):
+  `masteryStatus` (nuevo/aprendiendo/consolidando/asentado) y `reviewState`
+  (futuro/debido/atrasado). Un concepto puede ser `asentado + atrasado`:
+  que toque repasarlo NO significa que se haya olvidado. `asentado` solo se
+  abandona con evidencia ACTUAL de pérdida (fallo reciente o acierto < 0.6).
+  `status` = valor compuesto legado, solo para compat de lectura.
+- `P` es la tabla de honestidad en código. Cada parámetro etiquetado
+  PRINCIPIO / PRODUCTO / HEURÍSTICA / CALIBRABLE. **Nada de esto se expone ni
+  se configura desde la interfaz** salvo lo que pasa por `setPlan` (fecha de
+  examen, minutos/día, días de la semana).
+- Sin `Math.random` en el motor. Todo el tiempo entra por un `now` param.
+- **Capa de examen**: `recalc()` garantiza que ninguna recuperación NECESARIA
+  quede programada tras `fechaExamen − 2 días`; si no cabe, marca `examDeficit`
+  y `examReadiness().deficits` lo expone. `coverageProjection` es todavía poco
+  discriminante → la UI NO lo presenta como % de probabilidad (dice "sin
+  déficit detectado" / lista los bloques en déficit).
+- Se valida con `tests/sim.js` (usuario sintético + verdad de terreno) y
+  `tests/test_engine.js` (20 escenarios). **Cualquier cambio en el motor:
+  reejecuta esos 20 antes de dar nada por bueno.**
+
+- **`engine-bridge.js` (`OPE.LEB`)** es el ÚNICO sitio donde `views.js` toca el
+  motor. La interfaz jamás inventa prioridades/intervalos/estados/déficits:
+  todo sale de `LEB` (y `LEB` de `LE`). `LEB.boot()` siembra desde el progreso
+  previo (`seedFromLegacy`, idempotente) + recalc, en `init()`. Cada respuesta
+  de práctica/examen/flashcard llama a `LEB.recordQuestion/recordExamSession/
+  recordFlashcard`. `tests/test_ui_integration.js` cubre los flujos A–X;
+  `tests/manual_walkthrough_fase2.mjs` es la QA en navegador real.
+- El sistema legado de `computeStats` / `getFlashcardState` ("dominada"
+  booleana) **coexiste** con el motor: se usa para "precisión al responder"
+  (una lente distinta) y para el badge/filtro de flashcards. No lo confundas
+  con el dominio real, que sale del motor.
+
+## Arquitectura de sesiones y compartir (app.js)
 
 - Semillas deterministas (`mulberry32`, versionado como
   `randomizationAlgorithmVersion`) para que dos dispositivos reconstruyan
@@ -305,8 +366,9 @@ patrón pero de forma ad hoc, sin guardarlas). Requieren
 devDependency — nada de esto es una dependencia en runtime de la app).
 Patrón: `tests/fixture.html` como HTML mínimo, cargarlo con `JSDOM`,
 `window.eval()` de cada script en el orden real (`questions_data.js` →
-`taxonomy_data.js` → `flashcards_data.js` → `app.js` → `multiplayer.js`/
-`views.js`), simular clics/eventos reales (incluida la navegación vía
+`taxonomy_data.js` → `flashcards_data.js` → `app.js` → `engine.js` →
+`engine-bridge.js` → `multiplayer.js` → `views.js`), simular clics/eventos
+reales (incluida la navegación vía
 `[data-goto]`, que es el único enganche público de `views.js` — `go()`/
 `render()` están cerradas dentro de su IIFE), leer `OPE.getState()`/
 `OPE_MP...`. Para multijugador, usar `MP.createMockPair()` en vez de
