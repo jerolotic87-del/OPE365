@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "note": "Taxonomía pedagógica global de OPE365. Independiente de sourceFile/bloque (que son procedencia, no temario). Reclasificación completa del banco heredado (952 preguntas) hecha en ago-2026 a partir de un análisis sourceFile por sourceFile del contenido real -- ver commits de esa fecha para el detalle de cómo se asignó cada bloque/tema/atajo.",
   "sections": [
     {
@@ -278,6 +278,11 @@
             "Dictado",
             "Copilot"
           ]
+        },
+        {
+          "id": "complementos",
+          "name": "Complementos",
+          "subtopics": []
         }
       ]
     },
@@ -342,6 +347,11 @@
             "Ecuación",
             "Carácter Unicode"
           ]
+        },
+        {
+          "id": "multimedia",
+          "name": "Multimedia",
+          "subtopics": []
         }
       ]
     },
@@ -439,6 +449,11 @@
           "subtopics": [
             "Búsqueda en referencia"
           ]
+        },
+        {
+          "id": "tabla-autoridades",
+          "name": "Tabla de autoridades",
+          "subtopics": []
         }
       ]
     },
@@ -488,6 +503,21 @@
         {
           "id": "estructura",
           "name": "Estructura de la pestaña",
+          "subtopics": []
+        },
+        {
+          "id": "voz",
+          "name": "Voz",
+          "subtopics": []
+        },
+        {
+          "id": "comentarios",
+          "name": "Comentarios",
+          "subtopics": []
+        },
+        {
+          "id": "entrada-lapiz",
+          "name": "Entrada de lápiz",
           "subtopics": []
         }
       ]
@@ -595,6 +625,16 @@
             "Combinar a impresora",
             "Comprobar errores"
           ]
+        },
+        {
+          "id": "crear-sobres-etiquetas",
+          "name": "Crear (sobres y etiquetas)",
+          "subtopics": []
+        },
+        {
+          "id": "vista-previa-resultados",
+          "name": "Vista previa de resultados",
+          "subtopics": []
         }
       ]
     }
