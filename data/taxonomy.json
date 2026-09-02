@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "note": "Taxonomía pedagógica global de OPE365. Independiente de sourceFile/bloque (que son procedencia, no temario). Reclasificación completa del banco heredado (952 preguntas) hecha en ago-2026 a partir de un análisis sourceFile por sourceFile del contenido real -- ver commits de esa fecha para el detalle de cómo se asignó cada bloque/tema/atajo.",
   "sections": [
     {
@@ -439,9 +439,22 @@
           ]
         },
         {
-          "id": "titulos-indice",
-          "name": "Títulos e índice",
-          "subtopics": []
+          "id": "titulos",
+          "name": "Títulos",
+          "subtopics": [
+            "Insertar título",
+            "Referencia cruzada",
+            "Tabla de ilustraciones"
+          ]
+        },
+        {
+          "id": "indice",
+          "name": "Índice",
+          "subtopics": [
+            "Marcar entrada",
+            "Insertar índice",
+            "Actualizar índice"
+          ]
         },
         {
           "id": "investigacion",

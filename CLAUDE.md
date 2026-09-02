@@ -249,8 +249,16 @@ Total 1325. Historial: `data/questions_regroup_report.md`.
 
 Taxonomía: `inicio > parrafo` se abrió en 7 grupos
 (`parrafo-marcas`/`-alineacion`/`-sangria`/`-espaciado`/`-bordes`/
-`-listas`/`-tabulaciones`); `vista` y `revisar` tienen un grupo
-`estructura` (preguntas sobre grupos/ubicación de la pestaña).
+`-listas`/`-tabulaciones`), que llevan `ribbonGroup:"Párrafo"` para que la
+UI de creación los agrupe bajo el grupo real de la cinta; `vista` y
+`revisar` tienen un grupo `estructura` (preguntas sobre grupos/ubicación de
+la pestaña). Taxonomía v4 (sep-2026): completados los grupos de cinta que
+faltaban (Inicio→Complementos, Insertar→Multimedia, Revisar→Voz/
+Comentarios/Entrada de lápiz, Correspondencia→Crear/Vista previa de
+resultados, Referencias→Tabla de autoridades) y `referencias > titulos-indice`
+partido en `titulos` + `indice` — todo aditivo, ninguna pregunta cambió de
+`topic` (esos grupos estaban a 0 preguntas). El campo `ribbonGroup` en un
+topic es opcional; `populateTopicSelect`/`topicName` en views.js lo usan.
 
 El campo `tema` ya no se usa para navegar (el asistente "Por pestaña y
 grupo" y "Repasar preguntas" usan `section`/`topic` vía
