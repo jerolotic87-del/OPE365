@@ -343,16 +343,33 @@ function isUser(kind, id){
 function listUser(){
   const u = ustore();
   return [].concat(
-    u.q.map(q=>({ kind:"q", id:q.id, label:(q.enunciado||"(sin enunciado)").slice(0,70), tipo:q.tipo, hasImg:!!q.imagen, section:q.section, topic:q.topic })),
-    u.fc.map(c=>({ kind:"fc", id:c.canonicalId, label:(c.front||"(sin frente)").slice(0,70), tipo:"flashcard", hasImg:!!c.imagen, section:c.section, topic:c.topic }))
+    u.q.map(q=>({ kind:"q", id:q.id, label:(q.enunciado||"(sin enunciado)").slice(0,70), tipo:q.tipo, hasImg:!!q.imagen, section:q.section, topic:q.topic, published:q.published || null })),
+    u.fc.map(c=>({ kind:"fc", id:c.canonicalId, label:(c.front||"(sin frente)").slice(0,70), tipo:"flashcard", hasImg:!!c.imagen, section:c.section, topic:c.topic, published:c.published || null }))
   );
 }
 function userCount(){ const u = ustore(); return u.q.length + u.fc.length; }
 
+/* copia profunda de tu contenido, para publicarlo al repo */
+function userItems(){
+  const u = ustore();
+  return { q: deep(u.q) || [], fc: deep(u.fc) || [] };
+}
+
+/* marca un elemento propio como ya publicado en el repo (github-sync.js) */
+function markPublished(kind, id, info){
+  const u = ustore();
+  const arr = kind === "fc" ? u.fc : u.q;
+  const item = kind === "fc" ? arr.find(x=>x.canonicalId === id) : arr.find(x=>x.id === id);
+  if(!item) return false;
+  item.published = Object.assign({ sha:null, at:Date.now(), newId:null }, info || {});
+  O.persist();
+  return true;
+}
+
 O.ContentEdit = { applyAll, apply, revert, get, has, count, list, exportJSON, clearAll, original,
                   Q_FIELDS, FC_FIELDS,
                   createQuestion, createFlashcard, updateUserItem, deleteUserItem,
-                  isUser, listUser, userCount };
+                  isUser, listUser, userCount, userItems, markPublished };
 
 // al cargar (antes que engine.js): fusionar contenido propio y aplicar correcciones
 mergeUserContent();

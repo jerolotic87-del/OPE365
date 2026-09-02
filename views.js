@@ -556,18 +556,38 @@ function renderMyContent(){
     const canonical = it.id;
     const obj = it.kind==="fc" ? O.F_BY_ID[canonical] : O.Q_BY_ID[canonical];
     const img = obj && obj.imagen;
+    const pub = it.published;
     return `<div class="mc-row" data-mc="${it.kind}:${canonical}">
       <div class="mc-thumb">${img?`<img src="${img}" alt="">`:`<span>${it.kind==="fc"?icon('cards'):icon('tests')}</span>`}</div>
       <div class="mc-main">
         <div class="mc-label">${O.escapeHtml(it.label)}${it.label.length>=70?'…':''}</div>
-        <div class="mc-meta">${it.kind==="fc"?"Flashcard":(it.tipo==="verdadero_falso"?"V/F":it.tipo==="seleccion_multiple"?"Selección múltiple":"Opción única")} · ${O.escapeHtml(sectionName(it.section))}${it.topic?` · ${O.escapeHtml(topicName(it.section, it.topic))}`:''}</div>
+        <div class="mc-meta">${it.kind==="fc"?"Flashcard":(it.tipo==="verdadero_falso"?"V/F":it.tipo==="seleccion_multiple"?"Selección múltiple":"Opción única")} · ${O.escapeHtml(sectionName(it.section))}${it.topic?` · ${O.escapeHtml(topicName(it.section, it.topic))}`:''}${pub?` · <span class="state-chip tone-settled">en el banco · ${pub.sha?O.escapeHtml(String(pub.sha).slice(0,7)):"publicada"}</span>`:''}</div>
       </div>
       <div class="mc-acts">
-        <button class="btn btn-ghost btn-sm" data-mc-edit="${it.kind}:${canonical}">Editar</button>
-        <button class="btn btn-ghost btn-sm" data-mc-del="${it.kind}:${canonical}">Eliminar</button>
+        ${pub
+          ? `<button class="btn btn-ghost btn-sm" data-mc-unpub="${it.kind}:${canonical}">Quitar copia local</button>`
+          : `<button class="btn btn-ghost btn-sm" data-mc-edit="${it.kind}:${canonical}">Editar</button>
+             <button class="btn btn-ghost btn-sm" data-mc-del="${it.kind}:${canonical}">Eliminar</button>`}
       </div>
     </div>`;
   };
+
+  const pendingN = O.GHS ? O.GHS.pendingCount() : 0;
+  const ghToken = !!(O.GHS && O.GHS.hasToken());
+  const publishPanel = !users.length ? `` : `
+    <div class="section-block" style="margin-top:var(--sp-6);">
+      ${ghToken
+        ? (pendingN
+            ? `<button class="cta-hero as-button primary" id="mc-publish" style="margin-bottom:0;">
+                 <div class="cta-body"><div class="cta-kicker">GitHub</div><div class="cta-title">Publicar al banco (${pendingN})</div>
+                   <div class="cta-sub">Un commit · la web se actualiza en ~1-2 min · queda en todos tus dispositivos</div></div>
+                 <span class="cta-go">${icon('chevronR')}</span></button>`
+            : `<p style="font-size:12.5px;color:var(--text-2);">Todo tu contenido está publicado. <button class="btn btn-ghost btn-sm" id="mc-gh-cfg">Configuración de GitHub</button></p>`)
+        : `<button class="cta-hero as-button" id="mc-gh-connect" style="margin-bottom:0;">
+             <div class="cta-body"><div class="cta-kicker">GitHub</div><div class="cta-title">Conectar GitHub para publicar</div>
+               <div class="cta-sub">Envía tu material al repo con un botón, sin pegar JSON a mano</div></div>
+             <span class="cta-go">${icon('chevronR')}</span></button>`}
+    </div>`;
 
   mainEl().innerHTML = `
   <div class="view view-narrow">
@@ -590,6 +610,8 @@ function renderMyContent(){
         <span class="cta-go">${icon('pencil')}</span>
       </button>
     </div>
+
+    ${publishPanel}
 
     ${qs.length ? `<div class="section-block" style="margin-top:var(--sp-7);">
       <div class="section-title"><h3>Preguntas creadas</h3><span class="section-hint">${qs.length}</span></div>
@@ -621,6 +643,17 @@ function renderMyContent(){
   $("#mc-new-q").addEventListener("click", ()=> openUserQuestionModal(null, ()=> go("mi-contenido")));
   $("#mc-new-fc").addEventListener("click", ()=> openUserFlashcardModal(null, ()=> go("mi-contenido")));
   $("#mc-export").addEventListener("click", ()=> openContentEditsModal());
+  const pubBtn = $("#mc-publish");
+  if(pubBtn) pubBtn.addEventListener("click", ()=> publishMyContent(null, ()=> go("mi-contenido")));
+  const ghCfg = $("#mc-gh-cfg"); if(ghCfg) ghCfg.addEventListener("click", ()=> openGitHubModal());
+  const ghCon = $("#mc-gh-connect"); if(ghCon) ghCon.addEventListener("click", ()=> openGitHubModal());
+  $$("[data-mc-unpub]").forEach(b=> b.addEventListener("click", ()=>{
+    const [kind,id] = b.getAttribute("data-mc-unpub").split(/:(.+)/);
+    confirmDanger("Quitar copia local", "La versión del banco (ya publicada) no se toca. Solo elimina la copia de este dispositivo.", ()=>{
+      O.ContentEdit.deleteUserItem(kind, id); if(O.LEB) O.LEB.recalcNow();
+      closeModal(); go("mi-contenido"); O.toast("Copia local eliminada");
+    });
+  }));
   $$("[data-mc-edit]").forEach(b=> b.addEventListener("click", ()=>{
     const [kind,id] = b.getAttribute("data-mc-edit").split(/:(.+)/);
     if(kind==="fc") openUserFlashcardModal(id, ()=> go("mi-contenido"));
@@ -2391,6 +2424,86 @@ function openContentEditsModal(){
   }, {wide:true});
 }
 
+/* ---------------------------------------------------------------
+   PUBLICAR EN GITHUB — configuración del token + envío
+--------------------------------------------------------------- */
+function openGitHubModal(){
+  if(!O.GHS){ O.toast("Sincronización no disponible"); return; }
+  const c = O.GHS.cfg();
+  const tokenSet = O.GHS.hasToken();
+  showModal(`
+    <h3>Publicar en GitHub</h3>
+    <p style="font-size:12.5px;color:var(--text-2);">Tus preguntas y flashcards se envían a <code>data/</code> del repositorio en un solo commit. La web se actualiza sola en 1-2 min.</p>
+    <div class="field" style="margin-top:var(--sp-4);">
+      <label>Token de acceso personal (fine-grained)</label>
+      <input type="password" id="gh-token" class="edit-field" autocomplete="off" spellcheck="false"
+        placeholder="${tokenSet ? "•••••••• (guardado — escribe para cambiarlo)" : "github_pat_..."}">
+      <p class="edit-hint">Permiso mínimo: <strong>Contents → Read and write</strong>, solo sobre el repo <code>${O.escapeHtml(c.owner)}/${O.escapeHtml(c.repo)}</code>. Se guarda solo en este navegador; no entra en exportaciones ni códigos de compartir. <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Crear token ↗</a></p>
+    </div>
+    <div class="edit-opts" style="grid-template-columns:1fr 1fr auto;gap:8px;">
+      <div class="field"><label>Owner</label><input id="gh-owner" class="edit-field" value="${O.escapeHtml(c.owner)}"></div>
+      <div class="field"><label>Repo</label><input id="gh-repo" class="edit-field" value="${O.escapeHtml(c.repo)}"></div>
+      <div class="field"><label>Rama</label><input id="gh-branch" class="edit-field" value="${O.escapeHtml(c.branch)}" style="width:90px;"></div>
+    </div>
+    <p id="gh-status" style="font-size:12px;min-height:16px;margin:4px 0;"></p>
+    <div class="actions" style="flex-wrap:wrap;">
+      <button class="btn btn-solid btn-sm" id="gh-save">Guardar</button>
+      <button class="btn btn-outline btn-sm" id="gh-test">Probar conexión</button>
+      ${tokenSet ? `<button class="btn btn-danger btn-sm" id="gh-forget">Olvidar token</button>` : ``}
+      <button class="btn btn-ghost btn-sm" id="gh-close">Cerrar</button>
+    </div>
+  `, (root)=>{
+    const st = root.querySelector("#gh-status");
+    const readCfg = ()=>({
+      owner: root.querySelector("#gh-owner").value.trim() || "jerolotic87-del",
+      repo:  root.querySelector("#gh-repo").value.trim()  || "OPE365",
+      branch:root.querySelector("#gh-branch").value.trim()|| "main",
+    });
+    const saveToken = ()=>{
+      const t = root.querySelector("#gh-token").value.trim();
+      const patch = readCfg();
+      if(t) patch.token = t;
+      O.GHS.setCfg(patch);
+    };
+    root.querySelector("#gh-close").addEventListener("click", closeModal);
+    root.querySelector("#gh-save").addEventListener("click", ()=>{
+      saveToken(); st.style.color = "var(--ok, #4ade80)"; st.textContent = "Guardado.";
+    });
+    root.querySelector("#gh-test").addEventListener("click", async ()=>{
+      saveToken();
+      st.style.color = "var(--text-2)"; st.textContent = "Comprobando…";
+      try { const name = await O.GHS.test(); st.style.color = "var(--ok, #4ade80)"; st.textContent = "OK · escritura en " + name; }
+      catch(e){ st.style.color = "var(--bad, #f87171)"; st.textContent = e.message; }
+    });
+    const fg = root.querySelector("#gh-forget");
+    if(fg) fg.addEventListener("click", ()=>{ O.GHS.forget(); closeModal(); O.toast("Token olvidado"); });
+  }, {wide:true});
+}
+
+/* envía lo pendiente; sel opcional { q:[], fc:[] } */
+async function publishMyContent(sel, onDone){
+  if(!O.GHS){ O.toast("Sincronización no disponible"); return; }
+  if(!O.GHS.hasToken()){ openGitHubModal(); return; }
+  O.toast("Publicando en GitHub…");
+  try {
+    const r = await O.GHS.publish(sel);
+    showModal(`
+      <h3>Publicado ✓</h3>
+      <p>${r.count} elemento${r.count===1?"":"s"} enviado${r.count===1?"":"s"} al repositorio · commit <code>${r.shaShort}</code>.</p>
+      <p style="font-size:12.5px;color:var(--text-2);">GitHub Pages tarda ~1-2 min en redesplegar. Cuando recargues la app, verás tu material como parte del banco — y podrás quitar la copia local desde "Mi contenido".</p>
+      <p style="font-size:11.5px;color:var(--text-3);">Ficheros tocados: ${r.files.map(f=>`<code>${O.escapeHtml(f)}</code>`).join(" · ")}</p>
+      <div class="actions"><button class="btn btn-ghost" id="pub-close">Entendido</button></div>
+    `, (root)=> root.querySelector("#pub-close").addEventListener("click", ()=>{ closeModal(); (onDone||(()=>go("mi-contenido")))(); }));
+  } catch(e){
+    O.toast("");
+    showModal(`<h3>No se pudo publicar</h3><p style="color:var(--bad,#f87171);">${O.escapeHtml(e.message)}</p>
+      <p style="font-size:12px;color:var(--text-2);">Nada se ha subido. Revisa el token en Ajustes → Publicar en GitHub.</p>
+      <div class="actions"><button class="btn btn-outline btn-sm" id="pub-cfg">Configuración</button><button class="btn btn-ghost" id="pub-x">Cerrar</button></div>`,
+      (root)=>{ root.querySelector("#pub-x").addEventListener("click", closeModal);
+        root.querySelector("#pub-cfg").addEventListener("click", ()=>{ closeModal(); openGitHubModal(); }); });
+  }
+}
+
 function renderProgress(){
   const s = O.computeStats();
   const pm = O.LEB ? O.LEB.progressModel() : null;
@@ -2928,6 +3041,13 @@ function openSettingsModal(){
     </div>
 
     <hr class="div">
+    <p style="font-weight:700; font-size:13px; margin-bottom:8px;">Publicar en GitHub</p>
+    <p style="font-size:12px;color:var(--text-2);margin-bottom:8px;">Manda lo que creas directamente al repositorio. GitHub Pages redespliega solo (~1-2 min) y queda permanente y en todos tus dispositivos. ${O.GHS?(O.GHS.hasToken()?("Conectado a <strong>"+O.escapeHtml(O.GHS.repoLabel())+"</strong>."):"Sin conectar."):""}</p>
+    <div class="actions" style="justify-content:flex-start;margin-bottom:16px;flex-wrap:wrap;">
+      <button class="btn btn-outline btn-sm" id="open-github-sync">${O.GHS&&O.GHS.hasToken()?"Configuración de GitHub":"Conectar GitHub"}</button>
+    </div>
+
+    <hr class="div">
     <p style="font-weight:700; font-size:13px; margin-bottom:8px;">Borrado de datos</p>
     <div class="actions" style="justify-content:flex-start; flex-wrap:wrap;">
       <button class="btn btn-outline btn-sm" id="reset-current">Reiniciar test actual</button>
@@ -2941,6 +3061,8 @@ function openSettingsModal(){
     if(ceBtn) ceBtn.addEventListener("click", ()=>{ closeModal(); openContentEditsModal(); });
     const mcBtn = root.querySelector("#goto-my-content");
     if(mcBtn) mcBtn.addEventListener("click", ()=>{ closeModal(); go("mi-contenido"); });
+    const ghBtn = root.querySelector("#open-github-sync");
+    if(ghBtn) ghBtn.addEventListener("click", ()=>{ closeModal(); openGitHubModal(); });
     root.querySelector("#reset-current").addEventListener("click", ()=> confirmDanger(
       "Reiniciar test actual","Se perderán las respuestas de la sesión en curso.",
       ()=>{ O.setSession(null); O.saveSessionSnapshot(); closeModal(); go("home"); O.toast("Test actual reiniciado"); }

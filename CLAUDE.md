@@ -40,6 +40,9 @@ engine-bridge.js      PUENTE motor↔UI (window.OPE.LEB). ÚNICO punto por el qu
                        recordFlashcard/recordExamSession alimentan el motor;
                        startSmartSession/startReviewSession/startConceptSession;
                        homeModel/progressModel/sectionConceptsModel = view-models.
+github-sync.js        window.OPE.GHS. Publica tu contenido propio a
+                       data/ del repo vía la API de GitHub (commit atómico).
+                       Token en localStorage 'ope365_gh', fuera de PROGRESS.
 multiplayer.js        Duelo y Farol: transporte PeerJS + máquina de estados
 views.js               toda la interfaz (router simple basado en funciones).
                        5 áreas (Inicio · Temario · Práctica · Flashcards ·
@@ -327,6 +330,27 @@ archivo, añádele preguntas a ese archivo renumerando la cola.
   no se ven afectados. Se carga entre app.js y engine.js. Test:
   `tests/test_content_edit.js`.
 
+- **`github-sync.js` (`OPE.GHS`)** — publica tu contenido propio (el de
+  "Mi contenido") directamente al repo vía la API de GitHub, en UN commit
+  atómico (Git Data API: blob→tree→commit→update-ref). Escribe la fuente
+  con sangría (`data/questions|flashcards/<section>.json`, renumerando el id
+  a `<section>-N` / `F-0NN`), el artefacto que sirve la web
+  (`questions_data.js`/`flashcards_data.js`/`questions_all.json`, regenerado
+  desde el banco pristino en memoria — `window.__OPE365_*` — + lo nuevo;
+  un `python build_data.py` local lo normaliza igual) y el manifest si
+  aparece una pestaña sin fichero. GitHub Pages redespliega solo (~1-2 min).
+  El token (PAT fine-grained, *Contents: Read and write* sobre el repo) vive
+  SOLO en `localStorage` bajo la clave `ope365_gh` — **fuera de PROGRESS**,
+  así que no viaja en códigos de compartir, export ni HTML empaquetado. Se
+  carga entre content-overrides.js y engine.js. UI: Ajustes → "Publicar en
+  GitHub" (config/test) y "Mi contenido" → "Publicar al banco (N)"; los
+  elementos publicados quedan marcados (`item.published = {sha,at,newId}`)
+  y se pueden quitar como copia local. NO borra la copia local
+  automáticamente (evita el hueco hasta que Pages redespliega). El HTML
+  empaquetado (`OPE365_Word365_Estudio.html`) NO se actualiza por esta vía;
+  se regenera con `build.py` en el siguiente build real. Test:
+  `tests/test_github_sync.js` (fetch mockeado, sin red).
+
 ## Arquitectura de sesiones y compartir (app.js)
 
 - Semillas deterministas (`mulberry32`, versionado como
@@ -380,7 +404,8 @@ devDependency — nada de esto es una dependencia en runtime de la app).
 Patrón: `tests/fixture.html` como HTML mínimo, cargarlo con `JSDOM`,
 `window.eval()` de cada script en el orden real (`questions_data.js` →
 `taxonomy_data.js` → `flashcards_data.js` → `app.js` → `content-overrides.js`
-→ `engine.js` → `engine-bridge.js` → `multiplayer.js` → `views.js`), simular
+→ `github-sync.js` → `engine.js` → `engine-bridge.js` → `multiplayer.js` →
+`views.js`), simular
 clics/eventos reales (incluida la navegación vía
 `[data-goto]`, que es el único enganche público de `views.js` — `go()`/
 `render()` están cerradas dentro de su IIFE), leer `OPE.getState()`/

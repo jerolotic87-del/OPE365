@@ -8,7 +8,7 @@
      node tests/test_ui_integration.js   → exit 0/1
 ============================================================ */
 const fs=require("fs"),{JSDOM}=require("jsdom");
-const SCRIPTS=["questions_data.js","taxonomy_data.js","flashcards_data.js","app.js","content-overrides.js","engine.js","engine-bridge.js","peerjs.min.js","multiplayer.js","views.js"];
+const SCRIPTS=["questions_data.js","taxonomy_data.js","flashcards_data.js","app.js","content-overrides.js","github-sync.js","engine.js","engine-bridge.js","peerjs.min.js","multiplayer.js","views.js"];
 function boot(storage){
   const dom=new JSDOM(fs.readFileSync("tests/fixture.html","utf8"),{runScripts:"dangerously",url:"http://localhost/",
     beforeParse(w){ if(storage) w.localStorage.setItem("ope365_v1", storage); }});

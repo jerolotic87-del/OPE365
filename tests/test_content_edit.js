@@ -14,7 +14,7 @@ const { JSDOM } = require("jsdom");
 const ROOT = path.join(__dirname, "..");
 const read = n => fs.readFileSync(path.join(ROOT, n), "utf-8");
 const SCRIPTS = ["questions_data.js","taxonomy_data.js","flashcards_data.js","app.js",
-  "content-overrides.js","engine.js","engine-bridge.js","peerjs.min.js","multiplayer.js","views.js"];
+  "content-overrides.js","github-sync.js","engine.js","engine-bridge.js","peerjs.min.js","multiplayer.js","views.js"];
 
 function boot(storage){
   const dom = new JSDOM(read("tests/fixture.html"), { runScripts:"dangerously", url:"http://localhost/",

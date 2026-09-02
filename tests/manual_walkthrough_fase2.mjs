@@ -165,6 +165,15 @@ try {
   ok(await seen('.q-image img'), 'La imagen se muestra centrada en la pregunta');
   await shot('09b-pregunta-con-imagen-en-runner');
 
+  // publicar en GitHub: configurar token (sin red) y ver el botón de publicar
+  await nav('mi-contenido');
+  await page.waitForSelector('#mc-gh-connect, #mc-publish');
+  await page.evaluate(() => window.OPE.GHS.setCfg({ token: 'github_pat_DEMO', owner: 'jerolotic87-del', repo: 'OPE365', branch: 'main' }));
+  await nav('mi-contenido');
+  ok(await seen('#mc-publish'), 'Mi contenido: botón "Publicar al banco" con token configurado');
+  await shot('10-mi-contenido-publicar');
+  await page.evaluate(() => window.OPE.GHS.forget());
+
   await click('[data-goto="flashcards"]');
   await page.waitForSelector('.fc-cta, .empty-state');
   await click('.segmented .seg[data-tab="todas"]');
