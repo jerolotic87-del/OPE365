@@ -128,70 +128,170 @@ function studyStreak(){
   return streak;
 }
 
+/* Lanza la sesión guiada del motor (preguntas + flashcards encadenadas). */
+function startSmartStudy(minutes){
+  if(!O.LEB){ go("practica"); return; }
+  const run = O.LEB.startSmartSession(minutes);
+  if(!run){ O.toast("Nada urgente ahora mismo. Puedes practicar un tema libremente."); go("practica"); return; }
+  if(run.session){ O.setSession(run.session); O.saveSessionSnapshot(); go("running"); }
+  else if(run.cardIds && run.cardIds.length){ startFlashcardSession(run.cardIds, 0); }
+  else { O.toast("No hay contenido disponible para la sesión guiada"); go("practica"); }
+}
+function startReviewStudy(minutes){
+  if(!O.LEB){ go("practica"); return; }
+  const s = O.LEB.startReviewSession(minutes);
+  if(!s){ O.toast("No tienes nada pendiente de repaso ahora mismo"); return; }
+  O.setSession(s); O.saveSessionSnapshot(); go("running");
+}
+function practiceConcept(conceptId){
+  const s = O.LEB ? O.LEB.startConceptSession(conceptId) : null;
+  if(s){ O.setSession(s); O.saveSessionSnapshot(); go("running"); }
+  else O.toast("No hay preguntas disponibles para este bloque");
+}
+
+/* barra de dominio apilada: asentado · consolidando · aprendiendo · sin empezar */
+function masteryBarHtml(b){
+  const total = Math.max(1, b.total);
+  const seg = (n, cls, lbl)=> n>0
+    ? `<span class="mb-seg ${cls}" style="flex:${n}" title="${lbl}: ${n}"></span>` : '';
+  return `<div class="mastery-bar" role="img" aria-label="Asentado ${b.asentado}, consolidando ${b.consolidando}, aprendiendo ${b.aprendiendo}, sin empezar ${b.nuevo}">
+    ${seg(b.asentado,'mb-settled','Asentado')}
+    ${seg(b.consolidando,'mb-consolid','Consolidando')}
+    ${seg(b.aprendiendo,'mb-learn','Aprendiendo')}
+    ${seg(b.nuevo,'mb-neutral','Sin empezar')}
+  </div>`;
+}
+
 function renderHome(){
-  const s = O.computeStats();
+  const hm = O.LEB ? O.LEB.homeModel() : null;
   const fc = O.computeFlashcardStats();
+  const cs = O.computeStats();
   const saved = O.PROGRESS.currentSession;
   const hasContinue = saved && !saved.finished && saved.questionIds && saved.questionIds.length;
-  const pendingChallenges = Object.values(O.PROGRESS.challenges||{}).filter(c=>c.role==="recipient" && c.status!=="UNLOCKED" && c.status!=="COMPLETED");
-  const streak = studyStreak();
   const last = O.PROGRESS.history.slice(-1)[0];
+  const b = hm ? hm.breakdown : null;
+  const preview = (hm && hm.anyData) ? O.LEB.smartPreview(hm.minutesPerDay) : null;
+  const started = !!(hm && hm.anyData);
+
+  const smartSub = !started
+    ? "Sesión guiada — empieza por lo esencial de Word 365"
+    : `≈ ${preview.estMinutes} min · ${preview.questions} pregunta${preview.questions===1?'':'s'}${preview.cards?` + ${preview.cards} flashcard${preview.cards===1?'':'s'}`:''} · <span class="phase-tag">${phaseLabel(preview.phase)}</span>`;
+
+  const exam = hm && hm.exam;
 
   mainEl().innerHTML = `
   <div class="view view-narrow">
     <div class="view-head">
-      <p class="eyebrow">OPE365 · Word 365</p>
-      <h1>${hasContinue ? "Sigamos donde lo dejaste" : "¿Qué estudiamos hoy?"}</h1>
+      <p class="eyebrow">OPE365 · Word 365 · AGE/INAP</p>
+      <h1>¿Qué estudio ahora?</h1>
     </div>
 
     ${hasContinue ? `
-    <button class="hero-continue as-button" id="home-continue">
-      <div>
-        <div class="label">Continuar</div>
-        <h3>${saved.mode==="exam"?"Examen":"Práctica"} en curso</h3>
-        <p>${Object.keys(saved.responses||{}).length} de ${saved.questionIds.length} preguntas respondidas</p>
+    <button class="cta-hero as-button" id="home-continue">
+      <div class="cta-body">
+        <div class="cta-kicker">Continuar</div>
+        <div class="cta-title">${saved.mode==="exam"?"Examen":"Práctica"} en curso</div>
+        <div class="cta-sub">${Object.keys(saved.responses||{}).length} de ${saved.questionIds.length} preguntas respondidas</div>
       </div>
-      <span class="hc-go">${icon('play')}</span>
-    </button>` : ``}
+      <span class="cta-go">${icon('play')}</span>
+    </button>
+    <button class="btn btn-primary btn-block btn-lg" id="home-smart" style="margin:calc(-1 * var(--sp-4)) 0 var(--sp-7);">${icon('study')} Estudiar ahora (sesión guiada)</button>
+    ` : `
+    <button class="cta-hero as-button primary" id="home-smart">
+      <div class="cta-body">
+        <div class="cta-kicker">Recomendado por tu progreso</div>
+        <div class="cta-title">Estudiar ahora</div>
+        <div class="cta-sub">${smartSub}</div>
+      </div>
+      <span class="cta-go">${icon('play')}</span>
+    </button>
+    `}
 
-    <div class="stat-strip">
-      <div class="ss-cell"><div class="ss-num">${streak}</div><div class="ss-lbl">día${streak===1?'':'s'} de racha</div></div>
-      <div class="ss-cell"><div class="ss-num">${s.accuracy}<small>%</small></div><div class="ss-lbl">precisión</div></div>
-      <div class="ss-cell"><div class="ss-num">${s.incorrect}</div><div class="ss-lbl">falladas</div></div>
-      <div class="ss-cell"><div class="ss-num">${fc.pendientes}</div><div class="ss-lbl">flashcards</div></div>
-    </div>
+    ${exam ? `
+    <div class="exam-strip ${exam.sinDeficit?'is-ok':'is-warn'}">
+      <div class="es-top">
+        <span class="es-days">${exam.daysLeft} día${exam.daysLeft===1?'':'s'}</span>
+        <span class="es-label">para el examen · fase ${phaseLabel(exam.phase)}</span>
+      </div>
+      ${exam.sinDeficit
+        ? `<p class="es-msg">Sin déficit detectado ahora mismo: con tu ritmo, todo lo estudiado llega a repasarse a tiempo. <span class="es-note">No es una probabilidad de aprobado — es que no hay huecos en la agenda.</span></p>`
+        : `<p class="es-msg"><b>${exam.deficitCount} bloque${exam.deficitCount===1?'':'s'}</b> no llega${exam.deficitCount===1?'':'n'} a asegurarse con el tiempo y los minutos/día actuales.
+           ${exam.deficitConcepts.length?`<span class="es-list">${exam.deficitConcepts.map(n=>O.escapeHtml(n)).join(" · ")}${exam.deficitCount>exam.deficitConcepts.length?` +${exam.deficitCount-exam.deficitConcepts.length}`:''}</span>`:''}
+           ${exam.hint?`<span class="es-note">${O.escapeHtml(exam.hint)}</span>`:''}</p>`}
+      <button class="es-link" data-goto="progress">Ver preparación de examen ${icon('chevronR')}</button>
+    </div>` : ``}
+
+    ${started ? `
+    <div class="section-block">
+      <div class="section-title"><h3>Tu aprendizaje</h3><button class="link" data-goto="progress">Detalle</button></div>
+      <div class="learn-panel">
+        <div class="lp-row">
+          <div class="lp-head"><span class="lp-axis">Dominio</span><span class="lp-sub">${b.asentado} asentado${b.asentado===1?'':'s'} de ${b.total} bloques</span></div>
+          ${masteryBarHtml(b)}
+          <div class="lp-legend">
+            <span><i class="dot mb-settled"></i>Asentado ${b.asentado}</span>
+            <span><i class="dot mb-consolid"></i>Consolidando ${b.consolidando}</span>
+            <span><i class="dot mb-learn"></i>Aprendiendo ${b.aprendiendo}</span>
+            <span><i class="dot mb-neutral"></i>Sin empezar ${b.nuevo}</span>
+          </div>
+        </div>
+        <div class="lp-row lp-review">
+          <div class="lp-head"><span class="lp-axis">Repaso</span><span class="lp-sub">independiente del dominio</span></div>
+          <p class="lp-review-line">
+            <b class="${hm.dueTotal?'':'muted'}">${hm.dueTotal}</b> bloque${hm.dueTotal===1?'':'s'} pendiente${hm.dueTotal===1?'':'s'} de repaso${hm.atrasadoTotal?` · <b class="warn">${hm.atrasadoTotal} atrasado${hm.atrasadoTotal===1?'':'s'}</b>`:''}.
+            <span class="lp-note">Que un bloque toque repasar <b>no</b> significa que lo hayas olvidado.</span>
+          </p>
+        </div>
+      </div>
+    </div>` : ``}
+
+    ${started && hm.actionable.length ? `
+    <div class="section-block">
+      <div class="section-title"><h3>Empieza por aquí</h3><span class="section-hint">tu prioridad ahora</span></div>
+      <div class="nav-list">
+        ${hm.actionable.map(a=>`<button class="nav-row concept-row" data-concept="${a.id}">
+          <span class="state-pip tone-${a.masteryTone}" aria-hidden="true"></span>
+          <span class="nr-body">
+            <span class="nr-title">${O.escapeHtml(a.name)}</span>
+            <span class="nr-reason">${O.escapeHtml(a.reason)}</span>
+          </span>
+          <span class="nr-chev">${icon('chevronR')}</span>
+        </button>`).join("")}
+      </div>
+    </div>` : ``}
 
     <div class="section-block">
-      <div class="section-title"><h3>Empezar</h3></div>
+      <div class="section-title"><h3>Otras formas de estudiar</h3></div>
       <div class="action-grid">
+        ${started ? `<button class="action-card" id="home-review">
+          <div class="ic">${icon('history')}</div><div class="t">Repasar lo pendiente</div>
+          <div class="d">${hm.dueTotal?`${hm.dueTotal} bloque${hm.dueTotal===1?'':'s'} debido${hm.dueTotal===1?'':'s'}`:'nada pendiente ahora'}</div>
+        </button>` : ``}
         <button class="action-card" data-goto="practica">
-          <div class="ic">${icon('study')}</div><div class="t">Practicar</div>
-          <div class="d">Configura una sesión en segundos</div>
+          <div class="ic">${icon('study')}</div><div class="t">Practicar un tema</div>
+          <div class="d">Elige pestaña, tipo o dificultad</div>
         </button>
         <button class="action-card" data-goto="flashcards">
           <div class="ic">${icon('cards')}</div><div class="t">Flashcards</div>
-          <div class="d">${fc.pendientes} pendientes de repaso</div>
+          <div class="d">${fc.pendientes} pendientes</div>
         </button>
-        <button class="action-card" id="home-errors" ${s.incorrect?'':'disabled'}>
+        <button class="action-card" id="home-errors" ${cs.incorrect?'':'disabled'}>
           <div class="ic">${icon('errors')}</div><div class="t">Repasar errores</div>
-          <div class="d">${s.incorrect} preguntas falladas</div>
+          <div class="d">${cs.incorrect} pregunta${cs.incorrect===1?'':'s'} fallada${cs.incorrect===1?'':'s'}</div>
         </button>
         <button class="action-card" data-goto="mp-setup">
           <div class="ic">${icon('challenge')}</div><div class="t">Duelo en vivo</div>
-          <div class="d">Reto en tiempo real con otra persona</div>
+          <div class="d">Reto en tiempo real</div>
         </button>
       </div>
     </div>
 
-    ${(pendingChallenges.length || last) ? `<div class="nav-list" style="margin-top:var(--sp-2);">
-      ${pendingChallenges.length ? `<button class="nav-row" data-goto="challenges">
-        <span class="nr-ic">${icon('challenge')}</span>
-        <span class="nr-title">${pendingChallenges.length} desafío${pendingChallenges.length===1?'':'s'} pendiente${pendingChallenges.length===1?'':'s'}</span>
-        <span class="nr-chev">${icon('chevronR')}</span></button>` : ``}
-      ${last ? `<button class="nav-row" data-goto="progress">
+    ${last ? `<div class="nav-list">
+      <button class="nav-row" data-goto="progress">
         <span class="nr-ic">${icon('progress')}</span>
         <span class="nr-title">Última sesión: ${last.mode==="exam"?"examen":"práctica"} ${last.correct}/${last.total} (${last.accuracy}%)</span>
-        <span class="nr-meta">${O.fmtDate(last.finishedAt)}</span><span class="nr-chev">${icon('chevronR')}</span></button>` : ``}
+        <span class="nr-meta">${O.fmtDate(last.finishedAt)}</span><span class="nr-chev">${icon('chevronR')}</span>
+      </button>
     </div>` : ``}
   </div>`;
 
@@ -201,12 +301,22 @@ function renderHome(){
       O.setSession(hydrated); O.saveSessionSnapshot(); go("running");
     });
   }
+  const smartBtn = $("#home-smart");
+  if(smartBtn) smartBtn.addEventListener("click", ()=> startSmartStudy(hm ? hm.minutesPerDay : 20));
+  const revBtn = $("#home-review");
+  if(revBtn) revBtn.addEventListener("click", ()=> startReviewStudy(hm ? hm.minutesPerDay : 20));
+  $$(".concept-row").forEach(r=> r.addEventListener("click", ()=> practiceConcept(r.getAttribute("data-concept"))));
   const errBtn = $("#home-errors");
   if(errBtn) errBtn.addEventListener("click", ()=>{
     const s2 = O.buildSession({mode:"practice", scope:"errores", count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
     if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); }
     else O.toast("No tienes preguntas falladas pendientes");
   });
+}
+
+function phaseLabel(p){
+  return { construir:"construir base", consolidar:"consolidar", mezclar:"mezclar y simular",
+           simular:"simulacros", asegurar:"asegurar", aflojar:"repaso ligero" }[p] || p || "";
 }
 
 function renderChallengeCardHtml(c){

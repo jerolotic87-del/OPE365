@@ -140,8 +140,91 @@ hr.div{ border:none; border-top:1px solid var(--border); margin:var(--sp-6) 0; }
 .pad-4{ padding:var(--sp-4); } .pad-5{ padding:var(--sp-5); } .pad-6{ padding:var(--sp-6); }
 
 /* ---------------------------------------------------------------
+   Estado de aprendizaje — semántica de color única para toda la app
+   dominio:  settled(asentado) · consolid · learn(aprendiendo) · neutral(nuevo)
+   repaso:   se marca aparte (warn), nunca se mezcla con el dominio
+--------------------------------------------------------------- */
+.tone-settled{ --tone:var(--good); --tone-dim:var(--good-dim); --tone-line:var(--good-line); }
+.tone-consolid{ --tone:var(--accent); --tone-dim:var(--accent-dim); --tone-line:var(--accent-line); }
+.tone-learn{ --tone:var(--warn); --tone-dim:var(--warn-dim); --tone-line:rgba(227,178,60,.4); }
+.tone-neutral{ --tone:var(--text-3); --tone-dim:var(--surface-2); --tone-line:var(--border); }
+
+.state-pip{ width:9px; height:9px; border-radius:50%; background:var(--tone,var(--text-3)); flex-shrink:0; border:2px solid var(--tone-dim,var(--surface-2)); }
+.state-chip{
+  display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:600; letter-spacing:.01em;
+  padding:3px 9px 3px 7px; border-radius:var(--radius-pill); border:1px solid var(--tone-line,var(--border));
+  background:var(--tone-dim,var(--surface-2)); color:var(--tone,var(--text-2));
+}
+.state-chip::before{ content:""; width:6px; height:6px; border-radius:50%; background:var(--tone,var(--text-3)); }
+.state-chip.review{ border-style:dashed; }
+
+.mastery-bar{ display:flex; height:10px; border-radius:99px; overflow:hidden; background:var(--surface-2); gap:2px; }
+.mastery-bar .mb-seg{ display:block; min-width:3px; }
+.mb-settled{ background:var(--good); } .mb-consolid{ background:var(--accent); }
+.mb-learn{ background:var(--warn); } .mb-neutral{ background:var(--border-2); }
+i.dot{ display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:5px; vertical-align:middle; }
+
+/* ---------------------------------------------------------------
    Home
 --------------------------------------------------------------- */
+.cta-hero{
+  appearance:none; width:100%; text-align:left; cursor:pointer; font:inherit; color:var(--text);
+  display:flex; align-items:center; justify-content:space-between; gap:var(--sp-5);
+  padding:var(--sp-6); border-radius:var(--radius-l); margin-bottom:var(--sp-6);
+  border:1px solid var(--border-2); background:var(--raised);
+  transition:transform .12s var(--ease), box-shadow .16s var(--ease), border-color .16s var(--ease);
+}
+.cta-hero:hover{ transform:translateY(-1px); }
+.cta-hero.primary{
+  border-color:var(--accent-line);
+  background:linear-gradient(135deg, var(--accent-dim), var(--raised) 65%);
+}
+.cta-hero.primary:hover{ box-shadow:0 12px 32px -14px var(--accent-line); border-color:var(--accent); }
+.cta-hero .cta-kicker{ font-family:var(--font-mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--text-3); margin-bottom:6px; }
+.cta-hero.primary .cta-kicker{ color:var(--accent-ink); }
+.cta-hero .cta-title{ font-size:20px; font-weight:700; letter-spacing:-.01em; }
+.cta-hero .cta-sub{ font-size:12.5px; color:var(--text-2); margin-top:5px; line-height:1.5; }
+.cta-hero .cta-go{ width:44px; height:44px; border-radius:50%; background:var(--accent); color:#06101F; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.cta-hero .cta-go svg{ width:18px; height:18px; }
+.phase-tag{ font-family:var(--font-mono); font-size:11px; color:var(--text-3); }
+
+.exam-strip{
+  border:1px solid var(--border-2); border-left:3px solid var(--text-3);
+  border-radius:var(--radius-m); padding:var(--sp-4) var(--sp-5); margin-bottom:var(--sp-7);
+  background:var(--surface);
+}
+.exam-strip.is-ok{ border-left-color:var(--good); }
+.exam-strip.is-warn{ border-left-color:var(--warn); background:var(--warn-dim); }
+.exam-strip .es-top{ display:flex; align-items:baseline; gap:8px; margin-bottom:6px; }
+.exam-strip .es-days{ font-family:var(--font-mono); font-size:20px; font-weight:700; color:var(--text); }
+.exam-strip .es-label{ font-size:12px; color:var(--text-2); }
+.exam-strip .es-msg{ margin:0; font-size:13px; line-height:1.55; color:var(--text); }
+.exam-strip .es-msg b{ color:var(--text); }
+.exam-strip .es-list{ display:block; margin-top:6px; font-size:11.5px; color:var(--text-2); font-family:var(--font-mono); }
+.exam-strip .es-note{ display:block; margin-top:6px; font-size:11.5px; color:var(--text-3); }
+.exam-strip .es-link{ appearance:none; background:none; border:none; cursor:pointer; font:inherit; font-size:12px; font-weight:600;
+  color:var(--accent-ink); display:inline-flex; align-items:center; gap:4px; padding:8px 0 0; }
+.exam-strip .es-link svg{ width:13px; height:13px; }
+
+.learn-panel{ border:1px solid var(--border); border-radius:var(--radius-m); background:var(--surface); overflow:hidden; }
+.learn-panel .lp-row{ padding:var(--sp-4) var(--sp-5); }
+.learn-panel .lp-row + .lp-row{ border-top:1px solid var(--border); }
+.lp-head{ display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:10px; }
+.lp-axis{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text-2); }
+.lp-sub{ font-size:11px; color:var(--text-3); }
+.lp-legend{ display:flex; flex-wrap:wrap; gap:12px; margin-top:9px; font-size:11px; color:var(--text-2); }
+.lp-review-line{ margin:0; font-size:13px; line-height:1.6; color:var(--text-2); }
+.lp-review-line b{ font-family:var(--font-mono); color:var(--text); font-size:14px; }
+.lp-review-line b.warn{ color:var(--warn); }
+.lp-review-line b.muted{ color:var(--text-3); }
+.lp-note{ display:block; margin-top:4px; font-size:11.5px; color:var(--text-3); }
+
+.concept-row{ align-items:center; }
+.concept-row .nr-body{ flex:1; display:flex; flex-direction:column; gap:2px; min-width:0; }
+.concept-row .nr-title{ flex:none; }
+.concept-row .nr-reason{ font-size:11px; color:var(--text-3); }
+.section-title .link{ font-size:12px; }
+
 .hero-continue{
   border-radius:var(--radius-l); border:1px solid var(--border-2);
   background:linear-gradient(180deg, var(--raised), var(--surface));
@@ -2475,8 +2558,9 @@ function bestItem(conceptId, ctx, avoid){
    Reordenado final: nunca dos ítems seguidos del mismo concepto
    salvo que sea inevitable.
 ============================================================ */
-function buildSmartSession(minutes, ctx){
+function buildSmartSession(minutes, ctx, opts){
   ctx = ctx || planCtx();
+  opts = opts || {};
   const pr = store();
   const n = itemsForMinutes(minutes);
   const prof = ctx.profile;
@@ -2583,8 +2667,12 @@ function buildSmartSession(minutes, ctx){
   // ---- REORDENAR: nunca dos ítems seguidos del mismo concepto ----------
   items = spreadByConcept(items).slice(0, n);
 
-  pr._recentSessionStarts = (pr._recentSessionStarts || []).concat(ctx.now).slice(-10);
-  save();
+  // en modo 'preview' NO se registra el inicio de sesión (para pintar el Inicio
+  // sin contaminar la anti-repetición)
+  if(!opts.preview){
+    pr._recentSessionStarts = (pr._recentSessionStarts || []).concat(ctx.now).slice(-10);
+    save();
+  }
 
   const consecutive = countConsecutive(items);
   return {
@@ -2824,9 +2912,9 @@ function recalc(now){
 /* ============================================================
    API — construir una sesión ejecutable
 ============================================================ */
-function smartSessionRun(minutes, now){
+function smartSessionRun(minutes, now, opts){
   const ctx = planCtx(now);
-  const plan = buildSmartSession(minutes, ctx);
+  const plan = buildSmartSession(minutes, ctx, opts);
   return {
     plan,
     qIds:    plan.items.filter(i=>i.kind==="q").map(i=>i.ref),
@@ -3167,11 +3255,58 @@ function smartFlashcards(minutes){
   return run.cardIds;
 }
 
+// Sesión centrada SOLO en lo que toca repasar (conceptos debidos/atrasados).
+// Devuelve una sesión de práctica lista para el runner, o null si no hay nada.
+function startReviewSession(minutes){
+  const ctx = LE.planCtx(Date.now());
+  const pr = LE.store();
+  const now = Date.now();
+  const due = LE.rankedConcepts(ctx).filter(r=>{
+    const st = pr.concepts[r.id];
+    return st && st.nextReview && st.nextReview <= now;
+  });
+  if(!due.length) return null;
+  const n = LE.itemsForMinutes(minutes || (getPlan() && getPlan().minutesPerDay) || 20);
+  const avoid = new Set();
+  const qIds = [];
+  // dos pasadas: amplitud y luego profundidad
+  for(let pass=0; pass<3 && qIds.length<n; pass++){
+    let added = false;
+    for(const r of due){
+      if(qIds.length >= n) break;
+      const it = LE.bestItem(r.id, ctx, avoid);
+      if(it && it.kind === "q"){ avoid.add(it.id); qIds.push(it.id); added = true; }
+    }
+    if(!added) break;
+  }
+  if(!qIds.length) return null;
+  const s = O.buildSessionFromIds(qIds, { mode:"practice", shuffleOptions:true, smart:true }, null);
+  if(s){ s.smart = true; s.smartCardIds = []; }
+  return s;
+}
+
+// Sesión de práctica centrada en un único concepto (section:topic).
+function startConceptSession(conceptId){
+  const meta = LE.CONCEPT_BY_ID[conceptId];
+  if(!meta) return null;
+  const [section, topic] = conceptId.split(":");
+  return O.buildSession({ mode:"practice", section, topic, count:"todas", qOrder:"aleatorio",
+    source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true });
+}
+
+// Vista previa del plan inteligente sin construir la sesión (para el Inicio).
+function smartPreview(minutes){
+  const run = LE.smartSessionRun(minutes || (getPlan() && getPlan().minutesPerDay) || 20, null, { preview:true });
+  return { total: run.plan.items.length, questions: run.qIds.length, cards: run.cardIds.length,
+           phase: run.plan.phase, goal: run.plan.goal, estMinutes: run.plan.estMinutes,
+           buckets: run.plan.mix };
+}
+
 O.LEB = {
   boot, markShown, elapsedMs,
   recordQuestion, recordExamSession, recordFlashcard, recalcNow, recalcSoon,
   getPlan, setPlan, clearExamDate,
-  startSmartSession, smartFlashcards,
+  startSmartSession, startReviewSession, startConceptSession, smartFlashcards, smartPreview,
   homeModel, progressModel, sectionConceptsModel, conceptView, masteryBreakdown,
   masteryLabel, masteryTone, reviewLabel,
 };
@@ -4256,70 +4391,170 @@ function studyStreak(){
   return streak;
 }
 
+/* Lanza la sesión guiada del motor (preguntas + flashcards encadenadas). */
+function startSmartStudy(minutes){
+  if(!O.LEB){ go("practica"); return; }
+  const run = O.LEB.startSmartSession(minutes);
+  if(!run){ O.toast("Nada urgente ahora mismo. Puedes practicar un tema libremente."); go("practica"); return; }
+  if(run.session){ O.setSession(run.session); O.saveSessionSnapshot(); go("running"); }
+  else if(run.cardIds && run.cardIds.length){ startFlashcardSession(run.cardIds, 0); }
+  else { O.toast("No hay contenido disponible para la sesión guiada"); go("practica"); }
+}
+function startReviewStudy(minutes){
+  if(!O.LEB){ go("practica"); return; }
+  const s = O.LEB.startReviewSession(minutes);
+  if(!s){ O.toast("No tienes nada pendiente de repaso ahora mismo"); return; }
+  O.setSession(s); O.saveSessionSnapshot(); go("running");
+}
+function practiceConcept(conceptId){
+  const s = O.LEB ? O.LEB.startConceptSession(conceptId) : null;
+  if(s){ O.setSession(s); O.saveSessionSnapshot(); go("running"); }
+  else O.toast("No hay preguntas disponibles para este bloque");
+}
+
+/* barra de dominio apilada: asentado · consolidando · aprendiendo · sin empezar */
+function masteryBarHtml(b){
+  const total = Math.max(1, b.total);
+  const seg = (n, cls, lbl)=> n>0
+    ? `<span class="mb-seg ${cls}" style="flex:${n}" title="${lbl}: ${n}"></span>` : '';
+  return `<div class="mastery-bar" role="img" aria-label="Asentado ${b.asentado}, consolidando ${b.consolidando}, aprendiendo ${b.aprendiendo}, sin empezar ${b.nuevo}">
+    ${seg(b.asentado,'mb-settled','Asentado')}
+    ${seg(b.consolidando,'mb-consolid','Consolidando')}
+    ${seg(b.aprendiendo,'mb-learn','Aprendiendo')}
+    ${seg(b.nuevo,'mb-neutral','Sin empezar')}
+  </div>`;
+}
+
 function renderHome(){
-  const s = O.computeStats();
+  const hm = O.LEB ? O.LEB.homeModel() : null;
   const fc = O.computeFlashcardStats();
+  const cs = O.computeStats();
   const saved = O.PROGRESS.currentSession;
   const hasContinue = saved && !saved.finished && saved.questionIds && saved.questionIds.length;
-  const pendingChallenges = Object.values(O.PROGRESS.challenges||{}).filter(c=>c.role==="recipient" && c.status!=="UNLOCKED" && c.status!=="COMPLETED");
-  const streak = studyStreak();
   const last = O.PROGRESS.history.slice(-1)[0];
+  const b = hm ? hm.breakdown : null;
+  const preview = (hm && hm.anyData) ? O.LEB.smartPreview(hm.minutesPerDay) : null;
+  const started = !!(hm && hm.anyData);
+
+  const smartSub = !started
+    ? "Sesión guiada — empieza por lo esencial de Word 365"
+    : `≈ ${preview.estMinutes} min · ${preview.questions} pregunta${preview.questions===1?'':'s'}${preview.cards?` + ${preview.cards} flashcard${preview.cards===1?'':'s'}`:''} · <span class="phase-tag">${phaseLabel(preview.phase)}</span>`;
+
+  const exam = hm && hm.exam;
 
   mainEl().innerHTML = `
   <div class="view view-narrow">
     <div class="view-head">
-      <p class="eyebrow">OPE365 · Word 365</p>
-      <h1>${hasContinue ? "Sigamos donde lo dejaste" : "¿Qué estudiamos hoy?"}</h1>
+      <p class="eyebrow">OPE365 · Word 365 · AGE/INAP</p>
+      <h1>¿Qué estudio ahora?</h1>
     </div>
 
     ${hasContinue ? `
-    <button class="hero-continue as-button" id="home-continue">
-      <div>
-        <div class="label">Continuar</div>
-        <h3>${saved.mode==="exam"?"Examen":"Práctica"} en curso</h3>
-        <p>${Object.keys(saved.responses||{}).length} de ${saved.questionIds.length} preguntas respondidas</p>
+    <button class="cta-hero as-button" id="home-continue">
+      <div class="cta-body">
+        <div class="cta-kicker">Continuar</div>
+        <div class="cta-title">${saved.mode==="exam"?"Examen":"Práctica"} en curso</div>
+        <div class="cta-sub">${Object.keys(saved.responses||{}).length} de ${saved.questionIds.length} preguntas respondidas</div>
       </div>
-      <span class="hc-go">${icon('play')}</span>
-    </button>` : ``}
+      <span class="cta-go">${icon('play')}</span>
+    </button>
+    <button class="btn btn-primary btn-block btn-lg" id="home-smart" style="margin:calc(-1 * var(--sp-4)) 0 var(--sp-7);">${icon('study')} Estudiar ahora (sesión guiada)</button>
+    ` : `
+    <button class="cta-hero as-button primary" id="home-smart">
+      <div class="cta-body">
+        <div class="cta-kicker">Recomendado por tu progreso</div>
+        <div class="cta-title">Estudiar ahora</div>
+        <div class="cta-sub">${smartSub}</div>
+      </div>
+      <span class="cta-go">${icon('play')}</span>
+    </button>
+    `}
 
-    <div class="stat-strip">
-      <div class="ss-cell"><div class="ss-num">${streak}</div><div class="ss-lbl">día${streak===1?'':'s'} de racha</div></div>
-      <div class="ss-cell"><div class="ss-num">${s.accuracy}<small>%</small></div><div class="ss-lbl">precisión</div></div>
-      <div class="ss-cell"><div class="ss-num">${s.incorrect}</div><div class="ss-lbl">falladas</div></div>
-      <div class="ss-cell"><div class="ss-num">${fc.pendientes}</div><div class="ss-lbl">flashcards</div></div>
-    </div>
+    ${exam ? `
+    <div class="exam-strip ${exam.sinDeficit?'is-ok':'is-warn'}">
+      <div class="es-top">
+        <span class="es-days">${exam.daysLeft} día${exam.daysLeft===1?'':'s'}</span>
+        <span class="es-label">para el examen · fase ${phaseLabel(exam.phase)}</span>
+      </div>
+      ${exam.sinDeficit
+        ? `<p class="es-msg">Sin déficit detectado ahora mismo: con tu ritmo, todo lo estudiado llega a repasarse a tiempo. <span class="es-note">No es una probabilidad de aprobado — es que no hay huecos en la agenda.</span></p>`
+        : `<p class="es-msg"><b>${exam.deficitCount} bloque${exam.deficitCount===1?'':'s'}</b> no llega${exam.deficitCount===1?'':'n'} a asegurarse con el tiempo y los minutos/día actuales.
+           ${exam.deficitConcepts.length?`<span class="es-list">${exam.deficitConcepts.map(n=>O.escapeHtml(n)).join(" · ")}${exam.deficitCount>exam.deficitConcepts.length?` +${exam.deficitCount-exam.deficitConcepts.length}`:''}</span>`:''}
+           ${exam.hint?`<span class="es-note">${O.escapeHtml(exam.hint)}</span>`:''}</p>`}
+      <button class="es-link" data-goto="progress">Ver preparación de examen ${icon('chevronR')}</button>
+    </div>` : ``}
+
+    ${started ? `
+    <div class="section-block">
+      <div class="section-title"><h3>Tu aprendizaje</h3><button class="link" data-goto="progress">Detalle</button></div>
+      <div class="learn-panel">
+        <div class="lp-row">
+          <div class="lp-head"><span class="lp-axis">Dominio</span><span class="lp-sub">${b.asentado} asentado${b.asentado===1?'':'s'} de ${b.total} bloques</span></div>
+          ${masteryBarHtml(b)}
+          <div class="lp-legend">
+            <span><i class="dot mb-settled"></i>Asentado ${b.asentado}</span>
+            <span><i class="dot mb-consolid"></i>Consolidando ${b.consolidando}</span>
+            <span><i class="dot mb-learn"></i>Aprendiendo ${b.aprendiendo}</span>
+            <span><i class="dot mb-neutral"></i>Sin empezar ${b.nuevo}</span>
+          </div>
+        </div>
+        <div class="lp-row lp-review">
+          <div class="lp-head"><span class="lp-axis">Repaso</span><span class="lp-sub">independiente del dominio</span></div>
+          <p class="lp-review-line">
+            <b class="${hm.dueTotal?'':'muted'}">${hm.dueTotal}</b> bloque${hm.dueTotal===1?'':'s'} pendiente${hm.dueTotal===1?'':'s'} de repaso${hm.atrasadoTotal?` · <b class="warn">${hm.atrasadoTotal} atrasado${hm.atrasadoTotal===1?'':'s'}</b>`:''}.
+            <span class="lp-note">Que un bloque toque repasar <b>no</b> significa que lo hayas olvidado.</span>
+          </p>
+        </div>
+      </div>
+    </div>` : ``}
+
+    ${started && hm.actionable.length ? `
+    <div class="section-block">
+      <div class="section-title"><h3>Empieza por aquí</h3><span class="section-hint">tu prioridad ahora</span></div>
+      <div class="nav-list">
+        ${hm.actionable.map(a=>`<button class="nav-row concept-row" data-concept="${a.id}">
+          <span class="state-pip tone-${a.masteryTone}" aria-hidden="true"></span>
+          <span class="nr-body">
+            <span class="nr-title">${O.escapeHtml(a.name)}</span>
+            <span class="nr-reason">${O.escapeHtml(a.reason)}</span>
+          </span>
+          <span class="nr-chev">${icon('chevronR')}</span>
+        </button>`).join("")}
+      </div>
+    </div>` : ``}
 
     <div class="section-block">
-      <div class="section-title"><h3>Empezar</h3></div>
+      <div class="section-title"><h3>Otras formas de estudiar</h3></div>
       <div class="action-grid">
+        ${started ? `<button class="action-card" id="home-review">
+          <div class="ic">${icon('history')}</div><div class="t">Repasar lo pendiente</div>
+          <div class="d">${hm.dueTotal?`${hm.dueTotal} bloque${hm.dueTotal===1?'':'s'} debido${hm.dueTotal===1?'':'s'}`:'nada pendiente ahora'}</div>
+        </button>` : ``}
         <button class="action-card" data-goto="practica">
-          <div class="ic">${icon('study')}</div><div class="t">Practicar</div>
-          <div class="d">Configura una sesión en segundos</div>
+          <div class="ic">${icon('study')}</div><div class="t">Practicar un tema</div>
+          <div class="d">Elige pestaña, tipo o dificultad</div>
         </button>
         <button class="action-card" data-goto="flashcards">
           <div class="ic">${icon('cards')}</div><div class="t">Flashcards</div>
-          <div class="d">${fc.pendientes} pendientes de repaso</div>
+          <div class="d">${fc.pendientes} pendientes</div>
         </button>
-        <button class="action-card" id="home-errors" ${s.incorrect?'':'disabled'}>
+        <button class="action-card" id="home-errors" ${cs.incorrect?'':'disabled'}>
           <div class="ic">${icon('errors')}</div><div class="t">Repasar errores</div>
-          <div class="d">${s.incorrect} preguntas falladas</div>
+          <div class="d">${cs.incorrect} pregunta${cs.incorrect===1?'':'s'} fallada${cs.incorrect===1?'':'s'}</div>
         </button>
         <button class="action-card" data-goto="mp-setup">
           <div class="ic">${icon('challenge')}</div><div class="t">Duelo en vivo</div>
-          <div class="d">Reto en tiempo real con otra persona</div>
+          <div class="d">Reto en tiempo real</div>
         </button>
       </div>
     </div>
 
-    ${(pendingChallenges.length || last) ? `<div class="nav-list" style="margin-top:var(--sp-2);">
-      ${pendingChallenges.length ? `<button class="nav-row" data-goto="challenges">
-        <span class="nr-ic">${icon('challenge')}</span>
-        <span class="nr-title">${pendingChallenges.length} desafío${pendingChallenges.length===1?'':'s'} pendiente${pendingChallenges.length===1?'':'s'}</span>
-        <span class="nr-chev">${icon('chevronR')}</span></button>` : ``}
-      ${last ? `<button class="nav-row" data-goto="progress">
+    ${last ? `<div class="nav-list">
+      <button class="nav-row" data-goto="progress">
         <span class="nr-ic">${icon('progress')}</span>
         <span class="nr-title">Última sesión: ${last.mode==="exam"?"examen":"práctica"} ${last.correct}/${last.total} (${last.accuracy}%)</span>
-        <span class="nr-meta">${O.fmtDate(last.finishedAt)}</span><span class="nr-chev">${icon('chevronR')}</span></button>` : ``}
+        <span class="nr-meta">${O.fmtDate(last.finishedAt)}</span><span class="nr-chev">${icon('chevronR')}</span>
+      </button>
     </div>` : ``}
   </div>`;
 
@@ -4329,12 +4564,22 @@ function renderHome(){
       O.setSession(hydrated); O.saveSessionSnapshot(); go("running");
     });
   }
+  const smartBtn = $("#home-smart");
+  if(smartBtn) smartBtn.addEventListener("click", ()=> startSmartStudy(hm ? hm.minutesPerDay : 20));
+  const revBtn = $("#home-review");
+  if(revBtn) revBtn.addEventListener("click", ()=> startReviewStudy(hm ? hm.minutesPerDay : 20));
+  $$(".concept-row").forEach(r=> r.addEventListener("click", ()=> practiceConcept(r.getAttribute("data-concept"))));
   const errBtn = $("#home-errors");
   if(errBtn) errBtn.addEventListener("click", ()=>{
     const s2 = O.buildSession({mode:"practice", scope:"errores", count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
     if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); }
     else O.toast("No tienes preguntas falladas pendientes");
   });
+}
+
+function phaseLabel(p){
+  return { construir:"construir base", consolidar:"consolidar", mezclar:"mezclar y simular",
+           simular:"simulacros", asegurar:"asegurar", aflojar:"repaso ligero" }[p] || p || "";
 }
 
 function renderChallengeCardHtml(c){

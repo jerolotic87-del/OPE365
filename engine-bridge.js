@@ -310,11 +310,58 @@ function smartFlashcards(minutes){
   return run.cardIds;
 }
 
+// Sesión centrada SOLO en lo que toca repasar (conceptos debidos/atrasados).
+// Devuelve una sesión de práctica lista para el runner, o null si no hay nada.
+function startReviewSession(minutes){
+  const ctx = LE.planCtx(Date.now());
+  const pr = LE.store();
+  const now = Date.now();
+  const due = LE.rankedConcepts(ctx).filter(r=>{
+    const st = pr.concepts[r.id];
+    return st && st.nextReview && st.nextReview <= now;
+  });
+  if(!due.length) return null;
+  const n = LE.itemsForMinutes(minutes || (getPlan() && getPlan().minutesPerDay) || 20);
+  const avoid = new Set();
+  const qIds = [];
+  // dos pasadas: amplitud y luego profundidad
+  for(let pass=0; pass<3 && qIds.length<n; pass++){
+    let added = false;
+    for(const r of due){
+      if(qIds.length >= n) break;
+      const it = LE.bestItem(r.id, ctx, avoid);
+      if(it && it.kind === "q"){ avoid.add(it.id); qIds.push(it.id); added = true; }
+    }
+    if(!added) break;
+  }
+  if(!qIds.length) return null;
+  const s = O.buildSessionFromIds(qIds, { mode:"practice", shuffleOptions:true, smart:true }, null);
+  if(s){ s.smart = true; s.smartCardIds = []; }
+  return s;
+}
+
+// Sesión de práctica centrada en un único concepto (section:topic).
+function startConceptSession(conceptId){
+  const meta = LE.CONCEPT_BY_ID[conceptId];
+  if(!meta) return null;
+  const [section, topic] = conceptId.split(":");
+  return O.buildSession({ mode:"practice", section, topic, count:"todas", qOrder:"aleatorio",
+    source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true });
+}
+
+// Vista previa del plan inteligente sin construir la sesión (para el Inicio).
+function smartPreview(minutes){
+  const run = LE.smartSessionRun(minutes || (getPlan() && getPlan().minutesPerDay) || 20, null, { preview:true });
+  return { total: run.plan.items.length, questions: run.qIds.length, cards: run.cardIds.length,
+           phase: run.plan.phase, goal: run.plan.goal, estMinutes: run.plan.estMinutes,
+           buckets: run.plan.mix };
+}
+
 O.LEB = {
   boot, markShown, elapsedMs,
   recordQuestion, recordExamSession, recordFlashcard, recalcNow, recalcSoon,
   getPlan, setPlan, clearExamDate,
-  startSmartSession, smartFlashcards,
+  startSmartSession, startReviewSession, startConceptSession, smartFlashcards, smartPreview,
   homeModel, progressModel, sectionConceptsModel, conceptView, masteryBreakdown,
   masteryLabel, masteryTone, reviewLabel,
 };

@@ -596,8 +596,9 @@ function bestItem(conceptId, ctx, avoid){
    Reordenado final: nunca dos ítems seguidos del mismo concepto
    salvo que sea inevitable.
 ============================================================ */
-function buildSmartSession(minutes, ctx){
+function buildSmartSession(minutes, ctx, opts){
   ctx = ctx || planCtx();
+  opts = opts || {};
   const pr = store();
   const n = itemsForMinutes(minutes);
   const prof = ctx.profile;
@@ -704,8 +705,12 @@ function buildSmartSession(minutes, ctx){
   // ---- REORDENAR: nunca dos ítems seguidos del mismo concepto ----------
   items = spreadByConcept(items).slice(0, n);
 
-  pr._recentSessionStarts = (pr._recentSessionStarts || []).concat(ctx.now).slice(-10);
-  save();
+  // en modo 'preview' NO se registra el inicio de sesión (para pintar el Inicio
+  // sin contaminar la anti-repetición)
+  if(!opts.preview){
+    pr._recentSessionStarts = (pr._recentSessionStarts || []).concat(ctx.now).slice(-10);
+    save();
+  }
 
   const consecutive = countConsecutive(items);
   return {
@@ -945,9 +950,9 @@ function recalc(now){
 /* ============================================================
    API — construir una sesión ejecutable
 ============================================================ */
-function smartSessionRun(minutes, now){
+function smartSessionRun(minutes, now, opts){
   const ctx = planCtx(now);
-  const plan = buildSmartSession(minutes, ctx);
+  const plan = buildSmartSession(minutes, ctx, opts);
   return {
     plan,
     qIds:    plan.items.filter(i=>i.kind==="q").map(i=>i.ref),

@@ -131,8 +131,91 @@ hr.div{ border:none; border-top:1px solid var(--border); margin:var(--sp-6) 0; }
 .pad-4{ padding:var(--sp-4); } .pad-5{ padding:var(--sp-5); } .pad-6{ padding:var(--sp-6); }
 
 /* ---------------------------------------------------------------
+   Estado de aprendizaje — semántica de color única para toda la app
+   dominio:  settled(asentado) · consolid · learn(aprendiendo) · neutral(nuevo)
+   repaso:   se marca aparte (warn), nunca se mezcla con el dominio
+--------------------------------------------------------------- */
+.tone-settled{ --tone:var(--good); --tone-dim:var(--good-dim); --tone-line:var(--good-line); }
+.tone-consolid{ --tone:var(--accent); --tone-dim:var(--accent-dim); --tone-line:var(--accent-line); }
+.tone-learn{ --tone:var(--warn); --tone-dim:var(--warn-dim); --tone-line:rgba(227,178,60,.4); }
+.tone-neutral{ --tone:var(--text-3); --tone-dim:var(--surface-2); --tone-line:var(--border); }
+
+.state-pip{ width:9px; height:9px; border-radius:50%; background:var(--tone,var(--text-3)); flex-shrink:0; border:2px solid var(--tone-dim,var(--surface-2)); }
+.state-chip{
+  display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:600; letter-spacing:.01em;
+  padding:3px 9px 3px 7px; border-radius:var(--radius-pill); border:1px solid var(--tone-line,var(--border));
+  background:var(--tone-dim,var(--surface-2)); color:var(--tone,var(--text-2));
+}
+.state-chip::before{ content:""; width:6px; height:6px; border-radius:50%; background:var(--tone,var(--text-3)); }
+.state-chip.review{ border-style:dashed; }
+
+.mastery-bar{ display:flex; height:10px; border-radius:99px; overflow:hidden; background:var(--surface-2); gap:2px; }
+.mastery-bar .mb-seg{ display:block; min-width:3px; }
+.mb-settled{ background:var(--good); } .mb-consolid{ background:var(--accent); }
+.mb-learn{ background:var(--warn); } .mb-neutral{ background:var(--border-2); }
+i.dot{ display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:5px; vertical-align:middle; }
+
+/* ---------------------------------------------------------------
    Home
 --------------------------------------------------------------- */
+.cta-hero{
+  appearance:none; width:100%; text-align:left; cursor:pointer; font:inherit; color:var(--text);
+  display:flex; align-items:center; justify-content:space-between; gap:var(--sp-5);
+  padding:var(--sp-6); border-radius:var(--radius-l); margin-bottom:var(--sp-6);
+  border:1px solid var(--border-2); background:var(--raised);
+  transition:transform .12s var(--ease), box-shadow .16s var(--ease), border-color .16s var(--ease);
+}
+.cta-hero:hover{ transform:translateY(-1px); }
+.cta-hero.primary{
+  border-color:var(--accent-line);
+  background:linear-gradient(135deg, var(--accent-dim), var(--raised) 65%);
+}
+.cta-hero.primary:hover{ box-shadow:0 12px 32px -14px var(--accent-line); border-color:var(--accent); }
+.cta-hero .cta-kicker{ font-family:var(--font-mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--text-3); margin-bottom:6px; }
+.cta-hero.primary .cta-kicker{ color:var(--accent-ink); }
+.cta-hero .cta-title{ font-size:20px; font-weight:700; letter-spacing:-.01em; }
+.cta-hero .cta-sub{ font-size:12.5px; color:var(--text-2); margin-top:5px; line-height:1.5; }
+.cta-hero .cta-go{ width:44px; height:44px; border-radius:50%; background:var(--accent); color:#06101F; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.cta-hero .cta-go svg{ width:18px; height:18px; }
+.phase-tag{ font-family:var(--font-mono); font-size:11px; color:var(--text-3); }
+
+.exam-strip{
+  border:1px solid var(--border-2); border-left:3px solid var(--text-3);
+  border-radius:var(--radius-m); padding:var(--sp-4) var(--sp-5); margin-bottom:var(--sp-7);
+  background:var(--surface);
+}
+.exam-strip.is-ok{ border-left-color:var(--good); }
+.exam-strip.is-warn{ border-left-color:var(--warn); background:var(--warn-dim); }
+.exam-strip .es-top{ display:flex; align-items:baseline; gap:8px; margin-bottom:6px; }
+.exam-strip .es-days{ font-family:var(--font-mono); font-size:20px; font-weight:700; color:var(--text); }
+.exam-strip .es-label{ font-size:12px; color:var(--text-2); }
+.exam-strip .es-msg{ margin:0; font-size:13px; line-height:1.55; color:var(--text); }
+.exam-strip .es-msg b{ color:var(--text); }
+.exam-strip .es-list{ display:block; margin-top:6px; font-size:11.5px; color:var(--text-2); font-family:var(--font-mono); }
+.exam-strip .es-note{ display:block; margin-top:6px; font-size:11.5px; color:var(--text-3); }
+.exam-strip .es-link{ appearance:none; background:none; border:none; cursor:pointer; font:inherit; font-size:12px; font-weight:600;
+  color:var(--accent-ink); display:inline-flex; align-items:center; gap:4px; padding:8px 0 0; }
+.exam-strip .es-link svg{ width:13px; height:13px; }
+
+.learn-panel{ border:1px solid var(--border); border-radius:var(--radius-m); background:var(--surface); overflow:hidden; }
+.learn-panel .lp-row{ padding:var(--sp-4) var(--sp-5); }
+.learn-panel .lp-row + .lp-row{ border-top:1px solid var(--border); }
+.lp-head{ display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:10px; }
+.lp-axis{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text-2); }
+.lp-sub{ font-size:11px; color:var(--text-3); }
+.lp-legend{ display:flex; flex-wrap:wrap; gap:12px; margin-top:9px; font-size:11px; color:var(--text-2); }
+.lp-review-line{ margin:0; font-size:13px; line-height:1.6; color:var(--text-2); }
+.lp-review-line b{ font-family:var(--font-mono); color:var(--text); font-size:14px; }
+.lp-review-line b.warn{ color:var(--warn); }
+.lp-review-line b.muted{ color:var(--text-3); }
+.lp-note{ display:block; margin-top:4px; font-size:11.5px; color:var(--text-3); }
+
+.concept-row{ align-items:center; }
+.concept-row .nr-body{ flex:1; display:flex; flex-direction:column; gap:2px; min-width:0; }
+.concept-row .nr-title{ flex:none; }
+.concept-row .nr-reason{ font-size:11px; color:var(--text-3); }
+.section-title .link{ font-size:12px; }
+
 .hero-continue{
   border-radius:var(--radius-l); border:1px solid var(--border-2);
   background:linear-gradient(180deg, var(--raised), var(--surface));
