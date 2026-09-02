@@ -2321,13 +2321,14 @@ function observedSecPerItem(kind){
   const avg = evs.reduce((s,e)=> s + e.ms/1000, 0) / evs.length;
   return clamp(avg, P.secObservedMin, P.secObservedMax);
 }
-/* Nº de ítems para un presupuesto de minutos. Objetivo aproximado, no tope duro:
-   se usa el ritmo real observado; el único límite es una densidad máxima
-   (maxItemsPerMinute) para no comprimir la sesión hasta lo irreal. */
+/* Nº de ítems para un presupuesto de minutos. Objetivo aproximado, NO un tope
+   duro: se usa el ritmo real observado (EMA de los ms medidos). El único
+   recorte es un suelo absoluto de P.minSecPerItemHard segundos por ítem, que
+   sólo existe para evitar cifras irreales si el ritmo medido fuese absurdo. */
 function itemsForMinutes(minutes){
   const sec = observedSecPerItem("q");
   const raw = Math.round(minutes * 60 / sec);
-  const ceil = Math.round(minutes * 60 / P.minSecPerItemHard);   // sólo evita cifras absurdas
+  const ceil = Math.round(minutes * 60 / P.minSecPerItemHard);
   return clamp(raw, P.sessionMinItems, Math.max(P.sessionMinItems, ceil));
 }
 /* duración estimada (min) de una sesión de n ítems al ritmo observado */
