@@ -147,9 +147,19 @@ try {
   await page.fill('[data-uopt="D"]', 'Resaltado');
   await page.check('.uq-correct[data-l="B"]');
   await page.fill('#uq-expl', 'Es el icono de cursiva (Ctrl+K en Word 365 español).');
+  // el selector de grupo agrupa "Párrafo" (no comandos sueltos)
+  await page.selectOption('#uq-sec', 'inicio');
+  await page.waitForTimeout(50);
+  ok(await page.locator('#uq-top optgroup[label="Párrafo"]').count() === 1, 'Grupo: "Párrafo" aparece como optgroup en Inicio');
+  await page.selectOption('#uq-top', { label: 'Alineación' });
   await shot('09a-crear-pregunta-con-imagen');
   await click('#uq-save');
-  await page.waitForTimeout(200);
+  await page.waitForSelector('.preview-q');
+  ok(await seen('.preview-opts li.is-correct'), 'Tras crear: vista previa con la opción correcta marcada');
+  ok(await seen('.preview-q .q-image img'), 'Vista previa muestra la imagen');
+  await shot('09a2-vista-previa');
+  await click('#pv-close');
+  await page.waitForTimeout(150);
   const created = await page.evaluate(() => {
     const O = window.OPE;
     const q = O.QUESTIONS.find(x => x.id && x.id.startsWith('usr-q') && x.imagen);
@@ -167,6 +177,12 @@ try {
 
   // publicar en GitHub: configurar token (sin red) y ver el botón de publicar
   await nav('mi-contenido');
+  await page.waitForSelector('[data-mc-view]');
+  await click('[data-mc-view]');
+  await page.waitForSelector('.preview-q, .preview-fc');
+  ok(await seen('#pv-edit'), 'Mi contenido: "Ver" abre la vista previa');
+  await click('#pv-close');
+  await page.waitForTimeout(150);
   await page.waitForSelector('#mc-gh-connect, #mc-publish');
   await page.evaluate(() => window.OPE.GHS.setCfg({ token: 'github_pat_DEMO', owner: 'jerolotic87-del', repo: 'OPE365', branch: 'main' }));
   await nav('mi-contenido');

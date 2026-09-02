@@ -167,7 +167,20 @@ function wireImageField(root, initial){
 function populateTopicSelect(sel, secId, chosen){
   const sec = O.TAXONOMY_SECTIONS.find(s=>s.id===secId);
   const topics = (sec && sec.topics) || [];
-  sel.innerHTML = topics.map(t=>`<option value="${t.id}">${O.escapeHtml(t.name)}</option>`).join("") || `<option value="">(sin grupos)</option>`;
+  if(!topics.length){ sel.innerHTML = `<option value="">(sin grupos)</option>`; return; }
+  // agrupa por el grupo REAL de la cinta (ribbonGroup); ej. "Párrafo" reúne
+  // Alineación/Sangría/Espaciado/… — los demás grupos van sueltos.
+  const order = [], bucket = {};
+  topics.forEach(t=>{
+    const g = t.ribbonGroup;
+    if(g){ if(!bucket[g]){ bucket[g] = []; order.push({ g }); } bucket[g].push(t); }
+    else order.push({ t });
+  });
+  sel.innerHTML = order.map(o=>{
+    if(o.t) return `<option value="${o.t.id}">${O.escapeHtml(o.t.name)}</option>`;
+    return `<optgroup label="${O.escapeHtml(o.g)}">${bucket[o.g].map(t=>
+      `<option value="${t.id}">${O.escapeHtml(t.name)}</option>`).join("")}</optgroup>`;
+  }).join("");
   if(chosen && topics.some(t=>t.id===chosen)) sel.value = chosen;
 }
 
@@ -564,6 +577,7 @@ function renderMyContent(){
         <div class="mc-meta">${it.kind==="fc"?"Flashcard":(it.tipo==="verdadero_falso"?"V/F":it.tipo==="seleccion_multiple"?"Selección múltiple":"Opción única")} · ${O.escapeHtml(sectionName(it.section))}${it.topic?` · ${O.escapeHtml(topicName(it.section, it.topic))}`:''}${pub?` · <span class="state-chip tone-settled">en el banco · ${pub.sha?O.escapeHtml(String(pub.sha).slice(0,7)):"publicada"}</span>`:''}</div>
       </div>
       <div class="mc-acts">
+        <button class="btn btn-ghost btn-sm" data-mc-view="${it.kind}:${canonical}">Ver</button>
         ${pub
           ? `<button class="btn btn-ghost btn-sm" data-mc-unpub="${it.kind}:${canonical}">Quitar copia local</button>`
           : `<button class="btn btn-ghost btn-sm" data-mc-edit="${it.kind}:${canonical}">Editar</button>
@@ -647,6 +661,10 @@ function renderMyContent(){
   if(pubBtn) pubBtn.addEventListener("click", ()=> publishMyContent(null, ()=> go("mi-contenido")));
   const ghCfg = $("#mc-gh-cfg"); if(ghCfg) ghCfg.addEventListener("click", ()=> openGitHubModal());
   const ghCon = $("#mc-gh-connect"); if(ghCon) ghCon.addEventListener("click", ()=> openGitHubModal());
+  $$("[data-mc-view]").forEach(b=> b.addEventListener("click", ()=>{
+    const [kind,id] = b.getAttribute("data-mc-view").split(/:(.+)/);
+    openPreviewModal(kind, id, ()=> go("mi-contenido"));
+  }));
   $$("[data-mc-unpub]").forEach(b=> b.addEventListener("click", ()=>{
     const [kind,id] = b.getAttribute("data-mc-unpub").split(/:(.+)/);
     confirmDanger("Quitar copia local", "La versión del banco (ya publicada) no se toca. Solo elimina la copia de este dispositivo.", ()=>{
@@ -1666,7 +1684,8 @@ function sectionName(id){ const s = O.TAXONOMY_SECTIONS.find(x=>x.id===id); retu
 function topicName(secId, topId){
   const s = O.TAXONOMY_SECTIONS.find(x=>x.id===secId);
   const t = s && (s.topics||[]).find(x=>x.id===topId);
-  return t ? t.name : (topId||"");
+  if(!t) return topId||"";
+  return t.ribbonGroup && t.ribbonGroup !== t.name ? `${t.ribbonGroup} · ${t.name}` : t.name;
 }
 
 let fcHubState = { section:"all", tab:"repaso" };
@@ -2225,7 +2244,8 @@ function openUserQuestionModal(editId, onDone){
       <textarea id="uq-expl" rows="2" class="edit-field">${ex?O.escapeHtml(ex.explicacion||""):""}</textarea></div>
     <div class="config-grid">
       <div class="field"><label>Pestaña de la cinta</label><select id="uq-sec" class="edit-field">${tax.map(s=>`<option value="${s.id}" ${s.id===secId0?'selected':''}>${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
-      <div class="field"><label>Grupo</label><select id="uq-top" class="edit-field"></select></div>
+      <div class="field"><label>Grupo</label><select id="uq-top" class="edit-field"></select>
+        <span class="edit-hint">El grupo de la cinta de Word. "Párrafo" viene desglosado por temas (Alineación, Sangría…).</span></div>
     </div>
     <div class="field"><label>Categoría</label><select id="uq-cat" class="edit-field">
       ${["general","atajo","ruta","concepto"].map(c=>`<option value="${c}" ${ex&&ex.categoria===c?'selected':''}>${c==="ruta"?"Ruta / menú":c[0].toUpperCase()+c.slice(1)}</option>`).join("")}</select></div>
@@ -2294,12 +2314,14 @@ function openUserQuestionModal(editId, onDone){
         data.opciones = opts;
         data.respuesta = tipo === "seleccion_multiple" ? chosen.sort() : chosen[0];
       }
+      let newId = ex && ex.id;
       if(ex) O.ContentEdit.updateUserItem("q", ex.id, data);
-      else O.ContentEdit.createQuestion(data);
+      else newId = O.ContentEdit.createQuestion(data);
       if(O.LEB) O.LEB.recalcNow();
       O.toast(ex ? "Pregunta actualizada" : "Pregunta creada");
       closeModal();
-      if(onDone) onDone(); else go(O.Nav.view === "running" ? "mi-contenido" : O.Nav.view, O.Nav.params);
+      const done = onDone || (()=> go(O.Nav.view === "running" ? "mi-contenido" : O.Nav.view, O.Nav.params));
+      if(newId) openPreviewModal("q", newId, done); else done();
     });
   }, {wide:true});
 }
@@ -2321,7 +2343,8 @@ function openUserFlashcardModal(editId, onDone){
       <span class="edit-hint">Puedes usar "R: … / E: … / A: …" para respuesta, explicación y atajo.</span></div>
     <div class="config-grid">
       <div class="field"><label>Pestaña de la cinta</label><select id="uf-sec" class="edit-field">${tax.map(s=>`<option value="${s.id}" ${s.id===secId0?'selected':''}>${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
-      <div class="field"><label>Grupo</label><select id="uf-top" class="edit-field"></select></div>
+      <div class="field"><label>Grupo</label><select id="uf-top" class="edit-field"></select>
+        <span class="edit-hint">El grupo de la cinta de Word. "Párrafo" viene desglosado por temas (Alineación, Sangría…).</span></div>
     </div>
     <div class="field"><label>Prioridad</label>
       <div class="segmented" id="uf-prio">
@@ -2358,13 +2381,75 @@ function openUserFlashcardModal(editId, onDone){
         section: secSel.value, topic: topSel.value || null,
         imagen: imgState.val || null,
       };
+      let newId = ex && ex.canonicalId;
       if(ex) O.ContentEdit.updateUserItem("fc", ex.canonicalId, data);
-      else O.ContentEdit.createFlashcard(data);
+      else newId = O.ContentEdit.createFlashcard(data);
       if(O.LEB) O.LEB.recalcNow();
       O.toast(ex ? "Flashcard actualizada" : "Flashcard creada");
       closeModal();
-      if(onDone) onDone(); else go("flashcards");
+      const done = onDone || (()=> go("flashcards"));
+      if(newId && !ex) openPreviewModal("fc", newId, done); else done();
     });
+  }, {wide:true});
+}
+
+/* previsualiza una pregunta/flashcard tal como se verá al estudiarla */
+function openPreviewModal(kind, id, onDone){
+  const back = ()=> (onDone || (()=>{}))();
+  if(kind === "fc"){
+    const c = O.F_BY_ID[id];
+    if(!c){ O.toast("No encontrada"); return; }
+    showModal(`
+      <h3>Vista previa · flashcard</h3>
+      <p class="edit-id">${O.escapeHtml(c.canonicalId)} · ${O.escapeHtml(sectionName(c.section))}${c.topic?` · ${O.escapeHtml(topicName(c.section, c.topic))}`:''}</p>
+      <div class="preview-fc">
+        <div class="preview-face"><span class="preview-tag">Frente</span>
+          ${qImageHtml(c.imagen)}
+          <div class="ff-text">${formatCardText(c.front)}</div></div>
+        <div class="preview-face preview-back"><span class="preview-tag">Dorso</span>
+          <div class="fb-text">${renderCardBack(c.back)}</div></div>
+      </div>
+      <div class="actions" style="flex-wrap:wrap;">
+        <button class="btn btn-outline btn-sm" id="pv-edit">Editar</button>
+        <button class="btn btn-ghost" id="pv-close">Cerrar</button>
+      </div>
+    `, (root)=>{
+      root.querySelector("#pv-close").addEventListener("click", ()=>{ closeModal(); back(); });
+      root.querySelector("#pv-edit").addEventListener("click", ()=>{ closeModal(); openUserFlashcardModal(id, onDone); });
+    }, {wide:true});
+    return;
+  }
+  const q = O.Q_BY_ID[id];
+  if(!q){ O.toast("No encontrada"); return; }
+  const correct = new Set(Array.isArray(q.respuesta) ? q.respuesta : [q.respuesta]);
+  let body = "";
+  if(q.tipo === "verdadero_falso"){
+    const val = q.respuesta === true || q.respuesta === "true";
+    body = `<ul class="preview-opts">
+      <li class="${val?'is-correct':''}">${val?icon('check'):''} Verdadero</li>
+      <li class="${!val?'is-correct':''}">${!val?icon('check'):''} Falso</li></ul>`;
+  } else {
+    body = `<ul class="preview-opts">${(q.opciones||[]).map(o=>
+      `<li class="${correct.has(o.letter)?'is-correct':''}">${correct.has(o.letter)?icon('check'):`<span class="preview-l">${o.letter}</span>`} ${O.escapeHtml(o.text)}</li>`).join("")}</ul>`;
+  }
+  const expl = cleanExplic(q.explicacion);
+  showModal(`
+    <h3>Vista previa · pregunta</h3>
+    <p class="edit-id">${O.escapeHtml(q.id)} · ${q.tipo==="verdadero_falso"?"V/F":q.tipo==="seleccion_multiple"?"Selección múltiple":"Opción única"}${q.negativa?" · negativa":""} · ${O.escapeHtml(sectionName(q.section))}${q.topic?` · ${O.escapeHtml(topicName(q.section, q.topic))}`:''}</p>
+    <div class="preview-q">
+      ${qImageHtml(q.imagen)}
+      <p class="preview-enun">${O.escapeHtml(q.enunciado||"")}</p>
+      ${body}
+      ${expl ? `<div class="preview-expl"><b>Explicación.</b> ${kbdify(O.escapeHtml(expl))}</div>` : `<p class="edit-hint">Sin explicación.</p>`}
+    </div>
+    <div class="actions" style="flex-wrap:wrap;">
+      <button class="btn btn-outline btn-sm" id="pv-edit">Editar</button>
+      <button class="btn btn-ghost" id="pv-close">Cerrar</button>
+    </div>
+  `, (root)=>{
+    root.querySelector("#pv-close").addEventListener("click", ()=>{ closeModal(); back(); });
+    root.querySelector("#pv-edit").addEventListener("click", ()=>{ closeModal();
+      if(O.ContentEdit && O.ContentEdit.isUser("q", id)) openUserQuestionModal(id, onDone); else openEditQuestionModal(id, onDone); });
   }, {wide:true});
 }
 

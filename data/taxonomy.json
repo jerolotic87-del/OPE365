@@ -1,595 +1,602 @@
 {
- "version": 2,
- "note": "Taxonomía pedagógica global de OPE365. Independiente de sourceFile/bloque (que son procedencia, no temario). Reclasificación completa del banco heredado (952 preguntas) hecha en ago-2026 a partir de un análisis sourceFile por sourceFile del contenido real -- ver commits de esa fecha para el detalle de cómo se asignó cada bloque/tema/atajo.",
- "sections": [
-  {
-   "id": "interfaz",
-   "name": "Interfaz",
-   "order": 1,
-   "topics": [
+  "version": 2,
+  "note": "Taxonomía pedagógica global de OPE365. Independiente de sourceFile/bloque (que son procedencia, no temario). Reclasificación completa del banco heredado (952 preguntas) hecha en ago-2026 a partir de un análisis sourceFile por sourceFile del contenido real -- ver commits de esa fecha para el detalle de cómo se asignó cada bloque/tema/atajo.",
+  "sections": [
     {
-     "id": "conceptos-generales",
-     "name": "Conceptos generales",
-     "subtopics": []
+      "id": "interfaz",
+      "name": "Interfaz",
+      "order": 1,
+      "topics": [
+        {
+          "id": "conceptos-generales",
+          "name": "Conceptos generales",
+          "subtopics": []
+        },
+        {
+          "id": "documentos-archivos",
+          "name": "Documentos y archivos",
+          "subtopics": [
+            "Extensiones",
+            "Nombres de archivo",
+            "Plantillas",
+            "XML"
+          ]
+        },
+        {
+          "id": "ventana-cinta",
+          "name": "Ventana y cinta de opciones",
+          "subtopics": [
+            "Barra de título",
+            "Botones de control",
+            "Modo mouse y táctil",
+            "Fichas contextuales"
+          ]
+        },
+        {
+          "id": "acceso-teclado-ayuda",
+          "name": "Modo de acceso por teclado y ayuda",
+          "subtopics": [
+            "Iniciador de cuadro de diálogo",
+            "Menú contextual de pestaña",
+            "Opciones de visualización de la cinta",
+            "Ayuda (F1)"
+          ]
+        },
+        {
+          "id": "acceso-rapido",
+          "name": "Barra de herramientas de acceso rápido",
+          "subtopics": []
+        },
+        {
+          "id": "barra-estado",
+          "name": "Barra de estado",
+          "subtopics": [
+            "Contar palabras",
+            "Modo Insertar/Sobrescribir",
+            "Personalizar barra de estado"
+          ]
+        },
+        {
+          "id": "zoom",
+          "name": "Zoom",
+          "subtopics": []
+        },
+        {
+          "id": "area-vistas",
+          "name": "Área de vistas",
+          "subtopics": []
+        },
+        {
+          "id": "regla",
+          "name": "Regla",
+          "subtopics": []
+        },
+        {
+          "id": "buscador",
+          "name": "Buscador",
+          "subtopics": [
+            "Acciones sugeridas",
+            "Acciones usadas recientemente"
+          ]
+        },
+        {
+          "id": "cursor-navegacion",
+          "name": "Cursor, puntero y barras de desplazamiento",
+          "subtopics": []
+        },
+        {
+          "id": "deshacer-rehacer",
+          "name": "Deshacer y rehacer",
+          "subtopics": []
+        }
+      ]
     },
     {
-     "id": "documentos-archivos",
-     "name": "Documentos y archivos",
-     "subtopics": [
-      "Extensiones",
-      "Nombres de archivo",
-      "Plantillas",
-      "XML"
-     ]
+      "id": "archivo",
+      "name": "Archivo",
+      "order": 2,
+      "topics": [
+        {
+          "id": "backstage",
+          "name": "Vista Backstage",
+          "subtopics": []
+        },
+        {
+          "id": "nuevo",
+          "name": "Nuevo documento",
+          "subtopics": []
+        },
+        {
+          "id": "abrir",
+          "name": "Abrir",
+          "subtopics": [
+            "Recientes, anclar y quitar",
+            "Opciones del botón Abrir",
+            "Recuperación de documentos"
+          ]
+        },
+        {
+          "id": "informacion",
+          "name": "Información",
+          "subtopics": [
+            "Propiedades",
+            "Proteger documento",
+            "Comprobar si hay problemas",
+            "Administrar documento"
+          ]
+        },
+        {
+          "id": "guardar",
+          "name": "Guardar y Guardar como",
+          "subtopics": [
+            "Autorrecuperación",
+            "Formatos y extensiones"
+          ]
+        },
+        {
+          "id": "imprimir",
+          "name": "Imprimir",
+          "subtopics": [
+            "Vista Preliminar"
+          ],
+          "note": "Vista Preliminar procede del corpus de Vista pero su ubicación funcional verificada es Archivo → Imprimir, no el Grupo Vistas. Ver VISTA_PROCESADA_PARA_OPE365.md §12."
+        },
+        {
+          "id": "compartir",
+          "name": "Compartir",
+          "subtopics": [
+            "OneDrive",
+            "Coautoría en tiempo real"
+          ]
+        },
+        {
+          "id": "exportar",
+          "name": "Exportar",
+          "subtopics": [
+            "Transformar a PDF/XPS"
+          ]
+        },
+        {
+          "id": "cerrar",
+          "name": "Cerrar",
+          "subtopics": [
+            "Modo de compatibilidad"
+          ]
+        },
+        {
+          "id": "cuenta",
+          "name": "Cuenta",
+          "subtopics": [
+            "Comentarios de producto",
+            "Información del sistema"
+          ]
+        },
+        {
+          "id": "opciones",
+          "name": "Opciones",
+          "subtopics": [
+            "General",
+            "Presentación",
+            "Revisión",
+            "Guardar",
+            "Idioma",
+            "Accesibilidad",
+            "Avanzadas — Edición",
+            "Avanzadas — Mostrar contenido",
+            "Avanzadas — Pantalla",
+            "Avanzadas — Impresión",
+            "Avanzadas — General",
+            "Personalizar cinta y acceso rápido",
+            "Complementos y centro de confianza"
+          ]
+        }
+      ]
     },
     {
-     "id": "ventana-cinta",
-     "name": "Ventana y cinta de opciones",
-     "subtopics": [
-      "Barra de título",
-      "Botones de control",
-      "Modo mouse y táctil",
-      "Fichas contextuales"
-     ]
+      "id": "inicio",
+      "name": "Inicio",
+      "order": 3,
+      "topics": [
+        {
+          "id": "portapapeles",
+          "name": "Portapapeles",
+          "subtopics": [
+            "Copiar formato"
+          ]
+        },
+        {
+          "id": "fuente",
+          "name": "Fuente",
+          "subtopics": [
+            "Tamaño",
+            "Mayúsculas y minúsculas",
+            "Subíndice y superíndice",
+            "Resaltar",
+            "Formato de carácter"
+          ]
+        },
+        {
+          "id": "parrafo-marcas",
+          "name": "Marcas de formato",
+          "subtopics": [],
+          "ribbonGroup": "Párrafo"
+        },
+        {
+          "id": "parrafo-alineacion",
+          "name": "Alineación",
+          "subtopics": [],
+          "ribbonGroup": "Párrafo"
+        },
+        {
+          "id": "parrafo-sangria",
+          "name": "Sangría",
+          "subtopics": [],
+          "ribbonGroup": "Párrafo"
+        },
+        {
+          "id": "parrafo-espaciado",
+          "name": "Espaciado e interlineado",
+          "subtopics": [],
+          "ribbonGroup": "Párrafo"
+        },
+        {
+          "id": "parrafo-bordes",
+          "name": "Bordes y sombreado",
+          "subtopics": [],
+          "ribbonGroup": "Párrafo"
+        },
+        {
+          "id": "parrafo-listas",
+          "name": "Listas, viñetas y numeración",
+          "subtopics": [],
+          "ribbonGroup": "Párrafo"
+        },
+        {
+          "id": "parrafo-tabulaciones",
+          "name": "Tabulaciones",
+          "subtopics": [],
+          "ribbonGroup": "Párrafo"
+        },
+        {
+          "id": "estilos",
+          "name": "Estilos",
+          "subtopics": []
+        },
+        {
+          "id": "edicion",
+          "name": "Edición",
+          "subtopics": [
+            "Buscar y reemplazar",
+            "Ir a",
+            "Seleccionar"
+          ]
+        },
+        {
+          "id": "voz",
+          "name": "Voz",
+          "subtopics": [
+            "Dictado",
+            "Copilot"
+          ]
+        }
+      ]
     },
     {
-     "id": "acceso-teclado-ayuda",
-     "name": "Modo de acceso por teclado y ayuda",
-     "subtopics": [
-      "Iniciador de cuadro de diálogo",
-      "Menú contextual de pestaña",
-      "Opciones de visualización de la cinta",
-      "Ayuda (F1)"
-     ]
+      "id": "insertar",
+      "name": "Insertar",
+      "order": 4,
+      "topics": [
+        {
+          "id": "paginas",
+          "name": "Páginas",
+          "subtopics": [
+            "Salto de página",
+            "Página en blanco"
+          ]
+        },
+        {
+          "id": "tablas",
+          "name": "Tablas",
+          "subtopics": []
+        },
+        {
+          "id": "ilustraciones",
+          "name": "Ilustraciones",
+          "subtopics": []
+        },
+        {
+          "id": "vinculos",
+          "name": "Vínculos",
+          "subtopics": [
+            "Hipervínculo",
+            "Marcador",
+            "Referencia cruzada"
+          ]
+        },
+        {
+          "id": "comentarios",
+          "name": "Comentarios",
+          "subtopics": []
+        },
+        {
+          "id": "encabezado-pie",
+          "name": "Encabezado y pie de página",
+          "subtopics": [
+            "Número de página",
+            "Fecha y hora"
+          ]
+        },
+        {
+          "id": "texto",
+          "name": "Texto",
+          "subtopics": [
+            "Autotexto",
+            "Bloques de creación",
+            "Campos"
+          ]
+        },
+        {
+          "id": "simbolos",
+          "name": "Símbolos",
+          "subtopics": [
+            "Ecuación",
+            "Carácter Unicode"
+          ]
+        }
+      ]
     },
     {
-     "id": "acceso-rapido",
-     "name": "Barra de herramientas de acceso rápido",
-     "subtopics": []
+      "id": "diseno",
+      "name": "Diseño",
+      "order": 5,
+      "topics": [
+        {
+          "id": "formato-documento",
+          "name": "Formato del documento",
+          "subtopics": [
+            "Temas",
+            "Estilos de documento"
+          ]
+        },
+        {
+          "id": "fondo-pagina",
+          "name": "Fondo de página",
+          "subtopics": [
+            "Marca de agua",
+            "Color de página",
+            "Bordes de página"
+          ]
+        }
+      ]
     },
     {
-     "id": "barra-estado",
-     "name": "Barra de estado",
-     "subtopics": [
-      "Contar palabras",
-      "Modo Insertar/Sobrescribir",
-      "Personalizar barra de estado"
-     ]
+      "id": "disposicion",
+      "name": "Disposición",
+      "order": 6,
+      "topics": [
+        {
+          "id": "configurar-pagina",
+          "name": "Configurar página",
+          "subtopics": [
+            "Márgenes",
+            "Orientación y tamaño",
+            "Columnas",
+            "Saltos"
+          ]
+        },
+        {
+          "id": "parrafo-disposicion",
+          "name": "Párrafo",
+          "subtopics": [
+            "Sangría",
+            "Espaciado"
+          ]
+        },
+        {
+          "id": "organizar",
+          "name": "Organizar",
+          "subtopics": [
+            "Posición",
+            "Ajustar texto",
+            "Alinear y agrupar"
+          ]
+        }
+      ]
     },
     {
-     "id": "zoom",
-     "name": "Zoom",
-     "subtopics": []
+      "id": "referencias",
+      "name": "Referencias",
+      "order": 7,
+      "topics": [
+        {
+          "id": "tabla-contenido",
+          "name": "Tabla de contenido",
+          "subtopics": []
+        },
+        {
+          "id": "notas",
+          "name": "Notas al pie",
+          "subtopics": [
+            "Nota al pie",
+            "Nota al final"
+          ]
+        },
+        {
+          "id": "citas-bibliografia",
+          "name": "Citas y bibliografía",
+          "subtopics": [
+            "Tabla de autoridades"
+          ]
+        },
+        {
+          "id": "titulos-indice",
+          "name": "Títulos e índice",
+          "subtopics": []
+        },
+        {
+          "id": "investigacion",
+          "name": "Investigación",
+          "subtopics": [
+            "Búsqueda en referencia"
+          ]
+        }
+      ]
     },
     {
-     "id": "area-vistas",
-     "name": "Área de vistas",
-     "subtopics": []
+      "id": "revisar",
+      "name": "Revisar",
+      "order": 8,
+      "topics": [
+        {
+          "id": "revision-ortografica",
+          "name": "Revisión ortográfica y gramatical",
+          "subtopics": [
+            "Sinónimos",
+            "Contar palabras"
+          ]
+        },
+        {
+          "id": "accesibilidad",
+          "name": "Accesibilidad",
+          "subtopics": []
+        },
+        {
+          "id": "idioma",
+          "name": "Idioma",
+          "subtopics": [
+            "Traducir"
+          ]
+        },
+        {
+          "id": "seguimiento",
+          "name": "Seguimiento",
+          "subtopics": [
+            "Control de cambios",
+            "Marcas de revisión"
+          ]
+        },
+        {
+          "id": "comparar",
+          "name": "Comparar",
+          "subtopics": []
+        },
+        {
+          "id": "proteger",
+          "name": "Proteger",
+          "subtopics": []
+        },
+        {
+          "id": "estructura",
+          "name": "Estructura de la pestaña",
+          "subtopics": []
+        }
+      ]
     },
     {
-     "id": "regla",
-     "name": "Regla",
-     "subtopics": []
+      "id": "vista",
+      "name": "Vista",
+      "order": 9,
+      "topics": [
+        {
+          "id": "vistas",
+          "name": "Vistas",
+          "subtopics": [
+            "Modo de lectura",
+            "Diseño de impresión",
+            "Diseño Web",
+            "Vista Esquema",
+            "Vista Borrador"
+          ]
+        },
+        {
+          "id": "inmersivo",
+          "name": "Inmersivo",
+          "subtopics": [
+            "Concentración",
+            "Lector inmersivo"
+          ]
+        },
+        {
+          "id": "movimiento-pagina",
+          "name": "Movimiento de página",
+          "subtopics": []
+        },
+        {
+          "id": "mostrar",
+          "name": "Mostrar",
+          "subtopics": [
+            "Regla",
+            "Líneas de la cuadrícula",
+            "Panel de navegación"
+          ]
+        },
+        {
+          "id": "zoom",
+          "name": "Zoom",
+          "subtopics": [
+            "Valores",
+            "Cuadro de diálogo"
+          ]
+        },
+        {
+          "id": "ventana",
+          "name": "Ventana",
+          "subtopics": [
+            "Nueva ventana",
+            "Dividir",
+            "Ver en paralelo",
+            "Organizar todo",
+            "Desplazamiento sincrónico",
+            "Restablecer posición de la ventana",
+            "Cambiar ventanas"
+          ]
+        },
+        {
+          "id": "macros",
+          "name": "Macros",
+          "subtopics": [
+            "Visual Basic (VBE)"
+          ]
+        },
+        {
+          "id": "sharepoint",
+          "name": "SharePoint",
+          "subtopics": []
+        },
+        {
+          "id": "estructura",
+          "name": "Estructura de la pestaña",
+          "subtopics": []
+        }
+      ]
     },
     {
-     "id": "buscador",
-     "name": "Buscador",
-     "subtopics": [
-      "Acciones sugeridas",
-      "Acciones usadas recientemente"
-     ]
-    },
-    {
-     "id": "cursor-navegacion",
-     "name": "Cursor, puntero y barras de desplazamiento",
-     "subtopics": []
-    },
-    {
-     "id": "deshacer-rehacer",
-     "name": "Deshacer y rehacer",
-     "subtopics": []
+      "id": "correspondencia",
+      "name": "Correspondencia",
+      "order": 10,
+      "topics": [
+        {
+          "id": "iniciar-combinacion",
+          "name": "Iniciar combinación de correspondencia",
+          "subtopics": [
+            "Origen de datos"
+          ]
+        },
+        {
+          "id": "campos-combinacion",
+          "name": "Escribir e insertar campos",
+          "subtopics": []
+        },
+        {
+          "id": "finalizar",
+          "name": "Finalizar",
+          "subtopics": [
+            "Combinar a documento",
+            "Combinar a impresora",
+            "Comprobar errores"
+          ]
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "archivo",
-   "name": "Archivo",
-   "order": 2,
-   "topics": [
-    {
-     "id": "backstage",
-     "name": "Vista Backstage",
-     "subtopics": []
-    },
-    {
-     "id": "nuevo",
-     "name": "Nuevo documento",
-     "subtopics": []
-    },
-    {
-     "id": "abrir",
-     "name": "Abrir",
-     "subtopics": [
-      "Recientes, anclar y quitar",
-      "Opciones del botón Abrir",
-      "Recuperación de documentos"
-     ]
-    },
-    {
-     "id": "informacion",
-     "name": "Información",
-     "subtopics": [
-      "Propiedades",
-      "Proteger documento",
-      "Comprobar si hay problemas",
-      "Administrar documento"
-     ]
-    },
-    {
-     "id": "guardar",
-     "name": "Guardar y Guardar como",
-     "subtopics": [
-      "Autorrecuperación",
-      "Formatos y extensiones"
-     ]
-    },
-    {
-     "id": "imprimir",
-     "name": "Imprimir",
-     "subtopics": [
-      "Vista Preliminar"
-     ],
-     "note": "Vista Preliminar procede del corpus de Vista pero su ubicación funcional verificada es Archivo → Imprimir, no el Grupo Vistas. Ver VISTA_PROCESADA_PARA_OPE365.md §12."
-    },
-    {
-     "id": "compartir",
-     "name": "Compartir",
-     "subtopics": [
-      "OneDrive",
-      "Coautoría en tiempo real"
-     ]
-    },
-    {
-     "id": "exportar",
-     "name": "Exportar",
-     "subtopics": [
-      "Transformar a PDF/XPS"
-     ]
-    },
-    {
-     "id": "cerrar",
-     "name": "Cerrar",
-     "subtopics": [
-      "Modo de compatibilidad"
-     ]
-    },
-    {
-     "id": "cuenta",
-     "name": "Cuenta",
-     "subtopics": [
-      "Comentarios de producto",
-      "Información del sistema"
-     ]
-    },
-    {
-     "id": "opciones",
-     "name": "Opciones",
-     "subtopics": [
-      "General",
-      "Presentación",
-      "Revisión",
-      "Guardar",
-      "Idioma",
-      "Accesibilidad",
-      "Avanzadas — Edición",
-      "Avanzadas — Mostrar contenido",
-      "Avanzadas — Pantalla",
-      "Avanzadas — Impresión",
-      "Avanzadas — General",
-      "Personalizar cinta y acceso rápido",
-      "Complementos y centro de confianza"
-     ]
-    }
-   ]
-  },
-  {
-   "id": "inicio",
-   "name": "Inicio",
-   "order": 3,
-   "topics": [
-    {
-     "id": "portapapeles",
-     "name": "Portapapeles",
-     "subtopics": [
-      "Copiar formato"
-     ]
-    },
-    {
-     "id": "fuente",
-     "name": "Fuente",
-     "subtopics": [
-      "Tamaño",
-      "Mayúsculas y minúsculas",
-      "Subíndice y superíndice",
-      "Resaltar",
-      "Formato de carácter"
-     ]
-    },
-    {
-     "id": "parrafo-marcas",
-     "name": "Marcas de formato",
-     "subtopics": []
-    },
-    {
-     "id": "parrafo-alineacion",
-     "name": "Alineación",
-     "subtopics": []
-    },
-    {
-     "id": "parrafo-sangria",
-     "name": "Sangría",
-     "subtopics": []
-    },
-    {
-     "id": "parrafo-espaciado",
-     "name": "Espaciado e interlineado",
-     "subtopics": []
-    },
-    {
-     "id": "parrafo-bordes",
-     "name": "Bordes y sombreado",
-     "subtopics": []
-    },
-    {
-     "id": "parrafo-listas",
-     "name": "Listas, viñetas y numeración",
-     "subtopics": []
-    },
-    {
-     "id": "parrafo-tabulaciones",
-     "name": "Tabulaciones",
-     "subtopics": []
-    },
-    {
-     "id": "estilos",
-     "name": "Estilos",
-     "subtopics": []
-    },
-    {
-     "id": "edicion",
-     "name": "Edición",
-     "subtopics": [
-      "Buscar y reemplazar",
-      "Ir a",
-      "Seleccionar"
-     ]
-    },
-    {
-     "id": "voz",
-     "name": "Voz",
-     "subtopics": [
-      "Dictado",
-      "Copilot"
-     ]
-    }
-   ]
-  },
-  {
-   "id": "insertar",
-   "name": "Insertar",
-   "order": 4,
-   "topics": [
-    {
-     "id": "paginas",
-     "name": "Páginas",
-     "subtopics": [
-      "Salto de página",
-      "Página en blanco"
-     ]
-    },
-    {
-     "id": "tablas",
-     "name": "Tablas",
-     "subtopics": []
-    },
-    {
-     "id": "ilustraciones",
-     "name": "Ilustraciones",
-     "subtopics": []
-    },
-    {
-     "id": "vinculos",
-     "name": "Vínculos",
-     "subtopics": [
-      "Hipervínculo",
-      "Marcador",
-      "Referencia cruzada"
-     ]
-    },
-    {
-     "id": "comentarios",
-     "name": "Comentarios",
-     "subtopics": []
-    },
-    {
-     "id": "encabezado-pie",
-     "name": "Encabezado y pie de página",
-     "subtopics": [
-      "Número de página",
-      "Fecha y hora"
-     ]
-    },
-    {
-     "id": "texto",
-     "name": "Texto",
-     "subtopics": [
-      "Autotexto",
-      "Bloques de creación",
-      "Campos"
-     ]
-    },
-    {
-     "id": "simbolos",
-     "name": "Símbolos",
-     "subtopics": [
-      "Ecuación",
-      "Carácter Unicode"
-     ]
-    }
-   ]
-  },
-  {
-   "id": "diseno",
-   "name": "Diseño",
-   "order": 5,
-   "topics": [
-    {
-     "id": "formato-documento",
-     "name": "Formato del documento",
-     "subtopics": [
-      "Temas",
-      "Estilos de documento"
-     ]
-    },
-    {
-     "id": "fondo-pagina",
-     "name": "Fondo de página",
-     "subtopics": [
-      "Marca de agua",
-      "Color de página",
-      "Bordes de página"
-     ]
-    }
-   ]
-  },
-  {
-   "id": "disposicion",
-   "name": "Disposición",
-   "order": 6,
-   "topics": [
-    {
-     "id": "configurar-pagina",
-     "name": "Configurar página",
-     "subtopics": [
-      "Márgenes",
-      "Orientación y tamaño",
-      "Columnas",
-      "Saltos"
-     ]
-    },
-    {
-     "id": "parrafo-disposicion",
-     "name": "Párrafo",
-     "subtopics": [
-      "Sangría",
-      "Espaciado"
-     ]
-    },
-    {
-     "id": "organizar",
-     "name": "Organizar",
-     "subtopics": [
-      "Posición",
-      "Ajustar texto",
-      "Alinear y agrupar"
-     ]
-    }
-   ]
-  },
-  {
-   "id": "referencias",
-   "name": "Referencias",
-   "order": 7,
-   "topics": [
-    {
-     "id": "tabla-contenido",
-     "name": "Tabla de contenido",
-     "subtopics": []
-    },
-    {
-     "id": "notas",
-     "name": "Notas al pie",
-     "subtopics": [
-      "Nota al pie",
-      "Nota al final"
-     ]
-    },
-    {
-     "id": "citas-bibliografia",
-     "name": "Citas y bibliografía",
-     "subtopics": [
-      "Tabla de autoridades"
-     ]
-    },
-    {
-     "id": "titulos-indice",
-     "name": "Títulos e índice",
-     "subtopics": []
-    },
-    {
-     "id": "investigacion",
-     "name": "Investigación",
-     "subtopics": [
-      "Búsqueda en referencia"
-     ]
-    }
-   ]
-  },
-  {
-   "id": "revisar",
-   "name": "Revisar",
-   "order": 8,
-   "topics": [
-    {
-     "id": "revision-ortografica",
-     "name": "Revisión ortográfica y gramatical",
-     "subtopics": [
-      "Sinónimos",
-      "Contar palabras"
-     ]
-    },
-    {
-     "id": "accesibilidad",
-     "name": "Accesibilidad",
-     "subtopics": []
-    },
-    {
-     "id": "idioma",
-     "name": "Idioma",
-     "subtopics": [
-      "Traducir"
-     ]
-    },
-    {
-     "id": "seguimiento",
-     "name": "Seguimiento",
-     "subtopics": [
-      "Control de cambios",
-      "Marcas de revisión"
-     ]
-    },
-    {
-     "id": "comparar",
-     "name": "Comparar",
-     "subtopics": []
-    },
-    {
-     "id": "proteger",
-     "name": "Proteger",
-     "subtopics": []
-    },
-    {
-     "id": "estructura",
-     "name": "Estructura de la pestaña",
-     "subtopics": []
-    }
-   ]
-  },
-  {
-   "id": "vista",
-   "name": "Vista",
-   "order": 9,
-   "topics": [
-    {
-     "id": "vistas",
-     "name": "Vistas",
-     "subtopics": [
-      "Modo de lectura",
-      "Diseño de impresión",
-      "Diseño Web",
-      "Vista Esquema",
-      "Vista Borrador"
-     ]
-    },
-    {
-     "id": "inmersivo",
-     "name": "Inmersivo",
-     "subtopics": [
-      "Concentración",
-      "Lector inmersivo"
-     ]
-    },
-    {
-     "id": "movimiento-pagina",
-     "name": "Movimiento de página",
-     "subtopics": []
-    },
-    {
-     "id": "mostrar",
-     "name": "Mostrar",
-     "subtopics": [
-      "Regla",
-      "Líneas de la cuadrícula",
-      "Panel de navegación"
-     ]
-    },
-    {
-     "id": "zoom",
-     "name": "Zoom",
-     "subtopics": [
-      "Valores",
-      "Cuadro de diálogo"
-     ]
-    },
-    {
-     "id": "ventana",
-     "name": "Ventana",
-     "subtopics": [
-      "Nueva ventana",
-      "Dividir",
-      "Ver en paralelo",
-      "Organizar todo",
-      "Desplazamiento sincrónico",
-      "Restablecer posición de la ventana",
-      "Cambiar ventanas"
-     ]
-    },
-    {
-     "id": "macros",
-     "name": "Macros",
-     "subtopics": [
-      "Visual Basic (VBE)"
-     ]
-    },
-    {
-     "id": "sharepoint",
-     "name": "SharePoint",
-     "subtopics": []
-    },
-    {
-     "id": "estructura",
-     "name": "Estructura de la pestaña",
-     "subtopics": []
-    }
-   ]
-  },
-  {
-   "id": "correspondencia",
-   "name": "Correspondencia",
-   "order": 10,
-   "topics": [
-    {
-     "id": "iniciar-combinacion",
-     "name": "Iniciar combinación de correspondencia",
-     "subtopics": [
-      "Origen de datos"
-     ]
-    },
-    {
-     "id": "campos-combinacion",
-     "name": "Escribir e insertar campos",
-     "subtopics": []
-    },
-    {
-     "id": "finalizar",
-     "name": "Finalizar",
-     "subtopics": [
-      "Combinar a documento",
-      "Combinar a impresora",
-      "Comprobar errores"
-     ]
-    }
-   ]
-  }
- ]
+  ]
 }
