@@ -869,7 +869,7 @@ details.meta-panel summary{ cursor:pointer; font-size:11.5px; color:var(--text-3
    Modal / toast
 --------------------------------------------------------------- */
 .modal-backdrop{ position:fixed; inset:0; background:rgba(4,8,16,.6); backdrop-filter:blur(2px); display:flex; align-items:center; justify-content:center; z-index:100; padding:16px; }
-.modal{ background:var(--raised); border:1px solid var(--border-2); border-radius:var(--radius-l); max-width:440px; width:100%; padding:var(--sp-6); box-shadow:var(--shadow-2); }
+.modal{ background:var(--raised); border:1px solid var(--border-2); border-radius:var(--radius-l); max-width:440px; width:100%; padding:var(--sp-6); box-shadow:var(--shadow-2); max-height:90vh; overflow-y:auto; }
 .modal h3{ margin:0 0 10px; font-size:17px; font-weight:700; }
 .modal p{ margin:0 0 var(--sp-5); font-size:13.5px; color:var(--text-2); line-height:1.55; }
 .modal .actions{ display:flex; gap:10px; justify-content:flex-end; }
