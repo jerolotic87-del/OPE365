@@ -511,14 +511,36 @@ input[type="date"]{ color-scheme:dark; }
 .bk-ed-nav .pos{ font-size:12px; color:var(--text-2); }
 .bk-row.selected{ border-color:var(--accent-line); background:var(--accent-dim); }
 .bk-row.has-ov .badge{ color:var(--accent-ink); }
-.bk-ed-status{ display:block; min-height:16px; font-size:12px; color:var(--text-3); margin:4px 0 2px; }
+.bk-ed-status{ display:block; min-height:16px; font-size:12px; color:var(--text-3); margin:6px 0 2px; }
+/* barra de acciones del editor: rejilla de botones idénticos y de ancho
+   igual (form-footer / segmented action bar). auto-fit reparte 2–4 por
+   fila según el ancho; todos misma altura, borde y forma. Orden por
+   prioridad: Guardar · Publicar corrección · Descartar · Borrar. */
 .bk-ed-actions{
-  display:flex; flex-wrap:wrap; gap:8px 10px; align-items:center;
-  margin-top:var(--sp-4); padding-top:var(--sp-4); border-top:1px solid var(--border);
+  display:grid; grid-template-columns:1fr 1fr; gap:8px;
+  margin-top:var(--sp-5); padding-top:var(--sp-4); border-top:1px solid var(--border);
 }
-.bk-ed-grp{ display:flex; flex-wrap:wrap; gap:8px; }
-.bk-ed-grp + .bk-ed-grp{ margin-left:auto; }
-.bk-ed-actions .btn{ flex:0 0 auto; }
+.bk-ed-top-r{ display:inline-flex; align-items:center; gap:10px; }
+.bk-ed-link{
+  appearance:none; background:none; border:0; cursor:pointer; padding:0;
+  font-size:12px; font-weight:600; color:var(--accent-ink);
+}
+.bk-ed-link:hover{ text-decoration:underline; }
+.bk-ed-btn{
+  min-width:0;
+  appearance:none; cursor:pointer; border-radius:var(--radius-s);
+  padding:9px 12px; font-size:12.5px; font-weight:600; line-height:1.2; text-align:center;
+  background:var(--surface); border:1px solid var(--border-2); color:var(--text-2);
+  transition:border-color .15s, color .15s, background .15s;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.bk-ed-btn:hover:not([disabled]){ border-color:var(--border-2); color:var(--text); background:rgba(255,255,255,.04); }
+.bk-ed-btn:active:not([disabled]){ transform:translateY(1px); }
+.bk-ed-btn[disabled]{ opacity:.4; cursor:not-allowed; }
+.bk-ed-btn.is-primary{ color:var(--accent-ink); border-color:var(--accent-line); background:var(--accent-dim); }
+.bk-ed-btn.is-primary:hover:not([disabled]){ border-color:var(--accent); background:rgba(91,155,255,.2); color:var(--accent-ink); }
+.bk-ed-btn.is-danger{ color:var(--bad); border-color:var(--bad-line); }
+.bk-ed-btn.is-danger:hover:not([disabled]){ background:var(--bad-dim); border-color:var(--bad-line); color:var(--bad); }
 @media (max-width:900px){
   .bk-split{ grid-template-columns:1fr; }
   .bk-list{ max-height:42vh; }
@@ -8220,27 +8242,25 @@ function renderBancoAdmin(){
           <span class="pos">${idx+1} / ${curList.length}</span>
           <button class="btn btn-outline btn-sm" id="bk-ed-next" ${idx>=curList.length-1?'disabled':''}>${icon('chevronR')}</button>
         </div>
-        ${isUsr?'<span class="state-chip tone-settled">creada por ti</span>':hasOv?'<span class="state-chip">corregida ✎</span>':''}
+        <span class="bk-ed-top-r">
+          ${isUsr?'<span class="state-chip tone-settled">creada por ti</span>':hasOv?'<span class="state-chip">corregida ✎</span>':''}
+          ${(isQ && !isUsr)?`<button class="bk-ed-link" id="bk-ed-review">Ver en repaso</button>`:''}
+        </span>
       </div>
       <p class="edit-id">${head}</p>
       ${isUsr
         ? `<p style="font-size:12px;color:var(--text-2);">Es contenido tuyo. Se edita en su formulario completo (tipo, imagen, pestaña).</p>
            <div class="bk-ed-actions">
-             <div class="bk-ed-grp"><button class="btn btn-primary btn-sm" id="bk-ed-openuser">Abrir editor completo</button></div>
-             <div class="bk-ed-grp"><button class="btn btn-danger btn-sm" id="bk-ed-deluser">Eliminar</button></div>
+             <button class="bk-ed-btn is-primary" id="bk-ed-openuser">Abrir editor completo</button>
+             <button class="bk-ed-btn is-danger" id="bk-ed-deluser">Eliminar</button>
            </div>`
         : `${isQ ? qEditFormHtml(obj, orig, "bk-ed") : fcEditFormHtml(orig, "bk-ed")}
            <span id="bk-ed-status" class="bk-ed-status">${hasOv?'Corrección local guardada · sin publicar':''}</span>
            <div class="bk-ed-actions">
-             <div class="bk-ed-grp">
-               <button class="btn btn-primary btn-sm" id="bk-ed-save">Guardar</button>
-               <button class="btn btn-outline btn-sm" id="bk-ed-publish"${hasOv?'':' disabled'}>Publicar corrección</button>
-               <button class="btn btn-ghost btn-sm" id="bk-ed-revert"${hasOv?'':' disabled'}>Descartar</button>
-             </div>
-             <div class="bk-ed-grp">
-               ${isQ?`<button class="btn btn-ghost btn-sm" id="bk-ed-review">Ver en repaso</button>`:''}
-               <button class="btn btn-danger btn-sm" id="bk-ed-delbank">Borrar del banco</button>
-             </div>
+             <button class="bk-ed-btn is-primary" id="bk-ed-save">Guardar</button>
+             <button class="bk-ed-btn" id="bk-ed-publish"${hasOv?'':' disabled'}>Publicar corrección</button>
+             <button class="bk-ed-btn" id="bk-ed-revert"${hasOv?'':' disabled'}>Descartar</button>
+             <button class="bk-ed-btn is-danger" id="bk-ed-delbank">Borrar del banco</button>
            </div>`}
     `;
 

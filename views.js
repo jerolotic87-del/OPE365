@@ -2936,27 +2936,25 @@ function renderBancoAdmin(){
           <span class="pos">${idx+1} / ${curList.length}</span>
           <button class="btn btn-outline btn-sm" id="bk-ed-next" ${idx>=curList.length-1?'disabled':''}>${icon('chevronR')}</button>
         </div>
-        ${isUsr?'<span class="state-chip tone-settled">creada por ti</span>':hasOv?'<span class="state-chip">corregida ✎</span>':''}
+        <span class="bk-ed-top-r">
+          ${isUsr?'<span class="state-chip tone-settled">creada por ti</span>':hasOv?'<span class="state-chip">corregida ✎</span>':''}
+          ${(isQ && !isUsr)?`<button class="bk-ed-link" id="bk-ed-review">Ver en repaso</button>`:''}
+        </span>
       </div>
       <p class="edit-id">${head}</p>
       ${isUsr
         ? `<p style="font-size:12px;color:var(--text-2);">Es contenido tuyo. Se edita en su formulario completo (tipo, imagen, pestaña).</p>
            <div class="bk-ed-actions">
-             <div class="bk-ed-grp"><button class="btn btn-primary btn-sm" id="bk-ed-openuser">Abrir editor completo</button></div>
-             <div class="bk-ed-grp"><button class="btn btn-danger btn-sm" id="bk-ed-deluser">Eliminar</button></div>
+             <button class="bk-ed-btn is-primary" id="bk-ed-openuser">Abrir editor completo</button>
+             <button class="bk-ed-btn is-danger" id="bk-ed-deluser">Eliminar</button>
            </div>`
         : `${isQ ? qEditFormHtml(obj, orig, "bk-ed") : fcEditFormHtml(orig, "bk-ed")}
            <span id="bk-ed-status" class="bk-ed-status">${hasOv?'Corrección local guardada · sin publicar':''}</span>
            <div class="bk-ed-actions">
-             <div class="bk-ed-grp">
-               <button class="btn btn-primary btn-sm" id="bk-ed-save">Guardar</button>
-               <button class="btn btn-outline btn-sm" id="bk-ed-publish"${hasOv?'':' disabled'}>Publicar corrección</button>
-               <button class="btn btn-ghost btn-sm" id="bk-ed-revert"${hasOv?'':' disabled'}>Descartar</button>
-             </div>
-             <div class="bk-ed-grp">
-               ${isQ?`<button class="btn btn-ghost btn-sm" id="bk-ed-review">Ver en repaso</button>`:''}
-               <button class="btn btn-danger btn-sm" id="bk-ed-delbank">Borrar del banco</button>
-             </div>
+             <button class="bk-ed-btn is-primary" id="bk-ed-save">Guardar</button>
+             <button class="bk-ed-btn" id="bk-ed-publish"${hasOv?'':' disabled'}>Publicar corrección</button>
+             <button class="bk-ed-btn" id="bk-ed-revert"${hasOv?'':' disabled'}>Descartar</button>
+             <button class="bk-ed-btn is-danger" id="bk-ed-delbank">Borrar del banco</button>
            </div>`}
     `;
 
