@@ -5890,7 +5890,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El subíndice reduce el tamaño del texto y lo coloca por debajo de la línea base, como en H₂O. Su atajo es Ctrl+= (signo igual). El superíndice hace lo contrario, colocando el texto por encima de la línea, como en las potencias matemáticas."
+    "explicacion": "El subíndice reduce el tamaño del texto y lo coloca por debajo de la línea base, como en H₂O. Su atajo es Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión). El superíndice hace lo contrario, elevando el texto por encima de la línea, como en las potencias matemáticas — y no tiene atajo: se aplica desde el botón de la cinta o desde la casilla Superíndice del cuadro Fuente (Ctrl+M)."
   },
   {
     "id": "inicio-158",
@@ -5926,7 +5926,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El superíndice reduce el tamaño del texto y lo eleva por encima de la línea base, como en x². Su atajo es Ctrl+Mayús+= (signo igual con mayúsculas). Es el formato adecuado para exponentes, referencias bibliográficas numéricas y otras notaciones elevadas."
+    "explicacion": "El superíndice reduce el tamaño del texto y lo eleva por encima de la línea base, como en x². En esta instalación NO tiene atajo de teclado: se aplica con el botón Superíndice del grupo Fuente o marcando la casilla Superíndice en el cuadro Fuente (Ctrl+M). El subíndice sí lo tiene: Ctrl+Mayús+-."
   },
   {
     "id": "inicio-159",
@@ -9623,7 +9623,7 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0513",
-    "enunciado": "Relaciona cada atajo con el formato de fuente que aplica o quita en la versión española de Word 365:",
+    "enunciado": "Relaciona cada atajo con lo que hace sobre el tamaño y el formato de fuente en Word 365 (versión española):",
     "opciones": [],
     "matching": {
       "left": [
@@ -9633,45 +9633,45 @@
         },
         {
           "id": "2",
-          "label": "Ctrl + Mayús + <"
+          "label": "Ctrl + <"
         },
         {
           "id": "3",
-          "label": "Ctrl + ="
+          "label": "Ctrl + Alt + Mayús + >"
         },
         {
           "id": "4",
-          "label": "Ctrl + Mayús + ="
+          "label": "Ctrl + Alt + <"
         },
         {
           "id": "5",
-          "label": "Alt + Ctrl + H"
+          "label": "Ctrl + Mayús + -"
         }
       ],
       "right": [
         {
           "id": "A",
-          "label": "Aumenta el tamaño al siguiente valor de la lista"
+          "label": "Agranda la fuente al siguiente valor de la lista"
         },
         {
           "id": "B",
-          "label": "Reduce el tamaño al valor anterior de la lista"
+          "label": "Reduce la fuente al valor anterior de la lista"
         },
         {
           "id": "C",
-          "label": "Aplica o quita subíndice"
+          "label": "Agranda la fuente de punto en punto"
         },
         {
           "id": "D",
-          "label": "Aplica o quita superíndice"
+          "label": "Reduce la fuente de punto en punto"
         },
         {
           "id": "E",
-          "label": "Aplica resaltado amarillo"
+          "label": "Aplica o quita el subíndice"
         },
         {
           "id": "F",
-          "label": "Aplica o quita tachado"
+          "label": "Aplica o quita el superíndice"
         }
       ],
       "correct": {
@@ -9689,7 +9689,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Ctrl+Mayús+>: aumenta tamaño. Ctrl+Mayús+<: reduce tamaño. Ctrl+=: subíndice. Ctrl+Mayús+=: superíndice. Alt+Ctrl+H: resaltado amarillo. El distractor F (tachado) no tiene atajo directo documentado en fuentes españolas verificadas."
+    "explicacion": "La tecla «<>» con Ctrl controla el tamaño: con Mayús (>) agranda, sin Mayús (<) reduce; añadir Alt lo pasa de \"valor de la lista\" a \"de punto en punto\". Ctrl+Mayús+- aplica o quita el subíndice. El superíndice (distractor F) NO tiene atajo en esta instalación: solo desde el cuadro Fuente (Ctrl+M) o el botón de la cinta."
   },
   {
     "id": "inicio-260",

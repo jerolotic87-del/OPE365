@@ -187,10 +187,13 @@ silencio ni elijas arbitrariamente.
   `inicio-91` (respuesta C→B) y `inicio-92`.
 - **Subíndice = `Ctrl+Mayús+-`** (Ctrl + Mayús + la tecla del guión).
   **`Ctrl+=` NO funciona** (era el esquema internacional que traía el banco
-  de aulaclic). **Superíndice: ni `Ctrl+Mayús+=` ni `Ctrl+Mayús++`
-  funcionan — sin atajo confirmado**; las preguntas `inicio-258` e
-  `inicio-360` se borraron a la espera de saber cuál es. Prueba en vivo del
-  usuario. Corrigió `inicio-257/361/362`.
+  de aulaclic). **Superíndice NO tiene atajo** en esta instalación (probado:
+  ni `Ctrl+Mayús+=`, ni `Ctrl+Mayús++`, ni `Ctrl+Alt++`) — solo desde la
+  casilla Superíndice del cuadro Fuente (`Ctrl+M`) o el botón de la cinta.
+  Prueba en vivo del usuario. Borradas `inicio-258/360`; corrigió
+  `inicio-257/361/362` (subíndice), `inicio-157/158` y `inicio-259`
+  (emparejamiento reconstruido solo con atajos confirmados) y el distractor
+  fósil de `vista-124`.
 - **Tamaño de fuente — la tecla `<>`** (izquierda de la Z). En el teclado
   ES esa tecla da `<` sin Mayús y `>` con Mayús, así que **`Ctrl+Mayús+<` y
   `Ctrl+>` NO existen** — son notaciones contradictorias y no deben
