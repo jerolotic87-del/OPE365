@@ -257,6 +257,14 @@ silencio ni elijas arbitrariamente.
   Borrada `inicio-376` (`Alt+Mayús+5` numérico = no hace nada). `Ctrl+5`
   (numérico) = **seleccionar todo** — funciona con NumLock on u off
   (`inicio-371` corregida y verificada).
+- **Tanda 4 (sep-2026):** `Ctrl+1` / `Ctrl+5` / `Ctrl+2` (fila superior) =
+  interlineado sencillo / 1,5 / doble (`inicio-314/315/316/254`) — `Ctrl+5`
+  en el numérico en cambio selecciona todo, ese es el doble sentido de
+  `inicio-67` · `Ctrl+Q` = alinear a la izquierda **y, si el párrafo YA
+  está a la izquierda, una segunda pulsación lo justifica** (`inicio-378`).
+  Verificadas `inicio-296` (Ctrl+J justifica), `inicio-297` (Ctrl+D
+  derecha; Ctrl+R nada), `inicio-42` (emparejamiento Q/T/D/J) y
+  `inicio-275` (Ctrl+E/B/F/L cambian entre ES e inglés).
 - **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
   poden preguntas correctas solo por parecerse a otra — se conservan
   aunque otra pregunte por el mismo atajo (están en topics/framings que

@@ -1627,7 +1627,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Izquierda: Ctrl+Q. Centrar: Ctrl+T. Derecha: Ctrl+D. Justificar: Ctrl+J. Distribuir: Ctrl+Mayus+J. El distractor Ctrl+E es Seleccionar todo el documento, no una alineacion."
+    "explicacion": "Izquierda: Ctrl+Q. Centrar: Ctrl+T. Derecha: Ctrl+D. Justificar: Ctrl+J. Distribuir: Ctrl+Mayus+J. El distractor Ctrl+E es Seleccionar todo el documento, no una alineacion. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-43",
@@ -2541,7 +2541,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Ctrl+5 alfanumerico aplica interlineado de 1,5 lineas. Ctrl+5 del teclado numerico ejecuta Seleccionar todo el documento. Son dos funciones completamente distintas segun la ubicacion fisica de la tecla 5 utilizada."
+    "explicacion": "Ctrl+5 alfanumerico aplica interlineado de 1,5 lineas. Ctrl+5 del teclado numerico ejecuta Seleccionar todo el documento. Son dos funciones completamente distintas segun la ubicacion fisica de la tecla 5 utilizada. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-68",
@@ -9500,7 +9500,7 @@
       "2": "B",
       "3": "C"
     },
-    "explicacion": "Ctrl+1 aplica interlineado sencillo. Ctrl+2 aplica interlineado doble. Ctrl+5 alfanumérico aplica interlineado de 1,5 líneas. Nota: Ctrl+5 del teclado numérico selecciona todo el documento en lugar de aplicar interlineado. Los distractores D y E no tienen atajo directo documentado."
+    "explicacion": "Ctrl+1 aplica interlineado sencillo. Ctrl+2 aplica interlineado doble. Ctrl+5 alfanumérico aplica interlineado de 1,5 líneas. Nota: Ctrl+5 del teclado numérico selecciona todo el documento en lugar de aplicar interlineado. Los distractores D y E no tienen atajo directo documentado. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-255",
@@ -10304,7 +10304,7 @@
       "C",
       "D"
     ],
-    "explicacion": "Los atajos A, B, C y D tienen comportamiento diferente entre versiones. Ctrl+E: español selecciona todo, inglés centra. Ctrl+B: español abre el panel de navegación, inglés aplica negrita. Ctrl+F: español aplica la sangría francesa, inglés abre el buscador. Ctrl+L: español abre Reemplazar, inglés alinea a la izquierda. Ctrl+Z es universal: deshace en ambas versiones."
+    "explicacion": "Los atajos A, B, C y D tienen comportamiento diferente entre versiones. Ctrl+E: español selecciona todo, inglés centra. Ctrl+B: español abre el panel de navegación, inglés aplica negrita. Ctrl+F: español aplica la sangría francesa, inglés abre el buscador. Ctrl+L: español abre Reemplazar, inglés alinea a la izquierda. Ctrl+Z es universal: deshace en ambas versiones. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-276",
@@ -11139,7 +11139,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+J justifica el párrafo. Ctrl+D alinea a la derecha. Ctrl+T centra el párrafo. Ctrl+Q alinea a la izquierda."
+    "explicacion": "Ctrl+J justifica el párrafo. Ctrl+D alinea a la derecha. Ctrl+T centra el párrafo. Ctrl+Q alinea a la izquierda. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-297",
@@ -11174,7 +11174,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+D alinea a la derecha en español. Ctrl+R no tiene ninguna acción asignada en esta instalación (no aparece en atajos_oficial.json). Ctrl+J justifica. Ctrl+T centra."
+    "explicacion": "Ctrl+D alinea a la derecha en español. Ctrl+R no tiene ninguna acción asignada en esta instalación (no aparece en atajos_oficial.json). Ctrl+J justifica. Ctrl+T centra. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-298",
@@ -11769,7 +11769,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+1 aplica interlineado sencillo. Ctrl+2 aplica interlineado doble. Ctrl+5 aplica interlineado de 1,5 líneas. Ctrl+0 abre o cierra el espacio adicional antes del párrafo."
+    "explicacion": "Ctrl+1 aplica interlineado sencillo, Ctrl+2 doble y Ctrl+5 (fila superior, no numérico) de 1,5 líneas. Ctrl+0 restaura el zoom al 100 %, no toca el interlineado. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-315",
@@ -11804,7 +11804,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+2 aplica interlineado doble. Ctrl+1 aplica interlineado sencillo. Ctrl+5 aplica interlineado de 1,5 líneas. Ctrl+Mayús+2 no tiene función asignada para interlineado."
+    "explicacion": "Ctrl+2 aplica interlineado doble. Ctrl+1 sencillo, Ctrl+5 de 1,5 líneas. Ctrl+Mayús+2 no tiene función asignada. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-316",
@@ -11839,7 +11839,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+5 aplica interlineado de 1,5 líneas. Ctrl+1 aplica interlineado sencillo. Ctrl+2 aplica interlineado doble. Ctrl+Mayús+5 no tiene función asignada para interlineado."
+    "explicacion": "Ctrl+5 (fila superior) aplica interlineado de 1,5 líneas. Ctrl+1 sencillo, Ctrl+2 doble. Ctrl+5 en el teclado NUMÉRICO en cambio selecciona todo el documento. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-317",
@@ -13871,7 +13871,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Alinea el contenido del párrafo con el margen izquierdo. Es la alineación predeterminada de un párrafo nuevo."
+    "explicacion": "Ctrl+Q alinea el párrafo a la izquierda. Detalle: si el párrafo YA está alineado a la izquierda, una segunda pulsación de Ctrl+Q lo pasa a JUSTIFICADO. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-379",
