@@ -579,7 +579,8 @@ function renderMyContent(){
       <div class="mc-acts">
         <button class="btn btn-ghost btn-sm" data-mc-view="${it.kind}:${canonical}">Ver</button>
         ${pub
-          ? `<button class="btn btn-ghost btn-sm" data-mc-unpub="${it.kind}:${canonical}">Quitar copia local</button>`
+          ? `<button class="btn btn-ghost btn-sm" data-mc-unpub="${it.kind}:${canonical}">Quitar copia local</button>
+             ${pub.newId ? `<button class="btn btn-ghost btn-sm" data-mc-delbank-kind="${it.kind}" data-mc-delbank-id="${O.escapeHtml(String(pub.newId))}" data-mc-delbank-local="${O.escapeHtml(String(canonical))}">Borrar del banco</button>` : ''}`
           : `<button class="btn btn-ghost btn-sm" data-mc-edit="${it.kind}:${canonical}">Editar</button>
              <button class="btn btn-ghost btn-sm" data-mc-del="${it.kind}:${canonical}">Eliminar</button>`}
       </div>
@@ -682,6 +683,16 @@ function renderMyContent(){
     confirmDanger("Eliminar", "No se puede deshacer.", ()=>{
       O.ContentEdit.deleteUserItem(kind, id); if(O.LEB) O.LEB.recalcNow();
       closeModal(); go("mi-contenido"); O.toast("Eliminado");
+    });
+  }));
+  $$("[data-mc-delbank-kind]").forEach(b=> b.addEventListener("click", ()=>{
+    const kind  = b.getAttribute("data-mc-delbank-kind");
+    const newId = b.getAttribute("data-mc-delbank-id");
+    const local = b.getAttribute("data-mc-delbank-local");
+    deleteFromBankFlow(kind, newId, ()=>{
+      // el commit borró la versión del banco; quita también la copia local
+      if(local && O.ContentEdit && O.ContentEdit.isUser(kind, local)) O.ContentEdit.deleteUserItem(kind, local);
+      go("mi-contenido");
     });
   }));
 }
@@ -2129,6 +2140,7 @@ function openEditQuestionModal(qid, onDone){
     <p class="edit-warn">Se guarda solo en este dispositivo. Para volcarlo al banco: Ajustes → Correcciones de contenido → Exportar.</p>
     <div class="actions" style="flex-wrap:wrap;">
       ${hasOv ? `<button class="btn btn-ghost btn-sm" id="edit-revert">Descartar corrección</button>` : ''}
+      ${(O.GHS && O.GHS.hasToken() && !(O.ContentEdit && O.ContentEdit.isUser("q", qid))) ? `<button class="btn btn-danger btn-sm" id="edit-delbank">Borrar del banco</button>` : ''}
       <button class="btn btn-ghost" id="edit-cancel">Cancelar</button>
       <button class="btn btn-solid" id="edit-save">Guardar corrección</button>
     </div>
@@ -2137,6 +2149,8 @@ function openEditQuestionModal(qid, onDone){
       root.querySelectorAll("#edit-resp-tf .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on");
     }));
     root.querySelector("#edit-cancel").addEventListener("click", ()=> afterContentEdit(onDone));
+    const del = root.querySelector("#edit-delbank");
+    if(del) del.addEventListener("click", ()=> deleteFromBankFlow("q", qid));  // navega a Inicio: la pregunta ya no existe
     const rev = root.querySelector("#edit-revert");
     if(rev) rev.addEventListener("click", ()=>{ O.ContentEdit.revert("q", qid); O.toast("Corrección descartada"); afterContentEdit(onDone); });
     root.querySelector("#edit-save").addEventListener("click", ()=>{
@@ -2195,6 +2209,7 @@ function openEditFlashcardModal(canonicalId, onDone){
     <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes para volcarlo al banco.</p>
     <div class="actions" style="flex-wrap:wrap;">
       ${hasOv ? `<button class="btn btn-ghost btn-sm" id="fc-edit-revert">Descartar corrección</button>` : ''}
+      ${(O.GHS && O.GHS.hasToken() && !(O.ContentEdit && O.ContentEdit.isUser("fc", canonicalId))) ? `<button class="btn btn-danger btn-sm" id="fc-edit-delbank">Borrar del banco</button>` : ''}
       <button class="btn btn-ghost" id="fc-edit-cancel">Cancelar</button>
       <button class="btn btn-solid" id="fc-edit-save">Guardar corrección</button>
     </div>
@@ -2203,6 +2218,8 @@ function openEditFlashcardModal(canonicalId, onDone){
       root.querySelectorAll("#fc-edit-prio .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on");
     }));
     root.querySelector("#fc-edit-cancel").addEventListener("click", ()=> afterContentEdit(onDone));
+    const del = root.querySelector("#fc-edit-delbank");
+    if(del) del.addEventListener("click", ()=> deleteFromBankFlow("fc", canonicalId));  // navega a Inicio: la flashcard ya no existe
     const rev = root.querySelector("#fc-edit-revert");
     if(rev) rev.addEventListener("click", ()=>{ O.ContentEdit.revert("fc", canonicalId); O.toast("Corrección descartada"); afterContentEdit(onDone); });
     root.querySelector("#fc-edit-save").addEventListener("click", ()=>{
@@ -2601,6 +2618,45 @@ async function publishMyContent(sel, onDone){
       (root)=>{ root.querySelector("#pub-x").addEventListener("click", closeModal);
         root.querySelector("#pub-cfg").addEventListener("click", ()=>{ closeModal(); openGitHubModal(); }); });
   }
+}
+
+/* borra una pregunta / flashcard del banco DE VERDAD (commit a GitHub) */
+function deleteFromBankFlow(kind, id, onDone){
+  if(!O.GHS){ O.toast("Sincronización con GitHub no disponible"); return; }
+  if(!O.GHS.hasToken()){ O.toast("Configura primero el token de GitHub"); openGitHubModal(); return; }
+  const what = kind === "fc" ? "flashcard" : "pregunta";
+  confirmDanger(
+    `Borrar esta ${what} del banco`,
+    `Se elimina de forma permanente de <code>data/</code> del repositorio (${O.escapeHtml(O.GHS.repoLabel())}) en un commit. Desaparece para todos los dispositivos cuando GitHub Pages redespliegue (~1-2 min). Esto NO es ocultarla: se borra. No se puede deshacer desde la app.`,
+    async ()=>{
+      closeModal();
+      O.toast("Borrando del banco…");
+      try{
+        const r = await O.GHS.deleteFromBank(kind, id);
+        if(O.ContentEdit){
+          if(O.ContentEdit.has(kind, id)) O.ContentEdit.revert(kind, id);
+          O.ContentEdit.purgeFromRuntime(kind, id);
+          O.persist();
+        }
+        if(O.LEB) O.LEB.recalcNow();
+        O.toast("");
+        showModal(`
+          <h3>Borrada del banco ✓</h3>
+          <p>${what[0].toUpperCase()+what.slice(1)} <code>${O.escapeHtml(id)}</code> eliminada · commit <code>${r.shaShort}</code>.</p>
+          <p style="font-size:12px;color:var(--text-2);">Ficheros: ${r.files.map(f=>`<code>${O.escapeHtml(f)}</code>`).join(" · ")}. Ya no aparece en esta sesión; el resto de dispositivos la pierden al redesplegar Pages.</p>
+          <div class="actions"><button class="btn btn-ghost" id="db-x">Entendido</button></div>
+        `, (root)=> root.querySelector("#db-x").addEventListener("click", ()=>{ closeModal(); (onDone || (()=>go("home")))(); }));
+      }catch(e){
+        O.toast("");
+        showModal(`<h3>No se pudo borrar</h3>
+          <p style="color:var(--bad,#f87171);">${O.escapeHtml(e.message)}</p>
+          <p style="font-size:12px;color:var(--text-2);">Nada se ha tocado en el repositorio.</p>
+          <div class="actions"><button class="btn btn-outline btn-sm" id="db-cfg">Configuración</button><button class="btn btn-ghost" id="db-c">Cerrar</button></div>`,
+          (root)=>{ root.querySelector("#db-c").addEventListener("click", closeModal);
+            root.querySelector("#db-cfg").addEventListener("click", ()=>{ closeModal(); openGitHubModal(); }); });
+      }
+    }
+  );
 }
 
 function renderProgress(){

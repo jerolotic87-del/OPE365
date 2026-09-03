@@ -309,10 +309,12 @@ function updateUserItem(kind, id, patch){
   return true;
 }
 
-function deleteUserItem(kind, id){
-  const u = ustore();
+// Quita un item de las estructuras EN VIVO (banco canónico, índices, grafo de
+// conceptos del motor, progreso y override asociados) para que la app deje de
+// mostrarlo sin recargar. No toca ustore() ni el repo. Lo usan tanto el
+// borrado de contenido propio como el borrado del banco vía GitHub (GHS).
+function purgeFromRuntime(kind, id){
   if(kind === "fc"){
-    u.fc = u.fc.filter(x=>x.canonicalId !== id);
     const i = O.FLASHCARDS.findIndex(x=>x.canonicalId === id);
     if(i >= 0) O.FLASHCARDS.splice(i,1);
     delete O.F_BY_ID[id];
@@ -320,7 +322,6 @@ function deleteUserItem(kind, id){
     if(O.LE){ delete O.LE.CONCEPT_OF_CARD[id];
       Object.values(O.LE.CONCEPT_BY_ID).forEach(m=>{ const k=m.flashcardIds.indexOf(id); if(k>=0) m.flashcardIds.splice(k,1); }); }
   } else {
-    u.q = u.q.filter(x=>x.id !== id);
     const i = O.QUESTIONS.findIndex(x=>x.id === id);
     if(i >= 0) O.QUESTIONS.splice(i,1);
     delete O.Q_BY_ID[id];
@@ -328,11 +329,19 @@ function deleteUserItem(kind, id){
     if(O.LE){ delete O.LE.CONCEPT_OF_Q[id];
       Object.values(O.LE.CONCEPT_BY_ID).forEach(m=>{ const k=m.questionIds.indexOf(id); if(k>=0){ m.questionIds.splice(k,1); m.size=m.questionIds.length; } }); }
   }
-  // limpiar cualquier progreso/override asociado
   if(O.PROGRESS.answers) delete O.PROGRESS.answers[id];
+  if(O.PROGRESS.marked) delete O.PROGRESS.marked[id];
   if(O.PROGRESS.flashcards) delete O.PROGRESS.flashcards[id];
-  if(bagFor("q")[id]) delete bagFor("q")[id];
-  if(bagFor("fc")[id]) delete bagFor("fc")[id];
+  const bq = bagFor("q"), bf = bagFor("fc");
+  if(bq && bq[id]) delete bq[id];
+  if(bf && bf[id]) delete bf[id];
+}
+
+function deleteUserItem(kind, id){
+  const u = ustore();
+  if(kind === "fc") u.fc = u.fc.filter(x=>x.canonicalId !== id);
+  else u.q = u.q.filter(x=>x.id !== id);
+  purgeFromRuntime(kind, id);
   O.persist();
 }
 
@@ -369,6 +378,7 @@ function markPublished(kind, id, info){
 O.ContentEdit = { applyAll, apply, revert, get, has, count, list, exportJSON, clearAll, original,
                   Q_FIELDS, FC_FIELDS,
                   createQuestion, createFlashcard, updateUserItem, deleteUserItem,
+                  purgeFromRuntime,
                   isUser, listUser, userCount, userItems, markPublished };
 
 // al cargar (antes que engine.js): fusionar contenido propio y aplicar correcciones

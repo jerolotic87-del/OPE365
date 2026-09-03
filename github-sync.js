@@ -282,6 +282,60 @@ async function publish(sel){
   return { sha, shaShort: sha.slice(0,7), count: published.length, files: Object.keys(files), items: published };
 }
 
+/* --- borrado del banco de verdad -------------------------------
+   Quita una pregunta / flashcard del repo: la elimina de
+   data/<tipo>/<section>.json (sin renumerar el resto — deja el
+   hueco, igual que publish() nunca renumera al añadir) y regenera
+   el artefacto que sirve la web. Un commit atómico. Irreversible
+   salvo revertir el commit a mano.                                */
+async function deleteFromBank(kind, id){
+  await test(); // token + permiso de escritura, falla pronto
+
+  if(kind === "fc"){
+    if(O.ContentEdit && O.ContentEdit.isUser("fc", id))
+      throw new Error("Es contenido tuyo sin publicar — bórralo desde “Mi contenido”.");
+    const m = /^([^:]+):(.+)$/.exec(id || "");
+    const card = O.F_BY_ID && O.F_BY_ID[id];
+    const section = card ? card.section : (m && m[1]);
+    const cardId  = card ? card.cardId  : (m && m[2]);
+    if(!section || !cardId) throw new Error("No se puede deducir la sección de la flashcard " + id + ".");
+    const path = `data/flashcards/${section}.json`;
+    const f = await getFile(path);
+    if(!f.existed) throw new Error("No existe " + path + " en el repo.");
+    const arr = JSON.parse(f.text);
+    const rest = arr.filter(c=> c.cardId !== cardId);
+    if(rest.length === arr.length) throw new Error(`${id} no está en ${path} (¿ya borrada, o con otro cardId?).`);
+    const bank = bankCards().filter(c=> (c.section + ":" + c.cardId) !== id);
+    const files = [
+      { path, content: JSON.stringify(rest, null, 2) + "\n" },
+      { path: "flashcards_data.js", content: dataJs("__OPE365_FLASHCARDS__", bank) },
+    ];
+    const sha = await commitFiles(files, `contenido: borrada flashcard ${id} desde la app`);
+    return { sha, shaShort: sha.slice(0,7), kind, id, files: files.map(x=>x.path) };
+  }
+
+  if(O.ContentEdit && O.ContentEdit.isUser("q", id))
+    throw new Error("Es contenido tuyo sin publicar — bórralo desde “Mi contenido”.");
+  const q = O.Q_BY_ID && O.Q_BY_ID[id];
+  const m = /^(.+)-\d+$/.exec(id || "");
+  const section = q ? ((q.sourceFile || "").replace(/\.json$/, "") || q.section) : (m && m[1]);
+  if(!section) throw new Error("No se puede deducir la sección de la pregunta " + id + ".");
+  const path = `data/questions/${section}.json`;
+  const f = await getFile(path);
+  if(!f.existed) throw new Error("No existe " + path + " en el repo.");
+  const arr = JSON.parse(f.text);
+  const rest = arr.filter(x=> x.id !== id);
+  if(rest.length === arr.length) throw new Error(`${id} no está en ${path}.`);
+  const bank = bankQuestions().filter(x=> x.id !== id);
+  const files = [
+    { path, content: JSON.stringify(rest, null, 2) + "\n" },
+    { path: "questions_data.js", content: dataJs("__OPE365_DATA__", bank) },
+    { path: "questions_all.json", content: JSON.stringify(bank).replace(/<\/script/gi, "<\\/script") },
+  ];
+  const sha = await commitFiles(files, `contenido: borrada pregunta ${id} desde la app`);
+  return { sha, shaShort: sha.slice(0,7), kind, id, files: files.map(x=>x.path) };
+}
+
 /* cuántos elementos propios quedan sin publicar */
 function pendingCount(){
   if(!O.ContentEdit || !O.ContentEdit.userItems) return 0;
@@ -291,7 +345,7 @@ function pendingCount(){
 
 O.GHS = {
   cfg, setCfg, forget, hasToken, repoLabel,
-  test, publish, pendingCount,
+  test, publish, deleteFromBank, pendingCount,
   commitFiles, getFile, cleanCard, cleanQuestion, nextCardNum, nextQNum, // testables
 };
 

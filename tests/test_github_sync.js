@@ -104,6 +104,59 @@ async function main(){
   try { await O.GHS.publish(); } catch(e){ threw = /nuevo que publicar/.test(e.message); }
   assert(threw, "publish sin pendientes lanza error explicativo");
 
+  // --- borrar del banco de verdad ---
+  const delBlobs = [];
+  const qBankFile = [{ id:"inicio-1", section:"inicio", enunciado:"uno" },
+                     { id:"inicio-2", section:"inicio", enunciado:"dos" },
+                     { id:"inicio-3", section:"inicio", enunciado:"tres" }];
+  const fcBankFile = [{ cardId:"F-001", section:"inicio", front:"a", back:"b" },
+                      { cardId:"F-002", section:"inicio", front:"c", back:"d" }];
+  window.fetch = async (url, opts)=>{
+    opts = opts || {};
+    const method = opts.method || "GET";
+    const j = (obj, status)=> ({ ok:(status||200)<300, status:status||200, json: async ()=>obj });
+    if(/\/repos\/[^/]+\/[^/]+$/.test(url)) return j({ full_name:"jerolotic87-del/OPE365", permissions:{ push:true } });
+    if(url.indexOf("/contents/data/questions/inicio.json") >= 0)
+      return j({ sha:"qsha", content: Buffer.from(JSON.stringify(qBankFile),"utf-8").toString("base64") });
+    if(url.indexOf("/contents/data/flashcards/inicio.json") >= 0)
+      return j({ sha:"fcsha", content: Buffer.from(JSON.stringify(fcBankFile),"utf-8").toString("base64") });
+    if(url.indexOf("/git/ref/heads/main") >= 0) return j({ object:{ sha:"HEADSHA" } });
+    if(url.indexOf("/git/commits/HEADSHA") >= 0) return j({ tree:{ sha:"BASETREE" } });
+    if(method === "POST" && url.indexOf("/git/blobs") >= 0){ delBlobs.push(JSON.parse(opts.body)); return j({ sha:"dblob"+delBlobs.length }); }
+    if(method === "POST" && url.indexOf("/git/trees") >= 0) return j({ sha:"DTREE" });
+    if(method === "POST" && url.indexOf("/git/commits") >= 0) return j({ sha:"del9999commit" });
+    if(method === "PATCH" && url.indexOf("/git/refs/heads/main") >= 0) return j({});
+    return j({ message:"ruta no simulada: "+url }, 404);
+  };
+  const dsrc = ()=> delBlobs.map(x=> require("buffer").Buffer.from(x.content,"base64").toString("utf-8"));
+
+  const dq = await O.GHS.deleteFromBank("q", "inicio-2");
+  assert(dq.shaShort === "del9999", "deleteFromBank(q) devuelve el sha del commit");
+  assert(dq.files.indexOf("data/questions/inicio.json") >= 0 && dq.files.indexOf("questions_data.js") >= 0
+      && dq.files.indexOf("questions_all.json") >= 0, "deleteFromBank(q) commitea fuente + ambos artefactos");
+  const qSrcBlob = dsrc().find(t=> t.indexOf('"inicio-1"') >= 0 && t.indexOf("window.") < 0 && t.indexOf("[") === 0);
+  assert(qSrcBlob && qSrcBlob.indexOf('"inicio-2"') < 0 && qSrcBlob.indexOf('"inicio-3"') >= 0,
+    "el fichero fuente pierde inicio-2 y conserva el resto sin renumerar");
+
+  delBlobs.length = 0;
+  const df = await O.GHS.deleteFromBank("fc", "inicio:F-001");
+  assert(df.files.indexOf("data/flashcards/inicio.json") >= 0 && df.files.indexOf("flashcards_data.js") >= 0,
+    "deleteFromBank(fc) commitea fuente + artefacto");
+  const fcSrcBlob = dsrc().find(t=> t.indexOf("[") === 0 && t.indexOf("F-002") >= 0);
+  assert(fcSrcBlob && fcSrcBlob.indexOf('"F-001"') < 0, "el fichero fuente de flashcards pierde F-001");
+
+  // id que no está en el fichero -> error, nada se toca
+  let dThrew = false;
+  try { await O.GHS.deleteFromBank("q", "inicio-999"); } catch(e){ dThrew = /no está en/.test(e.message); }
+  assert(dThrew, "deleteFromBank de un id inexistente lanza error y no commitea");
+
+  // contenido propio sin publicar -> redirige a Mi contenido
+  const uq = O.ContentEdit.createQuestion({ tipo:"opcion_unica", enunciado:"mía sin publicar",
+    opciones:[{text:"a"},{text:"b"}], respuesta:"A", section:"inicio", topic:"portapapeles" });
+  let uThrew = false;
+  try { await O.GHS.deleteFromBank("q", uq); } catch(e){ uThrew = /Mi contenido/.test(e.message); }
+  assert(uThrew, "deleteFromBank rechaza contenido propio sin publicar");
+
   // sin token -> test() falla antes de tocar nada
   O.GHS.forget();
   assert(O.GHS.hasToken() === false, "forget borra el token");

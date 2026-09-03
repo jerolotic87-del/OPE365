@@ -386,6 +386,18 @@ archivo, añádele preguntas a ese archivo renumerando la cola.
   empaquetado (`OPE365_Word365_Estudio.html`) NO se actualiza por esta vía;
   se regenera con `build.py` en el siguiente build real. Test:
   `tests/test_github_sync.js` (fetch mockeado, sin red).
+  - **`GHS.deleteFromBank(kind, id)`** — borrado REAL de una pregunta/flashcard
+    del banco: la quita de `data/<tipo>/<section>.json` (sin renumerar el resto
+    — deja el hueco, igual que `publish` nunca renumera al añadir) y regenera
+    el artefacto. Un commit. La sección se deduce del `id` (`<section>-N` /
+    `<section>:F-0NN`), así que funciona aunque el item no esté aún en el
+    runtime (recién publicado, sin redesplegar). Rechaza contenido propio sin
+    publicar (→ "Mi contenido"). Tras el commit la UI llama a
+    `ContentEdit.purgeFromRuntime(kind, id)` (quita el item del banco vivo, los
+    índices, el grafo de conceptos y el progreso asociado, sin recargar) +
+    `revert` de cualquier corrección + `LEB.recalcNow()`. UI: botón rojo
+    "Borrar del banco" en los modales de edición de pregunta/flashcard (`✎`) y
+    en "Mi contenido" para elementos ya publicados. Irreversible desde la app.
 
 ## Arquitectura de sesiones y compartir (app.js)
 

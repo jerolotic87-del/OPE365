@@ -155,6 +155,15 @@ const ok = (c,m)=>{ console.log((c?"  OK  ":"  XX  ")+m); if(!c) fail++; };
   ok(O5.ContentEdit.userCount() === n5 - 3, "userCount baja tras borrar cada elemento");
   ok(O5.ContentEdit.userCount() === 0, "no queda contenido propio tras borrar todo");
 
+  // ---- purgeFromRuntime sobre una pregunta del banco (lo usa el borrado vía GitHub) ----
+  const bankId = O5.QUESTIONS.find(q=> !O5.ContentEdit.isUser("q", q.id)).id;
+  const nBank = O5.QUESTIONS.length;
+  O5.PROGRESS.answers[bankId] = { tipo:"opcion_unica", correcta:true, seleccion:"A", intentos:1, ultimaVez:Date.now() };
+  O5.ContentEdit.purgeFromRuntime("q", bankId);
+  ok(!O5.Q_BY_ID[bankId] && O5.QUESTIONS.length === nBank - 1, "purgeFromRuntime quita una pregunta del banco en vivo");
+  ok(!O5.PROGRESS.answers[bankId], "purgeFromRuntime limpia el progreso asociado");
+  ok(!O5.LE.CONCEPT_OF_Q[bankId], "purgeFromRuntime la quita del grafo de conceptos del motor");
+
   // ---- huérfano seguro: id inexistente ----
   const bad = JSON.stringify({ contentOverrides:{ q:{ "no-existe-999":{respuesta:"A",ts:1} }, fc:{} }, answers:{}, marked:{}, history:[], settings:{}, challenges:{}, flashcards:{} });
   w = boot(bad);
