@@ -165,7 +165,7 @@ async function main(){
   await waitFor(()=> cHs==="waiting_rival");
   cGs.guestJoinRoom(cH.getRoomCode(), "Beto");
   await waitFor(()=> cHs==="ready" && cGsSt==="ready", 4000);
-  cHost.hostSetConfig({ rounds:2, seconds:1, section:"all", topic:"all", categoria:"all", lieRate:0.5 });
+  cHost.hostSetConfig({ rounds:2, seconds:1, section:"all", topic:"all", categoria:"all" });
   await waitFor(()=> cHost_lobby && cGuest_lobby, 3000);
 
   const cState = cHost.getState();
@@ -185,16 +185,18 @@ async function main(){
   bH.hostCreateRoom("X"); await waitFor(()=> bHs==="waiting_rival");
   bG.guestJoinRoom(bH.getRoomCode(), "Y");
   await waitFor(()=> bHs==="ready" && bGs==="ready", 4000);
-  bHost.hostSetConfig({ rounds:250, seconds:10, section:"all", topic:"all", categoria:"all", lieRate:0.5 });
+  bHost.hostSetConfig({ rounds:250, seconds:10, section:"all", topic:"all", categoria:"all" });
   await waitFor(()=> !!bPlan, 3000);
   const kinds = new Set((bPlan||[]).map(p=>p.kind));
   assert(["vf","opt","multi","match"].every(k=> kinds.has(k)), "Contra Word: el plan convierte V/F, opción única, selección múltiple y emparejamiento ("+[...kinds].sort().join(",")+")");
   assert((bPlan||[]).some(p=> p.truth === false) && (bPlan||[]).some(p=> p.truth === true), "Contra Word: Word a veces dice la verdad y a veces se equivoca");
-  // presupuesto FIJO de mentiras para toda la partida (no un dado por ronda:
-  // eso daría una dispersión binomial de ~±8 sobre 240 rondas)
+  // La tasa de mentiras se sortea por partida (no se configura) y se
+  // reparte como presupuesto FIJO: entre ~15% y ~85% de las rondas
+  // "mentibles", nunca 0 ni todas, y determinista para los dos lados.
   const nonvf = (bPlan||[]).filter(p=> p.kind !== "vf");
   const falsas = nonvf.filter(p=> p.truth === false).length;
-  assert(Math.abs(falsas - Math.round(0.5*nonvf.length)) <= 1, `Contra Word: nº de mentiras fijo para la partida (${falsas} ≈ ${Math.round(0.5*nonvf.length)}), no un dado por ronda`);
+  const frac = falsas / nonvf.length;
+  assert(frac > 0.12 && frac < 0.88, `Contra Word: tasa de mentiras aleatoria por partida dentro de banda (${(frac*100).toFixed(0)}%)`);
   bH.destroy(); bG.destroy();
 
   // Contra Word respeta el filtro de tipo de ejercicio del asistente
@@ -207,7 +209,7 @@ async function main(){
   tH.hostCreateRoom("X"); await waitFor(()=> tHs==="waiting_rival");
   tG.guestJoinRoom(tH.getRoomCode(), "Y");
   await waitFor(()=> tHs==="ready" && tGsS==="ready", 4000);
-  tHost.hostSetConfig({ rounds:20, seconds:10, section:"all", topic:"all", categoria:"all", tipo:"verdadero_falso", lieRate:0.5 });
+  tHost.hostSetConfig({ rounds:20, seconds:10, section:"all", topic:"all", categoria:"all", tipo:"verdadero_falso" });
   await waitFor(()=> tReady, 3000);
   const tq = tHost.getState().questions;
   assert(tq.length > 0 && tq.every(q=> q.tipo === "verdadero_falso"), "Contra Word: respeta el tipo de ejercicio elegido en el asistente");

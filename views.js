@@ -3791,7 +3791,7 @@ document.addEventListener("DOMContentLoaded", init);
    sin conexión; esta es la única parte que la necesita.
 ================================================================ */
 const MP = window.OPE_MP;
-let mpSetupState = { role:null, name:"", mode:"duelo", preset:"clasica", rounds:15, seconds:10, scope:"todo", section:"all", topic:"all", tipo:"all", categoria:"all", joinCode:"", raceMode:false, lieRate:0.5 };
+let mpSetupState = { role:null, name:"", mode:"duelo", preset:"clasica", rounds:15, seconds:10, scope:"todo", section:"all", topic:"all", tipo:"all", categoria:"all", joinCode:"", raceMode:false };
 let mpSession = null, mpDuel = null, mpPoker = null, mpGameMode = "duelo";
 let mpConnPhase = "idle";
 let mpDuelPhase = "idle";
@@ -3900,13 +3900,8 @@ function renderMpModeFields(){
         <div class="field"><label>Rondas</label><input type="number" id="mp-coop-rounds" min="3" max="40" value="${mpSetupState.rounds}"></div>
         <div class="field"><label>Segundos por ronda</label><input type="number" id="mp-coop-seconds" min="5" max="90" value="${mpSetupState.seconds}"></div>
       </div>
-      <p style="font-size:11.5px; font-weight:700; color:var(--text-2); text-transform:uppercase; letter-spacing:.04em; margin:var(--sp-6) 0 10px;">Cuánto miente Word</p>
-      <div class="preset-grid" id="mp-coop-lie">
-        <button class="preset-card ${mpSetupState.lieRate===0.35?'selected':''}" data-lr="0.35"><div class="t">Sincero</div><div class="d">miente poco</div></button>
-        <button class="preset-card ${mpSetupState.lieRate===0.5?'selected':''}" data-lr="0.5"><div class="t">Normal</div><div class="d">la mitad</div></button>
-        <button class="preset-card ${mpSetupState.lieRate===0.65?'selected':''}" data-lr="0.65"><div class="t">Tramposo</div><div class="d">miente mucho</div></button>
-      </div>
-      <details class="advanced" style="margin-top:var(--sp-5);">
+      <p style="font-size:11px; color:var(--text-3); margin:var(--sp-5) 0 0;">Cada partida, Word decide por su cuenta cuánto va a mentir — no lo sabréis hasta jugarla.</p>
+      <details class="advanced" style="margin-top:var(--sp-4);">
         <summary>Contenido</summary>
         <div class="config-grid" style="margin-top:var(--sp-4);">
           <div class="field"><label>Contenido</label><select id="mp-scope">
@@ -3940,10 +3935,6 @@ function renderMpModeFields(){
     if(cr) cr.addEventListener("input", ()=> mpSetupState.rounds = Math.max(3, Math.min(40, Number(cr.value)||12)));
     if(cs) cs.addEventListener("input", ()=> mpSetupState.seconds = Math.max(5, Math.min(90, Number(cs.value)||15)));
     const ct = $("#mp-tipo"); if(ct) ct.addEventListener("change", ()=> mpSetupState.tipo = ct.value);
-    $$("#mp-coop-lie .preset-card").forEach(c=> c.addEventListener("click", ()=>{
-      mpSetupState.lieRate = Number(c.getAttribute("data-lr"));
-      $$("#mp-coop-lie .preset-card").forEach(x=>x.classList.remove("selected")); c.classList.add("selected");
-    }));
     mpWireContentSelectors();
     return;
   }
@@ -4099,8 +4090,7 @@ function mpCreateGameEngine(isHost){
     mpDuel = MP.createCoopGame(mpSession);
     mpWireDuelHandlers();
     if(isHost) mpDuel.hostSetConfig(Object.assign({
-      rounds: mpSetupState.rounds, seconds: mpSetupState.seconds, lieRate: mpSetupState.lieRate,
-      tipo: mpSetupState.tipo,
+      rounds: mpSetupState.rounds, seconds: mpSetupState.seconds, tipo: mpSetupState.tipo,
     }, contentCfg));
   } else {
     mpDuel = MP.createDuelGame(mpSession);

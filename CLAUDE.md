@@ -601,7 +601,12 @@ funciona.
   (`mpCoopCorrectText`). Puntúa el equipo (los dos aciertan = +200·racha;
   uno = +90; ninguno = Word +140). Sin `raceMode`. El plan lo fija el host
   y viaja en `config.wordPlan` — igual que `questionIds` — para que ambos
-  lados vean lo mismo sin servidor. Reusa el tablero determinista, el
+  lados vean lo mismo sin servidor. **Cuánto miente Word NO se configura**
+  (sep-2026): cada partida sortea su tasa (`0.25 + rng()*0.50`, semilla
+  compartida) y la reparte como presupuesto FIJO barajado — la cantidad es
+  sorpresa pero sin rachas ni dado por ronda. El asistente sí deja elegir
+  ritmo (preset o "a tu medida": rondas 3-40, seg 5-90) y tipo de ejercicio.
+  Reusa el tablero determinista, el
   reloj y la máquina de ronda del Duelo (la vista guarda el engine en
   `mpDuel` y `mpGameMode` desambigua el render: `renderMpCoopGame`/
   `mpCoopClaimHtml`/`mpCoopRenderBody`/`renderMpCoopResults`). Resultado

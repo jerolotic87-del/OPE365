@@ -798,13 +798,17 @@ function createCoopGame(session){
   function buildWordPlan(){
     const rng = O.mulberry32(((seed >>> 0) ^ 0x9e3779b9) >>> 0);
     const pick = arr => arr[Math.floor(rng()*arr.length)];
-    const lieRate = Math.max(0.1, Math.min(0.9, Number(config.lieRate) || 0.5));
+    // Cuánto miente Word NO se configura: cada partida sortea su propia
+    // tasa (entre ~25% y ~75%) a partir de la semilla — así los jugadores
+    // no saben de antemano si les tocó un Word sincero o tramposo, pero
+    // los dos dispositivos calculan lo mismo (semilla compartida).
+    const lieRate = 0.25 + rng() * 0.50;
 
     // Presupuesto FIJO de mentiras para toda la partida, repartido entre las
     // rondas donde Word puede equivocarse (las V/F no cuentan: su verdad es
     // intrínseca a la frase). Así no se "resetea" el % en cada ronda ni salen
-    // rachas de 6 mentiras seguidas: si son 12 rondas y Word es "tramposo"
-    // (0.65), miente en 8, ni una más ni una menos, en posiciones barajadas.
+    // rachas de 6 mentiras seguidas: la CANTIDAD es sorpresa, pero está
+    // fijada de golpe y repartida en posiciones barajadas.
     const lieable = [];
     questions.forEach((q,i)=>{ if(q.tipo !== "verdadero_falso") lieable.push(i); });
     const target = Math.round(lieRate * lieable.length);
