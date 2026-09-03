@@ -360,6 +360,72 @@ input[type="date"]{ color-scheme:dark; }
   .progress-row .pr-bar{ display:none; }
 }
 
+/* ── Temario: acordeón de pestañas con subgrupos ───────────────── */
+.tm-acc-list{ display:flex; flex-direction:column; border:1px solid var(--border); border-radius:var(--radius-m); overflow:hidden; background:var(--surface); }
+.tm-acc{ border-bottom:1px solid var(--border); }
+.tm-acc:last-child{ border-bottom:none; }
+.tm-acc.is-empty{ opacity:.5; }
+
+.tm-head{
+  appearance:none; cursor:pointer; text-align:left; width:100%; background:transparent; border:none; color:var(--text);
+  display:grid; grid-template-columns:1fr 160px 46px 18px; align-items:center; gap:var(--sp-4);
+  padding:14px var(--sp-5); transition:background .13s var(--ease);
+}
+.tm-head:hover{ background:var(--surface-2); }
+.tm-head:focus-visible{ outline:none; box-shadow:inset 0 0 0 2px var(--accent); }
+.tm-head-name{ font-weight:700; font-size:14px; }
+.tm-head-meta{ font-size:11.5px; color:var(--text-3); margin-top:3px; }
+.tm-head-bar .mastery-bar{ width:100%; }
+.tm-head-pct{ font-family:var(--font-mono); font-size:12.5px; color:var(--text-2); text-align:right; }
+.tm-chev{ color:var(--text-3); display:flex; transition:transform .3s var(--ease); }
+.tm-chev svg{ width:15px; height:15px; }
+.tm-acc.open .tm-chev{ transform:rotate(90deg); }
+
+/* región plegable: grid 0fr→1fr = animación de altura fluida que empuja el resto */
+.tm-panel{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .34s cubic-bezier(.4,0,.2,1); }
+.tm-acc.open .tm-panel{ grid-template-rows:1fr; }
+.tm-panel-inner{ overflow:hidden; min-height:0; background:var(--surface-2); box-shadow:inset 0 8px 12px -10px rgba(0,0,0,.5), inset 0 -1px 0 var(--border); }
+.tm-acc.open .tm-head{ background:var(--surface-2); }
+
+/* subgrupos: claramente subordinados — pequeños, finos, tenues, sangrados */
+.tm-sub{
+  appearance:none; cursor:pointer; width:100%; text-align:left; background:transparent; border:none;
+  border-top:1px solid var(--border);
+  display:grid; grid-template-columns:9px 1fr 84px 40px; align-items:center; gap:11px;
+  padding:9px var(--sp-5) 9px calc(var(--sp-5) + 20px);
+  color:var(--text-2); transition:background .12s var(--ease);
+}
+.tm-sub:first-child{ border-top:none; }
+.tm-sub:hover:not([disabled]){ background:var(--surface); color:var(--text); }
+.tm-sub:focus-visible{ outline:none; box-shadow:inset 0 0 0 2px var(--accent); }
+.tm-sub[disabled]{ opacity:.45; cursor:default; }
+.tm-sub .state-pip{ width:8px; height:8px; border-width:2px; }
+.tm-sub-name{ font-size:12px; font-weight:400; line-height:1.3; display:block; }
+.tm-sub-stage{ font-size:10.5px; color:var(--text-3); display:block; margin-top:2px; }
+.tm-sub-bar{ height:5px; border-radius:99px; background:var(--surface-2); overflow:hidden; box-shadow:inset 0 0 0 1px var(--border); }
+.tm-sub-bar > i{ display:block; height:100%; background:var(--accent); border-radius:99px; transition:width .4s var(--ease); }
+.tm-sub-pct{ font-family:var(--font-mono); font-size:10.5px; color:var(--text-3); text-align:right; }
+
+.tm-open{
+  appearance:none; cursor:pointer; width:100%; text-align:left; background:transparent; border:none;
+  border-top:1px solid var(--border);
+  padding:10px var(--sp-5) 10px calc(var(--sp-5) + 20px);
+  font-size:11.5px; font-weight:600; color:var(--accent-ink);
+}
+.tm-open:hover{ background:var(--surface); text-decoration:underline; }
+
+@media (max-width:640px){
+  .tm-head{ grid-template-columns:1fr 46px 16px; gap:var(--sp-3); padding:13px var(--sp-4); }
+  .tm-head-bar{ display:none; }
+  .tm-sub{ grid-template-columns:8px 1fr 40px; }
+  .tm-sub-bar{ display:none; }
+}
+@media (prefers-reduced-motion: reduce){
+  .tm-panel{ transition:none; }
+  .tm-chev{ transition:none; }
+  .tm-sub-bar > i{ transition:none; }
+}
+
 .nav-list{ display:flex; flex-direction:column; border:1px solid var(--border); border-radius:var(--radius-m); overflow:hidden; background:var(--surface); }
 .nav-row{
   appearance:none; cursor:pointer; text-align:left; width:100%; background:transparent; border:none;

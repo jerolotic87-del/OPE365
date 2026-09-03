@@ -417,6 +417,13 @@ function renderChallengeCardHtml(c){
    de dominio real de cada bloque (del motor), no una rejilla.
 --------------------------------------------------------------- */
 
+/* progreso 0–100 de un subgrupo (un concepto) a partir de su fase de dominio,
+   coherente con el % de sección (asentados / total). */
+function topicPct(cv){
+  if(!cv || !cv.seen) return 0;
+  return ({ aprendiendo:33, consolidando:67, asentado:100 })[cv.mastery] || 15;
+}
+
 function renderTemario(){
   const taxStats = O.computeTaxonomyStats();
   const bd = O.LEB ? O.LEB.masteryBreakdown() : null;
@@ -430,7 +437,7 @@ function renderTemario(){
            : `<p>${O.TAXONOMY_SECTIONS.length} pestañas de la cinta de Word 365.</p>`}
     </div>
 
-    <div class="progress-list">
+    <div class="tm-acc-list">
       ${O.TAXONOMY_SECTIONS.map(sec=>{
         const st = taxStats[sec.id] || {questions:0, flashcards:0};
         const scm = O.LEB ? O.LEB.sectionConceptsModel(sec.id) : null;
@@ -441,18 +448,61 @@ function renderTemario(){
           aprendiendo:scm.topics.filter(t=>t.mastery==="aprendiendo").length,
           nuevo:scm.topics.filter(t=>!t.seen).length } : null;
         const repaso = scm ? scm.repaso : 0;
-        return `<button class="progress-row${empty?' is-empty':''}" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
-          <div class="pr-main">
-            <div class="pr-name">${O.escapeHtml(sec.name)}</div>
-            <div class="pr-meta">${scm && scm.total ? `${scm.total} bloque${scm.total===1?'':'s'} · ` : ''}${st.questions} pregunta${st.questions===1?'':'s'}${repaso?` · <span class="mini-warn">${repaso} a repasar</span>`:''}</div>
+        const subs = (scm && scm.topics) ? scm.topics : [];
+        const canExpand = subs.length > 0;
+        // % de la pestaña = media del progreso de sus subgrupos (coherente con lo que se ve al abrir)
+        const pct = canExpand ? Math.round(subs.reduce((a,t)=>a+topicPct(t),0)/subs.length)
+                              : (scm && scm.total ? Math.round((barB.asentado/barB.total)*100) : null);
+
+        const headInner = `
+          <div class="tm-head-main">
+            <div class="tm-head-name">${O.escapeHtml(sec.name)}</div>
+            <div class="tm-head-meta">${scm && scm.total ? `${scm.total} bloque${scm.total===1?'':'s'} · ` : ''}${st.questions} pregunta${st.questions===1?'':'s'}${repaso?` · <span class="mini-warn">${repaso} a repasar</span>`:''}</div>
           </div>
-          <div class="pr-bar">${barB && barB.total ? masteryBarHtml(barB) : (empty ? '<span class="pr-emptydash">sin preguntas</span>' : '<div class="bar-track"></div>')}</div>
-          <div class="pr-pct">${scm && scm.total ? Math.round((barB.asentado/barB.total)*100)+'%' : '—'}</div>
-          <span class="pr-chev">${icon('chevronR')}</span>
-        </button>`;
+          <div class="tm-head-bar">${barB && barB.total ? masteryBarHtml(barB) : (empty ? '<span class="pr-emptydash">sin preguntas</span>' : '')}</div>
+          <div class="tm-head-pct">${pct!=null ? pct+'%' : '—'}</div>
+          <span class="tm-chev">${icon('chevronR')}</span>`;
+
+        if(!canExpand){
+          return `<div class="tm-acc${empty?' is-empty':''}">
+            <button class="tm-head" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>${headInner}</button>
+          </div>`;
+        }
+        return `<div class="tm-acc" data-sec="${sec.id}">
+          <button class="tm-head" aria-expanded="false" data-tm-toggle>${headInner}</button>
+          <div class="tm-panel"><div class="tm-panel-inner">
+            ${subs.map(t=>{
+              const p = topicPct(t);
+              const stage = t.seen ? t.masteryLabel : 'Sin empezar';
+              return `<button class="tm-sub" data-sec="${sec.id}" data-topic="${t.topicId}" ${t.questionCount?'':'disabled'}>
+                <span class="state-pip tone-${t.seen?t.masteryTone:'neutral'}"></span>
+                <span class="tm-sub-body">
+                  <span class="tm-sub-name">${O.escapeHtml(t.topicName)}</span>
+                  <span class="tm-sub-stage">${stage}${t.reviewLabel?` · <span class="mini-warn">${t.reviewLabel}</span>`:''} · ${t.questionCount} pregunta${t.questionCount===1?'':'s'}</span>
+                </span>
+                <span class="tm-sub-bar"><i style="width:${p}%"></i></span>
+                <span class="tm-sub-pct">${p}%</span>
+              </button>`;
+            }).join("")}
+            <button class="tm-open" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
+              Practicar la pestaña · flashcards · errores <span aria-hidden="true">›</span>
+            </button>
+          </div></div>
+        </div>`;
       }).join("")}
     </div>
   </div>`;
+
+  $$(".tm-head[data-tm-toggle]").forEach(head=> head.addEventListener("click", ()=>{
+    const item = head.closest(".tm-acc");
+    const open = item.classList.toggle("open");
+    head.setAttribute("aria-expanded", open ? "true" : "false");
+  }));
+  $$(".tm-sub[data-topic]").forEach(btn=> btn.addEventListener("click", ()=>{
+    const sid = btn.getAttribute("data-sec"), tid = btn.getAttribute("data-topic");
+    const s2 = O.buildSession({mode:"practice", section:sid, topic:tid, count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
+    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No hay preguntas en este grupo");
+  }));
 }
 
 function renderHistory(){

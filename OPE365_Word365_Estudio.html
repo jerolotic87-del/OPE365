@@ -369,6 +369,72 @@ input[type="date"]{ color-scheme:dark; }
   .progress-row .pr-bar{ display:none; }
 }
 
+/* ── Temario: acordeón de pestañas con subgrupos ───────────────── */
+.tm-acc-list{ display:flex; flex-direction:column; border:1px solid var(--border); border-radius:var(--radius-m); overflow:hidden; background:var(--surface); }
+.tm-acc{ border-bottom:1px solid var(--border); }
+.tm-acc:last-child{ border-bottom:none; }
+.tm-acc.is-empty{ opacity:.5; }
+
+.tm-head{
+  appearance:none; cursor:pointer; text-align:left; width:100%; background:transparent; border:none; color:var(--text);
+  display:grid; grid-template-columns:1fr 160px 46px 18px; align-items:center; gap:var(--sp-4);
+  padding:14px var(--sp-5); transition:background .13s var(--ease);
+}
+.tm-head:hover{ background:var(--surface-2); }
+.tm-head:focus-visible{ outline:none; box-shadow:inset 0 0 0 2px var(--accent); }
+.tm-head-name{ font-weight:700; font-size:14px; }
+.tm-head-meta{ font-size:11.5px; color:var(--text-3); margin-top:3px; }
+.tm-head-bar .mastery-bar{ width:100%; }
+.tm-head-pct{ font-family:var(--font-mono); font-size:12.5px; color:var(--text-2); text-align:right; }
+.tm-chev{ color:var(--text-3); display:flex; transition:transform .3s var(--ease); }
+.tm-chev svg{ width:15px; height:15px; }
+.tm-acc.open .tm-chev{ transform:rotate(90deg); }
+
+/* región plegable: grid 0fr→1fr = animación de altura fluida que empuja el resto */
+.tm-panel{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .34s cubic-bezier(.4,0,.2,1); }
+.tm-acc.open .tm-panel{ grid-template-rows:1fr; }
+.tm-panel-inner{ overflow:hidden; min-height:0; background:var(--surface-2); box-shadow:inset 0 8px 12px -10px rgba(0,0,0,.5), inset 0 -1px 0 var(--border); }
+.tm-acc.open .tm-head{ background:var(--surface-2); }
+
+/* subgrupos: claramente subordinados — pequeños, finos, tenues, sangrados */
+.tm-sub{
+  appearance:none; cursor:pointer; width:100%; text-align:left; background:transparent; border:none;
+  border-top:1px solid var(--border);
+  display:grid; grid-template-columns:9px 1fr 84px 40px; align-items:center; gap:11px;
+  padding:9px var(--sp-5) 9px calc(var(--sp-5) + 20px);
+  color:var(--text-2); transition:background .12s var(--ease);
+}
+.tm-sub:first-child{ border-top:none; }
+.tm-sub:hover:not([disabled]){ background:var(--surface); color:var(--text); }
+.tm-sub:focus-visible{ outline:none; box-shadow:inset 0 0 0 2px var(--accent); }
+.tm-sub[disabled]{ opacity:.45; cursor:default; }
+.tm-sub .state-pip{ width:8px; height:8px; border-width:2px; }
+.tm-sub-name{ font-size:12px; font-weight:400; line-height:1.3; display:block; }
+.tm-sub-stage{ font-size:10.5px; color:var(--text-3); display:block; margin-top:2px; }
+.tm-sub-bar{ height:5px; border-radius:99px; background:var(--surface-2); overflow:hidden; box-shadow:inset 0 0 0 1px var(--border); }
+.tm-sub-bar > i{ display:block; height:100%; background:var(--accent); border-radius:99px; transition:width .4s var(--ease); }
+.tm-sub-pct{ font-family:var(--font-mono); font-size:10.5px; color:var(--text-3); text-align:right; }
+
+.tm-open{
+  appearance:none; cursor:pointer; width:100%; text-align:left; background:transparent; border:none;
+  border-top:1px solid var(--border);
+  padding:10px var(--sp-5) 10px calc(var(--sp-5) + 20px);
+  font-size:11.5px; font-weight:600; color:var(--accent-ink);
+}
+.tm-open:hover{ background:var(--surface); text-decoration:underline; }
+
+@media (max-width:640px){
+  .tm-head{ grid-template-columns:1fr 46px 16px; gap:var(--sp-3); padding:13px var(--sp-4); }
+  .tm-head-bar{ display:none; }
+  .tm-sub{ grid-template-columns:8px 1fr 40px; }
+  .tm-sub-bar{ display:none; }
+}
+@media (prefers-reduced-motion: reduce){
+  .tm-panel{ transition:none; }
+  .tm-chev{ transition:none; }
+  .tm-sub-bar > i{ transition:none; }
+}
+
 .nav-list{ display:flex; flex-direction:column; border:1px solid var(--border); border-radius:var(--radius-m); overflow:hidden; background:var(--surface); }
 .nav-row{
   appearance:none; cursor:pointer; text-align:left; width:100%; background:transparent; border:none;
@@ -5727,6 +5793,13 @@ function renderChallengeCardHtml(c){
    de dominio real de cada bloque (del motor), no una rejilla.
 --------------------------------------------------------------- */
 
+/* progreso 0–100 de un subgrupo (un concepto) a partir de su fase de dominio,
+   coherente con el % de sección (asentados / total). */
+function topicPct(cv){
+  if(!cv || !cv.seen) return 0;
+  return ({ aprendiendo:33, consolidando:67, asentado:100 })[cv.mastery] || 15;
+}
+
 function renderTemario(){
   const taxStats = O.computeTaxonomyStats();
   const bd = O.LEB ? O.LEB.masteryBreakdown() : null;
@@ -5740,7 +5813,7 @@ function renderTemario(){
            : `<p>${O.TAXONOMY_SECTIONS.length} pestañas de la cinta de Word 365.</p>`}
     </div>
 
-    <div class="progress-list">
+    <div class="tm-acc-list">
       ${O.TAXONOMY_SECTIONS.map(sec=>{
         const st = taxStats[sec.id] || {questions:0, flashcards:0};
         const scm = O.LEB ? O.LEB.sectionConceptsModel(sec.id) : null;
@@ -5751,18 +5824,61 @@ function renderTemario(){
           aprendiendo:scm.topics.filter(t=>t.mastery==="aprendiendo").length,
           nuevo:scm.topics.filter(t=>!t.seen).length } : null;
         const repaso = scm ? scm.repaso : 0;
-        return `<button class="progress-row${empty?' is-empty':''}" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
-          <div class="pr-main">
-            <div class="pr-name">${O.escapeHtml(sec.name)}</div>
-            <div class="pr-meta">${scm && scm.total ? `${scm.total} bloque${scm.total===1?'':'s'} · ` : ''}${st.questions} pregunta${st.questions===1?'':'s'}${repaso?` · <span class="mini-warn">${repaso} a repasar</span>`:''}</div>
+        const subs = (scm && scm.topics) ? scm.topics : [];
+        const canExpand = subs.length > 0;
+        // % de la pestaña = media del progreso de sus subgrupos (coherente con lo que se ve al abrir)
+        const pct = canExpand ? Math.round(subs.reduce((a,t)=>a+topicPct(t),0)/subs.length)
+                              : (scm && scm.total ? Math.round((barB.asentado/barB.total)*100) : null);
+
+        const headInner = `
+          <div class="tm-head-main">
+            <div class="tm-head-name">${O.escapeHtml(sec.name)}</div>
+            <div class="tm-head-meta">${scm && scm.total ? `${scm.total} bloque${scm.total===1?'':'s'} · ` : ''}${st.questions} pregunta${st.questions===1?'':'s'}${repaso?` · <span class="mini-warn">${repaso} a repasar</span>`:''}</div>
           </div>
-          <div class="pr-bar">${barB && barB.total ? masteryBarHtml(barB) : (empty ? '<span class="pr-emptydash">sin preguntas</span>' : '<div class="bar-track"></div>')}</div>
-          <div class="pr-pct">${scm && scm.total ? Math.round((barB.asentado/barB.total)*100)+'%' : '—'}</div>
-          <span class="pr-chev">${icon('chevronR')}</span>
-        </button>`;
+          <div class="tm-head-bar">${barB && barB.total ? masteryBarHtml(barB) : (empty ? '<span class="pr-emptydash">sin preguntas</span>' : '')}</div>
+          <div class="tm-head-pct">${pct!=null ? pct+'%' : '—'}</div>
+          <span class="tm-chev">${icon('chevronR')}</span>`;
+
+        if(!canExpand){
+          return `<div class="tm-acc${empty?' is-empty':''}">
+            <button class="tm-head" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>${headInner}</button>
+          </div>`;
+        }
+        return `<div class="tm-acc" data-sec="${sec.id}">
+          <button class="tm-head" aria-expanded="false" data-tm-toggle>${headInner}</button>
+          <div class="tm-panel"><div class="tm-panel-inner">
+            ${subs.map(t=>{
+              const p = topicPct(t);
+              const stage = t.seen ? t.masteryLabel : 'Sin empezar';
+              return `<button class="tm-sub" data-sec="${sec.id}" data-topic="${t.topicId}" ${t.questionCount?'':'disabled'}>
+                <span class="state-pip tone-${t.seen?t.masteryTone:'neutral'}"></span>
+                <span class="tm-sub-body">
+                  <span class="tm-sub-name">${O.escapeHtml(t.topicName)}</span>
+                  <span class="tm-sub-stage">${stage}${t.reviewLabel?` · <span class="mini-warn">${t.reviewLabel}</span>`:''} · ${t.questionCount} pregunta${t.questionCount===1?'':'s'}</span>
+                </span>
+                <span class="tm-sub-bar"><i style="width:${p}%"></i></span>
+                <span class="tm-sub-pct">${p}%</span>
+              </button>`;
+            }).join("")}
+            <button class="tm-open" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
+              Practicar la pestaña · flashcards · errores <span aria-hidden="true">›</span>
+            </button>
+          </div></div>
+        </div>`;
       }).join("")}
     </div>
   </div>`;
+
+  $$(".tm-head[data-tm-toggle]").forEach(head=> head.addEventListener("click", ()=>{
+    const item = head.closest(".tm-acc");
+    const open = item.classList.toggle("open");
+    head.setAttribute("aria-expanded", open ? "true" : "false");
+  }));
+  $$(".tm-sub[data-topic]").forEach(btn=> btn.addEventListener("click", ()=>{
+    const sid = btn.getAttribute("data-sec"), tid = btn.getAttribute("data-topic");
+    const s2 = O.buildSession({mode:"practice", section:sid, topic:tid, count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
+    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No hay preguntas en este grupo");
+  }));
 }
 
 function renderHistory(){

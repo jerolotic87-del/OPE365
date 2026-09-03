@@ -71,8 +71,14 @@ try {
   await shot('01-home-desktop');
 
   await click('[data-goto="temario"]');
-  await page.waitForSelector('.progress-list');
+  await page.waitForSelector('.tm-acc-list');
   ok((await page.locator('[data-goto="temario-detalle"]').count()) === 10, 'Temario: 10 pestañas');
+  // acordeón: abre una pestaña y comprueba subgrupos con %
+  const acc = page.locator('.tm-acc[data-sec] .tm-head[data-tm-toggle]').first();
+  await acc.click();
+  await page.waitForTimeout(400);
+  ok(await seen('.tm-acc.open .tm-sub .tm-sub-pct'), 'Temario: el acordeón abre y muestra subgrupos con %');
+  await shot('02a-temario-acordeon');
   await click('[data-goto="temario-detalle"]');
   await page.waitForSelector('.nav-row[data-topic], .empty-state');
   await shot('02-temario-detalle');
