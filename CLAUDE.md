@@ -193,7 +193,13 @@ silencio ni elijas arbitrariamente.
   Prueba en vivo del usuario. Borradas `inicio-258/360`; corrigió
   `inicio-257/361/362` (subíndice), `inicio-157/158` y `inicio-259`
   (emparejamiento reconstruido solo con atajos confirmados) y el distractor
-  fósil de `vista-124`.
+  fósil de `vista-124`. Notación: `atajos_oficial.json` escribe el subíndice
+  como `Ctrl+Mayús+` + `-` — se nombra la **tecla** (signo menos), no el
+  carácter que saldría con Mayús (`_`); es correcta tal cual. La mayoría de
+  webs (y Microsoft Support ES, poco fiable) repiten el esquema
+  internacional `Ctrl+=` para subíndice y `Ctrl+Mayús++` para superíndice —
+  ninguno funciona aquí. `atajos_oficial.json` también lista `Ctrl+Mayús+0`
+  para subíndice: en vivo no hace nada (entrada fósil de ATAJOS.docx).
 - **Tamaño de fuente — la tecla `<>`** (izquierda de la Z). En el teclado
   ES esa tecla da `<` sin Mayús y `>` con Mayús, así que **`Ctrl+Mayús+<` y
   `Ctrl+>` NO existen** — son notaciones contradictorias y no deben
