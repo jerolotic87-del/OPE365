@@ -4164,6 +4164,7 @@ function renderMpLobby(){
         <div class="glyph" style="font-size:30px; margin-bottom:var(--sp-3); color:var(--bad);">⚠</div>
         <h3>${MP_CONN_LABELS[mpConnPhase]}</h3>
         <p>${mpConnPhase==="room_full" ? "Esa partida ya tiene dos jugadores." : "El servidor de conexión (PeerJS) no responde o vuestras redes no dejan abrir el canal. No tiene que ver con las preguntas: el contenido ni se carga hasta estar conectados."}</p>
+        ${mpConnPhase==="room_full" ? "" : `<p style="font-size:12.5px; color:var(--text-2); margin-top:8px;">Con <strong>datos móviles</strong> (4G/5G) la conexión directa suele fallar. Probad los dos en <strong>Wi-Fi</strong>.</p>`}
       </div>
       <div class="actions" style="justify-content:center; margin-top:var(--sp-5);">
         <button class="btn btn-outline" id="mp-retry">Intentar de nuevo</button>
