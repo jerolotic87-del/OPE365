@@ -157,6 +157,37 @@ async function main(){
   try { await O.GHS.deleteFromBank("q", uq); } catch(e){ uThrew = /Mi contenido/.test(e.message); }
   assert(uThrew, "deleteFromBank rechaza contenido propio sin publicar");
 
+  // --- publicar una corrección al banco (applyEditToBank) ---
+  const editBlobs = [];
+  const qEditFile = [{ id:"inicio-7", section:"inicio", enunciado:"viejo", opciones:[{letter:"A",text:"a"},{letter:"B",text:"b"}], respuesta:"A", explicacion:"vieja" }];
+  window.fetch = async (url, opts)=>{
+    opts = opts || {};
+    const method = opts.method || "GET";
+    const j = (obj,status)=> ({ ok:(status||200)<300, status:status||200, json: async ()=>obj });
+    if(/\/repos\/[^/]+\/[^/]+$/.test(url)) return j({ full_name:"jerolotic87-del/OPE365", permissions:{ push:true } });
+    if(url.indexOf("/contents/data/questions/inicio.json") >= 0)
+      return j({ sha:"qe", content: Buffer.from(JSON.stringify(qEditFile),"utf-8").toString("base64") });
+    if(url.indexOf("/git/ref/heads/main") >= 0) return j({ object:{ sha:"H" } });
+    if(url.indexOf("/git/commits/H") >= 0) return j({ tree:{ sha:"T" } });
+    if(method === "POST" && url.indexOf("/git/blobs") >= 0){ editBlobs.push(JSON.parse(opts.body)); return j({ sha:"eb"+editBlobs.length }); }
+    if(method === "POST" && url.indexOf("/git/trees") >= 0) return j({ sha:"NT" });
+    if(method === "POST" && url.indexOf("/git/commits") >= 0) return j({ sha:"edit777commit" });
+    if(method === "PATCH" && url.indexOf("/git/refs/heads/main") >= 0) return j({});
+    return j({ message:"no simulada: "+url }, 404);
+  };
+  const q7 = O.QUESTIONS.find(x=>x.id==="inicio-7") || O.Q_BY_ID["inicio-7"];
+  O.ContentEdit.apply("q", "inicio-7", { explicacion:"EXPLICACIÓN CORREGIDA", enunciado:"nuevo enunciado" });
+  assert(O.Q_BY_ID["inicio-7"].explicacion === "EXPLICACIÓN CORREGIDA", "corrección aplicada en memoria");
+  const er = await O.GHS.applyEditToBank("q", "inicio-7");
+  assert(er.shaShort === "edit777", "applyEditToBank devuelve el sha del commit");
+  const srcBlob = editBlobs.map(x=> require("buffer").Buffer.from(x.content,"base64").toString("utf-8"))
+    .find(t=> t.indexOf("[") === 0 && t.indexOf("inicio-7") >= 0);
+  assert(srcBlob && srcBlob.indexOf("EXPLICACIÓN CORREGIDA") >= 0 && srcBlob.indexOf("nuevo enunciado") >= 0,
+    "el fichero fuente recibe los campos corregidos");
+  O.ContentEdit.bake("q", "inicio-7");
+  assert(!O.ContentEdit.has("q", "inicio-7") && O.Q_BY_ID["inicio-7"].explicacion === "EXPLICACIÓN CORREGIDA",
+    "bake() quita el override pero conserva los valores corregidos");
+
   // sin token -> test() falla antes de tocar nada
   O.GHS.forget();
   assert(O.GHS.hasToken() === false, "forget borra el token");

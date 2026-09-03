@@ -74,6 +74,8 @@ const rows = w => w.document.querySelectorAll("#bk-body .qlist-item").length;
   expl.dispatchEvent(new w.Event("change", { bubbles:true }));
   ok(O.Q_BY_ID[sample.id].explicacion === "Explicación corregida por el test." && O.ContentEdit.has("q", sample.id),
     "editar en el panel guarda la corrección en el objeto canónico");
+  ok(!!w.document.querySelector("#bk-ed-save") && w.document.querySelector("#bk-ed-publish") && !w.document.querySelector("#bk-ed-publish").disabled,
+    "con corrección pendiente: botones Guardar y Publicar al banco activos");
 
   // volver el campo al valor original en el propio panel -> la corrección se retira sola
   expl.value = origExpl;

@@ -282,6 +282,70 @@ async function publish(sel){
   return { sha, shaShort: sha.slice(0,7), count: published.length, files: Object.keys(files), items: published };
 }
 
+/* --- corregir en el banco de verdad ---------------------------
+   Escribe los campos editables ya corregidos (en memoria vía
+   ContentEdit) del item `id` en data/<tipo>/<section>.json y
+   regenera el artefacto. Un commit. La UI llama después a
+   ContentEdit.bake() para dar la corrección por incorporada.     */
+async function applyEditToBank(kind, id){
+  await test();
+  if(O.ContentEdit && O.ContentEdit.isUser(kind, id))
+    throw new Error("Es contenido tuyo — publícalo desde “Mi contenido”.");
+
+  if(kind === "fc"){
+    const card = O.F_BY_ID && O.F_BY_ID[id];
+    if(!card) throw new Error("Flashcard no encontrada en el banco: " + id);
+    const m = /^([^:]+):(.+)$/.exec(id || "");
+    const section = card.section || (m && m[1]);
+    const cardId  = card.cardId  || (m && m[2]);
+    if(!section || !cardId) throw new Error("No se puede deducir la sección de " + id + ".");
+    const path = `data/flashcards/${section}.json`;
+    const f = await getFile(path);
+    if(!f.existed) throw new Error("No existe " + path + " en el repo.");
+    const arr = JSON.parse(f.text);
+    const entry = arr.find(c=> c.cardId === cardId);
+    if(!entry) throw new Error(`${id} no está en ${path}.`);
+    entry.front = String(card.front || "").trim();
+    entry.back  = String(card.back || "").trim();
+    entry.priority = card.priority === "alta" ? "alta" : "normal";
+    const files = [
+      { path, content: JSON.stringify(arr, null, 2) + "\n" },
+      { path: "flashcards_data.js", content: dataJs("__OPE365_FLASHCARDS__", bankCards()) },
+    ];
+    const sha = await commitFiles(files, `contenido: corregida flashcard ${id} desde la app`);
+    return { sha, shaShort: sha.slice(0,7), kind, id, files: files.map(x=>x.path) };
+  }
+
+  const q = O.Q_BY_ID && O.Q_BY_ID[id];
+  if(!q) throw new Error("Pregunta no encontrada en el banco: " + id);
+  const m = /^(.+)-\d+$/.exec(id || "");
+  const section = (q.sourceFile || "").replace(/\.json$/, "") || q.section || (m && m[1]);
+  if(!section) throw new Error("No se puede deducir la sección de " + id + ".");
+  const path = `data/questions/${section}.json`;
+  const f = await getFile(path);
+  if(!f.existed) throw new Error("No existe " + path + " en el repo.");
+  const arr = JSON.parse(f.text);
+  const entry = arr.find(x=> x.id === id);
+  if(!entry) throw new Error(`${id} no está en ${path}.`);
+  entry.enunciado = String(q.enunciado || "").trim();
+  if(Array.isArray(q.opciones) && Array.isArray(entry.opciones)){
+    entry.opciones = entry.opciones.map(o=>{
+      const src = q.opciones.find(x=> x.letter === o.letter);
+      return { letter: o.letter, text: src ? String(src.text || "").trim() : o.text };
+    });
+  }
+  entry.respuesta = q.respuesta;
+  entry.explicacion = String(q.explicacion || "").trim();
+  entry.negativa = !!q.negativa;
+  const files = [
+    { path, content: JSON.stringify(arr, null, 2) + "\n" },
+    { path: "questions_data.js", content: dataJs("__OPE365_DATA__", bankQuestions()) },
+    { path: "questions_all.json", content: JSON.stringify(bankQuestions()).replace(/<\/script/gi, "<\\/script") },
+  ];
+  const sha = await commitFiles(files, `contenido: corregida pregunta ${id} desde la app`);
+  return { sha, shaShort: sha.slice(0,7), kind, id, files: files.map(x=>x.path) };
+}
+
 /* --- borrado del banco de verdad -------------------------------
    Quita una pregunta / flashcard del repo: la elimina de
    data/<tipo>/<section>.json (sin renumerar el resto — deja el
@@ -345,7 +409,7 @@ function pendingCount(){
 
 O.GHS = {
   cfg, setCfg, forget, hasToken, repoLabel,
-  test, publish, deleteFromBank, pendingCount,
+  test, publish, applyEditToBank, deleteFromBank, pendingCount,
   commitFiles, getFile, cleanCard, cleanQuestion, nextCardNum, nextQNum, // testables
 };
 

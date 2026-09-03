@@ -11967,5 +11967,41 @@
   "matching": null,
   "respuesta": "A",
   "explicacion": "Archivo → Opciones → Barra de herramientas de acceso rápido → Importar o exportar... → Importar archivo de personalización. Al importar se pierden todas las personalizaciones anteriores, tanto de la barra como de la cinta; conviene exportar la configuración actual antes."
+ },
+ {
+  "id": "archivo-337",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "general",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-personalizar",
+  "subtopic": "Barra de herramientas de acceso rápido",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-bar-14",
+  "generado": true,
+  "enunciado": "Sobre la barra de herramientas de acceso rápido de Word 365, ¿cuál de estas afirmaciones es correcta?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Su personalización es total, pero solo se pueden agregar comandos, no listas ni estilos individuales"
+   },
+   {
+    "letter": "B",
+    "text": "Solo admite los comandos que Microsoft define por defecto; no se puede añadir ninguno más"
+   },
+   {
+    "letter": "C",
+    "text": "Su personalización tiene las mismas limitaciones que la cinta de opciones"
+   },
+   {
+    "letter": "D",
+    "text": "Puede contener comandos, listas desplegables y estilos, igual que un grupo de la cinta"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "A diferencia de la cinta de opciones, la personalización de la barra de acceso rápido es total: puedes quitar y reordenar todo. Pero solo admite comandos sueltos: no galerías, listas desplegables ni estilos individuales. Sus botones predeterminados son Guardar automáticamente, Guardar, Deshacer, Rehacer y Personalizar."
  }
 ]

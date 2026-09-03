@@ -116,6 +116,17 @@ function revert(kind, id){
 function get(kind, id){ return bagFor(kind === "fc" ? "fc" : "q")[id] || null; }
 function has(kind, id){ return !!get(kind, id); }
 
+// "hornea" la corrección: la da por incorporada al banco de origen (la usa
+// github-sync.js tras un commit) — borra el registro de override y el
+// snapshot original SIN restaurar el objeto, así que los valores corregidos
+// se quedan y deja de aparecer el badge "corregida".
+function bake(kind, id){
+  if(kind !== "fc") kind = "q";
+  delete bagFor(kind)[id];
+  delete _orig[kind][id];
+  O.persist();
+}
+
 function count(){
   const c = store();
   return Object.keys(c.q).length + Object.keys(c.fc).length;
@@ -375,7 +386,7 @@ function markPublished(kind, id, info){
   return true;
 }
 
-O.ContentEdit = { applyAll, apply, revert, get, has, count, list, exportJSON, clearAll, original,
+O.ContentEdit = { applyAll, apply, revert, bake, get, has, count, list, exportJSON, clearAll, original,
                   Q_FIELDS, FC_FIELDS,
                   createQuestion, createFlashcard, updateUserItem, deleteUserItem,
                   purgeFromRuntime,

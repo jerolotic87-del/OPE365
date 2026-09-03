@@ -2757,10 +2757,13 @@ function bancoSaveEditor(kind, id){
   if(O.ContentEdit.has(kind, id)) O.ContentEdit.revert(kind, id);   // parte de cero para poder quitar campos
   if(Object.keys(patch).length) O.ContentEdit.apply(kind, id, patch);
   if(O.LEB && O.LEB.recalcSoon) O.LEB.recalcSoon();
-  bancoSaveStatus(O.ContentEdit.has(kind, id) ? "Guardado ✓ (corrección local)" : "Sin cambios · original");
-  // refresca los meta de la fila seleccionada
+  const ov = O.ContentEdit.has(kind, id);
+  bancoSaveStatus(ov ? "Guardado ✓ (corrección local · sin publicar)" : "Sin cambios · igual que el original");
+  // refresca fila + botón de publicar + chip de estado
   const row = $(`#bk-body [data-${kind==="fc"?"fcid":"qid"}="${id}"]`);
-  if(row) row.classList.toggle("has-ov", O.ContentEdit.has(kind, id));
+  if(row){ row.classList.toggle("has-ov", ov); const bd = row.querySelector(".badge"); if(bd) bd.textContent = ov ? "✎" : "·"; }
+  const pub = $("#bk-ed-publish"); if(pub) pub.disabled = !ov;
+  const rev = $("#bk-ed-revert"); if(rev) rev.disabled = !ov;
 }
 function bancoSaveStatus(msg, bad){
   const el = $("#bk-ed-status"); if(!el) return;
@@ -2768,6 +2771,38 @@ function bancoSaveStatus(msg, bad){
   el.style.color = bad ? "var(--bad,#f87171)" : "var(--ok,#4ade80)";
   clearTimeout(bancoSaveStatus._t);
   bancoSaveStatus._t = setTimeout(()=>{ if($("#bk-ed-status")===el){ el.textContent = ""; } }, 2200);
+}
+
+/* publica al repo los campos ya corregidos de una pregunta/flashcard */
+function bancoPublishEdit(kind, id, onDone){
+  if(!O.GHS || !O.GHS.hasToken()){ O.toast("Configura el token de GitHub"); openGitHubModal(); return; }
+  if(!O.ContentEdit || !O.ContentEdit.has(kind, id)){ O.toast("No hay ninguna corrección pendiente"); return; }
+  const what = kind === "fc" ? "flashcard" : "pregunta";
+  confirmDanger(
+    "Publicar la corrección al banco",
+    `Se escriben los campos corregidos de esta ${what} en <code>data/</code> del repositorio (${O.escapeHtml(O.GHS.repoLabel())}) en un commit. Queda permanente y para todos los dispositivos (~1-2 min).`,
+    async ()=>{
+      closeModal(); O.toast("Publicando corrección…");
+      try{
+        const r = await O.GHS.applyEditToBank(kind, id);
+        O.ContentEdit.bake(kind, id);
+        if(O.LEB) O.LEB.recalcNow();
+        O.toast("");
+        showModal(`<h3>Corrección publicada ✓</h3>
+          <p>${what[0].toUpperCase()+what.slice(1)} <code>${O.escapeHtml(id)}</code> · commit <code>${r.shaShort}</code>.</p>
+          <p style="font-size:12px;color:var(--text-2);">Ficheros: ${r.files.map(f=>`<code>${O.escapeHtml(f)}</code>`).join(" · ")}.</p>
+          <div class="actions"><button class="btn btn-ghost" id="pe-x">Entendido</button></div>`,
+          (root)=> root.querySelector("#pe-x").addEventListener("click", ()=>{ closeModal(); (onDone||(()=>{}))(); }));
+      }catch(e){
+        O.toast("");
+        showModal(`<h3>No se pudo publicar</h3><p style="color:var(--bad,#f87171);">${O.escapeHtml(e.message)}</p>
+          <p style="font-size:12px;color:var(--text-2);">Nada se ha tocado en el repositorio. La corrección local sigue guardada.</p>
+          <div class="actions"><button class="btn btn-outline btn-sm" id="pe-cfg">Configuración</button><button class="btn btn-ghost" id="pe-c">Cerrar</button></div>`,
+          (root)=>{ root.querySelector("#pe-c").addEventListener("click", closeModal);
+            root.querySelector("#pe-cfg").addEventListener("click", ()=>{ closeModal(); openGitHubModal(); }); });
+      }
+    }
+  );
 }
 
 function renderBancoAdmin(){
@@ -2905,15 +2940,19 @@ function renderBancoAdmin(){
            <div class="actions" style="flex-wrap:wrap;"><button class="btn btn-solid btn-sm" id="bk-ed-openuser">Abrir editor completo</button>
            <button class="btn btn-ghost btn-sm" id="bk-ed-deluser">Eliminar</button></div>`
         : `${isQ ? qEditFormHtml(obj, orig, "bk-ed") : fcEditFormHtml(orig, "bk-ed")}
-           <span id="bk-ed-status" style="display:block;min-height:16px;font-size:12px;margin:2px 0 8px;"></span>
+           <span id="bk-ed-status" style="display:block;min-height:16px;font-size:12px;margin:2px 0 8px;">${hasOv?'<span style="color:var(--text-2)">Corrección local guardada · sin publicar</span>':''}</span>
            <div class="actions" style="flex-wrap:wrap;">
-             ${hasOv?`<button class="btn btn-ghost btn-sm" id="bk-ed-revert">Descartar corrección</button>`:''}
+             <button class="btn btn-solid btn-sm" id="bk-ed-save">Guardar</button>
+             <button class="btn btn-outline btn-sm" id="bk-ed-publish"${hasOv?'':' disabled'}>Publicar al banco (GitHub)</button>
+             <button class="btn btn-ghost btn-sm" id="bk-ed-revert"${hasOv?'':' disabled'}>Descartar</button>
              ${isQ?`<button class="btn btn-ghost btn-sm" id="bk-ed-review">Ver en repaso</button>`:''}
              <button class="btn btn-danger btn-sm" id="bk-ed-delbank">Borrar del banco</button>
            </div>`}
     `;
 
-    const nav = (d)=>{ const n = curList[idx+d]; if(!n) return; st.selId = idOf(n);
+    const nav = (d)=>{ const n = curList[idx+d]; if(!n) return;
+      if(!isUsr) bancoSaveEditor(kind, id);   // no pierdas lo escrito al moverte
+      st.selId = idOf(n);
       const a = isQ ? "data-qid" : "data-fcid";
       $$("#bk-body .bk-row").forEach(r=> r.classList.toggle("selected", r.getAttribute(a)===st.selId));
       const el = $(`#bk-body [${a}="${st.selId}"]`); if(el) el.scrollIntoView({ block:"nearest" });
@@ -2940,6 +2979,11 @@ function renderBancoAdmin(){
     });
     pane.querySelectorAll("#bk-ed-resp-tf .seg").forEach(b=> b.addEventListener("click", ()=> bancoSaveEditor(kind, id)));
 
+    $("#bk-ed-save").addEventListener("click", ()=>{ bancoSaveEditor(kind, id); renderEditor(id); refresh(); O.toast("Guardado"); });
+    $("#bk-ed-publish").addEventListener("click", ()=>{
+      bancoSaveEditor(kind, id);
+      bancoPublishEdit(kind, id, ()=>{ renderEditor(id); refresh(); });
+    });
     const rev = $("#bk-ed-revert");
     if(rev) rev.addEventListener("click", ()=>{ O.ContentEdit.revert(kind, id); if(O.LEB) O.LEB.recalcNow(); O.toast("Corrección descartada"); renderEditor(id); refresh(); });
     const rvw = $("#bk-ed-review");
@@ -3111,6 +3155,21 @@ function renderProgress(){
         <li><span class="mini-row-main">${h.mode==="exam"?"Examen":"Práctica"} · ${h.correct}/${h.total} (${h.accuracy}%)</span><span class="mini-row-sub">${O.fmtDate(h.finishedAt)}</span></li>
       `).join("")}</ul>` : ``}
     </div>
+
+    ${(O.GHS && O.GHS.hasToken()) ? `
+    <div class="section-block">
+      <div class="section-title"><h3>Administración</h3><span class="section-hint">solo con GitHub conectado</span></div>
+      <div class="nav-list">
+        <button class="nav-row" data-goto="banco">
+          <span class="nr-ic">${icon('search')}</span><span class="nr-title">Editor del banco</span>
+          <span class="nr-meta">buscar · editar · publicar</span><span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+        <button class="nav-row" data-goto="mi-contenido">
+          <span class="nr-ic">${icon('pencil')}</span><span class="nr-title">Mi contenido</span>
+          <span class="nr-meta">${O.ContentEdit?(O.ContentEdit.userCount()+" creada(s)"):""}</span><span class="nr-chev">${icon('chevronR')}</span>
+        </button>
+      </div>
+    </div>` : ``}
   </div>`;
 
   const repasarBtn = $("#pg-repasar");
