@@ -189,6 +189,21 @@ i.dot{ display:inline-block; width:8px; height:8px; border-radius:50%; margin-ri
 .cta-hero .cta-go svg{ width:18px; height:18px; }
 .phase-tag{ font-family:var(--font-mono); font-size:11px; color:var(--text-3); }
 
+/* Inicio: una línea de estado en vez del panel "Tu aprendizaje" */
+.home-strip{
+  display:flex; flex-wrap:wrap; align-items:center; gap:var(--sp-2) var(--sp-5);
+  padding:var(--sp-3) var(--sp-1); margin-bottom:var(--sp-6);
+  border-bottom:1px solid var(--border); font-size:13px; color:var(--text-2);
+}
+.home-strip .hs-item b{ color:var(--text); font-weight:700; font-family:var(--font-mono); }
+.home-strip .hs-item.is-warn b{ color:var(--warn); }
+.home-strip .hs-link{
+  appearance:none; background:none; border:none; cursor:pointer; font:inherit;
+  font-size:12px; font-weight:600; color:var(--accent-ink); margin-left:auto;
+  display:inline-flex; align-items:center; gap:3px;
+}
+.home-strip .hs-link svg{ width:13px; height:13px; }
+
 .exam-strip{
   border:1px solid var(--border-2); border-left:3px solid var(--text-3);
   border-radius:var(--radius-m); padding:var(--sp-4) var(--sp-5); margin-bottom:var(--sp-7);
@@ -322,6 +337,8 @@ input[type="date"]{ color-scheme:dark; }
 .action-card[disabled]:hover{ transform:none; background:var(--surface); border-color:var(--border); }
 
 .action-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:var(--sp-3); }
+.action-grid--3{ grid-template-columns:repeat(3,1fr); }
+@media (max-width:640px){ .action-grid--3{ grid-template-columns:1fr; } }
 .action-card{
   text-align:left; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-m);
   padding:var(--sp-4); cursor:pointer; transition:border-color .15s var(--ease), transform .12s var(--ease), background .15s;

@@ -292,6 +292,9 @@ function renderHome(){
 
   const exam = hm && hm.exam;
 
+  const streak = studyStreak();
+  const dueTotal = hm ? hm.dueTotal : 0;
+
   mainEl().innerHTML = `
   <div class="view view-narrow">
     <div class="view-head">
@@ -308,85 +311,45 @@ function renderHome(){
       </div>
       <span class="cta-go">${icon('play')}</span>
     </button>
-    <button class="btn btn-primary btn-block btn-lg" id="home-smart" style="margin:calc(-1 * var(--sp-4)) 0 var(--sp-7);">${icon('study')} Estudiar ahora (sesión guiada)</button>
+    <button class="btn btn-primary btn-block btn-lg" id="home-smart" style="margin:calc(-1 * var(--sp-4)) 0 var(--sp-6);">${icon('study')} Estudiar lo de hoy</button>
     ` : `
     <button class="cta-hero as-button primary" id="home-smart">
       <div class="cta-body">
         <div class="cta-kicker">Recomendado por tu progreso</div>
-        <div class="cta-title">Estudiar ahora</div>
+        <div class="cta-title">Estudiar lo de hoy</div>
         <div class="cta-sub">${smartSub}</div>
       </div>
       <span class="cta-go">${icon('play')}</span>
     </button>
     `}
 
+    ${started ? `
+    <div class="home-strip">
+      ${streak ? `<span class="hs-item"><b>${streak}</b> día${streak===1?'':'s'} seguido${streak===1?'':'s'}</span>` : ``}
+      <span class="hs-item"><b>${cs.accuracy}%</b> de acierto</span>
+      <span class="hs-item ${dueTotal?'is-warn':''}"><b>${dueTotal}</b> bloque${dueTotal===1?'':'s'} a repasar</span>
+      <button class="hs-link" data-goto="progress">Ver progreso ${icon('chevronR')}</button>
+    </div>` : ``}
+
     ${exam ? `
     <div class="exam-strip ${exam.sinDeficit?'is-ok':'is-warn'}">
       <div class="es-top">
         <span class="es-days">${exam.daysLeft} día${exam.daysLeft===1?'':'s'}</span>
-        <span class="es-label">para el examen · fase ${phaseLabel(exam.phase)}</span>
+        <span class="es-label">para el examen</span>
       </div>
-      ${exam.sinDeficit
-        ? `<p class="es-msg">Sin déficit detectado ahora mismo: con tu ritmo, todo lo estudiado llega a repasarse a tiempo. <span class="es-note">No es una probabilidad de aprobado — es que no hay huecos en la agenda.</span></p>`
-        : `<p class="es-msg"><b>${exam.deficitCount} bloque${exam.deficitCount===1?'':'s'}</b> no llega${exam.deficitCount===1?'':'n'} a asegurarse con el tiempo y los minutos/día actuales.
-           ${exam.deficitConcepts.length?`<span class="es-list">${exam.deficitConcepts.map(n=>O.escapeHtml(n)).join(" · ")}${exam.deficitCount>exam.deficitConcepts.length?` +${exam.deficitCount-exam.deficitConcepts.length}`:''}</span>`:''}
-           ${exam.hint?`<span class="es-note">${O.escapeHtml(exam.hint)}</span>`:''}</p>`}
+      <p class="es-msg">${exam.sinDeficit
+        ? `Vas a tiempo: con tu ritmo, todo lo estudiado llega a repasarse antes del examen.`
+        : `<b>${exam.deficitCount} bloque${exam.deficitCount===1?'':'s'}</b> no llega${exam.deficitCount===1?'':'n'} a asegurarse con los minutos/día actuales.${exam.hint?` <span class="es-note">${O.escapeHtml(exam.hint)}</span>`:''}`}</p>
       <button class="es-link" data-goto="progress">Ver preparación de examen ${icon('chevronR')}</button>
     </div>` : ``}
 
     ${started ? `
     <div class="section-block">
-      <div class="section-title"><h3>Tu aprendizaje</h3><button class="link" data-goto="progress">Detalle</button></div>
-      <div class="learn-panel">
-        <div class="lp-row">
-          <div class="lp-head"><span class="lp-axis">Dominio</span><span class="lp-sub">${b.asentado} asentado${b.asentado===1?'':'s'} de ${b.total} bloques</span></div>
-          ${masteryBarHtml(b)}
-          <div class="lp-legend">
-            <span><i class="dot mb-settled"></i>Asentado ${b.asentado}</span>
-            <span><i class="dot mb-consolid"></i>Consolidando ${b.consolidando}</span>
-            <span><i class="dot mb-learn"></i>Aprendiendo ${b.aprendiendo}</span>
-            <span><i class="dot mb-neutral"></i>Sin empezar ${b.nuevo}</span>
-          </div>
-        </div>
-        <div class="lp-row lp-review">
-          <div class="lp-head"><span class="lp-axis">Repaso</span><span class="lp-sub">independiente del dominio</span></div>
-          <p class="lp-review-line">
-            <b class="${hm.dueTotal?'':'muted'}">${hm.dueTotal}</b> bloque${hm.dueTotal===1?'':'s'} pendiente${hm.dueTotal===1?'':'s'} de repaso${hm.atrasadoTotal?` · <b class="warn">${hm.atrasadoTotal} atrasado${hm.atrasadoTotal===1?'':'s'}</b>`:''}.
-            <span class="lp-note">Que un bloque toque repasar <b>no</b> significa que lo hayas olvidado.</span>
-          </p>
-        </div>
-      </div>
-    </div>` : ``}
-
-    ${started && hm.actionable.length ? `
-    <div class="section-block">
-      <div class="section-title"><h3>Empieza por aquí</h3><span class="section-hint">tu prioridad ahora</span></div>
-      <div class="nav-list">
-        ${hm.actionable.map(a=>`<button class="nav-row concept-row" data-concept="${a.id}">
-          <span class="state-pip tone-${a.masteryTone}" aria-hidden="true"></span>
-          <span class="nr-body">
-            <span class="nr-title">${O.escapeHtml(a.name)}</span>
-            <span class="nr-reason">${O.escapeHtml(a.reason)}</span>
-          </span>
-          <span class="nr-chev">${icon('chevronR')}</span>
-        </button>`).join("")}
-      </div>
-    </div>` : ``}
-
-    <div class="section-block">
       <div class="section-title"><h3>Otras formas de estudiar</h3></div>
-      <div class="action-grid">
-        ${started ? `<button class="action-card" id="home-review">
+      <div class="action-grid action-grid--3">
+        <button class="action-card" id="home-review">
           <div class="ic">${icon('history')}</div><div class="t">Repasar lo pendiente</div>
-          <div class="d">${hm.dueTotal?`${hm.dueTotal} bloque${hm.dueTotal===1?'':'s'} debido${hm.dueTotal===1?'':'s'}`:'nada pendiente ahora'}</div>
-        </button>` : ``}
-        <button class="action-card" data-goto="practica">
-          <div class="ic">${icon('study')}</div><div class="t">Practicar un tema</div>
-          <div class="d">Elige pestaña, tipo o dificultad</div>
-        </button>
-        <button class="action-card" data-goto="flashcards">
-          <div class="ic">${icon('cards')}</div><div class="t">Flashcards</div>
-          <div class="d">${fc.pendientes} pendientes</div>
+          <div class="d">${dueTotal?`${dueTotal} bloque${dueTotal===1?'':'s'} pendiente${dueTotal===1?'':'s'}`:'nada pendiente ahora'}</div>
         </button>
         <button class="action-card" id="home-errors" ${cs.incorrect?'':'disabled'}>
           <div class="ic">${icon('errors')}</div><div class="t">Repasar errores</div>
@@ -397,7 +360,7 @@ function renderHome(){
           <div class="d">Reto en tiempo real</div>
         </button>
       </div>
-    </div>
+    </div>` : ``}
 
     ${last ? `<div class="nav-list">
       <button class="nav-row" data-goto="progress">

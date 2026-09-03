@@ -64,10 +64,11 @@ try {
   });
 
   await click('[data-goto="home"]');
-  await page.waitForSelector('.learn-panel');
-  ok(await seen('.learn-panel'), 'Inicio: panel "Tu aprendizaje" (dominio + repaso)');
+  await page.waitForSelector('.home-strip');
+  ok(await seen('.home-strip .hs-item'), 'Inicio: línea de estado compacta (racha · acierto · a repasar)');
+  ok(!(await seen('.learn-panel')), 'Inicio: ya no muestra el panel grande "Tu aprendizaje"');
   ok(await seen('.exam-strip'), 'Inicio: tira de examen con datos reales');
-  ok(await seen('.mastery-bar .mb-seg'), 'Inicio: barra de dominio apilada');
+  ok((await page.locator('.action-grid--3 .action-card').count()) === 3, 'Inicio: 3 accesos secundarios (sin duplicar pestañas)');
   await shot('01-home-desktop');
 
   await click('[data-goto="temario"]');
