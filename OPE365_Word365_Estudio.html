@@ -5268,13 +5268,26 @@ function createCoopGame(session){
     const rng = O.mulberry32(((seed >>> 0) ^ 0x9e3779b9) >>> 0);
     const pick = arr => arr[Math.floor(rng()*arr.length)];
     const lieRate = Math.max(0.1, Math.min(0.9, Number(config.lieRate) || 0.5));
-    return questions.map(q=>{
+
+    // Presupuesto FIJO de mentiras para toda la partida, repartido entre las
+    // rondas donde Word puede equivocarse (las V/F no cuentan: su verdad es
+    // intrínseca a la frase). Así no se "resetea" el % en cada ronda ni salen
+    // rachas de 6 mentiras seguidas: si son 12 rondas y Word es "tramposo"
+    // (0.65), miente en 8, ni una más ni una menos, en posiciones barajadas.
+    const lieable = [];
+    questions.forEach((q,i)=>{ if(q.tipo !== "verdadero_falso") lieable.push(i); });
+    const target = Math.round(lieRate * lieable.length);
+    const shuffled = lieable.slice();
+    for(let k = shuffled.length - 1; k > 0; k--){ const j = Math.floor(rng()*(k+1)); const t = shuffled[k]; shuffled[k] = shuffled[j]; shuffled[j] = t; }
+    const lieSet = new Set(shuffled.slice(0, target));
+
+    return questions.map((q,idx)=>{
       // V/F: la afirmación ES la pregunta; no hay "mentira" de Word, la frase es
       // cierta o falsa de por sí. El jugador responde Verdadero / Falso.
       if(q.tipo === "verdadero_falso"){
         return { kind:"vf", context:q.enunciado, truth: (q.respuesta === true || q.respuesta === "true") };
       }
-      const lies = rng() < lieRate;
+      const lies = lieSet.has(idx);
 
       if(q.tipo === "seleccion_multiple"){
         const all = (q.opciones||[]).map(o=>o.letter);

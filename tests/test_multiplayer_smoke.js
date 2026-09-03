@@ -182,6 +182,11 @@ async function main(){
   const kinds = new Set((bPlan||[]).map(p=>p.kind));
   assert(["vf","opt","multi","match"].every(k=> kinds.has(k)), "Contra Word: el plan convierte V/F, opción única, selección múltiple y emparejamiento ("+[...kinds].sort().join(",")+")");
   assert((bPlan||[]).some(p=> p.truth === false) && (bPlan||[]).some(p=> p.truth === true), "Contra Word: Word a veces dice la verdad y a veces se equivoca");
+  // presupuesto FIJO de mentiras para toda la partida (no un dado por ronda:
+  // eso daría una dispersión binomial de ~±8 sobre 240 rondas)
+  const nonvf = (bPlan||[]).filter(p=> p.kind !== "vf");
+  const falsas = nonvf.filter(p=> p.truth === false).length;
+  assert(Math.abs(falsas - Math.round(0.5*nonvf.length)) <= 1, `Contra Word: nº de mentiras fijo para la partida (${falsas} ≈ ${Math.round(0.5*nonvf.length)}), no un dado por ronda`);
   bH.destroy(); bG.destroy();
 
   cHost.confirmReady(); cGuest.confirmReady();
