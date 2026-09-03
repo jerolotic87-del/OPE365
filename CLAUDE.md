@@ -404,6 +404,11 @@ archivo, añádele preguntas a ese archivo renumerando la cola.
     `revert` de cualquier corrección + `LEB.recalcNow()`. UI: botón rojo
     "Borrar del banco" en los modales de edición de pregunta/flashcard (`✎`) y
     en "Mi contenido" para elementos ya publicados. Irreversible desde la app.
+  - **`GHS.applyEditToBank(kind, id)`** — escribe los campos ya corregidos
+    (en memoria vía `ContentEdit`) del item en `data/<tipo>/<section>.json` +
+    regenera el artefacto, un commit. La UI llama después a
+    `ContentEdit.bake(kind, id)` (borra el registro de override SIN restaurar:
+    los valores corregidos se quedan, desaparece el badge "corregida").
   - **Vista `banco` ("Editor del banco", `renderBancoAdmin` en views.js)** —
     consola tipo Anki-Browse SOLO visible con token de GitHub (`bancoIsAdmin()`
     = `GHS.hasToken()`; de facto solo el dueño). Toggle Preguntas/Flashcards,
@@ -416,9 +421,13 @@ archivo, añádele preguntas a ese archivo renumerando la cola.
     cada `change` de campo → `bancoSaveEditor` calcula el patch por diff vs
     `ContentEdit.original`, hace `revert` + `apply` (para poder quitar campos),
     `recalcSoon`; si el campo vuelve al original, la corrección se retira sola.
-    Navegación ‹ › entre resultados. El contenido propio abre su formulario
-    completo (`openUserQuestionModal`). Botones del panel: Descartar corrección,
-    Ver en repaso, Borrar del banco (`deleteFromBankFlow`). Helpers compartidos
+    Navegación ‹ › entre resultados (salva lo escrito antes de moverse). El
+    contenido propio abre su formulario completo (`openUserQuestionModal`).
+    Botones del panel: **Guardar** (explícito), **Publicar al banco (GitHub)**
+    (`bancoPublishEdit` → `GHS.applyEditToBank` + `ContentEdit.bake`), Descartar,
+    Ver en repaso, Borrar del banco (`deleteFromBankFlow`). "Publicar"/"Descartar"
+    se habilitan solo con corrección pendiente. Acceso visible: **Progreso →
+    "Administración"** (solo con token) además de Ajustes y "Mi contenido". Helpers compartidos
     con el modal: `qEditFormHtml`/`readQPatch`/`wireTfSegments`,
     `fcEditFormHtml`/`readFcPatch`. Filtrado en views.js
     (`bancoFilterQuestions`/`bancoFilterFlashcards`, no toca `filterQuestions`).
