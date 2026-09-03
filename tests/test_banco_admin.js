@@ -77,9 +77,17 @@ const rows = w => w.document.querySelectorAll("#bk-body .qlist-item").length;
   ok(!!w.document.querySelector("#bk-ed-save") && w.document.querySelector("#bk-ed-publish") && !w.document.querySelector("#bk-ed-publish").disabled,
     "con corrección pendiente: botones Guardar y Publicar al banco activos");
 
+  // al re-seleccionar la fila, el panel muestra la corrección (no el original)
+  goto(w, "banco");
+  s.value = sample.id; s.dispatchEvent(new w.Event("input", { bubbles:true })); await tick(240);
+  w.document.querySelector(`#bk-body [data-qid="${sample.id}"]`).dispatchEvent(new w.MouseEvent("click", { bubbles:true }));
+  ok(w.document.querySelector("#bk-ed-expl").value === "Explicación corregida por el test.",
+    "el panel muestra el texto corregido al reabrirlo, no el original");
+
   // volver el campo al valor original en el propio panel -> la corrección se retira sola
-  expl.value = origExpl;
-  expl.dispatchEvent(new w.Event("change", { bubbles:true }));
+  const expl2 = w.document.querySelector("#bk-ed-expl");
+  expl2.value = origExpl;
+  expl2.dispatchEvent(new w.Event("change", { bubbles:true }));
   ok(!O.ContentEdit.has("q", sample.id) && (O.Q_BY_ID[sample.id].explicacion || "") === origExpl,
     "dejar el campo como el original retira la corrección automáticamente");
 

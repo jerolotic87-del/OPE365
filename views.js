@@ -2123,6 +2123,20 @@ function respuestaControl(q, cur, pfx){
   return `<p style="font-size:12px;color:var(--text-3);">La respuesta de este tipo de ejercicio no se edita aquí — usa la nota para reportar el problema.</p>`;
 }
 
+/* valores a MOSTRAR en el formulario de edición: los actuales (con la
+   corrección ya aplicada si la hay) + la nota, que vive solo en el override.
+   `orig` es el original pristino, para calcular el diff al guardar. */
+function contentEditDisplay(kind, id){
+  const obj = kind === "fc" ? O.F_BY_ID[id] : O.Q_BY_ID[id];
+  const orig = O.ContentEdit.original(kind, id) || {};
+  const note = (O.ContentEdit.get(kind, id) || {}).nota || "";
+  if(!obj) return Object.assign({}, orig, { nota: note });
+  const fields = kind === "fc" ? ["front","back","priority"] : ["enunciado","opciones","respuesta","explicacion","negativa"];
+  const disp = Object.assign({}, orig, { nota: note });
+  fields.forEach(f=>{ disp[f] = obj[f]; });
+  return disp;
+}
+
 /* lee el formulario de edición de pregunta y devuelve el PATCH (solo campos
    distintos del original). Compartido por el modal ✎ y el panel del Editor
    del banco. `pfx` = prefijo de ids ("edit" en el modal, "bk-ed" en el panel). */
@@ -2189,13 +2203,13 @@ function openEditQuestionModal(qid, onDone){
   showModal(`
     <h3>Editar pregunta</h3>
     <p class="edit-id">${qid} · ${tipoLabel(q.tipo)}${q.bloque?` · ${O.escapeHtml(q.bloque)}`:''}</p>
-    ${qEditFormHtml(q, orig, "edit")}
+    ${qEditFormHtml(q, contentEditDisplay("q", qid), "edit")}
     <p class="edit-warn">Se guarda solo en este dispositivo. Para volcarlo al banco: Ajustes → Correcciones de contenido → Exportar.</p>
-    <div class="actions" style="flex-wrap:wrap;">
-      ${hasOv ? `<button class="btn btn-ghost btn-sm" id="edit-revert">Descartar corrección</button>` : ''}
-      ${(O.GHS && O.GHS.hasToken() && !(O.ContentEdit && O.ContentEdit.isUser("q", qid))) ? `<button class="btn btn-danger btn-sm" id="edit-delbank">Borrar del banco</button>` : ''}
-      <button class="btn btn-ghost" id="edit-cancel">Cancelar</button>
-      <button class="btn btn-solid" id="edit-save">Guardar corrección</button>
+    <div class="ed-actions">
+      ${(O.GHS && O.GHS.hasToken() && !(O.ContentEdit && O.ContentEdit.isUser("q", qid))) ? `<button class="ed-btn is-danger" id="edit-delbank" title="Borrar la pregunta del banco (commit a GitHub)">Borrar del banco</button>` : ''}
+      ${hasOv ? `<button class="ed-btn" id="edit-revert" title="Descartar la corrección y volver al original">Descartar</button>` : ''}
+      <button class="ed-btn" id="edit-cancel">Cancelar</button>
+      <button class="ed-btn is-primary" id="edit-save">Guardar</button>
     </div>
   `, (root)=>{
     wireTfSegments(root, "edit");
@@ -2255,13 +2269,13 @@ function openEditFlashcardModal(canonicalId, onDone){
   showModal(`
     <h3>Editar flashcard</h3>
     <p class="edit-id">${canonicalId} · ${cardTypeLabel(f.cardType)}${f.topic?` · ${O.escapeHtml(f.topic)}`:''}</p>
-    ${fcEditFormHtml(orig, "fc-edit")}
+    ${fcEditFormHtml(contentEditDisplay("fc", canonicalId), "fc-edit")}
     <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes para volcarlo al banco.</p>
-    <div class="actions" style="flex-wrap:wrap;">
-      ${hasOv ? `<button class="btn btn-ghost btn-sm" id="fc-edit-revert">Descartar corrección</button>` : ''}
-      ${(O.GHS && O.GHS.hasToken() && !(O.ContentEdit && O.ContentEdit.isUser("fc", canonicalId))) ? `<button class="btn btn-danger btn-sm" id="fc-edit-delbank">Borrar del banco</button>` : ''}
-      <button class="btn btn-ghost" id="fc-edit-cancel">Cancelar</button>
-      <button class="btn btn-solid" id="fc-edit-save">Guardar corrección</button>
+    <div class="ed-actions">
+      ${(O.GHS && O.GHS.hasToken() && !(O.ContentEdit && O.ContentEdit.isUser("fc", canonicalId))) ? `<button class="ed-btn is-danger" id="fc-edit-delbank" title="Borrar la flashcard del banco (commit a GitHub)">Borrar del banco</button>` : ''}
+      ${hasOv ? `<button class="ed-btn" id="fc-edit-revert" title="Descartar la corrección y volver al original">Descartar</button>` : ''}
+      <button class="ed-btn" id="fc-edit-cancel">Cancelar</button>
+      <button class="ed-btn is-primary" id="fc-edit-save">Guardar</button>
     </div>
   `, (root)=>{
     root.querySelectorAll("#fc-edit-prio .seg").forEach(b=> b.addEventListener("click", ()=>{
@@ -2324,10 +2338,10 @@ function openUserQuestionModal(editId, onDone){
     <div class="field"><label>Categoría</label><select id="uq-cat" class="edit-field">
       ${["general","atajo","ruta","concepto"].map(c=>`<option value="${c}" ${ex&&ex.categoria===c?'selected':''}>${c==="ruta"?"Ruta / menú":c[0].toUpperCase()+c.slice(1)}</option>`).join("")}</select></div>
     <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes → Mi contenido para incorporarla al banco.</p>
-    <div class="actions" style="flex-wrap:wrap;">
-      ${ex?`<button class="btn btn-danger btn-sm" id="uq-delete">Eliminar</button>`:''}
-      <button class="btn btn-ghost" id="uq-cancel">Cancelar</button>
-      <button class="btn btn-solid" id="uq-save">${ex?"Guardar":"Crear pregunta"}</button>
+    <div class="ed-actions">
+      ${ex?`<button class="ed-btn is-danger" id="uq-delete">Eliminar</button>`:''}
+      <button class="ed-btn" id="uq-cancel">Cancelar</button>
+      <button class="ed-btn is-primary" id="uq-save">${ex?"Guardar":"Crear pregunta"}</button>
     </div>
   `, (root)=>{
     const imgState = wireImageField(root, ex && ex.imagen);
@@ -2426,10 +2440,10 @@ function openUserFlashcardModal(editId, onDone){
         <button type="button" class="seg ${!ex||ex.priority!=='alta'?'on':''}" data-v="normal">Normal</button>
       </div></div>
     <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes para incorporarla al banco.</p>
-    <div class="actions" style="flex-wrap:wrap;">
-      ${ex?`<button class="btn btn-danger btn-sm" id="uf-delete">Eliminar</button>`:''}
-      <button class="btn btn-ghost" id="uf-cancel">Cancelar</button>
-      <button class="btn btn-solid" id="uf-save">${ex?"Guardar":"Crear flashcard"}</button>
+    <div class="ed-actions">
+      ${ex?`<button class="ed-btn is-danger" id="uf-delete">Eliminar</button>`:''}
+      <button class="ed-btn" id="uf-cancel">Cancelar</button>
+      <button class="ed-btn is-primary" id="uf-save">${ex?"Guardar":"Crear flashcard"}</button>
     </div>
   `, (root)=>{
     const imgState = wireImageField(root, ex && ex.imagen);
@@ -2944,17 +2958,17 @@ function renderBancoAdmin(){
       <p class="edit-id">${head}</p>
       ${isUsr
         ? `<p style="font-size:12px;color:var(--text-2);">Es contenido tuyo. Se edita en su formulario completo (tipo, imagen, pestaña).</p>
-           <div class="bk-ed-actions">
-             <button class="bk-ed-btn is-primary" id="bk-ed-openuser">Abrir editor completo</button>
-             <button class="bk-ed-btn is-danger" id="bk-ed-deluser">Eliminar</button>
+           <div class="ed-actions bk-ed-actions">
+             <button class="ed-btn is-primary" id="bk-ed-openuser">Abrir editor completo</button>
+             <button class="ed-btn is-danger" id="bk-ed-deluser">Eliminar</button>
            </div>`
-        : `${isQ ? qEditFormHtml(obj, orig, "bk-ed") : fcEditFormHtml(orig, "bk-ed")}
-           <span id="bk-ed-status" class="bk-ed-status">${hasOv?'Corrección local guardada · sin publicar':''}</span>
-           <div class="bk-ed-actions">
-             <button class="bk-ed-btn is-primary" id="bk-ed-save">Guardar</button>
-             <button class="bk-ed-btn" id="bk-ed-publish"${hasOv?'':' disabled'}>Publicar corrección</button>
-             <button class="bk-ed-btn" id="bk-ed-revert"${hasOv?'':' disabled'}>Descartar</button>
-             <button class="bk-ed-btn is-danger" id="bk-ed-delbank">Borrar del banco</button>
+        : `${isQ ? qEditFormHtml(obj, contentEditDisplay("q", id), "bk-ed") : fcEditFormHtml(contentEditDisplay("fc", id), "bk-ed")}
+           <span id="bk-ed-status" class="ed-status">${hasOv?'Corrección local guardada · sin publicar':''}</span>
+           <div class="ed-actions bk-ed-actions">
+             <button class="ed-btn is-primary" id="bk-ed-save">Guardar</button>
+             <button class="ed-btn" id="bk-ed-publish"${hasOv?'':' disabled'}>Publicar corrección</button>
+             <button class="ed-btn" id="bk-ed-revert"${hasOv?'':' disabled'}>Descartar</button>
+             <button class="ed-btn is-danger" id="bk-ed-delbank">Borrar del banco</button>
            </div>`}
     `;
 
