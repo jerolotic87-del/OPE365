@@ -1265,11 +1265,16 @@ function correctAnswerText(q){
 }
 function showFeedback(el, q, resp){
   const full = cleanExplic(q.explicacion);
-  const gistCut = full.length > 150 ? full.slice(0, full.slice(0,150).lastIndexOf(" ")>80 ? full.slice(0,150).lastIndexOf(" ") : 150).trim() + "…" : full;
-  const hasMore = full.length > gistCut.length + 1;
-  const label = q.categoria==="atajo" ? "Ver atajo y explicación completa"
-              : q.categoria==="ruta"  ? "Ver ruta y explicación completa"
-              : "Ver explicación completa";
+  // parte en frente (siempre visible) + continuación (plegada). La
+  // continuación NO repite el frente: se retoma justo donde se cortó.
+  let head = full, tail = "";
+  if(full.length > 170){
+    let cut = full.lastIndexOf(" ", 170);
+    if(cut < 90) cut = 170;
+    head = full.slice(0, cut).trim();
+    tail = full.slice(cut).trim();
+  }
+  const label = "Continuar leyendo";
   const rightTxt = !resp.correct ? correctAnswerText(q) : null;
   el.innerHTML = `
     <div class="fb ${resp.correct?'fb-ok':'fb-bad'}">
@@ -1278,9 +1283,9 @@ function showFeedback(el, q, resp){
         <span class="fb-verdict">${resp.correct?'Correcto':'Incorrecto'}</span>
         ${rightTxt ? `<span class="fb-right">Correcta: <b>${O.escapeHtml(rightTxt)}</b></span>` : ''}
       </div>
-      ${gistCut ? `<p class="fb-gist">${kbdify(O.escapeHtml(gistCut))}</p>` : ''}
-      ${hasMore ? `<details class="fb-more"><summary>${label}</summary>
-        <div class="fb-more-body">${kbdify(O.escapeHtml(full))}</div></details>` : ''}
+      ${head ? `<p class="fb-gist">${kbdify(O.escapeHtml(head))}${tail?'…':''}</p>` : ''}
+      ${tail ? `<details class="fb-more"><summary>${label}</summary>
+        <div class="fb-more-body">${kbdify(O.escapeHtml(tail))}</div></details>` : ''}
     </div>`;
 }
 

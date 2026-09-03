@@ -776,7 +776,7 @@ details.advanced summary:hover{ color:var(--text); }
 .fb-more summary::before{ content:"›"; font-size:15px; transition:transform .15s var(--ease); display:inline-block; }
 .fb-more[open] summary::before{ transform:rotate(90deg); }
 .fb-more summary:hover{ color:var(--text); }
-.fb-more-body{ padding:2px 14px 14px; font-size:13px; line-height:1.65; color:var(--text-2); }
+.fb-more-body{ padding:2px 14px 14px; font-size:13px; line-height:1.6; color:var(--text); }
 kbd{
   display:inline-block; font-family:var(--font-mono); font-size:11.5px; font-weight:600; line-height:1.4;
   color:var(--accent-ink); background:var(--surface-2); border:1px solid var(--border-2);
@@ -6575,11 +6575,16 @@ function correctAnswerText(q){
 }
 function showFeedback(el, q, resp){
   const full = cleanExplic(q.explicacion);
-  const gistCut = full.length > 150 ? full.slice(0, full.slice(0,150).lastIndexOf(" ")>80 ? full.slice(0,150).lastIndexOf(" ") : 150).trim() + "…" : full;
-  const hasMore = full.length > gistCut.length + 1;
-  const label = q.categoria==="atajo" ? "Ver atajo y explicación completa"
-              : q.categoria==="ruta"  ? "Ver ruta y explicación completa"
-              : "Ver explicación completa";
+  // parte en frente (siempre visible) + continuación (plegada). La
+  // continuación NO repite el frente: se retoma justo donde se cortó.
+  let head = full, tail = "";
+  if(full.length > 170){
+    let cut = full.lastIndexOf(" ", 170);
+    if(cut < 90) cut = 170;
+    head = full.slice(0, cut).trim();
+    tail = full.slice(cut).trim();
+  }
+  const label = "Continuar leyendo";
   const rightTxt = !resp.correct ? correctAnswerText(q) : null;
   el.innerHTML = `
     <div class="fb ${resp.correct?'fb-ok':'fb-bad'}">
@@ -6588,9 +6593,9 @@ function showFeedback(el, q, resp){
         <span class="fb-verdict">${resp.correct?'Correcto':'Incorrecto'}</span>
         ${rightTxt ? `<span class="fb-right">Correcta: <b>${O.escapeHtml(rightTxt)}</b></span>` : ''}
       </div>
-      ${gistCut ? `<p class="fb-gist">${kbdify(O.escapeHtml(gistCut))}</p>` : ''}
-      ${hasMore ? `<details class="fb-more"><summary>${label}</summary>
-        <div class="fb-more-body">${kbdify(O.escapeHtml(full))}</div></details>` : ''}
+      ${head ? `<p class="fb-gist">${kbdify(O.escapeHtml(head))}${tail?'…':''}</p>` : ''}
+      ${tail ? `<details class="fb-more"><summary>${label}</summary>
+        <div class="fb-more-body">${kbdify(O.escapeHtml(tail))}</div></details>` : ''}
     </div>`;
 }
 
