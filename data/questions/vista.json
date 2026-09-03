@@ -942,28 +942,28 @@
     "tema": "Ventana",
     "difficulty": "alta",
     "sourceQuestionId": "Q-028",
-    "enunciado": "¿Qué función permite compartir dos vistas del mismo documento en una única ventana y cuál es su atajo?",
+    "enunciado": "¿Qué función permite ver dos zonas distintas del mismo documento dentro de una única ventana?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Nueva ventana — Alt + F11"
+        "text": "Nueva ventana"
       },
       {
         "letter": "B",
-        "text": "Ver en paralelo — Alt + F8"
+        "text": "Ver en paralelo"
       },
       {
         "letter": "C",
-        "text": "Dividir — Alt + Ctrl + V"
+        "text": "Dividir"
       },
       {
         "letter": "D",
-        "text": "Organizar todo — Ctrl + Alt + D"
+        "text": "Organizar todo"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": ""
+    "explicacion": "Dividir parte la ventana activa en dos paneles que muestran zonas distintas del mismo documento. Nueva ventana abre una segunda ventana del mismo documento; Ver en paralelo y Organizar todo trabajan con varias ventanas o documentos. En esta instalación Dividir NO tiene atajo de teclado: ATAJOS.docx asigna Alt+Ctrl+V pero está en conflicto con «Pegar formato» y en vivo no hace nada (prueba en vivo del usuario). Se usa desde Vista ▸ grupo Ventana ▸ Dividir."
   },
   {
     "id": "vista-28",
@@ -3168,28 +3168,28 @@
     "difficulty": "alta",
     "sourceQuestionId": "Q-089",
     "generado": true,
-    "enunciado": "Un usuario quiere ver dos partes alejadas del mismo documento dentro de una sola ventana sin abrir una segunda. ¿Qué función usa y cuál es su atajo?",
+    "enunciado": "Un usuario quiere ver dos partes alejadas del mismo documento dentro de una sola ventana sin abrir una segunda. ¿Qué función usa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Nueva ventana — sin atajo documentado"
+        "text": "Nueva ventana"
       },
       {
         "letter": "B",
-        "text": "Ver en paralelo — Alt + F8"
+        "text": "Ver en paralelo"
       },
       {
         "letter": "C",
-        "text": "Dividir — Alt + Ctrl + V"
+        "text": "Dividir"
       },
       {
         "letter": "D",
-        "text": "Organizar todo — Ctrl + Alt + D"
+        "text": "Organizar todo"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Dividir parte la ventana activa en dos paneles que muestran distintas zonas del mismo documento, sin abrir una segunda ventana. Su atajo es Alt+Ctrl+V. Nueva ventana abre una segunda ventana independiente del mismo documento."
+    "explicacion": "Dividir parte la ventana activa en dos paneles que muestran distintas zonas del mismo documento, sin abrir una segunda ventana. Nueva ventana abre una segunda ventana independiente del mismo documento. En esta instalación Dividir NO tiene atajo de teclado: ATAJOS.docx asigna Alt+Ctrl+V pero está en conflicto con «Pegar formato» y en vivo no hace nada (prueba en vivo del usuario). Se usa desde Vista ▸ grupo Ventana ▸ Dividir."
   },
   {
     "id": "vista-88",
@@ -3205,16 +3205,15 @@
     "difficulty": "alta",
     "sourceQuestionId": "Q-090",
     "generado": true,
-    "enunciado": "Completa la tríada crítica del Grupo Ventana: [1] abre dos ventanas independientes del mismo documento. [2] divide el mismo documento en dos paneles dentro de una sola ventana (atajo: [3]). [4] muestra dos documentos distintos simultáneamente para compararlos.",
+    "enunciado": "Completa la tríada crítica del Grupo Ventana: [1] abre dos ventanas independientes del mismo documento. [2] divide el mismo documento en dos paneles dentro de una sola ventana. [3] muestra dos documentos distintos simultáneamente para compararlos.",
     "opciones": [],
     "matching": null,
     "respuesta": [
       "Nueva ventana",
       "Dividir",
-      "Alt+Ctrl+V",
       "Ver en paralelo"
     ],
-    "explicacion": "Esta tríada es uno de los puntos de mayor confusión en el examen. La clave es: Nueva ventana y Dividir trabajan con el mismo documento; Ver en paralelo trabaja con dos documentos distintos."
+    "explicacion": "Esta tríada es uno de los puntos de mayor confusión en el examen. La clave es: Nueva ventana y Dividir trabajan con el mismo documento; Ver en paralelo trabaja con dos documentos distintos. Dividir se hace desde Vista ▸ Ventana ▸ Dividir; en esta instalación no tiene atajo de teclado (prueba en vivo del usuario)."
   },
   {
     "id": "vista-89",
@@ -3981,35 +3980,35 @@
     "sourceFile": "vista.json",
     "bloque": "Vista — Ventana",
     "tipo": "opcion_unica",
-    "categoria": "atajo",
+    "categoria": "ruta",
     "negativa": false,
     "section": "vista",
     "topic": "ventana",
     "subtopic": null,
     "tema": "Ventana",
     "sourceQuestionId": "8-193",
-    "enunciado": "¿Qué atajo divide la ventana del documento en dos paneles en Word 365?",
+    "enunciado": "¿Cómo se divide la ventana del documento en dos paneles en Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Ctrl+V"
+        "text": "Vista ▸ grupo Ventana ▸ Dividir"
       },
       {
         "letter": "B",
-        "text": "Alt+Ctrl+W"
+        "text": "Con el atajo Alt+Ctrl+V"
       },
       {
         "letter": "C",
-        "text": "Alt+V"
+        "text": "Con el atajo Ctrl+Alt+W"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Alt+Mayús+V"
+        "text": "Arrastrando la barra de desplazamiento vertical"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+V divide la ventana en dos paneles para ver distintas partes del documento simultáneamente. Alt+Ctrl+W no tiene esa función asignada. Alt+V no tiene función asignada para dividir ventana. Ctrl+Alt+Mayús+V no tiene función asignada."
+    "explicacion": "Se divide desde Vista ▸ grupo Ventana ▸ Dividir (y se deshace con Quitar división). En esta instalación Dividir NO tiene atajo de teclado: ATAJOS.docx asigna Alt+Ctrl+V pero está en conflicto con «Pegar formato» y en vivo no hace nada (prueba en vivo del usuario). Se usa desde Vista ▸ grupo Ventana ▸ Dividir."
   },
   {
     "id": "vista-110",

@@ -283,6 +283,18 @@ silencio ni elijas arbitrariamente.
   Spike (`inicio-8`) · `Mayús+F2` = "Copiar a" (copia sin tocar el
   portapapeles) (`inicio-311`). Todos hacen lo que dice el banco, sin
   cambios.
+- **Tanda 7 (sep-2026):** `Alt+[` = iniciar el Dictado (`inicio-373`) ·
+  `Alt+Ctrl++` (num.) = abrir *Personalizar teclado* (`archivo-129`) ·
+  **`F7` y `Windows+F7`** abren los dos el panel **Editor** (`revisar-1`
+  ya lo decía; `revisar-74` también vale — en 365 "Editor" y "Ortografía y
+  gramática" son el mismo panel). **`Alt+Ctrl+V` NO hace nada** en esta
+  instalación — ni divide la ventana ni pegado especial. **Dividir no
+  tiene atajo**: se hace por Vista ▸ Ventana ▸ Dividir. `ATAJOS.docx`
+  asigna `Alt+Ctrl+V` a "Dividir ventana" *y* a "Pegar formato" (conflicto
+  → no funciona ninguno). Corregidas `vista-27/87/109/88` (quitado el
+  atajo inventado; `vista-109` pasa a `categoria:"ruta"`). **Pegado
+  especial** según `atajos_oficial.json` = **`Alt+Ctrl+G`** (`inicio-383`
+  ya lo dice) — pendiente de prueba en vivo.
 - **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
   poden preguntas correctas solo por parecerse a otra — se conservan
   aunque otra pregunte por el mismo atajo (están en topics/framings que
