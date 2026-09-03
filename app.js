@@ -110,9 +110,6 @@ function validateDataset(list){
 const { report: INTEGRITY_REPORT, valid: QUESTIONS } = validateDataset(RAW_QUESTIONS);
 const Q_BY_ID = {}; QUESTIONS.forEach(q=> Q_BY_ID[q.id]=q);
 const ALL_SOURCES = Array.from(new Set(QUESTIONS.map(q=>q.sourceFile))).sort();
-const ALL_TEMAS = Array.from(new Set(QUESTIONS.map(q=>q.tema).filter(Boolean)));
-const ALL_TYPES = Array.from(new Set(QUESTIONS.map(q=>q.tipo)));
-const ALL_CATEGORIAS = Array.from(new Set(QUESTIONS.map(q=>q.categoria).filter(c=>c && c!=="general")));
 
 /* ---------------------------------------------------------------
    1.1 MODELO CANÓNICO — registros, hash de contenido y versión
@@ -166,28 +163,6 @@ const CATEGORY_LABELS = Object.freeze({
 const CATEGORY_REGISTRY = Array.from(new Set(QUESTIONS.map(q=>q.categoria).filter(Boolean)))
   .sort()
   .map(id => ({ id, name: CATEGORY_LABELS[id] || id }));
-
-// Registro de temas, derivado de los valores `tema` ya presentes.
-// Se expone como registro adicional de consulta; el campo `tema` de
-// cada pregunta se conserva tal cual (no se fuerza ninguna jerarquía
-// tema→categoría porque los datos de origen no la respaldan).
-function slugify(s){
-  return String(s||"").toLowerCase()
-    .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
-    .replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"") || "sin-tema";
-}
-const TOPIC_REGISTRY = Array.from(new Set(QUESTIONS.map(q=>q.tema).filter(Boolean)))
-  .sort()
-  .map(name => ({ id: slugify(name), name }));
-const TOPIC_ID_BY_NAME = {}; TOPIC_REGISTRY.forEach(t=> TOPIC_ID_BY_NAME[t.name]=t.id);
-
-// Registro de fuentes, derivado de sourceFile (+ bloque como sección
-// cuando existe). No se inventan páginas ni documentos.
-const SOURCE_REGISTRY = ALL_SOURCES.map(doc => ({
-  id: doc, document: doc,
-  sections: Array.from(new Set(QUESTIONS.filter(q=>q.sourceFile===doc).map(q=>q.bloque).filter(Boolean))).sort()
-}));
-
 // Huella de contenido estable (no incluye estado de sesión, orden de
 // presentación ni metadatos de clasificación — solo el contenido
 // evaluable: tipo, enunciado, respuestas canónicas y explicación).
@@ -213,7 +188,6 @@ QUESTIONS.forEach(q=>{
   if(!q.questionVersion){ q.questionVersion = 1; changes.push("questionVersion=1 asignada"); }
   const h = contentHash(q);
   if(q.contentHash !== h){ q.contentHash = h; changes.push("contentHash calculado"); }
-  if(q.topicId === undefined){ q.topicId = q.tema ? TOPIC_ID_BY_NAME[q.tema] : null; changes.push("vinculada a registro de temas"); }
   // Taxonomía pedagógica nueva (section/topic/subtopic), independiente de
   // sourceFile/bloque/tema (que siguen siendo procedencia). Aditivo y
   // nulo por defecto: no se reclasifica el banco existente de golpe,
@@ -269,7 +243,6 @@ function buildMigrationReport(){
     byType: INTEGRITY_REPORT.byType,
     byCategoria: CATEGORY_REGISTRY.reduce((m,c)=>{ m[c.id]=QUESTIONS.filter(q=>q.categoria===c.id).length; return m; },{}),
     bySource: INTEGRITY_REPORT.bySource,
-    distinctTopics: TOPIC_REGISTRY.length,
     duplicateIds,
     invalidRecords: INTEGRITY_REPORT.invalid,
     structuralIssues,
@@ -324,37 +297,6 @@ function toast(msg){
   toast._t = setTimeout(()=> el.classList.remove("show"), 2200);
 }
 function uid(){ return Math.random().toString(36).slice(2,10); }
-
-/* Randomize a question's presentation (option order) without altering correctness */
-function randomizeQuestionView(q){
-  const clone = JSON.parse(JSON.stringify(q));
-  if((clone.tipo === "opcion_unica" || clone.tipo === "seleccion_multiple") && clone.opciones && clone.opciones.length){
-    const letters = clone.opciones.map(o=>o.letter);
-    const texts = clone.opciones.map(o=>o.text);
-    const shuffledTexts = shuffle(texts);
-    // rebuild options with original letters but shuffled text, remap correct answer(s)
-    const textToNewLetter = {};
-    clone.opciones = letters.map((letter, idx)=>{
-      const text = shuffledTexts[idx];
-      textToNewLetter[text] = letter;
-      return { letter, text };
-    });
-    // find where each original-correct text ended up
-    if(clone.tipo === "opcion_unica"){
-      const origCorrectText = texts[letters.indexOf(q.respuesta)];
-      clone.respuesta = textToNewLetter[origCorrectText];
-    } else {
-      clone.respuesta = q.respuesta.map(letter=>{
-        const origText = texts[letters.indexOf(letter)];
-        return textToNewLetter[origText];
-      });
-    }
-  }
-  if(clone.tipo === "emparejamiento" && clone.matching){
-    clone.matching.right = shuffle(clone.matching.right);
-  }
-  return clone;
-}
 
 /* ---------------------------------------------------------------
    3. FILTRADO DE PREGUNTAS
@@ -460,13 +402,7 @@ function computeStats(){
     const a = PROGRESS.answers[q.id];
     if(a){ byTema[t].answered++; if(a.correcta) byTema[t].correct++; }
   });
-  const weakTopics = Object.entries(byTema)
-    .filter(([,v])=>v.answered>=3)
-    .map(([k,v])=>({tema:k, pct:Math.round((v.correct/v.answered)*100), answered:v.answered}))
-    .sort((a,b)=>a.pct-b.pct)
-    .slice(0,5);
-
-  return { total, answered, correct, incorrect, unanswered, markedCount, accuracy, byTema, weakTopics };
+  return { total, answered, correct, incorrect, unanswered, markedCount, accuracy, byTema };
 }
 
 /* ---------------------------------------------------------------
@@ -1014,7 +950,6 @@ function validateFlashcards(list){
 }
 const { report: FLASHCARD_INTEGRITY_REPORT, valid: FLASHCARDS } = validateFlashcards(RAW_FLASHCARDS);
 const F_BY_ID = {}; FLASHCARDS.forEach(c=> F_BY_ID[c.canonicalId]=c);
-const FLASHCARD_TOPIC_REGISTRY = Array.from(new Set(FLASHCARDS.map(c=>c.topic).filter(Boolean))).sort();
 
 function getFlashcardState(cid){
   const st = PROGRESS.flashcards[cid];
@@ -1075,13 +1010,13 @@ function computeFlashcardStats(){
 --------------------------------------------------------------- */
 window.OPE = {
   STORE, storageIsLocal, PROGRESS, persist,
-  QUESTIONS, Q_BY_ID, ALL_SOURCES, ALL_TEMAS, ALL_TYPES, ALL_CATEGORIAS, INTEGRITY_REPORT,
-  EXERCISE_TYPES, TYPE_LABELS, CATEGORY_REGISTRY, CATEGORY_LABELS, TOPIC_REGISTRY, SOURCE_REGISTRY,
+  QUESTIONS, Q_BY_ID, ALL_SOURCES, INTEGRITY_REPORT,
+  EXERCISE_TYPES, TYPE_LABELS, CATEGORY_REGISTRY, CATEGORY_LABELS,
   TAXONOMY, TAXONOMY_SECTIONS,
   contentHash, MIGRATION_REPORT, RANDOMIZATION_ALGORITHM_VERSION,
   shuffle, seededShuffle, mulberry32, makeSeed, escapeHtml, renderBlank, fmtTime, fmtDate, toast, uid,
   countBlanks,
-  randomizeQuestionView, filterQuestions, getQuestionState, isMarked,
+  filterQuestions, getQuestionState, isMarked,
   evaluateAnswer, recordAnswer, computeStats, Timer,
   Nav, buildSession, buildSessionFromIds, buildSessionFromShareableConfig, resolveQuestionIds,
   saveSessionSnapshot, hydrateSession, summarizeSession, pushHistory, resetProgress,
@@ -1090,7 +1025,7 @@ window.OPE = {
   makeShareCode, parseShareCode, shareCodeForSession, shareCodeForQuestion, shareCodeForSelection,
   sessionFromTestPayload, createChallenge, importChallengeCode, sessionForChallenge,
   completeChallengeAttempt, compareResults, shareCodeForReturnResult, importReturnedResult,
-  FLASHCARDS, F_BY_ID, FLASHCARD_INTEGRITY_REPORT, FLASHCARD_TOPIC_REGISTRY,
+  FLASHCARDS, F_BY_ID, FLASHCARD_INTEGRITY_REPORT,
   getFlashcardState, markFlashcardSeen, setFlashcardMastered, filterFlashcards, computeFlashcardStats,
   computeTaxonomyStats,
 };

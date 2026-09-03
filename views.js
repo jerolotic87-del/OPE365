@@ -962,6 +962,7 @@ let pendingBlankValues = [];
 function renderRunner(){
   const s = O.getSession();
   if(!s){ go("home"); return; }
+  if(s.finished){ go(s.mode==="exam" ? "results" : "home"); return; }
   const isExam = s.mode==="exam";
 
   mainEl().innerHTML = `
@@ -1279,6 +1280,7 @@ function submitAnswer(q, s, isExam, answer){
 }
 
 function finishPracticeSession(s){
+  if(s.finished) return;
   const summary = O.summarizeSession(s);
   O.pushHistory(Object.assign({mode:"practice", finishedAt:Date.now(), config:s.config}, summary));
   s.finished = true;
@@ -1348,14 +1350,30 @@ function confirmSubmitExam(){
 /* ---------------------------------------------------------------
    RESULTADOS
 --------------------------------------------------------------- */
+// Registra una sesión de examen terminada EXACTAMENTE UNA VEZ: respuestas al
+// banco + al motor, fila de historial, cierre de desafío. renderResults se
+// re-ejecuta al re-renderizar la vista o al volver atrás/adelante; sin esta
+// guarda, cada re-render añadía otro evento de examen al motor y otra fila de
+// historial (D-05/D-15).
+function consolidateSession(s){
+  if(s._consolidated) return s._summary;
+  s.questions.forEach((q,i)=>{ const r=s.responses[i]; if(r) O.recordAnswer(q, r.answer, r.correct); });
+  if(O.LEB) O.LEB.recordExamSession(s);   // registro en bloque en el motor (kind: examen)
+  const summary = O.summarizeSession(s);
+  O.pushHistory(Object.assign({mode:"exam", finishedAt:Date.now(), config:s.config}, summary));
+  if(s.challengeId) O.completeChallengeAttempt(s.challengeId, summary);
+  s.finished = true;
+  s._summary = summary;
+  s._consolidated = true;
+  return summary;
+}
+
 function renderResults(){
   const s = O.getSession();
   if(!s){ go("home"); return; }
   const timer = O.getActiveTimer(); if(timer) timer.stop();
 
-  s.questions.forEach((q,i)=>{ const r=s.responses[i]; if(r) O.recordAnswer(q, r.answer, r.correct); });
-  if(O.LEB) O.LEB.recordExamSession(s);   // registro en bloque en el motor (kind: examen)
-  const summary = O.summarizeSession(s);
+  const summary = consolidateSession(s);
 
   const byTema = {}, byTipo = {};
   s.questions.forEach((q,i)=>{
@@ -1364,11 +1382,7 @@ function renderResults(){
     bump(byTema, q.tema||"General"); bump(byTipo, tipoLabel(q.tipo));
   });
 
-  O.pushHistory(Object.assign({mode:"exam", finishedAt:Date.now(), config:s.config}, summary));
-  s.finished = true;
-
   if(s.challengeId){
-    O.completeChallengeAttempt(s.challengeId, summary);
     O.saveSessionSnapshot(); O.persist();
     return renderChallengeCompletion(s.challengeId, summary, byTema, byTipo);
   }

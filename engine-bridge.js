@@ -304,12 +304,6 @@ function sectionConceptsModel(sectionId){
   return { section:{ id:sec.id, name:sec.name }, topics, total:topics.length, seen, asentado, repaso };
 }
 
-/* ---- flashcards del plan del motor ------------------------- */
-function smartFlashcards(minutes){
-  const run = LE.smartSessionRun(minutes || (getPlan() && getPlan().minutesPerDay) || 20);
-  return run.cardIds;
-}
-
 // Sesión centrada SOLO en lo que toca repasar (conceptos debidos/atrasados).
 // Devuelve una sesión de práctica lista para el runner, o null si no hay nada.
 function startReviewSession(minutes){
@@ -361,7 +355,7 @@ O.LEB = {
   boot, markShown, elapsedMs,
   recordQuestion, recordExamSession, recordFlashcard, recalcNow, recalcSoon,
   getPlan, setPlan, clearExamDate,
-  startSmartSession, startReviewSession, startConceptSession, smartFlashcards, smartPreview,
+  startSmartSession, startReviewSession, startConceptSession, smartPreview,
   homeModel, progressModel, sectionConceptsModel, conceptView, masteryBreakdown,
   masteryLabel, masteryTone, reviewLabel,
 };
