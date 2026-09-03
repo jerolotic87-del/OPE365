@@ -245,6 +245,17 @@ silencio ni elijas arbitrariamente.
   subíndice: la tabla lo lista pero en vivo no hace nada). **Pendiente**:
   `Ctrl+Mayús+Z` = "Restablecer carácter" (en ATAJOS.docx, sin probar —
   `inicio-363/364`).
+- **Tanda 3 (sep-2026):** `Ctrl+Tab` = tabulación real dentro de una celda
+  de tabla (`inicio-82`) · `Alt,F,T` = abre el diálogo Tabulaciones
+  (`inicio-77`) · `Alt+Fin` = va al final de la fila de la tabla
+  (`insertar-32`) · `Ctrl+-` = alejar zoom de 10 en 10 (`vista-123`) ·
+  `Ctrl+0` = **restaura el zoom al 100 %** (`inicio-253` reformulada — NO
+  toca el espaciado del párrafo, que no tiene atajo). Correcciones:
+  `Alt+Mayús+Fin` en tabla **extiende la selección** hasta el final de la
+  fila, no "va al final" (`insertar-43`) · `Alt+5` (numérico) inserta el
+  símbolo del código Alt (♣), **no** selecciona la tabla (`insertar-38`).
+  Borrada `inicio-376` (`Alt+Mayús+5` numérico = no hace nada). Pendiente:
+  `Ctrl+5` (numérico) = ¿seleccionar todo? (`inicio-371`).
 - **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
   poden preguntas correctas solo por parecerse a otra — se conservan
   aunque otra pregunte por el mismo atajo (están en topics/framings que

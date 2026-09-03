@@ -1082,7 +1082,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Inicio va al inicio de la fila activa en una tabla. Inicio va al inicio de la línea del texto dentro de la celdaactual. Alt+Mayús+Inicio también va al inicio de la fila en una tabla como atajo alternativo. Ctrl+Inicio va al inicio del documento completo."
+    "explicacion": "Alt+Inicio va al inicio de la fila activa en una tabla. Inicio va al inicio de la línea del texto dentro de la celdaactual. Alt+Mayús+Inicio extiende la selección hasta el inicio de la fila."
   },
   {
     "id": "insertar-32",
@@ -1117,7 +1117,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Fin va al final de la fila activa en una tabla. Fin va al final de la línea del texto dentro de la celda actual. Alt+Mayús+Fin también va al final de la fila como atajo alternativo. Ctrl+Fin va al final del documento completo."
+    "explicacion": "Alt+Fin va al final de la fila activa en una tabla. Fin va al final de la línea del texto dentro de la celda actual. Alt+Mayús+Fin no es equivalente: extiende la selección desde el cursor hasta el final de la fila. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-33",
@@ -1306,28 +1306,28 @@
     "subtopic": null,
     "tema": "Tablas",
     "sourceQuestionId": "8-324",
-    "enunciado": "¿Qué atajo selecciona una tabla completa en Word 365?",
+    "enunciado": "¿Qué ocurre al pulsar Alt + 5 en el teclado numérico dentro de un documento de Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Borrar (Número 5)"
+        "text": "Inserta el símbolo ♣ (el carácter del código Alt 5)"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Borrar (Número 5)"
+        "text": "Selecciona la tabla completa donde está el cursor"
       },
       {
         "letter": "C",
-        "text": "Mayús+Borrar (Número 5)"
+        "text": "Selecciona la fila actual"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+Borrar (Número 5)"
+        "text": "No hace nada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Borrar en el teclado numérico selecciona la tabla completa donde está el cursor. Ctrl+Borrar (Número 5) selecciona todo el documento. Mayús+Borrar no tiene función asignada para seleccionar tabla. Alt+Ctrl+Borrar no tiene función asignada."
+    "explicacion": "Alt + un número del teclado numérico introduce un carácter por su código Alt (una función de Windows, no de Word): Alt+5 da ♣. No selecciona la tabla — para eso se usa Disposición de tabla ▸ Seleccionar ▸ Tabla. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-40",
@@ -1450,28 +1450,28 @@
     "tema": "Tablas",
     "sourceQuestionId": "gen-atajo-25",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también va al final de la fila en una tabla en Word 365, además de Alt+Fin?",
+    "enunciado": "Dentro de una tabla en Word 365, ¿qué hace Alt+Mayús+Fin?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Mayús+P"
+        "text": "Va al final de la fila sin seleccionar nada"
       },
       {
         "letter": "B",
-        "text": "Alt+Ctrl+O"
+        "text": "Selecciona desde el cursor hasta el final de la fila (todas las celdas)"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+L"
+        "text": "Selecciona la columna entera"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+Fin"
+        "text": "Inserta una tabulación"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Mueve el cursor al final de la fila activa dentro de una tabla; es una segunda combinación asignada a la misma función que Alt+Fin."
+    "respuesta": "B",
+    "explicacion": "Alt+Mayús+Fin extiende la selección desde donde está el cursor hasta el final de la fila, abarcando el texto de todas las celdas intermedias. Para ir al final de la fila SIN seleccionar se usa Alt+Fin. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-44",

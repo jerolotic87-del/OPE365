@@ -2950,7 +2950,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "La secuencia de KeyTips Alt, F, T abre el cuadro de diálogo Tabulaciones. Siguiendo el mismo patrón: Alt, F, Y abre el cuadro Fuente, Alt, F, P abre el cuadro Párrafo. Ctrl+T es el atajo para centrar texto, no para abrir Tabulaciones."
+    "explicacion": "La secuencia de KeyTips Alt, F, T abre el cuadro de diálogo Tabulaciones. Siguiendo el mismo patrón: Alt, F, Y abre el cuadro Fuente, Alt, F, P abre el cuadro Párrafo. Ctrl+T es el atajo para centrar texto, no para abrir Tabulaciones. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-78",
@@ -3113,7 +3113,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Dentro de una celda de tabla Tab avanza a la siguiente celda. Para insertar un carácter de tabulación real dentro de la celda hay que usar Ctrl+Tab. Mayús+Tab retrocede a la celda anterior."
+    "explicacion": "Dentro de una celda de tabla Tab avanza a la siguiente celda. Para insertar un carácter de tabulación real dentro de la celda hay que usar Ctrl+Tab. Mayús+Tab retrocede a la celda anterior. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-83",
@@ -9414,28 +9414,28 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0507",
-    "enunciado": "¿Qué atajos permiten aumentar y disminuir el espaciado anterior de un párrafo en Word 365?",
+    "enunciado": "En esta instalación de Word 365 (versión española), ¿hay atajo de teclado para el espaciado anterior/posterior de un párrafo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + 0 añade o quita 12 pto antes del párrafo; no hay atajo para el espaciado posterior"
+        "text": "Sí: Ctrl+0 añade o quita 12 pto antes del párrafo"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Mayús + Arriba aumenta; Ctrl + Mayús + Abajo disminuye"
+        "text": "Sí: Ctrl+Mayús+Arriba / Abajo"
       },
       {
         "letter": "C",
-        "text": "No existen atajos de teclado para el espaciado entre párrafos"
+        "text": "No: el espaciado antes/después solo se ajusta desde la cinta o el diálogo Párrafo"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Arriba aumenta; Ctrl + Abajo disminuye"
+        "text": "Sí: Ctrl+Arriba / Abajo"
       }
     ],
     "matching": null,
-    "respuesta": "A",
-    "explicacion": "En Word 365 versión española, Ctrl+0 (cero) alterna entre añadir y quitar 12 puntos de espaciado anterior al párrafo. No existe un atajo equivalente para el espaciado posterior, que debe configurarse desde el cuadro de diálogo Párrafo o desde los controles del grupo Párrafo."
+    "respuesta": "C",
+    "explicacion": "No hay atajo para el espaciado entre párrafos: se ajusta desde el grupo Párrafo de la cinta o el diálogo Párrafo. En esta instalación Ctrl+0 restaura el zoom al 100 %, no toca el espaciado. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-254",
@@ -13659,7 +13659,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Borrar en el teclado numérico selecciona todo el contenido del documento. Ctrl+Número 5 también selecciona todo. Alt+Borrar (Número 5) selecciona la tabla. Ctrl+Mayús+Número 5 no tiene función asignada para seleccionar todo."
+    "explicacion": "Ctrl+5 en el teclado numérico (NumLock desactivado) selecciona todo el documento. Ojo: Alt+5 en el numérico NO selecciona — inserta el símbolo del código Alt 5 (♣). PENDIENTE de confirmar en vivo Ctrl+5(num)."
   },
   {
     "id": "inicio-372",
@@ -13800,41 +13800,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ctrl+Mayús+A aplica el estilo Normal al párrafo. Alt+Mayús+Borrar (Número 5) también aplica el estilo Normal como atajo alternativo. Ctrl+Mayús+N también aplica Normal en algunos contextos. Alt+Ctrl+N activa la vista Normal del documento."
-  },
-  {
-    "id": "inicio-376",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": null,
-    "tema": "Estilos",
-    "sourceQuestionId": "8-333",
-    "enunciado": "¿Qué atajo alternativo también aplica el estilo Normal además de Ctrl+Mayús+A en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+Borrar (Número 5)"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+N"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+Z"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+A"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+Borrar en el teclado numérico es el atajo alternativo para aplicar el estilo Normal. Ctrl+Mayús+N también aplica Normal en algunos contextos. Ctrl+Mayús+Z restablece el formato de carácter. Alt+Ctrl+A inserta un comentario."
   },
   {
     "id": "inicio-377",
