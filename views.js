@@ -4163,15 +4163,26 @@ function renderMpLobby(){
       <div class="conn-status-panel">
         <div class="glyph" style="font-size:30px; margin-bottom:var(--sp-3); color:var(--bad);">⚠</div>
         <h3>${MP_CONN_LABELS[mpConnPhase]}</h3>
-        <p>${mpConnPhase==="room_full" ? "Esa partida ya tiene dos jugadores." : "Puede que tu rival se haya desconectado o que la conexión haya fallado."}</p>
+        <p>${mpConnPhase==="room_full" ? "Esa partida ya tiene dos jugadores." : "El servidor de conexión (PeerJS) no responde o vuestras redes no dejan abrir el canal. No tiene que ver con las preguntas: el contenido ni se carga hasta estar conectados."}</p>
       </div>
       <div class="actions" style="justify-content:center; margin-top:var(--sp-5);">
         <button class="btn btn-outline" id="mp-retry">Intentar de nuevo</button>
         <button class="btn btn-ghost" id="mp-exit">Salir</button>
       </div>
+      <details style="margin-top:var(--sp-5); font-size:12px; color:var(--text-2);">
+        <summary style="cursor:pointer;">Detalles técnicos</summary>
+        <pre id="mp-netlog" style="white-space:pre-wrap; word-break:break-word; font-size:11px; margin-top:8px; max-height:240px; overflow:auto;"></pre>
+        <button class="btn btn-ghost btn-sm" id="mp-copy-netlog" style="margin-top:6px;">Copiar</button>
+      </details>
     </div>`;
     $("#mp-retry").addEventListener("click", ()=>{ mpSetupState.role==='host' ? mpStartAsHost() : mpStartAsGuest(); });
     $("#mp-exit").addEventListener("click", mpExitToSetup);
+    try{
+      const log = (window.OPE_MP && OPE_MP.getNetLog() || []).slice(-25)
+        .map(e=> `${new Date(e.t).toISOString().slice(11,23)} ${e.event} ${e.data?JSON.stringify(e.data):""}`).join("\n");
+      const pre = $("#mp-netlog"); if(pre) pre.textContent = log || "(sin registro)";
+      const cb = $("#mp-copy-netlog"); if(cb) cb.addEventListener("click", ()=> copyToClipboard(log));
+    }catch(e){}
     return;
   }
 

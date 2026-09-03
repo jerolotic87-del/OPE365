@@ -4560,29 +4560,25 @@ function generateRoomCode(){
 }
 const PEER_PREFIX = "ope365du-";
 
-/* Servidores de señalización PeerJS a probar, en orden. El primero es el
-   broker público por defecto (0.peerjs.com); si está caído o saturado
-   —causa del "no llega a iniciar", el Peer nunca abre— se reintenta contra
-   un broker alternativo. `undefined` = usar los valores por defecto de PeerJS. */
-const PEER_SERVERS = [
-  undefined,
-  { host: "0.peerjs.com", port: 443, path: "/", secure: true },
-  { host: "peerjs.92k.de", port: 443, path: "/", secure: true },
-];
-/* ICE: STUN de Google + un TURN gratuito (OpenRelay). Sin un servidor TURN,
-   dos dispositivos en redes móviles / detrás de CGNAT abren la sala pero el
-   canal de datos nunca llega a establecerse (se queda en "conectando"). */
+/* Un ÚNICO broker de señalización para los dos lados: el broker público
+   por defecto de PeerJS (0.peerjs.com). Probar varios brokers distintos
+   sin un canal previo para ponerse de acuerdo hace que host e invitado
+   acaben en servidores distintos y no se encuentren nunca — peor que un
+   solo broker. Ante un fallo transitorio se REINTENTA el mismo. */
+/* ICE: STUN (Google/Cloudflare) + TURN gratuito (OpenRelay). Sin un TURN
+   que releve el tráfico, dos dispositivos en redes móviles / detrás de
+   CGNAT abren la sala en el broker pero el canal de datos WebRTC nunca
+   llega a establecerse: se queda en "conectando" y acaba fallando. Se
+   incluye :443 y ?transport=tcp para redes que solo dejan salir el 443. */
 const ICE_SERVERS = [
   { urls: ["stun:stun.l.google.com:19302", "stun:stun1.l.google.com:19302", "stun:stun.cloudflare.com:3478"] },
   { urls: "turn:openrelay.metered.ca:80", username: "openrelayproject", credential: "openrelayproject" },
   { urls: "turn:openrelay.metered.ca:443", username: "openrelayproject", credential: "openrelayproject" },
   { urls: "turn:openrelay.metered.ca:443?transport=tcp", username: "openrelayproject", credential: "openrelayproject" },
-  { urls: "turn:staticauth.openrelay.metered.ca:443", username: "openrelayproject", credential: "openrelayproject" },
+  { urls: "turns:openrelay.metered.ca:443?transport=tcp", username: "openrelayproject", credential: "openrelayproject" },
 ];
-function peerOpts(serverIdx){
-  const base = { debug: 0, config: { iceServers: ICE_SERVERS } };
-  const srv = PEER_SERVERS[serverIdx] || null;
-  return srv ? Object.assign({}, srv, base) : base;
+function peerOpts(){
+  return { debug: 0, config: { iceServers: ICE_SERVERS } };
 }
 
 /* ---------------------------------------------------------------
@@ -4606,7 +4602,7 @@ function createRealTransport(){
       const code = generateRoomCode();
       netLog("ROOM_CREATE_ATTEMPTED", {code, retry});
       let settled = false;
-      const p = new window.Peer(PEER_PREFIX+code, peerOpts(retry % PEER_SERVERS.length));
+      const p = new window.Peer(PEER_PREFIX+code, peerOpts());
       const to = setTimeout(()=>{
         if(settled) return; settled = true;
         try{ p.destroy(); }catch(e){}
@@ -4647,7 +4643,7 @@ function createRealTransport(){
     function attempt(retry){
       netLog("ROOM_JOIN_ATTEMPTED", {code, retry});
       let settled = false;
-      const p = new window.Peer(undefined, peerOpts(retry % PEER_SERVERS.length));
+      const p = new window.Peer(undefined, peerOpts());
       function nextOrFail(){
         try{ p.destroy(); }catch(e){}
         if(retry < 5) attempt(retry+1); else emit("connect_failed");
@@ -10005,15 +10001,26 @@ function renderMpLobby(){
       <div class="conn-status-panel">
         <div class="glyph" style="font-size:30px; margin-bottom:var(--sp-3); color:var(--bad);">⚠</div>
         <h3>${MP_CONN_LABELS[mpConnPhase]}</h3>
-        <p>${mpConnPhase==="room_full" ? "Esa partida ya tiene dos jugadores." : "Puede que tu rival se haya desconectado o que la conexión haya fallado."}</p>
+        <p>${mpConnPhase==="room_full" ? "Esa partida ya tiene dos jugadores." : "El servidor de conexión (PeerJS) no responde o vuestras redes no dejan abrir el canal. No tiene que ver con las preguntas: el contenido ni se carga hasta estar conectados."}</p>
       </div>
       <div class="actions" style="justify-content:center; margin-top:var(--sp-5);">
         <button class="btn btn-outline" id="mp-retry">Intentar de nuevo</button>
         <button class="btn btn-ghost" id="mp-exit">Salir</button>
       </div>
+      <details style="margin-top:var(--sp-5); font-size:12px; color:var(--text-2);">
+        <summary style="cursor:pointer;">Detalles técnicos</summary>
+        <pre id="mp-netlog" style="white-space:pre-wrap; word-break:break-word; font-size:11px; margin-top:8px; max-height:240px; overflow:auto;"></pre>
+        <button class="btn btn-ghost btn-sm" id="mp-copy-netlog" style="margin-top:6px;">Copiar</button>
+      </details>
     </div>`;
     $("#mp-retry").addEventListener("click", ()=>{ mpSetupState.role==='host' ? mpStartAsHost() : mpStartAsGuest(); });
     $("#mp-exit").addEventListener("click", mpExitToSetup);
+    try{
+      const log = (window.OPE_MP && OPE_MP.getNetLog() || []).slice(-25)
+        .map(e=> `${new Date(e.t).toISOString().slice(11,23)} ${e.event} ${e.data?JSON.stringify(e.data):""}`).join("\n");
+      const pre = $("#mp-netlog"); if(pre) pre.textContent = log || "(sin registro)";
+      const cb = $("#mp-copy-netlog"); if(cb) cb.addEventListener("click", ()=> copyToClipboard(log));
+    }catch(e){}
     return;
   }
 
