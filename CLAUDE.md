@@ -248,13 +248,19 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 516, inicio 393, archivo 323, vista 145, revisar 78, insertar 45,
+interfaz 516, inicio 393, archivo 336, vista 145, revisar 78, insertar 45,
 referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
-Total 1515. Historial: `data/questions_regroup_report.md`. Las de `archivo`
+Total 1528. Historial: `data/questions_regroup_report.md`. Las de `archivo`
 `archivo-134..` (`sourceQuestionId` `opc-<panel>-NN`) cubren toggles de
 `Archivo > Opciones` — opción = "sub-panel del diálogo ▸ ajuste",
 distractores = ajustes-hermanos reales, nada inventado; las que ya tenían
-pregunta previa (`archivo-64..79`) no se duplicaron. **Taxonomía v6→v7**: el
+pregunta previa (`archivo-64..79`) no se duplicaron. `archivo-324..336`
+(`opc-bar-01..13`, `subtopic` "Barra de herramientas de acceso rápido",
+topic `opciones-personalizar`) cubren el panel Barra de acceso rápido de
+Opciones (filtro "Comandos disponibles en", Agregar/Quitar/Modificar,
+separador, macros, para todos/este documento, mostrar/posición/etiquetas,
+Restablecer, Importar-exportar) — verificadas con aulaClic + vence.es +
+Microsoft Support ES; complementan `archivo-105..107` sin duplicarlas. **Taxonomía v6→v7**: el
 topic único `archivo:opciones` (concepto gigante que degradaba el motor) se
 partió por panel — `opciones-general/-presentacion/-revision/-guardar/
 -idioma/-accesibilidad/-personalizar/-complementos` y, para el panel
