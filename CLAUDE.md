@@ -295,6 +295,17 @@ silencio ni elijas arbitrariamente.
   atajo inventado; `vista-109` pasa a `categoria:"ruta"`). **Pegado
   especial** según `atajos_oficial.json` = **`Alt+Ctrl+G`** (`inicio-383`
   ya lo dice) — pendiente de prueba en vivo.
+- **Tanda 7·bis (sep-2026, prueba en vivo):** `Alt+Ctrl+V` **sí hace algo**
+  — es el **pincel Copiar/Pegar formato**: `Alt+Ctrl+C` copia el formato
+  del texto seleccionado, `Alt+Ctrl+V` lo pega (coincide con
+  `atajos_oficial.json`: "Copiar formato" Alt+Ctrl+C, "Pegar formato"
+  Alt+Ctrl+V). El banco traía el esquema internacional `Ctrl+Mayús+C/V`
+  (que aquí NO va). Corregidas `inicio-3` (dorso del emparejamiento),
+  `inicio-145`, `inicio-301`, `inicio-302`. **Matiz confirmado**: si el
+  origen mezcla formato de carácter (negrita/cursiva) y de párrafo
+  (sangría, interlineado), al pegar sobre otro párrafo **solo se aplica el
+  formato de párrafo**. Las notas de `vista-27/87/109/88` ya no dicen que
+  `Alt+Ctrl+V` "no hace nada" (dicen que hace pegar formato).
 - **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
   poden preguntas correctas solo por parecerse a otra — se conservan
   aunque otra pregunte por el mismo atajo (están en topics/framings que

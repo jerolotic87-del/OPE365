@@ -120,7 +120,7 @@
         },
         {
           "id": "D",
-          "label": "Ctrl + Mayus + C"
+          "label": "Alt + Ctrl + C"
         },
         {
           "id": "E",
@@ -140,7 +140,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Cortar: Ctrl+X. Copiar: Ctrl+C. Pegar: Ctrl+V. Copiar formato: Ctrl+Mayus+C (y para pegar el formato copiado se usa Ctrl+Mayus+V). El distractor Ctrl+Z es Deshacer."
+    "explicacion": "Cortar: Ctrl+X. Copiar: Ctrl+C. Pegar: Ctrl+V. Copiar formato: Alt+Ctrl+C (y para pegar el formato copiado, Alt+Ctrl+V). El distractor Ctrl+Z es Deshacer. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-4",
@@ -5458,7 +5458,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Copiar formato copia el formato del texto seleccionado y lo aplica sobre otro texto al hacer clic. Su atajo de dos pasos es Ctrl+Mayús+C para copiar el formato y Ctrl+Mayús+V para pegarlo. El icono en la cinta es un pincel situado en el grupo Portapapeles."
+    "explicacion": "Copiar formato copia el formato del texto seleccionado y lo aplica sobre otro texto al hacer clic. Su atajo de dos pasos es Alt+Ctrl+C para copiar el formato y Alt+Ctrl+V para pegarlo. El icono en la cinta es un pincel situado en el grupo Portapapeles. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-146",
@@ -11314,7 +11314,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+C copia el formato del texto seleccionado. Ctrl+C copia el contenido. Ctrl+Mayús+C no tiene esa función asignada. Alt+C establece el foco en Copilot."
+    "explicacion": "Alt+Ctrl+C copia el formato del texto seleccionado (equivale al pincel Copiar formato). Ctrl+C copia el contenido. Ctrl+Mayus+C no tiene esa funcion asignada en esta instalacion. Alt+C establece el foco en Copilot. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-302",
@@ -11349,7 +11349,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+V pega el formato copiado previamente con Alt+Ctrl+C. Ctrl+V pega el contenido del portapapeles. Ctrl+Mayús+V pega solo texto sin formato. Alt+V no tiene esa función asignada."
+    "explicacion": "Alt+Ctrl+V pega el formato copiado previamente con Alt+Ctrl+C. Ojo: si el origen mezcla formato de caracter (negrita, cursiva...) y de parrafo (sangria, interlineado), al pegarlo sobre otro parrafo solo se aplica el formato de parrafo. Ctrl+V pega el contenido del portapapeles. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-303",
