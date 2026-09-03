@@ -4560,6 +4560,31 @@ function generateRoomCode(){
 }
 const PEER_PREFIX = "ope365du-";
 
+/* Servidores de señalización PeerJS a probar, en orden. El primero es el
+   broker público por defecto (0.peerjs.com); si está caído o saturado
+   —causa del "no llega a iniciar", el Peer nunca abre— se reintenta contra
+   un broker alternativo. `undefined` = usar los valores por defecto de PeerJS. */
+const PEER_SERVERS = [
+  undefined,
+  { host: "0.peerjs.com", port: 443, path: "/", secure: true },
+  { host: "peerjs.92k.de", port: 443, path: "/", secure: true },
+];
+/* ICE: STUN de Google + un TURN gratuito (OpenRelay). Sin un servidor TURN,
+   dos dispositivos en redes móviles / detrás de CGNAT abren la sala pero el
+   canal de datos nunca llega a establecerse (se queda en "conectando"). */
+const ICE_SERVERS = [
+  { urls: ["stun:stun.l.google.com:19302", "stun:stun1.l.google.com:19302", "stun:stun.cloudflare.com:3478"] },
+  { urls: "turn:openrelay.metered.ca:80", username: "openrelayproject", credential: "openrelayproject" },
+  { urls: "turn:openrelay.metered.ca:443", username: "openrelayproject", credential: "openrelayproject" },
+  { urls: "turn:openrelay.metered.ca:443?transport=tcp", username: "openrelayproject", credential: "openrelayproject" },
+  { urls: "turn:staticauth.openrelay.metered.ca:443", username: "openrelayproject", credential: "openrelayproject" },
+];
+function peerOpts(serverIdx){
+  const base = { debug: 0, config: { iceServers: ICE_SERVERS } };
+  const srv = PEER_SERVERS[serverIdx] || null;
+  return srv ? Object.assign({}, srv, base) : base;
+}
+
 /* ---------------------------------------------------------------
    2. CAPA DE TRANSPORTE
    `RealTransport` envuelve PeerJS. `MockTransport` (usado solo en
@@ -4581,12 +4606,12 @@ function createRealTransport(){
       const code = generateRoomCode();
       netLog("ROOM_CREATE_ATTEMPTED", {code, retry});
       let settled = false;
-      const p = new window.Peer(PEER_PREFIX+code, {debug:0});
+      const p = new window.Peer(PEER_PREFIX+code, peerOpts(retry % PEER_SERVERS.length));
       const to = setTimeout(()=>{
         if(settled) return; settled = true;
         try{ p.destroy(); }catch(e){}
-        if(retry < 2) attempt(retry+1); else emit("room_create_failed");
-      }, 9000);
+        if(retry < 5) attempt(retry+1); else emit("room_create_failed");
+      }, 11000);
       p.on("open", (id)=>{
         if(settled) return; settled = true;
         clearTimeout(to);
@@ -4604,45 +4629,59 @@ function createRealTransport(){
         });
       });
       p.on("error", (err)=>{
-        netLog("PEER_ERROR", {type: err && err.type, msg:String(err)});
+        const type = err && err.type;
+        netLog("PEER_ERROR", {type, msg:String(err)});
         if(settled) return;
-        if(err && err.type === "unavailable-id"){
+        // id colisionado, broker caído/inaccesible o error de servidor -> siguiente intento
+        if(["unavailable-id","network","server-error","socket-error","socket-closed"].includes(type)){
           settled = true; clearTimeout(to);
-          if(retry < 4) attempt(retry+1); else emit("room_create_failed");
+          try{ p.destroy(); }catch(e){}
+          if(retry < 5) attempt(retry+1); else emit("room_create_failed");
         }
       });
     }
   }
 
   function guestJoinRoom(code){
-    netLog("ROOM_JOIN_ATTEMPTED", {code});
-    let settled = false;
-    const p = new window.Peer(undefined, {debug:0});
-    const toOpen = setTimeout(()=>{ if(settled) return; settled=true; try{p.destroy();}catch(e){} emit("connect_failed"); }, 9000);
-    p.on("open", ()=>{
-      if(settled) return; settled = true;
-      clearTimeout(toOpen);
-      peer = p;
-      const c = p.connect(PEER_PREFIX+code.toUpperCase(), {reliable:true});
-      let connSettled = false;
-      const toConn = setTimeout(()=>{ if(connSettled) return; connSettled=true; emit("connect_failed"); }, 9000);
-      c.on("open", ()=>{
-        if(connSettled) return; connSettled = true;
-        clearTimeout(toConn);
-        netLog("PEER_CONNECTED", {});
-        attach(c);
+    attempt(0);
+    function attempt(retry){
+      netLog("ROOM_JOIN_ATTEMPTED", {code, retry});
+      let settled = false;
+      const p = new window.Peer(undefined, peerOpts(retry % PEER_SERVERS.length));
+      function nextOrFail(){
+        try{ p.destroy(); }catch(e){}
+        if(retry < 5) attempt(retry+1); else emit("connect_failed");
+      }
+      const toOpen = setTimeout(()=>{ if(settled) return; settled=true; nextOrFail(); }, 11000);
+      p.on("open", ()=>{
+        if(settled) return; settled = true;
+        clearTimeout(toOpen);
+        peer = p;
+        const c = p.connect(PEER_PREFIX+code.toUpperCase(), {reliable:true});
+        let connSettled = false;
+        const toConn = setTimeout(()=>{ if(connSettled) return; connSettled=true; nextOrFail(); }, 11000);
+        c.on("open", ()=>{
+          if(connSettled) return; connSettled = true;
+          clearTimeout(toConn);
+          netLog("PEER_CONNECTED", {});
+          attach(c);
+        });
+        c.on("error", (err)=>{
+          netLog("CONN_ERROR", {type: err && err.type, msg:String(err)});
+          if(connSettled) return; connSettled = true; clearTimeout(toConn);
+          nextOrFail();
+        });
       });
-      c.on("error", (err)=>{
-        netLog("CONN_ERROR", {msg:String(err)});
-        if(connSettled) return; connSettled = true; clearTimeout(toConn);
-        emit("connect_failed");
+      p.on("error", (err)=>{
+        const type = err && err.type;
+        netLog("PEER_ERROR", {type, msg:String(err)});
+        // 'peer-unavailable' = el host no está en ESTE broker; probamos el siguiente
+        if(["network","server-error","socket-error","socket-closed","peer-unavailable","unavailable-id"].includes(type)){
+          if(settled) return; settled = true; clearTimeout(toOpen);
+          nextOrFail();
+        }
       });
-    });
-    p.on("error", (err)=>{
-      netLog("PEER_ERROR", {type: err && err.type, msg:String(err)});
-      if(settled) return; settled = true; clearTimeout(toOpen);
-      emit("connect_failed");
-    });
+    }
   }
 
   function attach(c){
@@ -4741,7 +4780,7 @@ function createSession(transport){
     setState("connected");
     setState("preparing");
     transport.send({type:"hello", v:1, name:myName});
-    setPhaseTimeout("handshake", 8000, ()=> setState("connect_failed"));
+    setPhaseTimeout("handshake", 15000, ()=> setState("connect_failed"));
   });
   transport.on("disconnected", ()=>{
     clearAllPhaseTimeouts();
@@ -4822,7 +4861,9 @@ function createSession(transport){
     guestJoinRoom(code, name){
       role = "guest"; myName = name || "Jugador"; roomCode = code.toUpperCase();
       setState("connecting");
-      setPhaseTimeout("connecting", 9000, ()=> setState("connect_failed"));
+      // holgado: el transporte reintenta contra varios brokers (hasta ~60 s);
+      // este es solo la red de seguridad si ni siquiera emite 'connect_failed'.
+      setPhaseTimeout("connecting", 75000, ()=> setState("connect_failed"));
       transport.guestJoinRoom(roomCode);
     },
     send(msg){ transport.send(msg); },
