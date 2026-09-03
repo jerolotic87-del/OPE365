@@ -129,9 +129,12 @@ function startSmartSession(minutes){
 }
 
 /* ---- etiquetas de estado (semántica única para toda la UI) --- */
-const MASTERY_LABEL = { nuevo:"Sin empezar", aprendiendo:"Aprendiendo", consolidando:"Consolidando", asentado:"Asentado" };
+/* Etiquetas en lenguaje llano — el vocabulario interno del motor
+   (nuevo/aprendiendo/consolidando/asentado · debido/atrasado) NO se
+   muestra nunca; esto es lo único que ve el usuario. */
+const MASTERY_LABEL = { nuevo:"Sin empezar", aprendiendo:"Aprendiendo", consolidando:"En progreso", asentado:"Dominado" };
 const MASTERY_TONE  = { nuevo:"neutral", aprendiendo:"learn", consolidando:"consolid", asentado:"settled" };
-const REVIEW_LABEL  = { futuro:"", debido:"Toca repasar", atrasado:"Repaso atrasado" };
+const REVIEW_LABEL  = { futuro:"", debido:"Toca repasar", atrasado:"Con retraso" };
 function masteryLabel(m){ return MASTERY_LABEL[m] || "—"; }
 function masteryTone(m){ return MASTERY_TONE[m] || "neutral"; }
 function reviewLabel(r){ return REVIEW_LABEL[r] || ""; }
@@ -196,11 +199,11 @@ function homeModel(){
     .map(r => {
       const meta = LE.CONCEPT_BY_ID[r.id];
       let reason;
-      if(r.reviewState === "atrasado")      reason = "Repaso atrasado";
+      if(r.reviewState === "atrasado")      reason = "Repaso con retraso";
       else if(r.reviewState === "debido")    reason = "Toca repasar";
       else if(r.masteryStatus === "nuevo")   reason = "Sin empezar";
-      else if(r.masteryStatus === "aprendiendo") reason = "Aprendiendo — necesita recuperación";
-      else if(r.masteryStatus === "consolidando") reason = "Consolidando";
+      else if(r.masteryStatus === "aprendiendo") reason = "Necesita un repaso";
+      else if(r.masteryStatus === "consolidando") reason = "En progreso";
       else                                   reason = "Reforzar";
       return { id:r.id, name: meta ? meta.name : r.id, reason,
                mastery:r.masteryStatus, review:r.reviewState,

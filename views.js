@@ -267,9 +267,9 @@ function masteryBarHtml(b){
   const total = Math.max(1, b.total);
   const seg = (n, cls, lbl)=> n>0
     ? `<span class="mb-seg ${cls}" style="flex:${n}" title="${lbl}: ${n}"></span>` : '';
-  return `<div class="mastery-bar" role="img" aria-label="Asentado ${b.asentado}, consolidando ${b.consolidando}, aprendiendo ${b.aprendiendo}, sin empezar ${b.nuevo}">
-    ${seg(b.asentado,'mb-settled','Asentado')}
-    ${seg(b.consolidando,'mb-consolid','Consolidando')}
+  return `<div class="mastery-bar" role="img" aria-label="Dominado ${b.asentado}, en progreso ${b.consolidando}, aprendiendo ${b.aprendiendo}, sin empezar ${b.nuevo}">
+    ${seg(b.asentado,'mb-settled','Dominado')}
+    ${seg(b.consolidando,'mb-consolid','En progreso')}
     ${seg(b.aprendiendo,'mb-learn','Aprendiendo')}
     ${seg(b.nuevo,'mb-neutral','Sin empezar')}
   </div>`;
@@ -429,7 +429,7 @@ function renderTemario(){
     <div class="view-head">
       <p class="eyebrow">Temario · Word 365 de la cinta</p>
       <h1>¿Cómo voy por cada parte?</h1>
-      ${bd ? `<p>${bd.asentado} de ${bd.total} bloques asentados${bd.debido+bd.atrasado?` · ${bd.debido+bd.atrasado} a repasar`:''}.</p>`
+      ${bd ? `<p>${bd.asentado} de ${bd.total} bloques dominados${bd.debido+bd.atrasado?` · ${bd.debido+bd.atrasado} a repasar`:''}.</p>`
            : `<p>${O.TAXONOMY_SECTIONS.length} pestañas de la cinta de Word 365.</p>`}
     </div>
 
@@ -608,7 +608,7 @@ function renderPracticeHub(){
       ${started ? `<button class="intent" id="in-review">
         <span class="in-ic">${icon('history')}</span>
         <span class="in-body"><span class="in-t">Repasar lo pendiente</span>
-          <span class="in-d">${hm.dueTotal?`${hm.dueTotal} bloque${hm.dueTotal===1?'':'s'} tocan repaso${hm.atrasadoTotal?` · ${hm.atrasadoTotal} atrasado${hm.atrasadoTotal===1?'':'s'}`:''}`:'Nada pendiente ahora mismo'}</span></span>
+          <span class="in-d">${hm.dueTotal?`${hm.dueTotal} bloque${hm.dueTotal===1?'':'s'} tocan repaso${hm.atrasadoTotal?` · ${hm.atrasadoTotal} con retraso`:''}`:'Nada pendiente ahora mismo'}</span></span>
         <span class="in-go">${icon('chevronR')}</span>
       </button>` : ``}
       <button class="intent" id="in-tema">
@@ -2068,7 +2068,7 @@ function renderTemarioDetalle(params){
       <h1>${O.escapeHtml(sec.name)}</h1>
       <p>${scm&&scm.total?`${scm.total} bloque${scm.total===1?'':'s'} · `:''}${qCount} pregunta${qCount===1?'':'s'} · ${fCount} flashcard${fCount===1?'':'s'}</p>
       ${barB && barB.total ? `<div style="margin-top:var(--sp-3);max-width:320px;">${masteryBarHtml(barB)}
-        <div class="lp-legend" style="margin-top:7px;"><span>${asentadoN} asentado${asentadoN===1?'':'s'} de ${scm.total}</span>${repasoN?`<span class="mini-warn">${repasoN} a repasar</span>`:''}</div></div>` : ``}
+        <div class="lp-legend" style="margin-top:7px;"><span>${asentadoN} dominado${asentadoN===1?'':'s'} de ${scm.total}</span>${repasoN?`<span class="mini-warn">${repasoN} a repasar</span>`:''}</div></div>` : ``}
     </div>
 
     ${qCount ? `
@@ -3157,12 +3157,12 @@ function renderProgress(){
         <div class="lp-row">
           ${masteryBarHtml(b)}
           <div class="dom-grid">
-            <div class="dom-cell tone-settled"><span class="dom-n">${b.asentado}</span><span class="dom-l">Asentado</span></div>
-            <div class="dom-cell tone-consolid"><span class="dom-n">${b.consolidando}</span><span class="dom-l">Consolidando</span></div>
+            <div class="dom-cell tone-settled"><span class="dom-n">${b.asentado}</span><span class="dom-l">Dominado</span></div>
+            <div class="dom-cell tone-consolid"><span class="dom-n">${b.consolidando}</span><span class="dom-l">En progreso</span></div>
             <div class="dom-cell tone-learn"><span class="dom-n">${b.aprendiendo}</span><span class="dom-l">Aprendiendo</span></div>
             <div class="dom-cell tone-neutral"><span class="dom-n">${b.nuevo}</span><span class="dom-l">Sin empezar</span></div>
           </div>
-          <p class="lp-note">"Asentado" = evidencia suficiente de que lo dominas <b>ahora</b>. No es permanente y no significa "no volver a verlo".</p>
+          <p class="lp-note">"Dominado" = hay evidencia suficiente de que lo dominas <b>ahora</b>. No es permanente y no significa "no volver a verlo".</p>
         </div>
       </div>
     </div>
@@ -3172,8 +3172,8 @@ function renderProgress(){
       <div class="learn-panel">
         <div class="lp-row lp-review">
           <p class="lp-review-line">
-            <b class="${b.debido+b.atrasado?'':'muted'}">${b.debido+b.atrasado}</b> bloque${b.debido+b.atrasado===1?'':'s'} tocan repaso${b.atrasado?` · <b class="warn">${b.atrasado} atrasado${b.atrasado===1?'':'s'}</b>`:''}.
-            ${b.asentadoPendiente?`<span class="lp-note">${b.asentadoPendiente} de ellos siguen <b>asentados</b> — solo toca refrescarlos.</span>`:''}
+            <b class="${b.debido+b.atrasado?'':'muted'}">${b.debido+b.atrasado}</b> bloque${b.debido+b.atrasado===1?'':'s'} tocan repaso${b.atrasado?` · <b class="warn">${b.atrasado} con retraso</b>`:''}.
+            ${b.asentadoPendiente?`<span class="lp-note">${b.asentadoPendiente} de ellos siguen <b>dominados</b> — solo toca refrescarlos.</span>`:''}
           </p>
           <button class="btn btn-primary btn-sm" id="pg-repasar" ${b.debido+b.atrasado?'':'disabled'} style="margin-top:var(--sp-3);">${icon('history')} Repasar lo pendiente</button>
         </div>
@@ -3206,7 +3206,7 @@ function renderProgress(){
         <div class="es-top"><span class="es-days">${pm.exam.daysLeft} día${pm.exam.daysLeft===1?'':'s'}</span>
           <span class="es-label">· ${pm.exam.studyDays} días de estudio · fase ${phaseLabel(pm.exam.phase)}</span></div>
         ${pm.exam.sinDeficit
-          ? `<p class="es-msg">Sin déficit: todo lo que estudies llega a repasarse antes del examen con tu ritmo actual. <span class="es-note">Es una comprobación de agenda, no una predicción de nota.</span></p>`
+          ? `<p class="es-msg">Vas a tiempo: todo lo que estudies llega a repasarse antes del examen con tu ritmo actual. <span class="es-note">Es una comprobación de agenda, no una predicción de nota.</span></p>`
           : `<p class="es-msg"><b>${pm.exam.deficitCount} bloque${pm.exam.deficitCount===1?'':'s'}</b> no llega${pm.exam.deficitCount===1?'':'n'} a asegurarse a tiempo.
              <span class="es-list">${pm.exam.deficitConcepts.slice(0,10).map(n=>O.escapeHtml(n)).join(" · ")}${pm.exam.deficitConcepts.length>10?` +${pm.exam.deficitConcepts.length-10}`:''}</span>
              ${pm.exam.hint?`<span class="es-note">${O.escapeHtml(pm.exam.hint)}</span>`:''}</p>`}
@@ -3224,11 +3224,11 @@ function renderProgress(){
     </div>`}
 
     <div class="section-block">
-      <div class="section-title"><h3>Cobertura por pestaña</h3><span class="section-hint">bloques asentados / total</span></div>
+      <div class="section-title"><h3>Cobertura por pestaña</h3><span class="section-hint">bloques dominados / total</span></div>
       <div class="progress-list">${(pm ? pm.sections : []).map(sec=>`
         <button class="progress-row" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
           <div class="pr-main"><div class="pr-name">${O.escapeHtml(sec.name)}</div>
-            <div class="pr-meta">${sec.asentado} asentado${sec.asentado===1?'':'s'} · ${sec.enProgreso} en curso · ${sec.nuevo} sin empezar${sec.repaso?` · ${sec.repaso} a repasar`:''}</div></div>
+            <div class="pr-meta">${sec.asentado} dominado${sec.asentado===1?'':'s'} · ${sec.enProgreso} en curso · ${sec.nuevo} sin empezar${sec.repaso?` · ${sec.repaso} a repasar`:''}</div></div>
           <div class="pr-bar"><div class="bar-track good"><i style="width:${sec.pct}%"></i></div></div>
           <div class="pr-pct">${sec.pct}%</div><span class="pr-chev">${icon('chevronR')}</span>
         </button>`).join("") || `<p style="font-size:13px;color:var(--text-2);padding:var(--sp-4);">Aún sin datos por pestaña.</p>`}</div>
