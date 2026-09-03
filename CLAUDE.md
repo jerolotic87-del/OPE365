@@ -15,8 +15,8 @@ normalizado y agrupado por pestaña de la cinta
 (`data/questions/<section>.json`). Práctica/examen con corrección
 inmediata, compartir por código, desafíos asíncronos con resultado
 sellado, un mazo de flashcards (frente/dorso, sin repetición espaciada
-todavía), y dos modos multijugador en tiempo real (Duelo y Farol) sobre
-WebRTC vía PeerJS.
+todavía), y tres modos multijugador en tiempo real (Duelo 1v1, Farol 1v1,
+y Contra Word — cooperativo: los dos contra la app) sobre WebRTC vía PeerJS.
 
 ## Estructura de archivos (desarrollo local)
 
@@ -46,7 +46,7 @@ engine-bridge.js      PUENTE motor↔UI (window.OPE.LEB). ÚNICO punto por el qu
 github-sync.js        window.OPE.GHS. Publica tu contenido propio a
                        data/ del repo vía la API de GitHub (commit atómico).
                        Token en localStorage 'ope365_gh', fuera de PROGRESS.
-multiplayer.js        Duelo y Farol: transporte PeerJS + máquina de estados
+multiplayer.js        Duelo · Farol · Contra Word: transporte PeerJS + máquinas de estado
 views.js               toda la interfaz (router simple basado en funciones).
                        5 áreas (Inicio · Temario · Práctica · Flashcards ·
                        Progreso). El router `go(view,params)` + la delegación
@@ -488,6 +488,19 @@ funciona.
   asaltos de mayor valor a mitad de partida, remontada automática si vas
   8+ puntos por detrás, comodín 50/50 (1 uso, solo para el defensor,
   reduce puntos a la mitad si acierta).
+- **Contra Word** (`createCoopGame`, `mpGameMode:"coop"`): cooperativo, los
+  dos humanos son EQUIPO y el rival es "Word". Cada ronda Word lanza una
+  afirmación (V/F tal cual, o una opción de una `opcion_unica`) que puede
+  ser verdad o trampa; los dos votan V/T desde su móvil. Puntúa el equipo
+  (los dos aciertan = +200·racha; uno = +90; ninguno = Word +140). Sin
+  `raceMode`. El "plan de Word" (qué afirma cada ronda + si es cierto) lo
+  fija el host y viaja en `config.wordPlan` — igual que `questionIds` —
+  para que ambos lados vean lo mismo sin servidor. Reusa el tablero
+  determinista, el reloj y la máquina de ronda del Duelo (la vista guarda
+  el engine en `mpDuel` y `mpGameMode` desambigua el render:
+  `renderMpCoopGame`/`mpCoopRenderBody`/`renderMpCoopResults`). Resultado
+  final: marcador equipo–Word + "Word os pilló en" con enlace a repasar
+  esos `section:topic`.
 
 **Bugs reales ya encontrados y corregidos en este historial** (por si
 reaparecen en un refactor): reenvío de `round_start` tras reconexión

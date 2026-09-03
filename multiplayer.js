@@ -666,6 +666,255 @@ function createDuelGame(session){
 }
 
 /* ---------------------------------------------------------------
+   4·bis. CONTRA WORD — cooperativo
+   Los dos jugadores forman equipo; el rival es la app ("Word"), que
+   lanza una AFIRMACIÓN (un atajo, una ruta, un dato) que puede ser
+   verdad o trampa. Cada humano decide V (me lo creo) o T (es trampa).
+   Reutiliza el mismo transporte/Session, reloj compartido y tablero
+   determinista que el Duelo. El "plan de Word" (qué afirma cada ronda
+   y si es cierto) lo fija el host y viaja en el config — igual que la
+   lista de ids — para que ambos lados vean EXACTAMENTE lo mismo sin
+   servidor. La ronda se resuelve como el Duelo "cada uno responde":
+   nunca con un solo pulso, siempre esperando a los dos o al reloj.
+--------------------------------------------------------------- */
+function createCoopGame(session){
+  let handlers = {};
+  let config = null, seed = null, questions = [], wordPlan = [];
+  let roundIndex = -1, roundDeadlineHost = null, roundDuration = 15000;
+  let myAnswer = null, rivalAnswer = null;
+  let resolvedRounds = {}, pendingRivalMsgs = {};
+  let teamScore = 0, wordScore = 0, teamStreak = 0;
+  let teamCorrectRounds = 0, bothCorrectRounds = 0, disagreements = 0;
+  let missedTopics = {};
+  let roundHistory = [];
+  let localTimeoutHandle = null;
+  let readyFlags = {mine:false, rival:false};
+  let pendingConfig = null, ended = false;
+
+  function emitPhase(p, extra){ netLog("COOP:"+p, extra); if(handlers.onPhase) handlers.onPhase(p, extra||{}); }
+
+  session.setHandlers({
+    onState(s){ if(handlers.onConnState) handlers.onConnState(s); if(s === "ready" && session.getRole() === "host") trySendConfig(); },
+    onMessage(msg){ handleMsg(msg); },
+  });
+
+  function trySendConfig(){
+    if(!pendingConfig || session.getState() !== "ready") return;
+    seed = O.makeSeed();
+    config = pendingConfig;
+    buildBoard();
+    session.send({type:"config", config, seed});
+    emitPhase("lobby_ready", {rounds:questions.length, config});
+  }
+
+  function buildBoard(){
+    roundDuration = (Number(config.seconds)||15) * 1000;
+    let ids = config.questionIds;
+    if(!Array.isArray(ids)){
+      let pool = O.filterQuestions({
+        section: config.section || "all", topic: config.topic || "all",
+        tema: config.tema || "all", categoria: config.categoria || "all",
+      }).filter(q=>
+        (q.tipo === "opcion_unica" || q.tipo === "verdadero_falso")   // solo estos dos: se convierten a un "¿verdad o trampa?" limpio
+        && !q.creado && !/^usr-/.test(q.id || "")
+      );
+      pool = O.seededShuffle(pool, O.mulberry32((seed >>> 0)));
+      const n = Math.min(Number(config.rounds) || 12, pool.length);
+      ids = pool.slice(0, n).map(q=>q.id);
+      config.questionIds = ids;
+    }
+    ids = ids.filter(id=> O.Q_BY_ID[id]);
+    const built = ids.length ? O.buildSessionFromIds(ids, { mode:"coop", shuffleOptions:true }, seed >>> 0) : null;
+    questions = built ? built.questions : [];
+
+    // Plan de Word: lo fija el host y viaja en el config.
+    if(Array.isArray(config.wordPlan) && config.wordPlan.length === questions.length){
+      wordPlan = config.wordPlan;
+    } else {
+      wordPlan = buildWordPlan();
+      config.wordPlan = wordPlan;
+    }
+  }
+
+  function buildWordPlan(){
+    const rng = O.mulberry32(((seed >>> 0) ^ 0x9e3779b9) >>> 0);
+    const lieRate = Math.max(0.1, Math.min(0.9, Number(config.lieRate) || 0.5));
+    return questions.map(q=>{
+      if(q.tipo === "verdadero_falso"){
+        const truth = (q.respuesta === true || q.respuesta === "true");
+        return { context:q.enunciado, claim:null, isVF:true, truth };
+      }
+      const lies = rng() < lieRate;
+      let opt;
+      if(lies){
+        const wrong = (q.opciones||[]).filter(o=> o.letter !== q.respuesta);
+        opt = wrong.length ? wrong[Math.floor(rng()*wrong.length)] : (q.opciones||[])[0];
+      } else {
+        opt = (q.opciones||[]).find(o=> o.letter === q.respuesta) || (q.opciones||[])[0];
+      }
+      return { context:q.enunciado, claim: opt ? opt.text : "", truth: !lies };
+    });
+  }
+
+  function handleMsg(msg){
+    if(msg.type === "config"){ config = msg.config; seed = msg.seed; buildBoard(); emitPhase("lobby_ready", {rounds:questions.length, config}); return; }
+    if(msg.type === "player_ready"){ readyFlags.rival = true; checkBothReady(); return; }
+    if(msg.type === "start_countdown"){ emitPhase("countdown", {startAtLocal: session.hostToLocalTime(msg.startAt)}); return; }
+    if(msg.type === "round_start"){
+      if(session.getRole() !== "guest") return;
+      if(msg.round === roundIndex && roundDeadlineHost === msg.deadline) return;
+      beginRound(msg.round, msg.deadline);
+      return;
+    }
+    if(msg.type === "answer"){
+      if(msg.round === roundIndex) applyRivalAnswer(msg);
+      else if(msg.round > roundIndex) pendingRivalMsgs["ans_"+msg.round] = msg;
+      return;
+    }
+    if(msg.type === "game_end"){ finishGame(); return; }
+    if(msg.type === "resume_request"){
+      if(session.getRole() === "host" && roundIndex >= 0 && !ended) session.send({type:"round_start", round:roundIndex, deadline:roundDeadlineHost});
+      if(myAnswer && roundIndex >= 0) session.send({type:"answer", round:roundIndex, answer:myAnswer.answer, timeout:myAnswer.state==="TIMEOUT"});
+      return;
+    }
+  }
+
+  function checkBothReady(){
+    if(readyFlags.mine && readyFlags.rival && session.getRole()==="host"){
+      if(!questions.length){ readyFlags = {mine:false, rival:false}; emitPhase("no_content", {}); return; }
+      const startAt = Date.now() + 3200;
+      session.send({type:"start_countdown", startAt});
+      emitPhase("countdown", {startAtLocal:startAt});
+      setTimeout(()=>{ if(!ended) hostStartRound(0); }, 3200);
+    }
+  }
+
+  function beginRound(i, deadlineHost){
+    roundIndex = i;
+    roundDeadlineHost = deadlineHost;
+    myAnswer = null; rivalAnswer = null;
+    if(localTimeoutHandle){ clearTimeout(localTimeoutHandle); localTimeoutHandle=null; }
+    const deadlineLocal = session.getRole()==="host" ? deadlineHost : session.hostToLocalTime(deadlineHost);
+    const byDeadline = deadlineLocal - Date.now();
+    const wait = Math.max(roundDuration, Math.min(roundDuration + ROUND_GRACE_MS, byDeadline || 0));
+    localTimeoutHandle = setTimeout(()=> handleLocalTimeout(i), wait + 250);
+    emitPhase("round", {index:i, total:questions.length, question:questions[i], plan:wordPlan[i], deadlineLocal, duration:roundDuration});
+    const buffered = pendingRivalMsgs["ans_"+i];
+    if(buffered){ delete pendingRivalMsgs["ans_"+i]; applyRivalAnswer(buffered); }
+  }
+
+  function handleLocalTimeout(i){
+    if(i !== roundIndex || myAnswer || resolvedRounds[i]) return;
+    myAnswer = { answer:null, state:"TIMEOUT" };
+    session.send({type:"answer", round:i, answer:null, timeout:true});
+    if(handlers.onSelfAnswered) handlers.onSelfAnswered("TIMEOUT");
+    maybeResolve();
+  }
+
+  function submitAnswer(call){          // call: "V" (me lo creo) | "T" (es trampa)
+    if(myAnswer || roundIndex<0) return;
+    myAnswer = { answer: call, state:"SUBMITTED" };
+    session.send({type:"answer", round:roundIndex, answer:call, timeout:false});
+    if(handlers.onSelfAnswered) handlers.onSelfAnswered("SUBMITTED");
+    maybeResolve();
+  }
+
+  function applyRivalAnswer(msg){
+    if(rivalAnswer) return;
+    rivalAnswer = { answer: msg.timeout ? null : msg.answer, state: msg.timeout ? "TIMEOUT" : "SUBMITTED" };
+    if(handlers.onRivalAnswered) handlers.onRivalAnswered(rivalAnswer.state);
+    maybeResolve();
+  }
+
+  function maybeResolve(){
+    if(resolvedRounds[roundIndex]) return;
+    if(!myAnswer || !rivalAnswer) return;
+    resolveRound();
+  }
+
+  function resolveRound(){
+    resolvedRounds[roundIndex] = true;
+    if(localTimeoutHandle){ clearTimeout(localTimeoutHandle); localTimeoutHandle=null; }
+    const plan = wordPlan[roundIndex] || {truth:true};
+    const truthCall = plan.truth ? "V" : "T";
+    const myRight = myAnswer.state === "SUBMITTED" && myAnswer.answer === truthCall;
+    const rivalRight = rivalAnswer.state === "SUBMITTED" && rivalAnswer.answer === truthCall;
+    const n = (myRight?1:0) + (rivalRight?1:0);
+    const disagreed = myAnswer.state === "SUBMITTED" && rivalAnswer.state === "SUBMITTED" && myAnswer.answer !== rivalAnswer.answer;
+
+    teamStreak = (n === 2) ? teamStreak + 1 : 0;
+    const mult = 1 + Math.min(teamStreak, 5) * 0.1;                // tope x1.5
+    const teamPts = n === 2 ? Math.round(200 * mult) : (n === 1 ? 90 : 0);
+    const wordPts = n === 0 ? 140 : 0;
+    teamScore += teamPts; wordScore += wordPts;
+
+    if(n >= 1) teamCorrectRounds++;
+    if(n === 2) bothCorrectRounds++;
+    if(disagreed) disagreements++;
+    if(n === 0){
+      const q = questions[roundIndex];
+      const key = (q.section||"?") + ":" + (q.topic||"?");
+      missedTopics[key] = (missedTopics[key]||0) + 1;
+    }
+
+    const result = {
+      round: roundIndex, question: questions[roundIndex], plan, truthCall,
+      me:{ call: myAnswer.answer, state: myAnswer.state, right: myRight },
+      rival:{ call: rivalAnswer.answer, state: rivalAnswer.state, right: rivalRight },
+      n, disagreed, teamPts, wordPts, teamStreak, teamScore, wordScore,
+    };
+    roundHistory.push(result);
+    emitPhase("round_end", result);
+  }
+
+  function hostStartRound(i){
+    if(session.getRole() !== "host") return;
+    if(i >= questions.length){ hostEndGame(); return; }
+    const deadline = Date.now() + roundDuration;
+    session.send({type:"round_start", round:i, deadline});
+    beginRound(i, deadline);
+  }
+  function hostEndGame(){ session.send({type:"game_end"}); finishGame(); }
+  function finishGame(){
+    if(ended) return;
+    ended = true;
+    if(localTimeoutHandle){ clearTimeout(localTimeoutHandle); localTimeoutHandle=null; }
+    const total = questions.length;
+    emitPhase("finished", {
+      teamScore, wordScore,
+      outcome: teamScore > wordScore ? "victory" : (teamScore < wordScore ? "defeat" : "draw"),
+      total, teamCorrectRounds, bothCorrectRounds, disagreements,
+      teamAccuracy: total ? Math.round(teamCorrectRounds/total*100) : 0,
+      missedTopics: Object.entries(missedTopics).sort((a,b)=>b[1]-a[1]).slice(0,4).map(e=>e[0]),
+    });
+  }
+
+  return {
+    setHandlers(h){ handlers = h; },
+    hostSetConfig(cfg){ pendingConfig = cfg; trySendConfig(); },
+    confirmReady(){ readyFlags.mine = true; session.send({type:"player_ready"}); checkBothReady(); },
+    submitAnswer,
+    advanceIfHost(){ if(session.getRole()==="host" && !ended) hostStartRound(roundIndex+1); },
+    requestRematch(newSeed){
+      if(session.getRole() !== "host") return;
+      ended = false; roundIndex = -1; resolvedRounds = {}; pendingRivalMsgs = {};
+      teamScore=0; wordScore=0; teamStreak=0; teamCorrectRounds=0; bothCorrectRounds=0; disagreements=0; missedTopics={}; roundHistory=[];
+      readyFlags = {mine:false, rival:false};
+      seed = newSeed ? O.makeSeed() : seed;
+      if(config){ delete config.questionIds; delete config.wordPlan; }
+      buildBoard();
+      session.send({type:"config", config, seed});
+      emitPhase("lobby_ready", {rounds:questions.length, config});
+    },
+    getState(){ return {
+      config, seed, questions, roundIndex, teamScore, wordScore, teamStreak, roundHistory,
+      plan: wordPlan[roundIndex] || null,
+      myAnswerState: myAnswer&&myAnswer.state, rivalAnswerState: rivalAnswer&&rivalAnswer.state, myAnswerValue: myAnswer&&myAnswer.answer,
+    }; },
+  };
+}
+
+/* ---------------------------------------------------------------
    5. WORD POKER — duelo de conocimiento con farol
    Reutiliza exactamente la misma Session (transporte, apretón de
    manos, sincronización de reloj) que el modo Duelo — no se crea
@@ -952,7 +1201,7 @@ function createPokerGame(session){
 window.OPE_MP = {
   netLog, setDebugMode, getNetLog:()=>NET_LOG.slice(),
   createRealTransport, createMockPair,
-  createSession, createDuelGame, createPokerGame,
+  createSession, createDuelGame, createCoopGame, createPokerGame,
   generateRoomCode, FAROL_TOKENS_PER_PLAYER, POKER_ROUNDS_PER_DECK,
   // Fábrica de transporte sustituible — solo para pruebas automatizadas;
   // en producción siempre usa el transporte WebRTC real.

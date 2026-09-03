@@ -3791,7 +3791,7 @@ document.addEventListener("DOMContentLoaded", init);
    sin conexión; esta es la única parte que la necesita.
 ================================================================ */
 const MP = window.OPE_MP;
-let mpSetupState = { role:null, name:"", mode:"duelo", preset:"clasica", rounds:15, seconds:10, scope:"todo", section:"all", topic:"all", tipo:"all", categoria:"all", joinCode:"", raceMode:false };
+let mpSetupState = { role:null, name:"", mode:"duelo", preset:"clasica", rounds:15, seconds:10, scope:"todo", section:"all", topic:"all", tipo:"all", categoria:"all", joinCode:"", raceMode:false, lieRate:0.5 };
 let mpSession = null, mpDuel = null, mpPoker = null, mpGameMode = "duelo";
 let mpConnPhase = "idle";
 let mpDuelPhase = "idle";
@@ -3858,7 +3858,7 @@ function renderMpHostConfig(){
     <div class="mode-grid" id="mp-mode-grid">
       <button class="mode-card ${mpSetupState.mode==='duelo'?'selected':''}" data-mode="duelo"><div class="glyph">⚔️</div><div class="t">Duelo</div><div class="d">Cada uno responde. Gana quien consigue más puntos.</div></button>
       <button class="mode-card ${mpSetupState.mode==='farol'?'selected':''}" data-mode="farol"><div class="glyph">🎭</div><div class="t">Farol</div><div class="d">Elige tu respuesta. Tu rival decide si se fía o no.</div></button>
-      <button class="mode-card soon" disabled><div class="glyph">🤝</div><div class="t">Cooperativo</div><div class="d">Los dos jugáis juntos contra Word.</div><span class="soon-badge">Próximamente</span></button>
+      <button class="mode-card ${mpSetupState.mode==='coop'?'selected':''}" data-mode="coop"><div class="glyph">🤝</div><div class="t">Contra Word</div><div class="d">Los dos en equipo. Word lanza una afirmación y decidís si es verdad o trampa.</div></button>
       <button class="mode-card" data-goto="challenges"><div class="glyph">🎯</div><div class="t">Desafío</div><div class="d">Comparte una partida y compite por el mejor resultado, sin estar conectados a la vez.</div></button>
     </div>
 
@@ -3882,6 +3882,52 @@ function renderMpModeFields(){
     el.innerHTML = `<div class="security-note" style="margin-top:var(--sp-5);">
       Cada uno elige su propia respuesta y decide si presentarla en serio o farolear. El otro ve lo que has marcado y elige: <strong style="color:var(--text);">CONFÍO</strong> o <strong style="color:var(--text);">DUDO</strong>. Prepararéis vuestro mazo de atajos en la sala, antes de empezar.
     </div>`;
+    return;
+  }
+  if(mpSetupState.mode === "coop"){
+    const COOP_PRESETS = { charla:{label:"Con calma",rounds:10,seconds:20}, normal:{label:"Normal",rounds:12,seconds:15}, agil:{label:"Ágil",rounds:15,seconds:10} };
+    if(!["charla","normal","agil"].includes(mpSetupState.preset)) mpSetupState.preset = "normal";
+    el.innerHTML = `
+      <div class="security-note" style="margin-top:var(--sp-5);">
+        Word os lanza una afirmación cada ronda (un atajo, una ruta, un dato) que puede ser <strong style="color:var(--text);">verdad</strong> o <strong style="color:var(--text);">trampa</strong>. Cada uno pulsa desde su móvil — habladlo entre vosotros primero. Ganáis puntos si acertáis los dos; Word marca si falláis los dos.
+      </div>
+      <p style="font-size:11.5px; font-weight:700; color:var(--text-2); text-transform:uppercase; letter-spacing:.04em; margin:var(--sp-6) 0 10px;">Ritmo</p>
+      <div class="preset-grid" id="mp-coop-preset">
+        ${Object.entries(COOP_PRESETS).map(([k,p])=>`<button class="preset-card ${mpSetupState.preset===k?'selected':''}" data-cp="${k}"><div class="t">${p.label}</div><div class="d">${p.rounds} rondas · ${p.seconds} s</div></button>`).join("")}
+      </div>
+      <p style="font-size:11.5px; font-weight:700; color:var(--text-2); text-transform:uppercase; letter-spacing:.04em; margin:var(--sp-6) 0 10px;">Cuánto miente Word</p>
+      <div class="preset-grid" id="mp-coop-lie">
+        <button class="preset-card ${mpSetupState.lieRate===0.35?'selected':''}" data-lr="0.35"><div class="t">Sincero</div><div class="d">miente poco</div></button>
+        <button class="preset-card ${mpSetupState.lieRate===0.5?'selected':''}" data-lr="0.5"><div class="t">Normal</div><div class="d">la mitad</div></button>
+        <button class="preset-card ${mpSetupState.lieRate===0.65?'selected':''}" data-lr="0.65"><div class="t">Tramposo</div><div class="d">miente mucho</div></button>
+      </div>
+      <details class="advanced" style="margin-top:var(--sp-5);">
+        <summary>Contenido</summary>
+        <div class="config-grid" style="margin-top:var(--sp-4);">
+          <div class="field"><label>Contenido</label><select id="mp-scope">
+            <option value="todo" ${mpSetupState.scope==='todo'?'selected':''}>Todo el temario</option>
+            <option value="pestana" ${mpSetupState.scope==='pestana'?'selected':''}>Por pestaña y grupo</option>
+            <option value="categoria" ${mpSetupState.scope==='categoria'?'selected':''}>Por categoría (rutas/atajos)</option>
+          </select></div>
+          <div class="field" id="mp-sec-field" style="${mpSetupState.scope==='pestana'?'':'display:none;'}"><label>Pestaña</label><select id="mp-section">${O.TAXONOMY_SECTIONS.filter(s=>s.topics&&s.topics.length).map(s=>`<option value="${s.id}" ${mpSetupState.section===s.id?'selected':''}>${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
+          <div class="field" id="mp-top-field" style="${mpSetupState.scope==='pestana'?'':'display:none;'}"><label>Grupo</label><select id="mp-topic"></select></div>
+          <div class="field" id="mp-cat-field" style="${mpSetupState.scope==='categoria'?'':'display:none;'}"><label>Categoría</label><select id="mp-categoria">${O.CATEGORY_REGISTRY.filter(c=>c.id!=='general').map(c=>`<option value="${c.id}" ${mpSetupState.categoria===c.id?'selected':''}>${c.name}</option>`).join("")}</select></div>
+        </div>
+        <p style="font-size:11px;color:var(--text-3);margin-top:8px;">Solo preguntas de opción única y verdadero/falso (las que se pueden convertir en una afirmación). Omite lo que hayas creado tú.</p>
+      </details>
+    `;
+    const applyCoopPreset = ()=>{ const p = COOP_PRESETS[mpSetupState.preset]; if(p){ mpSetupState.rounds = p.rounds; mpSetupState.seconds = p.seconds; } };
+    applyCoopPreset();
+    $$("#mp-coop-preset .preset-card").forEach(c=> c.addEventListener("click", ()=>{
+      mpSetupState.preset = c.getAttribute("data-cp");
+      $$("#mp-coop-preset .preset-card").forEach(x=>x.classList.remove("selected")); c.classList.add("selected");
+      applyCoopPreset();
+    }));
+    $$("#mp-coop-lie .preset-card").forEach(c=> c.addEventListener("click", ()=>{
+      mpSetupState.lieRate = Number(c.getAttribute("data-lr"));
+      $$("#mp-coop-lie .preset-card").forEach(x=>x.classList.remove("selected")); c.classList.add("selected");
+    }));
+    mpWireContentSelectors();
     return;
   }
   el.innerHTML = `
@@ -3940,6 +3986,15 @@ function renderMpModeFields(){
   const roundsInput = $("#mp-rounds"), secondsInput = $("#mp-seconds");
   if(roundsInput) roundsInput.addEventListener("input", ()=> mpSetupState.rounds = Number(roundsInput.value)||15);
   if(secondsInput) secondsInput.addEventListener("input", ()=> mpSetupState.seconds = Number(secondsInput.value)||10);
+  mpWireContentSelectors();
+  const tipoSel = $("#mp-tipo"); if(tipoSel) tipoSel.addEventListener("change", ()=> mpSetupState.tipo = tipoSel.value);
+}
+
+/* Enlaza los selectores de contenido (scope · pestaña · grupo · categoría),
+   compartidos por el asistente del Duelo y el de "Contra Word". */
+function mpWireContentSelectors(){
+  const scopeSel = $("#mp-scope");
+  if(!scopeSel) return;
   const secSel = $("#mp-section"), topSel = $("#mp-topic");
   if(secSel && topSel){
     if(!O.TAXONOMY_SECTIONS.some(s=>s.id===mpSetupState.section)) mpSetupState.section = secSel.value;
@@ -3952,15 +4007,15 @@ function renderMpModeFields(){
     });
     topSel.addEventListener("change", ()=> mpSetupState.topic = topSel.value || "all");
   }
-  $("#mp-scope").addEventListener("change", ()=>{
-    mpSetupState.scope = $("#mp-scope").value;
+  scopeSel.addEventListener("change", ()=>{
+    mpSetupState.scope = scopeSel.value;
     const pest = mpSetupState.scope==="pestana";
-    $("#mp-sec-field").style.display = pest ? "" : "none";
-    $("#mp-top-field").style.display = pest ? "" : "none";
-    $("#mp-cat-field").style.display = mpSetupState.scope==="categoria" ? "" : "none";
+    const secF=$("#mp-sec-field"), topF=$("#mp-top-field"), catF=$("#mp-cat-field");
+    if(secF) secF.style.display = pest ? "" : "none";
+    if(topF) topF.style.display = pest ? "" : "none";
+    if(catF) catF.style.display = mpSetupState.scope==="categoria" ? "" : "none";
   });
   const catSel = $("#mp-categoria"); if(catSel) catSel.addEventListener("change", ()=> mpSetupState.categoria = catSel.value);
-  $("#mp-tipo").addEventListener("change", ()=> mpSetupState.tipo = $("#mp-tipo").value);
 }
 
 function renderMpGuestJoin(){
@@ -4015,21 +4070,27 @@ function mpStartAsGuest(){
 }
 
 function mpCreateGameEngine(isHost){
+  const contentCfg = {
+    section: mpSetupState.scope==="pestana" ? mpSetupState.section : "all",
+    topic: mpSetupState.scope==="pestana" ? mpSetupState.topic : "all",
+    categoria: mpSetupState.scope==="categoria" ? mpSetupState.categoria : "all",
+  };
   if(mpGameMode === "farol"){
     mpPoker = MP.createPokerGame(mpSession);
     mpWirePokerHandlers();
+  } else if(mpGameMode === "coop"){
+    mpDuel = MP.createCoopGame(mpSession);
+    mpWireDuelHandlers();
+    if(isHost) mpDuel.hostSetConfig(Object.assign({
+      rounds: mpSetupState.rounds, seconds: mpSetupState.seconds, lieRate: mpSetupState.lieRate,
+    }, contentCfg));
   } else {
     mpDuel = MP.createDuelGame(mpSession);
     mpWireDuelHandlers();
-    if(isHost){
-      mpDuel.hostSetConfig({
-        rounds: mpSetupState.rounds, seconds: mpSetupState.seconds,
-        section: mpSetupState.scope==="pestana" ? mpSetupState.section : "all",
-        topic: mpSetupState.scope==="pestana" ? mpSetupState.topic : "all",
-        tipo: mpSetupState.tipo, categoria: mpSetupState.scope==="categoria" ? mpSetupState.categoria : "all",
-        raceMode: !!mpSetupState.raceMode,
-      });
-    }
+    if(isHost) mpDuel.hostSetConfig(Object.assign({
+      rounds: mpSetupState.rounds, seconds: mpSetupState.seconds,
+      tipo: mpSetupState.tipo, raceMode: !!mpSetupState.raceMode,
+    }, contentCfg));
   }
   mpRerenderCurrentMpView();
 }
@@ -4057,7 +4118,10 @@ function mpWireDuelHandlers(){
     onSelfAnswered(){
       mpUpdateSelfStatus();
       const st = mpDuel.getState();
-      if(O.Nav.view === "mp-game" && st.roundIndex>=0 && mpDuelPhase==="round") mpRenderAnswerBody(st.questions[st.roundIndex], st);
+      if(O.Nav.view === "mp-game" && st.roundIndex>=0 && mpDuelPhase==="round"){
+        if(mpGameMode==="coop") mpCoopRenderBody(st);
+        else mpRenderAnswerBody(st.questions[st.roundIndex], st);
+      }
     },
     onRivalAnswered(){ mpUpdateSelfStatus(); },
   });
@@ -4125,7 +4189,9 @@ function renderMpLobby(){
         <div class="big">${rounds}</div>
         <div class="sub">${noQ ? 'sin preguntas con esta configuración' : `rondas · ${cfg.seconds||10} s por pregunta`}</div>
       </div>
-      <p style="text-align:center; color:var(--text-2); font-size:13px; margin-top:var(--sp-4);">Jugando contra <strong style="color:var(--text);">${O.escapeHtml(mpSession.getRivalName())}</strong></p>
+      <p style="text-align:center; color:var(--text-2); font-size:13px; margin-top:var(--sp-4);">${mpGameMode==='coop'
+        ? `En equipo con <strong style="color:var(--text);">${O.escapeHtml(mpSession.getRivalName())}</strong> contra Word`
+        : `Jugando contra <strong style="color:var(--text);">${O.escapeHtml(mpSession.getRivalName())}</strong>`}</p>
       ${noQ ? `<p style="text-align:center;color:var(--bad);font-size:12.5px;margin-top:8px;">El host debe volver a la configuración y elegir otro contenido.</p>` : ''}
       <button class="btn btn-solid btn-block" id="mp-im-ready" style="margin-top:var(--sp-6);" ${noQ?'disabled':''}>Estoy listo</button>
       <button class="btn btn-ghost btn-block" id="mp-exit" style="margin-top:10px;">${noQ?'Volver a configurar':'Salir'}</button>
@@ -4158,6 +4224,7 @@ function renderMpGame(){
   }
   if(!mpDuel){ go("mp-setup"); return; }
   if(mpTimerInterval){ clearInterval(mpTimerInterval); mpTimerInterval = null; }
+  if(mpGameMode === "coop") return renderMpCoopGame();
 
   if(mpConnPhase === "reconnecting"){
     mainEl().innerHTML = `<div class="view view-narrow"><div class="conn-status-panel">
@@ -4309,14 +4376,18 @@ function mpUpdateSelfStatus(){
   if(!el) return;
   const st = mpDuel.getState();
   const rival = !!st.rivalAnswerState;
+  const coop = mpGameMode === "coop";
+  const other = coop ? "el otro" : "el rival";
   if(st.myAnswerState === "SUBMITTED"){
-    el.textContent = rival ? "Ambos habéis respondido" : "✓ Respuesta registrada — esperando al rival…";
+    el.textContent = rival
+      ? (coop ? "Ya habéis votado los dos" : "Ambos habéis respondido")
+      : (coop ? `✓ Voto registrado — esperando a ${other}…` : "✓ Respuesta registrada — esperando al rival…");
     el.className = "duel-selfstatus " + (rival ? "waiting" : "submitted");
   } else if(st.myAnswerState === "TIMEOUT"){
-    el.textContent = rival ? "Se acabó el tiempo para los dos" : "⏱ Se te acabó el tiempo — esperando al rival…";
+    el.textContent = rival ? "Se acabó el tiempo para los dos" : `⏱ Se te acabó el tiempo — esperando a ${other}…`;
     el.className = "duel-selfstatus timedout";
   } else {
-    el.textContent = rival ? "Tu rival ya ha respondido — te toca" : "Pensando…";
+    el.textContent = rival ? `${coop ? 'Tu compañero' : 'Tu rival'} ya ha ${coop?'votado':'respondido'} — te toca` : "Pensando…";
     el.className = "duel-selfstatus" + (rival ? " rival-ready" : "");
   }
 }
@@ -4407,6 +4478,171 @@ function renderMpResults(){
   </div>`;
   const rm = $("#mp-rematch"); if(rm) rm.addEventListener("click", ()=>{ mpDuel.requestRematch(true); mpDuelPhase="lobby_ready"; go("mp-lobby"); });
   const rp = $("#mp-repeat"); if(rp) rp.addEventListener("click", ()=>{ mpDuel.requestRematch(false); mpDuelPhase="lobby_ready"; go("mp-lobby"); });
+}
+
+/* ===================== CONTRA WORD (cooperativo) ===================== */
+function mpCoopClaimHtml(plan){
+  if(!plan) return "";
+  if(plan.isVF){
+    return `<p class="coop-context">Word afirma:</p>
+      <div class="coop-claim">«${O.escapeHtml(plan.context)}»</div>`;
+  }
+  return `<p class="coop-context">${O.escapeHtml(plan.context)}</p>
+    <p class="coop-context" style="margin-top:10px;">Word responde:</p>
+    <div class="coop-claim">${O.escapeHtml(plan.claim)}</div>`;
+}
+
+function mpCoopRenderBody(st){
+  const body = $("#mp-coop-body");
+  if(!body) return;
+  const voted = !!st.myAnswerState;
+  const timedOut = st.myAnswerState === "TIMEOUT";
+  const mine = st.myAnswerValue;
+  body.innerHTML = `
+    <div class="coop-vote">
+      <button class="coop-btn v ${voted&&mine==='V'?'chosen':''}" data-call="V" ${voted?'disabled':''}>✓ Verdad</button>
+      <button class="coop-btn t ${voted&&mine==='T'?'chosen':''}" data-call="T" ${voted?'disabled':''}>✕ Trampa</button>
+    </div>
+    ${timedOut ? `<p class="coop-hint">No votaste a tiempo.</p>` : (voted ? `` : `<p class="coop-hint">Habladlo entre vosotros y votad cada uno.</p>`)}`;
+  if(!voted) $$(".coop-btn", body).forEach(b=> b.addEventListener("click", ()=> mpCoopSubmit(b.getAttribute("data-call"))));
+}
+function mpCoopSubmit(call){ if(mpDuel) mpDuel.submitAnswer(call); }
+
+function mpCoopRoundEnd(data){
+  const wasTruth = data.truthCall === "V";
+  const teamOk = data.n >= 1;
+  const verdict = data.n === 2 ? "¡Los dos lo pillasteis!"
+    : data.n === 1 ? "Uno de los dos acertó"
+    : "Word os ha pillado";
+  const call = st => st.state === "TIMEOUT" ? "sin voto" : (st.call === "V" ? "Verdad" : "Trampa");
+  return `<div class="round-end-panel">
+    <div class="verdict ${teamOk?'ok':'bad'}">${verdict}</div>
+    <p style="font-size:13px;color:var(--text-2);margin:2px 0 10px;">Era <strong style="color:var(--text);">${wasTruth?'VERDAD':'TRAMPA'}</strong></p>
+    <div class="round-end-vs">
+      <div><strong>${O.escapeHtml(mpSetupState.name)||'Tú'}</strong><br>${data.me.right?'✓':'✕'} ${call(data.me)}</div>
+      <div><strong>${O.escapeHtml(mpSession.getRivalName())}</strong><br>${data.rival.right?'✓':'✕'} ${call(data.rival)}</div>
+    </div>
+    <div class="pts" style="margin-top:10px;">${data.teamPts?`Equipo +${data.teamPts}`:''}${data.teamPts&&data.wordPts?' · ':''}${data.wordPts?`<span style="color:var(--bad)">Word +${data.wordPts}</span>`:''}${!data.teamPts&&!data.wordPts?'sin puntos':''}</div>
+    ${data.disagreed?`<p class="coop-hint" style="margin-top:6px;">No votasteis lo mismo — repasad este después.</p>`:''}
+  </div>`;
+}
+
+function renderMpCoopGame(){
+  if(mpConnPhase === "reconnecting"){
+    mainEl().innerHTML = `<div class="view view-narrow"><div class="conn-status-panel"><div class="conn-spinner"></div><h3>Conexión interrumpida</h3><p>Intentando reconectar… la partida se conserva.</p></div></div>`;
+    return;
+  }
+  if(mpConnPhase === "reconnect_failed"){
+    mainEl().innerHTML = `<div class="view view-narrow"><div class="conn-status-panel"><div class="glyph" style="font-size:30px;margin-bottom:var(--sp-3);color:var(--bad);">⚠</div><h3>No se ha podido recuperar la conexión</h3></div><button class="btn btn-outline btn-block" id="mp-exit" style="margin-top:var(--sp-5);">Salir</button></div>`;
+    $("#mp-exit").addEventListener("click", mpExitToSetup);
+    return;
+  }
+  if(mpDuelPhase === "countdown"){
+    mainEl().innerHTML = `<div class="view view-narrow"><div class="countdown-hero"><div class="num" id="mp-countdown-num">3</div><p style="color:var(--text-2);">Preparaos…</p></div></div>`;
+    let n = 3; const el = $("#mp-countdown-num");
+    const iv = setInterval(()=>{ n--; if(!el){ clearInterval(iv); return; } if(n<=0){ el.textContent="¡YA!"; clearInterval(iv); } else el.textContent = String(n); }, 1000);
+    return;
+  }
+  if(mpDuelPhase === "finished") return renderMpCoopResults();
+
+  const st = mpDuel.getState();
+  const q = st.questions[st.roundIndex];
+  if(!q) return;
+  const roundEndData = (mpDuelPhase === "round_end" && mpLastRoundExtra && mpLastRoundExtra.round === st.roundIndex) ? mpLastRoundExtra : null;
+  const teamName = `${O.escapeHtml(mpSetupState.name)||'Tú'} + ${O.escapeHtml(mpSession.getRivalName())}`;
+
+  mainEl().innerHTML = `
+  <div class="view">
+    <div class="duel-board">
+      <div class="session-topbar">
+        <button class="exit" id="mp-game-exit">${icon('arrowL')} Salir</button>
+        <span class="counter">Ronda ${st.roundIndex+1} / ${st.questions.length}</span>
+        <button class="icon-btn" id="mp-game-pause" aria-label="Pausa" title="Pausa" style="width:30px;height:30px;">⏸</button>
+      </div>
+      <div class="duel-players-row">
+        <div class="duel-player self">
+          <div class="name"><span class="status-dot"></span>Equipo</div>
+          <div class="score">${st.teamScore}</div>
+          ${st.teamStreak>1?`<div class="combo">🔥 RACHA x${st.teamStreak}</div>`:''}
+        </div>
+        <div class="duel-player">
+          <div class="name"><span class="status-dot ${mpConnPhase==='restored'?'warn':''}"></span>Word</div>
+          <div class="score">${st.wordScore}</div>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:11px;color:var(--text-3);margin:-4px 0 8px;">${teamName}</p>
+
+      ${roundEndData ? mpCoopRoundEnd(roundEndData) : `
+        <div class="duel-timer" id="mp-timer-wrap"><div class="t-num" id="mp-timer-num">--</div><div class="t-bar"><i id="mp-timer-bar" style="width:100%;"></i></div></div>
+        <div class="surface qcard coop-card" style="padding:var(--sp-6);">
+          ${mpCoopClaimHtml(st.plan)}
+          <div id="mp-coop-body"></div>
+        </div>
+        <div class="duel-selfstatus" id="mp-selfstatus">Pensando…</div>
+      `}
+    </div>
+  </div>`;
+
+  $("#mp-game-exit").addEventListener("click", mpConfirmExitDuringGame);
+  $("#mp-game-pause").addEventListener("click", mpShowPauseOverlay);
+
+  if(!roundEndData){
+    mpCoopRenderBody(st);
+    mpStartTimerTick({ config: st.config, roundIndex: st.roundIndex });
+    mpUpdateSelfStatus();
+  }
+}
+
+function renderMpCoopResults(){
+  const f = mpFinalExtra;
+  if(!f) return;
+  const label = { victory:"LE HABÉIS GANADO A WORD", defeat:"WORD OS HA GANADO", draw:"EMPATE CON WORD" }[f.outcome];
+  const cls = { victory:"win", defeat:"lose", draw:"draw" }[f.outcome];
+  const isHost = mpSession.getRole() === "host";
+  const missed = (f.missedTopics||[]).map(k=>{
+    const [sec,top] = k.split(":");
+    const s = O.TAXONOMY_SECTIONS.find(x=>x.id===sec);
+    const t = s && (s.topics||[]).find(x=>x.id===top);
+    return t ? `${s.name} · ${t.name}` : (s ? s.name : k);
+  });
+  mainEl().innerHTML = `
+  <div class="view view-narrow">
+    <div class="victory-hero ${cls}">
+      <h1>${label}</h1>
+      <p style="color:var(--text-2); font-size:13px;">Equipo ${f.teamScore} — ${f.wordScore} Word</p>
+    </div>
+    <table class="victory-compare">
+      <tbody>
+        <tr><td>Rondas ganadas por el equipo</td><td>${f.teamCorrectRounds}/${f.total}</td></tr>
+        <tr><td>Rondas con los dos a la vez</td><td>${f.bothCorrectRounds}/${f.total}</td></tr>
+        <tr><td>Precisión del equipo</td><td>${f.teamAccuracy}%</td></tr>
+        <tr><td>Rondas en desacuerdo</td><td>${f.disagreements}</td></tr>
+      </tbody>
+    </table>
+    ${missed.length ? `<div class="section-block" style="margin-top:var(--sp-5);">
+      <div class="section-title"><h3>Word os pilló en</h3></div>
+      <ul class="mini-list">${missed.map(m=>`<li><span class="mini-row-main">${O.escapeHtml(m)}</span></li>`).join("")}</ul>
+      <button class="btn btn-outline btn-sm btn-block" id="mp-coop-review" style="margin-top:var(--sp-3);">Repasar estos temas</button>
+    </div>` : ''}
+    ${isHost ? `
+    <div class="action-grid" style="margin-top:var(--sp-6);">
+      <button class="action-card" id="mp-rematch"><div class="t">Otra partida</div><div class="d">Mismas reglas, preguntas nuevas</div></button>
+      <button class="action-card" data-goto="home"><div class="t">Salir</div><div class="d">Volver al panel principal</div></button>
+    </div>` : `
+    <div class="empty-panel" style="margin-top:var(--sp-6);"><p>Si tu compañero pide otra partida, empezará automáticamente.</p></div>
+    <button class="btn btn-outline btn-block" data-goto="home" style="margin-top:var(--sp-4);">Salir</button>
+    `}
+  </div>`;
+  const rv = $("#mp-coop-review");
+  if(rv) rv.addEventListener("click", ()=>{
+    const ids = [];
+    (f.missedTopics||[]).forEach(k=>{ const [sec,top] = k.split(":");
+      O.filterQuestions({ section:sec, topic:top }).forEach(q=> ids.push(q.id)); });
+    if(!ids.length){ O.toast("No hay preguntas para repasar"); return; }
+    const s2 = O.buildSessionFromIds(O.shuffle(ids), { mode:"practice", shuffleOptions:true, qOrder:"aleatorio" }, null);
+    if(s2){ mpReset(); O.setSession(s2); O.saveSessionSnapshot(); go("running"); }
+  });
+  const rm = $("#mp-rematch"); if(rm) rm.addEventListener("click", ()=>{ mpDuel.requestRematch(true); mpDuelPhase="lobby_ready"; go("mp-lobby"); });
 }
 
 /* ================================================================

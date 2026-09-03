@@ -145,8 +145,53 @@ async function main(){
   assert(hEnd2 && hEnd2.rival.state === "TIMEOUT", "la ronda se cierra por tiempo agotado del invitado, no por un pulso fantasma");
   hS.destroy(); gS.destroy();
 
+  // ── CONTRA WORD (cooperativo): Word lanza una afirmación, los dos votan
+  //    V/T, puntúa el equipo; falla el equipo -> Word marca.
+  const pair3 = MP.createMockPair();
+  const cH = MP.createSession(pair3.a), cGs = MP.createSession(pair3.b);
+  const cHost = MP.createCoopGame(cH), cGuest = MP.createCoopGame(cGs);
+  let cHs=null, cGsSt=null, cHost_lobby=false, cGuest_lobby=false, cHostRound=null, cGuestRound=null, cEnd=null, cFin=null, cEndCount=0;
+  cHost.setHandlers({ onConnState:s=>{cHs=s;}, onPhase:(p,x)=>{ if(p==="lobby_ready")cHost_lobby=true; if(p==="round")cHostRound=x; if(p==="round_end"){cEnd=x;cEndCount++;} if(p==="finished")cFin=x; } });
+  cGuest.setHandlers({ onConnState:s=>{cGsSt=s;}, onPhase:(p,x)=>{ if(p==="lobby_ready")cGuest_lobby=true; if(p==="round")cGuestRound=x; if(p==="round")cGuestRound=x; } });
+  cH.hostCreateRoom("Ana");
+  await waitFor(()=> cHs==="waiting_rival");
+  cGs.guestJoinRoom(cH.getRoomCode(), "Beto");
+  await waitFor(()=> cHs==="ready" && cGsSt==="ready", 4000);
+  cHost.hostSetConfig({ rounds:2, seconds:1, section:"all", topic:"all", categoria:"all", lieRate:0.5 });
+  await waitFor(()=> cHost_lobby && cGuest_lobby, 3000);
+
+  const cState = cHost.getState();
+  assert(cState.questions.length === 2, "Contra Word: el host fija el tablero (2 rondas)");
+  assert(Array.isArray(cState.config.wordPlan) && cState.config.wordPlan.length === 2, "Contra Word: el plan de Word viaja en el config");
+  assert(JSON.stringify(cHost.getState().config.wordPlan) === JSON.stringify(cGuest.getState().config.wordPlan), "Contra Word: los dos lados ven el mismo plan de Word");
+  assert(cState.questions.every(q=> q.tipo==="opcion_unica" || q.tipo==="verdadero_falso"), "Contra Word: solo preguntas convertibles a afirmación");
+
+  cHost.confirmReady(); cGuest.confirmReady();
+  await waitFor(()=> !!cHostRound && !!cGuestRound, 5000);
+  assert(cHostRound.plan && typeof cHostRound.plan.truth === "boolean", "Contra Word: cada ronda trae la afirmación de Word y si es cierta");
+
+  // los dos aciertan: votan según la verdad real del plan
+  const truthCall = cHostRound.plan.truth ? "V" : "T";
+  cHost.submitAnswer(truthCall);
+  await new Promise(r=> setTimeout(r,120));
+  assert(!cEnd, "Contra Word: la ronda no se cierra con un solo voto");
+  cGuest.submitAnswer(truthCall);
+  await waitFor(()=> cEndCount === 1, 3000);
+  assert(cEnd.n === 2 && cEnd.teamPts > 0 && cEnd.wordPts === 0, "Contra Word: los dos aciertan -> puntúa el equipo, Word no");
+
+  // ronda 2: nadie vota -> se cierra por tiempo -> Word marca
+  cHost.advanceIfHost();
+  await waitFor(()=> cHostRound.index === 1, 3000);
+  await waitFor(()=> cEndCount === 2, 4000);
+  assert(cEnd.n === 0 && cEnd.wordPts > 0, "Contra Word: si nadie acierta, Word marca");
+
+  cHost.advanceIfHost();
+  await waitFor(()=> !!cFin, 5000);
+  assert(cFin.teamScore > 0 && ["victory","defeat","draw"].includes(cFin.outcome), "Contra Word: la partida termina con marcador equipo vs Word");
+  cH.destroy(); cGs.destroy();
+
   if(failures > 0){ console.error(`\n${failures} fallo(s).`); process.exit(1); }
-  console.log("\nSmoke test de multijugador (Duelo, mock transport): OK.");
+  console.log("\nSmoke test de multijugador (Duelo + Contra Word, mock transport): OK.");
 }
 
 main().catch(e=>{ console.error(e); process.exit(1); });

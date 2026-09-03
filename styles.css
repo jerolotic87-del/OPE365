@@ -1222,6 +1222,28 @@ details.meta-panel summary{ cursor:pointer; font-size:11.5px; color:var(--text-3
 .round-end-vs{ display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-3); margin-top:var(--sp-5); }
 .round-end-vs > div{ padding:12px; border-radius:var(--radius-m); border:1px solid var(--border); background:var(--surface); font-size:12.5px; }
 
+/* Contra Word (cooperativo) */
+.coop-card{ text-align:center; }
+.coop-context{ font-size:12.5px; color:var(--text-2); line-height:1.5; margin:0; }
+.coop-claim{
+  font-size:16px; font-weight:600; color:var(--text); line-height:1.4;
+  margin-top:8px; padding:14px 16px; border-radius:var(--radius-m);
+  border:1px solid var(--border-2); background:var(--surface-2);
+}
+.coop-vote{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:var(--sp-5); }
+.coop-btn{
+  appearance:none; cursor:pointer; font:inherit; font-size:15px; font-weight:700;
+  padding:16px 12px; border-radius:var(--radius-m); border:1.5px solid var(--border-2);
+  background:var(--surface); color:var(--text); transition:border-color .12s, background .12s, transform .1s;
+}
+.coop-btn:hover:not(:disabled){ transform:translateY(-1px); }
+.coop-btn.v:hover:not(:disabled){ border-color:var(--good); }
+.coop-btn.t:hover:not(:disabled){ border-color:var(--bad); }
+.coop-btn.chosen.v{ border-color:var(--good); background:var(--good-dim); color:var(--good); }
+.coop-btn.chosen.t{ border-color:var(--bad); background:var(--bad-dim); color:var(--bad); }
+.coop-btn:disabled{ opacity:.5; cursor:default; }
+.coop-hint{ font-size:11.5px; color:var(--text-3); text-align:center; margin-top:10px; }
+
 .countdown-hero{ text-align:center; padding:var(--sp-10) var(--sp-5); }
 .countdown-hero .num{ font-family:var(--font-mono); font-size:80px; font-weight:700; color:var(--accent-ink); }
 
