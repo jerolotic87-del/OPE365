@@ -40,24 +40,41 @@ async function main(){
 
   // acordeón: empieza contraído; al abrir muestra los subgrupos con su %
   const D = window.document;
+  const fire = (el,type)=> el.dispatchEvent(new window.Event(type, { bubbles:true }));
   const accs = D.querySelectorAll('.tm-acc[data-sec]');
   assert(accs.length >= 8, `${accs.length} pestañas son acordeones desplegables`);
   assert(Array.from(accs).every(a=> !a.classList.contains('open')), "todos los acordeones empiezan contraídos");
   const vistaAcc = Array.from(accs).find(a=> a.getAttribute('data-sec') === 'vista');
-  const head = vistaAcc.querySelector('.tm-head[data-tm-toggle]');
+  const head = vistaAcc.querySelector('.tm-head-btn[data-tm-toggle]');
   assert(head.getAttribute('aria-expanded') === 'false', "la cabecera marca aria-expanded=false al inicio");
   head.dispatchEvent(new window.MouseEvent('click', { bubbles:true }));
   assert(vistaAcc.classList.contains('open') && head.getAttribute('aria-expanded') === 'true', "clic en la cabecera abre el acordeón");
-  const subs = vistaAcc.querySelectorAll('.tm-sub[data-topic]');
+  const subs = vistaAcc.querySelectorAll('.tm-sub');
   assert(subs.length > 0, `${subs.length} subgrupos dentro de Vista`);
   assert(subs[0].querySelector('.tm-sub-pct') && /%$/.test(subs[0].querySelector('.tm-sub-pct').textContent), "cada subgrupo muestra su porcentaje");
-  assert(!vistaAcc.querySelector('.tm-sub-name').closest('.tm-head'), "los subgrupos NO están dentro de la cabecera");
-  // el subgrupo lanza práctica de ese grupo concreto
-  subs[0].dispatchEvent(new window.MouseEvent('click', { bubbles:true }));
-  const topId = subs[0].getAttribute('data-topic');
+  assert(!vistaAcc.querySelector('.tm-sub-name').closest('.tm-head-btn'), "los subgrupos NO están dentro de la cabecera");
+
+  // casillas + barra Comenzar
+  const bar = D.getElementById('tm-floatbar');
+  assert(bar && !bar.classList.contains('show'), "la barra Comenzar está oculta sin selección");
+  const firstTopic = vistaAcc.querySelector('.tm-topic-check:not([disabled])');
+  const topId = firstTopic.getAttribute('data-topic');
+  firstTopic.checked = true; fire(firstTopic, 'change');
+  assert(bar.classList.contains('show'), "marcar un subgrupo muestra la barra Comenzar");
   const expected = O.filterQuestions({ section:'vista', topic:topId }).length;
-  assert(O.getSession() && O.getSession().questions.length === expected && expected > 0,
-    `clic en un subgrupo arranca una sesión con solo sus ${expected} preguntas`);
+  assert(D.getElementById('tm-fb-count').textContent === String(expected), `la barra cuenta las ${expected} preguntas del grupo`);
+  // marcar la pestaña entera
+  const secCheck = vistaAcc.querySelector('.tm-sec-check');
+  secCheck.checked = true; fire(secCheck, 'change');
+  const allVista = O.filterQuestions({ section:'vista' }).length;
+  assert(Number(D.getElementById('tm-fb-count').textContent) === allVista && allVista > expected,
+    `marcar la pestaña selecciona sus ${allVista} preguntas`);
+  assert(Array.from(vistaAcc.querySelectorAll('.tm-topic-check:not([disabled])')).every(c=>c.checked),
+    "marcar la pestaña marca todos sus subgrupos");
+  // Comenzar
+  D.getElementById('tm-fb-go').dispatchEvent(new window.MouseEvent('click', { bubbles:true }));
+  assert(O.getSession() && O.getSession().questions.length === allVista && O.Nav.view === 'running',
+    `"Comenzar" arranca una sesión con las ${allVista} preguntas seleccionadas`);
   O.setSession(null);
   clickGoto("temario");
 

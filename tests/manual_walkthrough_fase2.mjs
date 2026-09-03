@@ -74,11 +74,15 @@ try {
   await page.waitForSelector('.tm-acc-list');
   ok((await page.locator('[data-goto="temario-detalle"]').count()) === 10, 'Temario: 10 pestañas');
   // acordeón: abre una pestaña y comprueba subgrupos con %
-  const acc = page.locator('.tm-acc[data-sec] .tm-head[data-tm-toggle]').first();
+  const acc = page.locator('.tm-acc[data-sec] .tm-head-btn[data-tm-toggle]').first();
   await acc.click();
   await page.waitForTimeout(400);
   ok(await seen('.tm-acc.open .tm-sub .tm-sub-pct'), 'Temario: el acordeón abre y muestra subgrupos con %');
+  // casillas + barra Comenzar
+  await page.locator('.tm-acc.open .tm-topic-check:not([disabled])').first().check();
+  ok(await seen('#tm-floatbar.show'), 'Temario: marcar un grupo muestra la barra Comenzar');
   await shot('02a-temario-acordeon');
+  await page.locator('#tm-fb-clear').click();
   await click('[data-goto="temario-detalle"]');
   await page.waitForSelector('.nav-row[data-topic], .empty-state');
   await shot('02-temario-detalle');

@@ -437,6 +437,8 @@ function renderTemario(){
            : `<p>${O.TAXONOMY_SECTIONS.length} pestañas de la cinta de Word 365.</p>`}
     </div>
 
+    <p class="tm-hint">Marca la casilla de una pestaña (o abre y elige grupos) y pulsa <b>Comenzar</b>.</p>
+
     <div class="tm-acc-list">
       ${O.TAXONOMY_SECTIONS.map(sec=>{
         const st = taxStats[sec.id] || {questions:0, flashcards:0};
@@ -465,16 +467,23 @@ function renderTemario(){
 
         if(!canExpand){
           return `<div class="tm-acc${empty?' is-empty':''}">
-            <button class="tm-head" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>${headInner}</button>
+            <button class="tm-head tm-head--plain" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>${headInner}</button>
           </div>`;
         }
         return `<div class="tm-acc" data-sec="${sec.id}">
-          <button class="tm-head" aria-expanded="false" data-tm-toggle>${headInner}</button>
+          <div class="tm-head">
+            <label class="tm-check" title="Seleccionar toda la pestaña">
+              <input type="checkbox" class="tm-sec-check" data-sec="${sec.id}">
+            </label>
+            <button class="tm-head-btn" aria-expanded="false" data-tm-toggle>${headInner}</button>
+          </div>
           <div class="tm-panel"><div class="tm-panel-inner">
             ${subs.map(t=>{
               const p = topicPct(t);
               const stage = t.seen ? t.masteryLabel : 'Sin empezar';
-              return `<button class="tm-sub" data-sec="${sec.id}" data-topic="${t.topicId}" ${t.questionCount?'':'disabled'}>
+              const dis = !t.questionCount;
+              return `<label class="tm-sub${dis?' is-disabled':''}">
+                <input type="checkbox" class="tm-topic-check" data-sec="${sec.id}" data-topic="${t.topicId}" ${dis?'disabled':''}>
                 <span class="state-pip tone-${t.seen?t.masteryTone:'neutral'}"></span>
                 <span class="tm-sub-body">
                   <span class="tm-sub-name">${O.escapeHtml(t.topicName)}</span>
@@ -482,27 +491,82 @@ function renderTemario(){
                 </span>
                 <span class="tm-sub-bar"><i style="width:${p}%"></i></span>
                 <span class="tm-sub-pct">${p}%</span>
-              </button>`;
+              </label>`;
             }).join("")}
             <button class="tm-open" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
-              Practicar la pestaña · flashcards · errores <span aria-hidden="true">›</span>
+              Flashcards y errores de esta pestaña <span aria-hidden="true">›</span>
             </button>
           </div></div>
         </div>`;
       }).join("")}
     </div>
+
+    <div class="tm-floatbar" id="tm-floatbar" role="region" aria-label="Selección">
+      <span class="tm-fb-info"><b id="tm-fb-count">0</b> preguntas · <span id="tm-fb-groups">0 grupos</span></span>
+      <button class="btn btn-ghost btn-sm" id="tm-fb-clear">Quitar</button>
+      <button class="btn btn-solid btn-sm" id="tm-fb-go">${icon('play')} Comenzar</button>
+    </div>
   </div>`;
 
-  $$(".tm-head[data-tm-toggle]").forEach(head=> head.addEventListener("click", ()=>{
-    const item = head.closest(".tm-acc");
+  const selKeys = new Set();   // "sec::topic"
+  const keyOf = (sec,top)=> sec + "::" + top;
+  const splitKey = k => { const i = k.indexOf("::"); return [k.slice(0,i), k.slice(i+2)]; };
+
+  function selectedIds(){
+    const ids = new Set();
+    selKeys.forEach(k=>{ const [sec,top] = splitKey(k);
+      O.filterQuestions({ section:sec, topic:top }).forEach(q=> ids.add(q.id)); });
+    return ids;
+  }
+  function refreshBar(){
+    const bar = $("#tm-floatbar");
+    if(!selKeys.size){ bar.classList.remove("show"); return; }
+    const n = selectedIds().size;
+    $("#tm-fb-count").textContent = n;
+    $("#tm-fb-groups").textContent = selKeys.size + (selKeys.size===1 ? " grupo" : " grupos");
+    $("#tm-fb-go").disabled = n === 0;
+    bar.classList.add("show");
+  }
+  function syncSecCheck(sec){
+    const cb = $(`.tm-sec-check[data-sec="${sec}"]`); if(!cb) return;
+    const topics = $$(`.tm-topic-check[data-sec="${sec}"]`).filter(t=>!t.disabled);
+    const on = topics.filter(t=> selKeys.has(keyOf(sec, t.getAttribute("data-topic")))).length;
+    cb.checked = on > 0 && on === topics.length;
+    cb.indeterminate = on > 0 && on < topics.length;
+  }
+
+  $$(".tm-head-btn[data-tm-toggle]").forEach(btn=> btn.addEventListener("click", ()=>{
+    const item = btn.closest(".tm-acc");
     const open = item.classList.toggle("open");
-    head.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
   }));
-  $$(".tm-sub[data-topic]").forEach(btn=> btn.addEventListener("click", ()=>{
-    const sid = btn.getAttribute("data-sec"), tid = btn.getAttribute("data-topic");
-    const s2 = O.buildSession({mode:"practice", section:sid, topic:tid, count:"todas", qOrder:"aleatorio", source:"all", tema:"all", tipo:"all", categoria:"all", shuffleOptions:true});
-    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No hay preguntas en este grupo");
+  $$(".tm-topic-check").forEach(cb=> cb.addEventListener("change", ()=>{
+    const sec = cb.getAttribute("data-sec"), top = cb.getAttribute("data-topic");
+    if(cb.checked) selKeys.add(keyOf(sec, top)); else selKeys.delete(keyOf(sec, top));
+    syncSecCheck(sec); refreshBar();
   }));
+  $$(".tm-sec-check").forEach(cb=> cb.addEventListener("change", ()=>{
+    const sec = cb.getAttribute("data-sec");
+    cb.indeterminate = false;
+    $$(`.tm-topic-check[data-sec="${sec}"]`).forEach(t=>{
+      if(t.disabled) return;
+      t.checked = cb.checked;
+      const k = keyOf(sec, t.getAttribute("data-topic"));
+      if(cb.checked) selKeys.add(k); else selKeys.delete(k);
+    });
+    refreshBar();
+  }));
+  $("#tm-fb-clear").addEventListener("click", ()=>{
+    selKeys.clear();
+    $$(".tm-topic-check, .tm-sec-check").forEach(c=>{ c.checked = false; c.indeterminate = false; });
+    refreshBar();
+  });
+  $("#tm-fb-go").addEventListener("click", ()=>{
+    const ids = O.shuffle([...selectedIds()]);
+    if(!ids.length){ O.toast("Selecciona al menos un grupo con preguntas"); return; }
+    const s2 = O.buildSessionFromIds(ids, { mode:"practice", shuffleOptions:true, qOrder:"aleatorio" }, null);
+    if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No se pudo crear la sesión");
+  });
 }
 
 function renderHistory(){
