@@ -254,8 +254,9 @@ silencio ni elijas arbitrariamente.
   `Alt+Mayús+Fin` en tabla **extiende la selección** hasta el final de la
   fila, no "va al final" (`insertar-43`) · `Alt+5` (numérico) inserta el
   símbolo del código Alt (♣), **no** selecciona la tabla (`insertar-38`).
-  Borrada `inicio-376` (`Alt+Mayús+5` numérico = no hace nada). Pendiente:
-  `Ctrl+5` (numérico) = ¿seleccionar todo? (`inicio-371`).
+  Borrada `inicio-376` (`Alt+Mayús+5` numérico = no hace nada). `Ctrl+5`
+  (numérico) = **seleccionar todo** — funciona con NumLock on u off
+  (`inicio-371` corregida y verificada).
 - **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
   poden preguntas correctas solo por parecerse a otra — se conservan
   aunque otra pregunte por el mismo atajo (están en topics/framings que
