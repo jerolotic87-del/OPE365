@@ -49,6 +49,12 @@ const PRIMARY_TABS = [
   {id:"progress",   label:"Progreso",    ic:"progress"},
 ];
 
+/* Pila de navegación en memoria para el botón "‹ Atrás".
+   Las 5 pestañas raíz son un punto de partida limpio: entrar en una
+   vacía la pila. Cualquier otra vista apila la anterior. */
+const ROOT_VIEWS = ["home","temario","practica","flashcards","progress"];
+let navStack = [];
+
 function groupForView(view){
   if(view==="home") return "home";
   if(["temario","temario-detalle"].includes(view)) return "temario";
@@ -70,16 +76,43 @@ function renderTopbar(activeView){
   `).join("");
   document.getElementById("primary-nav").innerHTML = navHtml;
   document.getElementById("bottom-nav").innerHTML = navHtmlMobile;
+  const back = document.getElementById("topbar-back");
+  if(back) back.hidden = !(navStack.length > 0 && !ROOT_VIEWS.includes(activeView));
 }
 
-function go(view, params){
+function go(view, params, opts){
+  opts = opts || {};
+  const prev = O.Nav.view;
+  if(ROOT_VIEWS.includes(view)){
+    navStack = [];
+  } else if(!opts.back && prev && prev !== view){
+    navStack.push({ view: prev, params: O.Nav.params });
+    if(navStack.length > 50) navStack.shift();
+  }
   O.Nav.view = view;
   O.Nav.params = params||{};
+  if(!opts.back){ try{ history.pushState({ view }, ""); }catch(e){} }
   window.scrollTo({top:0});
   renderTopbar(view);
   render(view, O.Nav.params);
 }
+function goBack(){
+  if(navStack.length){ history.back(); return; }   // dispara popstate
+  go("home");
+}
+window.addEventListener("popstate", ()=>{
+  const entry = navStack.pop();
+  if(entry){
+    O.Nav.view = entry.view; O.Nav.params = entry.params || {};
+    window.scrollTo({top:0});
+    renderTopbar(entry.view);
+    render(entry.view, O.Nav.params);
+  } else {
+    go("home", null, { back:true });
+  }
+});
 window.addEventListener("click", (e)=>{
+  if(e.target.closest("#topbar-back")){ goBack(); return; }
   const btn = e.target.closest("[data-goto]");
   if(btn){ go(btn.getAttribute("data-goto"), btn.dataset.params ? JSON.parse(btn.dataset.params) : undefined); }
 });

@@ -82,6 +82,15 @@ code{ font-family:var(--font-mono); }
 .brand{ display:flex; align-items:center; gap:var(--sp-2); font-weight:700; font-size:14px; letter-spacing:.01em; flex-shrink:0; }
 .brand .dot{ width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 8px 1px var(--accent-line); }
 
+.topbar-back{
+  appearance:none; border:1px solid var(--border); background:var(--surface); cursor:pointer;
+  color:var(--text-2); font-size:13px; font-weight:600; padding:6px 12px 6px 10px;
+  border-radius:var(--radius-s); flex-shrink:0; white-space:nowrap;
+  transition:border-color .15s, color .15s, background .15s;
+}
+.topbar-back:hover{ color:var(--text); border-color:var(--border-2); background:var(--surface-2); }
+.topbar-back[hidden]{ display:none; }
+
 .primary-nav{ display:flex; gap:2px; flex:1; }
 .nav-btn{
   appearance:none; border:1px solid transparent; background:transparent; cursor:pointer;

@@ -223,6 +223,26 @@ try {
   ok(await seen('#fc-hard'), 'Flashcard: 3 grados de valoración');
   await click('#fc-hard');
 
+  // navegación "‹ Atrás": pila real, no "Salir a Inicio"
+  await click('[data-goto="home"]');
+  await page.waitForSelector('.cta-hero');
+  ok(!(await seen('#topbar-back')), 'Atrás: oculto en una pestaña raíz (Inicio)');
+  await click('[data-goto="mp-setup"]');
+  await page.waitForSelector('#mp-role-pick');
+  ok(await seen('#topbar-back'), 'Atrás: visible en una vista secundaria (Duelo)');
+  await click('#topbar-back');
+  await page.waitForSelector('.cta-hero');
+  ok(await page.evaluate(() => window.OPE.Nav.view) === 'home', 'Atrás: vuelve a la vista anterior (Inicio)');
+  ok(!(await seen('#topbar-back')), 'Atrás: se oculta al volver a la raíz');
+  // botón del navegador
+  await click('[data-goto="progress"]');
+  await page.waitForSelector('.dim-list');
+  await click('[data-goto="temario-detalle"]');
+  await page.waitForTimeout(150);
+  await page.goBack();
+  await page.waitForTimeout(250);
+  ok(await page.evaluate(() => window.OPE.Nav.view) === 'progress', 'Atrás: el botón del navegador retrocede en la app');
+
   // móvil
   await page.setViewportSize({ width: 390, height: 844 });
   await click('.bottom-nav [data-goto="home"]');
