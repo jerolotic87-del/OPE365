@@ -4457,6 +4457,95 @@ function renderMpRoundEnd(data){
 }
 
 /* --------------------------- RESULTADOS --------------------------- */
+/* Repaso al final de cualquier modo: cada pregunta con lo que respondió
+   cada uno, la respuesta correcta y la explicación del banco. */
+function mpAnswerToText(q, val){
+  if(val === null || val === undefined) return "—";
+  if(q.tipo === "verdadero_falso") return (val === true || val === "true") ? "Verdadero" : "Falso";
+  if(q.tipo === "opcion_unica"){ const o = (q.opciones||[]).find(x=>x.letter===val); return o ? `${val}) ${o.text}` : String(val); }
+  if(q.tipo === "seleccion_multiple"){
+    const by = Object.fromEntries((q.opciones||[]).map(o=>[o.letter,o.text]));
+    return (Array.isArray(val)?val:[val]).map(l=> by[l]||l).join(" · ");
+  }
+  if(q.tipo === "emparejamiento" && q.matching){
+    const L = Object.fromEntries((q.matching.left||[]).map(x=>[x.id,x.label]));
+    const R = Object.fromEntries((q.matching.right||[]).map(x=>[x.id,x.label]));
+    return Object.keys(val||{}).map(k=> `${L[k]||k} → ${R[val[k]]||val[k]}`).join(" · ");
+  }
+  return String(val);
+}
+function mpReviewShell(rowsHtml){
+  return `<div class="section-block" style="margin-top:var(--sp-5);">
+    <div class="section-title"><h3>Repaso de la partida</h3></div>
+    <p style="font-size:11.5px;color:var(--text-3);margin:0 0 var(--sp-3);">Toca cada pregunta para ver la explicación.</p>
+    <div class="mp-review">${rowsHtml}</div>
+  </div>`;
+}
+function mpReviewItemHtml(idx, ok, enunciado, bodyHtml){
+  return `<details class="mp-rev-item ${ok?'ok':'bad'}">
+    <summary><span class="mp-rev-ic">${ok?'✓':'✕'}</span><span class="mp-rev-q">${idx+1}. ${O.escapeHtml(enunciado)}</span></summary>
+    <div class="mp-rev-body">${bodyHtml}</div>
+  </details>`;
+}
+function mpDuelReviewHtml(review){
+  if(!Array.isArray(review) || !review.length) return "";
+  const rival = O.escapeHtml(mpSession.getRivalName());
+  const rows = review.map((r,i)=>{
+    const q = r.question; if(!q) return "";
+    const meTxt = r.myState === "TIMEOUT" ? "Sin responder a tiempo" : mpAnswerToText(q, r.myAnswer);
+    const rvTxt = r.rivalState === "TIMEOUT" ? "Sin responder a tiempo" : mpAnswerToText(q, r.rivalAnswer);
+    const body = `
+      <p><strong>Tú:</strong> ${O.escapeHtml(meTxt)} ${r.myCorrect?'✓':'✕'}</p>
+      <p><strong>${rival}:</strong> ${O.escapeHtml(rvTxt)} ${r.rivalCorrect?'✓':'✕'}</p>
+      <p><strong>Correcto:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
+      ${q.explicacion ? `<p class="mp-rev-exp">${O.escapeHtml(q.explicacion)}</p>` : ''}`;
+    return mpReviewItemHtml(i, r.myCorrect, q.enunciado, body);
+  }).join("");
+  return mpReviewShell(rows);
+}
+function mpCoopPlanClaimPlain(plan){
+  if(!plan) return "";
+  if(plan.kind === "vf") return "";
+  if(plan.kind === "multi") return (plan.claimItems||[]).join(" · ");
+  if(plan.kind === "match") return (plan.claimPairs||[]).map(p=>`${p.l} → ${p.r}`).join(" · ");
+  return plan.claim || "";
+}
+function mpCoopReviewHtml(review){
+  if(!Array.isArray(review) || !review.length) return "";
+  const me = O.escapeHtml(mpSetupState.name) || "Tú";
+  const rival = O.escapeHtml(mpSession.getRivalName());
+  const rows = review.map((r,i)=>{
+    const q = r.question; if(!q) return "";
+    const wasTrue = r.truthCall === "V";
+    const claim = mpCoopPlanClaimPlain(r.plan);
+    const lbl = (call,state)=> state === "TIMEOUT" ? "sin voto" : (call === "V" ? "Verdadero" : "Falso");
+    const body = `
+      <p><strong>Word decía:</strong> ${claim ? O.escapeHtml(claim) : (wasTrue ? '(la afirmación tal cual)' : '—')} — era <strong>${wasTrue?'VERDADERO':'FALSO'}</strong></p>
+      <p><strong>${me}:</strong> ${lbl(r.myCall,r.myState)} ${r.myRight?'✓':'✕'} · <strong>${rival}:</strong> ${lbl(r.rivalCall,r.rivalState)} ${r.rivalRight?'✓':'✕'}</p>
+      <p><strong>Respuesta correcta:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
+      ${q.explicacion ? `<p class="mp-rev-exp">${O.escapeHtml(q.explicacion)}</p>` : ''}`;
+    return mpReviewItemHtml(i, r.n >= 1, q.enunciado, body);
+  }).join("");
+  return mpReviewShell(rows);
+}
+function mpPokerReviewHtml(review){
+  if(!Array.isArray(review) || !review.length) return "";
+  const rival = O.escapeHtml(mpSession.getRivalName());
+  const rows = review.map((r,i)=>{
+    const q = r.question; if(!q) return "";
+    const meRight = r.attackerIsMe ? r.attackerTruthful : r.defenderCorrect;
+    const roleTxt = r.attackerIsMe
+      ? `Atacaste afirmando «${O.escapeHtml(String(r.claim))}» — ${r.attackerTruthful ? 'decías la verdad' : 'era farol'}`
+      : `Defendiste: ${r.decision === "dudo" ? 'DUDÉ' : 'CONFIÉ'} · el rival ${r.attackerTruthful ? 'decía la verdad' : 'faroleaba'}`;
+    const body = `
+      <p>${roleTxt}</p>
+      <p><strong>Correcto:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
+      ${q.explicacion ? `<p class="mp-rev-exp">${O.escapeHtml(q.explicacion)}</p>` : ''}`;
+    return mpReviewItemHtml(i, !!meRight, q.enunciado || "Pregunta", body);
+  }).join("");
+  return mpReviewShell(rows);
+}
+
 function renderMpResults(){
   const f = mpFinalExtra;
   if(!f) return;
@@ -4478,6 +4567,7 @@ function renderMpResults(){
       </tbody>
     </table>
     <p style="font-size:11.5px; color:var(--text-3); margin-top:var(--sp-3);">La precisión es tu dato educativo puro; la puntuación de juego también premia la velocidad y la racha de aciertos.</p>
+    ${mpDuelReviewHtml(f.review)}
     ${isHost ? `
     <div class="action-grid" style="margin-top:var(--sp-6);">
       <button class="action-card" id="mp-rematch"><div class="t">Revancha</div><div class="d">Mismas reglas, preguntas nuevas</div></button>
@@ -4494,7 +4584,7 @@ function renderMpResults(){
 
 /* ===================== CONTRA WORD (cooperativo) ===================== */
 function mpCoopClaimHtml(plan){
-  if(!plan) return "";
+  if(!plan) return `<p class="coop-context">Word lanza una afirmación.</p><p class="coop-ask">¿Es verdadera o falsa?</p>`;
   if(plan.kind === "vf"){
     return `<p class="coop-context">Word afirma:</p>
       <div class="coop-claim">«${O.escapeHtml(plan.context)}»</div>
@@ -4666,6 +4756,7 @@ function renderMpCoopResults(){
       <ul class="mini-list">${missed.map(m=>`<li><span class="mini-row-main">${O.escapeHtml(m)}</span></li>`).join("")}</ul>
       <button class="btn btn-outline btn-sm btn-block" id="mp-coop-review" style="margin-top:var(--sp-3);">Repasar estos temas</button>
     </div>` : ''}
+    ${mpCoopReviewHtml(f.review)}
     ${isHost ? `
     <div class="action-grid" style="margin-top:var(--sp-6);">
       <button class="action-card" id="mp-rematch"><div class="t">Otra partida</div><div class="d">Mismas reglas, preguntas nuevas</div></button>
@@ -5010,6 +5101,7 @@ function renderPokerResults(){
         ${dudoPct!==null ? `<li><span class="mini-row-main">Cuando dudaste, acertaste</span><span class="mini-row-sub">${dudoPct}% (${f.myDudoCorrect}/${f.myDudoTotal})</span></li>` : ``}
       </ul>
     </div>
+    ${mpPokerReviewHtml(f.review)}
     <div class="action-grid" style="margin-top:var(--sp-6);">
       <button class="action-card" data-goto="mp-setup"><div class="t">Jugar otra vez</div><div class="d">Vuelve a configurar la partida</div></button>
       <button class="action-card" data-goto="home"><div class="t">Salir</div><div class="d">Volver al panel principal</div></button>

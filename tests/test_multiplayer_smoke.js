@@ -80,6 +80,11 @@ async function main(){
   assert(Array.isArray(hIds) && hIds.length === 1, "el host fija la lista exacta de ids (config.questionIds)");
   assert(JSON.stringify(hIds) === JSON.stringify(gIds), "el invitado usa la MISMA lista de ids que el host (no la reconstruye)");
   assert(hostGame.getState().questions.every(q=>q.tipo !== "relleno"), "el tablero de duelo excluye preguntas de tipo relleno");
+  const gq0 = guestGame.getState().questions[0];
+  assert(gq0 && gq0.id === hIds[0] && "tipo" in gq0 && "enunciado" in gq0,
+    "el invitado recibe la pregunta COMPUESTA entera (qPayload), no solo el id");
+  assert(!!guestGame.getState().config.qPayload && guestGame.getState().config.qPayload.length === hIds.length,
+    "el tablero compuesto entero viaja en config.qPayload");
 
   hostGame.confirmReady();
   guestGame.confirmReady();
@@ -109,6 +114,9 @@ async function main(){
   await waitFor(()=> hostFinished !== null, 5000);
   assert(hostFinished.myCorrect === 1 && hostFinished.rivalCorrect === 1, "ambas respuestas correctas se contabilizan bien vía O.evaluateAnswer (incluye el tipo relleno)");
   assert(hostFinished.myScore > 0, "se otorgan puntos por la respuesta correcta");
+  assert(Array.isArray(hostFinished.review) && hostFinished.review.length === 1
+    && hostFinished.review[0].question && "myCorrect" in hostFinished.review[0],
+    "el resultado final incluye el repaso pregunta a pregunta (review)");
 
   hostSession.destroy(); guestSession.destroy();
 

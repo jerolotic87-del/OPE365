@@ -1249,6 +1249,20 @@ details.meta-panel summary{ cursor:pointer; font-size:11.5px; color:var(--text-3
 .coop-btn:disabled:not(.chosen){ opacity:.4; }
 .coop-hint{ font-size:11.5px; color:var(--text-3); text-align:center; margin-top:10px; }
 
+/* Repaso al final de la partida (todos los modos) */
+.mp-review{ display:flex; flex-direction:column; gap:6px; }
+.mp-rev-item{ border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--surface-2); overflow:hidden; }
+.mp-rev-item.ok{ border-left:3px solid var(--good); }
+.mp-rev-item.bad{ border-left:3px solid var(--bad); }
+.mp-rev-item > summary{ list-style:none; cursor:pointer; padding:10px 12px; display:flex; gap:8px; align-items:flex-start; font-size:12.5px; }
+.mp-rev-item > summary::-webkit-details-marker{ display:none; }
+.mp-rev-ic{ flex-shrink:0; font-weight:700; }
+.mp-rev-item.ok .mp-rev-ic{ color:var(--good); } .mp-rev-item.bad .mp-rev-ic{ color:var(--bad); }
+.mp-rev-q{ color:var(--text); }
+.mp-rev-body{ padding:0 12px 12px 12px; font-size:12px; color:var(--text-2); }
+.mp-rev-body p{ margin:6px 0; }
+.mp-rev-exp{ border-top:1px solid var(--border); padding-top:8px; color:var(--text-3); }
+
 .countdown-hero{ text-align:center; padding:var(--sp-10) var(--sp-5); }
 .countdown-hero .num{ font-family:var(--font-mono); font-size:80px; font-weight:700; color:var(--accent-ink); }
 

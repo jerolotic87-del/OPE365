@@ -399,10 +399,18 @@ function createDuelGame(session){
   }
   function buildBoard(){
     roundDuration = (Number(config.seconds)||10) * 1000;
-    // El HOST fija la lista EXACTA de ids y la mete en el config; el
-    // invitado la usa tal cual. Así el tablero no depende de que los dos
-    // dispositivos tengan un banco idéntico (contenido propio creado en
-    // uno solo hacía divergir la reconstrucción "determinista").
+    // El HOST compone el tablero ENTERO (preguntas ya con sus opciones
+    // barajadas, respuesta remapeada, matching y explicación) y lo mete
+    // tal cual en el config. El invitado lo usa VERBATIM — así el tablero
+    // no depende de que los dos dispositivos tengan un banco idéntico.
+    // (Antes solo viajaban los ids y el invitado recomponía desde su banco:
+    //  si le faltaba una pregunta —Pages sin redesplegar, contenido propio,
+    //  una borrada— el tablero divergía y la partida no arrancaba o
+    //  mostraba huecos sin opciones que marcar.)
+    if(Array.isArray(config.qPayload) && config.qPayload.length){
+      questions = config.qPayload;
+      return;
+    }
     let ids = config.questionIds;
     if(!Array.isArray(ids)){
       let pool = O.filterQuestions({
@@ -416,11 +424,12 @@ function createDuelGame(session){
       pool = O.seededShuffle(pool, O.mulberry32((seed >>> 0)));
       const n = Math.min(Number(config.rounds) || 15, pool.length);
       ids = pool.slice(0, n).map(q=>q.id);
-      config.questionIds = ids;
     }
     ids = ids.filter(id=> O.Q_BY_ID[id]);
     const built = ids.length ? O.buildSessionFromIds(ids, { mode:"duel", shuffleOptions:true }, seed >>> 0) : null;
     questions = built ? built.questions : [];
+    config.questionIds = questions.map(q=>q.id);
+    config.qPayload = questions;   // el invitado recibe el tablero ya compuesto
   }
 
   function handleMsg(msg){
@@ -678,6 +687,12 @@ function createDuelGame(session){
       rivalAccuracy: questions.length ? Math.round(rivalCorrect/questions.length*100) : 0,
       myCorrect, rivalCorrect, total: questions.length,
       outcome: myScore>rivalScore ? "victory" : myScore<rivalScore ? "defeat" : "draw",
+      review: roundHistory.map(r=>({
+        question: r.question,
+        myAnswer: r.me.answer, myCorrect: r.me.correct, myState: r.me.state,
+        rivalAnswer: r.rival.answer, rivalCorrect: r.rival.correct, rivalState: r.rival.state,
+        race: r.race, iWon: r.iWon,
+      })),
     });
   }
 
@@ -693,7 +708,7 @@ function createDuelGame(session){
       myScore=0; rivalScore=0; myCombo=0; rivalCombo=0; myCorrect=0; rivalCorrect=0; roundHistory=[];
       readyFlags = {mine:false, rival:false};
       seed = newSeed ? O.makeSeed() : seed;
-      if(config) delete config.questionIds;   // re-resolver el tablero desde cero
+      if(config){ delete config.questionIds; delete config.qPayload; }   // re-resolver el tablero desde cero
       buildBoard();
       session.send({type:"config", config, seed});
       emitPhase("lobby_ready", {rounds:questions.length, config});
@@ -746,23 +761,30 @@ function createCoopGame(session){
 
   function buildBoard(){
     roundDuration = (Number(config.seconds)||15) * 1000;
-    let ids = config.questionIds;
-    if(!Array.isArray(ids)){
-      let pool = O.filterQuestions({
-        section: config.section || "all", topic: config.topic || "all",
-        tema: config.tema || "all", categoria: config.categoria || "all",
-      }).filter(q=>
-        q.tipo !== "relleno"          // relleno no tiene distractores: Word no puede "equivocarse" sin inventar contenido
-        && !q.creado && !/^usr-/.test(q.id || "")
-      );
-      pool = O.seededShuffle(pool, O.mulberry32((seed >>> 0)));
-      const n = Math.min(Number(config.rounds) || 12, pool.length);
-      ids = pool.slice(0, n).map(q=>q.id);
-      config.questionIds = ids;
+    // El invitado usa el tablero ya compuesto por el host (ver misma nota
+    // en createDuelGame): no depende de tener un banco idéntico.
+    if(Array.isArray(config.qPayload) && config.qPayload.length){
+      questions = config.qPayload;
+    } else {
+      let ids = config.questionIds;
+      if(!Array.isArray(ids)){
+        let pool = O.filterQuestions({
+          section: config.section || "all", topic: config.topic || "all",
+          tema: config.tema || "all", categoria: config.categoria || "all",
+        }).filter(q=>
+          q.tipo !== "relleno"          // relleno no tiene distractores: Word no puede "equivocarse" sin inventar contenido
+          && !q.creado && !/^usr-/.test(q.id || "")
+        );
+        pool = O.seededShuffle(pool, O.mulberry32((seed >>> 0)));
+        const n = Math.min(Number(config.rounds) || 12, pool.length);
+        ids = pool.slice(0, n).map(q=>q.id);
+      }
+      ids = ids.filter(id=> O.Q_BY_ID[id]);
+      const built = ids.length ? O.buildSessionFromIds(ids, { mode:"coop", shuffleOptions:true }, seed >>> 0) : null;
+      questions = built ? built.questions : [];
+      config.questionIds = questions.map(q=>q.id);
+      config.qPayload = questions;
     }
-    ids = ids.filter(id=> O.Q_BY_ID[id]);
-    const built = ids.length ? O.buildSessionFromIds(ids, { mode:"coop", shuffleOptions:true }, seed >>> 0) : null;
-    questions = built ? built.questions : [];
 
     // Plan de Word: lo fija el host y viaja en el config.
     if(Array.isArray(config.wordPlan) && config.wordPlan.length === questions.length){
@@ -981,6 +1003,12 @@ function createCoopGame(session){
       total, teamCorrectRounds, bothCorrectRounds, disagreements,
       teamAccuracy: total ? Math.round(teamCorrectRounds/total*100) : 0,
       missedTopics: Object.entries(missedTopics).sort((a,b)=>b[1]-a[1]).slice(0,4).map(e=>e[0]),
+      review: roundHistory.map(r=>({
+        question: r.question, plan: r.plan, truthCall: r.truthCall,
+        myCall: r.me.call, myState: r.me.state, myRight: r.me.right,
+        rivalCall: r.rival.call, rivalState: r.rival.state, rivalRight: r.rival.right,
+        n: r.n, disagreed: r.disagreed,
+      })),
     });
   }
 
@@ -996,7 +1024,7 @@ function createCoopGame(session){
       teamScore=0; wordScore=0; teamStreak=0; teamCorrectRounds=0; bothCorrectRounds=0; disagreements=0; missedTopics={}; roundHistory=[];
       readyFlags = {mine:false, rival:false};
       seed = newSeed ? O.makeSeed() : seed;
-      if(config){ delete config.questionIds; delete config.wordPlan; }
+      if(config){ delete config.questionIds; delete config.qPayload; delete config.wordPlan; }
       buildBoard();
       session.send({type:"config", config, seed});
       emitPhase("lobby_ready", {rounds:questions.length, config});
@@ -1275,6 +1303,11 @@ function createPokerGame(session){
       myScore, rivalScore, myCorrect, myBluffsSuccessful, myBluffsDetectedByMe,
       rivalBluffCount, trustedRivalBluffCount, detectedRivalBluffCount, myDudoTotal, myDudoCorrect,
       outcome: myScore>rivalScore ? "victory" : myScore<rivalScore ? "defeat" : "draw",
+      review: matchHistory.map(r=>({
+        question: r.question, attackerIsMe: r.attackerIsMe, claim: r.claim,
+        decision: r.decision, answer: r.answer, correct: r.correct,
+        attackerTruthful: r.attackerTruthful, defenderCorrect: r.defenderCorrect,
+      })),
     });
   }
 

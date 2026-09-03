@@ -1258,6 +1258,20 @@ details.meta-panel summary{ cursor:pointer; font-size:11.5px; color:var(--text-3
 .coop-btn:disabled:not(.chosen){ opacity:.4; }
 .coop-hint{ font-size:11.5px; color:var(--text-3); text-align:center; margin-top:10px; }
 
+/* Repaso al final de la partida (todos los modos) */
+.mp-review{ display:flex; flex-direction:column; gap:6px; }
+.mp-rev-item{ border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--surface-2); overflow:hidden; }
+.mp-rev-item.ok{ border-left:3px solid var(--good); }
+.mp-rev-item.bad{ border-left:3px solid var(--bad); }
+.mp-rev-item > summary{ list-style:none; cursor:pointer; padding:10px 12px; display:flex; gap:8px; align-items:flex-start; font-size:12.5px; }
+.mp-rev-item > summary::-webkit-details-marker{ display:none; }
+.mp-rev-ic{ flex-shrink:0; font-weight:700; }
+.mp-rev-item.ok .mp-rev-ic{ color:var(--good); } .mp-rev-item.bad .mp-rev-ic{ color:var(--bad); }
+.mp-rev-q{ color:var(--text); }
+.mp-rev-body{ padding:0 12px 12px 12px; font-size:12px; color:var(--text-2); }
+.mp-rev-body p{ margin:6px 0; }
+.mp-rev-exp{ border-top:1px solid var(--border); padding-top:8px; color:var(--text-3); }
+
 .countdown-hero{ text-align:center; padding:var(--sp-10) var(--sp-5); }
 .countdown-hero .num{ font-family:var(--font-mono); font-size:80px; font-weight:700; color:var(--accent-ink); }
 
@@ -4927,10 +4941,18 @@ function createDuelGame(session){
   }
   function buildBoard(){
     roundDuration = (Number(config.seconds)||10) * 1000;
-    // El HOST fija la lista EXACTA de ids y la mete en el config; el
-    // invitado la usa tal cual. Así el tablero no depende de que los dos
-    // dispositivos tengan un banco idéntico (contenido propio creado en
-    // uno solo hacía divergir la reconstrucción "determinista").
+    // El HOST compone el tablero ENTERO (preguntas ya con sus opciones
+    // barajadas, respuesta remapeada, matching y explicación) y lo mete
+    // tal cual en el config. El invitado lo usa VERBATIM — así el tablero
+    // no depende de que los dos dispositivos tengan un banco idéntico.
+    // (Antes solo viajaban los ids y el invitado recomponía desde su banco:
+    //  si le faltaba una pregunta —Pages sin redesplegar, contenido propio,
+    //  una borrada— el tablero divergía y la partida no arrancaba o
+    //  mostraba huecos sin opciones que marcar.)
+    if(Array.isArray(config.qPayload) && config.qPayload.length){
+      questions = config.qPayload;
+      return;
+    }
     let ids = config.questionIds;
     if(!Array.isArray(ids)){
       let pool = O.filterQuestions({
@@ -4944,11 +4966,12 @@ function createDuelGame(session){
       pool = O.seededShuffle(pool, O.mulberry32((seed >>> 0)));
       const n = Math.min(Number(config.rounds) || 15, pool.length);
       ids = pool.slice(0, n).map(q=>q.id);
-      config.questionIds = ids;
     }
     ids = ids.filter(id=> O.Q_BY_ID[id]);
     const built = ids.length ? O.buildSessionFromIds(ids, { mode:"duel", shuffleOptions:true }, seed >>> 0) : null;
     questions = built ? built.questions : [];
+    config.questionIds = questions.map(q=>q.id);
+    config.qPayload = questions;   // el invitado recibe el tablero ya compuesto
   }
 
   function handleMsg(msg){
@@ -5206,6 +5229,12 @@ function createDuelGame(session){
       rivalAccuracy: questions.length ? Math.round(rivalCorrect/questions.length*100) : 0,
       myCorrect, rivalCorrect, total: questions.length,
       outcome: myScore>rivalScore ? "victory" : myScore<rivalScore ? "defeat" : "draw",
+      review: roundHistory.map(r=>({
+        question: r.question,
+        myAnswer: r.me.answer, myCorrect: r.me.correct, myState: r.me.state,
+        rivalAnswer: r.rival.answer, rivalCorrect: r.rival.correct, rivalState: r.rival.state,
+        race: r.race, iWon: r.iWon,
+      })),
     });
   }
 
@@ -5221,7 +5250,7 @@ function createDuelGame(session){
       myScore=0; rivalScore=0; myCombo=0; rivalCombo=0; myCorrect=0; rivalCorrect=0; roundHistory=[];
       readyFlags = {mine:false, rival:false};
       seed = newSeed ? O.makeSeed() : seed;
-      if(config) delete config.questionIds;   // re-resolver el tablero desde cero
+      if(config){ delete config.questionIds; delete config.qPayload; }   // re-resolver el tablero desde cero
       buildBoard();
       session.send({type:"config", config, seed});
       emitPhase("lobby_ready", {rounds:questions.length, config});
@@ -5274,23 +5303,30 @@ function createCoopGame(session){
 
   function buildBoard(){
     roundDuration = (Number(config.seconds)||15) * 1000;
-    let ids = config.questionIds;
-    if(!Array.isArray(ids)){
-      let pool = O.filterQuestions({
-        section: config.section || "all", topic: config.topic || "all",
-        tema: config.tema || "all", categoria: config.categoria || "all",
-      }).filter(q=>
-        q.tipo !== "relleno"          // relleno no tiene distractores: Word no puede "equivocarse" sin inventar contenido
-        && !q.creado && !/^usr-/.test(q.id || "")
-      );
-      pool = O.seededShuffle(pool, O.mulberry32((seed >>> 0)));
-      const n = Math.min(Number(config.rounds) || 12, pool.length);
-      ids = pool.slice(0, n).map(q=>q.id);
-      config.questionIds = ids;
+    // El invitado usa el tablero ya compuesto por el host (ver misma nota
+    // en createDuelGame): no depende de tener un banco idéntico.
+    if(Array.isArray(config.qPayload) && config.qPayload.length){
+      questions = config.qPayload;
+    } else {
+      let ids = config.questionIds;
+      if(!Array.isArray(ids)){
+        let pool = O.filterQuestions({
+          section: config.section || "all", topic: config.topic || "all",
+          tema: config.tema || "all", categoria: config.categoria || "all",
+        }).filter(q=>
+          q.tipo !== "relleno"          // relleno no tiene distractores: Word no puede "equivocarse" sin inventar contenido
+          && !q.creado && !/^usr-/.test(q.id || "")
+        );
+        pool = O.seededShuffle(pool, O.mulberry32((seed >>> 0)));
+        const n = Math.min(Number(config.rounds) || 12, pool.length);
+        ids = pool.slice(0, n).map(q=>q.id);
+      }
+      ids = ids.filter(id=> O.Q_BY_ID[id]);
+      const built = ids.length ? O.buildSessionFromIds(ids, { mode:"coop", shuffleOptions:true }, seed >>> 0) : null;
+      questions = built ? built.questions : [];
+      config.questionIds = questions.map(q=>q.id);
+      config.qPayload = questions;
     }
-    ids = ids.filter(id=> O.Q_BY_ID[id]);
-    const built = ids.length ? O.buildSessionFromIds(ids, { mode:"coop", shuffleOptions:true }, seed >>> 0) : null;
-    questions = built ? built.questions : [];
 
     // Plan de Word: lo fija el host y viaja en el config.
     if(Array.isArray(config.wordPlan) && config.wordPlan.length === questions.length){
@@ -5509,6 +5545,12 @@ function createCoopGame(session){
       total, teamCorrectRounds, bothCorrectRounds, disagreements,
       teamAccuracy: total ? Math.round(teamCorrectRounds/total*100) : 0,
       missedTopics: Object.entries(missedTopics).sort((a,b)=>b[1]-a[1]).slice(0,4).map(e=>e[0]),
+      review: roundHistory.map(r=>({
+        question: r.question, plan: r.plan, truthCall: r.truthCall,
+        myCall: r.me.call, myState: r.me.state, myRight: r.me.right,
+        rivalCall: r.rival.call, rivalState: r.rival.state, rivalRight: r.rival.right,
+        n: r.n, disagreed: r.disagreed,
+      })),
     });
   }
 
@@ -5524,7 +5566,7 @@ function createCoopGame(session){
       teamScore=0; wordScore=0; teamStreak=0; teamCorrectRounds=0; bothCorrectRounds=0; disagreements=0; missedTopics={}; roundHistory=[];
       readyFlags = {mine:false, rival:false};
       seed = newSeed ? O.makeSeed() : seed;
-      if(config){ delete config.questionIds; delete config.wordPlan; }
+      if(config){ delete config.questionIds; delete config.qPayload; delete config.wordPlan; }
       buildBoard();
       session.send({type:"config", config, seed});
       emitPhase("lobby_ready", {rounds:questions.length, config});
@@ -5803,6 +5845,11 @@ function createPokerGame(session){
       myScore, rivalScore, myCorrect, myBluffsSuccessful, myBluffsDetectedByMe,
       rivalBluffCount, trustedRivalBluffCount, detectedRivalBluffCount, myDudoTotal, myDudoCorrect,
       outcome: myScore>rivalScore ? "victory" : myScore<rivalScore ? "defeat" : "draw",
+      review: matchHistory.map(r=>({
+        question: r.question, attackerIsMe: r.attackerIsMe, claim: r.claim,
+        decision: r.decision, answer: r.answer, correct: r.correct,
+        attackerTruthful: r.attackerTruthful, defenderCorrect: r.defenderCorrect,
+      })),
     });
   }
 
@@ -10295,6 +10342,95 @@ function renderMpRoundEnd(data){
 }
 
 /* --------------------------- RESULTADOS --------------------------- */
+/* Repaso al final de cualquier modo: cada pregunta con lo que respondió
+   cada uno, la respuesta correcta y la explicación del banco. */
+function mpAnswerToText(q, val){
+  if(val === null || val === undefined) return "—";
+  if(q.tipo === "verdadero_falso") return (val === true || val === "true") ? "Verdadero" : "Falso";
+  if(q.tipo === "opcion_unica"){ const o = (q.opciones||[]).find(x=>x.letter===val); return o ? `${val}) ${o.text}` : String(val); }
+  if(q.tipo === "seleccion_multiple"){
+    const by = Object.fromEntries((q.opciones||[]).map(o=>[o.letter,o.text]));
+    return (Array.isArray(val)?val:[val]).map(l=> by[l]||l).join(" · ");
+  }
+  if(q.tipo === "emparejamiento" && q.matching){
+    const L = Object.fromEntries((q.matching.left||[]).map(x=>[x.id,x.label]));
+    const R = Object.fromEntries((q.matching.right||[]).map(x=>[x.id,x.label]));
+    return Object.keys(val||{}).map(k=> `${L[k]||k} → ${R[val[k]]||val[k]}`).join(" · ");
+  }
+  return String(val);
+}
+function mpReviewShell(rowsHtml){
+  return `<div class="section-block" style="margin-top:var(--sp-5);">
+    <div class="section-title"><h3>Repaso de la partida</h3></div>
+    <p style="font-size:11.5px;color:var(--text-3);margin:0 0 var(--sp-3);">Toca cada pregunta para ver la explicación.</p>
+    <div class="mp-review">${rowsHtml}</div>
+  </div>`;
+}
+function mpReviewItemHtml(idx, ok, enunciado, bodyHtml){
+  return `<details class="mp-rev-item ${ok?'ok':'bad'}">
+    <summary><span class="mp-rev-ic">${ok?'✓':'✕'}</span><span class="mp-rev-q">${idx+1}. ${O.escapeHtml(enunciado)}</span></summary>
+    <div class="mp-rev-body">${bodyHtml}</div>
+  </details>`;
+}
+function mpDuelReviewHtml(review){
+  if(!Array.isArray(review) || !review.length) return "";
+  const rival = O.escapeHtml(mpSession.getRivalName());
+  const rows = review.map((r,i)=>{
+    const q = r.question; if(!q) return "";
+    const meTxt = r.myState === "TIMEOUT" ? "Sin responder a tiempo" : mpAnswerToText(q, r.myAnswer);
+    const rvTxt = r.rivalState === "TIMEOUT" ? "Sin responder a tiempo" : mpAnswerToText(q, r.rivalAnswer);
+    const body = `
+      <p><strong>Tú:</strong> ${O.escapeHtml(meTxt)} ${r.myCorrect?'✓':'✕'}</p>
+      <p><strong>${rival}:</strong> ${O.escapeHtml(rvTxt)} ${r.rivalCorrect?'✓':'✕'}</p>
+      <p><strong>Correcto:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
+      ${q.explicacion ? `<p class="mp-rev-exp">${O.escapeHtml(q.explicacion)}</p>` : ''}`;
+    return mpReviewItemHtml(i, r.myCorrect, q.enunciado, body);
+  }).join("");
+  return mpReviewShell(rows);
+}
+function mpCoopPlanClaimPlain(plan){
+  if(!plan) return "";
+  if(plan.kind === "vf") return "";
+  if(plan.kind === "multi") return (plan.claimItems||[]).join(" · ");
+  if(plan.kind === "match") return (plan.claimPairs||[]).map(p=>`${p.l} → ${p.r}`).join(" · ");
+  return plan.claim || "";
+}
+function mpCoopReviewHtml(review){
+  if(!Array.isArray(review) || !review.length) return "";
+  const me = O.escapeHtml(mpSetupState.name) || "Tú";
+  const rival = O.escapeHtml(mpSession.getRivalName());
+  const rows = review.map((r,i)=>{
+    const q = r.question; if(!q) return "";
+    const wasTrue = r.truthCall === "V";
+    const claim = mpCoopPlanClaimPlain(r.plan);
+    const lbl = (call,state)=> state === "TIMEOUT" ? "sin voto" : (call === "V" ? "Verdadero" : "Falso");
+    const body = `
+      <p><strong>Word decía:</strong> ${claim ? O.escapeHtml(claim) : (wasTrue ? '(la afirmación tal cual)' : '—')} — era <strong>${wasTrue?'VERDADERO':'FALSO'}</strong></p>
+      <p><strong>${me}:</strong> ${lbl(r.myCall,r.myState)} ${r.myRight?'✓':'✕'} · <strong>${rival}:</strong> ${lbl(r.rivalCall,r.rivalState)} ${r.rivalRight?'✓':'✕'}</p>
+      <p><strong>Respuesta correcta:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
+      ${q.explicacion ? `<p class="mp-rev-exp">${O.escapeHtml(q.explicacion)}</p>` : ''}`;
+    return mpReviewItemHtml(i, r.n >= 1, q.enunciado, body);
+  }).join("");
+  return mpReviewShell(rows);
+}
+function mpPokerReviewHtml(review){
+  if(!Array.isArray(review) || !review.length) return "";
+  const rival = O.escapeHtml(mpSession.getRivalName());
+  const rows = review.map((r,i)=>{
+    const q = r.question; if(!q) return "";
+    const meRight = r.attackerIsMe ? r.attackerTruthful : r.defenderCorrect;
+    const roleTxt = r.attackerIsMe
+      ? `Atacaste afirmando «${O.escapeHtml(String(r.claim))}» — ${r.attackerTruthful ? 'decías la verdad' : 'era farol'}`
+      : `Defendiste: ${r.decision === "dudo" ? 'DUDÉ' : 'CONFIÉ'} · el rival ${r.attackerTruthful ? 'decía la verdad' : 'faroleaba'}`;
+    const body = `
+      <p>${roleTxt}</p>
+      <p><strong>Correcto:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
+      ${q.explicacion ? `<p class="mp-rev-exp">${O.escapeHtml(q.explicacion)}</p>` : ''}`;
+    return mpReviewItemHtml(i, !!meRight, q.enunciado || "Pregunta", body);
+  }).join("");
+  return mpReviewShell(rows);
+}
+
 function renderMpResults(){
   const f = mpFinalExtra;
   if(!f) return;
@@ -10316,6 +10452,7 @@ function renderMpResults(){
       </tbody>
     </table>
     <p style="font-size:11.5px; color:var(--text-3); margin-top:var(--sp-3);">La precisión es tu dato educativo puro; la puntuación de juego también premia la velocidad y la racha de aciertos.</p>
+    ${mpDuelReviewHtml(f.review)}
     ${isHost ? `
     <div class="action-grid" style="margin-top:var(--sp-6);">
       <button class="action-card" id="mp-rematch"><div class="t">Revancha</div><div class="d">Mismas reglas, preguntas nuevas</div></button>
@@ -10332,7 +10469,7 @@ function renderMpResults(){
 
 /* ===================== CONTRA WORD (cooperativo) ===================== */
 function mpCoopClaimHtml(plan){
-  if(!plan) return "";
+  if(!plan) return `<p class="coop-context">Word lanza una afirmación.</p><p class="coop-ask">¿Es verdadera o falsa?</p>`;
   if(plan.kind === "vf"){
     return `<p class="coop-context">Word afirma:</p>
       <div class="coop-claim">«${O.escapeHtml(plan.context)}»</div>
@@ -10504,6 +10641,7 @@ function renderMpCoopResults(){
       <ul class="mini-list">${missed.map(m=>`<li><span class="mini-row-main">${O.escapeHtml(m)}</span></li>`).join("")}</ul>
       <button class="btn btn-outline btn-sm btn-block" id="mp-coop-review" style="margin-top:var(--sp-3);">Repasar estos temas</button>
     </div>` : ''}
+    ${mpCoopReviewHtml(f.review)}
     ${isHost ? `
     <div class="action-grid" style="margin-top:var(--sp-6);">
       <button class="action-card" id="mp-rematch"><div class="t">Otra partida</div><div class="d">Mismas reglas, preguntas nuevas</div></button>
@@ -10848,6 +10986,7 @@ function renderPokerResults(){
         ${dudoPct!==null ? `<li><span class="mini-row-main">Cuando dudaste, acertaste</span><span class="mini-row-sub">${dudoPct}% (${f.myDudoCorrect}/${f.myDudoTotal})</span></li>` : ``}
       </ul>
     </div>
+    ${mpPokerReviewHtml(f.review)}
     <div class="action-grid" style="margin-top:var(--sp-6);">
       <button class="action-card" data-goto="mp-setup"><div class="t">Jugar otra vez</div><div class="d">Vuelve a configurar la partida</div></button>
       <button class="action-card" data-goto="home"><div class="t">Salir</div><div class="d">Volver al panel principal</div></button>

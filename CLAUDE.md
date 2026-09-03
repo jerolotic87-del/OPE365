@@ -616,6 +616,27 @@ rompía el desempate de carrera. Los tres tenían pruebas automatizadas que
 los detectaron — si tocas esta zona, reutiliza ese patrón de test antes
 de dar nada por bueno.
 
+**Tablero por valor, no por referencia (sep-2026):** el host compone el
+tablero ENTERO (`buildSessionFromIds` → preguntas ya con opciones
+barajadas, `respuesta` remapeada, `matching`, `explicacion`) y lo mete en
+`config.qPayload`; el invitado lo usa VERBATIM. Antes solo viajaban los
+`questionIds` y el invitado recomponía desde su banco — si le faltaba
+alguna (Pages sin redesplegar entre los dos móviles, contenido propio,
+una borrada) el tablero divergía: la partida no arrancaba, o salían
+rondas con la pregunta de un lado y el `wordPlan`/opciones del otro
+("no se podían marcar las opciones"). Vale para Duelo y Contra Word.
+`requestRematch` borra `qPayload` (+ `wordPlan` en coop) para re-resolver.
+Conexión: **un solo broker PeerJS** para ambos (probar varios sin canal
+previo los separa) + ICE con TURN (OpenRelay); con datos móviles/CGNAT
+sin TURN propio la conexión directa falla y hay que jugar en Wi-Fi
+(la pantalla de error lo dice + despliega `OPE_MP.getNetLog()`).
+
+**Repaso al final (sep-2026):** los tres modos emiten `review` en el
+evento `finished` (pregunta + respuesta de cada uno + correcta +
+`explicacion`). Lo pintan `mpDuelReviewHtml`/`mpCoopReviewHtml`/
+`mpPokerReviewHtml` (helpers compartidos `mpAnswerToText`/`mpReviewShell`/
+`mpReviewItemHtml`, CSS `.mp-review`/`.mp-rev-item`).
+
 ## Disciplina de pruebas
 
 `tests/test_*.js` son pruebas jsdom que sí persisten en el repo (antes de
