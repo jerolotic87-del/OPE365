@@ -123,14 +123,20 @@ de mayor a menor:
    probado y hace X", eso manda por encima de cualquier documento.
 2. **`atajos_oficial.json`** (extraído de `ATAJOS.docx`, volcado real del
    cuadro "Personalizar teclado" de la instalación del usuario).
-3. **PDFs de la academia** (Beatriz R.) — están en el Project Knowledge de
-   claude.ai, no en esta carpeta local. Si necesitas su contenido, pide al
-   usuario que los suba o pégalos.
-4. **Documentación de Microsoft en español online** — la menos fiable
-   (traducción automática confirmada). Último recurso.
+3. **PDFs de la academia** (Beatriz R., Adams, MAD…) — están en el Project
+   Knowledge de claude.ai, no en esta carpeta local. Si necesitas su
+   contenido, pide al usuario que los suba o pégalos.
+
+**`support.microsoft.com` (y su versión ES): 0% fiable — NO usar.** El
+usuario lo ha descartado explícitamente: traducción automática, mezcla
+esquemas de teclado y da atajos que en su instalación no funcionan (p. ej.
+documenta subíndice `Ctrl+=` y superíndice `Ctrl+Mayús++`, ambos falsos
+aquí). No citarlo ni como "último recurso". Las webs generalistas de atajos
+(xataka, profesionalreview…) copian ese mismo esquema internacional y
+valen igual de poco para esta instalación.
 
 **Nunca inventes un atajo o distractor que no exista en una fuente real.**
-Si dos fuentes se contradicen, dilo en el chat — no lo resuelvas en
+Si dos fuentes fiables se contradicen, dilo en el chat — no lo resuelvas en
 silencio ni elijas arbitrariamente.
 
 ### Contexto importante ya resuelto (no lo reabras sin motivo)
