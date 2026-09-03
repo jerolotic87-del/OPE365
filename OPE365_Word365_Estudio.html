@@ -376,8 +376,22 @@ input[type="date"]{ color-scheme:dark; }
 .tm-acc:last-child{ border-bottom:none; }
 .tm-acc.is-empty{ opacity:.5; }
 
-.tm-check{ display:flex; align-items:center; justify-content:center; padding:0 4px 0 14px; align-self:stretch; cursor:pointer; }
-.tm-check input, .tm-sub input[type=checkbox]{ width:16px; height:16px; accent-color:var(--accent); cursor:pointer; margin:0; }
+.tm-check{ position:relative; display:flex; align-items:center; justify-content:center; padding:0 6px 0 14px; align-self:stretch; cursor:pointer; }
+/* casilla propia, dibujada — tamaño acorde al texto pequeño de los subgrupos */
+.tm-check input, .tm-sub input[type=checkbox]{ position:absolute; opacity:0; width:1px; height:1px; margin:0; }
+.tm-box{
+  width:14px; height:14px; border-radius:4px; flex-shrink:0;
+  border:1.5px solid var(--border-2); background:var(--surface);
+  display:inline-flex; align-items:center; justify-content:center;
+  transition:background .12s var(--ease), border-color .12s var(--ease);
+}
+.tm-sub .tm-box{ width:12px; height:12px; border-radius:3px; border-width:1px; }
+input:checked + .tm-box, input:indeterminate + .tm-box{ background:var(--accent); border-color:var(--accent); }
+input:checked + .tm-box::after{ content:""; width:3.5px; height:7px; border:solid #06101F; border-width:0 2px 2px 0; transform:translateY(-1px) rotate(45deg); }
+.tm-sub input:checked + .tm-box::after{ width:3px; height:6px; }
+input:indeterminate + .tm-box::after{ content:""; width:7px; height:2px; border-radius:1px; background:#06101F; }
+input:focus-visible + .tm-box{ box-shadow:0 0 0 3px var(--accent-line); }
+input:disabled + .tm-box{ opacity:.4; }
 
 .tm-head{ display:grid; grid-template-columns:auto 1fr; align-items:stretch; }
 .tm-head--plain{ grid-template-columns:1fr; }
@@ -405,9 +419,9 @@ input[type="date"]{ color-scheme:dark; }
 
 /* subgrupos: claramente subordinados — pequeños, finos, tenues, sangrados */
 .tm-sub{
-  cursor:pointer; width:100%; border-top:1px solid var(--border);
-  display:grid; grid-template-columns:16px 9px 1fr 84px 40px; align-items:center; gap:11px;
-  padding:9px var(--sp-5) 9px calc(var(--sp-4) + 8px);
+  position:relative; cursor:pointer; width:100%; border-top:1px solid var(--border);
+  display:grid; grid-template-columns:14px 7px 1fr 84px 40px; align-items:center; gap:9px;
+  padding:9px var(--sp-5) 9px calc(var(--sp-4) + 6px);
   color:var(--text-2); transition:background .12s var(--ease);
 }
 .tm-sub:first-child{ border-top:none; }
@@ -446,7 +460,7 @@ input[type="date"]{ color-scheme:dark; }
 @media (max-width:760px){
   .tm-head-btn, .tm-head--plain{ grid-template-columns:1fr 46px 16px; gap:var(--sp-3); padding:13px var(--sp-4); }
   .tm-head-bar{ display:none; }
-  .tm-sub{ grid-template-columns:16px 8px 1fr 40px; }
+  .tm-sub{ grid-template-columns:14px 7px 1fr 40px; }
   .tm-sub-bar{ display:none; }
   .tm-floatbar{ left:12px; right:12px; bottom:calc(58px + 12px); transform:translateY(24px); justify-content:space-between; padding:8px 10px 8px 14px; }
   .tm-floatbar.show{ transform:translateY(0); }
@@ -5873,6 +5887,7 @@ function renderTemario(){
           <div class="tm-head">
             <label class="tm-check" title="Seleccionar toda la pestaña">
               <input type="checkbox" class="tm-sec-check" data-sec="${sec.id}">
+              <span class="tm-box"></span>
             </label>
             <button class="tm-head-btn" aria-expanded="false" data-tm-toggle>${headInner}</button>
           </div>
@@ -5883,6 +5898,7 @@ function renderTemario(){
               const dis = !t.questionCount;
               return `<label class="tm-sub${dis?' is-disabled':''}">
                 <input type="checkbox" class="tm-topic-check" data-sec="${sec.id}" data-topic="${t.topicId}" ${dis?'disabled':''}>
+                <span class="tm-box"></span>
                 <span class="state-pip tone-${t.seen?t.masteryTone:'neutral'}"></span>
                 <span class="tm-sub-body">
                   <span class="tm-sub-name">${O.escapeHtml(t.topicName)}</span>

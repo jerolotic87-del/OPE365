@@ -474,6 +474,7 @@ function renderTemario(){
           <div class="tm-head">
             <label class="tm-check" title="Seleccionar toda la pestaña">
               <input type="checkbox" class="tm-sec-check" data-sec="${sec.id}">
+              <span class="tm-box"></span>
             </label>
             <button class="tm-head-btn" aria-expanded="false" data-tm-toggle>${headInner}</button>
           </div>
@@ -484,6 +485,7 @@ function renderTemario(){
               const dis = !t.questionCount;
               return `<label class="tm-sub${dis?' is-disabled':''}">
                 <input type="checkbox" class="tm-topic-check" data-sec="${sec.id}" data-topic="${t.topicId}" ${dis?'disabled':''}>
+                <span class="tm-box"></span>
                 <span class="state-pip tone-${t.seen?t.masteryTone:'neutral'}"></span>
                 <span class="tm-sub-body">
                   <span class="tm-sub-name">${O.escapeHtml(t.topicName)}</span>
