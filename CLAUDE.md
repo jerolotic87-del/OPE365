@@ -306,6 +306,24 @@ silencio ni elijas arbitrariamente.
   (sangría, interlineado), al pegar sobre otro párrafo **solo se aplica el
   formato de párrafo**. Las notas de `vista-27/87/109/88` ya no dicen que
   `Alt+Ctrl+V` "no hace nada" (dicen que hace pegar formato).
+- **Tanda 8 (sep-2026) — escenario E cerrado + limpieza del banco.** Prueba
+  en vivo: `Alt+Ctrl+H` resalta la selección (`inicio-21/303/159`) ·
+  `Ctrl+rueda` zoom de 10 en 10 (`vista-22`) · `Alt+Ctrl+Espacio` Leer en
+  voz alta (`revisar-6`) · `Inicio`/`Fin` inicio/fin de línea
+  (`interfaz-503/504`) · hipervínculos con un clic = desactivar "Utilizar
+  CTRL+clic…" en Opciones ▸ Avanzadas (`archivo-86`) · `Ctrl+M` Fuente (NO
+  sangría; esa es `Ctrl+H`) (`inicio-283`) · `Ctrl+E` seleccionar todo
+  (`inicio-274`) · `Ctrl+Z` deshacer (`inicio-139`) · `F2` mover texto, la
+  barra de estado muestra «¿Dónde quieres moverlo?» (`inicio-7/312`) ·
+  `Ctrl+F3` Spike, `Ctrl+Mayús+F3` lo suelta (`inicio-8`, notación
+  normalizada). **Limpieza global del banco**: eliminados los banners de
+  basura (`====… FIN DEL BANCO / TABLA OFICIAL / BLOQUE N …`) y TODAS las
+  citas de fuente en enunciados/explicaciones (aulaClic, Scribd, SlideShare,
+  LinkedIn Learning, IONOS, "según la fuente", "documentado en el corpus").
+  Las ~40 preguntas de Vista afectadas se reescribieron a mano conservando
+  el hecho; `vista-38` y `vista-44` estaban vacías y se rellenaron. **Regla
+  nueva**: el banco NO cita fuentes externas — dato verificado en vivo →
+  "Prueba en vivo del usuario"; si no, se enuncia sin coletillas.
 - **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
   poden preguntas correctas solo por parecerse a otra — se conservan
   aunque otra pregunte por el mismo atajo (están en topics/framings que

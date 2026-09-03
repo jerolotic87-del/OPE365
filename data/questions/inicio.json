@@ -276,7 +276,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "F2 prepara el texto para moverlo sin usar el portapapeles. El procedimiento es: seleccionar texto, pulsar F2, colocarse en el destino y pulsar Intro. Para copiar en lugar de mover se usa Mayus+F2."
+    "explicacion": "F2 prepara el texto seleccionado para moverlo sin usar el portapapeles: la barra de estado muestra «¿Dónde quieres moverlo?»; se coloca el cursor en el destino y se pulsa Intro. Para copiar en vez de mover se usa Mayus+F2 («Copiar a»). Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-8",
@@ -295,7 +295,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Acumula todas las selecciones una a una para pegarlas juntas despues con Mayus+Ctrl+F3"
+        "text": "Acumula todas las selecciones una a una para pegarlas juntas despues con Ctrl+Mayus+F3"
       },
       {
         "letter": "B",
@@ -312,7 +312,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F3 tiene efecto acumulativo: cada vez que se usa va sumando la seleccion actual a las anteriores. Para pegar todo lo acumulado de golpe se usa Mayus+Ctrl+F3."
+    "explicacion": "Ctrl+F3 tiene efecto acumulativo (Spike): cada uso añade la selección actual a las anteriores y la quita del documento. Para soltar todo lo acumulado de golpe se pulsa Ctrl+Mayus+F3. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-9",
@@ -795,7 +795,7 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0022",
-    "enunciado": "¿Que atajo aplica especificamente el color de resaltado amarillo en Word 365?",
+    "enunciado": "¿Qué atajo resalta el texto seleccionado (rotulador) en Word 365?",
     "opciones": [
       {
         "letter": "A",
@@ -816,7 +816,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Alt+Ctrl+H aplica el resaltado amarillo especificamente. Ctrl+Mayus+H es el atajo para quitar la sangria francesa, no para resaltar."
+    "explicacion": "Alt+Ctrl+H aplica el resaltado (rotulador) al texto seleccionado, en el color activo del botón Color de resaltado (amarillo por defecto). Ctrl+Mayus+H reduce la sangría francesa. Ctrl+Alt+R y Mayus+F7 no resaltan (Mayus+F7 abre Sinónimos). Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-22",
@@ -5242,7 +5242,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Ctrl+Z deshace la última acción realizada. Puede pulsarse repetidamente para deshacer varias acciones en orden inverso. El historial de Deshacer está disponible desde la flecha desplegable del botón Deshacer en la barra de herramientas de Acceso rápido."
+    "explicacion": "Ctrl+Z deshace la última acción realizada. Puede pulsarse repetidamente para deshacer varias en orden inverso. El historial de Deshacer está en la flecha desplegable del botón Deshacer de la barra de acceso rápido. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-140",
@@ -9770,7 +9770,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Ctrl+N: negrita. Ctrl+K: cursiva. Ctrl+S: subrayado sencillo. Ctrl+Mayús+D: subrayado doble. Ctrl+Mayús+L: versalitas. El distractor F (subrayado solo palabras) corresponde a Ctrl+Mayús+P, no a ninguno de los atajos de la lista. Fuentes verificadas: aulaclic.es y Scribd Ayto.Madrid."
+    "explicacion": "Ctrl+N: negrita. Ctrl+K: cursiva. Ctrl+S: subrayado sencillo. Ctrl+Mayús+D: subrayado doble. Ctrl+Mayús+L: versalitas. El distractor F (subrayado solo palabras) corresponde a Ctrl+Mayús+P, no a ninguno de los atajos de la lista."
   },
   {
     "id": "inicio-261",
@@ -10259,7 +10259,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Correcto. En la versión española de Word 365, Ctrl+E selecciona todo el documento, equivalente a Seleccionar todo del grupo Edición. Ctrl+T es el atajo para centrar texto en español. Esta es una diferencia importante respecto a la versión inglesa donde Ctrl+E centra y Ctrl+A selecciona todo. Fuentes verificadas: aulaclic.es y Scribd Ayto.Madrid."
+    "explicacion": "Correcto. En la versión española de Word 365, Ctrl+E selecciona todo el documento (equivale a Seleccionar todo del grupo Edición). Ctrl+T centra el texto. En la versión inglesa es al revés: Ctrl+E centra y Ctrl+A selecciona todo. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-275",
@@ -10689,7 +10689,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Correcto. En la versión española de Word 365, Ctrl+M abre el cuadro de diálogo Fuente completo. Esta es otra diferencia respecto a la versión inglesa donde Ctrl+M aumenta la sangría izquierda. En español la sangría se gestiona con Ctrl+M (aumentar) pero ese atajo comparte función con abrir Fuente según la fuente consultada. Fuente verificada: aulaclic.es."
+    "explicacion": "Correcto. En la versión española de Word 365, Ctrl+M abre el cuadro de diálogo Fuente con el foco en el campo Fuente (nombre). NO aplica sangría: la sangría se aumenta con Ctrl+H. En la versión inglesa Ctrl+M sí aumenta la sangría izquierda — de ahí la confusión. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-284",
@@ -10789,7 +10789,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "La afirmación del opositor es incorrecta. El ciclo de Mayús+F3 tiene tres estados: 1ª pulsación MAYÚSCULAS, 2ª pulsación minúscula, 3ª pulsación condicional: aplica Tipo oración si el texto seleccionado contiene punto al final, o Poner En Mayúsculas Cada Palabra si no contiene punto. Esta distinción está documentada en aulaclic.es y es relevante para el examen. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "La afirmación del opositor es incorrecta. El ciclo de Mayús+F3 tiene tres estados: 1ª pulsación MAYÚSCULAS, 2ª pulsación minúscula, 3ª pulsación condicional: aplica Tipo oración si el texto seleccionado contiene punto al final, o Poner En Mayúsculas Cada Palabra si no contiene punto. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-287",
@@ -11384,7 +11384,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+H aplica resaltado al texto seleccionado. Ctrl+H en inglés es Reemplazar pero en español esa función es Ctrl+L. Ctrl+Mayús+H aplica sangría francesa reducida. Alt+H no tiene función asignada para resaltado. ============================================================ BANCO DE ATAJOS COMPLETO – TABLA OFICIAL WORD 365 PREGUNTAS DE TODOS LOS ATAJOS PENDIENTES NIVEL MÁXIMO · DISTRACTORES SCORE 5 ============================================================"
+    "explicacion": "Alt+Ctrl+H aplica el resaltado al texto seleccionado. En la versión española Ctrl+H aplica sangría (Reemplazar es Ctrl+L). Ctrl+Mayus+H reduce la sangría francesa. Alt+H no resalta. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-304",
@@ -11699,7 +11699,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F2 activa el modo mover para desplazar el texto seleccionado sin usar el portapapeles. Mayús+F2 copia sin cortar. Ctrl+F2 abre el panel de impresión. Alt+F2 no tiene esa función."
+    "explicacion": "F2 activa el modo mover: la barra de estado muestra «¿Dónde quieres moverlo?», se lleva el cursor al destino y se pulsa Intro. Mayus+F2 copia («Copiar a»). Ctrl+F2 abre la vista de impresión. Alt+F2 no tiene esa función. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-313",
