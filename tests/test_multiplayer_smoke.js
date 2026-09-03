@@ -146,7 +146,7 @@ async function main(){
   hS.destroy(); gS.destroy();
 
   // ── CONTRA WORD (cooperativo): Word lanza una afirmación, los dos votan
-  //    V/T, puntúa el equipo; falla el equipo -> Word marca.
+  //    Verdadero/Falso, puntúa el equipo; falla el equipo -> Word marca.
   const pair3 = MP.createMockPair();
   const cH = MP.createSession(pair3.a), cGs = MP.createSession(pair3.b);
   const cHost = MP.createCoopGame(cH), cGuest = MP.createCoopGame(cGs);
@@ -164,14 +164,32 @@ async function main(){
   assert(cState.questions.length === 2, "Contra Word: el host fija el tablero (2 rondas)");
   assert(Array.isArray(cState.config.wordPlan) && cState.config.wordPlan.length === 2, "Contra Word: el plan de Word viaja en el config");
   assert(JSON.stringify(cHost.getState().config.wordPlan) === JSON.stringify(cGuest.getState().config.wordPlan), "Contra Word: los dos lados ven el mismo plan de Word");
-  assert(cState.questions.every(q=> q.tipo==="opcion_unica" || q.tipo==="verdadero_falso"), "Contra Word: solo preguntas convertibles a afirmación");
+  assert(cState.questions.every(q=> q.tipo !== "relleno"), "Contra Word: acepta todos los tipos menos relleno");
+  assert(cState.config.wordPlan.every(p=> ["vf","opt","multi","match"].includes(p.kind) && typeof p.truth === "boolean"), "Contra Word: el plan tiene kind + truth por ronda");
+
+  // buildWordPlan cubre los 4 tipos: pareja aparte con tablero grande
+  const pBig = MP.createMockPair();
+  const bH = MP.createSession(pBig.a), bG = MP.createSession(pBig.b);
+  const bHost = MP.createCoopGame(bH), bGuest = MP.createCoopGame(bG);
+  let bHs=null, bGs=null, bPlan=null;
+  bHost.setHandlers({ onConnState:s=>{bHs=s;}, onPhase:(p)=>{ if(p==="lobby_ready") bPlan = bHost.getState().config.wordPlan; } });
+  bGuest.setHandlers({ onConnState:s=>{bGs=s;}, onPhase:()=>{} });
+  bH.hostCreateRoom("X"); await waitFor(()=> bHs==="waiting_rival");
+  bG.guestJoinRoom(bH.getRoomCode(), "Y");
+  await waitFor(()=> bHs==="ready" && bGs==="ready", 4000);
+  bHost.hostSetConfig({ rounds:250, seconds:10, section:"all", topic:"all", categoria:"all", lieRate:0.5 });
+  await waitFor(()=> !!bPlan, 3000);
+  const kinds = new Set((bPlan||[]).map(p=>p.kind));
+  assert(["vf","opt","multi","match"].every(k=> kinds.has(k)), "Contra Word: el plan convierte V/F, opción única, selección múltiple y emparejamiento ("+[...kinds].sort().join(",")+")");
+  assert((bPlan||[]).some(p=> p.truth === false) && (bPlan||[]).some(p=> p.truth === true), "Contra Word: Word a veces dice la verdad y a veces se equivoca");
+  bH.destroy(); bG.destroy();
 
   cHost.confirmReady(); cGuest.confirmReady();
   await waitFor(()=> !!cHostRound && !!cGuestRound, 5000);
   assert(cHostRound.plan && typeof cHostRound.plan.truth === "boolean", "Contra Word: cada ronda trae la afirmación de Word y si es cierta");
 
   // los dos aciertan: votan según la verdad real del plan
-  const truthCall = cHostRound.plan.truth ? "V" : "T";
+  const truthCall = cHostRound.plan.truth ? "V" : "F";
   cHost.submitAnswer(truthCall);
   await new Promise(r=> setTimeout(r,120));
   assert(!cEnd, "Contra Word: la ronda no se cierra con un solo voto");

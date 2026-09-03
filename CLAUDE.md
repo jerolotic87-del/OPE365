@@ -489,16 +489,22 @@ funciona.
   8+ puntos por detrás, comodín 50/50 (1 uso, solo para el defensor,
   reduce puntos a la mitad si acierta).
 - **Contra Word** (`createCoopGame`, `mpGameMode:"coop"`): cooperativo, los
-  dos humanos son EQUIPO y el rival es "Word". Cada ronda Word lanza una
-  afirmación (V/F tal cual, o una opción de una `opcion_unica`) que puede
-  ser verdad o trampa; los dos votan V/T desde su móvil. Puntúa el equipo
-  (los dos aciertan = +200·racha; uno = +90; ninguno = Word +140). Sin
-  `raceMode`. El "plan de Word" (qué afirma cada ronda + si es cierto) lo
-  fija el host y viaja en `config.wordPlan` — igual que `questionIds` —
-  para que ambos lados vean lo mismo sin servidor. Reusa el tablero
-  determinista, el reloj y la máquina de ronda del Duelo (la vista guarda
-  el engine en `mpDuel` y `mpGameMode` desambigua el render:
-  `renderMpCoopGame`/`mpCoopRenderBody`/`renderMpCoopResults`). Resultado
+  dos humanos son EQUIPO y el rival es "Word". Cada ronda Word presenta
+  una **afirmación** y los dos votan **Verdadero** (celda verde) /
+  **Falso** (celda roja) desde su móvil. `buildWordPlan` convierte
+  CUALQUIER tipo menos `relleno` (no tiene distractores) en esa afirmación:
+  `vf` = la frase tal cual · `opt` = Word enuncia una opción · `multi` =
+  Word da un conjunto (a veces con una cambiada/omitida) · `match` = Word
+  da un emparejamiento completo (a veces con dos cruzados). `plan.truth`
+  dice si lo mostrado es correcto; la casilla correcta es `"V"`/`"F"`.
+  Cuando Word se equivoca, el panel de fin de ronda enseña "Lo correcto"
+  (`mpCoopCorrectText`). Puntúa el equipo (los dos aciertan = +200·racha;
+  uno = +90; ninguno = Word +140). Sin `raceMode`. El plan lo fija el host
+  y viaja en `config.wordPlan` — igual que `questionIds` — para que ambos
+  lados vean lo mismo sin servidor. Reusa el tablero determinista, el
+  reloj y la máquina de ronda del Duelo (la vista guarda el engine en
+  `mpDuel` y `mpGameMode` desambigua el render: `renderMpCoopGame`/
+  `mpCoopClaimHtml`/`mpCoopRenderBody`/`renderMpCoopResults`). Resultado
   final: marcador equipo–Word + "Word os pilló en" con enlace a repasar
   esos `section:topic`.
 

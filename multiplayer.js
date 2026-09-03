@@ -715,7 +715,7 @@ function createCoopGame(session){
         section: config.section || "all", topic: config.topic || "all",
         tema: config.tema || "all", categoria: config.categoria || "all",
       }).filter(q=>
-        (q.tipo === "opcion_unica" || q.tipo === "verdadero_falso")   // solo estos dos: se convierten a un "¿verdad o trampa?" limpio
+        q.tipo !== "relleno"          // relleno no tiene distractores: Word no puede "equivocarse" sin inventar contenido
         && !q.creado && !/^usr-/.test(q.id || "")
       );
       pool = O.seededShuffle(pool, O.mulberry32((seed >>> 0)));
@@ -738,21 +738,66 @@ function createCoopGame(session){
 
   function buildWordPlan(){
     const rng = O.mulberry32(((seed >>> 0) ^ 0x9e3779b9) >>> 0);
+    const pick = arr => arr[Math.floor(rng()*arr.length)];
     const lieRate = Math.max(0.1, Math.min(0.9, Number(config.lieRate) || 0.5));
     return questions.map(q=>{
+      // V/F: la afirmación ES la pregunta; no hay "mentira" de Word, la frase es
+      // cierta o falsa de por sí. El jugador responde Verdadero / Falso.
       if(q.tipo === "verdadero_falso"){
-        const truth = (q.respuesta === true || q.respuesta === "true");
-        return { context:q.enunciado, claim:null, isVF:true, truth };
+        return { kind:"vf", context:q.enunciado, truth: (q.respuesta === true || q.respuesta === "true") };
       }
       const lies = rng() < lieRate;
+
+      if(q.tipo === "seleccion_multiple"){
+        const all = (q.opciones||[]).map(o=>o.letter);
+        const real = Array.isArray(q.respuesta) ? q.respuesta.slice() : [];
+        let claimed = real.slice();
+        if(lies && all.length > real.length && real.length){
+          // cambia una correcta por una incorrecta
+          const out = pick(real);
+          const inn = pick(all.filter(l=> !real.includes(l)));
+          claimed = real.filter(l=> l !== out).concat(inn);
+        } else if(lies && real.length > 1){
+          claimed = real.slice(0, real.length - 1);   // omite una
+        } else if(lies){
+          const extra = pick(all.filter(l=> !real.includes(l)));
+          if(extra) claimed = real.concat(extra);
+        }
+        const same = claimed.length === real.length && claimed.every(l=> real.includes(l));
+        const byLetter = Object.fromEntries((q.opciones||[]).map(o=>[o.letter,o.text]));
+        return { kind:"multi", context:q.enunciado,
+          claimItems: claimed.slice().sort().map(l=> byLetter[l] || l), truth: same };
+      }
+
+      if(q.tipo === "emparejamiento" && q.matching){
+        const leftById = Object.fromEntries((q.matching.left||[]).map(x=>[x.id,x.label]));
+        const rightById = Object.fromEntries((q.matching.right||[]).map(x=>[x.id,x.label]));
+        const real = q.matching.correct || q.respuesta || {};
+        const claimed = Object.assign({}, real);
+        let truthy = true;
+        if(lies){
+          const lefts = Object.keys(real);
+          if(lefts.length >= 2){
+            const a = pick(lefts);
+            let b = pick(lefts); let guard = 0;
+            while(b === a && guard++ < 8) b = pick(lefts);
+            if(b !== a){ const t = claimed[a]; claimed[a] = claimed[b]; claimed[b] = t; truthy = false; }
+          }
+        }
+        return { kind:"match", context:q.enunciado,
+          claimPairs: Object.keys(claimed).map(lid=> ({ l: leftById[lid] || lid, r: rightById[claimed[lid]] || claimed[lid] })),
+          truth: truthy };
+      }
+
+      // opcion_unica
       let opt;
       if(lies){
         const wrong = (q.opciones||[]).filter(o=> o.letter !== q.respuesta);
-        opt = wrong.length ? wrong[Math.floor(rng()*wrong.length)] : (q.opciones||[])[0];
+        opt = wrong.length ? pick(wrong) : (q.opciones||[])[0];
       } else {
         opt = (q.opciones||[]).find(o=> o.letter === q.respuesta) || (q.opciones||[])[0];
       }
-      return { context:q.enunciado, claim: opt ? opt.text : "", truth: !lies };
+      return { kind:"opt", context:q.enunciado, claim: opt ? opt.text : "", truth: !lies };
     });
   }
 
@@ -836,7 +881,7 @@ function createCoopGame(session){
     resolvedRounds[roundIndex] = true;
     if(localTimeoutHandle){ clearTimeout(localTimeoutHandle); localTimeoutHandle=null; }
     const plan = wordPlan[roundIndex] || {truth:true};
-    const truthCall = plan.truth ? "V" : "T";
+    const truthCall = plan.truth ? "V" : "F";
     const myRight = myAnswer.state === "SUBMITTED" && myAnswer.answer === truthCall;
     const rivalRight = rivalAnswer.state === "SUBMITTED" && rivalAnswer.answer === truthCall;
     const n = (myRight?1:0) + (rivalRight?1:0);

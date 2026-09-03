@@ -1230,18 +1230,23 @@ details.meta-panel summary{ cursor:pointer; font-size:11.5px; color:var(--text-3
   margin-top:8px; padding:14px 16px; border-radius:var(--radius-m);
   border:1px solid var(--border-2); background:var(--surface-2);
 }
-.coop-vote{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:var(--sp-5); }
+.coop-list{ list-style:none; margin:8px 0 0; padding:12px 14px; border-radius:var(--radius-m); border:1px solid var(--border-2); background:var(--surface-2); text-align:left; display:flex; flex-direction:column; gap:6px; }
+.coop-list li{ font-size:14px; font-weight:500; color:var(--text); line-height:1.35; }
+.coop-arrow{ color:var(--accent-ink); margin:0 4px; }
+.coop-ask{ font-size:13px; font-weight:600; color:var(--text-2); margin:14px 0 0; }
+.coop-vote{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:var(--sp-4); }
 .coop-btn{
-  appearance:none; cursor:pointer; font:inherit; font-size:15px; font-weight:700;
-  padding:16px 12px; border-radius:var(--radius-m); border:1.5px solid var(--border-2);
-  background:var(--surface); color:var(--text); transition:border-color .12s, background .12s, transform .1s;
+  appearance:none; cursor:pointer; font:inherit; font-size:16px; font-weight:800; letter-spacing:.01em;
+  padding:20px 12px; border-radius:var(--radius-m); border:2px solid transparent;
+  transition:filter .12s, transform .1s, box-shadow .12s;
 }
-.coop-btn:hover:not(:disabled){ transform:translateY(-1px); }
-.coop-btn.v:hover:not(:disabled){ border-color:var(--good); }
-.coop-btn.t:hover:not(:disabled){ border-color:var(--bad); }
-.coop-btn.chosen.v{ border-color:var(--good); background:var(--good-dim); color:var(--good); }
-.coop-btn.chosen.t{ border-color:var(--bad); background:var(--bad-dim); color:var(--bad); }
-.coop-btn:disabled{ opacity:.5; cursor:default; }
+.coop-btn.v{ background:var(--good-dim); border-color:var(--good-line); color:var(--good); }
+.coop-btn.f{ background:var(--bad-dim);  border-color:var(--bad-line);  color:var(--bad); }
+.coop-btn:hover:not(:disabled){ transform:translateY(-1px); filter:brightness(1.15); }
+.coop-btn.chosen.v{ background:var(--good); border-color:var(--good); color:#06140d; box-shadow:0 0 0 3px var(--good-dim); }
+.coop-btn.chosen.f{ background:var(--bad);  border-color:var(--bad);  color:#1c0906; box-shadow:0 0 0 3px var(--bad-dim); }
+.coop-btn:disabled{ cursor:default; }
+.coop-btn:disabled:not(.chosen){ opacity:.4; }
 .coop-hint{ font-size:11.5px; color:var(--text-3); text-align:center; margin-top:10px; }
 
 .countdown-hero{ text-align:center; padding:var(--sp-10) var(--sp-5); }

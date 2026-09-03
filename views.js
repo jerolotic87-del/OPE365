@@ -4483,13 +4483,23 @@ function renderMpResults(){
 /* ===================== CONTRA WORD (cooperativo) ===================== */
 function mpCoopClaimHtml(plan){
   if(!plan) return "";
-  if(plan.isVF){
+  if(plan.kind === "vf"){
     return `<p class="coop-context">Word afirma:</p>
-      <div class="coop-claim">«${O.escapeHtml(plan.context)}»</div>`;
+      <div class="coop-claim">«${O.escapeHtml(plan.context)}»</div>
+      <p class="coop-ask">¿Es verdadero o falso?</p>`;
+  }
+  let ans;
+  if(plan.kind === "multi"){
+    ans = `<ul class="coop-list">${(plan.claimItems||[]).map(t=>`<li>${O.escapeHtml(t)}</li>`).join("")}</ul>`;
+  } else if(plan.kind === "match"){
+    ans = `<ul class="coop-list">${(plan.claimPairs||[]).map(p=>`<li>${O.escapeHtml(p.l)} <span class="coop-arrow">→</span> ${O.escapeHtml(p.r)}</li>`).join("")}</ul>`;
+  } else {
+    ans = `<div class="coop-claim">${O.escapeHtml(plan.claim)}</div>`;
   }
   return `<p class="coop-context">${O.escapeHtml(plan.context)}</p>
     <p class="coop-context" style="margin-top:10px;">Word responde:</p>
-    <div class="coop-claim">${O.escapeHtml(plan.claim)}</div>`;
+    ${ans}
+    <p class="coop-ask">¿Es correcto lo que dice Word?</p>`;
 }
 
 function mpCoopRenderBody(st){
@@ -4500,27 +4510,47 @@ function mpCoopRenderBody(st){
   const mine = st.myAnswerValue;
   body.innerHTML = `
     <div class="coop-vote">
-      <button class="coop-btn v ${voted&&mine==='V'?'chosen':''}" data-call="V" ${voted?'disabled':''}>✓ Verdad</button>
-      <button class="coop-btn t ${voted&&mine==='T'?'chosen':''}" data-call="T" ${voted?'disabled':''}>✕ Trampa</button>
+      <button class="coop-btn v ${voted&&mine==='V'?'chosen':''}" data-call="V" ${voted?'disabled':''}>Verdadero</button>
+      <button class="coop-btn f ${voted&&mine==='F'?'chosen':''}" data-call="F" ${voted?'disabled':''}>Falso</button>
     </div>
     ${timedOut ? `<p class="coop-hint">No votaste a tiempo.</p>` : (voted ? `` : `<p class="coop-hint">Habladlo entre vosotros y votad cada uno.</p>`)}`;
   if(!voted) $$(".coop-btn", body).forEach(b=> b.addEventListener("click", ()=> mpCoopSubmit(b.getAttribute("data-call"))));
 }
 function mpCoopSubmit(call){ if(mpDuel) mpDuel.submitAnswer(call); }
 
+/* la respuesta correcta real, para enseñarla cuando Word se equivoca */
+function mpCoopCorrectText(q){
+  if(!q) return "";
+  if(q.tipo === "verdadero_falso") return (q.respuesta === true || q.respuesta === "true") ? "Verdadero" : "Falso";
+  if(q.tipo === "opcion_unica"){ const o = (q.opciones||[]).find(x=>x.letter===q.respuesta); return o ? o.text : ""; }
+  if(q.tipo === "seleccion_multiple"){
+    const by = Object.fromEntries((q.opciones||[]).map(o=>[o.letter,o.text]));
+    return (Array.isArray(q.respuesta)?q.respuesta:[]).map(l=> by[l]||l).join(" · ");
+  }
+  if(q.tipo === "emparejamiento" && q.matching){
+    const L = Object.fromEntries((q.matching.left||[]).map(x=>[x.id,x.label]));
+    const R = Object.fromEntries((q.matching.right||[]).map(x=>[x.id,x.label]));
+    const m = q.matching.correct || q.respuesta || {};
+    return Object.keys(m).map(lid=> `${L[lid]||lid} → ${R[m[lid]]||m[lid]}`).join(" · ");
+  }
+  return "";
+}
+
 function mpCoopRoundEnd(data){
-  const wasTruth = data.truthCall === "V";
+  const wasTrue = data.truthCall === "V";
   const teamOk = data.n >= 1;
   const verdict = data.n === 2 ? "¡Los dos lo pillasteis!"
     : data.n === 1 ? "Uno de los dos acertó"
     : "Word os ha pillado";
-  const call = st => st.state === "TIMEOUT" ? "sin voto" : (st.call === "V" ? "Verdad" : "Trampa");
+  const callLbl = s => s.state === "TIMEOUT" ? "sin voto" : (s.call === "V" ? "Verdadero" : "Falso");
+  const correct = !wasTrue ? mpCoopCorrectText(data.question) : "";
   return `<div class="round-end-panel">
     <div class="verdict ${teamOk?'ok':'bad'}">${verdict}</div>
-    <p style="font-size:13px;color:var(--text-2);margin:2px 0 10px;">Era <strong style="color:var(--text);">${wasTruth?'VERDAD':'TRAMPA'}</strong></p>
+    <p style="font-size:13px;color:var(--text-2);margin:2px 0 8px;">Era <strong style="color:var(--text);">${wasTrue?'VERDADERO':'FALSO'}</strong></p>
+    ${correct ? `<p class="coop-hint" style="margin-bottom:10px;">Lo correcto: <strong style="color:var(--text)">${O.escapeHtml(correct)}</strong></p>` : ''}
     <div class="round-end-vs">
-      <div><strong>${O.escapeHtml(mpSetupState.name)||'Tú'}</strong><br>${data.me.right?'✓':'✕'} ${call(data.me)}</div>
-      <div><strong>${O.escapeHtml(mpSession.getRivalName())}</strong><br>${data.rival.right?'✓':'✕'} ${call(data.rival)}</div>
+      <div><strong>${O.escapeHtml(mpSetupState.name)||'Tú'}</strong><br>${data.me.right?'✓':'✕'} ${callLbl(data.me)}</div>
+      <div><strong>${O.escapeHtml(mpSession.getRivalName())}</strong><br>${data.rival.right?'✓':'✕'} ${callLbl(data.rival)}</div>
     </div>
     <div class="pts" style="margin-top:10px;">${data.teamPts?`Equipo +${data.teamPts}`:''}${data.teamPts&&data.wordPts?' · ':''}${data.wordPts?`<span style="color:var(--bad)">Word +${data.wordPts}</span>`:''}${!data.teamPts&&!data.wordPts?'sin puntos':''}</div>
     ${data.disagreed?`<p class="coop-hint" style="margin-top:6px;">No votasteis lo mismo — repasad este después.</p>`:''}
