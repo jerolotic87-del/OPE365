@@ -191,13 +191,16 @@ silencio ni elijas arbitrariamente.
   funcionan — sin atajo confirmado**; las preguntas `inicio-258` e
   `inicio-360` se borraron a la espera de saber cuál es. Prueba en vivo del
   usuario. Corrigió `inicio-257/361/362`.
-- **Tamaño de fuente — la tecla `<>`** (izquierda de la Z) con 4
-  combinaciones: `Ctrl+Mayús+>` agranda al siguiente valor de la lista ·
-  `Ctrl+Alt+Mayús+>` agranda de punto en punto · **`Ctrl+<` (SIN Mayús)**
-  reduce al valor anterior de la lista · `Ctrl+Alt+<` reduce de punto en
-  punto. El banco tenía la reducción con Mayús (`Ctrl+Mayús+<`) — mal.
-  Prueba en vivo. Corrigió `inicio-256/359` (+ explicación en
-  `inicio-255/356/357/358`).
+- **Tamaño de fuente — la tecla `<>`** (izquierda de la Z). En el teclado
+  ES esa tecla da `<` sin Mayús y `>` con Mayús, así que **`Ctrl+Mayús+<` y
+  `Ctrl+>` NO existen** — son notaciones contradictorias y no deben
+  aparecer como opción. Las 4 combinaciones reales: `Ctrl+Mayús+>` agranda
+  al siguiente valor de la lista · `Ctrl+Alt+Mayús+>` agranda de punto en
+  punto · `Ctrl+<` (sin Mayús) reduce al valor anterior de la lista ·
+  `Ctrl+Alt+<` reduce de punto en punto. Prueba en vivo. Quedan 4 preguntas
+  limpias: `inicio-255` (agrandar lista) · `inicio-256` (reducir lista) ·
+  `inicio-356` (agrandar 1pt) · `inicio-357` (reducir 1pt); `inicio-358/359`
+  eran duplicados y se borraron; distractor arreglado en `inicio-384`.
 - **`Ctrl+Barra espaciadora` = quitar el formato de carácter manual** —
   funciona (prueba en vivo, confirma `inicio-262`).
 
