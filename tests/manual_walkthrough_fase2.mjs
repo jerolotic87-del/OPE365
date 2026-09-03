@@ -140,12 +140,17 @@ try {
   ok(edited, 'La corrección se aplica al objeto canónico y queda registrada');
   await shot('05b-edit-modal');
 
-  // crear una pregunta con imagen desde "Mi contenido"
-  await nav('practica');
-  await page.waitForSelector('#in-create');
-  await click('#in-create');
+  // "Mi contenido" ahora vive en Ajustes → Avanzado (no en Práctica ni Progreso)
+  ok((await page.locator('#in-create').count()) === 0, 'Práctica: ya no lista "Mi contenido" (movido a Ajustes)');
+  await page.click('#settings-btn');
+  await page.waitForSelector('.settings-adv');
+  ok(!(await seen('#goto-my-content')), 'Ajustes: el bloque Avanzado empieza plegado');
+  await page.click('.settings-adv > summary');
+  await page.waitForTimeout(150);
+  ok(await seen('#goto-my-content'), 'Ajustes → Avanzado: "Abrir Mi contenido" al desplegar');
+  await click('#goto-my-content');
   await page.waitForSelector('#mc-new-q');
-  ok(await seen('#mc-new-q') && await seen('#mc-new-fc'), 'Práctica → "Mi contenido" con crear pregunta/flashcard');
+  ok(await seen('#mc-new-q') && await seen('#mc-new-fc'), 'Ajustes → "Mi contenido" con crear pregunta/flashcard');
   await click('#mc-new-q');
   await page.waitForSelector('#uq-save');
   const PNG = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHElEQVR42mNkYPhfz0AEYBxVSF+Fo6NKGWgAAI5cA/2M0z8pAAAAAElFTkSuQmCC','base64');

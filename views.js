@@ -635,12 +635,6 @@ function renderPracticeHub(){
           <span class="in-d">${cs.incorrect} pregunta${cs.incorrect===1?'':'s'} fallada${cs.incorrect===1?'':'s'}</span></span>
         <span class="in-go">${icon('chevronR')}</span>
       </button>
-      <button class="intent" id="in-create">
-        <span class="in-ic">${icon('pencil')}</span>
-        <span class="in-body"><span class="in-t">Mi contenido</span>
-          <span class="in-d">Crea tus propias preguntas y flashcards (con imagen), edítalas y expórtalas${O.ContentEdit&&O.ContentEdit.userCount()?` · ${O.ContentEdit.userCount()} creada${O.ContentEdit.userCount()===1?'':'s'}`:''}</span></span>
-        <span class="in-go">${icon('chevronR')}</span>
-      </button>
       <button class="intent" data-goto="mp-setup">
         <span class="in-ic">${icon('challenge')}</span>
         <span class="in-body"><span class="in-t">Duelo en vivo</span>
@@ -651,7 +645,6 @@ function renderPracticeHub(){
   </div>`;
 
   const smart = $("#in-smart"); if(smart) smart.addEventListener("click", ()=> startSmartStudy(hm?hm.minutesPerDay:20));
-  $("#in-create").addEventListener("click", ()=> go("mi-contenido"));
   const rev = $("#in-review"); if(rev) rev.addEventListener("click", ()=> startReviewStudy(hm?hm.minutesPerDay:20));
   $("#in-tema").addEventListener("click", ()=> go("practica", {mode:"practice", step:"tema"}));
   $("#in-test").addEventListener("click", ()=> go("practica", {mode:"exam"}));
@@ -3295,20 +3288,6 @@ function renderProgress(){
       `).join("")}</ul>` : ``}
     </div>
 
-    ${(O.GHS && O.GHS.hasToken()) ? `
-    <div class="section-block">
-      <div class="section-title"><h3>Administración</h3><span class="section-hint">solo con GitHub conectado</span></div>
-      <div class="nav-list">
-        <button class="nav-row" data-goto="banco">
-          <span class="nr-ic">${icon('search')}</span><span class="nr-title">Editor del banco</span>
-          <span class="nr-meta">buscar · editar · publicar</span><span class="nr-chev">${icon('chevronR')}</span>
-        </button>
-        <button class="nav-row" data-goto="mi-contenido">
-          <span class="nr-ic">${icon('pencil')}</span><span class="nr-title">Mi contenido</span>
-          <span class="nr-meta">${O.ContentEdit?(O.ContentEdit.userCount()+" creada(s)"):""}</span><span class="nr-chev">${icon('chevronR')}</span>
-        </button>
-      </div>
-    </div>` : ``}
   </div>`;
 
   const repasarBtn = $("#pg-repasar");
@@ -3675,41 +3654,48 @@ function closeModal(){ const m=document.getElementById("active-modal"); if(m) m.
 function openSettingsModal(){
   const ir = O.INTEGRITY_REPORT;
   const mr = O.MIGRATION_REPORT;
+  const hasToken = !!(O.GHS && O.GHS.hasToken());
   showModal(`
-    <h3>Ajustes y diagnóstico</h3>
-    <div class="debug-panel">
-      <p><strong>Almacenamiento:</strong> ${O.storageIsLocal? "activo en este navegador" : "modo memoria (no persistirá al cerrar)"}</p>
-      <p><strong>Preguntas válidas:</strong> ${ir.valid} / ${ir.total} · <strong>Banco</strong> v${mr.bankVersion}</p>
-      <table><thead><tr><th>Fuente</th><th>Preguntas</th></tr></thead>
-        <tbody>${Object.entries(ir.bySource).sort().map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join("")}</tbody></table>
-      <table><thead><tr><th>Tipo</th><th>Preguntas</th></tr></thead>
-        <tbody>${Object.entries(ir.byType).map(([k,v])=>`<tr><td>${tipoLabel(k)}</td><td>${v}</td></tr>`).join("")}</tbody></table>
-      ${ir.invalid ? `<p style="color:var(--bad);">Registros inválidos: ${ir.invalid}</p>` : `<p>Sin registros inválidos.</p>`}
-      <p>IDs duplicados: <strong>${mr.duplicateIds.length}</strong> · Cobertura contentHash: <strong>${mr.contentHashCoverage}%</strong> · Generadas: <strong>${mr.generatedCount}</strong></p>
-    </div>
-    <hr class="div">
-    <p style="font-weight:700; font-size:13px; margin-bottom:8px;">Mi contenido</p>
-    <p style="font-size:12px;color:var(--text-2);margin-bottom:8px;">Crea tus preguntas y flashcards (con imagen) o corrige el banco con el lápiz ✎. ${O.ContentEdit?(O.ContentEdit.userCount()+" creada(s), "+O.ContentEdit.count()+" corrección(es)"):""}.</p>
-    <div class="actions" style="justify-content:flex-start;margin-bottom:16px;flex-wrap:wrap;">
-      <button class="btn btn-outline btn-sm" id="goto-my-content">Abrir "Mi contenido"</button>
-      <button class="btn btn-ghost btn-sm" id="open-content-edits">Exportar JSON</button>
-      ${(O.GHS && O.GHS.hasToken()) ? `<button class="btn btn-outline btn-sm" id="goto-banco">Editor del banco (admin)</button>` : ``}
-    </div>
+    <h3>Ajustes</h3>
+    <p style="font-size:12.5px;color:var(--text-2);margin-bottom:4px;"><strong>Almacenamiento:</strong> ${O.storageIsLocal? "activo en este navegador" : "modo memoria (no persistirá al cerrar)"}</p>
 
     <hr class="div">
-    <p style="font-weight:700; font-size:13px; margin-bottom:8px;">Publicar en GitHub</p>
-    <p style="font-size:12px;color:var(--text-2);margin-bottom:8px;">Manda lo que creas directamente al repositorio. GitHub Pages redespliega solo (~1-2 min) y queda permanente y en todos tus dispositivos. ${O.GHS?(O.GHS.hasToken()?("Conectado a <strong>"+O.escapeHtml(O.GHS.repoLabel())+"</strong>."):"Sin conectar."):""}</p>
-    <div class="actions" style="justify-content:flex-start;margin-bottom:16px;flex-wrap:wrap;">
-      <button class="btn btn-outline btn-sm" id="open-github-sync">${O.GHS&&O.GHS.hasToken()?"Configuración de GitHub":"Conectar GitHub"}</button>
-    </div>
-
-    <hr class="div">
-    <p style="font-weight:700; font-size:13px; margin-bottom:8px;">Borrado de datos</p>
+    <p class="set-h">Borrado de datos</p>
     <div class="actions" style="justify-content:flex-start; flex-wrap:wrap;">
       <button class="btn btn-outline btn-sm" id="reset-current">Reiniciar test actual</button>
       <button class="btn btn-danger btn-sm" id="reset-progress">Borrar progreso</button>
       <button class="btn btn-danger btn-sm" id="reset-all">Borrar todo</button>
     </div>
+
+    <details class="settings-adv"${hasToken?' open':''}>
+      <summary>Avanzado — mi contenido, publicación y diagnóstico</summary>
+
+      <p class="set-h">Mi contenido</p>
+      <p class="set-note">Crea tus preguntas y flashcards (con imagen) o corrige el banco con el lápiz ✎. ${O.ContentEdit?(O.ContentEdit.userCount()+" creada(s), "+O.ContentEdit.count()+" corrección(es)"):""}.</p>
+      <div class="actions" style="justify-content:flex-start;margin-bottom:14px;flex-wrap:wrap;">
+        <button class="btn btn-outline btn-sm" id="goto-my-content">Abrir "Mi contenido"</button>
+        <button class="btn btn-ghost btn-sm" id="open-content-edits">Exportar JSON</button>
+        ${hasToken ? `<button class="btn btn-outline btn-sm" id="goto-banco">Editor del banco</button>` : ``}
+      </div>
+
+      <p class="set-h">Publicar en GitHub</p>
+      <p class="set-note">Manda lo que creas directamente al repositorio. GitHub Pages redespliega solo (~1-2 min) y queda permanente y en todos tus dispositivos. ${O.GHS?(hasToken?("Conectado a <strong>"+O.escapeHtml(O.GHS.repoLabel())+"</strong>."):"Sin conectar."):""}</p>
+      <div class="actions" style="justify-content:flex-start;margin-bottom:14px;flex-wrap:wrap;">
+        <button class="btn btn-outline btn-sm" id="open-github-sync">${hasToken?"Configuración de GitHub":"Conectar GitHub"}</button>
+      </div>
+
+      <p class="set-h">Diagnóstico</p>
+      <div class="debug-panel">
+        <p><strong>Preguntas válidas:</strong> ${ir.valid} / ${ir.total} · <strong>Banco</strong> v${mr.bankVersion}</p>
+        <table><thead><tr><th>Fuente</th><th>Preguntas</th></tr></thead>
+          <tbody>${Object.entries(ir.bySource).sort().map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join("")}</tbody></table>
+        <table><thead><tr><th>Tipo</th><th>Preguntas</th></tr></thead>
+          <tbody>${Object.entries(ir.byType).map(([k,v])=>`<tr><td>${tipoLabel(k)}</td><td>${v}</td></tr>`).join("")}</tbody></table>
+        ${ir.invalid ? `<p style="color:var(--bad);">Registros inválidos: ${ir.invalid}</p>` : `<p>Sin registros inválidos.</p>`}
+        <p>IDs duplicados: <strong>${mr.duplicateIds.length}</strong> · Cobertura contentHash: <strong>${mr.contentHashCoverage}%</strong> · Generadas: <strong>${mr.generatedCount}</strong></p>
+      </div>
+    </details>
+
     <div class="actions" style="margin-top:16px;"><button class="btn btn-ghost" id="close-settings">Cerrar</button></div>
   `, (root)=>{
     root.querySelector("#close-settings").addEventListener("click", closeModal);
