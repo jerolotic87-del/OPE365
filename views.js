@@ -2768,9 +2768,13 @@ function bancoSaveEditor(kind, id){
 function bancoSaveStatus(msg, bad){
   const el = $("#bk-ed-status"); if(!el) return;
   el.textContent = msg;
-  el.style.color = bad ? "var(--bad,#f87171)" : "var(--ok,#4ade80)";
+  el.style.color = bad ? "var(--bad,#f87171)" : "var(--accent-ink)";
   clearTimeout(bancoSaveStatus._t);
-  bancoSaveStatus._t = setTimeout(()=>{ if($("#bk-ed-status")===el){ el.textContent = ""; } }, 2200);
+  bancoSaveStatus._t = setTimeout(()=>{
+    if($("#bk-ed-status")!==el) return;
+    el.style.color = "";
+    el.textContent = O.ContentEdit && O.ContentEdit.has(bancoState.tab==="fc"?"fc":"q", bancoState.selId) ? "Corrección local guardada · sin publicar" : "";
+  }, 2000);
 }
 
 /* publica al repo los campos ya corregidos de una pregunta/flashcard */
@@ -2937,16 +2941,22 @@ function renderBancoAdmin(){
       <p class="edit-id">${head}</p>
       ${isUsr
         ? `<p style="font-size:12px;color:var(--text-2);">Es contenido tuyo. Se edita en su formulario completo (tipo, imagen, pestaña).</p>
-           <div class="actions" style="flex-wrap:wrap;"><button class="btn btn-solid btn-sm" id="bk-ed-openuser">Abrir editor completo</button>
-           <button class="btn btn-ghost btn-sm" id="bk-ed-deluser">Eliminar</button></div>`
+           <div class="bk-ed-actions">
+             <div class="bk-ed-grp"><button class="btn btn-primary btn-sm" id="bk-ed-openuser">Abrir editor completo</button></div>
+             <div class="bk-ed-grp"><button class="btn btn-danger btn-sm" id="bk-ed-deluser">Eliminar</button></div>
+           </div>`
         : `${isQ ? qEditFormHtml(obj, orig, "bk-ed") : fcEditFormHtml(orig, "bk-ed")}
-           <span id="bk-ed-status" style="display:block;min-height:16px;font-size:12px;margin:2px 0 8px;">${hasOv?'<span style="color:var(--text-2)">Corrección local guardada · sin publicar</span>':''}</span>
-           <div class="actions" style="flex-wrap:wrap;">
-             <button class="btn btn-solid btn-sm" id="bk-ed-save">Guardar</button>
-             <button class="btn btn-outline btn-sm" id="bk-ed-publish"${hasOv?'':' disabled'}>Publicar al banco (GitHub)</button>
-             <button class="btn btn-ghost btn-sm" id="bk-ed-revert"${hasOv?'':' disabled'}>Descartar</button>
-             ${isQ?`<button class="btn btn-ghost btn-sm" id="bk-ed-review">Ver en repaso</button>`:''}
-             <button class="btn btn-danger btn-sm" id="bk-ed-delbank">Borrar del banco</button>
+           <span id="bk-ed-status" class="bk-ed-status">${hasOv?'Corrección local guardada · sin publicar':''}</span>
+           <div class="bk-ed-actions">
+             <div class="bk-ed-grp">
+               <button class="btn btn-primary btn-sm" id="bk-ed-save">Guardar</button>
+               <button class="btn btn-outline btn-sm" id="bk-ed-publish"${hasOv?'':' disabled'}>Publicar corrección</button>
+               <button class="btn btn-ghost btn-sm" id="bk-ed-revert"${hasOv?'':' disabled'}>Descartar</button>
+             </div>
+             <div class="bk-ed-grp">
+               ${isQ?`<button class="btn btn-ghost btn-sm" id="bk-ed-review">Ver en repaso</button>`:''}
+               <button class="btn btn-danger btn-sm" id="bk-ed-delbank">Borrar del banco</button>
+             </div>
            </div>`}
     `;
 

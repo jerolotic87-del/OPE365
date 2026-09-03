@@ -502,6 +502,14 @@ input[type="date"]{ color-scheme:dark; }
 .bk-ed-nav .pos{ font-size:12px; color:var(--text-2); }
 .bk-row.selected{ border-color:var(--accent-line); background:var(--accent-dim); }
 .bk-row.has-ov .badge{ color:var(--accent-ink); }
+.bk-ed-status{ display:block; min-height:16px; font-size:12px; color:var(--text-3); margin:4px 0 2px; }
+.bk-ed-actions{
+  display:flex; flex-wrap:wrap; gap:8px 10px; align-items:center;
+  margin-top:var(--sp-4); padding-top:var(--sp-4); border-top:1px solid var(--border);
+}
+.bk-ed-grp{ display:flex; flex-wrap:wrap; gap:8px; }
+.bk-ed-grp + .bk-ed-grp{ margin-left:auto; }
+.bk-ed-actions .btn{ flex:0 0 auto; }
 @media (max-width:900px){
   .bk-split{ grid-template-columns:1fr; }
   .bk-list{ max-height:42vh; }
