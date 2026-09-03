@@ -221,18 +221,27 @@ silencio ni elijas arbitrariamente.
   `Ctrl+W` (ya resuelto arriba). `Ctrl+Q` = alinear a la izquierda —
   `inicio-263` decía mal que quitaba el formato de párrafo, corregido a
   `Ctrl+W`.
-- **Depuración de duplicados de atajo** (sep-2026): 16 preguntas borradas
-  por ser la misma acción + mismo atajo que otra (`inicio-293/350/351/362/
-  366/375/381`, `insertar-2`, `revisar-71/76`, `vista-90/103/118/125`,
-  `disposicion-3`) + `insertar-39` ("página en blanco" no tiene atajo).
-  Total 1698→1682. Cruce en `scripts/` (one-shot).
-  **Pendiente de que el usuario verifique** (contradicciones detectadas):
-  `Ctrl+B` = ¿"Búsqueda inteligente" (ATAJOS.docx) o panel de navegación?
-  (`inicio-117` vs `inicio-294`) · `Alt+Ctrl+D` = ¿qué hace? ATAJOS.docx
-  pone "Página" (ambiguo); `disposicion-1` dice "formato de página" y en
-  Word suele ser "nota al final" · `Alt+Ctrl+H` = resaltado: no está en
-  ATAJOS.docx (`inicio-21/303`) · `Alt+Ctrl+V` = "Dividir ventana"
-  (`vista-27/87/109`) sigue sin confirmar (suele ser Pegado especial).
+- **`Ctrl+B` = abre el panel de Navegación** con el cuadro de búsqueda
+  dentro del documento (pestañas Títulos/Páginas/Resultados) — prueba en
+  vivo con captura. NO es "Búsqueda inteligente": `inicio-294` decía eso y
+  se reformuló para preguntar por **`Alt+Q`** = lleva el foco al cuadro
+  Buscar de la barra de título (Microsoft Search). `inicio-117` (Ctrl+B =
+  panel de Navegación) ya estaba bien.
+- **`Ctrl+Mayús+8` = mostrar/ocultar marcas de formato** (¶). En el
+  teclado ES `(` es Mayús+8, así que "Ctrl+(" y "Ctrl+Mayús+8" son la
+  misma pulsación — no dos atajos. `inicio-138` tenía las dos como
+  opciones distintas (bug tipo `<>`); corregido a `Ctrl+Mayús+8`.
+- **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
+  poden preguntas correctas solo por parecerse a otra — se conservan
+  aunque otra pregunte por el mismo atajo (están en topics/framings que
+  pueden ser útiles). Solo se borra lo que está MAL o testea un atajo
+  inexistente (así se fue `insertar-39`: "página en blanco" no tiene
+  atajo). La poda de 16 de `dc50ece` se revirtió en la siguiente sesión.
+  **Pendiente de que el usuario verifique**: `Alt+Ctrl+D` = ¿qué hace?
+  ATAJOS.docx pone "Página" (ambiguo); `disposicion-1` dice "formato de
+  página" y en Word suele ser "nota al final" · `Alt+Ctrl+H` = resaltado:
+  no está en ATAJOS.docx (`inicio-21/303`) · `Alt+Ctrl+V` = "Dividir
+  ventana" (`vista-27/87/109`) sin confirmar (suele ser Pegado especial).
 
 ## Modelo de datos (questions_all.json)
 

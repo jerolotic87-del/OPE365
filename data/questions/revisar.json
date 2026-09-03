@@ -2640,6 +2640,41 @@
     "explicacion": "En Word 365, F7 abre el panel Editor. 'Ortografía y gramática' es el nombre de versiones anteriores."
   },
   {
+    "id": "revisar-71",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "tema": "Revisión ortográfica y gramatical",
+    "sourceQuestionId": "8-121",
+    "enunciado": "¿Cuál de los siguientes atajos activa o desactiva el seguimiento de cambios en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Mayús+E"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+E"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Mayús+T"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Ctrl+E"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+Mayús+E activa o desactiva el control de cambios. Ctrl+E selecciona todo el documento. Ctrl+Mayús+T no tiene función asignada para seguimiento. Alt+Ctrl+E no tiene esa función asignada."
+  },
+  {
     "id": "revisar-72",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -2778,6 +2813,41 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Mayús+F7 abre el diccionario de sinónimos. F7 abre la revisión ortográfica completa. Alt+F7 va al siguiente error ortográfico. Ctrl+Mayús+F7 actualiza el origen vinculado al documento."
+  },
+  {
+    "id": "revisar-76",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "tema": "Revisión ortográfica y gramatical",
+    "sourceQuestionId": "8-218",
+    "enunciado": "¿Qué atajo activa la herramienta Revisar ortografía y gramática en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "F7"
+      },
+      {
+        "letter": "B",
+        "text": "F8"
+      },
+      {
+        "letter": "C",
+        "text": "F9"
+      },
+      {
+        "letter": "D",
+        "text": "F6"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "F7 activa la revisión ortográfica y gramatical. F8 activa el modo de selección extendida. F9 actualiza los campos del documento. F6 activa el panel siguiente."
   },
   {
     "id": "revisar-77",

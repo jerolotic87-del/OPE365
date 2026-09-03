@@ -35,6 +35,41 @@
     "explicacion": "Ctrl+Entrar inserta un salto de página manual. Ctrl+Mayús+Entrar inserta un salto de columna. Alt+Entrar repite la última acción. Ctrl+Alt+Entrar inserta un separador de estilos."
   },
   {
+    "id": "insertar-2",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Encabezado y pie de página",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "encabezado-pie",
+    "subtopic": null,
+    "tema": "Encabezado y pie de página",
+    "sourceQuestionId": "8-143",
+    "enunciado": "¿Cuál de los siguientes atajos actualiza los campos del documento en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "F9"
+      },
+      {
+        "letter": "B",
+        "text": "F8"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Mayús+U"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+F9"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "F9 actualiza los campos seleccionados o todos si no hay selección. F8 extiende la selección. Alt+Mayús+U también actualiza campos. Ctrl+F9 inserta un campo vacío."
+  },
+  {
     "id": "insertar-3",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
