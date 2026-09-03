@@ -274,6 +274,15 @@ silencio ni elijas arbitrariamente.
   (`insertar-45`, mismo patrón que `Alt+Mayús+Fin`). **Pendiente**: la
   navegación por columna de tabla `Alt+Re Pág` / `Alt+Av Pág` y sus
   variantes con Mayús (`insertar-33/34/44`).
+- **Tanda 6 (sep-2026) — escenarios D y E cerrados enteros, prueba en vivo:**
+  `Ctrl+Mayús+H` = reducir sangría francesa (`inicio-251`) · `Ctrl+Ins` =
+  copiar, `Mayús+Ins` = pegar, `Mayús+Supr` = cortar (método antiguo del
+  portapapeles, `inicio-308/309/310`) · `F2` = mover texto (marca "¿A
+  dónde?" en la barra de estado; `Enter` en el destino) (`inicio-7·312`) ·
+  `Ctrl+F3` = Spike (acumula recortes), `Ctrl+Mayús+F3` = pega todo el
+  Spike (`inicio-8`) · `Mayús+F2` = "Copiar a" (copia sin tocar el
+  portapapeles) (`inicio-311`). Todos hacen lo que dice el banco, sin
+  cambios.
 - **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
   poden preguntas correctas solo por parecerse a otra — se conservan
   aunque otra pregunte por el mismo atajo (están en topics/framings que
