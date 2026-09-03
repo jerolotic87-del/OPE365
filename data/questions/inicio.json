@@ -9840,15 +9840,15 @@
     "tema": "Alineación",
     "difficulty": "media",
     "sourceQuestionId": "P-0517",
-    "enunciado": "¿Qué atajo elimina el formato de párrafo manual del texto seleccionado en la versión española de Word 365, restaurando los valores del estilo aplicado sin borrar el formato de carácter?",
+    "enunciado": "En esta instalación de Word 365 (versión española), ¿qué atajo elimina el formato de párrafo manual del texto seleccionado (sangrías, alineación, espaciado) restaurando los del estilo, sin tocar el formato de carácter?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Q"
+        "text": "Ctrl + W"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Barra espaciadora"
+        "text": "Ctrl + Q"
       },
       {
         "letter": "C",
@@ -9856,12 +9856,12 @@
       },
       {
         "letter": "D",
-        "text": "Ctrl + Mayús + Z"
+        "text": "Ctrl + Barra espaciadora"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Q elimina el formato de párrafo manual (alineación, sangrías, espaciado, etc.) restaurando los valores del estilo de párrafo aplicado. No afecta al formato de carácter. Es el complementario de Ctrl+Barra espaciadora que borra el formato de carácter. Juntos equivalen al botón Borrar todo el formato."
+    "explicacion": "Ctrl+W quita el formato de párrafo manual y restaura el del estilo (prueba en vivo del usuario). Ctrl+Q alinea el párrafo a la izquierda. Ctrl+Barra espaciadora quita el formato de CARÁCTER, no el de párrafo."
   },
   {
     "id": "inicio-264",
@@ -11000,41 +11000,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ctrl+K aplica cursiva en español. Ctrl+I es el atajo de la versión inglesa (Italic). Ctrl+C copia el contenido seleccionado. Ctrl+E selecciona todo el documento."
-  },
-  {
-    "id": "inicio-293",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": null,
-    "tema": "Edición",
-    "sourceQuestionId": "8-111",
-    "enunciado": "¿Cuál de los siguientes atajos abre el cuadro Buscar y reemplazar en Word 365 versión española?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+L"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+H"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+F"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+B"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+L abre Buscar y reemplazar en español. Ctrl+H es el atajo de la versión inglesa (Replace). Ctrl+F abre el panel de búsqueda en inglés. Ctrl+B es Búsqueda inteligente en la versión española."
   },
   {
     "id": "inicio-294",
@@ -12997,76 +12962,6 @@
     "explicacion": "Ctrl+H aplica una sangría al párrafo. Ctrl+Mayús+H aplica reducción de sangría francesa. Ctrl+M abre el cuadro de diálogo Fuente. Alt+Ctrl+H aplica resaltado al texto."
   },
   {
-    "id": "inicio-350",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Sangría",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-sangria",
-    "subtopic": null,
-    "tema": "Sangría",
-    "sourceQuestionId": "8-281",
-    "enunciado": "¿Qué atajo aplica una sangría francesa al párrafo en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+F"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+H"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+F"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+H"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+F aplica sangría francesa al párrafo. Ctrl+H aplica sangría normal. Ctrl+Mayús+F activa el campo de nombre de fuente en la cinta. Ctrl+Mayús+H reduce la sangría francesa del párrafo."
-  },
-  {
-    "id": "inicio-351",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Sangría",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-sangria",
-    "subtopic": null,
-    "tema": "Sangría",
-    "sourceQuestionId": "8-282",
-    "enunciado": "¿Qué atajo reduce la sangría francesa del párrafo en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Mayús+H"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+F"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+H"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+F"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+H reduce la sangría francesa. Ctrl+F aplica sangría francesa. Ctrl+H aplica sangría normal. Alt+Ctrl+F también aparece asociado a nota al pie en algunas versiones pero no a sangría francesa."
-  },
-  {
     "id": "inicio-352",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Sangría",
@@ -13312,41 +13207,6 @@
     "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario."
   },
   {
-    "id": "inicio-362",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": null,
-    "tema": "Fuente",
-    "sourceQuestionId": "8-296",
-    "enunciado": "¿Qué atajo aplica o quita el subíndice del texto seleccionado en Word 365 (versión española)?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Mayús+menos"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+menos"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+igual"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+menos"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario."
-  },
-  {
     "id": "inicio-363",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -13450,41 +13310,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Alt+Ctrl+Mayús+S abre el panel de formato que muestra el formato del texto seleccionado. Alt+Ctrl+S no tiene función asignada para abrir el panel de formato. Ctrl+Mayús+S aplica subrayado al texto. Alt+Mayús+S no tiene función asignada."
-  },
-  {
-    "id": "inicio-366",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": null,
-    "tema": "Estilos",
-    "sourceQuestionId": "8-316",
-    "enunciado": "¿Qué atajo abre el panel Aplicar estilos en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Mayús+W"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+W"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Mayús+W"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+W"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+W abre el panel Aplicar estilos. Ctrl+W quita el formato de párrafo. Alt+Mayús+W no tiene función asignada para abrir el panel de estilos. Alt+Ctrl+W divide la ventana."
   },
   {
     "id": "inicio-367",
@@ -13767,41 +13592,6 @@
     "explicacion": "Ctrl+Mayús+I aplica el estilo de énfasis al párrafo. Ctrl+I es el atajo de la versión inglesa para cursiva. Ctrl+Mayús+A aplica el estilo Normal. Alt+Ctrl+I abre la vista previa de impresión."
   },
   {
-    "id": "inicio-375",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": null,
-    "tema": "Estilos",
-    "sourceQuestionId": "8-332",
-    "enunciado": "¿Qué atajo aplica el estilo normal al párrafo activo en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Mayús+A"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+Borrar (Número 5)"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+N"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+N"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+A aplica el estilo Normal al párrafo. Alt+Mayús+Borrar (Número 5) también aplica el estilo Normal como atajo alternativo. Ctrl+Mayús+N también aplica Normal en algunos contextos. Alt+Ctrl+N activa la vista Normal del documento."
-  },
-  {
     "id": "inicio-376",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -13979,42 +13769,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Ejecuta el comando Autoformato sobre el texto seleccionado o el documento activo."
-  },
-  {
-    "id": "inicio-381",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Sangría",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-sangria",
-    "subtopic": null,
-    "tema": "Sangría",
-    "sourceQuestionId": "gen-atajo-7",
-    "generado": true,
-    "enunciado": "¿Qué atajo de teclado quita el formato de párrafo (como sangrías) del párrafo activo en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Z"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+W"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+O"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Retroceso"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Elimina el formato manual aplicado directamente al párrafo (por ejemplo, sangrías), dejándolo con el formato base del estilo."
   },
   {
     "id": "inicio-382",

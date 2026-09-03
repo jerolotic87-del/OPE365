@@ -217,7 +217,22 @@ silencio ni elijas arbitrariamente.
   `inicio-356` (agrandar 1pt) · `inicio-357` (reducir 1pt); `inicio-358/359`
   eran duplicados y se borraron; distractor arreglado en `inicio-384`.
 - **`Ctrl+Barra espaciadora` = quitar el formato de carácter manual** —
-  funciona (prueba en vivo, confirma `inicio-262`).
+  funciona (prueba en vivo, confirma `inicio-262`). El de PÁRRAFO es
+  `Ctrl+W` (ya resuelto arriba). `Ctrl+Q` = alinear a la izquierda —
+  `inicio-263` decía mal que quitaba el formato de párrafo, corregido a
+  `Ctrl+W`.
+- **Depuración de duplicados de atajo** (sep-2026): 16 preguntas borradas
+  por ser la misma acción + mismo atajo que otra (`inicio-293/350/351/362/
+  366/375/381`, `insertar-2`, `revisar-71/76`, `vista-90/103/118/125`,
+  `disposicion-3`) + `insertar-39` ("página en blanco" no tiene atajo).
+  Total 1698→1682. Cruce en `scripts/` (one-shot).
+  **Pendiente de que el usuario verifique** (contradicciones detectadas):
+  `Ctrl+B` = ¿"Búsqueda inteligente" (ATAJOS.docx) o panel de navegación?
+  (`inicio-117` vs `inicio-294`) · `Alt+Ctrl+D` = ¿qué hace? ATAJOS.docx
+  pone "Página" (ambiguo); `disposicion-1` dice "formato de página" y en
+  Word suele ser "nota al final" · `Alt+Ctrl+H` = resaltado: no está en
+  ATAJOS.docx (`inicio-21/303`) · `Alt+Ctrl+V` = "Dividir ventana"
+  (`vista-27/87/109`) sigue sin confirmar (suele ser Pegado especial).
 
 ## Modelo de datos (questions_all.json)
 

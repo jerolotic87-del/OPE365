@@ -3237,43 +3237,6 @@
     "explicacion": "Falso: el mínimo absoluto es el 10%. El 25% no es un preset; los presets reales son 200%, 100% y 75% según verificación en Word 365 ES."
   },
   {
-    "id": "vista-90",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": true,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Organizar todo",
-    "tema": "Ventana",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-092",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes funciones de la pestaña Vista NO tiene atajo de teclado documentado en la fuente?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Diseño de impresión"
-      },
-      {
-        "letter": "B",
-        "text": "Vista Esquema"
-      },
-      {
-        "letter": "C",
-        "text": "Dividir"
-      },
-      {
-        "letter": "D",
-        "text": "Organizar todo"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "Organizar todo no tiene atajo de teclado documentado en la fuente. Diseño de impresión (Ctrl+Alt+D), Vista Esquema (Ctrl+Alt+Q) y Dividir (Alt+Ctrl+V) sí tienen atajo."
-  },
-  {
     "id": "vista-91",
     "sourceFile": "vista.json",
     "bloque": "Vista — Vistas",
@@ -3767,41 +3730,6 @@
     "explicacion": "Alt+F11 abre el editor de Visual Basic para Aplicaciones. Alt+F8 abre el cuadro de diálogo Macro para ejecutar macros. Alt+F10 no tiene función asignada relevante. Ctrl+F11 bloquea campos."
   },
   {
-    "id": "vista-103",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": "Visual Basic (VBE)",
-    "tema": "Macros",
-    "sourceQuestionId": "8-142",
-    "enunciado": "¿Cuál de los siguientes atajos ejecuta o ejecuta el cuadro de diálogo de Macros en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+F8"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+F11"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+F8"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Mayús+F11"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+F8 abre el cuadro de diálogo Macro. Alt+F11 abre el editor de Visual Basic. Ctrl+F8 cambia el tamaño del documento. Alt+Mayús+F11 no tiene función asignada para macros."
-  },
-  {
     "id": "vista-104",
     "sourceFile": "vista.json",
     "bloque": "Vista — Vistas",
@@ -4292,41 +4220,6 @@
     "explicacion": "Mayús+F6 activa el panel anterior dentro de la ventana de Word. F6 activa el panel siguiente. Ctrl+Mayús+F6 activa la ventana de documento anterior. Alt+Mayús+F6 también activa la ventana de documento anterior como atajo alternativo."
   },
   {
-    "id": "vista-118",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": "Visual Basic (VBE)",
-    "tema": "Macros",
-    "sourceQuestionId": "8-227",
-    "enunciado": "¿Qué atajo abre el editor de código VBA en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+F11"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+F8"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+F11"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Mayús+F11"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+F11 abre el editor de Visual Basic para Aplicaciones. Alt+F8 abre el cuadro de diálogo para ejecutar macros. Ctrl+F11 bloquea los campos del documento. Alt+Mayús+F11 no tiene función asignada para el editor VBA."
-  },
-  {
     "id": "vista-119",
     "sourceFile": "vista.json",
     "bloque": "Vista — Ventana",
@@ -4535,41 +4428,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ctrl++ (más) acerca el zoom del documento. Ctrl+- (menos) aleja el zoom. Alt+Ctrl++ abre el cuadro de personalización de métodos abreviados de teclado. Ctrl+Mayús++ no tiene función asignada."
-  },
-  {
-    "id": "vista-125",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-299",
-    "enunciado": "¿Qué atajo restaura el documento a su tamaño y posición predeterminados en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+F5"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+F5"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+F5"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+F10"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+F5 restaura el documento a su tamaño normal. Alt+F5 restaura la ventana de la aplicación Word completa. Ctrl+Mayús+F5 abre el cuadro de diálogo Marcador. Ctrl+F10 maximiza la ventana del documento."
   },
   {
     "id": "vista-126",

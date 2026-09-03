@@ -35,41 +35,6 @@
     "explicacion": "Ctrl+Entrar inserta un salto de página manual. Ctrl+Mayús+Entrar inserta un salto de columna. Alt+Entrar repite la última acción. Ctrl+Alt+Entrar inserta un separador de estilos."
   },
   {
-    "id": "insertar-2",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Encabezado y pie de página",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "encabezado-pie",
-    "subtopic": null,
-    "tema": "Encabezado y pie de página",
-    "sourceQuestionId": "8-143",
-    "enunciado": "¿Cuál de los siguientes atajos actualiza los campos del documento en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "F9"
-      },
-      {
-        "letter": "B",
-        "text": "F8"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Mayús+U"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+F9"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "F9 actualiza los campos seleccionados o todos si no hay selección. F8 extiende la selección. Alt+Mayús+U también actualiza campos. Ctrl+F9 inserta un campo vacío."
-  },
-  {
     "id": "insertar-3",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
@@ -1328,41 +1293,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Alt+Borrar en el teclado numérico selecciona la tabla completa donde está el cursor. Ctrl+Borrar (Número 5) selecciona todo el documento. Mayús+Borrar no tiene función asignada para seleccionar tabla. Alt+Ctrl+Borrar no tiene función asignada."
-  },
-  {
-    "id": "insertar-39",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Páginas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "paginas",
-    "subtopic": null,
-    "tema": "Páginas",
-    "sourceQuestionId": "8-327",
-    "enunciado": "¿Qué atajo inserta una página en blanco en el documento en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Ctrl+D"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+D"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+D"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+D"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Ctrl+D inserta una página en blanco en el documento. Ctrl+D alinea el párrafo a la derecha. Alt+D no tiene función asignada para insertar página. Ctrl+Mayús+D aplica subrayado doble al texto."
   },
   {
     "id": "insertar-40",
