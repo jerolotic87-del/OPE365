@@ -112,6 +112,39 @@ async function main(){
 
   hostSession.destroy(); guestSession.destroy();
 
+  // ── Formato "cada uno responde": si UNO no pulsa, la ronda NO se
+  //    resuelve al instante — espera a que se agote el reloj de la ronda.
+  const pair2 = MP.createMockPair();
+  const hS = MP.createSession(pair2.a), gS = MP.createSession(pair2.b);
+  const hG = MP.createDuelGame(hS), gG = MP.createDuelGame(gS);
+  let hSt2=null, gSt2=null, hPhase2=null, hEnd2=null;
+  hG.setHandlers({ onConnState:s=>{hSt2=s;}, onPhase:(p,x)=>{ hPhase2=p; if(p==="round_end") hEnd2=x; } });
+  gG.setHandlers({ onConnState:s=>{gSt2=s;}, onPhase:()=>{} });
+  hS.hostCreateRoom("H2");
+  await waitFor(()=> hSt2==="waiting_rival");
+  gS.guestJoinRoom(hS.getRoomCode(), "G2");
+  await waitFor(()=> hSt2==="ready" && gSt2==="ready", 4000);
+  hG.hostSetConfig({ rounds:1, seconds:1, section:"all", topic:"all", tipo:"all", categoria:"all", raceMode:false });
+  await waitFor(()=> hG.getState().config && hG.getState().config.questionIds, 3000);
+  hG.confirmReady(); gG.confirmReady();
+  await waitFor(()=> hPhase2==="round", 5000);
+
+  const q2 = hG.getState().questions[0];
+  let a2;
+  if(q2.tipo==="opcion_unica"||q2.tipo==="verdadero_falso") a2=q2.respuesta;
+  else if(q2.tipo==="seleccion_multiple") a2=q2.respuesta.slice();
+  else if(q2.tipo==="emparejamiento") a2=Object.assign({},q2.matching.correct);
+  else a2=q2.respuesta.map(a=>Array.isArray(a)?a[0]:a);
+
+  hG.submitAnswer(a2);               // solo el host responde
+  await new Promise(r=> setTimeout(r, 150));
+  assert(hPhase2 === "round", "la ronda NO se resuelve solo porque el host haya respondido");
+  assert(!gG.getState().myAnswerState, "el invitado que no ha pulsado sigue sin respuesta (no se auto-agota al instante)");
+
+  await waitFor(()=> hPhase2 === "round_end", 4000);
+  assert(hEnd2 && hEnd2.rival.state === "TIMEOUT", "la ronda se cierra por tiempo agotado del invitado, no por un pulso fantasma");
+  hS.destroy(); gS.destroy();
+
   if(failures > 0){ console.error(`\n${failures} fallo(s).`); process.exit(1); }
   console.log("\nSmoke test de multijugador (Duelo, mock transport): OK.");
 }

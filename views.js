@@ -4308,11 +4308,16 @@ function mpUpdateSelfStatus(){
   const el = $("#mp-selfstatus");
   if(!el) return;
   const st = mpDuel.getState();
-  if(st.myAnswerState){
-    el.textContent = st.rivalAnswerState ? "Ambos habéis respondido" : "✓ Respuesta registrada — esperando al rival…";
-    el.className = "duel-selfstatus " + (st.rivalAnswerState ? "waiting" : "submitted");
+  const rival = !!st.rivalAnswerState;
+  if(st.myAnswerState === "SUBMITTED"){
+    el.textContent = rival ? "Ambos habéis respondido" : "✓ Respuesta registrada — esperando al rival…";
+    el.className = "duel-selfstatus " + (rival ? "waiting" : "submitted");
+  } else if(st.myAnswerState === "TIMEOUT"){
+    el.textContent = rival ? "Se acabó el tiempo para los dos" : "⏱ Se te acabó el tiempo — esperando al rival…";
+    el.className = "duel-selfstatus timedout";
   } else {
-    el.textContent = "Pensando…"; el.className = "duel-selfstatus";
+    el.textContent = rival ? "Tu rival ya ha respondido — te toca" : "Pensando…";
+    el.className = "duel-selfstatus" + (rival ? " rival-ready" : "");
   }
 }
 

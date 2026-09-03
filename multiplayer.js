@@ -465,8 +465,17 @@ function createDuelGame(session){
     myAnswer = null; rivalAnswer = null;
     if(localTimeoutHandle){ clearTimeout(localTimeoutHandle); localTimeoutHandle=null; }
     const deadlineLocal = session.getRole()==="host" ? deadlineHost : session.hostToLocalTime(deadlineHost);
-    const wait = Math.max(0, deadlineLocal - Date.now());
-    localTimeoutHandle = setTimeout(()=> handleLocalTimeout(i), wait + 60);
+    // El temporizador de la ronda se mide desde AHORA con la duración
+    // configurada — exactamente igual que la barra visible. El deadline
+    // convertido del host solo se usa como cota superior: si por un
+    // desfase de reloj saliera más corto que la duración, se ignora.
+    // Antes, un reloj de invitado adelantado hacía que `wait` fuera casi
+    // cero y la ronda se auto-agotaba al instante (parecía que el jugador
+    // ya había respondido). Nunca acortamos la ronda por debajo de lo que
+    // se ve en pantalla.
+    const byDeadline = deadlineLocal - Date.now();
+    const wait = Math.max(roundDuration, Math.min(roundDuration + ROUND_GRACE_MS, byDeadline || 0));
+    localTimeoutHandle = setTimeout(()=> handleLocalTimeout(i), wait + 250);
     emitPhase("round", {index:i, total:questions.length, question:questions[i], deadlineLocal, duration:roundDuration});
 
     const bufferedAns = pendingRivalMsgs["ans_"+i];

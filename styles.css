@@ -1212,6 +1212,8 @@ details.meta-panel summary{ cursor:pointer; font-size:11.5px; color:var(--text-3
 .duel-selfstatus{ text-align:center; padding:10px; border-radius:var(--radius-m); font-size:13px; font-weight:600; margin-top:var(--sp-4); border:1px solid var(--border); background:var(--surface); color:var(--text-2); }
 .duel-selfstatus.submitted{ color:var(--good); border-color:var(--good-line); background:var(--good-dim); }
 .duel-selfstatus.waiting{ color:var(--accent-ink); border-color:var(--accent-line); background:var(--accent-dim); }
+.duel-selfstatus.timedout{ color:var(--warn); border-color:rgba(227,178,60,.4); background:var(--warn-dim); }
+.duel-selfstatus.rival-ready{ color:var(--accent-ink); border-color:var(--accent-line); background:var(--accent-dim); }
 
 .round-end-panel{ text-align:center; padding:var(--sp-6); }
 .round-end-panel .verdict{ font-size:20px; font-weight:700; margin-bottom:6px; }
