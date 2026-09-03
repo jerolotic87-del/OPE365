@@ -231,6 +231,20 @@ silencio ni elijas arbitrariamente.
   teclado ES `(` es Mayús+8, así que "Ctrl+(" y "Ctrl+Mayús+8" son la
   misma pulsación — no dos atajos. `inicio-138` tenía las dos como
   opciones distintas (bug tipo `<>`); corregido a `Ctrl+Mayús+8`.
+- **Atajos verificados en vivo uno a uno (sep-2026), llevan "Prueba en
+  vivo del usuario" en la explicación — no reabrir:** `Ctrl+F12` Abrir ·
+  `Ctrl+A` Abrir (Backstage) · `Ctrl+G` Guardar · `F12` Guardar como ·
+  `Ctrl+F4` cerrar documento (no Word) · `F1` Ayuda · `Ctrl+Fin` final del
+  documento · `Fin` final de línea · `Mayús+Fin` / `Ctrl+Mayús+Fin`
+  extender selección a fin de línea / de documento · `Ctrl+E` seleccionar
+  todo · `F8` modo extender selección · `Ctrl+Retroceso` borrar palabra a
+  la izquierda · `Ctrl+Barra espaciadora` quitar formato de carácter ·
+  `Ctrl+Mayús+8` mostrar/ocultar marcas de formato (= `Ctrl+(` en teclado
+  ES) · `Ctrl+M` diálogo Fuente · `Mayús+F3` rotar mayús/minús/tipo
+  oración · `Ctrl+Mayús+-` subíndice. Borrada `inicio-392` (`Ctrl+Mayús+0`
+  subíndice: la tabla lo lista pero en vivo no hace nada). **Pendiente**:
+  `Ctrl+Mayús+Z` = "Restablecer carácter" (en ATAJOS.docx, sin probar —
+  `inicio-363/364`).
 - **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
   poden preguntas correctas solo por parecerse a otra — se conservan
   aunque otra pregunte por el mismo atajo (están en topics/framings que
