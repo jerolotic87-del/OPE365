@@ -265,6 +265,15 @@ silencio ni elijas arbitrariamente.
   Verificadas `inicio-296` (Ctrl+J justifica), `inicio-297` (Ctrl+D
   derecha; Ctrl+R nada), `inicio-42` (emparejamiento Q/T/D/J) y
   `inicio-275` (Ctrl+E/B/F/L cambian entre ES e inglés).
+- **Tanda 5 (sep-2026):** `Ctrl+Mayús+F8` = **modo "Seleccionar columna"**
+  (ATAJOS.docx) — deja la selección enganchada y, al mover el cursor o
+  hacer clic, se extiende un bloque vertical de texto; se sale con `Esc`
+  (`inicio-321` reformulada) · `Alt+Inicio` = va a la primera celda de la
+  fila de la tabla (`insertar-31`). Corrección: `Alt+Mayús+Inicio` en tabla
+  **extiende la selección** hasta el inicio de la fila, no "va al inicio"
+  (`insertar-45`, mismo patrón que `Alt+Mayús+Fin`). **Pendiente**: la
+  navegación por columna de tabla `Alt+Re Pág` / `Alt+Av Pág` y sus
+  variantes con Mayús (`insertar-33/34/44`).
 - **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
   poden preguntas correctas solo por parecerse a otra — se conservan
   aunque otra pregunte por el mismo atajo (están en topics/framings que

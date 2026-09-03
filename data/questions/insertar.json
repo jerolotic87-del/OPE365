@@ -1082,7 +1082,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Inicio va al inicio de la fila activa en una tabla. Inicio va al inicio de la línea del texto dentro de la celdaactual. Alt+Mayús+Inicio extiende la selección hasta el inicio de la fila."
+    "explicacion": "Alt+Inicio va al inicio de la fila activa en una tabla. Inicio va al inicio de la línea del texto dentro de la celdaactual. Alt+Mayús+Inicio extiende la selección hasta el inicio de la fila. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-32",
@@ -1522,28 +1522,28 @@
     "tema": "Tablas",
     "sourceQuestionId": "gen-atajo-29",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también va al inicio de la fila en una tabla en Word 365, además de Alt+Inicio?",
+    "enunciado": "Dentro de una tabla en Word 365, ¿qué hace Alt+Mayús+Inicio?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+F"
+        "text": "Va al inicio de la fila sin seleccionar nada"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+D"
+        "text": "Selecciona desde el cursor hasta el inicio de la fila (todas las celdas)"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+Izquierda"
+        "text": "Selecciona la fila entera"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+Inicio"
+        "text": "Inserta una tabulación"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Mueve el cursor al inicio de la fila activa dentro de una tabla; es una segunda combinación asignada a la misma función que Alt+Inicio."
+    "respuesta": "B",
+    "explicacion": "Alt+Mayús+Inicio extiende la selección desde el cursor hasta el inicio de la fila, abarcando el texto de las celdas intermedias. Para ir al inicio de la fila SIN seleccionar se usa Alt+Inicio. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-46",
