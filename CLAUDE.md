@@ -398,6 +398,18 @@ archivo, añádele preguntas a ese archivo renumerando la cola.
     `revert` de cualquier corrección + `LEB.recalcNow()`. UI: botón rojo
     "Borrar del banco" en los modales de edición de pregunta/flashcard (`✎`) y
     en "Mi contenido" para elementos ya publicados. Irreversible desde la app.
+  - **Vista `banco` ("Editor del banco", `renderBancoAdmin` en views.js)** —
+    consola tipo Anki-Browse SOLO visible con token de GitHub (`bancoIsAdmin()`
+    = `GHS.hasToken()`; de facto solo el dueño). Toggle Preguntas/Flashcards,
+    búsqueda de texto (id + enunciado + opciones + explicación / front+back),
+    filtros pestaña/grupo/tipo/estado (corregida·creada·sin explicación·
+    fallada·marcada), tabla (máx 400 filas), contador "N / total". Clic en
+    fila → editor (`openEditQuestionModal`/`openEditFlashcardModal`, o el
+    modal de contenido propio si es tuyo). Botón "Borrar" por fila →
+    `deleteFromBankFlow` / `deleteUserItem`. Filtrado en views.js (no toca
+    `filterQuestions` de app.js). Entradas: Ajustes y "Mi contenido" (ambas
+    solo con token). En `groupForView` cuelga de `progress`. Test:
+    `tests/test_banco_admin.js`.
 
 ## Arquitectura de sesiones y compartir (app.js)
 

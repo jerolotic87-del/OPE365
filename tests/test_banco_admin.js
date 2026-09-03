@@ -1,0 +1,85 @@
+/* ============================================================
+   OPE365 · Editor del banco (admin) — jsdom
+   Vista "banco": buscar/filtrar/editar/borrar cualquier pregunta
+   o flashcard. Solo visible con token de GitHub configurado.
+     node tests/test_banco_admin.js
+============================================================ */
+"use strict";
+const fs = require("fs");
+const path = require("path");
+const { JSDOM } = require("jsdom");
+const ROOT = path.join(__dirname, "..");
+const read = n => fs.readFileSync(path.join(ROOT, n), "utf-8");
+const SCRIPTS = ["questions_data.js","taxonomy_data.js","flashcards_data.js","app.js",
+  "content-overrides.js","github-sync.js","engine.js","engine-bridge.js","peerjs.min.js","multiplayer.js","views.js"];
+
+const tick = ms => new Promise(r=> setTimeout(r, ms||30));
+
+async function boot(){
+  const dom = new JSDOM(read("tests/fixture.html"), { runScripts:"dangerously", url:"http://localhost/" });
+  const w = dom.window;
+  SCRIPTS.forEach(f=> w.eval(read(f)));
+  w.document.dispatchEvent(new w.Event("DOMContentLoaded"));
+  await tick(60);          // deja que el DOMContentLoaded real de jsdom se asiente (init() → go("home"))
+  return w;
+}
+function goto(w, v){
+  const b = w.document.createElement("button");
+  b.setAttribute("data-goto", v);
+  w.document.body.appendChild(b);
+  b.dispatchEvent(new w.MouseEvent("click", { bubbles:true }));
+  b.remove();
+}
+let fail = 0;
+const ok = (c,m)=>{ console.log((c?"  OK  ":"  XX  ")+m); if(!c) fail++; };
+const main = w => w.document.querySelector("main");
+const rows = w => w.document.querySelectorAll("#bk-body .qlist-item").length;
+
+(async function(){
+  const w = await boot();
+  const O = w.OPE;
+
+  goto(w, "banco");
+  ok(!/Editor del banco/.test(main(w).innerHTML), "sin token: la vista banco NO se muestra");
+
+  O.GHS.setCfg({ owner:"jerolotic87-del", repo:"OPE365", branch:"main", token:"github_pat_TEST" });
+  goto(w, "banco");
+  ok(/Editor del banco/.test(main(w).innerHTML), "con token: la vista banco se muestra");
+  ok(w.document.querySelector("#bk-search") && w.document.querySelector("#bk-section") && w.document.querySelector("#bk-estado"),
+    "barra de filtros presente");
+  ok(rows(w) > 0, `lista de preguntas con filas (${rows(w)})`);
+  ok(w.document.querySelector("#bk-count").textContent === `${O.QUESTIONS.length} / ${O.QUESTIONS.length}`,
+    `contador "N / ${O.QUESTIONS.length}"`);
+
+  // búsqueda por id exacto
+  const sample = O.QUESTIONS[Math.floor(O.QUESTIONS.length/2)];
+  const s = w.document.querySelector("#bk-search");
+  s.value = sample.id;
+  s.dispatchEvent(new w.Event("input", { bubbles:true }));
+  await tick(240);   // debounce 180ms
+  ok(rows(w) === 1, `buscar "${sample.id}" deja 1 fila (${rows(w)})`);
+  const row = w.document.querySelector(`#bk-body [data-qid="${sample.id}"]`);
+  ok(!!row, "la fila es la pregunta buscada");
+
+  row.dispatchEvent(new w.MouseEvent("click", { bubbles:true }));
+  ok(/Editar pregunta/.test(w.document.body.innerHTML) && !!w.document.querySelector("#edit-delbank"),
+    "clic en fila abre el editor con 'Borrar del banco'");
+  const cancel = w.document.querySelector("#edit-cancel");
+  if(cancel) cancel.dispatchEvent(new w.MouseEvent("click", { bubbles:true }));
+
+  // pestaña Flashcards
+  goto(w, "banco");
+  w.document.querySelector('.pill-row [data-bt="fc"]').dispatchEvent(new w.MouseEvent("click", { bubbles:true }));
+  ok(/Flashcards ·/.test(main(w).innerHTML) && !!w.document.querySelector('#bk-body [data-fcid]'),
+    "la pestaña Flashcards lista flashcards del banco");
+  ok(w.document.querySelector("#bk-count").textContent === `${O.FLASHCARDS.length} / ${O.FLASHCARDS.length}`,
+    "contador de flashcards correcto");
+  ok(!w.document.querySelector("#bk-tipo"), "en Flashcards no hay filtro de tipo de ejercicio");
+
+  const est = w.document.querySelector("#bk-estado");
+  est.value = "creada"; est.dispatchEvent(new w.Event("change", { bubbles:true }));
+  ok(w.document.querySelector("#bk-count").textContent.startsWith("0 "), "filtro 'Creadas por mí' con banco limpio da 0");
+
+  console.log(fail ? `\n${fail} FALLO(S)` : "\nTODO OK");
+  process.exit(fail ? 1 : 0);
+})();

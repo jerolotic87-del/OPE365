@@ -56,7 +56,7 @@ function groupForView(view){
       "review-hub","review-detail","mi-contenido","mp-setup","mp-lobby","mp-game"].includes(view)) return "practica";
   if(["flashcards","flashcards-study"].includes(view)) return "flashcards";
   if(["progress","tests","challenges","challenge-create","challenge-detail",
-      "comparison","history"].includes(view)) return "progress";
+      "comparison","history","banco"].includes(view)) return "progress";
   return "home";
 }
 
@@ -106,6 +106,7 @@ function render(view, params){
   if(view==="flashcards-study") return renderFlashcardsStudy();
   if(view==="temario-detalle") return renderTemarioDetalle(params);
   if(view==="mi-contenido") return renderMyContent();
+  if(view==="banco") return renderBancoAdmin(params);
   return renderHome();
 }
 
@@ -650,6 +651,11 @@ function renderMyContent(){
           <span class="nr-title">Exportar todo tu contenido (JSON)</span>
           <span class="nr-meta">${users.length + edits}</span><span class="nr-chev">${icon('chevronR')}</span>
         </button>
+        ${(O.GHS && O.GHS.hasToken()) ? `<button class="nav-row" data-goto="banco">
+          <span class="nr-ic">${icon('search')}</span>
+          <span class="nr-title">Editor del banco — buscar y editar cualquier pregunta/flashcard</span>
+          <span class="nr-meta">admin</span><span class="nr-chev">${icon('chevronR')}</span>
+        </button>` : ``}
       </div>
       <p style="font-size:11.5px;color:var(--text-3);margin-top:8px;">Incluye tus creaciones y las correcciones que hayas hecho al banco (lápiz ✎). Pásalo para incorporarlo a data/ de forma permanente.</p>
     </div>
@@ -1714,6 +1720,7 @@ function topicName(secId, topId){
 }
 
 let fcHubState = { section:"all", tab:"repaso" };
+let bancoState = { tab:"q", search:"", section:"all", topic:"all", tipo:"all", estado:"all", sort:"id" };
 
 function renderFlashcardsHub(params){
   if(params && params.section) fcHubState.section = params.section;
@@ -2659,6 +2666,174 @@ function deleteFromBankFlow(kind, id, onDone){
   );
 }
 
+/* ---------------------------------------------------------------
+   EDITOR DEL BANCO (admin) — buscar y editar/borrar cualquier
+   pregunta o flashcard del banco entero. Solo con token de GitHub
+   configurado (de facto: solo el dueño del repo).
+--------------------------------------------------------------- */
+function bancoIsAdmin(){ return !!(O.GHS && O.GHS.hasToken()); }
+
+function bancoFilterQuestions(f){
+  const term = (f.search||"").toLowerCase().trim();
+  return O.QUESTIONS.filter(q=>{
+    if(f.section!=="all" && q.section!==f.section) return false;
+    if(f.topic!=="all" && q.topic!==f.topic) return false;
+    if(f.tipo!=="all" && q.tipo!==f.tipo) return false;
+    if(f.estado==="corregida" && !(O.ContentEdit && O.ContentEdit.has("q", q.id))) return false;
+    if(f.estado==="creada"    && !(O.ContentEdit && O.ContentEdit.isUser("q", q.id))) return false;
+    if(f.estado==="sinexpl"   && q.explicacion) return false;
+    if(f.estado==="falladas"){ const a=O.PROGRESS.answers[q.id]; if(!a || a.correcta) return false; }
+    if(f.estado==="marcadas"  && !O.isMarked(q.id)) return false;
+    if(term){
+      const hay = (q.id+" "+q.enunciado+" "+(q.explicacion||"")+" "+(q.opciones||[]).map(o=>o.text).join(" ")).toLowerCase();
+      if(!hay.includes(term)) return false;
+    }
+    return true;
+  });
+}
+function bancoFilterFlashcards(f){
+  const term = (f.search||"").toLowerCase().trim();
+  return O.FLASHCARDS.filter(c=>{
+    if(f.section!=="all" && c.section!==f.section) return false;
+    if(f.topic!=="all" && c.topic!==f.topic) return false;
+    if(f.estado==="corregida" && !(O.ContentEdit && O.ContentEdit.has("fc", c.canonicalId))) return false;
+    if(f.estado==="creada"    && !(O.ContentEdit && O.ContentEdit.isUser("fc", c.canonicalId))) return false;
+    if(term){
+      const hay = (c.canonicalId+" "+(c.front||"")+" "+(c.back||"")).toLowerCase();
+      if(!hay.includes(term)) return false;
+    }
+    return true;
+  });
+}
+
+function renderBancoAdmin(){
+  if(!bancoIsAdmin()){ O.toast("Solo con GitHub conectado"); return go("progress"); }
+  const st = bancoState;
+  const isQ = st.tab === "q";
+  const totalQ = O.QUESTIONS.length, totalFc = O.FLASHCARDS.length;
+
+  mainEl().innerHTML = `
+  <div class="view">
+    <nav class="breadcrumb"><button data-goto="progress">Progreso</button><span>/</span><b>Editor del banco</b></nav>
+    <div class="view-head">
+      <p class="eyebrow">Admin · ${O.escapeHtml(O.GHS.repoLabel())}</p>
+      <h1>Editor del banco</h1>
+      <p>Busca en las ${totalQ} preguntas y ${totalFc} flashcards. Clic en una fila para editarla; "Borrar del banco" hace commit al repo.</p>
+    </div>
+
+    <div class="pill-row" style="margin-bottom:var(--sp-4);">
+      <button class="pill ${isQ?'active':''}" data-bt="q">Preguntas · ${totalQ}</button>
+      <button class="pill ${!isQ?'active':''}" data-bt="fc">Flashcards · ${totalFc}</button>
+    </div>
+
+    <div class="filter-bar">
+      <input type="search" id="bk-search" placeholder="id, enunciado, opción, explicación…" value="${O.escapeHtml(st.search)}" style="min-width:220px;">
+      <select id="bk-section"><option value="all">Todas las pestañas</option>${O.TAXONOMY_SECTIONS.map(s=>`<option value="${s.id}" ${st.section===s.id?'selected':''}>${O.escapeHtml(s.name)}</option>`).join("")}</select>
+      <select id="bk-topic"><option value="all">Todos los grupos</option></select>
+      ${isQ ? `<select id="bk-tipo"><option value="all">Todos los tipos</option>${Object.entries(O.TYPE_LABELS).map(([v,l])=>`<option value="${v}" ${st.tipo===v?'selected':''}>${l}</option>`).join("")}</select>` : ``}
+      <select id="bk-estado">
+        <option value="all">Cualquier estado</option>
+        <option value="corregida" ${st.estado==="corregida"?'selected':''}>Corregidas (✎)</option>
+        <option value="creada" ${st.estado==="creada"?'selected':''}>Creadas por mí</option>
+        ${isQ ? `<option value="sinexpl" ${st.estado==="sinexpl"?'selected':''}>Sin explicación</option>
+        <option value="falladas" ${st.estado==="falladas"?'selected':''}>Falladas</option>
+        <option value="marcadas" ${st.estado==="marcadas"?'selected':''}>Marcadas</option>` : ``}
+      </select>
+      <span class="chip" id="bk-count">0</span>
+    </div>
+    <div id="bk-body"></div>
+  </div>`;
+
+  function refreshTopics(){
+    const sec = O.TAXONOMY_SECTIONS.find(s=>s.id===$("#bk-section").value);
+    const topics = (sec && sec.topics) || [];
+    const sel = $("#bk-topic");
+    sel.innerHTML = `<option value="all">Todos los grupos</option>` + topics.map(t=>`<option value="${t.id}">${O.escapeHtml(t.name)}</option>`).join("");
+    sel.value = topics.some(t=>t.id===st.topic) ? st.topic : "all";
+  }
+  function readFilters(){
+    const g = (sel,def)=>{ const el = $(sel); return el ? el.value : def; };
+    st.search = g("#bk-search", st.search);
+    st.section = g("#bk-section", "all");
+    st.topic = g("#bk-topic", "all");
+    st.tipo = isQ ? g("#bk-tipo", "all") : "all";
+    st.estado = g("#bk-estado", "all");
+  }
+  function refresh(){
+    const body = $("#bk-body");
+    if(!body) return;   // la vista ya no está montada (navegación durante el debounce)
+    readFilters();
+    if(isQ){
+      const list = bancoFilterQuestions(st).sort((a,b)=> a.id.localeCompare(b.id, undefined, {numeric:true}));
+      $("#bk-count").textContent = `${list.length} / ${totalQ}`;
+      if(!list.length){ body.innerHTML = `<div class="empty-state"><div class="glyph">${icon('search')}</div><p>Nada coincide.</p></div>`; return; }
+      body.innerHTML = `<div class="qlist">${list.slice(0,400).map(q=>`
+        <div class="qlist-item" data-qid="${q.id}" style="cursor:pointer;">
+          <span class="badge ${badgeClass(q.id)}">${badgeGlyph(q.id)}</span>
+          <div style="flex:1; min-width:0;">
+            <div class="qtext">${O.renderBlank(truncate(q.enunciado,150))}</div>
+            <div class="qmeta">${O.escapeHtml(q.id)} · ${tipoLabel(q.tipo)} · ${O.escapeHtml(sectionName(q.section))}${q.topic?` ▸ ${O.escapeHtml(topicName(q.section,q.topic))}`:''}${q.explicacion?'':' · <span class="mini-warn">sin explicación</span>'}</div>
+          </div>
+          <button class="btn btn-ghost btn-sm" data-bk-del="${q.id}">Borrar</button>
+        </div>`).join("")}</div>
+        ${list.length>400?`<p style="font-size:12px;color:var(--text-3);margin-top:8px;">Mostrando 400 de ${list.length}. Afina la búsqueda.</p>`:''}`;
+      $$("#bk-body .qlist-item").forEach(row=> row.addEventListener("click",(e)=>{
+        if(e.target.closest("[data-bk-del]")) return;
+        const id = row.getAttribute("data-qid");
+        if(O.ContentEdit && O.ContentEdit.isUser("q", id)) openUserQuestionModal(id, ()=> go("banco"));
+        else openEditQuestionModal(id, ()=> go("banco"));
+      }));
+      $$("#bk-body [data-bk-del]").forEach(b=> b.addEventListener("click",(e)=>{
+        e.stopPropagation();
+        const id = b.getAttribute("data-bk-del");
+        if(O.ContentEdit && O.ContentEdit.isUser("q", id))
+          confirmDanger("Eliminar pregunta propia","No se puede deshacer.",()=>{ O.ContentEdit.deleteUserItem("q", id); if(O.LEB) O.LEB.recalcNow(); closeModal(); go("banco"); O.toast("Eliminada"); });
+        else deleteFromBankFlow("q", id, ()=> go("banco"));
+      }));
+    } else {
+      const list = bancoFilterFlashcards(st).sort((a,b)=> a.canonicalId.localeCompare(b.canonicalId, undefined, {numeric:true}));
+      $("#bk-count").textContent = `${list.length} / ${totalFc}`;
+      if(!list.length){ body.innerHTML = `<div class="empty-state"><div class="glyph">${icon('search')}</div><p>Nada coincide.</p></div>`; return; }
+      body.innerHTML = `<div class="qlist">${list.slice(0,400).map(c=>`
+        <div class="qlist-item" data-fcid="${O.escapeHtml(c.canonicalId)}" style="cursor:pointer;">
+          <span class="badge ${badgeClass(c.canonicalId)}">${badgeGlyph(c.canonicalId)}</span>
+          <div style="flex:1; min-width:0;">
+            <div class="qtext">${O.escapeHtml(truncate(c.front||"(sin frente)",120))}</div>
+            <div class="qmeta">${O.escapeHtml(c.canonicalId)} · ${O.escapeHtml(sectionName(c.section))}${c.topic?` ▸ ${O.escapeHtml(topicName(c.section,c.topic))}`:''} · ${O.escapeHtml(truncate(c.back||"",60))}</div>
+          </div>
+          <button class="btn btn-ghost btn-sm" data-bk-delfc="${O.escapeHtml(c.canonicalId)}">Borrar</button>
+        </div>`).join("")}</div>
+        ${list.length>400?`<p style="font-size:12px;color:var(--text-3);margin-top:8px;">Mostrando 400 de ${list.length}. Afina la búsqueda.</p>`:''}`;
+      $$("#bk-body .qlist-item").forEach(row=> row.addEventListener("click",(e)=>{
+        if(e.target.closest("[data-bk-delfc]")) return;
+        const id = row.getAttribute("data-fcid");
+        if(O.ContentEdit && O.ContentEdit.isUser("fc", id)) openUserFlashcardModal(id, ()=> go("banco"));
+        else openEditFlashcardModal(id, ()=> go("banco"));
+      }));
+      $$("#bk-body [data-bk-delfc]").forEach(b=> b.addEventListener("click",(e)=>{
+        e.stopPropagation();
+        const id = b.getAttribute("data-bk-delfc");
+        if(O.ContentEdit && O.ContentEdit.isUser("fc", id))
+          confirmDanger("Eliminar flashcard propia","No se puede deshacer.",()=>{ O.ContentEdit.deleteUserItem("fc", id); if(O.LEB) O.LEB.recalcNow(); closeModal(); go("banco"); O.toast("Eliminada"); });
+        else deleteFromBankFlow("fc", id, ()=> go("banco"));
+      }));
+    }
+  }
+
+  $$(".pill-row [data-bt]").forEach(b=> b.addEventListener("click", ()=>{
+    const t = b.getAttribute("data-bt");
+    if(t!==st.tab){ bancoState = { tab:t, search:"", section:"all", topic:"all", tipo:"all", estado:"all", sort:"id" }; go("banco"); }
+  }));
+  let bkT = null;
+  $("#bk-search").addEventListener("input", ()=>{ clearTimeout(bkT); bkT = setTimeout(refresh, 180); });
+  $("#bk-section").addEventListener("change", ()=>{ st.topic = "all"; refreshTopics(); refresh(); });
+  $("#bk-topic").addEventListener("change", refresh);
+  if($("#bk-tipo")) $("#bk-tipo").addEventListener("change", refresh);
+  $("#bk-estado").addEventListener("change", refresh);
+  refreshTopics();
+  refresh();
+}
+
 function renderProgress(){
   const s = O.computeStats();
   const pm = O.LEB ? O.LEB.progressModel() : null;
@@ -3193,6 +3368,7 @@ function openSettingsModal(){
     <div class="actions" style="justify-content:flex-start;margin-bottom:16px;flex-wrap:wrap;">
       <button class="btn btn-outline btn-sm" id="goto-my-content">Abrir "Mi contenido"</button>
       <button class="btn btn-ghost btn-sm" id="open-content-edits">Exportar JSON</button>
+      ${(O.GHS && O.GHS.hasToken()) ? `<button class="btn btn-outline btn-sm" id="goto-banco">Editor del banco (admin)</button>` : ``}
     </div>
 
     <hr class="div">
@@ -3216,6 +3392,8 @@ function openSettingsModal(){
     if(ceBtn) ceBtn.addEventListener("click", ()=>{ closeModal(); openContentEditsModal(); });
     const mcBtn = root.querySelector("#goto-my-content");
     if(mcBtn) mcBtn.addEventListener("click", ()=>{ closeModal(); go("mi-contenido"); });
+    const bkBtn = root.querySelector("#goto-banco");
+    if(bkBtn) bkBtn.addEventListener("click", ()=>{ closeModal(); go("banco"); });
     const ghBtn = root.querySelector("#open-github-sync");
     if(ghBtn) ghBtn.addEventListener("click", ()=>{ closeModal(); openGitHubModal(); });
     root.querySelector("#reset-current").addEventListener("click", ()=> confirmDanger(
