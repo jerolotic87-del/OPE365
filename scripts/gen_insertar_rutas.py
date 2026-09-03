@@ -24,6 +24,10 @@ def topic_for(n):
     if n in range(67,73) or n in range(160,173): return ("formato-forma", "Formato de forma")
     raise ValueError(f"P-{n} sin topic")
 
+# P-NN descartadas tras revisión: afirmaban contenido de galerías online
+# (Imágenes de archivo / Modelos 3D / plataformas de vídeo) no verificable.
+DROP = {16, 21, 28, 80, 81, 82, 83, 84, 85, 86, 87, 88}
+
 raw = open(SRC, encoding="utf-8").read()
 # corta la cruft de chat / resúmenes: nos quedamos con bloques "P-NN ... Respuesta correcta: X Trampa: ..."
 # normaliza saltos
@@ -103,7 +107,7 @@ while i < len(lines):
         Q[n] = cand
     i = j
 
-print(f"parseadas {len(Q)} preguntas (esperadas 172)")
+print(f"parseadas {len(Q)} preguntas (esperadas 172); {len(DROP)} descartadas -> {len(Q)-len(DROP)} a importar")
 missing = [n for n in range(1,173) if n not in Q]
 if missing:
     print("FALTAN:", missing)
@@ -113,7 +117,7 @@ bank = json.load(open(OUT, encoding="utf-8"))
 start_id = max(int(q["id"].split("-")[1]) for q in bank) + 1   # 46
 letters = ["A","B","C","D"]
 new = []
-for k, n in enumerate(sorted(Q)):
+for k, n in enumerate(n for n in sorted(Q) if n not in DROP):
     enun, opts, ans, trampa = Q[n]
     topic, tema = topic_for(n)
     new.append({

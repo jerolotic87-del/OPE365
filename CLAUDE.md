@@ -6,7 +6,7 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **1714 preguntas** y **615
+de Word 365 de una oposición de ayuntamiento. **1702 preguntas** y **615
 flashcards** (inicio 148, archivo 230, vista 79, revisar 73, insertar 28,
 referencias 17, disposicion 16, correspondencia 15, diseno 9 — las ~375
 de sep-2026 son tarjetas de RUTA: frente = la acción, dorso =
@@ -248,19 +248,18 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 516, inicio 393, archivo 350, insertar 217, vista 145, revisar 78,
+interfaz 516, inicio 393, archivo 350, insertar 205, vista 145, revisar 78,
 referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
-Total 1714. Historial: `data/questions_regroup_report.md`.
-`insertar-46..217` (`sourceQuestionId` `P-01..P-172`, `generado:true`) son
-**preguntas de RUTA** (4 opciones, 1 correcta + 3 distractores del mismo nivel)
-de toda la pestaña Insertar — la pestaña solo tenía atajos hasta ahora. Añaden
-2 topics: `insertar:esignature` (grupo propio, confirmado por captura del
+Total 1702. Historial: `data/questions_regroup_report.md`.
+`insertar-46..205` (`sourceQuestionId` `P-01..P-172` con huecos, `generado:true`)
+son **preguntas de RUTA** (4 opciones, 1 correcta + 3 distractores del mismo
+nivel) de toda la pestaña Insertar — la pestaña solo tenía atajos hasta ahora.
+Añaden 2 topics: `insertar:esignature` (grupo propio, confirmado por captura del
 usuario) y `insertar:formato-forma` (cinta contextual de Formas, con
-`ribbonGroup`). ~150 son coherentes con Word 365 verificable; ~12 afirman
-contenido de galerías online no verificable aquí (`insertar-61/66/73/125..133`,
-categorías de Imágenes de archivo / Modelos 3D / plataformas de vídeo) — están
-listadas en `data/insertar_rutas_integration_report.md` para contraste en Word
-en vivo. Generador: `scripts/gen_insertar_rutas.py`.
+`ribbonGroup`). Del bloque original de 172 se descartaron 12 que afirmaban
+contenido de galerías online no verificable (Imágenes de archivo / Modelos 3D /
+plataformas de vídeo). Detalle: `data/insertar_rutas_integration_report.md`.
+Generador: `scripts/gen_insertar_rutas.py` (con set `DROP`).
 Las de `archivo`
 `archivo-134..` (`sourceQuestionId` `opc-<panel>-NN`) cubren toggles de
 `Archivo > Opciones` — opción = "sub-panel del diálogo ▸ ajuste",

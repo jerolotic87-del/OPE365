@@ -7,19 +7,21 @@ nivel jerárquico: nombre / grupo / pestaña / subopción inexistente).
 
 ## Clasificación (patrón `vista_integration_report.md`)
 
-`insertar.json` tenía **45 preguntas, todas `categoria:"atajo"`**. Estas 172 son
-**todas `categoria:"ruta"`**. → **COMPLEMENTARIA** en bloque: cero solapamiento,
-cero conflicto. Cubren el hueco de "ruta" que la pestaña Insertar tenía a 0.
+`insertar.json` tenía **45 preguntas, todas `categoria:"atajo"`**. De las 172 del
+archivo se importaron **160** (`categoria:"ruta"`) → **COMPLEMENTARIA** en bloque:
+cero solapamiento, cero conflicto. Cubren el hueco de "ruta" que la pestaña
+Insertar tenía a 0.
 
-- IDs: `insertar-46` … `insertar-217`. `sourceQuestionId` = `P-01`…`P-172`.
+- IDs: `insertar-46` … `insertar-205`. `sourceQuestionId` = `P-01`…`P-172`
+  (con huecos: ver "descartadas").
 - Todas `"generado": true`.
 - Taxonomía: 2 topics nuevos en `insertar` —
   - `esignature` (grupo propio de la cinta, confirmado por captura del usuario)
   - `formato-forma` (cinta **contextual** que aparece al insertar una forma;
     mismo criterio que el grupo `estructura` de Vista/Revisar)
-- Reparto: paginas 6 · tablas 10 · ilustraciones 37 · formato-forma 19 ·
-  vinculos 13 · comentarios 1 · encabezado-pie 20 · texto 31 · simbolos 31 ·
-  multimedia 2 · esignature 2.
+- Reparto (tras descartar 12): paginas 6 · tablas 10 · ilustraciones 26 ·
+  formato-forma 19 · vinculos 13 · comentarios 1 · encabezado-pie 20 ·
+  texto 31 · simbolos 31 · multimedia 1 · esignature 2.
 
 ## Verificación
 
@@ -30,25 +32,27 @@ ecuaciones, grupos de la cinta contextual Formato de forma, campos de los
 cuadros de diálogo Letra capital / Línea de firma / Fecha y hora / Objeto,
 subrutas de Número de página, etc.).
 
-### PENDIENTE de contraste en Word 365 en vivo
+### DESCARTADAS (12) — no importadas
 
-Afirman el contenido de **galerías online** (cambian con el tiempo y no están en
-`atajos_oficial.json` ni en ninguna fuente de este repo). Si fallan al probarlas,
-borrar desde el Editor del banco:
+Afirmaban el contenido de **galerías online** (cambian con el tiempo, no están en
+`atajos_oficial.json` ni en ninguna fuente de este repo). El usuario pidió
+dejarlas fuera tras la revisión:
 
-| id | P- | afirma |
-|----|----|--------|
-| `insertar-61` | P-16 | categorías del cuadro "Imágenes de archivo" (incluye "Partes del cuerpo") |
-| `insertar-66` | P-21 | categoría 3D online "Dibujos animados vintage" |
-| `insertar-125`..`insertar-133` | P-80..P-88 | categorías de "Modelos 3D en línea": Steampunk, Polígonos bajos, Adhesivos, Cosmos, Dioramas, Geología, Letras, Juguetes, Esculturas |
-| `insertar-73` | P-28 | plataformas de "Vídeo en línea": YouTube, SlideShare, Vimeo, TED (lista sensible a la versión) |
+- **P-16** — categorías del cuadro "Imágenes de archivo"
+- **P-21, P-80..P-88** — categorías de "Modelos 3D en línea" (Dibujos animados
+  vintage, Steampunk, Polígonos bajos, Adhesivos, Cosmos, Dioramas, Geología,
+  Letras, Juguetes, Esculturas)
+- **P-28** — plataformas de "Vídeo en línea" (YouTube/SlideShare/Vimeo/TED,
+  lista sensible a la versión)
+
+El generador (`scripts/gen_insertar_rutas.py`) las excluye vía `DROP`.
 
 ### Confianza media (nombres exactos / dependientes de la instalación)
 
 | id | P- | matiz |
 |----|----|-------|
 | `insertar-60` | P-15 | los nombres de categoría del enunciado son adorno; la ruta (Imágenes de archivo) sí es verificable |
-| `insertar-180`..`insertar-182` | P-135..P-137 | tipos de objeto OLE ("Microsoft Graph Chart", "…Macro-Enabled Worksheet", "PowerPoint 97-2003") — dependen de lo instalado; los nombrados son estándar |
+| `insertar-168`..`insertar-170` | P-135..P-137 | tipos de objeto OLE ("Microsoft Graph Chart", "…Macro-Enabled Worksheet", "PowerPoint 97-2003") — dependen de lo instalado; los nombrados son estándar |
 
 ## Notas de parseo
 

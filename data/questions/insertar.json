@@ -2131,42 +2131,6 @@
     "topic": "ilustraciones",
     "subtopic": null,
     "tema": "Ilustraciones",
-    "sourceQuestionId": "P-16",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes categorías existe realmente dentro del cuadro Imágenes de archivo de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Monumentos y viajes"
-      },
-      {
-        "letter": "B",
-        "text": "Partes del cuerpo"
-      },
-      {
-        "letter": "C",
-        "text": "Naturaleza y paisajes"
-      },
-      {
-        "letter": "D",
-        "text": "Alimentos y bebidas"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son categorías temáticas plausibles pero no figuran en la extracción real. Las categorías reales incluyen: Animales, Partes del cuerpo, El tiempo, Juegos, Vehículos, Tecnología, Deportes, Gente, Flechas, Educación."
-  },
-  {
-    "id": "insertar-62",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Ilustraciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "ilustraciones",
-    "subtopic": null,
-    "tema": "Ilustraciones",
     "sourceQuestionId": "P-17",
     "generado": true,
     "enunciado": "¿Qué ruta permite insertar iconos vectoriales escalables en el documento, organizados en la galería de iconos de Microsoft 365?",
@@ -2193,7 +2157,7 @@
     "explicacion": "A lleva a la galería de imágenes de archivo (donde hay una sección de iconos accesible desde ese cuadro), pero la ruta directa del comando Iconos es diferente. C y D no existen."
   },
   {
-    "id": "insertar-63",
+    "id": "insertar-62",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -2229,7 +2193,7 @@
     "explicacion": "A no existe. C los conectores en Visio sí existen pero en Word la categoría no se llama así. D no existe."
   },
   {
-    "id": "insertar-64",
+    "id": "insertar-63",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -2265,7 +2229,7 @@
     "explicacion": "A usa \"área\" en lugar de \"lienzo\". C y D no existen con ese nombre."
   },
   {
-    "id": "insertar-65",
+    "id": "insertar-64",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -2301,43 +2265,7 @@
     "explicacion": "A accede a modelos guardados en el equipo local. B no existe como subopción de Imágenes. D no existe como grupo."
   },
   {
-    "id": "insertar-66",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Ilustraciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "ilustraciones",
-    "subtopic": null,
-    "tema": "Ilustraciones",
-    "sourceQuestionId": "P-21",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes categorías existe dentro del cuadro En línea Modelos 3D de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Figuras geométricas planas"
-      },
-      {
-        "letter": "B",
-        "text": "Dibujos animados vintage"
-      },
-      {
-        "letter": "C",
-        "text": "Personajes históricos"
-      },
-      {
-        "letter": "D",
-        "text": "Mapas y cartografía"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe (sí hay \"Formas en 3D\" pero no figuras planas). C no existe. D no existe. \"Dibujos animados vintage\" sí figura en la extracción real."
-  },
-  {
-    "id": "insertar-67",
+    "id": "insertar-65",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -2373,7 +2301,7 @@
     "explicacion": "A invierte la lógica (SmartArt no es un subtipo de Gráfico). C lo coloca en el grupo Texto, que no contiene SmartArt. D cambia la pestaña."
   },
   {
-    "id": "insertar-68",
+    "id": "insertar-66",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -2409,7 +2337,7 @@
     "explicacion": "A, B y D son representaciones visuales muy conocidas pero no son tipos de SmartArt disponibles en Word 365. \"Escala de tiempo\" sí figura en la extracción real."
   },
   {
-    "id": "insertar-69",
+    "id": "insertar-67",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -2445,7 +2373,7 @@
     "explicacion": "A confunde SmartArt con Gráfico. C lo sitúa en el grupo Tablas. D \"Diagrama\" no existe como comando en Insertar."
   },
   {
-    "id": "insertar-70",
+    "id": "insertar-68",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -2481,7 +2409,7 @@
     "explicacion": "A no existe. C el gráfico de Pareto existe en Excel como subtipo de Histograma, pero no aparece como tipo independiente en el cuadro de insertar gráfico de Word. D no existe."
   },
   {
-    "id": "insertar-71",
+    "id": "insertar-69",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -2517,7 +2445,7 @@
     "explicacion": "A permite seleccionar una región libre, no una ventana completa. B no existe como subopción de Imágenes. D sitúa el comando en Multimedia, que no lo contiene."
   },
   {
-    "id": "insertar-72",
+    "id": "insertar-70",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -2553,43 +2481,7 @@
     "explicacion": "A captura una ventana completa, no una región libre. B no existe bajo Imágenes. D \"Selección libre\" no existe."
   },
   {
-    "id": "insertar-73",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Multimedia",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "multimedia",
-    "subtopic": null,
-    "tema": "Multimedia",
-    "sourceQuestionId": "P-28",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes plataformas de vídeo está disponible como opción directa en el cuadro Insertar video en línea de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Dailymotion"
-      },
-      {
-        "letter": "B",
-        "text": "TED"
-      },
-      {
-        "letter": "C",
-        "text": "Twitch"
-      },
-      {
-        "letter": "D",
-        "text": "Netflix"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son plataformas de vídeo reales pero no están en ese cuadro. Las disponibles en la extracción son: YouTube, SlideShare, Vimeo y TED."
-  },
-  {
-    "id": "insertar-74",
+    "id": "insertar-71",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Multimedia",
     "tipo": "opcion_unica",
@@ -2625,7 +2517,7 @@
     "explicacion": "A y C tienen grupos que no existen en Insertar. D coloca el vídeo en Ilustraciones, que no contiene ese comando."
   },
   {
-    "id": "insertar-75",
+    "id": "insertar-72",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -2661,7 +2553,7 @@
     "explicacion": "A usa \"Hipervínculo\" como nombre del comando, que es como aparece en versiones antiguas de Word pero en la extracción real el comando se llama \"Vínculo\". C \"Nuevo vínculo\" no existe. D sitúa el comando en el grupo Texto."
   },
   {
-    "id": "insertar-76",
+    "id": "insertar-73",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -2697,7 +2589,7 @@
     "explicacion": "A no existe como opción diferenciada. C no existe. D no existe en ese cuadro. Las opciones reales son: Archivo o página web existente, Lugar de este documento, Crear nuevo documento, Dirección de correo electrónico."
   },
   {
-    "id": "insertar-77",
+    "id": "insertar-74",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -2733,7 +2625,7 @@
     "explicacion": "A confunde Referencia cruzada con Marcador (aunque el cuadro de Referencia cruzada puede referenciar marcadores, no los crea). C sitúa Marcador en Elementos rápidos. D describe una navegación dentro del cuadro de hipervínculo, no la creación de un marcador."
   },
   {
-    "id": "insertar-78",
+    "id": "insertar-75",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -2769,7 +2661,7 @@
     "explicacion": "A no existe como botón en ese cuadro. C y D no existen. Las acciones reales son: Agregar, Eliminar, Ir a."
   },
   {
-    "id": "insertar-79",
+    "id": "insertar-76",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -2805,7 +2697,7 @@
     "explicacion": "A \"fecha de creación\" no existe. C \"tipo\" no existe. D \"longitud\" no existe. Las opciones reales de orden son: Nombre y Posición."
   },
   {
-    "id": "insertar-80",
+    "id": "insertar-77",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -2841,7 +2733,7 @@
     "explicacion": "A crea un hipervínculo interno, no una referencia cruzada dinámica. B no existe como subruta. D es una ruta real de Word (la pestaña Referencias también tiene acceso a Referencia cruzada), pero la ruta de la pestaña Insertar es la que se pide."
   },
   {
-    "id": "insertar-81",
+    "id": "insertar-78",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -2877,7 +2769,7 @@
     "explicacion": "A los cuadros de texto no son tipos disponibles en ese cuadro. C no existe como tipo (los títulos con estilo Título sí, pero no se llaman \"Encabezado de sección\"). D no existe. Los tipos reales incluyen: Elemento numerado, Marcador, Nota al pie, Nota al final, Ecuación, Ilustración, Tabla."
   },
   {
-    "id": "insertar-82",
+    "id": "insertar-79",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -2913,7 +2805,7 @@
     "explicacion": "A no existe. C no existe. D no existe. Las opciones reales de \"Referencia a\" incluyen: Número de página, Número de párrafo, Texto de párrafo, Más adelante o más atrás, entre otras."
   },
   {
-    "id": "insertar-83",
+    "id": "insertar-80",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Comentarios",
     "tipo": "opcion_unica",
@@ -2949,7 +2841,7 @@
     "explicacion": "A es una ruta real y también funciona (Revisar tiene el mismo comando), pero la ruta de la pestaña Insertar es la que se solicita. C sitúa el comentario en Texto. D no existe."
   },
   {
-    "id": "insertar-84",
+    "id": "insertar-81",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -2985,7 +2877,7 @@
     "explicacion": "A abre el área de edición directamente sin elegir plantilla. B sitúa el encabezado en el grupo Páginas. D cambia la pestaña."
   },
   {
-    "id": "insertar-85",
+    "id": "insertar-82",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -3021,7 +2913,7 @@
     "explicacion": "A no existe. C no existe (vincular al anterior sí, pero con otro nombre y desde la cinta contextual). D no existe."
   },
   {
-    "id": "insertar-86",
+    "id": "insertar-83",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -3057,7 +2949,7 @@
     "explicacion": "A no existe como posición (los márgenes son laterales, no centro). C no existe. D no existe. Las posiciones reales son: Principio de página, Final de página, Márgenes de página, Posición actual."
   },
   {
-    "id": "insertar-87",
+    "id": "insertar-84",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -3093,7 +2985,7 @@
     "explicacion": "A los números con cero inicial no existen como formato. B las mayúsculas romanas (I, II, III) no figuran en la extracción; sí figuran las minúsculas (i, ii, iii). D el formato griego no existe. Los formatos reales son: 1,2,3 / -1,-2,-3 / a,b,c / A,B,C / i,ii,iii."
   },
   {
-    "id": "insertar-88",
+    "id": "insertar-85",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -3129,7 +3021,7 @@
     "explicacion": "A el submenú de Encabezado no contiene esa opción directamente. C la opción también existe en Disposición (no Diseño), pero la ruta de Insertar con la cinta contextual es la que se pide aquí. D es una ruta incorrecta."
   },
   {
-    "id": "insertar-89",
+    "id": "insertar-86",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -3165,7 +3057,7 @@
     "explicacion": "B no existe como comando. C es la ruta genérica de tabulaciones pero no la específica del encabezado. D sitúa el comando en Navegación, que solo contiene Ir al encabezado/pie, Vincular a la anterior, Anterior y Siguiente."
   },
   {
-    "id": "insertar-90",
+    "id": "insertar-87",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -3201,7 +3093,7 @@
     "explicacion": "A inserta un cuadro de texto prediseñado con formato, no lo dibuja libremente. C las Formas sí tienen un comando equivalente (Dibujar cuadro de texto) pero la ruta del grupo Texto es la que se pide. D no existe."
   },
   {
-    "id": "insertar-91",
+    "id": "insertar-88",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -3237,7 +3129,7 @@
     "explicacion": "A no existe como propiedad insertable. B la ruta del archivo es un campo (FileName), no una propiedad del documento en ese submenú. D no existe. \"Extracto\" sí figura en la extracción real como propiedad disponible."
   },
   {
-    "id": "insertar-92",
+    "id": "insertar-89",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -3273,7 +3165,7 @@
     "explicacion": "A \"Fecha y hora\" inserta la fecha actual del sistema, no la fecha de creación del archivo. C \"Fecha de creación\" no existe como propiedad del documento en ese submenú (sí existe CreateDate como campo). D también puede insertar fecha, pero es la fecha actual del sistema en el encabezado, no la fecha de creación del documento."
   },
   {
-    "id": "insertar-93",
+    "id": "insertar-90",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -3309,7 +3201,7 @@
     "explicacion": "A no existe como subopción. C no existe en esa ruta. D \"Administrar galería\" no existe; el nombre real es \"Organizador de bloques de creación\"."
   },
   {
-    "id": "insertar-94",
+    "id": "insertar-91",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -3345,7 +3237,7 @@
     "explicacion": "A no existe. C no existe. D no existe. Las posiciones reales son: Ninguno, En texto, En margen."
   },
   {
-    "id": "insertar-95",
+    "id": "insertar-92",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -3381,7 +3273,7 @@
     "explicacion": "A usa \"Alto en líneas\", que suena técnico pero no es el nombre real del campo. C no existe como ruta. D no existe."
   },
   {
-    "id": "insertar-96",
+    "id": "insertar-93",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -3417,7 +3309,7 @@
     "explicacion": "A el número de serie del certificado no se introduce en ese cuadro. C no existe ese campo. D \"Agregar servicios de firma\" es una opción separada en el menú Línea de firma, no un campo del cuadro Configuración. Los campos reales del cuadro son: Firmante sugerido, Puesto, Correo electrónico, Instrucciones, y las casillas de comentarios y fecha."
   },
   {
-    "id": "insertar-97",
+    "id": "insertar-94",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -3453,7 +3345,7 @@
     "explicacion": "A, C y D no existen como opciones en ese cuadro. El nombre real del campo es \"Actualizar automáticamente\". Si no está marcado, la fecha queda como texto estático."
   },
   {
-    "id": "insertar-98",
+    "id": "insertar-95",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -3489,7 +3381,7 @@
     "explicacion": "A importa el contenido de un archivo de texto, no crea un objeto OLE nuevo. B crea el objeto a partir de un archivo ya existente en el disco. D inserta una hoja Excel pero desde el grupo Tablas y sin cuadro de diálogo."
   },
   {
-    "id": "insertar-99",
+    "id": "insertar-96",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -3525,7 +3417,7 @@
     "explicacion": "A cambia la visualización a un icono pero no vincula. B no existe como opción; \"incrustar\" describe el comportamiento sin vínculo, no es una casilla. D no existe como opción en ese cuadro."
   },
   {
-    "id": "insertar-100",
+    "id": "insertar-97",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -3561,7 +3453,7 @@
     "explicacion": "A incrusta el archivo como objeto OLE, no importa el texto directamente al flujo del documento. C no existe como opción en Archivo. D no existe."
   },
   {
-    "id": "insertar-101",
+    "id": "insertar-98",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -3597,7 +3489,7 @@
     "explicacion": "A no figura en la galería integrada de Word 365. C y D son fórmulas físicas reales pero no están en la galería. Las ecuaciones integradas reales incluyen: Área del círculo, Expansión de una suma, Expansión Taylor, Fórmula cuadrática, Identidad trigonométrica 1."
   },
   {
-    "id": "insertar-102",
+    "id": "insertar-99",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -3633,7 +3525,7 @@
     "explicacion": "B usa \"en blanco\" que no es el nombre exacto. C no existe. D sitúa Ecuación en el grupo Texto."
   },
   {
-    "id": "insertar-103",
+    "id": "insertar-100",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -3669,7 +3561,7 @@
     "explicacion": "A \"manuscrita\" no es el término real. C \"Dibujar ecuación\" no existe con ese nombre. D no existe."
   },
   {
-    "id": "insertar-104",
+    "id": "insertar-101",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -3705,7 +3597,7 @@
     "explicacion": "A MathML no figura en la extracción real. C HTML no existe como opción de conversión. D TeX no existe como opción diferenciada de LaTeX. Las opciones reales son: Unicode, LaTeX y Texto."
   },
   {
-    "id": "insertar-105",
+    "id": "insertar-102",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -3741,7 +3633,7 @@
     "explicacion": "A y D no son estructuras del editor de ecuaciones. B tampoco. Las estructuras reales incluyen: Fracción, Índice, Radical, Integral, Operador grande, Corchete, Función, Acento, Límite y logaritmo, Operador, Matriz."
   },
   {
-    "id": "insertar-106",
+    "id": "insertar-103",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -3777,7 +3669,7 @@
     "explicacion": "A, C y D son símbolos matemáticos reales pero no figuran en la galería de recientes de la extracción. Los símbolos de la galería real incluyen: €, £, ¥, ©, ®, ™, ±, ≠, ≤, ≥, ÷, ×, ∞, µ, α, β, π, Ω, Σ, ☺."
   },
   {
-    "id": "insertar-107",
+    "id": "insertar-104",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -3813,7 +3705,7 @@
     "explicacion": "A \"Galería de símbolos\" no existe como opción. C \"Buscar símbolo\" no existe. D sitúa el comando en el grupo Texto."
   },
   {
-    "id": "insertar-108",
+    "id": "insertar-105",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -3849,7 +3741,7 @@
     "explicacion": "A el bullet es un carácter pero no figura en la pestaña Caracteres especiales con ese nombre. C no existe en esa pestaña. D el símbolo de grado es un símbolo Unicode pero no es un \"carácter especial\" de esa pestaña. Los caracteres especiales reales incluyen: Guión largo, Guión corto, Guión de no separación, Guión opcional, Espacio de no separación, Copyright, Registrado, Marca registrada, Sección, Párrafo, Puntos suspensivos, Comillas tipográficas."
   },
   {
-    "id": "insertar-109",
+    "id": "insertar-106",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -3885,7 +3777,7 @@
     "explicacion": "A la asignación de macros no es la función de ese botón. C describe Autocorrección, que es otro botón del mismo cuadro. D no existe."
   },
   {
-    "id": "insertar-110",
+    "id": "insertar-107",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — eSignature",
     "tipo": "opcion_unica",
@@ -3921,7 +3813,7 @@
     "explicacion": "A \"Agregar servicios de firma\" es una opción real del menú Línea de firma, pero lanza un asistente de configuración de proveedores, no una solicitud de firma concreta. C el grupo Vínculos no contiene eSignature. D no existe como ruta."
   },
   {
-    "id": "insertar-111",
+    "id": "insertar-108",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — eSignature",
     "tipo": "opcion_unica",
@@ -3957,7 +3849,7 @@
     "explicacion": "A el formato PDF no es el requerido. B OneDrive no es un requisito explícito del comando. D la Línea de firma de Microsoft Office es una función diferente; eSignature no la requiere. El mensaje real de la extracción indica: \"Save this document as a .docx file to use eSignature\"."
   },
   {
-    "id": "insertar-112",
+    "id": "insertar-109",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -3993,7 +3885,7 @@
     "explicacion": "A \"Formato de imagen\" es una cinta contextual diferente (aparece con imágenes, no con formas). C el grupo Estilos de forma no contiene Editar forma. D en Word 365 la pestaña contextual no se llama \"Herramientas de dibujo\"."
   },
   {
-    "id": "insertar-113",
+    "id": "insertar-110",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -4029,7 +3921,7 @@
     "explicacion": "A Estilos de forma contiene Relleno, Contorno y Efectos. B Tamaño contiene Alto y Ancho. D Texto contiene Dirección del texto, Alinear texto y Crear vínculo. Ajustar texto está en Organizar."
   },
   {
-    "id": "insertar-114",
+    "id": "insertar-111",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -4065,7 +3957,7 @@
     "explicacion": "A, B y C son grupos reales de esa cinta pero no contienen esos comandos. Traer adelante y Enviar atrás forman parte del grupo Organizar."
   },
   {
-    "id": "insertar-115",
+    "id": "insertar-112",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -4101,7 +3993,7 @@
     "explicacion": "A pertenece al grupo Texto. C pertenece al grupo Organizar. D pertenece al grupo Estilos de forma (no Estilos de WordArt). El grupo Estilos de WordArt contiene: Relleno de texto, Contorno de texto y Efectos de texto."
   },
   {
-    "id": "insertar-116",
+    "id": "insertar-113",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -4137,7 +4029,7 @@
     "explicacion": "A el grupo Texto contiene Dirección del texto, Alinear texto y Crear vínculo, no Texto alternativo. B Organizar gestiona posición y orden, no accesibilidad. D Estilos de forma gestiona apariencia visual."
   },
   {
-    "id": "insertar-117",
+    "id": "insertar-114",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -4173,7 +4065,7 @@
     "explicacion": "A pertenece a Estilos de WordArt. C pertenece al grupo Organizar. D pertenece a Estilos de forma. El grupo Texto contiene: Dirección del texto, Alinear texto y Crear vínculo."
   },
   {
-    "id": "insertar-118",
+    "id": "insertar-115",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Tablas",
     "tipo": "opcion_unica",
@@ -4209,7 +4101,7 @@
     "explicacion": "A no existe. C no existe. D no existe. Las tres opciones reales son: Ancho de columna fijo, Autoajustar al contenido, Autoajustar a la ventana."
   },
   {
-    "id": "insertar-119",
+    "id": "insertar-116",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Tablas",
     "tipo": "opcion_unica",
@@ -4245,7 +4137,7 @@
     "explicacion": "A, C y D no existen. Las opciones reales son: Ancho de columna fijo, Autoajustar al contenido, Autoajustar a la ventana."
   },
   {
-    "id": "insertar-120",
+    "id": "insertar-117",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Tablas",
     "tipo": "opcion_unica",
@@ -4281,7 +4173,7 @@
     "explicacion": "A, B y D usan denominaciones plausibles pero incorrectas. El nombre real de la casilla es \"Recordar dimensiones para tablas nuevas\"."
   },
   {
-    "id": "insertar-121",
+    "id": "insertar-118",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -4317,7 +4209,7 @@
     "explicacion": "A no existe. C no existe. D no existe. Las subcategorías reales incluyen: Formas usadas recientemente, Líneas, Rectángulos, Formas básicas, Flechas de bloque, Formas de ecuación, Diagrama de flujo, Cintas y estrellas, Llamadas, Nuevo lienzo de dibujo."
   },
   {
-    "id": "insertar-122",
+    "id": "insertar-119",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -4353,7 +4245,7 @@
     "explicacion": "A \"Flechas de dirección\" no existe; la categoría real es \"Flechas de bloque\". C y D no existen."
   },
   {
-    "id": "insertar-123",
+    "id": "insertar-120",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -4389,7 +4281,7 @@
     "explicacion": "B, C y D describen conceptos relacionados con anotaciones pero no son nombres de subcategorías reales. \"Llamadas\" sí figura en la extracción."
   },
   {
-    "id": "insertar-124",
+    "id": "insertar-121",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -4425,331 +4317,7 @@
     "explicacion": "A es una descripción funcional pero no el nombre real. B no existe con ese nombre. D no existe. El nombre exacto es \"Diagrama de flujo\". ILUSTRACIONES — CATEGORÍAS DE MODELOS 3D"
   },
   {
-    "id": "insertar-125",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Ilustraciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "ilustraciones",
-    "subtopic": null,
-    "tema": "Ilustraciones",
-    "sourceQuestionId": "P-80",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Vehículos de transporte"
-      },
-      {
-        "letter": "B",
-        "text": "Steampunk"
-      },
-      {
-        "letter": "C",
-        "text": "Personajes de fantasía"
-      },
-      {
-        "letter": "D",
-        "text": "Arquitectura urbana"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no figura con ese nombre. C y D no existen. \"Steampunk\" sí figura en la extracción real."
-  },
-  {
-    "id": "insertar-126",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Ilustraciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "ilustraciones",
-    "subtopic": null,
-    "tema": "Ilustraciones",
-    "sourceQuestionId": "P-81",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Obras de arte"
-      },
-      {
-        "letter": "B",
-        "text": "Instrumentos musicales"
-      },
-      {
-        "letter": "C",
-        "text": "Polígonos bajos"
-      },
-      {
-        "letter": "D",
-        "text": "Figuras abstractas"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "A, B y D no figuran en la extracción. \"Polígonos bajos\" sí existe."
-  },
-  {
-    "id": "insertar-127",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Ilustraciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "ilustraciones",
-    "subtopic": null,
-    "tema": "Ilustraciones",
-    "sourceQuestionId": "P-82",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Monumentos históricos"
-      },
-      {
-        "letter": "B",
-        "text": "Adhesivos"
-      },
-      {
-        "letter": "C",
-        "text": "Mapas del mundo"
-      },
-      {
-        "letter": "D",
-        "text": "Retratos humanos"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no existen en esa galería. \"Adhesivos\" sí figura en la extracción real."
-  },
-  {
-    "id": "insertar-128",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Ilustraciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "ilustraciones",
-    "subtopic": null,
-    "tema": "Ilustraciones",
-    "sourceQuestionId": "P-83",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Cosmos"
-      },
-      {
-        "letter": "B",
-        "text": "Sistemas solares"
-      },
-      {
-        "letter": "C",
-        "text": "Astronomía aplicada"
-      },
-      {
-        "letter": "D",
-        "text": "Ciencia espacial"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "B, C y D son denominaciones alternativas que podrían parecer equivalentes, pero el nombre exacto de la categoría es \"Cosmos\"."
-  },
-  {
-    "id": "insertar-129",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Ilustraciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "ilustraciones",
-    "subtopic": null,
-    "tema": "Ilustraciones",
-    "sourceQuestionId": "P-84",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Dioramas"
-      },
-      {
-        "letter": "B",
-        "text": "Escenas en miniatura"
-      },
-      {
-        "letter": "C",
-        "text": "Maquetas arquitectónicas"
-      },
-      {
-        "letter": "D",
-        "text": "Recreaciones históricas"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "B, C y D describen conceptos relacionados pero no son nombres de categorías reales. \"Dioramas\" sí figura en la extracción."
-  },
-  {
-    "id": "insertar-130",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Ilustraciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "ilustraciones",
-    "subtopic": null,
-    "tema": "Ilustraciones",
-    "sourceQuestionId": "P-85",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ciencias naturales"
-      },
-      {
-        "letter": "B",
-        "text": "Minerales y rocas"
-      },
-      {
-        "letter": "C",
-        "text": "Geología"
-      },
-      {
-        "letter": "D",
-        "text": "Geografía física"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "A, B y D son denominaciones plausibles pero incorrectas. El nombre exacto es \"Geología\"."
-  },
-  {
-    "id": "insertar-131",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Ilustraciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "ilustraciones",
-    "subtopic": null,
-    "tema": "Ilustraciones",
-    "sourceQuestionId": "P-86",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Letras"
-      },
-      {
-        "letter": "B",
-        "text": "Tipografía decorativa"
-      },
-      {
-        "letter": "C",
-        "text": "Alfabeto en relieve"
-      },
-      {
-        "letter": "D",
-        "text": "Caracteres en 3D"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "B, C y D son descripciones funcionales que suenan razonables pero el nombre exacto de la categoría es simplemente \"Letras\"."
-  },
-  {
-    "id": "insertar-132",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Ilustraciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "ilustraciones",
-    "subtopic": null,
-    "tema": "Ilustraciones",
-    "sourceQuestionId": "P-87",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Juguetes"
-      },
-      {
-        "letter": "B",
-        "text": "Artículos de coleccionismo"
-      },
-      {
-        "letter": "C",
-        "text": "Objetos de juego"
-      },
-      {
-        "letter": "D",
-        "text": "Material lúdico"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "B, C y D son denominaciones alternativas pero el nombre exacto es \"Juguetes\"."
-  },
-  {
-    "id": "insertar-133",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Ilustraciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "ilustraciones",
-    "subtopic": null,
-    "tema": "Ilustraciones",
-    "sourceQuestionId": "P-88",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Esculturas"
-      },
-      {
-        "letter": "B",
-        "text": "Arte contemporáneo"
-      },
-      {
-        "letter": "C",
-        "text": "Figuras decorativas"
-      },
-      {
-        "letter": "D",
-        "text": "Objetos de museo"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "B, C y D son denominaciones plausibles pero incorrectas. El nombre exacto es \"Esculturas\"."
-  },
-  {
-    "id": "insertar-134",
+    "id": "insertar-122",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -4785,7 +4353,7 @@
     "explicacion": "A, C y D son tipos de diagramas reales en otros contextos pero no son categorías de SmartArt en Word. \"Relación\" sí figura en la extracción."
   },
   {
-    "id": "insertar-135",
+    "id": "insertar-123",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -4821,7 +4389,7 @@
     "explicacion": "B, C y D describen funciones similares pero no son nombres de categorías SmartArt. \"Conoce al equipo\" sí figura en la extracción."
   },
   {
-    "id": "insertar-136",
+    "id": "insertar-124",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -4857,7 +4425,7 @@
     "explicacion": "B, C y D no existen como tipos de SmartArt. \"Tarjeta de texto\" sí figura en la extracción."
   },
   {
-    "id": "insertar-137",
+    "id": "insertar-125",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -4893,7 +4461,7 @@
     "explicacion": "A y D no son tipos de SmartArt. B \"Organigrama\" es un diseño concreto dentro de la categoría Jerarquía, no la categoría en sí. La categoría real se llama \"Jerarquía\"."
   },
   {
-    "id": "insertar-138",
+    "id": "insertar-126",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -4929,7 +4497,7 @@
     "explicacion": "B \"Radial\" sí existe pero \"radial expandido\" no es el nombre de un tipo. C es otra forma de llamar al gráfico circular pero no es el nombre oficial. D no existe como tipo independiente. \"Proyección solar\" sí figura en la extracción."
   },
   {
-    "id": "insertar-139",
+    "id": "insertar-127",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -4965,7 +4533,7 @@
     "explicacion": "A describe el gráfico X Y (dispersión) pero no es su nombre oficial. B no existe. D no existe. El tipo real se llama \"Mapa\"."
   },
   {
-    "id": "insertar-140",
+    "id": "insertar-128",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -5001,7 +4569,7 @@
     "explicacion": "B, C y D no existen como tipos. \"Embudo\" sí figura en la extracción real."
   },
   {
-    "id": "insertar-141",
+    "id": "insertar-129",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -5037,7 +4605,7 @@
     "explicacion": "A, C y D no existen como tipos de gráfico. \"Cascada\" sí figura en la extracción."
   },
   {
-    "id": "insertar-142",
+    "id": "insertar-130",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -5073,7 +4641,7 @@
     "explicacion": "B, C y D son denominaciones reales en otros contextos financieros pero no son el nombre del tipo en Word. El tipo real se llama \"Cotizaciones\"."
   },
   {
-    "id": "insertar-143",
+    "id": "insertar-131",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
     "tipo": "opcion_unica",
@@ -5109,7 +4677,7 @@
     "explicacion": "A y C son denominaciones que describen este tipo de gráfico en otros sistemas pero no son el nombre oficial en Word. D no existe como tipo. El nombre real es \"Rectángulos\" (treemap)."
   },
   {
-    "id": "insertar-144",
+    "id": "insertar-132",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -5145,7 +4713,7 @@
     "explicacion": "A no existe con ese nombre exacto; la opción real es \"Texto de párrafo\". C no existe. D no existe. \"Número de párrafo (sin contexto)\" sí figura en la extracción."
   },
   {
-    "id": "insertar-145",
+    "id": "insertar-133",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -5181,7 +4749,7 @@
     "explicacion": "B, C y D son formas alternativas de expresar la misma idea pero no son el nombre real de la opción. El nombre exacto es \"Más adelante o más atrás\"."
   },
   {
-    "id": "insertar-146",
+    "id": "insertar-134",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -5217,7 +4785,7 @@
     "explicacion": "A, C y D son denominaciones plausibles pero incorrectas. El nombre real de la casilla es \"Insertar como hipervínculo\"."
   },
   {
-    "id": "insertar-147",
+    "id": "insertar-135",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -5253,7 +4821,7 @@
     "explicacion": "A, B y D no existen con esos nombres. El nombre real de la casilla es \"Incluir más adelante o más atrás\"."
   },
   {
-    "id": "insertar-148",
+    "id": "insertar-136",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
     "tipo": "opcion_unica",
@@ -5289,7 +4857,7 @@
     "explicacion": "A, C y D son denominaciones plausibles pero incorrectas. El nombre real de la casilla es \"Marcadores ocultos\". ENCABEZADO Y PIE — NÚMERO DE PÁGINA (SUBRUTAS)"
   },
   {
-    "id": "insertar-149",
+    "id": "insertar-137",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5325,7 +4893,7 @@
     "explicacion": "A \"Número centrado\" no existe con ese nombre; los tres números simples son: Número sin formato 1, 2 y 3 (alineados a izquierda, centro y derecha). C \"Círculo relleno\" no existe; la opción real es solo \"Círculo\". D no existe."
   },
   {
-    "id": "insertar-150",
+    "id": "insertar-138",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5361,7 +4929,7 @@
     "explicacion": "B, C y D no existen. \"Cinta\" sí figura como opción real dentro de Final de página > Con formas."
   },
   {
-    "id": "insertar-151",
+    "id": "insertar-139",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5397,7 +4965,7 @@
     "explicacion": "B, C y D no existen con esos nombres. \"Flecha, derecha\" sí figura en la extracción real."
   },
   {
-    "id": "insertar-152",
+    "id": "insertar-140",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5433,7 +5001,7 @@
     "explicacion": "A, C y D no existen. El nombre real es \"Barra de énfasis, derec...\" (abreviado en la extracción por longitud)."
   },
   {
-    "id": "insertar-153",
+    "id": "insertar-141",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5469,7 +5037,7 @@
     "explicacion": "B, C y D no existen. \"Mosaico\" sí figura en Posición actual > Con formas."
   },
   {
-    "id": "insertar-154",
+    "id": "insertar-142",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5505,7 +5073,7 @@
     "explicacion": "A, C y D son variantes plausibles pero incorrectas. El nombre real es \"Corchetes\"."
   },
   {
-    "id": "insertar-155",
+    "id": "insertar-143",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5541,7 +5109,7 @@
     "explicacion": "A, C y D usan denominaciones plausibles pero incorrectas. El nombre real del campo es \"Iniciar en\"."
   },
   {
-    "id": "insertar-156",
+    "id": "insertar-144",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5577,7 +5145,7 @@
     "explicacion": "A, C y D no existen con esos nombres. La opción real se llama \"Incluir número de capítulo\"."
   },
   {
-    "id": "insertar-157",
+    "id": "insertar-145",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5613,7 +5181,7 @@
     "explicacion": "A la barra no figura en la extracción. B el guión largo no figura. D el punto medio no figura. La extracción real muestra: - (guión)."
   },
   {
-    "id": "insertar-158",
+    "id": "insertar-146",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5649,7 +5217,7 @@
     "explicacion": "A Elementos rápidos también existe en esa cinta pero no es el comando específico para información del documento. C y D no existen con esos nombres."
   },
   {
-    "id": "insertar-159",
+    "id": "insertar-147",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5685,7 +5253,7 @@
     "explicacion": "A, C y D no existen. \"Vincular a la anterior\" es el comando real; cuando está activo enlaza con la sección anterior, y desactivándolo los independiza."
   },
   {
-    "id": "insertar-160",
+    "id": "insertar-148",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5721,7 +5289,7 @@
     "explicacion": "A, C y D son denominaciones plausibles pero incorrectas. El nombre real es \"Páginas pares e impares diferentes\"."
   },
   {
-    "id": "insertar-161",
+    "id": "insertar-149",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5757,7 +5325,7 @@
     "explicacion": "A, B y D no existen con esos nombres. El nombre real es \"Mostrar texto del documento\"."
   },
   {
-    "id": "insertar-162",
+    "id": "insertar-150",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
@@ -5793,7 +5361,7 @@
     "explicacion": "A, B y D son denominaciones plausibles pero incorrectas. El nombre real del campo es \"Encabezado desde arriba\" (valor predeterminado: 1,25 cm)."
   },
   {
-    "id": "insertar-163",
+    "id": "insertar-151",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -5829,7 +5397,7 @@
     "explicacion": "A no figura en la extracción. C y D tampoco. \"Fax de la compañía\" sí figura en la lista real de propiedades del documento."
   },
   {
-    "id": "insertar-164",
+    "id": "insertar-152",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -5865,7 +5433,7 @@
     "explicacion": "A no existe como propiedad insertable en ese submenú. C y D no existen. \"Fecha de publicación\" sí figura en la extracción real."
   },
   {
-    "id": "insertar-165",
+    "id": "insertar-153",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -5901,7 +5469,7 @@
     "explicacion": "A, C y D no existen con esos nombres. \"Dirección de la compañía\" sí figura en la extracción."
   },
   {
-    "id": "insertar-166",
+    "id": "insertar-154",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -5937,7 +5505,7 @@
     "explicacion": "A, C y D son sinónimos plausibles pero el nombre exacto de la propiedad es \"Extracto\"."
   },
   {
-    "id": "insertar-167",
+    "id": "insertar-155",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -5973,7 +5541,7 @@
     "explicacion": "B, C y D son denominaciones alternativas pero el nombre real es \"Palabras clave\"."
   },
   {
-    "id": "insertar-168",
+    "id": "insertar-156",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6009,7 +5577,7 @@
     "explicacion": "A, C y D son denominaciones plausibles pero el nombre exacto de la propiedad es \"Administrador\"."
   },
   {
-    "id": "insertar-169",
+    "id": "insertar-157",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6045,7 +5613,7 @@
     "explicacion": "A, C y D no son nombres de campo reales en Word. \"CreateDate\" sí figura en la extracción real como nombre de campo oficial."
   },
   {
-    "id": "insertar-170",
+    "id": "insertar-158",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6081,7 +5649,7 @@
     "explicacion": "A, C y D no son nombres de campo reales. \"AutoNum\" sí figura en la extracción como nombre de campo oficial."
   },
   {
-    "id": "insertar-171",
+    "id": "insertar-159",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6117,7 +5685,7 @@
     "explicacion": "A, C y D no existen con esos nombres. La casilla real se llama \"Conservar formato al actualizar\"."
   },
   {
-    "id": "insertar-172",
+    "id": "insertar-160",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6153,7 +5721,7 @@
     "explicacion": "A \"Duplicar\" no existe. C \"Copiar\" y \"Mover\" no existen en ese cuadro. D \"Renombrar\" y \"Archivar\" no existen. Las tres acciones reales son: Editar propiedades, Eliminar, Insertar. TEXTO — LETRA CAPITAL (CUADRO DE DIÁLOGO)"
   },
   {
-    "id": "insertar-173",
+    "id": "insertar-161",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6189,7 +5757,7 @@
     "explicacion": "A el color no se configura en ese cuadro (se hace desde Formato de carácter). C el tamaño se expresa en número de líneas que ocupa, no en puntos. D no existe. Las opciones reales del cuadro son: Posición, Fuente, Líneas que ocupa, Distancia desde el texto."
   },
   {
-    "id": "insertar-174",
+    "id": "insertar-162",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6225,7 +5793,7 @@
     "explicacion": "A, B y D son valores plausibles pero el valor predeterminado real es 3, tal como figura en la extracción."
   },
   {
-    "id": "insertar-175",
+    "id": "insertar-163",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6261,7 +5829,7 @@
     "explicacion": "A, B y C son valores con separación, pero el valor predeterminado real es 0 cm, tal como figura en la extracción. TEXTO — LÍNEA DE FIRMA (CUADRO DE DIÁLOGO)"
   },
   {
-    "id": "insertar-176",
+    "id": "insertar-164",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6297,7 +5865,7 @@
     "explicacion": "A, C y D no existen con esos nombres. La casilla real se llama \"Mostrar la fecha en la línea de firma\"."
   },
   {
-    "id": "insertar-177",
+    "id": "insertar-165",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6333,7 +5901,7 @@
     "explicacion": "A, C y D no existen como casillas de ese cuadro. La casilla real es \"Permitir que el firmante agregue comentarios en el cuadro de diálogo Firmar\". TEXTO — FECHA Y HORA (CUADRO DE DIÁLOGO)"
   },
   {
-    "id": "insertar-178",
+    "id": "insertar-166",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6369,7 +5937,7 @@
     "explicacion": "A es notación de código de formato, no un formato de visualización. C el separador de puntos no figura en la extracción. D es el formato en inglés; la instalación es en español. El formato real \"3-sep-26\" sí figura en la extracción."
   },
   {
-    "id": "insertar-179",
+    "id": "insertar-167",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6405,7 +5973,7 @@
     "explicacion": "A, C y D no existen. El botón real se llama \"Establecer como predeterminado\". TEXTO — OBJETO (CUADRO DE DIÁLOGO)"
   },
   {
-    "id": "insertar-180",
+    "id": "insertar-168",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6441,7 +6009,7 @@
     "explicacion": "A Microsoft Access no figura en la extracción real de ese cuadro. C Visio tampoco. D Adobe Acrobat tampoco. \"Microsoft Graph Chart\" sí figura en la extracción."
   },
   {
-    "id": "insertar-181",
+    "id": "insertar-169",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6477,7 +6045,7 @@
     "explicacion": "B, C y D no figuran en la extracción real. \"Microsoft Excel Macro-Enabled Worksheet\" sí figura como tipo de objeto disponible."
   },
   {
-    "id": "insertar-182",
+    "id": "insertar-170",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
@@ -6513,7 +6081,7 @@
     "explicacion": "A, C y D no figuran en la extracción. \"Microsoft PowerPoint 97-2003 Presentation\" sí figura como tipo disponible."
   },
   {
-    "id": "insertar-183",
+    "id": "insertar-171",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6549,7 +6117,7 @@
     "explicacion": "A, C y D no son estructuras reales del editor de ecuaciones. \"Operador grande\" sí figura en la extracción."
   },
   {
-    "id": "insertar-184",
+    "id": "insertar-172",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6585,7 +6153,7 @@
     "explicacion": "A \"Exponente\" no es el nombre de la estructura; se accede al exponente desde \"Índice\". C \"Potencia\" tampoco es el nombre. D no existe. \"Radical\" sí figura como estructura real."
   },
   {
-    "id": "insertar-185",
+    "id": "insertar-173",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6621,7 +6189,7 @@
     "explicacion": "B, C y D son denominaciones alternativas pero el nombre real de la estructura es \"Corchete\"."
   },
   {
-    "id": "insertar-186",
+    "id": "insertar-174",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6657,7 +6225,7 @@
     "explicacion": "A, C y D no son nombres de estructura. El nombre real es \"Límite y logaritmo\"."
   },
   {
-    "id": "insertar-187",
+    "id": "insertar-175",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6693,7 +6261,7 @@
     "explicacion": "A describe una función del editor pero no es el nombre de la estructura. C y D no existen. El nombre real es \"Índice\"."
   },
   {
-    "id": "insertar-188",
+    "id": "insertar-176",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6729,7 +6297,7 @@
     "explicacion": "A, C y D no son nombres de estructura. El nombre real es \"Integral\"."
   },
   {
-    "id": "insertar-189",
+    "id": "insertar-177",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6765,7 +6333,7 @@
     "explicacion": "A, C y D son denominaciones alternativas pero el nombre real de la estructura es \"Fracción\"."
   },
   {
-    "id": "insertar-190",
+    "id": "insertar-178",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6801,7 +6369,7 @@
     "explicacion": "A, B y D son denominaciones plausibles pero incorrectas. El nombre real de la estructura es \"Matriz\"."
   },
   {
-    "id": "insertar-191",
+    "id": "insertar-179",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6837,7 +6405,7 @@
     "explicacion": "A, C y D no son nombres de estructura en el editor de ecuaciones. El nombre real es \"Acento\"."
   },
   {
-    "id": "insertar-192",
+    "id": "insertar-180",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6873,7 +6441,7 @@
     "explicacion": "A y D añaden palabras innecesarias. B es una descripción, no el nombre. El nombre real y exacto de la estructura es simplemente \"Función\"."
   },
   {
-    "id": "insertar-193",
+    "id": "insertar-181",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6909,7 +6477,7 @@
     "explicacion": "A, C y D no son nombres de estructura. El nombre real es \"Operador\"."
   },
   {
-    "id": "insertar-194",
+    "id": "insertar-182",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6945,7 +6513,7 @@
     "explicacion": "B, C y D mezclan términos plausibles con nombres incorrectos. Las cuatro opciones reales son exactamente: Escribir, Borrar, Seleccionar y corregir, Eliminar. SÍMBOLOS — CUADRO SÍMBOLO (SUBRUTAS)"
   },
   {
-    "id": "insertar-195",
+    "id": "insertar-183",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -6981,7 +6549,7 @@
     "explicacion": "A, C y D no son nombres de subconjunto reales en ese cuadro. \"Latín básico\" sí figura en la extracción."
   },
   {
-    "id": "insertar-196",
+    "id": "insertar-184",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -7017,7 +6585,7 @@
     "explicacion": "A \"Teclas\" permite asignar un atajo de teclado, no una Autocorrección. C y D no existen como botones en ese cuadro. Los dos botones reales de acción son \"Autocorrección...\" y \"Teclas...\"."
   },
   {
-    "id": "insertar-197",
+    "id": "insertar-185",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -7053,7 +6621,7 @@
     "explicacion": "A no existe en esa pestaña. C y D tampoco. \"Espacio de no separación\" sí figura en la extracción real."
   },
   {
-    "id": "insertar-198",
+    "id": "insertar-186",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -7089,7 +6657,7 @@
     "explicacion": "B, C y D son denominaciones plausibles pero incorrectas. El nombre real es \"Guión de no separación\"."
   },
   {
-    "id": "insertar-199",
+    "id": "insertar-187",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -7125,7 +6693,7 @@
     "explicacion": "A, C y D son denominaciones alternativas pero el nombre real que figura en la extracción es \"Comillas de apertura\"."
   },
   {
-    "id": "insertar-200",
+    "id": "insertar-188",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -7161,7 +6729,7 @@
     "explicacion": "B, C y D son denominaciones alternativas. El nombre real que figura en la extracción es \"Puntos suspensivos\"."
   },
   {
-    "id": "insertar-201",
+    "id": "insertar-189",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -7197,7 +6765,7 @@
     "explicacion": "B \"Guión medio\" es otra denominación común pero no es el nombre exacto en Word. C y D no existen. El nombre real es \"Guión corto\"."
   },
   {
-    "id": "insertar-202",
+    "id": "insertar-190",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -7233,7 +6801,7 @@
     "explicacion": "B es otra denominación común pero no la oficial en Word. C y D no existen. El nombre real es \"Guión largo\"."
   },
   {
-    "id": "insertar-203",
+    "id": "insertar-191",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -7269,7 +6837,7 @@
     "explicacion": "B es la denominación en inglés (em space). C y D son denominaciones técnicas alternativas. El nombre real en la extracción en español es \"Espacio largo\"."
   },
   {
-    "id": "insertar-204",
+    "id": "insertar-192",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
     "tipo": "opcion_unica",
@@ -7305,7 +6873,7 @@
     "explicacion": "A, C y D son denominaciones alternativas. El nombre real y exacto en la extracción es simplemente \"Sección\"."
   },
   {
-    "id": "insertar-205",
+    "id": "insertar-193",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7341,7 +6909,7 @@
     "explicacion": "A y C pertenecen al grupo Estilos de WordArt, no a Estilos de forma. D pertenece al grupo Texto. El grupo Estilos de forma contiene: Relleno de forma, Contorno de forma, Efectos de forma."
   },
   {
-    "id": "insertar-206",
+    "id": "insertar-194",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7377,7 +6945,7 @@
     "explicacion": "A y C pertenecen a Estilos de WordArt. D pertenece al grupo Texto. \"Relleno de forma\" sí pertenece a Estilos de forma."
   },
   {
-    "id": "insertar-207",
+    "id": "insertar-195",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7413,7 +6981,7 @@
     "explicacion": "A y B pertenecen a Estilos de forma. D pertenece a Organizar. \"Efectos de texto\" sí pertenece a Estilos de WordArt."
   },
   {
-    "id": "insertar-208",
+    "id": "insertar-196",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7449,7 +7017,7 @@
     "explicacion": "A pertenece al grupo Texto. B pertenece al grupo Accesibilidad. D pertenece a Estilos de forma. \"Agrupar\" sí pertenece al grupo Organizar."
   },
   {
-    "id": "insertar-209",
+    "id": "insertar-197",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7485,7 +7053,7 @@
     "explicacion": "A pertenece al grupo Texto. C pertenece a Estilos de WordArt. D pertenece al grupo Tamaño. \"Girar\" sí pertenece al grupo Organizar."
   },
   {
-    "id": "insertar-210",
+    "id": "insertar-198",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7521,7 +7089,7 @@
     "explicacion": "A pertenece a Estilos de forma. B pertenece al grupo Tamaño. D no existe. \"Panel de selección\" sí pertenece al grupo Organizar."
   },
   {
-    "id": "insertar-211",
+    "id": "insertar-199",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7557,7 +7125,7 @@
     "explicacion": "A es una opción del cuadro Objeto, no un comando de la cinta de forma. C pertenece al formato de carácter. D pertenece a Estilos de WordArt. \"Posición\" sí pertenece al grupo Organizar."
   },
   {
-    "id": "insertar-212",
+    "id": "insertar-200",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7593,7 +7161,7 @@
     "explicacion": "A, C y D son estructuras del editor de ecuaciones, no comandos de Organizar. \"Alinear\" sí pertenece al grupo Organizar."
   },
   {
-    "id": "insertar-213",
+    "id": "insertar-201",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7629,7 +7197,7 @@
     "explicacion": "A pertenece al grupo Organizar. C pertenece a Estilos de forma. D pertenece al grupo Organizar. \"Crear vínculo\" sí pertenece al grupo Texto (permite vincular el flujo de texto entre cuadros de texto)."
   },
   {
-    "id": "insertar-214",
+    "id": "insertar-202",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7665,7 +7233,7 @@
     "explicacion": "A controla cómo el texto del documento rodea la forma, no el flujo entre cuadros. B cambia la orientación del texto dentro del cuadro. D controla la alineación vertical del texto. \"Crear vínculo\" es el comando que enlaza cuadros de texto para que el contenido fluya de uno al siguiente."
   },
   {
-    "id": "insertar-215",
+    "id": "insertar-203",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7701,7 +7269,7 @@
     "explicacion": "A, C y D pertenecen al grupo Organizar. El grupo Tamaño contiene únicamente: Alto y Ancho."
   },
   {
-    "id": "insertar-216",
+    "id": "insertar-204",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
@@ -7737,7 +7305,7 @@
     "explicacion": "A pertenece a Estilos de forma. C pertenece a Organizar. D pertenece a Accesibilidad. El grupo Insertar formas contiene: Editar forma y Dibujar cuadro de texto."
   },
   {
-    "id": "insertar-217",
+    "id": "insertar-205",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
     "tipo": "opcion_unica",
