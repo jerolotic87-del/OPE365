@@ -12003,5 +12003,473 @@
   "matching": null,
   "respuesta": "A",
   "explicacion": "A diferencia de la cinta de opciones, la personalización de la barra de acceso rápido es total: puedes quitar y reordenar todo. Pero solo admite comandos sueltos: no galerías, listas desplegables ni estilos individuales. Sus botones predeterminados son Guardar automáticamente, Guardar, Deshacer, Rehacer y Personalizar."
+ },
+ {
+  "id": "archivo-338",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-02",
+  "generado": true,
+  "enunciado": "Has instalado complementos y macros firmados digitalmente por un proveedor concreto y quieres que Word confíe siempre en ese editor sin volver a preguntarte. ¿Dónde gestionas la lista?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Editores de confianza"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Ubicaciones de confianza"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Documentos confiables"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Catálogos de complementos de confianza"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Editores de confianza. Guarda los certificados de los editores en los que has decidido confiar; su contenido firmado se habilita sin avisos."
+ },
+ {
+  "id": "archivo-339",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-03",
+  "generado": true,
+  "enunciado": "Guardas tus documentos con macros en una carpeta concreta y quieres que Word los abra sin advertencias de seguridad por confiar en esa ubicación. ¿Dónde añades esa carpeta?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Ubicaciones de confianza"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Editores de confianza"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Documentos confiables"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de bloqueo de archivos"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Ubicaciones de confianza. Los archivos abiertos desde una ubicación de confianza se abren sin pasar por la Vista protegida ni pedir habilitar macros."
+ },
+ {
+  "id": "archivo-340",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-04",
+  "generado": true,
+  "enunciado": "Habilitaste el contenido de varios documentos concretos y ahora quieres borrar esa confianza para que Word vuelva a preguntar. ¿Dónde lo restableces?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Documentos confiables"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Ubicaciones de confianza"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Editores de confianza"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Vista protegida"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Documentos confiables. Incluye el botón Borrar para restablecer todos los documentos confiables y una casilla para deshabilitar la confianza en documentos de la red."
+ },
+ {
+  "id": "archivo-341",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-05",
+  "generado": true,
+  "enunciado": "Tu organización usa un catálogo interno de complementos web y quieres registrarlo como fuente de confianza. ¿Dónde lo añades?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Catálogos de complementos de confianza"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Complementos"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Editores de confianza"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Ubicaciones de confianza"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Catálogos de complementos de confianza. Registra las URL de catálogos de complementos web (add-ins de Office) que tu organización considera seguros."
+ },
+ {
+  "id": "archivo-342",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-06",
+  "generado": true,
+  "enunciado": "Por política de seguridad quieres exigir que todos los complementos de aplicación estén firmados por un editor de confianza, o deshabilitarlos todos. ¿Dónde lo configuras?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Complementos"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de ActiveX"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Catálogos de complementos de confianza"
+   },
+   {
+    "letter": "D",
+    "text": "Archivo → Opciones → Complementos"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Complementos. Es la sección de SEGURIDAD de complementos (exigir firma, deshabilitar todos, modo de aplicación); no se confunde con la categoría «Complementos» del cuadro Opciones, que solo lista los instalados."
+ },
+ {
+  "id": "archivo-343",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-07",
+  "generado": true,
+  "enunciado": "Abres documentos con controles ActiveX y quieres controlar si se habilitan, se piden o se bloquean por seguridad. ¿Dónde lo configuras?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de ActiveX"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de macros"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Complementos"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Barra de mensajes"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Configuración de ActiveX. Define cómo se cargan los controles ActiveX de los documentos (deshabilitar, preguntar, habilitar con restricciones)."
+ },
+ {
+  "id": "archivo-344",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-08",
+  "generado": true,
+  "enunciado": "Al abrir un documento con macros Word las bloquea automáticamente y quieres que en su lugar te avise antes de habilitarlas. ¿Dónde cambias el nivel de seguridad de las macros?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de macros"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de ActiveX"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Editores de confianza"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Vista protegida"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Configuración de macros. La opción recomendada y predeterminada es «Deshabilitar las macros VBA con notificación»: bloquea las macros pero avisa para poder habilitarlas manualmente."
+ },
+ {
+  "id": "archivo-345",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-09",
+  "generado": true,
+  "enunciado": "Descargas documentos de internet o los recibes por correo y quieres controlar si Word los abre en modo de solo lectura protegido antes de permitir editarlos. ¿Dónde configuras la Vista protegida?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Vista protegida"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de bloqueo de archivos"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Barra de mensajes"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Ubicaciones de confianza"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Vista protegida. Abre en modo aislado los archivos procedentes de internet, de ubicaciones potencialmente peligrosas o adjuntos de Outlook."
+ },
+ {
+  "id": "archivo-346",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-10",
+  "generado": true,
+  "enunciado": "Quieres impedir que Word abra o guarde ciertos formatos antiguos o potencialmente peligrosos, como versiones muy antiguas de .doc. ¿Dónde lo configuras?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de bloqueo de archivos"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Vista protegida"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de macros"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Contenido externo"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Configuración de bloqueo de archivos. Permite marcar por tipo de formato si se bloquea al abrir, al guardar o ambos (y si el bloqueado se abre en Vista protegida)."
+ },
+ {
+  "id": "archivo-347",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-11",
+  "generado": true,
+  "enunciado": "Quieres controlar si Word muestra la barra de advertencia amarilla en la parte superior cuando bloquea contenido activo como macros o controles. ¿Dónde lo configuras?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Barra de mensajes"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Vista protegida"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de macros"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de ActiveX"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Barra de mensajes. Elige entre mostrar la barra de mensajes cuando se bloquea contenido activo o no mostrarla nunca."
+ },
+ {
+  "id": "archivo-348",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-12",
+  "generado": true,
+  "enunciado": "Quieres controlar cuándo Word avisa si otro programa intenta acceder a él mediante programación para enviar documentos, por seguridad frente a virus de macros. ¿Dónde lo configuras?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Acceso mediante programación"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de macros"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de formularios"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Barra de mensajes"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Acceso mediante programación. Controla el aviso cuando otra aplicación accede al modelo de objetos de Word (avisar según la configuración de macros, avisar siempre o no avisar nunca)."
+ },
+ {
+  "id": "archivo-349",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-13",
+  "generado": true,
+  "enunciado": "Quieres revisar y ajustar qué datos comparte Word con Microsoft y gestionar las experiencias conectadas desde el Centro de confianza. ¿Dónde accedes?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Opciones de privacidad"
+   },
+   {
+    "letter": "B",
+    "text": "Archivo → Opciones → General → Configuración de privacidad"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Barra de mensajes"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Editores de confianza"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Opciones de privacidad. Está relacionada con Archivo → Opciones → General → Configuración de privacidad: ambas gestionan las experiencias conectadas y el envío de datos de diagnóstico."
+ },
+ {
+  "id": "archivo-350",
+  "sourceFile": "archivo.json",
+  "bloque": "Archivo — Opciones",
+  "tipo": "opcion_unica",
+  "categoria": "ruta",
+  "negativa": false,
+  "section": "archivo",
+  "topic": "opciones-complementos",
+  "subtopic": "Centro de confianza",
+  "tema": "Opciones",
+  "sourceQuestionId": "opc-tc-14",
+  "generado": true,
+  "enunciado": "Quieres controlar cómo se comporta Word ante solicitudes de inicio de sesión basadas en formularios de servidores externos. ¿Dónde lo configuras?",
+  "opciones": [
+   {
+    "letter": "A",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de formularios"
+   },
+   {
+    "letter": "B",
+    "text": "Configuración del Centro de confianza... ▸ Acceso mediante programación"
+   },
+   {
+    "letter": "C",
+    "text": "Configuración del Centro de confianza... ▸ Configuración de ActiveX"
+   },
+   {
+    "letter": "D",
+    "text": "Configuración del Centro de confianza... ▸ Barra de mensajes"
+   }
+  ],
+  "matching": null,
+  "respuesta": "A",
+  "explicacion": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza… → Configuración de formularios (Form-based Sign-in). Define si Word permite, pregunta o bloquea las solicitudes de inicio de sesión mediante formularios web de sitios externos."
  }
 ]

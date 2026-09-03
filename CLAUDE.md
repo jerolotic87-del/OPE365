@@ -248,9 +248,9 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 516, inicio 393, archivo 336, vista 145, revisar 78, insertar 45,
+interfaz 516, inicio 393, archivo 350, vista 145, revisar 78, insertar 45,
 referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
-Total 1528. Historial: `data/questions_regroup_report.md`. Las de `archivo`
+Total 1542. Historial: `data/questions_regroup_report.md`. Las de `archivo`
 `archivo-134..` (`sourceQuestionId` `opc-<panel>-NN`) cubren toggles de
 `Archivo > Opciones` — opción = "sub-panel del diálogo ▸ ajuste",
 distractores = ajustes-hermanos reales, nada inventado; las que ya tenían
@@ -260,7 +260,17 @@ topic `opciones-personalizar`) cubren el panel Barra de acceso rápido de
 Opciones (filtro "Comandos disponibles en", Agregar/Quitar/Modificar,
 separador, macros, para todos/este documento, mostrar/posición/etiquetas,
 Restablecer, Importar-exportar) — verificadas con aulaClic + vence.es +
-Microsoft Support ES; complementan `archivo-105..107` sin duplicarlas. **Taxonomía v6→v7**: el
+Microsoft Support ES; complementan `archivo-105..107` sin duplicarlas.
+`archivo-337` (`opc-bar-14`) = concepto (personalización total pero solo
+comandos). `archivo-338..350` (`opc-tc-02..14`, `subtopic` "Centro de
+confianza", topic `opciones-complementos`) cubren las secciones del diálogo
+Configuración del Centro de confianza (Editores/Ubicaciones/Documentos
+confiables, Catálogos, Complementos-seguridad, ActiveX, Macros, Vista
+protegida, Bloqueo de archivos, Barra de mensajes, Acceso mediante
+programación, Opciones de privacidad, Configuración de formularios) —
+verificadas con aulaClic + educa.jcyl.es + Microsoft Support ES; se omitió
+el "acceder al Centro de confianza" del usuario por duplicar `archivo-112`.
+Sin atajos en el bloque. **Taxonomía v6→v7**: el
 topic único `archivo:opciones` (concepto gigante que degradaba el motor) se
 partió por panel — `opciones-general/-presentacion/-revision/-guardar/
 -idioma/-accesibilidad/-personalizar/-complementos` y, para el panel
