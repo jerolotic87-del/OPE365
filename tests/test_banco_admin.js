@@ -62,10 +62,24 @@ const rows = w => w.document.querySelectorAll("#bk-body .qlist-item").length;
   ok(!!row, "la fila es la pregunta buscada");
 
   row.dispatchEvent(new w.MouseEvent("click", { bubbles:true }));
-  ok(/Editar pregunta/.test(w.document.body.innerHTML) && !!w.document.querySelector("#edit-delbank"),
-    "clic en fila abre el editor con 'Borrar del banco'");
-  const cancel = w.document.querySelector("#edit-cancel");
-  if(cancel) cancel.dispatchEvent(new w.MouseEvent("click", { bubbles:true }));
+  ok(!!w.document.querySelector("#bk-editor #bk-ed-enun") && !!w.document.querySelector("#bk-editor #bk-ed-delbank"),
+    "clic en fila carga el panel de edición inline con 'Borrar del banco'");
+  ok(w.document.querySelector(`#bk-body [data-qid="${sample.id}"]`).classList.contains("selected"),
+    "la fila queda marcada como seleccionada");
+
+  // autoguardado: cambiar la explicación dispara una corrección local
+  const origExpl = O.ContentEdit.original("q", sample.id).explicacion || "";
+  const expl = w.document.querySelector("#bk-ed-expl");
+  expl.value = "Explicación corregida por el test.";
+  expl.dispatchEvent(new w.Event("change", { bubbles:true }));
+  ok(O.Q_BY_ID[sample.id].explicacion === "Explicación corregida por el test." && O.ContentEdit.has("q", sample.id),
+    "editar en el panel guarda la corrección en el objeto canónico");
+
+  // volver el campo al valor original en el propio panel -> la corrección se retira sola
+  expl.value = origExpl;
+  expl.dispatchEvent(new w.Event("change", { bubbles:true }));
+  ok(!O.ContentEdit.has("q", sample.id) && (O.Q_BY_ID[sample.id].explicacion || "") === origExpl,
+    "dejar el campo como el original retira la corrección automáticamente");
 
   // pestaña Flashcards
   goto(w, "banco");

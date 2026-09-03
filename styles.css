@@ -492,6 +492,22 @@ input[type="date"]{ color-scheme:dark; }
 .pill:hover{ border-color:var(--border-2); }
 .pill.active{ background:var(--accent-dim); color:var(--accent-ink); border-color:var(--accent-line); }
 
+/* Editor del banco (admin) — lista + panel de edición estilo Anki */
+.bk-split{ display:grid; grid-template-columns:minmax(280px,400px) 1fr; gap:var(--sp-5); align-items:start; }
+.bk-list{ max-height:calc(100vh - 280px); overflow-y:auto; padding-right:2px; }
+.bk-editor{ position:sticky; top:var(--sp-4); border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); padding:var(--sp-5); max-height:calc(100vh - 200px); overflow-y:auto; }
+.bk-editor-empty{ color:var(--text-3); font-size:13px; padding:var(--sp-6) 0; text-align:center; }
+.bk-ed-top{ display:flex; justify-content:space-between; align-items:center; gap:var(--sp-3); margin-bottom:var(--sp-3); flex-wrap:wrap; }
+.bk-ed-nav{ display:flex; align-items:center; gap:8px; }
+.bk-ed-nav .pos{ font-size:12px; color:var(--text-2); }
+.bk-row.selected{ border-color:var(--accent-line); background:var(--accent-dim); }
+.bk-row.has-ov .badge{ color:var(--accent-ink); }
+@media (max-width:900px){
+  .bk-split{ grid-template-columns:1fr; }
+  .bk-list{ max-height:none; }
+  .bk-editor{ position:static; max-height:none; }
+}
+
 .field{ margin-bottom:var(--sp-4); }
 .field label{ display:block; font-size:11.5px; font-weight:700; color:var(--text-2); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; }
 .field select, .field input{

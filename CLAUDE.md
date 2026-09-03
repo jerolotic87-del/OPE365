@@ -403,13 +403,21 @@ archivo, añádele preguntas a ese archivo renumerando la cola.
     = `GHS.hasToken()`; de facto solo el dueño). Toggle Preguntas/Flashcards,
     búsqueda de texto (id + enunciado + opciones + explicación / front+back),
     filtros pestaña/grupo/tipo/estado (corregida·creada·sin explicación·
-    fallada·marcada), tabla (máx 400 filas), contador "N / total". Clic en
-    fila → editor (`openEditQuestionModal`/`openEditFlashcardModal`, o el
-    modal de contenido propio si es tuyo). Botón "Borrar" por fila →
-    `deleteFromBankFlow` / `deleteUserItem`. Filtrado en views.js (no toca
-    `filterQuestions` de app.js). Entradas: Ajustes y "Mi contenido" (ambas
-    solo con token). En `groupForView` cuelga de `progress`. Test:
-    `tests/test_banco_admin.js`.
+    fallada·marcada), contador "N / total". **Layout partido tipo Anki-Browse**
+    (`.bk-split`): lista a la izquierda (máx 400 filas), **panel de edición
+    inline** a la derecha con `qEditFormHtml`/`fcEditFormHtml` (los mismos
+    formularios que el modal ✎; ids con prefijo `bk-ed`). **Autoguardado**:
+    cada `change` de campo → `bancoSaveEditor` calcula el patch por diff vs
+    `ContentEdit.original`, hace `revert` + `apply` (para poder quitar campos),
+    `recalcSoon`; si el campo vuelve al original, la corrección se retira sola.
+    Navegación ‹ › entre resultados. El contenido propio abre su formulario
+    completo (`openUserQuestionModal`). Botones del panel: Descartar corrección,
+    Ver en repaso, Borrar del banco (`deleteFromBankFlow`). Helpers compartidos
+    con el modal: `qEditFormHtml`/`readQPatch`/`wireTfSegments`,
+    `fcEditFormHtml`/`readFcPatch`. Filtrado en views.js
+    (`bancoFilterQuestions`/`bancoFilterFlashcards`, no toca `filterQuestions`).
+    Entradas: Ajustes y "Mi contenido" (solo con token). `groupForView` →
+    `progress`. Test: `tests/test_banco_admin.js`.
 
 ## Arquitectura de sesiones y compartir (app.js)
 

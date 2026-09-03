@@ -1720,7 +1720,7 @@ function topicName(secId, topId){
 }
 
 let fcHubState = { section:"all", tab:"repaso" };
-let bancoState = { tab:"q", search:"", section:"all", topic:"all", tipo:"all", estado:"all", sort:"id" };
+let bancoState = { tab:"q", search:"", section:"all", topic:"all", tipo:"all", estado:"all", sort:"id", selId:null };
 
 function renderFlashcardsHub(params){
   if(params && params.section) fcHubState.section = params.section;
@@ -2107,43 +2107,89 @@ function afterContentEdit(onDone){
   else go(O.Nav.view, O.Nav.params);
 }
 
-function respuestaControl(q, cur){
+function respuestaControl(q, cur, pfx){
+  pfx = pfx || "edit";
   if(q.tipo === "opcion_unica"){
-    return `<select id="edit-resp" class="edit-field">${q.opciones.map(o=>`<option value="${o.letter}" ${cur===o.letter?'selected':''}>${o.letter}) ${O.escapeHtml(truncate(o.text,40))}</option>`).join("")}</select>`;
+    return `<select id="${pfx}-resp" class="edit-field">${q.opciones.map(o=>`<option value="${o.letter}" ${cur===o.letter?'selected':''}>${o.letter}) ${O.escapeHtml(truncate(o.text,40))}</option>`).join("")}</select>`;
   }
   if(q.tipo === "verdadero_falso"){
     const isT = cur===true || cur==="true";
-    return `<div class="segmented" id="edit-resp-tf"><button type="button" class="seg ${isT?'on':''}" data-v="true">Verdadero</button><button type="button" class="seg ${!isT?'on':''}" data-v="false">Falso</button></div>`;
+    return `<div class="segmented" id="${pfx}-resp-tf"><button type="button" class="seg ${isT?'on':''}" data-v="true">Verdadero</button><button type="button" class="seg ${!isT?'on':''}" data-v="false">Falso</button></div>`;
   }
   if(q.tipo === "seleccion_multiple"){
     const arr = Array.isArray(cur) ? cur : [];
-    return `<div class="edit-multi" id="edit-resp-multi">${q.opciones.map(o=>`<label class="echk"><input type="checkbox" value="${o.letter}" ${arr.includes(o.letter)?'checked':''}> ${o.letter}) ${O.escapeHtml(truncate(o.text,44))}</label>`).join("")}</div>`;
+    return `<div class="edit-multi" id="${pfx}-resp-multi">${q.opciones.map(o=>`<label class="echk"><input type="checkbox" value="${o.letter}" ${arr.includes(o.letter)?'checked':''}> ${o.letter}) ${O.escapeHtml(truncate(o.text,44))}</label>`).join("")}</div>`;
   }
   return `<p style="font-size:12px;color:var(--text-3);">La respuesta de este tipo de ejercicio no se edita aquí — usa la nota para reportar el problema.</p>`;
+}
+
+/* lee el formulario de edición de pregunta y devuelve el PATCH (solo campos
+   distintos del original). Compartido por el modal ✎ y el panel del Editor
+   del banco. `pfx` = prefijo de ids ("edit" en el modal, "bk-ed" en el panel). */
+function readQPatch(root, q, orig, pfx){
+  pfx = pfx || "edit";
+  const editsResp = ["opcion_unica","verdadero_falso","seleccion_multiple"].includes(q.tipo);
+  const editsOpts = ["opcion_unica","seleccion_multiple"].includes(q.tipo) && Array.isArray(q.opciones);
+  const patch = {};
+  const eq = (a,b)=> JSON.stringify(a) === JSON.stringify(b);
+  const nu = root.querySelector("#"+pfx+"-enun").value.trim();
+  if(!eq(nu, orig.enunciado||"")) patch.enunciado = nu;
+  if(editsOpts){
+    const nOpts = q.opciones.map(o=>({ letter:o.letter, text: root.querySelector(`[data-${pfx}-opt="${o.letter}"]`).value }));
+    const oOpts = q.opciones.map(o=>({ letter:o.letter, text: ((orig.opciones||[]).find(x=>x.letter===o.letter)||{}).text||"" }));
+    if(!eq(nOpts, oOpts)) patch.opciones = nOpts;
+  }
+  if(editsResp){
+    let nr, ori = orig.respuesta;
+    if(q.tipo === "opcion_unica"){ nr = root.querySelector("#"+pfx+"-resp").value; }
+    else if(q.tipo === "verdadero_falso"){ const on = root.querySelector("#"+pfx+"-resp-tf .seg.on"); nr = on && on.getAttribute("data-v") === "true"; ori = (ori===true||ori==="true"); }
+    else { nr = [...root.querySelectorAll("#"+pfx+"-resp-multi input:checked")].map(i=>i.value).sort(); ori = Array.isArray(ori)?ori.slice().sort():[]; }
+    if(!eq(nr, ori)) patch.respuesta = nr;
+  }
+  const ne = root.querySelector("#"+pfx+"-expl").value.trim();
+  if(!eq(ne, orig.explicacion||"")) patch.explicacion = ne;
+  const negEl = root.querySelector("#"+pfx+"-neg");
+  if(negEl && negEl.checked !== !!orig.negativa) patch.negativa = negEl.checked;
+  const notaEl = root.querySelector("#"+pfx+"-nota");
+  const nota = notaEl ? notaEl.value.trim() : "";
+  if(nota !== (orig.nota||"")) patch.nota = nota;
+  return patch;
+}
+
+/* formulario de edición de pregunta (campos), reutilizado por el modal y el
+   panel del Editor del banco. `pfx` prefija los ids. */
+function qEditFormHtml(q, orig, pfx){
+  const editsResp = ["opcion_unica","verdadero_falso","seleccion_multiple"].includes(q.tipo);
+  const editsOpts = ["opcion_unica","seleccion_multiple"].includes(q.tipo) && Array.isArray(q.opciones);
+  return `
+    <div class="field"><label>Enunciado</label>
+      <textarea id="${pfx}-enun" rows="3" class="edit-field">${O.escapeHtml(orig.enunciado||"")}</textarea></div>
+    ${editsOpts ? `<div class="field"><label>Opciones</label>
+      <div class="edit-opts">${q.opciones.map(o=>`<div class="eopt"><span class="eopt-l">${o.letter}</span>
+        <input type="text" data-${pfx}-opt="${o.letter}" class="edit-field" value="${O.escapeHtml(((orig.opciones||[]).find(x=>x.letter===o.letter)||{}).text||"")}"></div>`).join("")}</div></div>` : ''}
+    ${editsResp ? `<div class="field"><label>Respuesta correcta</label>${respuestaControl(q, orig.respuesta, pfx)}</div>` : ''}
+    <div class="field"><label>Explicación</label>
+      <textarea id="${pfx}-expl" rows="3" class="edit-field">${O.escapeHtml(orig.explicacion||"")}</textarea></div>
+    <label class="echk" style="margin-bottom:var(--sp-4);"><input type="checkbox" id="${pfx}-neg" ${orig.negativa?'checked':''}> Es una pregunta negativa (pide la opción FALSA / EXCEPTO)</label>
+    <div class="field"><label>Nota / motivo (opcional)</label>
+      <input type="text" id="${pfx}-nota" class="edit-field" value="${O.escapeHtml(orig.nota||"")}" placeholder="p. ej. la correcta es B, no C — comprobado en Word"></div>`;
+}
+function wireTfSegments(root, pfx){
+  root.querySelectorAll("#"+pfx+"-resp-tf .seg").forEach(b=> b.addEventListener("click", ()=>{
+    root.querySelectorAll("#"+pfx+"-resp-tf .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on");
+  }));
 }
 
 function openEditQuestionModal(qid, onDone){
   const q = O.Q_BY_ID[qid];
   if(!q || !O.ContentEdit){ O.toast("No se puede editar esta pregunta"); return; }
   const orig = O.ContentEdit.original("q", qid);
-  const editsResp = ["opcion_unica","verdadero_falso","seleccion_multiple"].includes(q.tipo);
-  const editsOpts = ["opcion_unica","seleccion_multiple"].includes(q.tipo) && Array.isArray(q.opciones);
   const hasOv = O.ContentEdit.has("q", qid);
 
   showModal(`
     <h3>Editar pregunta</h3>
     <p class="edit-id">${qid} · ${tipoLabel(q.tipo)}${q.bloque?` · ${O.escapeHtml(q.bloque)}`:''}</p>
-    <div class="field"><label>Enunciado</label>
-      <textarea id="edit-enun" rows="3" class="edit-field">${O.escapeHtml(orig.enunciado||"")}</textarea></div>
-    ${editsOpts ? `<div class="field"><label>Opciones</label>
-      <div class="edit-opts">${q.opciones.map(o=>`<div class="eopt"><span class="eopt-l">${o.letter}</span>
-        <input type="text" data-opt="${o.letter}" class="edit-field" value="${O.escapeHtml(((orig.opciones||[]).find(x=>x.letter===o.letter)||{}).text||"")}"></div>`).join("")}</div></div>` : ''}
-    ${editsResp ? `<div class="field"><label>Respuesta correcta</label>${respuestaControl(q, orig.respuesta)}</div>` : ''}
-    <div class="field"><label>Explicación</label>
-      <textarea id="edit-expl" rows="3" class="edit-field">${O.escapeHtml(orig.explicacion||"")}</textarea></div>
-    <label class="echk" style="margin-bottom:var(--sp-4);"><input type="checkbox" id="edit-neg" ${orig.negativa?'checked':''}> Es una pregunta negativa (pide la opción FALSA / EXCEPTO)</label>
-    <div class="field"><label>Nota / motivo (opcional)</label>
-      <input type="text" id="edit-nota" class="edit-field" value="${O.escapeHtml(orig.nota||"")}" placeholder="p. ej. la correcta es B, no C — comprobado en Word"></div>
+    ${qEditFormHtml(q, orig, "edit")}
     <p class="edit-warn">Se guarda solo en este dispositivo. Para volcarlo al banco: Ajustes → Correcciones de contenido → Exportar.</p>
     <div class="actions" style="flex-wrap:wrap;">
       ${hasOv ? `<button class="btn btn-ghost btn-sm" id="edit-revert">Descartar corrección</button>` : ''}
@@ -2152,37 +2198,15 @@ function openEditQuestionModal(qid, onDone){
       <button class="btn btn-solid" id="edit-save">Guardar corrección</button>
     </div>
   `, (root)=>{
-    root.querySelectorAll("#edit-resp-tf .seg").forEach(b=> b.addEventListener("click", ()=>{
-      root.querySelectorAll("#edit-resp-tf .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on");
-    }));
+    wireTfSegments(root, "edit");
     root.querySelector("#edit-cancel").addEventListener("click", ()=> afterContentEdit(onDone));
     const del = root.querySelector("#edit-delbank");
     if(del) del.addEventListener("click", ()=> deleteFromBankFlow("q", qid));  // navega a Inicio: la pregunta ya no existe
     const rev = root.querySelector("#edit-revert");
     if(rev) rev.addEventListener("click", ()=>{ O.ContentEdit.revert("q", qid); O.toast("Corrección descartada"); afterContentEdit(onDone); });
     root.querySelector("#edit-save").addEventListener("click", ()=>{
-      const patch = {};
-      const eq = (a,b)=> JSON.stringify(a) === JSON.stringify(b);
-      const nu = root.querySelector("#edit-enun").value.trim();
-      if(!eq(nu, orig.enunciado||"")) patch.enunciado = nu;
-      if(editsOpts){
-        const nOpts = q.opciones.map(o=>({ letter:o.letter, text: root.querySelector(`[data-opt="${o.letter}"]`).value }));
-        const oOpts = q.opciones.map(o=>({ letter:o.letter, text: ((orig.opciones||[]).find(x=>x.letter===o.letter)||{}).text||"" }));
-        if(!eq(nOpts, oOpts)) patch.opciones = nOpts;
-      }
-      if(editsResp){
-        let nr, ori = orig.respuesta;
-        if(q.tipo === "opcion_unica"){ nr = root.querySelector("#edit-resp").value; }
-        else if(q.tipo === "verdadero_falso"){ nr = root.querySelector("#edit-resp-tf .seg.on").getAttribute("data-v") === "true"; ori = (ori===true||ori==="true"); }
-        else { nr = [...root.querySelectorAll("#edit-resp-multi input:checked")].map(i=>i.value).sort(); ori = Array.isArray(ori)?ori.slice().sort():[]; }
-        if(!eq(nr, ori)) patch.respuesta = nr;
-      }
-      const ne = root.querySelector("#edit-expl").value.trim();
-      if(!eq(ne, orig.explicacion||"")) patch.explicacion = ne;
-      const nn = root.querySelector("#edit-neg").checked;
-      if(nn !== !!orig.negativa) patch.negativa = nn;
-      const nota = root.querySelector("#edit-nota").value.trim();
-      if(nota) patch.nota = nota;
+      const patch = readQPatch(root, q, orig, "edit");
+      if("nota" in patch && !patch.nota) delete patch.nota;   // el modal no borra la nota con string vacía
       if(!Object.keys(patch).length){ O.toast("No has cambiado nada"); afterContentEdit(onDone); return; }
       if(q.tipo === "seleccion_multiple" && patch.respuesta && !patch.respuesta.length){ O.toast("Marca al menos una respuesta correcta"); return; }
       O.ContentEdit.apply("q", qid, patch);
@@ -2190,6 +2214,36 @@ function openEditQuestionModal(qid, onDone){
       afterContentEdit(onDone);
     });
   }, {wide:true});
+}
+
+function fcEditFormHtml(orig, pfx){
+  return `
+    <div class="field"><label>Frente</label>
+      <textarea id="${pfx}-front" rows="3" class="edit-field">${O.escapeHtml(orig.front||"")}</textarea></div>
+    <div class="field"><label>Dorso</label>
+      <textarea id="${pfx}-back" rows="6" class="edit-field">${O.escapeHtml(orig.back||"")}</textarea>
+      <span class="edit-hint">Puedes usar "R: … / E: … / A: …" para respuesta, explicación y atajo, o "- " al principio de línea para listas.</span></div>
+    <div class="field"><label>Prioridad</label>
+      <div class="segmented" id="${pfx}-prio">
+        <button type="button" class="seg ${orig.priority==='alta'?'on':''}" data-v="alta">Alta</button>
+        <button type="button" class="seg ${orig.priority!=='alta'?'on':''}" data-v="normal">Normal</button>
+      </div></div>
+    <div class="field"><label>Nota / motivo (opcional)</label>
+      <input type="text" id="${pfx}-nota" class="edit-field" value="${O.escapeHtml(orig.nota||"")}" placeholder="qué estaba mal"></div>`;
+}
+function readFcPatch(root, orig, pfx){
+  const patch = {};
+  const nf = root.querySelector("#"+pfx+"-front").value.trim();
+  const nb = root.querySelector("#"+pfx+"-back").value.trim();
+  const onSeg = root.querySelector("#"+pfx+"-prio .seg.on");
+  const np = onSeg ? onSeg.getAttribute("data-v") : (orig.priority||"normal");
+  const notaEl = root.querySelector("#"+pfx+"-nota");
+  const nn = notaEl ? notaEl.value.trim() : "";
+  if(nf !== (orig.front||"")) patch.front = nf;
+  if(nb !== (orig.back||"")) patch.back = nb;
+  if(np !== (orig.priority||"normal")) patch.priority = np;
+  if(nn !== (orig.nota||"")) patch.nota = nn;
+  return patch;
 }
 
 function openEditFlashcardModal(canonicalId, onDone){
@@ -2201,18 +2255,7 @@ function openEditFlashcardModal(canonicalId, onDone){
   showModal(`
     <h3>Editar flashcard</h3>
     <p class="edit-id">${canonicalId} · ${cardTypeLabel(f.cardType)}${f.topic?` · ${O.escapeHtml(f.topic)}`:''}</p>
-    <div class="field"><label>Frente</label>
-      <textarea id="fc-edit-front" rows="3" class="edit-field">${O.escapeHtml(orig.front||"")}</textarea></div>
-    <div class="field"><label>Dorso</label>
-      <textarea id="fc-edit-back" rows="6" class="edit-field">${O.escapeHtml(orig.back||"")}</textarea>
-      <span class="edit-hint">Puedes usar "R: … / E: … / A: …" para respuesta, explicación y atajo, o "- " al principio de línea para listas.</span></div>
-    <div class="field"><label>Prioridad</label>
-      <div class="segmented" id="fc-edit-prio">
-        <button type="button" class="seg ${orig.priority==='alta'?'on':''}" data-v="alta">Alta</button>
-        <button type="button" class="seg ${orig.priority!=='alta'?'on':''}" data-v="normal">Normal</button>
-      </div></div>
-    <div class="field"><label>Nota / motivo (opcional)</label>
-      <input type="text" id="fc-edit-nota" class="edit-field" value="${O.escapeHtml(orig.nota||"")}" placeholder="qué estaba mal"></div>
+    ${fcEditFormHtml(orig, "fc-edit")}
     <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes para volcarlo al banco.</p>
     <div class="actions" style="flex-wrap:wrap;">
       ${hasOv ? `<button class="btn btn-ghost btn-sm" id="fc-edit-revert">Descartar corrección</button>` : ''}
@@ -2230,15 +2273,8 @@ function openEditFlashcardModal(canonicalId, onDone){
     const rev = root.querySelector("#fc-edit-revert");
     if(rev) rev.addEventListener("click", ()=>{ O.ContentEdit.revert("fc", canonicalId); O.toast("Corrección descartada"); afterContentEdit(onDone); });
     root.querySelector("#fc-edit-save").addEventListener("click", ()=>{
-      const patch = {};
-      const nf = root.querySelector("#fc-edit-front").value.trim();
-      const nb = root.querySelector("#fc-edit-back").value.trim();
-      const np = root.querySelector("#fc-edit-prio .seg.on").getAttribute("data-v");
-      const nn = root.querySelector("#fc-edit-nota").value.trim();
-      if(nf !== (orig.front||"")) patch.front = nf;
-      if(nb !== (orig.back||"")) patch.back = nb;
-      if(np !== (orig.priority||"normal")) patch.priority = np;
-      if(nn) patch.nota = nn;
+      const patch = readFcPatch(root, orig, "fc-edit");
+      if("nota" in patch && !patch.nota) delete patch.nota;
       if(!Object.keys(patch).length){ O.toast("No has cambiado nada"); afterContentEdit(onDone); return; }
       O.ContentEdit.apply("fc", canonicalId, patch);
       O.toast("Corrección guardada");
@@ -2706,6 +2742,34 @@ function bancoFilterFlashcards(f){
   });
 }
 
+// guarda el panel de edición como corrección local (patch por diff). Si el
+// usuario deja todo igual que el original, la corrección se retira limpiamente.
+function bancoSaveEditor(kind, id){
+  const pane = $("#bk-editor"); if(!pane || !O.ContentEdit) return;
+  const orig = O.ContentEdit.original(kind, id);
+  if(!orig) return;
+  let patch;
+  if(kind === "fc") patch = readFcPatch(pane, orig, "bk-ed");
+  else patch = readQPatch(pane, O.Q_BY_ID[id], orig, "bk-ed");
+  if(kind !== "fc" && O.Q_BY_ID[id] && O.Q_BY_ID[id].tipo === "seleccion_multiple" && patch.respuesta && !patch.respuesta.length){
+    bancoSaveStatus("La respuesta múltiple no puede quedar vacía", true); return;
+  }
+  if(O.ContentEdit.has(kind, id)) O.ContentEdit.revert(kind, id);   // parte de cero para poder quitar campos
+  if(Object.keys(patch).length) O.ContentEdit.apply(kind, id, patch);
+  if(O.LEB && O.LEB.recalcSoon) O.LEB.recalcSoon();
+  bancoSaveStatus(O.ContentEdit.has(kind, id) ? "Guardado ✓ (corrección local)" : "Sin cambios · original");
+  // refresca los meta de la fila seleccionada
+  const row = $(`#bk-body [data-${kind==="fc"?"fcid":"qid"}="${id}"]`);
+  if(row) row.classList.toggle("has-ov", O.ContentEdit.has(kind, id));
+}
+function bancoSaveStatus(msg, bad){
+  const el = $("#bk-ed-status"); if(!el) return;
+  el.textContent = msg;
+  el.style.color = bad ? "var(--bad,#f87171)" : "var(--ok,#4ade80)";
+  clearTimeout(bancoSaveStatus._t);
+  bancoSaveStatus._t = setTimeout(()=>{ if($("#bk-ed-status")===el){ el.textContent = ""; } }, 2200);
+}
+
 function renderBancoAdmin(){
   if(!bancoIsAdmin()){ O.toast("Solo con GitHub conectado"); return go("progress"); }
   const st = bancoState;
@@ -2718,7 +2782,7 @@ function renderBancoAdmin(){
     <div class="view-head">
       <p class="eyebrow">Admin · ${O.escapeHtml(O.GHS.repoLabel())}</p>
       <h1>Editor del banco</h1>
-      <p>Busca en las ${totalQ} preguntas y ${totalFc} flashcards. Clic en una fila para editarla; "Borrar del banco" hace commit al repo.</p>
+      <p>Clic en una fila para editarla en el panel de la derecha (se guarda solo, como corrección local). "Borrar del banco" hace commit al repo.</p>
     </div>
 
     <div class="pill-row" style="margin-bottom:var(--sp-4);">
@@ -2727,7 +2791,7 @@ function renderBancoAdmin(){
     </div>
 
     <div class="filter-bar">
-      <input type="search" id="bk-search" placeholder="id, enunciado, opción, explicación…" value="${O.escapeHtml(st.search)}" style="min-width:220px;">
+      <input type="search" id="bk-search" placeholder="id, enunciado, opción, explicación…" value="${O.escapeHtml(st.search)}" style="min-width:200px;">
       <select id="bk-section"><option value="all">Todas las pestañas</option>${O.TAXONOMY_SECTIONS.map(s=>`<option value="${s.id}" ${st.section===s.id?'selected':''}>${O.escapeHtml(s.name)}</option>`).join("")}</select>
       <select id="bk-topic"><option value="all">Todos los grupos</option></select>
       ${isQ ? `<select id="bk-tipo"><option value="all">Todos los tipos</option>${Object.entries(O.TYPE_LABELS).map(([v,l])=>`<option value="${v}" ${st.tipo===v?'selected':''}>${l}</option>`).join("")}</select>` : ``}
@@ -2741,7 +2805,11 @@ function renderBancoAdmin(){
       </select>
       <span class="chip" id="bk-count">0</span>
     </div>
-    <div id="bk-body"></div>
+
+    <div class="bk-split">
+      <div class="bk-list"><div id="bk-body"></div></div>
+      <div class="bk-editor" id="bk-editor"><div class="bk-editor-empty">Selecciona una fila para editarla.</div></div>
+    </div>
   </div>`;
 
   function refreshTopics(){
@@ -2759,70 +2827,129 @@ function renderBancoAdmin(){
     st.tipo = isQ ? g("#bk-tipo", "all") : "all";
     st.estado = g("#bk-estado", "all");
   }
+
+  let curList = [];
+  function currentList(){
+    return isQ
+      ? bancoFilterQuestions(st).sort((a,b)=> a.id.localeCompare(b.id, undefined, {numeric:true}))
+      : bancoFilterFlashcards(st).sort((a,b)=> a.canonicalId.localeCompare(b.canonicalId, undefined, {numeric:true}));
+  }
+  function idOf(x){ return isQ ? x.id : x.canonicalId; }
+
   function refresh(){
     const body = $("#bk-body");
-    if(!body) return;   // la vista ya no está montada (navegación durante el debounce)
+    if(!body) return;
     readFilters();
-    if(isQ){
-      const list = bancoFilterQuestions(st).sort((a,b)=> a.id.localeCompare(b.id, undefined, {numeric:true}));
-      $("#bk-count").textContent = `${list.length} / ${totalQ}`;
-      if(!list.length){ body.innerHTML = `<div class="empty-state"><div class="glyph">${icon('search')}</div><p>Nada coincide.</p></div>`; return; }
-      body.innerHTML = `<div class="qlist">${list.slice(0,400).map(q=>`
-        <div class="qlist-item" data-qid="${q.id}" style="cursor:pointer;">
-          <span class="badge ${badgeClass(q.id)}">${badgeGlyph(q.id)}</span>
-          <div style="flex:1; min-width:0;">
-            <div class="qtext">${O.renderBlank(truncate(q.enunciado,150))}</div>
-            <div class="qmeta">${O.escapeHtml(q.id)} · ${tipoLabel(q.tipo)} · ${O.escapeHtml(sectionName(q.section))}${q.topic?` ▸ ${O.escapeHtml(topicName(q.section,q.topic))}`:''}${q.explicacion?'':' · <span class="mini-warn">sin explicación</span>'}</div>
-          </div>
-          <button class="btn btn-ghost btn-sm" data-bk-del="${q.id}">Borrar</button>
-        </div>`).join("")}</div>
-        ${list.length>400?`<p style="font-size:12px;color:var(--text-3);margin-top:8px;">Mostrando 400 de ${list.length}. Afina la búsqueda.</p>`:''}`;
-      $$("#bk-body .qlist-item").forEach(row=> row.addEventListener("click",(e)=>{
-        if(e.target.closest("[data-bk-del]")) return;
-        const id = row.getAttribute("data-qid");
-        if(O.ContentEdit && O.ContentEdit.isUser("q", id)) openUserQuestionModal(id, ()=> go("banco"));
-        else openEditQuestionModal(id, ()=> go("banco"));
-      }));
-      $$("#bk-body [data-bk-del]").forEach(b=> b.addEventListener("click",(e)=>{
-        e.stopPropagation();
-        const id = b.getAttribute("data-bk-del");
-        if(O.ContentEdit && O.ContentEdit.isUser("q", id))
-          confirmDanger("Eliminar pregunta propia","No se puede deshacer.",()=>{ O.ContentEdit.deleteUserItem("q", id); if(O.LEB) O.LEB.recalcNow(); closeModal(); go("banco"); O.toast("Eliminada"); });
-        else deleteFromBankFlow("q", id, ()=> go("banco"));
-      }));
-    } else {
-      const list = bancoFilterFlashcards(st).sort((a,b)=> a.canonicalId.localeCompare(b.canonicalId, undefined, {numeric:true}));
-      $("#bk-count").textContent = `${list.length} / ${totalFc}`;
-      if(!list.length){ body.innerHTML = `<div class="empty-state"><div class="glyph">${icon('search')}</div><p>Nada coincide.</p></div>`; return; }
-      body.innerHTML = `<div class="qlist">${list.slice(0,400).map(c=>`
-        <div class="qlist-item" data-fcid="${O.escapeHtml(c.canonicalId)}" style="cursor:pointer;">
-          <span class="badge ${badgeClass(c.canonicalId)}">${badgeGlyph(c.canonicalId)}</span>
-          <div style="flex:1; min-width:0;">
-            <div class="qtext">${O.escapeHtml(truncate(c.front||"(sin frente)",120))}</div>
-            <div class="qmeta">${O.escapeHtml(c.canonicalId)} · ${O.escapeHtml(sectionName(c.section))}${c.topic?` ▸ ${O.escapeHtml(topicName(c.section,c.topic))}`:''} · ${O.escapeHtml(truncate(c.back||"",60))}</div>
-          </div>
-          <button class="btn btn-ghost btn-sm" data-bk-delfc="${O.escapeHtml(c.canonicalId)}">Borrar</button>
-        </div>`).join("")}</div>
-        ${list.length>400?`<p style="font-size:12px;color:var(--text-3);margin-top:8px;">Mostrando 400 de ${list.length}. Afina la búsqueda.</p>`:''}`;
-      $$("#bk-body .qlist-item").forEach(row=> row.addEventListener("click",(e)=>{
-        if(e.target.closest("[data-bk-delfc]")) return;
-        const id = row.getAttribute("data-fcid");
-        if(O.ContentEdit && O.ContentEdit.isUser("fc", id)) openUserFlashcardModal(id, ()=> go("banco"));
-        else openEditFlashcardModal(id, ()=> go("banco"));
-      }));
-      $$("#bk-body [data-bk-delfc]").forEach(b=> b.addEventListener("click",(e)=>{
-        e.stopPropagation();
-        const id = b.getAttribute("data-bk-delfc");
-        if(O.ContentEdit && O.ContentEdit.isUser("fc", id))
-          confirmDanger("Eliminar flashcard propia","No se puede deshacer.",()=>{ O.ContentEdit.deleteUserItem("fc", id); if(O.LEB) O.LEB.recalcNow(); closeModal(); go("banco"); O.toast("Eliminada"); });
-        else deleteFromBankFlow("fc", id, ()=> go("banco"));
-      }));
+    curList = currentList();
+    $("#bk-count").textContent = `${curList.length} / ${isQ?totalQ:totalFc}`;
+    if(!curList.length){
+      body.innerHTML = `<div class="empty-state"><div class="glyph">${icon('search')}</div><p>Nada coincide.</p></div>`;
+      renderEditor(null); return;
     }
+    const attr = isQ ? "data-qid" : "data-fcid";
+    body.innerHTML = `<div class="qlist">${curList.slice(0,400).map(x=>{
+      const id = idOf(x);
+      const ov = O.ContentEdit && (O.ContentEdit.has(isQ?"q":"fc", id));
+      const usr = O.ContentEdit && O.ContentEdit.isUser(isQ?"q":"fc", id);
+      const text = isQ ? O.renderBlank(truncate(x.enunciado,140)) : O.escapeHtml(truncate(x.front||"(sin frente)",120));
+      const meta = isQ
+        ? `${O.escapeHtml(x.id)} · ${tipoLabel(x.tipo)} · ${O.escapeHtml(sectionName(x.section))}${x.topic?` ▸ ${O.escapeHtml(topicName(x.section,x.topic))}`:''}${x.explicacion?'':' · <span class="mini-warn">sin explic.</span>'}`
+        : `${O.escapeHtml(x.canonicalId)} · ${O.escapeHtml(sectionName(x.section))}${x.topic?` ▸ ${O.escapeHtml(topicName(x.section,x.topic))}`:''}`;
+      return `<div class="qlist-item bk-row${id===st.selId?' selected':''}${ov?' has-ov':''}" ${attr}="${O.escapeHtml(String(id))}" style="cursor:pointer;">
+        <span class="badge">${usr?'✚':ov?'✎':'·'}</span>
+        <div style="flex:1; min-width:0;"><div class="qtext">${text}</div><div class="qmeta">${meta}</div></div>
+      </div>`;
+    }).join("")}</div>
+      ${curList.length>400?`<p style="font-size:12px;color:var(--text-3);margin-top:8px;">Mostrando 400 de ${curList.length}. Afina la búsqueda.</p>`:''}`;
+
+    $$("#bk-body .bk-row").forEach(row=> row.addEventListener("click", ()=>{
+      st.selId = row.getAttribute(attr);
+      $$("#bk-body .bk-row").forEach(r=> r.classList.toggle("selected", r===row));
+      renderEditor(st.selId);
+      if(window.matchMedia && window.matchMedia("(max-width: 900px)").matches){
+        const ed = $("#bk-editor"); if(ed) ed.scrollIntoView({ behavior:"smooth", block:"start" });
+      }
+    }));
+
+    // mantener / restaurar selección
+    if(st.selId && curList.some(x=> idOf(x)===st.selId)) renderEditor(st.selId);
+    else { st.selId = null; renderEditor(null); }
+  }
+
+  function renderEditor(id){
+    const pane = $("#bk-editor"); if(!pane) return;
+    if(!id){ pane.innerHTML = `<div class="bk-editor-empty">Selecciona una fila para editarla.</div>`; return; }
+    const kind = isQ ? "q" : "fc";
+    const obj = isQ ? O.Q_BY_ID[id] : O.F_BY_ID[id];
+    if(!obj){ pane.innerHTML = `<div class="bk-editor-empty">Ya no existe.</div>`; return; }
+    const orig = O.ContentEdit.original(kind, id);
+    const isUsr = O.ContentEdit.isUser(kind, id);
+    const hasOv = O.ContentEdit.has(kind, id);
+    const idx = curList.findIndex(x=> idOf(x)===id);
+    const head = isQ
+      ? `${O.escapeHtml(id)} · ${tipoLabel(obj.tipo)} · ${O.escapeHtml(sectionName(obj.section))}${obj.topic?` ▸ ${O.escapeHtml(topicName(obj.section,obj.topic))}`:''}`
+      : `${O.escapeHtml(id)} · ${cardTypeLabel(obj.cardType)} · ${O.escapeHtml(sectionName(obj.section))}${obj.topic?` ▸ ${O.escapeHtml(topicName(obj.section,obj.topic))}`:''}`;
+
+    pane.innerHTML = `
+      <div class="bk-ed-top">
+        <div class="bk-ed-nav">
+          <button class="btn btn-outline btn-sm" id="bk-ed-prev" ${idx<=0?'disabled':''}>${icon('arrowL')}</button>
+          <span class="pos">${idx+1} / ${curList.length}</span>
+          <button class="btn btn-outline btn-sm" id="bk-ed-next" ${idx>=curList.length-1?'disabled':''}>${icon('chevronR')}</button>
+        </div>
+        ${isUsr?'<span class="state-chip tone-settled">creada por ti</span>':hasOv?'<span class="state-chip">corregida ✎</span>':''}
+      </div>
+      <p class="edit-id">${head}</p>
+      ${isUsr
+        ? `<p style="font-size:12px;color:var(--text-2);">Es contenido tuyo. Se edita en su formulario completo (tipo, imagen, pestaña).</p>
+           <div class="actions" style="flex-wrap:wrap;"><button class="btn btn-solid btn-sm" id="bk-ed-openuser">Abrir editor completo</button>
+           <button class="btn btn-ghost btn-sm" id="bk-ed-deluser">Eliminar</button></div>`
+        : `${isQ ? qEditFormHtml(obj, orig, "bk-ed") : fcEditFormHtml(orig, "bk-ed")}
+           <span id="bk-ed-status" style="display:block;min-height:16px;font-size:12px;margin:2px 0 8px;"></span>
+           <div class="actions" style="flex-wrap:wrap;">
+             ${hasOv?`<button class="btn btn-ghost btn-sm" id="bk-ed-revert">Descartar corrección</button>`:''}
+             ${isQ?`<button class="btn btn-ghost btn-sm" id="bk-ed-review">Ver en repaso</button>`:''}
+             <button class="btn btn-danger btn-sm" id="bk-ed-delbank">Borrar del banco</button>
+           </div>`}
+    `;
+
+    const nav = (d)=>{ const n = curList[idx+d]; if(!n) return; st.selId = idOf(n);
+      const a = isQ ? "data-qid" : "data-fcid";
+      $$("#bk-body .bk-row").forEach(r=> r.classList.toggle("selected", r.getAttribute(a)===st.selId));
+      const el = $(`#bk-body [${a}="${st.selId}"]`); if(el) el.scrollIntoView({ block:"nearest" });
+      renderEditor(st.selId);
+    };
+    const prev = $("#bk-ed-prev"); if(prev) prev.addEventListener("click", ()=> nav(-1));
+    const next = $("#bk-ed-next"); if(next) next.addEventListener("click", ()=> nav(1));
+
+    if(isUsr){
+      $("#bk-ed-openuser").addEventListener("click", ()=> (isQ?openUserQuestionModal:openUserFlashcardModal)(id, ()=> go("banco")));
+      $("#bk-ed-deluser").addEventListener("click", ()=> confirmDanger("Eliminar contenido propio","No se puede deshacer.",()=>{
+        O.ContentEdit.deleteUserItem(kind, id); if(O.LEB) O.LEB.recalcNow(); closeModal(); st.selId = null; go("banco"); O.toast("Eliminado");
+      }));
+      return;
+    }
+
+    // autoguardado
+    if(isQ) wireTfSegments(pane, "bk-ed");
+    pane.querySelectorAll("#bk-ed-prio .seg").forEach(b=> b.addEventListener("click", ()=>{
+      pane.querySelectorAll("#bk-ed-prio .seg").forEach(x=>x.classList.remove("on")); b.classList.add("on"); bancoSaveEditor(kind, id);
+    }));
+    pane.querySelectorAll("input, textarea, select").forEach(el=>{
+      el.addEventListener("change", ()=> bancoSaveEditor(kind, id));
+    });
+    pane.querySelectorAll("#bk-ed-resp-tf .seg").forEach(b=> b.addEventListener("click", ()=> bancoSaveEditor(kind, id)));
+
+    const rev = $("#bk-ed-revert");
+    if(rev) rev.addEventListener("click", ()=>{ O.ContentEdit.revert(kind, id); if(O.LEB) O.LEB.recalcNow(); O.toast("Corrección descartada"); renderEditor(id); refresh(); });
+    const rvw = $("#bk-ed-review");
+    if(rvw) rvw.addEventListener("click", ()=>{ reviewList = [obj]; reviewIndex = 0; openReviewDetail(); });
+    $("#bk-ed-delbank").addEventListener("click", ()=> deleteFromBankFlow(kind, id, ()=>{ st.selId = null; go("banco"); }));
   }
 
   $$(".pill-row [data-bt]").forEach(b=> b.addEventListener("click", ()=>{
     const t = b.getAttribute("data-bt");
-    if(t!==st.tab){ bancoState = { tab:t, search:"", section:"all", topic:"all", tipo:"all", estado:"all", sort:"id" }; go("banco"); }
+    if(t!==st.tab){ bancoState = { tab:t, search:"", section:"all", topic:"all", tipo:"all", estado:"all", sort:"id", selId:null }; go("banco"); }
   }));
   let bkT = null;
   $("#bk-search").addEventListener("input", ()=>{ clearTimeout(bkT); bkT = setTimeout(refresh, 180); });
