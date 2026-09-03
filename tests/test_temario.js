@@ -35,7 +35,7 @@ async function main(){
   }
 
   clickGoto("temario");
-  const sectionCards = window.document.querySelectorAll('[data-goto="temario-detalle"]');
+  const sectionCards = window.document.querySelectorAll('.tm-acc');
   assert(sectionCards.length === 10, `el área Temario lista las 10 secciones (obtenidas ${sectionCards.length})`);
 
   // acordeón: empieza contraído; al abrir muestra los subgrupos con su %
@@ -78,11 +78,21 @@ async function main(){
   O.setSession(null);
   clickGoto("temario");
 
-  // Sección "vista" (con contenido real): el enlace "Practicar la pestaña…" del panel
-  const links = window.document.querySelectorAll('[data-goto="temario-detalle"]');
-  const vistaCard = Array.from(links).find(b=> b.getAttribute("data-params").includes('"vista"'));
-  assert(!!vistaCard, "existe la fila de la sección Vista");
-  vistaCard.click();
+  // el panel del acordeón enlaza flashcards + errores directamente (no una página aparte)
+  const vistaAcc2 = Array.from(D.querySelectorAll('.tm-acc[data-sec="vista"]'))[0];
+  vistaAcc2.querySelector('.tm-head-btn[data-tm-toggle]').dispatchEvent(new window.MouseEvent('click', { bubbles:true }));
+  const extra = vistaAcc2.querySelector('.tm-panel-extra');
+  const vistaCardsAll = O.FLASHCARDS.filter(c=> c.section==="vista");
+  assert(extra && extra.querySelector('[data-goto="flashcards"][data-params*="vista"]'), "el panel enlaza 'Flashcards de esta pestaña'");
+  assert(extra.textContent.includes(String(vistaCardsAll.length)), `el enlace de flashcards muestra el recuento (${vistaCardsAll.length})`);
+
+  // llegada desde Progreso: abrir Temario con una pestaña desplegada
+  clickGoto("temario", { expand:"vista" });
+  const vistaAcc3 = D.querySelector('.tm-acc[data-sec="vista"]');
+  assert(vistaAcc3 && vistaAcc3.classList.contains('open'), "clickGoto temario {expand} abre esa pestaña");
+
+  // temario-detalle sigue existiendo como vista directa (para secciones sin subgrupos)
+  clickGoto("temario-detalle", {sectionId:"vista"});
   assert(window.document.querySelector("h1").textContent.trim()==="Vista", "el detalle muestra el nombre de la sección");
   // El total de "vista" ya no es solo vista.json (61): tras la
   // reclasificación completa del banco heredado (ago-2026), también

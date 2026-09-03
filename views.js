@@ -120,7 +120,7 @@ window.addEventListener("click", (e)=>{
 function render(view, params){
   params = params || {};
   if(view==="home") return renderHome();
-  if(view==="temario") return renderTemario();
+  if(view==="temario") return renderTemario(params);
   if(view==="practica" || view==="study") return params.mode || params.step ? renderTestWizard(params) : renderPracticeHub();
   if(view==="tests") return renderProgress();
   if(view==="progress") return renderProgress();
@@ -420,7 +420,7 @@ function topicPct(cv){
   return ({ aprendiendo:33, consolidando:67, asentado:100 })[cv.mastery] || 15;
 }
 
-function renderTemario(){
+function renderTemario(params){
   const taxStats = O.computeTaxonomyStats();
   const bd = O.LEB ? O.LEB.masteryBreakdown() : null;
 
@@ -448,6 +448,8 @@ function renderTemario(){
         const repaso = scm ? scm.repaso : 0;
         const subs = (scm && scm.topics) ? scm.topics : [];
         const canExpand = subs.length > 0;
+        const fcN = st.flashcards || 0;
+        const errN = O.filterFlashcards({section:sec.id, cardType:"error"}).length;
         // % de la pestaña = media del progreso de sus subgrupos (coherente con lo que se ve al abrir)
         const pct = canExpand ? Math.round(subs.reduce((a,t)=>a+topicPct(t),0)/subs.length)
                               : (scm && scm.total ? Math.round((barB.asentado/barB.total)*100) : null);
@@ -491,9 +493,10 @@ function renderTemario(){
                 <span class="tm-sub-pct">${p}%</span>
               </label>`;
             }).join("")}
-            <button class="tm-open" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
-              Flashcards y errores de esta pestaña <span aria-hidden="true">›</span>
-            </button>
+            ${(fcN || errN) ? `<div class="tm-panel-extra">
+              ${fcN ? `<button class="tm-open" data-goto="flashcards" data-params='{"section":"${sec.id}"}'>Flashcards de esta pestaña · ${fcN} <span aria-hidden="true">›</span></button>` : ``}
+              ${errN ? `<button class="tm-open" data-tm-errores="${sec.id}">Errores frecuentes · ${errN} <span aria-hidden="true">›</span></button>` : ``}
+            </div>` : ``}
           </div></div>
         </div>`;
       }).join("")}
@@ -565,6 +568,22 @@ function renderTemario(){
     const s2 = O.buildSessionFromIds(ids, { mode:"practice", shuffleOptions:true, qOrder:"aleatorio" }, null);
     if(s2){ O.setSession(s2); O.saveSessionSnapshot(); go("running"); } else O.toast("No se pudo crear la sesión");
   });
+  $$("[data-tm-errores]").forEach(btn=> btn.addEventListener("click", ()=>{
+    const errs = O.filterFlashcards({ section: btn.getAttribute("data-tm-errores"), cardType:"error" });
+    if(errs.length) startFlashcardSession(errs.map(c=>c.canonicalId), 0);
+    else O.toast("No hay fichas de error en esta pestaña");
+  }));
+
+  // llegada desde Progreso ("Cobertura por pestaña"): abrir esa pestaña
+  if(params && params.expand){
+    const acc = document.querySelector(`.tm-acc[data-sec="${params.expand}"]`);
+    if(acc){
+      acc.classList.add("open");
+      const hb = acc.querySelector(".tm-head-btn[data-tm-toggle]");
+      if(hb) hb.setAttribute("aria-expanded", "true");
+      try{ acc.scrollIntoView({ block:"start", behavior:"smooth" }); }catch(e){}
+    }
+  }
 }
 
 function renderHistory(){
@@ -3226,7 +3245,7 @@ function renderProgress(){
     <div class="section-block">
       <div class="section-title"><h3>Cobertura por pestaña</h3><span class="section-hint">bloques dominados / total</span></div>
       <div class="progress-list">${(pm ? pm.sections : []).map(sec=>`
-        <button class="progress-row" data-goto="temario-detalle" data-params='{"sectionId":"${sec.id}"}'>
+        <button class="progress-row" data-goto="temario" data-params='{"expand":"${sec.id}"}'>
           <div class="pr-main"><div class="pr-name">${O.escapeHtml(sec.name)}</div>
             <div class="pr-meta">${sec.asentado} dominado${sec.asentado===1?'':'s'} · ${sec.enProgreso} en curso · ${sec.nuevo} sin empezar${sec.repaso?` · ${sec.repaso} a repasar`:''}</div></div>
           <div class="pr-bar"><div class="bar-track good"><i style="width:${sec.pct}%"></i></div></div>

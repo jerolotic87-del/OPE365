@@ -39,7 +39,7 @@ ck(!!D.querySelector(".cta-hero"), "C · Inicio: CTA principal");
 
 // ===== D) temario =====
 goto(D,w,"temario");
-ck(D.querySelectorAll('[data-goto="temario-detalle"]').length===10, "D · Temario: 10 pestañas");
+ck(D.querySelectorAll('.tm-acc').length===10, "D · Temario: 10 pestañas");
 goto(D,w,"temario-detalle",{sectionId:"inicio"});
 ck(D.querySelectorAll(".nav-row[data-topic]").length>0, "D · detalle Inicio con bloques");
 

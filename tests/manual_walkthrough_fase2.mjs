@@ -73,20 +73,26 @@ try {
 
   await click('[data-goto="temario"]');
   await page.waitForSelector('.tm-acc-list');
-  ok((await page.locator('[data-goto="temario-detalle"]').count()) === 10, 'Temario: 10 pestañas');
-  // acordeón: abre una pestaña y comprueba subgrupos con %
-  const acc = page.locator('.tm-acc[data-sec] .tm-head-btn[data-tm-toggle]').first();
+  ok((await page.locator('.tm-acc').count()) === 10, 'Temario: 10 pestañas');
+  // acordeón: abre una pestaña con flashcards y comprueba subgrupos con % + enlaces
+  const acc = page.locator('.tm-acc[data-sec="archivo"] .tm-head-btn[data-tm-toggle]');
   await acc.click();
   await page.waitForTimeout(400);
   ok(await seen('.tm-acc.open .tm-sub .tm-sub-pct'), 'Temario: el acordeón abre y muestra subgrupos con %');
+  ok(await seen('.tm-acc.open .tm-panel-extra [data-goto="flashcards"]'), 'Temario: el panel enlaza flashcards de la pestaña directamente');
   // casillas + barra Comenzar
   await page.locator('.tm-acc.open .tm-topic-check:not([disabled])').first().check();
   ok(await seen('#tm-floatbar.show'), 'Temario: marcar un grupo muestra la barra Comenzar');
   await shot('02a-temario-acordeon');
   await page.locator('#tm-fb-clear').click();
-  await click('[data-goto="temario-detalle"]');
-  await page.waitForSelector('.nav-row[data-topic], .empty-state');
-  await shot('02-temario-detalle');
+  // Progreso "Cobertura por pestaña" abre Temario con esa pestaña desplegada
+  await click('[data-goto="progress"]');
+  await page.waitForSelector('.progress-list .progress-row');
+  await page.locator('.progress-list .progress-row').first().click();
+  await page.waitForTimeout(400);
+  ok(await page.evaluate(() => window.OPE.Nav.view) === 'temario', 'Cobertura por pestaña → Temario (no una página aparte)');
+  ok(await seen('.tm-acc.open'), 'Cobertura por pestaña → la pestaña llega desplegada');
+  await shot('02-temario-desde-cobertura');
 
   await click('[data-goto="progress"]');
   await page.waitForSelector('.dim-list');
@@ -243,10 +249,10 @@ try {
   // botón del navegador
   await click('[data-goto="progress"]');
   await page.waitForSelector('.dim-list');
-  await click('[data-goto="temario-detalle"]');
-  await page.waitForTimeout(150);
+  await click('[data-goto="challenges"], [data-goto="history"]');
+  await page.waitForTimeout(200);
   await page.goBack();
-  await page.waitForTimeout(250);
+  await page.waitForTimeout(300);
   ok(await page.evaluate(() => window.OPE.Nav.view) === 'progress', 'Atrás: el botón del navegador retrocede en la app');
 
   // móvil
