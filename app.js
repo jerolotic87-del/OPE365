@@ -683,6 +683,47 @@ function saveSessionSnapshot(){
   persist();
 }
 
+// Añade una sesión terminada al historial y lo mantiene topado (igual que
+// engine.js topa pr.events) para que PROGRESS no crezca sin límite.
+const HISTORY_CAP = 200;
+function pushHistory(entry){
+  PROGRESS.history.push(entry);
+  if(PROGRESS.history.length > HISTORY_CAP){
+    PROGRESS.history = PROGRESS.history.slice(-HISTORY_CAP);
+  }
+  persist();
+}
+
+// Borrado de datos, hecho DE VERDAD (antes solo se reseteaban 6 de las ~18
+// claves de PROGRESS y el motor / flashcards / contenido propio revivían).
+//   "progress" : borra todo el aprendizaje (respuestas, marcadas, historial,
+//                desafíos, flashcards y TODO el estado del motor); conserva
+//                los ajustes, las preguntas/flashcards creadas por el usuario
+//                y las correcciones al banco.
+//   "all"      : restablecimiento de fábrica — borra el blob entero y la
+//                configuración de GitHub (token incluido).
+// El llamador debe hacer location.reload() a continuación para partir de un
+// estado en memoria limpio.
+function resetProgress(mode){
+  if(mode === "all"){
+    try{ STORE.removeItem(SKEY); }catch(e){}
+    try{ window.localStorage.removeItem("ope365_gh"); }catch(e){}
+    Object.keys(PROGRESS).forEach(k=> delete PROGRESS[k]);
+    Object.assign(PROGRESS, defaultProgress());
+    session = null;
+    return;
+  }
+  const keep = {
+    settings: JSON.parse(JSON.stringify(PROGRESS.settings || { onboarded:false })),
+    userContent: JSON.parse(JSON.stringify(PROGRESS.userContent || { q:[], fc:[] })),
+    contentOverrides: JSON.parse(JSON.stringify(PROGRESS.contentOverrides || { q:{}, fc:{} })),
+  };
+  Object.keys(PROGRESS).forEach(k=> delete PROGRESS[k]);
+  Object.assign(PROGRESS, defaultProgress(), keep);
+  session = null;
+  persist();
+}
+
 // Resultado consolidado de una sesión terminada (para compartir /
 // comparar / historial) — nunca contiene contenido de pregunta,
 // solo métricas + respuestas en espacio canónico.
@@ -1043,7 +1084,7 @@ window.OPE = {
   randomizeQuestionView, filterQuestions, getQuestionState, isMarked,
   evaluateAnswer, recordAnswer, computeStats, Timer,
   Nav, buildSession, buildSessionFromIds, buildSessionFromShareableConfig, resolveQuestionIds,
-  saveSessionSnapshot, hydrateSession, summarizeSession,
+  saveSessionSnapshot, hydrateSession, summarizeSession, pushHistory, resetProgress,
   getSession:()=>session, setSession:(s)=>{ session=s; },
   getActiveTimer:()=>activeTimer, setActiveTimer:(t)=>{ activeTimer=t; },
   makeShareCode, parseShareCode, shareCodeForSession, shareCodeForQuestion, shareCodeForSelection,

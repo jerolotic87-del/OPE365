@@ -1280,7 +1280,7 @@ function submitAnswer(q, s, isExam, answer){
 
 function finishPracticeSession(s){
   const summary = O.summarizeSession(s);
-  O.PROGRESS.history.push(Object.assign({mode:"practice", finishedAt:Date.now(), config:s.config}, summary));
+  O.pushHistory(Object.assign({mode:"practice", finishedAt:Date.now(), config:s.config}, summary));
   s.finished = true;
   O.saveSessionSnapshot(); O.persist();
   if(O.LEB) O.LEB.recalcNow();
@@ -1364,7 +1364,7 @@ function renderResults(){
     bump(byTema, q.tema||"General"); bump(byTipo, tipoLabel(q.tipo));
   });
 
-  O.PROGRESS.history.push(Object.assign({mode:"exam", finishedAt:Date.now(), config:s.config}, summary));
+  O.pushHistory(Object.assign({mode:"exam", finishedAt:Date.now(), config:s.config}, summary));
   s.finished = true;
 
   if(s.challengeId){
@@ -3049,9 +3049,9 @@ function renderComparison(params){
 }
 function fmtDiffAnswer(a){
   if(typeof a === "boolean") return a ? "Verdadero" : "Falso";
-  if(Array.isArray(a)) return a.join(", ");
+  if(Array.isArray(a)) return O.escapeHtml(a.join(", "));
   if(a && typeof a === "object") return "—";
-  return String(a);
+  return O.escapeHtml(String(a));   // viene de un código de desafío pegado por el usuario
 }
 
 /* ---------------------------------------------------------------
@@ -3153,12 +3153,14 @@ function openSettingsModal(){
       ()=>{ O.setSession(null); O.saveSessionSnapshot(); closeModal(); go("home"); O.toast("Test actual reiniciado"); }
     ));
     root.querySelector("#reset-progress").addEventListener("click", ()=> confirmDanger(
-      "Borrar todo el progreso","Se eliminarán tus respuestas, marcadas, historial y desafíos. No se puede deshacer.",
-      ()=>{ O.PROGRESS.answers={}; O.PROGRESS.marked={}; O.PROGRESS.history=[]; O.PROGRESS.challenges={}; O.persist(); closeModal(); go("home"); O.toast("Progreso borrado"); }
+      "Borrar el progreso de estudio",
+      "Se borran tus respuestas, aciertos y fallos, marcadas, historial, desafíos, el progreso de las flashcards y todo el estado del asistente de aprendizaje. Se conservan tus ajustes, las preguntas y flashcards que hayas creado y tus correcciones al banco. No se puede deshacer.",
+      ()=>{ O.resetProgress("progress"); location.reload(); }
     ));
     root.querySelector("#reset-all").addEventListener("click", ()=> confirmDanger(
-      "Borrar todos los datos","Esto restablece la aplicación por completo.",
-      ()=>{ O.STORE.removeItem("ope365_v1"); Object.assign(O.PROGRESS, {answers:{},marked:{},history:[],settings:{onboarded:false},currentSession:null,challenges:{}}); O.setSession(null); closeModal(); go("home"); O.toast("Aplicación restablecida"); }
+      "Restablecer la aplicación por completo",
+      "Se borra TODO: progreso, aprendizaje, flashcards, las preguntas que hayas creado, tus correcciones y la conexión con GitHub (token incluido). La app vuelve a su estado inicial. No se puede deshacer.",
+      ()=>{ O.resetProgress("all"); location.reload(); }
     ));
   }, {wide:true});
 }
@@ -3981,10 +3983,18 @@ function mpStartPressureText(){
   }, 2600);
 }
 
+// El qid de la carta lo envía el rival por WebRTC: si no está en nuestro
+// banco (peer con bug, contenido propio que no tenemos, o mensaje malicioso)
+// no reventamos el render — mostramos un estado de error.
+function pokerQNotAvailable(){
+  return `<div class="conn-status-panel"><div class="glyph" style="font-size:28px;color:var(--bad);">⚠</div>
+    <h3>Carta no disponible</h3><p>La pregunta que ha jugado tu rival no está en tu banco. Salid y empezad otra partida.</p></div>`;
+}
+
 function renderPokerAttackerUI(round, phase){
   if(phase === "attacker_select_card"){
     const played = new Set(Object.keys(mpPokerPlayed));
-    const available = mpPokerDeck.filter(qid=>!played.has(qid));
+    const available = mpPokerDeck.filter(qid=>!played.has(qid) && O.Q_BY_ID[qid]);
     return `
       <p style="text-align:center; color:var(--text-2); font-size:13px; margin:var(--sp-4) 0;">Elige la carta que quieres jugar.</p>
       <div class="qlist">${available.map(qid=>{
@@ -3994,6 +4004,7 @@ function renderPokerAttackerUI(round, phase){
   }
   if(phase === "attacker_answer"){
     const q = O.Q_BY_ID[round.qid];
+    if(!q) return pokerQNotAvailable();
     return `
       <p style="text-align:center; color:var(--text-2); font-size:13px; margin:var(--sp-4) 0;">Elige la respuesta que quieres presentar.</p>
       <div class="surface qcard" style="padding:var(--sp-6);">
@@ -4012,13 +4023,14 @@ function renderPokerDefenderUI(round, phase){
     return `<div class="conn-status-panel"><div class="conn-spinner"></div><h3 id="mp-pressure-text" data-msgs='${JSON.stringify(["Pensando…","Decidiendo su respuesta…"])}'>Pensando…</h3><p>${O.escapeHtml(mpSession.getRivalName())} está decidiendo su respuesta.</p></div>`;
   }
   const q = O.Q_BY_ID[round.qid];
+  if(!q) return pokerQNotAvailable();
   if(phase === "defender_decide"){
-    const claimOpt = q.opciones.find(o=>o.letter===round.claim);
+    const claimOpt = q.opciones.find(o=>o.letter===round.claim) || { letter:round.claim||"?", text:"(opción desconocida)" };
     return `
       <div class="surface qcard" style="padding:var(--sp-6);">
         <h3>${O.renderBlank(q.enunciado)}</h3>
         <div class="security-note" style="margin-bottom:var(--sp-4);">Tu rival ha marcado:</div>
-        <div class="option selected" style="pointer-events:none;"><span class="letter">${claimOpt.letter}</span><span>${O.escapeHtml(claimOpt.text)}</span></div>
+        <div class="option selected" style="pointer-events:none;"><span class="letter">${O.escapeHtml(String(claimOpt.letter))}</span><span>${O.escapeHtml(claimOpt.text)}</span></div>
         <p style="text-align:center; font-weight:700; margin-top:var(--sp-5);">¿Te fías?</p>
         <div class="tf-row" style="margin-top:var(--sp-3);">
           <button class="tf-btn" id="poker-confio">🤝 CONFÍO</button>
@@ -4068,9 +4080,11 @@ function wirePokerGameHandlers(round, phase){
 
 function renderPokerReveal(r){
   const q = r.question;
-  const correctOpt = q.opciones.find(o=>o.letter===r.correct);
-  const claimOpt = q.opciones.find(o=>o.letter===r.claim);
-  const answerOpt = q.opciones.find(o=>o.letter===r.answer);
+  if(!q || !q.opciones) return pokerQNotAvailable();
+  const unknown = { text:"(opción desconocida)" };
+  const correctOpt = q.opciones.find(o=>o.letter===r.correct) || unknown;
+  const claimOpt = q.opciones.find(o=>o.letter===r.claim) || unknown;
+  const answerOpt = q.opciones.find(o=>o.letter===r.answer) || unknown;
   const myWasAttacker = r.attackerIsMe;
   const myPts = myWasAttacker ? r.attackerPts : r.defenderPts;
 
