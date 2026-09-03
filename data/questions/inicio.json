@@ -9536,7 +9536,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+> aumenta el tamaño de la fuente al siguiente valor de la lista predefinida de tamaños, equivalente al botón Aumentar tamaño fuente de la cinta. Ctrl+Mayús+< hace lo contrario. Ctrl+Mayús+P posiciona el cursor en el campo Tamaño de fuente de la cinta para escribir un valor exacto."
+    "explicacion": "En el teclado español la tecla «<>» (a la izquierda de la Z) controla el tamaño de fuente con cuatro combinaciones: Ctrl+Mayús+> agranda al siguiente valor de la lista; Ctrl+Alt+Mayús+> agranda de punto en punto; Ctrl+< (sin Mayús) reduce al valor anterior de la lista; Ctrl+Alt+< reduce de punto en punto. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-256",
@@ -9555,7 +9555,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Mayús + <"
+        "text": "Ctrl + <"
       },
       {
         "letter": "B",
@@ -9572,7 +9572,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+< reduce el tamaño de la fuente al valor anterior de la lista predefinida de tamaños, equivalente al botón Disminuir tamaño fuente de la cinta. Es el atajo complementario de Ctrl+Mayús+> que aumenta el tamaño."
+    "explicacion": "En el teclado español la tecla «<>» (a la izquierda de la Z) controla el tamaño de fuente con cuatro combinaciones: Ctrl+Mayús+> agranda al siguiente valor de la lista; Ctrl+Alt+Mayús+> agranda de punto en punto; Ctrl+< (sin Mayús) reduce al valor anterior de la lista; Ctrl+Alt+< reduce de punto en punto. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-257",
@@ -9591,7 +9591,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + ="
+        "text": "Ctrl + Mayús + -"
       },
       {
         "letter": "B",
@@ -9608,43 +9608,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+= (signo igual sin mayúsculas) aplica o quita el subíndice en Word 365 versión española. Ctrl+Mayús+= aplica o quita el superíndice. Ambos atajos son complementarios y están verificados en fuentes de oposiciones españolas como aulaclic.es y sergiogalanformacion.es."
-  },
-  {
-    "id": "inicio-258",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "Atajos de formato",
-    "tema": "Fuente",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0512",
-    "enunciado": "¿Qué atajo aplica o quita el formato de superíndice en la versión española de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl + Mayús + ="
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl + ="
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl + Mayús + S"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl + Alt + +"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+= aplica o quita el superíndice en Word 365 versión española. Ctrl+= aplica o quita el subíndice. Ambos atajos están verificados en aulaclic.es y en el material de oposiciones del Ayuntamiento de Madrid."
+    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-259",
@@ -13275,7 +13239,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Mayús+> aumenta el tamaño de la fuente exactamente un punto. Ctrl+Mayús+> aumenta el tamaño de fuente en intervalos predefinidos más grandes. Ctrl+> también aumenta la fuente en intervalos predefinidos. Alt+Ctrl+> no tiene función asignada para aumentar fuente un punto."
+    "explicacion": "En el teclado español la tecla «<>» (a la izquierda de la Z) controla el tamaño de fuente con cuatro combinaciones: Ctrl+Mayús+> agranda al siguiente valor de la lista; Ctrl+Alt+Mayús+> agranda de punto en punto; Ctrl+< (sin Mayús) reduce al valor anterior de la lista; Ctrl+Alt+< reduce de punto en punto. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-357",
@@ -13310,7 +13274,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+< reduce el tamaño de la fuente exactamente un punto. Ctrl+< también reduce la fuente pero en intervalos predefinidos. Ctrl+Mayús+< reduce la fuente en intervalos predefinidos más grandes. Alt+Ctrl+Mayús+< no tiene esa función asignada."
+    "explicacion": "En el teclado español la tecla «<>» (a la izquierda de la Z) controla el tamaño de fuente con cuatro combinaciones: Ctrl+Mayús+> agranda al siguiente valor de la lista; Ctrl+Alt+Mayús+> agranda de punto en punto; Ctrl+< (sin Mayús) reduce al valor anterior de la lista; Ctrl+Alt+< reduce de punto en punto. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-358",
@@ -13345,7 +13309,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+> aumenta la fuente en intervalos predefinidos como 8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24... Alt+Ctrl+Mayús+> aumenta la fuente exactamente un punto. Ctrl+> también aumenta pero en intervalos más pequeños. Alt+> no tiene función asignada para tamaño de fuente."
+    "explicacion": "En el teclado español la tecla «<>» (a la izquierda de la Z) controla el tamaño de fuente con cuatro combinaciones: Ctrl+Mayús+> agranda al siguiente valor de la lista; Ctrl+Alt+Mayús+> agranda de punto en punto; Ctrl+< (sin Mayús) reduce al valor anterior de la lista; Ctrl+Alt+< reduce de punto en punto. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-359",
@@ -13363,7 +13327,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+menor que"
+        "text": "Ctrl + <"
       },
       {
         "letter": "B",
@@ -13380,42 +13344,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+< reduce la fuente en intervalos predefinidos. Alt+Ctrl+< reduce la fuente exactamente un punto. Ctrl+< también reduce la fuente pero en intervalos más pequeños. Alt+< no tiene función asignada para reducir tamaño de fuente."
-  },
-  {
-    "id": "inicio-360",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": null,
-    "tema": "Fuente",
-    "sourceQuestionId": "8-294",
-    "enunciado": "¿Qué atajo aplica superíndice al texto seleccionado en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Mayús+más"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+más"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+igual"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+Mayús+más"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+= aplica superíndice. En muchos teclados Mayús+= es el signo más, por lo que Ctrl+Mayús+= y Ctrl+Mayús+más son el mismo atajo. Ctrl+= aplica subíndice. Ctrl+igual es lo mismo que Ctrl+= que aplica subíndice. Alt+Ctrl+Mayús+más no tiene función asignada para superíndice."
+    "explicacion": "En el teclado español la tecla «<>» (a la izquierda de la Z) controla el tamaño de fuente con cuatro combinaciones: Ctrl+Mayús+> agranda al siguiente valor de la lista; Ctrl+Alt+Mayús+> agranda de punto en punto; Ctrl+< (sin Mayús) reduce al valor anterior de la lista; Ctrl+Alt+< reduce de punto en punto. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-361",
@@ -13449,8 +13378,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+= aplica subíndice al texto seleccionado. En muchos teclados = es el signo igual. Ctrl+Mayús+= aplica superíndice. Ctrl+Mayús+- aplica subíndice según la tabla oficial como atajo alternativo. Ctrl+- aleja el zoom."
+    "respuesta": "C",
+    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-362",
@@ -13464,7 +13393,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-296",
-    "enunciado": "¿Qué atajo alternativo también aplica subíndice además de Ctrl+igual en Word 365?",
+    "enunciado": "¿Qué atajo aplica o quita el subíndice del texto seleccionado en Word 365 (versión española)?",
     "opciones": [
       {
         "letter": "A",
@@ -13485,7 +13414,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+- es el atajo alternativo para aplicar subíndice según la tabla oficial. Ctrl+- aleja el zoom. Ctrl+Mayús+= aplica superíndice. Alt+Ctrl+- no tiene función asignada para subíndice."
+    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-363",

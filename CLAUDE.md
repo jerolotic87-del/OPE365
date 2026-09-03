@@ -185,6 +185,21 @@ silencio ni elijas arbitrariamente.
   El banco `inicio.json` nuevo venía de aulaclic diciendo que Ctrl+Mayús+S
   "abre Aplicar estilo" — corregido. Afectó a `inicio-13`, `inicio-90`,
   `inicio-91` (respuesta C→B) y `inicio-92`.
+- **Subíndice = `Ctrl+Mayús+-`** (Ctrl + Mayús + la tecla del guión).
+  **`Ctrl+=` NO funciona** (era el esquema internacional que traía el banco
+  de aulaclic). **Superíndice: ni `Ctrl+Mayús+=` ni `Ctrl+Mayús++`
+  funcionan — sin atajo confirmado**; las preguntas `inicio-258` e
+  `inicio-360` se borraron a la espera de saber cuál es. Prueba en vivo del
+  usuario. Corrigió `inicio-257/361/362`.
+- **Tamaño de fuente — la tecla `<>`** (izquierda de la Z) con 4
+  combinaciones: `Ctrl+Mayús+>` agranda al siguiente valor de la lista ·
+  `Ctrl+Alt+Mayús+>` agranda de punto en punto · **`Ctrl+<` (SIN Mayús)**
+  reduce al valor anterior de la lista · `Ctrl+Alt+<` reduce de punto en
+  punto. El banco tenía la reducción con Mayús (`Ctrl+Mayús+<`) — mal.
+  Prueba en vivo. Corrigió `inicio-256/359` (+ explicación en
+  `inicio-255/356/357/358`).
+- **`Ctrl+Barra espaciadora` = quitar el formato de carácter manual** —
+  funciona (prueba en vivo, confirma `inicio-262`).
 
 ## Modelo de datos (questions_all.json)
 
