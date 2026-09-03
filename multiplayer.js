@@ -770,7 +770,7 @@ function createCoopGame(session){
       if(!Array.isArray(ids)){
         let pool = O.filterQuestions({
           section: config.section || "all", topic: config.topic || "all",
-          tema: config.tema || "all", categoria: config.categoria || "all",
+          tema: config.tema || "all", tipo: config.tipo || "all", categoria: config.categoria || "all",
         }).filter(q=>
           q.tipo !== "relleno"          // relleno no tiene distractores: Word no puede "equivocarse" sin inventar contenido
           && !q.creado && !/^usr-/.test(q.id || "")

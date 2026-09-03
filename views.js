@@ -3886,7 +3886,7 @@ function renderMpModeFields(){
   }
   if(mpSetupState.mode === "coop"){
     const COOP_PRESETS = { charla:{label:"Con calma",rounds:10,seconds:20}, normal:{label:"Normal",rounds:12,seconds:15}, agil:{label:"Ágil",rounds:15,seconds:10} };
-    if(!["charla","normal","agil"].includes(mpSetupState.preset)) mpSetupState.preset = "normal";
+    if(!["charla","normal","agil","personalizada"].includes(mpSetupState.preset)) mpSetupState.preset = "normal";
     el.innerHTML = `
       <div class="security-note" style="margin-top:var(--sp-5);">
         Word os lanza una afirmación cada ronda (un atajo, una ruta, un dato) que puede ser <strong style="color:var(--text);">verdad</strong> o <strong style="color:var(--text);">trampa</strong>. Cada uno pulsa desde su móvil — habladlo entre vosotros primero. Ganáis puntos si acertáis los dos; Word marca si falláis los dos.
@@ -3894,6 +3894,11 @@ function renderMpModeFields(){
       <p style="font-size:11.5px; font-weight:700; color:var(--text-2); text-transform:uppercase; letter-spacing:.04em; margin:var(--sp-6) 0 10px;">Ritmo</p>
       <div class="preset-grid" id="mp-coop-preset">
         ${Object.entries(COOP_PRESETS).map(([k,p])=>`<button class="preset-card ${mpSetupState.preset===k?'selected':''}" data-cp="${k}"><div class="t">${p.label}</div><div class="d">${p.rounds} rondas · ${p.seconds} s</div></button>`).join("")}
+        <button class="preset-card ${mpSetupState.preset==='personalizada'?'selected':''}" data-cp="personalizada"><div class="t">A tu medida</div><div class="d">rondas y tiempo</div></button>
+      </div>
+      <div class="config-grid" id="mp-coop-custom" style="margin-top:var(--sp-4); ${mpSetupState.preset==='personalizada'?'':'display:none;'}">
+        <div class="field"><label>Rondas</label><input type="number" id="mp-coop-rounds" min="3" max="40" value="${mpSetupState.rounds}"></div>
+        <div class="field"><label>Segundos por ronda</label><input type="number" id="mp-coop-seconds" min="5" max="90" value="${mpSetupState.seconds}"></div>
       </div>
       <p style="font-size:11.5px; font-weight:700; color:var(--text-2); text-transform:uppercase; letter-spacing:.04em; margin:var(--sp-6) 0 10px;">Cuánto miente Word</p>
       <div class="preset-grid" id="mp-coop-lie">
@@ -3912,8 +3917,15 @@ function renderMpModeFields(){
           <div class="field" id="mp-sec-field" style="${mpSetupState.scope==='pestana'?'':'display:none;'}"><label>Pestaña</label><select id="mp-section">${O.TAXONOMY_SECTIONS.filter(s=>s.topics&&s.topics.length).map(s=>`<option value="${s.id}" ${mpSetupState.section===s.id?'selected':''}>${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
           <div class="field" id="mp-top-field" style="${mpSetupState.scope==='pestana'?'':'display:none;'}"><label>Grupo</label><select id="mp-topic"></select></div>
           <div class="field" id="mp-cat-field" style="${mpSetupState.scope==='categoria'?'':'display:none;'}"><label>Categoría</label><select id="mp-categoria">${O.CATEGORY_REGISTRY.filter(c=>c.id!=='general').map(c=>`<option value="${c.id}" ${mpSetupState.categoria===c.id?'selected':''}>${c.name}</option>`).join("")}</select></div>
+          <div class="field"><label>Tipo de ejercicio</label><select id="mp-tipo">
+            <option value="all" ${mpSetupState.tipo==='all'?'selected':''}>Todos</option>
+            <option value="opcion_unica" ${mpSetupState.tipo==='opcion_unica'?'selected':''}>Opción única</option>
+            <option value="seleccion_multiple" ${mpSetupState.tipo==='seleccion_multiple'?'selected':''}>Selección múltiple</option>
+            <option value="verdadero_falso" ${mpSetupState.tipo==='verdadero_falso'?'selected':''}>Verdadero / Falso</option>
+            <option value="emparejamiento" ${mpSetupState.tipo==='emparejamiento'?'selected':''}>Emparejamiento</option>
+          </select></div>
         </div>
-        <p style="font-size:11px;color:var(--text-3);margin-top:8px;">Solo preguntas de opción única y verdadero/falso (las que se pueden convertir en una afirmación). Omite lo que hayas creado tú.</p>
+        <p style="font-size:11px;color:var(--text-3);margin-top:8px;">Word convierte cualquier tipo en una afirmación de "verdadero o falso": enuncia una opción, da un conjunto (a veces con una cambiada) o un emparejamiento completo. Se omiten las de rellenar huecos y lo que hayas creado tú.</p>
       </details>
     `;
     const applyCoopPreset = ()=>{ const p = COOP_PRESETS[mpSetupState.preset]; if(p){ mpSetupState.rounds = p.rounds; mpSetupState.seconds = p.seconds; } };
@@ -3922,7 +3934,12 @@ function renderMpModeFields(){
       mpSetupState.preset = c.getAttribute("data-cp");
       $$("#mp-coop-preset .preset-card").forEach(x=>x.classList.remove("selected")); c.classList.add("selected");
       applyCoopPreset();
+      const cc = $("#mp-coop-custom"); if(cc) cc.style.display = mpSetupState.preset === "personalizada" ? "" : "none";
     }));
+    const cr = $("#mp-coop-rounds"), cs = $("#mp-coop-seconds");
+    if(cr) cr.addEventListener("input", ()=> mpSetupState.rounds = Math.max(3, Math.min(40, Number(cr.value)||12)));
+    if(cs) cs.addEventListener("input", ()=> mpSetupState.seconds = Math.max(5, Math.min(90, Number(cs.value)||15)));
+    const ct = $("#mp-tipo"); if(ct) ct.addEventListener("change", ()=> mpSetupState.tipo = ct.value);
     $$("#mp-coop-lie .preset-card").forEach(c=> c.addEventListener("click", ()=>{
       mpSetupState.lieRate = Number(c.getAttribute("data-lr"));
       $$("#mp-coop-lie .preset-card").forEach(x=>x.classList.remove("selected")); c.classList.add("selected");
@@ -4083,6 +4100,7 @@ function mpCreateGameEngine(isHost){
     mpWireDuelHandlers();
     if(isHost) mpDuel.hostSetConfig(Object.assign({
       rounds: mpSetupState.rounds, seconds: mpSetupState.seconds, lieRate: mpSetupState.lieRate,
+      tipo: mpSetupState.tipo,
     }, contentCfg));
   } else {
     mpDuel = MP.createDuelGame(mpSession);

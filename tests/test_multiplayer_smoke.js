@@ -197,6 +197,22 @@ async function main(){
   assert(Math.abs(falsas - Math.round(0.5*nonvf.length)) <= 1, `Contra Word: nº de mentiras fijo para la partida (${falsas} ≈ ${Math.round(0.5*nonvf.length)}), no un dado por ronda`);
   bH.destroy(); bG.destroy();
 
+  // Contra Word respeta el filtro de tipo de ejercicio del asistente
+  const pT = MP.createMockPair();
+  const tH = MP.createSession(pT.a), tG = MP.createSession(pT.b);
+  const tHost = MP.createCoopGame(tH), tGuest = MP.createCoopGame(tG);
+  let tHs=null, tGsS=null, tReady=false;
+  tHost.setHandlers({ onConnState:s=>{tHs=s;}, onPhase:(p)=>{ if(p==="lobby_ready") tReady=true; } });
+  tGuest.setHandlers({ onConnState:s=>{tGsS=s;}, onPhase:()=>{} });
+  tH.hostCreateRoom("X"); await waitFor(()=> tHs==="waiting_rival");
+  tG.guestJoinRoom(tH.getRoomCode(), "Y");
+  await waitFor(()=> tHs==="ready" && tGsS==="ready", 4000);
+  tHost.hostSetConfig({ rounds:20, seconds:10, section:"all", topic:"all", categoria:"all", tipo:"verdadero_falso", lieRate:0.5 });
+  await waitFor(()=> tReady, 3000);
+  const tq = tHost.getState().questions;
+  assert(tq.length > 0 && tq.every(q=> q.tipo === "verdadero_falso"), "Contra Word: respeta el tipo de ejercicio elegido en el asistente");
+  tH.destroy(); tG.destroy();
+
   cHost.confirmReady(); cGuest.confirmReady();
   await waitFor(()=> !!cHostRound && !!cGuestRound, 5000);
   assert(cHostRound.plan && typeof cHostRound.plan.truth === "boolean", "Contra Word: cada ronda trae la afirmación de Word y si es cierta");
