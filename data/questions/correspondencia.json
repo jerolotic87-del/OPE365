@@ -1,5 +1,115 @@
 [
   {
+    "id": "correspondencia-12",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "pdf-correspondencia-05",
+    "generado": true,
+    "enunciado": "¿Qué comando del grupo Iniciar combinación de correspondencia permite indicar qué tipo de documento se va a usar (carta, sobre, etiquetas, mensaje de correo…)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Seleccionar destinatarios"
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar combinación de correspondencia"
+      },
+      {
+        "letter": "C",
+        "text": "Editar lista de destinatarios"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar campo combinado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "«Iniciar combinación de correspondencia» es el primer paso: elige el tipo de documento final."
+  },
+  {
+    "id": "correspondencia-13",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "pdf-correspondencia-06",
+    "generado": true,
+    "enunciado": "¿Qué comando permite indicar dónde está la lista de destinatarios, crear una nueva o usar los contactos de Outlook?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Seleccionar destinatarios"
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar combinación de correspondencia"
+      },
+      {
+        "letter": "C",
+        "text": "Resaltar campos de combinación"
+      },
+      {
+        "letter": "D",
+        "text": "Reglas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Seleccionar destinatarios» conecta el documento a una lista existente (Word/Excel/Access), crea una nueva o usa los contactos de Outlook."
+  },
+  {
+    "id": "correspondencia-14",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "pdf-correspondencia-07",
+    "generado": true,
+    "enunciado": "La lista de destinatarios existente puede ser una tabla de Word, un libro de Excel o una base de datos de Access, siempre que esté organizada con los campos en columnas y cada registro en una fila.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es el requisito estructural de cualquier origen de datos para la combinación."
+  },
+  {
+    "id": "correspondencia-15",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "pdf-correspondencia-08",
+    "generado": true,
+    "enunciado": "Al crear una lista nueva de destinatarios, no se pueden personalizar las columnas: hay que usar siempre las que trae Word por defecto.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: «Personalizar columnas» permite cambiar las columnas por defecto por las propias."
+  },
+  {
     "id": "correspondencia-2",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Escribir e insertar campos",
@@ -176,6 +286,97 @@
     "explicacion": "«Sobres» está en el grupo Crear, al principio de la pestaña Correspondencia, no en Escribir e insertar campos."
   },
   {
+    "id": "correspondencia-20",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Escribir e insertar campos",
+    "sourceQuestionId": "pdf-correspondencia-13",
+    "generado": true,
+    "enunciado": "¿Qué atajo inserta un campo de combinación de correspondencia en el punto del cursor?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Mayús+J"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Mayús+D"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Mayús+M"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Mayús+K"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Mayús+J inserta un campo de combinación de correspondencia (los otros tres son Combinar en documento, Combinar al imprimir y Revisar combinación)."
+  },
+  {
+    "id": "correspondencia-22",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Escribir e insertar campos",
+    "sourceQuestionId": "pdf-correspondencia-15",
+    "generado": true,
+    "enunciado": "¿Qué comando de Escribir e insertar campos añade automáticamente el nombre, la calle, la ciudad y el código postal en un único bloque, con el formato que se indique?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Bloque de direcciones"
+      },
+      {
+        "letter": "B",
+        "text": "Línea de saludo"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar campo combinado"
+      },
+      {
+        "letter": "D",
+        "text": "Resaltar campos de combinación"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Bloque de direcciones» inserta de una vez el conjunto completo de datos de dirección con el formato elegido."
+  },
+  {
+    "id": "correspondencia-21",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Escribir e insertar campos",
+    "sourceQuestionId": "pdf-correspondencia-14",
+    "generado": true,
+    "enunciado": "«Reglas», dentro de Escribir e insertar campos, permite insertar condiciones (Si…Entonces…Si no) que cambian el contenido del documento según el destinatario.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "«Reglas» añade lógica condicional y otros campos especiales a la combinación."
+  },
+  {
     "id": "correspondencia-7",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Escribir e insertar campos",
@@ -210,5 +411,225 @@
       ]
     ],
     "explicacion": "Los cuatro atajos de la combinación de correspondencia: Alt+Mayús+D (a nuevo documento), Alt+Mayús+M (a impresora), Alt+Mayús+K (comprobar) y Alt+Mayús+E (editar origen de datos)."
+  },
+  {
+    "id": "correspondencia-16",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Finalizar",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "finalizar",
+    "subtopic": null,
+    "tema": "Finalizar",
+    "sourceQuestionId": "pdf-correspondencia-09",
+    "generado": true,
+    "enunciado": "¿Qué comando del grupo Finalizar genera el resultado final de la combinación (a un documento nuevo, a la impresora o al correo electrónico)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Vista previa de resultados"
+      },
+      {
+        "letter": "B",
+        "text": "Finalizar y combinar"
+      },
+      {
+        "letter": "C",
+        "text": "Comprobación de errores"
+      },
+      {
+        "letter": "D",
+        "text": "Editar lista de destinatarios"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "«Finalizar y combinar» es el último paso: vuelca la combinación en un documento nuevo, la manda a imprimir o al correo."
+  },
+  {
+    "id": "correspondencia-17",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Finalizar",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "finalizar",
+    "subtopic": null,
+    "tema": "Finalizar",
+    "sourceQuestionId": "pdf-correspondencia-10",
+    "generado": true,
+    "enunciado": "«Finalizar y combinar» es el último paso del proceso de combinación de correspondencia.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Tras revisar la vista previa, «Finalizar y combinar» cierra el proceso generando el resultado."
+  },
+  {
+    "id": "correspondencia-8",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "pdf-correspondencia-01",
+    "generado": true,
+    "enunciado": "¿Qué comando del grupo Crear de Correspondencia inserta la dirección y el remite en un sobre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Sobres"
+      },
+      {
+        "letter": "B",
+        "text": "Etiquetas"
+      },
+      {
+        "letter": "C",
+        "text": "Iniciar combinación de correspondencia"
+      },
+      {
+        "letter": "D",
+        "text": "Bloque de direcciones"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Sobres» abre el cuadro de diálogo que permite elegir el tipo de sobre e insertar dirección y remite."
+  },
+  {
+    "id": "correspondencia-9",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "pdf-correspondencia-02",
+    "generado": true,
+    "enunciado": "¿Qué comando del grupo Crear permite generar una hoja de etiquetas repetidas a partir de una medida y un contenido?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Sobres"
+      },
+      {
+        "letter": "B",
+        "text": "Etiquetas"
+      },
+      {
+        "letter": "C",
+        "text": "Seleccionar destinatarios"
+      },
+      {
+        "letter": "D",
+        "text": "Finalizar y combinar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "«Etiquetas» abre el cuadro de diálogo para elegir el tipo/medida de etiqueta antes de rellenarla."
+  },
+  {
+    "id": "correspondencia-10",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "pdf-correspondencia-03",
+    "generado": true,
+    "enunciado": "Al combinar etiquetas, Word muestra primero una tabla que simula las etiquetas que se imprimirán; tras rellenar la primera hay que pulsar «Actualizar etiquetas» para replicar el contenido en el resto.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es el flujo real: se rellenan los campos en la primera etiqueta y «Actualizar etiquetas» copia ese contenido al resto de la hoja."
+  },
+  {
+    "id": "correspondencia-11",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "pdf-correspondencia-04",
+    "generado": true,
+    "enunciado": "El cuadro de diálogo de Sobres permite elegir el tipo de sobre antes de generarlo.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El cuadro de Sobres deja elegir el tamaño/tipo de sobre, además de las opciones de impresión."
+  },
+  {
+    "id": "correspondencia-18",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Vista previa de resultados",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "vista-previa-resultados",
+    "subtopic": null,
+    "tema": "Vista previa de resultados",
+    "sourceQuestionId": "pdf-correspondencia-11",
+    "generado": true,
+    "enunciado": "¿Qué permite hacer «Vista previa de resultados» en Correspondencia?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ver los campos combinados sustituidos por los datos reales, pudiendo pasar de un registro a otro o buscar un destinatario"
+      },
+      {
+        "letter": "B",
+        "text": "Cambiar el estilo del documento antes de combinar"
+      },
+      {
+        "letter": "C",
+        "text": "Elegir el tipo de sobre"
+      },
+      {
+        "letter": "D",
+        "text": "Conectar con una nueva lista de destinatarios"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Muestra los datos reales en lugar de los nombres de campo, con navegación entre registros y búsqueda de un destinatario concreto."
+  },
+  {
+    "id": "correspondencia-19",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Vista previa de resultados",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "vista-previa-resultados",
+    "subtopic": null,
+    "tema": "Vista previa de resultados",
+    "sourceQuestionId": "pdf-correspondencia-12",
+    "generado": true,
+    "enunciado": "Desde Vista previa de resultados se puede buscar un destinatario concreto dentro de la lista.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El grupo incluye un comando de búsqueda de destinatario, además de la navegación registro a registro."
   }
 ]

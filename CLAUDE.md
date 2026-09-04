@@ -490,8 +490,26 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 525, insertar 457, inicio 456, archivo 407, vista 144, disposicion 120,
-diseno 90, referencias 89, revisar 82, correspondencia 6.
-Total 2376. 352 preguntas `categoria:"atajo"`, 1048 `"ruta"`, 935
+diseno 90, referencias 98, revisar 82, correspondencia 21.
+Total 2400.
+**Correspondencia y `referencias:investigacion` desde los PDF de la
+academia (sep-2026)**: el usuario aportó dos PDF de Beatriz R.T.
+("Combinación de correspondencia" y "Pestaña Referencias") como fuente de
+confianza. `correspondencia` tenía sus 6 preguntas apelotonadas en 1 solo
+topic de 5 (`campos-combinacion`) — los otros 4 (`crear-sobres-etiquetas`,
+`iniciar-combinacion`, `finalizar`, `vista-previa-resultados`) estaban a
+0. `referencias:investigacion` (grupo Buscar/Investigador) no tenía NINGUNA
+pregunta ni flashcard. Se añadieron 15 preguntas nuevas a correspondencia
+(21 en total, las 5 topics cubiertas) + 9 a referencias (investigacion
+×4, más 5 sueltas: secuencia Alt,K,C del cuadro de notas, «Nivel de
+esquema» en TDC, «Estilo: Descripción» en tabla de ilustraciones,
+tabla-autoridades ×2) + 3 flashcards de investigacion.
+También se corrigió un atajo que faltaba: `Alt+Mayús+J` inserta un campo
+de combinación de correspondencia (el PDF lo documenta junto a los otros
+4 ya confirmados D/M/K/E). Contrastado además con tests genéricos de
+daypo.com (sin atajos de teclado, sin riesgo de esquema distinto) que
+confirman el mismo enfoque conceptual. `sourceQuestionId` `pdf-<sec>-NN`,
+`generado:true`. Generador: `scripts/gen_pdf_academia.py`. 352 preguntas `categoria:"atajo"`, 1048 `"ruta"`, 935
 `"concepto"`, 41 `"general"` (sep-2026: `interfaz` reclasificada por
 completo — ver más abajo — quedan sin reclasificar 31 en `vista`, 7 en
 `archivo`, 3 en `inicio`). Por tipo: opcion_unica 1652, verdadero_falso

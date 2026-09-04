@@ -415,6 +415,25 @@
     "explicacion": "Falso: ese menú rápido solo ofrece Nivel 1, Nivel 2, Nivel 3 y «No mostrar en la tabla de contenido»."
   },
   {
+    "id": "referencias-95",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "pdf-referencias-06",
+    "generado": true,
+    "enunciado": "Se puede hacer que un texto aparezca en la tabla de contenido aunque no tenga estilo de título, aplicándole el formato de párrafo «Nivel de esquema».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es una de las tres formas de que un texto entre en la TDC: estilo Título, «Nivel de esquema» en formato de párrafo, o marcarlo como campo."
+  },
+  {
     "id": "referencias-89",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Tabla de contenido",
@@ -636,6 +655,42 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Alt+Ctrl+O inserta una nota AL PIE, no al final (eso es Alt+Ctrl+L). No puede ser las dos cosas a la vez."
+  },
+  {
+    "id": "referencias-94",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Notas al pie",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "notas",
+    "subtopic": null,
+    "tema": "Notas al pie",
+    "sourceQuestionId": "pdf-referencias-05",
+    "generado": true,
+    "enunciado": "¿Qué secuencia de teclas abre el cuadro «Notas al pie y notas al final» (el mismo que abre el iniciador de cuadro de diálogo del grupo)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt, K, C"
+      },
+      {
+        "letter": "B",
+        "text": "Alt, R, N"
+      },
+      {
+        "letter": "C",
+        "text": "Alt, S, N"
+      },
+      {
+        "letter": "D",
+        "text": "Alt, K, N"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt, K, C abre el cuadro Notas al pie y notas al final, igual que el icono iniciador del grupo."
   },
   {
     "id": "referencias-20",
@@ -1634,6 +1689,25 @@
     "explicacion": "Falso: Autotítulo (Referencias) pone títulos automáticos a los objetos que insertas; Autotexto (Insertar ▸ Elementos rápidos) guarda fragmentos de texto reutilizables."
   },
   {
+    "id": "referencias-96",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "pdf-referencias-07",
+    "generado": true,
+    "enunciado": "Si la tabla de ilustraciones solo debe mostrar los títulos con un rótulo concreto (p. ej. solo «Tabla»), hay que elegir ese rótulo en «Opciones»; el estilo «Descripción» incluye en cambio TODOS los rótulos de título del documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "«Opciones» ▸ «Estilo: Descripción» es el que Word aplica a los títulos al insertarlos e incluye todos los rótulos; elegir un rótulo concreto filtra la tabla a solo ese tipo."
+  },
+  {
     "id": "referencias-87",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Títulos",
@@ -2025,6 +2099,116 @@
     "explicacion": "Alt+Mayús+X marca entrada de índice, Alt+Mayús+I marca cita para tabla de autoridades, Alt+Mayús+B marca elemento de TDC a mano."
   },
   {
+    "id": "referencias-90",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Investigación",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "investigacion",
+    "subtopic": null,
+    "tema": "Investigación",
+    "sourceQuestionId": "pdf-referencias-01",
+    "generado": true,
+    "enunciado": "¿Qué comando del grupo Investigación de Referencias abre un panel de búsqueda para ayudarte a encontrar información sobre lo que estás escribiendo?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Buscar"
+      },
+      {
+        "letter": "B",
+        "text": "Investigador"
+      },
+      {
+        "letter": "C",
+        "text": "Administrar fuentes"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar cita"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Buscar» abre un panel de búsqueda de información relacionada con el texto del documento."
+  },
+  {
+    "id": "referencias-91",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Investigación",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "investigacion",
+    "subtopic": null,
+    "tema": "Investigación",
+    "sourceQuestionId": "pdf-referencias-02",
+    "generado": true,
+    "enunciado": "¿Qué comando del grupo Investigación ayuda a buscar citas, fuentes e imágenes sobre personas, hechos históricos, etc.?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Buscar"
+      },
+      {
+        "letter": "B",
+        "text": "Investigador"
+      },
+      {
+        "letter": "C",
+        "text": "Estilo"
+      },
+      {
+        "letter": "D",
+        "text": "Bibliografía"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "«Investigador» está orientado a la investigación de fuentes citables: personas, hechos históricos, datos verificables…"
+  },
+  {
+    "id": "referencias-92",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Investigación",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "investigacion",
+    "subtopic": null,
+    "tema": "Investigación",
+    "sourceQuestionId": "pdf-referencias-03",
+    "generado": true,
+    "enunciado": "El grupo Investigación de la pestaña Referencias incluye los comandos Buscar e Investigador.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Son los dos únicos comandos de ese grupo."
+  },
+  {
+    "id": "referencias-93",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Investigación",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "investigacion",
+    "subtopic": null,
+    "tema": "Investigación",
+    "sourceQuestionId": "pdf-referencias-04",
+    "generado": true,
+    "enunciado": "El comando Investigador solo permite buscar imágenes, no citas ni fuentes.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: Investigador busca citas, fuentes e imágenes, no solo imágenes."
+  },
+  {
     "id": "referencias-7",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Notas al pie",
@@ -2058,5 +2242,43 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Alt+Mayús+I marca una cita para la tabla de autoridades. Alt+Mayús+X marca una entrada de índice. Alt+Mayús+B marca un elemento para la tabla de contenido. Alt+Ctrl+I no tiene esa función asignada para citas."
+  },
+  {
+    "id": "referencias-97",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de autoridades",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-autoridades",
+    "subtopic": null,
+    "tema": "Tabla de autoridades",
+    "sourceQuestionId": "pdf-referencias-08",
+    "generado": true,
+    "enunciado": "La Tabla de autoridades agrupa las citas legales del documento (casos, estatutos, normas…) por categoría, de forma parecida a como la Tabla de contenido agrupa los títulos.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es el propósito de la Tabla de autoridades: un índice de referencias legales agrupadas por tipo, con las páginas donde aparecen."
+  },
+  {
+    "id": "referencias-98",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de autoridades",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-autoridades",
+    "subtopic": null,
+    "tema": "Tabla de autoridades",
+    "sourceQuestionId": "pdf-referencias-09",
+    "generado": true,
+    "enunciado": "Para que una cita entre en la Tabla de autoridades hace falta marcarla antes, igual que ocurre con las entradas del Índice.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Igual que el índice necesita «Marcar entrada», la tabla de autoridades necesita «Marcar cita» antes de generarse."
   }
 ]
