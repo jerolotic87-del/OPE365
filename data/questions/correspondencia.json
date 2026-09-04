@@ -32,7 +32,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Mayús+D combina la correspondencia a un documento. Alt+Mayús+M combina la correspondencia a la impresora. Alt+Mayús+K comprueba la combinación de correspondencia. Alt+Mayús+N edita el origen de datos de combinación de correspondencia en algunas versiones."
+    "explicacion": "Alt+Mayús+D recopila los resultados de la combinación en un documento nuevo. Alt+Mayús+M los envía a la impresora. Alt+Mayús+K comprueba si hay errores. Alt+Mayús+N no tiene función de combinación (vincula encabezado/pie con la sección anterior)."
   },
   {
     "id": "correspondencia-3",
@@ -67,7 +67,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Mayús+M combina a la impresora. Alt+Mayús+D combina a un nuevo documento. Alt+Mayús+K comprueba errores de combinación. Alt+Ctrl+M inserta un comentario."
+    "explicacion": "Alt+Mayús+M envía los resultados de la combinación a la impresora. Alt+Mayús+D los recopila en un documento. Alt+Mayús+K comprueba errores. Alt+Ctrl+M no tiene función asignada (el comentario se inserta con Alt+Ctrl+A)."
   },
   {
     "id": "correspondencia-4",
@@ -102,7 +102,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Mayús+K comprueba la combinación de correspondencia. Alt+Mayús+M combina a la impresora. Alt+Mayús+D combina a documento. Ctrl+Mayús+K aplica versalitas al texto seleccionado."
+    "explicacion": "Alt+Mayús+K comprueba si hay errores en la combinación de correspondencia. Alt+Mayús+M envía a la impresora. Alt+Mayús+D recopila en un documento. Ctrl+Mayús+K aplica cursiva (las versalitas son Ctrl+Mayús+L)."
   },
   {
     "id": "correspondencia-5",

@@ -33,7 +33,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "La fuente declara F7 y Windows+F7 como equivalentes para abrir el Editor. Alt+F7 salta al siguiente error, Mayús+F7 abre Sinónimos, Ctrl+Mayús+E activa el Control de cambios."
+    "explicacion": "F7 abre el panel Editor (revisión de ortografía y gramática). Windows+F7 también lo abre. Alt+F7 salta al siguiente error, Mayús+F7 abre Sinónimos, Ctrl+Mayús+E activa el Control de cambios. ⚠️ En el volcado v2608 solo figura F7 (ToolsProofing); Windows+F7 está confirmado en vivo por el usuario."
   },
   {
     "id": "revisar-2",
@@ -66,7 +66,7 @@
         },
         {
           "id": "4",
-          "label": "Ctrl + Mayús + G"
+          "label": "Ctrl + Mayús + O"
         },
         {
           "id": "5",
@@ -130,7 +130,7 @@
       "6": "C",
       "7": "G"
     },
-    "explicacion": "F7 abre el Editor; Alt+F7 salta al siguiente error; Mayús+F7 abre Sinónimos; Ctrl+Mayús+G Contar palabras; Ctrl+Alt+A Nuevo comentario; Ctrl+Mayús+E Control de cambios; Alt+Mayús+F7 Traducir. Todos confirmados en Word 365."
+    "explicacion": "F7 abre el panel Editor (revisión de ortografía y gramática); Alt+F7 salta al siguiente error; Mayús+F7 abre Sinónimos; Ctrl+Mayús+O recuenta las palabras; Alt+Ctrl+A inserta un comentario; Ctrl+Mayús+E activa el Control de cambios; Alt+Mayús+F7 abre el Traductor. ⚠️ Alt+Mayús+F7 no figura en el volcado v2608; confirmado en vivo."
   },
   {
     "id": "revisar-3",
@@ -149,7 +149,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: Alt+F7 salta al siguiente error ortográfico o gramatical (requiere que 'Revisar ortografía mientras escribe' esté activado). Es F7 (o Windows+F7) quien abre el Editor."
+    "explicacion": "Falso: Alt+F7 salta al siguiente error ortográfico. F7 (y Windows+F7) abren el panel Editor."
   },
   {
     "id": "revisar-4",
@@ -207,7 +207,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Ctrl+Mayús+E es el atajo para Control de cambios. Los otros son Nuevo comentario, error siguiente y Traducir."
+    "explicacion": "Ctrl+Mayús+E activa o desactiva el Control de cambios (atajo estándar). Ctrl+Alt+A inserta un comentario, Alt+F7 salta al siguiente error y Alt+Mayús+F7 abre el Traductor."
   },
   {
     "id": "revisar-6",
@@ -1530,7 +1530,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Sinónimos está en el grupo Revisión y su atajo es Mayús + F7."
+    "explicacion": "Sinónimos está en el grupo Revisión de la pestaña Revisar y su atajo es Mayús+F7 (abre el panel Referencia)."
   },
   {
     "id": "revisar-43",
@@ -1679,7 +1679,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "La fuente declara F7 o Windows+F7 como equivalentes."
+    "explicacion": "F7 abre el panel Editor. Windows+F7 también. ⚠️ Windows+F7 no figura en el volcado v2608; confirmado en vivo por el usuario."
   },
   {
     "id": "revisar-48",
@@ -1793,7 +1793,7 @@
         },
         {
           "id": "4",
-          "label": "Ctrl + Mayús + G"
+          "label": "Ctrl + Mayús + O"
         },
         {
           "id": "5",
@@ -1855,7 +1855,7 @@
       "7": "A",
       "8": "D"
     },
-    "explicacion": "F7, Alt+F7, Mayús+F7 y Ctrl+Mayús+G están en Revisión; Alt+Ctrl+Espacio en Voz; Alt+Mayús+F7 en Idioma; Ctrl+Alt+A en Comentarios; Ctrl+Mayús+E en Seguimiento."
+    "explicacion": "F7, Alt+F7, Mayús+F7 y Ctrl+Mayús+O están en el grupo Revisión; Alt+Ctrl+Espacio en Voz; Alt+Mayús+F7 en Idioma; Alt+Ctrl+A en Comentarios; Ctrl+Mayús+E en Seguimiento."
   },
   {
     "id": "revisar-52",
@@ -2637,7 +2637,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "En Word 365, F7 abre el panel Editor. 'Ortografía y gramática' es el nombre de versiones anteriores."
+    "explicacion": "En Word 365 el panel que abre F7 se llama Editor y reúne la revisión de ortografía y gramática. «Ortografía y gramática» era el nombre en versiones anteriores. En el volcado v2608 el comando de F7 aparece descrito precisamente como «Ortografía y gramática»."
   },
   {
     "id": "revisar-71",
@@ -2672,7 +2672,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+E activa o desactiva el control de cambios. Ctrl+E selecciona todo el documento. Ctrl+Mayús+T no tiene función asignada para seguimiento. Alt+Ctrl+E no tiene esa función asignada."
+    "explicacion": "Ctrl+Mayús+E activa o desactiva el control de cambios (atajo estándar). Ctrl+E selecciona todo. Ctrl+Mayús+T abre Búsqueda en referencia. Alt+Ctrl+E no tiene función."
   },
   {
     "id": "revisar-72",
@@ -2707,7 +2707,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+E activa o desactiva el control de cambios. Ctrl+E selecciona todo el documento. Alt+Ctrl+E no tiene esa función. Ctrl+Mayús+R no tiene función asignada para seguimiento de cambios."
+    "explicacion": "Ctrl+Mayús+E activa o desactiva el control de cambios. Ctrl+E selecciona todo. Alt+Ctrl+E no tiene función. Ctrl+Mayús+R quita la sangría francesa, no toca el control de cambios."
   },
   {
     "id": "revisar-73",
@@ -2742,7 +2742,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+F7 va al siguiente error ortográfico detectado. F7 abre el panel completo de Ortografía y gramática. Mayús+F7 abre el diccionario de sinónimos. Ctrl+F7 mueve la ventana del documento."
+    "explicacion": "Alt+F7 lleva el cursor al siguiente error ortográfico. F7 abre el panel completo de revisión. Mayús+F7 abre Sinónimos. Ctrl+F7 no tiene función asignada en este Word (cambiar el tamaño de la ventana es Ctrl+F8)."
   },
   {
     "id": "revisar-74",
@@ -2777,7 +2777,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F7 abre el panel completo de Ortografía y gramática. Alt+F7 va al siguiente error ortográfico sin abrir el panel. Ctrl+F7 activa el modo de mover la ventana del documento. Mayús+F7 abre el diccionario de sinónimos."
+    "explicacion": "F7 abre el panel completo de revisión de ortografía y gramática (el Editor). Alt+F7 va al siguiente error sin abrir el panel. Mayús+F7 abre Sinónimos. Ctrl+F7 no tiene función en este Word."
   },
   {
     "id": "revisar-75",
@@ -2812,7 +2812,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+F7 abre el diccionario de sinónimos. F7 abre la revisión ortográfica completa. Alt+F7 va al siguiente error ortográfico. Ctrl+Mayús+F7 actualiza el origen vinculado al documento."
+    "explicacion": "Mayús+F7 abre Sinónimos en el panel Referencia. F7 abre el panel de revisión completo. Alt+F7 va al siguiente error. Ctrl+Mayús+F7 copia al archivo de origen el texto modificado de un archivo vinculado."
   },
   {
     "id": "revisar-76",
@@ -2842,12 +2842,12 @@
       },
       {
         "letter": "D",
-        "text": "F6"
+        "text": "F5"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F7 activa la revisión ortográfica y gramatical. F8 activa el modo de selección extendida. F9 actualiza los campos del documento. F6 activa el panel siguiente."
+    "explicacion": "F7 activa la revisión de ortografía y gramática. F8 activa el modo de selección extendida. F9 actualiza los campos del documento. F5 abre Ir a."
   },
   {
     "id": "revisar-77",
@@ -2861,7 +2861,7 @@
     "subtopic": null,
     "tema": "Revisión ortográfica y gramatical",
     "sourceQuestionId": "8-232",
-    "enunciado": "¿Qué atajo activa la lectura en voz alta del documento enWord 365?",
+    "enunciado": "¿Qué atajo activa la lectura en voz alta del documento en Word 365?",
     "opciones": [
       {
         "letter": "A",
@@ -2882,6 +2882,6 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Espacio activa la lectura en voz alta del documento. Alt+Espacio abre el menú del icono del programa en la barra de título. Ctrl+Alt+Mayús+Espacio no tiene función asignada para lectura en voz alta. Alt+Mayús+Espacio no tiene función asignada para lectura en voz alta."
+    "explicacion": "Alt+Ctrl+Espacio activa Leer en voz alta. Alt+Espacio abre el menú del icono del programa en la barra de título. Ctrl+Alt+Mayús+Espacio y Alt+Mayús+Espacio no tienen función. Prueba en vivo del usuario (sep 2026)."
   }
 ]
