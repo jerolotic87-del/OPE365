@@ -6,12 +6,12 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **1702 preguntas** y **615
-flashcards** (inicio 148, archivo 230, vista 79, revisar 73, insertar 28,
-referencias 17, disposicion 16, correspondencia 15, diseno 9 — las ~375
-de sep-2026 son tarjetas de RUTA: frente = la acción, dorso =
-"Pestaña ▸ Grupo ▸ Comando", de `rutasyatajos.txt`), todo el banco
-normalizado y agrupado por pestaña de la cinta
+de Word 365 de una oposición de ayuntamiento. **2419 preguntas** y **971
+flashcards** (archivo 263, disposicion 100, inicio 148, insertar 147,
+referencias 74, revisar 73, vista 79, diseno 24, interfaz 48,
+correspondencia 15 — un buen tramo de las de archivo/disposicion son
+tarjetas de RUTA: frente = la acción, dorso = "Pestaña ▸ Grupo ▸ Comando"),
+todo el banco normalizado y agrupado por pestaña de la cinta
 (`data/questions/<section>.json`). Práctica/examen con corrección
 inmediata, compartir por código, desafíos asíncronos con resultado
 sellado, un mazo de flashcards (frente/dorso, sin repetición espaciada
@@ -490,8 +490,23 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 525, insertar 457, inicio 456, archivo 407, vista 144, disposicion 120,
-diseno 90, referencias 98, revisar 82, correspondencia 21.
-Total 2400.
+diseno 90, referencias 117, revisar 82, correspondencia 21.
+Total 2419.
+**19 preguntas CON IMAGEN nuevas en Referencias (sep-2026)**: los 26
+recortes de icono de `data/imagenes_iconos/referencias/` (movidos ahí en
+la limpieza de organización, sin procesar hasta ahora) se convirtieron en
+preguntas con el mismo patrón que Inicio/Insertar/Disposición/Diseño.
+Descartados de la conversión: 5 `_rotulo.png` (son la etiqueta del GRUPO,
+no un comando), `ocultar_mostrar_cinta_referencias.png` (una flecha
+genérica sin comando propio) y `titulos_actualizar_tabla.png` (icono
+IDÉNTICO al de `tabla_de_contenido_actualizar_tabla.png` — mismo recorte
+para dos comandos distintos de dos grupos distintos; usar los dos habría
+sido ambiguo, así que se dejó solo uno). Cubre citas-bibliografia (5),
+indice (3), notas (5), tabla-contenido (3), titulos (3). Confirmado que
+el filtro de exclusión de imágenes de Duelo/Farol/Contra Word
+(`multiplayer.js`) también las excluye a estas (0 en el pool).
+Generador: `scripts/gen_iconos_referencias.py` (aparte de
+`gen_iconos_img.py` para no reprocesar ni duplicar las 93 ya existentes).
 **Correspondencia y `referencias:investigacion` desde los PDF de la
 academia (sep-2026)**: el usuario aportó dos PDF de Beatriz R.T.
 ("Combinación de correspondencia" y "Pestaña Referencias") como fuente de
