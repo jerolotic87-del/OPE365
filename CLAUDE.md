@@ -437,10 +437,13 @@ una pregunta vive en el archivo de su `section` aunque su procedencia
 fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
-**Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 516, inicio 393, archivo 350, insertar 205, vista 145, revisar 78,
-referencias 7, correspondencia 5, disposicion 3, diseno 0 (sin archivo).
-Total 1702. Historial: `data/questions_regroup_report.md`.
+**Recuento actual** (`data/questions/<section>.json`, sep-2026, tras el
+barrido de atajos contra el volcado v2608):
+interfaz 514, inicio 380, archivo 350, insertar 199, vista 131, revisar 77,
+referencias 7, correspondencia 4, disposicion 1, diseno 0 (sin archivo).
+Total 1663 (~40 preguntas de atajo borradas por probar atajos que no
+existen en el volcado v2608 o dar respuestas que lo contradicen).
+282 preguntas `categoria:"atajo"`. Historial: `data/questions_regroup_report.md`.
 `insertar-46..205` (`sourceQuestionId` `P-01..P-172` con huecos, `generado:true`)
 son **preguntas de RUTA** (4 opciones, 1 correcta + 3 distractores del mismo
 nivel) de toda la pestaña Insertar — la pestaña solo tenía atajos hasta ahora.
