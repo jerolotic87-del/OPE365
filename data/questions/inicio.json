@@ -1704,6 +1704,38 @@
     "explicacion": "24: Portapapeles de Office. 1.638: tamaño máximo de fuente. 17: tipos de subrayado. 9: niveles de lista multinivel. 100: resultados máximos del panel de navegación. 160: diseños de Arte en Borde de página. El distractor G (estilos de línea de borde: 24) coincide numéricamente con el Portapapeles pero corresponde a un elemento diferente."
   },
   {
+    "id": "inicio-469",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null,
+    "tema": "Portapapeles",
+    "sourceQuestionId": "rell-inicio-05",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada método antiguo del portapapeles: copiar → [1]. pegar → [2]. cortar → [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Ctrl+Insertar",
+        "Ctrl+Ins"
+      ],
+      [
+        "Mayús+Insertar",
+        "Mayús+Ins"
+      ],
+      [
+        "Mayús+Supr",
+        "Mayús + Supr"
+      ]
+    ],
+    "explicacion": "Ctrl+Ins copia, Mayús+Ins pega, Mayús+Supr corta (método clásico del portapapeles, además de Ctrl+C/V/X)."
+  },
+  {
     "id": "inicio-11",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -5815,6 +5847,34 @@
     "explicacion": "Ctrl+N: negrita. Ctrl+K: cursiva. Ctrl+S: subrayado sencillo. Ctrl+Mayús+D: subrayado doble. Ctrl+Mayús+L: versalitas. El distractor F (subrayado solo palabras) corresponde a Ctrl+Mayús+P, no a ninguno de los atajos de la lista."
   },
   {
+    "id": "inicio-465",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "rell-inicio-01",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada acción: resaltar el texto seleccionado (rotulador) → [1]. mostrar u ocultar todas las marcas de formato → [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Alt+Ctrl+H",
+        "Ctrl+Alt+H"
+      ],
+      [
+        "Ctrl+Mayús+8",
+        "Ctrl + Mayús + 8"
+      ]
+    ],
+    "explicacion": "Alt+Ctrl+H resalta (prueba en vivo); Ctrl+Mayús+8 muestra/oculta las marcas de formato (¶)."
+  },
+  {
     "id": "inicio-36",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Marcas de formato",
@@ -6632,6 +6692,34 @@
       "5": "E"
     },
     "explicacion": "Izquierda: Ctrl+Q. Centrar: Ctrl+T. Derecha: Ctrl+D. Justificar: Ctrl+J. Distribuir: Ctrl+Mayus+J. El distractor Ctrl+E es Seleccionar todo el documento, no una alineacion. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
+    "id": "inicio-466",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "tema": "Alineación",
+    "sourceQuestionId": "rell-inicio-02",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada acción sobre párrafo en esta instalación: quitar el formato de párrafo (sangrías, etc.) → [1]. aplicar o quitar la sangría francesa → [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Ctrl+W",
+        "Ctrl + W"
+      ],
+      [
+        "Ctrl+F",
+        "Ctrl + F"
+      ]
+    ],
+    "explicacion": "Ctrl+W quita el formato de párrafo (prueba en vivo); Ctrl+F aplica/quita la sangría francesa (esquema clásico español)."
   },
   {
     "id": "inicio-43",
@@ -12899,6 +12987,34 @@
     "explicacion": "Toda la tabla: todas las celdas. Fila de encabezado: primera fila. Fila de totales: última fila. Primera columna: columna izquierda. Última columna: columna derecha. El distractor F corresponde a las opciones de Bandas en filas, que también existen en el desplegable pero no aparecen en esta pregunta."
   },
   {
+    "id": "inicio-467",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rell-inicio-03",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada acción: abrir el panel flotante Aplicar estilos → [1]. abrir el panel de Navegación con el cuadro de búsqueda → [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Ctrl+Mayús+W",
+        "Ctrl + Mayús + W"
+      ],
+      [
+        "Ctrl+B",
+        "Ctrl + B"
+      ]
+    ],
+    "explicacion": "Ctrl+Mayús+W abre Aplicar estilos; Ctrl+B abre el panel de Navegación."
+  },
+  {
     "id": "inicio-117",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -16531,6 +16647,28 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "No existe ningún atajo Ctrl+Mayús+V para Dictar. El atajo real, confirmado en vivo, es Alt+[."
+  },
+  {
+    "id": "inicio-468",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Voz",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "voz",
+    "subtopic": null,
+    "tema": "Voz",
+    "sourceQuestionId": "rell-inicio-04",
+    "generado": true,
+    "enunciado": "El atajo [1] inicia el Dictado de Office en Word 365. F7 (o Windows+F7) abre el panel [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Alt+[",
+      "Editor"
+    ],
+    "explicacion": "Alt+[ inicia el Dictado; F7/Windows+F7 abren el mismo panel Editor (revisión ortográfica y gramatical)."
   },
   {
     "id": "inicio-430",

@@ -416,6 +416,38 @@
     "explicacion": "Cualquier cambio de fuente, márgenes o estilos que se guarde en Normal.dotm afecta a los documentos en blanco futuros."
   },
   {
+    "id": "archivo-403",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Nuevo documento",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "nuevo",
+    "subtopic": null,
+    "tema": "Nuevo documento",
+    "sourceQuestionId": "rell-archivo-01",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada acción de Archivo: crear un documento nuevo → [1]. abrir el cuadro de diálogo Abrir → [2]. guardar el documento → [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Ctrl+U",
+        "Ctrl + U"
+      ],
+      [
+        "Ctrl+F12",
+        "Ctrl + F12"
+      ],
+      [
+        "Ctrl+G",
+        "Ctrl + G"
+      ]
+    ],
+    "explicacion": "Ctrl+U crea un documento nuevo, Ctrl+F12 abre el cuadro de diálogo Abrir y Ctrl+G guarda (esquema clásico de esta instalación)."
+  },
+  {
     "id": "archivo-15",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Abrir",
@@ -3959,6 +3991,34 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "La conversión se realiza desde Archivo → Información donde aparece el botón Convertir cuando el documento está en modo compatibilidad. Guardar como con tipo docx también funciona pero no es la ruta de Convertir. No existe Convertir documento en la pestaña Revisar ni en Avanzadas."
+  },
+  {
+    "id": "archivo-404",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Cerrar",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "cerrar",
+    "subtopic": null,
+    "tema": "Cerrar",
+    "sourceQuestionId": "rell-archivo-02",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada acción: guardar como (elegir nombre y ubicación) → [1]. cerrar el documento activo sin cerrar Word → [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "F12",
+        "F12"
+      ],
+      [
+        "Ctrl+F4",
+        "Ctrl + F4"
+      ]
+    ],
+    "explicacion": "F12 abre Guardar como; Ctrl+F4 cierra el documento activo sin cerrar el programa (prueba en vivo del usuario)."
   },
   {
     "id": "archivo-61",
@@ -9621,6 +9681,29 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → No crear automáticamente ningún hipervínculo de la captura de pantalla. Sin atajo: solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-405",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones — Avanzadas — Edición",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-avz-edicion",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas — Edición",
+    "sourceQuestionId": "rell-archivo-03",
+    "generado": true,
+    "enunciado": "Para que los hipervínculos de un documento requieran Ctrl+clic para poder seguirse, hay que ir a [1] ▸ [2] ▸ [3] y marcar «Utilizar CTRL + clic para seguir hipervínculo».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Archivo",
+      "Opciones",
+      "Avanzadas"
+    ],
+    "explicacion": "La casilla vive en Archivo ▸ Opciones ▸ Avanzadas ▸ Opciones de edición."
   },
   {
     "id": "archivo-89",

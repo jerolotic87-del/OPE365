@@ -841,6 +841,34 @@
     "explicacion": "Sus tres opciones: al pie→al final, al final→al pie, e intercambiar ambas."
   },
   {
+    "id": "referencias-85",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Notas al pie",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "notas",
+    "subtopic": null,
+    "tema": "Notas al pie",
+    "sourceQuestionId": "rell-referencias-01",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada tipo de nota: nota al pie → [1]. nota al final → [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Alt+Ctrl+O",
+        "Ctrl+Alt+O"
+      ],
+      [
+        "Alt+Ctrl+L",
+        "Ctrl+Alt+L"
+      ]
+    ],
+    "explicacion": "Alt+Ctrl+O inserta una nota al pie; Alt+Ctrl+L inserta una nota al final."
+  },
+  {
     "id": "referencias-82",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Citas y bibliografía (negativa)",
@@ -1792,6 +1820,38 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Las otras opciones son «Página actual» (por defecto) e «Intervalo de páginas» (con un marcador)."
+  },
+  {
+    "id": "referencias-86",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Índice",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "indice",
+    "subtopic": null,
+    "tema": "Índice",
+    "sourceQuestionId": "rell-referencias-02",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada marcado manual: marcar una entrada de índice → [1]. marcar una cita para la tabla de autoridades → [2]. marcar un elemento para la tabla de contenido manualmente → [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Alt+Mayús+X",
+        "Alt + Mayús + X"
+      ],
+      [
+        "Alt+Mayús+I",
+        "Alt + Mayús + I"
+      ],
+      [
+        "Alt+Mayús+B",
+        "Alt + Mayús + B"
+      ]
+    ],
+    "explicacion": "Alt+Mayús+X marca entrada de índice, Alt+Mayús+I marca cita para tabla de autoridades, Alt+Mayús+B marca elemento de TDC a mano."
   },
   {
     "id": "referencias-7",

@@ -586,6 +586,33 @@
     "explicacion": "Un Salto de página simplemente fuerza que el texto siguiente empiece en una nueva página, pero no crea ninguna sección nueva. Un Salto de sección (que está en Disposición, no en Insertar) divide el documento en secciones independientes, lo que permite tener orientaciones, márgenes, encabezados o numeraciones diferentes en cada parte."
   },
   {
+    "id": "insertar-461",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Páginas",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "paginas",
+    "subtopic": null,
+    "tema": "Páginas",
+    "sourceQuestionId": "rell-insertar-01",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada acción: insertar un salto de página manual → [1]. actualizar los campos del documento → [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Ctrl+Entrar",
+        "Ctrl + Entrar"
+      ],
+      [
+        "F9"
+      ]
+    ],
+    "explicacion": "Ctrl+Entrar inserta un salto de página; F9 actualiza los campos seleccionados (o todo el documento con Ctrl+E antes)."
+  },
+  {
     "id": "insertar-31",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Tablas",
@@ -1636,6 +1663,38 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Justo debajo de las opciones de autoajuste, aparece una casilla con ese texto. Si la marcas, Word recordará el número de columnas, filas y el autoajuste elegido para futuras tablas."
+  },
+  {
+    "id": "insertar-462",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Tablas",
+    "sourceQuestionId": "rell-insertar-02",
+    "generado": true,
+    "enunciado": "Escribe el atajo de movimiento dentro de una tabla: ir al inicio de la fila → [1]. ir al final de la fila → [2]. ir al inicio de la columna → [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Alt+Inicio",
+        "Alt + Inicio"
+      ],
+      [
+        "Alt+Fin",
+        "Alt + Fin"
+      ],
+      [
+        "Alt+Re Pág",
+        "Alt+RePág"
+      ]
+    ],
+    "explicacion": "Alt+Inicio/Alt+Fin van al inicio/final de la fila; Alt+Re Pág va al inicio de la columna."
   },
   {
     "id": "insertar-59",
@@ -6628,6 +6687,34 @@
     "explicacion": "Al pie del cuadro hay una casilla con ese texto. Si está marcada, al hacer Ctrl+clic sobre la referencia saltarás directamente al elemento referenciado. Si no, el texto de la referencia es estático y no lleva a ninguna parte."
   },
   {
+    "id": "insertar-463",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Vínculos",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "vinculos",
+    "subtopic": null,
+    "tema": "Vínculos",
+    "sourceQuestionId": "rell-insertar-03",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada acción: insertar un marcador → [1]. insertar un comentario → [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Ctrl+Mayús+F5",
+        "Ctrl + Mayús + F5"
+      ],
+      [
+        "Alt+Ctrl+A",
+        "Ctrl+Alt+A"
+      ]
+    ],
+    "explicacion": "Ctrl+Mayús+F5 inserta un marcador; Alt+Ctrl+A inserta un comentario."
+  },
+  {
     "id": "insertar-27",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Comentarios",
@@ -10932,6 +11019,34 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Además del nombre y el puesto, el cuadro tiene un campo para \"Dirección de correo electrónico del firmante sugerido\". No es obligatorio, pero está disponible."
+  },
+  {
+    "id": "insertar-464",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Texto",
+    "sourceQuestionId": "rell-insertar-04",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada acción: crear un Autotexto a partir de la selección → [1]. alternar entre el código Unicode y el carácter de un símbolo → [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Alt+F3",
+        "Alt + F3"
+      ],
+      [
+        "Alt+X",
+        "Alt + X"
+      ]
+    ],
+    "explicacion": "Alt+F3 crea un elemento de Autotexto; Alt+X alterna el carácter bajo el cursor con su código Unicode."
   },
   {
     "id": "insertar-7",

@@ -174,5 +174,41 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "«Sobres» está en el grupo Crear, al principio de la pestaña Correspondencia, no en Escribir e insertar campos."
+  },
+  {
+    "id": "correspondencia-7",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Escribir e insertar campos",
+    "sourceQuestionId": "rell-correspondencia-01",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada paso de Combinar correspondencia: combinar a un nuevo documento → [1]. combinar directamente a la impresora → [2]. comprobar la combinación → [3]. editar el origen de datos → [4].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Alt+Mayús+D",
+        "Alt + Mayús + D"
+      ],
+      [
+        "Alt+Mayús+M",
+        "Alt + Mayús + M"
+      ],
+      [
+        "Alt+Mayús+K",
+        "Alt + Mayús + K"
+      ],
+      [
+        "Alt+Mayús+E",
+        "Alt + Mayús + E"
+      ]
+    ],
+    "explicacion": "Los cuatro atajos de la combinación de correspondencia: Alt+Mayús+D (a nuevo documento), Alt+Mayús+M (a impresora), Alt+Mayús+K (comprobar) y Alt+Mayús+E (editar origen de datos)."
   }
 ]

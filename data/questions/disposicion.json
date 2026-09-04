@@ -1510,6 +1510,29 @@
     "explicacion": "Ancho: laterales 5,08 · Moderado: laterales 1,91 · ambos 2,54 arriba y abajo."
   },
   {
+    "id": "disposicion-115",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Configurar página",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "rell-disposicion-01",
+    "generado": true,
+    "enunciado": "El comando Configurar página vive en la pestaña [1], grupo [2]. El atajo Alt+Ctrl+D cambia a la vista [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Disposición",
+      "Configurar página",
+      "Diseño de impresión"
+    ],
+    "explicacion": "Disposición ▸ Configurar página; el atajo Alt+Ctrl+D cambia a la vista Diseño de impresión."
+  },
+  {
     "id": "disposicion-112",
     "sourceFile": "disposicion.json",
     "bloque": "Disposicion — Párrafo (negativa)",
@@ -2623,5 +2646,27 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "La cuadrícula nunca se imprime; el espaciado por defecto es 0,32 cm."
+  },
+  {
+    "id": "disposicion-116",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Organizar",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "organizar",
+    "subtopic": null,
+    "tema": "Organizar",
+    "sourceQuestionId": "rell-disposicion-02",
+    "generado": true,
+    "enunciado": "El comando para organizar objetos flotantes (posición, ajuste de texto, alinear…) vive en la pestaña [1], grupo [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Disposición",
+      "Organizar"
+    ],
+    "explicacion": "Disposición ▸ Organizar reúne Posición, Ajustar texto, Traer/Enviar, Alinear, Agrupar y Girar."
   }
 ]

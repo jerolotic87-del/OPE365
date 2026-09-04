@@ -6854,6 +6854,34 @@
     "explicacion": "Emparejamiento correcto: Modo mouse → Comandos más pequeños, aprovecha mejor el espacio · Modo táctil → Comandos más grandes, más espacio entre ellos."
   },
   {
+    "id": "interfaz-524",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "rell-interfaz-01",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada acción: restaurar o maximizar el tamaño de la ventana de Word → [1]. activar o desactivar la vista de etiquetas XML → [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Ctrl+F10",
+        "Ctrl + F10"
+      ],
+      [
+        "Ctrl+Mayús+X",
+        "Ctrl + Mayús + X"
+      ]
+    ],
+    "explicacion": "Ctrl+F10 restaura/maximiza la ventana; Ctrl+Mayús+X activa/desactiva las etiquetas XML."
+  },
+  {
     "id": "interfaz-256",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
@@ -9506,6 +9534,27 @@
       "3": "C"
     },
     "explicacion": "Cada opción tiene un efecto visual distinto."
+  },
+  {
+    "id": "interfaz-527",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-teclado-ayuda",
+    "subtopic": null,
+    "tema": "Modo de acceso por teclado y ayuda",
+    "sourceQuestionId": "rell-interfaz-04",
+    "generado": true,
+    "enunciado": "La tecla [1] (o F10) activa el modo de acceso por teclado en la cinta de opciones, mostrando recuadros con letras sobre cada comando.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Alt"
+    ],
+    "explicacion": "Alt (o F10) activa el modo de acceso por teclado; se sale con Esc o haciendo clic en el documento."
   },
   {
     "id": "interfaz-115",
@@ -14183,6 +14232,27 @@
     "explicacion": "\"Número de línea\" no tiene check."
   },
   {
+    "id": "interfaz-528",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Área de vistas",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "area-vistas",
+    "subtopic": null,
+    "tema": "Área de vistas",
+    "sourceQuestionId": "rell-interfaz-05",
+    "generado": true,
+    "enunciado": "De las vistas del grupo Vistas, la única que NO tiene un atajo de teclado dedicado es [1].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Modo lectura"
+    ],
+    "explicacion": "Diseño de impresión, Vista Esquema, Vista Borrador y Diseño Web sí tienen atajo (Alt+Ctrl+ letra); Modo de lectura no."
+  },
+  {
     "id": "interfaz-125",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Regla",
@@ -16009,6 +16079,34 @@
     "explicacion": "Correspondencia directa."
   },
   {
+    "id": "interfaz-526",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Buscador",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "buscador",
+    "subtopic": null,
+    "tema": "Buscador",
+    "sourceQuestionId": "rell-interfaz-03",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada acción: llevar el foco al cuadro de búsqueda de la barra de título → [1]. actualizar las estadísticas de recuento de palabras → [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Alt+Q",
+        "Alt + Q"
+      ],
+      [
+        "Ctrl+Mayús+O",
+        "Ctrl + Mayús + O"
+      ]
+    ],
+    "explicacion": "Alt+Q lleva el foco al cuadro Buscar (Microsoft Search); Ctrl+Mayús+O actualiza el recuento de palabras."
+  },
+  {
     "id": "interfaz-121",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
@@ -17761,6 +17859,34 @@
       "2": "A"
     },
     "explicacion": "En texto es I; en barras es flecha blanca."
+  },
+  {
+    "id": "interfaz-525",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "cursor-navegacion",
+    "subtopic": null,
+    "tema": "Cursor, puntero y barras de desplazamiento",
+    "sourceQuestionId": "rell-interfaz-02",
+    "generado": true,
+    "enunciado": "Escribe el atajo de cada acción: ir al inicio del documento → [1]. deshacer la última acción → [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Ctrl+Inicio",
+        "Ctrl + Inicio"
+      ],
+      [
+        "Ctrl+Z",
+        "Ctrl + Z"
+      ]
+    ],
+    "explicacion": "Ctrl+Inicio va al principio del documento; Ctrl+Z deshace."
   },
   {
     "id": "interfaz-183",

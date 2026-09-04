@@ -489,12 +489,22 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 520, insertar 452, inicio 451, archivo 402, vista 144, disposicion 114,
-diseno 86, referencias 84, revisar 82, correspondencia 5.
-Total 2340. 331 preguntas `categoria:"atajo"`, 1035 `"ruta"`, 912
+interfaz 525, insertar 456, inicio 456, archivo 405, vista 144, disposicion 116,
+diseno 88, referencias 86, revisar 82, correspondencia 6.
+Total 2364. 352 preguntas `categoria:"atajo"`, 1048 `"ruta"`, 923
 `"concepto"`, 41 `"general"` (sep-2026: `interfaz` reclasificada por
 completo — ver más abajo — quedan sin reclasificar 31 en `vista`, 7 en
-`archivo`, 3 en `inicio`).
+`archivo`, 3 en `inicio`). Por tipo: opcion_unica 1652, verdadero_falso
+564, emparejamiento 54, seleccion_multiple 50, relleno 44.
+**Relleno en todas las pestañas (sep-2026)**: hasta ahora solo `revisar`
+(9) y `vista` (11) tenían preguntas de tipo `relleno`; las otras 8 estaban
+a 0. Se añadieron 24 más (`sourceQuestionId` `rell-<sec>-NN`,
+`generado:true`), 1 a 5 por sección según su tamaño, REFORMATEANDO hechos
+que ya tenían su propia pregunta `opcion_unica`/`atajo` en la misma
+sección (mismo atajo o ruta, solo cambia el formato a huecos) — cero
+contenido nuevo sin fuente. `diseno` no tiene atajos (confirmado en este
+documento), así que sus 2 relleno son de ruta (Formato del documento /
+Fondo de página). Total relleno: 20→44. Generador: `scripts/gen_relleno.py`.
 **Densidad de `negativa` nivelada (sep-2026)**: `inicio` e `insertar`
 estaban al 2.7 % (12/437 y 12/438) frente al 6-11 % del resto del banco.
 Se añadieron 14 `opcion_unica` "señale la INCORRECTA" por sección (28
