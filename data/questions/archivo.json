@@ -175,6 +175,50 @@
     "explicacion": "Las dos formas de volver al documento son la flecha Atrás en la parte superior izquierda del panel de navegación y la tecla Escape. Ctrl+Z deshace acciones en el documento pero no cierra Backstage. No hay botón X para cerrar el panel. Alt+F4 cierra la aplicación completa."
   },
   {
+    "id": "archivo-408",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Vista Backstage",
+    "tipo": "seleccion_multiple",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "backstage",
+    "subtopic": null,
+    "tema": "Vista Backstage",
+    "sourceQuestionId": "sm2-archivo-01",
+    "generado": true,
+    "enunciado": "¿Cuáles de estos atajos SÍ funcionan en esta instalación de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+G (Guardar)"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+U (Nuevo documento)"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+F4 (cerrar documento sin cerrar Word)"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+R (no hace nada)"
+      },
+      {
+        "letter": "E",
+        "text": "Ctrl+Alt+F2 (no abre el panel de impresión)"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "Ctrl+G, Ctrl+U y Ctrl+F4 son atajos reales confirmados. Ctrl+R no hace nada en esta instalación (prueba en vivo) y Ctrl+Alt+F2 NO abre el panel de impresión, pese a aparecer en alguna fuente."
+  },
+  {
     "id": "archivo-351",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Vista Backstage",

@@ -583,6 +583,88 @@
     "explicacion": "«Ancho y espacio» permite fijar el ancho y el espaciado de cada columna por separado, en vez de repartirlas a partes iguales."
   },
   {
+    "id": "disposicion-131",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposición — Configurar página (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "img2-disposicion-03",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAABHCAMAAACgXu6pAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADNQTFRF////HovNOjo4f399+vr6RUVDyMjHfn58RkZEW1tbJCQkj4+PPz8/dnZ22traqKiowMDAepuYagAAAQJJREFUeJztlAsLgyAUha9awqS1/v+v7LEHWcupW1ROs1hBA4WKe/vOuacQEaxbKPC78kh4at88H7/S37d+4JEKi4fy6fNXWXEv6EhnE7j5SOB6DY8xFt+CGR5sgjneJpjlLQI3bzx9fI8HPvDH4I3zoRe4/ZeswG/Pn7QI3exEAtdzZfqzqHQYpgjxuFjOW/K8eZmKVMAohxgale7TiHWRtgBqzMRf3pl4ZJxUGb/DqHGHhBRpK6GBvzQANGc01+KhoQus9CdaDDy00iT6vC7NxjePazmXjvhpg8VmnqQTZOw/bajvlVEPuX8CvzOv9o26FvtnHAkr7srjcP+T/7Mh/wL1+a1IDLu5KwAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tamaño"
+      },
+      {
+        "letter": "B",
+        "text": "Espaciado entre párrafos"
+      },
+      {
+        "letter": "C",
+        "text": "Márgenes"
+      },
+      {
+        "letter": "D",
+        "text": "Sangría francesa"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Tamaño.** Pestaña Disposición ▸ Configurar página. No tiene atajo de teclado directo. Elige el tamaño de papel (A4, Carta, Oficio…) de la galería; «Más tamaños de papel…» abre la ficha Papel del cuadro Configurar página."
+  },
+  {
+    "id": "disposicion-132",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Configurar página",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "sm2-disposicion-01",
+    "generado": true,
+    "enunciado": "¿Cuáles de estos SÍ son preajustes del desplegable Márgenes, en Configurar página?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Normal"
+      },
+      {
+        "letter": "B",
+        "text": "Estrecho"
+      },
+      {
+        "letter": "C",
+        "text": "Moderado"
+      },
+      {
+        "letter": "D",
+        "text": "Justificado"
+      },
+      {
+        "letter": "E",
+        "text": "Ancho"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explicacion": "Los cinco preajustes reales son Normal, Estrecho, Moderado, Ancho y Reflejado. «Justificado» no es un preajuste de márgenes: es un tipo de alineación de párrafo."
+  },
+  {
     "id": "disposicion-2",
     "sourceFile": "disposicion.json",
     "bloque": "Disposición — Configurar página",
@@ -1939,6 +2021,80 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "La alineación está en el grupo Párrafo de la pestaña Inicio, no en el de Disposición (que solo tiene sangría y espaciado)."
+  },
+  {
+    "id": "disposicion-129",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposición — Párrafo (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "parrafo-disposicion",
+    "subtopic": null,
+    "tema": "Párrafo",
+    "sourceQuestionId": "img2-disposicion-01",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ0AAABSCAMAAAB5RiaFAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAALFQTFRF////W1tbJCQk2tradnZ2Pz8/wMDAj4+PqKio6enpvr6+kZGRioqKr6+v8PDwmZmZy8vL+Pj44eHhp6entra2xcXFkJCQjY2N6urqzc3NOjo4TExMMjIy/712UJve//+9diR2vf//diRQm97/3e33MZXRsNfuJHa93ptQhsHkKJDP///em1Akdr3/m72bUCQkHovNdiQkJFCb3v//JCR2/96bUCR2R6DWi4uL09PTsbGxd4qbdQAABDhJREFUeJztmt9r2zAQx0+S7WRr2WgotBstfVnLRijsZWz//8O2x43CxrqNQaEtaymFsG5J/EM7Wf6lJM4P+dSmNAc2tmRLH06yffe1GCyzsbsGmGorOntb0dnbis7eVnT2dm/oGMjyhOMZixduzoOIAKqwkk5wSEocboEGECSkcBW6Fm6D4sySbticqGolnZ8IGSIW9uAPFJ0C9GPwhowBj4DzJFE3MAj6WYm+NIjAD/FyrMdbdBU1XYBoPhsCl1LIFE11JbKO1KmvPNuOKiVSBlECvui3Ql2vPW7n96l0nhhAK47Splmrn9KBVN6CNo6XN9R9CqkgyxLOtMe1q3HTVdR0PN0nE+gE7tGruUdaoReXJaN0oKuI6doD9TpRWP4giPKR9Tk6KghxAL2CDh8fWZao67xhe5jTCV1FTIdcmhEnN077whlqmPxYernv1MChd4oSPZY8KUZWVxHTFWY1pYWeoORGQ4czkQJmzAjo8J0Iblx3f6KAJbQVnb2t6OzNEd0jxhq2LDnrOaJ7gnDXDdvosJu+G7pNdtm8kQ3/wg3dU9kjaGXrtxu69T/2926z86KVKt1z46oz+w6a0G0LFp/nrSyb77bFFWxmeC7pdk9h52ThO59d96G9MScdnxQaiTGVYDTsQro9xhLBfi6MZ7Ri0r1g7Diff2e1dOM2gW738Td4+Xdx502hg1csOja6taZTZIoQoMu+QLcn1tlRNzxeZLRNutdqd/PdpGupfDDK8/0sC2OxkCDCVB/AI1WVagA6szPpuqyHQHsdxi5Od052t65+2dFBje94me8XdH4St6NI5f9ZlbqO+RPo3rBL5NnDOZhv1nRvr8fnHSaTgZnvc61gSPxSx3mVoQFU5x0h3aghnVJOxulUQVqUVZkaANIhlH5ms5F1RKcHV+f7OIpZ2s+DvqbLqrQGwMuRVe+77pE62et8Vk+FEzoVp4kwy/fLtB8fE3wKFF1WlmoAVTo7q38bz/jOLpDp3sGX7FborKOA26GrjaDobC1oGrcre/fRUeS+/6F5IxvDG0dZT3LYGK8THr53lTGu9Ru2INt//z3MbJvIXNARCQHghI5KCAAndFRCADihoxICwAkd1WcMTDoiLYAqBIAl850ZPoEzOgohAGbSqT+P/qC2dmJMRSUEwKR5h/PtQMofZf++rPtXXUtHIgTAZN8dePJrpf9x2WQmHYkQUEO3v6b2n4r+MRM0Un880gsGsoUBhgxAJwTU0I34TtFVUv/0SKfb2cIAqMoAdEIAzDXvkA7K1D894jLJa8eXAlAJATD7mcX+0T2Bmfrnf4snLwWgEgLmohNS/YgvU//0KF0wANWlALw6siRCwBx0oAetTP31kV4wUF0KYNLZ2dS38Z1/Z2/rS2ZpSx0FTI2giIxKCAA3kTuREABush4iIQAcZYw0QgA8xGybzpab7j8Y7KBxMPpKGgAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Márgenes"
+      },
+      {
+        "letter": "B",
+        "text": "Aplicar sangría"
+      },
+      {
+        "letter": "C",
+        "text": "Sangría francesa"
+      },
+      {
+        "letter": "D",
+        "text": "Espaciado entre párrafos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Aplicar sangría.** Pestaña Disposición ▸ Párrafo. No tiene atajo de teclado directo. Fija directamente en la cinta la sangría izquierda y derecha del párrafo, en centímetros, sin abrir el cuadro Párrafo."
+  },
+  {
+    "id": "disposicion-130",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposición — Párrafo (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "parrafo-disposicion",
+    "subtopic": null,
+    "tema": "Párrafo",
+    "sourceQuestionId": "img2-disposicion-02",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAABSCAMAAACFUw1PAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAL1QTFRF////JCQkqKio2traW1tbj4+PdnZ2Pz8/wMDA6enpvr6+kZGRioqKr6+v8PDwmZmZy8vL+Pj44eHhp6entra2xcXFkJCQjY2N6urqzc3NsNfuMZXROjo4TExMMjIyKJDPHovNR6DWhsHk/712UJve3e33//+9diR2vf//diRQm97/JHa93ptQm72bUCQkdiQkJFCb3v///96bUCRQvXYkdr3////em1AkUCR2dnZQi4uL09PTsbGxUFCbm1BQowa2mAAABAtJREFUeJztmv9L20AUwN9Lck3EfVMGOucPG6KDIQhS/GF//zYGMoSJY6CM/TAVt4FOdLZJmtt7l7RJv8QmzbMWycMmvSS9fri73t3nToQZDLxvgFFRQxWNGqpo1FBFo4YqGjMKxVgY5dy2I6uTeTibuMPAMt9UQ9HZ6VAdImpwAn6vfADXB7dFd+OkHYETWh065Ve2IBQdLe34nLDDpBExi+VDt3Do6AaRCs2pv53dERR/hR1RCZm3ThRZmoopiDTEOCYJus0J1aYEPTIVKAAVmrqib0TCcbEHBSZ5P1CgIEAn8NqWCkOv7bbcKDBQSRLdlqWtDuJ0qg+4mVMBaEAVcCt2fdvGFt8whRcnqRJVEDd0t3W3TP09+rR+8uOihioaMzogz2DUUEWjhioaglBziBVz0xZe8lkO6gkxnVfMYxHPeayXg3qOv6tnsqB+gSTUU30pkMvSGUhCPbqa/LPLeJrNxUCtoD4xl1bN8ee0oZYVBqcDUCsKdXAycZaVoZbVMawmVD2o1xhZ7WMJqLXvsHZU+pMvziKwlgagAF79WD8cfNSBsCzUBk+W8Wvv0kY2UTiXFIqPq8kN06ZsgkpnVwVmWpTdmncAm620qCSg+kLRKygJxUAMRjQO7q9Zc1/g7cHEUCPCDZWxKiPN9JTyyRkabaPSYI2o2T4oHnLwJqxUUsPhEZHLSmOTYGlTUm7YsZyQVdoaC8U0TfwrXH0NHYBC39DQi/48KjewtVHpnOx6bYqhdjCSgUo7z/i6zkJxbUKs0jnZbTcu4l/fxtz1US8xGdT64VCXEFcQ+XkXikAwWW1R0MmpPu6nmrvAJfXsE79rfp64ob90hzrPeLmA0BKoRqB8rj8VskrntalelOsLRnae8sNMOaiRw0x3QO7rPKcINXJAlgnpqYtIzDeqToY53n0E0enwmw/VM1nwr0FUHKKtylSLwdZ7kFWs+aqLadr7d8Pnhy6jciEJJabIglByiiwIJafIglByiiwIJTfO5E3ypgs1MCLn2sw0oQbnLjkzz0mhZBQ5Z+YZ79jkKEISlmoPQtE8KhRQ5OzMMzvJM06l/ds+7vYzGXOYv9pr4q4EVLoUlAZD3b6H5g0Ov5TdjvcnRPxWVZHzugTj6WSjqRZ3d5gTlRj2Zc5uO9yPdaaSIo+DSrW4u8OcQA37crb6qinybdXHu7QZLU52mGMoNezLg94+uSL3K1bGkOmrvbbOanE/1LAvs7c/xr3mxVFVRc5byTOthpQ41eJkh5n/CSDZTE5udDJtavMgbtnVFDlvJY+vcxmkWtzdYU42k4d9WU6RSwwz4xbO5BQ5d3lxmlCjB+RCUQaqbIyauoiEnCJLTofFFFlSHMQUWVSxpBT5wcuoWMwk1H+JX09xxd5euQAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Disposición ▸ Párrafo"
+      },
+      {
+        "letter": "B",
+        "text": "Referencias ▸ Tabla de contenido"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Páginas"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Fuente"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Espaciado.** Pestaña Disposición ▸ Párrafo. No tiene atajo de teclado directo. Fija directamente en la cinta el espacio antes y después del párrafo, en puntos, sin abrir el cuadro Párrafo."
   },
   {
     "id": "disposicion-35",

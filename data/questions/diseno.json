@@ -405,6 +405,51 @@
   {
     "id": "diseno-12",
     "sourceFile": "diseno.json",
+    "bloque": "Diseno — Formato del documento",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "formato-documento",
+    "subtopic": null,
+    "tema": "Formato del documento",
+    "sourceQuestionId": "sm2-diseno-01",
+    "generado": true,
+    "enunciado": "¿Cuáles de estos SÍ son comandos del grupo Formato del documento, en la pestaña Diseño?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Colores"
+      },
+      {
+        "letter": "B",
+        "text": "Fuentes"
+      },
+      {
+        "letter": "C",
+        "text": "Espaciado entre párrafos"
+      },
+      {
+        "letter": "D",
+        "text": "Márgenes"
+      },
+      {
+        "letter": "E",
+        "text": "Establecer como predeterminada"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explicacion": "Colores, Fuentes, Espaciado entre párrafos y Establecer como predeterminada son del grupo Formato del documento. «Márgenes» vive en la pestaña Disposición, no en Diseño."
+  },
+  {
+    "id": "diseno-13",
+    "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
     "categoria": "concepto",
@@ -422,7 +467,7 @@
     "explicacion": "Al aplicar un tema desde Diseño ▸ Temas cambian a la vez la paleta de colores, las fuentes de títulos y cuerpo y los efectos de formas y SmartArt. Colores, Fuentes y Efectos son además desplegables independientes en el mismo grupo para ajustar solo una de las tres piezas."
   },
   {
-    "id": "diseno-13",
+    "id": "diseno-14",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -441,7 +486,7 @@
     "explicacion": "Falso: el tema predeterminado se llama «Office» y, en esta versión, su conjunto de fuentes usa Aptos Display para los títulos y Aptos para el cuerpo. «Calibri Light / Calibri» es el conjunto «Office 2013 - 2022»."
   },
   {
-    "id": "diseno-14",
+    "id": "diseno-15",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -460,7 +505,7 @@
     "explicacion": "Falso: «Guardar tema actual...» crea un archivo de tema independiente con extensión .thmx que se puede aplicar después a otros documentos desde «Buscar temas...»."
   },
   {
-    "id": "diseno-15",
+    "id": "diseno-16",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -479,7 +524,7 @@
     "explicacion": "Falso: las formas, los gráficos SmartArt y los estilos rápidos que usan colores o fuentes del tema se actualizan automáticamente al cambiar el tema."
   },
   {
-    "id": "diseno-16",
+    "id": "diseno-17",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -498,7 +543,7 @@
     "explicacion": "Restablecer tema de plantilla descarta los cambios de tema hechos en el documento y vuelve al tema que trae la plantilla base (por ejemplo Normal.dotm)."
   },
   {
-    "id": "diseno-17",
+    "id": "diseno-18",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -517,7 +562,7 @@
     "explicacion": "Falso: «Buscar temas...» abre un explorador de archivos para aplicar un tema tomado de otro documento, plantilla o archivo .thmx del equipo. Los temas en línea están en «Más...» de la galería, no aquí."
   },
   {
-    "id": "diseno-18",
+    "id": "diseno-19",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -536,7 +581,7 @@
     "explicacion": "La pestaña Diseño tiene dos grupos: «Formato del documento» (Temas, Colores, Fuentes, Espaciado entre párrafos, Efectos, Conjunto de estilos y Establecer como predeterminada) y «Fondo de página»."
   },
   {
-    "id": "diseno-19",
+    "id": "diseno-20",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -555,7 +600,7 @@
     "explicacion": "Colores solo sustituye la paleta del tema (texto/fondo, colores de énfasis e hipervínculos). Para cambiar las fuentes hay que usar el desplegable Fuentes."
   },
   {
-    "id": "diseno-20",
+    "id": "diseno-21",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -574,7 +619,7 @@
     "explicacion": "Falso: solo aplica una combinación de colores del tema en grises. Se puede volver a «Office» o a cualquier otra combinación en cualquier momento."
   },
   {
-    "id": "diseno-21",
+    "id": "diseno-22",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -593,7 +638,7 @@
     "explicacion": "El cuadro «Crear nuevos colores del tema» deja elegir los 12 colores de la paleta y guardarlos como una combinación con nombre, que luego aparece en la parte superior del desplegable Colores."
   },
   {
-    "id": "diseno-22",
+    "id": "diseno-23",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -612,7 +657,7 @@
     "explicacion": "Falso: son dos combinaciones de colores del tema distintas, pensadas para reproducir la paleta de esas versiones de Office."
   },
   {
-    "id": "diseno-23",
+    "id": "diseno-24",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -631,7 +676,7 @@
     "explicacion": "Una combinación de colores del tema define 4 colores de texto/fondo, 6 de énfasis (Énfasis 1 a 6) y 2 de hipervínculo (visitado y no visitado)."
   },
   {
-    "id": "diseno-24",
+    "id": "diseno-25",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -650,7 +695,7 @@
     "explicacion": "Por eso en muchas listas de fuentes de Word aparecen arriba «+Títulos» y «+Cuerpo»: son las dos fuentes que fija el conjunto de fuentes del tema activo."
   },
   {
-    "id": "diseno-25",
+    "id": "diseno-26",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -669,7 +714,7 @@
     "explicacion": "Falso: en esta versión «Office» usa Aptos Display (títulos) y Aptos (cuerpo). Calibri Light / Calibri es el conjunto «Office 2013 - 2022»."
   },
   {
-    "id": "diseno-26",
+    "id": "diseno-27",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -688,7 +733,7 @@
     "explicacion": "Ese conjunto reproduce la combinación clásica de Office 2007-2010: Cambria (con serifa) en los títulos y Calibri en el cuerpo."
   },
   {
-    "id": "diseno-27",
+    "id": "diseno-28",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -707,7 +752,7 @@
     "explicacion": "Falso: el cuadro «Crear nuevas fuentes del tema» permite una fuente de encabezado y otra de cuerpo distintas, y guardar la combinación con un nombre."
   },
   {
-    "id": "diseno-28",
+    "id": "diseno-29",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -726,7 +771,7 @@
     "explicacion": "Además de esas seis opciones integradas están «Predeterminado» (el del conjunto de estilos) y «Espaciado personalizado entre párrafos...»."
   },
   {
-    "id": "diseno-29",
+    "id": "diseno-30",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -745,7 +790,7 @@
     "explicacion": "Falso: cada opción integrada fija a la vez el espacio antes y después del párrafo y el interlineado."
   },
   {
-    "id": "diseno-30",
+    "id": "diseno-31",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -764,7 +809,7 @@
     "explicacion": "«Predeterminado» no impone valores fijos: usa el espaciado que traiga el conjunto de estilos seleccionado en ese momento."
   },
   {
-    "id": "diseno-31",
+    "id": "diseno-32",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -783,7 +828,7 @@
     "explicacion": "Falso: se aplica a todo el documento cambiando los estilos, no solo al párrafo actual. Para un párrafo suelto se usa el grupo Párrafo de Inicio."
   },
   {
-    "id": "diseno-32",
+    "id": "diseno-33",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -802,7 +847,7 @@
     "explicacion": "Desde ahí se fijan el espacio anterior, el posterior y el interlineado para todo el documento, con la opción de aplicarlo también a los documentos nuevos basados en la plantilla."
   },
   {
-    "id": "diseno-33",
+    "id": "diseno-34",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -821,7 +866,7 @@
     "explicacion": "Los efectos del tema afectan al acabado gráfico (bordes, sombras, iluminación, 3D) de los objetos, no al texto normal."
   },
   {
-    "id": "diseno-34",
+    "id": "diseno-35",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -840,7 +885,7 @@
     "explicacion": "Falso: los Efectos solo actúan sobre objetos gráficos (formas, SmartArt, gráficos). El interlineado y las sangrías se controlan con estilos y con el grupo Párrafo."
   },
   {
-    "id": "diseno-35",
+    "id": "diseno-36",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -859,7 +904,7 @@
     "explicacion": "Falso: sí lo incluye. El orden del grupo es Temas, Colores, Fuentes, Espaciado entre párrafos, Efectos y Conjunto de estilos."
   },
   {
-    "id": "diseno-36",
+    "id": "diseno-37",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -878,7 +923,7 @@
     "explicacion": "La galería de conjuntos de estilos usa vista previa dinámica: el documento se muestra con ese conjunto mientras el puntero está sobre la miniatura, sin necesidad de hacer clic."
   },
   {
-    "id": "diseno-37",
+    "id": "diseno-38",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -897,7 +942,7 @@
     "explicacion": "Falso: redefine el formato completo (fuente, tamaño, color, espaciado, alineación) de todos los estilos: Normal, Título 1 a 9, Título, Subtítulo, Cita, etc."
   },
   {
-    "id": "diseno-38",
+    "id": "diseno-39",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -916,7 +961,7 @@
     "explicacion": "Descarta el conjunto de estilos elegido en el documento y vuelve al que trae la plantilla base."
   },
   {
-    "id": "diseno-39",
+    "id": "diseno-40",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -935,7 +980,7 @@
     "explicacion": "El botón «Establecer como predeterminada» del grupo Formato del documento fija la combinación actual de tema/colores/fuentes/espaciado como predeterminada de la plantilla (por ejemplo Normal.dotm)."
   },
   {
-    "id": "diseno-40",
+    "id": "diseno-41",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -954,7 +999,7 @@
     "explicacion": "Falso: se guarda como un archivo .dotx en la carpeta QuickStyles del usuario y a partir de entonces aparece en la galería «Conjunto de estilos» de cualquier documento."
   },
   {
-    "id": "diseno-41",
+    "id": "diseno-42",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -973,7 +1018,7 @@
     "explicacion": "Esos son los valores por defecto que muestra el cuadro: posición izquierda 0 cm, alineación izquierda, espacio anterior 0 pto, posterior 8 pto e interlineado Múltiple 1,16."
   },
   {
-    "id": "diseno-42",
+    "id": "diseno-43",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -992,7 +1037,7 @@
     "explicacion": "Falso: el cuadro ofrece las dos opciones: «Solo en este documento» y «Documentos nuevos basados en esta plantilla»."
   },
   {
-    "id": "diseno-43",
+    "id": "diseno-44",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1011,7 +1056,7 @@
     "explicacion": "Falso: incluye el botón «Importar o exportar...», que abre el Organizador para copiar estilos entre documentos y plantillas."
   },
   {
-    "id": "diseno-44",
+    "id": "diseno-45",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1030,7 +1075,7 @@
     "explicacion": "Es uno de los temas integrados, junto a Faceta, Galería, Integral, Ion, Orgánico, Sector, Berlin, Damasco, etc."
   },
   {
-    "id": "diseno-45",
+    "id": "diseno-46",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1049,7 +1094,7 @@
     "explicacion": "«Sector» es uno de los temas integrados de Word 365."
   },
   {
-    "id": "diseno-46",
+    "id": "diseno-47",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1068,7 +1113,7 @@
     "explicacion": "Aunque el nombre parezca de tejido, «Damasco» es un tema integrado real, en la segunda fila de la galería."
   },
   {
-    "id": "diseno-47",
+    "id": "diseno-48",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1087,7 +1132,7 @@
     "explicacion": "Falso: no existe ningún tema «Vintage». La galería incluye Office, Espiral, Faceta, Galería, Integral, Ion, Orgánico, Sector, Berlin, Circuito, Citable, Con bandas, Damasco, Distintivo, Dividendo, etc."
   },
   {
-    "id": "diseno-48",
+    "id": "diseno-49",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1106,7 +1151,7 @@
     "explicacion": "Falso: solo existe «Sector». «Sector industrial» es un nombre inventado."
   },
   {
-    "id": "diseno-49",
+    "id": "diseno-50",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1125,7 +1170,7 @@
     "explicacion": "Falso: el tema se llama «Galería». No existe ningún «Galería de Office» (mezcla el nombre del tema «Galería» con el del tema «Office»)."
   },
   {
-    "id": "diseno-50",
+    "id": "diseno-51",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1144,7 +1189,7 @@
     "explicacion": "La lista de combinaciones de colores incluye Verde azulado, Verde, Verde amarillo, Amarillo, Naranja amarillo, Naranja, etc."
   },
   {
-    "id": "diseno-51",
+    "id": "diseno-52",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1163,7 +1208,7 @@
     "explicacion": "«Intermedio» aparece al final de la lista de combinaciones, junto a «Papel»."
   },
   {
-    "id": "diseno-52",
+    "id": "diseno-53",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1182,7 +1227,7 @@
     "explicacion": "Falso: «Escala de grises» solo cambia la paleta de colores del tema (formas, SmartArt, tablas con estilo, texto con colores de tema). Las imágenes insertadas mantienen su color."
   },
   {
-    "id": "diseno-53",
+    "id": "diseno-54",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1201,7 +1246,7 @@
     "explicacion": "Al igual que Calibri, Arial, Corbel, Century Gothic o TW Cen MT, el conjunto «Candara» aplica Candara tanto a títulos como a cuerpo."
   },
   {
-    "id": "diseno-54",
+    "id": "diseno-55",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1220,7 +1265,7 @@
     "explicacion": "Falso: usa Franklin Gothic Medium para los títulos y Franklin Gothic Book para el cuerpo, dos variantes distintas."
   },
   {
-    "id": "diseno-55",
+    "id": "diseno-56",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1239,7 +1284,7 @@
     "explicacion": "Es un nombre poco habitual, pero «Microsurco» es uno de los conjuntos de efectos integrados, junto a Recuadro, Reflejos, Brillante, etc."
   },
   {
-    "id": "diseno-56",
+    "id": "diseno-57",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1258,7 +1303,7 @@
     "explicacion": "«Vaso de leche» es un conjunto de efectos real, en la lista con Vidrio esmerilado, Sombra suave, Microsurco, etc."
   },
   {
-    "id": "diseno-57",
+    "id": "diseno-58",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1277,7 +1322,7 @@
     "explicacion": "Falso: no hay ningún conjunto de efectos «3D». Los conjuntos son Office, Sólidos, Borde colorido, Vidrio ahumado, Textura granulada, Vidrio esmerilado, Sombra suave, Recuadro, Vaso de leche, Microsurco, Reflejos, Sombra exterior y Brillante."
   },
   {
-    "id": "diseno-58",
+    "id": "diseno-59",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1296,7 +1341,7 @@
     "explicacion": "Falso: son dos conjuntos de efectos distintos y separados en la lista del desplegable Efectos."
   },
   {
-    "id": "diseno-59",
+    "id": "diseno-60",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1315,7 +1360,7 @@
     "explicacion": "La galería de conjuntos de estilos empieza por una sección «Este documento» con el conjunto en uso, seguida de los conjuntos integrados."
   },
   {
-    "id": "diseno-60",
+    "id": "diseno-61",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Formato del documento",
     "tipo": "verdadero_falso",
@@ -1334,7 +1379,7 @@
     "explicacion": "Word usa «Automático» (que se ve negro sobre fondo claro, pero se invierte a blanco sobre fondos oscuros), no un negro fijo."
   },
   {
-    "id": "diseno-61",
+    "id": "diseno-62",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Formato del documento",
     "tipo": "emparejamiento",
@@ -1401,7 +1446,7 @@
     "explicacion": "Cada comando del grupo Formato del documento cambia un único aspecto del formato global, sin tocar los demás."
   },
   {
-    "id": "diseno-62",
+    "id": "diseno-63",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Formato del documento",
     "tipo": "relleno",
@@ -1424,7 +1469,7 @@
     "explicacion": "Los tres comandos del grupo Formato del documento que afectan a un aspecto concreto sin tocar los demás."
   },
   {
-    "id": "diseno-63",
+    "id": "diseno-64",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página (icono)",
     "tipo": "opcion_unica",
@@ -1461,7 +1506,7 @@
     "explicacion": "**Marca de agua.** Pestaña Diseño ▸ Fondo de página. Atajo: no tiene atajo de teclado en esta instalación. Pone un texto o una imagen semitransparente detrás del contenido (CONFIDENCIAL, BORRADOR…). Se repite en todas las páginas."
   },
   {
-    "id": "diseno-64",
+    "id": "diseno-65",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página (icono)",
     "tipo": "opcion_unica",
@@ -1498,7 +1543,7 @@
     "explicacion": "**Color de página.** Pestaña Diseño ▸ Fondo de página. Atajo: no tiene atajo de teclado en esta instalación. Pone un color o efecto de relleno de fondo a la página. Por defecto NO se imprime."
   },
   {
-    "id": "diseno-65",
+    "id": "diseno-66",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página (icono)",
     "tipo": "opcion_unica",
@@ -1535,7 +1580,7 @@
     "explicacion": "**Bordes de página.** Pestaña Diseño ▸ Fondo de página. Atajo: no tiene atajo de teclado en esta instalación. Abre «Bordes y sombreado» en la ficha «Borde de página» (Valor: Ninguno/Cuadro/Sombra/3D/Personalizado; desplegable Arte)."
   },
   {
-    "id": "diseno-66",
+    "id": "diseno-67",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página (negativa)",
     "tipo": "opcion_unica",
@@ -1571,7 +1616,7 @@
     "explicacion": "«Efectos» está en el grupo Formato del documento, no en Fondo de página (que solo tiene Marca de agua, Color de página y Bordes de página)."
   },
   {
-    "id": "diseno-67",
+    "id": "diseno-68",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página (negativa)",
     "tipo": "opcion_unica",
@@ -1607,7 +1652,7 @@
     "explicacion": "«Aplicar a» también ofrece Esta sección, Esta sección: solo la primera página y Esta sección: todas excepto la primera."
   },
   {
-    "id": "diseno-68",
+    "id": "diseno-69",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1626,7 +1671,7 @@
     "explicacion": "En «Confidencial» están CONFIDENCIAL 1/2 y NO COPIAR 1/2; en «Declinaciones de responsabilidades», BORRADOR 1/2 y EJEMPLO 1."
   },
   {
-    "id": "diseno-69",
+    "id": "diseno-70",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1645,7 +1690,7 @@
     "explicacion": "Falso: BORRADOR y EJEMPLO están en «Declinaciones de responsabilidades». En «Confidencial» están CONFIDENCIAL y NO COPIAR."
   },
   {
-    "id": "diseno-70",
+    "id": "diseno-71",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1664,7 +1709,7 @@
     "explicacion": "El cuadro «Marca de agua impresa» ofrece «Marca de agua de imagen» (con opción de atenuar) y «Marca de agua de texto» (texto, fuente, tamaño, color, disposición diagonal u horizontal)."
   },
   {
-    "id": "diseno-71",
+    "id": "diseno-72",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1683,7 +1728,7 @@
     "explicacion": "Falso: la marca de agua se coloca en el encabezado y se repite en todas las páginas de la sección."
   },
   {
-    "id": "diseno-72",
+    "id": "diseno-73",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1702,7 +1747,7 @@
     "explicacion": "«Quitar marca de agua» borra la marca de agua activa. También se puede hacer entrando en el encabezado y eliminando el objeto."
   },
   {
-    "id": "diseno-73",
+    "id": "diseno-74",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1721,7 +1766,7 @@
     "explicacion": "Falso: por defecto el color de página se ve en pantalla pero no se imprime. Para imprimirlo hay que activar «Imprimir colores e imágenes de fondo» en Archivo ▸ Opciones ▸ Mostrar."
   },
   {
-    "id": "diseno-74",
+    "id": "diseno-75",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1740,7 +1785,7 @@
     "explicacion": "El cuadro «Efectos de relleno» tiene las fichas Degradado, Textura, Trama e Imagen para el fondo de la página."
   },
   {
-    "id": "diseno-75",
+    "id": "diseno-76",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1759,7 +1804,7 @@
     "explicacion": "Falso: «Más colores...» abre el cuadro Colores con las fichas «Estándar» y «Personalizado» (modelo RGB/HSL). Los degradados están en «Efectos de relleno...»."
   },
   {
-    "id": "diseno-76",
+    "id": "diseno-77",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1778,7 +1823,7 @@
     "explicacion": "Falso: está en el grupo «Fondo de página», junto a «Marca de agua» y «Bordes de página»."
   },
   {
-    "id": "diseno-77",
+    "id": "diseno-78",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1797,7 +1842,7 @@
     "explicacion": "El mismo cuadro tiene también las fichas «Bordes» (del párrafo) y «Sombreado», pero el comando de la pestaña Diseño entra por «Borde de página»."
   },
   {
-    "id": "diseno-78",
+    "id": "diseno-79",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1816,7 +1861,7 @@
     "explicacion": "Esos son los cinco valores del borde de página. «Personalizado» permite un estilo, color o ancho distinto en cada lado desde la vista previa."
   },
   {
-    "id": "diseno-79",
+    "id": "diseno-80",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1835,7 +1880,7 @@
     "explicacion": "Falso: «Arte» permite bordes de página con motivos gráficos (manzanas, estrellas, corazones, árboles, etc.) en lugar de una línea."
   },
   {
-    "id": "diseno-80",
+    "id": "diseno-81",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1854,7 +1899,7 @@
     "explicacion": "Falso: también ofrece «Esta sección», «Esta sección: solo la primera página» y «Esta sección: todas excepto la primera página»."
   },
   {
-    "id": "diseno-81",
+    "id": "diseno-82",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1873,7 +1918,7 @@
     "explicacion": "La lista de anchos va de 1/4 pto a 6 pto (1/4, 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 pto)."
   },
   {
-    "id": "diseno-82",
+    "id": "diseno-83",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1892,7 +1937,7 @@
     "explicacion": "El cuadro «Opciones de borde y sombreado» muestra por defecto 24 pto en Superior, Inferior, Izquierdo y Derecho, medidos desde el borde de página."
   },
   {
-    "id": "diseno-83",
+    "id": "diseno-84",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1911,7 +1956,7 @@
     "explicacion": "Falso: el campo «Medir desde» permite elegir entre «Texto» y «Borde de página»."
   },
   {
-    "id": "diseno-84",
+    "id": "diseno-85",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1930,7 +1975,7 @@
     "explicacion": "Falso: «Color de página» está en la pestaña Diseño, grupo «Fondo de página», junto a «Marca de agua» y «Bordes de página»."
   },
   {
-    "id": "diseno-85",
+    "id": "diseno-86",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1949,7 +1994,7 @@
     "explicacion": "Falso: para el borde de página las opciones son Todo el documento, Esta sección, Esta sección: solo la primera página y Esta sección: todas excepto la primera. «Solo el párrafo actual» solo aparece para los bordes de párrafo (pestaña Bordes)."
   },
   {
-    "id": "diseno-86",
+    "id": "diseno-87",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1968,7 +2013,7 @@
     "explicacion": "Falso: el valor predeterminado es «Borde de página». La otra opción del desplegable es «Texto», no «Borde de texto»."
   },
   {
-    "id": "diseno-87",
+    "id": "diseno-88",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página",
     "tipo": "emparejamiento",
@@ -2025,7 +2070,7 @@
     "explicacion": "Los tres comandos del grupo Fondo de página."
   },
   {
-    "id": "diseno-88",
+    "id": "diseno-89",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página",
     "tipo": "relleno",
@@ -2048,7 +2093,7 @@
     "explicacion": "Los tres comandos del grupo Fondo de página."
   },
   {
-    "id": "diseno-89",
+    "id": "diseno-90",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Estructura de la pestaña",
     "tipo": "verdadero_falso",
@@ -2067,7 +2112,7 @@
     "explicacion": "«Formato del documento» reúne Temas, Colores, Fuentes, Espaciado entre párrafos, Efectos, Conjunto de estilos y Establecer como predeterminada; «Fondo de página» reúne Marca de agua, Color de página y Bordes de página."
   },
   {
-    "id": "diseno-90",
+    "id": "diseno-91",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Estructura de la pestaña",
     "tipo": "verdadero_falso",

@@ -6,7 +6,7 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **2496 preguntas** y **971
+de Word 365 de una oposición de ayuntamiento. **2503 preguntas** y **971
 flashcards** (archivo 263, disposicion 100, inicio 148, insertar 147,
 referencias 74, revisar 73, vista 79, diseno 24, interfaz 48,
 correspondencia 15 — un buen tramo de las de archivo/disposicion son
@@ -489,9 +489,31 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 525, insertar 457, inicio 456, archivo 407, vista 144, disposicion 128,
-diseno 90, referencias 161, revisar 82, correspondencia 46.
-Total 2496.
+interfaz 525, insertar 458, inicio 456, archivo 408, vista 144, disposicion 132,
+diseno 91, referencias 161, revisar 82, correspondencia 46.
+Total 2503.
+**Auditoría de cobertura + demo de recorte de icono (sep-2026)**: a
+petición del usuario, se auditó qué quedaba realmente por cubrir en todo
+el banco (no solo referencias/correspondencia): iconos sin convertir,
+tipos de ejercicio ausentes por sección, topics con <3 preguntas,
+ratios de flashcards. Se instaló Pillow (`py -3.11 -m pip install --user
+pillow`) para demostrar recorte preciso de un icono desde una captura de
+cinta completa (2 recortes de muestra sobre `Cinta_Diseño.PNG`,
+iterando 2-3 veces hasta eliminar texto de comandos vecinos) — pero
+resultó innecesario para el hueco real encontrado: los 3 iconos de
+`disposicion` sin usar (Aplicar sangría, Espaciado, Tamaño) YA estaban
+recortados por el usuario, solo sin convertir a pregunta → **+3
+preguntas con imagen** (`scripts/gen_iconos_disposicion2.py`, aparte del
+generador de disposicion original para no duplicar las 16 ya existentes).
+`seleccion_multiple` seguía ausente del todo en `archivo`, `diseno`,
+`disposicion` e `insertar` → **+4** (una por sección, reformateando
+hechos ya verificados) con `scripts/gen_sm2.py`. Hallazgo de la
+auditoría **sin resolver, pendiente del usuario**: `revisar` tiene tres
+topics casi vacíos — `comentarios` (0), `revision-marcado` (0),
+`entrada-lapiz` (0) — y no hay `data/rutas/revisar.txt` ni
+`data/imagenes_rutas/revisar/`; no se inventó contenido ahí. `interfaz`
+sigue con la flashcard-ratio más baja del banco (48/525 = 0.09) pese a
+haber salido de 0 esta sesión.
 **Cuarta pasada: `seleccion_multiple` + lectura de los ejemplos del PDF
 (sep-2026)**: ni `correspondencia` ni `referencias` tenían NINGUNA
 pregunta de tipo `seleccion_multiple` (varias respuestas correctas a la

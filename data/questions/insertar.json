@@ -6926,6 +6926,51 @@
     "explicacion": "Alt+Ctrl+C copia el formato de la selección (el pincel); no tiene nada que ver con los comentarios. El comentario se inserta con Alt+Ctrl+A."
   },
   {
+    "id": "insertar-466",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Comentarios",
+    "tipo": "seleccion_multiple",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "comentarios",
+    "subtopic": null,
+    "tema": "Comentarios",
+    "sourceQuestionId": "sm2-insertar-01",
+    "generado": true,
+    "enunciado": "¿Cuáles de estos atajos SÍ existen en la pestaña Insertar de esta instalación?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Entrar (salto de página)"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Ctrl+A (comentario nuevo)"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+F3 (crear Autotexto)"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+P (no existe)"
+      },
+      {
+        "letter": "E",
+        "text": "Alt+X (código Unicode del carácter)"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explicacion": "Ctrl+Entrar, Alt+Ctrl+A, Alt+F3 y Alt+X son atajos confirmados de esta pestaña. Ctrl+Mayús+P no es un atajo real de Insertar."
+  },
+  {
     "id": "insertar-279",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Comentarios",
