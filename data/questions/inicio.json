@@ -12784,7 +12784,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+D aplica subrayado doble al texto seleccionado. Ctrl+S aplica subrayado simple. Ctrl+D alinea el párrafo a la derecha. Alt+Ctrl+D inserta una página en blanco en el documento."
+    "explicacion": "Ctrl+Mayús+D aplica subrayado doble al texto seleccionado. Ctrl+S aplica subrayado simple. Ctrl+D alinea el párrafo a la derecha. Alt+Ctrl+D activa la vista Diseño de impresión."
   },
   {
     "id": "inicio-348",
@@ -12889,7 +12889,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F aplica sangría francesa al párrafo. Ctrl+H aplica sangría normal. Ctrl+Mayús+F activa el campo de nombre de fuente en la cinta. Ctrl+Mayús+H reduce la sangría francesa del párrafo."
+    "explicacion": "Ctrl+F aplica la sangría francesa al párrafo. Ctrl+H aplica sangría izquierda. Ctrl+Mayús+F abre el cuadro de diálogo Fuente (foco en el nombre). Ctrl+Mayús+H reduce la sangría francesa."
   },
   {
     "id": "inicio-351",
@@ -12924,7 +12924,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+H reduce la sangría francesa. Ctrl+F aplica sangría francesa. Ctrl+H aplica sangría normal. Alt+Ctrl+F también aparece asociado a nota al pie en algunas versiones pero no a sangría francesa."
+    "explicacion": "Ctrl+Mayús+H reduce la sangría francesa ya aplicada. Ctrl+F la aplica o la quita. Ctrl+H aplica sangría izquierda. Alt+Ctrl+F no tiene función en este Word."
   },
   {
     "id": "inicio-352",
@@ -12994,7 +12994,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+Q aplica la fuente Symbol al texto seleccionado. Ctrl+Q quita la sangría del párrafo o restablece el formato de párrafo. Alt+Ctrl+Q aplica el formato de contorno al texto. Ctrl+Mayús+S aplica subrayado al texto seleccionado."
+    "explicacion": "Ctrl+Mayús+Q aplica la fuente Symbol al texto seleccionado. Ctrl+Q alinea el párrafo a la izquierda. Alt+Ctrl+Q activa la vista Esquema. Ctrl+Mayús+S aplica subrayado."
   },
   {
     "id": "inicio-354",
@@ -13344,7 +13344,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+W abre el panel Aplicar estilos. Ctrl+W quita el formato de párrafo. Alt+Mayús+W no tiene función asignada para abrir el panel de estilos. Alt+Ctrl+W divide la ventana."
+    "explicacion": "Ctrl+Mayús+W abre el panel Aplicar estilos. Ctrl+W quita el formato de párrafo. Alt+Mayús+W y Alt+Ctrl+W no tienen función en este Word."
   },
   {
     "id": "inicio-367",
@@ -13554,7 +13554,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Número 5 en el teclado numérico selecciona todo el documento como atajo alternativo a Ctrl+E. Ctrl+Borrar (Número 5) también selecciona todo. Ctrl+Mayús+E activa el control de cambios. Alt+Ctrl+E no tiene función asignada para seleccionar todo."
+    "explicacion": "Ctrl+5 del teclado numérico selecciona todo el documento, igual que Ctrl+E. Ctrl+Mayús+E activa el control de cambios. Alt+Ctrl+E no tiene función. ⚠️ Ctrl+5 num no figura en el volcado v2608; confirmado en vivo."
   },
   {
     "id": "inicio-373",
@@ -13611,7 +13611,7 @@
       },
       {
         "letter": "B",
-        "text": "Alt+Mayús+Borrar (Número 5)"
+        "text": "Ctrl+Mayús+S"
       },
       {
         "letter": "C",
@@ -13624,7 +13624,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+A aplica el estilo Normal al párrafo. Alt+Mayús+Borrar (Número 5) también aplica el estilo Normal como atajo alternativo. Ctrl+Mayús+N también aplica Normal en algunos contextos. Alt+Ctrl+N activa la vista Normal del documento."
+    "explicacion": "Ctrl+Mayús+A aplica el estilo Normal al párrafo. Ctrl+Mayús+S aplica subrayado, Ctrl+Mayús+N aplica negrita y Alt+Ctrl+N activa la vista Normal del documento (no el estilo)."
   },
   {
     "id": "inicio-377",
@@ -13804,7 +13804,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Elimina el formato manual aplicado directamente al párrafo (por ejemplo, sangrías), dejándolo con el formato base del estilo."
+    "explicacion": "Ctrl+W elimina el formato manual del párrafo (sangrías, etc.), dejándolo con el del estilo base. ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+W también bajo «cerrar documento», pero en la práctica quita el formato de párrafo. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-382",
