@@ -7200,11 +7200,11 @@
     "tema": "Páginas",
     "sourceQuestionId": "vf-insertar-04",
     "generado": true,
-    "enunciado": "El atajo Ctrl+Entrar produce el mismo efecto que el comando Salto de página de la pestaña Insertar.",
+    "enunciado": "El atajo Ctrl+Mayús+Entrar produce el mismo efecto que el comando Salto de página de la pestaña Insertar.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Tanto si vas a Insertar > Páginas > Salto de página como si pulsas Ctrl+Entrar con el cursor en mitad de un párrafo, el resultado es idéntico: el texto a partir del cursor pasa a la página siguiente."
+    "respuesta": false,
+    "explicacion": "Falso: el atajo del salto de página es Ctrl+Entrar. Ctrl+Mayús+Entrar inserta un salto de columna."
   },
   {
     "id": "insertar-210",
@@ -7257,11 +7257,11 @@
     "tema": "Páginas",
     "sourceQuestionId": "vf-insertar-08",
     "generado": true,
-    "enunciado": "El Salto de página se encuentra en el grupo Páginas de la pestaña Insertar.",
+    "enunciado": "El Salto de página se encuentra en el grupo Texto de la pestaña Insertar.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al abrir la pestaña Insertar, el primer grupo visible es Páginas. Dentro de ese grupo están los tres comandos: Portada, Página en blanco y Salto de página. No está en el grupo Tablas ni en el grupo Texto."
+    "respuesta": false,
+    "explicacion": "Falso: está en el grupo Páginas, junto a Portada y Página en blanco."
   },
   {
     "id": "insertar-213",
@@ -7333,11 +7333,11 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-12",
     "generado": true,
-    "enunciado": "El comando Convertir texto en tabla puede usar tabulaciones, comas u otros caracteres como separadores de columna.",
+    "enunciado": "El comando Convertir texto en tabla solo admite el tabulador como separador de columna.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Tienes este texto: Juan;García;Madrid. Seleccionas el texto, vas a Insertar > Tablas > Tabla > Convertir texto en tabla y en el cuadro indicas que el separador es el punto y coma. Word crea una tabla de tres columnas con Juan, García y Madrid en cada una."
+    "respuesta": false,
+    "explicacion": "Falso: admite tabulaciones, punto y coma, coma o un carácter definido por el usuario."
   },
   {
     "id": "insertar-217",
@@ -7371,11 +7371,11 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-14",
     "generado": true,
-    "enunciado": "La galería de Tablas rápidas incluye exactamente cuatro modelos de calendarios listos para insertar.",
+    "enunciado": "La galería de Tablas rápidas incluye exactamente tres modelos de calendarios listos para insertar.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "En Insertar > Tablas > Tabla > Tablas rápidas > Integrado aparecen Calendario 1, Calendario 2, Calendario 3 y Calendario 4. Son tablas con la estructura de un calendario mensual que se insertan con un solo clic. No hay un quinto calendario."
+    "respuesta": false,
+    "explicacion": "Falso: son cuatro (Calendario 1, 2, 3 y 4)."
   },
   {
     "id": "insertar-219",
@@ -7447,11 +7447,11 @@
     "tema": "Ilustraciones",
     "sourceQuestionId": "vf-insertar-18",
     "generado": true,
-    "enunciado": "Imágenes de archivo da acceso a la biblioteca de imágenes de stock de Microsoft 365, no a las imágenes guardadas en el equipo.",
+    "enunciado": "El comando Este dispositivo da acceso a la biblioteca de imágenes de stock de Microsoft 365.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al elegir Imágenes de archivo se abre un cuadro con categorías como Animales, Deportes o Tecnología. Las imágenes son de la biblioteca de Microsoft, no del disco duro. Para insertar una foto guardada en el equipo hay que usar Este dispositivo."
+    "respuesta": false,
+    "explicacion": "Falso: Este dispositivo abre el explorador de archivos local. La biblioteca de stock es Imágenes de archivo."
   },
   {
     "id": "insertar-223",
@@ -7713,11 +7713,11 @@
     "tema": "Ilustraciones",
     "sourceQuestionId": "vf-insertar-32",
     "generado": true,
-    "enunciado": "El cuadro Elegir un gráfico SmartArt contiene exactamente doce categorías, incluyendo Todos como primera opción.",
+    "enunciado": "El cuadro Elegir un gráfico SmartArt contiene exactamente catorce categorías, incluyendo Todos como primera opción.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Las doce categorías son: Todos, Listas, Procesos, Ciclos, Jerarquía, Relación, Matriz, Pirámide, Imagen, Escala de tiempo, Conoce al equipo y Tarjeta de texto. Todos no es un tipo en sí mismo, sino una vista que muestra los diseños de todas las categorías juntos."
+    "respuesta": false,
+    "explicacion": "Falso: son doce (Todos más Listas, Procesos, Ciclos, Jerarquía, Relación, Matriz, Pirámide, Imagen, Escala de tiempo, Conoce al equipo, Tarjeta de texto)."
   },
   {
     "id": "insertar-237",
@@ -7808,11 +7808,11 @@
     "tema": "Ilustraciones",
     "sourceQuestionId": "vf-insertar-37",
     "generado": true,
-    "enunciado": "La subcategoría Diagrama de flujo incluye el rombo de decisión, el rectángulo de proceso y el cilindro de base de datos, entre otras formas estándar.",
+    "enunciado": "El rombo de decisión pertenece a la subcategoría Formas básicas del desplegable Formas, no a Diagrama de flujo.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Para dibujar el flujo de tramitación de una solicitud, la subcategoría Diagrama de flujo proporciona el rectángulo para los pasos de proceso, el rombo para las decisiones (¿Está completa la documentación?), el paralelogramo para los datos y el cilindro para las bases de datos."
+    "respuesta": false,
+    "explicacion": "Falso: el rombo de decisión está en la subcategoría Diagrama de flujo, junto al rectángulo de proceso y el cilindro de base de datos."
   },
   {
     "id": "insertar-242",
@@ -7827,11 +7827,11 @@
     "tema": "Ilustraciones",
     "sourceQuestionId": "vf-insertar-38",
     "generado": true,
-    "enunciado": "La subcategoría Llamadas incluye formas de bocadillo con un apéndice que señala hacia un punto, útiles para añadir anotaciones visuales en el documento.",
+    "enunciado": "La subcategoría Cintas y estrellas incluye las formas de bocadillo con apéndice para anotaciones.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "En un manual de instrucciones puedes insertar una Llamada rectangular apuntando hacia un botón de la interfaz para explicar su función. El bocadillo señala exactamente al elemento que comentas, como en los cómics."
+    "respuesta": false,
+    "explicacion": "Falso: los bocadillos con apéndice están en la subcategoría Llamadas."
   },
   {
     "id": "insertar-243",
@@ -7865,11 +7865,11 @@
     "tema": "Ilustraciones",
     "sourceQuestionId": "vf-insertar-40",
     "generado": true,
-    "enunciado": "La subcategoría Rectángulos incluye variantes como el rectángulo con esquinas redondeadas y el rectángulo con una esquina cortada, además del rectángulo básico.",
+    "enunciado": "La subcategoría Rectángulos del desplegable Formas contiene únicamente el rectángulo básico.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al desplegar Formas y buscar en Rectángulos encuentras el rectángulo básico, el redondeado, el de esquina única recortada y el de esquina doblada (que simula una esquina de papel doblada). No es solo la forma básica."
+    "respuesta": false,
+    "explicacion": "Falso: incluye también el rectángulo de esquinas redondeadas, el de esquina recortada y el de esquina doblada."
   },
   {
     "id": "insertar-245",
@@ -8036,11 +8036,11 @@
     "tema": "Ilustraciones",
     "sourceQuestionId": "vf-insertar-49",
     "generado": true,
-    "enunciado": "El tipo de gráfico Cascada sirve para mostrar cómo una cantidad inicial aumenta o disminuye a través de una serie de valores positivos y negativos.",
+    "enunciado": "El tipo de gráfico Embudo sirve para mostrar cómo una cantidad inicial aumenta o disminuye a través de una serie de valores positivos y negativos.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Un presupuesto empieza en 100.000 euros, suma 20.000 de subvención, resta 35.000 de gastos de personal y resta 15.000 de material, hasta llegar al saldo final de 70.000. El gráfico de Cascada muestra cada suma y cada resta como una barra flotante, haciendo visible cómo se llega al resultado."
+    "respuesta": false,
+    "explicacion": "Falso: eso lo hace el gráfico de Cascada. El Embudo muestra la reducción de volumen por etapas."
   },
   {
     "id": "insertar-254",
@@ -8112,11 +8112,11 @@
     "tema": "Ilustraciones",
     "sourceQuestionId": "vf-insertar-53",
     "generado": true,
-    "enunciado": "El tipo de gráfico Cotizaciones está diseñado para representar datos financieros como el precio máximo, mínimo y de cierre de un valor bursátil.",
+    "enunciado": "El tipo de gráfico Cascada está diseñado para representar datos financieros como el precio máximo, mínimo y de cierre de un valor bursátil.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Para representar la evolución diaria de una acción con su precio de apertura, máximo, mínimo y cierre, el gráfico de Cotizaciones muestra cada jornada con una barra vertical que va del mínimo al máximo, con marcas para la apertura y el cierre."
+    "respuesta": false,
+    "explicacion": "Falso: ese es el gráfico de Cotizaciones. La Cascada muestra sumas y restas sucesivas sobre una cantidad inicial."
   },
   {
     "id": "insertar-258",
@@ -8264,11 +8264,11 @@
     "tema": "Ilustraciones",
     "sourceQuestionId": "vf-insertar-61",
     "generado": true,
-    "enunciado": "El comando Captura se encuentra en el grupo Ilustraciones de la pestaña Insertar.",
+    "enunciado": "El comando Captura se encuentra en el grupo Multimedia de la pestaña Insertar.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al abrir la pestaña Insertar y mirar el grupo Ilustraciones, el último comando de ese grupo es Captura. Sus dos opciones son Ventanas disponibles y Recorte de pantalla. No está en el grupo Páginas ni en el grupo Multimedia."
+    "respuesta": false,
+    "explicacion": "Falso: Captura está en el grupo Ilustraciones. En Multimedia está Vídeos en línea."
   },
   {
     "id": "insertar-266",
@@ -8321,11 +8321,11 @@
     "tema": "Multimedia",
     "sourceQuestionId": "vf-insertar-64",
     "generado": true,
-    "enunciado": "Las cuatro plataformas disponibles en el cuadro Insertar video en línea de Word 365 son YouTube, Vimeo, SlideShare y TED.",
+    "enunciado": "Las cuatro plataformas disponibles en el cuadro Insertar vídeo en línea de Word 365 son YouTube, Vimeo, Dailymotion y TED.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Si quieres insertar un vídeo de Dailymotion o de Twitch, no podrás hacerlo directamente desde ese cuadro porque esas plataformas no están entre las cuatro compatibles. Solo funcionan YouTube, Vimeo, SlideShare y TED."
+    "respuesta": false,
+    "explicacion": "Falso: son YouTube, SlideShare, Vimeo y TED. Dailymotion no está."
   },
   {
     "id": "insertar-269",
@@ -8378,11 +8378,11 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-67",
     "generado": true,
-    "enunciado": "El cuadro de Marcador permite ordenar la lista de marcadores por nombre o por posición en el documento.",
+    "enunciado": "El cuadro de Marcador permite ordenar la lista de marcadores por nombre o por fecha de creación.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Si tienes diez marcadores, puedes ordenarlos alfabéticamente para encontrar ZonaFinal fácilmente, o por Posición para ver en qué orden aparecen físicamente en el documento de arriba abajo. Son las dos únicas opciones de ordenación disponibles."
+    "respuesta": false,
+    "explicacion": "Falso: las dos únicas ordenaciones son por Nombre y por Posición."
   },
   {
     "id": "insertar-272",
@@ -8416,11 +8416,11 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-69",
     "generado": true,
-    "enunciado": "Una referencia cruzada actualiza su valor automáticamente si cambia la numeración del elemento referenciado.",
+    "enunciado": "Una referencia cruzada no se actualiza sola si cambia la numeración del elemento referenciado: hay que reescribirla a mano.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Tu documento tiene una referencia cruzada que dice \"véase la Tabla 3\". Añades una tabla nueva antes de esa tabla y la antigua Tabla 3 pasa a ser la Tabla 4. Al actualizar los campos del documento con F9, la referencia cruzada cambia automáticamente a \"véase la Tabla 4\"."
+    "respuesta": false,
+    "explicacion": "Falso: se actualiza al actualizar los campos del documento (F9 con la selección o con todo seleccionado)."
   },
   {
     "id": "insertar-274",
@@ -8435,11 +8435,11 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-70",
     "generado": true,
-    "enunciado": "El cuadro de Referencia cruzada permite referenciar notas al pie y notas al final como tipos de elemento.",
+    "enunciado": "El cuadro de Referencia cruzada no permite referenciar notas al pie ni notas al final.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "En un texto jurídico tienes una nota al pie número 7 con una cita legal. En el cuerpo del texto puedes insertar una referencia cruzada del tipo Nota al pie que muestre \"véase nota 7\", y si añades notas antes de esa, el número se actualiza solo."
+    "respuesta": false,
+    "explicacion": "Falso: sí las permite, además de elemento numerado, marcador, ilustración, tabla y ecuación."
   },
   {
     "id": "insertar-275",
@@ -8492,11 +8492,11 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-73",
     "generado": true,
-    "enunciado": "El cuadro de Referencia cruzada permite elegir Ecuación o Tabla como tipo de elemento a referenciar.",
+    "enunciado": "El cuadro de Referencia cruzada no admite Ecuación como tipo de elemento a referenciar.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "En un informe técnico tienes ecuaciones numeradas y tablas numeradas. El cuadro de Referencia cruzada te permite referenciar ambas como tipos distintos. Seleccionas tipo Ecuación y el cuadro lista todas las ecuaciones del documento. Seleccionas tipo Tabla y lista todas las tablas. Son tipos independientes en el desplegable."
+    "respuesta": false,
+    "explicacion": "Falso: sí admite Ecuación (y Tabla) en el desplegable de tipos."
   },
   {
     "id": "insertar-278",
@@ -8530,11 +8530,11 @@
     "tema": "Comentarios",
     "sourceQuestionId": "vf-insertar-76",
     "generado": true,
-    "enunciado": "El atajo Alt+Ctrl+A inserta un comentario en el documento.",
+    "enunciado": "El atajo Alt+Ctrl+C inserta un comentario en el documento.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Seleccionas un párrafo que quieres revisar y pulsas Alt+Ctrl+A. Aparece inmediatamente el panel de comentarios con el cursor listo para escribir tu anotación. Es equivalente a ir a Insertar > Comentarios > Comentario."
+    "respuesta": false,
+    "explicacion": "Falso: el comentario se inserta con Alt+Ctrl+A. Alt+Ctrl+C copia el formato de la selección."
   },
   {
     "id": "insertar-280",
@@ -8587,11 +8587,11 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-79",
     "generado": true,
-    "enunciado": "El contenido del encabezado aparece automáticamente en la parte superior de todas las páginas del documento.",
+    "enunciado": "El contenido del encabezado aparece solo en la primera página del documento salvo que se active la opción de repetirlo.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Escribes \"Ministerio de Hacienda - Informe anual 2026\" en el encabezado de la página 1. Ese texto aparece en la parte superior de todas las páginas del documento sin que tengas que repetirlo manualmente. Si activas Primera página diferente, la página 1 puede tener un encabezado distinto o vacío."
+    "respuesta": false,
+    "explicacion": "Falso: el encabezado se repite en todas las páginas por defecto; lo que se activa es Primera página diferente para lo contrario."
   },
   {
     "id": "insertar-283",
@@ -8720,11 +8720,11 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-86",
     "generado": true,
-    "enunciado": "El valor predeterminado de la distancia entre el encabezado y el borde superior del papel en Word 365 es de 1,25 cm.",
+    "enunciado": "El valor predeterminado de la distancia entre el encabezado y el borde superior del papel en Word 365 es de 2 cm.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al abrir un documento nuevo y entrar en el modo de edición de encabezado, el campo Encabezado desde arriba del grupo Posición muestra 1,25 cm. Ese es el espacio entre el borde superior del papel y el contenido del encabezado, tal como figura en la extracción real de esta instalación."
+    "respuesta": false,
+    "explicacion": "Falso: el valor predeterminado es 1,25 cm."
   },
   {
     "id": "insertar-290",
@@ -8796,11 +8796,11 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-90",
     "generado": true,
-    "enunciado": "El comando Quitar números de página elimina todos los números de página del documento de una sola vez.",
+    "enunciado": "El comando Quitar números de página obliga a eliminarlos sección por sección.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Has insertado números de página en el pie de todas las páginas y también en el margen derecho de algunas secciones. Con un solo clic en Quitar números de página desaparecen todos, independientemente de dónde estén colocados. No hay que ir sección por sección."
+    "respuesta": false,
+    "explicacion": "Falso: con un solo clic quita todos los números de página del documento, estén donde estén."
   },
   {
     "id": "insertar-294",
@@ -8853,11 +8853,11 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-94",
     "generado": true,
-    "enunciado": "Un cuadro de texto puede colocarse en cualquier posición de la página con independencia del flujo del texto principal.",
+    "enunciado": "Un cuadro de texto se comporta siempre como un carácter más dentro del párrafo y no puede moverse libremente por la página.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "En un informe quieres destacar una cifra clave en el margen derecho junto a un párrafo determinado. Insertas un cuadro de texto, escribes la cifra y lo arrastras hasta el margen. El texto principal del documento fluye a su alrededor o por debajo según el ajuste que elijas."
+    "respuesta": false,
+    "explicacion": "Falso: un cuadro de texto puede colocarse en cualquier posición con independencia del flujo del texto, según el ajuste que se elija."
   },
   {
     "id": "insertar-297",
@@ -8948,11 +8948,11 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-101",
     "generado": true,
-    "enunciado": "El valor predeterminado de Líneas que ocupa en el cuadro Letra capital es 3.",
+    "enunciado": "El valor predeterminado de Líneas que ocupa en el cuadro Letra capital es 2.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Aplicas una Letra capital sin cambiar nada en el cuadro de opciones. La primera letra del párrafo ocupa exactamente 3 líneas de altura. Si quieres una letra capital más grande o más pequeña, cambias ese número en el cuadro Insertar > Texto > Letra capital > Opciones de letra capital."
+    "respuesta": false,
+    "explicacion": "Falso: el valor predeterminado es 3 líneas."
   },
   {
     "id": "insertar-302",
@@ -9024,11 +9024,11 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-105",
     "generado": true,
-    "enunciado": "WordArt se inserta desde el grupo Texto de la pestaña Insertar.",
+    "enunciado": "WordArt se inserta desde el grupo Ilustraciones de la pestaña Insertar.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Para añadir el título de un cartel con efectos visuales llamativos vas a Insertar > Texto > WordArt, eliges un estilo de la galería y escribes el texto. El resultado es un objeto independiente con relleno, contorno y efectos de sombra o reflejo, no texto normal con formato de fuente."
+    "respuesta": false,
+    "explicacion": "Falso: WordArt está en el grupo Texto."
   },
   {
     "id": "insertar-306",
@@ -9043,11 +9043,11 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-106",
     "generado": true,
-    "enunciado": "WordArt y la Letra capital son dos formas de dar tratamiento visual especial al texto que se insertan desde el mismo grupo de la pestaña Insertar.",
+    "enunciado": "WordArt y la Letra capital se insertan desde grupos distintos de la pestaña Insertar.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Tanto WordArt como Letra capital están en Insertar > Texto. Sin embargo hacen cosas distintas: WordArt crea un objeto de texto decorativo nuevo e independiente. La Letra capital transforma la primera letra de un párrafo ya existente en una letra de gran tamaño."
+    "respuesta": false,
+    "explicacion": "Falso: los dos están en el grupo Texto."
   },
   {
     "id": "insertar-307",
@@ -9119,11 +9119,11 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-110",
     "generado": true,
-    "enunciado": "El comando Objeto > Insertar texto de archivo incorpora el contenido de un archivo externo al flujo del documento como texto normal.",
+    "enunciado": "El comando Objeto > Insertar texto de archivo incorpora el archivo externo como un objeto incrustado, no como texto.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Tienes tres capítulos redactados en tres archivos Word distintos. Con el cursor al final del documento principal usas Insertar texto de archivo tres veces y el contenido de cada archivo se añade al documento como si lo hubieras escrito directamente ahí. No se incrusta como objeto: es texto integrado."
+    "respuesta": false,
+    "explicacion": "Falso: incorpora el contenido como texto integrado en el flujo del documento, no como objeto."
   },
   {
     "id": "insertar-311",
@@ -9176,11 +9176,11 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-113",
     "generado": true,
-    "enunciado": "El comando Ecuación y el comando Símbolo pertenecen al mismo grupo de la pestaña Insertar pero sirven para cosas distintas.",
+    "enunciado": "El comando Ecuación está en el grupo Símbolos de la pestaña Insertar y el comando Símbolo está en el grupo Texto.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Ambos están en Insertar > Símbolos. Pero Ecuación abre el editor completo para construir fórmulas matemáticas con fracciones, radicales e integrales. Símbolo inserta caracteres individuales como la c de copyright, el euro o la letra griega pi. No son intercambiables."
+    "respuesta": false,
+    "explicacion": "Falso: los dos están en el grupo Símbolos."
   },
   {
     "id": "insertar-314",
@@ -9271,11 +9271,11 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-119",
     "generado": true,
-    "enunciado": "Expansión Taylor es una de las ecuaciones integradas disponibles en la galería de Ecuación de Word 365.",
+    "enunciado": "El Teorema de Pitágoras es una de las ecuaciones integradas disponibles en la galería de Ecuación de Word 365.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "En lugar de construir la serie de Taylor desde cero con el editor, puedes ir a Insertar > Símbolos > Ecuación > Integrado y seleccionar Expansión Taylor. Word inserta la fórmula completa y correctamente formateada, que luego puedes modificar."
+    "respuesta": false,
+    "explicacion": "Falso: las integradas son Área del círculo, Expansión de una suma, Expansión Taylor, Fórmula cuadrática e Identidad trigonométrica 1."
   },
   {
     "id": "insertar-319",
@@ -9385,11 +9385,11 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-125",
     "generado": true,
-    "enunciado": "La estructura Índice del editor de ecuaciones permite crear tanto superíndices como subíndices.",
+    "enunciado": "La estructura Radical del editor de ecuaciones permite crear tanto superíndices como subíndices.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "En la fórmula química H2O el 2 es un subíndice. En la expresión matemática x2 el 2 es un superíndice. La estructura Índice del editor de ecuaciones cubre ambos casos y también la combinación de superíndice y subíndice simultáneos, como en las sumatorias con límites."
+    "respuesta": false,
+    "explicacion": "Falso: eso lo hace la estructura Índice. Radical sirve para raíces."
   },
   {
     "id": "insertar-325",
@@ -9423,11 +9423,11 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-127",
     "generado": true,
-    "enunciado": "El símbolo del euro aparece en la galería de símbolos recientes del menú Símbolo en la extracción de Word 365.",
+    "enunciado": "La galería de símbolos recientes del menú Símbolo es fija y siempre muestra los mismos símbolos.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al desplegar Insertar > Símbolos > Símbolo, la parte superior del menú muestra una fila de símbolos recientes. En la extracción real de esta instalación el primero de la fila es el euro, seguido de la libra, el yen, el copyright, el registrado y la marca registrada entre otros."
+    "respuesta": false,
+    "explicacion": "Falso: muestra los últimos símbolos que hayas insertado, por eso cambia con el uso."
   },
   {
     "id": "insertar-327",
@@ -9480,11 +9480,11 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-130",
     "generado": true,
-    "enunciado": "Las once estructuras disponibles en la cinta contextual de Ecuación son: Fracción, Índice, Radical, Integral, Operador grande, Corchete, Función, Acento, Límite y logaritmo, Operador y Matriz.",
+    "enunciado": "Las estructuras disponibles en la cinta contextual de Ecuación son doce, incluyendo Exponente como estructura propia.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al insertar una ecuación y mirar el grupo Estructuras de la cinta contextual, aparecen exactamente esas once estructuras y ninguna más. No existe una estructura llamada Exponente ni una llamada Potencia de forma independiente: el exponente se crea desde la estructura Índice."
+    "respuesta": false,
+    "explicacion": "Falso: son once. El exponente no es una estructura propia: se crea desde Índice."
   },
   {
     "id": "insertar-330",
@@ -9537,11 +9537,11 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-133",
     "generado": true,
-    "enunciado": "La cinta contextual Formato de forma aparece automáticamente al seleccionar una forma insertada en el documento.",
+    "enunciado": "La cinta contextual Formato de forma hay que activarla manualmente desde la pestaña Ver.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Insertas un rectángulo en el documento y haces clic en él. Aparece inmediatamente la pestaña Formato de forma en la cinta con todos sus grupos: Insertar formas, Estilos de forma, Estilos de WordArt, Texto, Accesibilidad, Organizar y Tamaño. Al hacer clic fuera de la forma esa pestaña desaparece."
+    "respuesta": false,
+    "explicacion": "Falso: aparece sola al seleccionar una forma y desaparece al deseleccionarla."
   },
   {
     "id": "insertar-333",
@@ -9708,11 +9708,11 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-142",
     "generado": true,
-    "enunciado": "La cinta contextual Formato de forma contiene exactamente siete grupos: Insertar formas, Estilos de forma, Estilos de WordArt, Texto, Accesibilidad, Organizar y Tamaño.",
+    "enunciado": "La cinta contextual Formato de forma contiene exactamente seis grupos.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al seleccionar una forma y repasar la cinta Formato de forma de izquierda a derecha, encuentras exactamente esos siete grupos en ese orden: Insertar formas, Estilos de forma, Estilos de WordArt, Texto, Accesibilidad, Organizar y Tamaño. No hay ningún grupo más ni ninguno menos."
+    "respuesta": false,
+    "explicacion": "Falso: contiene siete (Insertar formas, Estilos de forma, Estilos de WordArt, Texto, Accesibilidad, Organizar y Tamaño)."
   },
   {
     "id": "insertar-342",
@@ -9727,11 +9727,11 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-143",
     "generado": true,
-    "enunciado": "El grupo Accesibilidad de la cinta Formato de forma contiene únicamente el comando Texto alternativo.",
+    "enunciado": "El grupo Accesibilidad de la cinta Formato de forma contiene los comandos Texto alternativo y Comprobar accesibilidad.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Buscas en el grupo Accesibilidad de la cinta Formato de forma y encuentras un solo comando: Texto alternativo. No hay otros comandos de accesibilidad en ese grupo dentro de esta cinta contextual."
+    "respuesta": false,
+    "explicacion": "Falso: en esa cinta el grupo Accesibilidad contiene únicamente Texto alternativo."
   },
   {
     "id": "insertar-343",
@@ -9746,11 +9746,11 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-144",
     "generado": true,
-    "enunciado": "El grupo Insertar formas de la cinta contextual Formato de forma contiene los comandos Editar forma y Dibujar cuadro de texto.",
+    "enunciado": "El grupo Insertar formas de la cinta contextual Formato de forma contiene los comandos Editar forma y Combinar formas.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al seleccionar una forma y mirar el primer grupo de la cinta Formato de forma, el grupo Insertar formas, encuentras exactamente dos comandos: Editar forma (para modificar los vértices y la geometría de la forma) y Dibujar cuadro de texto (para trazar un cuadro de texto manualmente dentro del documento). No hay más comandos en ese grupo."
+    "respuesta": false,
+    "explicacion": "Falso: contiene Editar forma y Dibujar cuadro de texto."
   },
   {
     "id": "insertar-344",
@@ -9784,11 +9784,11 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-146",
     "generado": true,
-    "enunciado": "El grupo Organizar de la cinta contextual Formato de forma contiene los comandos Posición, Ajustar texto, Traer adelante, Enviar atrás, Panel de selección, Alinear, Agrupar y Girar.",
+    "enunciado": "El grupo Organizar de la cinta contextual Formato de forma contiene, además, los comandos Recortar y Comprimir imágenes.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al seleccionar una forma y repasar el grupo Organizar, encuentras exactamente esos ocho comandos. Posición coloca la forma en un punto fijo de la página. Ajustar texto controla cómo fluye el texto a su alrededor. Traer adelante y Enviar atrás gestionan el orden de superposición. Panel de selección muestra todos los objetos del documento. Alinear, Agrupar y Girar completan el grupo."
+    "respuesta": false,
+    "explicacion": "Falso: Recortar y Comprimir imágenes son de la cinta Formato de imagen. El grupo Organizar de Formato de forma tiene Posición, Ajustar texto, Traer adelante, Enviar atrás, Panel de selección, Alinear, Agrupar y Girar."
   },
   {
     "id": "insertar-346",
@@ -9841,11 +9841,11 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-152",
     "generado": true,
-    "enunciado": "El atajo Ctrl+F9 inserta un campo vacío en el documento, listo para escribir el código de campo manualmente.",
+    "enunciado": "El atajo Alt+F9 inserta un campo vacío en el documento, listo para escribir el código de campo manualmente.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Pulsas Ctrl+F9 y aparecen las llaves de campo { } con el cursor dentro, listas para que escribas el nombre del campo directamente, por ejemplo DATE o PAGE. Es el método más rápido para usuarios avanzados que conocen los códigos de campo de memoria."
+    "respuesta": false,
+    "explicacion": "Falso: el que inserta el campo vacío es Ctrl+F9. Alt+F9 muestra u oculta los códigos de campo."
   },
   {
     "id": "insertar-349",
@@ -9917,11 +9917,11 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-157",
     "generado": true,
-    "enunciado": "El atajo Alt+Ctrl+L inserta una nota al final del documento.",
+    "enunciado": "El atajo Alt+Ctrl+O inserta una nota al final del documento.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Estás redactando un informe y quieres añadir una nota bibliográfica que aparezca al final del documento, no al pie de la página. Pulsas Alt+Ctrl+L y Word inserta la marca de nota al final en el texto y coloca el cursor en la zona de notas al final para que escribas el contenido."
+    "respuesta": false,
+    "explicacion": "Falso: Alt+Ctrl+O inserta una nota al pie. La nota al final es Alt+Ctrl+L."
   },
   {
     "id": "insertar-353",
@@ -9993,11 +9993,11 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-161",
     "generado": true,
-    "enunciado": "El atajo F3 solo funciona si el texto escrito antes del cursor coincide exactamente con el nombre de un bloque de creación guardado.",
+    "enunciado": "El atajo F3 funciona aunque el texto escrito antes del cursor no coincida exactamente con el nombre de un bloque de creación: Word busca el más parecido.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Tienes un bloque guardado con el nombre CierreFormal. Si escribes CierreFormal y pulsas F3, Word lo sustituye por el bloque completo. Si escribes cierreformal en minúsculas o CierreFórmal con tilde, F3 no reconoce el bloque y no hace nada. El nombre debe coincidir exactamente."
+    "respuesta": false,
+    "explicacion": "Falso: el nombre debe coincidir exactamente o F3 no hace nada."
   },
   {
     "id": "insertar-357",
@@ -10012,11 +10012,11 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-162",
     "generado": true,
-    "enunciado": "El atajo Alt+Mayús+X marca una entrada de índice en el documento.",
+    "enunciado": "El atajo Alt+Mayús+I marca una entrada de índice en el documento.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Seleccionas la palabra \"expediente\" en tu documento y pulsas Alt+Mayús+X. Se abre el cuadro Marcar entrada de índice con esa palabra ya en el campo Entrada principal, lista para que la confirmes y marques. Esa marca invisible quedará registrada para cuando generes el índice del documento."
+    "respuesta": false,
+    "explicacion": "Falso: Alt+Mayús+X marca una entrada de índice. Alt+Mayús+I marca una cita para la tabla de autoridades."
   },
   {
     "id": "insertar-358",
@@ -10031,11 +10031,11 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-163",
     "generado": true,
-    "enunciado": "El atajo Alt+Mayús+B marca un elemento de tabla de contenido en el documento.",
+    "enunciado": "El atajo Alt+Mayús+X marca un elemento de tabla de contenido en el documento.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Seleccionas un título que no tiene aplicado el estilo Título 1 pero quieres que aparezca en la tabla de contenido. Pulsas Alt+Mayús+B y se abre el cuadro Marcar elemento de tabla de contenido para incluirlo manualmente."
+    "respuesta": false,
+    "explicacion": "Falso: Alt+Mayús+X marca una entrada de índice. El elemento de tabla de contenido se marca con Alt+Mayús+B."
   },
   {
     "id": "insertar-359",
@@ -10069,11 +10069,11 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-182",
     "generado": true,
-    "enunciado": "En el cuadro Insertar tabla, el valor predeterminado del campo Número de columnas es 5.",
+    "enunciado": "En el cuadro Insertar tabla, el valor predeterminado del campo Número de columnas es 3.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Abres Insertar > Tablas > Tabla > Insertar tabla... y el campo Número de columnas aparece con el valor 5 ya escrito. No tienes que cambiarlo si quieres una tabla de 5 columnas. Ese es el valor que trae por defecto en esta instalación."
+    "respuesta": false,
+    "explicacion": "Falso: el valor predeterminado es 5 columnas (y 2 filas)."
   },
   {
     "id": "insertar-361",
@@ -10145,11 +10145,11 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-186",
     "generado": true,
-    "enunciado": "En el cuadro Formato de los números de página, la opción \"Incluir número de capítulo\" permite elegir el estilo \"Título 1\" como punto de partida.",
+    "enunciado": "En el cuadro Formato de los números de página, la opción Incluir número de capítulo solo permite elegir el estilo Título 3 como punto de partida.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Si quieres que la numeración incluya el número de capítulo (ej: 2-1, 2-2), en el desplegable \"Empezar con el estilo\" puedes seleccionar Título 1. Word buscará los párrafos con ese estilo para identificar los inicios de capítulo."
+    "respuesta": false,
+    "explicacion": "Falso: permite cualquier estilo de título; el valor por defecto es Título 1."
   },
   {
     "id": "insertar-365",
@@ -10335,11 +10335,11 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-196",
     "generado": true,
-    "enunciado": "En el cuadro Fecha y hora, hay un formato que muestra la fecha como \"jueves, 3 de septiembre de 2026\".",
+    "enunciado": "El cuadro Fecha y hora solo ofrece formatos numéricos (tipo 03/09/2026).",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Entre los formatos disponibles aparece esa opción, que es el día de la semana con nombre completo, día, mes con nombre y año con cuatro dígitos. Es uno de los formatos predefinidos."
+    "respuesta": false,
+    "explicacion": "Falso: ofrece también formatos con el día de la semana y el mes con nombre, como jueves, 3 de septiembre de 2026."
   },
   {
     "id": "insertar-375",
@@ -10449,11 +10449,11 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-202",
     "generado": true,
-    "enunciado": "En el cuadro Campo, la lista de nombres de campos incluye \"Author\" y \"CreateDate\" entre otros.",
+    "enunciado": "En el cuadro Campo, la lista de nombres de campos no incluye Author ni CreateDate.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al abrir Elementos rápidos > Campo..., el cuadro muestra una lista de nombres de campos. Entre los primeros aparecen Author (autor del documento), CreateDate (fecha de creación), Comments (comentarios), etc."
+    "respuesta": false,
+    "explicacion": "Falso: la lista incluye Author, CreateDate, Comments y muchos más."
   },
   {
     "id": "insertar-381",
@@ -10582,11 +10582,11 @@
     "tema": "eSignature",
     "sourceQuestionId": "vf-insertar-209",
     "generado": true,
-    "enunciado": "Al intentar usar eSignature con un documento guardado en formato .doc, Word muestra el mensaje \"Save this document as a .docx file to use eSignature\".",
+    "enunciado": "Al intentar usar eSignature con un documento guardado en formato .doc, Word lo convierte automáticamente a .docx.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Si tu documento está en formato .doc (el antiguo) y vas a Insertar > eSignature > Crear una solicitud de firma, Word te mostrará ese mensaje y no te dejará continuar hasta que lo guardes como .docx."
+    "respuesta": false,
+    "explicacion": "Falso: Word muestra el mensaje «Save this document as a .docx file to use eSignature» y no continúa hasta que lo guardes en .docx."
   },
   {
     "id": "insertar-388",
@@ -10601,11 +10601,11 @@
     "tema": "Ilustraciones",
     "sourceQuestionId": "vf-insertar-210",
     "generado": true,
-    "enunciado": "El cuadro Insertar gráfico incluye una sección \"Reciente\" que muestra los tipos de gráfico usados recientemente.",
+    "enunciado": "El cuadro Insertar gráfico incluye una sección Favoritos que muestra los tipos de gráfico marcados.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al abrir Insertar > Ilustraciones > Gráfico, la primera sección que aparece en el panel izquierdo es \"Reciente\". Si has usado algún gráfico antes, aparecerá ahí."
+    "respuesta": false,
+    "explicacion": "Falso: las secciones son Reciente y Plantillas; no hay una sección Favoritos."
   },
   {
     "id": "insertar-389",
