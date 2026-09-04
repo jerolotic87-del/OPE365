@@ -6,7 +6,7 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **2419 preguntas** y **971
+de Word 365 de una oposición de ayuntamiento. **2420 preguntas** y **971
 flashcards** (archivo 263, disposicion 100, inicio 148, insertar 147,
 referencias 74, revisar 73, vista 79, diseno 24, interfaz 48,
 correspondencia 15 — un buen tramo de las de archivo/disposicion son
@@ -490,8 +490,9 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 525, insertar 457, inicio 456, archivo 407, vista 144, disposicion 120,
-diseno 90, referencias 117, revisar 82, correspondencia 21.
-Total 2419.
+diseno 90, referencias 117, revisar 82, correspondencia 22.
+Total 2420. (+1 sobre «Asignar campos», contrastada con aulaclic.es —
+hecho genérico sin atajos, sin riesgo de esquema de teclado distinto.)
 **19 preguntas CON IMAGEN nuevas en Referencias (sep-2026)**: los 26
 recortes de icono de `data/imagenes_iconos/referencias/` (movidos ahí en
 la limpieza de organización, sin procesar hasta ahora) se convirtieron en

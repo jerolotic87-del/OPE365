@@ -358,6 +358,42 @@
     "explicacion": "«Bloque de direcciones» inserta de una vez el conjunto completo de datos de dirección con el formato elegido."
   },
   {
+    "id": "correspondencia-23",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Escribir e insertar campos",
+    "sourceQuestionId": "web-correspondencia-01",
+    "generado": true,
+    "enunciado": "¿Para qué sirve «Asignar campos» dentro de Escribir e insertar campos?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Para emparejar los campos estándar de Word (Nombre, Dirección, Ciudad…) con las columnas del origen de datos, aunque tengan otro nombre"
+      },
+      {
+        "letter": "B",
+        "text": "Para elegir el tipo de sobre antes de combinar"
+      },
+      {
+        "letter": "C",
+        "text": "Para cambiar el estilo de letra de los campos combinados"
+      },
+      {
+        "letter": "D",
+        "text": "Para conectar el documento con los contactos de Outlook"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Word usa nombres de campo estándar (Nombre, Dirección…) que no tienen por qué coincidir con las columnas del origen de datos; «Asignar campos» empareja unos con otros para que la combinación funcione."
+  },
+  {
     "id": "correspondencia-21",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Escribir e insertar campos",
