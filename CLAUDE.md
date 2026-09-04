@@ -449,8 +449,16 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 514, insertar 399, inicio 380, archivo 350, vista 131, revisar 77,
-diseno 70, referencias 7, correspondencia 4, disposicion 1.
-Total 1933. 282 preguntas `categoria:"atajo"`.
+diseno 70, disposicion 55, referencias 7, correspondencia 4.
+Total 1987. 282 preguntas `categoria:"atajo"`.
+`disposicion-2..55` (`sourceQuestionId` `vf-disposicion-NN`, `generado:true`,
+`tipo:"verdadero_falso"`, 27 V / 27 F) = banco de la pestaña **Disposición**
+(antes solo tenía `disposicion-1`, el atajo `Alt+Ctrl+D`). Cubre Configurar
+página (márgenes con sus valores reales de esta instalación, tamaños de
+papel, columnas, saltos de sección vs página, números de línea, guiones),
+Párrafo (sangría/espaciado, cuadro Párrafo) y Organizar (posición, ajuste
+de texto, alinear/distribuir/girar, cuadro Diseño). Fuente:
+`data/rutas/disposicion.txt`. Generador: `scripts/gen_disposicion_vf.py`.
 Historial: `data/questions_regroup_report.md`.
 `diseno-1..70` (`sourceQuestionId` `vf-diseno-NN`, `generado:true`,
 `categoria:"concepto"`, `tipo:"verdadero_falso"`, 35 V / 35 F) = banco

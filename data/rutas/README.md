@@ -15,6 +15,9 @@ instalación real de Word 365 (v2608, compilación 16.0.20326.20072).
 Pestañas: `interfaz`, `archivo`, `inicio`, `insertar`, `diseno`,
 `disposicion`, `referencias`, `revisar`, `vista`, `correspondencia`.
 
+Las capturas de pantalla de origen (una carpeta por pestaña, mismo id)
+están en `data/imagenes_rutas/<pestaña>/`.
+
 ## Reglas
 
 - **Son fuente, no artefacto.** De aquí salen los bancos

@@ -52,7 +52,11 @@ const rows = w => w.document.querySelectorAll("#bk-body .qlist-item").length;
     `contador "N / ${O.QUESTIONS.length}"`);
 
   // búsqueda por id exacto
-  const sample = O.QUESTIONS[Math.floor(O.QUESTIONS.length/2)];
+  // un id que no sea subcadena de ningún otro (el buscador filtra por
+  // subcadena de id): p.ej. inicio-38 casa también con inicio-380..389.
+  const sample = O.QUESTIONS.slice().reverse().find(q =>
+    O.QUESTIONS.filter(o => o.id.includes(q.id)).length === 1
+  ) || O.QUESTIONS[Math.floor(O.QUESTIONS.length/2)];
   const s = w.document.querySelector("#bk-search");
   s.value = sample.id;
   s.dispatchEvent(new w.Event("input", { bubbles:true }));

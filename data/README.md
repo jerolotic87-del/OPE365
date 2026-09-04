@@ -15,6 +15,7 @@ data/
   flashcards/manifest.json      orden de carga
   taxonomy.json                 section > topic > subtopic
   rutas/<pestaña>.txt           volcado de rutas de cinta del usuario (ver rutas/README.md)
+  imagenes_rutas/<pestaña>/      capturas de pantalla de origen de esas rutas
   atajos_word365_v2608.md       volcado de "Personalizar teclado" — ÚNICA fuente de atajos
   ATAJOS_WORD365.md             referencia legible de atajos, agrupada por función
   *_integration_report.md       informes de integración de cada bloque grande
