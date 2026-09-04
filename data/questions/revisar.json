@@ -1173,6 +1173,42 @@
     "explicacion": "Alt+Ctrl+Espacio activa Leer en voz alta. Alt+Espacio abre el menú del icono del programa en la barra de título. Ctrl+Alt+Mayús+Espacio y Alt+Mayús+Espacio no tienen función. Prueba en vivo del usuario (sep 2026)."
   },
   {
+    "id": "revisar-78",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión — ortografía, editor y sinónimos (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "tema": "Revisión — ortografía, editor y sinónimos",
+    "sourceQuestionId": "neg-revisar-01",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el Editor de Revisar es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se abre con F7"
+      },
+      {
+        "letter": "B",
+        "text": "También se abre con Windows+F7"
+      },
+      {
+        "letter": "C",
+        "text": "Revisa ortografía, gramática y estilo"
+      },
+      {
+        "letter": "D",
+        "text": "Se abre con Ctrl+F7"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ctrl+F7 no está documentado con esa función. El Editor se abre con F7 (y, confirmado en vivo, también con Windows+F7)."
+  },
+  {
     "id": "revisar-6",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Accesibilidad",
@@ -1615,6 +1651,42 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "El icono ⇅ permite intercambiar la dirección de la traducción."
+  },
+  {
+    "id": "revisar-80",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": null,
+    "tema": "Idioma",
+    "sourceQuestionId": "neg-revisar-03",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el Traductor es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se abre con Alt+Mayús+F7"
+      },
+      {
+        "letter": "B",
+        "text": "No aparece en el volcado v2608"
+      },
+      {
+        "letter": "C",
+        "text": "Está confirmado en vivo por el usuario"
+      },
+      {
+        "letter": "D",
+        "text": "Su atajo es Ctrl+Mayús+T"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "No existe un atajo Ctrl+Mayús+T para el Traductor. El atajo real, confirmado en vivo (no está en el volcado), es Alt+Mayús+F7."
   },
   {
     "id": "revisar-4",
@@ -2090,6 +2162,42 @@
       "4": "A"
     },
     "explicacion": "Nuevo comentario inserta; Eliminar borra el seleccionado; Anterior/Siguiente navegan; Mostrar comentarios muestra/oculta todos."
+  },
+  {
+    "id": "revisar-79",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": null,
+    "tema": "Seguimiento",
+    "sourceQuestionId": "neg-revisar-02",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el control de cambios es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se activa o desactiva con Ctrl+Mayús+E"
+      },
+      {
+        "letter": "B",
+        "text": "Está relacionado con el grupo Seguimiento"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+E también activa el control de cambios"
+      },
+      {
+        "letter": "D",
+        "text": "Permite ver «Todas las revisiones» o «Simple markup»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ctrl+E selecciona todo el documento; no tiene nada que ver con el control de cambios. El atajo real es Ctrl+Mayús+E."
   },
   {
     "id": "revisar-23",
@@ -2883,5 +2991,77 @@
       "8": "SEG"
     },
     "explicacion": "Control de cambios, Mostrar revisiones, Panel de revisiones y Todas las revisiones están en Seguimiento. Nuevo comentario, Eliminar y Anterior en Comentarios. Aceptar en Cambios."
+  },
+  {
+    "id": "revisar-82",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Estructura de la pestaña (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "revisar",
+    "topic": "estructura",
+    "subtopic": null,
+    "tema": "Estructura de la pestaña",
+    "sourceQuestionId": "neg-revisar-05",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre la pestaña Revisar es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tiene dos grupos llamados literalmente «Revisión»"
+      },
+      {
+        "letter": "B",
+        "text": "Uno es el de corrección ortográfica y otro el de visualización del marcado"
+      },
+      {
+        "letter": "C",
+        "text": "Los dos comparten el mismo ribbonGroup «Revisión»"
+      },
+      {
+        "letter": "D",
+        "text": "Solo existe un grupo llamado «Revisión» en toda la pestaña"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Revisar tiene DOS grupos distintos que se llaman igual, «Revisión»: uno de corrección (Ortografía) y otro de visualización del marcado de cambios."
+  },
+  {
+    "id": "revisar-81",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Voz (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "revisar",
+    "topic": "voz",
+    "subtopic": null,
+    "tema": "Voz",
+    "sourceQuestionId": "neg-revisar-04",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre «Leer en voz alta» es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Su atajo es Alt+Ctrl+Espacio"
+      },
+      {
+        "letter": "B",
+        "text": "Está confirmado en vivo"
+      },
+      {
+        "letter": "C",
+        "text": "Hace lo mismo que Dictar (Alt+[)"
+      },
+      {
+        "letter": "D",
+        "text": "Convierte texto a voz, no voz a texto"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Son funciones opuestas: Dictar convierte VOZ en texto; Leer en voz alta convierte TEXTO en voz. No son lo mismo."
   }
 ]

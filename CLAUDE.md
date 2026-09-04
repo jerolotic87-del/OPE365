@@ -458,9 +458,14 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 514, insertar 428, inicio 418, archivo 392, vista 131, disposicion 106,
-diseno 80, referencias 78, revisar 77, correspondencia 4.
-Total 2228. 282 preguntas `categoria:"atajo"`.
+interfaz 513, insertar 438, inicio 430, archivo 402, vista 137, disposicion 114,
+diseno 86, referencias 84, revisar 82, correspondencia 5.
+Total 2291. 282 preguntas `categoria:"atajo"`.
+**141 preguntas `negativa:true`** (11 % interfaz, 6-7 % en la mayoría de
+pestañas, 2,7-2,8 % en insertar/inicio por ser los bancos más grandes —
+todas sus pestañas y grupos tienen al menos una). Antes de sep-2026, 7 de
+las 10 pestañas tenían 0. `sourceQuestionId` `neg-<sec>-NN`,
+`generado:true`, `tipo:"opcion_unica"`. Generador: `scripts/gen_negativas.py`.
 **93 preguntas CON IMAGEN** (`sourceQuestionId` `img-<sec>-NN`, `generado:true`,
 campo `imagen` = data URI base64 del PNG): muestran el icono recortado de un
 comando de la cinta y preguntan qué representa / en qué pestaña y grupo está /

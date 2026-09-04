@@ -1330,6 +1330,186 @@
     "explicacion": "**Iniciador del grupo Configurar página.** Pestaña Disposición ▸ Configurar página (esquina). Atajo: no tiene atajo de teclado en esta instalación. Abre el cuadro «Configurar página» en la ficha Disposición (el mismo que el enlace «Configurar página» del panel Imprimir)."
   },
   {
+    "id": "disposicion-107",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Configurar página (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "neg-disposicion-01",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO está en el grupo Configurar página de Disposición?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Márgenes"
+      },
+      {
+        "letter": "B",
+        "text": "Orientación"
+      },
+      {
+        "letter": "C",
+        "text": "Tamaño"
+      },
+      {
+        "letter": "D",
+        "text": "Estilos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "«Estilos» es un grupo de la pestaña Inicio. Configurar página tiene Márgenes, Orientación, Tamaño, Columnas, Saltos, Números de línea y Guiones."
+  },
+  {
+    "id": "disposicion-108",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Configurar página (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "neg-disposicion-02",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre márgenes es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Normal» es 2,5/3 cm en esta instalación"
+      },
+      {
+        "letter": "B",
+        "text": "«Estrecho» es 1,27 cm en los cuatro lados"
+      },
+      {
+        "letter": "C",
+        "text": "«Ancho» aplica 5,08 cm en los cuatro lados"
+      },
+      {
+        "letter": "D",
+        "text": "«Reflejado» usa Interior/Exterior en vez de Izquierdo/Derecho"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "«Ancho» solo aplica 5,08 cm en los laterales; arriba y abajo mantiene 2,54 cm, no 5,08 en los cuatro lados."
+  },
+  {
+    "id": "disposicion-109",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Configurar página (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "neg-disposicion-03",
+    "generado": true,
+    "enunciado": "¿Cuál de estos tamaños de papel es INCORRECTO?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "A4 = 21 × 29,7 cm"
+      },
+      {
+        "letter": "B",
+        "text": "Carta = 21,59 × 27,94 cm"
+      },
+      {
+        "letter": "C",
+        "text": "Oficio = 21,59 × 35,56 cm"
+      },
+      {
+        "letter": "D",
+        "text": "A4 y Carta son idénticos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "A4 y Carta NO son idénticos: A4 mide 21×29,7 cm y Carta 21,59×27,94 cm."
+  },
+  {
+    "id": "disposicion-110",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Configurar página (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "neg-disposicion-04",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre Columnas es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El desplegable ofrece Una/Dos/Tres/Izquierda/Derecha"
+      },
+      {
+        "letter": "B",
+        "text": "«Izquierda» crea dos columnas del mismo ancho"
+      },
+      {
+        "letter": "C",
+        "text": "El cuadro Columnas tiene la casilla «Línea entre columnas»"
+      },
+      {
+        "letter": "D",
+        "text": "Por defecto el cuadro Columnas propone 5 columnas al elegir «Más columnas...»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "«Izquierda» crea dos columnas de ancho DESIGUAL (la estrecha a la izquierda), no del mismo ancho."
+  },
+  {
+    "id": "disposicion-111",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Configurar página (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "neg-disposicion-05",
+    "generado": true,
+    "enunciado": "¿Cuál de estos NO es un salto de sección del menú Saltos?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Página siguiente"
+      },
+      {
+        "letter": "B",
+        "text": "Continua"
+      },
+      {
+        "letter": "C",
+        "text": "Página par"
+      },
+      {
+        "letter": "D",
+        "text": "Columna"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "«Columna» es un salto de página, no de sección. Los saltos de sección son Página siguiente, Continua, Página par y Página impar."
+  },
+  {
     "id": "disposicion-35",
     "sourceFile": "disposicion.json",
     "bloque": "Disposición — Párrafo",
@@ -1578,6 +1758,42 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: es «Texto independiente». Los niveles 1-9 se usan para que el párrafo cuente en la tabla de contenido sin llevar estilo de título."
+  },
+  {
+    "id": "disposicion-112",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Párrafo (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "disposicion",
+    "topic": "parrafo-disposicion",
+    "subtopic": null,
+    "tema": "Párrafo",
+    "sourceQuestionId": "neg-disposicion-06",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el grupo Párrafo de Disposición es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Incluye la sangría izquierda y derecha"
+      },
+      {
+        "letter": "B",
+        "text": "Incluye el espaciado antes y después"
+      },
+      {
+        "letter": "C",
+        "text": "Incluye los botones de alineación (izquierda/centro/derecha/justificar)"
+      },
+      {
+        "letter": "D",
+        "text": "El espaciado por defecto es Antes 0 pto / Después 8 pto"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "La alineación está en el grupo Párrafo de la pestaña Inicio, no en el de Disposición (que solo tiene sangría y espaciado)."
   },
   {
     "id": "disposicion-42",
@@ -2335,5 +2551,77 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "**Girar.** Pestaña Disposición ▸ Organizar. Atajo: no tiene atajo de teclado en esta instalación. Gira 90° a cada lado, voltea en horizontal o vertical, o abre «Más opciones de giro…» para un ángulo exacto."
+  },
+  {
+    "id": "disposicion-113",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Organizar (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "disposicion",
+    "topic": "organizar",
+    "subtopic": null,
+    "tema": "Organizar",
+    "sourceQuestionId": "neg-disposicion-07",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO está en el grupo Organizar de Disposición?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Posición"
+      },
+      {
+        "letter": "B",
+        "text": "Ajustar texto"
+      },
+      {
+        "letter": "C",
+        "text": "Alinear"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar formas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "«Insertar formas» es un grupo de la cinta contextual Formato de forma, no del grupo Organizar de Disposición."
+  },
+  {
+    "id": "disposicion-114",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Organizar (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "disposicion",
+    "topic": "organizar",
+    "subtopic": null,
+    "tema": "Organizar",
+    "sourceQuestionId": "neg-disposicion-08",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el menú Alinear es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Alinear verticalmente» centra los objetos en horizontal"
+      },
+      {
+        "letter": "B",
+        "text": "«Alinear al medio» centra los objetos en vertical"
+      },
+      {
+        "letter": "C",
+        "text": "Por defecto está marcada la opción «Alinear a la página»"
+      },
+      {
+        "letter": "D",
+        "text": "Existen «Distribuir horizontalmente» y «Distribuir verticalmente»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Por defecto está marcada «Alinear al margen», no «Alinear a la página»."
   }
 ]

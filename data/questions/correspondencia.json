@@ -138,5 +138,41 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Alt+Mayús+E abre el origen de datos de combinación de correspondencia para editarlo. Alt+Mayús+D combina la correspondencia a un nuevo documento. Alt+Ctrl+E no tiene esa función asignada. Ctrl+Mayús+E activa o desactiva el seguimiento de cambios."
+  },
+  {
+    "id": "correspondencia-6",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Escribir e insertar campos",
+    "sourceQuestionId": "neg-correspondencia-01",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO está en el grupo Escribir e insertar campos de Correspondencia?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Bloque de direcciones"
+      },
+      {
+        "letter": "B",
+        "text": "Línea de saludo"
+      },
+      {
+        "letter": "C",
+        "text": "Reglas"
+      },
+      {
+        "letter": "D",
+        "text": "Sobres"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "«Sobres» está en el grupo Crear, al principio de la pestaña Correspondencia, no en Escribir e insertar campos."
   }
 ]

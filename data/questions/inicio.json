@@ -5489,6 +5489,114 @@
     "explicacion": "**Iniciador de cuadro de diálogo.** Pestaña esquina inferior derecha de un grupo de la cinta. Atajo: no tiene atajo de teclado en esta instalación. La flechita ↘ que abre el cuadro de diálogo completo de ese grupo (Fuente, Párrafo, Portapapeles…) con todas las opciones que no caben en la cinta."
   },
   {
+    "id": "inicio-432",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "neg-inicio-01",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO está en el grupo Portapapeles de Inicio?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Pegar"
+      },
+      {
+        "letter": "B",
+        "text": "Copiar"
+      },
+      {
+        "letter": "C",
+        "text": "Cortar"
+      },
+      {
+        "letter": "D",
+        "text": "Borrar todo el formato"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "«Borrar todo el formato» está en el grupo Fuente, no en Portapapeles (que tiene Pegar, Copiar, Cortar, Copiar formato y su lanzador)."
+  },
+  {
+    "id": "inicio-433",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "neg-inicio-02",
+    "generado": true,
+    "enunciado": "¿Cuál de estos atajos NO corresponde al formato de fuente en esta instalación?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+N (negrita)"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+K (cursiva)"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+S (subrayado)"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+U (subrayado)"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "En el esquema clásico español, negrita/cursiva/subrayado son Ctrl+N/Ctrl+K/Ctrl+S. Ctrl+U no tiene esa función (es el esquema internacional en inglés)."
+  },
+  {
+    "id": "inicio-434",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "neg-inicio-03",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre subíndice y superíndice es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Subíndice es Ctrl+Mayús+-"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+_ hace lo mismo que Ctrl+Mayús+-"
+      },
+      {
+        "letter": "C",
+        "text": "Superíndice es Ctrl+Mayús++"
+      },
+      {
+        "letter": "D",
+        "text": "Superíndice no tiene atajo de teclado en esta instalación"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Superíndice NO tiene atajo en esta instalación (probado en vivo: ni Ctrl+Mayús+=, ni Ctrl+Mayús++, ni Ctrl+Alt++). Solo se activa desde el botón o la casilla del cuadro Fuente."
+  },
+  {
     "id": "inicio-36",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Marcas de formato",
@@ -6272,6 +6380,42 @@
     "explicacion": "**Justificar.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+J. Alinea el texto con los dos márgenes repartiendo el espacio entre palabras."
   },
   {
+    "id": "inicio-435",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "tema": "Alineación",
+    "sourceQuestionId": "neg-inicio-04",
+    "generado": true,
+    "enunciado": "¿Cuál de estos atajos de alineación es INCORRECTO en esta instalación?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Q = izquierda"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+T = centrar"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+R = derecha"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+J = justificar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ctrl+R no hace absolutamente nada en esta instalación. Alinear a la derecha es Ctrl+D."
+  },
+  {
     "id": "inicio-43",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Sangría",
@@ -6879,6 +7023,42 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "**Disminuir sangría.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Desplaza el párrafo a la tabulación anterior hacia la izquierda."
+  },
+  {
+    "id": "inicio-436",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Sangría (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-sangria",
+    "subtopic": null,
+    "tema": "Sangría",
+    "sourceQuestionId": "neg-inicio-05",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre sangría es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+H aumenta la sangría (esquema clásico español)"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+F aplica sangría francesa"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Mayús+R quita toda la sangría en esta instalación"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+W quita el formato de párrafo, sangrías incluidas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ctrl+Mayús+R NO quita la sangría en esta instalación, aunque el volcado se la asigne. Para quitar sangrías se usa Ctrl+W (prueba en vivo del usuario)."
   },
   {
     "id": "inicio-47",
@@ -7717,6 +7897,42 @@
     "explicacion": "**Espaciado entre líneas y párrafos.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. El interlineado (1,0 / 1,15 / 1,5 / 2,0…) y «Agregar/Quitar espacio antes o después del párrafo»."
   },
   {
+    "id": "inicio-437",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "neg-inicio-06",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre interlineado es INCORRECTA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+1 = interlineado sencillo"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+5 (fila superior) = interlineado 1,5"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+2 = interlineado doble"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+0 cambia el interlineado a triple"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ctrl+0 no toca el interlineado: restaura el zoom al 100 %. Los atajos de interlineado son Ctrl+1/Ctrl+5/Ctrl+2 (sencillo/1,5/doble)."
+  },
+  {
     "id": "inicio-51",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Bordes y sombreado",
@@ -8287,6 +8503,42 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "**Sombreado.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Aplica un color de fondo al párrafo o a la selección (no a toda la página)."
+  },
+  {
+    "id": "inicio-438",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "neg-inicio-07",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO está en el grupo Párrafo de Inicio?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Bordes"
+      },
+      {
+        "letter": "B",
+        "text": "Sombreado"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar todo"
+      },
+      {
+        "letter": "D",
+        "text": "Estilos rápidos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "«Estilos rápidos» (la galería de estilos) tiene su propio grupo, «Estilos», independiente del grupo Párrafo."
   },
   {
     "id": "inicio-58",
@@ -9370,6 +9622,42 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "**Ordenar.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Ordena alfabética o numéricamente las líneas, los párrafos o las filas de una tabla seleccionados."
+  },
+  {
+    "id": "inicio-439",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "neg-inicio-08",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre listas es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Viñetas y Numeración están en el grupo Párrafo"
+      },
+      {
+        "letter": "B",
+        "text": "Lista multinivel permite niveles jerárquicos (1, 1.1, 1.1.1...)"
+      },
+      {
+        "letter": "C",
+        "text": "El atajo de Viñetas es Ctrl+Mayús+L sin ninguna ambigüedad"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+L también está asignado a Versalitas en el volcado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El volcado asigna Ctrl+Mayús+L tanto a Versalitas como a Lista con viñetas: es un conflicto interno sin dirimir, no una asignación limpia."
   },
   {
     "id": "inicio-68",
@@ -12027,6 +12315,42 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ctrl+Mayús+A aplica el estilo Normal al párrafo. Ctrl+Mayús+S aplica subrayado, Ctrl+Mayús+N aplica negrita y Alt+Ctrl+N activa la vista Normal del documento (no el estilo)."
+  },
+  {
+    "id": "inicio-440",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "neg-inicio-09",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre los atajos de título es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Mayús+1 aplica Título 1"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Ctrl+2 aplica Título 2"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Mayús+2 también aplica Título 2"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+3 aplica Título 3"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ctrl+Mayús+2 no hace nada en esta instalación (probado en vivo). El atajo real de Título 2 es Alt+Ctrl+2."
   },
   {
     "id": "inicio-117",
@@ -15392,6 +15716,42 @@
     "explicacion": "**Seleccionar.** Pestaña Inicio ▸ Edición. Atajo: no tiene atajo de teclado en esta instalación. Menú: Seleccionar todo (Ctrl+E), Seleccionar objetos, Seleccionar texto con formato similar y Panel de selección."
   },
   {
+    "id": "inicio-441",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": null,
+    "tema": "Edición",
+    "sourceQuestionId": "neg-inicio-10",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO está en el grupo Edición de Inicio?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Buscar"
+      },
+      {
+        "letter": "B",
+        "text": "Reemplazar"
+      },
+      {
+        "letter": "C",
+        "text": "Seleccionar"
+      },
+      {
+        "letter": "D",
+        "text": "Ir a"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El grupo Edición tiene tres comandos: Buscar, Reemplazar y Seleccionar. «Ir a» no es un botón de ese grupo (es un atajo de teclado, Ctrl+I, sin botón propio en la cinta)."
+  },
+  {
     "id": "inicio-373",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Voz",
@@ -15500,6 +15860,42 @@
     "explicacion": "**Dictar.** Pestaña Inicio ▸ Voz. Atajo: Alt+[. Convierte tu voz en texto. Abre una barra flotante con el micrófono."
   },
   {
+    "id": "inicio-442",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Voz (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "voz",
+    "subtopic": null,
+    "tema": "Voz",
+    "sourceQuestionId": "neg-inicio-11",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre Dictar es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Está en el grupo Voz de Inicio"
+      },
+      {
+        "letter": "B",
+        "text": "Su atajo es Alt+["
+      },
+      {
+        "letter": "C",
+        "text": "Convierte la voz en texto"
+      },
+      {
+        "letter": "D",
+        "text": "Su atajo es Ctrl+Mayús+V"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "No existe ningún atajo Ctrl+Mayús+V para Dictar. El atajo real, confirmado en vivo, es Alt+[."
+  },
+  {
     "id": "inicio-430",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Complementos (icono)",
@@ -15535,5 +15931,41 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "**Editor.** Pestaña Inicio ▸ Editor. Atajo: F7. Abre el panel Editor con la revisión de ortografía, gramática y estilo. También Windows+F7."
+  },
+  {
+    "id": "inicio-443",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Complementos (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "complementos",
+    "subtopic": null,
+    "tema": "Complementos",
+    "sourceQuestionId": "neg-inicio-12",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el Editor es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se abre con F7"
+      },
+      {
+        "letter": "B",
+        "text": "También se abre con Windows+F7"
+      },
+      {
+        "letter": "C",
+        "text": "Revisa ortografía, gramática y estilo"
+      },
+      {
+        "letter": "D",
+        "text": "F7 abre el panel de Impresión"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "F7 abre el panel Editor (ortografía y gramática), no el panel de Impresión. El de Impresión se abre con Ctrl+P."
   }
 ]

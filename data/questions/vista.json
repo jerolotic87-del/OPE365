@@ -1411,6 +1411,78 @@
     "explicacion": "En la vista Esquema, vuelve a mostrar el texto subordinado que estaba oculto bajo el título seleccionado."
   },
   {
+    "id": "vista-146",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "neg-vista-01",
+    "generado": true,
+    "enunciado": "¿Cuál de estos atajos de vista es INCORRECTO?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Ctrl+D = Diseño de impresión"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Ctrl+Q = Vista Esquema"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+N = Vista Normal/Borrador"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Ctrl+L = Modo de lectura"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "No existe un atajo Alt+Ctrl+L para el Modo de lectura. Los cuatro atajos reales de vista son Alt+Ctrl+D/Q/N/I (Diseño de impresión/Esquema/Normal/vista preliminar)."
+  },
+  {
+    "id": "vista-150",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "neg-vista-05",
+    "generado": true,
+    "enunciado": "¿Cuál de estas vistas NO está entre los botones del grupo Vistas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Modo de lectura"
+      },
+      {
+        "letter": "B",
+        "text": "Diseño de impresión"
+      },
+      {
+        "letter": "C",
+        "text": "Diseño Web"
+      },
+      {
+        "letter": "D",
+        "text": "Vista previa de impresión"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "La «Vista previa de impresión» no es un botón del grupo Vistas: se accede desde Archivo ▸ Imprimir. El grupo Vistas tiene Modo de lectura, Diseño de impresión, Diseño Web, Vista Esquema y Vista Borrador."
+  },
+  {
     "id": "vista-11",
     "sourceFile": "vista.json",
     "bloque": "Vista — Inmersivo",
@@ -2348,6 +2420,42 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ctrl++ (más) acerca el zoom del documento. Ctrl+- (menos) aleja el zoom. Alt+Ctrl++ abre el cuadro de personalización de métodos abreviados de teclado. Ctrl+Mayús++ no tiene función asignada. El zoom cambia de 10 en 10. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
+    "id": "vista-149",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Zoom (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": null,
+    "tema": "Zoom",
+    "sourceQuestionId": "neg-vista-04",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el zoom es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El rango va del 10 % al 500 %"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl + rueda del ratón cambia el zoom de 10 en 10"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+- aleja el zoom"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl++ también aleja el zoom"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ctrl++ acerca el zoom, no lo aleja. El que aleja es Ctrl+- (de 10 en 10 puntos)."
   },
   {
     "id": "vista-24",
@@ -3507,6 +3615,78 @@
     "explicacion": "Cambia el foco a la siguiente ventana de documento cuando hay varios documentos abiertos; es una segunda combinación asignada a la misma función que Ctrl+F6."
   },
   {
+    "id": "vista-147",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "neg-vista-02",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre Alt+Ctrl+V es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "En esta instalación pega el formato copiado"
+      },
+      {
+        "letter": "B",
+        "text": "Es a Pegar formato lo que Alt+Ctrl+C es a Copiar formato"
+      },
+      {
+        "letter": "C",
+        "text": "El volcado también lo asigna a «Dividir ventana»"
+      },
+      {
+        "letter": "D",
+        "text": "En la práctica, divide la ventana del documento en dos paneles"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "En vivo, Alt+Ctrl+V NO divide la ventana: pega el formato copiado con Alt+Ctrl+C. Dividir la ventana no tiene atajo; se hace desde Vista ▸ Ventana ▸ Dividir."
+  },
+  {
+    "id": "vista-148",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "neg-vista-03",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO está en el grupo Ventana de Vista?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Nueva ventana"
+      },
+      {
+        "letter": "B",
+        "text": "Dividir"
+      },
+      {
+        "letter": "C",
+        "text": "Ver en paralelo"
+      },
+      {
+        "letter": "D",
+        "text": "Panel de navegación"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El Panel de navegación está en el grupo Mostrar, no en el grupo Ventana."
+  },
+  {
     "id": "vista-35",
     "sourceFile": "vista.json",
     "bloque": "Vista — Macros",
@@ -4135,6 +4315,42 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Alt+F11 abre el editor de Visual Basic para Aplicaciones. Alt+F8 abre el cuadro de diálogo para ejecutar macros. Ctrl+F11 bloquea los campos del documento. Alt+Mayús+F11 no tiene función asignada para el editor VBA."
+  },
+  {
+    "id": "vista-151",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Macros (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "tema": "Macros",
+    "sourceQuestionId": "neg-vista-06",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el grupo Macros de Vista es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Contiene el comando Macros"
+      },
+      {
+        "letter": "B",
+        "text": "Permite grabar una macro"
+      },
+      {
+        "letter": "C",
+        "text": "Abre el editor de Visual Basic (VBE) con Alt+F11"
+      },
+      {
+        "letter": "D",
+        "text": "Está en la pestaña Programador, no en Vista"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El grupo Macros está en la pestaña Vista (la pestaña Programador, si está activada, tiene su propio grupo de macros aparte)."
   },
   {
     "id": "vista-43",

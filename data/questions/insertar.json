@@ -514,6 +514,42 @@
     "explicacion": "**Salto de página.** Pestaña Insertar ▸ Páginas. Atajo: Ctrl+Entrar. Fuerza que el texto siguiente empiece en la página siguiente, sin crear una sección nueva."
   },
   {
+    "id": "insertar-435",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Páginas (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "paginas",
+    "subtopic": null,
+    "tema": "Páginas",
+    "sourceQuestionId": "neg-insertar-01",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO está en el grupo Páginas de Insertar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Portada"
+      },
+      {
+        "letter": "B",
+        "text": "Página en blanco"
+      },
+      {
+        "letter": "C",
+        "text": "Salto de página"
+      },
+      {
+        "letter": "D",
+        "text": "Salto de sección"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El grupo Páginas de Insertar tiene solo tres comandos: Portada, Página en blanco y Salto de página. «Salto de sección» está en Disposición ▸ Configurar página ▸ Saltos."
+  },
+  {
     "id": "insertar-31",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Tablas",
@@ -1492,6 +1528,42 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "**Tabla.** Pestaña Insertar ▸ Tablas. Atajo: no tiene atajo de teclado en esta instalación. Inserta una tabla (cuadrícula, «Insertar tabla…» con 5 columnas / 2 filas por defecto, Dibujar tabla, Hoja de cálculo de Excel, Tablas rápidas)."
+  },
+  {
+    "id": "insertar-436",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Tablas",
+    "sourceQuestionId": "neg-insertar-02",
+    "generado": true,
+    "enunciado": "¿Cuál de estas opciones de autoajuste NO existe en el cuadro Insertar tabla?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ancho de columna fijo"
+      },
+      {
+        "letter": "B",
+        "text": "Autoajustar al contenido"
+      },
+      {
+        "letter": "C",
+        "text": "Autoajustar a la ventana"
+      },
+      {
+        "letter": "D",
+        "text": "Autoajustar al papel"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Las tres opciones reales de Autoajuste son Ancho de columna fijo, Autoajustar al contenido y Autoajustar a la ventana. «Autoajustar al papel» no existe."
   },
   {
     "id": "insertar-59",
@@ -3959,6 +4031,78 @@
     "explicacion": "**Captura.** Pestaña Insertar ▸ Ilustraciones. Atajo: no tiene atajo de teclado en esta instalación. Inserta una imagen de otra ventana abierta, o «Recorte de pantalla» para capturar una zona."
   },
   {
+    "id": "insertar-437",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "neg-insertar-03",
+    "generado": true,
+    "enunciado": "¿Cuál de estas subcategorías del desplegable Formas NO existe?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Líneas"
+      },
+      {
+        "letter": "B",
+        "text": "Rectángulos"
+      },
+      {
+        "letter": "C",
+        "text": "Formas básicas"
+      },
+      {
+        "letter": "D",
+        "text": "Círculos y óvalos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Las subcategorías reales son Líneas, Rectángulos, Formas básicas, Flechas de bloque, Formas de ecuación, Diagrama de flujo, Cintas y estrellas y Llamadas. No hay una subcategoría «Círculos y óvalos» (el óvalo está dentro de Formas básicas)."
+  },
+  {
+    "id": "insertar-438",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "neg-insertar-04",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO pertenece al grupo Ilustraciones de Insertar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Imágenes"
+      },
+      {
+        "letter": "B",
+        "text": "Formas"
+      },
+      {
+        "letter": "C",
+        "text": "Iconos"
+      },
+      {
+        "letter": "D",
+        "text": "Tabla"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Tabla tiene su propio grupo («Tablas»), justo antes de Ilustraciones. Imágenes, Formas e Iconos sí están en el grupo Ilustraciones."
+  },
+  {
     "id": "insertar-109",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
@@ -4945,6 +5089,42 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Tienes un documento con diez imágenes y formas superpuestas y no consigues seleccionar la que está debajo. Abres el Panel de selección desde Organizar > Panel de selección y aparece una lista con el nombre de todos los objetos del documento. Puedes hacer clic en el ojo junto a cada objeto para ocultarlo temporalmente, y puedes arrastrar los objetos en la lista para cambiar su orden de superposición."
+  },
+  {
+    "id": "insertar-439",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Formato de forma (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "formato-forma",
+    "subtopic": null,
+    "tema": "Formato de forma",
+    "sourceQuestionId": "neg-insertar-05",
+    "generado": true,
+    "enunciado": "¿Cuál de estos grupos NO pertenece a la cinta contextual Formato de forma?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar formas"
+      },
+      {
+        "letter": "B",
+        "text": "Estilos de forma"
+      },
+      {
+        "letter": "C",
+        "text": "Accesibilidad"
+      },
+      {
+        "letter": "D",
+        "text": "Ajustar página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Formato de forma tiene siete grupos: Insertar formas, Estilos de forma, Estilos de WordArt, Texto, Accesibilidad, Organizar y Tamaño. No existe un grupo «Ajustar página» en esa cinta."
   },
   {
     "id": "insertar-3",
@@ -6160,6 +6340,42 @@
     "explicacion": "**Referencia cruzada.** Pestaña Insertar ▸ Vínculos. Atajo: no tiene atajo de teclado en esta instalación. Inserta una referencia a otro elemento (título, marcador, nota, ilustración, tabla, ecuación) que se actualiza sola. Mismo cuadro que Referencias ▸ Títulos ▸ Referencia cruzada."
   },
   {
+    "id": "insertar-440",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Vínculos (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "vinculos",
+    "subtopic": null,
+    "tema": "Vínculos",
+    "sourceQuestionId": "neg-insertar-06",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO pertenece al grupo Vínculos de Insertar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Vínculo"
+      },
+      {
+        "letter": "B",
+        "text": "Marcador"
+      },
+      {
+        "letter": "C",
+        "text": "Referencia cruzada"
+      },
+      {
+        "letter": "D",
+        "text": "Hipervínculo interno"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El grupo Vínculos tiene exactamente tres comandos: Vínculo, Marcador y Referencia cruzada. No existe un comando separado llamado «Hipervínculo interno»."
+  },
+  {
     "id": "insertar-27",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Comentarios",
@@ -6323,6 +6539,42 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "**Comentario nuevo.** Pestaña Insertar ▸ Comentarios. Atajo: Alt+Ctrl+A. Añade un comentario anclado a la selección, en el margen o en el panel de comentarios."
+  },
+  {
+    "id": "insertar-441",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Comentarios (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "comentarios",
+    "subtopic": null,
+    "tema": "Comentarios",
+    "sourceQuestionId": "neg-insertar-07",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre comentarios es INCORRECTA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El atajo para insertar un comentario es Alt+Ctrl+A"
+      },
+      {
+        "letter": "B",
+        "text": "Un comentario se puede resolver"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+C también inserta un comentario"
+      },
+      {
+        "letter": "D",
+        "text": "Los comentarios se anclan a una selección de texto"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Alt+Ctrl+C copia el formato de la selección (el pincel); no tiene nada que ver con los comentarios. El comentario se inserta con Alt+Ctrl+A."
   },
   {
     "id": "insertar-2",
@@ -8108,6 +8360,42 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "**Número de página.** Pestaña Insertar ▸ Encabezado y pie de página. Atajo: no tiene atajo de teclado en esta instalación. Inserta la numeración automática (Principio de página, Final de página, Márgenes, Posición actual) y «Formato del número de página…»."
+  },
+  {
+    "id": "insertar-442",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Encabezado y pie de página (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "encabezado-pie",
+    "subtopic": null,
+    "tema": "Encabezado y pie de página",
+    "sourceQuestionId": "neg-insertar-08",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO está en el grupo Encabezado y pie de página de Insertar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Encabezado"
+      },
+      {
+        "letter": "B",
+        "text": "Pie de página"
+      },
+      {
+        "letter": "C",
+        "text": "Número de página"
+      },
+      {
+        "letter": "D",
+        "text": "Fecha y hora"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El grupo Encabezado y pie de página de la pestaña Insertar tiene solo tres comandos: Encabezado, Pie de página y Número de página. Fecha y hora está en el grupo Texto."
   },
   {
     "id": "insertar-19",
@@ -10214,6 +10502,42 @@
     "explicacion": "**Línea de firma.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta una línea de firma de Microsoft Office con el nombre y el puesto del firmante. Distinta de eSignature."
   },
   {
+    "id": "insertar-443",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Texto",
+    "sourceQuestionId": "neg-insertar-09",
+    "generado": true,
+    "enunciado": "¿Cuál de estos comandos NO está en el grupo Texto de Insertar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cuadro de texto"
+      },
+      {
+        "letter": "B",
+        "text": "WordArt"
+      },
+      {
+        "letter": "C",
+        "text": "Letra capital"
+      },
+      {
+        "letter": "D",
+        "text": "Símbolo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Símbolo tiene su propio grupo («Símbolos»), al final de la pestaña Insertar. Cuadro de texto, WordArt y Letra capital sí están en el grupo Texto."
+  },
+  {
     "id": "insertar-7",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
@@ -11819,6 +12143,42 @@
     "explicacion": "**Símbolo.** Pestaña Insertar ▸ Símbolos. Atajo: no tiene atajo de teclado en esta instalación. Inserta caracteres que no están en el teclado (€, ©, ½, letras griegas…). «Más símbolos…» abre el cuadro con las fichas Símbolos y Caracteres especiales."
   },
   {
+    "id": "insertar-444",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Símbolos (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "simbolos",
+    "subtopic": null,
+    "tema": "Símbolos",
+    "sourceQuestionId": "neg-insertar-10",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el cuadro Símbolo es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tiene una ficha Símbolos y otra Caracteres especiales"
+      },
+      {
+        "letter": "B",
+        "text": "Muestra una fila de símbolos usados recientemente"
+      },
+      {
+        "letter": "C",
+        "text": "El botón Teclas... abre Personalizar teclado"
+      },
+      {
+        "letter": "D",
+        "text": "Tiene una tercera ficha llamada Ecuaciones"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El cuadro Símbolo solo tiene dos fichas: Símbolos y Caracteres especiales. No existe una ficha «Ecuaciones» ahí (la ecuación es un comando aparte, en el mismo grupo Símbolos)."
+  },
+  {
     "id": "insertar-71",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Multimedia",
@@ -12004,6 +12364,42 @@
     "explicacion": "**Vídeos en línea.** Pestaña Insertar ▸ Multimedia. Atajo: no tiene atajo de teclado en esta instalación. Inserta un vídeo desde una URL (YouTube, SlideShare, Vimeo, TED) que se reproduce dentro del documento."
   },
   {
+    "id": "insertar-445",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Multimedia (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "multimedia",
+    "subtopic": null,
+    "tema": "Multimedia",
+    "sourceQuestionId": "neg-insertar-11",
+    "generado": true,
+    "enunciado": "¿Cuál de estas plataformas de vídeo NO aparece en el cuadro Insertar vídeo en línea?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "YouTube"
+      },
+      {
+        "letter": "B",
+        "text": "Vimeo"
+      },
+      {
+        "letter": "C",
+        "text": "TED"
+      },
+      {
+        "letter": "D",
+        "text": "Dailymotion"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Las plataformas disponibles son YouTube, SlideShare, Vimeo y TED. Dailymotion no aparece en la lista."
+  },
+  {
     "id": "insertar-107",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — eSignature",
@@ -12168,5 +12564,41 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "**Campos de eSignature.** Pestaña Insertar ▸ eSignature. Atajo: no tiene atajo de teclado en esta instalación. Crea una solicitud de firma electrónica. Exige que el documento esté guardado en .docx."
+  },
+  {
+    "id": "insertar-446",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — eSignature (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "esignature",
+    "subtopic": null,
+    "tema": "eSignature",
+    "sourceQuestionId": "neg-insertar-12",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre eSignature es INCORRECTA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El grupo tiene el comando «Campos de eSignature»"
+      },
+      {
+        "letter": "B",
+        "text": "Exige que el documento esté guardado en .docx"
+      },
+      {
+        "letter": "C",
+        "text": "Si el documento está en .doc, Word lo convierte automáticamente a .docx"
+      },
+      {
+        "letter": "D",
+        "text": "Abre un panel «Crear una solicitud de firma»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Word NO convierte el .doc automáticamente: muestra el mensaje «Save this document as a .docx file to use eSignature» y no deja continuar hasta que lo guardes tú en .docx."
   }
 ]
