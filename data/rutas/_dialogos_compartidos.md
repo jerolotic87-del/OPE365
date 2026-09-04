@@ -132,6 +132,46 @@ El **split-button Objeto** tiene dos comandos distintos: **«Objeto…»**
 incrustado/vinculado**) y **«Insertar texto de archivo…»** (incorpora el
 contenido como **texto normal** en el flujo del documento). No confundir. ✅
 
+## 7bis. «Índice y tablas» (3 fichas: Índice · Tabla de contenido · Tabla de ilustraciones) ✅
+
+Un **único cuadro** con tres fichas; cada comando lo abre por su ficha:
+
+| Ruta | Ficha |
+|---|---|
+| Referencias ▸ Tabla de contenido ▸ **Tabla de contenido personalizada…** | Tabla de contenido ✅ |
+| Referencias ▸ Índice ▸ **Insertar índice** | Índice ✅ |
+| Referencias ▸ Títulos ▸ **Insertar tabla de ilustraciones** | Tabla de ilustraciones ✅ |
+
+- TdC: 7 formatos (Estilo personal · Clásico · Elegante · **Sofisticado** ·
+  **Moderno** · Formal · Sencillo), Mostrar niveles 3, «Modificar…» edita
+  los estilos **TDC 1–9**. ✅
+- Tabla de ilustraciones: 6 formatos (… · **Centrado** · …), rótulo
+  Ilustración/Ecuación/Tabla. ✅
+- Índice: Tipo Con sangría/Continuo, 2 columnas, idioma Español (España),
+  se genera de entradas XE (marcadas a mano o con «Automarcar…»), NO de
+  estilos de título. ✅
+
+## 7ter. «Referencia cruzada» ✅
+
+Mismo cuadro desde **dos pestañas**:
+
+| Ruta |
+|---|
+| **Insertar** ▸ Vínculos ▸ Referencia cruzada |
+| **Referencias** ▸ Títulos ▸ Referencia cruzada |
+
+Tipos: Elemento numerado · **Título** (solo si el documento tiene estilos
+de título) · Marcador · Nota al pie · Nota al final · Ecuación ·
+Ilustración · Tabla. «Insertar como hipervínculo» marcado por defecto. ✅
+
+## 7quater. «Notas al pie y notas al final» ✅
+
+Referencias ▸ Notas al pie ▸ **lanzador**. Posición nota al pie (Final de
+página / Por debajo de la selección), nota al final (Final del documento /
+Final de la sección), botón **Convertir…** (al pie↔al final↔intercambiar),
+formato de número (1,2,3 / a,b,c / i,ii,iii / *,†,‡,§), numeración
+(Continua / Reiniciar cada sección / Reiniciar cada página). ✅
+
 ## 8. Otros cuadros con más de una entrada (▫ estándar)
 
 | Cuadro | Rutas |

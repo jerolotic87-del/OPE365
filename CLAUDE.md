@@ -456,16 +456,28 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 514, insertar 399, inicio 380, archivo 350, vista 131, revisar 77,
-diseno 70, disposicion 55, referencias 7, correspondencia 4.
-Total 1987. 282 preguntas `categoria:"atajo"`.
-`disposicion-2..55` (`sourceQuestionId` `vf-disposicion-NN`, `generado:true`,
-`tipo:"verdadero_falso"`, 27 V / 27 F) = banco de la pestaña **Disposición**
+disposicion 71, diseno 70, referencias 59, correspondencia 4.
+Total 2055. 282 preguntas `categoria:"atajo"`.
+`disposicion-2..71` (`sourceQuestionId` `vf-disposicion-*`, `generado:true`,
+`tipo:"verdadero_falso"`, 35 V / 35 F) = banco de la pestaña **Disposición**
 (antes solo tenía `disposicion-1`, el atajo `Alt+Ctrl+D`). Cubre Configurar
 página (márgenes con sus valores reales de esta instalación, tamaños de
 papel, columnas, saltos de sección vs página, números de línea, guiones),
 Párrafo (sangría/espaciado, cuadro Párrafo) y Organizar (posición, ajuste
-de texto, alinear/distribuir/girar, cuadro Diseño). Fuente:
-`data/rutas/disposicion.txt`. Generador: `scripts/gen_disposicion_vf.py`.
+de texto, alinear/distribuir/girar, cuadro Diseño). 88 flashcards.
+Fuente: `data/rutas/disposicion.txt` + capturas. Generadores:
+`scripts/gen_disposicion_vf.py`, `gen_disposicion_extra.py`.
+`referencias-8..59` (`vf-referencias-NN`, `generado:true`,
+`tipo:"verdadero_falso"`, 26 V / 26 F) = banco de la pestaña **Referencias**
+(antes solo 7 opcion_unica de atajos). Tabla de contenido (cuadro de 3
+fichas TdC/Índice/Tabla de ilustraciones), Notas al pie (`Alt+Ctrl+O` pie /
+`Alt+Ctrl+L` final), Citas y bibliografía (12 estilos, APA por defecto,
+Administrador de fuentes con Lista general/actual, «Cambiar SP de proveedor»
+= complementos no estilo), Títulos (Referencia cruzada = mismo cuadro que
+Insertar; tipo «Título» solo si hay estilos de título) e Índice (entradas
+XE marcadas a mano, Automarcar). 58 flashcards. Fuente:
+`data/rutas/referencias.txt` + capturas. Generador:
+`scripts/gen_referencias_vf.py`.
 Historial: `data/questions_regroup_report.md`.
 `diseno-1..70` (`sourceQuestionId` `vf-diseno-NN`, `generado:true`,
 `categoria:"concepto"`, `tipo:"verdadero_falso"`, 35 V / 35 F) = banco
