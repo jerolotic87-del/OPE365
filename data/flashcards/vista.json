@@ -1,6 +1,6 @@
 [
   {
-    "cardId": "F-01",
+    "cardId": "F-001",
     "section": "vista",
     "topic": "vistas",
     "subtopic": "Diseño de impresión",
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "cardId": "F-02",
+    "cardId": "F-002",
     "section": "vista",
     "topic": "vistas",
     "subtopic": "Modo de lectura",
@@ -34,7 +34,7 @@
     ]
   },
   {
-    "cardId": "F-03",
+    "cardId": "F-003",
     "section": "vista",
     "topic": "vistas",
     "subtopic": "Modo de lectura",
@@ -51,7 +51,7 @@
     ]
   },
   {
-    "cardId": "F-04",
+    "cardId": "F-004",
     "section": "vista",
     "topic": "vistas",
     "subtopic": "Vista Esquema",
@@ -67,7 +67,7 @@
     ]
   },
   {
-    "cardId": "F-05",
+    "cardId": "F-005",
     "section": "vista",
     "topic": "vistas",
     "subtopic": "Vista Esquema",
@@ -84,7 +84,22 @@
     ]
   },
   {
-    "cardId": "F-06",
+    "cardId": "E-005",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Esquema",
+    "cardType": "error",
+    "priority": "normal",
+    "front": "¿La Vista Esquema muestra todo el contenido organizado jerárquicamente?",
+    "back": "No. Muestra SÓLO los títulos. El contenido completo no es visible.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-3"
+    ]
+  },
+  {
+    "cardId": "F-006",
     "section": "vista",
     "topic": "vistas",
     "subtopic": "Vista Borrador",
@@ -100,745 +115,7 @@
     ]
   },
   {
-    "cardId": "F-07",
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Vista Borrador",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Cuál es la función principal de Vista Borrador?",
-    "back": "Editar el texto rápidamente mostrando el documento como borrador.",
-    "sourceRefs": [
-      "Sergio Galán"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-2"
-    ]
-  },
-  {
-    "cardId": "F-08",
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Diseño Web",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué hace el Diseño Web?",
-    "back": "Muestra el documento como en un explorador web: fondos con colores/texturas · texto ajustado a la ventana · gráficos como en web.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-6"
-    ]
-  },
-  {
-    "cardId": "F-09",
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Vista Preliminar",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Para qué sirve la Vista Preliminar? Atajo.",
-    "back": "Ver páginas completas a tamaño reducido · verificar saltos de página, distribución y formato · Ctrl + Alt + I. ¡OJO!: No es un botón del Grupo Vistas. Se accede desde Archivo → Imprimir.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "archivo-1"
-    ]
-  },
-  {
-    "cardId": "F-10",
-    "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": "Concentración",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué hace la herramienta Concentración?",
-    "back": "Elimina las distracciones del entorno para concentrarse en el documento.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-11"
-    ]
-  },
-  {
-    "cardId": "F-11",
-    "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": "Lector inmersivo",
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Qué es Immersive Reader?",
-    "back": "Un conjunto de herramientas (plural) para mejorar la comprensión y fluidez de lectura. Nombre oficial en español: \"Lector inmersivo\".",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-12",
-      "vista-13"
-    ]
-  },
-  {
-    "cardId": "F-12",
-    "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿A qué grupo pertenecen Concentración e Immersive Reader?",
-    "back": "Al Grupo Inmersivo (también llamado \"Inmersivo\" en la cinta) ¡NO al Grupo Vistas!",
-    "sourceRefs": [
-      "aulaClic"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-14"
-    ]
-  },
-  {
-    "cardId": "F-13",
-    "section": "vista",
-    "topic": "movimiento-pagina",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿En qué dirección desplaza el Grupo Movimiento de Página y mediante qué medios?",
-    "back": "Dirección: horizontal · Medios: rueda del ratón o barra de desplazamiento horizontal.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-15",
-      "vista-16"
-    ]
-  },
-  {
-    "cardId": "F-14",
-    "section": "vista",
-    "topic": "mostrar",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Qué tres elementos controla el Grupo Mostrar?",
-    "back": "Regla · Líneas de la cuadrícula · Panel de navegación · Acción: Mostrar/Ocultar (toggle reversible)",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-17",
-      "vista-18",
-      "vista-19"
-    ]
-  },
-  {
-    "cardId": "F-15",
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Valores",
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Cuál es el zoom mínimo y máximo en Word?",
-    "back": "Mínimo 10% · Máximo 500%. Los presets del cuadro de diálogo son 200%, 100% y 75% (el 25% no existe como preset).",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-56",
-      "vista-57"
-    ]
-  },
-  {
-    "cardId": "F-16",
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Valores",
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿En qué incremento cambia el zoom con Ctrl + rueda del ratón?",
-    "back": "De 10 en 10 puntos porcentuales.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-22"
-    ]
-  },
-  {
-    "cardId": "F-17",
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Cuadro de diálogo",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Diferencia entre el botón Zoom (lupa) y el botón 100%?",
-    "back": "Zoom (lupa) → abre el cuadro de diálogo para configurar · 100% → aplica directamente zoom al 100% sin abrir ningún cuadro de diálogo.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-20"
-    ]
-  },
-  {
-    "cardId": "F-18",
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Cuadro de diálogo",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué opciones de ajuste ofrece el Grupo Zoom además del botón Zoom y 100%?",
-    "back": "Una página · Varias páginas · Ancho de página",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-21"
-    ]
-  },
-  {
-    "cardId": "F-19",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Nueva ventana",
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Qué hace Nueva ventana?",
-    "back": "Abre dos ventanas independientes del mismo documento.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-31"
-    ]
-  },
-  {
-    "cardId": "F-20",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Dividir",
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Qué hace Dividir? Atajo.",
-    "back": "Dos paneles del mismo documento en una sola ventana · Alt + Ctrl + V. Atajo complementario para desactivar: Alt + Mayús + C.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-27"
-    ]
-  },
-  {
-    "cardId": "F-21",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Ver en paralelo",
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Qué hace Ver en paralelo?",
-    "back": "Muestra dos documentos distintos simultáneamente para compararlos cómodamente.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-26"
-    ]
-  },
-  {
-    "cardId": "F-22",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Cuál es la diferencia entre Nueva ventana, Dividir y Ver en paralelo?",
-    "back": "Nueva ventana → mismo doc · 2 ventanas separadas. Dividir → mismo doc · 2 paneles en 1 ventana · Alt+Ctrl+V. Ver en paralelo → 2 documentos distintos para comparar.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-31",
-      "vista-32"
-    ]
-  },
-  {
-    "cardId": "F-23",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Organizar todo",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Con qué otro nombre se conoce Organizar todo y qué hace?",
-    "back": "Mosaico · Coloca en mosaico todas las ventanas abiertas (sin límite numérico).",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-24"
-    ]
-  },
-  {
-    "cardId": "F-24",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Desplazamiento sincrónico",
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Qué condición requiere el Desplazamiento sincrónico para activarse?",
-    "back": "Requiere que Ver en paralelo esté activo previamente. Función: desplaza simultáneamente los dos documentos en paralelo.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-28",
-      "vista-29"
-    ]
-  },
-  {
-    "cardId": "F-25",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Restablecer posición de la ventana",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué hace Restablecer posición de la ventana y qué condición requiere?",
-    "back": "Coloca las ventanas en paralelo de manera equitativa · Requiere que el modo paralelo esté activo.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-30",
-      "vista-34"
-    ]
-  },
-  {
-    "cardId": "F-26",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Cambiar ventanas",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué hace Cambiar ventanas y cómo se presenta en la cinta?",
-    "back": "Cambia rápidamente a otra ventana abierta · Se presenta como menú desplegable (∨).",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-25"
-    ]
-  },
-  {
-    "cardId": "F-27",
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Qué es una macro? (3 componentes estructurales)",
-    "back": "Una serie de comandos e instrucciones · agrupados como un mismo comando · para completar una tarea automáticamente. aulaClic añade: se ejecutan en un orden que el usuario decide.",
-    "sourceRefs": [
-      "aulaClic"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-35"
-    ]
-  },
-  {
-    "cardId": "F-28",
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Cuáles son los tres usos principales de las macros según aulaClic?",
-    "back": "1. Automatizar una serie de pasos. 2. Personalizar la barra de acceso rápido. 3. Insertar texto o gráficos de uso frecuente.",
-    "sourceRefs": [
-      "aulaClic"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-67"
-    ]
-  },
-  {
-    "cardId": "F-29",
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Para qué tipo de tareas se usan las macros según Adams?",
-    "back": "Para automatizar las tareas más usadas (frecuentes) en Word.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-38"
-    ]
-  },
-  {
-    "cardId": "F-30",
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Qué abre Alt + F8?",
-    "back": "El cuadro de diálogo Macros.",
-    "sourceRefs": [
-      "Studocu",
-      "aulaClic"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-86",
-      "vista-54"
-    ]
-  },
-  {
-    "cardId": "F-31",
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Qué abre Alt + F11?",
-    "back": "El editor de Visual Basic (VBE -- entorno de programación de macros).",
-    "sourceRefs": [
-      "Studocu",
-      "IONOS España"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-86",
-      "vista-54"
-    ]
-  },
-  {
-    "cardId": "F-32",
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué opciones tiene el submenú del botón Macros?",
-    "back": "Ver macros · Grabar macro... · Pausar grabación (Pausar grabación aparece en gris si no hay grabación activa)",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-39",
-      "vista-40"
-    ]
-  },
-  {
-    "cardId": "F-33",
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Cuál es la ruta para abrir el cuadro de diálogo Macros desde la cinta?",
-    "back": "Vista → Macros → Ver macros (También con atajo directo Alt + F8)",
-    "sourceRefs": [
-      "aulaClic"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-66"
-    ]
-  },
-  {
-    "cardId": "F-34",
-    "section": "vista",
-    "topic": "sharepoint",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué es SharePoint y quién lo diseñó?",
-    "back": "Herramienta de Microsoft para la gestión documental y el trabajo en equipo.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-43",
-      "vista-44"
-    ]
-  },
-  {
-    "cardId": "F-35",
-    "section": "vista",
-    "topic": "estructura",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Entre qué pestañas está la pestaña Vista en la cinta?",
-    "back": "Entre Revisar y Ayuda · Posición 9 (contando Archivo como 1).",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-49"
-    ]
-  },
-  {
-    "cardId": "F-36",
-    "section": "vista",
-    "topic": "estructura",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Cuáles son los 8 grupos de la pestaña Vista?",
-    "back": "Vistas · Inmersivo · Movimiento de Página · Mostrar · Zoom · Ventana · Macros · SharePoint",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-75"
-    ]
-  },
-  {
-    "cardId": "F-37",
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Qué 4 vistas tienen atajo Ctrl + Alt + [letra]?",
-    "back": "D = Diseño de impresión · Q = esQuema · N = borrador (borraNdor) · I = vIsta preliminar (previa de impresión)",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-60",
-      "vista-10"
-    ]
-  },
-  {
-    "cardId": "F-38",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Organizar todo",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué función NO tiene atajo documentado entre estas tres: Diseño de impresión, Dividir, Organizar todo?",
-    "back": "Organizar todo no tiene atajo documentado. Diseño de impresión → Ctrl+Alt+D. Dividir → Alt+Ctrl+V. Organizar todo → sin atajo.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-47"
-    ]
-  },
-  {
-    "cardId": "F-39",
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Cómo se llama el Grupo Vistas según aulaClic?",
-    "back": "aulaClic lo llama \"Vistas de documento\" · Tu temario Adams lo llama \"Grupo Vistas\" · Ambas denominaciones son válidas para el examen.",
-    "sourceRefs": [
-      "aulaClic"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-76"
-    ]
-  },
-  {
-    "cardId": "F-40",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Dividir",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué hace Alt + Mayús + C?",
-    "back": "Desactiva la división de la ventana cuando está activa (complementario de Alt+Ctrl+V que la activa).",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-70"
-    ]
-  },
-  {
-    "cardId": "F-41",
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué vistas se pueden activar directamente desde la barra de estado inferior?",
-    "back": "Concentración · Modo lectura · Diseño de impresión · Diseño web (según aulaClic Word 365).",
-    "sourceRefs": [
-      "aulaClic"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-83",
-      "vista-84"
-    ]
-  },
-  {
-    "cardId": "F-42",
-    "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": "Lector inmersivo",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué herramientas ofrece el Lector inmersivo?",
-    "back": "Foco de líneas · Ajuste de espaciado · División por sílabas · Lectura en voz alta · Cambio de color de página (verificado con LinkedIn Learning ES).",
-    "sourceRefs": [
-      "LinkedIn Learning"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-65",
-      "vista-85"
-    ]
-  },
-  {
-    "cardId": "F-43",
-    "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": "Concentración",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Cómo funciona la herramienta Concentración y cómo se desactiva?",
-    "back": "Superpone una capa que oculta todas las barras y herramientas (fondo oscuro). Para salir, pulsar la tecla Esc. (aulaClic + LinkedIn Learning ES).",
-    "sourceRefs": [
-      "aulaClic",
-      "LinkedIn Learning"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-64"
-    ]
-  },
-  {
-    "cardId": "F-44",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "alta",
-    "front": "¿Cuál es la diferencia de alcance entre Organizar todo y Ver en paralelo?",
-    "back": "Organizar todo (Mosaico) actúa sobre todas las ventanas abiertas sin límite. Ver en paralelo trabaja exactamente con dos documentos distintos.",
-    "sourceRefs": [
-      "SlideShare"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-51",
-      "vista-80"
-    ]
-  },
-  {
-    "cardId": "F-45",
-    "section": "vista",
-    "topic": "estructura",
-    "subtopic": null,
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Cuántos grupos tiene la pestaña Vista?",
-    "back": "8 grupos: Vistas · Inmersivo · Movimiento de Página · Mostrar · Zoom · Ventana · Macros · SharePoint.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-75"
-    ]
-  },
-  {
-    "cardId": "F-46",
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Cuadro de diálogo",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Qué control de ajuste fino tiene el campo Porcentaje en el cuadro de diálogo Zoom?",
-    "back": "Un spinner (flechas ▲▼) para subir o bajar el porcentaje de uno en uno.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-23"
-    ]
-  },
-  {
-    "cardId": "F-47",
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Cuadro de diálogo",
-    "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Cuál es la diferencia entre 'Toda la página' y 'Ancho de página' en el cuadro de diálogo Zoom?",
-    "back": "'Toda la página' ajusta el zoom para que la página completa quepa a lo alto y a lo ancho en la ventana. 'Ancho de página' ajusta solo al ancho, mostrando la página de arriba abajo sin preocuparse por el alto.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-45"
-    ]
-  },
-  {
-    "cardId": "E-01",
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "cardType": "error",
-    "priority": "alta",
-    "front": "Alt + F8 vs Alt + F11 — ¿cuál es cuál?",
-    "back": "Alt + F8 → diálogo MACROS (gestionar). Alt + F11 → VISUAL BASIC (programar). Regla: F8 viene antes que F11, igual que gestionar viene antes que programar.",
-    "sourceRefs": [
-      "Studocu",
-      "aulaClic",
-      "IONOS España"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-36"
-    ]
-  },
-  {
-    "cardId": "E-02",
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Valores",
-    "cardType": "error",
-    "priority": "alta",
-    "front": "Zoom mínimo: ¿10% o 25%?",
-    "back": "10% es el mínimo absoluto. Los presets del cuadro de diálogo son 200%, 100% y 75% (no 25%). El 75% es un preset, pero no el mínimo.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-56"
-    ]
-  },
-  {
-    "cardId": "E-03",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "cardType": "error",
-    "priority": "alta",
-    "front": "Ver el mismo documento en 2 ventanas vs. 2 paneles — ¿qué función es cada una?",
-    "back": "2 ventanas separadas = Nueva ventana. 2 paneles en 1 ventana = Dividir (Alt+Ctrl+V).",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-31",
-      "vista-27"
-    ]
-  },
-  {
-    "cardId": "E-04",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Desplazamiento sincrónico",
-    "cardType": "error",
-    "priority": "normal",
-    "front": "¿Se puede activar el Desplazamiento sincrónico en cualquier momento?",
-    "back": "No. Solo cuando Ver en paralelo está activo previamente.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-28"
-    ]
-  },
-  {
-    "cardId": "E-05",
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Vista Esquema",
-    "cardType": "error",
-    "priority": "normal",
-    "front": "¿La Vista Esquema muestra todo el contenido organizado jerárquicamente?",
-    "back": "No. Muestra SÓLO los títulos. El contenido completo no es visible.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-3"
-    ]
-  },
-  {
-    "cardId": "E-06",
+    "cardId": "E-006",
     "section": "vista",
     "topic": "vistas",
     "subtopic": "Vista Preliminar",
@@ -857,7 +134,24 @@
     ]
   },
   {
-    "cardId": "E-07",
+    "cardId": "F-007",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Borrador",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Cuál es la función principal de Vista Borrador?",
+    "back": "Editar el texto rápidamente mostrando el documento como borrador.",
+    "sourceRefs": [
+      "Sergio Galán"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-2"
+    ]
+  },
+  {
+    "cardId": "E-007",
     "section": "vista",
     "topic": "vistas",
     "subtopic": "Modo de lectura",
@@ -874,20 +168,84 @@
     ]
   },
   {
-    "cardId": "E-08",
+    "cardId": "F-008",
     "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Ver en paralelo",
-    "cardType": "error",
+    "topic": "vistas",
+    "subtopic": "Diseño Web",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué hace el Diseño Web?",
+    "back": "Muestra el documento como en un explorador web: fondos con colores/texturas · texto ajustado a la ventana · gráficos como en web.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-6"
+    ]
+  },
+  {
+    "cardId": "F-009",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Preliminar",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Para qué sirve la Vista Preliminar? Atajo.",
+    "back": "Ver páginas completas a tamaño reducido · verificar saltos de página, distribución y formato · Ctrl + Alt + I. ¡OJO!: No es un botón del Grupo Vistas. Se accede desde Archivo → Imprimir.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "archivo-1"
+    ]
+  },
+  {
+    "cardId": "F-037",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "cardType": "contenido",
     "priority": "alta",
-    "front": "¿Ver en paralelo puede usarse con más de dos documentos?",
-    "back": "No. Ver en paralelo solo funciona con exactamente dos documentos distintos. Para más de dos, se usa Organizar todo (Mosaico).",
+    "front": "¿Qué 4 vistas tienen atajo Ctrl + Alt + [letra]?",
+    "back": "D = Diseño de impresión · Q = esQuema · N = borrador (borraNdor) · I = vIsta preliminar (previa de impresión)",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-60",
+      "vista-10"
+    ]
+  },
+  {
+    "cardId": "F-039",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Cómo se llama el Grupo Vistas según aulaClic?",
+    "back": "aulaClic lo llama \"Vistas de documento\" · Tu temario Adams lo llama \"Grupo Vistas\" · Ambas denominaciones son válidas para el examen.",
     "sourceRefs": [
-      "SlideShare"
+      "aulaClic"
     ],
     "knowledgeRefs": [],
     "questionRefs": [
-      "vista-80"
+      "vista-76"
+    ]
+  },
+  {
+    "cardId": "F-041",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué vistas se pueden activar directamente desde la barra de estado inferior?",
+    "back": "Concentración · Modo lectura · Diseño de impresión · Diseño web (según aulaClic Word 365).",
+    "sourceRefs": [
+      "aulaClic"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-83",
+      "vista-84"
     ]
   },
   {
@@ -966,6 +324,90 @@
     "questionRefs": []
   },
   {
+    "cardId": "F-010",
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Concentración",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué hace la herramienta Concentración?",
+    "back": "Elimina las distracciones del entorno para concentrarse en el documento.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-11"
+    ]
+  },
+  {
+    "cardId": "F-011",
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Lector inmersivo",
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Qué es Immersive Reader?",
+    "back": "Un conjunto de herramientas (plural) para mejorar la comprensión y fluidez de lectura. Nombre oficial en español: \"Lector inmersivo\".",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-12",
+      "vista-13"
+    ]
+  },
+  {
+    "cardId": "F-012",
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿A qué grupo pertenecen Concentración e Immersive Reader?",
+    "back": "Al Grupo Inmersivo (también llamado \"Inmersivo\" en la cinta) ¡NO al Grupo Vistas!",
+    "sourceRefs": [
+      "aulaClic"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-14"
+    ]
+  },
+  {
+    "cardId": "F-042",
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Lector inmersivo",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué herramientas ofrece el Lector inmersivo?",
+    "back": "Foco de líneas · Ajuste de espaciado · División por sílabas · Lectura en voz alta · Cambio de color de página (verificado con LinkedIn Learning ES).",
+    "sourceRefs": [
+      "LinkedIn Learning"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-65",
+      "vista-85"
+    ]
+  },
+  {
+    "cardId": "F-043",
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Concentración",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Cómo funciona la herramienta Concentración y cómo se desactiva?",
+    "back": "Superpone una capa que oculta todas las barras y herramientas (fondo oscuro). Para salir, pulsar la tecla Esc. (aulaClic + LinkedIn Learning ES).",
+    "sourceRefs": [
+      "aulaClic",
+      "LinkedIn Learning"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-64"
+    ]
+  },
+  {
     "cardId": "F-053",
     "section": "vista",
     "topic": "inmersivo",
@@ -996,6 +438,22 @@
     "questionRefs": []
   },
   {
+    "cardId": "F-013",
+    "section": "vista",
+    "topic": "movimiento-pagina",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿En qué dirección desplaza el Grupo Movimiento de Página y mediante qué medios?",
+    "back": "Dirección: horizontal · Medios: rueda del ratón o barra de desplazamiento horizontal.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-15",
+      "vista-16"
+    ]
+  },
+  {
     "cardId": "F-055",
     "section": "vista",
     "topic": "movimiento-pagina",
@@ -1009,6 +467,23 @@
     ],
     "knowledgeRefs": [],
     "questionRefs": []
+  },
+  {
+    "cardId": "F-014",
+    "section": "vista",
+    "topic": "mostrar",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Qué tres elementos controla el Grupo Mostrar?",
+    "back": "Regla · Líneas de la cuadrícula · Panel de navegación · Acción: Mostrar/Ocultar (toggle reversible)",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-17",
+      "vista-18",
+      "vista-19"
+    ]
   },
   {
     "cardId": "F-056",
@@ -1054,6 +529,112 @@
     ],
     "knowledgeRefs": [],
     "questionRefs": []
+  },
+  {
+    "cardId": "E-002",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Valores",
+    "cardType": "error",
+    "priority": "alta",
+    "front": "Zoom mínimo: ¿10% o 25%?",
+    "back": "10% es el mínimo absoluto. Los presets del cuadro de diálogo son 200%, 100% y 75% (no 25%). El 75% es un preset, pero no el mínimo.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-56"
+    ]
+  },
+  {
+    "cardId": "F-015",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Valores",
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Cuál es el zoom mínimo y máximo en Word?",
+    "back": "Mínimo 10% · Máximo 500%. Los presets del cuadro de diálogo son 200%, 100% y 75% (el 25% no existe como preset).",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-56",
+      "vista-57"
+    ]
+  },
+  {
+    "cardId": "F-016",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Valores",
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿En qué incremento cambia el zoom con Ctrl + rueda del ratón?",
+    "back": "De 10 en 10 puntos porcentuales.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-22"
+    ]
+  },
+  {
+    "cardId": "F-017",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Cuadro de diálogo",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Diferencia entre el botón Zoom (lupa) y el botón 100%?",
+    "back": "Zoom (lupa) → abre el cuadro de diálogo para configurar · 100% → aplica directamente zoom al 100% sin abrir ningún cuadro de diálogo.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-20"
+    ]
+  },
+  {
+    "cardId": "F-018",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Cuadro de diálogo",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué opciones de ajuste ofrece el Grupo Zoom además del botón Zoom y 100%?",
+    "back": "Una página · Varias páginas · Ancho de página",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-21"
+    ]
+  },
+  {
+    "cardId": "F-046",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Cuadro de diálogo",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué control de ajuste fino tiene el campo Porcentaje en el cuadro de diálogo Zoom?",
+    "back": "Un spinner (flechas ▲▼) para subir o bajar el porcentaje de uno en uno.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-23"
+    ]
+  },
+  {
+    "cardId": "F-047",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Cuadro de diálogo",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Cuál es la diferencia entre 'Toda la página' y 'Ancho de página' en el cuadro de diálogo Zoom?",
+    "back": "'Toda la página' ajusta el zoom para que la página completa quepa a lo alto y a lo ancho en la ventana. 'Ancho de página' ajusta solo al ancho, mostrando la página de arriba abajo sin preocuparse por el alto.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-45"
+    ]
   },
   {
     "cardId": "F-059",
@@ -1129,6 +710,225 @@
     ],
     "knowledgeRefs": [],
     "questionRefs": []
+  },
+  {
+    "cardId": "E-003",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "cardType": "error",
+    "priority": "alta",
+    "front": "Ver el mismo documento en 2 ventanas vs. 2 paneles — ¿qué función es cada una?",
+    "back": "2 ventanas separadas = Nueva ventana. 2 paneles en 1 ventana = Dividir (Alt+Ctrl+V).",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-31",
+      "vista-27"
+    ]
+  },
+  {
+    "cardId": "E-004",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Desplazamiento sincrónico",
+    "cardType": "error",
+    "priority": "normal",
+    "front": "¿Se puede activar el Desplazamiento sincrónico en cualquier momento?",
+    "back": "No. Solo cuando Ver en paralelo está activo previamente.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-28"
+    ]
+  },
+  {
+    "cardId": "E-008",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Ver en paralelo",
+    "cardType": "error",
+    "priority": "alta",
+    "front": "¿Ver en paralelo puede usarse con más de dos documentos?",
+    "back": "No. Ver en paralelo solo funciona con exactamente dos documentos distintos. Para más de dos, se usa Organizar todo (Mosaico).",
+    "sourceRefs": [
+      "SlideShare"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-80"
+    ]
+  },
+  {
+    "cardId": "F-019",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Nueva ventana",
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Qué hace Nueva ventana?",
+    "back": "Abre dos ventanas independientes del mismo documento.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-31"
+    ]
+  },
+  {
+    "cardId": "F-020",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Dividir",
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Qué hace Dividir? Atajo.",
+    "back": "Dos paneles del mismo documento en una sola ventana · Alt + Ctrl + V. Atajo complementario para desactivar: Alt + Mayús + C.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-27"
+    ]
+  },
+  {
+    "cardId": "F-021",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Ver en paralelo",
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Qué hace Ver en paralelo?",
+    "back": "Muestra dos documentos distintos simultáneamente para compararlos cómodamente.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-26"
+    ]
+  },
+  {
+    "cardId": "F-022",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Cuál es la diferencia entre Nueva ventana, Dividir y Ver en paralelo?",
+    "back": "Nueva ventana → mismo doc · 2 ventanas separadas. Dividir → mismo doc · 2 paneles en 1 ventana · Alt+Ctrl+V. Ver en paralelo → 2 documentos distintos para comparar.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-31",
+      "vista-32"
+    ]
+  },
+  {
+    "cardId": "F-023",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Organizar todo",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Con qué otro nombre se conoce Organizar todo y qué hace?",
+    "back": "Mosaico · Coloca en mosaico todas las ventanas abiertas (sin límite numérico).",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-24"
+    ]
+  },
+  {
+    "cardId": "F-024",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Desplazamiento sincrónico",
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Qué condición requiere el Desplazamiento sincrónico para activarse?",
+    "back": "Requiere que Ver en paralelo esté activo previamente. Función: desplaza simultáneamente los dos documentos en paralelo.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-28",
+      "vista-29"
+    ]
+  },
+  {
+    "cardId": "F-025",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Restablecer posición de la ventana",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué hace Restablecer posición de la ventana y qué condición requiere?",
+    "back": "Coloca las ventanas en paralelo de manera equitativa · Requiere que el modo paralelo esté activo.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-30",
+      "vista-34"
+    ]
+  },
+  {
+    "cardId": "F-026",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Cambiar ventanas",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué hace Cambiar ventanas y cómo se presenta en la cinta?",
+    "back": "Cambia rápidamente a otra ventana abierta · Se presenta como menú desplegable (∨).",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-25"
+    ]
+  },
+  {
+    "cardId": "F-038",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Organizar todo",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué función NO tiene atajo documentado entre estas tres: Diseño de impresión, Dividir, Organizar todo?",
+    "back": "Organizar todo no tiene atajo documentado. Diseño de impresión → Ctrl+Alt+D. Dividir → Alt+Ctrl+V. Organizar todo → sin atajo.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-47"
+    ]
+  },
+  {
+    "cardId": "F-040",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Dividir",
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué hace Alt + Mayús + C?",
+    "back": "Desactiva la división de la ventana cuando está activa (complementario de Alt+Ctrl+V que la activa).",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-70"
+    ]
+  },
+  {
+    "cardId": "F-044",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Cuál es la diferencia de alcance entre Organizar todo y Ver en paralelo?",
+    "back": "Organizar todo (Mosaico) actúa sobre todas las ventanas abiertas sin límite. Ver en paralelo trabaja exactamente con dos documentos distintos.",
+    "sourceRefs": [
+      "SlideShare"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-51",
+      "vista-80"
+    ]
   },
   {
     "cardId": "F-064",
@@ -1221,6 +1021,145 @@
     "questionRefs": []
   },
   {
+    "cardId": "E-001",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "cardType": "error",
+    "priority": "alta",
+    "front": "Alt + F8 vs Alt + F11 — ¿cuál es cuál?",
+    "back": "Alt + F8 → diálogo MACROS (gestionar). Alt + F11 → VISUAL BASIC (programar). Regla: F8 viene antes que F11, igual que gestionar viene antes que programar.",
+    "sourceRefs": [
+      "Studocu",
+      "aulaClic",
+      "IONOS España"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-36"
+    ]
+  },
+  {
+    "cardId": "F-027",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Qué es una macro? (3 componentes estructurales)",
+    "back": "Una serie de comandos e instrucciones · agrupados como un mismo comando · para completar una tarea automáticamente. aulaClic añade: se ejecutan en un orden que el usuario decide.",
+    "sourceRefs": [
+      "aulaClic"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-35"
+    ]
+  },
+  {
+    "cardId": "F-028",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Cuáles son los tres usos principales de las macros según aulaClic?",
+    "back": "1. Automatizar una serie de pasos. 2. Personalizar la barra de acceso rápido. 3. Insertar texto o gráficos de uso frecuente.",
+    "sourceRefs": [
+      "aulaClic"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-67"
+    ]
+  },
+  {
+    "cardId": "F-029",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Para qué tipo de tareas se usan las macros según Adams?",
+    "back": "Para automatizar las tareas más usadas (frecuentes) en Word.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-38"
+    ]
+  },
+  {
+    "cardId": "F-030",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Qué abre Alt + F8?",
+    "back": "El cuadro de diálogo Macros.",
+    "sourceRefs": [
+      "Studocu",
+      "aulaClic"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-86",
+      "vista-54"
+    ]
+  },
+  {
+    "cardId": "F-031",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Qué abre Alt + F11?",
+    "back": "El editor de Visual Basic (VBE -- entorno de programación de macros).",
+    "sourceRefs": [
+      "Studocu",
+      "IONOS España"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-86",
+      "vista-54"
+    ]
+  },
+  {
+    "cardId": "F-032",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué opciones tiene el submenú del botón Macros?",
+    "back": "Ver macros · Grabar macro... · Pausar grabación (Pausar grabación aparece en gris si no hay grabación activa)",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-39",
+      "vista-40"
+    ]
+  },
+  {
+    "cardId": "F-033",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Cuál es la ruta para abrir el cuadro de diálogo Macros desde la cinta?",
+    "back": "Vista → Macros → Ver macros (También con atajo directo Alt + F8)",
+    "sourceRefs": [
+      "aulaClic"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-66"
+    ]
+  },
+  {
     "cardId": "F-070",
     "section": "vista",
     "topic": "macros",
@@ -1236,6 +1175,22 @@
     "questionRefs": []
   },
   {
+    "cardId": "F-034",
+    "section": "vista",
+    "topic": "sharepoint",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Qué es SharePoint y quién lo diseñó?",
+    "back": "Herramienta de Microsoft para la gestión documental y el trabajo en equipo.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-43",
+      "vista-44"
+    ]
+  },
+  {
     "cardId": "F-071",
     "section": "vista",
     "topic": "sharepoint",
@@ -1249,5 +1204,50 @@
     ],
     "knowledgeRefs": [],
     "questionRefs": []
+  },
+  {
+    "cardId": "F-035",
+    "section": "vista",
+    "topic": "estructura",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Entre qué pestañas está la pestaña Vista en la cinta?",
+    "back": "Entre Revisar y Ayuda · Posición 9 (contando Archivo como 1).",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-49"
+    ]
+  },
+  {
+    "cardId": "F-036",
+    "section": "vista",
+    "topic": "estructura",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Cuáles son los 8 grupos de la pestaña Vista?",
+    "back": "Vistas · Inmersivo · Movimiento de Página · Mostrar · Zoom · Ventana · Macros · SharePoint",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-75"
+    ]
+  },
+  {
+    "cardId": "F-045",
+    "section": "vista",
+    "topic": "estructura",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "normal",
+    "front": "¿Cuántos grupos tiene la pestaña Vista?",
+    "back": "8 grupos: Vistas · Inmersivo · Movimiento de Página · Mostrar · Zoom · Ventana · Macros · SharePoint.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-75"
+    ]
   }
 ]

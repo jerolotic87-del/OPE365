@@ -394,6 +394,1023 @@
     "explicacion": "Ctrl+Alt+D = Diseño de impresión · Ctrl+Alt+Q = Vista Esquema · Ctrl+Alt+N = Vista Normal/Borrador · Ctrl+Alt+I = vista preliminar de impresión. Todos figuran en el volcado v2608."
   },
   {
+    "id": "vista-50",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-051",
+    "enunciado": "¿Cuál es la diferencia principal entre el Modo de lectura y la Vista Preliminar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El Modo de lectura solo muestra una página; la Vista Preliminar muestra todas a tamaño completo"
+      },
+      {
+        "letter": "B",
+        "text": "Ambas vistas son idénticas en función pero se acceden desde grupos distintos"
+      },
+      {
+        "letter": "C",
+        "text": "El Modo de lectura presenta el documento en dos páginas en forma de libro para facilitar la lectura; la Vista Preliminar muestra páginas completas a tamaño reducido para verificar formato y saltos de página"
+      },
+      {
+        "letter": "D",
+        "text": "El Modo de lectura oculta el texto y muestra solo imágenes; la Vista Preliminar muestra el documento en escala de grises"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "La respuesta correcta es «El Modo de lectura presenta el documento en dos páginas en forma de libro para facilitar la lectura; la Vista Preliminar muestra páginas completas a tamaño reducido para verificar formato y saltos de página»."
+  },
+  {
+    "id": "vista-55",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "relleno",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Esquema",
+    "tema": "Vistas",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-056",
+    "enunciado": "La Vista Esquema se utiliza para [1] y [2] esquemas. Esta vista muestra [3] los [4] del documento y resulta de particular utilidad para [5].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "crear",
+      "editar",
+      "sólo",
+      "títulos",
+      "elaborar notas"
+    ],
+    "explicacion": ""
+  },
+  {
+    "id": "vista-60",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-061",
+    "enunciado": "Escribe el atajo de teclado correspondiente a cada función: Diseño de impresión → [1]. Vista Esquema → [2]. Vista Borrador → [3]. Vista Preliminar → [4]. Dividir → [5].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Ctrl+Alt+D",
+      "Ctrl+Alt+Q",
+      "Ctrl+Alt+N",
+      "Ctrl+Alt+I",
+      "Alt+Ctrl+V"
+    ],
+    "explicacion": "Ctrl+Alt+D Diseño de impresión, Ctrl+Alt+Q Esquema, Ctrl+Alt+N Borrador, Ctrl+Alt+I vista preliminar, Alt+Ctrl+V Dividir (según el volcado). ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
+  },
+  {
+    "id": "vista-62",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Modo de lectura",
+    "tema": "Vistas",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-063",
+    "generado": true,
+    "enunciado": "El Modo de lectura oculta las barras de herramientas y las reglas, pero mantiene visibles los encabezados y pies de página para no perder el contexto del documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: el Modo de lectura también oculta los encabezados y pies de página, además de las barras y reglas."
+  },
+  {
+    "id": "vista-63",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Modo de lectura",
+    "tema": "Vistas",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-064",
+    "generado": true,
+    "enunciado": "Un usuario activa una vista y observa que desaparecen las barras de herramientas, las reglas, los encabezados y los pies de página, mostrándose el documento en dos páginas en forma de libro. ¿Qué vista ha activado?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Vista Borrador"
+      },
+      {
+        "letter": "B",
+        "text": "Diseño de impresión"
+      },
+      {
+        "letter": "C",
+        "text": "Modo de lectura"
+      },
+      {
+        "letter": "D",
+        "text": "Vista Preliminar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El Modo de lectura presenta el documento en dos páginas por pantalla en forma de libro, ocultando barras, reglas, encabezados y pies de página."
+  },
+  {
+    "id": "vista-71",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Borrador",
+    "tema": "Vistas",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-073",
+    "generado": true,
+    "enunciado": "La denominación 'Borrador (Normal)' es una variante terminológica aceptada de la Vista Borrador; el temario conserva 'Borrador' como denominación principal.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero: 'Borrador (Normal)' es un nombre alternativo habitual de la Vista Borrador. La denominación principal es 'Borrador'."
+  },
+  {
+    "id": "vista-72",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Diseño Web",
+    "tema": "Vistas",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-074",
+    "generado": true,
+    "enunciado": "Un usuario se queja de que al abrir su documento 'no ve dónde termina la hoja ni los márgenes, y el texto se reajusta al cambiar el tamaño de la ventana'. ¿En qué vista está trabajando probablemente?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Diseño de impresión"
+      },
+      {
+        "letter": "B",
+        "text": "Vista Preliminar"
+      },
+      {
+        "letter": "C",
+        "text": "Diseño Web"
+      },
+      {
+        "letter": "D",
+        "text": "Modo de lectura"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Diseño Web muestra el documento sin márgenes de hoja visibles y ajusta el texto al ancho de la ventana, exactamente como en un explorador web."
+  },
+  {
+    "id": "vista-73",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Esquema",
+    "tema": "Vistas",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-075",
+    "generado": true,
+    "enunciado": "Al activar cierta vista, el usuario observa que aparece una pestaña adicional en la cinta que antes no existía. ¿Qué vista ha activado?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Vista Borrador — aparece la pestaña 'Borrador'"
+      },
+      {
+        "letter": "B",
+        "text": "Diseño Web — aparece la pestaña 'Web'"
+      },
+      {
+        "letter": "C",
+        "text": "Vista Esquema — aparece la pestaña 'Esquema'"
+      },
+      {
+        "letter": "D",
+        "text": "Diseño de impresión — aparece la pestaña 'Diseño'"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Vista Esquema es la única vista que genera su propia pestaña adicional 'Esquema' en la cinta al activarse. Confirmado por verificación en Word 365."
+  },
+  {
+    "id": "vista-76",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-078",
+    "generado": true,
+    "enunciado": "El Grupo Vistas puede aparecer también con la denominación alternativa 'Vistas de documento'. ¿Es correcto?",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero: 'Vistas de documento' es un nombre alternativo habitual del Grupo Vistas. Las dos formas son válidas."
+  },
+  {
+    "id": "vista-83",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-085",
+    "generado": true,
+    "enunciado": "Desde la barra de estado inferior de Word se puede acceder directamente a las vistas Concentración, Modo lectura, Diseño de impresión y Diseño web. ¿Es correcto?",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero: esas cuatro vistas tienen botón en la barra de estado inferior, además de estar en la pestaña Vista."
+  },
+  {
+    "id": "vista-84",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-086",
+    "generado": true,
+    "enunciado": "¿Cuáles de estas vistas son accesibles directamente desde la barra de estado inferior de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Concentración"
+      },
+      {
+        "letter": "B",
+        "text": "Modo lectura"
+      },
+      {
+        "letter": "C",
+        "text": "Diseño de impresión"
+      },
+      {
+        "letter": "D",
+        "text": "Diseño web"
+      },
+      {
+        "letter": "E",
+        "text": "Vista Esquema"
+      },
+      {
+        "letter": "F",
+        "text": "Vista Borrador"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "Desde la barra de estado inferior se accede a Concentración, Modo lectura, Diseño de impresión y Diseño web. Vista Esquema y Vista Borrador solo están en la pestaña Vista, grupo Vistas."
+  },
+  {
+    "id": "vista-91",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Diseño de impresión",
+    "tema": "Vistas",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-093",
+    "generado": true,
+    "enunciado": "Un usuario necesita revisar cómo quedarán distribuidos los encabezados, pies y márgenes en la hoja impresa mientras sigue editando el contenido con total normalidad. ¿Qué vista es la más adecuada?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Vista Preliminar — muestra páginas a tamaño reducido sin permitir edición normal"
+      },
+      {
+        "letter": "B",
+        "text": "Modo de lectura — oculta barras y encabezados dificultando la edición"
+      },
+      {
+        "letter": "C",
+        "text": "Diseño de impresión — permite ver y editar encabezados, pies y márgenes tal como se imprimirán"
+      },
+      {
+        "letter": "D",
+        "text": "Diseño Web — no representa la hoja impresa sino la vista en navegador"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Diseño de impresión es la vista predefinida de Word y permite visualizar y editar encabezados, pies de página y márgenes exactamente como aparecerán al imprimir."
+  },
+  {
+    "id": "vista-96",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "general",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "1-87",
+    "enunciado": "¿Qué vista del documento está configurada como predeterminada en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Modo lectura"
+      },
+      {
+        "letter": "B",
+        "text": "Diseño de impresión"
+      },
+      {
+        "letter": "C",
+        "text": "Diseño Web"
+      },
+      {
+        "letter": "D",
+        "text": "Borrador"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Diseño de impresión es la vista predeterminada de Word 365. En esta vista se ve el documento tal como se imprimirá."
+  },
+  {
+    "id": "vista-97",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "general",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "1-88",
+    "enunciado": "¿Qué combinación de teclas activa la vista \"Diseño de impresión\" en Word 365 (versión española)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Alt+P"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Ctrl+D"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Alt+W"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Alt+I"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "En Word 365 versión española, Alt+Ctrl+D activa la vista Diseño de impresión."
+  },
+  {
+    "id": "vista-98",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "general",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "7-11",
+    "enunciado": "En Word 365, ¿qué atajo de teclado está asociado a la vista \"Diseño de Impresión\"?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl + Alt + P"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl + Alt + D"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl + Alt + W"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl + Alt + I"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "El material muestra \"Ctrl + Alt + D\" junto a \"Diseño de Impresión\". Aunque en la interfaz real de Word es Ctrl+Alt+P, se respeta la literalidad del temario (trampa de versión)."
+  },
+  {
+    "id": "vista-99",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "general",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "7-21",
+    "enunciado": "En Word 365, un usuario quiere leer un documento sin distracciones. ¿Qué vista debe elegir?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Diseño de Impresión"
+      },
+      {
+        "letter": "B",
+        "text": "Modo lectura"
+      },
+      {
+        "letter": "C",
+        "text": "Diseño Web"
+      },
+      {
+        "letter": "D",
+        "text": "Borrador"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "El Modo lectura está optimizado para leer en pantalla sin distracciones."
+  },
+  {
+    "id": "vista-100",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "general",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "7-22",
+    "enunciado": "En Word 365, un usuario quiere volver a la vista predeterminada con el teclado. ¿Qué debe pulsar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl + Alt + D"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl + F1"
+      },
+      {
+        "letter": "C",
+        "text": "Alt + Q"
+      },
+      {
+        "letter": "D",
+        "text": "MAY + F1"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "\"Diseño de Impresión\" es la predeterminada y su atajo es Ctrl + Alt + D."
+  },
+  {
+    "id": "vista-101",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "emparejamiento",
+    "categoria": "general",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "7-27",
+    "enunciado": "En Word 365, relacione cada vista con su característica:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Diseño de Impresión"
+        },
+        {
+          "id": "2",
+          "label": "Modo lectura"
+        },
+        {
+          "id": "3",
+          "label": "Diseño Web"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Vista predeterminada y con atajo Ctrl+Alt+D"
+        },
+        {
+          "id": "B",
+          "label": "Sin atajo asignado en el temario"
+        },
+        {
+          "id": "C",
+          "label": "Sin atajo asignado en el temario"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explicacion": "Solo la vista de impresión tiene atajo."
+  },
+  {
+    "id": "vista-104",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "8-165",
+    "enunciado": "¿Qué atajo cambia el documento a vista maestro o subdocumentos en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Ctrl+barra invertida"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Ctrl+M"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+D"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Ctrl+Mayús+M"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Ctrl+\\ (barra invertida) cambia entre hipervínculos y subdocumentos (vista maestro). Alt+Ctrl+M no tiene función. Alt+Ctrl+D activa la vista Diseño de impresión. Alt+Ctrl+Mayús+M no tiene función."
+  },
+  {
+    "id": "vista-105",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "8-189",
+    "enunciado": "¿Qué atajo sube un elemento en la vista Esquema de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Mayús+Arriba"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Mayús+Abajo"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Arriba"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+Arriba"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Mayús+Arriba sube un elemento en el esquema. Alt+Mayús+Abajo baja un elemento en el esquema. Alt+Arriba mueve al objeto anterior. Ctrl+Mayús+Arriba extiende la selección un párrafo hacia arriba sin mover el elemento del esquema."
+  },
+  {
+    "id": "vista-106",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "8-190",
+    "enunciado": "¿Qué atajo baja un elemento en la vista Esquema de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Mayús+Abajo"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Mayús+Arriba"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Abajo"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+Abajo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Mayús+Abajo baja un elemento en el esquema. Alt+Mayús+Arriba sube un elemento. Alt+Abajo mueve al objeto siguiente. Ctrl+Mayús+Abajo extiende la selección un párrafo hacia abajo sin mover el elemento del esquema."
+  },
+  {
+    "id": "vista-107",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "8-191",
+    "enunciado": "¿Qué atajo disminuye el nivel de esquema de un título en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Mayús+Derecha"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Mayús+Izquierda"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Derecha"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Alt+Derecha"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Mayús+Derecha disminuye el nivel del título en el esquema. Alt+Mayús+Izquierda promueve el título a un nivel superior. Alt+Derecha navega hacia delante en hipervínculos. Ctrl+Alt+Derecha no tiene función asignada para esquema."
+  },
+  {
+    "id": "vista-108",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "8-192",
+    "enunciado": "¿Qué atajo promueve un título a un nivel superior en la vista Esquema de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Mayús+Izquierda"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Mayús+Derecha"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Izquierda"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Alt+Izquierda"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Mayús+Izquierda promueve el título un nivel hacia arriba en el esquema. Alt+Mayús+Derecha degrada el título a un nivel inferior. Alt+Izquierda navega hacia atrás en hipervínculos. Ctrl+Alt+Izquierda no tiene función asignada para esquema."
+  },
+  {
+    "id": "vista-122",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "8-271",
+    "enunciado": "¿Qué atajo activa la vista Normal del documento en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Ctrl+N"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+Mayús+N"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+N"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+N"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Ctrl+N activa la vista Normal del documento. Ctrl+Mayús+N aplica el estilo Normal al párrafo activo. Ctrl+N aplica negrita al texto seleccionado. Alt+N no tiene función asignada para activar la vista Normal."
+  },
+  {
+    "id": "vista-126",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "8-300",
+    "enunciado": "¿Qué atajo muestra la primera línea del esquema solamente en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Mayús+L"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Mayús+T"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+L"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+L"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Mayús+L muestra solo la primera línea de cada párrafo en la vista Esquema. Alt+Mayús+T muestra todos lostítulos del esquema. Alt+L no tiene función asignada para mostrar primera línea. Ctrl+Mayús+L aplica versalitas al texto seleccionado."
+  },
+  {
+    "id": "vista-127",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "8-301",
+    "enunciado": "¿Qué atajo muestra todos los títulos del esquema en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Mayús+T"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Mayús+L"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+T"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+T"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Mayús+T muestra todos los títulos en la vista Esquema. Alt+Mayús+L muestra solo la primera línea de cada párrafo. Alt+T no tiene función asignada para mostrar títulos. Ctrl+Mayús+T abre la búsqueda en referencia."
+  },
+  {
+    "id": "vista-137",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "8-311",
+    "enunciado": "¿Qué atajo expande un título en la vista Esquema en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Mayús+más (teclado numérico)"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Mayús+menos (teclado numérico)"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+más"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+más"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Mayús++ del teclado numérico expande un título en la vista Esquema. Alt+Mayús+- lo contrae. Alt++ y Ctrl+Mayús++ no tienen función (el superíndice no tiene atajo en este Word)."
+  },
+  {
+    "id": "vista-138",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "8-312",
+    "enunciado": "¿Qué atajo contrae un título en la vista Esquema en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Mayús+menos (teclado numérico)"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Mayús+más (teclado numérico)"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+menos"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+menos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+Mayús+menos en el teclado numérico contrae un título en la vista Esquema ocultando su contenido. Alt+Mayús+más expande el título. Alt+menos no tiene función asignada para esquema. Ctrl+Mayús+menos no tiene función asignada para contraer títulos."
+  },
+  {
+    "id": "vista-140",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "gen-atajo-3",
+    "generado": true,
+    "enunciado": "¿Qué atajo de teclado contrae un título en la vista Esquema en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Mayús+F9"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Ctrl+5"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Mayús+- (numérico)"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+Z"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "En la vista Esquema, oculta el texto subordinado bajo el título seleccionado, mostrando solo el título."
+  },
+  {
+    "id": "vista-141",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vistas",
+    "sourceQuestionId": "gen-atajo-5",
+    "generado": true,
+    "enunciado": "¿Qué atajo de teclado expande un título en la vista Esquema en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Mayús++ (numérico)"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Ctrl++ (numérico)"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+Mayús+Re Pág"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Ctrl+Mayús+S"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "En la vista Esquema, vuelve a mostrar el texto subordinado que estaba oculto bajo el título seleccionado."
+  },
+  {
     "id": "vista-11",
     "sourceFile": "vista.json",
     "bloque": "Vista — Inmersivo",
@@ -502,6 +1519,250 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: pertenecen al Grupo Inmersivo, no al Grupo Vistas."
+  },
+  {
+    "id": "vista-45",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Inmersivo",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Lector inmersivo",
+    "tema": "Inmersivo",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-046",
+    "enunciado": "¿En qué grupo de la pestaña Vista se encuentra la herramienta Lector inmersivo?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Grupo Vistas"
+      },
+      {
+        "letter": "B",
+        "text": "Grupo Mostrar"
+      },
+      {
+        "letter": "C",
+        "text": "Grupo Inmersivo"
+      },
+      {
+        "letter": "D",
+        "text": "Grupo Ventana"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El Lector inmersivo (Immersive Reader) está en el Grupo Inmersivo de la pestaña Vista."
+  },
+  {
+    "id": "vista-52",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Inmersivo",
+    "tipo": "opcion_unica",
+    "categoria": "general",
+    "negativa": false,
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Lector inmersivo",
+    "tema": "Inmersivo",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-053",
+    "enunciado": "Un usuario quiere usar una herramienta diseñada específicamente para mejorar la comprensión y la fluidez lectora. ¿Cuál debe activar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Concentración"
+      },
+      {
+        "letter": "B",
+        "text": "Vista Borrador"
+      },
+      {
+        "letter": "C",
+        "text": "Lector inmersivo"
+      },
+      {
+        "letter": "D",
+        "text": "Vista Esquema"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El Lector inmersivo (nombre oficial en español; alias: Immersive Reader) está diseñado para mejorar la comprensión y la fluidez de lectura."
+  },
+  {
+    "id": "vista-64",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Inmersivo",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Concentración",
+    "tema": "Inmersivo",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-065",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes afirmaciones describe correctamente la herramienta Concentración de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Superpone una capa que oculta todas las barras y herramientas dejando solo el documento visible; se desactiva pulsando Esc"
+      },
+      {
+        "letter": "B",
+        "text": "Muestra el documento en dos páginas en forma de libro con fondo oscuro"
+      },
+      {
+        "letter": "C",
+        "text": "Abre el documento en una ventana nueva con fondo negro para facilitar la edición"
+      },
+      {
+        "letter": "D",
+        "text": "Oculta únicamente la cinta de opciones dejando visibles la barra de estado y los paneles laterales"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Concentración superpone una capa que oculta todas las barras (fondo oscuro). Para salir basta con pulsar Esc."
+  },
+  {
+    "id": "vista-65",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Inmersivo",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Lector inmersivo",
+    "tema": "Inmersivo",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-066",
+    "generado": true,
+    "enunciado": "¿Cuáles de estas funciones ofrece el Lector inmersivo de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Foco de líneas (resaltar una o varias líneas para concentrar la lectura)"
+      },
+      {
+        "letter": "B",
+        "text": "Ajuste del espaciado entre caracteres"
+      },
+      {
+        "letter": "C",
+        "text": "División del texto por sílabas"
+      },
+      {
+        "letter": "D",
+        "text": "Lectura en voz alta del documento"
+      },
+      {
+        "letter": "E",
+        "text": "Traducción automática al idioma del sistema"
+      },
+      {
+        "letter": "F",
+        "text": "Corrección ortográfica en tiempo real"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "El Lector inmersivo ofrece foco de líneas, ajuste de espaciado, división por sílabas y lectura en voz alta. La traducción y la corrección ortográfica no forman parte del Lector inmersivo."
+  },
+  {
+    "id": "vista-77",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Inmersivo",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Lector inmersivo",
+    "tema": "Inmersivo",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-079",
+    "generado": true,
+    "enunciado": "Las herramientas Concentración y Lector inmersivo son accesibles desde la barra de estado inferior de Word 365, además de desde la pestaña Vista.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: desde la barra de estado inferior se accede a Concentración, Modo lectura, Diseño de impresión y Diseño web. El Lector inmersivo solo está en la pestaña Vista, grupo Inmersivo."
+  },
+  {
+    "id": "vista-85",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Inmersivo",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": "Lector inmersivo",
+    "tema": "Inmersivo",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-087",
+    "generado": true,
+    "enunciado": "Un usuario activa una herramienta y el documento pasa a mostrarse con un ancho de pantalla mayor, con una barra de herramientas reducida que permite cambiar el color de página y activar un foco de líneas. ¿Qué herramienta ha activado?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Concentración"
+      },
+      {
+        "letter": "B",
+        "text": "Modo de lectura"
+      },
+      {
+        "letter": "C",
+        "text": "Lector inmersivo"
+      },
+      {
+        "letter": "D",
+        "text": "Vista Borrador"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El Lector inmersivo presenta el documento con mayor ancho de pantalla y ofrece una barra con opciones de color de página, foco de líneas, espaciado y lectura en voz alta. Concentración en cambio oculta todo dejando solo el documento con fondo oscuro."
+  },
+  {
+    "id": "vista-94",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Inmersivo",
+    "tipo": "relleno",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "inmersivo",
+    "subtopic": null,
+    "tema": "Inmersivo",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-096",
+    "generado": true,
+    "enunciado": "[1] superpone una capa que oculta todas las barras dejando fondo oscuro; se sale con [2]. El [3] es un conjunto de herramientas que mejora la [4] y la [5] de lectura; incluye foco de líneas, espaciado, división por [6] y lectura en [7].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Concentración",
+      "Esc",
+      "Lector inmersivo",
+      "comprensión",
+      "fluidez",
+      "sílabas",
+      "voz alta"
+    ],
+    "explicacion": "Concentración oculta toda la interfaz con fondo oscuro y se sale con Esc. El Lector inmersivo reúne foco de líneas, espaciado, división por sílabas y lectura en voz alta para mejorar la comprensión y la fluidez de lectura. Los dos están en el grupo Inmersivo de la pestaña Vista."
   },
   {
     "id": "vista-15",
@@ -837,6 +2098,256 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Las opciones reales del diálogo incluyen Ancho del texto, Toda la página y Varias páginas. 'Página completa' no existe como tal. Nota: los presets de porcentaje son 200%, 100% y 75% (no 25%), según verificación en Word 365 ES y fuentes españolas."
+  },
+  {
+    "id": "vista-56",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Zoom",
+    "tipo": "relleno",
+    "categoria": "general",
+    "negativa": false,
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Valores",
+    "tema": "Zoom",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-057",
+    "enunciado": "El zoom mínimo es del [1]% y el máximo del [2]%. Con Ctrl + rueda del ratón, el zoom se modifica de [3] en [3] puntos porcentuales.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "10",
+      "500",
+      "10"
+    ],
+    "explicacion": ""
+  },
+  {
+    "id": "vista-57",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Zoom",
+    "tipo": "relleno",
+    "categoria": "general",
+    "negativa": false,
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": null,
+    "tema": "Zoom",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-058",
+    "enunciado": "El Grupo [1] de la pestaña [2] permite acercar o alejar la vista. El botón [3] abre un cuadro de diálogo. El botón [4] aplica directamente el nivel de zoom. El mínimo es [5]% y el máximo [6]%.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Zoom",
+      "Vista",
+      "Zoom (lupa)",
+      "100%",
+      "10",
+      "500"
+    ],
+    "explicacion": ""
+  },
+  {
+    "id": "vista-68",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Zoom",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Valores",
+    "tema": "Zoom",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-070",
+    "generado": true,
+    "enunciado": "Un usuario intenta reducir el zoom por debajo del 10% y no lo consigue. ¿Cuál es la explicación correcta?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El mínimo permitido es el 25% en Word 365"
+      },
+      {
+        "letter": "B",
+        "text": "El mínimo absoluto del zoom en Word es el 10%; no puede bajarse más"
+      },
+      {
+        "letter": "C",
+        "text": "El mínimo depende de la resolución del monitor conectado"
+      },
+      {
+        "letter": "D",
+        "text": "Solo puede bajarse del 10% desde el cuadro de diálogo, no con Ctrl+rueda"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "El zoom mínimo absoluto en Word es el 10% y el máximo el 500%. El 25% no es el mínimo sino una confusión; los presets reales son 200%, 100% y 75% según verificación en Word 365 ES."
+  },
+  {
+    "id": "vista-69",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Zoom",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Cuadro de diálogo",
+    "tema": "Zoom",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-071",
+    "generado": true,
+    "enunciado": "En el cuadro de diálogo Zoom, ¿cuál de estas opciones aparece como radio button pero NO existe como botón directo en la cinta del Grupo Zoom?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "100%"
+      },
+      {
+        "letter": "B",
+        "text": "Varias páginas"
+      },
+      {
+        "letter": "C",
+        "text": "Ancho del texto"
+      },
+      {
+        "letter": "D",
+        "text": "Ancho de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ancho del texto solo existe en el cuadro de diálogo Zoom de Word para Windows; no aparece como botón directo en la cinta del Grupo Zoom. El resto (100%, Varias páginas, Ancho de página) sí son botones de la cinta."
+  },
+  {
+    "id": "vista-81",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Zoom",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Cuadro de diálogo",
+    "tema": "Zoom",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-083",
+    "generado": true,
+    "enunciado": "Un usuario confunde el botón Zoom (lupa) con el botón 100%. ¿Cuál es la diferencia funcional exacta entre ambos?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Zoom aplica el 100% directamente; 100% abre el cuadro de diálogo para configurar el porcentaje"
+      },
+      {
+        "letter": "B",
+        "text": "Zoom abre el cuadro de diálogo para configurar el porcentaje; 100% aplica directamente el 100% sin abrir ningún diálogo"
+      },
+      {
+        "letter": "C",
+        "text": "Ambos abren el cuadro de diálogo pero con valores por defecto distintos"
+      },
+      {
+        "letter": "D",
+        "text": "Zoom pertenece al Grupo Zoom y 100% al Grupo Mostrar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "El botón Zoom (lupa) abre el cuadro de diálogo Zoom para que el usuario configure el porcentaje. El botón 100% aplica directamente el zoom al 100% sin abrir ningún diálogo."
+  },
+  {
+    "id": "vista-89",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Zoom",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": "Valores",
+    "tema": "Zoom",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-091",
+    "generado": true,
+    "enunciado": "El 25% es el nivel de zoom mínimo de Word 365.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: el mínimo absoluto es el 10%. El 25% no es un preset; los presets reales son 200%, 100% y 75% según verificación en Word 365 ES."
+  },
+  {
+    "id": "vista-123",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Zoom",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": null,
+    "tema": "Zoom",
+    "sourceQuestionId": "8-292",
+    "enunciado": "¿Qué atajo aleja el zoom del documento en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+menos"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+más"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+menos"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+menos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+- (menos) aleja el zoom del documento. Ctrl++ (más) acerca el zoom. Alt+Ctrl+- no tiene función asignada para zoom. Ctrl+Mayús+- no tiene función asignada para zoom. El zoom cambia de 10 en 10. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
+    "id": "vista-124",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Zoom",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": null,
+    "tema": "Zoom",
+    "sourceQuestionId": "8-293",
+    "enunciado": "¿Qué atajo acerca el zoom del documento en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+más"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+menos"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+más"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+más"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl++ (más) acerca el zoom del documento. Ctrl+- (menos) aleja el zoom. Alt+Ctrl++ abre el cuadro de personalización de métodos abreviados de teclado. Ctrl+Mayús++ no tiene función asignada. El zoom cambia de 10 en 10. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "vista-24",
@@ -1250,6 +2761,752 @@
     "explicacion": "Falso: presupone que las ventanas ya están en modo paralelo; no actúa sobre 'todas' las ventanas sin más."
   },
   {
+    "id": "vista-46",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Nueva ventana",
+    "tema": "Ventana",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-047",
+    "enunciado": "¿En qué grupo de la pestaña Vista se encuentra la función Nueva ventana?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Grupo Vistas"
+      },
+      {
+        "letter": "B",
+        "text": "Grupo Zoom"
+      },
+      {
+        "letter": "C",
+        "text": "Grupo Inmersivo"
+      },
+      {
+        "letter": "D",
+        "text": "Grupo Ventana"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "La respuesta correcta es «Grupo Ventana»."
+  },
+  {
+    "id": "vista-47",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Organizar todo",
+    "tema": "Ventana",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-048",
+    "enunciado": "¿Cuál de las siguientes funciones no tiene atajo de teclado documentado en la fuente?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Diseño de impresión"
+      },
+      {
+        "letter": "B",
+        "text": "Vista Esquema"
+      },
+      {
+        "letter": "C",
+        "text": "Dividir"
+      },
+      {
+        "letter": "D",
+        "text": "Organizar todo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Organizar todo no tiene atajo de teclado. Diseño de impresión (Ctrl+Alt+D), Vista Esquema (Ctrl+Alt+Q) y Dividir (Alt+Ctrl+V en el volcado) sí aparecen. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
+  },
+  {
+    "id": "vista-51",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-052",
+    "enunciado": "¿Cuál es la diferencia de alcance entre Organizar todo y Ver en paralelo?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Organizar todo solo funciona con documentos guardados; Ver en paralelo funciona con cualquier documento"
+      },
+      {
+        "letter": "B",
+        "text": "Organizar todo muestra exactamente dos ventanas; Ver en paralelo muestra todas las abiertas"
+      },
+      {
+        "letter": "C",
+        "text": "Ambas funciones tienen el mismo alcance pero diferente disposición visual"
+      },
+      {
+        "letter": "D",
+        "text": "Organizar todo actúa sobre todas las ventanas abiertas; Ver en paralelo opera sobre exactamente dos documentos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "La respuesta correcta es «Organizar todo actúa sobre todas las ventanas abiertas; Ver en paralelo opera sobre exactamente dos documentos»."
+  },
+  {
+    "id": "vista-58",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "relleno",
+    "categoria": "general",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-059",
+    "enunciado": "[1]: abre dos ventanas de Word para ver el mismo documento. [2]: en una única ventana comparte dos vistas del mismo documento. [3]: visualiza en paralelo dos documentos para compararlos. [4]: solo puede activarse cuando se hayan puesto dos documentos en paralelo.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Nueva ventana",
+      "Dividir",
+      "Ver en paralelo",
+      "Desplazamiento sincrónico"
+    ],
+    "explicacion": ""
+  },
+  {
+    "id": "vista-70",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "verdadero_falso",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Dividir",
+    "tema": "Ventana",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-072",
+    "generado": true,
+    "enunciado": "El atajo Alt + Mayús + C permite desactivar la división de la ventana cuando esta se encuentra activa.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero: Alt+Mayús+C cierra el panel de la ventana activa, lo que quita la división cuando la ventana está dividida. La división se activa desde Vista ▸ Ventana ▸ Dividir (sin atajo fiable en este Word)."
+  },
+  {
+    "id": "vista-80",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-082",
+    "generado": true,
+    "enunciado": "Un usuario tiene cinco documentos abiertos y quiere verlos todos en mosaico a la vez. Si intentara usar Ver en paralelo, ¿qué pasaría?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ver en paralelo también dispondría los cinco en mosaico igual que Organizar todo"
+      },
+      {
+        "letter": "B",
+        "text": "Ver en paralelo trabaja solo con dos documentos distintos; para los cinco a la vez corresponde Organizar todo (Mosaico)"
+      },
+      {
+        "letter": "C",
+        "text": "Ambas funciones son intercambiables sin límite de documentos"
+      },
+      {
+        "letter": "D",
+        "text": "Ver en paralelo requiere activar antes Nueva ventana para funcionar con más de dos documentos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Organizar todo (Mosaico) actúa sobre todas las ventanas abiertas sin límite. Ver en paralelo trabaja exactamente con dos documentos distintos para compararlos."
+  },
+  {
+    "id": "vista-87",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Dividir",
+    "tema": "Ventana",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-089",
+    "generado": true,
+    "enunciado": "Un usuario quiere ver dos partes alejadas del mismo documento dentro de una sola ventana sin abrir una segunda. ¿Qué función usa?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Nueva ventana"
+      },
+      {
+        "letter": "B",
+        "text": "Ver en paralelo"
+      },
+      {
+        "letter": "C",
+        "text": "Dividir"
+      },
+      {
+        "letter": "D",
+        "text": "Organizar todo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Dividir parte la ventana activa en dos paneles del mismo documento sin abrir una segunda ventana. Nueva ventana abre una segunda ventana independiente. Dividir se hace por Vista ▸ grupo Ventana ▸ Dividir. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
+  },
+  {
+    "id": "vista-88",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "relleno",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-090",
+    "generado": true,
+    "enunciado": "Completa la tríada crítica del Grupo Ventana: [1] abre dos ventanas independientes del mismo documento. [2] divide el mismo documento en dos paneles dentro de una sola ventana. [3] muestra dos documentos distintos simultáneamente para compararlos.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Nueva ventana",
+      "Dividir",
+      "Ver en paralelo"
+    ],
+    "explicacion": "Esta tríada es uno de los puntos de mayor confusión en el examen. La clave es: Nueva ventana y Dividir trabajan con el mismo documento; Ver en paralelo trabaja con dos documentos distintos. En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
+  },
+  {
+    "id": "vista-90",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Organizar todo",
+    "tema": "Ventana",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-092",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes funciones de la pestaña Vista NO tiene atajo de teclado documentado en la fuente?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Diseño de impresión"
+      },
+      {
+        "letter": "B",
+        "text": "Vista Esquema"
+      },
+      {
+        "letter": "C",
+        "text": "Dividir"
+      },
+      {
+        "letter": "D",
+        "text": "Organizar todo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Organizar todo no tiene atajo de teclado. Diseño de impresión (Ctrl+Alt+D), Vista Esquema (Ctrl+Alt+Q) y Dividir (Alt+Ctrl+V en el volcado) sí aparecen. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
+  },
+  {
+    "id": "vista-109",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "8-193",
+    "enunciado": "¿Cómo se divide la ventana del documento en dos paneles en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Vista ▸ grupo Ventana ▸ Dividir"
+      },
+      {
+        "letter": "B",
+        "text": "Con el atajo Alt+Ctrl+V"
+      },
+      {
+        "letter": "C",
+        "text": "Con el atajo Ctrl+Alt+W"
+      },
+      {
+        "letter": "D",
+        "text": "Arrastrando la barra de desplazamiento vertical"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Se divide desde Vista ▸ grupo Ventana ▸ Dividir (y se deshace con Quitar división). En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
+  },
+  {
+    "id": "vista-111",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "8-205",
+    "enunciado": "¿Qué atajo restaura el tamaño de la ventana del documento en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+F5"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+F10"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+F5"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+F5"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+F5 restaura el tamaño de la ventana del documento. Ctrl+F10 no tiene función en este Word. Alt+F5 restaura la ventana de la aplicación. Ctrl+Mayús+F5 abre el cuadro Marcador."
+  },
+  {
+    "id": "vista-112",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "8-206",
+    "enunciado": "¿Qué atajo restaura la ventana de la aplicación Word completa en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+F5"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+F5"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+F10"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Alt+F5"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+F5 restaura la ventana de la aplicación Word. Ctrl+F5 restaura la ventana del documento activo. Alt+F10 no tiene esa función asignada. Ctrl+Alt+F5 no tiene función asignada para restaurar ventanas."
+  },
+  {
+    "id": "vista-113",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "8-207",
+    "enunciado": "¿Qué atajo cambia el tamaño de la ventana del documento en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+F8"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+F5"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+F10"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+F8"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+F8 activa el modo de cambio de tamaño de la ventana del documento. Ctrl+F5 restaura el tamaño. Ctrl+F10 no tiene función en este Word. Alt+F8 abre el cuadro de diálogo Macros."
+  },
+  {
+    "id": "vista-114",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "8-208",
+    "enunciado": "¿Qué atajo va a la ventana siguiente en Word 365 cuando hay varios documentos abiertos?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+F6"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+Mayús+F6"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+F6"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Tab"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+F6 activa la ventana siguiente cuando hay varios documentos abiertos. Ctrl+Mayús+F6 activa la ventana anterior. Alt+F6 también activa la ventana siguiente como atajo alternativo. Ctrl+Tab no tiene esa función asignada en Word para cambiar entre ventanas de documento."
+  },
+  {
+    "id": "vista-115",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "8-209",
+    "enunciado": "¿Qué atajo va a la ventana anterior en Word 365 cuando hay varios documentos abiertos?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Mayús+F6"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+F6"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Mayús+F6"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+Tab"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+Mayús+F6 activa la ventana anterior. Ctrl+F6 activa la ventana siguiente. Alt+Mayús+F6 también activa la ventana anterior como atajo alternativo. Ctrl+Mayús+Tab no tiene esa función asignada para cambiar ventanas de documento."
+  },
+  {
+    "id": "vista-119",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "8-235",
+    "enunciado": "¿Qué atajo navega a través del examen anterior en Word 365 usando el explorador de objetos?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Re Pág"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+Av Pág"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+Inicio"
+      },
+      {
+        "letter": "D",
+        "text": "Re Pág"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+Re Pág pasa al objeto de búsqueda anterior. Ctrl+Av Pág pasa al siguiente. Alt+Ctrl+Inicio no tiene función en este Word. Re Pág sube una pantalla sin usar el explorador."
+  },
+  {
+    "id": "vista-120",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "8-236",
+    "enunciado": "¿Qué atajo examina el objeto siguiente en Word 365 usando el explorador de objetos?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Av Pág"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+Re Pág"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+Fin"
+      },
+      {
+        "letter": "D",
+        "text": "Av Pág"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+Av Pág examina el objeto siguiente usando el explorador de objetos. Ctrl+Re Pág examina el objeto anterior. Alt+Ctrl+Fin no tiene función asignada para el explorador. Av Pág baja una pantalla sin usar el explorador de objetos."
+  },
+  {
+    "id": "vista-125",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "8-299",
+    "enunciado": "¿Qué atajo restaura el documento a su tamaño y posición predeterminados en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+F5"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+F5"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Mayús+F5"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+F10"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+F5 restaura el documento a su tamaño normal. Alt+F5 restaura la ventana de la aplicación. Ctrl+Mayús+F5 abre el cuadro Marcador. Ctrl+F10 no tiene función en este Word."
+  },
+  {
+    "id": "vista-142",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "gen-atajo-11",
+    "generado": true,
+    "enunciado": "¿Qué atajo de teclado selecciona el objeto anterior en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Arriba"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+X"
+      },
+      {
+        "letter": "C",
+        "text": "Mayús+Av Pág"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+F4"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Mueve la selección al objeto flotante o elemento anterior dentro del documento."
+  },
+  {
+    "id": "vista-143",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "gen-atajo-12",
+    "generado": true,
+    "enunciado": "¿Qué atajo de teclado selecciona el objeto siguiente en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Abajo"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+2"
+      },
+      {
+        "letter": "C",
+        "text": "Mayús+F2"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+5"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Mueve la selección al objeto flotante o elemento siguiente dentro del documento."
+  },
+  {
+    "id": "vista-144",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "gen-atajo-37",
+    "generado": true,
+    "enunciado": "¿Qué atajo alternativo también pasa a la ventana anterior en Word 365, además de Ctrl+Mayús+F6?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Mayús+Q"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+Mayús+Z"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Mayús+F6"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+F8"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Cambia el foco a la ventana de documento anterior cuando hay varios documentos abiertos; es una segunda combinación asignada a la misma función que Ctrl+Mayús+F6."
+  },
+  {
+    "id": "vista-145",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Ventana",
+    "sourceQuestionId": "gen-atajo-38",
+    "generado": true,
+    "enunciado": "¿Qué atajo alternativo también pasa a la ventana siguiente en Word 365, además de Ctrl+F6?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Abajo"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Izquierda"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+F6"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+I"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Cambia el foco a la siguiente ventana de documento cuando hay varios documentos abiertos; es una segunda combinación asignada a la misma función que Ctrl+F6."
+  },
+  {
     "id": "vista-35",
     "sourceFile": "vista.json",
     "bloque": "Vista — Macros",
@@ -1557,6 +3814,329 @@
     "explicacion": "Alt+F8 abre el cuadro de diálogo Macros (gestionar las existentes). Alt+F11 abre el editor de Visual Basic. Grabar macro, Pausar grabación y Ver macros son botones del grupo Macros, sin atajo propio."
   },
   {
+    "id": "vista-48",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Macros",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "tema": "Macros",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-049",
+    "enunciado": "¿Cuál de los siguientes atajos pertenece al Grupo Macros?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl + Alt + D"
+      },
+      {
+        "letter": "B",
+        "text": "Alt + Ctrl + V"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl + Alt + N"
+      },
+      {
+        "letter": "D",
+        "text": "Alt + F8"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Alt+F8 abre el cuadro de diálogo Macros, del grupo Macros. Ctrl+Alt+D/N son atajos de vista y Alt+Ctrl+V pega formato."
+  },
+  {
+    "id": "vista-59",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Macros",
+    "tipo": "relleno",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "tema": "Macros",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-060",
+    "enunciado": "Una macro es una [1] de comandos e instrucciones que se agrupan de forma conjunta como un mismo [2] para completar una tarea [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "serie",
+      "comando",
+      "automáticamente"
+    ],
+    "explicacion": ""
+  },
+  {
+    "id": "vista-66",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Macros",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "tema": "Macros",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-068",
+    "generado": true,
+    "enunciado": "¿Cuál es la ruta exacta para abrir el cuadro de diálogo Macros desde la cinta sin usar atajo de teclado?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Vista → Macros → Grabar macro..."
+      },
+      {
+        "letter": "B",
+        "text": "Vista → Macros → Ver macros"
+      },
+      {
+        "letter": "C",
+        "text": "Programador → Macros → Ver macros"
+      },
+      {
+        "letter": "D",
+        "text": "Archivo → Opciones → Macros"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "La ruta exacta es Vista → Macros → Ver macros. También se puede acceder con el atajo Alt+F8."
+  },
+  {
+    "id": "vista-67",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Macros",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "tema": "Macros",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-069",
+    "generado": true,
+    "enunciado": "¿Cuáles son usos habituales de las macros en Word 365? (Marca todos los correctos)",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Automatizar una serie de pasos"
+      },
+      {
+        "letter": "B",
+        "text": "Personalizar la barra de acceso rápido con nuevas funcionalidades"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar texto o gráficos utilizados frecuentemente"
+      },
+      {
+        "letter": "D",
+        "text": "Depurar errores de sintaxis del código VBA"
+      },
+      {
+        "letter": "E",
+        "text": "Cifrar el documento para protegerlo"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "Los tres usos principales de las macros son: automatizar pasos repetitivos, personalizar la barra de acceso rápido e insertar texto o gráficos frecuentes. D y E no son usos típicos."
+  },
+  {
+    "id": "vista-79",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Macros",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "tema": "Macros",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-081",
+    "generado": true,
+    "enunciado": "Los pasos de una macro se ejecutan en el orden en que el usuario los grabó al crearla. ¿Es correcto?",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero: una macro reproduce los pasos grabados exactamente en el mismo orden en que se registraron."
+  },
+  {
+    "id": "vista-86",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Macros",
+    "tipo": "verdadero_falso",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "tema": "Macros",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-088",
+    "generado": true,
+    "enunciado": "En Word 365, el atajo Alt + F8 abre el cuadro de diálogo Macros y el atajo Alt + F11 abre el editor de Visual Basic.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero: Alt+F8 abre el cuadro de diálogo Macros para gestionar las macros existentes. Alt+F11 abre el editor de Visual Basic (VBE). Es un error frecuente invertir ambos atajos."
+  },
+  {
+    "id": "vista-92",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Macros",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "tema": "Macros",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-094",
+    "generado": true,
+    "enunciado": "Un usuario abre el submenú del botón Macros y ve que 'Pausar grabación' está en gris mientras 'Grabar macro...' y 'Ver macros' están activas. ¿Qué situación describe esta captura?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Hay una grabación en curso y por eso Pausar grabación está en gris"
+      },
+      {
+        "letter": "B",
+        "text": "No hay ninguna grabación activa, por lo que Pausar grabación permanece deshabilitada"
+      },
+      {
+        "letter": "C",
+        "text": "La versión de Word no permite grabar macros en este equipo"
+      },
+      {
+        "letter": "D",
+        "text": "Falta iniciar Visual Basic para habilitar el submenú completo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Pausar grabación solo se activa cuando hay una grabación de macro en curso. Si aparece en gris significa que no hay ninguna grabación activa en ese momento."
+  },
+  {
+    "id": "vista-102",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Macros",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": "Visual Basic (VBE)",
+    "tema": "Macros",
+    "sourceQuestionId": "8-141",
+    "enunciado": "¿Cuál de los siguientes atajos abre el editor de Visual Basic en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+F11"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+F8"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+F10"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+F11"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+F11 abre el editor de Visual Basic para Aplicaciones. Alt+F8 abre el cuadro de diálogo Macro para ejecutar macros. Alt+F10 no tiene función asignada relevante. Ctrl+F11 bloquea campos."
+  },
+  {
+    "id": "vista-103",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Macros",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": "Visual Basic (VBE)",
+    "tema": "Macros",
+    "sourceQuestionId": "8-142",
+    "enunciado": "¿Cuál de los siguientes atajos ejecuta o ejecuta el cuadro de diálogo de Macros en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+F8"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+F11"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+F8"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Mayús+F11"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+F8 abre el cuadro de diálogo Macro. Alt+F11 abre el editor de Visual Basic. Ctrl+F8 cambia el tamaño del documento. Alt+Mayús+F11 no tiene función asignada para macros."
+  },
+  {
+    "id": "vista-118",
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Macros",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": "Visual Basic (VBE)",
+    "tema": "Macros",
+    "sourceQuestionId": "8-227",
+    "enunciado": "¿Qué atajo abre el editor de código VBA en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+F11"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+F8"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+F11"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Mayús+F11"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Alt+F11 abre el editor de Visual Basic para Aplicaciones. Alt+F8 abre el cuadro de diálogo para ejecutar macros. Ctrl+F11 bloquea los campos del documento. Alt+Mayús+F11 no tiene función asignada para el editor VBA."
+  },
+  {
     "id": "vista-43",
     "sourceFile": "vista.json",
     "bloque": "Vista — SharePoint",
@@ -1619,148 +4199,24 @@
     "explicacion": "SharePoint es la plataforma de Microsoft para gestión documental y trabajo en equipo (bibliotecas de documentos, permisos, versiones, sitios compartidos). El almacenamiento personal en la nube es OneDrive; la mensajería interna es Teams."
   },
   {
-    "id": "vista-45",
+    "id": "vista-78",
     "sourceFile": "vista.json",
-    "bloque": "Vista — Inmersivo",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "bloque": "Vista — SharePoint",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
     "negativa": false,
     "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": "Lector inmersivo",
-    "tema": "Inmersivo",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-046",
-    "enunciado": "¿En qué grupo de la pestaña Vista se encuentra la herramienta Lector inmersivo?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Grupo Vistas"
-      },
-      {
-        "letter": "B",
-        "text": "Grupo Mostrar"
-      },
-      {
-        "letter": "C",
-        "text": "Grupo Inmersivo"
-      },
-      {
-        "letter": "D",
-        "text": "Grupo Ventana"
-      }
-    ],
+    "topic": "sharepoint",
+    "subtopic": "Propiedades",
+    "tema": "SharePoint",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-080",
+    "generado": true,
+    "enunciado": "El elemento mostrado en el Grupo SharePoint de la pestaña Vista es el botón Propiedades, y la fuente proporciona una descripción funcional detallada de dicho botón.",
+    "opciones": [],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El Lector inmersivo (Immersive Reader) está en el Grupo Inmersivo de la pestaña Vista."
-  },
-  {
-    "id": "vista-46",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Nueva ventana",
-    "tema": "Ventana",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-047",
-    "enunciado": "¿En qué grupo de la pestaña Vista se encuentra la función Nueva ventana?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Grupo Vistas"
-      },
-      {
-        "letter": "B",
-        "text": "Grupo Zoom"
-      },
-      {
-        "letter": "C",
-        "text": "Grupo Inmersivo"
-      },
-      {
-        "letter": "D",
-        "text": "Grupo Ventana"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "La respuesta correcta es «Grupo Ventana»."
-  },
-  {
-    "id": "vista-47",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": true,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Organizar todo",
-    "tema": "Ventana",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-048",
-    "enunciado": "¿Cuál de las siguientes funciones no tiene atajo de teclado documentado en la fuente?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Diseño de impresión"
-      },
-      {
-        "letter": "B",
-        "text": "Vista Esquema"
-      },
-      {
-        "letter": "C",
-        "text": "Dividir"
-      },
-      {
-        "letter": "D",
-        "text": "Organizar todo"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "Organizar todo no tiene atajo de teclado. Diseño de impresión (Ctrl+Alt+D), Vista Esquema (Ctrl+Alt+Q) y Dividir (Alt+Ctrl+V en el volcado) sí aparecen. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
-  },
-  {
-    "id": "vista-48",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "tema": "Macros",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-049",
-    "enunciado": "¿Cuál de los siguientes atajos pertenece al Grupo Macros?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl + Alt + D"
-      },
-      {
-        "letter": "B",
-        "text": "Alt + Ctrl + V"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl + Alt + N"
-      },
-      {
-        "letter": "D",
-        "text": "Alt + F8"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "Alt+F8 abre el cuadro de diálogo Macros, del grupo Macros. Ctrl+Alt+D/N son atajos de vista y Alt+Ctrl+V pega formato."
+    "respuesta": false,
+    "explicacion": "Falso: el elemento es Propiedades (correcto), pero la fuente NO proporciona descripción funcional específica de ese botón. No debe inventarse una descripción."
   },
   {
     "id": "vista-49",
@@ -1780,114 +4236,6 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Verdadero: según verificación en Word 365 ES, la pestaña Vista está entre Revisar y Ayuda (posición 9, contando Archivo como 1)."
-  },
-  {
-    "id": "vista-50",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-051",
-    "enunciado": "¿Cuál es la diferencia principal entre el Modo de lectura y la Vista Preliminar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "El Modo de lectura solo muestra una página; la Vista Preliminar muestra todas a tamaño completo"
-      },
-      {
-        "letter": "B",
-        "text": "Ambas vistas son idénticas en función pero se acceden desde grupos distintos"
-      },
-      {
-        "letter": "C",
-        "text": "El Modo de lectura presenta el documento en dos páginas en forma de libro para facilitar la lectura; la Vista Preliminar muestra páginas completas a tamaño reducido para verificar formato y saltos de página"
-      },
-      {
-        "letter": "D",
-        "text": "El Modo de lectura oculta el texto y muestra solo imágenes; la Vista Preliminar muestra el documento en escala de grises"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "La respuesta correcta es «El Modo de lectura presenta el documento en dos páginas en forma de libro para facilitar la lectura; la Vista Preliminar muestra páginas completas a tamaño reducido para verificar formato y saltos de página»."
-  },
-  {
-    "id": "vista-51",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-052",
-    "enunciado": "¿Cuál es la diferencia de alcance entre Organizar todo y Ver en paralelo?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Organizar todo solo funciona con documentos guardados; Ver en paralelo funciona con cualquier documento"
-      },
-      {
-        "letter": "B",
-        "text": "Organizar todo muestra exactamente dos ventanas; Ver en paralelo muestra todas las abiertas"
-      },
-      {
-        "letter": "C",
-        "text": "Ambas funciones tienen el mismo alcance pero diferente disposición visual"
-      },
-      {
-        "letter": "D",
-        "text": "Organizar todo actúa sobre todas las ventanas abiertas; Ver en paralelo opera sobre exactamente dos documentos"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "La respuesta correcta es «Organizar todo actúa sobre todas las ventanas abiertas; Ver en paralelo opera sobre exactamente dos documentos»."
-  },
-  {
-    "id": "vista-52",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Inmersivo",
-    "tipo": "opcion_unica",
-    "categoria": "general",
-    "negativa": false,
-    "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": "Lector inmersivo",
-    "tema": "Inmersivo",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-053",
-    "enunciado": "Un usuario quiere usar una herramienta diseñada específicamente para mejorar la comprensión y la fluidez lectora. ¿Cuál debe activar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Concentración"
-      },
-      {
-        "letter": "B",
-        "text": "Vista Borrador"
-      },
-      {
-        "letter": "C",
-        "text": "Lector inmersivo"
-      },
-      {
-        "letter": "D",
-        "text": "Vista Esquema"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "El Lector inmersivo (nombre oficial en español; alias: Immersive Reader) está diseñado para mejorar la comprensión y la fluidez de lectura."
   },
   {
     "id": "vista-53",
@@ -2074,152 +4422,6 @@
     "explicacion": "Emparejamiento correcto: Grupo Vistas → Contiene los modos de visualización del documento · Grupo Inmersivo → Proporciona herramientas para mejorar concentración y lectura · Grupo Mostrar → Activa o desactiva elementos de interfaz como regla y cuadrícula · Grupo Zoom → Controla el nivel de ampliación de la vista · Grupo Ventana → Gestiona apertura, organización y comparación de ventanas · Grupo Macros → Permite automatizar tareas mediante secuencias de comandos."
   },
   {
-    "id": "vista-55",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "relleno",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Vista Esquema",
-    "tema": "Vistas",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-056",
-    "enunciado": "La Vista Esquema se utiliza para [1] y [2] esquemas. Esta vista muestra [3] los [4] del documento y resulta de particular utilidad para [5].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "crear",
-      "editar",
-      "sólo",
-      "títulos",
-      "elaborar notas"
-    ],
-    "explicacion": ""
-  },
-  {
-    "id": "vista-56",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Zoom",
-    "tipo": "relleno",
-    "categoria": "general",
-    "negativa": false,
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Valores",
-    "tema": "Zoom",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-057",
-    "enunciado": "El zoom mínimo es del [1]% y el máximo del [2]%. Con Ctrl + rueda del ratón, el zoom se modifica de [3] en [3] puntos porcentuales.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "10",
-      "500",
-      "10"
-    ],
-    "explicacion": ""
-  },
-  {
-    "id": "vista-57",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Zoom",
-    "tipo": "relleno",
-    "categoria": "general",
-    "negativa": false,
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": null,
-    "tema": "Zoom",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-058",
-    "enunciado": "El Grupo [1] de la pestaña [2] permite acercar o alejar la vista. El botón [3] abre un cuadro de diálogo. El botón [4] aplica directamente el nivel de zoom. El mínimo es [5]% y el máximo [6]%.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Zoom",
-      "Vista",
-      "Zoom (lupa)",
-      "100%",
-      "10",
-      "500"
-    ],
-    "explicacion": ""
-  },
-  {
-    "id": "vista-58",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "relleno",
-    "categoria": "general",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-059",
-    "enunciado": "[1]: abre dos ventanas de Word para ver el mismo documento. [2]: en una única ventana comparte dos vistas del mismo documento. [3]: visualiza en paralelo dos documentos para compararlos. [4]: solo puede activarse cuando se hayan puesto dos documentos en paralelo.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Nueva ventana",
-      "Dividir",
-      "Ver en paralelo",
-      "Desplazamiento sincrónico"
-    ],
-    "explicacion": ""
-  },
-  {
-    "id": "vista-59",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "relleno",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "tema": "Macros",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-060",
-    "enunciado": "Una macro es una [1] de comandos e instrucciones que se agrupan de forma conjunta como un mismo [2] para completar una tarea [3].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "serie",
-      "comando",
-      "automáticamente"
-    ],
-    "explicacion": ""
-  },
-  {
-    "id": "vista-60",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "relleno",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-061",
-    "enunciado": "Escribe el atajo de teclado correspondiente a cada función: Diseño de impresión → [1]. Vista Esquema → [2]. Vista Borrador → [3]. Vista Preliminar → [4]. Dividir → [5].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Ctrl+Alt+D",
-      "Ctrl+Alt+Q",
-      "Ctrl+Alt+N",
-      "Ctrl+Alt+I",
-      "Alt+Ctrl+V"
-    ],
-    "explicacion": "Ctrl+Alt+D Diseño de impresión, Ctrl+Alt+Q Esquema, Ctrl+Alt+N Borrador, Ctrl+Alt+I vista preliminar, Alt+Ctrl+V Dividir (según el volcado). ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
-  },
-  {
     "id": "vista-61",
     "sourceFile": "vista.json",
     "bloque": "Vista — Estructura de la pestaña",
@@ -2245,420 +4447,6 @@
       "Movimiento de Página"
     ],
     "explicacion": "Cada herramienta pertenece a su grupo homónimo de la pestaña Vista: Diseño de impresión y Modo lectura en Vistas; Lector inmersivo en Inmersivo; Líneas de la cuadrícula y Regla en Mostrar; Zoom en Zoom; Nueva ventana, Organizar todo, Dividir y Ver en paralelo en Ventana; Macros en Macros; Propiedades en SharePoint."
-  },
-  {
-    "id": "vista-62",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Modo de lectura",
-    "tema": "Vistas",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-063",
-    "generado": true,
-    "enunciado": "El Modo de lectura oculta las barras de herramientas y las reglas, pero mantiene visibles los encabezados y pies de página para no perder el contexto del documento.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: el Modo de lectura también oculta los encabezados y pies de página, además de las barras y reglas."
-  },
-  {
-    "id": "vista-63",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Modo de lectura",
-    "tema": "Vistas",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-064",
-    "generado": true,
-    "enunciado": "Un usuario activa una vista y observa que desaparecen las barras de herramientas, las reglas, los encabezados y los pies de página, mostrándose el documento en dos páginas en forma de libro. ¿Qué vista ha activado?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Vista Borrador"
-      },
-      {
-        "letter": "B",
-        "text": "Diseño de impresión"
-      },
-      {
-        "letter": "C",
-        "text": "Modo de lectura"
-      },
-      {
-        "letter": "D",
-        "text": "Vista Preliminar"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "El Modo de lectura presenta el documento en dos páginas por pantalla en forma de libro, ocultando barras, reglas, encabezados y pies de página."
-  },
-  {
-    "id": "vista-64",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Inmersivo",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": "Concentración",
-    "tema": "Inmersivo",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-065",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes afirmaciones describe correctamente la herramienta Concentración de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Superpone una capa que oculta todas las barras y herramientas dejando solo el documento visible; se desactiva pulsando Esc"
-      },
-      {
-        "letter": "B",
-        "text": "Muestra el documento en dos páginas en forma de libro con fondo oscuro"
-      },
-      {
-        "letter": "C",
-        "text": "Abre el documento en una ventana nueva con fondo negro para facilitar la edición"
-      },
-      {
-        "letter": "D",
-        "text": "Oculta únicamente la cinta de opciones dejando visibles la barra de estado y los paneles laterales"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Concentración superpone una capa que oculta todas las barras (fondo oscuro). Para salir basta con pulsar Esc."
-  },
-  {
-    "id": "vista-65",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Inmersivo",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": "Lector inmersivo",
-    "tema": "Inmersivo",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-066",
-    "generado": true,
-    "enunciado": "¿Cuáles de estas funciones ofrece el Lector inmersivo de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Foco de líneas (resaltar una o varias líneas para concentrar la lectura)"
-      },
-      {
-        "letter": "B",
-        "text": "Ajuste del espaciado entre caracteres"
-      },
-      {
-        "letter": "C",
-        "text": "División del texto por sílabas"
-      },
-      {
-        "letter": "D",
-        "text": "Lectura en voz alta del documento"
-      },
-      {
-        "letter": "E",
-        "text": "Traducción automática al idioma del sistema"
-      },
-      {
-        "letter": "F",
-        "text": "Corrección ortográfica en tiempo real"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "explicacion": "El Lector inmersivo ofrece foco de líneas, ajuste de espaciado, división por sílabas y lectura en voz alta. La traducción y la corrección ortográfica no forman parte del Lector inmersivo."
-  },
-  {
-    "id": "vista-66",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "tema": "Macros",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-068",
-    "generado": true,
-    "enunciado": "¿Cuál es la ruta exacta para abrir el cuadro de diálogo Macros desde la cinta sin usar atajo de teclado?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Vista → Macros → Grabar macro..."
-      },
-      {
-        "letter": "B",
-        "text": "Vista → Macros → Ver macros"
-      },
-      {
-        "letter": "C",
-        "text": "Programador → Macros → Ver macros"
-      },
-      {
-        "letter": "D",
-        "text": "Archivo → Opciones → Macros"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "La ruta exacta es Vista → Macros → Ver macros. También se puede acceder con el atajo Alt+F8."
-  },
-  {
-    "id": "vista-67",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "tema": "Macros",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-069",
-    "generado": true,
-    "enunciado": "¿Cuáles son usos habituales de las macros en Word 365? (Marca todos los correctos)",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Automatizar una serie de pasos"
-      },
-      {
-        "letter": "B",
-        "text": "Personalizar la barra de acceso rápido con nuevas funcionalidades"
-      },
-      {
-        "letter": "C",
-        "text": "Insertar texto o gráficos utilizados frecuentemente"
-      },
-      {
-        "letter": "D",
-        "text": "Depurar errores de sintaxis del código VBA"
-      },
-      {
-        "letter": "E",
-        "text": "Cifrar el documento para protegerlo"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C"
-    ],
-    "explicacion": "Los tres usos principales de las macros son: automatizar pasos repetitivos, personalizar la barra de acceso rápido e insertar texto o gráficos frecuentes. D y E no son usos típicos."
-  },
-  {
-    "id": "vista-68",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Zoom",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Valores",
-    "tema": "Zoom",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-070",
-    "generado": true,
-    "enunciado": "Un usuario intenta reducir el zoom por debajo del 10% y no lo consigue. ¿Cuál es la explicación correcta?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "El mínimo permitido es el 25% en Word 365"
-      },
-      {
-        "letter": "B",
-        "text": "El mínimo absoluto del zoom en Word es el 10%; no puede bajarse más"
-      },
-      {
-        "letter": "C",
-        "text": "El mínimo depende de la resolución del monitor conectado"
-      },
-      {
-        "letter": "D",
-        "text": "Solo puede bajarse del 10% desde el cuadro de diálogo, no con Ctrl+rueda"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "El zoom mínimo absoluto en Word es el 10% y el máximo el 500%. El 25% no es el mínimo sino una confusión; los presets reales son 200%, 100% y 75% según verificación en Word 365 ES."
-  },
-  {
-    "id": "vista-69",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Zoom",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Cuadro de diálogo",
-    "tema": "Zoom",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-071",
-    "generado": true,
-    "enunciado": "En el cuadro de diálogo Zoom, ¿cuál de estas opciones aparece como radio button pero NO existe como botón directo en la cinta del Grupo Zoom?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "100%"
-      },
-      {
-        "letter": "B",
-        "text": "Varias páginas"
-      },
-      {
-        "letter": "C",
-        "text": "Ancho del texto"
-      },
-      {
-        "letter": "D",
-        "text": "Ancho de página"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ancho del texto solo existe en el cuadro de diálogo Zoom de Word para Windows; no aparece como botón directo en la cinta del Grupo Zoom. El resto (100%, Varias páginas, Ancho de página) sí son botones de la cinta."
-  },
-  {
-    "id": "vista-70",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "verdadero_falso",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Dividir",
-    "tema": "Ventana",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-072",
-    "generado": true,
-    "enunciado": "El atajo Alt + Mayús + C permite desactivar la división de la ventana cuando esta se encuentra activa.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero: Alt+Mayús+C cierra el panel de la ventana activa, lo que quita la división cuando la ventana está dividida. La división se activa desde Vista ▸ Ventana ▸ Dividir (sin atajo fiable en este Word)."
-  },
-  {
-    "id": "vista-71",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Vista Borrador",
-    "tema": "Vistas",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-073",
-    "generado": true,
-    "enunciado": "La denominación 'Borrador (Normal)' es una variante terminológica aceptada de la Vista Borrador; el temario conserva 'Borrador' como denominación principal.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero: 'Borrador (Normal)' es un nombre alternativo habitual de la Vista Borrador. La denominación principal es 'Borrador'."
-  },
-  {
-    "id": "vista-72",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Diseño Web",
-    "tema": "Vistas",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-074",
-    "generado": true,
-    "enunciado": "Un usuario se queja de que al abrir su documento 'no ve dónde termina la hoja ni los márgenes, y el texto se reajusta al cambiar el tamaño de la ventana'. ¿En qué vista está trabajando probablemente?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Diseño de impresión"
-      },
-      {
-        "letter": "B",
-        "text": "Vista Preliminar"
-      },
-      {
-        "letter": "C",
-        "text": "Diseño Web"
-      },
-      {
-        "letter": "D",
-        "text": "Modo de lectura"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Diseño Web muestra el documento sin márgenes de hoja visibles y ajusta el texto al ancho de la ventana, exactamente como en un explorador web."
-  },
-  {
-    "id": "vista-73",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Vista Esquema",
-    "tema": "Vistas",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-075",
-    "generado": true,
-    "enunciado": "Al activar cierta vista, el usuario observa que aparece una pestaña adicional en la cinta que antes no existía. ¿Qué vista ha activado?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Vista Borrador — aparece la pestaña 'Borrador'"
-      },
-      {
-        "letter": "B",
-        "text": "Diseño Web — aparece la pestaña 'Web'"
-      },
-      {
-        "letter": "C",
-        "text": "Vista Esquema — aparece la pestaña 'Esquema'"
-      },
-      {
-        "letter": "D",
-        "text": "Diseño de impresión — aparece la pestaña 'Diseño'"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Vista Esquema es la única vista que genera su propia pestaña adicional 'Esquema' en la cinta al activarse. Confirmado por verificación en Word 365."
   },
   {
     "id": "vista-74",
@@ -2776,160 +4564,6 @@
     "explicacion": "Zoom mínimo 10% y máximo 500% sin disputa. Incremento Ctrl+rueda = 10 puntos. Grupos = 8 y posición 9 (entre Revisar y Ayuda) confirmados por verificación en Word 365."
   },
   {
-    "id": "vista-76",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-078",
-    "generado": true,
-    "enunciado": "El Grupo Vistas puede aparecer también con la denominación alternativa 'Vistas de documento'. ¿Es correcto?",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero: 'Vistas de documento' es un nombre alternativo habitual del Grupo Vistas. Las dos formas son válidas."
-  },
-  {
-    "id": "vista-77",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Inmersivo",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": "Lector inmersivo",
-    "tema": "Inmersivo",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-079",
-    "generado": true,
-    "enunciado": "Las herramientas Concentración y Lector inmersivo son accesibles desde la barra de estado inferior de Word 365, además de desde la pestaña Vista.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: desde la barra de estado inferior se accede a Concentración, Modo lectura, Diseño de impresión y Diseño web. El Lector inmersivo solo está en la pestaña Vista, grupo Inmersivo."
-  },
-  {
-    "id": "vista-78",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — SharePoint",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "sharepoint",
-    "subtopic": "Propiedades",
-    "tema": "SharePoint",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-080",
-    "generado": true,
-    "enunciado": "El elemento mostrado en el Grupo SharePoint de la pestaña Vista es el botón Propiedades, y la fuente proporciona una descripción funcional detallada de dicho botón.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: el elemento es Propiedades (correcto), pero la fuente NO proporciona descripción funcional específica de ese botón. No debe inventarse una descripción."
-  },
-  {
-    "id": "vista-79",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "tema": "Macros",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-081",
-    "generado": true,
-    "enunciado": "Los pasos de una macro se ejecutan en el orden en que el usuario los grabó al crearla. ¿Es correcto?",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero: una macro reproduce los pasos grabados exactamente en el mismo orden en que se registraron."
-  },
-  {
-    "id": "vista-80",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-082",
-    "generado": true,
-    "enunciado": "Un usuario tiene cinco documentos abiertos y quiere verlos todos en mosaico a la vez. Si intentara usar Ver en paralelo, ¿qué pasaría?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ver en paralelo también dispondría los cinco en mosaico igual que Organizar todo"
-      },
-      {
-        "letter": "B",
-        "text": "Ver en paralelo trabaja solo con dos documentos distintos; para los cinco a la vez corresponde Organizar todo (Mosaico)"
-      },
-      {
-        "letter": "C",
-        "text": "Ambas funciones son intercambiables sin límite de documentos"
-      },
-      {
-        "letter": "D",
-        "text": "Ver en paralelo requiere activar antes Nueva ventana para funcionar con más de dos documentos"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Organizar todo (Mosaico) actúa sobre todas las ventanas abiertas sin límite. Ver en paralelo trabaja exactamente con dos documentos distintos para compararlos."
-  },
-  {
-    "id": "vista-81",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Zoom",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Cuadro de diálogo",
-    "tema": "Zoom",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-083",
-    "generado": true,
-    "enunciado": "Un usuario confunde el botón Zoom (lupa) con el botón 100%. ¿Cuál es la diferencia funcional exacta entre ambos?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Zoom aplica el 100% directamente; 100% abre el cuadro de diálogo para configurar el porcentaje"
-      },
-      {
-        "letter": "B",
-        "text": "Zoom abre el cuadro de diálogo para configurar el porcentaje; 100% aplica directamente el 100% sin abrir ningún diálogo"
-      },
-      {
-        "letter": "C",
-        "text": "Ambos abren el cuadro de diálogo pero con valores por defecto distintos"
-      },
-      {
-        "letter": "D",
-        "text": "Zoom pertenece al Grupo Zoom y 100% al Grupo Mostrar"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "El botón Zoom (lupa) abre el cuadro de diálogo Zoom para que el usuario configure el porcentaje. El botón 100% aplica directamente el zoom al 100% sin abrir ningún diálogo."
-  },
-  {
     "id": "vista-82",
     "sourceFile": "vista.json",
     "bloque": "Vista — Estructura de la pestaña",
@@ -3028,325 +4662,6 @@
     "explicacion": "Ctrl+Alt+D Diseño de impresión, Ctrl+Alt+Q Esquema, Ctrl+Alt+N Borrador, Ctrl+Alt+I vista preliminar, Alt+Ctrl+V Dividir (volcado), Alt+F8 cuadro Macros, Alt+F11 Visual Basic. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
   },
   {
-    "id": "vista-83",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-085",
-    "generado": true,
-    "enunciado": "Desde la barra de estado inferior de Word se puede acceder directamente a las vistas Concentración, Modo lectura, Diseño de impresión y Diseño web. ¿Es correcto?",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero: esas cuatro vistas tienen botón en la barra de estado inferior, además de estar en la pestaña Vista."
-  },
-  {
-    "id": "vista-84",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-086",
-    "generado": true,
-    "enunciado": "¿Cuáles de estas vistas son accesibles directamente desde la barra de estado inferior de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Concentración"
-      },
-      {
-        "letter": "B",
-        "text": "Modo lectura"
-      },
-      {
-        "letter": "C",
-        "text": "Diseño de impresión"
-      },
-      {
-        "letter": "D",
-        "text": "Diseño web"
-      },
-      {
-        "letter": "E",
-        "text": "Vista Esquema"
-      },
-      {
-        "letter": "F",
-        "text": "Vista Borrador"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "explicacion": "Desde la barra de estado inferior se accede a Concentración, Modo lectura, Diseño de impresión y Diseño web. Vista Esquema y Vista Borrador solo están en la pestaña Vista, grupo Vistas."
-  },
-  {
-    "id": "vista-85",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Inmersivo",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": "Lector inmersivo",
-    "tema": "Inmersivo",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-087",
-    "generado": true,
-    "enunciado": "Un usuario activa una herramienta y el documento pasa a mostrarse con un ancho de pantalla mayor, con una barra de herramientas reducida que permite cambiar el color de página y activar un foco de líneas. ¿Qué herramienta ha activado?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Concentración"
-      },
-      {
-        "letter": "B",
-        "text": "Modo de lectura"
-      },
-      {
-        "letter": "C",
-        "text": "Lector inmersivo"
-      },
-      {
-        "letter": "D",
-        "text": "Vista Borrador"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "El Lector inmersivo presenta el documento con mayor ancho de pantalla y ofrece una barra con opciones de color de página, foco de líneas, espaciado y lectura en voz alta. Concentración en cambio oculta todo dejando solo el documento con fondo oscuro."
-  },
-  {
-    "id": "vista-86",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "verdadero_falso",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "tema": "Macros",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-088",
-    "generado": true,
-    "enunciado": "En Word 365, el atajo Alt + F8 abre el cuadro de diálogo Macros y el atajo Alt + F11 abre el editor de Visual Basic.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero: Alt+F8 abre el cuadro de diálogo Macros para gestionar las macros existentes. Alt+F11 abre el editor de Visual Basic (VBE). Es un error frecuente invertir ambos atajos."
-  },
-  {
-    "id": "vista-87",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Dividir",
-    "tema": "Ventana",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-089",
-    "generado": true,
-    "enunciado": "Un usuario quiere ver dos partes alejadas del mismo documento dentro de una sola ventana sin abrir una segunda. ¿Qué función usa?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Nueva ventana"
-      },
-      {
-        "letter": "B",
-        "text": "Ver en paralelo"
-      },
-      {
-        "letter": "C",
-        "text": "Dividir"
-      },
-      {
-        "letter": "D",
-        "text": "Organizar todo"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Dividir parte la ventana activa en dos paneles del mismo documento sin abrir una segunda ventana. Nueva ventana abre una segunda ventana independiente. Dividir se hace por Vista ▸ grupo Ventana ▸ Dividir. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
-  },
-  {
-    "id": "vista-88",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "relleno",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-090",
-    "generado": true,
-    "enunciado": "Completa la tríada crítica del Grupo Ventana: [1] abre dos ventanas independientes del mismo documento. [2] divide el mismo documento en dos paneles dentro de una sola ventana. [3] muestra dos documentos distintos simultáneamente para compararlos.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Nueva ventana",
-      "Dividir",
-      "Ver en paralelo"
-    ],
-    "explicacion": "Esta tríada es uno de los puntos de mayor confusión en el examen. La clave es: Nueva ventana y Dividir trabajan con el mismo documento; Ver en paralelo trabaja con dos documentos distintos. En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
-  },
-  {
-    "id": "vista-89",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Zoom",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Valores",
-    "tema": "Zoom",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-091",
-    "generado": true,
-    "enunciado": "El 25% es el nivel de zoom mínimo de Word 365.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: el mínimo absoluto es el 10%. El 25% no es un preset; los presets reales son 200%, 100% y 75% según verificación en Word 365 ES."
-  },
-  {
-    "id": "vista-90",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": true,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Organizar todo",
-    "tema": "Ventana",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-092",
-    "generado": true,
-    "enunciado": "¿Cuál de las siguientes funciones de la pestaña Vista NO tiene atajo de teclado documentado en la fuente?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Diseño de impresión"
-      },
-      {
-        "letter": "B",
-        "text": "Vista Esquema"
-      },
-      {
-        "letter": "C",
-        "text": "Dividir"
-      },
-      {
-        "letter": "D",
-        "text": "Organizar todo"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "Organizar todo no tiene atajo de teclado. Diseño de impresión (Ctrl+Alt+D), Vista Esquema (Ctrl+Alt+Q) y Dividir (Alt+Ctrl+V en el volcado) sí aparecen. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
-  },
-  {
-    "id": "vista-91",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Diseño de impresión",
-    "tema": "Vistas",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-093",
-    "generado": true,
-    "enunciado": "Un usuario necesita revisar cómo quedarán distribuidos los encabezados, pies y márgenes en la hoja impresa mientras sigue editando el contenido con total normalidad. ¿Qué vista es la más adecuada?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Vista Preliminar — muestra páginas a tamaño reducido sin permitir edición normal"
-      },
-      {
-        "letter": "B",
-        "text": "Modo de lectura — oculta barras y encabezados dificultando la edición"
-      },
-      {
-        "letter": "C",
-        "text": "Diseño de impresión — permite ver y editar encabezados, pies y márgenes tal como se imprimirán"
-      },
-      {
-        "letter": "D",
-        "text": "Diseño Web — no representa la hoja impresa sino la vista en navegador"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Diseño de impresión es la vista predefinida de Word y permite visualizar y editar encabezados, pies de página y márgenes exactamente como aparecerán al imprimir."
-  },
-  {
-    "id": "vista-92",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": null,
-    "tema": "Macros",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-094",
-    "generado": true,
-    "enunciado": "Un usuario abre el submenú del botón Macros y ve que 'Pausar grabación' está en gris mientras 'Grabar macro...' y 'Ver macros' están activas. ¿Qué situación describe esta captura?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Hay una grabación en curso y por eso Pausar grabación está en gris"
-      },
-      {
-        "letter": "B",
-        "text": "No hay ninguna grabación activa, por lo que Pausar grabación permanece deshabilitada"
-      },
-      {
-        "letter": "C",
-        "text": "La versión de Word no permite grabar macros en este equipo"
-      },
-      {
-        "letter": "D",
-        "text": "Falta iniciar Visual Basic para habilitar el submenú completo"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Pausar grabación solo se activa cuando hay una grabación de macro en curso. Si aparece en gris significa que no hay ninguna grabación activa en ese momento."
-  },
-  {
     "id": "vista-93",
     "sourceFile": "vista.json",
     "bloque": "Vista — Estructura de la pestaña",
@@ -3372,34 +4687,6 @@
       "SharePoint"
     ],
     "explicacion": "Cada herramienta pertenece a su grupo homónimo dentro de la pestaña Vista."
-  },
-  {
-    "id": "vista-94",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Inmersivo",
-    "tipo": "relleno",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "vista",
-    "topic": "inmersivo",
-    "subtopic": null,
-    "tema": "Inmersivo",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-096",
-    "generado": true,
-    "enunciado": "[1] superpone una capa que oculta todas las barras dejando fondo oscuro; se sale con [2]. El [3] es un conjunto de herramientas que mejora la [4] y la [5] de lectura; incluye foco de líneas, espaciado, división por [6] y lectura en [7].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Concentración",
-      "Esc",
-      "Lector inmersivo",
-      "comprensión",
-      "fluidez",
-      "sílabas",
-      "voz alta"
-    ],
-    "explicacion": "Concentración oculta toda la interfaz con fondo oscuro y se sale con Esc. El Lector inmersivo reúne foco de líneas, espaciado, división por sílabas y lectura en voz alta para mejorar la comprensión y la fluidez de lectura. Los dos están en el grupo Inmersivo de la pestaña Vista."
   },
   {
     "id": "vista-95",
@@ -3498,1292 +4785,5 @@
       "7": "G"
     },
     "explicacion": "Cada grupo de la pestaña Vista contiene sus elementos característicos. El Grupo SharePoint solo muestra el botón Propiedades."
-  },
-  {
-    "id": "vista-96",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "general",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "1-87",
-    "enunciado": "¿Qué vista del documento está configurada como predeterminada en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Modo lectura"
-      },
-      {
-        "letter": "B",
-        "text": "Diseño de impresión"
-      },
-      {
-        "letter": "C",
-        "text": "Diseño Web"
-      },
-      {
-        "letter": "D",
-        "text": "Borrador"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Diseño de impresión es la vista predeterminada de Word 365. En esta vista se ve el documento tal como se imprimirá."
-  },
-  {
-    "id": "vista-97",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "general",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "1-88",
-    "enunciado": "¿Qué combinación de teclas activa la vista \"Diseño de impresión\" en Word 365 (versión española)?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Alt+P"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Ctrl+D"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Alt+W"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Alt+I"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "En Word 365 versión española, Alt+Ctrl+D activa la vista Diseño de impresión."
-  },
-  {
-    "id": "vista-98",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "general",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "7-11",
-    "enunciado": "En Word 365, ¿qué atajo de teclado está asociado a la vista \"Diseño de Impresión\"?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl + Alt + P"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl + Alt + D"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl + Alt + W"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl + Alt + I"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "El material muestra \"Ctrl + Alt + D\" junto a \"Diseño de Impresión\". Aunque en la interfaz real de Word es Ctrl+Alt+P, se respeta la literalidad del temario (trampa de versión)."
-  },
-  {
-    "id": "vista-99",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "general",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "7-21",
-    "enunciado": "En Word 365, un usuario quiere leer un documento sin distracciones. ¿Qué vista debe elegir?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Diseño de Impresión"
-      },
-      {
-        "letter": "B",
-        "text": "Modo lectura"
-      },
-      {
-        "letter": "C",
-        "text": "Diseño Web"
-      },
-      {
-        "letter": "D",
-        "text": "Borrador"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "El Modo lectura está optimizado para leer en pantalla sin distracciones."
-  },
-  {
-    "id": "vista-100",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "general",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "7-22",
-    "enunciado": "En Word 365, un usuario quiere volver a la vista predeterminada con el teclado. ¿Qué debe pulsar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl + Alt + D"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl + F1"
-      },
-      {
-        "letter": "C",
-        "text": "Alt + Q"
-      },
-      {
-        "letter": "D",
-        "text": "MAY + F1"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "\"Diseño de Impresión\" es la predeterminada y su atajo es Ctrl + Alt + D."
-  },
-  {
-    "id": "vista-101",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "emparejamiento",
-    "categoria": "general",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "7-27",
-    "enunciado": "En Word 365, relacione cada vista con su característica:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Diseño de Impresión"
-        },
-        {
-          "id": "2",
-          "label": "Modo lectura"
-        },
-        {
-          "id": "3",
-          "label": "Diseño Web"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Vista predeterminada y con atajo Ctrl+Alt+D"
-        },
-        {
-          "id": "B",
-          "label": "Sin atajo asignado en el temario"
-        },
-        {
-          "id": "C",
-          "label": "Sin atajo asignado en el temario"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C"
-    },
-    "explicacion": "Solo la vista de impresión tiene atajo."
-  },
-  {
-    "id": "vista-102",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": "Visual Basic (VBE)",
-    "tema": "Macros",
-    "sourceQuestionId": "8-141",
-    "enunciado": "¿Cuál de los siguientes atajos abre el editor de Visual Basic en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+F11"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+F8"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+F10"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+F11"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+F11 abre el editor de Visual Basic para Aplicaciones. Alt+F8 abre el cuadro de diálogo Macro para ejecutar macros. Alt+F10 no tiene función asignada relevante. Ctrl+F11 bloquea campos."
-  },
-  {
-    "id": "vista-103",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": "Visual Basic (VBE)",
-    "tema": "Macros",
-    "sourceQuestionId": "8-142",
-    "enunciado": "¿Cuál de los siguientes atajos ejecuta o ejecuta el cuadro de diálogo de Macros en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+F8"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+F11"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+F8"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Mayús+F11"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+F8 abre el cuadro de diálogo Macro. Alt+F11 abre el editor de Visual Basic. Ctrl+F8 cambia el tamaño del documento. Alt+Mayús+F11 no tiene función asignada para macros."
-  },
-  {
-    "id": "vista-104",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-165",
-    "enunciado": "¿Qué atajo cambia el documento a vista maestro o subdocumentos en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Ctrl+barra invertida"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Ctrl+M"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Ctrl+D"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+Mayús+M"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Ctrl+\\ (barra invertida) cambia entre hipervínculos y subdocumentos (vista maestro). Alt+Ctrl+M no tiene función. Alt+Ctrl+D activa la vista Diseño de impresión. Alt+Ctrl+Mayús+M no tiene función."
-  },
-  {
-    "id": "vista-105",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-189",
-    "enunciado": "¿Qué atajo sube un elemento en la vista Esquema de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+Arriba"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+Abajo"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Arriba"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+Arriba"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+Arriba sube un elemento en el esquema. Alt+Mayús+Abajo baja un elemento en el esquema. Alt+Arriba mueve al objeto anterior. Ctrl+Mayús+Arriba extiende la selección un párrafo hacia arriba sin mover el elemento del esquema."
-  },
-  {
-    "id": "vista-106",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-190",
-    "enunciado": "¿Qué atajo baja un elemento en la vista Esquema de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+Abajo"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+Arriba"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Abajo"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+Abajo"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+Abajo baja un elemento en el esquema. Alt+Mayús+Arriba sube un elemento. Alt+Abajo mueve al objeto siguiente. Ctrl+Mayús+Abajo extiende la selección un párrafo hacia abajo sin mover el elemento del esquema."
-  },
-  {
-    "id": "vista-107",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-191",
-    "enunciado": "¿Qué atajo disminuye el nivel de esquema de un título en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+Derecha"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+Izquierda"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Derecha"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Alt+Derecha"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+Derecha disminuye el nivel del título en el esquema. Alt+Mayús+Izquierda promueve el título a un nivel superior. Alt+Derecha navega hacia delante en hipervínculos. Ctrl+Alt+Derecha no tiene función asignada para esquema."
-  },
-  {
-    "id": "vista-108",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-192",
-    "enunciado": "¿Qué atajo promueve un título a un nivel superior en la vista Esquema de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+Izquierda"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+Derecha"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Izquierda"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Alt+Izquierda"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+Izquierda promueve el título un nivel hacia arriba en el esquema. Alt+Mayús+Derecha degrada el título a un nivel inferior. Alt+Izquierda navega hacia atrás en hipervínculos. Ctrl+Alt+Izquierda no tiene función asignada para esquema."
-  },
-  {
-    "id": "vista-109",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-193",
-    "enunciado": "¿Cómo se divide la ventana del documento en dos paneles en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Vista ▸ grupo Ventana ▸ Dividir"
-      },
-      {
-        "letter": "B",
-        "text": "Con el atajo Alt+Ctrl+V"
-      },
-      {
-        "letter": "C",
-        "text": "Con el atajo Ctrl+Alt+W"
-      },
-      {
-        "letter": "D",
-        "text": "Arrastrando la barra de desplazamiento vertical"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Se divide desde Vista ▸ grupo Ventana ▸ Dividir (y se deshace con Quitar división). En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
-  },
-  {
-    "id": "vista-111",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-205",
-    "enunciado": "¿Qué atajo restaura el tamaño de la ventana del documento en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+F5"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+F10"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+F5"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+F5"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+F5 restaura el tamaño de la ventana del documento. Ctrl+F10 no tiene función en este Word. Alt+F5 restaura la ventana de la aplicación. Ctrl+Mayús+F5 abre el cuadro Marcador."
-  },
-  {
-    "id": "vista-112",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-206",
-    "enunciado": "¿Qué atajo restaura la ventana de la aplicación Word completa en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+F5"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+F5"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+F10"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Alt+F5"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+F5 restaura la ventana de la aplicación Word. Ctrl+F5 restaura la ventana del documento activo. Alt+F10 no tiene esa función asignada. Ctrl+Alt+F5 no tiene función asignada para restaurar ventanas."
-  },
-  {
-    "id": "vista-113",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-207",
-    "enunciado": "¿Qué atajo cambia el tamaño de la ventana del documento en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+F8"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+F5"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+F10"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+F8"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+F8 activa el modo de cambio de tamaño de la ventana del documento. Ctrl+F5 restaura el tamaño. Ctrl+F10 no tiene función en este Word. Alt+F8 abre el cuadro de diálogo Macros."
-  },
-  {
-    "id": "vista-114",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-208",
-    "enunciado": "¿Qué atajo va a la ventana siguiente en Word 365 cuando hay varios documentos abiertos?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+F6"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+F6"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+F6"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Tab"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+F6 activa la ventana siguiente cuando hay varios documentos abiertos. Ctrl+Mayús+F6 activa la ventana anterior. Alt+F6 también activa la ventana siguiente como atajo alternativo. Ctrl+Tab no tiene esa función asignada en Word para cambiar entre ventanas de documento."
-  },
-  {
-    "id": "vista-115",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-209",
-    "enunciado": "¿Qué atajo va a la ventana anterior en Word 365 cuando hay varios documentos abiertos?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Mayús+F6"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+F6"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Mayús+F6"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+Tab"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+F6 activa la ventana anterior. Ctrl+F6 activa la ventana siguiente. Alt+Mayús+F6 también activa la ventana anterior como atajo alternativo. Ctrl+Mayús+Tab no tiene esa función asignada para cambiar ventanas de documento."
-  },
-  {
-    "id": "vista-118",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Macros",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "macros",
-    "subtopic": "Visual Basic (VBE)",
-    "tema": "Macros",
-    "sourceQuestionId": "8-227",
-    "enunciado": "¿Qué atajo abre el editor de código VBA en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+F11"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+F8"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+F11"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Mayús+F11"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+F11 abre el editor de Visual Basic para Aplicaciones. Alt+F8 abre el cuadro de diálogo para ejecutar macros. Ctrl+F11 bloquea los campos del documento. Alt+Mayús+F11 no tiene función asignada para el editor VBA."
-  },
-  {
-    "id": "vista-119",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-235",
-    "enunciado": "¿Qué atajo navega a través del examen anterior en Word 365 usando el explorador de objetos?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Re Pág"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Av Pág"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Ctrl+Inicio"
-      },
-      {
-        "letter": "D",
-        "text": "Re Pág"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Re Pág pasa al objeto de búsqueda anterior. Ctrl+Av Pág pasa al siguiente. Alt+Ctrl+Inicio no tiene función en este Word. Re Pág sube una pantalla sin usar el explorador."
-  },
-  {
-    "id": "vista-120",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-236",
-    "enunciado": "¿Qué atajo examina el objeto siguiente en Word 365 usando el explorador de objetos?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Av Pág"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Re Pág"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Ctrl+Fin"
-      },
-      {
-        "letter": "D",
-        "text": "Av Pág"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Av Pág examina el objeto siguiente usando el explorador de objetos. Ctrl+Re Pág examina el objeto anterior. Alt+Ctrl+Fin no tiene función asignada para el explorador. Av Pág baja una pantalla sin usar el explorador de objetos."
-  },
-  {
-    "id": "vista-122",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-271",
-    "enunciado": "¿Qué atajo activa la vista Normal del documento en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Ctrl+N"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+N"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+N"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+N"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Ctrl+N activa la vista Normal del documento. Ctrl+Mayús+N aplica el estilo Normal al párrafo activo. Ctrl+N aplica negrita al texto seleccionado. Alt+N no tiene función asignada para activar la vista Normal."
-  },
-  {
-    "id": "vista-123",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Zoom",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": null,
-    "tema": "Zoom",
-    "sourceQuestionId": "8-292",
-    "enunciado": "¿Qué atajo aleja el zoom del documento en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+menos"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+más"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Ctrl+menos"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+menos"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+- (menos) aleja el zoom del documento. Ctrl++ (más) acerca el zoom. Alt+Ctrl+- no tiene función asignada para zoom. Ctrl+Mayús+- no tiene función asignada para zoom. El zoom cambia de 10 en 10. Prueba en vivo del usuario (sep 2026)."
-  },
-  {
-    "id": "vista-124",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Zoom",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": null,
-    "tema": "Zoom",
-    "sourceQuestionId": "8-293",
-    "enunciado": "¿Qué atajo acerca el zoom del documento en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+más"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+menos"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Ctrl+más"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+más"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl++ (más) acerca el zoom del documento. Ctrl+- (menos) aleja el zoom. Alt+Ctrl++ abre el cuadro de personalización de métodos abreviados de teclado. Ctrl+Mayús++ no tiene función asignada. El zoom cambia de 10 en 10. Prueba en vivo del usuario (sep 2026)."
-  },
-  {
-    "id": "vista-125",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-299",
-    "enunciado": "¿Qué atajo restaura el documento a su tamaño y posición predeterminados en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+F5"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+F5"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+F5"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+F10"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+F5 restaura el documento a su tamaño normal. Alt+F5 restaura la ventana de la aplicación. Ctrl+Mayús+F5 abre el cuadro Marcador. Ctrl+F10 no tiene función en este Word."
-  },
-  {
-    "id": "vista-126",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-300",
-    "enunciado": "¿Qué atajo muestra la primera línea del esquema solamente en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+L"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+T"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+L"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+L"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+L muestra solo la primera línea de cada párrafo en la vista Esquema. Alt+Mayús+T muestra todos lostítulos del esquema. Alt+L no tiene función asignada para mostrar primera línea. Ctrl+Mayús+L aplica versalitas al texto seleccionado."
-  },
-  {
-    "id": "vista-127",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-301",
-    "enunciado": "¿Qué atajo muestra todos los títulos del esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+T"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+L"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+T"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+T"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+T muestra todos los títulos en la vista Esquema. Alt+Mayús+L muestra solo la primera línea de cada párrafo. Alt+T no tiene función asignada para mostrar títulos. Ctrl+Mayús+T abre la búsqueda en referencia."
-  },
-  {
-    "id": "vista-137",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-311",
-    "enunciado": "¿Qué atajo expande un título en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+más (teclado numérico)"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+menos (teclado numérico)"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+más"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+más"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús++ del teclado numérico expande un título en la vista Esquema. Alt+Mayús+- lo contrae. Alt++ y Ctrl+Mayús++ no tienen función (el superíndice no tiene atajo en este Word)."
-  },
-  {
-    "id": "vista-138",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-312",
-    "enunciado": "¿Qué atajo contrae un título en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+menos (teclado numérico)"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+más (teclado numérico)"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+menos"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+menos"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+menos en el teclado numérico contrae un título en la vista Esquema ocultando su contenido. Alt+Mayús+más expande el título. Alt+menos no tiene función asignada para esquema. Ctrl+Mayús+menos no tiene función asignada para contraer títulos."
-  },
-  {
-    "id": "vista-140",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "gen-atajo-3",
-    "generado": true,
-    "enunciado": "¿Qué atajo de teclado contrae un título en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+F9"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Ctrl+5"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Mayús+- (numérico)"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+Z"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "En la vista Esquema, oculta el texto subordinado bajo el título seleccionado, mostrando solo el título."
-  },
-  {
-    "id": "vista-141",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "gen-atajo-5",
-    "generado": true,
-    "enunciado": "¿Qué atajo de teclado expande un título en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús++ (numérico)"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Ctrl++ (numérico)"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Ctrl+Mayús+Re Pág"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+Mayús+S"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "En la vista Esquema, vuelve a mostrar el texto subordinado que estaba oculto bajo el título seleccionado."
-  },
-  {
-    "id": "vista-142",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "gen-atajo-11",
-    "generado": true,
-    "enunciado": "¿Qué atajo de teclado selecciona el objeto anterior en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Arriba"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+X"
-      },
-      {
-        "letter": "C",
-        "text": "Mayús+Av Pág"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+F4"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Mueve la selección al objeto flotante o elemento anterior dentro del documento."
-  },
-  {
-    "id": "vista-143",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "gen-atajo-12",
-    "generado": true,
-    "enunciado": "¿Qué atajo de teclado selecciona el objeto siguiente en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Abajo"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+2"
-      },
-      {
-        "letter": "C",
-        "text": "Mayús+F2"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+5"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Mueve la selección al objeto flotante o elemento siguiente dentro del documento."
-  },
-  {
-    "id": "vista-144",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "gen-atajo-37",
-    "generado": true,
-    "enunciado": "¿Qué atajo alternativo también pasa a la ventana anterior en Word 365, además de Ctrl+Mayús+F6?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Mayús+Q"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+Z"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Mayús+F6"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+F8"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Cambia el foco a la ventana de documento anterior cuando hay varios documentos abiertos; es una segunda combinación asignada a la misma función que Ctrl+Mayús+F6."
-  },
-  {
-    "id": "vista-145",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "gen-atajo-38",
-    "generado": true,
-    "enunciado": "¿Qué atajo alternativo también pasa a la ventana siguiente en Word 365, además de Ctrl+F6?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Abajo"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Izquierda"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+F6"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+I"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Cambia el foco a la siguiente ventana de documento cuando hay varios documentos abiertos; es una segunda combinación asignada a la misma función que Ctrl+F6."
   }
 ]

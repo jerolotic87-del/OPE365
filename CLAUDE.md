@@ -62,6 +62,11 @@ data/atajos_word365_v2608.md  VOLCADO COMPLETO de "Personalizar teclado" de la
                        instalación real del usuario (Word 365 v2608). ÚNICA
                        fuente de atajos — ver "jerarquía de fuentes". Nada en el
                        banco puede contradecirlo.
+data/rutas/            UN .txt POR PESTAÑA con el volcado de rutas de cinta
+                       del usuario (`<pestaña>.txt`, `<pestaña>-4opciones.txt`,
+                       `<pestaña>_integration_report.md`). Fuente de los bancos
+                       de RUTA/concepto. NO se editan a mano. Ver
+                       `data/rutas/README.md`.
 
 --- artefactos generados (NO editar a mano, ver "Regenerar datos") ---
 questions_all.json     banco de preguntas concatenado — fuente de verdad
@@ -74,18 +79,23 @@ flashcards_data.js     data/flashcards/*.json envuelto en
 
 --- fuente editable de datos ---
 data/questions/*.json  el banco partido en UN ARCHIVO POR PESTAÑA/section
-                       (interfaz, archivo, inicio, insertar, disposicion,
-                       referencias, revisar, vista, correspondencia — sin
-                       diseno, que no tiene preguntas), con manifest.json
-                       fijando el orden de carga. Cada pregunta lleva
-                       id="<section>-<n>" y sourceFile="<section>.json";
-                       la procedencia fina está en `bloque` y
-                       `sourceQuestionId` (id original del documento).
-data/flashcards/*.json  flashcards por sección (inicio, archivo, insertar,
-                        diseno, disposicion, referencias, revisar, vista,
-                        correspondencia), con su propio manifest.json.
+                       (las 10: interfaz, archivo, inicio, insertar, diseno,
+                       disposicion, referencias, revisar, vista,
+                       correspondencia), con manifest.json fijando el orden
+                       de carga. Cada pregunta lleva id="<section>-<n>" y
+                       sourceFile="<section>.json"; la procedencia fina está
+                       en `bloque` y `sourceQuestionId`. ORDEN DENTRO DEL
+                       ARCHIVO: agrupadas por `topic` (orden de taxonomía),
+                       y dentro de cada grupo por id numérico. Los ids son
+                       ESTABLES (hay huecos por borrados; no se renumera —
+                       CLAUDE.md y el motor referencian ids concretos).
+data/flashcards/*.json  flashcards por sección (las 10), con su propio
+                        manifest.json. `cardId` = `F-NNN` (contenido) o
+                        `E-NNN` (tarjeta de error), 3 dígitos, relativo a su
+                        fichero; `canonicalId` runtime = `<section>:<cardId>`.
                         `priority` ∈ alta|normal; `questionRefs` = ids
-                        `<section>-N` (enlace blando, opcional). Las tarjetas
+                        `<section>-N` (enlace blando, opcional). Mismo orden
+                        que las preguntas: agrupadas por `topic`. Las tarjetas
                         de ruta llevan `sourceRefs` = ["rutasyatajos.txt §6 …"]
 data/questions_regroup_report.md  reagrupación ago-2026: qué se movió de
                        1.json..8.json/atajos.json al esquema por pestaña
@@ -445,10 +455,14 @@ Historial: `data/questions_regroup_report.md`.
 `diseno-1..70` (`sourceQuestionId` `vf-diseno-NN`, `generado:true`,
 `categoria:"concepto"`, `tipo:"verdadero_falso"`, 35 V / 35 F) = banco
 propio de la pestaña **Diseño**, que hasta sep-2026 no tenía archivo.
-`diseno-51..70` (sep-2026) son de reconocimiento: nombres de tema/color/
-fuente/efecto que existen vs inventados (Vintage, Sector industrial,
-Galería de Office, efecto «3D»…), pares de fuentes (Franklin Gothic Med/
-Book), y ubicación (Color de página está en Diseño, no en Insertar).
+Cubre Temas/Colores/Fuentes/Espaciado/Efectos/Conjunto de estilos/
+Administrar estilos + Marca de agua/Color de página/Bordes de página, y
+un bloque de reconocimiento (nombres reales vs inventados: Vintage,
+Sector industrial, Galería de Office, efecto «3D»; pares de fuentes
+Franklin Gothic Med/Book; Color de página vive en Diseño, no en Insertar).
+Fuente: `data/rutas/diseno.txt`. **Es el único banco cuyos ids sí se
+renumeraron** (1..70 en orden de taxonomía, sep-2026) — era nuevo y nada
+externo los referenciaba.
 Cubren Temas/Colores/Fuentes/Espaciado entre párrafos/Efectos/Conjunto de
 estilos/Administrar estilos (grupo Formato del documento) y Marca de
 agua/Color de página/Bordes de página (grupo Fondo de página), a partir
@@ -469,15 +483,15 @@ son **preguntas de RUTA** (4 opciones, 1 correcta + 3 distractores del mismo
 nivel) de toda la pestaña Insertar — la pestaña solo tenía atajos hasta ahora.
 Añaden 2 topics: `insertar:esignature` (grupo propio, confirmado por captura del
 usuario) y `insertar:formato-forma` (cinta contextual de Formas, con
-`ribbonGroup`). Detalle: `data/insertar_rutas_integration_report.md`.
+`ribbonGroup`). Detalle: `data/rutas/insertar_integration_report.md`.
 Generador: `scripts/gen_insertar_rutas.py`. `insertar-394..405` (`P-16/21/28/
 80..88`) = las 12 de galerías online (Imágenes de archivo / Modelos 3D /
 plataformas de vídeo) que se descartaron en la 1ª pasada y el usuario pidió
 integrar después; llevan advertencia ⚠️ "las galerías en línea de Microsoft
 cambian con el tiempo".
-`data/insertar_rutas_4opciones.txt` y `data/insertar_rutas_completas.txt`
-= volcados de rutas de Insertar del usuario, guardados como referencia (el
-segundo NO se integra como preguntas, solo "por si acaso").
+`data/rutas/insertar.txt` y `data/rutas/insertar-4opciones.txt`
+= volcados de rutas de Insertar del usuario (ver `data/rutas/README.md`;
+NO se integran enteros, solo "por si acaso").
 Las de `archivo`
 `archivo-134..` (`sourceQuestionId` `opc-<panel>-NN`) cubren toggles de
 `Archivo > Opciones` — opción = "sub-panel del diálogo ▸ ajuste",
@@ -541,10 +555,12 @@ selector del asistente de **multijugador** sigue igual (fuera de alcance).
 Las flashcards son un recurso independiente de las preguntas, en
 `data/flashcards/*.json` → `flashcards_data.js` →
 `window.__OPE365_FLASHCARDS__` → `OPE.FLASHCARDS`. Cada una tiene
-`cardId` (p.ej. `"F-01"`, relativo a su fuente) y `canonicalId` calculado
-en runtime como `"<section>:<cardId>"` — usar siempre `canonicalId` para
-identificarlas (progreso, DOM, etc.), nunca `cardId` a secas, porque
-`cardId` puede repetirse entre secciones futuras. `questionRefs` es un
+`cardId` (`"F-NNN"` contenido / `"E-NNN"` error, 3 dígitos, relativo a su
+fuente) y `canonicalId` calculado en runtime como `"<section>:<cardId>"` —
+usar siempre `canonicalId` para identificarlas (progreso, DOM, etc.),
+nunca `cardId` a secas, porque `cardId` se repite entre secciones.
+(sep-2026: `vista`/`revisar` pasaron de `F-01` a `F-001`; el resto ya
+estaba a 3 dígitos.) `questionRefs` es un
 enlace blando opcional hacia preguntas relacionadas — nunca uses
 flashcards como fuente de verdad de una pregunta ni al revés.
 

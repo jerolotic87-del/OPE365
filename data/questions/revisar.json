@@ -152,100 +152,6 @@
     "explicacion": "Falso: Alt+F7 salta al siguiente error ortográfico. F7 (y Windows+F7) abren el panel Editor."
   },
   {
-    "id": "revisar-4",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "relleno",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": null,
-    "tema": "Seguimiento",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-004",
-    "enunciado": "El atajo para insertar un nuevo comentario es [1]. El de Control de cambios es [2].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Ctrl + Alt + A",
-      "Ctrl + Mayús + E"
-    ],
-    "explicacion": "Nuevo comentario: Ctrl+Alt+A. Control de cambios: Ctrl+Mayús+E."
-  },
-  {
-    "id": "revisar-5",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Control de cambios",
-    "tema": "Seguimiento",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-005",
-    "enunciado": "Un usuario quiere activar el Control de cambios usando el teclado. ¿Qué atajo debe usar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl + Alt + A"
-      },
-      {
-        "letter": "B",
-        "text": "Alt + F7"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl + Mayús + E"
-      },
-      {
-        "letter": "D",
-        "text": "Alt + Mayús + F7"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ctrl+Mayús+E activa o desactiva el Control de cambios (atajo estándar). Ctrl+Alt+A inserta un comentario, Alt+F7 salta al siguiente error y Alt+Mayús+F7 abre el Traductor."
-  },
-  {
-    "id": "revisar-6",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Accesibilidad",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "accesibilidad",
-    "subtopic": "Leer en voz alta",
-    "tema": "Accesibilidad",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-006",
-    "enunciado": "¿Qué función activa el atajo Alt + Ctrl + Espacio en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Insertar un espacio de no separación"
-      },
-      {
-        "letter": "B",
-        "text": "Leer en voz alta el texto y resaltar cada palabra"
-      },
-      {
-        "letter": "C",
-        "text": "Activar el modo de concentración"
-      },
-      {
-        "letter": "D",
-        "text": "Abrir el panel de Control de cambios"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Alt+Ctrl+Espacio activa Leer en voz alta: Word lee el texto y va resaltando cada palabra. Prueba en vivo del usuario (sep 2026)."
-  },
-  {
     "id": "revisar-7",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -265,455 +171,6 @@
       "Revisión"
     ],
     "explicacion": "El grupo se llama 'Revisión' (no 'Revisar'). Es el grupo principal de la pestaña."
-  },
-  {
-    "id": "revisar-8",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Comentarios",
-    "tema": "Seguimiento",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-008",
-    "enunciado": "¿Cuáles de los siguientes comandos pertenecen al grupo Comentarios de la Pestaña Revisar? (Selecciona todos los correctos.)",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Nuevo comentario"
-      },
-      {
-        "letter": "B",
-        "text": "Control de cambios"
-      },
-      {
-        "letter": "C",
-        "text": "Mostrar comentarios"
-      },
-      {
-        "letter": "D",
-        "text": "Anterior"
-      },
-      {
-        "letter": "E",
-        "text": "Panel de revisiones"
-      },
-      {
-        "letter": "F",
-        "text": "Siguiente"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "C",
-      "D",
-      "F"
-    ],
-    "explicacion": "Control de cambios y Panel de revisiones pertenecen al grupo Seguimiento, no a Comentarios."
-  },
-  {
-    "id": "revisar-9",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Estructura de la pestaña",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "estructura",
-    "subtopic": null,
-    "tema": "Estructura de la pestaña",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-009",
-    "enunciado": "Empareja cada comando u opción con el grupo de la Pestaña Revisar en el que se encuentra. Cada letra se usa una sola vez.",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Leer en voz alta"
-        },
-        {
-          "id": "2",
-          "label": "Comprobar accesibilidad"
-        },
-        {
-          "id": "3",
-          "label": "Control de cambios"
-        },
-        {
-          "id": "4",
-          "label": "Aceptar"
-        },
-        {
-          "id": "5",
-          "label": "Comparar"
-        },
-        {
-          "id": "6",
-          "label": "Nuevo comentario"
-        },
-        {
-          "id": "7",
-          "label": "Restringir edición"
-        },
-        {
-          "id": "8",
-          "label": "Sinónimos"
-        },
-        {
-          "id": "9",
-          "label": "Ocultar entrada de lápiz"
-        },
-        {
-          "id": "10",
-          "label": "Traducir"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Accesibilidad"
-        },
-        {
-          "id": "B",
-          "label": "Cambios"
-        },
-        {
-          "id": "C",
-          "label": "Comentarios"
-        },
-        {
-          "id": "D",
-          "label": "Comparar"
-        },
-        {
-          "id": "E",
-          "label": "Entrada de lápiz"
-        },
-        {
-          "id": "F",
-          "label": "Proteger"
-        },
-        {
-          "id": "G",
-          "label": "Revisión"
-        },
-        {
-          "id": "H",
-          "label": "Seguimiento"
-        },
-        {
-          "id": "I",
-          "label": "Voz"
-        },
-        {
-          "id": "J",
-          "label": "Idioma"
-        }
-      ],
-      "correct": {
-        "1": "I",
-        "2": "A",
-        "3": "H",
-        "4": "B",
-        "5": "D",
-        "6": "C",
-        "7": "F",
-        "8": "G",
-        "9": "E",
-        "10": "J"
-      }
-    },
-    "respuesta": {
-      "1": "I",
-      "2": "A",
-      "3": "H",
-      "4": "B",
-      "5": "D",
-      "6": "C",
-      "7": "F",
-      "8": "G",
-      "9": "E",
-      "10": "J"
-    },
-    "explicacion": "Cada comando pertenece a su grupo: Voz, Accesibilidad, Seguimiento, Cambios, Comparar, Comentarios, Proteger, Revisión, Entrada de lápiz e Idioma."
-  },
-  {
-    "id": "revisar-10",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Control de cambios",
-    "tema": "Seguimiento",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-010",
-    "enunciado": "En la Pestaña Revisar de Word 365, el comando Aceptar (para aceptar cambios) se encuentra en el grupo Seguimiento, junto con el Control de cambios.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Aceptar pertenece al grupo Cambios, no a Seguimiento. Control de cambios está en Seguimiento; el proceso de aceptar/rechazar está en Cambios."
-  },
-  {
-    "id": "revisar-11",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": null,
-    "tema": "Proteger",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-011",
-    "enunciado": "El comando Ocultar entrada de lápiz se encuentra en un grupo cuya etiqueta es 'Entrada de lápiz', independiente del grupo Proteger.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Aunque son contiguos en la cinta, son grupos distintos. Ocultar entrada de lápiz pertenece al grupo Entrada de lápiz."
-  },
-  {
-    "id": "revisar-12",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Accesibilidad",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "accesibilidad",
-    "subtopic": "Leer en voz alta",
-    "tema": "Accesibilidad",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-012",
-    "enunciado": "¿Cuál es el comportamiento del comando Leer en voz alta según Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Lee el documento completo desde el principio y genera un archivo de audio"
-      },
-      {
-        "letter": "B",
-        "text": "Lee el texto en voz alta y resalta cada palabra mientras lo lee"
-      },
-      {
-        "letter": "C",
-        "text": "Lee solo el párrafo donde está situado el cursor"
-      },
-      {
-        "letter": "D",
-        "text": "Lee el texto seleccionado y lo convierte en un comentario de voz"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "La fuente declara que Leer en voz alta lee el texto y resalta cada palabra mientras lo lee."
-  },
-  {
-    "id": "revisar-13",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Accesibilidad",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "accesibilidad",
-    "subtopic": "Comprobar accesibilidad",
-    "tema": "Accesibilidad",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-013",
-    "enunciado": "¿Para qué sirve el comando Comprobar accesibilidad?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Verificar que el documento cumple las normas ortográficas"
-      },
-      {
-        "letter": "B",
-        "text": "Detectar y corregir contenido de difícil acceso para personas con discapacidad"
-      },
-      {
-        "letter": "C",
-        "text": "Restringir la edición del documento a usuarios sin permisos"
-      },
-      {
-        "letter": "D",
-        "text": "Comprobar si el documento es compatible con versiones anteriores"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Comprobar accesibilidad ayuda a detectar y corregir contenido que puede resultar difícil de acceder para personas con discapacidad."
-  },
-  {
-    "id": "revisar-14",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": "Restringir edición",
-    "tema": "Proteger",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-014",
-    "enunciado": "Un usuario necesita impedir que otros editen o cambien el formato de un documento, sin bloquear a autores específicos. ¿Qué opción del grupo Proteger debe usar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Bloquear autores"
-      },
-      {
-        "letter": "B",
-        "text": "Control de cambios"
-      },
-      {
-        "letter": "C",
-        "text": "Restringir edición"
-      },
-      {
-        "letter": "D",
-        "text": "Ocultar entrada de lápiz"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Restringir edición limita la edición y el formato de todo el documento, sin vincularse a autores concretos. Bloquear autores solo actúa sobre el texto seleccionado."
-  },
-  {
-    "id": "revisar-15",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": "Bloquear autores",
-    "tema": "Proteger",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-015",
-    "enunciado": "¿En qué se diferencia Bloquear autores de Restringir edición en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Bloquear autores limita la edición de todo el documento; Restringir edición solo afecta al texto seleccionado"
-      },
-      {
-        "letter": "B",
-        "text": "Bloquear autores evita cambios en el texto seleccionado; Restringir edición limita la edición y el formato de todo el documento"
-      },
-      {
-        "letter": "C",
-        "text": "Bloquear autores activa el registro de cambios por autor; Restringir edición oculta las revisiones"
-      },
-      {
-        "letter": "D",
-        "text": "Bloquear autores requiere contraseña; Restringir edición funciona sin contraseña"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Bloquear autores actúa sobre el texto seleccionado; Restringir edición limita la edición y el formato del documento completo."
-  },
-  {
-    "id": "revisar-16",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": "Ocultar entrada de lápiz",
-    "tema": "Proteger",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-016",
-    "enunciado": "El comando Ocultar entrada de lápiz elimina definitivamente las entradas de lápiz del documento.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Solo las oculta temporalmente; no las elimina."
-  },
-  {
-    "id": "revisar-17",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Control de cambios",
-    "tema": "Seguimiento",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-017",
-    "enunciado": "Un usuario observa que cada modificación que realiza aparece marcada con un color diferente, indicando el nombre del autor y la fecha. ¿Qué función está activa?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Mostrar revisiones"
-      },
-      {
-        "letter": "B",
-        "text": "Panel de revisiones"
-      },
-      {
-        "letter": "C",
-        "text": "Control de cambios"
-      },
-      {
-        "letter": "D",
-        "text": "Comparar"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Control de cambios registra las modificaciones con autor y fecha. Mostrar revisiones y Panel de revisiones solo controlan la visualización."
-  },
-  {
-    "id": "revisar-18",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Idioma",
-    "tema": "Idioma",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-018",
-    "enunciado": "¿Para qué sirve el comando Idioma en el grupo Idioma de la Pestaña Revisar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Traducir el documento a otro idioma"
-      },
-      {
-        "letter": "B",
-        "text": "Cambiar el idioma de la interfaz de Word"
-      },
-      {
-        "letter": "C",
-        "text": "Elegir el idioma en el que se quiere corregir el documento"
-      },
-      {
-        "letter": "D",
-        "text": "Insertar caracteres especiales de otros idiomas"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "El comando Idioma permite elegir el idioma de corrección del documento, no traduce ni cambia la interfaz."
   },
   {
     "id": "revisar-19",
@@ -822,201 +279,6 @@
     "explicacion": "Marca los posibles errores gramaticales y las palabras con distinto significado."
   },
   {
-    "id": "revisar-22",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Accesibilidad",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "accesibilidad",
-    "subtopic": "Comprobar accesibilidad",
-    "tema": "Accesibilidad",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-022",
-    "enunciado": "¿Cuáles de las siguientes opciones forman parte del submenú desplegable de Comprobar accesibilidad? (Son 4 respuestas correctas.)",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Texto alternativo"
-      },
-      {
-        "letter": "B",
-        "text": "Concentración"
-      },
-      {
-        "letter": "C",
-        "text": "Agregar al diccionario"
-      },
-      {
-        "letter": "D",
-        "text": "Panel de navegación"
-      },
-      {
-        "letter": "E",
-        "text": "Opciones: accesibilidad"
-      },
-      {
-        "letter": "F",
-        "text": "Leer en voz alta"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D",
-      "E"
-    ],
-    "explicacion": "El submenú de Comprobar accesibilidad contiene: Comprobar accesibilidad, Texto alternativo, Panel de navegación, Concentración y Opciones: accesibilidad. Agregar al diccionario pertenece al corrector; Leer en voz alta al grupo Voz."
-  },
-  {
-    "id": "revisar-23",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Comparar",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "comparar",
-    "subtopic": "Comparar",
-    "tema": "Comparar",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-023",
-    "enunciado": "¿Cuál es la diferencia entre Comparar... y Combinar... en el menú del comando Comparar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Comparar integra revisiones de varios autores; Combinar confronta dos versiones"
-      },
-      {
-        "letter": "B",
-        "text": "Comparar muestra los cambios en el Panel de revisiones; Combinar los muestra en el cuerpo"
-      },
-      {
-        "letter": "C",
-        "text": "Comparar confronta dos versiones (estilo jurídico); Combinar integra revisiones de varios autores"
-      },
-      {
-        "letter": "D",
-        "text": "Comparar activa Control de cambios; Combinar requiere activarlo manualmente"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Comparar confronta dos versiones (estilo jurídico); Combinar integra revisiones de varios autores en un documento único."
-  },
-  {
-    "id": "revisar-24",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Comparar",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "comparar",
-    "subtopic": "Combinar",
-    "tema": "Comparar",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-024",
-    "enunciado": "Un responsable ha recibido el mismo documento revisado por tres autores diferentes y necesita integrar todas las revisiones en un único documento. ¿Qué opción debe usar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Comparar..."
-      },
-      {
-        "letter": "B",
-        "text": "Mostrar documentos de origen"
-      },
-      {
-        "letter": "C",
-        "text": "Combinar..."
-      },
-      {
-        "letter": "D",
-        "text": "Control de cambios"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Combinar... integra revisiones de varios autores en un documento único."
-  },
-  {
-    "id": "revisar-25",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Traducir",
-    "tema": "Idioma",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-025",
-    "enunciado": "La opción Traducir documento del menú Traducir modifica directamente el documento actual, sustituyendo el texto original por la traducción.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Traducir documento crea una copia traducida del documento; no modifica el original."
-  },
-  {
-    "id": "revisar-26",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": "Restringir edición",
-    "tema": "Proteger",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-026",
-    "enunciado": "Ordena los siguientes elementos del panel Restringir edición en la secuencia correcta (de arriba a abajo):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "C → D → B → A"
-      },
-      {
-        "letter": "B",
-        "text": "D → C → B → A"
-      },
-      {
-        "letter": "C",
-        "text": "D → B → C → A"
-      },
-      {
-        "letter": "D",
-        "text": "B → C → D → A"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "El orden correcto es: Configuración... (D) → Casilla 'Limitar el formato...' (C) → Casilla 'Permitir solo este tipo de edición...' (B) → Botón 'Sí, aplicar la protección' (A)."
-  },
-  {
-    "id": "revisar-27",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": "Restringir edición",
-    "tema": "Proteger",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-027",
-    "enunciado": "En el panel Restringir edición, el botón 'Sí, aplicar la protección' está siempre disponible desde que se abre el panel.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "El botón aparece atenuado hasta que se configura al menos una restricción (de formato o de edición)."
-  },
-  {
     "id": "revisar-28",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -1087,65 +349,6 @@
       "Revisión"
     ],
     "explicacion": "La ruta es Archivo → Opciones → Revisión."
-  },
-  {
-    "id": "revisar-30",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": "Restringir edición",
-    "tema": "Proteger",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-030",
-    "enunciado": "Un administrador necesita limitar la edición y el formato que otros usuarios pueden aplicar a un documento. ¿Cuál es la ruta correcta en la pestaña Revisar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Archivo → Información → Proteger documento → Restringir edición"
-      },
-      {
-        "letter": "B",
-        "text": "Revisar → Proteger → Proteger ▼ → Restringir edición"
-      },
-      {
-        "letter": "C",
-        "text": "Revisar → Seguimiento → Control de cambios ▼ → Restringir"
-      },
-      {
-        "letter": "D",
-        "text": "Revisar → Cambios → Aceptar ▼ → Opciones de edición"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Revisar ▸ Proteger ▸ Proteger ▼ ▸ Restringir edición: abre el panel donde se acotan los cambios de formato y de edición permitidos y se activa la protección con contraseña."
-  },
-  {
-    "id": "revisar-31",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "relleno",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Traducir",
-    "tema": "Idioma",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-031",
-    "enunciado": "Para traducir únicamente el texto seleccionado usando el Traductor de Microsoft, la ruta es: Revisar → [1] → [2] ▼ → [3].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Idioma",
-      "Traducir",
-      "Traducir selección"
-    ],
-    "explicacion": "La ruta es Revisar → Idioma → Traducir ▼ → Traducir selección."
   },
   {
     "id": "revisar-32",
@@ -1279,152 +482,6 @@
     "explicacion": "Las secciones declaradas en la fuente son Correcciones, Refinamientos y Similitud."
   },
   {
-    "id": "revisar-35",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Comentarios",
-    "tema": "Seguimiento",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-035",
-    "enunciado": "Los comandos Anterior, Siguiente y Eliminar del grupo Comentarios están siempre activos en la Pestaña Revisar.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Aparecen atenuados cuando el documento no contiene comentarios."
-  },
-  {
-    "id": "revisar-36",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Comentarios",
-    "tema": "Seguimiento",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-036",
-    "enunciado": "¿Qué hace el comando Mostrar comentarios en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Imprime todos los comentarios"
-      },
-      {
-        "letter": "B",
-        "text": "Exporta los comentarios a un archivo"
-      },
-      {
-        "letter": "C",
-        "text": "Muestra u oculta todos los comentarios"
-      },
-      {
-        "letter": "D",
-        "text": "Convierte los comentarios en texto normal"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Mostrar comentarios muestra u oculta todos los comentarios del documento."
-  },
-  {
-    "id": "revisar-37",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Cambios",
-    "tema": "Seguimiento",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-037",
-    "enunciado": "Un usuario recibe un documento con múltiples revisiones de otros autores y necesita ir revisándolas para aceptarlas o rechazarlas. ¿En qué grupo encontrará las herramientas?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Seguimiento"
-      },
-      {
-        "letter": "B",
-        "text": "Cambios"
-      },
-      {
-        "letter": "C",
-        "text": "Comparar"
-      },
-      {
-        "letter": "D",
-        "text": "Proteger"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "El grupo Cambios permite moverse por las modificaciones para aceptarlas o rechazarlas."
-  },
-  {
-    "id": "revisar-38",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Traductor",
-    "tema": "Idioma",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-038",
-    "enunciado": "¿Cuáles son las dos pestañas que ofrece el panel Traductor de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Origen y Destino"
-      },
-      {
-        "letter": "B",
-        "text": "Selección y Documento"
-      },
-      {
-        "letter": "C",
-        "text": "Traducir y Revisar"
-      },
-      {
-        "letter": "D",
-        "text": "Insertar y Cancelar"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Las pestañas son Selección y Documento, correspondientes a las opciones del menú Traducir."
-  },
-  {
-    "id": "revisar-39",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Control de cambios",
-    "tema": "Seguimiento",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-039",
-    "enunciado": "El grupo Seguimiento permite controlar los cambios, mientras que el grupo Cambios permite moverse por las modificaciones para aceptarlas o rechazarlas.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Ambas afirmaciones son las definiciones exactas de la fuente."
-  },
-  {
     "id": "revisar-40",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -1533,136 +590,6 @@
     "explicacion": "Sinónimos está en el grupo Revisión de la pestaña Revisar y su atajo es Mayús+F7 (abre el panel Referencia)."
   },
   {
-    "id": "revisar-43",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Traductor",
-    "tema": "Idioma",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-043",
-    "enunciado": "En el panel Traductor, ¿qué función realiza el botón Insertar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Abre el documento traducido en una nueva ventana"
-      },
-      {
-        "letter": "B",
-        "text": "Envía la traducción a la nube para revisión"
-      },
-      {
-        "letter": "C",
-        "text": "Inserta la traducción en el documento en la posición del cursor"
-      },
-      {
-        "letter": "D",
-        "text": "Guarda la traducción como un archivo de texto"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "El botón Insertar coloca la traducción en el documento en la posición del cursor."
-  },
-  {
-    "id": "revisar-44",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Estructura de la pestaña",
-    "tipo": "relleno",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "estructura",
-    "subtopic": null,
-    "tema": "Estructura de la pestaña",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-044",
-    "enunciado": "La Pestaña Revisar contiene [1] grupos. Escribe el nombre de cada uno: [2], [3], [4], [5], [6], [7], [8], [9], [10], [11].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "10",
-      "Revisión",
-      "Voz",
-      "Accesibilidad",
-      "Idioma",
-      "Comentarios",
-      "Seguimiento",
-      "Cambios",
-      "Comparar",
-      "Proteger",
-      "Entrada de lápiz"
-    ],
-    "explicacion": "Los 10 grupos son Revisión, Voz, Accesibilidad, Idioma, Comentarios, Seguimiento, Cambios, Comparar, Proteger y Entrada de lápiz."
-  },
-  {
-    "id": "revisar-45",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Traducir",
-    "tema": "Idioma",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-045",
-    "enunciado": "La opción Preferencias de Traductor... del menú Traducir realiza una traducción directa del documento con la configuración predeterminada.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Preferencias de Traductor... abre los ajustes del traductor, no realiza una traducción."
-  },
-  {
-    "id": "revisar-46",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": "Restringir edición",
-    "tema": "Proteger",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-046",
-    "enunciado": "¿Cuáles de los siguientes son pasos numerados del panel Restringir edición? (Selecciona todos los correctos.)",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Restricciones de formato"
-      },
-      {
-        "letter": "B",
-        "text": "Aplicar contraseña de acceso"
-      },
-      {
-        "letter": "C",
-        "text": "Restricciones de edición"
-      },
-      {
-        "letter": "D",
-        "text": "Seleccionar usuarios autorizados"
-      },
-      {
-        "letter": "E",
-        "text": "Comenzar a aplicar"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "C",
-      "E"
-    ],
-    "explicacion": "Los pasos son (1) Restricciones de formato, (2) Restricciones de edición, (3) Comenzar a aplicar."
-  },
-  {
     "id": "revisar-47",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -1680,29 +607,6 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "F7 abre el panel Editor. Windows+F7 también. ⚠️ Windows+F7 no figura en el volcado v2608; confirmado en vivo por el usuario."
-  },
-  {
-    "id": "revisar-48",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "relleno",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Traducir",
-    "tema": "Idioma",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-048",
-    "enunciado": "El menú desplegable del comando Traducir contiene exactamente tres opciones: [1], [2], [3].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Traducir selección",
-      "Traducir documento",
-      "Preferencias de Traductor..."
-    ],
-    "explicacion": "Las tres opciones son Traducir selección, Traducir documento y Preferencias de Traductor..."
   },
   {
     "id": "revisar-49",
@@ -1761,101 +665,6 @@
       "erróneas"
     ],
     "explicacion": "Definición literal de la fuente: 'comprobar que las palabras de nuestro texto no son erróneas'."
-  },
-  {
-    "id": "revisar-51",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Estructura de la pestaña",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "estructura",
-    "subtopic": null,
-    "tema": "Estructura de la pestaña",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-051",
-    "enunciado": "Empareja cada atajo con el grupo de la Pestaña Revisar al que pertenece el comando que activa. Cada letra puede usarse más de una vez.",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "F7"
-        },
-        {
-          "id": "2",
-          "label": "Alt + F7"
-        },
-        {
-          "id": "3",
-          "label": "Mayús + F7"
-        },
-        {
-          "id": "4",
-          "label": "Ctrl + Mayús + O"
-        },
-        {
-          "id": "5",
-          "label": "Alt + Ctrl + Espacio"
-        },
-        {
-          "id": "6",
-          "label": "Alt + Mayús + F7"
-        },
-        {
-          "id": "7",
-          "label": "Ctrl + Alt + A"
-        },
-        {
-          "id": "8",
-          "label": "Ctrl + Mayús + E"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Comentarios"
-        },
-        {
-          "id": "B",
-          "label": "Idioma"
-        },
-        {
-          "id": "C",
-          "label": "Revisión"
-        },
-        {
-          "id": "D",
-          "label": "Seguimiento"
-        },
-        {
-          "id": "E",
-          "label": "Voz"
-        }
-      ],
-      "correct": {
-        "1": "C",
-        "2": "C",
-        "3": "C",
-        "4": "C",
-        "5": "E",
-        "6": "B",
-        "7": "A",
-        "8": "D"
-      }
-    },
-    "respuesta": {
-      "1": "C",
-      "2": "C",
-      "3": "C",
-      "4": "C",
-      "5": "E",
-      "6": "B",
-      "7": "A",
-      "8": "D"
-    },
-    "explicacion": "F7, Alt+F7, Mayús+F7 y Ctrl+Mayús+O están en el grupo Revisión; Alt+Ctrl+Espacio en Voz; Alt+Mayús+F7 en Idioma; Alt+Ctrl+A en Comentarios; Ctrl+Mayús+E en Seguimiento."
   },
   {
     "id": "revisar-52",
@@ -1925,160 +734,6 @@
     "explicacion": "Omitir una vez ignora solo esa aparición; Ignorar todo ignora todas las apariciones en la sesión; Agregar al diccionario añade permanentemente; Configuración abre ajustes."
   },
   {
-    "id": "revisar-53",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Estructura de la pestaña",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "estructura",
-    "subtopic": null,
-    "tema": "Estructura de la pestaña",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-053",
-    "enunciado": "Relaciona cada opción de submenú con el comando que la contiene.",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Texto alternativo"
-        },
-        {
-          "id": "2",
-          "label": "Traducir selección"
-        },
-        {
-          "id": "3",
-          "label": "Combinar..."
-        },
-        {
-          "id": "4",
-          "label": "Bloquear autores"
-        },
-        {
-          "id": "5",
-          "label": "Concentración"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Comparar"
-        },
-        {
-          "id": "B",
-          "label": "Comprobar accesibilidad"
-        },
-        {
-          "id": "C",
-          "label": "Proteger"
-        },
-        {
-          "id": "D",
-          "label": "Traducir"
-        }
-      ],
-      "correct": {
-        "1": "B",
-        "2": "D",
-        "3": "A",
-        "4": "C",
-        "5": "B"
-      }
-    },
-    "respuesta": {
-      "1": "B",
-      "2": "D",
-      "3": "A",
-      "4": "C",
-      "5": "B"
-    },
-    "explicacion": "Texto alternativo y Concentración están en el submenú de Comprobar accesibilidad; Traducir selección en Traducir; Combinar en Comparar; Bloquear autores en Proteger."
-  },
-  {
-    "id": "revisar-54",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": null,
-    "tema": "Seguimiento",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-054",
-    "enunciado": "Clasifica cada elemento en el grupo correcto. Indica el grupo (SEG = Seguimiento, CAM = Cambios, COM = Comparar).",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Control de cambios"
-        },
-        {
-          "id": "2",
-          "label": "Aceptar"
-        },
-        {
-          "id": "3",
-          "label": "Combinar..."
-        },
-        {
-          "id": "4",
-          "label": "Panel de revisiones"
-        },
-        {
-          "id": "5",
-          "label": "Mostrar revisiones"
-        },
-        {
-          "id": "6",
-          "label": "Comparar..."
-        },
-        {
-          "id": "7",
-          "label": "Todas las revisiones"
-        }
-      ],
-      "right": [
-        {
-          "id": "SEG",
-          "label": "Seguimiento"
-        },
-        {
-          "id": "CAM",
-          "label": "Cambios"
-        },
-        {
-          "id": "COM",
-          "label": "Comparar"
-        }
-      ],
-      "correct": {
-        "1": "SEG",
-        "2": "CAM",
-        "3": "COM",
-        "4": "SEG",
-        "5": "SEG",
-        "6": "COM",
-        "7": "SEG"
-      }
-    },
-    "respuesta": {
-      "1": "SEG",
-      "2": "CAM",
-      "3": "COM",
-      "4": "SEG",
-      "5": "SEG",
-      "6": "COM",
-      "7": "SEG"
-    },
-    "explicacion": "Control de cambios, Panel de revisiones, Mostrar revisiones y Todas las revisiones están en Seguimiento. Aceptar en Cambios. Combinar y Comparar en Comparar."
-  },
-  {
     "id": "revisar-55",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -2138,164 +793,6 @@
     "explicacion": "Línea ondulada roja para ortografía; doble línea azul para gramática/distinto significado."
   },
   {
-    "id": "revisar-57",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Traductor",
-    "tema": "Idioma",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-057",
-    "enunciado": "Las pestañas del panel Traductor (Selección y Documento) se corresponden con las opciones Traducir selección y Traducir documento del menú Traducir.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "La correspondencia es exacta: Selección ↔ Traducir selección, Documento ↔ Traducir documento."
-  },
-  {
-    "id": "revisar-58",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": null,
-    "tema": "Proteger",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-058",
-    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre el grupo Proteger son correctas?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Contiene el comando Proteger con un menú desplegable"
-      },
-      {
-        "letter": "B",
-        "text": "Bloquear autores evita cambios en el texto seleccionado"
-      },
-      {
-        "letter": "C",
-        "text": "Restringir edición elimina permanentemente los comentarios"
-      },
-      {
-        "letter": "D",
-        "text": "El panel Restringir edición se organiza en tres pasos numerados"
-      },
-      {
-        "letter": "E",
-        "text": "Bloquear autores limita el formato del documento completo"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explicacion": "A, B y D son correctas. C es falsa (Restringir edición no elimina comentarios) y E es falsa (Bloquear autores actúa sobre el texto seleccionado, no sobre todo el documento)."
-  },
-  {
-    "id": "revisar-59",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Accesibilidad",
-    "tipo": "relleno",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "accesibilidad",
-    "subtopic": "Leer en voz alta",
-    "tema": "Accesibilidad",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-059",
-    "enunciado": "El comando Leer en voz alta lee el texto en voz alta y [1] cada palabra mientras lo lee.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "resalta"
-    ],
-    "explicacion": "La fuente declara que resalta cada palabra mientras lo lee."
-  },
-  {
-    "id": "revisar-60",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": "Restringir edición",
-    "tema": "Proteger",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-060",
-    "enunciado": "El panel Restringir edición se abre al seleccionar la opción 'Restringir edición' en el menú desplegable de Proteger.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "La ruta es Revisar → Proteger → Proteger ▼ → Restringir edición → abre el panel."
-  },
-  {
-    "id": "revisar-61",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Panel de revisiones",
-    "tema": "Seguimiento",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-061",
-    "enunciado": "¿En qué grupo de la Pestaña Revisar se encuentra el comando Panel de revisiones?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Cambios"
-      },
-      {
-        "letter": "B",
-        "text": "Comparar"
-      },
-      {
-        "letter": "C",
-        "text": "Seguimiento"
-      },
-      {
-        "letter": "D",
-        "text": "Comentarios"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Panel de revisiones pertenece al grupo Seguimiento, junto con Control de cambios."
-  },
-  {
-    "id": "revisar-62",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": null,
-    "tema": "Seguimiento",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-062",
-    "enunciado": "Mostrar revisiones y Panel de revisiones son dos comandos distintos que pertenecen al grupo Seguimiento.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Ambos están en Seguimiento, junto con Control de cambios y Todas las revisiones."
-  },
-  {
     "id": "revisar-63",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -2330,112 +827,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Similitud comprueba la similitud del documento con orígenes en línea."
-  },
-  {
-    "id": "revisar-64",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Traductor",
-    "tema": "Idioma",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-064",
-    "enunciado": "En el panel Traductor, el control ⇅ intercambia los idiomas de origen y destino.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "El icono ⇅ permite intercambiar la dirección de la traducción."
-  },
-  {
-    "id": "revisar-65",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Estructura de la pestaña",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "estructura",
-    "subtopic": null,
-    "tema": "Estructura de la pestaña",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-065",
-    "enunciado": "Clasifica cada comando en su grupo correcto. Escribe SEG (Seguimiento), COM (Comentarios) o CAM (Cambios).",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Control de cambios"
-        },
-        {
-          "id": "2",
-          "label": "Nuevo comentario"
-        },
-        {
-          "id": "3",
-          "label": "Aceptar"
-        },
-        {
-          "id": "4",
-          "label": "Mostrar revisiones"
-        },
-        {
-          "id": "5",
-          "label": "Eliminar (comentario)"
-        },
-        {
-          "id": "6",
-          "label": "Panel de revisiones"
-        },
-        {
-          "id": "7",
-          "label": "Anterior (comentario)"
-        },
-        {
-          "id": "8",
-          "label": "Todas las revisiones"
-        }
-      ],
-      "right": [
-        {
-          "id": "SEG",
-          "label": "Seguimiento"
-        },
-        {
-          "id": "COM",
-          "label": "Comentarios"
-        },
-        {
-          "id": "CAM",
-          "label": "Cambios"
-        }
-      ],
-      "correct": {
-        "1": "SEG",
-        "2": "COM",
-        "3": "CAM",
-        "4": "SEG",
-        "5": "COM",
-        "6": "SEG",
-        "7": "COM",
-        "8": "SEG"
-      }
-    },
-    "respuesta": {
-      "1": "SEG",
-      "2": "COM",
-      "3": "CAM",
-      "4": "SEG",
-      "5": "COM",
-      "6": "SEG",
-      "7": "COM",
-      "8": "SEG"
-    },
-    "explicacion": "Control de cambios, Mostrar revisiones, Panel de revisiones y Todas las revisiones están en Seguimiento. Nuevo comentario, Eliminar y Anterior en Comentarios. Aceptar en Cambios."
   },
   {
     "id": "revisar-66",
@@ -2516,109 +907,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Ignorar todo ignora la palabra en todas sus apariciones durante la sesión actual. Agregar al diccionario sería permanente y va más allá del escenario."
-  },
-  {
-    "id": "revisar-68",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "emparejamiento",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Comentarios",
-    "tema": "Seguimiento",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-068",
-    "enunciado": "Relaciona cada comando del grupo Comentarios con su función declarada.",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Nuevo comentario"
-        },
-        {
-          "id": "2",
-          "label": "Eliminar"
-        },
-        {
-          "id": "3",
-          "label": "Anterior / Siguiente"
-        },
-        {
-          "id": "4",
-          "label": "Mostrar comentarios"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Muestra u oculta todos los comentarios"
-        },
-        {
-          "id": "B",
-          "label": "Inserta un nuevo comentario"
-        },
-        {
-          "id": "C",
-          "label": "Elimina el comentario seleccionado"
-        },
-        {
-          "id": "D",
-          "label": "Salta de un comentario a otro"
-        }
-      ],
-      "correct": {
-        "1": "B",
-        "2": "C",
-        "3": "D",
-        "4": "A"
-      }
-    },
-    "respuesta": {
-      "1": "B",
-      "2": "C",
-      "3": "D",
-      "4": "A"
-    },
-    "explicacion": "Nuevo comentario inserta; Eliminar borra el seleccionado; Anterior/Siguiente navegan; Mostrar comentarios muestra/oculta todos."
-  },
-  {
-    "id": "revisar-69",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Accesibilidad",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "accesibilidad",
-    "subtopic": "Comprobar accesibilidad",
-    "tema": "Accesibilidad",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-069",
-    "enunciado": "Además de la cinta, ¿desde qué otra ubicación se puede acceder a Comprobar accesibilidad?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Archivo → Información → Comprobar si hay problemas"
-      },
-      {
-        "letter": "B",
-        "text": "Barra de estado (parte inferior)"
-      },
-      {
-        "letter": "C",
-        "text": "Archivo → Opciones → Accesibilidad"
-      },
-      {
-        "letter": "D",
-        "text": "Inicio → Edición → Buscar"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Comprobar accesibilidad también está disponible desde Archivo → Información → Comprobar si hay problemas."
   },
   {
     "id": "revisar-70",
@@ -2883,5 +1171,1717 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Alt+Ctrl+Espacio activa Leer en voz alta. Alt+Espacio abre el menú del icono del programa en la barra de título. Ctrl+Alt+Mayús+Espacio y Alt+Mayús+Espacio no tienen función. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
+    "id": "revisar-6",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Accesibilidad",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "accesibilidad",
+    "subtopic": "Leer en voz alta",
+    "tema": "Accesibilidad",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-006",
+    "enunciado": "¿Qué función activa el atajo Alt + Ctrl + Espacio en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar un espacio de no separación"
+      },
+      {
+        "letter": "B",
+        "text": "Leer en voz alta el texto y resaltar cada palabra"
+      },
+      {
+        "letter": "C",
+        "text": "Activar el modo de concentración"
+      },
+      {
+        "letter": "D",
+        "text": "Abrir el panel de Control de cambios"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Alt+Ctrl+Espacio activa Leer en voz alta: Word lee el texto y va resaltando cada palabra. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
+    "id": "revisar-12",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Accesibilidad",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "accesibilidad",
+    "subtopic": "Leer en voz alta",
+    "tema": "Accesibilidad",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-012",
+    "enunciado": "¿Cuál es el comportamiento del comando Leer en voz alta según Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Lee el documento completo desde el principio y genera un archivo de audio"
+      },
+      {
+        "letter": "B",
+        "text": "Lee el texto en voz alta y resalta cada palabra mientras lo lee"
+      },
+      {
+        "letter": "C",
+        "text": "Lee solo el párrafo donde está situado el cursor"
+      },
+      {
+        "letter": "D",
+        "text": "Lee el texto seleccionado y lo convierte en un comentario de voz"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "La fuente declara que Leer en voz alta lee el texto y resalta cada palabra mientras lo lee."
+  },
+  {
+    "id": "revisar-13",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Accesibilidad",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "accesibilidad",
+    "subtopic": "Comprobar accesibilidad",
+    "tema": "Accesibilidad",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-013",
+    "enunciado": "¿Para qué sirve el comando Comprobar accesibilidad?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Verificar que el documento cumple las normas ortográficas"
+      },
+      {
+        "letter": "B",
+        "text": "Detectar y corregir contenido de difícil acceso para personas con discapacidad"
+      },
+      {
+        "letter": "C",
+        "text": "Restringir la edición del documento a usuarios sin permisos"
+      },
+      {
+        "letter": "D",
+        "text": "Comprobar si el documento es compatible con versiones anteriores"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Comprobar accesibilidad ayuda a detectar y corregir contenido que puede resultar difícil de acceder para personas con discapacidad."
+  },
+  {
+    "id": "revisar-22",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Accesibilidad",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "accesibilidad",
+    "subtopic": "Comprobar accesibilidad",
+    "tema": "Accesibilidad",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-022",
+    "enunciado": "¿Cuáles de las siguientes opciones forman parte del submenú desplegable de Comprobar accesibilidad? (Son 4 respuestas correctas.)",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Texto alternativo"
+      },
+      {
+        "letter": "B",
+        "text": "Concentración"
+      },
+      {
+        "letter": "C",
+        "text": "Agregar al diccionario"
+      },
+      {
+        "letter": "D",
+        "text": "Panel de navegación"
+      },
+      {
+        "letter": "E",
+        "text": "Opciones: accesibilidad"
+      },
+      {
+        "letter": "F",
+        "text": "Leer en voz alta"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explicacion": "El submenú de Comprobar accesibilidad contiene: Comprobar accesibilidad, Texto alternativo, Panel de navegación, Concentración y Opciones: accesibilidad. Agregar al diccionario pertenece al corrector; Leer en voz alta al grupo Voz."
+  },
+  {
+    "id": "revisar-59",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Accesibilidad",
+    "tipo": "relleno",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "accesibilidad",
+    "subtopic": "Leer en voz alta",
+    "tema": "Accesibilidad",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-059",
+    "enunciado": "El comando Leer en voz alta lee el texto en voz alta y [1] cada palabra mientras lo lee.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "resalta"
+    ],
+    "explicacion": "La fuente declara que resalta cada palabra mientras lo lee."
+  },
+  {
+    "id": "revisar-69",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Accesibilidad",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "accesibilidad",
+    "subtopic": "Comprobar accesibilidad",
+    "tema": "Accesibilidad",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-069",
+    "enunciado": "Además de la cinta, ¿desde qué otra ubicación se puede acceder a Comprobar accesibilidad?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Archivo → Información → Comprobar si hay problemas"
+      },
+      {
+        "letter": "B",
+        "text": "Barra de estado (parte inferior)"
+      },
+      {
+        "letter": "C",
+        "text": "Archivo → Opciones → Accesibilidad"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio → Edición → Buscar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Comprobar accesibilidad también está disponible desde Archivo → Información → Comprobar si hay problemas."
+  },
+  {
+    "id": "revisar-18",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": "Idioma",
+    "tema": "Idioma",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-018",
+    "enunciado": "¿Para qué sirve el comando Idioma en el grupo Idioma de la Pestaña Revisar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Traducir el documento a otro idioma"
+      },
+      {
+        "letter": "B",
+        "text": "Cambiar el idioma de la interfaz de Word"
+      },
+      {
+        "letter": "C",
+        "text": "Elegir el idioma en el que se quiere corregir el documento"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar caracteres especiales de otros idiomas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El comando Idioma permite elegir el idioma de corrección del documento, no traduce ni cambia la interfaz."
+  },
+  {
+    "id": "revisar-25",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": "Traducir",
+    "tema": "Idioma",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-025",
+    "enunciado": "La opción Traducir documento del menú Traducir modifica directamente el documento actual, sustituyendo el texto original por la traducción.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Traducir documento crea una copia traducida del documento; no modifica el original."
+  },
+  {
+    "id": "revisar-31",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": "Traducir",
+    "tema": "Idioma",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-031",
+    "enunciado": "Para traducir únicamente el texto seleccionado usando el Traductor de Microsoft, la ruta es: Revisar → [1] → [2] ▼ → [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Idioma",
+      "Traducir",
+      "Traducir selección"
+    ],
+    "explicacion": "La ruta es Revisar → Idioma → Traducir ▼ → Traducir selección."
+  },
+  {
+    "id": "revisar-38",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": "Traductor",
+    "tema": "Idioma",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-038",
+    "enunciado": "¿Cuáles son las dos pestañas que ofrece el panel Traductor de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Origen y Destino"
+      },
+      {
+        "letter": "B",
+        "text": "Selección y Documento"
+      },
+      {
+        "letter": "C",
+        "text": "Traducir y Revisar"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar y Cancelar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Las pestañas son Selección y Documento, correspondientes a las opciones del menú Traducir."
+  },
+  {
+    "id": "revisar-43",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": "Traductor",
+    "tema": "Idioma",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-043",
+    "enunciado": "En el panel Traductor, ¿qué función realiza el botón Insertar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Abre el documento traducido en una nueva ventana"
+      },
+      {
+        "letter": "B",
+        "text": "Envía la traducción a la nube para revisión"
+      },
+      {
+        "letter": "C",
+        "text": "Inserta la traducción en el documento en la posición del cursor"
+      },
+      {
+        "letter": "D",
+        "text": "Guarda la traducción como un archivo de texto"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El botón Insertar coloca la traducción en el documento en la posición del cursor."
+  },
+  {
+    "id": "revisar-45",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": "Traducir",
+    "tema": "Idioma",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-045",
+    "enunciado": "La opción Preferencias de Traductor... del menú Traducir realiza una traducción directa del documento con la configuración predeterminada.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Preferencias de Traductor... abre los ajustes del traductor, no realiza una traducción."
+  },
+  {
+    "id": "revisar-48",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": "Traducir",
+    "tema": "Idioma",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-048",
+    "enunciado": "El menú desplegable del comando Traducir contiene exactamente tres opciones: [1], [2], [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Traducir selección",
+      "Traducir documento",
+      "Preferencias de Traductor..."
+    ],
+    "explicacion": "Las tres opciones son Traducir selección, Traducir documento y Preferencias de Traductor..."
+  },
+  {
+    "id": "revisar-57",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": "Traductor",
+    "tema": "Idioma",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-057",
+    "enunciado": "Las pestañas del panel Traductor (Selección y Documento) se corresponden con las opciones Traducir selección y Traducir documento del menú Traducir.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "La correspondencia es exacta: Selección ↔ Traducir selección, Documento ↔ Traducir documento."
+  },
+  {
+    "id": "revisar-64",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": "Traductor",
+    "tema": "Idioma",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-064",
+    "enunciado": "En el panel Traductor, el control ⇅ intercambia los idiomas de origen y destino.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El icono ⇅ permite intercambiar la dirección de la traducción."
+  },
+  {
+    "id": "revisar-4",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "relleno",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": null,
+    "tema": "Seguimiento",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-004",
+    "enunciado": "El atajo para insertar un nuevo comentario es [1]. El de Control de cambios es [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Ctrl + Alt + A",
+      "Ctrl + Mayús + E"
+    ],
+    "explicacion": "Nuevo comentario: Ctrl+Alt+A. Control de cambios: Ctrl+Mayús+E."
+  },
+  {
+    "id": "revisar-5",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Control de cambios",
+    "tema": "Seguimiento",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-005",
+    "enunciado": "Un usuario quiere activar el Control de cambios usando el teclado. ¿Qué atajo debe usar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl + Alt + A"
+      },
+      {
+        "letter": "B",
+        "text": "Alt + F7"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl + Mayús + E"
+      },
+      {
+        "letter": "D",
+        "text": "Alt + Mayús + F7"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ctrl+Mayús+E activa o desactiva el Control de cambios (atajo estándar). Ctrl+Alt+A inserta un comentario, Alt+F7 salta al siguiente error y Alt+Mayús+F7 abre el Traductor."
+  },
+  {
+    "id": "revisar-8",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Comentarios",
+    "tema": "Seguimiento",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-008",
+    "enunciado": "¿Cuáles de los siguientes comandos pertenecen al grupo Comentarios de la Pestaña Revisar? (Selecciona todos los correctos.)",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Nuevo comentario"
+      },
+      {
+        "letter": "B",
+        "text": "Control de cambios"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar comentarios"
+      },
+      {
+        "letter": "D",
+        "text": "Anterior"
+      },
+      {
+        "letter": "E",
+        "text": "Panel de revisiones"
+      },
+      {
+        "letter": "F",
+        "text": "Siguiente"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "D",
+      "F"
+    ],
+    "explicacion": "Control de cambios y Panel de revisiones pertenecen al grupo Seguimiento, no a Comentarios."
+  },
+  {
+    "id": "revisar-10",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Control de cambios",
+    "tema": "Seguimiento",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-010",
+    "enunciado": "En la Pestaña Revisar de Word 365, el comando Aceptar (para aceptar cambios) se encuentra en el grupo Seguimiento, junto con el Control de cambios.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Aceptar pertenece al grupo Cambios, no a Seguimiento. Control de cambios está en Seguimiento; el proceso de aceptar/rechazar está en Cambios."
+  },
+  {
+    "id": "revisar-17",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Control de cambios",
+    "tema": "Seguimiento",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-017",
+    "enunciado": "Un usuario observa que cada modificación que realiza aparece marcada con un color diferente, indicando el nombre del autor y la fecha. ¿Qué función está activa?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Mostrar revisiones"
+      },
+      {
+        "letter": "B",
+        "text": "Panel de revisiones"
+      },
+      {
+        "letter": "C",
+        "text": "Control de cambios"
+      },
+      {
+        "letter": "D",
+        "text": "Comparar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Control de cambios registra las modificaciones con autor y fecha. Mostrar revisiones y Panel de revisiones solo controlan la visualización."
+  },
+  {
+    "id": "revisar-35",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Comentarios",
+    "tema": "Seguimiento",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-035",
+    "enunciado": "Los comandos Anterior, Siguiente y Eliminar del grupo Comentarios están siempre activos en la Pestaña Revisar.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Aparecen atenuados cuando el documento no contiene comentarios."
+  },
+  {
+    "id": "revisar-36",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Comentarios",
+    "tema": "Seguimiento",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-036",
+    "enunciado": "¿Qué hace el comando Mostrar comentarios en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Imprime todos los comentarios"
+      },
+      {
+        "letter": "B",
+        "text": "Exporta los comentarios a un archivo"
+      },
+      {
+        "letter": "C",
+        "text": "Muestra u oculta todos los comentarios"
+      },
+      {
+        "letter": "D",
+        "text": "Convierte los comentarios en texto normal"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Mostrar comentarios muestra u oculta todos los comentarios del documento."
+  },
+  {
+    "id": "revisar-37",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Cambios",
+    "tema": "Seguimiento",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-037",
+    "enunciado": "Un usuario recibe un documento con múltiples revisiones de otros autores y necesita ir revisándolas para aceptarlas o rechazarlas. ¿En qué grupo encontrará las herramientas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Seguimiento"
+      },
+      {
+        "letter": "B",
+        "text": "Cambios"
+      },
+      {
+        "letter": "C",
+        "text": "Comparar"
+      },
+      {
+        "letter": "D",
+        "text": "Proteger"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "El grupo Cambios permite moverse por las modificaciones para aceptarlas o rechazarlas."
+  },
+  {
+    "id": "revisar-39",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Control de cambios",
+    "tema": "Seguimiento",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-039",
+    "enunciado": "El grupo Seguimiento permite controlar los cambios, mientras que el grupo Cambios permite moverse por las modificaciones para aceptarlas o rechazarlas.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Ambas afirmaciones son las definiciones exactas de la fuente."
+  },
+  {
+    "id": "revisar-54",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": null,
+    "tema": "Seguimiento",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-054",
+    "enunciado": "Clasifica cada elemento en el grupo correcto. Indica el grupo (SEG = Seguimiento, CAM = Cambios, COM = Comparar).",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Control de cambios"
+        },
+        {
+          "id": "2",
+          "label": "Aceptar"
+        },
+        {
+          "id": "3",
+          "label": "Combinar..."
+        },
+        {
+          "id": "4",
+          "label": "Panel de revisiones"
+        },
+        {
+          "id": "5",
+          "label": "Mostrar revisiones"
+        },
+        {
+          "id": "6",
+          "label": "Comparar..."
+        },
+        {
+          "id": "7",
+          "label": "Todas las revisiones"
+        }
+      ],
+      "right": [
+        {
+          "id": "SEG",
+          "label": "Seguimiento"
+        },
+        {
+          "id": "CAM",
+          "label": "Cambios"
+        },
+        {
+          "id": "COM",
+          "label": "Comparar"
+        }
+      ],
+      "correct": {
+        "1": "SEG",
+        "2": "CAM",
+        "3": "COM",
+        "4": "SEG",
+        "5": "SEG",
+        "6": "COM",
+        "7": "SEG"
+      }
+    },
+    "respuesta": {
+      "1": "SEG",
+      "2": "CAM",
+      "3": "COM",
+      "4": "SEG",
+      "5": "SEG",
+      "6": "COM",
+      "7": "SEG"
+    },
+    "explicacion": "Control de cambios, Panel de revisiones, Mostrar revisiones y Todas las revisiones están en Seguimiento. Aceptar en Cambios. Combinar y Comparar en Comparar."
+  },
+  {
+    "id": "revisar-61",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Panel de revisiones",
+    "tema": "Seguimiento",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-061",
+    "enunciado": "¿En qué grupo de la Pestaña Revisar se encuentra el comando Panel de revisiones?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cambios"
+      },
+      {
+        "letter": "B",
+        "text": "Comparar"
+      },
+      {
+        "letter": "C",
+        "text": "Seguimiento"
+      },
+      {
+        "letter": "D",
+        "text": "Comentarios"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Panel de revisiones pertenece al grupo Seguimiento, junto con Control de cambios."
+  },
+  {
+    "id": "revisar-62",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": null,
+    "tema": "Seguimiento",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-062",
+    "enunciado": "Mostrar revisiones y Panel de revisiones son dos comandos distintos que pertenecen al grupo Seguimiento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Ambos están en Seguimiento, junto con Control de cambios y Todas las revisiones."
+  },
+  {
+    "id": "revisar-68",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Comentarios",
+    "tema": "Seguimiento",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-068",
+    "enunciado": "Relaciona cada comando del grupo Comentarios con su función declarada.",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Nuevo comentario"
+        },
+        {
+          "id": "2",
+          "label": "Eliminar"
+        },
+        {
+          "id": "3",
+          "label": "Anterior / Siguiente"
+        },
+        {
+          "id": "4",
+          "label": "Mostrar comentarios"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Muestra u oculta todos los comentarios"
+        },
+        {
+          "id": "B",
+          "label": "Inserta un nuevo comentario"
+        },
+        {
+          "id": "C",
+          "label": "Elimina el comentario seleccionado"
+        },
+        {
+          "id": "D",
+          "label": "Salta de un comentario a otro"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "C",
+        "3": "D",
+        "4": "A"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "C",
+      "3": "D",
+      "4": "A"
+    },
+    "explicacion": "Nuevo comentario inserta; Eliminar borra el seleccionado; Anterior/Siguiente navegan; Mostrar comentarios muestra/oculta todos."
+  },
+  {
+    "id": "revisar-23",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Comparar",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "comparar",
+    "subtopic": "Comparar",
+    "tema": "Comparar",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-023",
+    "enunciado": "¿Cuál es la diferencia entre Comparar... y Combinar... en el menú del comando Comparar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Comparar integra revisiones de varios autores; Combinar confronta dos versiones"
+      },
+      {
+        "letter": "B",
+        "text": "Comparar muestra los cambios en el Panel de revisiones; Combinar los muestra en el cuerpo"
+      },
+      {
+        "letter": "C",
+        "text": "Comparar confronta dos versiones (estilo jurídico); Combinar integra revisiones de varios autores"
+      },
+      {
+        "letter": "D",
+        "text": "Comparar activa Control de cambios; Combinar requiere activarlo manualmente"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Comparar confronta dos versiones (estilo jurídico); Combinar integra revisiones de varios autores en un documento único."
+  },
+  {
+    "id": "revisar-24",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Comparar",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "comparar",
+    "subtopic": "Combinar",
+    "tema": "Comparar",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-024",
+    "enunciado": "Un responsable ha recibido el mismo documento revisado por tres autores diferentes y necesita integrar todas las revisiones en un único documento. ¿Qué opción debe usar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Comparar..."
+      },
+      {
+        "letter": "B",
+        "text": "Mostrar documentos de origen"
+      },
+      {
+        "letter": "C",
+        "text": "Combinar..."
+      },
+      {
+        "letter": "D",
+        "text": "Control de cambios"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Combinar... integra revisiones de varios autores en un documento único."
+  },
+  {
+    "id": "revisar-11",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": null,
+    "tema": "Proteger",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-011",
+    "enunciado": "El comando Ocultar entrada de lápiz se encuentra en un grupo cuya etiqueta es 'Entrada de lápiz', independiente del grupo Proteger.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Aunque son contiguos en la cinta, son grupos distintos. Ocultar entrada de lápiz pertenece al grupo Entrada de lápiz."
+  },
+  {
+    "id": "revisar-14",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": "Restringir edición",
+    "tema": "Proteger",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-014",
+    "enunciado": "Un usuario necesita impedir que otros editen o cambien el formato de un documento, sin bloquear a autores específicos. ¿Qué opción del grupo Proteger debe usar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Bloquear autores"
+      },
+      {
+        "letter": "B",
+        "text": "Control de cambios"
+      },
+      {
+        "letter": "C",
+        "text": "Restringir edición"
+      },
+      {
+        "letter": "D",
+        "text": "Ocultar entrada de lápiz"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Restringir edición limita la edición y el formato de todo el documento, sin vincularse a autores concretos. Bloquear autores solo actúa sobre el texto seleccionado."
+  },
+  {
+    "id": "revisar-15",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": "Bloquear autores",
+    "tema": "Proteger",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-015",
+    "enunciado": "¿En qué se diferencia Bloquear autores de Restringir edición en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Bloquear autores limita la edición de todo el documento; Restringir edición solo afecta al texto seleccionado"
+      },
+      {
+        "letter": "B",
+        "text": "Bloquear autores evita cambios en el texto seleccionado; Restringir edición limita la edición y el formato de todo el documento"
+      },
+      {
+        "letter": "C",
+        "text": "Bloquear autores activa el registro de cambios por autor; Restringir edición oculta las revisiones"
+      },
+      {
+        "letter": "D",
+        "text": "Bloquear autores requiere contraseña; Restringir edición funciona sin contraseña"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Bloquear autores actúa sobre el texto seleccionado; Restringir edición limita la edición y el formato del documento completo."
+  },
+  {
+    "id": "revisar-16",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": "Ocultar entrada de lápiz",
+    "tema": "Proteger",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-016",
+    "enunciado": "El comando Ocultar entrada de lápiz elimina definitivamente las entradas de lápiz del documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Solo las oculta temporalmente; no las elimina."
+  },
+  {
+    "id": "revisar-26",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": "Restringir edición",
+    "tema": "Proteger",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-026",
+    "enunciado": "Ordena los siguientes elementos del panel Restringir edición en la secuencia correcta (de arriba a abajo):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "C → D → B → A"
+      },
+      {
+        "letter": "B",
+        "text": "D → C → B → A"
+      },
+      {
+        "letter": "C",
+        "text": "D → B → C → A"
+      },
+      {
+        "letter": "D",
+        "text": "B → C → D → A"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "El orden correcto es: Configuración... (D) → Casilla 'Limitar el formato...' (C) → Casilla 'Permitir solo este tipo de edición...' (B) → Botón 'Sí, aplicar la protección' (A)."
+  },
+  {
+    "id": "revisar-27",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": "Restringir edición",
+    "tema": "Proteger",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-027",
+    "enunciado": "En el panel Restringir edición, el botón 'Sí, aplicar la protección' está siempre disponible desde que se abre el panel.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "El botón aparece atenuado hasta que se configura al menos una restricción (de formato o de edición)."
+  },
+  {
+    "id": "revisar-30",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": "Restringir edición",
+    "tema": "Proteger",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-030",
+    "enunciado": "Un administrador necesita limitar la edición y el formato que otros usuarios pueden aplicar a un documento. ¿Cuál es la ruta correcta en la pestaña Revisar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Archivo → Información → Proteger documento → Restringir edición"
+      },
+      {
+        "letter": "B",
+        "text": "Revisar → Proteger → Proteger ▼ → Restringir edición"
+      },
+      {
+        "letter": "C",
+        "text": "Revisar → Seguimiento → Control de cambios ▼ → Restringir"
+      },
+      {
+        "letter": "D",
+        "text": "Revisar → Cambios → Aceptar ▼ → Opciones de edición"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "Revisar ▸ Proteger ▸ Proteger ▼ ▸ Restringir edición: abre el panel donde se acotan los cambios de formato y de edición permitidos y se activa la protección con contraseña."
+  },
+  {
+    "id": "revisar-46",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": "Restringir edición",
+    "tema": "Proteger",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-046",
+    "enunciado": "¿Cuáles de los siguientes son pasos numerados del panel Restringir edición? (Selecciona todos los correctos.)",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Restricciones de formato"
+      },
+      {
+        "letter": "B",
+        "text": "Aplicar contraseña de acceso"
+      },
+      {
+        "letter": "C",
+        "text": "Restricciones de edición"
+      },
+      {
+        "letter": "D",
+        "text": "Seleccionar usuarios autorizados"
+      },
+      {
+        "letter": "E",
+        "text": "Comenzar a aplicar"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "E"
+    ],
+    "explicacion": "Los pasos son (1) Restricciones de formato, (2) Restricciones de edición, (3) Comenzar a aplicar."
+  },
+  {
+    "id": "revisar-58",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": null,
+    "tema": "Proteger",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-058",
+    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre el grupo Proteger son correctas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Contiene el comando Proteger con un menú desplegable"
+      },
+      {
+        "letter": "B",
+        "text": "Bloquear autores evita cambios en el texto seleccionado"
+      },
+      {
+        "letter": "C",
+        "text": "Restringir edición elimina permanentemente los comentarios"
+      },
+      {
+        "letter": "D",
+        "text": "El panel Restringir edición se organiza en tres pasos numerados"
+      },
+      {
+        "letter": "E",
+        "text": "Bloquear autores limita el formato del documento completo"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "A, B y D son correctas. C es falsa (Restringir edición no elimina comentarios) y E es falsa (Bloquear autores actúa sobre el texto seleccionado, no sobre todo el documento)."
+  },
+  {
+    "id": "revisar-60",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": "Restringir edición",
+    "tema": "Proteger",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-060",
+    "enunciado": "El panel Restringir edición se abre al seleccionar la opción 'Restringir edición' en el menú desplegable de Proteger.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "La ruta es Revisar → Proteger → Proteger ▼ → Restringir edición → abre el panel."
+  },
+  {
+    "id": "revisar-9",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Estructura de la pestaña",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "estructura",
+    "subtopic": null,
+    "tema": "Estructura de la pestaña",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-009",
+    "enunciado": "Empareja cada comando u opción con el grupo de la Pestaña Revisar en el que se encuentra. Cada letra se usa una sola vez.",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Leer en voz alta"
+        },
+        {
+          "id": "2",
+          "label": "Comprobar accesibilidad"
+        },
+        {
+          "id": "3",
+          "label": "Control de cambios"
+        },
+        {
+          "id": "4",
+          "label": "Aceptar"
+        },
+        {
+          "id": "5",
+          "label": "Comparar"
+        },
+        {
+          "id": "6",
+          "label": "Nuevo comentario"
+        },
+        {
+          "id": "7",
+          "label": "Restringir edición"
+        },
+        {
+          "id": "8",
+          "label": "Sinónimos"
+        },
+        {
+          "id": "9",
+          "label": "Ocultar entrada de lápiz"
+        },
+        {
+          "id": "10",
+          "label": "Traducir"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Accesibilidad"
+        },
+        {
+          "id": "B",
+          "label": "Cambios"
+        },
+        {
+          "id": "C",
+          "label": "Comentarios"
+        },
+        {
+          "id": "D",
+          "label": "Comparar"
+        },
+        {
+          "id": "E",
+          "label": "Entrada de lápiz"
+        },
+        {
+          "id": "F",
+          "label": "Proteger"
+        },
+        {
+          "id": "G",
+          "label": "Revisión"
+        },
+        {
+          "id": "H",
+          "label": "Seguimiento"
+        },
+        {
+          "id": "I",
+          "label": "Voz"
+        },
+        {
+          "id": "J",
+          "label": "Idioma"
+        }
+      ],
+      "correct": {
+        "1": "I",
+        "2": "A",
+        "3": "H",
+        "4": "B",
+        "5": "D",
+        "6": "C",
+        "7": "F",
+        "8": "G",
+        "9": "E",
+        "10": "J"
+      }
+    },
+    "respuesta": {
+      "1": "I",
+      "2": "A",
+      "3": "H",
+      "4": "B",
+      "5": "D",
+      "6": "C",
+      "7": "F",
+      "8": "G",
+      "9": "E",
+      "10": "J"
+    },
+    "explicacion": "Cada comando pertenece a su grupo: Voz, Accesibilidad, Seguimiento, Cambios, Comparar, Comentarios, Proteger, Revisión, Entrada de lápiz e Idioma."
+  },
+  {
+    "id": "revisar-44",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Estructura de la pestaña",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "estructura",
+    "subtopic": null,
+    "tema": "Estructura de la pestaña",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-044",
+    "enunciado": "La Pestaña Revisar contiene [1] grupos. Escribe el nombre de cada uno: [2], [3], [4], [5], [6], [7], [8], [9], [10], [11].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "10",
+      "Revisión",
+      "Voz",
+      "Accesibilidad",
+      "Idioma",
+      "Comentarios",
+      "Seguimiento",
+      "Cambios",
+      "Comparar",
+      "Proteger",
+      "Entrada de lápiz"
+    ],
+    "explicacion": "Los 10 grupos son Revisión, Voz, Accesibilidad, Idioma, Comentarios, Seguimiento, Cambios, Comparar, Proteger y Entrada de lápiz."
+  },
+  {
+    "id": "revisar-51",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Estructura de la pestaña",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "estructura",
+    "subtopic": null,
+    "tema": "Estructura de la pestaña",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-051",
+    "enunciado": "Empareja cada atajo con el grupo de la Pestaña Revisar al que pertenece el comando que activa. Cada letra puede usarse más de una vez.",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "F7"
+        },
+        {
+          "id": "2",
+          "label": "Alt + F7"
+        },
+        {
+          "id": "3",
+          "label": "Mayús + F7"
+        },
+        {
+          "id": "4",
+          "label": "Ctrl + Mayús + O"
+        },
+        {
+          "id": "5",
+          "label": "Alt + Ctrl + Espacio"
+        },
+        {
+          "id": "6",
+          "label": "Alt + Mayús + F7"
+        },
+        {
+          "id": "7",
+          "label": "Ctrl + Alt + A"
+        },
+        {
+          "id": "8",
+          "label": "Ctrl + Mayús + E"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Comentarios"
+        },
+        {
+          "id": "B",
+          "label": "Idioma"
+        },
+        {
+          "id": "C",
+          "label": "Revisión"
+        },
+        {
+          "id": "D",
+          "label": "Seguimiento"
+        },
+        {
+          "id": "E",
+          "label": "Voz"
+        }
+      ],
+      "correct": {
+        "1": "C",
+        "2": "C",
+        "3": "C",
+        "4": "C",
+        "5": "E",
+        "6": "B",
+        "7": "A",
+        "8": "D"
+      }
+    },
+    "respuesta": {
+      "1": "C",
+      "2": "C",
+      "3": "C",
+      "4": "C",
+      "5": "E",
+      "6": "B",
+      "7": "A",
+      "8": "D"
+    },
+    "explicacion": "F7, Alt+F7, Mayús+F7 y Ctrl+Mayús+O están en el grupo Revisión; Alt+Ctrl+Espacio en Voz; Alt+Mayús+F7 en Idioma; Alt+Ctrl+A en Comentarios; Ctrl+Mayús+E en Seguimiento."
+  },
+  {
+    "id": "revisar-53",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Estructura de la pestaña",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "estructura",
+    "subtopic": null,
+    "tema": "Estructura de la pestaña",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-053",
+    "enunciado": "Relaciona cada opción de submenú con el comando que la contiene.",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Texto alternativo"
+        },
+        {
+          "id": "2",
+          "label": "Traducir selección"
+        },
+        {
+          "id": "3",
+          "label": "Combinar..."
+        },
+        {
+          "id": "4",
+          "label": "Bloquear autores"
+        },
+        {
+          "id": "5",
+          "label": "Concentración"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Comparar"
+        },
+        {
+          "id": "B",
+          "label": "Comprobar accesibilidad"
+        },
+        {
+          "id": "C",
+          "label": "Proteger"
+        },
+        {
+          "id": "D",
+          "label": "Traducir"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "D",
+        "3": "A",
+        "4": "C",
+        "5": "B"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "D",
+      "3": "A",
+      "4": "C",
+      "5": "B"
+    },
+    "explicacion": "Texto alternativo y Concentración están en el submenú de Comprobar accesibilidad; Traducir selección en Traducir; Combinar en Comparar; Bloquear autores en Proteger."
+  },
+  {
+    "id": "revisar-65",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Estructura de la pestaña",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "estructura",
+    "subtopic": null,
+    "tema": "Estructura de la pestaña",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-065",
+    "enunciado": "Clasifica cada comando en su grupo correcto. Escribe SEG (Seguimiento), COM (Comentarios) o CAM (Cambios).",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Control de cambios"
+        },
+        {
+          "id": "2",
+          "label": "Nuevo comentario"
+        },
+        {
+          "id": "3",
+          "label": "Aceptar"
+        },
+        {
+          "id": "4",
+          "label": "Mostrar revisiones"
+        },
+        {
+          "id": "5",
+          "label": "Eliminar (comentario)"
+        },
+        {
+          "id": "6",
+          "label": "Panel de revisiones"
+        },
+        {
+          "id": "7",
+          "label": "Anterior (comentario)"
+        },
+        {
+          "id": "8",
+          "label": "Todas las revisiones"
+        }
+      ],
+      "right": [
+        {
+          "id": "SEG",
+          "label": "Seguimiento"
+        },
+        {
+          "id": "COM",
+          "label": "Comentarios"
+        },
+        {
+          "id": "CAM",
+          "label": "Cambios"
+        }
+      ],
+      "correct": {
+        "1": "SEG",
+        "2": "COM",
+        "3": "CAM",
+        "4": "SEG",
+        "5": "COM",
+        "6": "SEG",
+        "7": "COM",
+        "8": "SEG"
+      }
+    },
+    "respuesta": {
+      "1": "SEG",
+      "2": "COM",
+      "3": "CAM",
+      "4": "SEG",
+      "5": "COM",
+      "6": "SEG",
+      "7": "COM",
+      "8": "SEG"
+    },
+    "explicacion": "Control de cambios, Mostrar revisiones, Panel de revisiones y Todas las revisiones están en Seguimiento. Nuevo comentario, Eliminar y Anterior en Comentarios. Aceptar en Cambios."
   }
 ]
