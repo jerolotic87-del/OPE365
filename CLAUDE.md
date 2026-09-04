@@ -129,17 +129,25 @@ verdad.** Si el banco dice algo que ese archivo no dice, el banco está
 mal: se corrige o se borra la pregunta. Un atajo que no aparezca en ese
 archivo NO existe en este Word — no se pregunta por él.
 
-Dos matices, y solo dos:
+**Regla del usuario (sep-2026):** el banco = lo que dice el volcado + lo
+que él verificó en vivo, MEZCLADO. Donde discrepen, **gana la prueba en
+vivo** y la explicación **lleva SIEMPRE una advertencia** `⚠️ Ojo: …`
+explicando qué dice el cuadro Personalizar teclado y qué pasa de verdad.
+
 - **Conflictos internos del propio volcado** (misma combinación bajo dos
   comandos): `Alt+Ctrl+V` = DocDividir *y* PegarFormato → en vivo **pega
   formato**; `Ctrl+0` = Zoom100 *y* AbrirCerrarPárrafo → **zoom 100 %**;
   `Ctrl+W` = DocCerrar *y* DefinirPárrafo → **quita formato de párrafo**;
-  `Ctrl+Mayús+L` = Versalitas *y* ListaConViñetas (sin dirimir).
+  `Ctrl+1` = AplicarTitulo1 en el volcado pero **en vivo aplica
+  interlineado sencillo** (y Título 1 es `Ctrl+Mayús+1`); `Ctrl+Mayús+L` =
+  Versalitas *y* ListaConViñetas (sin dirimir). Todos con advertencia en
+  las preguntas.
 - **Extras confirmados EN VIVO por el usuario que no salen en el volcado**
   (lista cerrada, no ampliar sin prueba): `Alt+Ctrl+H` = resaltar ·
   `Alt+Mayús+F7` = Traductor · `Ctrl+B` = panel Navegación · `Alt+Q` =
   Buscar de la barra de título · `Ctrl+Tab` = tabulación en celda ·
   `Windows+F7` = panel Editor · `Ctrl+5` numérico = seleccionar todo.
+  Cada uno con advertencia "no figura en el volcado; confirmado en vivo".
 
 Para lo que NO es un atajo (rutas de menú, conceptos): PDFs de la academia
 (Beatriz R., Adams, MAD…) en el Project Knowledge de claude.ai — pídeselos

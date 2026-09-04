@@ -2541,7 +2541,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Ctrl+5 alfanumerico aplica interlineado de 1,5 lineas. Ctrl+5 del teclado numerico ejecuta Seleccionar todo el documento. Son dos funciones completamente distintas segun la ubicacion fisica de la tecla 5 utilizada. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+5 de la fila superior aplica interlineado de 1,5 líneas. Ctrl+5 del teclado numérico ejecuta Seleccionar todo. Son dos funciones distintas según qué tecla 5 se pulse. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-68",
@@ -3607,7 +3607,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "En esta instalación: Ctrl+Mayús+1 aplica Título 1 y Ctrl+Mayús+3 aplica Título 3, pero Título 2 es Alt+Ctrl+2 (Ctrl+Mayús+2 NO hace nada). Ctrl+Mayús+A aplica el estilo Normal. Distractor E: Título 4 no tiene atajo directo fiable."
+    "explicacion": "En esta instalación: Ctrl+Mayús+1 → Título 1, Alt+Ctrl+2 → Título 2 (Ctrl+Mayús+2 NO hace nada), Ctrl+Mayús+3 → Título 3. Ctrl+Mayús+A aplica el estilo Normal. ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+1 como «Aplicar Título 1», pero Ctrl+1 aplica interlineado sencillo. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-94",
@@ -9435,7 +9435,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "No hay atajo para el espaciado entre párrafos: se ajusta desde el grupo Párrafo de la cinta o el diálogo Párrafo. En esta instalación Ctrl+0 restaura el zoom al 100 %, no toca el espaciado. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "No hay atajo para el espaciado entre párrafos: se ajusta desde el grupo Párrafo de la cinta o el diálogo Párrafo. En esta instalación Ctrl+0 restaura el zoom al 100 %, no toca el espaciado. Prueba en vivo del usuario (sep 2026). ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+0 bajo dos comandos (Zoom100 y «espacio antes del párrafo»); en la práctica hace zoom 100 %."
   },
   {
     "id": "inicio-254",
@@ -9500,7 +9500,7 @@
       "2": "B",
       "3": "C"
     },
-    "explicacion": "Ctrl+1 aplica interlineado sencillo. Ctrl+2 aplica interlineado doble. Ctrl+5 alfanumérico aplica interlineado de 1,5 líneas. Nota: Ctrl+5 del teclado numérico selecciona todo el documento en lugar de aplicar interlineado. Los distractores D y E no tienen atajo directo documentado. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+1 = interlineado sencillo, Ctrl+2 = doble, Ctrl+5 (fila superior) = 1,5 líneas. ⚠️ Ojo: Ctrl+5 del teclado numérico selecciona todo; y en el cuadro Personalizar teclado Ctrl+1 figura bajo «Aplicar Título 1», aunque en la práctica hace interlineado. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-255",
@@ -9608,7 +9608,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión; como Mayús+- da _, también se escribe Ctrl+_) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión; como Mayús+- da _, también se escribe Ctrl+_) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario (sep 2026). ⚠️ Ojo: el volcado también lista Ctrl+= para subíndice, pero esa combinación no funciona en este Word."
   },
   {
     "id": "inicio-259",
@@ -9825,7 +9825,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Barra espaciadora elimina el formato de carácter manual del texto seleccionado, restaurando los atributos de fuente del estilo aplicado. Su alcance es más limitado que el botón Borrar todo el formato, que además elimina el formato de párrafo y los estilos. Ctrl+Q elimina solo el formato de párrafo manual. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Barra espaciadora elimina el formato de carácter manual del texto seleccionado, restaurando los atributos de fuente del estilo aplicado. Su alcance es más limitado que el botón Borrar todo el formato, que además elimina el formato de párrafo y los estilos. Ctrl+Q elimina solo el formato de párrafo manual. Prueba en vivo del usuario (sep 2026). ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+W bajo dos comandos (cerrar documento y «quitar formato de párrafo»); en la práctica quita el formato de párrafo, no cierra nada."
   },
   {
     "id": "inicio-263",
@@ -9861,7 +9861,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+W quita el formato de párrafo manual y restaura el del estilo (prueba en vivo del usuario). Ctrl+Q alinea el párrafo a la izquierda. Ctrl+Barra espaciadora quita el formato de CARÁCTER, no el de párrafo."
+    "explicacion": "Ctrl+W quita el formato de párrafo manual y restaura el del estilo (prueba en vivo del usuario). Ctrl+Q alinea el párrafo a la izquierda. Ctrl+Barra espaciadora quita el formato de CARÁCTER, no el de párrafo. ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+W bajo dos comandos (cerrar documento y «quitar formato de párrafo»); en la práctica quita el formato de párrafo, no cierra nada."
   },
   {
     "id": "inicio-264",
@@ -11769,7 +11769,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+1 aplica interlineado sencillo, Ctrl+2 doble y Ctrl+5 (fila superior, no numérico) de 1,5 líneas. Ctrl+0 restaura el zoom al 100 %, no toca el interlineado. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+1 aplica interlineado sencillo, Ctrl+2 doble y Ctrl+5 (fila superior) de 1,5 líneas. Ctrl+0 restaura el zoom al 100 %. ⚠️ Ojo: en el cuadro Personalizar teclado, Ctrl+1 figura como «Aplicar Título 1», pero al pulsarlo aplica interlineado sencillo (prueba en vivo). Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-315",
@@ -11804,7 +11804,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+2 aplica interlineado doble. Ctrl+1 sencillo, Ctrl+5 de 1,5 líneas. Ctrl+Mayús+2 no tiene función asignada. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+2 aplica interlineado doble; Ctrl+1 sencillo, Ctrl+5 de 1,5 líneas. Ctrl+Mayús+2 no tiene función. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-316",
@@ -11839,7 +11839,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+5 (fila superior) aplica interlineado de 1,5 líneas. Ctrl+1 sencillo, Ctrl+2 doble. Ctrl+5 en el teclado NUMÉRICO en cambio selecciona todo el documento. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+5 (fila superior) aplica interlineado de 1,5 líneas; Ctrl+1 sencillo, Ctrl+2 doble. ⚠️ Ojo: Ctrl+5 del teclado NUMÉRICO en cambio selecciona todo el documento. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-317",
@@ -12644,7 +12644,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+1 aplica el estilo Título 1 al párrafo (prueba en vivo). Ctrl+1 aplica interlineado sencillo. Alt+Mayús+1 muestra solo los títulos de nivel 1 en la vista Esquema. Alt+Ctrl+1 no aparece en el volcado v2608."
+    "explicacion": "Ctrl+Mayús+1 aplica el estilo Título 1. Ctrl+1 aplica interlineado sencillo. Alt+Mayús+1 no está en el volcado v2608 (los niveles de esquema se muestran con Alt+Mayús+T). ⚠️ Ojo: en el cuadro Personalizar teclado, Ctrl+1 figura como «Aplicar Título 1», pero al pulsarlo aplica interlineado sencillo (prueba en vivo). Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-342",
@@ -12679,7 +12679,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+2 aplica el estilo Título 2 al párrafo. Ctrl+Mayús+2 no aplica Título 2 en el volcado v2608. Ctrl+2 aplica interlineado doble. Alt+Mayús+2 muestra los títulos hasta nivel 2 en la vista Esquema."
+    "explicacion": "Alt+Ctrl+2 aplica el estilo Título 2 (coincide con el volcado v2608). Ctrl+Mayús+2 no hace nada. Ctrl+2 aplica interlineado doble. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-343",
@@ -12714,7 +12714,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+3 aplica el estilo Título 3 al párrafo. Alt+Ctrl+3 no aplica Título 3 en el volcado v2608. Ctrl+3 bloquea los campos del documento. Alt+Mayús+3 muestra los títulos hasta nivel 3 en la vista Esquema."
+    "explicacion": "Ctrl+Mayús+3 aplica el estilo Título 3 (coincide con el volcado v2608). Ctrl+3 bloquea los campos del documento (BloquearCampos). Alt+Ctrl+3 no está en el volcado. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-344",
@@ -13029,7 +13029,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+W quita todo el formato de párrafo, sangrías incluidas (prueba en vivo). Ctrl+Mayús+R y Ctrl+R no hacen nada en esta versión, aunque el volcado v2608 asigne a Ctrl+Mayús+R 'quitar sangría francesa'. Ctrl+H aplica sangría, no la quita."
+    "explicacion": "Ctrl+W quita todo el formato de párrafo, sangrías incluidas (prueba en vivo). Ctrl+Mayús+R y Ctrl+R no hacen nada en esta versión, aunque el volcado v2608 asigne a Ctrl+Mayús+R 'quitar sangría francesa'. Ctrl+H aplica sangría, no la quita. ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+W bajo dos comandos (cerrar documento y «quitar formato de párrafo»); en la práctica quita el formato de párrafo, no cierra nada."
   },
   {
     "id": "inicio-353",
@@ -13239,7 +13239,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión; = Ctrl+_) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión; = Ctrl+_) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario (sep 2026). ⚠️ Ojo: el volcado también lista Ctrl+= para subíndice, pero esa combinación no funciona en este Word."
   },
   {
     "id": "inicio-362",
@@ -13589,7 +13589,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+5 en el teclado numérico selecciona todo el documento (funciona con NumLock activado o no). Ojo: Alt+5 en el numérico NO selecciona — introduce el carácter del código Alt 5 (♣), que es una función de Windows. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+5 del teclado numérico selecciona todo el documento (con NumLock activado o no). ⚠️ Ojo: Alt+5 del numérico NO selecciona — con NumLock ON inserta ♣ (código Alt); con NumLock OFF sí selecciona toda la tabla. Ctrl+5 num no figura en el volcado v2608; confirmado solo en vivo. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-372",
