@@ -6,7 +6,7 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **2480 preguntas** y **971
+de Word 365 de una oposición de ayuntamiento. **2496 preguntas** y **971
 flashcards** (archivo 263, disposicion 100, inicio 148, insertar 147,
 referencias 74, revisar 73, vista 79, diseno 24, interfaz 48,
 correspondencia 15 — un buen tramo de las de archivo/disposicion son
@@ -490,8 +490,24 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 525, insertar 457, inicio 456, archivo 407, vista 144, disposicion 128,
-diseno 90, referencias 153, revisar 82, correspondencia 38.
-Total 2480. (+14: segundo barrido de `data/rutas/referencias.txt` con un
+diseno 90, referencias 161, revisar 82, correspondencia 46.
+Total 2496.
+**Cuarta pasada: `seleccion_multiple` + lectura de los ejemplos del PDF
+(sep-2026)**: ni `correspondencia` ni `referencias` tenían NINGUNA
+pregunta de tipo `seleccion_multiple` (varias respuestas correctas a la
+vez) pese a ser uno de los 5 tipos del banco. Se añadieron 16 (+8/+8)
+reformateando listas cerradas ya verificadas a "cuáles SÍ son reales"
+(con distractores inventados marcados como tal en la explicación —
+Vancouver/Oxford no son estilos de este Word, Comentario/Sección no son
+tipos de Referencia cruzada, etc.) y usando los DATOS CONCRETOS de los
+ejemplos de las capturas del PDF como enfoque de lectura (la lista de
+destinatarios de muestra Rosa/Andrés/Carlota, el remite del sobre
+«Comida Natural», la fuente bibliográfica de ejemplo Autor:Beatriz
+Año:2023). De paso se reclasificaron las últimas 7 preguntas
+`categoria:"general"` que quedaban en `archivo` (todas sobre
+OneDrive/uso compartido y la barra de acceso rápido → `concepto`):
+`archivo` queda a 0 `general`, solo `vista` conserva 31 sin reclasificar.
+Generador: `scripts/gen_seleccion_multiple.py`. (+14: segundo barrido de `data/rutas/referencias.txt` con un
 detector de líneas no reflejadas en el banco — de 133 líneas, 40
 candidatas, 13 realmente nuevas tras descartar falsos positivos ya
 cubiertos con otra redacción; +2 en correspondencia del cuadro Nueva
@@ -574,9 +590,10 @@ daypo.com (sin atajos de teclado, sin riesgo de esquema distinto) que
 confirman el mismo enfoque conceptual. `sourceQuestionId` `pdf-<sec>-NN`,
 `generado:true`. Generador: `scripts/gen_pdf_academia.py`. 352 preguntas `categoria:"atajo"`, 1048 `"ruta"`, 935
 `"concepto"`, 41 `"general"` (sep-2026: `interfaz` reclasificada por
-completo — ver más abajo — quedan sin reclasificar 31 en `vista`, 7 en
-`archivo`, 3 en `inicio`). Por tipo: opcion_unica 1652, verdadero_falso
-564, emparejamiento 66, seleccion_multiple 50, relleno 44.
+completo — ver más abajo — y las últimas 7 de `archivo` reclasificadas
+también; solo quedan sin reclasificar 31 en `vista`). Por tipo:
+opcion_unica 1706, verdadero_falso 607, emparejamiento 69,
+seleccion_multiple 60, relleno 54.
 **Emparejamiento en 5 pestañas más (sep-2026)**: 6 de 10 estaban a 0 %.
 Se añadieron 12 (`sourceQuestionId` `emp-<sec>-NN`, `generado:true`) SOLO
 donde había una lista cerrada real ya verificada en el banco (tamaños de

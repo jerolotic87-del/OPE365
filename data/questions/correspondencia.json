@@ -180,6 +180,89 @@
     "explicacion": "«Nueva entrada» añade una fila más a la tabla de destinatarios que se está creando."
   },
   {
+    "id": "correspondencia-40",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "pdfimg2-correspondencia-01",
+    "generado": true,
+    "enunciado": "En la lista de destinatarios de ejemplo del PDF de la academia (Rosa Lara Mena, Andrés Roca Sanz y Carlota Téllez Prisa), ¿qué destinatarios tienen su dirección en Madrid?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Rosa Lara Mena"
+      },
+      {
+        "letter": "B",
+        "text": "Andrés Roca Sanz"
+      },
+      {
+        "letter": "C",
+        "text": "Carlota Téllez Prisa"
+      },
+      {
+        "letter": "D",
+        "text": "Ninguno vive en Madrid"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C"
+    ],
+    "explicacion": "Rosa (C/ La Paz 43) y Carlota (C/ Lastre 99) están en Madrid; Andrés (Plaza del Sol) está en Toledo."
+  },
+  {
+    "id": "correspondencia-46",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "pdfimg2-correspondencia-07",
+    "generado": true,
+    "enunciado": "Dentro de «Restringir lista de destinatarios», ¿cuáles de estos comandos SÍ existen?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ordenar…"
+      },
+      {
+        "letter": "B",
+        "text": "Filtrar…"
+      },
+      {
+        "letter": "C",
+        "text": "Agrupar…"
+      },
+      {
+        "letter": "D",
+        "text": "Buscar duplicados…"
+      },
+      {
+        "letter": "E",
+        "text": "Combinar duplicados…"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "Los cinco comandos reales son Ordenar, Filtrar, Buscar duplicados, Buscar destinatario y Validar direcciones. «Agrupar…» y «Combinar duplicados…» no existen."
+  },
+  {
     "id": "correspondencia-14",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Iniciar combinación de correspondencia",
@@ -235,6 +318,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Son las columnas estándar que Word propone al crear una lista de destinatarios desde cero."
+  },
+  {
+    "id": "correspondencia-47",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "pdfimg2-correspondencia-08",
+    "generado": true,
+    "enunciado": "El origen de datos del ejemplo usado en el PDF de la academia tiene 3 registros: Rosa, Andrés y Carlota.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "La tabla de ejemplo (Nombre, Apellidos, Dirección, CP, Ciudad, Teléfono) tiene exactamente esas tres filas."
   },
   {
     "id": "correspondencia-29",
@@ -647,6 +749,94 @@
     "explicacion": "«Si…Entonces…Sino…» es la regla condicional clásica del grupo Reglas."
   },
   {
+    "id": "correspondencia-41",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Escribir e insertar campos",
+    "sourceQuestionId": "pdfimg2-correspondencia-02",
+    "generado": true,
+    "enunciado": "En el ejemplo de carta combinada del PDF, bajo «Les rogamos que nos confirme la información», ¿qué campos aparecen realmente insertados?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Apellidos"
+      },
+      {
+        "letter": "B",
+        "text": "Dirección"
+      },
+      {
+        "letter": "C",
+        "text": "Teléfono"
+      },
+      {
+        "letter": "D",
+        "text": "Ciudad"
+      },
+      {
+        "letter": "E",
+        "text": "Correo electrónico"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "La carta de ejemplo muestra tres líneas combinadas: Apellidos, Dirección y Teléfono. Ciudad y correo electrónico no aparecen en ese cuerpo de carta."
+  },
+  {
+    "id": "correspondencia-42",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Escribir e insertar campos",
+    "sourceQuestionId": "pdfimg2-correspondencia-03",
+    "generado": true,
+    "enunciado": "¿Cuáles de estas opciones SÍ aparecen en el desplegable «Reglas» de Correspondencia?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Preguntar…"
+      },
+      {
+        "letter": "B",
+        "text": "Rellenar…"
+      },
+      {
+        "letter": "C",
+        "text": "Combinar todo…"
+      },
+      {
+        "letter": "D",
+        "text": "Próximo registro"
+      },
+      {
+        "letter": "E",
+        "text": "Duplicar registro"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "Reglas real: Preguntar, Rellenar, Si…Entonces…Sino, Registro de combinación n.º, Secuencia de combinación n.º, Próximo registro, Próximo registro si, Asignar marcador, Saltar registro si. «Combinar todo» y «Duplicar registro» no existen."
+  },
+  {
     "id": "correspondencia-21",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Escribir e insertar campos",
@@ -960,6 +1150,81 @@
     "explicacion": "Es el mismo campo que aparece como opción manual en «Reglas», pero aquí lo inserta Word solo al crear la hoja de etiquetas."
   },
   {
+    "id": "correspondencia-43",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "pdfimg2-correspondencia-04",
+    "generado": true,
+    "enunciado": "En el ejemplo de sobre combinado del PDF, ¿qué texto aparece como remite?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Comida Natural, C/ Naturaleza nº 3, Madrid"
+      },
+      {
+        "letter": "B",
+        "text": "Rosa Lara Mena, C/ La Paz 43"
+      },
+      {
+        "letter": "C",
+        "text": "Word 365, Ayuntamiento"
+      },
+      {
+        "letter": "D",
+        "text": "Ninguno, el remite se deja en blanco"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El remite del ejemplo es «Comida Natural / C/ Naturaleza nº 3 / Madrid», fijo para todos los sobres; el destinatario sí cambia con cada registro."
+  },
+  {
+    "id": "correspondencia-45",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "pdfimg2-correspondencia-06",
+    "generado": true,
+    "enunciado": "¿Cuáles de estas SÍ son fichas del cuadro «Opciones de sobre»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Opciones de sobre"
+      },
+      {
+        "letter": "B",
+        "text": "Opciones de impresión"
+      },
+      {
+        "letter": "C",
+        "text": "Opciones de fuente"
+      },
+      {
+        "letter": "D",
+        "text": "Vista previa (como ficha propia)"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B"
+    ],
+    "explicacion": "El cuadro Opciones de sobre solo tiene dos fichas: Opciones de sobre y Opciones de impresión. La Vista previa es un panel dentro de la primera ficha, no una ficha aparte."
+  },
+  {
     "id": "correspondencia-10",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Crear (sobres y etiquetas)",
@@ -1091,6 +1356,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Así reparte un registro distinto en cada etiqueta al combinar; la primera celda lleva los campos que insertó el usuario y el resto encadena «Próximo registro»."
+  },
+  {
+    "id": "correspondencia-44",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "pdfimg2-correspondencia-05",
+    "generado": true,
+    "enunciado": "En el ejemplo de etiqueta ya combinada del PDF, el nombre completo, la dirección, el código postal y la ciudad aparecen cada uno en su propia línea.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "La etiqueta de ejemplo muestra «Rosa Lara Mena» / «C/ La Paz 43» / «23939» / «Madrid», una línea por dato."
   },
   {
     "id": "correspondencia-18",

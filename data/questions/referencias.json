@@ -326,6 +326,46 @@
     "explicacion": "«Campos de elementos de tabla» sirve para que entre en la tabla el texto marcado a mano como campo (con Ctrl+F9), sin necesidad de estilo ni nivel de esquema."
   },
   {
+    "id": "referencias-160",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "pdfimg2-referencias-07",
+    "generado": true,
+    "enunciado": "¿Cuáles de estas SÍ son fichas del mismo cuadro de diálogo que se abre desde «Tabla de contenido», «Insertar Tabla de ilustraciones» e «Insertar índice»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Índice"
+      },
+      {
+        "letter": "B",
+        "text": "Tabla de contenido"
+      },
+      {
+        "letter": "C",
+        "text": "Tabla de ilustraciones"
+      },
+      {
+        "letter": "D",
+        "text": "Tabla de autoridades"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "Las tres primeras son fichas de UN MISMO cuadro de diálogo compartido. «Tabla de autoridades» es un comando y un cuadro aparte, de la pestaña Referencias pero fuera de ese cuadro."
+  },
+  {
     "id": "referencias-8",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Tabla de contenido",
@@ -1905,6 +1945,211 @@
     "explicacion": "«Lista general» son todas las fuentes guardadas alguna vez en el equipo; «Lista actual» son las del documento abierto."
   },
   {
+    "id": "referencias-157",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "pdfimg2-referencias-04",
+    "generado": true,
+    "enunciado": "En el ejemplo del cuadro Crear fuente (tipo Libro) del PDF, ¿qué año se indicó?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "2023"
+      },
+      {
+        "letter": "B",
+        "text": "2022"
+      },
+      {
+        "letter": "C",
+        "text": "2021"
+      },
+      {
+        "letter": "D",
+        "text": "No se indica"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Los campos del ejemplo son Autor: Beatriz, Título: Buenas noches en tu puerta, Año: 2023, Ciudad: Madrid, Editorial: Sin tiempo."
+  },
+  {
+    "id": "referencias-158",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "pdfimg2-referencias-05",
+    "generado": true,
+    "enunciado": "Según la vista previa (APA) del Administrador de fuentes en el ejemplo del PDF, ¿cómo se muestra la cita dentro del texto?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "(Beatriz, 2023)"
+      },
+      {
+        "letter": "B",
+        "text": "Beatriz (2023)"
+      },
+      {
+        "letter": "C",
+        "text": "[Beatriz 2023]"
+      },
+      {
+        "letter": "D",
+        "text": "Beatriz, B. (2023)"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "La vista previa del ejemplo muestra «Cita: (Beatriz, 2023)» y la entrada bibliográfica «Beatriz. (2023). Buenas noches en tu puerta. Madrid: Sin tiempo.»."
+  },
+  {
+    "id": "referencias-154",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "pdfimg2-referencias-01",
+    "generado": true,
+    "enunciado": "¿Cuáles de estos SÍ son estilos de cita disponibles en el menú Estilo de este Word?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "APA"
+      },
+      {
+        "letter": "B",
+        "text": "MLA"
+      },
+      {
+        "letter": "C",
+        "text": "Vancouver"
+      },
+      {
+        "letter": "D",
+        "text": "Chicago"
+      },
+      {
+        "letter": "E",
+        "text": "Oxford"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "El menú Estilo tiene 12 estilos (APA, Chicago, GB7714, GOST ×2, Harvard-Anglia, IEEE, ISO 690 ×2, MLA, SIST02, Turabian). «Vancouver» y «Oxford» no aparecen en la lista, aunque son nombres reales de estilos de cita en general."
+  },
+  {
+    "id": "referencias-155",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "pdfimg2-referencias-02",
+    "generado": true,
+    "enunciado": "¿Cuáles de estos SÍ son los tres diseños integrados de la galería Bibliografía?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Bibliografía"
+      },
+      {
+        "letter": "B",
+        "text": "Referencias"
+      },
+      {
+        "letter": "C",
+        "text": "Fuentes citadas"
+      },
+      {
+        "letter": "D",
+        "text": "Trabajos citados"
+      },
+      {
+        "letter": "E",
+        "text": "Notas finales"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "La galería Bibliografía ofrece Bibliografía, Referencias y Trabajos citados como diseños integrados, más «Insertar bibliografía» sin ninguno de los tres."
+  },
+  {
+    "id": "referencias-161",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "pdfimg2-referencias-08",
+    "generado": true,
+    "enunciado": "¿Cuáles de estos SÍ son campos del cuadro «Crear fuente» para una fuente de tipo Libro?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autor"
+      },
+      {
+        "letter": "B",
+        "text": "Título"
+      },
+      {
+        "letter": "C",
+        "text": "Año"
+      },
+      {
+        "letter": "D",
+        "text": "Ciudad"
+      },
+      {
+        "letter": "E",
+        "text": "Número de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "Los campos bibliográficos de APA para un Libro son Autor, Título, Año, Ciudad y Editorial (más «Autor corporativo» y «Mostrar todos los campos bibliográficos»). «Número de página» no es uno de ellos."
+  },
+  {
     "id": "referencias-30",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Citas y bibliografía",
@@ -2703,6 +2948,50 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "«Eliminar rótulo» borra un rótulo de la lista (los tres rótulos de fábrica —Ecuación, Ilustración, Tabla— no se pueden eliminar)."
+  },
+  {
+    "id": "referencias-156",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "pdfimg2-referencias-03",
+    "generado": true,
+    "enunciado": "¿Cuáles de estos SÍ son tipos válidos en el desplegable «Tipo» del cuadro Referencia cruzada?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Elemento numerado"
+      },
+      {
+        "letter": "B",
+        "text": "Marcador"
+      },
+      {
+        "letter": "C",
+        "text": "Comentario"
+      },
+      {
+        "letter": "D",
+        "text": "Nota al pie"
+      },
+      {
+        "letter": "E",
+        "text": "Sección"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "Los ocho tipos reales son: Elemento numerado, Título, Marcador, Nota al pie, Nota al final, Ecuación, Ilustración y Tabla. «Comentario» y «Sección» no son tipos de Referencia cruzada."
   },
   {
     "id": "referencias-41",
@@ -3739,6 +4028,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "El campo «Idioma» del cuadro Índice fija el criterio de ordenación alfabética (en esta instalación, Español (España))."
+  },
+  {
+    "id": "referencias-159",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Índice",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "indice",
+    "subtopic": null,
+    "tema": "Índice",
+    "sourceQuestionId": "pdfimg2-referencias-06",
+    "generado": true,
+    "enunciado": "En el ejemplo del cuadro Índice del PDF, la entrada «Asteroide» no muestra un número de página, sino el texto «Véase Júpiter».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es el ejemplo de vista preliminar del cuadro Índice: «Asteroide. Véase Júpiter» en vez de un número de página."
   },
   {
     "id": "referencias-86",
