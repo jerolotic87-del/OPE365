@@ -1465,6 +1465,154 @@
     "explicacion": "Pega el contenido del portapapeles en la posición del cursor; es la combinación más extendida para pegar, junto a la variante Mayús+Insertar."
   },
   {
+    "id": "inicio-394",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null,
+    "tema": "Portapapeles",
+    "sourceQuestionId": "img-inicio-01",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAABLCAMAAAA8q5XRAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADZQTFRF////wMC+hIKAeXd0iomGxsXE+vr63mwA+NuPOjo4JCQk2traqKioPz8/wMDAj4+PW1tbdnZ2qwUxvgAAARlJREFUeJzt04GOgyAMANBWdOacuN3/f6TeHO6cQg902WTC1GTJvMQmJUJeSiGIsCBwxRgRiWgeRmawHGsXDpheJammMbslyFv6cKyzZY+5DPVQ+7CeNUMc6XbehZXVJgteY7Di4/gK4/DjL8tdJvDwXtiGN3yP3/fiwXc9ha1Yhq3ZBHbEht04MTMxF6NIsZyPu1yC9wSshKyFqEFxvEKcQxLX1RgfsACuRBrlnM6HpttGLyfRj+OAfUmAnaKyP4T+ccLTvTm7DYDMsH5MEKgCjn4MSXA2Y3hKFbKgyNoXlbs+4lzvH9couNxJZ+Xn2FPlv7rn+KZiJub6BxwVXt8T/d/YvAeT8ypnbdQ4rKcNZ91V38aGP4z/AMRDs0yxuRPsAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Subrayado"
+      },
+      {
+        "letter": "B",
+        "text": "Cambiar mayúsculas y minúsculas"
+      },
+      {
+        "letter": "C",
+        "text": "Editor"
+      },
+      {
+        "letter": "D",
+        "text": "Pegar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Pegar.** Pestaña Inicio ▸ Portapapeles. Atajo: Ctrl+V. Pega el contenido del Portapapeles en la posición del cursor."
+  },
+  {
+    "id": "inicio-395",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null,
+    "tema": "Portapapeles",
+    "sourceQuestionId": "img-inicio-02",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABhQTFRF8/LxOjo4o6Oh+vr65eXlW1pYe3p4eXd01+vFVQAAAFxJREFUeJxjZIADRmSmIAMD/wMIU1iBUW4djPn3AgOc+ZCBwX8BhPlY4Z/qKjhTRHoBjMmstArGfMDwHspkYPh3HoOp4vBnH05RQYb/zFBRIBBGMAVBxHsUp8MBADAGNBVzRsvfAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Disposición ▸ Organizar"
+      },
+      {
+        "letter": "B",
+        "text": "Inicio ▸ Portapapeles"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Encabezado y pie de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Copiar.** Pestaña Inicio ▸ Portapapeles. Atajo: Ctrl+C. Copia la selección al Portapapeles sin quitarla del documento."
+  },
+  {
+    "id": "inicio-396",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null,
+    "tema": "Portapapeles",
+    "sourceQuestionId": "img-inicio-03",
+    "generado": true,
+    "enunciado": "¿Cuál es el atajo de teclado del comando que muestra el icono de la imagen?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACFQTFRF8/Lxw8LBo6OhuLe2z87OZWVkgLveJ4/OJo7NJY3MqM/lpEz9kgAAAGtJREFUeJxjZIADRhD+zyDwAcJk+seg8ADK1LssC2Wy+Gy1PgBhMgQ/Og3VxmAqtxbGZPXegIWJpAChjdl3q/YFCJNV+7LvBjCTrejFsoknF4CY7IuPTV98bAIak63w5bLClwsghiGcjskEAK3IJBXhISasAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Mayús+-"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+N"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+X"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+S"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Cortar.** Pestaña Inicio ▸ Portapapeles. Atajo: Ctrl+X. Quita la selección del documento y la lleva al Portapapeles."
+  },
+  {
+    "id": "inicio-397",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null,
+    "tema": "Portapapeles",
+    "sourceQuestionId": "img-inicio-04",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAMZQTFRF8/LxhYSDRUVDo6Ohenp4fXx6yMjHRkZEmZiXOjo4+vr6fX17ZmZlqpmHUVFP1dXVW1tZUFBOWlpX3t3d6K93zm0RWlhTp6em5eXlkpKR7tK35I4844Im89i+7Maj6Khs4YYv4HkX7LN83mwAz87O5ZRH4XkV66xw5Iw04HII4n8e6aRi8cypvpRqUEtFw8LB8N/P4X4c6p5A77dg55Mx4HcQ4HgS55xS4HMM66NH+NuP8sFt44Ic4HIJ4HMK5Icl4n8f5ZlNBEc4bwAAALFJREFUeJyd0LEOgjAQBuD+saUmijoQBocyGBMXE97/KXQ1xigDYUFjbLAGFFsqgsRFb/xyd+1/IF8KfyOAexepxlsL+8gLCgbIBl3dA8nAkb7RM4ZzZS+casgVv4yPw9S+LkxPQshIcShZWAxomVT9TE2Q+Vs7PgcyM0UK0Ouj/vwid/SGHSEzYF1jCFvSjaMmZuj0YBIeonZ2EWS8ZPvo8yBi4GMTd6/kLU+rn+5Z1RNN2S0V6whlzwAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alinear a la derecha"
+      },
+      {
+        "letter": "B",
+        "text": "Copiar formato"
+      },
+      {
+        "letter": "C",
+        "text": "Fuente (nombre)"
+      },
+      {
+        "letter": "D",
+        "text": "Subrayado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Copiar formato.** Pestaña Inicio ▸ Portapapeles. Atajo: Alt+Ctrl+C. El pincel: copia el formato del texto seleccionado para aplicarlo en otro sitio (Alt+Ctrl+V lo pega). Doble clic = varios usos."
+  },
+  {
     "id": "inicio-11",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -4786,6 +4934,561 @@
     "explicacion": "Aplica o quita el subrayado simple al texto seleccionado; es una segunda combinación asignada a la misma función que Ctrl+S."
   },
   {
+    "id": "inicio-398",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-05",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAMAAAAhm0ZxAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAHtQTFRF////tbW0Ojo4f399UVFPc3Ny6enpwMDAqqqpXFxan5+e2dnZzMzLioqJ8OPys266aGhnok2qp1iux5bL+vr6sWy4qFmvoEiounu/mDmg3b7grVi0mjqi17LalJSToEWo1JLYv3PFu3vApk+vrVazljWeoESolzafp1euf6Ow7wAAAK1JREFUeJzt0rEOwiAQBmB+oQhVqYuL7/9kDg5OplVpWhDPhta2oXFz8oZj+BJyxw/YcuFvXwwIYck40C6YdFkrmrQpWI1H2nSoiZO2saKRLr+lbFfTIJmqmEEoZyY8LaDU1XAEX04M3bn2iq8AFzHa+zYqQ8TYU1xGFqcwGo6xIHEeWd64jgRgB4qmDyfqxZ6eTdqeJjkYvfUC956mGRldoBpolp85lh/6+X95AamONiDr35AiAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Reducir el tamaño de la fuente"
+      },
+      {
+        "letter": "B",
+        "text": "Fuente (nombre)"
+      },
+      {
+        "letter": "C",
+        "text": "Negrita"
+      },
+      {
+        "letter": "D",
+        "text": "Borrar todo el formato"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Borrar todo el formato.** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. Quita todo el formato de la selección y la deja con el del estilo base. (Ctrl+Barra espaciadora quita solo el formato de carácter.)"
+  },
+  {
+    "id": "inicio-399",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-06",
+    "generado": true,
+    "enunciado": "¿Cuál es el atajo de teclado del comando que muestra el icono de la imagen?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAcCAIAAADwcTiEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC0SURBVEhLY/z//z8D9QATlKYSGDWOfDC4jcOZ7qytLYGknp7+9OkzICJAABE8evQ4hIsJCLju0qWLCxbMh3KIAIQ9u3z5slu3bkE5hAAB4ywtrb58+dLf3wflEwIEjCsrK+fh4SHeywSMExMTy88vADKI9DLhsPPy8g4ICCTSy4SNA4L4+ARxcXGgl6F83IAo48BeLoRy8AKijAMCe3t7oJehHNxgtDQmH4waRz4YzMYxMAAAmrM2k6JMzCsAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Mayús+F3"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+Entrar"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+N"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+L"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Negrita.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+N. Pone en negrita la selección. En el Word en español es «N», no «B»."
+  },
+  {
+    "id": "inicio-400",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-07",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAcBAMAAAB4wzlQAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADBQTFRF////wMDARkZEf399zMzLlJSTaGhnXFxa6enp2dnZOjo4c3NytbW0ioqJn5+eUVFPDEUTNgAAAFJJREFUeJxjZEACjDTmMMo/MOI7AOWwRi8u7YDJsHk992yAcZgEQ2fA9cyS9EUYcHzZZATn8v66D3BO3oJXHHDOwvjiXhiHZU6CV5kDHTxHmAMAXAUTHdw/J88AAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tachado"
+      },
+      {
+        "letter": "B",
+        "text": "Subíndice"
+      },
+      {
+        "letter": "C",
+        "text": "Cursiva"
+      },
+      {
+        "letter": "D",
+        "text": "Agrandar fuente"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Cursiva.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+K. Pone en cursiva la selección. En esta instalación Ctrl+K es Cursiva, no «insertar hipervínculo»."
+  },
+  {
+    "id": "inicio-401",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-08",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAcCAMAAAAkyw3kAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADNQTFRF////6enpf399Ojo4UVFPaGhntbW0wMDAzMzLlJSTqqqpJCQkj4+Pn5+e2dnZRkZEXFxaNFOWnQAAAHVJREFUeJzt0MsKgCAQBVCvjxSi///PilDT7LnIhJpFSy/IgBxmhgEjBhVSIQCGQIAqptR4AhTS0UbLZaFBEyAsBTIYr6f7h5bB7e8Jt6azsrlEOlxxR2UGlsvTZZA3Voe2/96Rd2M3Ue74mhsUV42/daywzArr+x8dMIGfEAAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Disposición ▸ Configurar página"
+      },
+      {
+        "letter": "B",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Portapapeles"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Texto"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Subrayado.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+S. Subraya la selección. La flecha permite elegir el tipo y el color de subrayado."
+  },
+  {
+    "id": "inicio-402",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-09",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAcBAMAAABi/9neAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADBQTFRF////aGhnzMzLf399XFxawMDAtbW0c3Ny6enpUVFPn5+eRkZEOjo4qqqplJSTioqJ98M6bAAAAFdJREFUeJxjZEABjAPMZfxPLJdJX2RP2h3bBhi3jrNhepbaBZhiDp/tXxk2BEC4PAcg+r84QGQ5v3MyfOewOMAA4942OGp3SQHK5bKdYfBC4yFd/EsUFwBM7Bgd8SjDtgAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Bordes"
+      },
+      {
+        "letter": "B",
+        "text": "Tachado"
+      },
+      {
+        "letter": "C",
+        "text": "Justificar"
+      },
+      {
+        "letter": "D",
+        "text": "Mostrar todo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Tachado.** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. Traza una línea sobre el texto seleccionado. No tiene atajo directo (se puede activar desde el cuadro Fuente)."
+  },
+  {
+    "id": "inicio-403",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-10",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAcCAMAAABIzV/hAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEJQTFRF////6enpRkZEaGhnUVFPn5+eOjo4wMDAtbW0ioqJ2dnZlJSTzMzLf399cLXfR6DWUKXYO5rThsHkZbDde7viHovNc1ZOiwAAAGVJREFUeJztj7EKgDAQQxPa0kUHFf//BxUrgmKl1oJj72YXsz5yL0eo4Y9ERDLBMGWh5Qq8eYoHDeEO2eUz7C4jg+zlVnHZS3Q10W+wSC0Z1L+6RUM9ZwUNnOqFb8aIVXXV479ED1jSFR353QPSAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Seleccionar"
+      },
+      {
+        "letter": "B",
+        "text": "Cursiva"
+      },
+      {
+        "letter": "C",
+        "text": "Superíndice"
+      },
+      {
+        "letter": "D",
+        "text": "Subíndice"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Subíndice.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+Mayús+-. Baja el texto y lo hace más pequeño (H₂O). El atajo es Ctrl + Mayús + la tecla del guión (= Ctrl+_)."
+  },
+  {
+    "id": "inicio-404",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-11",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAcCAMAAABIzV/hAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEJQTFRF////cLXfR6DWUKXYO5rThsHkZbDde7viHovN6enpRkZEaGhnUVFPn5+eOjo4wMDAtbW0ioqJ2dnZlJSTzMzLf399WWlNngAAAGJJREFUeJzljsEKgCAUBHdBs7Do0v//YJB0iMhS8yzv3YP2OiwzhDp+FZFM6ss8GrKMCup4aa4+IjdoIA94plMonGpb5i7Ge8IGiGguMJuMPIqTX9VlbtG1RLdihFjY7ofoBWbbFh18fQFcAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Subrayado"
+      },
+      {
+        "letter": "B",
+        "text": "Superíndice"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar todo"
+      },
+      {
+        "letter": "D",
+        "text": "Negrita"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Superíndice.** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. Sube el texto y lo hace más pequeño (x²). En esta instalación NO tiene atajo de teclado: solo el botón o la casilla del cuadro Fuente."
+  },
+  {
+    "id": "inicio-405",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-12",
+    "generado": true,
+    "enunciado": "¿Cuál es el atajo de teclado del comando que muestra el icono de la imagen?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAcCAMAAAA6Aj1XAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAGZQTFRF////zMzLUVFPOjo4iYmIRUVDp6em5eXlW1tZlJST+vr6vb29Z2dmfn580tHQWVlYZmZli4qHcnBtVFRRfX17wMDAJCQk7OvreXd0RkZEj4+PmJaUgoF+hISDwMC+f316q6qo//8A6h4iSgAAAIJJREFUeJzdzzELgCAUBOB38IqmoEHagv7/jypobCyIoqinCJmUNkYHLvJxnqBXwQ8ZJGuUgbWbIkwUS+EYZkZtsTarkiG47Vm5LAeWB+WyQr44XJXC3uvjsBK0IB2vXQq8ijpZyRsRo/NeM10nqzATZe3NLH9bKJbV3nXzIRbLD9gB95ciHZkjnk8AAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+S"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+L"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+H"
+      },
+      {
+        "letter": "D",
+        "text": "F7"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Color de resaltado del texto.** Pestaña Inicio ▸ Fuente. Atajo: Alt+Ctrl+H. Marca el texto como con un rotulador fluorescente. Atajo confirmado en vivo (no figura en el volcado)."
+  },
+  {
+    "id": "inicio-406",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-13",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAcCAMAAADRNYZUAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADxQTFRF////lJSTUVFPXFxatbW0wMDAaGhnqqqpf3996enpOjo4c3Nyn5+eRkZEzMzL2dnZioqJJCQkj4+P7gAAMXNYVAAAAIRJREFUeJzd0NsKgzAQBNCdNKkRFQv+/ycKopEqRuOtVSvi+lgcWAjDgSQLuhLcQgHdBSUAyyoFoGKVdgLuzSh/IAEMozxZkmdbRj1kTRQhP1VxM52f2dqr0DTjbNSrGv+ndEFbBvdFs/rcJYT9YQualOzmvYeuPH09FyS7Iv0TdVTeTPXsAiYdMXZEVAAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Color de fuente"
+      },
+      {
+        "letter": "B",
+        "text": "Seleccionar"
+      },
+      {
+        "letter": "C",
+        "text": "Centrar"
+      },
+      {
+        "letter": "D",
+        "text": "Aumentar sangría"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Color de fuente.** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. Cambia el color del texto. La flecha abre la paleta; no tiene atajo directo."
+  },
+  {
+    "id": "inicio-407",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-14",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAiCAMAAABySOkBAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAD9QTFRF////qqqpOjo4tbW0c3NyUVFPf399sNfuMZXR2dnZ6enphsHkn5+eUKXYXFxazMzLRkZEaGhnioqJwMDAlJST7bFk6gAAAIdJREFUeJztz2kKhDAMBeC+UVsVZVC8/xEF92mnUiMutC4XEPMnNB/lJWA3hRcAjJfgA4qagJEORBIm7GnujYtskPx0oA1LlRS8sYGmyac+Z3yh+kiK4QScUXKG8ggxb2hX+P8jYP1onbJMsi6dW8W0C1usN59iQ6HWRQPROrC/c107cFWPhwnP+Ssj+Q8cpwAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
+        "letter": "B",
+        "text": "Diseño ▸ Formato del documento"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Vínculos"
+      },
+      {
+        "letter": "D",
+        "text": "Disposición ▸ Organizar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Agrandar fuente.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+Mayús+>. Sube el tamaño de letra al siguiente valor de la lista. Ctrl+Alt+Mayús+> lo sube de punto en punto."
+  },
+  {
+    "id": "inicio-408",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-15",
+    "generado": true,
+    "enunciado": "¿Cuál es el atajo de teclado del comando que muestra el icono de la imagen?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAiCAMAAACdioI/AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAD9QTFRF////UKXYsNfuMZXRhsHkXFxazMzLRkZE2dnZf399ioqJtbW0qqqpUVFPc3Nyn5+eOjo4lJSTaGhnwMDA6enpZhMUjwAAAHZJREFUeJztzjsPgkAQBOAdHgIGTIz8/1/II6AxR8BbuaMht0thLdNM8RUzoKPglF8EsBGzJhHAbANJafbkYS8XEIy6U4DxViXjdJk0KfGkil+K3DDQNRml5LkvY4Tc0bnjZS9km3BjgTw+SbNWvcStfB3kf+QL2vcfI5u+duIAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+K"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+B"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+<"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+G"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Reducir el tamaño de la fuente.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+<. Baja el tamaño de letra al valor anterior de la lista. Ctrl+Alt+< lo baja de punto en punto."
+  },
+  {
+    "id": "inicio-409",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-16",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAiCAMAAADmrkDzAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADlQTFRF////2dnZaGhnioqJRkZEUVFPtbW0wMDAXFxaOjo4f399qqqpn5+ezMzLJCQk6enpj4+Pc3NylJSTrJ2WqwAAAJlJREFUeJzt0NsKwyAMBmCjtJapyN7/IYdjztM088CuWhy7HDSgBPLxRwTyreAU/y0AEOeCAea5WADTVHDwW4m9gRcNB+ICVpZnbdQDRexpnIfQzhDaCqPjavoEmRu5nJYKhhCl3dTWF1MJboie8tlyjXUosifKJ6Kj270DtrZAR4/KCcPWvZDLrSfdM2Fr4q4c/cekTvGreANt/joj0hkCiAAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cambiar mayúsculas y minúsculas"
+      },
+      {
+        "letter": "B",
+        "text": "Color de fuente"
+      },
+      {
+        "letter": "C",
+        "text": "Disminuir sangría"
+      },
+      {
+        "letter": "D",
+        "text": "Sombreado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Cambiar mayúsculas y minúsculas.** Pestaña Inicio ▸ Fuente. Atajo: Mayús+F3. Rota la selección entre MAYÚSCULAS, minúsculas y Tipo Oración. También ofrece «Poner en mayúsculas cada palabra»."
+  },
+  {
+    "id": "inicio-410",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-17",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAfCAMAAABXofT6AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAJlQTFRF////ptDxg77s8Pf9crLkB2i0AGOxDWy3vt31RJLPIHi++vr6D264W6Pam8rwIXrAYaHTrM3nzeHwSJHLKX/D4/D7ZareVJjPsdbzPY3MM4TEF3K6KX7BF3O7kMXuFHG6cKnXlb/h2Or5D224PYrIL4TGwMDAJCQkDm23FnK6j4+PicHtS5fToc7xG3W9t9n0NojJU5zWlcjvIpJAxAAAAOxJREFUeJzt0V0LwVAYB/Dzt9TSmJdolF0gFyTy/T+DSFxILnbBMC9DYrMdZ5u3wklueeqcnk6/zsv/gHxS+KtvFbyeUr4SwBhsOFwl+gr2gati8Mva8FQaq2j4iJ2TmnOUAphxrJKGrHOUyk4bU8mlsvZeFeYZPYsZQjtXHQVLZdCBNx4USnSSH5GiJlP9GlkZguOjm6oOI1bwCir1CLnv9niiWDKXssGaiK1sN0+RXVRtcrKthEEq5jILsftaCQhJrrrWiDrNrffPvxSo+oCtCywpRemzO7qdl6rZ9maWenrhNY3Wm7z49QvqDHSqUSCHvHFAAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Efectos de texto y tipografía"
+      },
+      {
+        "letter": "B",
+        "text": "Reducir el tamaño de la fuente"
+      },
+      {
+        "letter": "C",
+        "text": "Borrar todo el formato"
+      },
+      {
+        "letter": "D",
+        "text": "Ordenar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Efectos de texto y tipografía.** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. La «A» azul con flecha: aplica sombra, reflejo, iluminado y contorno al texto, además de ligaduras y estilos tipográficos."
+  },
+  {
+    "id": "inicio-411",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-18",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALMAAAAlCAMAAAA+9SifAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKJQTFRF////6enpvr6+kZGRioqKr6+v8PDwmZmZy8vL+Pj44eHhp6enqKiotra2xcXFkJCQjY2NvXYkJHa93ptQ///em1AkJCQkJFCb3v//UJve/712JCR2vf///96bUFB2dlBQm97///+9diRQUFCbUCQkdr3/m73/m1BQJHZ2diR2m72bdiQkUCR2dnZQvf+9UCRQwMDAj4+PJCRQi4uL09PTsbGxTYijsQAAAoVJREFUeJztmMFum0AQhndKwJi0IhgOFS0Hn3q11Pd/gjZSz+XCwQ2pWqHYSdqUYtMZYAlQvKypMLLKL1mJ43+Yb2dnlmBg5ycYG6CHJubTaGI+jc6ZGVBj5E9fQCydnpvzdxrG/ByS7aAMgAfp9JmZM7+C7aBkAs21jXx6MnPmWRoPR9Whq7sj0qOZM18kgyF1CnPLpyfnxNxL/8ZsQSSOsNOIOXgqAdyKjZYeylKUzC7AmlkqU0ShTWYPT5yAf7iEfdAM8LTHW28GPvPmn8Ucjv3rr2gxswM23K/xwm2JDzPbWqyVa2wLtbXQgStfBsR96tiyJjNm1O/XrGu5DWY077CQS9DjraIb31gSebMtM33qBtPPr+aZd2u+JHqhQwUVLiP7gcJClodkW9KPufghx4xpEqRaGt9BXWyAoIzY9xabuKgZXY2zFMzkclPdiEIelocE4syk1Y37iV5N5tZRqJqrzLjzNGRZU1hOQkWkolrO0+wxLJnrdd5hVVliFkUnbx7iSzT06ubNF6SoMztw0TqCFXOFeYndwBht9D7Arq0w+8xWqDfooryfOXO2BN4o+CFn7q5zXjxWZz681Gdzhdnd4QFGsLjRCKvy3sioaA/y6XAT6tZ5hOzu6wjQXDAXYUVIz37uHN06c95HdmrC5VeaIkvNZvBtFLgJlp+qlpHTkOH5jH9cxNkM8t7Iw/KQvueGreAvogO6/T4oOB9FxauHHX8+y5uPY87ugwdUD+u8o9YxhmQWqGcY+7/+R1K0cZ6sSO+vj0iP5vLZ6t3HwZg6NI938unJXD7D7lcjQRu/Vx+k02fm5+8KXo7THKn+I5VOz80DMw2hifk0mphPo3Nk/gP1dIM1fmnDcQAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Multimedia"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Editor"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Vínculos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Fuente (nombre).** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. La caja del nombre de fuente. No tiene atajo que la active; Ctrl+M y Ctrl+Mayús+F abren el cuadro de diálogo Fuente con el foco en el nombre, y Ctrl+Mayús+M con el foco en el tamaño."
+  },
+  {
+    "id": "inicio-431",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "img-inicio-38",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAUAgMAAAAWzj7aAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxQTFRF////0dHRJCQkwMDAeu5cdwAAADNJREFUeJxjZAACB0YCpFZDGJBUeMAAJ5V7LxwAss9MAZHSriDyXRGQZFh17QBYFwN+EgC0Nw+Vm676zwAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Texto"
+      },
+      {
+        "letter": "B",
+        "text": "esquina inferior derecha de un grupo de la cinta"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Ilustraciones"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Editor"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Iniciador de cuadro de diálogo.** Pestaña esquina inferior derecha de un grupo de la cinta. Atajo: no tiene atajo de teclado en esta instalación. La flechita ↘ que abre el cuadro de diálogo completo de ese grupo (Fuente, Párrafo, Portapapeles…) con todas las opciones que no caben en la cinta."
+  },
+  {
     "id": "inicio-36",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Marcas de formato",
@@ -4981,6 +5684,43 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ctrl+Mayús+8 muestra u oculta las marcas de formato (¶). En el teclado español «(» es Mayús+8, así que también se escribe «Ctrl+(». Ctrl+8 no tiene función. Ctrl+Mayús+P activa el subrayado de solo palabras. Ctrl+Alt+8 no tiene función."
+  },
+  {
+    "id": "inicio-425",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Marcas de formato (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-marcas",
+    "subtopic": null,
+    "tema": "Marcas de formato",
+    "sourceQuestionId": "img-inicio-32",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZBAMAAADZBfNuAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABtQTFRF////wMDAc3NyOjo4tbW0zMzLUVFPn5+eXFxaH7ZAIwAAAD1JREFUeJxjZEACjFTnMCoJMDCchXKcPzCd890A5SRf+Hv5L0yZMQMSB0Wm+AASh6V+LYLDwGBAKYdaPgUAJGogGh+VWt8AAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Portapapeles"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Texto"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Párrafo"
+      },
+      {
+        "letter": "D",
+        "text": "Diseño ▸ Fondo de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Mostrar todo.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+Mayús+8. Muestra u oculta las marcas de párrafo (¶), tabulaciones y espacios. En el teclado español la combinación es también Ctrl+( (Mayús+8 = «(»)."
   },
   {
     "id": "inicio-40",
@@ -5382,6 +6122,154 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Ctrl+Q alinea el párrafo a la izquierda. Detalle: si el párrafo YA está alineado a la izquierda, una segunda pulsación de Ctrl+Q lo pasa a JUSTIFICADO. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
+    "id": "inicio-412",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "tema": "Alineación",
+    "sourceQuestionId": "img-inicio-19",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAcCAMAAACnDzTfAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADZQTFRF////3t7eoqKiampqYWFhj4+P6Ojoc3Nzrq6u4uLi6+vrmJiYpqamt7e32traOjo409PThYWFt5ELsAAAAHxJREFUeJzV0k0LgCAMBuCmZpTQ//+ZXTrkcksDCWt9EF3acQ9uDl6ozgtuDGLt2qzAJ7OSMRLHpgMSBmoaozXNLBj7EM1Y8Sd+zlYXfSzs6t1b2/bhZzOf7cs7f3WftlKgGJM5FQSjgClL1B6QjW+HNYPddLB+4NvsntUCbXBCHRoAUmQAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alinear a la izquierda"
+      },
+      {
+        "letter": "B",
+        "text": "Superíndice"
+      },
+      {
+        "letter": "C",
+        "text": "Copiar"
+      },
+      {
+        "letter": "D",
+        "text": "Cursiva"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Alinear a la izquierda.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+Q. Alinea el párrafo con el margen izquierdo. En el esquema clásico español es Ctrl+Q (no Ctrl+L)."
+  },
+  {
+    "id": "inicio-413",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "tema": "Alineación",
+    "sourceQuestionId": "img-inicio-20",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcAQMAAACu6oaTAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAZQTFRF////Ojo4cZXV3wAAABxJREFUeJxjZAACRvwE85+PAhgS/w86kKsOFwEAS/oIHVkCujAAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Comentarios"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Símbolos"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Edición"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Párrafo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Centrar.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+T. Centra el párrafo entre los márgenes. En esta instalación Ctrl+T es Centrar (no «sangría francesa»)."
+  },
+  {
+    "id": "inicio-414",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "tema": "Alineación",
+    "sourceQuestionId": "img-inicio-21",
+    "generado": true,
+    "enunciado": "¿Cuál es el atajo de teclado del comando que muestra el icono de la imagen?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAcAQMAAABF3T2QAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAZQTFRF////Ojo4cZXV3wAAAB1JREFUeJxjZAACRvwE47+fHBgS8jcxxIhVh4sAAM6nBh0GlqRtAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+T"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Ctrl+K"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+D"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+S"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Alinear a la derecha.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+D. Alinea el párrafo con el margen derecho. Es Ctrl+D; Ctrl+R no hace nada en esta instalación."
+  },
+  {
+    "id": "inicio-415",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "tema": "Alineación",
+    "sourceQuestionId": "img-inicio-22",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAcAgMAAAACfUdAAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAlQTFRF////0dHROjo4qRnoYwAAAB1JREFUeJxjZIAARlRagDC9ioHhW8IAyuOl4f4BAE/ECZ3GBPaaAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Justificar"
+      },
+      {
+        "letter": "B",
+        "text": "Bordes"
+      },
+      {
+        "letter": "C",
+        "text": "Cortar"
+      },
+      {
+        "letter": "D",
+        "text": "Efectos de texto y tipografía"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Justificar.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+J. Alinea el texto con los dos márgenes repartiendo el espacio entre palabras."
   },
   {
     "id": "inicio-43",
@@ -5917,6 +6805,80 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Ctrl+W elimina el formato manual del párrafo (sangrías, etc.), dejándolo con el del estilo base. ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+W también bajo «cerrar documento», pero en la práctica quita el formato de párrafo. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
+    "id": "inicio-419",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Sangría (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-sangria",
+    "subtopic": null,
+    "tema": "Sangría",
+    "sourceQuestionId": "img-inicio-26",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZBAMAAAA2x5hQAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABtQTFRF////Ojo43e33MZXRsNfuhsHkKJDPHovNR6DWIUZIngAAADhJREFUeJxjZEAGjFTjMQqAmf8/kGoKk9EZoF64vrBXB+By7AUMOy8g6UOWY2BoqUHWR3N3EsUDAOEZEBqExQEHAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Disposición ▸ Organizar"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ eSignature"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Párrafo"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Vínculos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Aumentar sangría.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+H. Desplaza el párrafo a la siguiente tabulación hacia la derecha. En el esquema clásico español el atajo es Ctrl+H (no «reemplazar»)."
+  },
+  {
+    "id": "inicio-420",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Sangría (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-sangria",
+    "subtopic": null,
+    "tema": "Sangría",
+    "sourceQuestionId": "img-inicio-27",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAZBAMAAADHzMPdAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABhQTFRF////Ojo4sNfuMZXR3e33KJDPhsHkHovNZoQBNwAAADNJREFUeJxjZEAARsrYjAJg1v8PxOpVlj0A1ANWzxSyCi7OXMLwcwKUjSyOrJ4m7iHEBgAmCw4azxvk8QAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Viñetas"
+      },
+      {
+        "letter": "B",
+        "text": "Centrar"
+      },
+      {
+        "letter": "C",
+        "text": "Disminuir sangría"
+      },
+      {
+        "letter": "D",
+        "text": "Efectos de texto y tipografía"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Disminuir sangría.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Desplaza el párrafo a la tabulación anterior hacia la izquierda."
   },
   {
     "id": "inicio-47",
@@ -6718,6 +7680,43 @@
     "explicacion": "Ctrl+5 (fila superior) aplica interlineado de 1,5 líneas; Ctrl+1 sencillo, Ctrl+2 doble. ⚠️ Ojo: Ctrl+5 del teclado NUMÉRICO en cambio selecciona todo el documento. Prueba en vivo del usuario (sep 2026)."
   },
   {
+    "id": "inicio-421",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "img-inicio-28",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAcBAMAAADhO+DlAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACRQTFRF////sNfuMZXROjo4KJDPHovNR6DWhsHk3e33wMDAJCQkj4+PBdtAhgAAAF1JREFUeJxjZMACGAdckFHhPrMBkD6LLCjisOcDhsr0DycfYJoZYNCARXADpplAQXxO4lyQsCAcw52zFK4VYJjJCVKI28yGC1icpG6AxfFAb37GcCcwQPC5c1AIAgB5sRsdZqJgjwAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Párrafo"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Símbolos"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Comentarios"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Ilustraciones"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Espaciado entre líneas y párrafos.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. El interlineado (1,0 / 1,15 / 1,5 / 2,0…) y «Agregar/Quitar espacio antes o después del párrafo»."
+  },
+  {
     "id": "inicio-51",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Bordes y sombreado",
@@ -7214,6 +8213,80 @@
       "F"
     ],
     "explicacion": "Los anchos de borde disponibles en el cuadro Bordes y sombreado son exactamente: 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 puntos. Todas las opciones de esta pregunta corresponden a anchos reales disponibles. Los valores 3/4 y 1 pto no aparecen en las opciones pero también existen."
+  },
+  {
+    "id": "inicio-422",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "img-inicio-29",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAcBAMAAAAQMLtoAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABVQTFRF////Ojo4+vr6wMDAJCQkj4+PAAAAGAbyQgAAAEhJREFUeJxjZMACGOkpKARh/vuALKgEFXyAolKA4T+Qfkd7lRAeH1Als8MBh70YKk0U7lzAMJMZqJBm7kyDMH8tQBbEAAMrCAB/PCkd5WL2OwAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Lista multinivel"
+      },
+      {
+        "letter": "B",
+        "text": "Ordenar"
+      },
+      {
+        "letter": "C",
+        "text": "Color de fuente"
+      },
+      {
+        "letter": "D",
+        "text": "Bordes"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Bordes.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Añade bordes al párrafo o a la celda. La flecha lleva a «Bordes y sombreado…», el mismo cuadro que Diseño ▸ Bordes de página."
+  },
+  {
+    "id": "inicio-423",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "img-inicio-30",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAcCAMAAAA6Aj1XAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFpQTFRF////0dHRlJSTOjo42NjYqamoW1tZ+/v75eXl+vr6/v7+stDnhLTZ3uv1NFFmAGOxJ3u9VVhXPVdpocXiqqqpzMzLUVFPyMjHNYPBwMDAJCQkQYvFj4+PoKCgTF8dXQAAAKZJREFUeJzV0U0LwjAMBuC8dVMRvTlQZP//h3nYRaFOvWyusan40cLaggcxkEt46EtSUFYhk4H/hSmwyWAT8JBmJXBLsxIK3QzAOcZEUVdYpyPMKeqmcwzFcZStW+V+jg0vIqwC2ofqN/2TbcGN9Eeoc6Jop6/0cspw461g3UkULS/vOHkrOEgFLYpW0YNYx4cQ+KwO5vsR5s/rL1leaKJ+w3JQNrsDld9SHcSgr+sAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Comentarios"
+      },
+      {
+        "letter": "B",
+        "text": "Diseño ▸ Fondo de página"
+      },
+      {
+        "letter": "C",
+        "text": "Disposición ▸ Organizar"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Párrafo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Sombreado.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Aplica un color de fondo al párrafo o a la selección (no a toda la página)."
   },
   {
     "id": "inicio-58",
@@ -8149,6 +9222,154 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "La forma más directa y precisa es hacer clic derecho sobre el número del primer elemento del capítulo y elegir Establecer valor de numeración. En el cuadro se selecciona Iniciar nueva lista y se escribe 5 en Establecer valor en. La opción C modificaría la definición global de la lista afectando a todos los documentos que usen esa lista, mientras que D actúa solo sobre ese punto concreto del documento."
+  },
+  {
+    "id": "inicio-416",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "img-inicio-23",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAfBAMAAACBhlkPAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABJQTFRF////HovNOjo4wMDAJCQkj4+PttcjrQAAADZJREFUeJxjZMAOGEekuOD/DzjEPykAqX8PiFRPR/cwOxxw2ItNvYnCnQvYzGcGKR8m4UO8OADzCB0gx+tidgAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Negrita"
+      },
+      {
+        "letter": "B",
+        "text": "Centrar"
+      },
+      {
+        "letter": "C",
+        "text": "Tachado"
+      },
+      {
+        "letter": "D",
+        "text": "Viñetas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Viñetas.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Crea una lista con viñetas. La flecha abre la biblioteca de viñetas. (El volcado asigna Ctrl+Mayús+L a esta acción, pero también a «Versalitas»: conflicto sin dirimir.)"
+  },
+  {
+    "id": "inicio-417",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "img-inicio-24",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAfCAMAAACiX39KAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADxQTFRF////e7viKJDPsNfuR6DWOjo4ZbDdO5rTksfncLXfwMDAJCQkhsHkUKXY3e33j4+PHovNMZXRoc7qxOHy/61UXQAAAHZJREFUeJztkcsKgCAURJ2ysGgR9f8/GaGSklH02BhNi6hFA3dzOZzLKAQZ/OC3QWDkwBReiGzfuvPT0nNGHrzMXTAHLGeEMpHWJYKe5wAroIt5Ski/cBtY98kQvbj6HmxdKMO1bpyz1F+32gbKKFP2wS/zIjgBUJkeIHkYfbAAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Editor"
+      },
+      {
+        "letter": "B",
+        "text": "Inicio ▸ Párrafo"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Voz"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Multimedia"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Numeración.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Crea una lista numerada. La flecha permite elegir el formato de número y «Establecer valor de numeración»."
+  },
+  {
+    "id": "inicio-418",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "img-inicio-25",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAfCAMAAABJaMRJAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADZQTFRF////e7viKJDPsNfuR6DWOjo4cLXfZbDdxOHyhsHkwMDAJCQkO5rToc7qMZXRj4+PW6rbHovNbn9XkAAAAHZJREFUeJzt0kEKgCAUBNA/aCau6v6HLFoEklhUZGIg39oUNOBGHoMMgvjBbz9tAc+2Ao6oCtdT9g3SsXuLLCM3rfLCcq2G9ccU+w4G87iei9USGJImA+kCja2ydWopan22Q9PzbUlv221T5P/DaUt62TaXN9gFOq4bIH1G8VgAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Bordes"
+      },
+      {
+        "letter": "B",
+        "text": "Pegar"
+      },
+      {
+        "letter": "C",
+        "text": "Lista multinivel"
+      },
+      {
+        "letter": "D",
+        "text": "Cortar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Lista multinivel.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Crea listas con varios niveles de sangría y numeración jerárquica (1, 1.1, 1.1.1…)."
+  },
+  {
+    "id": "inicio-424",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "img-inicio-31",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAZCAMAAADt/kXiAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADxQTFRF////hsHkHovNOjo4O5rTR6DWsNfuKJDP3e33W6rbZbDdaGhnUVFPzMzL6enpn5+ec3NyqqqpRkZEwMDAQLO66QAAAJNJREFUeJy9zs0OwiAMAOBWhhF1mz/v/4xusEwjYqWMRcN68GDsgZKvTVsEOfA/jkg0/VT49ArpIfia++9LNzgauC58Qx5A4610VHF4Faj0RKlY3vOOb3zHG80g9dfj1gnePFXPybLHd/YDdJz2+qLC0Q+zt2Fl0zRNtkHvsp+7PDwW+pZ58hPPhrSwJnTi/Tl+5S9cMDoaTuU3wgAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cursiva"
+      },
+      {
+        "letter": "B",
+        "text": "Numeración"
+      },
+      {
+        "letter": "C",
+        "text": "Ordenar"
+      },
+      {
+        "letter": "D",
+        "text": "Aumentar sangría"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Ordenar.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Ordena alfabética o numéricamente las líneas, los párrafos o las filas de una tabla seleccionados."
   },
   {
     "id": "inicio-68",
@@ -14060,6 +15281,117 @@
     "explicacion": "Borra la siguiente palabra completa a la derecha del punto de inserción, sin necesidad de seleccionarla antes."
   },
   {
+    "id": "inicio-426",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": null,
+    "tema": "Edición",
+    "sourceQuestionId": "img-inicio-33",
+    "generado": true,
+    "enunciado": "¿Cuál es el atajo de teclado del comando que muestra el icono de la imagen?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAAAXCAMAAADp0UvcAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEtQTFRF0dHR////2dnZfn58RUVDOjo4qqqpUVFPkpKR1dXV+vr6UFBOyMjHf399RkZEJCQkwMDA2traqKiodnZ2W1tbPz8/j4+PzMzLtbW0BR5r4AAAASlJREFUeJztlWFrwyAQhj2jlLLRNCTN//97o6xtuo2sNWrvNLKtuo5BzPahB+JxyD15704DDNgfGNyxgGbR5sVKjy2UmhMLUhraue2z6U1gueTeMfJ1Rmwhx5CVL7St6FiXHStk8NTgsPxQ2mN2bKSWH9zKjP3orTIjtoJdoNeKFXvWnLHu6AqMiyEqRWmho/UbLCzBT7JSbpKpt8cgGvADGKvtzp/F4GqxjdOWdnG6NQ8JbNtr/fneYuq1wfQOywxS1sbpqzTNWrr+N7WmsG3/PjxAv3wLrxTlrYcutHhzAnBYgjfqG+wPFmGRevU4jWobva80ITZs2wAWthTPpGkSbEwN9xZLKgYO2jeaQs1ZwjRqE9Qs9hULj/NQr7Ht0yzUf/Wbv2OntQuPx4Yv9pPm+AAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Ctrl+H"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+B"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Mayús+>"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+J"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Buscar.** Pestaña Inicio ▸ Edición. Atajo: Ctrl+B. Abre el panel de Navegación con el cuadro de búsqueda dentro del documento (pestañas Títulos / Páginas / Resultados)."
+  },
+  {
+    "id": "inicio-427",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": null,
+    "tema": "Edición",
+    "sourceQuestionId": "img-inicio-34",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAAAbCAMAAACeE4unAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAGBQTFRF0dHR////qEay4cDlyIvPzZTS8uP03LTgwHrHJCQkqKio2trasNfuUKXYwMDAKJDPe7vivHDEuGjA6dDrPz8/j4+PW1tbdnZ2HovN3e33MZXRO5rTW6rbhsHkoc7qR6DWgw6N4AAAAXBJREFUeJztk39vgkAMhnvHNCdwlxgwkuz7f7It06GYTfRgsnFrDzU4f8fIko3+0SuX0Of6tmXA4BeMtdgWe38sM/8KS1Y0j+XO18NH81izI7Sgq+xMHsH1DViPLfaxXMsivyfWc9g79bbsum87Gc9mvQnrO0iFvsHbWT1jz03ALcHbeNEp8D8D/hQEqw6uBymoOES1VGxDEGp+TKRd7JCNDxQCICcAQaZ7Mq68kBNZqJi0x9Atua6qtV7k68cKfM7FWN8sf2A5lDlI2iiZWz8RnXSjPR2DRUaS4DjgPX5AFZ4Qfl9kT82RGy2UGW2wOoSp7CZEtH7b7jqW3hasUtQCO2HDi7E4Ur2x5T6y52i8xdr8donWvob1p7IguiNQeCwRJZbr8FIsLpCHno9g+FoTWUNoElKZ2km+jlVz2mqMgqUsVyLFJIkNr8BaNFVbw562KzfnKLbqrd9/ig5M9f2w1SRHXfh8aRLbiLXYv4v9BjIEsTdERrNXAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Subíndice"
+      },
+      {
+        "letter": "B",
+        "text": "Agrandar fuente"
+      },
+      {
+        "letter": "C",
+        "text": "Alinear a la izquierda"
+      },
+      {
+        "letter": "D",
+        "text": "Reemplazar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Reemplazar.** Pestaña Inicio ▸ Edición. Atajo: Ctrl+L. Abre el cuadro «Buscar y reemplazar» en la ficha Reemplazar. En esta instalación el atajo es Ctrl+L."
+  },
+  {
+    "id": "inicio-428",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": null,
+    "tema": "Edición",
+    "sourceQuestionId": "img-inicio-35",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAAAZCAMAAADT2yqsAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFRQTFRF0dHR////qqqpOjo4RkZEyMjHRUVD+vr6qKioJCQk2trawMDAPz8/dnZ2j4+PW1tbqamo5eXlp6emfX17kpKRfn58XFxa1dXV6enplJSTioqJiYmImgc+9gAAAWVJREFUeJzt1G1vgjAQAOC7yksBxQ/OmOz//7eNxCwZIIpCu7uWjaWImcvED7MJ9bjQPu21EQHhDg0f7L9hUd+FFXoSd8CimsIdsAKbCdwB6ynXDemLQxdL3A+miPSZ5NUsOC7PGmE1zv6mnWEdN8Zd/3JL1nGlVwJvGmY7Zm0ASQuisr1Ngq5BagS/gPQINEZ6DZ1NrETFzw9YUHr+3ueSlgG1D/2SBBukitdie042NR+GDPJYHbqySFoAsOufXHWEdVxaLSj6DXKJaIKTPpgKdASyldY1nwE9fAlNET5Hu+o5NoaCS/z9f2OhlT1hEkwQXWKB0omuLt2DIZtgucBtnwlnFaS6kHR0tnYmSETx1dukKbJh0ct5h1exS+9tdczXWZ+iaxPkVCqge0JT2QAk19H23ZXiV1vkpA3aK3e7Engs58Hr6Ig/aS67FtlmuyyeXqZlN1TdZ6Wzkc9vxU7UHuwE7QOYkLYz1YAc4wAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Bordes"
+      },
+      {
+        "letter": "B",
+        "text": "Seleccionar"
+      },
+      {
+        "letter": "C",
+        "text": "Ordenar"
+      },
+      {
+        "letter": "D",
+        "text": "Aumentar sangría"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Seleccionar.** Pestaña Inicio ▸ Edición. Atajo: no tiene atajo de teclado en esta instalación. Menú: Seleccionar todo (Ctrl+E), Seleccionar objetos, Seleccionar texto con formato similar y Panel de selección."
+  },
+  {
     "id": "inicio-373",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Voz",
@@ -14129,5 +15461,79 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Activa la función de dictado por voz de Word, que transcribe lo que se dice en texto dentro del documento."
+  },
+  {
+    "id": "inicio-429",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Voz (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "voz",
+    "subtopic": null,
+    "tema": "Voz",
+    "sourceQuestionId": "img-inicio-36",
+    "generado": true,
+    "enunciado": "¿Cuál es el atajo de teclado del comando que muestra el icono de la imagen?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAABLCAIAAABFkLgYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQDSURBVGhD7ZhdSFRBGIY3i7LcQvtxNRX8twgtyNy0QEUEU8Juc9fowju7KEwNMrrxxig0Ugi8qYsMuzCzH29KdzFcTSskQVdtsYvd0pZSPJJFYG/7TZu4VrvnzATWPCzj+83MYd/zzeecObtmcXFRt0oIYn9XA6vJK88a6H394VLnRNeoe27hK8KdocHF+yIqCxLjtm+iCRrh5vX+0DtT84vUmNBd0dvjdm5TPn12vp996Zj6OP/lemna0b0RbJ4G+HhFRgvq+47si05NiGJdP3jUb3/jVp6eO6w9u3zqFUuPjPoaBYXGlLCQ9dctkyzWAB+vA5MzWHoW+LAnZmv3qJsFGuDj1TWzsCNMzwIf9BuDnTMLLNAAtz1Lv3EDUyuBm2FKA6tpf5VexSC9ikF6FcP/4fX588GmpkYW+A0umZ6eZkGAqPeqKPPDw8Ms0OncswpTK3EgNpRES8utkZER0oGiqQYUZY5ESoT+rXuWtC9vP8zpg9exAE9jfQhTAaLea2RkpMPhoAUtzYweeP0e52saWgo6e0bfncyKgUbZoN2/P90zEjDqvSYnJ8fHx1utFujzRcnr1655/MKxzC4K407PSN7uHSc8Xvv6+vLz82lIBZpq4Pjxktu3Wyi1nacPbgkOanr4svOZvXd4Eh+Iqw+GDiWEtZ/KwISxsbGOjnu5uXmeS9Wg9R3m7NkKtJcvX6EQb12dr6YHJ2eg02NDzZnRWQlboXE/FRVn0tL2VlZWeSaqAl61MDU1ZTaX4GO321mXDxaLBRMuXrzAYrVweDdEzm7evNHefhe1mJFhTE8/EB4ejn4s+sTEeFdXl83WW1JiKi8/RfNVw+2d22q1dnc/sdlsivJzozUYDJmZWcXFx/CPyLq04MkuZ7DijY3XWMAPTfvAr9DrNzPFFSFeBfHfezUYwkNCVD70fwO3feAvIOtVDNKrGKRXMfyjXpOW0NDQQJ3j4+MI0VIoFjrC+ENiYiKOpKSzs7OrqqpI/4all2hHZQ00Nze3tbX9pXT+QKVXrHtUVJTL5SLtNZ2Tk/O9RJKScPRGi57CwsLq6moIs9lMQxQC0mgp/DMsv36wbEFRBniRgvD2m0ymZYWxYg14OyHq6+up0x+47QNIbX9/f11dHYt9aG1t9aT1exZpQUBRUREJf1DpFUvsdDqRWhb/CdxJTU0NWoDiYb0BosYrvq+srKy2tpbFHpAwmPDuZV4ohWiNRiME3aRnJHBYLfgByssLVSqB0FuUNApoAsoXmooYiwCNmvYtdD+RZ20xSK9ikF7FIL2KQXoVA0+vdGZFu0xzgx61vMCDHk95nEq9RwKO8P9dm+xyNwrk2UUM0qsYpFcxSK9ikF7FIL2KQKf7BovWlUZY0ILAAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+["
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+C"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+A"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+N"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Dictar.** Pestaña Inicio ▸ Voz. Atajo: Alt+[. Convierte tu voz en texto. Abre una barra flotante con el micrófono."
+  },
+  {
+    "id": "inicio-430",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Complementos (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "complementos",
+    "subtopic": null,
+    "tema": "Complementos",
+    "sourceQuestionId": "img-inicio-37",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAyCAMAAAA6Njh3AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAH5QTFRF0dHR////4On2t8zrOnPHGFq9UoPOytnwapXVJGLAmrfiI2G/pr/jxtXsRnvJc5vW+vr6MGvEdJzXqcLml7Tff6PZaZTUtMnoR3zKjq7f3OXyXYrPi6vcUYLNOXLGgaXbX4zRaJPTJCQkqKio2traj4+PdnZ2Pz8/wMDAW1tbXbjI6QAAAc9JREFUeJztlWtPwjAUhnu6WzZhcom3LyTDC/7/f4MCRhOjQhRRhADdZtuRWVy7dQt+s9nS7rTP3nNOzzpAgCo2+EMUIKqKGgCwroQ6IUImLCugLkSESa9Ko+BQf5mkJdHNR+tAZ+MFqs3ikmiTYNaRlf9W0mFsmwbrI3Mqm85B4dBgKULW6lM+r0atBt9PJ3W2PdmpDjV6Ojle0M5bzlNT+0ULxb7NN/NgLBiJFmo0N6yriUJ6qs4Rz01IBCG9WF3HZYEiHx7kTilRcHweaLzcKEkFyguQlZHCVzW6LUBv+hPoboaUaGvR5IHWnwUjySyToGkBvgtGPdVMASLdWDuPNdZ5Y1t6rOSgtrctQOs+n8yizhn/OM1Znq9ytMFFxQKUZEiK2h4/hfwnwZbdFynaIV80RYa4o7qqdX+OSCjqaMd68uo5Gyw7AItQoEcgEMmhW4y2PtyV/OdUiKKWlq9StET7RyuhAbON+AijCA/LoOnqZBSo6b2j5xEyQjwMMP1ozFv6xIIITHKXi9IbD6/I6IKj7EL06ZyGHRiDYtVefMNHydVbU7Hr9ei37/tGUWD3u3GC2n0UQOJwEUpvY9CNkUn44kuSpIm9oQAt0b4BLROxZeiXrl0AAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Viñetas"
+      },
+      {
+        "letter": "B",
+        "text": "Copiar"
+      },
+      {
+        "letter": "C",
+        "text": "Editor"
+      },
+      {
+        "letter": "D",
+        "text": "Disminuir sangría"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Editor.** Pestaña Inicio ▸ Editor. Atajo: F7. Abre el panel Editor con la revisión de ortografía, gramática y estilo. También Windows+F7."
   }
 ]

@@ -933,6 +933,265 @@
   {
     "id": "diseno-50",
     "sourceFile": "diseno.json",
+    "bloque": "Diseno — Formato del documento (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "formato-documento",
+    "subtopic": null,
+    "tema": "Formato del documento",
+    "sourceQuestionId": "img-diseno-01",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAABOCAMAAACUhv+VAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAIdQTFRF////YmyBn62/mKe5SVRnjZ2wfI2haXyRV2yC5+rsDihBucHIRlxznqiyZ3eHOlBkK0JYHDVMkqG0d4mdXHCGQVhvNExk1dredoWTq7S9WGp7kJyoxszSSl5xg5GdFWCC6XEyGWskD57VoCuTTqcuW1tbJCQkj4+P2traPz8/wMDAqKiodnZ2lElKugAAAbVJREFUeJzt1GlPwkAQBuB324IQbDlMxCCJdxH4//+kcnpGJPKF2wDS7rqlVEpYoBiNom7SI+3TmdlpuwT+BtkGtw4z17HVsWZOEtx1s5heRxecJDN/jgapP4cdy59DyFzmwgTk5d1hd7jEqRaU7sxBWeKihMrDgX2WIGTSmqbIJXsa6cg9T5n7QnfQVRvxcH2ti7EONFNtrHERFn9ydqudE8oOijRtY4/VhC4cYho/dMaJGlL9LlKoC51qTZNpz4jQQZpJj0KXarNJ62KkBVVWrX5U6JK9WH3anSjt8dyRhNAdtqYdTjcVrZmopQmELvbqpJ2cRUcjJaKI6xONj7oj4OEYuD8B7k6B2zPg5hy4/mr32fPw59yfQTDm3LJocG9vtK75GL/JXTjNKfuIp0slX3k3cJcUchG6YiKAsV0FLydo2PvAlddlWSlPDJ1Vc2bQyJkV57JMjPl4kr1ks6quFCZF8C0/5ssupc78Zo4V3UKdDbSCLCkgw/ijnry6XYbHSWNegU0yKHtdjicOGjNXylpMIYQnr2A7voM/7ex36rzXNfFyfN1ZYKK8gmg/aL7/7lvdG9D2L14H4xGfAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Efectos"
+      },
+      {
+        "letter": "B",
+        "text": "Establecer como predeterminada"
+      },
+      {
+        "letter": "C",
+        "text": "Temas"
+      },
+      {
+        "letter": "D",
+        "text": "Marca de agua"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Temas.** Pestaña Diseño ▸ Formato del documento. Atajo: no tiene atajo de teclado en esta instalación. Aplica de golpe un conjunto de colores + fuentes + efectos. Es el primer comando de la pestaña."
+  },
+  {
+    "id": "diseno-51",
+    "sourceFile": "diseno.json",
+    "bloque": "Diseno — Formato del documento (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "formato-documento",
+    "subtopic": null,
+    "tema": "Formato del documento",
+    "sourceQuestionId": "img-diseno-02",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAABFBAMAAAARARP4AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACpQTFRF////gICADihB6OjoFWCC6XEyPz8/JCQk2traqKioW1tbdnZ2wMDAj4+PP0JMAwAAANNJREFUeJxjZMAFGOkpwyiAKvj/A1xGEaoMquLuqMxAyDijyuwelRkIGZy5BCsYJDLp/F1Akr2yAV2mnbOiowCrzMpwMBNThiNjAlDfB8nySnYgsSEw/+WqXMkCkAxPyAIGhsz5Bf2VL4HESbMqaYZUhB6elAkr41qfAIlK9w3MvJ4GEHsypyPLuFkxMFx/6QCWma7p0/KyH2jaTxDR3lnAwHvYACzDkc/c1v7B0x3oAiDRk80i86Bz0IT1YJHhKZhQ0IJdz3EBYBBjleFB1kI3VwMAMouARgMYFt8AAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Editor"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Texto"
+      },
+      {
+        "letter": "C",
+        "text": "Disposición ▸ Configurar página (esquina)"
+      },
+      {
+        "letter": "D",
+        "text": "Diseño ▸ Formato del documento"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Colores.** Pestaña Diseño ▸ Formato del documento. Atajo: no tiene atajo de teclado en esta instalación. Cambia solo la combinación de colores del tema (texto/fondo, énfasis, hipervínculos), sin tocar las fuentes."
+  },
+  {
+    "id": "diseno-52",
+    "sourceFile": "diseno.json",
+    "bloque": "Diseno — Formato del documento (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "formato-documento",
+    "subtopic": null,
+    "tema": "Formato del documento",
+    "sourceQuestionId": "img-diseno-03",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAABOCAMAAACHUb9hAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFpQTFRF////YWyB25A6AAAAZrb///+2ZgAAAGa2/7ZmADo6OgAAAABmtv//tmYAOpDbkDoAAAA6kNv/ADqQ2//////b/9uQJCQkj4+P2traPz8/qKiodnZ2W1tbwMDAqZLzkAAAAWRJREFUeJzt1GtPgzAUBuAepEA0xC8OHcr//2GM3RJjsmwYbF095dZ1UuiyLHETMnY5PC3vDgUgp21wM35opDj2on/i0Z/jHSDA7T2Fb+IW9j5gHgBsrX2YP8BWC9TrKdzDJ3uEd0sfoN3gmA87/8RkFsy0sfOTnfyvgRaozzsge0m1QD2+ikP0QD0+YEHZ+uZzyIe5KvJhL9dCs6k1YfYqxmEgsw/zZlY8UxvI6Ce7okVh3l4Co3dAhQhY2FwCk8fmq65joObHld3vF/C9/Pfz3G77nz6S31YneGdpOH585Bwv33F/2ZO7BYlcjhExKM2qwtsXcecH+f209lOxjCGLvFlSrMs5yoKArHt+Km92b1YPxldSFvi+bEiH5wuiwklfFciz8FPNT2EecyQYU3k0VQEHkJXmY04oq85Ps9q/MpqVBYHPmPVfXT+jv6xPCj+Vu/X8SQGiixvzdM9+Lf0Z/a34H88bz0/Rnv56AAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Color de página"
+      },
+      {
+        "letter": "B",
+        "text": "Efectos"
+      },
+      {
+        "letter": "C",
+        "text": "Establecer como predeterminada"
+      },
+      {
+        "letter": "D",
+        "text": "Fuentes"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Fuentes.** Pestaña Diseño ▸ Formato del documento. Atajo: no tiene atajo de teclado en esta instalación. Cambia solo el par de fuentes del tema (una para títulos, otra para el cuerpo)."
+  },
+  {
+    "id": "diseno-53",
+    "sourceFile": "diseno.json",
+    "bloque": "Diseno — Formato del documento (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "formato-documento",
+    "subtopic": null,
+    "tema": "Formato del documento",
+    "sourceQuestionId": "img-diseno-04",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAAbCAMAAAA6VfExAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAOpQTFRF////YmyB2ubrgqq8SoOeeaS3vdLcjrHCNXSSXImheJqvX4ujQXuXZ5et+Pr7hau9T4Odk6m5l6u7X4yjX5GpJCQkqKioPz8/0+HnOXeUkae3lam5SH+ZrMbT2trawMDAcJ6yX4mhkqa3e5mtO3mWOnmWeZerkKS1jKKzIGeIdnZ2W1tbLXCOfpqtjaKzIGeHj4+PV4ykZoyjiqCyd5aqNHSSrsjUQ3qWhp2wVYOdfqe6T4egYIiggpqubo+lOHeU8PX3QH2ZTH+acZGnfpitdJOpUYGb4uvvjbDBLG+OH2aHJGmJJmuLfaa5hIB7aQAAAW9JREFUeJzt1jFPg0AUB/D3uhRYuhTQkICLizjUxcXF0a/s6OLSQVxwcQHjIDhhAtVBvNejcFx0MGnKceGflN5de8n9cscDBM2CQy9g35lAqmcCqR6UvnepD72QfaUF9QWoB2iGCIhfoAtojlsQYqEHaEEeauJ7A7Kplzn17G2o5f0/Heio8ZDopQGZKbu6RtKbwkdVTQc6wbaNzyJIBowFdCqAngQQO3d27FdA5879Bqts+uwwQpjRFYLSSugzDKGfDnTeggAfu3vITInlzlNnGYd1DJzp1plfmZtlzCcEpfeqhkcAXQg7tJaOXMC2BZyPKoddn7XC3Ki8iE9RZX9E0KUAupdBG6pzvgzKYKXKxrQRyvZVI0J8KOSiYNOtAu4xbYjNDKzPjhz7dQXRIOv+MwLoGvmD9dO4FZ5DXkSgYFsKaMBKznJeFKzEYf/Kh1v7r+m9+twQCe8KXV59xOHxg6Tx0YO0yQRSPRNI9fwAq4GDHHTvieEAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Texto"
+      },
+      {
+        "letter": "B",
+        "text": "Diseño ▸ Formato del documento"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Edición"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Portapapeles"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Efectos.** Pestaña Diseño ▸ Formato del documento. Atajo: no tiene atajo de teclado en esta instalación. Cambia el acabado de rellenos, líneas y sombras de las formas y los SmartArt (no del texto)."
+  },
+  {
+    "id": "diseno-54",
+    "sourceFile": "diseno.json",
+    "bloque": "Diseno — Formato del documento (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "formato-documento",
+    "subtopic": null,
+    "tema": "Formato del documento",
+    "sourceQuestionId": "img-diseno-05",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAAaCAMAAADxCSKUAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAIpQTFRF////Ojo4JCQkqKio2tradnZ2Pz8/wMDAW1tZXFxaiYmIiIiHaGhnW1tbj4+P6enpfX17vb29RUVDzMzL5eXlqqqpkrzeGmytOW6YocXiCWm1S5fTGHO7L1+DxdztIHe8g77sMIPFRoCuMoLBAGOxNojJcrLkPY3MCmm03uv1b6fUK36/OofEstDnUev7wwAAAiBJREFUeJztlUtvwjAMgOOkDzReN6Rddt///ym777DrtAsURmmTzo6TtrQUUV5DFZZC4zi1/TV2ADEwgf9O4NryBHp0eQI9ukDj6aS4eyLXksGe0GBksEA1sKp/JBl0x5uBkXmlybpyooQia6yoItj1drMvR0+oR5bdWzstsWnyiAjSUwN2yUGgGOD3aC5tOQeonfw559yQQ0AvRkFS+Z+use4kFGKypLnC7xrlIkzRympgxCSROT5cgeIMS4dfwbJVmVTa8CJ5rbsiCw2r2b3OjY2K1FmY0ugN5J7YP3MdAMCPDU2jkFQZcrxyTUMc26zExd9I61liH25LZHIlM3wlzozdJhGAF5uuyELDabjMbjiqIKJJ0oOnfULzdBQY9S3KEwoMxaPpdKMVEofaGGe1qih2pChMnrZQDmgdrywJJ4nDLYp9V6mzilKL2Q0YpuQzOp2nBUQ8yZR5fEnPEg5MYQw2bgkkrNoGKnb+7RpQ4e+vuisPFJRa7N3Meh1MF9ACIC95yh6diSWWRYytEK3og0WjpbU6VYapKjBz8CUnbSt5IMzLTv0fwJ4rj1vTvBuMegEQ2P55xe6BreexPTRZ47qh5qUmjfJxilerdPXBKpaL0nwp8Eel8sIW51xDzVNeJK91V77kKo3dKBv1AiArb5CHAJ+H9l3hQr2BqwNSA1pM6Xxg83XjLO4G9A5YTCP4uHUWdwMahjyBHl0GB/QHiswyKhNzTGEAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Conjunto de estilos"
+      },
+      {
+        "letter": "B",
+        "text": "Espaciado entre párrafos"
+      },
+      {
+        "letter": "C",
+        "text": "Efectos"
+      },
+      {
+        "letter": "D",
+        "text": "Establecer como predeterminada"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Espaciado entre párrafos.** Pestaña Diseño ▸ Formato del documento. Atajo: no tiene atajo de teclado en esta instalación. Aplica a todo el documento un conjunto de espaciado (Sin espacio, Compacto, Estrecho, Abierto, Moderado, Doble)."
+  },
+  {
+    "id": "diseno-55",
+    "sourceFile": "diseno.json",
+    "bloque": "Diseno — Formato del documento (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "formato-documento",
+    "subtopic": null,
+    "tema": "Formato del documento",
+    "sourceQuestionId": "img-diseno-06",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAAZCAMAAAB3nVA6AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEhQTFRF////mMikY6t1MJBIvtzGTqBjWKVsoMur3+zj+vr6OpVRlcWhJCQkqKio2trau9nDTZ9iOZRQRJtaW1tbdnZ2j4+PPz8/wMDAGVJQrwAAAldJREFUeJztVn9zokAMzaLy40A6Hat8/49nxT8OpSBWuGSTXVaGzs3NWWydZhSzYd/bPJJdUfBgpu6dwK3tR9BXt4cWpBSOuq67WzK3sF7QXJF1ZO93TOh/zQqa+6plz+uab6zIClr4rXG95nyfZG5hRpBazPrg5cz7KKEbhwEi8Qrn55b2V8q0HZkxQBlB3sITz1en9twO5/buBIL+ifsDQc+VeP7s0nTny3DutxM08yHoGtYD0LiCVidQ2IJhjk6YQ4KDaEf30hZ+vQJs3iDesp+E9ZGAJkQNm8QlrqIxEiFmIcH5jMRrVAllQov1hA4BLipIzkVQPLgWhBUiLazHVgjozAtycOuSBHvqZfQ2dbEM8pWi++wnuBQ9Ag5VBz0x2GdlmGfl0USIR0hwPiPx1roylLRYT+gQJEJ3lFwE5dbJ3UP+7BSQHrjaQ2lLWZK7xDrFW/JWzSHxohKnBOeW2DPt75k2lRBeaWK81WgCcESYNUnByHn3CmAo9zasCXuCgj/k6VyAUTzYXgvSpxzXxznlWPa60jIoz41yBBGdyV77MCqIM/hQkEZmIsjSOITO1woCnYsI4sFA0Oj/kKnjGnb4mLJ3LDZKi3ZZydx6P2y6nd4Uhx5gQ9KbNh9lW86SGGS8XXaGUtfEEo4JiiQXjZLBQNDYmwLtoajGah3hpQ7zzVswwwqFtd7r3BZ0SlC92TdPQIfoCOi7RU4RaY2eBBiJXRPWhpIW6wnHBBWci6B4MBA07bvcJxz6Ytdv209F+nuSt+1pBE1oDyfo8+xH0Fe3hxP0B2OnrCkGufFpAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Edición"
+      },
+      {
+        "letter": "B",
+        "text": "Diseño ▸ Fondo de página"
+      },
+      {
+        "letter": "C",
+        "text": "Diseño ▸ Formato del documento"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Párrafo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Establecer como predeterminada.** Pestaña Diseño ▸ Formato del documento. Atajo: no tiene atajo de teclado en esta instalación. Guarda el tema, los colores, las fuentes y el espaciado actuales como predeterminados de la plantilla."
+  },
+  {
+    "id": "diseno-56",
+    "sourceFile": "diseno.json",
+    "bloque": "Diseno — Formato del documento (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "formato-documento",
+    "subtopic": null,
+    "tema": "Formato del documento",
+    "sourceQuestionId": "img-diseno-07",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,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",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Conjunto de estilos"
+      },
+      {
+        "letter": "B",
+        "text": "Establecer como predeterminada"
+      },
+      {
+        "letter": "C",
+        "text": "Colores"
+      },
+      {
+        "letter": "D",
+        "text": "Color de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Conjunto de estilos.** Pestaña Diseño ▸ Formato del documento. Atajo: no tiene atajo de teclado en esta instalación. La galería grande del centro: redefine el aspecto de todos los estilos (Título 1-9, Normal…) con vista previa en vivo."
+  },
+  {
+    "id": "diseno-57",
+    "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
     "categoria": "concepto",
@@ -950,7 +1209,7 @@
     "explicacion": "En «Confidencial» están CONFIDENCIAL 1/2 y NO COPIAR 1/2; en «Declinaciones de responsabilidades», BORRADOR 1/2 y EJEMPLO 1."
   },
   {
-    "id": "diseno-51",
+    "id": "diseno-58",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -969,7 +1228,7 @@
     "explicacion": "Falso: BORRADOR y EJEMPLO están en «Declinaciones de responsabilidades». En «Confidencial» están CONFIDENCIAL y NO COPIAR."
   },
   {
-    "id": "diseno-52",
+    "id": "diseno-59",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -988,7 +1247,7 @@
     "explicacion": "El cuadro «Marca de agua impresa» ofrece «Marca de agua de imagen» (con opción de atenuar) y «Marca de agua de texto» (texto, fuente, tamaño, color, disposición diagonal u horizontal)."
   },
   {
-    "id": "diseno-53",
+    "id": "diseno-60",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1007,7 +1266,7 @@
     "explicacion": "Falso: la marca de agua se coloca en el encabezado y se repite en todas las páginas de la sección."
   },
   {
-    "id": "diseno-54",
+    "id": "diseno-61",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1026,7 +1285,7 @@
     "explicacion": "«Quitar marca de agua» borra la marca de agua activa. También se puede hacer entrando en el encabezado y eliminando el objeto."
   },
   {
-    "id": "diseno-55",
+    "id": "diseno-62",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1045,7 +1304,7 @@
     "explicacion": "Falso: por defecto el color de página se ve en pantalla pero no se imprime. Para imprimirlo hay que activar «Imprimir colores e imágenes de fondo» en Archivo ▸ Opciones ▸ Mostrar."
   },
   {
-    "id": "diseno-56",
+    "id": "diseno-63",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1064,7 +1323,7 @@
     "explicacion": "El cuadro «Efectos de relleno» tiene las fichas Degradado, Textura, Trama e Imagen para el fondo de la página."
   },
   {
-    "id": "diseno-57",
+    "id": "diseno-64",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1083,7 +1342,7 @@
     "explicacion": "Falso: «Más colores...» abre el cuadro Colores con las fichas «Estándar» y «Personalizado» (modelo RGB/HSL). Los degradados están en «Efectos de relleno...»."
   },
   {
-    "id": "diseno-58",
+    "id": "diseno-65",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1102,7 +1361,7 @@
     "explicacion": "Falso: está en el grupo «Fondo de página», junto a «Marca de agua» y «Bordes de página»."
   },
   {
-    "id": "diseno-59",
+    "id": "diseno-66",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1121,7 +1380,7 @@
     "explicacion": "El mismo cuadro tiene también las fichas «Bordes» (del párrafo) y «Sombreado», pero el comando de la pestaña Diseño entra por «Borde de página»."
   },
   {
-    "id": "diseno-60",
+    "id": "diseno-67",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1140,7 +1399,7 @@
     "explicacion": "Esos son los cinco valores del borde de página. «Personalizado» permite un estilo, color o ancho distinto en cada lado desde la vista previa."
   },
   {
-    "id": "diseno-61",
+    "id": "diseno-68",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1159,7 +1418,7 @@
     "explicacion": "Falso: «Arte» permite bordes de página con motivos gráficos (manzanas, estrellas, corazones, árboles, etc.) en lugar de una línea."
   },
   {
-    "id": "diseno-62",
+    "id": "diseno-69",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1178,7 +1437,7 @@
     "explicacion": "Falso: también ofrece «Esta sección», «Esta sección: solo la primera página» y «Esta sección: todas excepto la primera página»."
   },
   {
-    "id": "diseno-63",
+    "id": "diseno-70",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1197,7 +1456,7 @@
     "explicacion": "La lista de anchos va de 1/4 pto a 6 pto (1/4, 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 pto)."
   },
   {
-    "id": "diseno-64",
+    "id": "diseno-71",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1216,7 +1475,7 @@
     "explicacion": "El cuadro «Opciones de borde y sombreado» muestra por defecto 24 pto en Superior, Inferior, Izquierdo y Derecho, medidos desde el borde de página."
   },
   {
-    "id": "diseno-65",
+    "id": "diseno-72",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1235,7 +1494,7 @@
     "explicacion": "Falso: el campo «Medir desde» permite elegir entre «Texto» y «Borde de página»."
   },
   {
-    "id": "diseno-66",
+    "id": "diseno-73",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1254,7 +1513,7 @@
     "explicacion": "Falso: «Color de página» está en la pestaña Diseño, grupo «Fondo de página», junto a «Marca de agua» y «Bordes de página»."
   },
   {
-    "id": "diseno-67",
+    "id": "diseno-74",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1273,7 +1532,7 @@
     "explicacion": "Falso: para el borde de página las opciones son Todo el documento, Esta sección, Esta sección: solo la primera página y Esta sección: todas excepto la primera. «Solo el párrafo actual» solo aparece para los bordes de párrafo (pestaña Bordes)."
   },
   {
-    "id": "diseno-68",
+    "id": "diseno-75",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1292,7 +1551,118 @@
     "explicacion": "Falso: el valor predeterminado es «Borde de página». La otra opción del desplegable es «Texto», no «Borde de texto»."
   },
   {
-    "id": "diseno-69",
+    "id": "diseno-76",
+    "sourceFile": "diseno.json",
+    "bloque": "Diseno — Fondo de página (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "fondo-pagina",
+    "subtopic": null,
+    "tema": "Fondo de página",
+    "sourceQuestionId": "img-diseno-08",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAABPCAMAAACJf/ZVAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFpQTFRF////Ojo4f399+vr6RUVDyMjH/ba6/qKo++7v/pyi/5GY/5ee/Nvd/qet/bC1/cXJ/bu//cDE/qyy/NPV++Tl/MvOJCQkdnZ2j4+P2traPz8/qKiowMDAW1tbTc01KAAAAg5JREFUeJzt1Ft3ojAQAOCZcLPaenr6QLeI//+HeaH60Mu2xQVCshMCIqcghCfbYx6MifnIEGeCMLLhFV44bEyhMICs/i4s0SH7oC07ZB9krEP2QuiQ/bBDdkALMatgu+yALiIeKtgqO+AUE9v+JFhNyoHwLo9nnOfHOTEU3mYJzJNJnJnC+8P0FR5i7hwMocNu3gBucjZ5M4MwcT6Iuxy8v2Zwil8wT4Uruf1lBC28jZnzL6MjyikXhsN5Arb7qoYPsfduAO8Pzmc5djKTUB02ezmZGw7Bcz/GwSnE4+AsS8fBuRwZarP9Ovh9atjVMaxd4QVCH3eq+yOs6Oxqv/69hFDMBNwYIj4DLLg0hm66B1jK1IqWCVDcPso9BQDuWo+pPeXA6FWos7c1tIS9CXGln0ifPnuGZbo73SfAjTqDQEYLvquhhatHe0NLFnSLumtfPXqvftJjgFBsi3XqJvJWNYyWQm6pB1oesBo+6XENVXfyjmoniq7YOUyLHSEQdGChHhfnsF5k9BLOpgkhKJ4YBdzLix3Vn0RB6rGOGenUQ4oVdz8wV6/wAqEuPcopVXcq6fyqPClnKWHLpG3dUSWrrrsSQlWOYcrEiWvAovRAl08Fq3LUe7aHqkuvCaEqx3PvWJZeWXcUMXXWsRzPHY4uvbLuyu5YjudgI+i+1gof3dUISLcp9G/4U3P1t8L/EiAqX10GTP8AAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Diseño ▸ Fondo de página"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Ilustraciones"
+      },
+      {
+        "letter": "C",
+        "text": "Diseño ▸ Formato del documento"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Edición"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Marca de agua.** Pestaña Diseño ▸ Fondo de página. Atajo: no tiene atajo de teclado en esta instalación. Pone un texto o una imagen semitransparente detrás del contenido (CONFIDENCIAL, BORRADOR…). Se repite en todas las páginas."
+  },
+  {
+    "id": "diseno-77",
+    "sourceFile": "diseno.json",
+    "bloque": "Diseno — Fondo de página (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "fondo-pagina",
+    "subtopic": null,
+    "tema": "Fondo de página",
+    "sourceQuestionId": "img-diseno-09",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAABOCAMAAAC33a5AAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAHVQTFRF////Ojo4f399+vr6RUVDyMjH/Pz8+/v7qqqpRkZEzMzL/v7+qamofn58W1tZ4/D7ptDxm8rwsdbz8Pf95eXlYnB5g77slcjv/f39YG54eXx8oc7xzuX3xuH22Or5Pz8/JCQk2traqKioW1tbdnZ2j4+PwMDAJ9baIAAAAkZJREFUeJzt1W1P2zAQAOBznLgM2kmdNGnSPqQtkP//e0KTdB/HpG3SYCupY+98tvtqGnfSxIuIQD2ufuLXMwz+5WFv6j+onQxTsSrZxIqrIOtRqQ6ysOLQWZUkQRZS6QN+DCQpCLKQ6s4Y6CW3KsgCKmvfofojOqtCLKjYOfzWgoEkFWBhJaDVJh52S5vUfWp4N2L3oM5Ths/SKtWrYMTED1DiPX7FZPYtThHCdbi4wOWQ33mUsgjVuEXGvtp961EOmYfYrdmAPrWFUA3lyWrc6l/jLEptmEHweXUbNS/PDBLthyxuNRwj1J0N1M+4lScGhOBjylaRu2xOFBAC/un+TsYpPL0jIAS8BRpgjEqwseh2cjFqfW2cpg6eZ6YOUcQNEPO8qSdXORbVF//HhDWHTbeSTk11UsOU1aepS10/0uCImuqF7xP/XdWmgY9SubD5bEVJmoZVxYObUs7rqWYNKh9lNy5/jSpPmlky3++raBc02gleHj5q/FtNEmNereeF74pRfkhOzZQooZD1JPEj3ES0EqKcKUpuK1oG7Nt8oHerYSP7VkglawocYjp/UefwdasrmLvIbHGkKtT8kXZHVRmFnJokCrAkLjtzXvDYmFqis7iVNmdblOZ3rXjl5mEr69opXlEV+Dou2mxlkFeYxLLAMwoCbFU09sdElKax2552lcbazAcHCii9M2OnspuiZVlXmZf5WvLKpQMqleZqyRmXg9LV0maENh1Qezu6vrOOr/yeutLVqQrvbjje1curlFej/gKOlGpexoSuVwAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Color de página"
+      },
+      {
+        "letter": "B",
+        "text": "Conjunto de estilos"
+      },
+      {
+        "letter": "C",
+        "text": "Fuentes"
+      },
+      {
+        "letter": "D",
+        "text": "Bordes de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Color de página.** Pestaña Diseño ▸ Fondo de página. Atajo: no tiene atajo de teclado en esta instalación. Pone un color o efecto de relleno de fondo a la página. Por defecto NO se imprime."
+  },
+  {
+    "id": "diseno-78",
+    "sourceFile": "diseno.json",
+    "bloque": "Diseno — Fondo de página (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "fondo-pagina",
+    "subtopic": null,
+    "tema": "Fondo de página",
+    "sourceQuestionId": "img-diseno-10",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAABFBAMAAADgCkh1AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAC1QTFRF////Ojo4f399+vr6RUVD3mwAyMjHJCQkwMDA2traqKiodnZ2j4+PPz8/W1tbrCvqwgAAAa5JREFUeJxjZMAPGKkmzygApvgf4JI3ApH/BPfhkjdRAJJ/hPc8wCv/lGcfLnk5oM5/TIYoBmDKM6MYgCnPgGIAFnkUAzDkQXrf45YHAqU750flh6O8ApRFprwRjPUPu7wAnIk1fWEHI0SevYCxAyrC3lmARb7zeyV++XKYMA556dDpDzTTNwTlBZxkf9b8fHIbmv0/J9zSL+jb6TtZ/aSn4YZvAej62RlvTHgl2/m3mH3ifYaiyS3o8nVVL2DyFgYMPDkd6Pp/vuov6Ossr1R/+Qpo9xkTDP9Pf8DZ3lmV63Dz+wfnvT8noMjjBMNCHinKdrsCiek/C3DIc6wIYEAB6PI/MM3nhEQ5A/uCqy3Pp7S2f/3b1/nqr6dfpmUAWJ4XHOXLAthvbv9ZwN7pZZTb1/muK2MCQ2U7WL4XHOWZCsA4nsR+QdDDoLKv82V75cRcUJKFygOjHJQGZh+fWw2Tl8u8oQGWZ4dGOfvO44Iey3/+mJQPlhetKoDo5wJHuWUA+4bDbdfFJqtf+QeWn1IYpYESfjBfcqZPwBq+MHnuqwr45K8v6EQPPzyAkDwAjc7mRm2tKOUAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Disposición ▸ Configurar página"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Encabezado y pie de página"
+      },
+      {
+        "letter": "C",
+        "text": "Diseño ▸ Fondo de página"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ eSignature"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Bordes de página.** Pestaña Diseño ▸ Fondo de página. Atajo: no tiene atajo de teclado en esta instalación. Abre «Bordes y sombreado» en la ficha «Borde de página» (Valor: Ninguno/Cuadro/Sombra/3D/Personalizado; desplegable Arte)."
+  },
+  {
+    "id": "diseno-79",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Estructura de la pestaña",
     "tipo": "verdadero_falso",
@@ -1311,7 +1681,7 @@
     "explicacion": "«Formato del documento» reúne Temas, Colores, Fuentes, Espaciado entre párrafos, Efectos, Conjunto de estilos y Establecer como predeterminada; «Fondo de página» reúne Marca de agua, Color de página y Bordes de página."
   },
   {
-    "id": "diseno-70",
+    "id": "diseno-80",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Estructura de la pestaña",
     "tipo": "verdadero_falso",

@@ -74,6 +74,9 @@ data/imagenes_rutas/<pestaña>/  capturas de pantalla del usuario (cada menú,
                        rutas). FUENTE DE VERIFICACIÓN — cruzar cualquier duda
                        de una ruta/cuadro de Disposición, Diseño o Insertar
                        contra estas imágenes antes que contra nada externo.
+data/imagenes_iconos/<pestaña>/  recortes de iconos de comandos de la cinta
+                       (`<grupo>_<comando>.png`), del usuario. Fuente de las
+                       93 preguntas con imagen (campo `imagen` = data URI).
 
 --- artefactos generados (NO editar a mano, ver "Regenerar datos") ---
 questions_all.json     banco de preguntas concatenado — fuente de verdad
@@ -455,9 +458,18 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 514, insertar 399, archivo 392, inicio 380, vista 131, disposicion 90,
-referencias 78, revisar 77, diseno 70, correspondencia 4.
-Total 2135. 282 preguntas `categoria:"atajo"`.
+interfaz 514, insertar 428, inicio 418, archivo 392, vista 131, disposicion 106,
+diseno 80, referencias 78, revisar 77, correspondencia 4.
+Total 2228. 282 preguntas `categoria:"atajo"`.
+**93 preguntas CON IMAGEN** (`sourceQuestionId` `img-<sec>-NN`, `generado:true`,
+campo `imagen` = data URI base64 del PNG): muestran el icono recortado de un
+comando de la cinta y preguntan qué representa / en qué pestaña y grupo está /
+cuál es su atajo; la explicación cubre las tres cosas. Iconos de Inicio (38),
+Insertar (29), Disposición (16) y Diseño (10). Fuente:
+`data/imagenes_iconos/<pestaña>/<grupo>_<comando>.png` (recortes del usuario).
+Generador: `scripts/gen_iconos_img.py`. El runner las pinta con
+`qImageHtml(q.imagen)`; `composeSessionQuestion` conserva el campo. Añaden
+~230 KB a questions_all.json.
 `archivo-*` (`sourceQuestionId` `vf-archivo-bkNN`, `generado:true`, 42 V/F
 21/21) = **Vista Backstage** (pestaña Archivo): panel de navegación, Inicio/
 Nuevo/Abrir, Información (Proteger documento 6 opciones, Comprobar problemas 3,

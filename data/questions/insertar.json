@@ -403,6 +403,117 @@
     "explicacion": "Un Salto de página simplemente fuerza que el texto siguiente empiece en una nueva página, pero no crea ninguna sección nueva. Un Salto de sección (que está en Disposición, no en Insertar) divide el documento en secciones independientes, lo que permite tener orientaciones, márgenes, encabezados o numeraciones diferentes en cada parte."
   },
   {
+    "id": "insertar-406",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Páginas (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "paginas",
+    "subtopic": null,
+    "tema": "Páginas",
+    "sourceQuestionId": "img-insertar-01",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAABPBAMAAABbrYudAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAC1QTFRF////Ojo4f399+vr6RUVDyMjHeXd0JCQk2traqKioPz8/dnZ2W1tbj4+PwMDAmqNGRAAAARRJREFUeJxjZMAFGIerjCCE+w5TRlgBRD7keYBD5pHuPhwyDxzPPMAho8S7D4eMgiJME4YME0wThgwDTBNCRtmAgeHsPSDr/wdsMiDWXXQZBRiLBBmQaSBwloqmnaWS20aMjCCMgRHbGGDoyrAXMHYgi7FXNsBkKqXSkIRQZNqRhdBk2D9Ilm84wDIx2zIiP2Gl+5ZWqEyMysr4gv6T5kDFFZPa3Fc2ALVBXKCZlzThpB1Qa2cee44Ye6X4g0wFiJ4GPqgMe+U6GzH2xhezrsFkGCr7C/or22/yKBV03tz+3Uj9J1ym/UOmemV3QX+RUXSew0l1ZTGFwRHWg0eGr2BCQRN2Pc8/cCpgl+FD0jLI/DN0ZAA8XIJQ9q6TsAAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Línea de firma"
+      },
+      {
+        "letter": "B",
+        "text": "Campos de eSignature"
+      },
+      {
+        "letter": "C",
+        "text": "Portada"
+      },
+      {
+        "letter": "D",
+        "text": "Formas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Portada.** Pestaña Insertar ▸ Páginas. Atajo: no tiene atajo de teclado en esta instalación. Inserta una portada con diseño. Siempre va a la página 1, esté donde esté el cursor, y reemplaza la anterior si ya había una."
+  },
+  {
+    "id": "insertar-407",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Páginas (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "paginas",
+    "subtopic": null,
+    "tema": "Páginas",
+    "sourceQuestionId": "img-insertar-02",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAABPBAMAAACnuKBXAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACpQTFRF////Ojo4f399+vr6RUVDyMjHJCQk2tradnZ2qKioPz8/wMDAW1tbj4+P3EdEdQAAAYtJREFUeJxjZMALGEe8NKMAmOJ/gEPaCET+E9yHV1r5zAN80iy8+/BJMykia8eUZkLWjinNgKwdizSydgxpkM73OKXBSs6PSo9KE5AWgDOxJSasYLhLsyUwzmToqACyyn5NwCKdpZXGXdqAU3fWtKzZX3EbDpQOWzRj2/Zf87N+/s2yiZJqQJXOUQESlilR87P+zA9dwJA+E9VpVgnTLoQ+TUifn/V9ZvqiWNapqLonsEeu2giT5u9aHYomzb3126/d8+LA0qH+Cei6GZapPHt26T9YenGSPYpuGGCPXIDNYzDAscMBj/SyA7OwBgsuQC9pkN+hQU09afZ4q7QJ1yczsAGJ9KVRUm1AmivG69gHrQKQNFeaRt6ub14MbLu2/fo+kyF9PpBzwoJhZVzCTJD0tg1ss4CJZQJb1pyW68CYnp01rfDlAu7QBSfNQdK73MBpCSINjOloVGm2rgKI9Klnu74DYxqoO8s2mCFzHsRw7mimeWDphsfTQTEN1J01LQHoNK+AwRIlg00aAIdBzlDGAcbGAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Voz"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Ilustraciones"
+      },
+      {
+        "letter": "C",
+        "text": "Disposición ▸ Organizar"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Páginas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Página en blanco.** Pestaña Insertar ▸ Páginas. Atajo: no tiene atajo de teclado en esta instalación. Inserta una página vacía en la posición del cursor (dos saltos de página)."
+  },
+  {
+    "id": "insertar-408",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Páginas (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "paginas",
+    "subtopic": null,
+    "tema": "Páginas",
+    "sourceQuestionId": "img-insertar-03",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAABPBAMAAAC0b+CjAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACRQTFRF////Ojo4+vr6HovNqKioJCQk2trawMDAPz8/dnZ2W1tbj4+PjuNByAAAAXhJREFUeJxjZMAJGIe5lJAATOTdhxEiJQiTYfiPLoUFUCJlzHDB4C8znLhAS7vw+muQhDw9pbCAYSzFEvh7AwMDa/QCmFjYKphU6m/2mSCpb6swpCo6QAysUqzdBVze1qUJH6yvfnh9gCH12+8N/toNEGe0vp7AELYeqKulKWAVQ0u796aIl9shUuwBawOZ1kV/2+i5YUkMe2VDmPwD1mVQx+9cM7u9DklKqQNql/vO1ed7A9ZFf18ZsgloYPjaoPXWByBSHL7eGUG6ddGmv69+kJ7A4Cryd6Mfy/LBFPKUSHG2FzAwsAWswiJV2Y5TV8EErFIhjNFR3tblfgmrv613EFu6dMtyuFTUGqAdYZssSoFSs692Q9MJWCps1ZKEQCbFDmAiWB+9NPqpgPQEJKmDs9s/QqUSX+3IgEtFr/FXAcZY9lVpkFSS5dXfcKnIP69PBOnWBjqcBhuoqnwCyUCIc1NnYzgeJjUrDYcUhy8ogWMJDUwwSKQAsQK7UMqLe0sAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Campos de eSignature"
+      },
+      {
+        "letter": "B",
+        "text": "Modelos 3D"
+      },
+      {
+        "letter": "C",
+        "text": "Salto de página"
+      },
+      {
+        "letter": "D",
+        "text": "Símbolo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Salto de página.** Pestaña Insertar ▸ Páginas. Atajo: Ctrl+Entrar. Fuerza que el texto siguiente empiece en la página siguiente, sin crear una sección nueva."
+  },
+  {
     "id": "insertar-31",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Tablas",
@@ -1344,6 +1455,43 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Justo debajo de las opciones de autoajuste, aparece una casilla con ese texto. Si la marcas, Word recordará el número de columnas, filas y el autoajuste elegido para futuras tablas."
+  },
+  {
+    "id": "insertar-409",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Tablas",
+    "sourceQuestionId": "img-insertar-04",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAABPBAMAAABWs/vaAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACdQTFRF////Ojo4yMbE+vr6eXd0W1tbJCQkj4+P2tradnZ2qKiowMDAPz8/zIlv+QAAALZJREFUeJxjZMAJGIe3FKMAsuD/D8hSishS76gghccuIyAhABRh/A9k3B1iUs7I/jozGF04XB2PRwp3YsMGhoMUayID40wGtqoGhowZGLpAQmRIzU3UKltwcCaILsDQlTHPy+zXixkwjQipRTGss6taZ58A0lPRpOSqTluDpIC0KZqUb1jC7Cy3Uy+ANLquJZFp1hOuTAPRaLpwhsZIleJOWAANPkxd2w5YBeCQ4kbWNBj9NeSkAHm7klC8EIujAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Tablas"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Multimedia"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Editor"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Símbolos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Tabla.** Pestaña Insertar ▸ Tablas. Atajo: no tiene atajo de teclado en esta instalación. Inserta una tabla (cuadrícula, «Insertar tabla…» con 5 columnas / 2 filas por defecto, Dibujar tabla, Hoja de cálculo de Excel, Tablas rápidas)."
   },
   {
     "id": "insertar-59",
@@ -3552,6 +3700,265 @@
     "explicacion": "B, C y D son denominaciones plausibles pero incorrectas. El nombre exacto es \"Esculturas\". ILUSTRACIONES — SUBCATEGORÍAS DE SMARTART ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
   },
   {
+    "id": "insertar-410",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "img-insertar-05",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAABPCAMAAACJf/ZVAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEhQTFRF////Ojo4+vr69ubX5Y8+r83k3mwAE2+4W6Pag77sEm+4EW63gbHWB2i0RJLPDWy3JCQkdnZ2wMDAqKioj4+PW1tb2traPz8/cEIbHwAAAX1JREFUeJzt1dtygyAQANAFFPtoTBr///OijfrUqYqQBe/TIOpLmqnOMJllOS6ulxDYeZADHvDVcOlUahHapXoDiHMarYIMmnGOUpByHWS4tNkBGcXNjXL1VtHhUlo385QTGofrWDWXLti5UfaNckCPDneklYyL9nIdkE/upJaMN12jHDCYzilGVKN7qqUDfsxC5ZPaFEO5CYIKyr7F2+BEim1wlN8b4SDLrbCXP8vwtxtPsG7Z4nHAA74GhsV8+gT5Lhgpl7PBzOUmMKTSfLK9L/isgeQQSfAET64VBDcImcm0AebZBPppJEkeSVM85Eks7heEsUrOMjfZAkxAZT6vmOnlepzx40vBv2kv8H8R/LTNtAGpsPYEtggHVHjquof6B7pMF8BF0GdQMNwWzXAL54YnIbsPsAtQPq2YxKVPa1RAFE+wR9iqLmMCildSLD8516qwpZbhyUt3wLjEHVmz7/da/VuoH1g9tleMpCcszrFVa72/1pwDHtB+PAA24+GJkv7j2gAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Referencia cruzada"
+      },
+      {
+        "letter": "B",
+        "text": "Imágenes"
+      },
+      {
+        "letter": "C",
+        "text": "Marcador"
+      },
+      {
+        "letter": "D",
+        "text": "Salto de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Imágenes.** Pestaña Insertar ▸ Ilustraciones. Atajo: no tiene atajo de teclado en esta instalación. Inserta una imagen desde «Este dispositivo», «Imágenes de archivo» (stock) o «Imágenes en línea» (Bing)."
+  },
+  {
+    "id": "insertar-411",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "img-insertar-06",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAABPCAMAAACeXWacAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAGBQTFRF////AGOxg77sm8rwrNPysdbzVJjNkMXuvt318Pf9qqqpcnJxUVFPOjo4tbW0Z2dmp6em1dXV+vr6fn58XFxavb29W1tZ5eXlJCQkj4+P2traqKiodnZ2wMDAW1tbPz8/KwE59AAAAWpJREFUeJztk01zwiAQhtkg6dRaL17Qjvr//1YTNRcv1taYFSioMeZDAh7aac07AzN8POy7sADxFnTIH0AaDlBtSI1RD4yAVuaBMIBdbbsVoUj6Ooh2pr7ckDAdSnpGRLBxQMJ0BCDygEqtWxGKIwpYpKXEugVh+2FI8WqeiWxjR8J08CxKC3S3tSNPwCgpS+Dl3poQEC8sqCASP21IcBiwauUo3NoQiq+MVIUfN5BjzzIPJJeHsVwe6efqu19y4cz5KS9yL5hCzmV5zTgWf8mb2xcry+kjO6lDfhLhZrDyQ4Kld5R7kYnUhbsgvHdIOENCiTBuZxnpxabXS5VcWDQ/LCYyWHK9j4fvU+zFU0xOJwLETVGO6zOxMAPOouOkbm/CfEx5vh0LcmlEJmQuIzJW+pRaLpyejJUQCtqi2T0mq+b0C0N5m+9DkFK7S0rG3NUh/x4xRXUqLPcoUwTVSFiM3Yjx2+l3yCMg36MXtVAVK4vVAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Portapapeles"
+      },
+      {
+        "letter": "B",
+        "text": "Inicio ▸ Edición"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Comentarios"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Ilustraciones"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Formas.** Pestaña Insertar ▸ Ilustraciones. Atajo: no tiene atajo de teclado en esta instalación. Galería de formas: Líneas, Rectángulos, Formas básicas, Flechas de bloque, Diagrama de flujo, Llamadas, Cintas y estrellas, + «Nuevo lienzo de dibujo»."
+  },
+  {
+    "id": "insertar-412",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "img-insertar-07",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAABPCAMAAACqJKeAAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAARRQTFRF////xdztRo7IE2+4AGOxfK/XCGi0NojJZareg77shLTZF3K6crLkW6PaCWm13uv1Cmm0LYHEVpjMPY3MRJLPaaPRN4XDS5fTEG63ocXiT5PJL4TGU5zWF3O7Q43HOofEstDnEW63PIvKHna8OInJIHe8CWm0KoDDB2i0QIvHicHtptDxvt31zuX32dnZc3NyzMzLkMXu6enpwMDAlJSTiYmIZ2dmUVFPRkZE8Pf9n5+eXFxaiIiHkpKRnJybvb29yMjH+vr6cXFwqqqpfX17S5HJRUVDsdbzsrKxPYnE2Or5tbW0W1tZ1dXVp6emIXi85eXlOjo4cnJxUFBOfn58JCQkPz8/2traqKioj4+PW1tbdnZ20c3uKgAAAj1JREFUeJzt1E9vEkEUAPD39g8sFNxiYyNyaCEx8WQaStKDidGDBz/AguX71ULwC3jwaC8KwX9JEw3RmtpKrSlFdqWz7DjLDOx2y9KeGkyYwzJv5rezb/YNi3DlhnN6nRRZo6xdTlVBFfMyGkccuL8K2uZ0qlNq854i085UGo/+HXW1vjmV3sTx/MIJu6SOQukynvoiOYEH5+mdH+PJW5HfnlxC3AskoGRORjtYxcPRaHpv5WCUjUdX29Ff4pXftY7FYPqzVwWPqnTl7DvvSxIfXjib+F4VNbg7J4u7/spOpllW1w+8ex+xGU7vkY+QR3eG3QFI6qE0d6Ov4cCJID9giK8CVI6Luuc+rUWTRBo/w7beBuiTBt9sVreW+x5ka5g7AZrWjoYH7+HLjVTf/yJ6g2Cu8LQ1LOBjxN4wTmA3jOqPdvfZulYhprjRMREbXfzWCFLQF6XTHnJKExGHHwlKXsMFyvKNdP7YLk2qpCvGSP/NJDpsBU1NtrXRuG4evg+l62nJk0Buv4BQChvoyeRP0gina1F9XAI71m5CKM1HloA4itYBZ0AyXxsQTh/QHcinuhmAfUqa/pkgLZB3F7OfSPMxqzEZzu6n+LqpUZsBWqTQqpcc9m+ugCEPQNkGEZWJe/VoGbdYpyhVSo5UNdTn67maiFDeOrdqyXFzcOeh7FQMqQqG9IVH1GEPuBqtwKbdqvsSKMrurYbMExjSqogANmHbvy0DxLbYCoLy6Bn7kNRgZs7AnM7pnP4f9B9HRNtQPuPUqQAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Imágenes"
+      },
+      {
+        "letter": "B",
+        "text": "Iconos"
+      },
+      {
+        "letter": "C",
+        "text": "Página en blanco"
+      },
+      {
+        "letter": "D",
+        "text": "Comentario nuevo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Iconos.** Pestaña Insertar ▸ Ilustraciones. Atajo: no tiene atajo de teclado en esta instalación. Inserta iconos vectoriales (SVG) de una biblioteca clasificada por temas; se pueden recolorear y convertir en formas."
+  },
+  {
+    "id": "insertar-413",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "img-insertar-08",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAABPCAMAAACTQxbbAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAG9QTFRF////eq7bJnvDlL7iPonKn8TjstDqJ3zE+vr6M4PH3uv2VpnRG3XBeKzZhbTcxdzvbqfXYJ7S2ufybKXVh7bewdjrVZjQosfmP4rLEG6+MoLGSZDNSpHOJCQkdnZ2j4+P2traPz8/qKiowMDAW1tbEqIpPQAAAj9JREFUeJztlm1v2jAQgO/i4GwI2lGxTfuQtST8/1+UBEg/VFW7dYiOLW/2zk7IC6QhTNrUTViCw+c89t357gLCbww8Q68IQpTyRIhJA6XA7ASICyYYQGYmRtwTGiJiUtCRaa57QEOeDnBbbfD8Nt42nziEpptssmlsYm7fPHZCH3Gdsv19xmx9cd8BfcKfe7boccHuuqBsexivTML7TuiJnsCGgWNcW/GkG1JhvpRlKIYYWXILRyEV5tH3fM6jaaw2OA6RSfxL7syHh9zUPlDhTBWU3pBZS4ze0KT++wz1gAyjKqYKGj+xqAOCd1XZ7qChTMxv0AWpBlHkQQFxIWWzxtoay656NdTWkNpb2HSjcpugMb+7ejxYfqHvDfmPkbSilk7UAQFcjh+uvrb0vE6IXHse3bevvIpXzRn6o5CNoRLXgi1ri/ZuZjfUJQRaPUtPghBXAE4qT4J4fAswlzFb3tBfh0EAJAyhZ+ZCQYV6HtH3DmLCDFz0aHWGwU2mhfJwJpdOGpZqIw1rJzGG3mczIKmPFCgWWqsq3fJKtciMVQ1azoVcwAGkBFTqgALM/QpyEtqEpD3Q5tncdxI9y5cLNV0LrCoIZnpv7TH3wUkAKZYu2YdhqSYt3P4jufefQzolqVboBbfqDTmBSymjbzsLTzDPzqE8bXpCjuHlZTczfAA35r76dELXwvKgBhFliAbTepJL9VuDYO+cF3yaS19BKiD9fHJ9HQBdDLqWekGxLid1T3tGHTHv2DhDfx36BSmyIl/DVzPwAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Diseño ▸ Formato del documento"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Ilustraciones"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Encabezado y pie de página"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Voz"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Modelos 3D.** Pestaña Insertar ▸ Ilustraciones. Atajo: no tiene atajo de teclado en esta instalación. Inserta un modelo tridimensional (de archivo o de la galería en línea) que se puede rotar en cualquier eje."
+  },
+  {
+    "id": "insertar-414",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "img-insertar-09",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABPCAMAAAB4dK3YAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAGlQTFRF////b7J/MJBIk8egbLF8Valnod2qktOdPplUmMikSp5ffcWMN5RP4/Dnabd5sNW5OJRPP5lVvtzGb7t/zuXUSp9fQpxYbLh8Ojo4+vr6eXd0qKioJCQkW1tb2trawMDAPz8/j4+PdnZ2J5KbSAAAAYVJREFUeJzt1FtvgjAUAOBzKLK5xIf5ZGIR9P//JhgXkz0sS4wPc2DbtcjFtSjiizEpiabntF/b9BQQ7nvQOuse4NCcCNkt67m6RMSfGxy8lVpugsyEppsx96BDsht2MCNchx5+DzuY87LU9+BosLcO80Jo8NVxv4YdTEkpNPhy2A87mM52Gnzfk3N42f3291x1ap/Fwkh/DrjqXIqF3icG3KkOo11d97GuuWfKoej6xYBr7vXI9dr3aJzr3j4+cp/tM7oOj3JG5jZ39bHOunvcUjbyawN9yHrcijvpCpNeQZ1UDnCAp2dx7QL8uLhSNW4tG7HpgHqR+idMfg8QJjH4AmSKeoVMy0bIUU3dxu25hEeSAMUsYF4UsLyemMoZ1PxqP6GQA+r47DwDRhKqrEzLnzoomTgFsBExrDFqOv/VQeabNJWnkKsF2kQ1Ijfc0k3Ad+POIc+qDaiAJEtHFcHn2zru1guPgBl0Lg2PSE7rbQqv5Fs1uZPVcfR099M666yz7tndH0Z5rlCM+8jqAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Página en blanco"
+      },
+      {
+        "letter": "B",
+        "text": "Fecha y hora"
+      },
+      {
+        "letter": "C",
+        "text": "SmartArt"
+      },
+      {
+        "letter": "D",
+        "text": "Iconos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**SmartArt.** Pestaña Insertar ▸ Ilustraciones. Atajo: no tiene atajo de teclado en esta instalación. Inserta un diagrama (Lista, Proceso, Ciclo, Jerarquía, Relación, Matriz, Pirámide…) que convierte texto en un gráfico."
+  },
+  {
+    "id": "insertar-415",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "img-insertar-10",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAABPBAMAAACNCFH4AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAC1QTFRF////Ojo4+vr6AGOxg77seXd0yMbE2traJCQkPz8/dnZ2qKiowMDAW1tbj4+PYUoALgAAAOhJREFUeJxjZMAOGIeNOKMAkHiPRVyRgeH/fRqLCwEZZ7GIKwPxXvqJswYwMPy5iEU8kYHh98FRcZqLg8L/AJChxICRHlDBUBJnb2QsB1Krwnbc/1CJJH7ih9c3BgaeKQlzUlDUz04FsXi+MLRXIouzVzYwMHR9i9hU1yDxvHLGl+pG5lKQOE9LXdULuSIGjgzxyva2yQmcy0/8mABRDxLaccHieGX7xw6GExa8iwNA5s9JAYo3VHZuRxPf4QEUbz3y4wdQvOm6AscKiDkM3LVMZe2VMxyfA8UrO1iqG1lKBmU4j4oPfXEAFC+xUJ3GdVEAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Ilustraciones"
+      },
+      {
+        "letter": "B",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Voz"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Texto"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Gráfico.** Pestaña Insertar ▸ Ilustraciones. Atajo: no tiene atajo de teclado en esta instalación. Inserta un gráfico (Columnas, Líneas, Circular, Barras, Áreas, Cascada, Embudo, Cotizaciones…) con una mini hoja de datos de Excel."
+  },
+  {
+    "id": "insertar-416",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "img-insertar-11",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAABPCAMAAACTQxbbAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFRQTFRF////eXd0+vr6/v7+/Pz8tbW0Ojo46enpRUVDmpmYyMbEdXRy4/HmsNm5N55Oo6KfZGRiRERCn5+ejsibPz8/JCQk2traqKioW1tbdnZ2j4+PwMDAc4YdLwAAAXpJREFUeJzt1G1vgjAQAOA7aDXZ9MsisIX//9OGMpd90GyJULldKcyCAtVkGYs0obwcT+84CAg3DJzQ/0NoNjrbUR/qyEvjQN5lA1CMAo28e9N7qk8Q8Fge+Y2nGGiEV/WCyF68FwHMsVREdPipt1VbE830JM2imOs5M2iB+24kWguqCi1x14MUCJD4BQ+UX4Wkh5/wSEXujPTkffD8VGQlMoFBpFC3bU7CoIWOz/KyO3tXtLTiu050U3nNRjiiZstdkTWcELSHA3IfE2qjFQK9X4dC8lIIMW3EAnzrRc+UnscGUEjbCh9BrCHwCpBJAHysIW+BUFsTO6H4cHocfYu/CYl3BpRXZGLlbmWK+Cc3e9UxLthGvDMx65lWflrj1fwyqmIWigpeI1biuIkzziSTOOM7+RqvFhUlik3MQpyD//obflu+4kz8M+NX8KLEmmsSypRnYjZy63Wj5X+GhsaEfgHpr6z+0twzxZnMu0x3ed15RtCICd0t+gY6ftdQkXROCwAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Elementos rápidos"
+      },
+      {
+        "letter": "B",
+        "text": "Captura"
+      },
+      {
+        "letter": "C",
+        "text": "Ecuación"
+      },
+      {
+        "letter": "D",
+        "text": "Comentario nuevo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Captura.** Pestaña Insertar ▸ Ilustraciones. Atajo: no tiene atajo de teclado en esta instalación. Inserta una imagen de otra ventana abierta, o «Recorte de pantalla» para capturar una zona."
+  },
+  {
     "id": "insertar-109",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
@@ -5661,6 +6068,117 @@
     "explicacion": "Al pie del cuadro hay una casilla con ese texto. Si está marcada, al hacer Ctrl+clic sobre la referencia saltarás directamente al elemento referenciado. Si no, el texto de la referencia es estático y no lleva a ninguna parte."
   },
   {
+    "id": "insertar-418",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Vínculos (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "vinculos",
+    "subtopic": null,
+    "tema": "Vínculos",
+    "sourceQuestionId": "img-insertar-13",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAABPBAMAAABmP+r7AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADBQTFRF////wMDAc3NyRkZEOjo4f399UVFPqqqp6enpW1tbqKiodnZ2JCQk2traj4+PPz8/IBnknQAAAXlJREFUeJxjZMAOGEfFiRFnVFIEkv/v3UcTD1PqAJIcebc2oIizBq8A0xy+q1HExbIaINy2rg/I4uo3ocrYJR8gi1ucgIpzaFxAFnc4AHMHjIWkXkhJgOGIBtO9D6jmsyZJNgDNT783G9U9odoNYPe0nt6A7H7G9BkQ93NEzkf2b1feBKh/i/qQw+dB7RFo+DTXMiCFJ8sfFBZcnLkWGhRo6pmA5kMAsvlABsg94KBAdg8QgN0PBMjuB/sB5F8GhnZk/4IBKHwYGN4hhw8mGBWHi89K42qrXhoAE+E5YgARXxnOOb36KQOG+B0Vni8CHzDFOdk5n5+1X6BkxL/XZa/xWfsjPB+uJADF+RZxuZ21b+l5MjuV4SxIXEv4gDFQnPcxLzOQZ3PxsQNY/Oh7h1lpIHf+mlaAVfz9RwWQ+BE9JoZfAoftj/xyBpvDILPFACxuc8BljjwTyF6XD4MwnOklLvOF58sHLOKMZz/bYzVHBqF8MLh/UIsDAEQWjFAgmyKhAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Párrafo"
+      },
+      {
+        "letter": "B",
+        "text": "Inicio ▸ Editor"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Portapapeles"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Vínculos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Vínculo.** Pestaña Insertar ▸ Vínculos. Atajo: Alt+Ctrl+K. Inserta un hipervínculo a una página web, a un archivo, a un lugar del documento o a una dirección de correo. Aquí el atajo es Alt+Ctrl+K (Ctrl+K es Cursiva)."
+  },
+  {
+    "id": "insertar-419",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Vínculos (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "vinculos",
+    "subtopic": null,
+    "tema": "Vínculos",
+    "sourceQuestionId": "img-insertar-14",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAABPCAMAAABiSE1WAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFFQTFRF////Ojo4f399+vr6RUVDyMjHAGOxg77sU5zWEG63ZareJX3BFHC4krzeCWm1Y6DR3uv1NYPBxdztJCQkdnZ2j4+P2traPz8/qKiowMDAW1tbVVN6nAAAAUVJREFUeJzt0slahDAMAOAEmOpRRdne/9mGZQb1qCyNoRXGQfpROLm0B9rQ/CQFEPYPdPb/2aubKLdZ77KWvjThdRuQCa9bzzNhCwsmbGNN2MoasJ1dxut2XNB2Oz3jl9l+KcnWimnZbLdjGjnr7J+wiEBkY2cxiQCVpW7VfhviFvEV7ojettt7fFbzA71stsvD2c02xPMwPUm/MueGs83Rgrofd3ss4gkg6WiPFU0NkFHjV9k78AFCpJrbAJHrOOrB4wPxBIdC707Wl0GR4lE/mq+hd4KsOU8FYyyGl8FT1OvdL9bH42NQcFbS8r+fh0ONethSMchSJanuZKFLTLbKJJU8A4vYu9hIxSs2abkRVT9tVF2IJXeWfsYiT1pu9qB7nlmIS32y7qZXdYcvx93rmDtH0u9K5HBldw1nnXXWWWd/pv0AKdnWUElP/E4AAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Editor"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Vínculos"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Edición"
+      },
+      {
+        "letter": "D",
+        "text": "Diseño ▸ Fondo de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Marcador.** Pestaña Insertar ▸ Vínculos. Atajo: no tiene atajo de teclado en esta instalación. Crea un punto con nombre en el documento al que se puede saltar o hacer referencia. Se ordena por Nombre o por Posición."
+  },
+  {
+    "id": "insertar-420",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Vínculos (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "vinculos",
+    "subtopic": null,
+    "tema": "Vínculos",
+    "sourceQuestionId": "img-insertar-15",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABPBAMAAACpEd44AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACRQTFRF////Ojo4+vr67T07JCQkqKioPz8/2trawMDAdnZ2j4+PW1tbR0Y8QAAAAZZJREFUeJxjZCAAGEcVoCkQhDHe41AgJACh/9+nqYJ/D/A4EqzgI4ZL0RR8wrBnsClgFPj7aKDdQJwCRiD1/8MgdyRuBaBU/Z8JjwK4MQOtADP/Da7yYUAVsDgw7gayQngWoMiU/JkAU5AjUgNkZczAaULOlBygYveduBU8W1VyaZ+Dz5NLuzy/m1za5fo/JiHlyZ4cl6nboW7ICUif1719J5DYtQ1I7N5rcbq1gCVnAhCBFRSfPGHDkDP9IJzY6a7bAzT4yQebBogVVnERCxjcD8IJiILik8eqGmCOvLobKOwKJ9z3z0pgKbG48geqYFaYygGf7Ttb4IT7TheWPTlfgk41DJbIGiAFiKilmgI2O5uT39l3uscu8FGZur3k2t8jlj4FyAp2ujN4bQNG0k6WP8C4+brUdifMEIgCdssDoDgEwq3eIR9cbixw32fPsgObgn3d5ZbHmoAKdHugiRhqRdY0oILUBU57/3CsuPLnxF4nl1oHZBOA6dLm+M6Qr/9yJ8iwBJ268vXffldZFBNwg1EFEAAAal/0UJs+tqQAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Referencia cruzada"
+      },
+      {
+        "letter": "B",
+        "text": "Letra capital"
+      },
+      {
+        "letter": "C",
+        "text": "Captura"
+      },
+      {
+        "letter": "D",
+        "text": "Objeto"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Referencia cruzada.** Pestaña Insertar ▸ Vínculos. Atajo: no tiene atajo de teclado en esta instalación. Inserta una referencia a otro elemento (título, marcador, nota, ilustración, tabla, ecuación) que se actualiza sola. Mismo cuadro que Referencias ▸ Títulos ▸ Referencia cruzada."
+  },
+  {
     "id": "insertar-27",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Comentarios",
@@ -5787,6 +6305,43 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Estás escribiendo un comentario largo y pulsas Ctrl+Entrar pensando que vas a pasar a la línea siguiente dentro del globo. En cambio el comentario se publica directamente, igual que si hubieras hecho clic en el botón Publicar. Este comportamiento está verificado en vivo en esta instalación con comentarios modernos activados."
+  },
+  {
+    "id": "insertar-421",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Comentarios (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "comentarios",
+    "subtopic": null,
+    "tema": "Comentarios",
+    "sourceQuestionId": "img-insertar-16",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABPCAMAAAB7w6PwAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEVQTFRF////N55OsNm5k5OSOjo4/Pz8+vr6/f39+/v7jsib4/Hm5eXlW1tZfn58f399Pz8/JCQk2traqKioW1tbwMDAj4+PdnZ2prVRXwAAAX9JREFUeJzt1s1ygjAQAOAsAaSXEpDp+z8fFULbS6tIuvmj1KKYDBdsnNEY2HzsrkMQyGovCNRjUwDDo1MwF9F7UXQmYvCjEl0hnRbqSRliJ7ypi+OQ+FORHkT2pcbs7E9hd1A7rdOrGKnjOr9goBypKDutROHZua3Bh7ryCtQlRfRNncDnn3Pu+5VMLAH4uBVzP3W/tEQ5SAvUzkFaoDIHaYF6cpBuU8/vDtI2/xQF6p9SORDx5rS4EMBnqEJELSmgXVjNpouvZLUXS8q9VCE6+wW39JawuMedfSDJqzyChbNIThghab0/4wdh6bFD2MRPqOpk2pTTVraA0abq07rqO5JHvIxrdaCzWeHA8Co4mPiZrGS4LJbFB7WMAZWPF9roCZdDic/++GDPdrY5Y69Q/0XplTJY5/tDyavmyQ2qHDCPamhZpAscKc5UK+wkPlQCS7VZcRM/pVS/aaOGsTj1rnrZazN5OaZ1jrnYrLiJJxu4cQIVqEAFKlCB2gb1DWqfylCTA+bOAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Páginas"
+      },
+      {
+        "letter": "B",
+        "text": "Disposición ▸ Configurar página"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Comentarios"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ eSignature"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Comentario nuevo.** Pestaña Insertar ▸ Comentarios. Atajo: Alt+Ctrl+A. Añade un comentario anclado a la selección, en el margen o en el panel de comentarios."
   },
   {
     "id": "insertar-2",
@@ -7461,6 +8016,117 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "En la sección Numeración de páginas del cuadro, tienes dos opciones: un botón de opción para continuar la numeración de la sección anterior, y otro para iniciar en un número que tú escribes. Son las dos opciones disponibles."
+  },
+  {
+    "id": "insertar-422",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Encabezado y pie de página (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "encabezado-pie",
+    "subtopic": null,
+    "tema": "Encabezado y pie de página",
+    "sourceQuestionId": "img-insertar-17",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABPBAMAAACkD65/AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADBQTFRF////Ojo4f399+vr6RUVDyMjH3mwA+NuPJCQkqKio2traj4+PPz8/wMDAW1tbdnZ2o8PiegAAAUNJREFUeJxjZCAMGEfVEK+GUQBM8T/Ap8YIRP4T3EdYjfKZBwTVsPDuw6eG2YCB4fclRVSD0NU4MjD8OsSEahBWNQyoBmFXg2oQNvdsADLf4/cX2G/nR9WMqhkwNQJwJs60igOMcDUcDYzlcH5XGbIshAdSMyMBXZRcNRwTPpfy1HhILC/s/K8RVWfx40LGj+WFKx7/b6gDugPsHqa6Gz803guClL+raWia8j+R4weQrelU39Qi8SMBas6MjEXXGhhmfPDYVfby/Qa2opfiMz6EPnbo8tPgaypAVsNV1nMEqOazCgPnc6mynosYamZom/Je/vFjd1NtXUcBxw8Qe29NY10H1K4G5lqgmowGjx8qT/b/5KitZo9cYMGh8uTE998NdazFgzFOR4aaGz84fhgQUMNbx1RM0K4b6MYMfr+PqkEBAMblqlBZledKAAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Símbolo"
+      },
+      {
+        "letter": "B",
+        "text": "Cuadro de texto"
+      },
+      {
+        "letter": "C",
+        "text": "Tabla"
+      },
+      {
+        "letter": "D",
+        "text": "Encabezado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Encabezado.** Pestaña Insertar ▸ Encabezado y pie de página. Atajo: no tiene atajo de teclado en esta instalación. Inserta o edita el área superior que se repite en todas las páginas. Abre la cinta contextual «Encabezado y pie de página»."
+  },
+  {
+    "id": "insertar-423",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Encabezado y pie de página (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "encabezado-pie",
+    "subtopic": null,
+    "tema": "Encabezado y pie de página",
+    "sourceQuestionId": "img-insertar-18",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAABPBAMAAABWs/vaAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADBQTFRF////Ojo4f399+vr6RUVDyMjH3mwA+NuPJCQk2traqKioPz8/j4+PW1tbdnZ2wMDAvNv79wAAAXdJREFUeJxjZMAJGIe7FKMAmOJ/gEXKCET+E9yHU0r5zANcUiy8+3BJMSnCtWFIMcG1YUgxwLVhSsG1oUuBdLzHKgWWPj8qxWjEbABmnMUm5Qii/++lnhRuu6jtLwEYCyMBYILhIMXRwNjQUA5hd5ajSnVIh8JUY0hVdBTglvrZUK8RwDDjy18wjSRla9zZ1CoXxLArqBZMIzlDI6AzfwJrMf9CCI2sq4Chs4gVWNoApUA0mlT9jAQGhv7qejCNKtVWyVbEsOLZbzA92EKeTKl3QkBixo8CTCn+iwq4dPF/xGogx4InJTe2Ff2Y8re+49c/C9/qCAX+hoaGQpDUiRM/Cjg6tIJq6zv+NhU2gKL5xwUNAZBUR+1kjgflGwM66zt+lnc21rEXMvA3FDJApOZc7/4Ck+LP2O8It2uHxXJDjR/zgREFkioRAuqAST1YVLZDWXTHs99gqaYmI4QuaDLjLG/AcDxUiu+QAQ6pHRcqsIchFjBIpADXUrpQEMVG2QAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Ilustraciones"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Encabezado y pie de página"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Edición"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Fuente"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Pie de página.** Pestaña Insertar ▸ Encabezado y pie de página. Atajo: no tiene atajo de teclado en esta instalación. Inserta o edita el área inferior que se repite en todas las páginas."
+  },
+  {
+    "id": "insertar-424",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Encabezado y pie de página (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "encabezado-pie",
+    "subtopic": null,
+    "tema": "Encabezado y pie de página",
+    "sourceQuestionId": "img-insertar-19",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABPCAMAAACOPShAAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEJQTFRF////Ojo4f399+vr6RUVDyMjHbrPdWqnahL/iRp/VnsvnHovNT6TXj8TkJCQkdnZ22traPz8/qKiowMDAj4+PW1tbjRCz1AAAAfxJREFUeJzt1ttygjAQANBNuNkXFNH//0BEgYdOFUi6uaCAIMHUGdvCpBqy4bBcspbAz2xkcRbnJU4nQtjzDr31mcMmIEPH5ROQoUPpBGTqwARk7ExA5s5jaIbzEDJ0mg63c67e4rzOcaDGZu+4pMRm7/jkjM3WCdSMsrbOZ/Ulmm0+EPALNmtnpfb42Taf1mO3cvCZf5BPe6f12N9jXbyLMzT4hDNvW5z/7YQkF580w8+IHE0OVZP7DnipDu2YETPiuPykQ3FqxIw4lHsHERJR8eWV4EIF/gE2DJwTXjgvsAeuTBZ7/oVmKtR1smuTO0ESlySPywIinm3rPEQRb9yGNbdwh44K9Zytk7TzSUF1HfFTGoiQQGFfY0IxkzdBh3oOTqlujvoSk9lJT7h3VKjv4NViquS4rdpOFspbInfc5rowXTnLPQ44IC55WwHhHSfG7EmuTyRfDwA9S4Xaju22OH/DWUOue/rNe86Jq3w4MNcxrEFjTujKkrM/i9cd33pRZOQSaw3jWUovFX8PnCBpVqJcsjvtiGpUADRFMC79S4e5c2T5wBWPCxJUcWgVNzksD+9lM+IwhlWQ3jkgh4fvXN/xD3FJHZqIEzZFpnH0sJFDuKjkUR1UNL2VIn1datjI6b1zG1YMHjbXWfuJvRPhf/GG6fya9b44avsG+o1AX7VvpKkAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Pie de página"
+      },
+      {
+        "letter": "B",
+        "text": "SmartArt"
+      },
+      {
+        "letter": "C",
+        "text": "Número de página"
+      },
+      {
+        "letter": "D",
+        "text": "Gráfico"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Número de página.** Pestaña Insertar ▸ Encabezado y pie de página. Atajo: no tiene atajo de teclado en esta instalación. Inserta la numeración automática (Principio de página, Final de página, Márgenes, Posición actual) y «Formato del número de página…»."
   },
   {
     "id": "insertar-19",
@@ -9327,6 +9993,265 @@
     "explicacion": "Además del nombre y el puesto, el cuadro tiene un campo para \"Dirección de correo electrónico del firmante sugerido\". No es obligatorio, pero está disponible."
   },
   {
+    "id": "insertar-425",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Texto",
+    "sourceQuestionId": "img-insertar-20",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABPCAMAAABoFOMEAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAE5QTFRF////HovN+vr6Ojo4MZXRrdTrKJDPnsvnWqnaT6TXj8TkhL/i2enzRp/VY67bwN3ubrPdOpnSPz8/JCQk2traqKioW1tbdnZ2j4+PwMDAKSYgWwAAAexJREFUeJztlgtvgjAQgNtSMOrmEh5O/v+PQ0VM5nxkUOiuLQ8fiGDdogmNhN7Rfr27Xq9ipN1wj+gR/4gAJW+awc8VNaMwJ1cRGeZtEE0O8lZWIOO6HzAlvVjwRRAEZZoIAydWooewEOaxHoJSMGOvgxgmDFHzoIMY4y2yzJ0G4n1DU2Swyff9iMlW7Ch529yPIFT0MatSoyvCLLazSo2uiCKQ46RMjY6IUZxv53A/LlKjI6KcOdqNitToiPg4lLEYft2HqGsvhHhA+X3MJaB7FXVrPaJH3ELYGPH15RAHrxqVFcLlJEQuDjUQU345uxvC5VH1EZ5piugCtMhM8MqhLIIuIqEaKpXwkn6XCP9nfYJQPdsIZwJhzhF0XS71udImK48sGqzwMvHPQnBBgJ8fR7mzvlLKS8pYHscC2EcIBER70IgozK4QXmYFyGchoLwMm+nSj63AsQIQVhJLCkcKpYrMcV6IeIFh4AFl4Ck22CDIBYEQn2ERuZhU+uAJXTxjgveIJ0WcH+7aw/7XCEekrawFtjX3sqiQVbEQB0c8t61QtcCJ4K3kslj4sZmcEK4gfFULvEysfHLSlR03HJFTVC2oRbSIhSgHSNUCJ3KiUs4daYX4ZHQhawEz57N4LeWqWLRCdG09okfUtV+8wR5fnNH+7QAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Texto"
+      },
+      {
+        "letter": "B",
+        "text": "Disposición ▸ Configurar página"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Ilustraciones"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Cuadro de texto.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta un cuadro con texto que se puede colocar libremente. Ofrece cuadros integrados y «Dibujar un cuadro de texto»."
+  },
+  {
+    "id": "insertar-426",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Texto",
+    "sourceQuestionId": "img-insertar-21",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAABPCAMAAACXtsbmAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEtQTFRF////sNfuMZXRe7vihsHkKJDPHovNcLXfZbDdksfn3e33R6DWoc7qO5rTW6rbxOHyUKXYW1tbqKioJCQkwMDA2tradnZ2j4+PPz8/ruiYCQAAAg1JREFUeJzt1X1vqjAUBvDn0CrKvNtVUPn+n84XlGTxMpW257Y4M62osL+WhSbGUs4P6tOChG816tgvZkSk2zNJBDq0ZQMDJvHRjkVUIjDo71oxGh1gBkccr0efqKEiVhyyMm2YEAh3jNd9719zFsk9elwAL+V1kA/Zmzlg8O56fRjVlJGkz+q3Dy/IB0wG4PBUPNRekPfZ6x6K+dS/CfIec2tst4cqqqO/hRfkHUYkMdAl2FQ7+M/BC7Keua2rNUaFhIp2Lkitn7OQwbLauaEh9OR7zw+yhkX94isMt+CICsjiGaOoDHVxeQhw6RfVTHJIV9e2u9kPstFjGshg/w12G2QTNjreBNmE2c3pB9mEhXwTZBP2Ut4E2YQF8vSstmQ98jdyIxZJ4wf5I/9xOtaYjWkLxJQh0blXEQdrex55HZvIFRKWS8yxrGFTAb2+uMqZTcUCcy5zjEVWw+b2e1nDkOr1WJoN4g2m9n3PW8RCb2xXKluXapYLuCFbKlZfbKa26WJs55IjPW6nJljHdsq2O7cssSZVGdzQ9d0m0gSrai4Jb6qI4lO5q5uR/dG8qsg1mwout4mGyGpYXJVsahhSl1VaWhLzaZKuhrIJBZpznK9UrdIFm9Pic3lcJPacq5kQhA6UW1RMOHdDM30ZScvWsY5VLWHK3Kft3exLQt1RDyd5914/J5KOdezc/gOzdOVQbxcUywAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Número de página"
+      },
+      {
+        "letter": "B",
+        "text": "Letra capital"
+      },
+      {
+        "letter": "C",
+        "text": "Iconos"
+      },
+      {
+        "letter": "D",
+        "text": "WordArt"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**WordArt.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta texto decorativo con estilos de relleno, contorno y efectos."
+  },
+  {
+    "id": "insertar-427",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Texto",
+    "sourceQuestionId": "img-insertar-22",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAABPCAMAAAB8gX3lAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEtQTFRF////9vb2urq6zs7O2travb29xMTE19fX7u7uysrKm5ub0NDQxsbG6OjowMDA39/f4+PjmZmZ5eXlo6Ojtra2ra2tycnJv7+/1dXVZpSdlwAAAb1JREFUeJztlAtvgjAQgNsVipOoqUzD//91TlEzFR2vdteH4gsom8tixkWkXO7r9V7F6DuCO+rpKYxx0Z5yOMnaUxRzkbeleinN6MF89E/qfT3l490gpp8tfQ33ORomSTtqtBUC+WTTjiII0j6I/W0bCuPBB7xooUtmmQ2nr87m8bqS3VDUjeWrlyqXllQvNQFRcri1rqL80hZSaUu51DWrjStLZpWN0fbUFISktr5eya7coLpklxTGL2WzD4vYjvJ4XqbATytLdkkdO0KJKpn1pFjIs1H9Cisp/y8bHfVsFMOrH1LVOzySGgv0smRwk0aMFOtJDgsLKhCrKY/kmtH3O27vUqG84Z2FouCZwr3ozZqpbHlcwzMWaxS4zRRi7lz+gwP4DotFmDT4QjIH8ogkeiuIii3gDq/3ZScd9XvUWJx33nX31/kqbR9KBRy6Ws8RczME48GwkF1ldHoSvJlpSE1NRHTalDkLGRRTv6NOrcKEprqLsQ59LV96jqTFBM+NbalD2hu6oswcXVBnutu4Agfm3MwRzHyY6BNCHEZ3PxtMnkPPEdwvCIYSDOV8GV1j5m3u0b+lbKSjzuUL4mnQUBHka3QAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Texto"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Tablas"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Párrafo"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Ilustraciones"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Letra capital.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Agranda la primera letra del párrafo ocupando varias líneas (por defecto 3): «En texto» o «En margen»."
+  },
+  {
+    "id": "insertar-428",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Texto",
+    "sourceQuestionId": "img-insertar-23",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAABPBAMAAABFZLsuAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAC1QTFRF////Ojo4+vr6AGOxg77seXd0yMbEJCQkqKio2traPz8/wMDAj4+PdnZ2W1tbPD3fQQAAAaFJREFUeJxjZMALGEelGQXgzP8fsEgrwpnvaCANtf3/BxzSilC9g1Aav8vhTFpIMxuA6LO0MZwouxn+XsAh7QhmvBkQafxOI+AxiqTxZyJsYDhLsxcw9ncW4JbuLGBHl65sJ0ma/XFb9R/B956eeZrpDV+7CyKPP+Dsy+QE283U1ykZf2Jdb1Ff6qy2v1U3r3tWtq9ILBAphumecochc3ZrZXul3QH2zs7yzpeTUie8WK/pAJNmTQDaB4SObkA+VFri+EuY3S86INJ9lQ0g6detFRML2nm2gO1m7e5UPxC5EiQ9KYetCyjt/vP4A8vrHzoHd4xRQfquMpCY/rMAHlco0txHDaAC2KW/MuCWrv1cPq254r+neyf7078T8hg7nk/s4C6YUNAKka5pAcbLu+6Cvk6JlNyJZeKMFkCrtgu8DIBIV7a3f7A82f5CHhivlXaefNWfW4D2ATVDpSekz1qGJF3Uk9+KZHflpKvXf57pz+vrfN1b2Fcp/rPgjAmydPty52Nnf3G2d37/9mdCHktv/s8J6KGG6iMG6kpjBYNYGgB3u/RAjIAYiwAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Página en blanco"
+      },
+      {
+        "letter": "B",
+        "text": "Portada"
+      },
+      {
+        "letter": "C",
+        "text": "Elementos rápidos"
+      },
+      {
+        "letter": "D",
+        "text": "Vídeos en línea"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Elementos rápidos.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta bloques de creación reutilizables: Autotexto, Propiedad del documento, Campo… y el «Organizador de bloques de creación»."
+  },
+  {
+    "id": "insertar-429",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Texto",
+    "sourceQuestionId": "img-insertar-24",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAAAZCAMAAADdXpaGAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEVQTFRF////Ojo4+vr6JCQkj4+P2tra+/v7/Pz8RkZE/f393e33cLXfMJTQHovNzMzLPz8/wMDAqKioW1tbdnZ2O5rTT6TXwN3uu8WOFgAAAYBJREFUeJztlGFzgjAMhhtKxx2IRfT//0IVEeXmQLqklZZ1203YTvbB94CjTS55mqYF9k8EcwP0eoL4eoL4eoL4ciCg/J85QPzCPJ6lBwGmehj8UXOCDDUjiDetQTgZ2uE0D5qvw3xrGA1iSUJQ7a0in6M/DkRc6BvB68wgEaCUUuHRRRcdW5SMyRNLD3x5pM3KS5bt0CSDgmWqJFdjQF+2LBjPDtfeZxKI4DHAdqNUXWsQfNODrJtVsMuBonK5z6qrhVzBnq27whmQTHRBw01njSrTB5AuiXd0etf12QbKKlp61dn0+K6OREjzJT3WkBBkrgoaWZ8JIOHbIt4SyKY+ORBdejEEYTiQQEnClFWtMwxAhPWZACIu6VmfXEgqC4LbT7WX59blC3Af9GoFgjSDUqGv3pqgyazP5IqghhXRe4Ntx6nSt3zyJK9mtaZ1LAg1K2ankfMZD2J6BHXrkTuUdyNy3Q/inZqfZRroT0H0N3ppzT1yJ0de/voe80Hm1zsXfbwaL40J6gAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Disposición ▸ Configurar página"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Texto"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Páginas"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Voz"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Fecha y hora.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta la fecha o la hora en varios formatos, con opción de «Actualizar automáticamente» (como campo)."
+  },
+  {
+    "id": "insertar-430",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Texto",
+    "sourceQuestionId": "img-insertar-25",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAAAcBAMAAABIY+o0AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAACdQTFRF////Ojo4+vr6AGOxg77swMDAJCQkj4+P2traqKioPz8/dnZ2W1tb2PyU9AAAAQlJREFUeJxjZKACYBw1ZNQQYg0RBDPfU2aIkACQ+H+fMkNAQIlCQ4yB+O8nCg0xAfrmDcSQMAGuCRkzGNp+NZDvEs74GcsjgYaAAYwmzhCjDwwMfGBDuNoK2qooNaStioHLTfIv17QqtidzEryuPdAqgKpjTViQMJs4Q7rKgIbIzEmYV6WRuHzHjJXxCXDXhCnc2kCCSyRmnLStf8gQtWJu9IKT5jCFrLgdgh4mbhtAYQI0RDqBIQPFEEJhghI76TPT5yXPq3o5nSF1dub8BKICFy3FTrugVZD9W6us6pqAF9uvaw9e4QwHDEMw8g5bVQMxmvEbMiuNFDOwFwVtj4hOZwhDKAWDxxAAdbx4HRIgxocAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Objeto"
+      },
+      {
+        "letter": "B",
+        "text": "WordArt"
+      },
+      {
+        "letter": "C",
+        "text": "Elementos rápidos"
+      },
+      {
+        "letter": "D",
+        "text": "Referencia cruzada"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Objeto.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta un objeto incrustado o vinculado (Crear nuevo / Crear desde un archivo). La flecha añade «Insertar texto de archivo…», que incorpora el contenido como texto."
+  },
+  {
+    "id": "insertar-431",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Texto",
+    "sourceQuestionId": "img-insertar-26",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAAAcCAMAAACNkwc1AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAHtQTFRF8PDw6enp////Ojo4f399+vr6RUVDyMjHioqJy8vKZbDdHovNcLXf/f39W6rbKJDPrdTrJCQk2tradnZ2qKioPz8/RkZEysrJOpnSWqnaJ4/OwMDA2enzj4+PW1tb+/v7zMzL/Pz8xOHyKpLQMpXRe7viJI7PKpHQsNfuIjM7uQAAAZhJREFUeJztlFFvgjAQx+8KMYoQJjwsbGYv+/5faI+biw+bihmicyvsWlssDDbjkpUH/wnCHf/2fr1WEHoiRNsESshsEyhdQJq6gDR1AWmqfyDqw4aFdRD5UDiFJZImiFuyfS9AGGPvQ8TcPshw4yN+bEUQYipuE1h1DlcWqYi7vDTiP4FM8MX3ELPsWCXZdXPUQOLB/EyIFhDqh+fyTWZUSX6a3gQJz+7Gd5Aah5qZfkOHg/8MVyW4C5i+AZM9otDPMD1kyQeUF2ZWrEMvBwfkoMpeU5J7c3F1gNQ5DJBgluRriHkalavqRVwubwmklhVmqi4HsJUY1NGqJPczk6MGcvPkY0Acd49NEFliJP5KwSziAGKKZL+AY9YAETcyqFDb23rStTVTpGOaZ+PRazuIqEwbsj4cSw0is9pemfUF2v6bTBB+jzjPxruibAWho7Kk+s5MLYaWHXGV7QQZVfbTQWhnrp2H8Q4qENDn7zBvkos4/gy2conUdFbobBdIWtlPBxmop70G+Vc1viNSlkGMpFUQ2+oNyBfZKdNSarI4YQAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Páginas"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Texto"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Multimedia"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Línea de firma.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta una línea de firma de Microsoft Office con el nombre y el puesto del firmante. Distinta de eSignature."
+  },
+  {
     "id": "insertar-7",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
@@ -10858,6 +11783,80 @@
     "explicacion": "Cuando activas Entrada de lápiz de ecuación, se abre un cuadro con esos cuatro botones en la parte inferior. Puedes escribir a mano, borrar trazos, seleccionar partes para corregir o eliminar toda la escritura."
   },
   {
+    "id": "insertar-432",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Símbolos (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "simbolos",
+    "subtopic": null,
+    "tema": "Símbolos",
+    "sourceQuestionId": "img-insertar-27",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAABPCAMAAABmvZ1rAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEVQTFRF////6enpn5+ec3NyUVFPOjo4XFxaf399lJSTaGhn2dnZioqJwMDAtbW0qqqpRkZEJCQkqKio2traW1tbPz8/dnZ2j4+PH0/HGgAAAShJREFUeJztlutugzAMhZ0AKZWqKQXe/wFbtVRb1jEIMHth3G/lF9JiKcIx50t8IkAw2BrMkpbcE8koRqTZIukRm7tlXajyZJH0+RNxpxG281lyoLakJS25khSfG0kB6Xry9O1/1BM/P76/QB5Uo/FKzhzotTxBvmVfbZHwn9A3u5PvrSX/NSkpj6dUQcHv+Bq4jzGSbi1EeBvdc5kMoCPpkZEGrSjHEebgXZtSUPz6kawEcYGuTxTza7WKWUm2SlEek13p3Izfzp5B8YCGPON/hRZ/pZTkYRHXy06TgJMoWUlCxMkB9nUueXrAtrQyJbwtmel2QOJA43jRCtv0MjSmHZYoU6pOSCsYkK+HJS25SNJTS2PDnidXpJPgfLczO+7uhCxpyVXxA7CmolBuUel+AAAAAElFTkSuQmCC",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Página en blanco"
+      },
+      {
+        "letter": "B",
+        "text": "WordArt"
+      },
+      {
+        "letter": "C",
+        "text": "Ecuación"
+      },
+      {
+        "letter": "D",
+        "text": "Captura"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Ecuación.** Pestaña Insertar ▸ Símbolos. Atajo: no tiene atajo de teclado en esta instalación. Inserta una ecuación (integradas: Área del círculo, Fórmula cuadrática, Expansión Taylor…) y abre la cinta contextual Ecuación."
+  },
+  {
+    "id": "insertar-433",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Símbolos (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "simbolos",
+    "subtopic": null,
+    "tema": "Símbolos",
+    "sourceQuestionId": "img-insertar-28",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAABPCAMAAACTQxbbAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEVQTFRF////2dnZn5+ec3NyUVFPOjo46enpf399lJSTtbW0wMDARkZEqqqpXFxaaGhnzMzLqKioJCQkdnZ22traPz8/j4+PW1tbnj75IQAAAbZJREFUeJztlIlywiAQhhdCJOLVVOv7P1+t0R6TGJJAIaUeSw7bmU6v7IzuAvvBDywh8AkjAzRA/RCxBqCtXQmNiAIVEqJ1EUkqGzAfEgQqJV1jeuDkpR8SRfRyNvmootyjMEQEzeVFTxClWCGGOMMpozB46oYICw5YTFSVaB4E0QAnNE2EoLl+xgzABOtD0ORQ+dA8LTuh0N+SgbLiCyCaf1zeHPCdGGOi+yC4QkrgiiMflyzD0DQXj52QL8V0jfHdYWiah2lfj/80Zhm9qPKGevUhIi6LYqYK6eXgDliU5dldccYevZSGb8SiDA5u8hFXDQyGIvunlXYlMJG0Tui+p9D5orHZIa/fBujPQzfG7QBuITmNxHQLLa0aWiq6XWapiJK2tAZIiIfaXTzrPghikrwNxDkHbTrZBmJdu6Uyb2Vvx1x0hGBV5WkNhfeCk0TwHZjQyl6Ve+viY3SCQPA8rVeq2Zo3bi2lwY3bxzRz0RkEd1XiMq+EbmQKa71BENsIbpx+l+ei40qrCsJ7QBDRdt92+2+aXQS/pPYG6PshW/T297GVBGdlG9Mur32dH3AQA/RvoVfp7tpQFcZSSwAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Disposición ▸ Configurar página (esquina)"
+      },
+      {
+        "letter": "B",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Símbolos"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Texto"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "**Símbolo.** Pestaña Insertar ▸ Símbolos. Atajo: no tiene atajo de teclado en esta instalación. Inserta caracteres que no están en el teclado (€, ©, ½, letras griegas…). «Más símbolos…» abre el cuadro con las fichas Símbolos y Caracteres especiales."
+  },
+  {
     "id": "insertar-71",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Multimedia",
@@ -11006,6 +12005,43 @@
     "explicacion": "A, C y D son plataformas de vídeo reales pero no están en ese cuadro. Las disponibles son: YouTube, SlideShare, Vimeo y TED. ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
   },
   {
+    "id": "insertar-417",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Multimedia (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "multimedia",
+    "subtopic": null,
+    "tema": "Multimedia",
+    "sourceQuestionId": "img-insertar-12",
+    "generado": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAABPCAMAAACJf/ZVAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAGBQTFRF////Ojo4+vr6+/v7/Pz8/v7+RkZEhsHkUKXYHovN6enpsNfuO5rTRp/VOpnSWqnaKJDPhL/iwN3u2enzebngT6TXj8Tkk5OSW1tbqKiodnZ2JCQk2trawMDAj4+PPz8/1FEoVwAAAfBJREFUeJztlWFv2jAQhu+chXTtqqlbNUEhyf//WRBIMmlbNXV0g+Dc7mxaaIKRXamb1nEfbJ0vj+98+DUIzzQ8gSfwHwWPbURHQeR4n5Y1ejHQWemLgf/lGWUzpkJBhY1MMal1SKmomsRmXJ3fB4CoBsh2d0lsy4BSo0GM2Ea3V1oRNUtvUG3exd8/NHcAl/G3980P71IjNVjCR/wCcE1f4WK98gRRnz2J0y/PUtXm7fktJCYPj1f3P/3BFexASI6B+86nz/4ZO+Z/xo4l3l3tmvfv2LUL35vTJz3v6gF7UMfT1b//3/HawSFWACOq4QZKdsc49wSFETrVwgWAE1rw5wtICwgDYRgXaVMLMSGItJneTHlDgLaCYSTjQTDblDdUCZivq4zBXM9HWLIzIdRYOjNOoil/yiCqqZSKLS/quF3I0SOKZi4Q8rX0ZwfKBKkFK8i0KhxghjQzXRmrYqR4MofikUvlTmUwc4BpK3EGRwoIcZ5yrVRKc2QjgIWr1AA7gX8WFHFYYYaDW2E+Ayyc0T3Qam/cKrAqkBsrt9X4NsiKpLIHWu2NdW3U8Aha3wZh71l4BFOjvVoCNrgFjW+FWcs9f1DWDjTaAwdogvIm5W0XhK32DoJWmPwepW0vI1jtOUAbzDc66WcMtBP4OsDfOLUqX6u1u1wAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Multimedia"
+      },
+      {
+        "letter": "C",
+        "text": "Disposición ▸ Organizar"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Comentarios"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "**Vídeos en línea.** Pestaña Insertar ▸ Multimedia. Atajo: no tiene atajo de teclado en esta instalación. Inserta un vídeo desde una URL (YouTube, SlideShare, Vimeo, TED) que se reproduce dentro del documento."
+  },
+  {
     "id": "insertar-107",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — eSignature",
@@ -11133,5 +12169,42 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: Word muestra el mensaje «Save this document as a .docx file to use eSignature» y no continúa hasta que lo guardes en .docx."
+  },
+  {
+    "id": "insertar-434",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — eSignature (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "esignature",
+    "subtopic": null,
+    "tema": "eSignature",
+    "sourceQuestionId": "img-insertar-29",
+    "generado": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABPCAMAAABlCpNDAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAEtQTFRF8PDw6enp////qqqpc3NyXFxaOjo4n5+elJSTaGhnRkZEzMzLwMDAf3992dnZtbW0UVFPioqJPz8/JCQk2traqKioW1tbdnZ2j4+Pm322gAAAAq1JREFUeJztln+TojAMhtMW7NjTG0DX7//5RHRvdhf53Utb4IprFXBn7m7H/mGhNE+TkLxI4AsGIV8BoU/IE/IdIdgeUj4GkZ5qMVk5Gm0UBBmkBF/SYj4EGbUKhUE9G9IxgJNsLqRnLGXRzIRYDCDneZAxjHuQUYw7EItReTMhth85axxpvQ0ZxsIhnwEZMkTBP6ZDhgz88d4nQz4x3Hl1Q3htv1tObjCckFVmUtC6gL9uhhPiy+Ub3KmxuxDmZ6MZLoiOZvXBDUMuaFNOh/iSA0vBlPq6rAB+/JoM4ahhTHqpul40okopLTG1ZP1+rfYdkHVuABgKoywjsD7XclXWQr6Nh2BWPrxCnc0rE8jPguXgUGonRKArIq8BQ9H3Sz9t+HRlW9MMSvcXaxxk/HhCnpBJkAD/T71OsQzJ8QISSZpARJKHIFs5xf46JJInc7utwYshzDlQaMDfQ0j1FGEfoq/4mCZ6P/glOeKkU2AgYvFqnxCyg+BeLPgJ8DKS5BiwBCdCY7MHb3cICehxo5YuPNmg+uVpmKfaW8XDaSvPiMNJSnSqOzMkGcdrduhzgugOFhRpC/gESWBXIr+HdP63kE2DD8XyLDCOfADx94LjRFU4mMkdKF/Q1U2jV22Izhx6FhBWDT3xKpVL9VgZApzaqL2KHAXG48X3K9Z6ke7x/0BGje8N0ZVgymo2RJlHWerY63xTQ4jdzXMgRhtCVcVqN1a0UoxWTrTMhKrG/3TDqVMTW2ONNgTEyECrGFpZTq0bw77sLCyI6LTBdHFmmr2za2VmoBC9hQXps7GT8SUErsmMlb8+HK0Nm3MKW7pXu1rF0DZZKzMYKYbZr9PkEmK0Ab8+6KEJQClGe7CRmZfKi631Tk1uVmwvvHfHDciLPDwIwbhgrCP/bhf/RchvfXOP+mfX52gAAAAASUVORK5CYII=",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Formas"
+      },
+      {
+        "letter": "B",
+        "text": "Número de página"
+      },
+      {
+        "letter": "C",
+        "text": "Imágenes"
+      },
+      {
+        "letter": "D",
+        "text": "Campos de eSignature"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "**Campos de eSignature.** Pestaña Insertar ▸ eSignature. Atajo: no tiene atajo de teclado en esta instalación. Crea una solicitud de firma electrónica. Exige que el documento esté guardado en .docx."
   }
 ]
