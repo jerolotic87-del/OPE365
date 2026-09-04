@@ -9785,11 +9785,11 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0515",
-    "enunciado": "En la versión española de Word 365, el atajo Ctrl+Mayús+P posiciona el cursor directamente en el campo Tamaño de fuente de la cinta para que el usuario pueda escribir un valor exacto.",
+    "enunciado": "En la versión española de Word 365, el atajo Ctrl+Mayús+P posiciona el cursor en el campo Tamaño de fuente de la cinta.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Ctrl+Mayús+P selecciona el contenido del campo Tamaño de fuente en la cinta, permitiendo escribir directamente el tamaño deseado en puntos sin necesidad de hacer clic con el ratón. Es distinto de Ctrl+Mayús+> y Ctrl+Mayús+< que saltan al siguiente o anterior valor de la lista predefinida."
+    "respuesta": false,
+    "explicacion": "Falso: Ctrl+Mayús+P activa o desactiva el subrayado de solo palabras (SubrayadoPalabras). No hay atajo que lleve el foco a la caja de tamaño de la cinta; el cuadro de diálogo Fuente con el foco en Tamaño se abre con Ctrl+Mayús+M."
   },
   {
     "id": "inicio-262",
@@ -10929,7 +10929,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+S aplica subrayado en la versión española. Ctrl+U crea un documento nuevo en español. Ctrl+B es Búsqueda inteligente en español. Ctrl+N aplica negrita."
+    "explicacion": "Ctrl+S aplica subrayado en este Word. Ctrl+U crea un documento nuevo. Ctrl+B abre el panel de Navegación. Ctrl+N aplica negrita."
   },
   {
     "id": "inicio-291",
@@ -10964,7 +10964,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+N aplica negrita en español. Ctrl+B es Búsqueda inteligente en español, no negrita. Ctrl+G guarda el documento. Ctrl+S aplica subrayado."
+    "explicacion": "Ctrl+N aplica negrita. Ctrl+B abre el panel de Navegación. Ctrl+G guarda el documento. Ctrl+S aplica subrayado."
   },
   {
     "id": "inicio-292",
@@ -10999,7 +10999,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+K aplica cursiva en español. Ctrl+I es el atajo de la versión inglesa (Italic). Ctrl+C copia el contenido seleccionado. Ctrl+E selecciona todo el documento."
+    "explicacion": "Ctrl+K aplica cursiva en este Word. Ctrl+I abre «Ir a». Ctrl+C copia el contenido seleccionado. Ctrl+E selecciona todo el documento."
   },
   {
     "id": "inicio-293",
@@ -11034,7 +11034,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+L abre Buscar y reemplazar en español. Ctrl+H es el atajo de la versión inglesa (Replace). Ctrl+F abre el panel de búsqueda en inglés. Ctrl+B es Búsqueda inteligente en la versión española."
+    "explicacion": "Ctrl+L abre Buscar y reemplazar. Ctrl+H aplica sangría (aumenta la sangría izquierda). Ctrl+F aplica la sangría francesa. Ctrl+B abre el panel de Navegación."
   },
   {
     "id": "inicio-294",
@@ -11087,7 +11087,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+I"
+        "text": "Ctrl+B"
       },
       {
         "letter": "B",
@@ -11104,7 +11104,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Tanto Ctrl+I como F5 abren el cuadro Ir a. La pregunta pide cuál de los listados lo hace, y F5 es el atajo más universal y reconocido. Ctrl+G guarda el documento. Ctrl+F5 restaura el tamaño de la ventana del documento."
+    "explicacion": "F5 abre el cuadro Ir a (también lo hace Ctrl+I). Ctrl+B abre el panel de Navegación. Ctrl+G guarda el documento. Ctrl+F5 restaura el tamaño de la ventana."
   },
   {
     "id": "inicio-296",
@@ -11244,7 +11244,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+8 equivale a Ctrl+* y muestra u oculta las marcas de formato. Ctrl+8 no tiene esa función. Ctrl+Mayús+P activa el campo de tamaño de fuente. Ctrl+Alt+8 no tiene función asignada para marcas de formato. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Mayús+8 muestra u oculta las marcas de formato (¶). En el teclado español «(» es Mayús+8, así que también se escribe «Ctrl+(». Ctrl+8 no tiene función. Ctrl+Mayús+P activa el subrayado de solo palabras. Ctrl+Alt+8 no tiene función."
   },
   {
     "id": "inicio-300",
@@ -11258,7 +11258,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-125",
-    "enunciado": "¿Qué atajo abre el panel Fuente aplicando y mostrando las propiedades de formato del párrafo o carácter seleccionado?",
+    "enunciado": "¿Qué atajo muestra u oculta el panel Propiedades de formato («Revelar formato») en Word 365?",
     "opciones": [
       {
         "letter": "A",
@@ -11279,7 +11279,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+F1 abre Propiedades de formato del texto seleccionado. Ctrl+F1 muestra u oculta la cinta de opciones. Alt+F1 inserta un gráfico. F1 abre la Ayuda."
+    "explicacion": "Mayús+F1 muestra u oculta el panel Propiedades de formato del texto seleccionado. Ctrl+F1 no tiene función en este Word. Alt+F1 pasa al campo siguiente. F1 abre la Ayuda."
   },
   {
     "id": "inicio-301",
@@ -11314,7 +11314,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+C copia el formato del texto seleccionado (equivale al pincel Copiar formato). Ctrl+C copia el contenido. Ctrl+Mayus+C no tiene esa funcion asignada en esta instalacion. Alt+C establece el foco en Copilot. Prueba en vivo del usuario."
+    "explicacion": "Alt+Ctrl+C copia el formato del texto seleccionado (pincel). Ctrl+C copia el contenido. Ctrl+Mayús+C no tiene función en este Word. Alt+C tampoco."
   },
   {
     "id": "inicio-302",
@@ -11398,28 +11398,28 @@
     "subtopic": null,
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "8-153",
-    "enunciado": "¿Qué atajo abre o cierra el espacio adicional antes de un párrafo en Word 365?",
+    "enunciado": "¿Qué hace el atajo Ctrl+0 (cero) en esta instalación de Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+0"
+        "text": "Restaura el zoom al 100 %"
       },
       {
         "letter": "B",
-        "text": "Ctrl+5"
+        "text": "Aplica interlineado de 1,5 líneas"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+0"
+        "text": "Añade o quita 12 pto de espacio antes del párrafo"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Alt+0"
+        "text": "Aplica subíndice"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+0 (cero) activa o desactiva el espacio adicional antes del párrafo. Ctrl+5 aplica interlineado de 1,5 líneas. Ctrl+Mayús+0 aplica subíndice. Ctrl+Alt+0 no tiene esa función asignada."
+    "explicacion": "Ctrl+0 restaura el zoom al 100 %. ⚠️ Ojo: el cuadro Personalizar teclado lo lista también bajo «abrir/cerrar el espacio antes del párrafo», pero al pulsarlo hace zoom. El espaciado entre párrafos no tiene atajo. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-305",
@@ -11457,41 +11457,6 @@
     "explicacion": "Mayús+F3 cicla entre tipos de capitalización. Ctrl+Mayús+F3 inserta el contenido del portapapeles especial. F3 inserta un bloque de creación. Alt+F3 crea un Autotexto."
   },
   {
-    "id": "inicio-306",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": null,
-    "tema": "Fuente",
-    "sourceQuestionId": "8-179",
-    "enunciado": "¿Qué atajo aplica el formato de contorno a los caracteres en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Ctrl+Q"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Q"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+Q"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Mayús+Q"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Q aplica el formato de contorno. Ctrl+Q quita la sangría o restablece el formato de párrafo. Ctrl+Mayús+Q aplica la fuente Symbol al texto seleccionado. Alt+Mayús+Q aplica el formato de carácter oculto."
-  },
-  {
     "id": "inicio-307",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -11524,7 +11489,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Mayús+Q aplica el formato de texto oculto. Alt+Ctrl+Q aplica contorno. Ctrl+Mayús+Q aplica la fuente Symbol. Ctrl+Q quita la sangría del párrafo."
+    "explicacion": "Alt+Mayús+Q activa o desactiva el formato de texto oculto. Alt+Ctrl+Q activa la vista Esquema. Ctrl+Mayús+Q aplica la fuente Symbol. Ctrl+Q alinea el párrafo a la izquierda."
   },
   {
     "id": "inicio-308",
@@ -12575,41 +12540,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Mayús+Re Pág extiende la selección una página completa hacia arriba. Ctrl+Mayús+Arriba extiende la selección un párrafo hacia arriba. Mayús+Arriba extiende solo una línea. Ctrl+Re Pág examina el objeto anterior con el explorador."
-  },
-  {
-    "id": "inicio-340",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": null,
-    "tema": "Estilos",
-    "sourceQuestionId": "8-270",
-    "enunciado": "¿Qué atajo aplica el estilo Normal al párrafo activo en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Mayús+N"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Ctrl+N"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+N"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Mayús+N"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+Mayús+N aplica el estilo Normal al párrafo. Alt+Ctrl+N activa la vista Normal del documento. Ctrl+N aplica negrita al texto seleccionado. Alt+Mayús+N activa el modo de edición del documento."
   },
   {
     "id": "inicio-341",
