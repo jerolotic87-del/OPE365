@@ -489,12 +489,21 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 513, insertar 438, inicio 430, archivo 402, vista 137, disposicion 114,
+interfaz 520, insertar 438, inicio 437, archivo 402, vista 144, disposicion 114,
 diseno 86, referencias 84, revisar 82, correspondencia 5.
-Total 2291. 331 preguntas `categoria:"atajo"`, 1035 `"ruta"`, 884
+Total 2312. 331 preguntas `categoria:"atajo"`, 1035 `"ruta"`, 884
 `"concepto"`, 41 `"general"` (sep-2026: `interfaz` reclasificada por
 completo — ver más abajo — quedan sin reclasificar 31 en `vista`, 7 en
 `archivo`, 3 en `inicio`).
+**Balance V/F en bancos heredados (sep-2026)**: `inicio`, `interfaz` y
+`vista` traían V/F desequilibrados de origen (15V/8F, 15V/8F, 8V/15F) sin
+capturas de pantalla frescas que respaldaran tocar el contenido ya
+correcto. En vez de invertir preguntas existentes (arriesgado sin fuente),
+se AÑADIERON 21 V/F nuevas (7 por sección, `sourceQuestionId` `bal-<sec>-NN`,
+`generado:true`) sobre hechos ya establecidos/verificados en esta misma
+sesión o de conocimiento estándar de Word, sin tocar ni una sola pregunta
+previa. Las tres secciones quedan en 15V/15F exactas.
+Generador: `scripts/gen_balance_legacy.py`.
 **Reclasificación de `interfaz` (sep-2026)**: tenía 490 de sus 513
 preguntas en `categoria:"general"` (95 %) — el cajón de sastre que ni es
 atajo, ni ruta, ni concepto. Reclasificadas por topic con solape de
