@@ -439,12 +439,16 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 514, insertar 399, inicio 380, archivo 350, vista 131, revisar 77,
-diseno 50, referencias 7, correspondencia 4, disposicion 1.
-Total 1913. 282 preguntas `categoria:"atajo"`.
+diseno 70, referencias 7, correspondencia 4, disposicion 1.
+Total 1933. 282 preguntas `categoria:"atajo"`.
 Historial: `data/questions_regroup_report.md`.
-`diseno-1..50` (`sourceQuestionId` `vf-diseno-NN`, `generado:true`,
-`categoria:"concepto"`, `tipo:"verdadero_falso"`, 25 V / 25 F) = banco
+`diseno-1..70` (`sourceQuestionId` `vf-diseno-NN`, `generado:true`,
+`categoria:"concepto"`, `tipo:"verdadero_falso"`, 35 V / 35 F) = banco
 propio de la pestaña **Diseño**, que hasta sep-2026 no tenía archivo.
+`diseno-51..70` (sep-2026) son de reconocimiento: nombres de tema/color/
+fuente/efecto que existen vs inventados (Vintage, Sector industrial,
+Galería de Office, efecto «3D»…), pares de fuentes (Franklin Gothic Med/
+Book), y ubicación (Color de página está en Diseño, no en Insertar).
 Cubren Temas/Colores/Fuentes/Espaciado entre párrafos/Efectos/Conjunto de
 estilos/Administrar estilos (grupo Formato del documento) y Marca de
 agua/Color de página/Bordes de página (grupo Fondo de página), a partir

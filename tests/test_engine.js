@@ -42,7 +42,11 @@ async function main(){
   fresh();
   let r = simulate(env, makeUser({ competence:0.45, forgetRate:0.05, minutesPerDay:20, examInDays:null, seed:101 }), 90);
   ok(r.finalOverview.cobertura >= 0.85, `cobertura final ${r.finalOverview.cobertura} ≥ 0.85`);
-  ok(r.finalOverview.consolidacion > r.trace[20].overview.consolidacion, "la consolidación crece con el tiempo");
+  // La 'consolidacion' (fracción en estado consolidando) es transitoria: los
+  // conceptos la atraviesan camino de 'asentado', así que no es monótona.
+  // La señal real de que el aprendizaje consolida con el tiempo es que la
+  // estabilidad de memoria crece.
+  ok(r.finalOverview.estabilidad > r.trace[20].overview.estabilidad, "la estabilidad de memoria crece con el tiempo");
   ok(r.finalOverview.recuperado >= 0.8, `recuperado ${r.finalOverview.recuperado} ≥ 0.8`);
   ok(["bien encaminado","bien preparado","en construcción"].includes(r.finalOverview.veredicto), `veredicto plausible: ${r.finalOverview.veredicto}`);
 
