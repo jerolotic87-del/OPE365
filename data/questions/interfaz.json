@@ -17382,41 +17382,6 @@
     "explicacion": "Escape cancela la acción actual o cierra un cuadro de diálogo. Supr elimina el carácter siguiente o el contenido seleccionado. Retroceso elimina el carácter anterior. F10 activa las teclas de la cinta de opciones."
   },
   {
-    "id": "interfaz-498",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "8-194",
-    "enunciado": "¿Qué atajo activa el modo de edición en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+N"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+N"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+N"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+N"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+N activa el modo de edición del documento. Alt+N no tiene esa función asignada directamente. Ctrl+Mayús+N aplica el estilo Normal al párrafo. Alt+Ctrl+N activa la vista Normal del documento."
-  },
-  {
     "id": "interfaz-499",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
@@ -17449,7 +17414,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F1 abre la Ayuda de Word. F2 activa el modo mover texto. Alt+F1 inserta un gráfico. Ctrl+F1 muestra u oculta la cinta de opciones. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "F1 abre la Ayuda de Word. F2 activa el modo mover texto. Alt+F1 pasa al campo siguiente. Ctrl+F1 no tiene función asignada en este Word. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "interfaz-500",
@@ -17471,7 +17436,7 @@
       },
       {
         "letter": "B",
-        "text": "Alt+C"
+        "text": "Ctrl+W"
       },
       {
         "letter": "C",
@@ -17484,7 +17449,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Mayús+C cierra el panel activo. Alt+C establece el foco en Copilot. Ctrl+Mayús+C no tiene función asignada para cerrar panel. Alt+Ctrl+C copia el formato del texto seleccionado."
+    "explicacion": "Alt+Mayús+C cierra el panel de la ventana activa. Ctrl+W quita el formato de párrafo. Ctrl+Mayús+C no tiene función asignada. Alt+Ctrl+C copia el formato de la selección (pincel)."
   },
   {
     "id": "interfaz-501",
@@ -17510,7 +17475,7 @@
       },
       {
         "letter": "C",
-        "text": "Alt+Ctrl+Inicio"
+        "text": "Alt+Ctrl+Re Pág"
       },
       {
         "letter": "D",
@@ -17519,7 +17484,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Inicio lleva el cursor al inicio del documento. Inicio lleva el cursor al inicio de la línea actual. Alt+Ctrl+Inicio abre el explorador de objetos. Ctrl+Re Pág examina el objeto anterior usando el explorador de objetos."
+    "explicacion": "Ctrl+Inicio lleva el cursor al inicio del documento. Inicio lleva al inicio de la línea actual. Alt+Ctrl+Re Pág va al principio de la ventana visible. Ctrl+Re Pág examina el objeto anterior con el explorador."
   },
   {
     "id": "interfaz-502",
@@ -17921,7 +17886,7 @@
     "tema": "Deshacer y rehacer",
     "sourceQuestionId": "gen-atajo-16",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado deshace la desestructuración del último cambio y repite (rehace) la acción en Word 365?",
+    "enunciado": "¿Qué atajo rehace la última acción deshecha en Word 365, además de Ctrl+Y?",
     "opciones": [
       {
         "letter": "A",
@@ -17942,7 +17907,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Rehace la última acción que se había deshecho, restaurándola en el documento."
+    "explicacion": "Alt+Mayús+Retroceso rehace la última acción deshecha. Ctrl+Mayús+Entrar no tiene función en este Word. Alt+Mayús+D recopila la combinación de correspondencia en un documento. Alt+Ctrl+G abre Pegado especial."
   },
   {
     "id": "interfaz-514",
@@ -17957,7 +17922,7 @@
     "tema": "Barra de estado",
     "sourceQuestionId": "gen-atajo-18",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado abre el cuadro Contar palabras para actualizar el recuento en Word 365?",
+    "enunciado": "¿Qué atajo actualiza el recuento de palabras del documento en Word 365?",
     "opciones": [
       {
         "letter": "A",
@@ -17978,7 +17943,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Vuelve a calcular y muestra el recuento actualizado de palabras, caracteres, párrafos y líneas del documento."
+    "explicacion": "Ctrl+Mayús+O recalcula las estadísticas de palabras del documento. Alt+Ctrl+F2 abre el cuadro Abrir. Ctrl+Mayús+Q aplica la fuente Symbol. Ctrl+Mayús+G no tiene función en este Word."
   },
   {
     "id": "interfaz-515",
