@@ -218,6 +218,78 @@
     "explicacion": "**Tabla de contenido.** Pestaña Referencias ▸ Tabla de contenido. Atajo: no tiene atajo de teclado directo. Abre la galería/cuadro para elegir el tipo de tabla de contenido y generarla."
   },
   {
+    "id": "referencias-126",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "rutas-referencias-09",
+    "generado": true,
+    "enunciado": "Además de «No mostrar en la tabla de contenido», ¿cuántos niveles concretos ofrece directamente el desplegable «Agregar texto»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "3"
+      },
+      {
+        "letter": "B",
+        "text": "5"
+      },
+      {
+        "letter": "C",
+        "text": "9"
+      },
+      {
+        "letter": "D",
+        "text": "1"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ofrece Nivel 1, Nivel 2 y Nivel 3 directamente; para más niveles hay que usar «Nivel de esquema» en el formato de párrafo."
+  },
+  {
+    "id": "referencias-128",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "rutas-referencias-11",
+    "generado": true,
+    "enunciado": "En el cuadro Opciones de tabla de contenido, ¿qué casilla permite generar la tabla a partir de estilos como Cita, Normal, Párrafo de lista o Subtítulo, además de los estilos Título?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Estilos"
+      },
+      {
+        "letter": "B",
+        "text": "Niveles de esquema"
+      },
+      {
+        "letter": "C",
+        "text": "Campos de elementos de tabla"
+      },
+      {
+        "letter": "D",
+        "text": "Restablecer"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "La casilla «Estilos», con su lista de estilos disponibles y el «Nivel de TDC» asignable a cada uno."
+  },
+  {
     "id": "referencias-8",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Tabla de contenido",
@@ -545,6 +617,44 @@
     "explicacion": "Es una de las tres formas de que un texto entre en la TDC: estilo Título, «Nivel de esquema» en formato de párrafo, o marcarlo como campo."
   },
   {
+    "id": "referencias-124",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "rutas-referencias-07",
+    "generado": true,
+    "enunciado": "El cuadro Tabla de contenido ofrece los formatos «Sofisticado» y «Moderno», que NO están disponibles en el cuadro Tabla de ilustraciones.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es la misma diferencia vista desde el otro cuadro: cada uno tiene formatos propios que el otro no ofrece."
+  },
+  {
+    "id": "referencias-127",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "rutas-referencias-10",
+    "generado": true,
+    "enunciado": "Los estilos TDC 1 a TDC 9, que edita «Modificar…» en el cuadro Tabla de contenido, permiten personalizar el aspecto de cada nivel de la tabla por separado.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Cada nivel de la tabla de contenido tiene su propio estilo TDC N editable desde ese botón."
+  },
+  {
     "id": "referencias-89",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Tabla de contenido",
@@ -590,6 +700,50 @@
       "2": "A"
     },
     "explicacion": "«Opciones» controla de qué estilos se nutre la tabla; «Modificar» retoca el aspecto de los propios estilos TDC, no los estilos Título del documento."
+  },
+  {
+    "id": "referencias-122",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "rutas-referencias-05",
+    "generado": true,
+    "enunciado": "El desplegable Formatos del cuadro Tabla de contenido ofrece: Estilo personal, [1], Elegante, Sofisticado, Moderno, [2], Sencillo.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Clásico",
+      "Formal"
+    ],
+    "explicacion": "Los siete formatos completos del cuadro Tabla de contenido."
+  },
+  {
+    "id": "referencias-125",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "rutas-referencias-08",
+    "generado": true,
+    "enunciado": "El desplegable Agregar texto (grupo Tabla de contenido) ofrece: [1], Nivel 1, [2], Nivel 3.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "No mostrar en la tabla de contenido",
+      "Nivel 2"
+    ],
+    "explicacion": "Las cuatro opciones completas de Agregar texto."
   },
   {
     "id": "referencias-1",
@@ -989,6 +1143,42 @@
     "explicacion": "**Nota al pie siguiente.** Pestaña Referencias ▸ Notas al pie. Atajo: no tiene atajo de teclado directo. Salta a la siguiente nota al pie del documento; la flecha del comando permite elegir entre notas al pie y notas al final."
   },
   {
+    "id": "referencias-132",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Notas al pie",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "notas",
+    "subtopic": null,
+    "tema": "Notas al pie",
+    "sourceQuestionId": "rutas-referencias-15",
+    "generado": true,
+    "enunciado": "¿Desde qué cuadro de diálogo se pueden convertir todas las notas al pie del documento en notas al final?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Notas al pie y notas al final ▸ Convertir…"
+      },
+      {
+        "letter": "B",
+        "text": "Marcar entrada de índice"
+      },
+      {
+        "letter": "C",
+        "text": "Opciones de tabla de contenido"
+      },
+      {
+        "letter": "D",
+        "text": "Administrador de fuentes"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El botón «Convertir…» del cuadro Notas al pie y notas al final abre el cuadro «Convertir notas»."
+  },
+  {
     "id": "referencias-20",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Notas al pie",
@@ -1267,6 +1457,29 @@
     "explicacion": "Alt+Ctrl+O inserta una nota al pie; Alt+Ctrl+L inserta una nota al final."
   },
   {
+    "id": "referencias-131",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Notas al pie",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "notas",
+    "subtopic": null,
+    "tema": "Notas al pie",
+    "sourceQuestionId": "rutas-referencias-14",
+    "generado": true,
+    "enunciado": "El cuadro «Convertir notas» (dentro de Notas al pie y notas al final) ofrece tres opciones: [1], [2] y [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Convertir las notas al pie en notas al final",
+      "Convertir las notas al final en notas al pie",
+      "Intercambiar notas al pie y notas al final"
+    ],
+    "explicacion": "Las tres conversiones posibles entre notas al pie y notas al final."
+  },
+  {
     "id": "referencias-82",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Citas y bibliografía (negativa)",
@@ -1486,6 +1699,78 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "**Insertar cita.** Pestaña Referencias ▸ Citas y bibliografía. Atajo: no tiene atajo de teclado directo. Agrega una fuente nueva a la base de datos del documento e inserta la cita en el punto del cursor."
+  },
+  {
+    "id": "referencias-121",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "rutas-referencias-04",
+    "generado": true,
+    "enunciado": "¿Qué edición trae por defecto el estilo Turabian en el menú Estilo de este Word?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Sexta edición"
+      },
+      {
+        "letter": "B",
+        "text": "Séptima edición"
+      },
+      {
+        "letter": "C",
+        "text": "2003"
+      },
+      {
+        "letter": "D",
+        "text": "1987"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Turabian aparece como «Sexta edición», igual etiqueta que usa APA (aunque son estilos distintos)."
+  },
+  {
+    "id": "referencias-133",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "rutas-referencias-16",
+    "generado": true,
+    "enunciado": "¿Cuál de estos NO es uno de los proveedores que ofrece «Cambiar SP de proveedor» en este Word?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Mendeley Cite"
+      },
+      {
+        "letter": "B",
+        "text": "RefWorks Citation Manager"
+      },
+      {
+        "letter": "C",
+        "text": "Zotero Connector"
+      },
+      {
+        "letter": "D",
+        "text": "EndNote Cite While You Write for Word"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El desplegable lista Mendeley Cite, PERLLA, RefWorks Citation Manager, SmartCite for Papers, EndNote Cite While You Write for Word, Citavi Assistant, Lean Library Workspace, Ref-n-Write, EasyBib Add-In for Office 365 y Citavi Assistant Beta. «Zotero Connector» no aparece en esa lista."
   },
   {
     "id": "referencias-30",
@@ -1797,6 +2082,82 @@
     "explicacion": "En el menú Estilo se ve bajo cada nombre: APA «Sexta edición», MLA «Séptima edición», Chicago «Decimoquinta edición»."
   },
   {
+    "id": "referencias-119",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "rutas-referencias-02",
+    "generado": true,
+    "enunciado": "GOST - Orden de nombre, GOST - Orden de título y SIST02 comparten el mismo año en el menú Estilo: 2003.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Los tres estilos muestran «2003» junto a su nombre en el desplegable Estilo."
+  },
+  {
+    "id": "referencias-120",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "rutas-referencias-03",
+    "generado": true,
+    "enunciado": "Las dos variantes de ISO 690 (Primer elemento y fecha / Referencia numérica) comparten el mismo año: 1987.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Ambas variantes de ISO 690 muestran «1987» en el desplegable Estilo."
+  },
+  {
+    "id": "referencias-134",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "rutas-referencias-17",
+    "generado": true,
+    "enunciado": "Desde «Cambiar SP de proveedor» se puede acceder a «Ver más complementos…» para instalar otros gestores de citas.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es la última entrada del desplegable, con un enlace a la tienda de complementos."
+  },
+  {
+    "id": "referencias-141",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "rutas-referencias-24",
+    "generado": true,
+    "enunciado": "Además de los tres diseños integrados, el comando Bibliografía permite «Insertar bibliografía» sin título ni formato de galería.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es la opción «Insertar bibliografía» del propio desplegable, por debajo de los tres diseños integrados."
+  },
+  {
     "id": "referencias-88",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Citas y bibliografía",
@@ -1862,6 +2223,116 @@
       "4": "C"
     },
     "explicacion": "Los cuatro comandos principales del grupo Citas y bibliografía de la pestaña Referencias."
+  },
+  {
+    "id": "referencias-118",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "rutas-referencias-01",
+    "generado": true,
+    "enunciado": "Relaciona cada estilo de cita con la edición o el año que trae este Word en el menú Estilo:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "APA"
+        },
+        {
+          "id": "2",
+          "label": "MLA"
+        },
+        {
+          "id": "3",
+          "label": "Chicago"
+        },
+        {
+          "id": "4",
+          "label": "IEEE"
+        },
+        {
+          "id": "5",
+          "label": "Harvard - Anglia"
+        },
+        {
+          "id": "6",
+          "label": "GB7714"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Séptima edición"
+        },
+        {
+          "id": "B",
+          "label": "Decimoquinta edición"
+        },
+        {
+          "id": "C",
+          "label": "2006"
+        },
+        {
+          "id": "D",
+          "label": "2008"
+        },
+        {
+          "id": "E",
+          "label": "2005"
+        },
+        {
+          "id": "F",
+          "label": "Sexta edición"
+        }
+      ],
+      "correct": {
+        "1": "F",
+        "2": "A",
+        "3": "B",
+        "4": "C",
+        "5": "D",
+        "6": "E"
+      }
+    },
+    "respuesta": {
+      "1": "F",
+      "2": "A",
+      "3": "B",
+      "4": "C",
+      "5": "D",
+      "6": "E"
+    },
+    "explicacion": "Los seis estilos con edición/año distinto entre sí; APA es el que trae por defecto este Word."
+  },
+  {
+    "id": "referencias-140",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "rutas-referencias-23",
+    "generado": true,
+    "enunciado": "La galería del comando Bibliografía ofrece tres diseños integrados: [1], [2] y [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Bibliografía",
+      "Referencias",
+      "Trabajos citados"
+    ],
+    "explicacion": "Los tres encabezados integrados de la galería; también se puede «Insertar bibliografía» sin ninguno de los tres."
   },
   {
     "id": "referencias-83",
@@ -2009,6 +2480,42 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "**Referencia cruzada.** Pestaña Referencias ▸ Títulos. Atajo: no tiene atajo de teclado directo. Inserta un hipervínculo a otro elemento del documento (título, nota, marcador…) que se actualiza solo."
+  },
+  {
+    "id": "referencias-139",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "rutas-referencias-22",
+    "generado": true,
+    "enunciado": "¿Qué estilos se pueden elegir para generar la Tabla de ilustraciones, además de los rótulos Título/Título 1-9?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cita, Cita destacada, Normal, Párrafo de lista, Subtítulo, Texto nota pie"
+      },
+      {
+        "letter": "B",
+        "text": "Solo estilos de título"
+      },
+      {
+        "letter": "C",
+        "text": "Ninguno, es un valor fijo"
+      },
+      {
+        "letter": "D",
+        "text": "Solo el estilo Normal"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El cuadro Opciones de tabla de ilustraciones ofrece esa lista de estilos, más amplia que la de Opciones de tabla de contenido (que no incluye «Texto nota pie»)."
   },
   {
     "id": "referencias-41",
@@ -2300,6 +2807,63 @@
     "explicacion": "«Opciones» ▸ «Estilo: Descripción» es el que Word aplica a los títulos al insertarlos e incluye todos los rótulos; elegir un rótulo concreto filtra la tabla a solo ese tipo."
   },
   {
+    "id": "referencias-123",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "rutas-referencias-06",
+    "generado": true,
+    "enunciado": "El cuadro Tabla de ilustraciones ofrece el formato «Centrado», que NO está disponible en el cuadro Tabla de contenido.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Tabla de contenido tiene Sofisticado/Moderno (que Tabla de ilustraciones no tiene) y Tabla de ilustraciones tiene Centrado (que Tabla de contenido no tiene): son listas de formato distintas."
+  },
+  {
+    "id": "referencias-130",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "rutas-referencias-13",
+    "generado": true,
+    "enunciado": "El campo «Referencia a» del cuadro Referencia cruzada cambia según el Tipo elegido: para «Elemento numerado» ofrece Número de párrafo (con o sin contexto) además de Número de página.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Cada Tipo tiene su propia lista de «Referencia a»; «Elemento numerado» es el que más opciones de párrafo ofrece."
+  },
+  {
+    "id": "referencias-138",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "rutas-referencias-21",
+    "generado": true,
+    "enunciado": "El campo «Identificador de tabla», dentro de Opciones de tabla de ilustraciones, permite elegir entre las letras A a F.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Sirve para distinguir varias tablas de ilustraciones del mismo documento (por ejemplo, una para figuras y otra para tablas)."
+  },
+  {
     "id": "referencias-87",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Títulos",
@@ -2355,6 +2919,73 @@
       "3": "B"
     },
     "explicacion": "Los tres rótulos que trae Word por defecto en el cuadro Título (no «Figura», pese a ser el término más usado coloquialmente)."
+  },
+  {
+    "id": "referencias-129",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "rutas-referencias-12",
+    "generado": true,
+    "enunciado": "Relaciona cada tipo de la Referencia cruzada con el elemento al que apunta:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Elemento numerado"
+        },
+        {
+          "id": "2",
+          "label": "Marcador"
+        },
+        {
+          "id": "3",
+          "label": "Nota al pie"
+        },
+        {
+          "id": "4",
+          "label": "Ecuación"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "un punto con nombre creado en el documento"
+        },
+        {
+          "id": "B",
+          "label": "una nota insertada al pie de la página"
+        },
+        {
+          "id": "C",
+          "label": "una fórmula con título insertado"
+        },
+        {
+          "id": "D",
+          "label": "un párrafo con numeración automática"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "A",
+        "3": "B",
+        "4": "C"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "A",
+      "3": "B",
+      "4": "C"
+    },
+    "explicacion": "Cuatro de los ocho tipos que admite el desplegable «Tipo» del cuadro Referencia cruzada."
   },
   {
     "id": "referencias-3",
@@ -2537,6 +3168,42 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "**Marcar entrada.** Pestaña Referencias ▸ Índice. Atajo: Alt+Mayús+X. Abre el cuadro para marcar el texto seleccionado como entrada de índice (inserta un campo XE)."
+  },
+  {
+    "id": "referencias-135",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Índice",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "indice",
+    "subtopic": null,
+    "tema": "Índice",
+    "sourceQuestionId": "rutas-referencias-18",
+    "generado": true,
+    "enunciado": "En el cuadro Marcar entrada de índice, ¿qué tres opciones hay dentro de «Opciones» para indicar a qué página apunta la entrada?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Referencia cruzada, Página actual, Intervalo de páginas"
+      },
+      {
+        "letter": "B",
+        "text": "Negrita, Cursiva, Subrayado"
+      },
+      {
+        "letter": "C",
+        "text": "Con sangría, Continuo, Automático"
+      },
+      {
+        "letter": "D",
+        "text": "Entrada, Subentrada, Marcador"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Las tres formas de apuntar una entrada de índice: a otra entrada («Véase»), a la página actual, o a un intervalo de páginas marcado con un marcador."
   },
   {
     "id": "referencias-51",
@@ -2770,6 +3437,25 @@
     "explicacion": "Las otras opciones son «Página actual» (por defecto) e «Intervalo de páginas» (con un marcador)."
   },
   {
+    "id": "referencias-136",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Índice",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "indice",
+    "subtopic": null,
+    "tema": "Índice",
+    "sourceQuestionId": "rutas-referencias-19",
+    "generado": true,
+    "enunciado": "En el cuadro Índice, el Tipo puede ser «Con sangría» o «Contínuo».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Son las dos disposiciones posibles del índice, junto al número de Columnas y el Idioma."
+  },
+  {
     "id": "referencias-86",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Índice",
@@ -2800,6 +3486,28 @@
       ]
     ],
     "explicacion": "Alt+Mayús+X marca entrada de índice, Alt+Mayús+I marca cita para tabla de autoridades, Alt+Mayús+B marca elemento de TDC a mano."
+  },
+  {
+    "id": "referencias-137",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Índice",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "indice",
+    "subtopic": null,
+    "tema": "Índice",
+    "sourceQuestionId": "rutas-referencias-20",
+    "generado": true,
+    "enunciado": "En el cuadro Índice, el formato de los números de página se puede marcar en [1] o en [2], igual que en Marcar entrada de índice.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Negrita",
+      "Cursiva"
+    ],
+    "explicacion": "Ambos cuadros (Marcar entrada de índice e Índice) comparten estas dos casillas de formato."
   },
   {
     "id": "referencias-90",

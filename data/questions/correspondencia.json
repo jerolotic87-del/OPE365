@@ -72,6 +72,78 @@
     "explicacion": "«Seleccionar destinatarios» conecta el documento a una lista existente (Word/Excel/Access), crea una nueva o usa los contactos de Outlook."
   },
   {
+    "id": "correspondencia-24",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "rutas-correspondencia-01",
+    "generado": true,
+    "enunciado": "¿Cuál de estas opciones NO aparece en el desplegable «Iniciar combinación de correspondencia»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cartas"
+      },
+      {
+        "letter": "B",
+        "text": "Mensajes de correo electrónico"
+      },
+      {
+        "letter": "C",
+        "text": "Hoja de cálculo"
+      },
+      {
+        "letter": "D",
+        "text": "Directorio"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El desplegable ofrece Cartas, Mensajes de correo electrónico, Sobres…, Etiquetas…, Directorio, Documento normal de Word y Paso a paso por el Asistente. «Hoja de cálculo» no es una de las opciones."
+  },
+  {
+    "id": "correspondencia-27",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "rutas-correspondencia-04",
+    "generado": true,
+    "enunciado": "¿Qué comando de «Seleccionar destinatarios» permite escribir una lista de destinatarios completamente nueva dentro de Word?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Escribir una nueva lista…"
+      },
+      {
+        "letter": "B",
+        "text": "Usar una lista existente…"
+      },
+      {
+        "letter": "C",
+        "text": "Elegir de los contactos de Outlook…"
+      },
+      {
+        "letter": "D",
+        "text": "Editar lista de destinatarios"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Escribir una nueva lista…» abre el cuadro «Nueva lista de direcciones» para crear los registros desde cero."
+  },
+  {
     "id": "correspondencia-14",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Iniciar combinación de correspondencia",
@@ -108,6 +180,96 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: «Personalizar columnas» permite cambiar las columnas por defecto por las propias."
+  },
+  {
+    "id": "correspondencia-29",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "rutas-correspondencia-06",
+    "generado": true,
+    "enunciado": "Relaciona cada comando de «Restringir lista de destinatarios» con lo que hace:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ordenar…"
+        },
+        {
+          "id": "2",
+          "label": "Filtrar…"
+        },
+        {
+          "id": "3",
+          "label": "Buscar duplicados…"
+        },
+        {
+          "id": "4",
+          "label": "Validar direcciones…"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "muestra solo los registros que cumplen una condición"
+        },
+        {
+          "id": "B",
+          "label": "detecta registros repetidos en la lista"
+        },
+        {
+          "id": "C",
+          "label": "comprueba que las direcciones postales sean correctas"
+        },
+        {
+          "id": "D",
+          "label": "reordena los destinatarios por una o varias columnas"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "A",
+        "3": "B",
+        "4": "C"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "A",
+      "3": "B",
+      "4": "C"
+    },
+    "explicacion": "Las cuatro utilidades de «Restringir lista de destinatarios» del cuadro Destinatarios de combinar correspondencia."
+  },
+  {
+    "id": "correspondencia-28",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "rutas-correspondencia-05",
+    "generado": true,
+    "enunciado": "Dentro de «Editar lista de destinatarios», el bloque «Restringir lista de destinatarios» ofrece: [1], [2], Buscar duplicados…, Buscar destinatario…, [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Ordenar…",
+      "Filtrar…",
+      "Validar direcciones…"
+    ],
+    "explicacion": "Las cinco opciones completas: Ordenar, Filtrar, Buscar duplicados, Buscar destinatario y Validar direcciones."
   },
   {
     "id": "correspondencia-2",
@@ -394,6 +556,42 @@
     "explicacion": "Word usa nombres de campo estándar (Nombre, Dirección…) que no tienen por qué coincidir con las columnas del origen de datos; «Asignar campos» empareja unos con otros para que la combinación funcione."
   },
   {
+    "id": "correspondencia-26",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Escribir e insertar campos",
+    "sourceQuestionId": "rutas-correspondencia-03",
+    "generado": true,
+    "enunciado": "¿Qué opción de «Reglas» inserta una condición del tipo Si…Entonces…Si no…?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Preguntar…"
+      },
+      {
+        "letter": "B",
+        "text": "Rellenar…"
+      },
+      {
+        "letter": "C",
+        "text": "Si…Entonces…Sino…"
+      },
+      {
+        "letter": "D",
+        "text": "Registro de combinación n.º"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "«Si…Entonces…Sino…» es la regla condicional clásica del grupo Reglas."
+  },
+  {
     "id": "correspondencia-21",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Escribir e insertar campos",
@@ -449,6 +647,29 @@
     "explicacion": "Los cuatro atajos de la combinación de correspondencia: Alt+Mayús+D (a nuevo documento), Alt+Mayús+M (a impresora), Alt+Mayús+K (comprobar) y Alt+Mayús+E (editar origen de datos)."
   },
   {
+    "id": "correspondencia-25",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Escribir e insertar campos",
+    "sourceQuestionId": "rutas-correspondencia-02",
+    "generado": true,
+    "enunciado": "El desplegable «Reglas» del grupo Escribir e insertar campos incluye: [1], Rellenar…, Si…Entonces…Sino…, Registro de combinación n.º, Secuencia de combinación n.º, [2], Próximo registro si…, [3], Saltar registro si…",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Preguntar…",
+      "Próximo registro",
+      "Asignar marcador…"
+    ],
+    "explicacion": "Las nueve opciones completas de Reglas: Preguntar, Rellenar, Si…Entonces…Sino, Registro de combinación n.º, Secuencia de combinación n.º, Próximo registro, Próximo registro si, Asignar marcador y Saltar registro si."
+  },
+  {
     "id": "correspondencia-16",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Finalizar",
@@ -483,6 +704,42 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "«Finalizar y combinar» es el último paso: vuelca la combinación en un documento nuevo, la manda a imprimir o al correo."
+  },
+  {
+    "id": "correspondencia-30",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Finalizar",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "finalizar",
+    "subtopic": null,
+    "tema": "Finalizar",
+    "sourceQuestionId": "rutas-correspondencia-07",
+    "generado": true,
+    "enunciado": "¿Qué opción de «Finalizar y combinar» genera un documento nuevo con una copia por cada registro, para poder editar cartas concretas antes de imprimirlas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Editar documentos individuales…"
+      },
+      {
+        "letter": "B",
+        "text": "Imprimir documentos…"
+      },
+      {
+        "letter": "C",
+        "text": "Enviar mensajes de correo electrónico…"
+      },
+      {
+        "letter": "D",
+        "text": "Vista previa de resultados"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Editar documentos individuales…» es la única de las tres que genera un documento de Word editable con todos los registros combinados."
   },
   {
     "id": "correspondencia-17",
@@ -576,6 +833,78 @@
     "explicacion": "«Etiquetas» abre el cuadro de diálogo para elegir el tipo/medida de etiqueta antes de rellenarla."
   },
   {
+    "id": "correspondencia-34",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "rutas-correspondencia-11",
+    "generado": true,
+    "enunciado": "En el cuadro «Opciones para etiquetas», ¿qué campo permite elegir la marca comercial de las etiquetas (por ejemplo APLI)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Marcas de etiquetas"
+      },
+      {
+        "letter": "B",
+        "text": "Número de producto"
+      },
+      {
+        "letter": "C",
+        "text": "Bandeja"
+      },
+      {
+        "letter": "D",
+        "text": "Tipo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Marcas de etiquetas» es el desplegable con el fabricante; «Número de producto» ya depende de la marca elegida."
+  },
+  {
+    "id": "correspondencia-37",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "rutas-correspondencia-14",
+    "generado": true,
+    "enunciado": "¿Qué campo especial inserta Word automáticamente en todas las etiquetas salvo la primera, para que cada celda muestre un registro distinto?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Próximo registro»"
+      },
+      {
+        "letter": "B",
+        "text": "«Combinar campo»"
+      },
+      {
+        "letter": "C",
+        "text": "«Salto de sección»"
+      },
+      {
+        "letter": "D",
+        "text": "«Secuencia»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es el mismo campo que aparece como opción manual en «Reglas», pero aquí lo inserta Word solo al crear la hoja de etiquetas."
+  },
+  {
     "id": "correspondencia-10",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Crear (sobres y etiquetas)",
@@ -612,6 +941,101 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "El cuadro de Sobres deja elegir el tamaño/tipo de sobre, además de las opciones de impresión."
+  },
+  {
+    "id": "correspondencia-31",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "rutas-correspondencia-08",
+    "generado": true,
+    "enunciado": "El cuadro «Opciones de sobre» tiene dos fichas: Opciones de sobre y Opciones de impresión.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Confirmado en el cuadro de diálogo: ficha Opciones de sobre (tamaño, dirección, remite) y ficha Opciones de impresión."
+  },
+  {
+    "id": "correspondencia-32",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "rutas-correspondencia-09",
+    "generado": true,
+    "enunciado": "En «Opciones de sobre» se puede elegir la fuente del texto tanto de la Dirección como del Remite, de forma independiente.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Cada bloque (Dirección y Remite) tiene su propio botón «Fuente…» y sus propios márgenes «Desde la izquierda»/«Desde arriba»."
+  },
+  {
+    "id": "correspondencia-33",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "rutas-correspondencia-10",
+    "generado": true,
+    "enunciado": "El cuadro «Opciones para etiquetas» permite elegir entre impresoras de alimentación continua e impresoras de páginas.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es la primera opción del cuadro, dentro de «Información de impresora»."
+  },
+  {
+    "id": "correspondencia-35",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "rutas-correspondencia-12",
+    "generado": true,
+    "enunciado": "El botón «Actualizar etiquetas» solo hace falta cuando se están creando etiquetas; para combinar una carta impresa o un correo electrónico ese comando no es necesario.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Lo dice el propio tooltip del comando en Word: es exclusivo del flujo de etiquetas."
+  },
+  {
+    "id": "correspondencia-36",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear (sobres y etiquetas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Crear (sobres y etiquetas)",
+    "sourceQuestionId": "rutas-correspondencia-13",
+    "generado": true,
+    "enunciado": "Al combinar etiquetas, Word inserta automáticamente el campo «Próximo registro» en todas las celdas de la hoja salvo en la primera.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Así reparte un registro distinto en cada etiqueta al combinar; la primera celda lleva los campos que insertó el usuario y el resto encadena «Próximo registro»."
   },
   {
     "id": "correspondencia-18",

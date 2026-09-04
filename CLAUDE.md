@@ -6,7 +6,7 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **2420 preguntas** y **971
+de Word 365 de una oposición de ayuntamiento. **2458 preguntas** y **971
 flashcards** (archivo 263, disposicion 100, inicio 148, insertar 147,
 referencias 74, revisar 73, vista 79, diseno 24, interfaz 48,
 correspondencia 15 — un buen tramo de las de archivo/disposicion son
@@ -490,9 +490,35 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 525, insertar 457, inicio 456, archivo 407, vista 144, disposicion 120,
-diseno 90, referencias 117, revisar 82, correspondencia 22.
-Total 2420. (+1 sobre «Asignar campos», contrastada con aulaclic.es —
-hecho genérico sin atajos, sin riesgo de esquema de teclado distinto.)
+diseno 90, referencias 141, revisar 82, correspondencia 36.
+Total 2458.
+**Segunda pasada en profundidad sobre Correspondencia y Referencias
+(sep-2026)**: el usuario señaló, con razón, que las tandas anteriores se
+habían quedado cortas para lo que dan de sí esos cuadros de diálogo.
+Causa real: `data/rutas/referencias.txt` **ya existía** con el volcado
+completo rama a rama de los cuadros de diálogo (capturas del usuario,
+`data/imagenes_rutas/referencias/`, 45 imágenes) y no se había explotado
+del todo al escribir las tandas anteriores. Para Correspondencia no había
+volcado — se creó `data/rutas/correspondencia.txt` renderizando las 8
+páginas del PDF de la academia como imagen con PyMuPDF (el texto plano
+del PDF no capturaba los desplegables ni los cuadros de diálogo, solo el
+texto corrido) y transcribiéndolas rama a rama, igual que los volcados de
+las demás pestañas. Con ese material se añadieron 38 preguntas más
+(referencias +24, correspondencia +14) sobre listas cerradas reales:
+los 12 estilos de cita con su edición/año exactos, el desplegable Reglas
+completo (9 opciones), Restringir lista de destinatarios (5), Referencia
+cruzada (8 tipos), Convertir notas (3), Cambiar SP de proveedor (10
+complementos), diferencias exactas entre los formatos de Tabla de
+contenido y Tabla de ilustraciones (comparten 5, cada una tiene 2
+propios), Agregar texto (4), galería de Bibliografía (3+1), Opciones de
+sobre/etiquetas, y el hecho de que Word inserta «Próximo registro»
+automáticamente en las etiquetas combinadas. Todo verificado contra la
+fuente antes de escribir la pregunta — nada inventado. Instalar
+`pymupdf` (`py -3.11 -m pip install --user pymupdf`, Python 3.11 porque
+el `python3` del launcher no traía pip utilizable) para releer un PDF
+como imágenes es la vía a repetir si aparece otro documento con cuadros
+de diálogo que el texto plano no capture. Generador:
+`scripts/gen_rutas_profundo.py`.
 **19 preguntas CON IMAGEN nuevas en Referencias (sep-2026)**: los 26
 recortes de icono de `data/imagenes_iconos/referencias/` (movidos ahí en
 la limpieza de organización, sin procesar hasta ahora) se convirtieron en
