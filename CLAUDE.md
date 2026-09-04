@@ -58,7 +58,10 @@ views.js               toda la interfaz (router simple basado en funciones).
                        inventados); flashcards = 3 grados → LEB.recordFlashcard.
                        Toda llamada a LEB va guardada con `if(O.LEB)`.
 peerjs.min.js          librería de terceros, no tocar
-atajos_oficial.json    tabla extraída de ATAJOS.docx (ver más abajo)
+atajos_oficial.json    tabla extraída de ATAJOS.docx (respaldo histórico)
+data/atajos_word365_v2608.md  VOLCADO COMPLETO de "Personalizar teclado" de la
+                       instalación real del usuario (Word 365 v2608). Referencia
+                       principal de atajos — ver "jerarquía de fuentes".
 
 --- artefactos generados (NO editar a mano, ver "Regenerar datos") ---
 questions_all.json     banco de preguntas concatenado — fuente de verdad
@@ -121,9 +124,20 @@ de mayor a menor:
 
 1. **Prueba en vivo del usuario en su propio Word 365** — si dice "lo he
    probado y hace X", eso manda por encima de cualquier documento.
-2. **`atajos_oficial.json`** (extraído de `ATAJOS.docx`, volcado real del
-   cuadro "Personalizar teclado" de la instalación del usuario).
-3. **PDFs de la academia** (Beatriz R., Adams, MAD…) — están en el Project
+2. **`data/atajos_word365_v2608.md`** — volcado COMPLETO del cuadro
+   "Personalizar teclado" de la instalación real del usuario (Word para
+   Microsoft 365 MSO v2608, compilación 16.0.20326.20072, 64 bits),
+   capturado pantalla a pantalla por el usuario (sep-2026). Es la
+   referencia principal, sustituye a `atajos_oficial.json`/`ATAJOS.docx`.
+   Ojo: contiene **conflictos internos reales** (una misma combinación
+   listada bajo dos comandos: `Alt+Ctrl+V` = DocDividir *y* PegarFormato;
+   `Ctrl+0` = Zoom100 *y* AbrirCerrarPárrafo; `Ctrl+W` = DocCerrar *y*
+   DefinirPárrafo; `Ctrl+Mayús+L` = Versalitas *y* ListaConViñetas) y
+   **entradas fósiles que no funcionan** (`Ctrl+=` subíndice) — cuando eso
+   pase, gana la prueba en vivo y se anota.
+3. **`atajos_oficial.json`** / **`ATAJOS.docx`** — volcado anterior, más
+   corto. Ya solo como respaldo histórico.
+4. **PDFs de la academia** (Beatriz R., Adams, MAD…) — están en el Project
    Knowledge de claude.ai, no en esta carpeta local. Si necesitas su
    contenido, pide al usuario que los suba o pégalos.
 

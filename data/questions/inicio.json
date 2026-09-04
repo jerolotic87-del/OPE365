@@ -13379,7 +13379,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Barra espaciadora (Ctrl+Espacio) restablece el formato de carácter: quita negrita, cursiva, subrayado, etc. y deja los atributos del estilo. Según la tabla oficial Ctrl+Mayús+Z hace lo mismo, pero está sin probar en vivo. Ctrl+Q es el de PÁRRAFO. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Barra espaciadora (Ctrl+Espacio) restablece el formato de carácter: quita negrita, cursiva, subrayado, etc. y deja los atributos del estilo. Ctrl+Mayús+Z hace exactamente lo mismo (segunda combinación asignada a DefinirCarácter). Ctrl+Q es el de PÁRRAFO. Prueba en vivo del usuario (sep 2026); Confirmado en el volcado de Personalizar teclado de tu Word 365 (v2608)."
   },
   {
     "id": "inicio-364",
@@ -13414,7 +13414,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+Z restablece el formato de carácter como atajo alternativo a Ctrl+Espacio. Ctrl+Z deshace la última acción. Ctrl+Q restablece el formato de párrafo no el de carácter. Alt+Mayús+Z no tiene función asignada para restablecer formato."
+    "explicacion": "Ctrl+Mayús+Z restablece el formato de carácter, igual que Ctrl+Espacio (las dos combinaciones apuntan al comando DefinirCarácter). Ctrl+Z deshace la última acción. Ctrl+Q restablece el formato de PÁRRAFO. Alt+Mayús+Z no tiene función. Confirmado en el volcado de Personalizar teclado de tu Word 365 (v2608)."
   },
   {
     "id": "inicio-365",
