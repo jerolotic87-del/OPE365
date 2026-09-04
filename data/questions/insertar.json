@@ -10701,5 +10701,437 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Además del nombre y el puesto, el cuadro tiene un campo para \"Dirección de correo electrónico del firmante sugerido\". No es obligatorio, pero está disponible."
+  },
+  {
+    "id": "insertar-394",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "P-16",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes categorías existe realmente dentro del cuadro Imágenes de archivo de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Monumentos y viajes"
+      },
+      {
+        "letter": "B",
+        "text": "Partes del cuerpo"
+      },
+      {
+        "letter": "C",
+        "text": "Naturaleza y paisajes"
+      },
+      {
+        "letter": "D",
+        "text": "Alimentos y bebidas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "A, C y D son categorías temáticas plausibles pero no son categorías de esa galería. Categorías reales de esa galería: Animales, Partes del cuerpo, El tiempo, Juegos, Vehículos, Tecnología, Deportes, Gente, Flechas, Educación. ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+  },
+  {
+    "id": "insertar-395",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "P-21",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes categorías existe dentro del cuadro En línea Modelos 3D de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Figuras geométricas planas"
+      },
+      {
+        "letter": "B",
+        "text": "Dibujos animados vintage"
+      },
+      {
+        "letter": "C",
+        "text": "Personajes históricos"
+      },
+      {
+        "letter": "D",
+        "text": "Mapas y cartografía"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "A no existe (sí hay \"Formas en 3D\" pero no figuras planas). C no existe. D no existe. La categoría real es «Dibujos animados vintage». ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+  },
+  {
+    "id": "insertar-396",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Multimedia",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "multimedia",
+    "subtopic": null,
+    "tema": "Multimedia",
+    "sourceQuestionId": "P-28",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes plataformas de vídeo está disponible como opción directa en el cuadro Insertar video en línea de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Dailymotion"
+      },
+      {
+        "letter": "B",
+        "text": "TED"
+      },
+      {
+        "letter": "C",
+        "text": "Twitch"
+      },
+      {
+        "letter": "D",
+        "text": "Netflix"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "A, C y D son plataformas de vídeo reales pero no están en ese cuadro. Las disponibles son: YouTube, SlideShare, Vimeo y TED. ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+  },
+  {
+    "id": "insertar-397",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "P-80",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Vehículos de transporte"
+      },
+      {
+        "letter": "B",
+        "text": "Steampunk"
+      },
+      {
+        "letter": "C",
+        "text": "Personajes de fantasía"
+      },
+      {
+        "letter": "D",
+        "text": "Arquitectura urbana"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "A no figura con ese nombre. C y D no existen. La categoría real es «Steampunk». ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+  },
+  {
+    "id": "insertar-398",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "P-81",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Obras de arte"
+      },
+      {
+        "letter": "B",
+        "text": "Instrumentos musicales"
+      },
+      {
+        "letter": "C",
+        "text": "Polígonos bajos"
+      },
+      {
+        "letter": "D",
+        "text": "Figuras abstractas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "A, B y D no figuran en la extracción. \"Polígonos bajos\" sí existe. ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+  },
+  {
+    "id": "insertar-399",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "P-82",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Monumentos históricos"
+      },
+      {
+        "letter": "B",
+        "text": "Adhesivos"
+      },
+      {
+        "letter": "C",
+        "text": "Mapas del mundo"
+      },
+      {
+        "letter": "D",
+        "text": "Retratos humanos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "A, C y D no existen en esa galería. La categoría real es «Adhesivos». ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+  },
+  {
+    "id": "insertar-400",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "P-83",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cosmos"
+      },
+      {
+        "letter": "B",
+        "text": "Sistemas solares"
+      },
+      {
+        "letter": "C",
+        "text": "Astronomía aplicada"
+      },
+      {
+        "letter": "D",
+        "text": "Ciencia espacial"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "B, C y D son denominaciones alternativas que podrían parecer equivalentes, pero el nombre exacto de la categoría es \"Cosmos\". ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+  },
+  {
+    "id": "insertar-401",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "P-84",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Dioramas"
+      },
+      {
+        "letter": "B",
+        "text": "Escenas en miniatura"
+      },
+      {
+        "letter": "C",
+        "text": "Maquetas arquitectónicas"
+      },
+      {
+        "letter": "D",
+        "text": "Recreaciones históricas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "B, C y D describen conceptos relacionados pero no son nombres de categorías reales. La categoría real es «Dioramas». ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+  },
+  {
+    "id": "insertar-402",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "P-85",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ciencias naturales"
+      },
+      {
+        "letter": "B",
+        "text": "Minerales y rocas"
+      },
+      {
+        "letter": "C",
+        "text": "Geología"
+      },
+      {
+        "letter": "D",
+        "text": "Geografía física"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "A, B y D son denominaciones plausibles pero incorrectas. El nombre exacto es \"Geología\". ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+  },
+  {
+    "id": "insertar-403",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "P-86",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Letras"
+      },
+      {
+        "letter": "B",
+        "text": "Tipografía decorativa"
+      },
+      {
+        "letter": "C",
+        "text": "Alfabeto en relieve"
+      },
+      {
+        "letter": "D",
+        "text": "Caracteres en 3D"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "B, C y D son descripciones funcionales que suenan razonables pero el nombre exacto de la categoría es simplemente \"Letras\". ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+  },
+  {
+    "id": "insertar-404",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "P-87",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Juguetes"
+      },
+      {
+        "letter": "B",
+        "text": "Artículos de coleccionismo"
+      },
+      {
+        "letter": "C",
+        "text": "Objetos de juego"
+      },
+      {
+        "letter": "D",
+        "text": "Material lúdico"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "B, C y D son denominaciones alternativas pero el nombre exacto es \"Juguetes\". ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+  },
+  {
+    "id": "insertar-405",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "P-88",
+    "generado": true,
+    "enunciado": "¿Cuál de las siguientes categorías existe realmente en el cuadro En línea Modelos 3D de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Esculturas"
+      },
+      {
+        "letter": "B",
+        "text": "Arte contemporáneo"
+      },
+      {
+        "letter": "C",
+        "text": "Figuras decorativas"
+      },
+      {
+        "letter": "D",
+        "text": "Objetos de museo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "B, C y D son denominaciones plausibles pero incorrectas. El nombre exacto es \"Esculturas\". ILUSTRACIONES — SUBCATEGORÍAS DE SMARTART ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
   }
 ]

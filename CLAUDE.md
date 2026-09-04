@@ -438,9 +438,9 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 514, insertar 387, inicio 380, archivo 350, vista 131, revisar 77,
+interfaz 514, insertar 399, inicio 380, archivo 350, vista 131, revisar 77,
 referencias 7, correspondencia 4, disposicion 1, diseno 0 (sin archivo).
-Total 1851. 282 preguntas `categoria:"atajo"`.
+Total 1863. 282 preguntas `categoria:"atajo"`.
 Historial: `data/questions_regroup_report.md`.
 `insertar-206..393` (`sourceQuestionId` `vf-insertar-NN`, `generado:true`,
 `categoria:"concepto"`, `tipo:"verdadero_falso"`) = **188 V/F de toda la
@@ -456,10 +456,15 @@ son **preguntas de RUTA** (4 opciones, 1 correcta + 3 distractores del mismo
 nivel) de toda la pestaña Insertar — la pestaña solo tenía atajos hasta ahora.
 Añaden 2 topics: `insertar:esignature` (grupo propio, confirmado por captura del
 usuario) y `insertar:formato-forma` (cinta contextual de Formas, con
-`ribbonGroup`). Del bloque original de 172 se descartaron 12 que afirmaban
-contenido de galerías online no verificable (Imágenes de archivo / Modelos 3D /
-plataformas de vídeo). Detalle: `data/insertar_rutas_integration_report.md`.
-Generador: `scripts/gen_insertar_rutas.py` (con set `DROP`).
+`ribbonGroup`). Detalle: `data/insertar_rutas_integration_report.md`.
+Generador: `scripts/gen_insertar_rutas.py`. `insertar-394..405` (`P-16/21/28/
+80..88`) = las 12 de galerías online (Imágenes de archivo / Modelos 3D /
+plataformas de vídeo) que se descartaron en la 1ª pasada y el usuario pidió
+integrar después; llevan advertencia ⚠️ "las galerías en línea de Microsoft
+cambian con el tiempo".
+`data/insertar_rutas_4opciones.txt` y `data/insertar_rutas_completas.txt`
+= volcados de rutas de Insertar del usuario, guardados como referencia (el
+segundo NO se integra como preguntas, solo "por si acaso").
 Las de `archivo`
 `archivo-134..` (`sourceQuestionId` `opc-<panel>-NN`) cubren toggles de
 `Archivo > Opciones` — opción = "sub-panel del diálogo ▸ ajuste",
