@@ -115,14 +115,12 @@ async function main(){
   window.document.getElementById("td-errores").click();
   assert(window.document.getElementById("fc-card"), "iniciar 'Errores' abre la sesión de flashcards de error");
 
-  // Sección sin contenido clasificado todavía (estado vacío honesto).
-  // "diseno" es la única de las 10 que sigue a 0 tras la reclasificación
-  // completa del banco heredado -- el resto ya tienen preguntas reales.
-  assert(O.filterQuestions({section:"diseno"}).length === 0, "'diseno' sigue sin preguntas clasificadas (sanity check del propio test)");
+  // "diseno" ya tiene banco propio (V/F de la pestaña Diseño, sep-2026):
+  // las 10 secciones tienen contenido real.
+  const disenoCount = O.filterQuestions({section:"diseno"}).length;
+  assert(disenoCount >= 50, `'diseno' ya tiene preguntas clasificadas (${disenoCount})`);
   clickGoto("temario-detalle", {sectionId:"diseno"});
-  assert(window.document.querySelector(".empty-state"), "una sección sin preguntas clasificadas muestra el estado vacío");
-  window.document.getElementById("td-preguntas").click();
-  assert(O.Nav.view === "temario-detalle", "'Preguntas' en una sección vacía no rompe nada, se queda en la vista");
+  assert(window.document.getElementById("td-preguntas").textContent.includes(String(disenoCount)), `el detalle de Diseño muestra ${disenoCount} preguntas`);
 
   if(failures > 0){ console.error(`\n${failures} fallo(s).`); process.exit(1); }
   console.log("\nTodas las pruebas de temario/taxonomía pasaron.");

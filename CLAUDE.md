@@ -439,9 +439,18 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 514, insertar 399, inicio 380, archivo 350, vista 131, revisar 77,
-referencias 7, correspondencia 4, disposicion 1, diseno 0 (sin archivo).
-Total 1863. 282 preguntas `categoria:"atajo"`.
+diseno 50, referencias 7, correspondencia 4, disposicion 1.
+Total 1913. 282 preguntas `categoria:"atajo"`.
 Historial: `data/questions_regroup_report.md`.
+`diseno-1..50` (`sourceQuestionId` `vf-diseno-NN`, `generado:true`,
+`categoria:"concepto"`, `tipo:"verdadero_falso"`, 25 V / 25 F) = banco
+propio de la pestaña **Diseño**, que hasta sep-2026 no tenía archivo.
+Cubren Temas/Colores/Fuentes/Espaciado entre párrafos/Efectos/Conjunto de
+estilos/Administrar estilos (grupo Formato del documento) y Marca de
+agua/Color de página/Bordes de página (grupo Fondo de página), a partir
+del volcado de la cinta de Diseño del usuario (rutas completas). No hay
+atajos en esta pestaña. Taxonomía: subtopics de `formato-documento`
+ampliados + topic nuevo `diseno:estructura`.
 `insertar-206..393` (`sourceQuestionId` `vf-insertar-NN`, `generado:true`,
 `categoria:"concepto"`, `tipo:"verdadero_falso"`) = **188 V/F de toda la
 pestaña Insertar** (páginas, tablas, ilustraciones/SmartArt/formas/gráficos,
