@@ -460,7 +460,23 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 513, insertar 438, inicio 430, archivo 402, vista 137, disposicion 114,
 diseno 86, referencias 84, revisar 82, correspondencia 5.
-Total 2291. 282 preguntas `categoria:"atajo"`.
+Total 2291. 331 preguntas `categoria:"atajo"`, 1035 `"ruta"`, 884
+`"concepto"`, 41 `"general"` (sep-2026: `interfaz` reclasificada por
+completo — ver más abajo — quedan sin reclasificar 31 en `vista`, 7 en
+`archivo`, 3 en `inicio`).
+**Reclasificación de `interfaz` (sep-2026)**: tenía 490 de sus 513
+preguntas en `categoria:"general"` (95 %) — el cajón de sastre que ni es
+atajo, ni ruta, ni concepto. Reclasificadas por topic con solape de
+patrón (una pregunta de atajo dentro de un topic no-atajo sigue siendo
+atajo si pregunta por una combinación de teclas): `conceptos-generales` y
+`documentos-archivos` → `concepto` (definiciones, extensiones, XML);
+`ventana-cinta`/`barra-estado`/`cursor-navegacion`/`regla`/
+`acceso-rapido`/`zoom`/`area-vistas`/`acceso-teclado-ayuda`/`buscador` →
+`ruta` por defecto (identifican dónde está o qué hace un elemento de la
+ventana); `deshacer-rehacer` → `atajo`; y dentro de cualquier topic, toda
+pregunta que pida explícitamente una combinación de teclas → `atajo`
+(activa incluso en `ventana-cinta`, p. ej. Alt+F4). Resultado: 46 atajo /
+374 ruta / 93 concepto / 0 general. Generador: `scripts/reclasificar_interfaz.py`.
 **141 preguntas `negativa:true`** (11 % interfaz, 6-7 % en la mayoría de
 pestañas, 2,7-2,8 % en insertar/inicio por ser los bancos más grandes —
 todas sus pestañas y grupos tienen al menos una). Antes de sep-2026, 7 de
