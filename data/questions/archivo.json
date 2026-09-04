@@ -455,7 +455,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Ctrl+U crea un nuevo documento en la versión española. Ctrl+N aplica negrita. Ctrl+O no tiene función asignada para nuevo documento. Ctrl+W quita el formato de párrafo, no crea ni cierra documentos."
+    "explicacion": "Ctrl+U crea un documento nuevo basado en la plantilla Normal. Ctrl+N aplica negrita. Ctrl+O da formato automático al documento. Ctrl+W quita el formato de párrafo, no crea ni cierra documentos. ⚠️ Ojo: el volcado lista Ctrl+W también bajo «cerrar documento», pero en la práctica quita el formato de párrafo."
   },
   {
     "id": "archivo-14",
@@ -595,7 +595,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Ctrl+F12 abre el cuadro de diálogo Abrir directamente. Ctrl+A abre Abrir desde Backstage pero no el cuadro de diálogo. Alt+Ctrl+F2 también abre el cuadro pero es el atajo alternativo secundario. Ctrl+O es el atajo de la versión inglesa, no de la española. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+F12 abre el cuadro de diálogo Abrir (Alt+Ctrl+F2 es la combinación alternativa). Ctrl+A abre Abrir desde Backstage, no el cuadro clásico. Ctrl+O da formato automático, no abre nada. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "archivo-18",
@@ -1365,7 +1365,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+G guarda el documento en la versión española. Ctrl+S aplica subrayado en español, no guarda. Mayús+F11 inserta un campo en blanco. Ctrl+Alt+G no tiene función asignada en Word 365. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+G guarda el documento (⚠️ en Word estándar Ctrl+G es «Ir a»; aquí está reasignado a Guardar). Ctrl+S aplica subrayado. Mayús+F11 pasa al campo anterior. Ctrl+Alt+G = Alt+Ctrl+G abre Pegado especial. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "archivo-40",
@@ -1400,7 +1400,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F12 abre el cuadro de diálogo Guardar como. F11 no tiene función relevante en Word. Mayús+F12 ejecuta Guardar, no Guardar como. Ctrl+F12 abre el cuadro de diálogo Abrir, no Guardar como. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "F12 abre Guardar como. F11 pasa al campo siguiente. Mayús+F12 ejecuta Guardar, no Guardar como. Ctrl+F12 abre el cuadro Abrir. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "archivo-41",
@@ -1706,7 +1706,7 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+F2"
+        "text": "Alt+Ctrl+I"
       },
       {
         "letter": "D",
@@ -1715,7 +1715,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Alt+F2 no abre el panel de impresión. Los atajos válidos para imprimir son Ctrl+P, Ctrl+F2, Ctrl+Mayús+F12 y Alt+Ctrl+I."
+    "explicacion": "Ctrl+Alt+F2 abre el cuadro Abrir, no la impresión. Los atajos que muestran la pestaña Imprimir son Ctrl+P, Alt+Ctrl+I y Ctrl+Mayús+F12."
   },
   {
     "id": "archivo-50",
@@ -4445,7 +4445,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+A abre Abrir desde Backstage en español. Ctrl+O es el atajo de la versión inglesa. Ctrl+F12 abre el cuadro de diálogo Abrir directamente. Ctrl+Mayús+A no tiene esa función asignada. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+A abre Abrir desde Backstage. Ctrl+O da formato automático al documento. Ctrl+F12 abre el cuadro de diálogo Abrir. Ctrl+Mayús+A aplica el estilo Normal. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "archivo-128",
@@ -4515,7 +4515,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+más en el teclado numérico abre el cuadro de diálogo para personalizar los métodos abreviados de teclado. Ctrl+más acerca el zoom. Alt+más no tiene función asignada para personalizar atajos. Ctrl+Mayús+más aplica superíndice."
+    "explicacion": "Alt+Ctrl++ del teclado numérico abre el cuadro para personalizar los métodos abreviados de teclado. Ctrl++ del numérico acerca el zoom. Alt++ y Ctrl+Mayús++ no tienen función (el superíndice no tiene atajo en este Word)."
   },
   {
     "id": "archivo-130",
@@ -4550,7 +4550,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+F1 muestra la información del sistema de Microsoft. Alt+F1 inserta un gráfico. Ctrl+F1 muestra u oculta la cinta de opciones. Alt+Ctrl+Mayús+F1 no tiene función asignada para información del sistema."
+    "explicacion": "Alt+Ctrl+F1 inicia la Información del sistema de Microsoft. Alt+F1 pasa al campo siguiente. Ctrl+F1 no tiene función asignada en este Word. Alt+Ctrl+Mayús+F1 no tiene función."
   },
   {
     "id": "archivo-131",
