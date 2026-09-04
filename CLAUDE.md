@@ -437,13 +437,20 @@ una pregunta vive en el archivo de su `section` aunque su procedencia
 fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
-**Recuento actual** (`data/questions/<section>.json`, sep-2026, tras el
-barrido de atajos contra el volcado v2608):
-interfaz 514, inicio 380, archivo 350, insertar 199, vista 131, revisar 77,
+**Recuento actual** (`data/questions/<section>.json`, sep-2026):
+interfaz 514, insertar 387, inicio 380, archivo 350, vista 131, revisar 77,
 referencias 7, correspondencia 4, disposicion 1, diseno 0 (sin archivo).
-Total 1663 (~40 preguntas de atajo borradas por probar atajos que no
-existen en el volcado v2608 o dar respuestas que lo contradicen).
-282 preguntas `categoria:"atajo"`. Historial: `data/questions_regroup_report.md`.
+Total 1851. 282 preguntas `categoria:"atajo"`.
+Historial: `data/questions_regroup_report.md`.
+`insertar-206..393` (`sourceQuestionId` `vf-insertar-NN`, `generado:true`,
+`categoria:"concepto"`, `tipo:"verdadero_falso"`) = **188 V/F de toda la
+pestaña Insertar** (páginas, tablas, ilustraciones/SmartArt/formas/gráficos,
+multimedia, vínculos, comentarios, encabezado-pie, texto, símbolos/ecuación,
+eSignature, formato-forma) sobre comportamiento y opciones de los cuadros de
+diálogo. Del bloque original de ~215 se descartaron ~27 que preguntaban por
+atajos ausentes del volcado v2608 (`Alt+Mayús+P/F/H`, `Alt+C`, `Alt+I`,
+`Alt+Ctrl+D`=PAGE, `Ctrl+Mayús+Entrar`…) o eran de la pestaña Revisar. Sesgo
+conocido: ~74% de las 188 son VERDADERO (así venían del origen).
 `insertar-46..205` (`sourceQuestionId` `P-01..P-172` con huecos, `generado:true`)
 son **preguntas de RUTA** (4 opciones, 1 correcta + 3 distractores del mismo
 nivel) de toda la pestaña Insertar — la pestaña solo tenía atajos hasta ahora.
