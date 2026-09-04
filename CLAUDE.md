@@ -165,11 +165,14 @@ silencio ni elijas arbitrariamente.
   con ese error; corregido en `inicio-250/251/252/264/275/276`). Otros de
   sangría: `Ctrl+Mayús+H` = reducir sangría francesa, `Ctrl+Mayús+R` =
   quitar toda la sangría (`atajos_oficial.json`).
-- **`Ctrl+M`** abre el cuadro de diálogo Fuente con el foco en el campo
-  Fuente (nombre); **`Ctrl+Mayús+M`** abre el mismo cuadro con el foco en
-  el campo Tamaño. NO son atajos de sangría y NO activan la caja de la
-  cinta: abren el diálogo. Prueba en vivo del usuario. Afectó a
-  `inicio-25/251/354/355`.
+- **`Ctrl+M`** y **`Ctrl+Mayús+F`** abren el cuadro de diálogo Fuente con
+  el foco en el campo **Fuente (nombre)**; **`Ctrl+Mayús+M`** abre el mismo
+  cuadro con el foco en **Tamaño**. Los tres abren el DIÁLOGO — NO existe
+  atajo que active la caja de fuente de la cinta, y ninguno es atajo de
+  sangría. Prueba en vivo del usuario (sep-2026, confirmado contra el
+  volcado v2608). Afectó a `inicio-25` (tenía doble respuesta: B era
+  `Ctrl+Mayús+F` → cambiado a `Ctrl+Mayús+P`), `inicio-283`, `inicio-354`,
+  `inicio-355` (reformulada: la premisa "caja de la cinta" era falsa).
 - **`Ctrl+Mayús+R` NO quita la sangría** en esta instalación, aunque
   `atajos_oficial.json` le asigne "Quitar sangría". Para quitar sangrías
   se usa `Ctrl+W` (quita todo el formato de párrafo). Prueba en vivo.
@@ -338,6 +341,17 @@ silencio ni elijas arbitrariamente.
   el hecho; `vista-38` y `vista-44` estaban vacías y se rellenaron. **Regla
   nueva**: el banco NO cita fuentes externas — dato verificado en vivo →
   "Prueba en vivo del usuario"; si no, se enuncia sin coletillas.
+- **Tanda 9 (sep-2026) — cruce contra el volcado v2608, prueba en vivo.**
+  Los 3 conflictos internos del volcado se resuelven así en vivo:
+  `Alt+Ctrl+V` = **pegar formato**, `Ctrl+0` = **zoom 100 %**, `Ctrl+W` =
+  **quitar formato de párrafo** (no cierra la ventana). `Ctrl+Mayús+M` =
+  diálogo Fuente con foco en Tamaño; `Ctrl+Mayús+F` = diálogo Fuente con
+  foco en el nombre (igual que `Ctrl+M`) — ver punto de `Ctrl+M` arriba.
+  `Alt+5` numérico: **NumLock ON = ♣; NumLock OFF = selecciona toda la
+  tabla** (`insertar-38` reformulada). `Alt+Mayús+Inicio`/`Fin` en tabla =
+  extienden la selección hasta la celda extrema de la fila; si ya estás en
+  ella, seleccionan solo esa (`insertar-43/45`). Subíndice = `Ctrl+Mayús+-`
+  (= `Ctrl+_`); `Ctrl+=` no va (`inicio-257/361`).
 - **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
   poden preguntas correctas solo por parecerse a otra — se conservan
   aunque otra pregunte por el mismo atajo (están en topics/framings que

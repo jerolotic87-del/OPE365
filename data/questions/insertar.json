@@ -1306,19 +1306,19 @@
     "subtopic": null,
     "tema": "Tablas",
     "sourceQuestionId": "8-324",
-    "enunciado": "¿Qué ocurre al pulsar Alt + 5 en el teclado numérico dentro de un documento de Word 365?",
+    "enunciado": "¿Qué hace Alt + 5 del teclado numérico dentro de una tabla en Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Inserta el símbolo ♣ (el carácter del código Alt 5)"
+        "text": "Depende de NumLock: activado inserta ♣ (código Alt); desactivado selecciona toda la tabla"
       },
       {
         "letter": "B",
-        "text": "Selecciona la tabla completa donde está el cursor"
+        "text": "Siempre inserta el símbolo ♣"
       },
       {
         "letter": "C",
-        "text": "Selecciona la fila actual"
+        "text": "Siempre selecciona toda la tabla"
       },
       {
         "letter": "D",
@@ -1327,7 +1327,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Con NumLock activado, Alt + un número del teclado numérico introduce un carácter por su código Alt (función de Windows): Alt+5 da ♣. El volcado de Personalizar teclado asigna Alt + (5 del numérico, como tecla Borrar/Clear, es decir con NumLock desactivado) a «Seleccionar tabla». Prueba en vivo del usuario con NumLock activado: sale ♣."
+    "explicacion": "Con NumLock ACTIVADO, Alt+5 del numérico introduce el carácter del código Alt de Windows (♣). Con NumLock DESACTIVADO, la tecla 5 actúa como «Borrar/Clear» y Alt+5 selecciona toda la tabla (comando TablaSeleccionarTabla). Las dos ramas verificadas: Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-40",
@@ -1471,7 +1471,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Alt+Mayús+Fin extiende la selección desde donde está el cursor hasta el final de la fila, abarcando el texto de todas las celdas intermedias. Para ir al final de la fila SIN seleccionar se usa Alt+Fin. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Alt+Mayús+Fin extiende la selección desde donde está el cursor hasta el final de la fila, abarcando el texto de todas las celdas intermedias (si ya estás en la última celda, selecciona solo esa). Para ir al final de la fila SIN seleccionar se usa Alt+Fin. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-44",
@@ -1543,7 +1543,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Alt+Mayús+Inicio extiende la selección desde el cursor hasta el inicio de la fila, abarcando el texto de las celdas intermedias. Para ir al inicio de la fila SIN seleccionar se usa Alt+Inicio. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Alt+Mayús+Inicio extiende la selección desde el cursor hasta el inicio de la fila, abarcando las celdas intermedias (si ya estás en la primera celda, selecciona solo esa). Para ir al inicio de la fila SIN seleccionar se usa Alt+Inicio. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-46",

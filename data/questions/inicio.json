@@ -939,7 +939,7 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0025",
-    "enunciado": "¿Que atajo abre el cuadro de dialogo Fuente completo en Word 365?",
+    "enunciado": "¿Qué atajo abre el cuadro de diálogo Fuente en la versión española de Word 365?",
     "opciones": [
       {
         "letter": "A",
@@ -947,7 +947,7 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl + Mayus + F"
+        "text": "Ctrl + Mayús + P"
       },
       {
         "letter": "C",
@@ -960,7 +960,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Ctrl+M abre el cuadro de diálogo Fuente completo, con el foco puesto en el campo Fuente (nombre de la tipografía). Ctrl+Mayús+M abre el mismo cuadro pero con el foco en el campo Tamaño. Ctrl+Mayús+F actúa sobre el cuadro de fuente de la cinta, no abre el diálogo. Ctrl+F en la versión española aplica la sangría francesa. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+M abre el cuadro de diálogo Fuente con el foco en el campo Fuente (nombre). Ctrl+Mayús+F hace lo mismo (también abre el diálogo con el nombre enfocado) y Ctrl+Mayús+M lo abre con el foco en el Tamaño. Ctrl+F aplica sangría francesa. Ctrl+Mayús+P activa/desactiva el subrayado de palabras. Alt+F abre el menú Archivo. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-26",
@@ -9608,7 +9608,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario."
+    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión; como Mayús+- da _, también se escribe Ctrl+_) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-259",
@@ -10676,20 +10676,20 @@
       },
       {
         "letter": "B",
-        "text": "No, Ctrl+M aumenta la sangría izquierda; el cuadro Fuente se abre con Ctrl+Mayús+F"
+        "text": "No, Ctrl+M aumenta la sangría izquierda"
       },
       {
         "letter": "C",
-        "text": "No, Ctrl+M aplica negrita; el cuadro Fuente se abre con Ctrl+D"
+        "text": "No, Ctrl+M aplica negrita"
       },
       {
         "letter": "D",
-        "text": "Depende: Ctrl+M abre Fuente en la versión de escritorio pero no en la versión web"
+        "text": "No, Ctrl+M no hace nada en la versión española"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Correcto. En la versión española de Word 365, Ctrl+M abre el cuadro de diálogo Fuente con el foco en el campo Fuente (nombre). NO aplica sangría: la sangría se aumenta con Ctrl+H. En la versión inglesa Ctrl+M sí aumenta la sangría izquierda — de ahí la confusión. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Correcto. En la versión española de Word 365, Ctrl+M abre el cuadro de diálogo Fuente con el foco en el nombre de la tipografía (Ctrl+Mayús+F hace lo mismo). NO aplica sangría: la sangría se aumenta con Ctrl+H. En la versión inglesa Ctrl+M sí aumenta la sangría izquierda — de ahí la confusión. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-284",
@@ -13169,7 +13169,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+M abre el cuadro de diálogo Fuente con el cursor ya en el campo Tamaño, listo para teclear el valor. Ctrl+M abre el mismo cuadro pero con el foco en el campo Fuente (nombre). Ctrl+Mayús+F actúa sobre el cuadro de fuente de la cinta. Alt+Ctrl+M inserta un comentario."
+    "explicacion": "Ctrl+Mayús+M abre el cuadro de diálogo Fuente con el cursor ya en el campo Tamaño. Ctrl+M y Ctrl+Mayús+F abren el mismo cuadro pero con el foco en el campo Fuente (nombre). Alt+Ctrl+M inserta un comentario. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-355",
@@ -13183,28 +13183,28 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-287",
-    "enunciado": "¿Qué atajo activa el campo del nombre de fuente en la cinta para modificarlo con el teclado en Word 365?",
+    "enunciado": "Al abrir el cuadro de diálogo Fuente por teclado, ¿dónde queda el foco con cada atajo en Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+F"
+        "text": "Ctrl+M y Ctrl+Mayús+F → en el nombre de la fuente; Ctrl+Mayús+M → en el Tamaño"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+M"
+        "text": "Los tres dejan el foco en el nombre de la fuente"
       },
       {
         "letter": "C",
-        "text": "Ctrl+F"
+        "text": "Ctrl+M → en el Tamaño; Ctrl+Mayús+M → en el nombre"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+F"
+        "text": "Ninguno de los tres abre el cuadro de diálogo Fuente"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+F activa el cuadro de nombre de fuente de la cinta. Ctrl+Mayús+M abre el cuadro de diálogo Fuente con el foco en el campo Tamaño. Ctrl+F aplica la sangría francesa al párrafo. Alt+Ctrl+F no aparece en la tabla oficial de atajos."
+    "explicacion": "Ctrl+M y Ctrl+Mayús+F abren el cuadro Fuente con el foco en el nombre de la tipografía; Ctrl+Mayús+M lo abre con el foco en el campo Tamaño. No existe un atajo que active la caja de fuente de la cinta: todos abren el diálogo. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-356",
@@ -13309,7 +13309,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario."
+    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión; = Ctrl+_) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-362",
