@@ -19,7 +19,7 @@ estándar de Word no capturado aquí.
 | Disposición ▸ Configurar página ▸ Márgenes ▸ **Márgenes personalizados…** | Márgenes ✅ |
 | Disposición ▸ Configurar página ▸ Tamaño ▸ **Más tamaños de papel…** | Papel ✅ |
 | Disposición ▸ Configurar página ▸ Orientación | *(no abre el cuadro; aplica directo)* |
-| Archivo ▸ Imprimir ▸ **Configurar página** (enlace al pie) | Márgenes ▫ |
+| Archivo ▸ Imprimir ▸ **Configurar página** (enlace al pie del panel) | la última usada ✅ |
 
 - La ficha **Márgenes** tiene: Superior/Inferior/Izquierdo/Derecho,
   Encuadernación (0 cm), Posición del margen interno, Orientación
@@ -201,6 +201,24 @@ Configurar página · Columnas · Párrafo · Bordes y sombreado · Fecha y hora
 · Letra capital · Administrar estilos · cuadro Disposición (objeto, como
 «Establecer como diseño predeterminado»). En todos: fija los valores
 actuales para el documento o para la plantilla. ✅
+
+## Panel Archivo ▸ Imprimir = espejo de la pestaña Disposición ✅
+
+Los desplegables del panel Imprimir de Backstage repiten las galerías de la
+pestaña Disposición, verbatim:
+
+| Panel Imprimir | = pestaña Disposición |
+|---|---|
+| Orientación (Vertical / Horizontal) | Configurar página ▸ Orientación |
+| Tamaño (Carta … B5 (JIS) … Más tamaños de papel…) | Configurar página ▸ Tamaño |
+| Márgenes (Normal 2,5/3 · Estrecho 1,27 · Moderado · Ancho · Reflejado · Última config. · personalizados…) | Configurar página ▸ Márgenes |
+| enlace «Configurar página» | Configurar página ▸ lanzador (mismo cuadro, 3 fichas) |
+
+Además, exclusivos del panel Imprimir: Copias, Intercaladas/Sin intercalar,
+Imprimir a una cara / manualmente a doble cara, 1-16 páginas por hoja, y el
+desplegable «Imprimir todas las páginas» (Imprimir selección / página actual /
+Impresión personalizada + imprimir Estilos, Autotexto, Asignaciones de teclas,
+etc.).
 
 ## Enlaces entre pestañas detectados en las capturas
 

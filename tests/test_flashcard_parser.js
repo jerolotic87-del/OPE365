@@ -45,7 +45,9 @@ async function main(){
 
     if(!rEl || !rEl.textContent.trim()) structIssues++;
     if(eEl && !eEl.textContent.trim()) structIssues++;
-    if(/undefined|null|NaN|\[object|&lt;script/i.test(fb.textContent)) structIssues++;
+    // \b en los literales JS: "NaN"/"null"/"undefined" sueltos son fugas
+    // reales; sin frontera, "funcionan" o "página"+"Número" dan falso positivo.
+    if(/\bundefined\b|\bnull\b|\bNaN\b|\[object|&lt;script/i.test(fb.textContent)) structIssues++;
     if(eEl) split++;
     if(aEl) withAtajo++;
 

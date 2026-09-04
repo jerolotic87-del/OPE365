@@ -455,9 +455,19 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 514, insertar 399, inicio 380, archivo 350, vista 131, revisar 77,
-disposicion 90, diseno 70, referencias 78, correspondencia 4.
-Total 2093. 282 preguntas `categoria:"atajo"`.
+interfaz 514, insertar 399, archivo 392, inicio 380, vista 131, disposicion 90,
+referencias 78, revisar 77, diseno 70, correspondencia 4.
+Total 2135. 282 preguntas `categoria:"atajo"`.
+`archivo-*` (`sourceQuestionId` `vf-archivo-bkNN`, `generado:true`, 42 V/F
+21/21) = **Vista Backstage** (pestaña Archivo): panel de navegación, Inicio/
+Nuevo/Abrir, Información (Proteger documento 6 opciones, Comprobar problemas 3,
+Historial de versiones = requiere nube, cuadro Propiedades 5 fichas), Guardar
+como (Herramientas, tipos de archivo), Imprimir (Intercaladas/Sin intercalar,
+N por hoja, Impresión personalizada, Márgenes = misma galería que Disposición,
+enlace Configurar página), Exportar, Compartir, Cuenta. Fuente:
+`data/rutas/archivo.txt` (reconstruido de `data/imagenes_rutas/backstage/`).
+Generador: `scripts/gen_backstage_vf.py`. +33 flashcards
+(`data/flashcards/archivo.json`, primeras que no son de Opciones).
 `disposicion-2..90` (`sourceQuestionId` `vf-disposicion-*`, `generado:true`,
 `tipo:"verdadero_falso"`, 45/44 V/F, incl. 19 con `difficulty:"alta"` = trampa) = banco de la pestaña **Disposición**
 (antes solo tenía `disposicion-1`, el atajo `Alt+Ctrl+D`). Cubre Configurar
