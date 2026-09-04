@@ -2919,6 +2919,73 @@
     "explicacion": "Falso: «Guardar» sobrescribe el archivo actual; «Guardar como» crea una copia con otro nombre, ubicación o formato. Solo la primera vez (documento sin nombre), «Guardar» se comporta como «Guardar como»."
   },
   {
+    "id": "archivo-406",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Guardar y Guardar como",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "guardar",
+    "subtopic": null,
+    "tema": "Guardar y Guardar como",
+    "sourceQuestionId": "emp-archivo-01",
+    "generado": true,
+    "enunciado": "Relaciona cada extensión con el tipo de archivo de Word 365:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": ".docx"
+        },
+        {
+          "id": "2",
+          "label": ".docm"
+        },
+        {
+          "id": "3",
+          "label": ".dotx"
+        },
+        {
+          "id": "4",
+          "label": ".dotm"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "documento habilitado para macros"
+        },
+        {
+          "id": "B",
+          "label": "plantilla, sin macros"
+        },
+        {
+          "id": "C",
+          "label": "plantilla habilitada para macros"
+        },
+        {
+          "id": "D",
+          "label": "documento normal, sin macros"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "A",
+        "3": "B",
+        "4": "C"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "A",
+      "3": "B",
+      "4": "C"
+    },
+    "explicacion": "El sufijo «m» siempre indica que el archivo admite macros de VBA; «x» indica que no las admite."
+  },
+  {
     "id": "archivo-1",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Imprimir",
@@ -7642,6 +7709,73 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ruta completa: Archivo → Opciones → Revisión → Excepciones para: [documento] → Ocultar errores de gramática solo en este documento. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+  },
+  {
+    "id": "archivo-407",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones — Revisión",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-revision",
+    "subtopic": null,
+    "tema": "Opciones — Revisión",
+    "sourceQuestionId": "emp-archivo-02",
+    "generado": true,
+    "enunciado": "Relaciona cada opción de Autoformato con lo que hace:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Estilos de títulos integrados"
+        },
+        {
+          "id": "2",
+          "label": "Definir estilos basándose en el formato personal"
+        },
+        {
+          "id": "3",
+          "label": "Estilos de lista"
+        },
+        {
+          "id": "4",
+          "label": "Otros estilos de párrafo"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "crea un estilo nuevo a partir de un formato repetido aplicado a mano"
+        },
+        {
+          "id": "B",
+          "label": "aplica estilos de lista a párrafos con aspecto de lista"
+        },
+        {
+          "id": "C",
+          "label": "aplica otros estilos de párrafo distintos de título y lista"
+        },
+        {
+          "id": "D",
+          "label": "aplica un estilo de título a una línea corta sin puntuación seguida de Entrar dos veces"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "A",
+        "3": "B",
+        "4": "C"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "A",
+      "3": "B",
+      "4": "C"
+    },
+    "explicacion": "Cuatro de las opciones que controla Autoformato / Autoformato mientras escribe, en Opciones ▸ Revisión."
   },
   {
     "id": "archivo-76",

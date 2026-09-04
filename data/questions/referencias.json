@@ -415,6 +415,53 @@
     "explicacion": "Falso: ese menú rápido solo ofrece Nivel 1, Nivel 2, Nivel 3 y «No mostrar en la tabla de contenido»."
   },
   {
+    "id": "referencias-89",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "emp-referencias-03",
+    "generado": true,
+    "enunciado": "Relaciona cada botón del cuadro Tabla de contenido con lo que hace:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Opciones…"
+        },
+        {
+          "id": "2",
+          "label": "Modificar…"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "edita el aspecto de los estilos TDC 1 a TDC 9 (no los de Título)"
+        },
+        {
+          "id": "B",
+          "label": "genera la tabla a partir de los estilos concretos que elijas"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "A"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "A"
+    },
+    "explicacion": "«Opciones» controla de qué estilos se nutre la tabla; «Modificar» retoca el aspecto de los propios estilos TDC, no los estilos Título del documento."
+  },
+  {
     "id": "referencias-1",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Notas al pie",
@@ -1214,6 +1261,73 @@
     "explicacion": "En el menú Estilo se ve bajo cada nombre: APA «Sexta edición», MLA «Séptima edición», Chicago «Decimoquinta edición»."
   },
   {
+    "id": "referencias-88",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "emp-referencias-02",
+    "generado": true,
+    "enunciado": "Relaciona cada comando del grupo Citas y bibliografía con lo que hace:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Estilo"
+        },
+        {
+          "id": "2",
+          "label": "Insertar cita"
+        },
+        {
+          "id": "3",
+          "label": "Administrar fuentes"
+        },
+        {
+          "id": "4",
+          "label": "Bibliografía"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "añade una cita en el punto del cursor a partir de una fuente"
+        },
+        {
+          "id": "B",
+          "label": "muestra la lista general y la lista actual de fuentes usadas"
+        },
+        {
+          "id": "C",
+          "label": "genera automáticamente el listado final de referencias"
+        },
+        {
+          "id": "D",
+          "label": "elige el formato de cita: APA, MLA, Chicago…"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "A",
+        "3": "B",
+        "4": "C"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "A",
+      "3": "B",
+      "4": "C"
+    },
+    "explicacion": "Los cuatro comandos principales del grupo Citas y bibliografía de la pestaña Referencias."
+  },
+  {
     "id": "referencias-83",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Títulos (negativa)",
@@ -1518,6 +1632,63 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: Autotítulo (Referencias) pone títulos automáticos a los objetos que insertas; Autotexto (Insertar ▸ Elementos rápidos) guarda fragmentos de texto reutilizables."
+  },
+  {
+    "id": "referencias-87",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "emp-referencias-01",
+    "generado": true,
+    "enunciado": "Relaciona cada rótulo de fábrica del cuadro Título con lo que numera:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ilustración"
+        },
+        {
+          "id": "2",
+          "label": "Ecuación"
+        },
+        {
+          "id": "3",
+          "label": "Tabla"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "fórmulas matemáticas insertadas"
+        },
+        {
+          "id": "B",
+          "label": "datos organizados en filas y columnas"
+        },
+        {
+          "id": "C",
+          "label": "imágenes y gráficos"
+        }
+      ],
+      "correct": {
+        "1": "C",
+        "2": "A",
+        "3": "B"
+      }
+    },
+    "respuesta": {
+      "1": "C",
+      "2": "A",
+      "3": "B"
+    },
+    "explicacion": "Los tres rótulos que trae Word por defecto en el cuadro Título (no «Figura», pese a ser el término más usado coloquialmente)."
   },
   {
     "id": "referencias-3",

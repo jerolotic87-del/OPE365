@@ -1337,6 +1337,73 @@
     "id": "diseno-61",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Formato del documento",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "formato-documento",
+    "subtopic": null,
+    "tema": "Formato del documento",
+    "sourceQuestionId": "emp-diseno-01",
+    "generado": true,
+    "enunciado": "Relaciona cada comando de Diseño ▸ Formato del documento con lo que cambia:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Colores"
+        },
+        {
+          "id": "2",
+          "label": "Fuentes"
+        },
+        {
+          "id": "3",
+          "label": "Espaciado entre párrafos"
+        },
+        {
+          "id": "4",
+          "label": "Efectos"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "solo el conjunto de fuentes de título y cuerpo"
+        },
+        {
+          "id": "B",
+          "label": "el interlineado y el espacio entre párrafos de todo el documento"
+        },
+        {
+          "id": "C",
+          "label": "las sombras y biseles de formas y gráficos SmartArt"
+        },
+        {
+          "id": "D",
+          "label": "solo la paleta de color del tema"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "A",
+        "3": "B",
+        "4": "C"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "A",
+      "3": "B",
+      "4": "C"
+    },
+    "explicacion": "Cada comando del grupo Formato del documento cambia un único aspecto del formato global, sin tocar los demás."
+  },
+  {
+    "id": "diseno-62",
+    "sourceFile": "diseno.json",
+    "bloque": "Diseno — Formato del documento",
     "tipo": "relleno",
     "categoria": "ruta",
     "negativa": false,
@@ -1357,7 +1424,7 @@
     "explicacion": "Los tres comandos del grupo Formato del documento que afectan a un aspecto concreto sin tocar los demás."
   },
   {
-    "id": "diseno-62",
+    "id": "diseno-63",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página (icono)",
     "tipo": "opcion_unica",
@@ -1394,7 +1461,7 @@
     "explicacion": "**Marca de agua.** Pestaña Diseño ▸ Fondo de página. Atajo: no tiene atajo de teclado en esta instalación. Pone un texto o una imagen semitransparente detrás del contenido (CONFIDENCIAL, BORRADOR…). Se repite en todas las páginas."
   },
   {
-    "id": "diseno-63",
+    "id": "diseno-64",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página (icono)",
     "tipo": "opcion_unica",
@@ -1431,7 +1498,7 @@
     "explicacion": "**Color de página.** Pestaña Diseño ▸ Fondo de página. Atajo: no tiene atajo de teclado en esta instalación. Pone un color o efecto de relleno de fondo a la página. Por defecto NO se imprime."
   },
   {
-    "id": "diseno-64",
+    "id": "diseno-65",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página (icono)",
     "tipo": "opcion_unica",
@@ -1468,7 +1535,7 @@
     "explicacion": "**Bordes de página.** Pestaña Diseño ▸ Fondo de página. Atajo: no tiene atajo de teclado en esta instalación. Abre «Bordes y sombreado» en la ficha «Borde de página» (Valor: Ninguno/Cuadro/Sombra/3D/Personalizado; desplegable Arte)."
   },
   {
-    "id": "diseno-65",
+    "id": "diseno-66",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página (negativa)",
     "tipo": "opcion_unica",
@@ -1504,7 +1571,7 @@
     "explicacion": "«Efectos» está en el grupo Formato del documento, no en Fondo de página (que solo tiene Marca de agua, Color de página y Bordes de página)."
   },
   {
-    "id": "diseno-66",
+    "id": "diseno-67",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página (negativa)",
     "tipo": "opcion_unica",
@@ -1540,7 +1607,7 @@
     "explicacion": "«Aplicar a» también ofrece Esta sección, Esta sección: solo la primera página y Esta sección: todas excepto la primera."
   },
   {
-    "id": "diseno-67",
+    "id": "diseno-68",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1559,7 +1626,7 @@
     "explicacion": "En «Confidencial» están CONFIDENCIAL 1/2 y NO COPIAR 1/2; en «Declinaciones de responsabilidades», BORRADOR 1/2 y EJEMPLO 1."
   },
   {
-    "id": "diseno-68",
+    "id": "diseno-69",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1578,7 +1645,7 @@
     "explicacion": "Falso: BORRADOR y EJEMPLO están en «Declinaciones de responsabilidades». En «Confidencial» están CONFIDENCIAL y NO COPIAR."
   },
   {
-    "id": "diseno-69",
+    "id": "diseno-70",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1597,7 +1664,7 @@
     "explicacion": "El cuadro «Marca de agua impresa» ofrece «Marca de agua de imagen» (con opción de atenuar) y «Marca de agua de texto» (texto, fuente, tamaño, color, disposición diagonal u horizontal)."
   },
   {
-    "id": "diseno-70",
+    "id": "diseno-71",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1616,7 +1683,7 @@
     "explicacion": "Falso: la marca de agua se coloca en el encabezado y se repite en todas las páginas de la sección."
   },
   {
-    "id": "diseno-71",
+    "id": "diseno-72",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1635,7 +1702,7 @@
     "explicacion": "«Quitar marca de agua» borra la marca de agua activa. También se puede hacer entrando en el encabezado y eliminando el objeto."
   },
   {
-    "id": "diseno-72",
+    "id": "diseno-73",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1654,7 +1721,7 @@
     "explicacion": "Falso: por defecto el color de página se ve en pantalla pero no se imprime. Para imprimirlo hay que activar «Imprimir colores e imágenes de fondo» en Archivo ▸ Opciones ▸ Mostrar."
   },
   {
-    "id": "diseno-73",
+    "id": "diseno-74",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1673,7 +1740,7 @@
     "explicacion": "El cuadro «Efectos de relleno» tiene las fichas Degradado, Textura, Trama e Imagen para el fondo de la página."
   },
   {
-    "id": "diseno-74",
+    "id": "diseno-75",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1692,7 +1759,7 @@
     "explicacion": "Falso: «Más colores...» abre el cuadro Colores con las fichas «Estándar» y «Personalizado» (modelo RGB/HSL). Los degradados están en «Efectos de relleno...»."
   },
   {
-    "id": "diseno-75",
+    "id": "diseno-76",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1711,7 +1778,7 @@
     "explicacion": "Falso: está en el grupo «Fondo de página», junto a «Marca de agua» y «Bordes de página»."
   },
   {
-    "id": "diseno-76",
+    "id": "diseno-77",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1730,7 +1797,7 @@
     "explicacion": "El mismo cuadro tiene también las fichas «Bordes» (del párrafo) y «Sombreado», pero el comando de la pestaña Diseño entra por «Borde de página»."
   },
   {
-    "id": "diseno-77",
+    "id": "diseno-78",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1749,7 +1816,7 @@
     "explicacion": "Esos son los cinco valores del borde de página. «Personalizado» permite un estilo, color o ancho distinto en cada lado desde la vista previa."
   },
   {
-    "id": "diseno-78",
+    "id": "diseno-79",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1768,7 +1835,7 @@
     "explicacion": "Falso: «Arte» permite bordes de página con motivos gráficos (manzanas, estrellas, corazones, árboles, etc.) en lugar de una línea."
   },
   {
-    "id": "diseno-79",
+    "id": "diseno-80",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1787,7 +1854,7 @@
     "explicacion": "Falso: también ofrece «Esta sección», «Esta sección: solo la primera página» y «Esta sección: todas excepto la primera página»."
   },
   {
-    "id": "diseno-80",
+    "id": "diseno-81",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1806,7 +1873,7 @@
     "explicacion": "La lista de anchos va de 1/4 pto a 6 pto (1/4, 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 pto)."
   },
   {
-    "id": "diseno-81",
+    "id": "diseno-82",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1825,7 +1892,7 @@
     "explicacion": "El cuadro «Opciones de borde y sombreado» muestra por defecto 24 pto en Superior, Inferior, Izquierdo y Derecho, medidos desde el borde de página."
   },
   {
-    "id": "diseno-82",
+    "id": "diseno-83",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1844,7 +1911,7 @@
     "explicacion": "Falso: el campo «Medir desde» permite elegir entre «Texto» y «Borde de página»."
   },
   {
-    "id": "diseno-83",
+    "id": "diseno-84",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1863,7 +1930,7 @@
     "explicacion": "Falso: «Color de página» está en la pestaña Diseño, grupo «Fondo de página», junto a «Marca de agua» y «Bordes de página»."
   },
   {
-    "id": "diseno-84",
+    "id": "diseno-85",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1882,7 +1949,7 @@
     "explicacion": "Falso: para el borde de página las opciones son Todo el documento, Esta sección, Esta sección: solo la primera página y Esta sección: todas excepto la primera. «Solo el párrafo actual» solo aparece para los bordes de párrafo (pestaña Bordes)."
   },
   {
-    "id": "diseno-85",
+    "id": "diseno-86",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Fondo de página",
     "tipo": "verdadero_falso",
@@ -1901,7 +1968,64 @@
     "explicacion": "Falso: el valor predeterminado es «Borde de página». La otra opción del desplegable es «Texto», no «Borde de texto»."
   },
   {
-    "id": "diseno-86",
+    "id": "diseno-87",
+    "sourceFile": "diseno.json",
+    "bloque": "Diseno — Fondo de página",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "diseno",
+    "topic": "fondo-pagina",
+    "subtopic": null,
+    "tema": "Fondo de página",
+    "sourceQuestionId": "emp-diseno-02",
+    "generado": true,
+    "enunciado": "Relaciona cada comando de Diseño ▸ Fondo de página con lo que hace:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Marca de agua"
+        },
+        {
+          "id": "2",
+          "label": "Color de página"
+        },
+        {
+          "id": "3",
+          "label": "Bordes de página"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "aplica un color de fondo a todas las páginas"
+        },
+        {
+          "id": "B",
+          "label": "añade un borde decorativo alrededor del margen"
+        },
+        {
+          "id": "C",
+          "label": "inserta un texto o imagen fantasma detrás del contenido de cada página"
+        }
+      ],
+      "correct": {
+        "1": "C",
+        "2": "A",
+        "3": "B"
+      }
+    },
+    "respuesta": {
+      "1": "C",
+      "2": "A",
+      "3": "B"
+    },
+    "explicacion": "Los tres comandos del grupo Fondo de página."
+  },
+  {
+    "id": "diseno-88",
     "sourceFile": "diseno.json",
     "bloque": "Diseno — Fondo de página",
     "tipo": "relleno",
@@ -1924,7 +2048,7 @@
     "explicacion": "Los tres comandos del grupo Fondo de página."
   },
   {
-    "id": "diseno-87",
+    "id": "diseno-89",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Estructura de la pestaña",
     "tipo": "verdadero_falso",
@@ -1943,7 +2067,7 @@
     "explicacion": "«Formato del documento» reúne Temas, Colores, Fuentes, Espaciado entre párrafos, Efectos, Conjunto de estilos y Establecer como predeterminada; «Fondo de página» reúne Marca de agua, Color de página y Bordes de página."
   },
   {
-    "id": "diseno-88",
+    "id": "diseno-90",
     "sourceFile": "diseno.json",
     "bloque": "Diseño — Estructura de la pestaña",
     "tipo": "verdadero_falso",

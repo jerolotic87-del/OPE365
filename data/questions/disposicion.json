@@ -1510,6 +1510,227 @@
     "explicacion": "Ancho: laterales 5,08 · Moderado: laterales 1,91 · ambos 2,54 arriba y abajo."
   },
   {
+    "id": "disposicion-117",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Configurar página",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "emp-disposicion-01",
+    "generado": true,
+    "enunciado": "Relaciona cada tamaño de papel con sus medidas exactas en esta instalación:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "A4"
+        },
+        {
+          "id": "2",
+          "label": "Carta"
+        },
+        {
+          "id": "3",
+          "label": "Oficio"
+        },
+        {
+          "id": "4",
+          "label": "A5"
+        },
+        {
+          "id": "5",
+          "label": "Tabloide"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "21,59 × 27,94 cm"
+        },
+        {
+          "id": "B",
+          "label": "21,59 × 35,56 cm"
+        },
+        {
+          "id": "C",
+          "label": "14,8 × 21 cm"
+        },
+        {
+          "id": "D",
+          "label": "27,94 × 43,18 cm"
+        },
+        {
+          "id": "E",
+          "label": "21 × 29,7 cm"
+        }
+      ],
+      "correct": {
+        "1": "E",
+        "2": "A",
+        "3": "B",
+        "4": "C",
+        "5": "D"
+      }
+    },
+    "respuesta": {
+      "1": "E",
+      "2": "A",
+      "3": "B",
+      "4": "C",
+      "5": "D"
+    },
+    "explicacion": "A4 21×29,7 · Carta 21,59×27,94 (8,5×11 pulgadas) · Oficio mismo ancho que Carta pero 35,56 de alto · A5 es la mitad exacta de un A4 · Tabloide es el doble de un Carta."
+  },
+  {
+    "id": "disposicion-118",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Configurar página",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "emp-disposicion-02",
+    "generado": true,
+    "enunciado": "Relaciona cada preajuste de márgenes con su valor exacto en esta instalación:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Normal"
+        },
+        {
+          "id": "2",
+          "label": "Estrecho"
+        },
+        {
+          "id": "3",
+          "label": "Moderado"
+        },
+        {
+          "id": "4",
+          "label": "Ancho"
+        },
+        {
+          "id": "5",
+          "label": "Reflejado"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "1,27 cm en los cuatro lados"
+        },
+        {
+          "id": "B",
+          "label": "2,54 cm arriba/abajo, 1,91 cm izquierda/derecha"
+        },
+        {
+          "id": "C",
+          "label": "2,54 cm arriba/abajo, 5,08 cm izquierda/derecha"
+        },
+        {
+          "id": "D",
+          "label": "sustituye izquierda/derecha por Interior/Exterior"
+        },
+        {
+          "id": "E",
+          "label": "2,5 cm arriba/abajo, 3 cm izquierda/derecha"
+        }
+      ],
+      "correct": {
+        "1": "E",
+        "2": "A",
+        "3": "B",
+        "4": "C",
+        "5": "D"
+      }
+    },
+    "respuesta": {
+      "1": "E",
+      "2": "A",
+      "3": "B",
+      "4": "C",
+      "5": "D"
+    },
+    "explicacion": "Los cinco preajustes del desplegable Márgenes de Configurar página, con sus valores reales (v2608)."
+  },
+  {
+    "id": "disposicion-119",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Configurar página",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "emp-disposicion-03",
+    "generado": true,
+    "enunciado": "Relaciona cada tipo de salto de sección con lo que hace:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Página siguiente"
+        },
+        {
+          "id": "2",
+          "label": "Continua"
+        },
+        {
+          "id": "3",
+          "label": "Página par"
+        },
+        {
+          "id": "4",
+          "label": "Página impar"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "empieza la sección nueva en la misma página, sin pasar de página"
+        },
+        {
+          "id": "B",
+          "label": "empieza la sección nueva en la siguiente página par"
+        },
+        {
+          "id": "C",
+          "label": "empieza la sección nueva en la siguiente página impar"
+        },
+        {
+          "id": "D",
+          "label": "empieza la sección nueva en la página siguiente"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "A",
+        "3": "B",
+        "4": "C"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "A",
+      "3": "B",
+      "4": "C"
+    },
+    "explicacion": "Los cuatro saltos de sección del menú Saltos, distintos del salto de página simple."
+  },
+  {
     "id": "disposicion-115",
     "sourceFile": "disposicion.json",
     "bloque": "Disposicion — Configurar página",
@@ -2646,6 +2867,63 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "La cuadrícula nunca se imprime; el espaciado por defecto es 0,32 cm."
+  },
+  {
+    "id": "disposicion-120",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion — Organizar",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "organizar",
+    "subtopic": null,
+    "tema": "Organizar",
+    "sourceQuestionId": "emp-disposicion-04",
+    "generado": true,
+    "enunciado": "Relaciona cada ficha del cuadro Diseño (objeto flotante) con lo que controla:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Posición"
+        },
+        {
+          "id": "2",
+          "label": "Ajuste del texto"
+        },
+        {
+          "id": "3",
+          "label": "Tamaño"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "cómo fluye el texto alrededor del objeto"
+        },
+        {
+          "id": "B",
+          "label": "el alto y el ancho del objeto"
+        },
+        {
+          "id": "C",
+          "label": "dónde se sitúa el objeto respecto a la página o los márgenes"
+        }
+      ],
+      "correct": {
+        "1": "C",
+        "2": "A",
+        "3": "B"
+      }
+    },
+    "respuesta": {
+      "1": "C",
+      "2": "A",
+      "3": "B"
+    },
+    "explicacion": "El cuadro Diseño («Más opciones de diseño…») tiene exactamente estas tres fichas."
   },
   {
     "id": "disposicion-116",

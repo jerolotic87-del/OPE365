@@ -489,13 +489,28 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 525, insertar 456, inicio 456, archivo 405, vista 144, disposicion 116,
-diseno 88, referencias 86, revisar 82, correspondencia 6.
-Total 2364. 352 preguntas `categoria:"atajo"`, 1048 `"ruta"`, 923
+interfaz 525, insertar 457, inicio 456, archivo 407, vista 144, disposicion 120,
+diseno 90, referencias 89, revisar 82, correspondencia 6.
+Total 2376. 352 preguntas `categoria:"atajo"`, 1048 `"ruta"`, 935
 `"concepto"`, 41 `"general"` (sep-2026: `interfaz` reclasificada por
 completo — ver más abajo — quedan sin reclasificar 31 en `vista`, 7 en
 `archivo`, 3 en `inicio`). Por tipo: opcion_unica 1652, verdadero_falso
-564, emparejamiento 54, seleccion_multiple 50, relleno 44.
+564, emparejamiento 66, seleccion_multiple 50, relleno 44.
+**Emparejamiento en 5 pestañas más (sep-2026)**: 6 de 10 estaban a 0 %.
+Se añadieron 12 (`sourceQuestionId` `emp-<sec>-NN`, `generado:true`) SOLO
+donde había una lista cerrada real ya verificada en el banco (tamaños de
+papel, presets de márgenes, saltos de sección, fichas del cuadro Diseño,
+extensiones de archivo, opciones de Autoformato, comandos de Formato del
+documento/Fondo de página, rótulos de Título, comandos de Citas y
+bibliografía, botones del cuadro TdC, atajos de vínculos/comentarios) —
+nunca sobre conceptos sin pareja natural corta (por eso no se tocaron
+cosas tipo "modelos 3D"). Reparto deliberadamente desigual: `disposicion`
+(+4) y `referencias` (+3) tenían mucho material pareable relativo a su
+tamaño y llegan a ~3 %; `archivo` (+2) e `insertar` (+1) son secciones
+enormes (400+) sin suficiente material así de limpio para forzar un 10 %
+sin inventar parejas, así que se quedan por debajo a propósito.
+`correspondencia` (6 preguntas) se dejó sin tocar por ser demasiado
+pequeña. Total emparejamiento: 54→66. Generador: `scripts/gen_emparejamiento.py`.
 **Relleno en todas las pestañas (sep-2026)**: hasta ahora solo `revisar`
 (9) y `vista` (11) tenían preguntas de tipo `relleno`; las otras 8 estaban
 a 0. Se añadieron 24 más (`sourceQuestionId` `rell-<sec>-NN`,

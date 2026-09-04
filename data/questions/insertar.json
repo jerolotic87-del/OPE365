@@ -6687,6 +6687,73 @@
     "explicacion": "Al pie del cuadro hay una casilla con ese texto. Si está marcada, al hacer Ctrl+clic sobre la referencia saltarás directamente al elemento referenciado. Si no, el texto de la referencia es estático y no lleva a ninguna parte."
   },
   {
+    "id": "insertar-465",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Vínculos",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "vinculos",
+    "subtopic": null,
+    "tema": "Vínculos",
+    "sourceQuestionId": "emp-insertar-01",
+    "generado": true,
+    "enunciado": "Relaciona cada atajo con lo que inserta o hace:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ctrl+Mayús+F5"
+        },
+        {
+          "id": "2",
+          "label": "Alt+Ctrl+A"
+        },
+        {
+          "id": "3",
+          "label": "Alt+F3"
+        },
+        {
+          "id": "4",
+          "label": "Alt+X"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "inserta un comentario"
+        },
+        {
+          "id": "B",
+          "label": "crea un Autotexto a partir de la selección"
+        },
+        {
+          "id": "C",
+          "label": "alterna el carácter bajo el cursor con su código Unicode"
+        },
+        {
+          "id": "D",
+          "label": "inserta un marcador"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "A",
+        "3": "B",
+        "4": "C"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "A",
+      "3": "B",
+      "4": "C"
+    },
+    "explicacion": "Cuatro atajos ya verificados en el banco, agrupados aquí en un único emparejamiento."
+  },
+  {
     "id": "insertar-463",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Vínculos",
