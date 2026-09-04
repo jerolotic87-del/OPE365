@@ -6,7 +6,7 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **2503 preguntas** y **971
+de Word 365 de una oposición de ayuntamiento. **2504 preguntas** y **971
 flashcards** (archivo 263, disposicion 100, inicio 148, insertar 147,
 referencias 74, revisar 73, vista 79, diseno 24, interfaz 48,
 correspondencia 15 — un buen tramo de las de archivo/disposicion son
@@ -489,9 +489,26 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 525, insertar 458, inicio 456, archivo 408, vista 144, disposicion 132,
+interfaz 525, insertar 458, inicio 457, archivo 408, vista 144, disposicion 132,
 diseno 91, referencias 161, revisar 82, correspondencia 46.
-Total 2503.
+Total 2504.
+**Corrección de técnica de recorte de icono (sep-2026)**: el usuario
+señaló que los 2 recortes de muestra de la respuesta anterior estaban
+mal centrados (letras cortadas a la derecha, hueco desigual a la
+izquierda). Medí en píxeles los márgenes de varios recortes YA HECHOS
+POR EL USUARIO (`numpy`, bbox de contenido vs. tamaño del PNG): margen
+casi igual en los 4 lados, normalmente 4-10 px, nunca tocando letra ni
+contorno. Los míos medían 0 px de margen en al menos un lado. Repetidos
+con iteración visual (recortar ancho → ver → ajustar en píxeles 2-3
+veces) hasta igualar el patrón. **Al revisar con calma el resto de la
+lista de iconos "descartados" se encontró un error real**:
+`inicio/complementos_complementos.png` se había excluido por parecerse
+al patrón `_nombre_grupo` de etiqueta de grupo, pero es un comando real
+(abre la tienda/galería de complementos) que el usuario sí había
+recortado — nunca hacía falta que Claude cortara nada ahí. +1 pregunta
+con imagen (`scripts/gen_icono_complementos.py`). Confirmado con
+`numpy`/patrón de nombre que diseno/disposicion/insertar/referencias no
+tienen más candidatos genuinos sin usar.
 **Auditoría de cobertura + demo de recorte de icono (sep-2026)**: a
 petición del usuario, se auditó qué quedaba realmente por cubrir en todo
 el banco (no solo referencias/correspondencia): iconos sin convertir,
