@@ -391,7 +391,7 @@
       "3": "A",
       "4": "B"
     },
-    "explicacion": "Ctrl+Alt+D = Diseño de impresión (confirmado por fuentes ES y por verificación en Word 365 real). Ctrl+Alt+I = Vista Preliminar (confirmado). Ctrl+Alt+Q = Esquema y Ctrl+Alt+N = Borrador verificados en Word 365."
+    "explicacion": "Ctrl+Alt+D = Diseño de impresión · Ctrl+Alt+Q = Vista Esquema · Ctrl+Alt+N = Vista Normal/Borrador · Ctrl+Alt+I = vista preliminar de impresión. Todos figuran en el volcado v2608."
   },
   {
     "id": "vista-11",
@@ -963,7 +963,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Dividir parte la ventana activa en dos paneles que muestran zonas distintas del mismo documento. Nueva ventana abre una segunda ventana del mismo documento; Ver en paralelo y Organizar todo trabajan con varias ventanas o documentos. En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
+    "explicacion": "Dividir parte la ventana activa en dos paneles que muestran zonas distintas del mismo documento. Nueva ventana abre una segunda ventana; Ver en paralelo y Organizar todo trabajan con varias ventanas. Dividir se hace por Vista ▸ grupo Ventana ▸ Dividir. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
   },
   {
     "id": "vista-28",
@@ -1554,7 +1554,7 @@
       "4": "B",
       "5": "E"
     },
-    "explicacion": ""
+    "explicacion": "Alt+F8 abre el cuadro de diálogo Macros (gestionar las existentes). Alt+F11 abre el editor de Visual Basic. Grabar macro, Pausar grabación y Ver macros son botones del grupo Macros, sin atajo propio."
   },
   {
     "id": "vista-43",
@@ -1724,7 +1724,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": ""
+    "explicacion": "Organizar todo no tiene atajo de teclado. Diseño de impresión (Ctrl+Alt+D), Vista Esquema (Ctrl+Alt+Q) y Dividir (Alt+Ctrl+V en el volcado) sí aparecen. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
   },
   {
     "id": "vista-48",
@@ -1760,7 +1760,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": ""
+    "explicacion": "Alt+F8 abre el cuadro de diálogo Macros, del grupo Macros. Ctrl+Alt+D/N son atajos de vista y Alt+Ctrl+V pega formato."
   },
   {
     "id": "vista-49",
@@ -1984,7 +1984,7 @@
       "6": "A",
       "7": "C"
     },
-    "explicacion": "Ctrl+Alt+D y Ctrl+Alt+I confirmados por fuentes ES y verificación real. Ctrl+Alt+Q y Ctrl+Alt+N verificados en Word 365."
+    "explicacion": "Ctrl+Alt+Q = Vista Esquema · Alt+F8 = cuadro Macros · Ctrl+Alt+I = vista preliminar · Alt+Ctrl+V = (volcado) Dividir · Ctrl+Alt+N = Vista Borrador · Alt+F11 = Visual Basic · Ctrl+Alt+D = Diseño de impresión. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
   },
   {
     "id": "vista-54",
@@ -2217,7 +2217,7 @@
       "Ctrl+Alt+I",
       "Alt+Ctrl+V"
     ],
-    "explicacion": "Atajos confirmados por verificación en Word 365 ES."
+    "explicacion": "Ctrl+Alt+D Diseño de impresión, Ctrl+Alt+Q Esquema, Ctrl+Alt+N Borrador, Ctrl+Alt+I vista preliminar, Alt+Ctrl+V Dividir (según el volcado). ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
   },
   {
     "id": "vista-61",
@@ -2564,7 +2564,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero: confirmado por verificación en Word 365 ES. Alt+Ctrl+V activa la división y Alt+Mayús+C la desactiva."
+    "explicacion": "Verdadero: Alt+Mayús+C cierra el panel de la ventana activa, lo que quita la división cuando la ventana está dividida. La división se activa desde Vista ▸ Ventana ▸ Dividir (sin atajo fiable en este Word)."
   },
   {
     "id": "vista-71",
@@ -3025,7 +3025,7 @@
       "6": "F",
       "7": "G"
     },
-    "explicacion": "Atajos confirmados por verificación en Word 365 ES y fuentes de oposiciones."
+    "explicacion": "Ctrl+Alt+D Diseño de impresión, Ctrl+Alt+Q Esquema, Ctrl+Alt+N Borrador, Ctrl+Alt+I vista preliminar, Alt+Ctrl+V Dividir (volcado), Alt+F8 cuadro Macros, Alt+F11 Visual Basic. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
   },
   {
     "id": "vista-83",
@@ -3189,7 +3189,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Dividir parte la ventana activa en dos paneles que muestran distintas zonas del mismo documento, sin abrir una segunda ventana. Nueva ventana abre una segunda ventana independiente del mismo documento. En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
+    "explicacion": "Dividir parte la ventana activa en dos paneles del mismo documento sin abrir una segunda ventana. Nueva ventana abre una segunda ventana independiente. Dividir se hace por Vista ▸ grupo Ventana ▸ Dividir. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
   },
   {
     "id": "vista-88",
@@ -3270,7 +3270,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Organizar todo no tiene atajo de teclado documentado en la fuente. Diseño de impresión (Ctrl+Alt+D), Vista Esquema (Ctrl+Alt+Q) y Dividir (Alt+Ctrl+V) sí tienen atajo."
+    "explicacion": "Organizar todo no tiene atajo de teclado. Diseño de impresión (Ctrl+Alt+D), Vista Esquema (Ctrl+Alt+Q) y Dividir (Alt+Ctrl+V en el volcado) sí aparecen. ⚠️ Ojo: el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero al pulsarlo en este Word pega formato (comando en conflicto). Dividir se hace por Vista ▸ Ventana ▸ Dividir."
   },
   {
     "id": "vista-91",
@@ -3833,7 +3833,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+\\ (barra invertida) cambia a vista maestro/subdocumentos. Alt+Ctrl+M no tiene esa función asignada. Alt+Ctrl+D inserta una página en blanco. Alt+Ctrl+Mayús+M no tiene función asignada para documentos maestros."
+    "explicacion": "Alt+Ctrl+\\ (barra invertida) cambia entre hipervínculos y subdocumentos (vista maestro). Alt+Ctrl+M no tiene función. Alt+Ctrl+D activa la vista Diseño de impresión. Alt+Ctrl+Mayús+M no tiene función."
   },
   {
     "id": "vista-105",
@@ -4043,7 +4043,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F5 restaura el tamaño de la ventana del documento. Ctrl+F10 maximiza la ventana. Alt+F5 restaura la ventana de la aplicación completa. Ctrl+Mayús+F5 abre el cuadro de diálogo Marcador."
+    "explicacion": "Ctrl+F5 restaura el tamaño de la ventana del documento. Ctrl+F10 no tiene función en este Word. Alt+F5 restaura la ventana de la aplicación. Ctrl+Mayús+F5 abre el cuadro Marcador."
   },
   {
     "id": "vista-112",
@@ -4113,7 +4113,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F8 activa el modo de cambio de tamaño de la ventana del documento. Ctrl+F5 restaura el tamaño de la ventana. Ctrl+F10 maximiza la ventana. Alt+F8 abre el cuadro de diálogo Macro."
+    "explicacion": "Ctrl+F8 activa el modo de cambio de tamaño de la ventana del documento. Ctrl+F5 restaura el tamaño. Ctrl+F10 no tiene función en este Word. Alt+F8 abre el cuadro de diálogo Macros."
   },
   {
     "id": "vista-114",
@@ -4253,7 +4253,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Re Pág activa el examen o exploración del objeto anterior en el documento. Ctrl+Av Pág examina el objeto siguiente. Alt+Ctrl+Inicio abre el panel de selección del explorador de objetos. Re Pág sube una pantalla sin usar el explorador de objetos."
+    "explicacion": "Ctrl+Re Pág pasa al objeto de búsqueda anterior. Ctrl+Av Pág pasa al siguiente. Alt+Ctrl+Inicio no tiene función en este Word. Re Pág sube una pantalla sin usar el explorador."
   },
   {
     "id": "vista-120",
@@ -4428,7 +4428,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F5 restaura el documento a su tamaño normal. Alt+F5 restaura la ventana de la aplicación Word completa. Ctrl+Mayús+F5 abre el cuadro de diálogo Marcador. Ctrl+F10 maximiza la ventana del documento."
+    "explicacion": "Ctrl+F5 restaura el documento a su tamaño normal. Alt+F5 restaura la ventana de la aplicación. Ctrl+Mayús+F5 abre el cuadro Marcador. Ctrl+F10 no tiene función en este Word."
   },
   {
     "id": "vista-126",
@@ -4533,7 +4533,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Mayús+más en el teclado numérico expande un título en la vista Esquema mostrando su contenido. Alt+Mayús+menos contrae el título. Alt+más no tiene función asignada para esquema. Ctrl+Mayús+más aplica superíndice al texto."
+    "explicacion": "Alt+Mayús++ del teclado numérico expande un título en la vista Esquema. Alt+Mayús+- lo contrae. Alt++ y Ctrl+Mayús++ no tienen función (el superíndice no tiene atajo en este Word)."
   },
   {
     "id": "vista-138",
