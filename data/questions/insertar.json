@@ -32,7 +32,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Entrar inserta un salto de página manual. Ctrl+Mayús+Entrar inserta un salto de columna. Alt+Entrar repite la última acción. Ctrl+Alt+Entrar inserta un separador de estilos."
+    "explicacion": "Ctrl+Entrar inserta un salto de página manual. Ctrl+Mayús+Entrar no tiene función en este Word. Alt+Entrar repite la última acción. Alt+Ctrl+Entrar inserta un separador de estilos."
   },
   {
     "id": "insertar-2",
@@ -243,41 +243,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Alt+X alterna entre el código Unicode y el carácter. Ctrl+X corta. Ctrl+Alt+X no tiene esa función. Mayús+Alt+X no tiene función asignada para conversión Unicode."
-  },
-  {
-    "id": "insertar-9",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Encabezado y pie de página",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "encabezado-pie",
-    "subtopic": null,
-    "tema": "Encabezado y pie de página",
-    "sourceQuestionId": "8-160",
-    "enunciado": "¿Qué atajo alterna el encabezado en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+más"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+menos"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Ctrl+más"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+más"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+más alterna el encabezado. Alt+Mayús+menos contrae el título en vista Esquema. Alt+Ctrl+más personaliza el método abreviado de teclado. Alt+más no tiene función asignada para encabezados."
   },
   {
     "id": "insertar-10",
@@ -662,7 +627,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Mayús+G es el atajo alternativo para insertar un bloque de creación. Alt+Ctrl+G selecciona y desplaza hasta el siguiente elemento. Ctrl+Mayús+G abre la lista de recuento de palabras. Alt+Mayús+G no tiene función asignada para bloques de creación."
+    "explicacion": "Alt+Ctrl+Mayús+G inserta un bloque de creación (Autotexto), igual que F3. Alt+Ctrl+G abre Pegado especial. Ctrl+Mayús+G no tiene función en este Word. Alt+Mayús+G tampoco."
   },
   {
     "id": "insertar-24",
@@ -907,7 +872,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+F1 es el atajo alternativo para ir al siguiente campo. Mayús+F1 muestra las propiedades de formato del texto seleccionado. Ctrl+F1 muestra u oculta la cinta de opciones. Alt+Mayús+F1 va al campo anterior."
+    "explicacion": "Alt+F1 va al campo siguiente, igual que F11. Mayús+F1 muestra las Propiedades de formato. Ctrl+F1 no tiene función en este Word. Alt+Mayús+F1 va al campo anterior."
   },
   {
     "id": "insertar-31",
@@ -942,7 +907,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Inicio va al inicio de la fila activa en una tabla. Inicio va al inicio de la línea del texto dentro de la celdaactual. Alt+Mayús+Inicio extiende la selección hasta el inicio de la fila. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Alt+Inicio va a la primera celda de la fila activa en una tabla. Inicio va al inicio de la línea dentro de la celda. Ctrl+Inicio va al inicio del documento. ⚠️ Ojo: el volcado v2608 lista Alt+Mayús+Inicio/Fin como «ir a la primera/última celda de la fila» (igual que Alt+Inicio/Fin), pero al pulsarlas con Mayús la selección se extiende. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-32",
@@ -977,7 +942,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Fin va al final de la fila activa en una tabla. Fin va al final de la línea del texto dentro de la celda actual. Alt+Mayús+Fin no es equivalente: extiende la selección desde el cursor hasta el final de la fila. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Alt+Fin va a la última celda de la fila activa en una tabla. Fin va al final de la línea dentro de la celda. Ctrl+Fin va al final del documento. ⚠️ Ojo: el volcado v2608 lista Alt+Mayús+Inicio/Fin como «ir a la primera/última celda de la fila» (igual que Alt+Inicio/Fin), pero al pulsarlas con Mayús la selección se extiende. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-33",
@@ -1223,7 +1188,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Selecciona todas las celdas, filas y columnas de la tabla en la que se encuentra el cursor."
+    "explicacion": "Alt+5 del teclado numérico con NumLock DESACTIVADO (la tecla actúa como Borrar/Clear) selecciona toda la tabla. ⚠️ Con NumLock ACTIVADO en cambio inserta el símbolo ♣ (código Alt de Windows). Alt+Inicio va a la primera celda de la fila; Ctrl+F2 y Alt+F11 no seleccionan tablas. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-41",
@@ -1331,7 +1296,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Alt+Mayús+Fin extiende la selección desde donde está el cursor hasta el final de la fila, abarcando el texto de todas las celdas intermedias (si ya estás en la última celda, selecciona solo esa). Para ir al final de la fila SIN seleccionar se usa Alt+Fin. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Alt+Mayús+Fin extiende la selección desde el cursor hasta el final de la fila, abarcando todas las celdas intermedias (si ya estás en la última, selecciona solo esa). Para ir al final SIN seleccionar se usa Alt+Fin. ⚠️ Ojo: el volcado v2608 lista Alt+Mayús+Inicio/Fin como «ir a la primera/última celda de la fila» (igual que Alt+Inicio/Fin), pero al pulsarlas con Mayús la selección se extiende. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-44",
@@ -1403,7 +1368,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Alt+Mayús+Inicio extiende la selección desde el cursor hasta el inicio de la fila, abarcando las celdas intermedias (si ya estás en la primera celda, selecciona solo esa). Para ir al inicio de la fila SIN seleccionar se usa Alt+Inicio. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Alt+Mayús+Inicio extiende la selección desde el cursor hasta el inicio de la fila, abarcando las celdas intermedias (si ya estás en la primera, selecciona solo esa). Para ir al inicio SIN seleccionar se usa Alt+Inicio. ⚠️ Ojo: el volcado v2608 lista Alt+Mayús+Inicio/Fin como «ir a la primera/última celda de la fila» (igual que Alt+Inicio/Fin), pero al pulsarlas con Mayús la selección se extiende. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "insertar-46",
