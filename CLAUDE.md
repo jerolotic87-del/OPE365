@@ -456,28 +456,32 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 514, insertar 399, inicio 380, archivo 350, vista 131, revisar 77,
-disposicion 71, diseno 70, referencias 59, correspondencia 4.
-Total 2055. 282 preguntas `categoria:"atajo"`.
-`disposicion-2..71` (`sourceQuestionId` `vf-disposicion-*`, `generado:true`,
-`tipo:"verdadero_falso"`, 35 V / 35 F) = banco de la pestaña **Disposición**
+disposicion 90, diseno 70, referencias 78, correspondencia 4.
+Total 2093. 282 preguntas `categoria:"atajo"`.
+`disposicion-2..90` (`sourceQuestionId` `vf-disposicion-*`, `generado:true`,
+`tipo:"verdadero_falso"`, 45/44 V/F, incl. 19 con `difficulty:"alta"` = trampa) = banco de la pestaña **Disposición**
 (antes solo tenía `disposicion-1`, el atajo `Alt+Ctrl+D`). Cubre Configurar
 página (márgenes con sus valores reales de esta instalación, tamaños de
 papel, columnas, saltos de sección vs página, números de línea, guiones),
 Párrafo (sangría/espaciado, cuadro Párrafo) y Organizar (posición, ajuste
-de texto, alinear/distribuir/girar, cuadro Diseño). 88 flashcards.
-Fuente: `data/rutas/disposicion.txt` + capturas. Generadores:
-`scripts/gen_disposicion_vf.py`, `gen_disposicion_extra.py`.
-`referencias-8..59` (`vf-referencias-NN`, `generado:true`,
-`tipo:"verdadero_falso"`, 26 V / 26 F) = banco de la pestaña **Referencias**
+de texto, alinear/distribuir/girar, cuadro Diseño). 100 flashcards
+(12 trampa, `priority:"alta"`). Fuente: `data/rutas/disposicion.txt` +
+capturas. Generadores: `scripts/gen_disposicion_vf.py`,
+`gen_disposicion_extra.py`, `gen_trampas_disp_ref.py`.
+`referencias-8..78` (`vf-referencias-*`, `generado:true`,
+`tipo:"verdadero_falso"`, 35/36 V/F, incl. 19 con `difficulty:"alta"` = trampa) = banco de la pestaña **Referencias**
 (antes solo 7 opcion_unica de atajos). Tabla de contenido (cuadro de 3
 fichas TdC/Índice/Tabla de ilustraciones), Notas al pie (`Alt+Ctrl+O` pie /
 `Alt+Ctrl+L` final), Citas y bibliografía (12 estilos, APA por defecto,
 Administrador de fuentes con Lista general/actual, «Cambiar SP de proveedor»
 = complementos no estilo), Títulos (Referencia cruzada = mismo cuadro que
 Insertar; tipo «Título» solo si hay estilos de título) e Índice (entradas
-XE marcadas a mano, Automarcar). 58 flashcards. Fuente:
-`data/rutas/referencias.txt` + capturas. Generador:
-`scripts/gen_referencias_vf.py`.
+XE marcadas a mano, Automarcar). 71 flashcards (13 trampa). Fuente:
+`data/rutas/referencias.txt` + capturas. Generadores:
+`scripts/gen_referencias_vf.py`, `gen_trampas_disp_ref.py`. Las de trampa
+llevan `sourceQuestionId` `vf-<sec>-TNN` y explotan confusiones reales
+(nombres parecidos, valores que parecen los ingleses, «Alinear
+verticalmente» = centrar en horizontal, TDC 1-9 vs Título 1-9, etc.).
 Historial: `data/questions_regroup_report.md`.
 `diseno-1..70` (`sourceQuestionId` `vf-diseno-NN`, `generado:true`,
 `categoria:"concepto"`, `tipo:"verdadero_falso"`, 35 V / 35 F) = banco

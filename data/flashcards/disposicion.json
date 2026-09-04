@@ -735,6 +735,81 @@
     "questionRefs": []
   },
   {
+    "cardId": "F-089",
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿El margen «Normal» de este Word usa 2,54 cm (como en inglés) o 2,5 cm?",
+    "back": "2,5 cm arriba/abajo y 3 cm a los lados. El 2,54/3,17 cm es el esquema en pulgadas de la versión inglesa.",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-093",
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Un «Salto de página» del menú Saltos crea una sección nueva?",
+    "back": "No. Eso lo hace «Página siguiente» (Saltos de sección). El salto de página solo pasa de página.",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-094",
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Qué hace el preajuste «Izquierda» del menú Columnas?",
+    "back": "Dos columnas de ancho desigual, con la estrecha a la izquierda. No cambia la alineación del texto.",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-095",
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿El «Salto de ajuste del texto» fuerza una página nueva?",
+    "back": "No. Reorganiza el texto alrededor de objetos en diseño Web.",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-098",
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿«Encuadernación» es lo mismo que «Posición del margen interno»?",
+    "back": "No. Encuadernación = cuántos cm extra se reservan; Posición del margen interno = en qué lado (Izquierda/Arriba).",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
     "cardId": "F-008",
     "section": "disposicion",
     "topic": "parrafo-disposicion",
@@ -895,6 +970,51 @@
     "back": "El cuadro para fijar posiciones y tipo de tabulación",
     "sourceRefs": [
       "data/rutas/disposicion.txt / capturas del usuario (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-091",
+    "section": "disposicion",
+    "topic": "parrafo-disposicion",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Interlineado por defecto del estilo Normal en este Word?",
+    "back": "Múltiple 1,16 (no 1,15, no Sencillo).",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-092",
+    "section": "disposicion",
+    "topic": "parrafo-disposicion",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿El espaciado de párrafo por defecto es «Antes 8 / Después 0»?",
+    "back": "Al revés: Antes 0 pto, Después 8 pto.",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-100",
+    "section": "disposicion",
+    "topic": "parrafo-disposicion",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Nivel de esquema por defecto de un párrafo normal?",
+    "back": "«Texto independiente» (no «Nivel 1»).",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
     ],
     "knowledgeRefs": [],
     "questionRefs": []
@@ -1315,6 +1435,66 @@
     "back": "Girar ▸ Más opciones de giro… (abre el cuadro Diseño en la ficha Tamaño, campo «Girar»)",
     "sourceRefs": [
       "data/rutas/disposicion.txt / capturas del usuario (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-090",
+    "section": "disposicion",
+    "topic": "organizar",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Qué hace exactamente «Alinear verticalmente» en el menú Alinear?",
+    "back": "Centra los objetos en horizontal (respecto a un eje vertical). El centrado vertical es «Alinear al medio».",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-096",
+    "section": "disposicion",
+    "topic": "organizar",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Cómo se llama el cuadro que abre «Más opciones de diseño…»?",
+    "back": "«Disposición» (igual que la pestaña). Fichas: Posición, Ajuste del texto, Tamaño.",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-097",
+    "section": "disposicion",
+    "topic": "organizar",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿El menú Alinear viene con «Alinear a la página» marcado?",
+    "back": "No: viene marcado «Alinear al margen».",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-099",
+    "section": "disposicion",
+    "topic": "organizar",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿El menú Girar permite girar 45°?",
+    "back": "No directamente: solo 90° a cada lado y voltear. Para 45° u otro ángulo, «Más opciones de giro…».",
+    "sourceRefs": [
+      "trampa · data/rutas/disposicion.txt + capturas (sep-2026)"
     ],
     "knowledgeRefs": [],
     "questionRefs": []
