@@ -36,194 +36,6 @@
     "explicacion": "F7 abre el panel Editor (revisión de ortografía y gramática). Windows+F7 también lo abre. Alt+F7 salta al siguiente error, Mayús+F7 abre Sinónimos, Ctrl+Mayús+E activa el Control de cambios. ⚠️ En el volcado v2608 solo figura F7 (ToolsProofing); Windows+F7 está confirmado en vivo por el usuario."
   },
   {
-    "id": "revisar-2",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": null,
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-002",
-    "enunciado": "Relaciona cada atajo con su función. Cada letra se usa una sola vez.",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "F7"
-        },
-        {
-          "id": "2",
-          "label": "Alt + F7"
-        },
-        {
-          "id": "3",
-          "label": "Mayús + F7"
-        },
-        {
-          "id": "4",
-          "label": "Ctrl + Mayús + O"
-        },
-        {
-          "id": "5",
-          "label": "Ctrl + Alt + A"
-        },
-        {
-          "id": "6",
-          "label": "Ctrl + Mayús + E"
-        },
-        {
-          "id": "7",
-          "label": "Alt + Mayús + F7"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Nuevo comentario"
-        },
-        {
-          "id": "B",
-          "label": "Sinónimos"
-        },
-        {
-          "id": "C",
-          "label": "Control de cambios"
-        },
-        {
-          "id": "D",
-          "label": "Editor"
-        },
-        {
-          "id": "E",
-          "label": "Error ortográfico siguiente"
-        },
-        {
-          "id": "F",
-          "label": "Contar palabras"
-        },
-        {
-          "id": "G",
-          "label": "Traducir"
-        }
-      ],
-      "correct": {
-        "1": "D",
-        "2": "E",
-        "3": "B",
-        "4": "F",
-        "5": "A",
-        "6": "C",
-        "7": "G"
-      }
-    },
-    "respuesta": {
-      "1": "D",
-      "2": "E",
-      "3": "B",
-      "4": "F",
-      "5": "A",
-      "6": "C",
-      "7": "G"
-    },
-    "explicacion": "F7 abre el panel Editor (revisión de ortografía y gramática); Alt+F7 salta al siguiente error; Mayús+F7 abre Sinónimos; Ctrl+Mayús+O recuenta las palabras; Alt+Ctrl+A inserta un comentario; Ctrl+Mayús+E activa el Control de cambios; Alt+Mayús+F7 abre el Traductor. ⚠️ Alt+Mayús+F7 no figura en el volcado v2608; confirmado en vivo."
-  },
-  {
-    "id": "revisar-3",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "verdadero_falso",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": null,
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-003",
-    "enunciado": "En Word 365, Alt + F7 abre el panel Editor completo.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: Alt+F7 salta al siguiente error ortográfico. F7 (y Windows+F7) abren el panel Editor."
-  },
-  {
-    "id": "revisar-7",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "relleno",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": null,
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-007",
-    "enunciado": "Los comandos Editor, Sinónimos y Contar palabras se encuentran en el grupo [1] de la Pestaña Revisar.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Revisión"
-    ],
-    "explicacion": "El grupo se llama 'Revisión' (no 'Revisar'). Es el grupo principal de la pestaña."
-  },
-  {
-    "id": "revisar-19",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "emparejamiento",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": "Corrector",
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-019",
-    "enunciado": "Relaciona cada marca visual con lo que señala Word 365. Una de las marcas de la derecha no tiene correspondencia.",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Línea ondulada roja"
-        },
-        {
-          "id": "2",
-          "label": "Doble línea azul"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Error gramatical o palabra con distinto significado"
-        },
-        {
-          "id": "B",
-          "label": "Error ortográfico o palabra no encontrada"
-        },
-        {
-          "id": "C",
-          "label": "Formato incompatible con el estilo del párrafo"
-        }
-      ],
-      "correct": {
-        "1": "B",
-        "2": "A"
-      }
-    },
-    "respuesta": {
-      "1": "B",
-      "2": "A"
-    },
-    "explicacion": "Línea roja = ortografía/no encontrada. Doble azul = gramática/distinto significado. 'Formato incompatible' no está declarado."
-  },
-  {
     "id": "revisar-20",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -258,156 +70,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "La línea ondulada roja indica error ortográfico o palabra no encontrada."
-  },
-  {
-    "id": "revisar-21",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": "Corrector",
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-021",
-    "enunciado": "En Word 365, la doble línea azul marca únicamente errores gramaticales.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Marca los posibles errores gramaticales y las palabras con distinto significado."
-  },
-  {
-    "id": "revisar-28",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": "Corrector",
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-028",
-    "enunciado": "¿Cuáles de las siguientes opciones están disponibles en el panel de corrección ortográfica de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Omitir una vez"
-      },
-      {
-        "letter": "B",
-        "text": "Ignorar todo"
-      },
-      {
-        "letter": "C",
-        "text": "Eliminar la palabra del documento"
-      },
-      {
-        "letter": "D",
-        "text": "Agregar al diccionario"
-      },
-      {
-        "letter": "E",
-        "text": "Configuración"
-      },
-      {
-        "letter": "F",
-        "text": "Marcar la palabra como correcta permanentemente"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D",
-      "E"
-    ],
-    "explicacion": "Las opciones del corrector son Omitir una vez, Ignorar todo, Agregar al diccionario y Configuración."
-  },
-  {
-    "id": "revisar-29",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "relleno",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": null,
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-029",
-    "enunciado": "Las opciones de configuración de la ortografía en Word 365 se establecen desde [1] → [2] → [3].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Archivo",
-      "Opciones",
-      "Revisión"
-    ],
-    "explicacion": "La ruta es Archivo → Opciones → Revisión."
-  },
-  {
-    "id": "revisar-32",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": "Contar palabras",
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-032",
-    "enunciado": "¿Qué estadísticas proporciona exactamente el cuadro de diálogo Contar palabras en Word 365? (Son 6 respuestas correctas.)",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Páginas"
-      },
-      {
-        "letter": "B",
-        "text": "Palabras"
-      },
-      {
-        "letter": "C",
-        "text": "Imágenes"
-      },
-      {
-        "letter": "D",
-        "text": "Caracteres (sin espacios)"
-      },
-      {
-        "letter": "E",
-        "text": "Caracteres (con espacios)"
-      },
-      {
-        "letter": "F",
-        "text": "Párrafos"
-      },
-      {
-        "letter": "G",
-        "text": "Tablas"
-      },
-      {
-        "letter": "H",
-        "text": "Líneas"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D",
-      "E",
-      "F",
-      "H"
-    ],
-    "explicacion": "Contar palabras muestra Páginas, Palabras, Caracteres (sin/con espacios), Párrafos y Líneas."
   },
   {
     "id": "revisar-33",
@@ -590,25 +252,6 @@
     "explicacion": "Sinónimos está en el grupo Revisión de la pestaña Revisar y su atajo es Mayús+F7 (abre el panel Referencia)."
   },
   {
-    "id": "revisar-47",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "verdadero_falso",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": "Editor",
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-047",
-    "enunciado": "Windows + F7 es una alternativa válida a F7 para abrir el panel Editor.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "F7 abre el panel Editor. Windows+F7 también. ⚠️ Windows+F7 no figura en el volcado v2608; confirmado en vivo por el usuario."
-  },
-  {
     "id": "revisar-49",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -643,95 +286,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Agregar al diccionario añade el término permanentemente para todos los documentos. Ignorar todo solo lo ignora en la sesión actual."
-  },
-  {
-    "id": "revisar-50",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "relleno",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": "Ortografía",
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-050",
-    "enunciado": "Según Word 365, la revisión ortográfica consiste en comprobar que las [1] de nuestro texto no son [2].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "palabras",
-      "erróneas"
-    ],
-    "explicacion": "Definición literal de la fuente: 'comprobar que las palabras de nuestro texto no son erróneas'."
-  },
-  {
-    "id": "revisar-52",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "emparejamiento",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": "Corrector",
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-052",
-    "enunciado": "Relaciona cada opción del corrector ortográfico con su efecto.",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Omitir una vez"
-        },
-        {
-          "id": "2",
-          "label": "Ignorar todo"
-        },
-        {
-          "id": "3",
-          "label": "Agregar al diccionario"
-        },
-        {
-          "id": "4",
-          "label": "Configuración"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Añade la palabra al diccionario interno"
-        },
-        {
-          "id": "B",
-          "label": "Ignora la incidencia solo en esta ocasión"
-        },
-        {
-          "id": "C",
-          "label": "Ignora todas las apariciones de esa palabra en la revisión actual"
-        },
-        {
-          "id": "D",
-          "label": "Accede a los ajustes del corrector"
-        }
-      ],
-      "correct": {
-        "1": "B",
-        "2": "C",
-        "3": "A",
-        "4": "D"
-      }
-    },
-    "respuesta": {
-      "1": "B",
-      "2": "C",
-      "3": "A",
-      "4": "D"
-    },
-    "explicacion": "Omitir una vez ignora solo esa aparición; Ignorar todo ignora todas las apariciones en la sesión; Agregar al diccionario añade permanentemente; Configuración abre ajustes."
   },
   {
     "id": "revisar-55",
@@ -770,29 +324,6 @@
     "explicacion": "El orden correcto es Páginas (C) → Palabras (E) → Caracteres sin espacios (A) → Caracteres con espacios (F) → Párrafos (D) → Líneas (B)."
   },
   {
-    "id": "revisar-56",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "relleno",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": "Corrector",
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-056",
-    "enunciado": "Word marca con una línea ondulada de color [1] los errores ortográficos. Los posibles errores gramaticales y palabras con distinto significado se marcan con una [2] línea [3].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "rojo",
-      "doble",
-      "azul"
-    ],
-    "explicacion": "Línea ondulada roja para ortografía; doble línea azul para gramática/distinto significado."
-  },
-  {
     "id": "revisar-63",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -829,50 +360,6 @@
     "explicacion": "Similitud comprueba la similitud del documento con orígenes en línea."
   },
   {
-    "id": "revisar-66",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": "Corrector",
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-066",
-    "enunciado": "Al pulsar el botón de más opciones (···) junto a una sugerencia del corrector, ¿qué opciones aparecen en el menú contextual?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ignorar"
-      },
-      {
-        "letter": "B",
-        "text": "Agregar al diccionario"
-      },
-      {
-        "letter": "C",
-        "text": "Mostrar menú contextual"
-      },
-      {
-        "letter": "D",
-        "text": "Mostrar sinónimos"
-      },
-      {
-        "letter": "E",
-        "text": "Traducir palabra"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "C",
-      "D"
-    ],
-    "explicacion": "El menú contextual contiene Ignorar, Mostrar menú contextual y Mostrar sinónimos. Agregar al diccionario está en el panel principal."
-  },
-  {
     "id": "revisar-67",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -907,25 +394,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Ignorar todo ignora la palabra en todas sus apariciones durante la sesión actual. Agregar al diccionario sería permanente y va más allá del escenario."
-  },
-  {
-    "id": "revisar-70",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Revisión ortográfica y gramatical",
-    "tipo": "verdadero_falso",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "revision-ortografica",
-    "subtopic": "Editor",
-    "tema": "Revisión ortográfica y gramatical",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-070",
-    "enunciado": "En Word 365, F7 abre el corrector tradicional llamado 'Ortografía y gramática', no el panel Editor moderno.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "En Word 365 el panel que abre F7 se llama Editor y reúne la revisión de ortografía y gramática. «Ortografía y gramática» era el nombre en versiones anteriores. En el volcado v2608 el comando de F7 aparece descrito precisamente como «Ortografía y gramática»."
   },
   {
     "id": "revisar-71",
@@ -1209,6 +677,538 @@
     "explicacion": "Ctrl+F7 no está documentado con esa función. El Editor se abre con F7 (y, confirmado en vivo, también con Windows+F7)."
   },
   {
+    "id": "revisar-28",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": "Corrector",
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-028",
+    "enunciado": "¿Cuáles de las siguientes opciones están disponibles en el panel de corrección ortográfica de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Omitir una vez"
+      },
+      {
+        "letter": "B",
+        "text": "Ignorar todo"
+      },
+      {
+        "letter": "C",
+        "text": "Eliminar la palabra del documento"
+      },
+      {
+        "letter": "D",
+        "text": "Agregar al diccionario"
+      },
+      {
+        "letter": "E",
+        "text": "Configuración"
+      },
+      {
+        "letter": "F",
+        "text": "Marcar la palabra como correcta permanentemente"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explicacion": "Las opciones del corrector son Omitir una vez, Ignorar todo, Agregar al diccionario y Configuración."
+  },
+  {
+    "id": "revisar-32",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": "Contar palabras",
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-032",
+    "enunciado": "¿Qué estadísticas proporciona exactamente el cuadro de diálogo Contar palabras en Word 365? (Son 6 respuestas correctas.)",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Páginas"
+      },
+      {
+        "letter": "B",
+        "text": "Palabras"
+      },
+      {
+        "letter": "C",
+        "text": "Imágenes"
+      },
+      {
+        "letter": "D",
+        "text": "Caracteres (sin espacios)"
+      },
+      {
+        "letter": "E",
+        "text": "Caracteres (con espacios)"
+      },
+      {
+        "letter": "F",
+        "text": "Párrafos"
+      },
+      {
+        "letter": "G",
+        "text": "Tablas"
+      },
+      {
+        "letter": "H",
+        "text": "Líneas"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D",
+      "E",
+      "F",
+      "H"
+    ],
+    "explicacion": "Contar palabras muestra Páginas, Palabras, Caracteres (sin/con espacios), Párrafos y Líneas."
+  },
+  {
+    "id": "revisar-66",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": "Corrector",
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-066",
+    "enunciado": "Al pulsar el botón de más opciones (···) junto a una sugerencia del corrector, ¿qué opciones aparecen en el menú contextual?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ignorar"
+      },
+      {
+        "letter": "B",
+        "text": "Agregar al diccionario"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar menú contextual"
+      },
+      {
+        "letter": "D",
+        "text": "Mostrar sinónimos"
+      },
+      {
+        "letter": "E",
+        "text": "Traducir palabra"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explicacion": "El menú contextual contiene Ignorar, Mostrar menú contextual y Mostrar sinónimos. Agregar al diccionario está en el panel principal."
+  },
+  {
+    "id": "revisar-3",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "verdadero_falso",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-003",
+    "enunciado": "En Word 365, Alt + F7 abre el panel Editor completo.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: Alt+F7 salta al siguiente error ortográfico. F7 (y Windows+F7) abren el panel Editor."
+  },
+  {
+    "id": "revisar-21",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": "Corrector",
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-021",
+    "enunciado": "En Word 365, la doble línea azul marca únicamente errores gramaticales.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Marca los posibles errores gramaticales y las palabras con distinto significado."
+  },
+  {
+    "id": "revisar-47",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "verdadero_falso",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": "Editor",
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-047",
+    "enunciado": "Windows + F7 es una alternativa válida a F7 para abrir el panel Editor.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "F7 abre el panel Editor. Windows+F7 también. ⚠️ Windows+F7 no figura en el volcado v2608; confirmado en vivo por el usuario."
+  },
+  {
+    "id": "revisar-70",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "verdadero_falso",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": "Editor",
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-070",
+    "enunciado": "En Word 365, F7 abre el corrector tradicional llamado 'Ortografía y gramática', no el panel Editor moderno.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "En Word 365 el panel que abre F7 se llama Editor y reúne la revisión de ortografía y gramática. «Ortografía y gramática» era el nombre en versiones anteriores. En el volcado v2608 el comando de F7 aparece descrito precisamente como «Ortografía y gramática»."
+  },
+  {
+    "id": "revisar-2",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-002",
+    "enunciado": "Relaciona cada atajo con su función. Cada letra se usa una sola vez.",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "F7"
+        },
+        {
+          "id": "2",
+          "label": "Alt + F7"
+        },
+        {
+          "id": "3",
+          "label": "Mayús + F7"
+        },
+        {
+          "id": "4",
+          "label": "Ctrl + Mayús + O"
+        },
+        {
+          "id": "5",
+          "label": "Ctrl + Alt + A"
+        },
+        {
+          "id": "6",
+          "label": "Ctrl + Mayús + E"
+        },
+        {
+          "id": "7",
+          "label": "Alt + Mayús + F7"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Nuevo comentario"
+        },
+        {
+          "id": "B",
+          "label": "Sinónimos"
+        },
+        {
+          "id": "C",
+          "label": "Control de cambios"
+        },
+        {
+          "id": "D",
+          "label": "Editor"
+        },
+        {
+          "id": "E",
+          "label": "Error ortográfico siguiente"
+        },
+        {
+          "id": "F",
+          "label": "Contar palabras"
+        },
+        {
+          "id": "G",
+          "label": "Traducir"
+        }
+      ],
+      "correct": {
+        "1": "D",
+        "2": "E",
+        "3": "B",
+        "4": "F",
+        "5": "A",
+        "6": "C",
+        "7": "G"
+      }
+    },
+    "respuesta": {
+      "1": "D",
+      "2": "E",
+      "3": "B",
+      "4": "F",
+      "5": "A",
+      "6": "C",
+      "7": "G"
+    },
+    "explicacion": "F7 abre el panel Editor (revisión de ortografía y gramática); Alt+F7 salta al siguiente error; Mayús+F7 abre Sinónimos; Ctrl+Mayús+O recuenta las palabras; Alt+Ctrl+A inserta un comentario; Ctrl+Mayús+E activa el Control de cambios; Alt+Mayús+F7 abre el Traductor. ⚠️ Alt+Mayús+F7 no figura en el volcado v2608; confirmado en vivo."
+  },
+  {
+    "id": "revisar-19",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": "Corrector",
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-019",
+    "enunciado": "Relaciona cada marca visual con lo que señala Word 365. Una de las marcas de la derecha no tiene correspondencia.",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Línea ondulada roja"
+        },
+        {
+          "id": "2",
+          "label": "Doble línea azul"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Error gramatical o palabra con distinto significado"
+        },
+        {
+          "id": "B",
+          "label": "Error ortográfico o palabra no encontrada"
+        },
+        {
+          "id": "C",
+          "label": "Formato incompatible con el estilo del párrafo"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "A"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "A"
+    },
+    "explicacion": "Línea roja = ortografía/no encontrada. Doble azul = gramática/distinto significado. 'Formato incompatible' no está declarado."
+  },
+  {
+    "id": "revisar-52",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": "Corrector",
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-052",
+    "enunciado": "Relaciona cada opción del corrector ortográfico con su efecto.",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Omitir una vez"
+        },
+        {
+          "id": "2",
+          "label": "Ignorar todo"
+        },
+        {
+          "id": "3",
+          "label": "Agregar al diccionario"
+        },
+        {
+          "id": "4",
+          "label": "Configuración"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Añade la palabra al diccionario interno"
+        },
+        {
+          "id": "B",
+          "label": "Ignora la incidencia solo en esta ocasión"
+        },
+        {
+          "id": "C",
+          "label": "Ignora todas las apariciones de esa palabra en la revisión actual"
+        },
+        {
+          "id": "D",
+          "label": "Accede a los ajustes del corrector"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "C",
+        "3": "A",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "C",
+      "3": "A",
+      "4": "D"
+    },
+    "explicacion": "Omitir una vez ignora solo esa aparición; Ignorar todo ignora todas las apariciones en la sesión; Agregar al diccionario añade permanentemente; Configuración abre ajustes."
+  },
+  {
+    "id": "revisar-7",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-007",
+    "enunciado": "Los comandos Editor, Sinónimos y Contar palabras se encuentran en el grupo [1] de la Pestaña Revisar.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Revisión"
+    ],
+    "explicacion": "El grupo se llama 'Revisión' (no 'Revisar'). Es el grupo principal de la pestaña."
+  },
+  {
+    "id": "revisar-29",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-029",
+    "enunciado": "Las opciones de configuración de la ortografía en Word 365 se establecen desde [1] → [2] → [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Archivo",
+      "Opciones",
+      "Revisión"
+    ],
+    "explicacion": "La ruta es Archivo → Opciones → Revisión."
+  },
+  {
+    "id": "revisar-50",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "relleno",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": "Ortografía",
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-050",
+    "enunciado": "Según Word 365, la revisión ortográfica consiste en comprobar que las [1] de nuestro texto no son [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "palabras",
+      "erróneas"
+    ],
+    "explicacion": "Definición literal de la fuente: 'comprobar que las palabras de nuestro texto no son erróneas'."
+  },
+  {
+    "id": "revisar-56",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revisión ortográfica y gramatical",
+    "tipo": "relleno",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": "Corrector",
+    "tema": "Revisión ortográfica y gramatical",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-056",
+    "enunciado": "Word marca con una línea ondulada de color [1] los errores ortográficos. Los posibles errores gramaticales y palabras con distinto significado se marcan con una [2] línea [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "rojo",
+      "doble",
+      "azul"
+    ],
+    "explicacion": "Línea ondulada roja para ortografía; doble línea azul para gramática/distinto significado."
+  },
+  {
     "id": "revisar-6",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Accesibilidad",
@@ -1317,6 +1317,42 @@
     "explicacion": "Comprobar accesibilidad ayuda a detectar y corregir contenido que puede resultar difícil de acceder para personas con discapacidad."
   },
   {
+    "id": "revisar-69",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Accesibilidad",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "accesibilidad",
+    "subtopic": "Comprobar accesibilidad",
+    "tema": "Accesibilidad",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-069",
+    "enunciado": "Además de la cinta, ¿desde qué otra ubicación se puede acceder a Comprobar accesibilidad?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Archivo → Información → Comprobar si hay problemas"
+      },
+      {
+        "letter": "B",
+        "text": "Barra de estado (parte inferior)"
+      },
+      {
+        "letter": "C",
+        "text": "Archivo → Opciones → Accesibilidad"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio → Edición → Buscar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Comprobar accesibilidad también está disponible desde Archivo → Información → Comprobar si hay problemas."
+  },
+  {
     "id": "revisar-22",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Accesibilidad",
@@ -1387,42 +1423,6 @@
     "explicacion": "La fuente declara que resalta cada palabra mientras lo lee."
   },
   {
-    "id": "revisar-69",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Accesibilidad",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "accesibilidad",
-    "subtopic": "Comprobar accesibilidad",
-    "tema": "Accesibilidad",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-069",
-    "enunciado": "Además de la cinta, ¿desde qué otra ubicación se puede acceder a Comprobar accesibilidad?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Archivo → Información → Comprobar si hay problemas"
-      },
-      {
-        "letter": "B",
-        "text": "Barra de estado (parte inferior)"
-      },
-      {
-        "letter": "C",
-        "text": "Archivo → Opciones → Accesibilidad"
-      },
-      {
-        "letter": "D",
-        "text": "Inicio → Edición → Buscar"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Comprobar accesibilidad también está disponible desde Archivo → Información → Comprobar si hay problemas."
-  },
-  {
     "id": "revisar-18",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Idioma",
@@ -1457,48 +1457,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "El comando Idioma permite elegir el idioma de corrección del documento, no traduce ni cambia la interfaz."
-  },
-  {
-    "id": "revisar-25",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Traducir",
-    "tema": "Idioma",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-025",
-    "enunciado": "La opción Traducir documento del menú Traducir modifica directamente el documento actual, sustituyendo el texto original por la traducción.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Traducir documento crea una copia traducida del documento; no modifica el original."
-  },
-  {
-    "id": "revisar-31",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "relleno",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Traducir",
-    "tema": "Idioma",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-031",
-    "enunciado": "Para traducir únicamente el texto seleccionado usando el Traductor de Microsoft, la ruta es: Revisar → [1] → [2] ▼ → [3].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Idioma",
-      "Traducir",
-      "Traducir selección"
-    ],
-    "explicacion": "La ruta es Revisar → Idioma → Traducir ▼ → Traducir selección."
   },
   {
     "id": "revisar-38",
@@ -1573,6 +1531,61 @@
     "explicacion": "El botón Insertar coloca la traducción en el documento en la posición del cursor."
   },
   {
+    "id": "revisar-80",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": null,
+    "tema": "Idioma",
+    "sourceQuestionId": "neg-revisar-03",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el Traductor es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se abre con Alt+Mayús+F7"
+      },
+      {
+        "letter": "B",
+        "text": "No aparece en el volcado v2608"
+      },
+      {
+        "letter": "C",
+        "text": "Está confirmado en vivo por el usuario"
+      },
+      {
+        "letter": "D",
+        "text": "Su atajo es Ctrl+Mayús+T"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "No existe un atajo Ctrl+Mayús+T para el Traductor. El atajo real, confirmado en vivo (no está en el volcado), es Alt+Mayús+F7."
+  },
+  {
+    "id": "revisar-25",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": "Traducir",
+    "tema": "Idioma",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-025",
+    "enunciado": "La opción Traducir documento del menú Traducir modifica directamente el documento actual, sustituyendo el texto original por la traducción.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Traducir documento crea una copia traducida del documento; no modifica el original."
+  },
+  {
     "id": "revisar-45",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Idioma",
@@ -1590,29 +1603,6 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Preferencias de Traductor... abre los ajustes del traductor, no realiza una traducción."
-  },
-  {
-    "id": "revisar-48",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma",
-    "tipo": "relleno",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": "Traducir",
-    "tema": "Idioma",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-048",
-    "enunciado": "El menú desplegable del comando Traducir contiene exactamente tres opciones: [1], [2], [3].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "Traducir selección",
-      "Traducir documento",
-      "Preferencias de Traductor..."
-    ],
-    "explicacion": "Las tres opciones son Traducir selección, Traducir documento y Preferencias de Traductor..."
   },
   {
     "id": "revisar-57",
@@ -1653,62 +1643,50 @@
     "explicacion": "El icono ⇅ permite intercambiar la dirección de la traducción."
   },
   {
-    "id": "revisar-80",
+    "id": "revisar-31",
     "sourceFile": "revisar.json",
-    "bloque": "Revisar — Idioma (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": true,
-    "section": "revisar",
-    "topic": "idioma",
-    "subtopic": null,
-    "tema": "Idioma",
-    "sourceQuestionId": "neg-revisar-03",
-    "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre el Traductor es FALSA?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Se abre con Alt+Mayús+F7"
-      },
-      {
-        "letter": "B",
-        "text": "No aparece en el volcado v2608"
-      },
-      {
-        "letter": "C",
-        "text": "Está confirmado en vivo por el usuario"
-      },
-      {
-        "letter": "D",
-        "text": "Su atajo es Ctrl+Mayús+T"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "No existe un atajo Ctrl+Mayús+T para el Traductor. El atajo real, confirmado en vivo (no está en el volcado), es Alt+Mayús+F7."
-  },
-  {
-    "id": "revisar-4",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
+    "bloque": "Revisar — Idioma",
     "tipo": "relleno",
-    "categoria": "atajo",
+    "categoria": "ruta",
     "negativa": false,
     "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": null,
-    "tema": "Seguimiento",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-004",
-    "enunciado": "El atajo para insertar un nuevo comentario es [1]. El de Control de cambios es [2].",
+    "topic": "idioma",
+    "subtopic": "Traducir",
+    "tema": "Idioma",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-031",
+    "enunciado": "Para traducir únicamente el texto seleccionado usando el Traductor de Microsoft, la ruta es: Revisar → [1] → [2] ▼ → [3].",
     "opciones": [],
     "matching": null,
     "respuesta": [
-      "Ctrl + Alt + A",
-      "Ctrl + Mayús + E"
+      "Idioma",
+      "Traducir",
+      "Traducir selección"
     ],
-    "explicacion": "Nuevo comentario: Ctrl+Alt+A. Control de cambios: Ctrl+Mayús+E."
+    "explicacion": "La ruta es Revisar → Idioma → Traducir ▼ → Traducir selección."
+  },
+  {
+    "id": "revisar-48",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Idioma",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": "Traducir",
+    "tema": "Idioma",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-048",
+    "enunciado": "El menú desplegable del comando Traducir contiene exactamente tres opciones: [1], [2], [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Traducir selección",
+      "Traducir documento",
+      "Preferencias de Traductor..."
+    ],
+    "explicacion": "Las tres opciones son Traducir selección, Traducir documento y Preferencias de Traductor..."
   },
   {
     "id": "revisar-5",
@@ -1747,74 +1725,6 @@
     "explicacion": "Ctrl+Mayús+E activa o desactiva el Control de cambios (atajo estándar). Ctrl+Alt+A inserta un comentario, Alt+F7 salta al siguiente error y Alt+Mayús+F7 abre el Traductor."
   },
   {
-    "id": "revisar-8",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Comentarios",
-    "tema": "Seguimiento",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-008",
-    "enunciado": "¿Cuáles de los siguientes comandos pertenecen al grupo Comentarios de la Pestaña Revisar? (Selecciona todos los correctos.)",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Nuevo comentario"
-      },
-      {
-        "letter": "B",
-        "text": "Control de cambios"
-      },
-      {
-        "letter": "C",
-        "text": "Mostrar comentarios"
-      },
-      {
-        "letter": "D",
-        "text": "Anterior"
-      },
-      {
-        "letter": "E",
-        "text": "Panel de revisiones"
-      },
-      {
-        "letter": "F",
-        "text": "Siguiente"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "C",
-      "D",
-      "F"
-    ],
-    "explicacion": "Control de cambios y Panel de revisiones pertenecen al grupo Seguimiento, no a Comentarios."
-  },
-  {
-    "id": "revisar-10",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Control de cambios",
-    "tema": "Seguimiento",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-010",
-    "enunciado": "En la Pestaña Revisar de Word 365, el comando Aceptar (para aceptar cambios) se encuentra en el grupo Seguimiento, junto con el Control de cambios.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Aceptar pertenece al grupo Cambios, no a Seguimiento. Control de cambios está en Seguimiento; el proceso de aceptar/rechazar está en Cambios."
-  },
-  {
     "id": "revisar-17",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Seguimiento",
@@ -1849,25 +1759,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Control de cambios registra las modificaciones con autor y fecha. Mostrar revisiones y Panel de revisiones solo controlan la visualización."
-  },
-  {
-    "id": "revisar-35",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Comentarios",
-    "tema": "Seguimiento",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-035",
-    "enunciado": "Los comandos Anterior, Siguiente y Eliminar del grupo Comentarios están siempre activos en la Pestaña Revisar.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Aparecen atenuados cuando el documento no contiene comentarios."
   },
   {
     "id": "revisar-36",
@@ -1942,6 +1833,165 @@
     "explicacion": "El grupo Cambios permite moverse por las modificaciones para aceptarlas o rechazarlas."
   },
   {
+    "id": "revisar-61",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Panel de revisiones",
+    "tema": "Seguimiento",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-061",
+    "enunciado": "¿En qué grupo de la Pestaña Revisar se encuentra el comando Panel de revisiones?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cambios"
+      },
+      {
+        "letter": "B",
+        "text": "Comparar"
+      },
+      {
+        "letter": "C",
+        "text": "Seguimiento"
+      },
+      {
+        "letter": "D",
+        "text": "Comentarios"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Panel de revisiones pertenece al grupo Seguimiento, junto con Control de cambios."
+  },
+  {
+    "id": "revisar-79",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": null,
+    "tema": "Seguimiento",
+    "sourceQuestionId": "neg-revisar-02",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el control de cambios es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se activa o desactiva con Ctrl+Mayús+E"
+      },
+      {
+        "letter": "B",
+        "text": "Está relacionado con el grupo Seguimiento"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+E también activa el control de cambios"
+      },
+      {
+        "letter": "D",
+        "text": "Permite ver «Todas las revisiones» o «Simple markup»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ctrl+E selecciona todo el documento; no tiene nada que ver con el control de cambios. El atajo real es Ctrl+Mayús+E."
+  },
+  {
+    "id": "revisar-8",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Comentarios",
+    "tema": "Seguimiento",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-008",
+    "enunciado": "¿Cuáles de los siguientes comandos pertenecen al grupo Comentarios de la Pestaña Revisar? (Selecciona todos los correctos.)",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Nuevo comentario"
+      },
+      {
+        "letter": "B",
+        "text": "Control de cambios"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar comentarios"
+      },
+      {
+        "letter": "D",
+        "text": "Anterior"
+      },
+      {
+        "letter": "E",
+        "text": "Panel de revisiones"
+      },
+      {
+        "letter": "F",
+        "text": "Siguiente"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "D",
+      "F"
+    ],
+    "explicacion": "Control de cambios y Panel de revisiones pertenecen al grupo Seguimiento, no a Comentarios."
+  },
+  {
+    "id": "revisar-10",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Control de cambios",
+    "tema": "Seguimiento",
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-010",
+    "enunciado": "En la Pestaña Revisar de Word 365, el comando Aceptar (para aceptar cambios) se encuentra en el grupo Seguimiento, junto con el Control de cambios.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Aceptar pertenece al grupo Cambios, no a Seguimiento. Control de cambios está en Seguimiento; el proceso de aceptar/rechazar está en Cambios."
+  },
+  {
+    "id": "revisar-35",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": "Comentarios",
+    "tema": "Seguimiento",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-035",
+    "enunciado": "Los comandos Anterior, Siguiente y Eliminar del grupo Comentarios están siempre activos en la Pestaña Revisar.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Aparecen atenuados cuando el documento no contiene comentarios."
+  },
+  {
     "id": "revisar-39",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Seguimiento",
@@ -1959,6 +2009,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Ambas afirmaciones son las definiciones exactas de la fuente."
+  },
+  {
+    "id": "revisar-62",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": null,
+    "tema": "Seguimiento",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-062",
+    "enunciado": "Mostrar revisiones y Panel de revisiones son dos comandos distintos que pertenecen al grupo Seguimiento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Ambos están en Seguimiento, junto con Control de cambios y Todas las revisiones."
   },
   {
     "id": "revisar-54",
@@ -2042,61 +2111,6 @@
     "explicacion": "Control de cambios, Panel de revisiones, Mostrar revisiones y Todas las revisiones están en Seguimiento. Aceptar en Cambios. Combinar y Comparar en Comparar."
   },
   {
-    "id": "revisar-61",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": "Panel de revisiones",
-    "tema": "Seguimiento",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-061",
-    "enunciado": "¿En qué grupo de la Pestaña Revisar se encuentra el comando Panel de revisiones?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Cambios"
-      },
-      {
-        "letter": "B",
-        "text": "Comparar"
-      },
-      {
-        "letter": "C",
-        "text": "Seguimiento"
-      },
-      {
-        "letter": "D",
-        "text": "Comentarios"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "Panel de revisiones pertenece al grupo Seguimiento, junto con Control de cambios."
-  },
-  {
-    "id": "revisar-62",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "seguimiento",
-    "subtopic": null,
-    "tema": "Seguimiento",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-062",
-    "enunciado": "Mostrar revisiones y Panel de revisiones son dos comandos distintos que pertenecen al grupo Seguimiento.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Ambos están en Seguimiento, junto con Control de cambios y Todas las revisiones."
-  },
-  {
     "id": "revisar-68",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Seguimiento",
@@ -2164,40 +2178,26 @@
     "explicacion": "Nuevo comentario inserta; Eliminar borra el seleccionado; Anterior/Siguiente navegan; Mostrar comentarios muestra/oculta todos."
   },
   {
-    "id": "revisar-79",
+    "id": "revisar-4",
     "sourceFile": "revisar.json",
-    "bloque": "Revisar — Seguimiento (negativa)",
-    "tipo": "opcion_unica",
+    "bloque": "Revisar — Seguimiento",
+    "tipo": "relleno",
     "categoria": "atajo",
-    "negativa": true,
+    "negativa": false,
     "section": "revisar",
     "topic": "seguimiento",
     "subtopic": null,
     "tema": "Seguimiento",
-    "sourceQuestionId": "neg-revisar-02",
-    "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre el control de cambios es FALSA?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Se activa o desactiva con Ctrl+Mayús+E"
-      },
-      {
-        "letter": "B",
-        "text": "Está relacionado con el grupo Seguimiento"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+E también activa el control de cambios"
-      },
-      {
-        "letter": "D",
-        "text": "Permite ver «Todas las revisiones» o «Simple markup»"
-      }
-    ],
+    "difficulty": "media",
+    "sourceQuestionId": "Q-004",
+    "enunciado": "El atajo para insertar un nuevo comentario es [1]. El de Control de cambios es [2].",
+    "opciones": [],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ctrl+E selecciona todo el documento; no tiene nada que ver con el control de cambios. El atajo real es Ctrl+Mayús+E."
+    "respuesta": [
+      "Ctrl + Alt + A",
+      "Ctrl + Mayús + E"
+    ],
+    "explicacion": "Nuevo comentario: Ctrl+Alt+A. Control de cambios: Ctrl+Mayús+E."
   },
   {
     "id": "revisar-23",
@@ -2272,25 +2272,6 @@
     "explicacion": "Combinar... integra revisiones de varios autores en un documento único."
   },
   {
-    "id": "revisar-11",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": null,
-    "tema": "Proteger",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-011",
-    "enunciado": "El comando Ocultar entrada de lápiz se encuentra en un grupo cuya etiqueta es 'Entrada de lápiz', independiente del grupo Proteger.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Aunque son contiguos en la cinta, son grupos distintos. Ocultar entrada de lápiz pertenece al grupo Entrada de lápiz."
-  },
-  {
     "id": "revisar-14",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
@@ -2363,25 +2344,6 @@
     "explicacion": "Bloquear autores actúa sobre el texto seleccionado; Restringir edición limita la edición y el formato del documento completo."
   },
   {
-    "id": "revisar-16",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": "Ocultar entrada de lápiz",
-    "tema": "Proteger",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-016",
-    "enunciado": "El comando Ocultar entrada de lápiz elimina definitivamente las entradas de lápiz del documento.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Solo las oculta temporalmente; no las elimina."
-  },
-  {
     "id": "revisar-26",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
@@ -2416,25 +2378,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "El orden correcto es: Configuración... (D) → Casilla 'Limitar el formato...' (C) → Casilla 'Permitir solo este tipo de edición...' (B) → Botón 'Sí, aplicar la protección' (A)."
-  },
-  {
-    "id": "revisar-27",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Proteger",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "proteger",
-    "subtopic": "Restringir edición",
-    "tema": "Proteger",
-    "difficulty": "media",
-    "sourceQuestionId": "Q-027",
-    "enunciado": "En el panel Restringir edición, el botón 'Sí, aplicar la protección' está siempre disponible desde que se abre el panel.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "El botón aparece atenuado hasta que se configura al menos una restricción (de formato o de edición)."
   },
   {
     "id": "revisar-30",
@@ -2561,6 +2504,63 @@
     "explicacion": "A, B y D son correctas. C es falsa (Restringir edición no elimina comentarios) y E es falsa (Bloquear autores actúa sobre el texto seleccionado, no sobre todo el documento)."
   },
   {
+    "id": "revisar-11",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": null,
+    "tema": "Proteger",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-011",
+    "enunciado": "El comando Ocultar entrada de lápiz se encuentra en un grupo cuya etiqueta es 'Entrada de lápiz', independiente del grupo Proteger.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Aunque son contiguos en la cinta, son grupos distintos. Ocultar entrada de lápiz pertenece al grupo Entrada de lápiz."
+  },
+  {
+    "id": "revisar-16",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": "Ocultar entrada de lápiz",
+    "tema": "Proteger",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-016",
+    "enunciado": "El comando Ocultar entrada de lápiz elimina definitivamente las entradas de lápiz del documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Solo las oculta temporalmente; no las elimina."
+  },
+  {
+    "id": "revisar-27",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": "Restringir edición",
+    "tema": "Proteger",
+    "difficulty": "media",
+    "sourceQuestionId": "Q-027",
+    "enunciado": "En el panel Restringir edición, el botón 'Sí, aplicar la protección' está siempre disponible desde que se abre el panel.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "El botón aparece atenuado hasta que se configura al menos una restricción (de formato o de edición)."
+  },
+  {
     "id": "revisar-60",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
@@ -2578,6 +2578,42 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "La ruta es Revisar → Proteger → Proteger ▼ → Restringir edición → abre el panel."
+  },
+  {
+    "id": "revisar-82",
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Estructura de la pestaña (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "revisar",
+    "topic": "estructura",
+    "subtopic": null,
+    "tema": "Estructura de la pestaña",
+    "sourceQuestionId": "neg-revisar-05",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre la pestaña Revisar es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tiene dos grupos llamados literalmente «Revisión»"
+      },
+      {
+        "letter": "B",
+        "text": "Uno es el de corrección ortográfica y otro el de visualización del marcado"
+      },
+      {
+        "letter": "C",
+        "text": "Los dos comparten el mismo ribbonGroup «Revisión»"
+      },
+      {
+        "letter": "D",
+        "text": "Solo existe un grupo llamado «Revisión» en toda la pestaña"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Revisar tiene DOS grupos distintos que se llaman igual, «Revisión»: uno de corrección (Ortografía) y otro de visualización del marcado de cambios."
   },
   {
     "id": "revisar-9",
@@ -2705,37 +2741,6 @@
       "10": "J"
     },
     "explicacion": "Cada comando pertenece a su grupo: Voz, Accesibilidad, Seguimiento, Cambios, Comparar, Comentarios, Proteger, Revisión, Entrada de lápiz e Idioma."
-  },
-  {
-    "id": "revisar-44",
-    "sourceFile": "revisar.json",
-    "bloque": "Revisar — Estructura de la pestaña",
-    "tipo": "relleno",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "revisar",
-    "topic": "estructura",
-    "subtopic": null,
-    "tema": "Estructura de la pestaña",
-    "difficulty": "alta",
-    "sourceQuestionId": "Q-044",
-    "enunciado": "La Pestaña Revisar contiene [1] grupos. Escribe el nombre de cada uno: [2], [3], [4], [5], [6], [7], [8], [9], [10], [11].",
-    "opciones": [],
-    "matching": null,
-    "respuesta": [
-      "10",
-      "Revisión",
-      "Voz",
-      "Accesibilidad",
-      "Idioma",
-      "Comentarios",
-      "Seguimiento",
-      "Cambios",
-      "Comparar",
-      "Proteger",
-      "Entrada de lápiz"
-    ],
-    "explicacion": "Los 10 grupos son Revisión, Voz, Accesibilidad, Idioma, Comentarios, Seguimiento, Cambios, Comparar, Proteger y Entrada de lápiz."
   },
   {
     "id": "revisar-51",
@@ -2993,40 +2998,35 @@
     "explicacion": "Control de cambios, Mostrar revisiones, Panel de revisiones y Todas las revisiones están en Seguimiento. Nuevo comentario, Eliminar y Anterior en Comentarios. Aceptar en Cambios."
   },
   {
-    "id": "revisar-82",
+    "id": "revisar-44",
     "sourceFile": "revisar.json",
-    "bloque": "Revisar — Estructura de la pestaña (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
+    "bloque": "Revisar — Estructura de la pestaña",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
     "section": "revisar",
     "topic": "estructura",
     "subtopic": null,
     "tema": "Estructura de la pestaña",
-    "sourceQuestionId": "neg-revisar-05",
-    "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre la pestaña Revisar es FALSA?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Tiene dos grupos llamados literalmente «Revisión»"
-      },
-      {
-        "letter": "B",
-        "text": "Uno es el de corrección ortográfica y otro el de visualización del marcado"
-      },
-      {
-        "letter": "C",
-        "text": "Los dos comparten el mismo ribbonGroup «Revisión»"
-      },
-      {
-        "letter": "D",
-        "text": "Solo existe un grupo llamado «Revisión» en toda la pestaña"
-      }
-    ],
+    "difficulty": "alta",
+    "sourceQuestionId": "Q-044",
+    "enunciado": "La Pestaña Revisar contiene [1] grupos. Escribe el nombre de cada uno: [2], [3], [4], [5], [6], [7], [8], [9], [10], [11].",
+    "opciones": [],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Revisar tiene DOS grupos distintos que se llaman igual, «Revisión»: uno de corrección (Ortografía) y otro de visualización del marcado de cambios."
+    "respuesta": [
+      "10",
+      "Revisión",
+      "Voz",
+      "Accesibilidad",
+      "Idioma",
+      "Comentarios",
+      "Seguimiento",
+      "Cambios",
+      "Comparar",
+      "Proteger",
+      "Entrada de lápiz"
+    ],
+    "explicacion": "Los 10 grupos son Revisión, Voz, Accesibilidad, Idioma, Comentarios, Seguimiento, Cambios, Comparar, Proteger y Entrada de lápiz."
   },
   {
     "id": "revisar-81",

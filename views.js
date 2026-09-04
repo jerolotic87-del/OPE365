@@ -849,10 +849,6 @@ function renderTestWizard(params){
   renderWizardStep();
 }
 
-const WIZARD_STEPS_EXAM = 4; // qué / cuántas / tiempo / avanzado(preview)
-const WIZARD_STEPS_PRACTICE = 3; // qué / cuántas / avanzado(preview)
-
-function wizardTotalSteps(){ return wizardState.mode==="exam" ? WIZARD_STEPS_EXAM : WIZARD_STEPS_PRACTICE; }
 
 function renderWizardStep(){
   const names = wizardState.mode==="exam"

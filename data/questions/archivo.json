@@ -1453,6 +1453,150 @@
     "explicacion": "Cifrar con contraseña impide incluso la apertura del documento sin la clave, lo que garantiza que nadie no autorizado pueda acceder ni modificar el contenido. Marcar como final es informativo y cualquiera puede desactivarlo. Restringir edición sin contraseña puede ser desactivada por el destinatario. La firma digital verifica integridad pero no impide la edición."
   },
   {
+    "id": "archivo-393",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Información (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "informacion",
+    "subtopic": null,
+    "tema": "Información",
+    "sourceQuestionId": "neg-archivo-01",
+    "generado": true,
+    "enunciado": "¿Cuál de estas NO es una opción del menú Proteger documento?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cifrar con contraseña"
+      },
+      {
+        "letter": "B",
+        "text": "Restringir edición"
+      },
+      {
+        "letter": "C",
+        "text": "Marcar como final"
+      },
+      {
+        "letter": "D",
+        "text": "Comprimir imágenes"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "«Comprimir imágenes» está en Guardar como ▸ Herramientas, no en el menú Proteger documento (que tiene: solo lectura, cifrar, restringir edición, restringir acceso, firma digital y marcar como final)."
+  },
+  {
+    "id": "archivo-394",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Información (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "informacion",
+    "subtopic": null,
+    "tema": "Información",
+    "sourceQuestionId": "neg-archivo-02",
+    "generado": true,
+    "enunciado": "¿Cuál de estas NO es una opción de «Comprobar si hay problemas»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inspeccionar documento"
+      },
+      {
+        "letter": "B",
+        "text": "Comprobar accesibilidad"
+      },
+      {
+        "letter": "C",
+        "text": "Comprobar compatibilidad"
+      },
+      {
+        "letter": "D",
+        "text": "Comprobar ortografía"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "«Comprobar ortografía» no está en ese menú de Backstage: la revisión ortográfica se hace desde la pestaña Revisar, no desde Información."
+  },
+  {
+    "id": "archivo-395",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Información (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "informacion",
+    "subtopic": null,
+    "tema": "Información",
+    "sourceQuestionId": "neg-archivo-03",
+    "generado": true,
+    "enunciado": "¿Cuál de estos NO aparece en el panel Información?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Propiedades del documento"
+      },
+      {
+        "letter": "B",
+        "text": "Fechas relacionadas"
+      },
+      {
+        "letter": "C",
+        "text": "Personas relacionadas"
+      },
+      {
+        "letter": "D",
+        "text": "Configurar página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "«Configurar página» está en Disposición y en el panel Imprimir, no en el panel Información."
+  },
+  {
+    "id": "archivo-397",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Información (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "informacion",
+    "subtopic": null,
+    "tema": "Información",
+    "sourceQuestionId": "neg-archivo-05",
+    "generado": true,
+    "enunciado": "¿Cuál de estas fichas NO tiene el cuadro Propiedades avanzadas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "General"
+      },
+      {
+        "letter": "B",
+        "text": "Resumen"
+      },
+      {
+        "letter": "C",
+        "text": "Estadísticas"
+      },
+      {
+        "letter": "D",
+        "text": "Seguridad"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El cuadro Propiedades avanzadas tiene cinco fichas: General, Resumen, Estadísticas, Contenido y Personalizar. No existe una ficha «Seguridad»."
+  },
+  {
     "id": "archivo-361",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Información",
@@ -1660,150 +1804,6 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: muestra ambos; «Tiempo de edición» es uno de los datos de Propiedades."
-  },
-  {
-    "id": "archivo-393",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Información (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
-    "section": "archivo",
-    "topic": "informacion",
-    "subtopic": null,
-    "tema": "Información",
-    "sourceQuestionId": "neg-archivo-01",
-    "generado": true,
-    "enunciado": "¿Cuál de estas NO es una opción del menú Proteger documento?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Cifrar con contraseña"
-      },
-      {
-        "letter": "B",
-        "text": "Restringir edición"
-      },
-      {
-        "letter": "C",
-        "text": "Marcar como final"
-      },
-      {
-        "letter": "D",
-        "text": "Comprimir imágenes"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "«Comprimir imágenes» está en Guardar como ▸ Herramientas, no en el menú Proteger documento (que tiene: solo lectura, cifrar, restringir edición, restringir acceso, firma digital y marcar como final)."
-  },
-  {
-    "id": "archivo-394",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Información (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
-    "section": "archivo",
-    "topic": "informacion",
-    "subtopic": null,
-    "tema": "Información",
-    "sourceQuestionId": "neg-archivo-02",
-    "generado": true,
-    "enunciado": "¿Cuál de estas NO es una opción de «Comprobar si hay problemas»?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Inspeccionar documento"
-      },
-      {
-        "letter": "B",
-        "text": "Comprobar accesibilidad"
-      },
-      {
-        "letter": "C",
-        "text": "Comprobar compatibilidad"
-      },
-      {
-        "letter": "D",
-        "text": "Comprobar ortografía"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "«Comprobar ortografía» no está en ese menú de Backstage: la revisión ortográfica se hace desde la pestaña Revisar, no desde Información."
-  },
-  {
-    "id": "archivo-395",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Información (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
-    "section": "archivo",
-    "topic": "informacion",
-    "subtopic": null,
-    "tema": "Información",
-    "sourceQuestionId": "neg-archivo-03",
-    "generado": true,
-    "enunciado": "¿Cuál de estos NO aparece en el panel Información?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Propiedades del documento"
-      },
-      {
-        "letter": "B",
-        "text": "Fechas relacionadas"
-      },
-      {
-        "letter": "C",
-        "text": "Personas relacionadas"
-      },
-      {
-        "letter": "D",
-        "text": "Configurar página"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "«Configurar página» está en Disposición y en el panel Imprimir, no en el panel Información."
-  },
-  {
-    "id": "archivo-397",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Información (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
-    "section": "archivo",
-    "topic": "informacion",
-    "subtopic": null,
-    "tema": "Información",
-    "sourceQuestionId": "neg-archivo-05",
-    "generado": true,
-    "enunciado": "¿Cuál de estas fichas NO tiene el cuadro Propiedades avanzadas?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "General"
-      },
-      {
-        "letter": "B",
-        "text": "Resumen"
-      },
-      {
-        "letter": "C",
-        "text": "Estadísticas"
-      },
-      {
-        "letter": "D",
-        "text": "Seguridad"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "El cuadro Propiedades avanzadas tiene cinco fichas: General, Resumen, Estadísticas, Contenido y Personalizar. No existe una ficha «Seguridad»."
   },
   {
     "id": "archivo-39",
@@ -2684,101 +2684,6 @@
     "explicacion": "Guarda el documento activo; es una tercera combinación asignada a la misma función que Ctrl+G y Mayús+F12."
   },
   {
-    "id": "archivo-372",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Guardar y Guardar como",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "archivo",
-    "topic": "guardar",
-    "subtopic": null,
-    "tema": "Guardar y Guardar como",
-    "sourceQuestionId": "vf-archivo-bk22",
-    "generado": true,
-    "enunciado": "En el cuadro «Guardar como», el menú «Herramientas» ofrece Conectar a unidad de red, Opciones para guardar, Opciones generales, Opciones web y Comprimir imágenes.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "«Opciones para guardar…» lleva a Archivo ▸ Opciones ▸ Guardar."
-  },
-  {
-    "id": "archivo-373",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Guardar y Guardar como",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "archivo",
-    "topic": "guardar",
-    "subtopic": null,
-    "tema": "Guardar y Guardar como",
-    "sourceQuestionId": "vf-archivo-bk23",
-    "generado": true,
-    "enunciado": "«Opciones generales» (Herramientas del cuadro Guardar como) es donde se pone una contraseña de apertura o de escritura del documento.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "También «Recomendado solo lectura» y la opción de crear siempre una copia de seguridad."
-  },
-  {
-    "id": "archivo-374",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Guardar y Guardar como",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "archivo",
-    "topic": "guardar",
-    "subtopic": null,
-    "tema": "Guardar y Guardar como",
-    "sourceQuestionId": "vf-archivo-bk24",
-    "generado": true,
-    "enunciado": "El desplegable «Tipo» de Guardar como no incluye el formato OpenDocument (.odt).",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: sí lo incluye («Texto de OpenDocument (*.odt)»), junto a .docx, .docm, .doc, .dotx, .pdf, .xps, .rtf, .txt, .htm, .mht, .xml…"
-  },
-  {
-    "id": "archivo-375",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Guardar y Guardar como",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "archivo",
-    "topic": "guardar",
-    "subtopic": null,
-    "tema": "Guardar y Guardar como",
-    "sourceQuestionId": "vf-archivo-bk25",
-    "generado": true,
-    "enunciado": "El «Documento habilitado con macros de Word» tiene extensión .docm, y la plantilla equivalente con macros es .dotm.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Un .docx no puede guardar macros de VBA; hay que usar .docm."
-  },
-  {
-    "id": "archivo-376",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Guardar y Guardar como",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "archivo",
-    "topic": "guardar",
-    "subtopic": null,
-    "tema": "Guardar y Guardar como",
-    "sourceQuestionId": "vf-archivo-bk26",
-    "generado": true,
-    "enunciado": "«Guardar» y «Guardar como» hacen exactamente lo mismo en todos los casos.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: «Guardar» sobrescribe el archivo actual; «Guardar como» crea una copia con otro nombre, ubicación o formato. Solo la primera vez (documento sin nombre), «Guardar» se comporta como «Guardar como»."
-  },
-  {
     "id": "archivo-396",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Guardar y Guardar como (negativa)",
@@ -2885,6 +2790,101 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Guardar nunca borra nada: la primera vez que se usa en un documento sin nombre se comporta como Guardar como y pide dónde guardarlo."
+  },
+  {
+    "id": "archivo-372",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Guardar y Guardar como",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "guardar",
+    "subtopic": null,
+    "tema": "Guardar y Guardar como",
+    "sourceQuestionId": "vf-archivo-bk22",
+    "generado": true,
+    "enunciado": "En el cuadro «Guardar como», el menú «Herramientas» ofrece Conectar a unidad de red, Opciones para guardar, Opciones generales, Opciones web y Comprimir imágenes.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "«Opciones para guardar…» lleva a Archivo ▸ Opciones ▸ Guardar."
+  },
+  {
+    "id": "archivo-373",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Guardar y Guardar como",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "guardar",
+    "subtopic": null,
+    "tema": "Guardar y Guardar como",
+    "sourceQuestionId": "vf-archivo-bk23",
+    "generado": true,
+    "enunciado": "«Opciones generales» (Herramientas del cuadro Guardar como) es donde se pone una contraseña de apertura o de escritura del documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "También «Recomendado solo lectura» y la opción de crear siempre una copia de seguridad."
+  },
+  {
+    "id": "archivo-374",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Guardar y Guardar como",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "guardar",
+    "subtopic": null,
+    "tema": "Guardar y Guardar como",
+    "sourceQuestionId": "vf-archivo-bk24",
+    "generado": true,
+    "enunciado": "El desplegable «Tipo» de Guardar como no incluye el formato OpenDocument (.odt).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: sí lo incluye («Texto de OpenDocument (*.odt)»), junto a .docx, .docm, .doc, .dotx, .pdf, .xps, .rtf, .txt, .htm, .mht, .xml…"
+  },
+  {
+    "id": "archivo-375",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Guardar y Guardar como",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "guardar",
+    "subtopic": null,
+    "tema": "Guardar y Guardar como",
+    "sourceQuestionId": "vf-archivo-bk25",
+    "generado": true,
+    "enunciado": "El «Documento habilitado con macros de Word» tiene extensión .docm, y la plantilla equivalente con macros es .dotm.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Un .docx no puede guardar macros de VBA; hay que usar .docm."
+  },
+  {
+    "id": "archivo-376",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Guardar y Guardar como",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "guardar",
+    "subtopic": null,
+    "tema": "Guardar y Guardar como",
+    "sourceQuestionId": "vf-archivo-bk26",
+    "generado": true,
+    "enunciado": "«Guardar» y «Guardar como» hacen exactamente lo mismo en todos los casos.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: «Guardar» sobrescribe el archivo actual; «Guardar como» crea una copia con otro nombre, ubicación o formato. Solo la primera vez (documento sin nombre), «Guardar» se comporta como «Guardar como»."
   },
   {
     "id": "archivo-1",
@@ -3135,6 +3135,78 @@
     "explicacion": "La sintaxis correcta para páginas de sección es pNsN, donde p indica página y s indica sección. El orden siempre es página primero, sección después, por lo que s2p1 invierte el orden y es incorrecto. Las otras opciones son variantes inventadas."
   },
   {
+    "id": "archivo-399",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Imprimir (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "imprimir",
+    "subtopic": null,
+    "tema": "Imprimir",
+    "sourceQuestionId": "neg-archivo-07",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el panel Imprimir es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Intercaladas» imprime 1,2,3,1,2,3..."
+      },
+      {
+        "letter": "B",
+        "text": "Se puede imprimir a doble cara manualmente"
+      },
+      {
+        "letter": "C",
+        "text": "El máximo de páginas por hoja es 16"
+      },
+      {
+        "letter": "D",
+        "text": "El máximo de páginas por hoja es 4"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El desplegable de páginas por hoja llega hasta 16 (1, 2, 4, 6, 8, 16), no se queda en 4."
+  },
+  {
+    "id": "archivo-402",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Imprimir (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "imprimir",
+    "subtopic": null,
+    "tema": "Imprimir",
+    "sourceQuestionId": "neg-archivo-10",
+    "generado": true,
+    "enunciado": "¿Cuál de estas fichas NO tiene el cuadro Configurar página cuando se abre desde el panel Imprimir?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Márgenes"
+      },
+      {
+        "letter": "B",
+        "text": "Papel"
+      },
+      {
+        "letter": "C",
+        "text": "Disposición"
+      },
+      {
+        "letter": "D",
+        "text": "Fuente"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El cuadro Configurar página tiene tres fichas: Márgenes, Papel y Disposición. No existe una ficha «Fuente» ahí (eso es un cuadro distinto)."
+  },
+  {
     "id": "archivo-377",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Imprimir",
@@ -3266,78 +3338,6 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: existe «Imprimir manualmente a doble cara»: Word imprime las caras impares, avisa para recargar el papel y luego imprime las pares."
-  },
-  {
-    "id": "archivo-399",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Imprimir (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
-    "section": "archivo",
-    "topic": "imprimir",
-    "subtopic": null,
-    "tema": "Imprimir",
-    "sourceQuestionId": "neg-archivo-07",
-    "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre el panel Imprimir es FALSA?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "«Intercaladas» imprime 1,2,3,1,2,3..."
-      },
-      {
-        "letter": "B",
-        "text": "Se puede imprimir a doble cara manualmente"
-      },
-      {
-        "letter": "C",
-        "text": "El máximo de páginas por hoja es 16"
-      },
-      {
-        "letter": "D",
-        "text": "El máximo de páginas por hoja es 4"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "El desplegable de páginas por hoja llega hasta 16 (1, 2, 4, 6, 8, 16), no se queda en 4."
-  },
-  {
-    "id": "archivo-402",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Imprimir (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
-    "section": "archivo",
-    "topic": "imprimir",
-    "subtopic": null,
-    "tema": "Imprimir",
-    "sourceQuestionId": "neg-archivo-10",
-    "generado": true,
-    "enunciado": "¿Cuál de estas fichas NO tiene el cuadro Configurar página cuando se abre desde el panel Imprimir?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Márgenes"
-      },
-      {
-        "letter": "B",
-        "text": "Papel"
-      },
-      {
-        "letter": "C",
-        "text": "Disposición"
-      },
-      {
-        "letter": "D",
-        "text": "Fuente"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "El cuadro Configurar página tiene tres fichas: Márgenes, Papel y Disposición. No existe una ficha «Fuente» ahí (eso es un cuadro distinto)."
   },
   {
     "id": "archivo-3",
@@ -3620,6 +3620,42 @@
     "explicacion": "Descargar como PDF no existe en el panel Compartir. La exportación a PDF se realiza desde Archivo → Exportar. El panel Compartir contiene campos Para y Mensaje, botones Enviar, Copiar vínculo y Enviar una copia, y opciones de permisos de acceso."
   },
   {
+    "id": "archivo-400",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Compartir (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "compartir",
+    "subtopic": null,
+    "tema": "Compartir",
+    "sourceQuestionId": "neg-archivo-08",
+    "generado": true,
+    "enunciado": "¿Cuál de estas NO es una opción del panel Compartir?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cargar el documento a OneDrive"
+      },
+      {
+        "letter": "B",
+        "text": "Adjuntar una copia como Documento de Word"
+      },
+      {
+        "letter": "C",
+        "text": "Adjuntar una copia como PDF"
+      },
+      {
+        "letter": "D",
+        "text": "Enviar por fax"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El panel Compartir no ofrece envío por fax. Las opciones reales son subir a OneDrive o adjuntar una copia (Word o PDF)."
+  },
+  {
     "id": "archivo-384",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Compartir",
@@ -3656,42 +3692,6 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: hay que subirlo a OneDrive o SharePoint; si no, solo se puede adjuntar una copia por correo."
-  },
-  {
-    "id": "archivo-400",
-    "sourceFile": "archivo.json",
-    "bloque": "Archivo — Compartir (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
-    "section": "archivo",
-    "topic": "compartir",
-    "subtopic": null,
-    "tema": "Compartir",
-    "sourceQuestionId": "neg-archivo-08",
-    "generado": true,
-    "enunciado": "¿Cuál de estas NO es una opción del panel Compartir?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Cargar el documento a OneDrive"
-      },
-      {
-        "letter": "B",
-        "text": "Adjuntar una copia como Documento de Word"
-      },
-      {
-        "letter": "C",
-        "text": "Adjuntar una copia como PDF"
-      },
-      {
-        "letter": "D",
-        "text": "Enviar por fax"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "El panel Compartir no ofrece envío por fax. Las opciones reales son subir a OneDrive o adjuntar una copia (Word o PDF)."
   },
   {
     "id": "archivo-55",

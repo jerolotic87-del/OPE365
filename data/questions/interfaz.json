@@ -945,6 +945,45 @@
     "explicacion": "La inserción de gráficos es una función gráfica."
   },
   {
+    "id": "interfaz-109",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Conceptos generales",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "conceptos-generales",
+    "subtopic": null,
+    "tema": "Conceptos generales",
+    "sourceQuestionId": "1-113",
+    "enunciado": "Señale las funciones que pertenecen al grupo de funciones avanzadas (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Revisión ortográfica"
+      },
+      {
+        "letter": "B",
+        "text": "Numeración de páginas"
+      },
+      {
+        "letter": "C",
+        "text": "Buscar sinónimos"
+      },
+      {
+        "letter": "D",
+        "text": "Búsqueda y sustitución de texto"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explicacion": "Son funciones avanzadas: la revisión ortográfica (F7), la búsqueda de sinónimos (Mayús+F7) y la búsqueda y sustitución (Ctrl+L, accesible desde Inicio > grupo Edición). La numeración de páginas es una función de diseño de página."
+  },
+  {
     "id": "interfaz-104",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Conceptos generales",
@@ -1009,45 +1048,6 @@
       "4": "A"
     },
     "explicacion": "Emparejamiento correcto: Diseño de página → Configurar numeración de páginas · Edición de texto → Aplicar cursiva · Gráficas → Insertar una tabla · Avanzadas → Buscar sinónimos."
-  },
-  {
-    "id": "interfaz-109",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Conceptos generales",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "conceptos-generales",
-    "subtopic": null,
-    "tema": "Conceptos generales",
-    "sourceQuestionId": "1-113",
-    "enunciado": "Señale las funciones que pertenecen al grupo de funciones avanzadas (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Revisión ortográfica"
-      },
-      {
-        "letter": "B",
-        "text": "Numeración de páginas"
-      },
-      {
-        "letter": "C",
-        "text": "Buscar sinónimos"
-      },
-      {
-        "letter": "D",
-        "text": "Búsqueda y sustitución de texto"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "C",
-      "D"
-    ],
-    "explicacion": "Son funciones avanzadas: la revisión ortográfica (F7), la búsqueda de sinónimos (Mayús+F7) y la búsqueda y sustitución (Ctrl+L, accesible desde Inicio > grupo Edición). La numeración de páginas es una función de diseño de página."
   },
   {
     "id": "interfaz-7",
@@ -2835,6 +2835,230 @@
     "explicacion": ".docm es un documento con macros habilitadas, no una plantilla. Las plantillas llevan la raíz DOT en la extensión."
   },
   {
+    "id": "interfaz-112",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Documentos y archivos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "interfaz",
+    "topic": "documentos-archivos",
+    "subtopic": null,
+    "tema": "Documentos y archivos",
+    "sourceQuestionId": "1-116",
+    "enunciado": "Señale la afirmación que NO es correcta respecto a XML:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Es un lenguaje de marcas extensible"
+      },
+      {
+        "letter": "B",
+        "text": "Sirve para organizar y etiquetar documentos"
+      },
+      {
+        "letter": "C",
+        "text": "Es la base del formato de almacenamiento del .docx (estándar OOXML)"
+      },
+      {
+        "letter": "D",
+        "text": "Es un programa independiente de Word usado para comprimir archivos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "XML es un lenguaje de marcas, no un programa compresor. La compresión del .docx la realiza el empaquetado ZIP (Open Packaging Conventions), no el propio XML."
+  },
+  {
+    "id": "interfaz-494",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Documentos y archivos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "documentos-archivos",
+    "subtopic": null,
+    "tema": "Documentos y archivos",
+    "sourceQuestionId": "8-134",
+    "enunciado": "Un usuario crea una plantilla de Word que debe incluir macros. ¿Con qué extensión debe guardarla?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": ".dotm"
+      },
+      {
+        "letter": "B",
+        "text": ".dotx"
+      },
+      {
+        "letter": "C",
+        "text": ".docm"
+      },
+      {
+        "letter": "D",
+        "text": ".dot"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Las plantillas con macros se guardan con extensión .dotm. Las plantillas sin macros usan .dotx. Los documentos con macros usan .docm. El formato .dot es la plantilla de Word 97-2003, sin soporte completo para macros de versiones modernas."
+  },
+  {
+    "id": "interfaz-496",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Documentos y archivos",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "documentos-archivos",
+    "subtopic": null,
+    "tema": "Documentos y archivos",
+    "sourceQuestionId": "8-155",
+    "enunciado": "¿Qué atajo activa o desactiva la vista de etiquetas XML en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Mayús+X"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+X"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+X"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+Alt+X"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+Mayús+X activa o desactiva la vista de etiquetas XML. Ctrl+X corta el contenido seleccionado. Alt+Ctrl+X no tiene esa función. Ctrl+Mayús+Alt+X no tiene función asignada para etiquetas XML."
+  },
+  {
+    "id": "interfaz-106",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Documentos y archivos",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "documentos-archivos",
+    "subtopic": null,
+    "tema": "Documentos y archivos",
+    "sourceQuestionId": "1-110",
+    "enunciado": "Señale las extensiones que corresponden a plantillas de Word (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "DOCX"
+      },
+      {
+        "letter": "B",
+        "text": "DOTX"
+      },
+      {
+        "letter": "C",
+        "text": "DOCM"
+      },
+      {
+        "letter": "D",
+        "text": "DOTM"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "B",
+      "D"
+    ],
+    "explicacion": "Las plantillas llevan la raíz DOT: DOTX (sin macros) y DOTM (con macros). DOCX y DOCM son documentos."
+  },
+  {
+    "id": "interfaz-107",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Documentos y archivos",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "documentos-archivos",
+    "subtopic": null,
+    "tema": "Documentos y archivos",
+    "sourceQuestionId": "1-111",
+    "enunciado": "Señale las extensiones habilitadas para macros (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "DOCX"
+      },
+      {
+        "letter": "B",
+        "text": "DOCM"
+      },
+      {
+        "letter": "C",
+        "text": "DOTX"
+      },
+      {
+        "letter": "D",
+        "text": "DOTM"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "B",
+      "D"
+    ],
+    "explicacion": "Las extensiones habilitadas para macros llevan la M al final: DOCM (documento) y DOTM (plantilla). DOCX y DOTX no admiten macros."
+  },
+  {
+    "id": "interfaz-108",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Documentos y archivos",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "documentos-archivos",
+    "subtopic": null,
+    "tema": "Documentos y archivos",
+    "sourceQuestionId": "1-112",
+    "enunciado": "Señale los caracteres prohibidos para nombrar un archivo en Windows (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "\\"
+      },
+      {
+        "letter": "B",
+        "text": "-"
+      },
+      {
+        "letter": "C",
+        "text": "*"
+      },
+      {
+        "letter": "D",
+        "text": "_"
+      },
+      {
+        "letter": "E",
+        "text": "|"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "E"
+    ],
+    "explicacion": "La barra invertida (\\), el asterisco (*) y la barra vertical (|) forman parte de los 9 caracteres prohibidos: \\ / : * ? \" < > | El guion medio (-) y el guion bajo (_) están permitidos."
+  },
+  {
     "id": "interfaz-97",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Documentos y archivos",
@@ -3077,230 +3301,6 @@
       "6": "Pe"
     },
     "explicacion": "Los 9 caracteres prohibidos son: \\ / : * ? \" < > | La barra invertida (1) y el asterisco (5) están prohibidos. El guion bajo (2), el guion medio (3), el signo ¿ (4) y el punto (6) están permitidos."
-  },
-  {
-    "id": "interfaz-106",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Documentos y archivos",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "documentos-archivos",
-    "subtopic": null,
-    "tema": "Documentos y archivos",
-    "sourceQuestionId": "1-110",
-    "enunciado": "Señale las extensiones que corresponden a plantillas de Word (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "DOCX"
-      },
-      {
-        "letter": "B",
-        "text": "DOTX"
-      },
-      {
-        "letter": "C",
-        "text": "DOCM"
-      },
-      {
-        "letter": "D",
-        "text": "DOTM"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "B",
-      "D"
-    ],
-    "explicacion": "Las plantillas llevan la raíz DOT: DOTX (sin macros) y DOTM (con macros). DOCX y DOCM son documentos."
-  },
-  {
-    "id": "interfaz-107",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Documentos y archivos",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "documentos-archivos",
-    "subtopic": null,
-    "tema": "Documentos y archivos",
-    "sourceQuestionId": "1-111",
-    "enunciado": "Señale las extensiones habilitadas para macros (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "DOCX"
-      },
-      {
-        "letter": "B",
-        "text": "DOCM"
-      },
-      {
-        "letter": "C",
-        "text": "DOTX"
-      },
-      {
-        "letter": "D",
-        "text": "DOTM"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "B",
-      "D"
-    ],
-    "explicacion": "Las extensiones habilitadas para macros llevan la M al final: DOCM (documento) y DOTM (plantilla). DOCX y DOTX no admiten macros."
-  },
-  {
-    "id": "interfaz-108",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Documentos y archivos",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "documentos-archivos",
-    "subtopic": null,
-    "tema": "Documentos y archivos",
-    "sourceQuestionId": "1-112",
-    "enunciado": "Señale los caracteres prohibidos para nombrar un archivo en Windows (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "\\"
-      },
-      {
-        "letter": "B",
-        "text": "-"
-      },
-      {
-        "letter": "C",
-        "text": "*"
-      },
-      {
-        "letter": "D",
-        "text": "_"
-      },
-      {
-        "letter": "E",
-        "text": "|"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "C",
-      "E"
-    ],
-    "explicacion": "La barra invertida (\\), el asterisco (*) y la barra vertical (|) forman parte de los 9 caracteres prohibidos: \\ / : * ? \" < > | El guion medio (-) y el guion bajo (_) están permitidos."
-  },
-  {
-    "id": "interfaz-112",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Documentos y archivos",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
-    "section": "interfaz",
-    "topic": "documentos-archivos",
-    "subtopic": null,
-    "tema": "Documentos y archivos",
-    "sourceQuestionId": "1-116",
-    "enunciado": "Señale la afirmación que NO es correcta respecto a XML:",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Es un lenguaje de marcas extensible"
-      },
-      {
-        "letter": "B",
-        "text": "Sirve para organizar y etiquetar documentos"
-      },
-      {
-        "letter": "C",
-        "text": "Es la base del formato de almacenamiento del .docx (estándar OOXML)"
-      },
-      {
-        "letter": "D",
-        "text": "Es un programa independiente de Word usado para comprimir archivos"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "XML es un lenguaje de marcas, no un programa compresor. La compresión del .docx la realiza el empaquetado ZIP (Open Packaging Conventions), no el propio XML."
-  },
-  {
-    "id": "interfaz-494",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Documentos y archivos",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "documentos-archivos",
-    "subtopic": null,
-    "tema": "Documentos y archivos",
-    "sourceQuestionId": "8-134",
-    "enunciado": "Un usuario crea una plantilla de Word que debe incluir macros. ¿Con qué extensión debe guardarla?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": ".dotm"
-      },
-      {
-        "letter": "B",
-        "text": ".dotx"
-      },
-      {
-        "letter": "C",
-        "text": ".docm"
-      },
-      {
-        "letter": "D",
-        "text": ".dot"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Las plantillas con macros se guardan con extensión .dotm. Las plantillas sin macros usan .dotx. Los documentos con macros usan .docm. El formato .dot es la plantilla de Word 97-2003, sin soporte completo para macros de versiones modernas."
-  },
-  {
-    "id": "interfaz-496",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Documentos y archivos",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "documentos-archivos",
-    "subtopic": null,
-    "tema": "Documentos y archivos",
-    "sourceQuestionId": "8-155",
-    "enunciado": "¿Qué atajo activa o desactiva la vista de etiquetas XML en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Mayús+X"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+X"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Ctrl+X"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+Alt+X"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+X activa o desactiva la vista de etiquetas XML. Ctrl+X corta el contenido seleccionado. Alt+Ctrl+X no tiene esa función. Ctrl+Mayús+Alt+X no tiene función asignada para etiquetas XML."
   },
   {
     "id": "interfaz-93",
@@ -4178,190 +4178,6 @@
     "explicacion": "El modo táctil puede activarse o desactivarse desde la barra de acceso rápido, no es fijo."
   },
   {
-    "id": "interfaz-152",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "2-40",
-    "enunciado": "En Word 365, el modo mouse está pensado para dispositivos táctiles. (Verdadero/Falso)",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "El modo mouse es para ratón; el táctil para pantallas táctiles."
-  },
-  {
-    "id": "interfaz-153",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "2-41",
-    "enunciado": "En Word 365, en el modo táctil, los comandos son más grandes y hay más espacio entre ellos que en modo mouse. (Verdadero/Falso)",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Es una de las características del modo táctil."
-  },
-  {
-    "id": "interfaz-154",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "2-42",
-    "enunciado": "En Word 365, el modo táctil puede activarse desde la barra de herramientas de acceso rápido mediante el botón \"Modo táctil\". (Verdadero/Falso)",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "El texto lo indica expresamente."
-  },
-  {
-    "id": "interfaz-155",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "2-43",
-    "enunciado": "En Word 365, en modo mouse la cinta de opciones ocupa más espacio y caben menos comandos. (Verdadero/Falso)",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "En modo mouse caben más comandos porque son más pequeños."
-  },
-  {
-    "id": "interfaz-158",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "2-46",
-    "enunciado": "En Word 365, relacione cada elemento de la interfaz con su función:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Regla"
-        },
-        {
-          "id": "2",
-          "label": "Barra de título"
-        },
-        {
-          "id": "3",
-          "label": "Área de trabajo"
-        },
-        {
-          "id": "4",
-          "label": "Barra de estado"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Muestra el nombre del documento"
-        },
-        {
-          "id": "B",
-          "label": "Permite medir márgenes y tabulaciones"
-        },
-        {
-          "id": "C",
-          "label": "Zona central de edición del documento"
-        },
-        {
-          "id": "D",
-          "label": "Muestra sección, página y número de palabras"
-        }
-      ],
-      "correct": {
-        "1": "B",
-        "2": "A",
-        "3": "C",
-        "4": "D"
-      }
-    },
-    "respuesta": {
-      "1": "B",
-      "2": "A",
-      "3": "C",
-      "4": "D"
-    },
-    "explicacion": "Emparejamiento correcto: Regla → Permite medir márgenes y tabulaciones · Barra de título → Muestra el nombre del documento · Área de trabajo → Zona central de edición del documento · Barra de estado → Muestra sección, página y número de palabras."
-  },
-  {
-    "id": "interfaz-159",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "2-47",
-    "enunciado": "En Word 365, relacione cada modo con su característica:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Modo mouse"
-        },
-        {
-          "id": "2",
-          "label": "Modo táctil"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Comandos más grandes, más espacio entre ellos"
-        },
-        {
-          "id": "B",
-          "label": "Comandos más pequeños, aprovecha mejor el espacio"
-        }
-      ],
-      "correct": {
-        "1": "B",
-        "2": "A"
-      }
-    },
-    "respuesta": {
-      "1": "B",
-      "2": "A"
-    },
-    "explicacion": "Emparejamiento correcto: Modo mouse → Comandos más pequeños, aprovecha mejor el espacio · Modo táctil → Comandos más grandes, más espacio entre ellos."
-  },
-  {
     "id": "interfaz-160",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Ventana y cinta de opciones",
@@ -4430,45 +4246,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Modo mouse y modo táctil."
-  },
-  {
-    "id": "interfaz-163",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "2-51",
-    "enunciado": "En Word 365, señale las características correctas del modo táctil (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Comandos más grandes"
-      },
-      {
-        "letter": "B",
-        "text": "Más espacio entre comandos"
-      },
-      {
-        "letter": "C",
-        "text": "Pensado para dispositivos táctiles o visión reducida"
-      },
-      {
-        "letter": "D",
-        "text": "Reduce el número de pestañas disponibles"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C"
-    ],
-    "explicacion": "El modo táctil no reduce pestañas."
   },
   {
     "id": "interfaz-165",
@@ -6816,6 +6593,229 @@
     "explicacion": "Alt+Mayús+C cierra el panel de la ventana activa. Ctrl+W quita el formato de párrafo. Ctrl+Mayús+C no tiene función asignada. Alt+Ctrl+C copia el formato de la selección (pincel)."
   },
   {
+    "id": "interfaz-163",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "2-51",
+    "enunciado": "En Word 365, señale las características correctas del modo táctil (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Comandos más grandes"
+      },
+      {
+        "letter": "B",
+        "text": "Más espacio entre comandos"
+      },
+      {
+        "letter": "C",
+        "text": "Pensado para dispositivos táctiles o visión reducida"
+      },
+      {
+        "letter": "D",
+        "text": "Reduce el número de pestañas disponibles"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "El modo táctil no reduce pestañas."
+  },
+  {
+    "id": "interfaz-152",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "2-40",
+    "enunciado": "En Word 365, el modo mouse está pensado para dispositivos táctiles. (Verdadero/Falso)",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "El modo mouse es para ratón; el táctil para pantallas táctiles."
+  },
+  {
+    "id": "interfaz-153",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "2-41",
+    "enunciado": "En Word 365, en el modo táctil, los comandos son más grandes y hay más espacio entre ellos que en modo mouse. (Verdadero/Falso)",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es una de las características del modo táctil."
+  },
+  {
+    "id": "interfaz-154",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "2-42",
+    "enunciado": "En Word 365, el modo táctil puede activarse desde la barra de herramientas de acceso rápido mediante el botón \"Modo táctil\". (Verdadero/Falso)",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El texto lo indica expresamente."
+  },
+  {
+    "id": "interfaz-155",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "2-43",
+    "enunciado": "En Word 365, en modo mouse la cinta de opciones ocupa más espacio y caben menos comandos. (Verdadero/Falso)",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "En modo mouse caben más comandos porque son más pequeños."
+  },
+  {
+    "id": "interfaz-158",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "2-46",
+    "enunciado": "En Word 365, relacione cada elemento de la interfaz con su función:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Regla"
+        },
+        {
+          "id": "2",
+          "label": "Barra de título"
+        },
+        {
+          "id": "3",
+          "label": "Área de trabajo"
+        },
+        {
+          "id": "4",
+          "label": "Barra de estado"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Muestra el nombre del documento"
+        },
+        {
+          "id": "B",
+          "label": "Permite medir márgenes y tabulaciones"
+        },
+        {
+          "id": "C",
+          "label": "Zona central de edición del documento"
+        },
+        {
+          "id": "D",
+          "label": "Muestra sección, página y número de palabras"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "A",
+        "3": "C",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "A",
+      "3": "C",
+      "4": "D"
+    },
+    "explicacion": "Emparejamiento correcto: Regla → Permite medir márgenes y tabulaciones · Barra de título → Muestra el nombre del documento · Área de trabajo → Zona central de edición del documento · Barra de estado → Muestra sección, página y número de palabras."
+  },
+  {
+    "id": "interfaz-159",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "2-47",
+    "enunciado": "En Word 365, relacione cada modo con su característica:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Modo mouse"
+        },
+        {
+          "id": "2",
+          "label": "Modo táctil"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Comandos más grandes, más espacio entre ellos"
+        },
+        {
+          "id": "B",
+          "label": "Comandos más pequeños, aprovecha mejor el espacio"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "A"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "A"
+    },
+    "explicacion": "Emparejamiento correcto: Modo mouse → Comandos más pequeños, aprovecha mejor el espacio · Modo táctil → Comandos más grandes, más espacio entre ellos."
+  },
+  {
     "id": "interfaz-256",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
@@ -7446,118 +7446,6 @@
     "explicacion": "Son tres opciones: ocultar barra, personalizar y contraer."
   },
   {
-    "id": "interfaz-277",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-teclado-ayuda",
-    "subtopic": null,
-    "tema": "Modo de acceso por teclado y ayuda",
-    "sourceQuestionId": "4-22",
-    "enunciado": "En Word 365, relacione cada atajo con su función:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "ALT o F10"
-        },
-        {
-          "id": "2",
-          "label": "Ctrl + F1"
-        },
-        {
-          "id": "3",
-          "label": "F1"
-        },
-        {
-          "id": "4",
-          "label": "Alt + Q"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Ayuda"
-        },
-        {
-          "id": "B",
-          "label": "Búsqueda"
-        },
-        {
-          "id": "C",
-          "label": "Modo acceso teclado"
-        },
-        {
-          "id": "D",
-          "label": "Mostrar/ocultar cinta"
-        }
-      ],
-      "correct": {
-        "1": "C",
-        "2": "D",
-        "3": "A",
-        "4": "B"
-      }
-    },
-    "respuesta": {
-      "1": "C",
-      "2": "D",
-      "3": "A",
-      "4": "B"
-    },
-    "explicacion": "Correspondencia directa según el temario."
-  },
-  {
-    "id": "interfaz-278",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-teclado-ayuda",
-    "subtopic": null,
-    "tema": "Modo de acceso por teclado y ayuda",
-    "sourceQuestionId": "4-23",
-    "enunciado": "En Word 365, relacione cada opción con el menú al que pertenece:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Personalizar la cinta"
-        },
-        {
-          "id": "2",
-          "label": "Mostrar solo pestañas"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Opciones de visualización"
-        },
-        {
-          "id": "B",
-          "label": "Menú contextual"
-        }
-      ],
-      "correct": {
-        "1": "B",
-        "2": "A"
-      }
-    },
-    "respuesta": {
-      "1": "B",
-      "2": "A"
-    },
-    "explicacion": "La primera pertenece al menú contextual, la segunda a las opciones de visualización."
-  },
-  {
     "id": "interfaz-279",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
@@ -7836,123 +7724,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ctrl+F1 y doble clic son métodos válidos para ocultar la cinta."
-  },
-  {
-    "id": "interfaz-287",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-teclado-ayuda",
-    "subtopic": null,
-    "tema": "Modo de acceso por teclado y ayuda",
-    "sourceQuestionId": "4-32",
-    "enunciado": "En Word 365, señale las opciones que forman parte del menú contextual de una pestaña (varias correctas):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ocultar la barra de acceso rápido"
-      },
-      {
-        "letter": "B",
-        "text": "Personalizar la cinta de opciones"
-      },
-      {
-        "letter": "C",
-        "text": "Modo de pantalla completa"
-      },
-      {
-        "letter": "D",
-        "text": "Contraer la cinta de opciones"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explicacion": "Las tres pertenecen al menú contextual; \"Modo pantalla completa\" no."
-  },
-  {
-    "id": "interfaz-288",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-teclado-ayuda",
-    "subtopic": null,
-    "tema": "Modo de acceso por teclado y ayuda",
-    "sourceQuestionId": "4-33",
-    "enunciado": "En Word 365, señale las opciones que forman parte de \"Opciones de visualización de la cinta\" (varias correctas):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Modo de pantalla completa"
-      },
-      {
-        "letter": "B",
-        "text": "Mostrar solo pestañas"
-      },
-      {
-        "letter": "C",
-        "text": "Personalizar la cinta"
-      },
-      {
-        "letter": "D",
-        "text": "Mostrar siempre la barra de herramientas"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explicacion": "Son las tres opciones del botón de visualización."
-  },
-  {
-    "id": "interfaz-289",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-teclado-ayuda",
-    "subtopic": null,
-    "tema": "Modo de acceso por teclado y ayuda",
-    "sourceQuestionId": "4-34",
-    "enunciado": "En Word 365, señale las formas válidas de mostrar u ocultar la cinta (varias correctas):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Doble clic en una pestaña"
-      },
-      {
-        "letter": "B",
-        "text": "Menú contextual de una pestaña"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl + F1"
-      },
-      {
-        "letter": "D",
-        "text": "Alt + Q"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C"
-    ],
-    "explicacion": "Alt+Q no es una de las 4 formas."
   },
   {
     "id": "interfaz-290",
@@ -8585,62 +8356,6 @@
     "explicacion": "Son 3."
   },
   {
-    "id": "interfaz-310",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-teclado-ayuda",
-    "subtopic": null,
-    "tema": "Modo de acceso por teclado y ayuda",
-    "sourceQuestionId": "4-55",
-    "enunciado": "En Word 365, relacione cada opción con su efecto:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Mostrar solo pestañas"
-        },
-        {
-          "id": "2",
-          "label": "Modo de pantalla completa"
-        },
-        {
-          "id": "3",
-          "label": "Mostrar siempre la barra"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Maximiza el área de trabajo"
-        },
-        {
-          "id": "B",
-          "label": "Oculta los comandos, deja solo pestañas"
-        },
-        {
-          "id": "C",
-          "label": "Muestra todos los comandos"
-        }
-      ],
-      "correct": {
-        "1": "B",
-        "2": "A",
-        "3": "C"
-      }
-    },
-    "respuesta": {
-      "1": "B",
-      "2": "A",
-      "3": "C"
-    },
-    "explicacion": "Cada opción tiene un efecto visual distinto."
-  },
-  {
     "id": "interfaz-311",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
@@ -8709,45 +8424,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Es la opción que oculta todos los elementos."
-  },
-  {
-    "id": "interfaz-313",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-teclado-ayuda",
-    "subtopic": null,
-    "tema": "Modo de acceso por teclado y ayuda",
-    "sourceQuestionId": "4-58",
-    "enunciado": "En Word 365, señale las opciones que permiten reducir la visibilidad de la cinta (varias correctas):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Doble clic en una pestaña"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl + F1"
-      },
-      {
-        "letter": "C",
-        "text": "Alt + Q"
-      },
-      {
-        "letter": "D",
-        "text": "Menú contextual de una pestaña"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explicacion": "Todas excepto Alt+Q permiten ocultar la cinta."
   },
   {
     "id": "interfaz-314",
@@ -9451,6 +9127,330 @@
     "explicacion": "Abre el cuadro de diálogo Personalizar teclado, donde se pueden asignar, cambiar o quitar combinaciones de teclas a los comandos de Word."
   },
   {
+    "id": "interfaz-287",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-teclado-ayuda",
+    "subtopic": null,
+    "tema": "Modo de acceso por teclado y ayuda",
+    "sourceQuestionId": "4-32",
+    "enunciado": "En Word 365, señale las opciones que forman parte del menú contextual de una pestaña (varias correctas):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ocultar la barra de acceso rápido"
+      },
+      {
+        "letter": "B",
+        "text": "Personalizar la cinta de opciones"
+      },
+      {
+        "letter": "C",
+        "text": "Modo de pantalla completa"
+      },
+      {
+        "letter": "D",
+        "text": "Contraer la cinta de opciones"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "Las tres pertenecen al menú contextual; \"Modo pantalla completa\" no."
+  },
+  {
+    "id": "interfaz-288",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-teclado-ayuda",
+    "subtopic": null,
+    "tema": "Modo de acceso por teclado y ayuda",
+    "sourceQuestionId": "4-33",
+    "enunciado": "En Word 365, señale las opciones que forman parte de \"Opciones de visualización de la cinta\" (varias correctas):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Modo de pantalla completa"
+      },
+      {
+        "letter": "B",
+        "text": "Mostrar solo pestañas"
+      },
+      {
+        "letter": "C",
+        "text": "Personalizar la cinta"
+      },
+      {
+        "letter": "D",
+        "text": "Mostrar siempre la barra de herramientas"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "Son las tres opciones del botón de visualización."
+  },
+  {
+    "id": "interfaz-289",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-teclado-ayuda",
+    "subtopic": null,
+    "tema": "Modo de acceso por teclado y ayuda",
+    "sourceQuestionId": "4-34",
+    "enunciado": "En Word 365, señale las formas válidas de mostrar u ocultar la cinta (varias correctas):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Doble clic en una pestaña"
+      },
+      {
+        "letter": "B",
+        "text": "Menú contextual de una pestaña"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl + F1"
+      },
+      {
+        "letter": "D",
+        "text": "Alt + Q"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "Alt+Q no es una de las 4 formas."
+  },
+  {
+    "id": "interfaz-313",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-teclado-ayuda",
+    "subtopic": null,
+    "tema": "Modo de acceso por teclado y ayuda",
+    "sourceQuestionId": "4-58",
+    "enunciado": "En Word 365, señale las opciones que permiten reducir la visibilidad de la cinta (varias correctas):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Doble clic en una pestaña"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl + F1"
+      },
+      {
+        "letter": "C",
+        "text": "Alt + Q"
+      },
+      {
+        "letter": "D",
+        "text": "Menú contextual de una pestaña"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "Todas excepto Alt+Q permiten ocultar la cinta."
+  },
+  {
+    "id": "interfaz-277",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-teclado-ayuda",
+    "subtopic": null,
+    "tema": "Modo de acceso por teclado y ayuda",
+    "sourceQuestionId": "4-22",
+    "enunciado": "En Word 365, relacione cada atajo con su función:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "ALT o F10"
+        },
+        {
+          "id": "2",
+          "label": "Ctrl + F1"
+        },
+        {
+          "id": "3",
+          "label": "F1"
+        },
+        {
+          "id": "4",
+          "label": "Alt + Q"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Ayuda"
+        },
+        {
+          "id": "B",
+          "label": "Búsqueda"
+        },
+        {
+          "id": "C",
+          "label": "Modo acceso teclado"
+        },
+        {
+          "id": "D",
+          "label": "Mostrar/ocultar cinta"
+        }
+      ],
+      "correct": {
+        "1": "C",
+        "2": "D",
+        "3": "A",
+        "4": "B"
+      }
+    },
+    "respuesta": {
+      "1": "C",
+      "2": "D",
+      "3": "A",
+      "4": "B"
+    },
+    "explicacion": "Correspondencia directa según el temario."
+  },
+  {
+    "id": "interfaz-278",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-teclado-ayuda",
+    "subtopic": null,
+    "tema": "Modo de acceso por teclado y ayuda",
+    "sourceQuestionId": "4-23",
+    "enunciado": "En Word 365, relacione cada opción con el menú al que pertenece:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Personalizar la cinta"
+        },
+        {
+          "id": "2",
+          "label": "Mostrar solo pestañas"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Opciones de visualización"
+        },
+        {
+          "id": "B",
+          "label": "Menú contextual"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "A"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "A"
+    },
+    "explicacion": "La primera pertenece al menú contextual, la segunda a las opciones de visualización."
+  },
+  {
+    "id": "interfaz-310",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-teclado-ayuda",
+    "subtopic": null,
+    "tema": "Modo de acceso por teclado y ayuda",
+    "sourceQuestionId": "4-55",
+    "enunciado": "En Word 365, relacione cada opción con su efecto:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Mostrar solo pestañas"
+        },
+        {
+          "id": "2",
+          "label": "Modo de pantalla completa"
+        },
+        {
+          "id": "3",
+          "label": "Mostrar siempre la barra"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Maximiza el área de trabajo"
+        },
+        {
+          "id": "B",
+          "label": "Oculta los comandos, deja solo pestañas"
+        },
+        {
+          "id": "C",
+          "label": "Muestra todos los comandos"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "A",
+        "3": "C"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "A",
+      "3": "C"
+    },
+    "explicacion": "Cada opción tiene un efecto visual distinto."
+  },
+  {
     "id": "interfaz-115",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Barra de herramientas de acceso rápido",
@@ -9694,81 +9694,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Insertar imagen no es un comando de acceso rápido típico en el menú. Las otras opciones sí aparecen."
-  },
-  {
-    "id": "interfaz-150",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de herramientas de acceso rápido",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-rapido",
-    "subtopic": null,
-    "tema": "Barra de herramientas de acceso rápido",
-    "sourceQuestionId": "2-38",
-    "enunciado": "En Word 365, la barra de herramientas de acceso rápido es personalizable. (Verdadero/Falso)",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "El temario lo afirma explícitamente."
-  },
-  {
-    "id": "interfaz-151",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de herramientas de acceso rápido",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-rapido",
-    "subtopic": null,
-    "tema": "Barra de herramientas de acceso rápido",
-    "sourceQuestionId": "2-39",
-    "enunciado": "En Word 365, el último botón de la barra de herramientas de acceso rápido abre el desplegable de personalización. (Verdadero/Falso)",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Esa es su función exacta."
-  },
-  {
-    "id": "interfaz-164",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de herramientas de acceso rápido",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-rapido",
-    "subtopic": null,
-    "tema": "Barra de herramientas de acceso rápido",
-    "sourceQuestionId": "2-52",
-    "enunciado": "En Word 365, señale qué se puede activar/gestionar desde la barra de herramientas de acceso rápido (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Guardado automático"
-      },
-      {
-        "letter": "B",
-        "text": "Modo mouse/táctil"
-      },
-      {
-        "letter": "C",
-        "text": "Numeración de páginas"
-      },
-      {
-        "letter": "D",
-        "text": "Deshacer/Rehacer"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explicacion": "La numeración de páginas no es un botón de acceso rápido típico."
   },
   {
     "id": "interfaz-174",
@@ -10156,6 +10081,81 @@
     "explicacion": "Es la opción del menú contextual que elimina la barra de acceso rápido."
   },
   {
+    "id": "interfaz-164",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de herramientas de acceso rápido",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-rapido",
+    "subtopic": null,
+    "tema": "Barra de herramientas de acceso rápido",
+    "sourceQuestionId": "2-52",
+    "enunciado": "En Word 365, señale qué se puede activar/gestionar desde la barra de herramientas de acceso rápido (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Guardado automático"
+      },
+      {
+        "letter": "B",
+        "text": "Modo mouse/táctil"
+      },
+      {
+        "letter": "C",
+        "text": "Numeración de páginas"
+      },
+      {
+        "letter": "D",
+        "text": "Deshacer/Rehacer"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "La numeración de páginas no es un botón de acceso rápido típico."
+  },
+  {
+    "id": "interfaz-150",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de herramientas de acceso rápido",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-rapido",
+    "subtopic": null,
+    "tema": "Barra de herramientas de acceso rápido",
+    "sourceQuestionId": "2-38",
+    "enunciado": "En Word 365, la barra de herramientas de acceso rápido es personalizable. (Verdadero/Falso)",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El temario lo afirma explícitamente."
+  },
+  {
+    "id": "interfaz-151",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de herramientas de acceso rápido",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-rapido",
+    "subtopic": null,
+    "tema": "Barra de herramientas de acceso rápido",
+    "sourceQuestionId": "2-39",
+    "enunciado": "En Word 365, el último botón de la barra de herramientas de acceso rápido abre el desplegable de personalización. (Verdadero/Falso)",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Esa es su función exacta."
+  },
+  {
     "id": "interfaz-79",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Barra de estado",
@@ -10504,63 +10504,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "La barra de estado muestra información contextual."
-  },
-  {
-    "id": "interfaz-157",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "2-45",
-    "enunciado": "En Word 365, la Barra de estado se sitúa en la parte inferior de la ventana. (Verdadero/Falso)",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Es su ubicación correcta."
-  },
-  {
-    "id": "interfaz-162",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "2-50",
-    "enunciado": "En Word 365, señale los elementos que se sitúan en la parte inferior de la ventana (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Barra de estado"
-      },
-      {
-        "letter": "B",
-        "text": "Área de vistas"
-      },
-      {
-        "letter": "C",
-        "text": "Barra de título"
-      },
-      {
-        "letter": "D",
-        "text": "Zoom"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explicacion": "La barra de título está arriba."
   },
   {
     "id": "interfaz-398",
@@ -10913,132 +10856,6 @@
     "explicacion": "La ruta correcta es Archivo → Opciones → Avanzadas. Las opciones C y D son falsas."
   },
   {
-    "id": "interfaz-409",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "6-14",
-    "enunciado": "En Word 365, la Barra de estado es configurable desde el menú contextual (botón derecho del ratón).",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "El material lo indica explícitamente."
-  },
-  {
-    "id": "interfaz-410",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "6-15",
-    "enunciado": "En Word 365, si pulsamos sobre \"Página X de X\" en la barra de estado se abre el panel de navegación.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Esa es la función de ese indicador."
-  },
-  {
-    "id": "interfaz-411",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "6-16",
-    "enunciado": "En Word 365, si pulsamos sobre el número de palabras se abre el cuadro \"Contar palabras\".",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "El número de palabras abre el cuadro de conteo."
-  },
-  {
-    "id": "interfaz-412",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "6-17",
-    "enunciado": "En Word 365, un clic en el icono de revisión ortográfica de la barra de estado inicia la revisión ortográfica del documento.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Es la función de ese icono."
-  },
-  {
-    "id": "interfaz-413",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "6-18",
-    "enunciado": "En Word 365, un clic en el icono de \"Insertar\" de la barra de estado intercambia el modo de escritura entre Insertar/Sobrescribir.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "El icono alterna el modo."
-  },
-  {
-    "id": "interfaz-414",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "6-19",
-    "enunciado": "En Word 365, para activar la tecla Insert como control del modo Sobrescribir no es necesario configurar nada previamente.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Hay que ir a Archivo → Opciones → Avanzadas y activar la casilla."
-  },
-  {
-    "id": "interfaz-415",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "6-20",
-    "enunciado": "En Word 365, el icono de Macro en la barra de estado inicia el acceso a la grabación de macros.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Esa es su función."
-  },
-  {
     "id": "interfaz-418",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Barra de estado",
@@ -11142,128 +10959,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "La ruta es Archivo → Opciones → Avanzadas."
-  },
-  {
-    "id": "interfaz-423",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "6-28",
-    "enunciado": "En Word 365, relacione cada icono/elemento de la Barra de estado con su función:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Página X de X"
-        },
-        {
-          "id": "2",
-          "label": "Número de palabras"
-        },
-        {
-          "id": "3",
-          "label": "Icono de libro con X"
-        },
-        {
-          "id": "4",
-          "label": "Icono \"Insertar\""
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Abre \"Contar palabras\""
-        },
-        {
-          "id": "B",
-          "label": "Abre el panel de navegación"
-        },
-        {
-          "id": "C",
-          "label": "Inicia la revisión ortográfica"
-        },
-        {
-          "id": "D",
-          "label": "Intercambia modo Insertar/Sobrescribir"
-        }
-      ],
-      "correct": {
-        "1": "B",
-        "2": "A",
-        "3": "C",
-        "4": "D"
-      }
-    },
-    "respuesta": {
-      "1": "B",
-      "2": "A",
-      "3": "C",
-      "4": "D"
-    },
-    "explicacion": "Correspondencia directa."
-  },
-  {
-    "id": "interfaz-424",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "6-29",
-    "enunciado": "En Word 365, relacione cada dato con el cuadro donde aparece (\"Contar palabras\"):",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Párrafos"
-        },
-        {
-          "id": "2",
-          "label": "Líneas"
-        },
-        {
-          "id": "3",
-          "label": "Idioma"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Sí"
-        },
-        {
-          "id": "B",
-          "label": "Sí"
-        },
-        {
-          "id": "C",
-          "label": "No"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C"
-    },
-    "explicacion": "El idioma no aparece."
   },
   {
     "id": "interfaz-426",
@@ -11719,84 +11414,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "El icono de Macro inicia la grabación."
-  },
-  {
-    "id": "interfaz-440",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "6-45",
-    "enunciado": "En Word 365, señale los datos que muestra el cuadro \"Contar palabras\" (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Páginas"
-      },
-      {
-        "letter": "B",
-        "text": "Párrafos"
-      },
-      {
-        "letter": "C",
-        "text": "Idioma"
-      },
-      {
-        "letter": "D",
-        "text": "Líneas"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explicacion": "El idioma no aparece."
-  },
-  {
-    "id": "interfaz-441",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "6-46",
-    "enunciado": "En Word 365, señale las acciones que se pueden realizar directamente desde la Barra de estado (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Iniciar la revisión ortográfica"
-      },
-      {
-        "letter": "B",
-        "text": "Cambiar el modo de escritura"
-      },
-      {
-        "letter": "C",
-        "text": "Iniciar la grabación de una macro"
-      },
-      {
-        "letter": "D",
-        "text": "Cambiar el idioma de la interfaz"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C"
-    ],
-    "explicacion": "La barra de estado no cambia idioma."
   },
   {
     "id": "interfaz-443",
@@ -12394,72 +12011,6 @@
     "explicacion": "La sección se activa desde el menú contextual de la barra de estado."
   },
   {
-    "id": "interfaz-469",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "7-28",
-    "enunciado": "En Word 365, relacione cada elemento del menú con su valor:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Número de página"
-        },
-        {
-          "id": "2",
-          "label": "Contar palabras"
-        },
-        {
-          "id": "3",
-          "label": "Número de caracteres (con espacios)"
-        },
-        {
-          "id": "4",
-          "label": "Zoom"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "2351 palabras"
-        },
-        {
-          "id": "B",
-          "label": "14340 caracteres"
-        },
-        {
-          "id": "C",
-          "label": "Página 6 de 22"
-        },
-        {
-          "id": "D",
-          "label": "121 %"
-        }
-      ],
-      "correct": {
-        "1": "C",
-        "2": "A",
-        "3": "B",
-        "4": "D"
-      }
-    },
-    "respuesta": {
-      "1": "C",
-      "2": "A",
-      "3": "B",
-      "4": "D"
-    },
-    "explicacion": "Asociación directa de los valores mostrados en la captura."
-  },
-  {
     "id": "interfaz-470",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Barra de estado",
@@ -12493,84 +12044,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "El comprobador de accesibilidad muestra ese estado en la captura."
-  },
-  {
-    "id": "interfaz-471",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "7-30",
-    "enunciado": "En Word 365, señale los elementos que aparecen marcados (✓) en el menú \"Personalizar barra de estado\" (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Sección"
-      },
-      {
-        "letter": "B",
-        "text": "Idioma"
-      },
-      {
-        "letter": "C",
-        "text": "Posición de página vertical"
-      },
-      {
-        "letter": "D",
-        "text": "Bloq Mayús"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C"
-    ],
-    "explicacion": "\"Bloq Mayús\" aparece desactivado (sin check)."
-  },
-  {
-    "id": "interfaz-472",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Barra de estado",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "barra-estado",
-    "subtopic": null,
-    "tema": "Barra de estado",
-    "sourceQuestionId": "7-31",
-    "enunciado": "En Word 365, señale los elementos que aparecen SIN marcar en el menú \"Personalizar barra de estado\" (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Número de línea"
-      },
-      {
-        "letter": "B",
-        "text": "Columna"
-      },
-      {
-        "letter": "C",
-        "text": "Modo Selección"
-      },
-      {
-        "letter": "D",
-        "text": "Sobrescritura"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C"
-    ],
-    "explicacion": "\"Sobrescritura\" aparece marcada y con estado \"Insertar\"."
   },
   {
     "id": "interfaz-473",
@@ -12853,6 +12326,533 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Ctrl+Mayús+O recalcula las estadísticas de palabras del documento. Alt+Ctrl+F2 abre el cuadro Abrir. Ctrl+Mayús+Q aplica la fuente Symbol. Ctrl+Mayús+G no tiene función en este Word."
+  },
+  {
+    "id": "interfaz-162",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "2-50",
+    "enunciado": "En Word 365, señale los elementos que se sitúan en la parte inferior de la ventana (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Barra de estado"
+      },
+      {
+        "letter": "B",
+        "text": "Área de vistas"
+      },
+      {
+        "letter": "C",
+        "text": "Barra de título"
+      },
+      {
+        "letter": "D",
+        "text": "Zoom"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "La barra de título está arriba."
+  },
+  {
+    "id": "interfaz-440",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "6-45",
+    "enunciado": "En Word 365, señale los datos que muestra el cuadro \"Contar palabras\" (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Páginas"
+      },
+      {
+        "letter": "B",
+        "text": "Párrafos"
+      },
+      {
+        "letter": "C",
+        "text": "Idioma"
+      },
+      {
+        "letter": "D",
+        "text": "Líneas"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "El idioma no aparece."
+  },
+  {
+    "id": "interfaz-441",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "6-46",
+    "enunciado": "En Word 365, señale las acciones que se pueden realizar directamente desde la Barra de estado (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Iniciar la revisión ortográfica"
+      },
+      {
+        "letter": "B",
+        "text": "Cambiar el modo de escritura"
+      },
+      {
+        "letter": "C",
+        "text": "Iniciar la grabación de una macro"
+      },
+      {
+        "letter": "D",
+        "text": "Cambiar el idioma de la interfaz"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "La barra de estado no cambia idioma."
+  },
+  {
+    "id": "interfaz-471",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "7-30",
+    "enunciado": "En Word 365, señale los elementos que aparecen marcados (✓) en el menú \"Personalizar barra de estado\" (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Sección"
+      },
+      {
+        "letter": "B",
+        "text": "Idioma"
+      },
+      {
+        "letter": "C",
+        "text": "Posición de página vertical"
+      },
+      {
+        "letter": "D",
+        "text": "Bloq Mayús"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "\"Bloq Mayús\" aparece desactivado (sin check)."
+  },
+  {
+    "id": "interfaz-472",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "7-31",
+    "enunciado": "En Word 365, señale los elementos que aparecen SIN marcar en el menú \"Personalizar barra de estado\" (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Número de línea"
+      },
+      {
+        "letter": "B",
+        "text": "Columna"
+      },
+      {
+        "letter": "C",
+        "text": "Modo Selección"
+      },
+      {
+        "letter": "D",
+        "text": "Sobrescritura"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "\"Sobrescritura\" aparece marcada y con estado \"Insertar\"."
+  },
+  {
+    "id": "interfaz-157",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "2-45",
+    "enunciado": "En Word 365, la Barra de estado se sitúa en la parte inferior de la ventana. (Verdadero/Falso)",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es su ubicación correcta."
+  },
+  {
+    "id": "interfaz-409",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "6-14",
+    "enunciado": "En Word 365, la Barra de estado es configurable desde el menú contextual (botón derecho del ratón).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El material lo indica explícitamente."
+  },
+  {
+    "id": "interfaz-410",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "6-15",
+    "enunciado": "En Word 365, si pulsamos sobre \"Página X de X\" en la barra de estado se abre el panel de navegación.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Esa es la función de ese indicador."
+  },
+  {
+    "id": "interfaz-411",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "6-16",
+    "enunciado": "En Word 365, si pulsamos sobre el número de palabras se abre el cuadro \"Contar palabras\".",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El número de palabras abre el cuadro de conteo."
+  },
+  {
+    "id": "interfaz-412",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "6-17",
+    "enunciado": "En Word 365, un clic en el icono de revisión ortográfica de la barra de estado inicia la revisión ortográfica del documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es la función de ese icono."
+  },
+  {
+    "id": "interfaz-413",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "6-18",
+    "enunciado": "En Word 365, un clic en el icono de \"Insertar\" de la barra de estado intercambia el modo de escritura entre Insertar/Sobrescribir.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El icono alterna el modo."
+  },
+  {
+    "id": "interfaz-414",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "6-19",
+    "enunciado": "En Word 365, para activar la tecla Insert como control del modo Sobrescribir no es necesario configurar nada previamente.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Hay que ir a Archivo → Opciones → Avanzadas y activar la casilla."
+  },
+  {
+    "id": "interfaz-415",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "6-20",
+    "enunciado": "En Word 365, el icono de Macro en la barra de estado inicia el acceso a la grabación de macros.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Esa es su función."
+  },
+  {
+    "id": "interfaz-423",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "6-28",
+    "enunciado": "En Word 365, relacione cada icono/elemento de la Barra de estado con su función:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Página X de X"
+        },
+        {
+          "id": "2",
+          "label": "Número de palabras"
+        },
+        {
+          "id": "3",
+          "label": "Icono de libro con X"
+        },
+        {
+          "id": "4",
+          "label": "Icono \"Insertar\""
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Abre \"Contar palabras\""
+        },
+        {
+          "id": "B",
+          "label": "Abre el panel de navegación"
+        },
+        {
+          "id": "C",
+          "label": "Inicia la revisión ortográfica"
+        },
+        {
+          "id": "D",
+          "label": "Intercambia modo Insertar/Sobrescribir"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "A",
+        "3": "C",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "A",
+      "3": "C",
+      "4": "D"
+    },
+    "explicacion": "Correspondencia directa."
+  },
+  {
+    "id": "interfaz-424",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "6-29",
+    "enunciado": "En Word 365, relacione cada dato con el cuadro donde aparece (\"Contar palabras\"):",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Párrafos"
+        },
+        {
+          "id": "2",
+          "label": "Líneas"
+        },
+        {
+          "id": "3",
+          "label": "Idioma"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Sí"
+        },
+        {
+          "id": "B",
+          "label": "Sí"
+        },
+        {
+          "id": "C",
+          "label": "No"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explicacion": "El idioma no aparece."
+  },
+  {
+    "id": "interfaz-469",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Barra de estado",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "barra-estado",
+    "subtopic": null,
+    "tema": "Barra de estado",
+    "sourceQuestionId": "7-28",
+    "enunciado": "En Word 365, relacione cada elemento del menú con su valor:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Número de página"
+        },
+        {
+          "id": "2",
+          "label": "Contar palabras"
+        },
+        {
+          "id": "3",
+          "label": "Número de caracteres (con espacios)"
+        },
+        {
+          "id": "4",
+          "label": "Zoom"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "2351 palabras"
+        },
+        {
+          "id": "B",
+          "label": "14340 caracteres"
+        },
+        {
+          "id": "C",
+          "label": "Página 6 de 22"
+        },
+        {
+          "id": "D",
+          "label": "121 %"
+        }
+      ],
+      "correct": {
+        "1": "C",
+        "2": "A",
+        "3": "B",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "C",
+      "2": "A",
+      "3": "B",
+      "4": "D"
+    },
+    "explicacion": "Asociación directa de los valores mostrados en la captura."
   },
   {
     "id": "interfaz-86",
@@ -13835,84 +13835,6 @@
     "explicacion": "El Área de vistas contiene los botones para cambiar de vista."
   },
   {
-    "id": "interfaz-482",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Área de vistas",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "area-vistas",
-    "subtopic": null,
-    "tema": "Área de vistas",
-    "sourceQuestionId": "7-41",
-    "enunciado": "En Word 365, señale las vistas que aparecen en el Área de vistas (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Modo lectura"
-      },
-      {
-        "letter": "B",
-        "text": "Diseño de Impresión"
-      },
-      {
-        "letter": "C",
-        "text": "Diseño Web"
-      },
-      {
-        "letter": "D",
-        "text": "Borrador"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C"
-    ],
-    "explicacion": "El material solo menciona tres vistas, no incluye Borrador."
-  },
-  {
-    "id": "interfaz-483",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Área de vistas",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "area-vistas",
-    "subtopic": null,
-    "tema": "Área de vistas",
-    "sourceQuestionId": "7-42",
-    "enunciado": "En Word 365, señale los elementos que aparecen marcados (✓) en el menú (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Sección"
-      },
-      {
-        "letter": "B",
-        "text": "Idioma"
-      },
-      {
-        "letter": "C",
-        "text": "Número de línea"
-      },
-      {
-        "letter": "D",
-        "text": "Revisión ortográfica y gramatical"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explicacion": "\"Número de línea\" no tiene check."
-  },
-  {
     "id": "interfaz-484",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Área de vistas",
@@ -14088,6 +14010,84 @@
     "explicacion": "\"Sobrescritura\" muestra \"Insertar\" como estado actual."
   },
   {
+    "id": "interfaz-482",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Área de vistas",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "area-vistas",
+    "subtopic": null,
+    "tema": "Área de vistas",
+    "sourceQuestionId": "7-41",
+    "enunciado": "En Word 365, señale las vistas que aparecen en el Área de vistas (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Modo lectura"
+      },
+      {
+        "letter": "B",
+        "text": "Diseño de Impresión"
+      },
+      {
+        "letter": "C",
+        "text": "Diseño Web"
+      },
+      {
+        "letter": "D",
+        "text": "Borrador"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "El material solo menciona tres vistas, no incluye Borrador."
+  },
+  {
+    "id": "interfaz-483",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Área de vistas",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "area-vistas",
+    "subtopic": null,
+    "tema": "Área de vistas",
+    "sourceQuestionId": "7-42",
+    "enunciado": "En Word 365, señale los elementos que aparecen marcados (✓) en el menú (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Sección"
+      },
+      {
+        "letter": "B",
+        "text": "Idioma"
+      },
+      {
+        "letter": "C",
+        "text": "Número de línea"
+      },
+      {
+        "letter": "D",
+        "text": "Revisión ortográfica y gramatical"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "\"Número de línea\" no tiene check."
+  },
+  {
     "id": "interfaz-125",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Regla",
@@ -14156,24 +14156,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "La regla horizontal se encuentra debajo de la cinta. La barra de título (A) está encima."
-  },
-  {
-    "id": "interfaz-156",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Regla",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "regla",
-    "subtopic": null,
-    "tema": "Regla",
-    "sourceQuestionId": "2-44",
-    "enunciado": "En Word 365, la Regla solo aparece en la parte superior del documento, nunca en la lateral. (Verdadero/Falso)",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "La Regla aparece arriba y a la izquierda."
   },
   {
     "id": "interfaz-168",
@@ -14561,45 +14543,6 @@
     "explicacion": "La Regla está en la ficha Vista."
   },
   {
-    "id": "interfaz-367",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Regla",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "regla",
-    "subtopic": null,
-    "tema": "Regla",
-    "sourceQuestionId": "5-32",
-    "enunciado": "En Word 365, señale las funciones de la Regla (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Establecer tabulaciones y sangrías"
-      },
-      {
-        "letter": "B",
-        "text": "Colocar los márgenes"
-      },
-      {
-        "letter": "C",
-        "text": "Corregir la ortografía"
-      },
-      {
-        "letter": "D",
-        "text": "Ajustar anchos de columnas"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explicacion": "La Regla no corrige ortografía."
-  },
-  {
     "id": "interfaz-369",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Regla",
@@ -14878,6 +14821,63 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "La negrita se aplica desde el grupo Fuente."
+  },
+  {
+    "id": "interfaz-367",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Regla",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "regla",
+    "subtopic": null,
+    "tema": "Regla",
+    "sourceQuestionId": "5-32",
+    "enunciado": "En Word 365, señale las funciones de la Regla (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Establecer tabulaciones y sangrías"
+      },
+      {
+        "letter": "B",
+        "text": "Colocar los márgenes"
+      },
+      {
+        "letter": "C",
+        "text": "Corregir la ortografía"
+      },
+      {
+        "letter": "D",
+        "text": "Ajustar anchos de columnas"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "La Regla no corrige ortografía."
+  },
+  {
+    "id": "interfaz-156",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Regla",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "regla",
+    "subtopic": null,
+    "tema": "Regla",
+    "sourceQuestionId": "2-44",
+    "enunciado": "En Word 365, la Regla solo aparece en la parte superior del documento, nunca en la lateral. (Verdadero/Falso)",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "La Regla aparece arriba y a la izquierda."
   },
   {
     "id": "interfaz-269",
@@ -15300,72 +15300,6 @@
     "explicacion": "F1 es ayuda (trampa), Ctrl+F1 es ocultar cinta (trampa), Alt+Q es búsqueda (trampa)."
   },
   {
-    "id": "interfaz-356",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Buscador",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "buscador",
-    "subtopic": null,
-    "tema": "Buscador",
-    "sourceQuestionId": "5-21",
-    "enunciado": "En Word 365, relacione cada elemento con su función:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Cursor"
-        },
-        {
-          "id": "2",
-          "label": "Área de trabajo"
-        },
-        {
-          "id": "3",
-          "label": "Regla"
-        },
-        {
-          "id": "4",
-          "label": "Mostrar formato"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Zona donde se escribe el documento"
-        },
-        {
-          "id": "B",
-          "label": "Establece tabulaciones, sangrías y márgenes"
-        },
-        {
-          "id": "C",
-          "label": "Marcador que indica la posición exacta en el documento"
-        },
-        {
-          "id": "D",
-          "label": "Muestra un panel con el formato del texto"
-        }
-      ],
-      "correct": {
-        "1": "C",
-        "2": "A",
-        "3": "B",
-        "4": "D"
-      }
-    },
-    "respuesta": {
-      "1": "C",
-      "2": "A",
-      "3": "B",
-      "4": "D"
-    },
-    "explicacion": "Correspondencia directa."
-  },
-  {
     "id": "interfaz-358",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Buscador",
@@ -15469,45 +15403,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "MAY+F1 abre \"Mostrar formato\". Alt+Q es búsqueda (trampa)."
-  },
-  {
-    "id": "interfaz-366",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Buscador",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "buscador",
-    "subtopic": null,
-    "tema": "Buscador",
-    "sourceQuestionId": "5-31",
-    "enunciado": "En Word 365, señale las opciones que aparecen en \"Acciones sugeridas\" (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Tabla de contenido"
-      },
-      {
-        "letter": "B",
-        "text": "Marcar como final"
-      },
-      {
-        "letter": "C",
-        "text": "Abrir el panel de navegación"
-      },
-      {
-        "letter": "D",
-        "text": "Mostrar la regla"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "C",
-      "D"
-    ],
-    "explicacion": "\"Marcar como final\" es de \"Acciones usadas recientemente\"."
   },
   {
     "id": "interfaz-374",
@@ -15893,6 +15788,111 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Alt + Q abre el buscador."
+  },
+  {
+    "id": "interfaz-366",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Buscador",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "buscador",
+    "subtopic": null,
+    "tema": "Buscador",
+    "sourceQuestionId": "5-31",
+    "enunciado": "En Word 365, señale las opciones que aparecen en \"Acciones sugeridas\" (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tabla de contenido"
+      },
+      {
+        "letter": "B",
+        "text": "Marcar como final"
+      },
+      {
+        "letter": "C",
+        "text": "Abrir el panel de navegación"
+      },
+      {
+        "letter": "D",
+        "text": "Mostrar la regla"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explicacion": "\"Marcar como final\" es de \"Acciones usadas recientemente\"."
+  },
+  {
+    "id": "interfaz-356",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Buscador",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "buscador",
+    "subtopic": null,
+    "tema": "Buscador",
+    "sourceQuestionId": "5-21",
+    "enunciado": "En Word 365, relacione cada elemento con su función:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Cursor"
+        },
+        {
+          "id": "2",
+          "label": "Área de trabajo"
+        },
+        {
+          "id": "3",
+          "label": "Regla"
+        },
+        {
+          "id": "4",
+          "label": "Mostrar formato"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Zona donde se escribe el documento"
+        },
+        {
+          "id": "B",
+          "label": "Establece tabulaciones, sangrías y márgenes"
+        },
+        {
+          "id": "C",
+          "label": "Marcador que indica la posición exacta en el documento"
+        },
+        {
+          "id": "D",
+          "label": "Muestra un panel con el formato del texto"
+        }
+      ],
+      "correct": {
+        "1": "C",
+        "2": "A",
+        "3": "B",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "C",
+      "2": "A",
+      "3": "B",
+      "4": "D"
+    },
+    "explicacion": "Correspondencia directa."
   },
   {
     "id": "interfaz-121",
@@ -16455,52 +16455,6 @@
     "explicacion": "Es la letra I (i mayúscula)."
   },
   {
-    "id": "interfaz-357",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "cursor-navegacion",
-    "subtopic": null,
-    "tema": "Cursor, puntero y barras de desplazamiento",
-    "sourceQuestionId": "5-22",
-    "enunciado": "En Word 365, relacione cada zona con la forma del puntero:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Área del texto"
-        },
-        {
-          "id": "2",
-          "label": "Área de barras"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Flecha blanca"
-        },
-        {
-          "id": "B",
-          "label": "I mayúscula"
-        }
-      ],
-      "correct": {
-        "1": "B",
-        "2": "A"
-      }
-    },
-    "respuesta": {
-      "1": "B",
-      "2": "A"
-    },
-    "explicacion": "En texto es I; en barras es flecha blanca."
-  },
-  {
     "id": "interfaz-361",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
@@ -16569,45 +16523,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Al pasar del área de texto al área de barras, cambia de I a flecha."
-  },
-  {
-    "id": "interfaz-368",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "cursor-navegacion",
-    "subtopic": null,
-    "tema": "Cursor, puntero y barras de desplazamiento",
-    "sourceQuestionId": "5-33",
-    "enunciado": "En Word 365, señale las afirmaciones correctas sobre cursor y puntero (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "El cursor se llama punto de inserción"
-      },
-      {
-        "letter": "B",
-        "text": "El puntero siempre es una flecha"
-      },
-      {
-        "letter": "C",
-        "text": "El cursor indica dónde se escribe"
-      },
-      {
-        "letter": "D",
-        "text": "El puntero cambia de forma según la zona"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "C",
-      "D"
-    ],
-    "explicacion": "El puntero no siempre es flecha."
   },
   {
     "id": "interfaz-372",
@@ -16995,42 +16910,6 @@
     "explicacion": "Las barras se activan automáticamente, no desde el menú contextual."
   },
   {
-    "id": "interfaz-416",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "cursor-navegacion",
-    "subtopic": null,
-    "tema": "Cursor, puntero y barras de desplazamiento",
-    "sourceQuestionId": "6-21",
-    "enunciado": "En Word 365, existe una barra de desplazamiento vertical y otra horizontal.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "El material lo indica."
-  },
-  {
-    "id": "interfaz-417",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
-    "tipo": "verdadero_falso",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "cursor-navegacion",
-    "subtopic": null,
-    "tema": "Cursor, puntero y barras de desplazamiento",
-    "sourceQuestionId": "6-22",
-    "enunciado": "En Word 365, la barra de desplazamiento permanece siempre visible aunque se vea la totalidad del documento.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Desaparece si no es necesaria."
-  },
-  {
     "id": "interfaz-421",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
@@ -17169,45 +17048,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "La barra desaparece si no es necesaria."
-  },
-  {
-    "id": "interfaz-442",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
-    "tipo": "seleccion_multiple",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "cursor-navegacion",
-    "subtopic": null,
-    "tema": "Cursor, puntero y barras de desplazamiento",
-    "sourceQuestionId": "6-47",
-    "enunciado": "En Word 365, señale las afirmaciones correctas sobre las Barras de desplazamiento (puede haber más de una):",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Existe una vertical y otra horizontal"
-      },
-      {
-        "letter": "B",
-        "text": "Permiten desplazarse por el documento"
-      },
-      {
-        "letter": "C",
-        "text": "Pueden desaparecer si no son necesarias"
-      },
-      {
-        "letter": "D",
-        "text": "Se activan solo con MAY + F1"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C"
-    ],
-    "explicacion": "No se activan con MAY+F1."
   },
   {
     "id": "interfaz-451",
@@ -17628,6 +17468,166 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ctrl+Arriba mueve el cursor un párrafo hacia arriba sin extender selección. Ctrl+Mayús+Arriba extiende la selección un párrafo hacia arriba. Mayús+Arriba extiende la selección una línea hacia arriba. Alt+Arriba mueve al objeto anterior."
+  },
+  {
+    "id": "interfaz-368",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "cursor-navegacion",
+    "subtopic": null,
+    "tema": "Cursor, puntero y barras de desplazamiento",
+    "sourceQuestionId": "5-33",
+    "enunciado": "En Word 365, señale las afirmaciones correctas sobre cursor y puntero (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El cursor se llama punto de inserción"
+      },
+      {
+        "letter": "B",
+        "text": "El puntero siempre es una flecha"
+      },
+      {
+        "letter": "C",
+        "text": "El cursor indica dónde se escribe"
+      },
+      {
+        "letter": "D",
+        "text": "El puntero cambia de forma según la zona"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explicacion": "El puntero no siempre es flecha."
+  },
+  {
+    "id": "interfaz-442",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "cursor-navegacion",
+    "subtopic": null,
+    "tema": "Cursor, puntero y barras de desplazamiento",
+    "sourceQuestionId": "6-47",
+    "enunciado": "En Word 365, señale las afirmaciones correctas sobre las Barras de desplazamiento (puede haber más de una):",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Existe una vertical y otra horizontal"
+      },
+      {
+        "letter": "B",
+        "text": "Permiten desplazarse por el documento"
+      },
+      {
+        "letter": "C",
+        "text": "Pueden desaparecer si no son necesarias"
+      },
+      {
+        "letter": "D",
+        "text": "Se activan solo con MAY + F1"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "No se activan con MAY+F1."
+  },
+  {
+    "id": "interfaz-416",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "cursor-navegacion",
+    "subtopic": null,
+    "tema": "Cursor, puntero y barras de desplazamiento",
+    "sourceQuestionId": "6-21",
+    "enunciado": "En Word 365, existe una barra de desplazamiento vertical y otra horizontal.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El material lo indica."
+  },
+  {
+    "id": "interfaz-417",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "cursor-navegacion",
+    "subtopic": null,
+    "tema": "Cursor, puntero y barras de desplazamiento",
+    "sourceQuestionId": "6-22",
+    "enunciado": "En Word 365, la barra de desplazamiento permanece siempre visible aunque se vea la totalidad del documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Desaparece si no es necesaria."
+  },
+  {
+    "id": "interfaz-357",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Cursor, puntero y barras de desplazamiento",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "cursor-navegacion",
+    "subtopic": null,
+    "tema": "Cursor, puntero y barras de desplazamiento",
+    "sourceQuestionId": "5-22",
+    "enunciado": "En Word 365, relacione cada zona con la forma del puntero:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Área del texto"
+        },
+        {
+          "id": "2",
+          "label": "Área de barras"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Flecha blanca"
+        },
+        {
+          "id": "B",
+          "label": "I mayúscula"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "A"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "A"
+    },
+    "explicacion": "En texto es I; en barras es flecha blanca."
   },
   {
     "id": "interfaz-183",

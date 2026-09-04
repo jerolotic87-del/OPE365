@@ -35,6 +35,78 @@
     "explicacion": "Alt+Mayús+B marca un elemento para la tabla de contenido. Alt+Mayús+X marca entradas de índice. Alt+Ctrl+B no tiene esa función asignada. Ctrl+Mayús+B no tiene función asignada para tabla de contenido."
   },
   {
+    "id": "referencias-79",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "neg-referencias-01",
+    "generado": true,
+    "enunciado": "¿Cuál de estos NO es un grupo de la pestaña Referencias?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tabla de contenido"
+      },
+      {
+        "letter": "B",
+        "text": "Notas al pie"
+      },
+      {
+        "letter": "C",
+        "text": "Citas y bibliografía"
+      },
+      {
+        "letter": "D",
+        "text": "Tabla de contenidos multimedia"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "No existe un grupo llamado «Tabla de contenidos multimedia». Los grupos reales son Tabla de contenido, Notas al pie, Citas y bibliografía, Títulos e Índice."
+  },
+  {
+    "id": "referencias-80",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "neg-referencias-02",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el cuadro Tabla de contenido es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Comparte cuadro con Índice y Tabla de ilustraciones"
+      },
+      {
+        "letter": "B",
+        "text": "Tiene 7 formatos, incluidos Sofisticado y Moderno"
+      },
+      {
+        "letter": "C",
+        "text": "«Modificar...» edita los estilos Título 1 a Título 9"
+      },
+      {
+        "letter": "D",
+        "text": "Por defecto muestra 3 niveles"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "«Modificar...» edita los estilos TDC 1 a TDC 9 (las líneas de la propia tabla), no los estilos Título."
+  },
+  {
     "id": "referencias-8",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Tabla de contenido",
@@ -343,78 +415,6 @@
     "explicacion": "Falso: ese menú rápido solo ofrece Nivel 1, Nivel 2, Nivel 3 y «No mostrar en la tabla de contenido»."
   },
   {
-    "id": "referencias-79",
-    "sourceFile": "referencias.json",
-    "bloque": "Referencias — Tabla de contenido (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": true,
-    "section": "referencias",
-    "topic": "tabla-contenido",
-    "subtopic": null,
-    "tema": "Tabla de contenido",
-    "sourceQuestionId": "neg-referencias-01",
-    "generado": true,
-    "enunciado": "¿Cuál de estos NO es un grupo de la pestaña Referencias?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Tabla de contenido"
-      },
-      {
-        "letter": "B",
-        "text": "Notas al pie"
-      },
-      {
-        "letter": "C",
-        "text": "Citas y bibliografía"
-      },
-      {
-        "letter": "D",
-        "text": "Tabla de contenidos multimedia"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "No existe un grupo llamado «Tabla de contenidos multimedia». Los grupos reales son Tabla de contenido, Notas al pie, Citas y bibliografía, Títulos e Índice."
-  },
-  {
-    "id": "referencias-80",
-    "sourceFile": "referencias.json",
-    "bloque": "Referencias — Tabla de contenido (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
-    "section": "referencias",
-    "topic": "tabla-contenido",
-    "subtopic": null,
-    "tema": "Tabla de contenido",
-    "sourceQuestionId": "neg-referencias-02",
-    "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre el cuadro Tabla de contenido es FALSA?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Comparte cuadro con Índice y Tabla de ilustraciones"
-      },
-      {
-        "letter": "B",
-        "text": "Tiene 7 formatos, incluidos Sofisticado y Moderno"
-      },
-      {
-        "letter": "C",
-        "text": "«Modificar...» edita los estilos Título 1 a Título 9"
-      },
-      {
-        "letter": "D",
-        "text": "Por defecto muestra 3 niveles"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "«Modificar...» edita los estilos TDC 1 a TDC 9 (las líneas de la propia tabla), no los estilos Título."
-  },
-  {
     "id": "referencias-1",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Notas al pie",
@@ -553,6 +553,42 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ctrl+Mayús+F7 copia al archivo de origen el texto modificado de un archivo vinculado. Mayús+F7 abre Sinónimos. Alt+Ctrl+F7 hace la conversión hangul/hanja. Ctrl+F7 no tiene función asignada en este Word."
+  },
+  {
+    "id": "referencias-81",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Notas al pie (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": true,
+    "section": "referencias",
+    "topic": "notas",
+    "subtopic": null,
+    "tema": "Notas al pie",
+    "sourceQuestionId": "neg-referencias-03",
+    "generado": true,
+    "enunciado": "¿Cuál de estos atajos es INCORRECTO?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Alt+Ctrl+O = nota al pie"
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Ctrl+L = nota al final"
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+A = comentario"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Ctrl+O = nota al final"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Alt+Ctrl+O inserta una nota AL PIE, no al final (eso es Alt+Ctrl+L). No puede ser las dos cosas a la vez."
   },
   {
     "id": "referencias-20",
@@ -805,40 +841,40 @@
     "explicacion": "Sus tres opciones: al pie→al final, al final→al pie, e intercambiar ambas."
   },
   {
-    "id": "referencias-81",
+    "id": "referencias-82",
     "sourceFile": "referencias.json",
-    "bloque": "Referencias — Notas al pie (negativa)",
+    "bloque": "Referencias — Citas y bibliografía (negativa)",
     "tipo": "opcion_unica",
-    "categoria": "atajo",
+    "categoria": "concepto",
     "negativa": true,
     "section": "referencias",
-    "topic": "notas",
+    "topic": "citas-bibliografia",
     "subtopic": null,
-    "tema": "Notas al pie",
-    "sourceQuestionId": "neg-referencias-03",
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "neg-referencias-04",
     "generado": true,
-    "enunciado": "¿Cuál de estos atajos es INCORRECTO?",
+    "enunciado": "¿Cuál de estas afirmaciones sobre estilos de cita es FALSA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Ctrl+O = nota al pie"
+        "text": "El estilo por defecto es APA"
       },
       {
         "letter": "B",
-        "text": "Alt+Ctrl+L = nota al final"
+        "text": "Existe el estilo Vancouver"
       },
       {
         "letter": "C",
-        "text": "Alt+Ctrl+A = comentario"
+        "text": "Existe el estilo MLA"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+O = nota al final"
+        "text": "Existe el estilo Chicago"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Alt+Ctrl+O inserta una nota AL PIE, no al final (eso es Alt+Ctrl+L). No puede ser las dos cosas a la vez."
+    "respuesta": "B",
+    "explicacion": "No existe el estilo «Vancouver» en el menú Estilo de Word. Sí están APA, Chicago, GB7714, GOST, Harvard-Anglia, IEEE, ISO 690, MLA, SIST02 y Turabian."
   },
   {
     "id": "referencias-30",
@@ -1150,40 +1186,40 @@
     "explicacion": "En el menú Estilo se ve bajo cada nombre: APA «Sexta edición», MLA «Séptima edición», Chicago «Decimoquinta edición»."
   },
   {
-    "id": "referencias-82",
+    "id": "referencias-83",
     "sourceFile": "referencias.json",
-    "bloque": "Referencias — Citas y bibliografía (negativa)",
+    "bloque": "Referencias — Títulos (negativa)",
     "tipo": "opcion_unica",
-    "categoria": "concepto",
+    "categoria": "ruta",
     "negativa": true,
     "section": "referencias",
-    "topic": "citas-bibliografia",
+    "topic": "titulos",
     "subtopic": null,
-    "tema": "Citas y bibliografía",
-    "sourceQuestionId": "neg-referencias-04",
+    "tema": "Títulos",
+    "sourceQuestionId": "neg-referencias-05",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre estilos de cita es FALSA?",
+    "enunciado": "¿Cuál de estos NO es un rótulo de fábrica del cuadro Título?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El estilo por defecto es APA"
+        "text": "Ilustración"
       },
       {
         "letter": "B",
-        "text": "Existe el estilo Vancouver"
+        "text": "Ecuación"
       },
       {
         "letter": "C",
-        "text": "Existe el estilo MLA"
+        "text": "Tabla"
       },
       {
         "letter": "D",
-        "text": "Existe el estilo Chicago"
+        "text": "Figura"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "No existe el estilo «Vancouver» en el menú Estilo de Word. Sí están APA, Chicago, GB7714, GOST, Harvard-Anglia, IEEE, ISO 690, MLA, SIST02 y Turabian."
+    "respuesta": "D",
+    "explicacion": "En el Word en español el rótulo se llama «Ilustración», no «Figura». Los tres rótulos de fábrica son Ilustración, Ecuación y Tabla."
   },
   {
     "id": "referencias-41",
@@ -1456,42 +1492,6 @@
     "explicacion": "Falso: Autotítulo (Referencias) pone títulos automáticos a los objetos que insertas; Autotexto (Insertar ▸ Elementos rápidos) guarda fragmentos de texto reutilizables."
   },
   {
-    "id": "referencias-83",
-    "sourceFile": "referencias.json",
-    "bloque": "Referencias — Títulos (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": true,
-    "section": "referencias",
-    "topic": "titulos",
-    "subtopic": null,
-    "tema": "Títulos",
-    "sourceQuestionId": "neg-referencias-05",
-    "generado": true,
-    "enunciado": "¿Cuál de estos NO es un rótulo de fábrica del cuadro Título?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ilustración"
-      },
-      {
-        "letter": "B",
-        "text": "Ecuación"
-      },
-      {
-        "letter": "C",
-        "text": "Tabla"
-      },
-      {
-        "letter": "D",
-        "text": "Figura"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "En el Word en español el rótulo se llama «Ilustración», no «Figura». Los tres rótulos de fábrica son Ilustración, Ecuación y Tabla."
-  },
-  {
     "id": "referencias-3",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Notas al pie",
@@ -1525,6 +1525,42 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Alt+Mayús+X abre el cuadro para marcar entradas de índice. Alt+Mayús+I marca una cita para tabla de autoridades. Alt+Ctrl+X no tiene esa función asignada. Ctrl+Mayús+X no tiene función asignada para índices."
+  },
+  {
+    "id": "referencias-84",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Índice (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "referencias",
+    "topic": "indice",
+    "subtopic": null,
+    "tema": "Índice",
+    "sourceQuestionId": "neg-referencias-06",
+    "generado": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el índice alfabético es FALSA?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se genera de entradas marcadas con «Marcar entrada»"
+      },
+      {
+        "letter": "B",
+        "text": "«Automarcar» usa un archivo de concordancia"
+      },
+      {
+        "letter": "C",
+        "text": "Se genera a partir de los estilos de título, igual que la tabla de contenido"
+      },
+      {
+        "letter": "D",
+        "text": "Por defecto usa 2 columnas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El índice NO se genera de los estilos de título (eso es la tabla de contenido): se genera de entradas marcadas a mano o con Automarcar."
   },
   {
     "id": "referencias-51",
@@ -1756,42 +1792,6 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Las otras opciones son «Página actual» (por defecto) e «Intervalo de páginas» (con un marcador)."
-  },
-  {
-    "id": "referencias-84",
-    "sourceFile": "referencias.json",
-    "bloque": "Referencias — Índice (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": true,
-    "section": "referencias",
-    "topic": "indice",
-    "subtopic": null,
-    "tema": "Índice",
-    "sourceQuestionId": "neg-referencias-06",
-    "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre el índice alfabético es FALSA?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Se genera de entradas marcadas con «Marcar entrada»"
-      },
-      {
-        "letter": "B",
-        "text": "«Automarcar» usa un archivo de concordancia"
-      },
-      {
-        "letter": "C",
-        "text": "Se genera a partir de los estilos de título, igual que la tabla de contenido"
-      },
-      {
-        "letter": "D",
-        "text": "Por defecto usa 2 columnas"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "El índice NO se genera de los estilos de título (eso es la tabla de contenido): se genera de entradas marcadas a mano o con Automarcar."
   },
   {
     "id": "referencias-7",

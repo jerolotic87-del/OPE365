@@ -84,21 +84,6 @@
     ]
   },
   {
-    "cardId": "E-005",
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Vista Esquema",
-    "cardType": "error",
-    "priority": "normal",
-    "front": "¿La Vista Esquema muestra todo el contenido organizado jerárquicamente?",
-    "back": "No. Muestra SÓLO los títulos. El contenido completo no es visible.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-3"
-    ]
-  },
-  {
     "cardId": "F-006",
     "section": "vista",
     "topic": "vistas",
@@ -112,25 +97,6 @@
     "questionRefs": [
       "vista-4",
       "vista-5"
-    ]
-  },
-  {
-    "cardId": "E-006",
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Vista Preliminar",
-    "cardType": "error",
-    "priority": "alta",
-    "front": "¿La Vista Preliminar es un botón del Grupo Vistas en la pestaña Vista?",
-    "back": "No. La Vista Preliminar se accede desde Archivo → Imprimir. El atajo Ctrl+Alt+I la activa directamente desde cualquier lugar.",
-    "sourceRefs": [
-      "age.josenrique",
-      "Opostal",
-      "Sergio Galán"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "archivo-1"
     ]
   },
   {
@@ -148,23 +114,6 @@
     "knowledgeRefs": [],
     "questionRefs": [
       "vista-2"
-    ]
-  },
-  {
-    "cardId": "E-007",
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": "Modo de lectura",
-    "cardType": "error",
-    "priority": "alta",
-    "front": "¿El Modo de lectura solo oculta barras de herramientas y reglas?",
-    "back": "No solo eso. Oculta también encabezados y pies de página, además de barras de herramientas, reglas y otros elementos (lista abierta).",
-    "sourceRefs": [
-      "aulaClic"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-1"
     ]
   },
   {
@@ -322,6 +271,57 @@
     ],
     "knowledgeRefs": [],
     "questionRefs": []
+  },
+  {
+    "cardId": "E-005",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Esquema",
+    "cardType": "error",
+    "priority": "normal",
+    "front": "¿La Vista Esquema muestra todo el contenido organizado jerárquicamente?",
+    "back": "No. Muestra SÓLO los títulos. El contenido completo no es visible.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-3"
+    ]
+  },
+  {
+    "cardId": "E-006",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Vista Preliminar",
+    "cardType": "error",
+    "priority": "alta",
+    "front": "¿La Vista Preliminar es un botón del Grupo Vistas en la pestaña Vista?",
+    "back": "No. La Vista Preliminar se accede desde Archivo → Imprimir. El atajo Ctrl+Alt+I la activa directamente desde cualquier lugar.",
+    "sourceRefs": [
+      "age.josenrique",
+      "Opostal",
+      "Sergio Galán"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "archivo-1"
+    ]
+  },
+  {
+    "cardId": "E-007",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": "Modo de lectura",
+    "cardType": "error",
+    "priority": "alta",
+    "front": "¿El Modo de lectura solo oculta barras de herramientas y reglas?",
+    "back": "No solo eso. Oculta también encabezados y pies de página, además de barras de herramientas, reglas y otros elementos (lista abierta).",
+    "sourceRefs": [
+      "aulaClic"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-1"
+    ]
   },
   {
     "cardId": "F-010",
@@ -531,21 +531,6 @@
     "questionRefs": []
   },
   {
-    "cardId": "E-002",
-    "section": "vista",
-    "topic": "zoom",
-    "subtopic": "Valores",
-    "cardType": "error",
-    "priority": "alta",
-    "front": "Zoom mínimo: ¿10% o 25%?",
-    "back": "10% es el mínimo absoluto. Los presets del cuadro de diálogo son 200%, 100% y 75% (no 25%). El 75% es un preset, pero no el mínimo.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-56"
-    ]
-  },
-  {
     "cardId": "F-015",
     "section": "vista",
     "topic": "zoom",
@@ -712,51 +697,18 @@
     "questionRefs": []
   },
   {
-    "cardId": "E-003",
+    "cardId": "E-002",
     "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
+    "topic": "zoom",
+    "subtopic": "Valores",
     "cardType": "error",
     "priority": "alta",
-    "front": "Ver el mismo documento en 2 ventanas vs. 2 paneles — ¿qué función es cada una?",
-    "back": "2 ventanas separadas = Nueva ventana. 2 paneles en 1 ventana = Dividir (Alt+Ctrl+V).",
+    "front": "Zoom mínimo: ¿10% o 25%?",
+    "back": "10% es el mínimo absoluto. Los presets del cuadro de diálogo son 200%, 100% y 75% (no 25%). El 75% es un preset, pero no el mínimo.",
     "sourceRefs": [],
     "knowledgeRefs": [],
     "questionRefs": [
-      "vista-31",
-      "vista-27"
-    ]
-  },
-  {
-    "cardId": "E-004",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Desplazamiento sincrónico",
-    "cardType": "error",
-    "priority": "normal",
-    "front": "¿Se puede activar el Desplazamiento sincrónico en cualquier momento?",
-    "back": "No. Solo cuando Ver en paralelo está activo previamente.",
-    "sourceRefs": [],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-28"
-    ]
-  },
-  {
-    "cardId": "E-008",
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": "Ver en paralelo",
-    "cardType": "error",
-    "priority": "alta",
-    "front": "¿Ver en paralelo puede usarse con más de dos documentos?",
-    "back": "No. Ver en paralelo solo funciona con exactamente dos documentos distintos. Para más de dos, se usa Organizar todo (Mosaico).",
-    "sourceRefs": [
-      "SlideShare"
-    ],
-    "knowledgeRefs": [],
-    "questionRefs": [
-      "vista-80"
+      "vista-56"
     ]
   },
   {
@@ -1021,22 +973,51 @@
     "questionRefs": []
   },
   {
-    "cardId": "E-001",
+    "cardId": "E-003",
     "section": "vista",
-    "topic": "macros",
+    "topic": "ventana",
     "subtopic": null,
     "cardType": "error",
     "priority": "alta",
-    "front": "Alt + F8 vs Alt + F11 — ¿cuál es cuál?",
-    "back": "Alt + F8 → diálogo MACROS (gestionar). Alt + F11 → VISUAL BASIC (programar). Regla: F8 viene antes que F11, igual que gestionar viene antes que programar.",
+    "front": "Ver el mismo documento en 2 ventanas vs. 2 paneles — ¿qué función es cada una?",
+    "back": "2 ventanas separadas = Nueva ventana. 2 paneles en 1 ventana = Dividir (Alt+Ctrl+V).",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-31",
+      "vista-27"
+    ]
+  },
+  {
+    "cardId": "E-004",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Desplazamiento sincrónico",
+    "cardType": "error",
+    "priority": "normal",
+    "front": "¿Se puede activar el Desplazamiento sincrónico en cualquier momento?",
+    "back": "No. Solo cuando Ver en paralelo está activo previamente.",
+    "sourceRefs": [],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-28"
+    ]
+  },
+  {
+    "cardId": "E-008",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": "Ver en paralelo",
+    "cardType": "error",
+    "priority": "alta",
+    "front": "¿Ver en paralelo puede usarse con más de dos documentos?",
+    "back": "No. Ver en paralelo solo funciona con exactamente dos documentos distintos. Para más de dos, se usa Organizar todo (Mosaico).",
     "sourceRefs": [
-      "Studocu",
-      "aulaClic",
-      "IONOS España"
+      "SlideShare"
     ],
     "knowledgeRefs": [],
     "questionRefs": [
-      "vista-36"
+      "vista-80"
     ]
   },
   {
@@ -1173,6 +1154,25 @@
     ],
     "knowledgeRefs": [],
     "questionRefs": []
+  },
+  {
+    "cardId": "E-001",
+    "section": "vista",
+    "topic": "macros",
+    "subtopic": null,
+    "cardType": "error",
+    "priority": "alta",
+    "front": "Alt + F8 vs Alt + F11 — ¿cuál es cuál?",
+    "back": "Alt + F8 → diálogo MACROS (gestionar). Alt + F11 → VISUAL BASIC (programar). Regla: F8 viene antes que F11, igual que gestionar viene antes que programar.",
+    "sourceRefs": [
+      "Studocu",
+      "aulaClic",
+      "IONOS España"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": [
+      "vista-36"
+    ]
   },
   {
     "cardId": "F-034",

@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
-"""Normaliza el ORDEN de los bancos: agrupa por topic (orden de taxonomia)
-y, dentro de cada grupo, por id numerico. No cambia ids de preguntas
-(salvo diseno.json, banco nuevo). Flashcards: formato cardId -> F-NNN."""
+"""Normaliza el ORDEN de los bancos: agrupa por topic (orden de taxonomia),
+dentro de cada topic por tipo de ejercicio (orden canonico de
+EXERCISE_TYPES en app.js: opcion_unica, seleccion_multiple,
+verdadero_falso, emparejamiento, relleno) y, dentro de eso, por id
+numerico. No cambia ids de preguntas (salvo diseno.json, banco nuevo).
+Flashcards: formato cardId -> F-NNN, agrupadas por topic y por cardType
+(contenido antes que error)."""
 import json, os, re
 
 HERE = "."
@@ -10,6 +14,10 @@ TOPIC_ORDER = {}
 for s in tax["sections"]:
     for i, t in enumerate(s["topics"]):
         TOPIC_ORDER[(s["id"], t["id"])] = i
+
+TIPO_ORDER = {"opcion_unica": 0, "seleccion_multiple": 1, "verdadero_falso": 2,
+              "emparejamiento": 3, "relleno": 4}
+CARDTYPE_ORDER = {"contenido": 0, "error": 1}
 
 def num(s):
     m = re.search(r"(\d+)\s*$", s or "")
@@ -23,7 +31,8 @@ for fn in json.load(open(os.path.join(QDIR, "manifest.json"), encoding="utf-8"))
     d = json.load(open(path, encoding="utf-8"))
     sec = fn[:-5]
     d.sort(key=lambda q: (TOPIC_ORDER.get((sec, q.get("topic")), 999),
-                          str(q.get("topic") or ""), num(q["id"])))
+                          str(q.get("topic") or ""),
+                          TIPO_ORDER.get(q.get("tipo"), 99), num(q["id"])))
     if sec == "diseno":
         # banco nuevo: renumerar 1..N en el nuevo orden
         for i, q in enumerate(d, 1):
@@ -56,7 +65,8 @@ for fn in json.load(open(os.path.join(FDIR, "manifest.json"), encoding="utf-8"))
     ids = [c["cardId"] for c in d]
     assert len(ids) == len(set(ids)), (fn, "cardId duplicado tras reformatear")
     d.sort(key=lambda c: (TOPIC_ORDER.get((sec, c.get("topic")), 999),
-                          str(c.get("topic") or ""), num(c["cardId"])))
+                          str(c.get("topic") or ""),
+                          CARDTYPE_ORDER.get(c.get("cardType"), 9), num(c["cardId"])))
     json.dump(d, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     open(path, "a", encoding="utf-8").write("\n")
     runs = []

@@ -16,8 +16,11 @@ data/
   taxonomy.json                 section > topic > subtopic
   rutas/<pestaña>.txt           volcado de rutas de cinta del usuario (ver rutas/README.md)
   imagenes_rutas/<pestaña>/      capturas de pantalla de origen de esas rutas
+  imagenes_iconos/<pestaña>/     recortes de iconos de comandos (fuente de las preguntas con imagen)
   atajos_word365_v2608.md       volcado de "Personalizar teclado" — ÚNICA fuente de atajos
   ATAJOS_WORD365.md             referencia legible de atajos, agrupada por función
+  ESQUEMA_EJERCICIOS.md         formato canónico de pregunta y los 5 tipos de ejercicio
+  vista_procesada_fuente.md     briefing de origen usado para integrar la pestaña Vista
   *_integration_report.md       informes de integración de cada bloque grande
 ```
 
@@ -30,7 +33,12 @@ Las 10 pestañas: `interfaz`, `archivo`, `inicio`, `insertar`, `diseno`,
    pestaña va a `questions/<pestaña>.json` / `flashcards/<pestaña>.json`.
    Nunca un archivo suelto por bloque.
 2. **Agrupado por `topic`** dentro de cada archivo, en el orden en que los
-   topics aparecen en `taxonomy.json`. Dentro de un topic, por id numérico.
+   topics aparecen en `taxonomy.json`. Dentro de un topic, por **tipo de
+   ejercicio** (orden canónico de `EXERCISE_TYPES` en `app.js`: opción
+   única, selección múltiple, V/F, emparejamiento, relleno — así se puede
+   hojear/filtrar el archivo por tipo a simple vista) y, dentro del tipo,
+   por id numérico. Flashcards: por `topic` y luego por `cardType`
+   (contenido antes que error).
 3. **Ids de pregunta estables.** `<pestaña>-<n>`. Hay huecos por borrados
    (documentados en CLAUDE.md) — NO se renumera: CLAUDE.md y el motor
    referencian ids concretos. Provenance en `sourceQuestionId` / `bloque`.

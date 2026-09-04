@@ -137,6 +137,37 @@ tests/                 jsdom (node tests/test_*.js) + tests/test_engine.js
 para compartir sin depender de una carpeta): ver `build.py` en esta misma
 carpeta — genera `OPE365_Word365_Estudio.html`.
 
+**Limpieza y organización (sep-2026):** auditoría completa de archivos y
+código muertos, con cuidado de no tocar nada con función real (verificado
+con `grep`/análisis estático + suite completa + Chromium real antes y
+después de cada borrado):
+- Borrado `ATAJOS_CONSOLIDADO.md` (raíz): predecesor de
+  `data/ATAJOS_WORD365.md`, citaba el ya eliminado `atajos_oficial.json`.
+- Movidos a `data/` por consistencia: `VISTA_PROCESADA_PARA_OPE365.md` →
+  `data/vista_procesada_fuente.md` (era el briefing de origen de Vista,
+  vivía suelto en la raíz); `data/referencias/*.png` (26 iconos sin
+  procesar) → `data/imagenes_iconos/referencias/` (mismo patrón que
+  diseno/disposicion/inicio/insertar).
+- `docs/` documentado con `docs/README.md` (no se tocó nada: los 3
+  ficheros — `UI_REDISENO.md`, `memory-engine.html`, `plan-inteligente.html`
+  — son registro de decisiones ya tomadas, no basura).
+- `views.js`: eliminada `wizardTotalSteps()` + sus dos constantes — única
+  función top-level de toda la app (7 ficheros JS) con 0 llamadas en
+  ningún sitio; el wizard cuenta pasos con `wizardState.step` a pelo desde
+  hace tiempo.
+- `styles.css`: 12 reglas sin ningún uso en JS/HTML confirmadas por
+  búsqueda literal (`.hero-continue`/`.hc-go` = versión anterior del CTA
+  de Inicio, hoy `.cta-hero`; `.lp-axis`/`.lp-head`/`.lp-sub` = versión
+  anterior del panel de progreso, hoy `.lp-row`/`.lp-legend`;
+  `.duel-round-label`, `.conn-dot`, `.fb-label`, `.stat-row`,
+  `.issue-warn`, `.mini-state`, `.view-wide`). Dejadas a propósito
+  `.sr-only`, `.pad-4`/`.pad-6` (utilidades del sistema de diseño, sin uso
+  actual pero no son "basura heredada") y `.soon`/`.soon-badge` (estado
+  "próximamente" ya con CSS listo para el día que se use).
+- `data/questions/*.json` y `data/flashcards/*.json`: además de por
+  `topic`, ahora se agrupan por **tipo de ejercicio** dentro de cada topic
+  (ver `data/README.md` regla 2) — `scripts/normalize_order.py` ampliado.
+
 ## Regla de oro: jerarquía de fuentes
 
 Para **atajos de teclado** hay una única fuente y NADA puede contradecirla:

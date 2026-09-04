@@ -72,77 +72,6 @@
     "explicacion": "El Portapapeles usa politica FIFO por insercion: al superar los 24 elementos, elimina automaticamente el primero que se almaceno para hacer hueco al nuevo."
   },
   {
-    "id": "inicio-3",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Portapapeles",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "portapapeles",
-    "subtopic": "Atajos",
-    "tema": "Portapapeles",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0003",
-    "enunciado": "Relaciona cada accion del Portapapeles con su atajo de teclado:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Cortar"
-        },
-        {
-          "id": "2",
-          "label": "Copiar"
-        },
-        {
-          "id": "3",
-          "label": "Pegar"
-        },
-        {
-          "id": "4",
-          "label": "Copiar formato"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Ctrl + X"
-        },
-        {
-          "id": "B",
-          "label": "Ctrl + C"
-        },
-        {
-          "id": "C",
-          "label": "Ctrl + V"
-        },
-        {
-          "id": "D",
-          "label": "Alt + Ctrl + C"
-        },
-        {
-          "id": "E",
-          "label": "Ctrl + Z"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D"
-    },
-    "explicacion": "Cortar: Ctrl+X. Copiar: Ctrl+C. Pegar: Ctrl+V. Copiar formato: Alt+Ctrl+C (y para pegar el formato copiado, Alt+Ctrl+V). El distractor Ctrl+Z es Deshacer. Prueba en vivo del usuario."
-  },
-  {
     "id": "inicio-4",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Portapapeles",
@@ -177,70 +106,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "La opcion predeterminada al pegar en Word 365 es Mantener formato de origen, que conserva el formato que tenia el texto en su documento de origen."
-  },
-  {
-    "id": "inicio-5",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Portapapeles",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "portapapeles",
-    "subtopic": "Opciones de pegado",
-    "tema": "Portapapeles",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0005",
-    "enunciado": "¿Cuales de las siguientes son opciones disponibles en el menu de Opciones de pegado de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Mantener formato de origen"
-      },
-      {
-        "letter": "B",
-        "text": "Combinar formato"
-      },
-      {
-        "letter": "C",
-        "text": "Conservar solo texto"
-      },
-      {
-        "letter": "D",
-        "text": "Pegar como imagen"
-      },
-      {
-        "letter": "E",
-        "text": "Pegar con hipervinculos"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "explicacion": "Las cuatro opciones de pegado son: Mantener formato de origen, Combinar formato, Pegar como imagen y Conservar solo texto. Pegar con hipervinculos no es una opcion del menu de pegado rapido."
-  },
-  {
-    "id": "inicio-6",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Portapapeles",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "portapapeles",
-    "subtopic": "Opciones de pegado",
-    "tema": "Portapapeles",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0006",
-    "enunciado": "La opcion Combinar formato al pegar texto fusiona el formato del texto copiado con el formato del documento de destino, de modo que ninguno de los dos formatos se pierde.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Combinar formato fusiona ambos formatos: el del texto de origen y el del parrafo de destino. El resultado conserva los dos."
   },
   {
     "id": "inicio-7",
@@ -313,86 +178,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ctrl+F3 tiene efecto acumulativo (Spike): cada uso añade la selección actual a las anteriores y la quita del documento. Para soltar todo lo acumulado de golpe se pulsa Ctrl+Mayus+F3. Prueba en vivo del usuario (sep 2026)."
-  },
-  {
-    "id": "inicio-9",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Portapapeles",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "portapapeles",
-    "subtopic": "Deshacer y Rehacer",
-    "tema": "Portapapeles",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0267",
-    "enunciado": "Cuando no existe ninguna accion que deshacer en el historial, el boton Rehacer de la barra de Acceso rapido pasa a funcionar como Repetir, ejecutando la misma funcion que la tecla F4.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. El boton Rehacer tiene tres estados: (1) hay acciones para rehacer, actua como Rehacer con Ctrl+Y; (2) no hay nada que rehacer pero si una accion reciente repetible, actua como Repetir igual que F4; (3) no hay nada que rehacer ni repetir, boton inactivo."
-  },
-  {
-    "id": "inicio-10",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Portapapeles",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "portapapeles",
-    "subtopic": "Deshacer y Rehacer",
-    "tema": "Portapapeles",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0010",
-    "enunciado": "Relaciona cada atajo con su accion en el historial de operaciones:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Ctrl + Z"
-        },
-        {
-          "id": "2",
-          "label": "Ctrl + Y"
-        },
-        {
-          "id": "3",
-          "label": "F4"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Deshacer la ultima accion"
-        },
-        {
-          "id": "B",
-          "label": "Rehacer o repetir la ultima accion"
-        },
-        {
-          "id": "C",
-          "label": "Repetir la ultima accion"
-        },
-        {
-          "id": "D",
-          "label": "Abrir historial de operaciones"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C"
-    },
-    "explicacion": "Ctrl+Z deshace. Ctrl+Y rehace o repite segun el contexto. F4 siempre repite la ultima accion. El distractor D no corresponde a ninguno de los tres atajos."
   },
   {
     "id": "inicio-142",
@@ -897,147 +682,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Ctrl+F3 tiene efecto acumulativo: cada vez que se usa sobre una selección, la corta y la añade al Acumulador. Al usar Mayús+Ctrl+F3 se pega en la posición del cursor todo el contenido acumulado de una vez. Ctrl+C repetido solo conserva el último elemento en el portapapeles de Windows; para acumular varios elementos habría que usar el panel del Portapapeles de Office."
-  },
-  {
-    "id": "inicio-281",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Portapapeles",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "portapapeles",
-    "subtopic": "Datos numericos",
-    "tema": "Portapapeles",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0535",
-    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre la capacidad de almacenamiento de distintos elementos de Word 365 son correctas?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "El Portapapeles de Office almacena hasta 24 elementos"
-      },
-      {
-        "letter": "B",
-        "text": "El campo Tamaño de fuente admite valores de 1 a 1.638 puntos"
-      },
-      {
-        "letter": "C",
-        "text": "Word ofrece 17 tipos de subrayado diferentes"
-      },
-      {
-        "letter": "D",
-        "text": "Una lista multinivel admite hasta 9 niveles"
-      },
-      {
-        "letter": "E",
-        "text": "El panel de navegación muestra hasta 200 resultados de búsqueda"
-      },
-      {
-        "letter": "F",
-        "text": "El cuadro Bordes y sombreado ofrece 24 estilos de línea de borde"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "D",
-      "F"
-    ],
-    "explicacion": "Todas son correctas excepto E. El Portapapeles: 24 elementos. Tamaño de fuente: 1 a 1.638 pto. Subrayados: 17 tipos. Niveles multinivel: 9. Estilos de línea de borde: 24. El panel de navegación muestra hasta 100 resultados, no 200; la opción E es incorrecta."
-  },
-  {
-    "id": "inicio-282",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Portapapeles",
-    "tipo": "emparejamiento",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "portapapeles",
-    "subtopic": "Datos numericos",
-    "tema": "Portapapeles",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0536",
-    "enunciado": "Relaciona cada dato numérico con el elemento de Word 365 al que corresponde:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "24"
-        },
-        {
-          "id": "2",
-          "label": "1.638"
-        },
-        {
-          "id": "3",
-          "label": "17"
-        },
-        {
-          "id": "4",
-          "label": "9"
-        },
-        {
-          "id": "5",
-          "label": "100"
-        },
-        {
-          "id": "6",
-          "label": "160"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Capacidad máxima del Portapapeles de Office"
-        },
-        {
-          "id": "B",
-          "label": "Tamaño máximo de fuente en puntos"
-        },
-        {
-          "id": "C",
-          "label": "Número de tipos de subrayado disponibles"
-        },
-        {
-          "id": "D",
-          "label": "Niveles máximos de una lista multinivel"
-        },
-        {
-          "id": "E",
-          "label": "Resultados máximos en el panel de navegación"
-        },
-        {
-          "id": "F",
-          "label": "Diseños de Arte disponibles en Borde de página"
-        },
-        {
-          "id": "G",
-          "label": "Estilos de línea de borde disponibles"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D",
-        "5": "E",
-        "6": "F"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D",
-      "5": "E",
-      "6": "F"
-    },
-    "explicacion": "24: Portapapeles de Office. 1.638: tamaño máximo de fuente. 17: tipos de subrayado. 9: niveles de lista multinivel. 100: resultados máximos del panel de navegación. 160: diseños de Arte en Borde de página. El distractor G (estilos de línea de borde: 24) coincide numéricamente con el Portapapeles pero corresponde a un elemento diferente."
   },
   {
     "id": "inicio-308",
@@ -1613,6 +1257,362 @@
     "explicacion": "**Copiar formato.** Pestaña Inicio ▸ Portapapeles. Atajo: Alt+Ctrl+C. El pincel: copia el formato del texto seleccionado para aplicarlo en otro sitio (Alt+Ctrl+V lo pega). Doble clic = varios usos."
   },
   {
+    "id": "inicio-5",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Opciones de pegado",
+    "tema": "Portapapeles",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0005",
+    "enunciado": "¿Cuales de las siguientes son opciones disponibles en el menu de Opciones de pegado de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Mantener formato de origen"
+      },
+      {
+        "letter": "B",
+        "text": "Combinar formato"
+      },
+      {
+        "letter": "C",
+        "text": "Conservar solo texto"
+      },
+      {
+        "letter": "D",
+        "text": "Pegar como imagen"
+      },
+      {
+        "letter": "E",
+        "text": "Pegar con hipervinculos"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "Las cuatro opciones de pegado son: Mantener formato de origen, Combinar formato, Pegar como imagen y Conservar solo texto. Pegar con hipervinculos no es una opcion del menu de pegado rapido."
+  },
+  {
+    "id": "inicio-281",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Datos numericos",
+    "tema": "Portapapeles",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0535",
+    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre la capacidad de almacenamiento de distintos elementos de Word 365 son correctas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El Portapapeles de Office almacena hasta 24 elementos"
+      },
+      {
+        "letter": "B",
+        "text": "El campo Tamaño de fuente admite valores de 1 a 1.638 puntos"
+      },
+      {
+        "letter": "C",
+        "text": "Word ofrece 17 tipos de subrayado diferentes"
+      },
+      {
+        "letter": "D",
+        "text": "Una lista multinivel admite hasta 9 niveles"
+      },
+      {
+        "letter": "E",
+        "text": "El panel de navegación muestra hasta 200 resultados de búsqueda"
+      },
+      {
+        "letter": "F",
+        "text": "El cuadro Bordes y sombreado ofrece 24 estilos de línea de borde"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "F"
+    ],
+    "explicacion": "Todas son correctas excepto E. El Portapapeles: 24 elementos. Tamaño de fuente: 1 a 1.638 pto. Subrayados: 17 tipos. Niveles multinivel: 9. Estilos de línea de borde: 24. El panel de navegación muestra hasta 100 resultados, no 200; la opción E es incorrecta."
+  },
+  {
+    "id": "inicio-6",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Opciones de pegado",
+    "tema": "Portapapeles",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0006",
+    "enunciado": "La opcion Combinar formato al pegar texto fusiona el formato del texto copiado con el formato del documento de destino, de modo que ninguno de los dos formatos se pierde.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. Combinar formato fusiona ambos formatos: el del texto de origen y el del parrafo de destino. El resultado conserva los dos."
+  },
+  {
+    "id": "inicio-9",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Deshacer y Rehacer",
+    "tema": "Portapapeles",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0267",
+    "enunciado": "Cuando no existe ninguna accion que deshacer en el historial, el boton Rehacer de la barra de Acceso rapido pasa a funcionar como Repetir, ejecutando la misma funcion que la tecla F4.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. El boton Rehacer tiene tres estados: (1) hay acciones para rehacer, actua como Rehacer con Ctrl+Y; (2) no hay nada que rehacer pero si una accion reciente repetible, actua como Repetir igual que F4; (3) no hay nada que rehacer ni repetir, boton inactivo."
+  },
+  {
+    "id": "inicio-3",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Atajos",
+    "tema": "Portapapeles",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0003",
+    "enunciado": "Relaciona cada accion del Portapapeles con su atajo de teclado:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Cortar"
+        },
+        {
+          "id": "2",
+          "label": "Copiar"
+        },
+        {
+          "id": "3",
+          "label": "Pegar"
+        },
+        {
+          "id": "4",
+          "label": "Copiar formato"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Ctrl + X"
+        },
+        {
+          "id": "B",
+          "label": "Ctrl + C"
+        },
+        {
+          "id": "C",
+          "label": "Ctrl + V"
+        },
+        {
+          "id": "D",
+          "label": "Alt + Ctrl + C"
+        },
+        {
+          "id": "E",
+          "label": "Ctrl + Z"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "explicacion": "Cortar: Ctrl+X. Copiar: Ctrl+C. Pegar: Ctrl+V. Copiar formato: Alt+Ctrl+C (y para pegar el formato copiado, Alt+Ctrl+V). El distractor Ctrl+Z es Deshacer. Prueba en vivo del usuario."
+  },
+  {
+    "id": "inicio-10",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Deshacer y Rehacer",
+    "tema": "Portapapeles",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0010",
+    "enunciado": "Relaciona cada atajo con su accion en el historial de operaciones:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ctrl + Z"
+        },
+        {
+          "id": "2",
+          "label": "Ctrl + Y"
+        },
+        {
+          "id": "3",
+          "label": "F4"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Deshacer la ultima accion"
+        },
+        {
+          "id": "B",
+          "label": "Rehacer o repetir la ultima accion"
+        },
+        {
+          "id": "C",
+          "label": "Repetir la ultima accion"
+        },
+        {
+          "id": "D",
+          "label": "Abrir historial de operaciones"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explicacion": "Ctrl+Z deshace. Ctrl+Y rehace o repite segun el contexto. F4 siempre repite la ultima accion. El distractor D no corresponde a ninguno de los tres atajos."
+  },
+  {
+    "id": "inicio-282",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Datos numericos",
+    "tema": "Portapapeles",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0536",
+    "enunciado": "Relaciona cada dato numérico con el elemento de Word 365 al que corresponde:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "24"
+        },
+        {
+          "id": "2",
+          "label": "1.638"
+        },
+        {
+          "id": "3",
+          "label": "17"
+        },
+        {
+          "id": "4",
+          "label": "9"
+        },
+        {
+          "id": "5",
+          "label": "100"
+        },
+        {
+          "id": "6",
+          "label": "160"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Capacidad máxima del Portapapeles de Office"
+        },
+        {
+          "id": "B",
+          "label": "Tamaño máximo de fuente en puntos"
+        },
+        {
+          "id": "C",
+          "label": "Número de tipos de subrayado disponibles"
+        },
+        {
+          "id": "D",
+          "label": "Niveles máximos de una lista multinivel"
+        },
+        {
+          "id": "E",
+          "label": "Resultados máximos en el panel de navegación"
+        },
+        {
+          "id": "F",
+          "label": "Diseños de Arte disponibles en Borde de página"
+        },
+        {
+          "id": "G",
+          "label": "Estilos de línea de borde disponibles"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E",
+        "6": "F"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E",
+      "6": "F"
+    },
+    "explicacion": "24: Portapapeles de Office. 1.638: tamaño máximo de fuente. 17: tipos de subrayado. 9: niveles de lista multinivel. 100: resultados máximos del panel de navegación. 160: diseños de Arte en Borde de página. El distractor G (estilos de línea de borde: 24) coincide numéricamente con el Portapapeles pero corresponde a un elemento diferente."
+  },
+  {
     "id": "inicio-11",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -1685,87 +1685,6 @@
     "explicacion": "El rango del campo Tamano de fuente en Word 365 va de 1 a 1.638 puntos. Los valores intermedios de 0,5 en 0,5 deben escribirse manualmente ya que no aparecen en la lista desplegable."
   },
   {
-    "id": "inicio-13",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "Atajos de formato",
-    "tema": "Fuente",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0013",
-    "enunciado": "Relaciona cada formato de fuente con su atajo de teclado:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Negrita"
-        },
-        {
-          "id": "2",
-          "label": "Cursiva"
-        },
-        {
-          "id": "3",
-          "label": "Subrayado sencillo"
-        },
-        {
-          "id": "4",
-          "label": "Subrayado doble"
-        },
-        {
-          "id": "5",
-          "label": "Subrayado solo palabras"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Ctrl + N"
-        },
-        {
-          "id": "B",
-          "label": "Ctrl + K"
-        },
-        {
-          "id": "C",
-          "label": "Ctrl + S"
-        },
-        {
-          "id": "D",
-          "label": "Ctrl + Mayus + D"
-        },
-        {
-          "id": "E",
-          "label": "Ctrl + Mayus + P"
-        },
-        {
-          "id": "F",
-          "label": "Ctrl + Mayus + W"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D",
-        "5": "E"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D",
-      "5": "E"
-    },
-    "explicacion": "Negrita: Ctrl+N. Cursiva: Ctrl+K. Subrayado sencillo: Ctrl+S. Subrayado doble: Ctrl+Mayus+D. Subrayado solo palabras: Ctrl+Mayus+P. El distractor F (Ctrl+Mayus+W) abre el panel Aplicar estilos, no es un formato de fuente."
-  },
-  {
     "id": "inicio-14",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -1800,25 +1719,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Word 365 ofrece 17 tipos de subrayado diferentes. De ellos, solo los tres primeros tienen atajo de teclado asignado: sencillo (Ctrl+S), doble (Ctrl+Mayus+D) y solo palabras (Ctrl+Mayus+P)."
-  },
-  {
-    "id": "inicio-15",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "Subrayado",
-    "tema": "Fuente",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0274",
-    "enunciado": "En el cuadro de dialogo Fuente, el campo Color de subrayado permite asignar al subrayado un color diferente al del propio texto subrayado.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Los campos Color de fuente y Color de subrayado son independientes entre si y pueden tener valores distintos. El color del subrayado no hereda obligatoriamente el color del texto."
   },
   {
     "id": "inicio-16",
@@ -2289,51 +2189,6 @@
     "explicacion": "Las ligaduras son uniones de dos o mas caracteres que se funden en un unico simbolo tipografico. Son una caracteristica OpenType y Word 365 ofrece cinco opciones: Ninguna, Solo estandar, Estandar y contextuales, Historicas y discrecionales, y Todas."
   },
   {
-    "id": "inicio-29",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "OpenType",
-    "tema": "Fuente",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0280",
-    "enunciado": "¿Cuales de las siguientes afirmaciones sobre el campo Ligaduras de la pestana Avanzado del cuadro de dialogo Fuente son correctas?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Una ligadura es la union visual de dos o mas caracteres"
-      },
-      {
-        "letter": "B",
-        "text": "Hay 5 opciones disponibles en el desplegable de Ligaduras"
-      },
-      {
-        "letter": "C",
-        "text": "La opcion Todas incluye tanto las historicas como las discrecionales"
-      },
-      {
-        "letter": "D",
-        "text": "Las ligaduras solo estan disponibles para tipografias TrueType antiguas"
-      },
-      {
-        "letter": "E",
-        "text": "La opcion Solo estandar aplica unicamente las combinaciones de caracteres mas comunes"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "E"
-    ],
-    "explicacion": "Las ligaduras son uniones de dos o mas caracteres. El desplegable ofrece 5 opciones: Ninguna, Solo estandar, Estandar y contextuales, Historicas y discrecionales, y Todas. La opcion Todas incluye todos los tipos, incluidas historicas y discrecionales. La opcion incorrecta es D: las ligaduras son una caracteristica OpenType, no exclusiva de TrueType antiguo."
-  },
-  {
     "id": "inicio-30",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -2512,25 +2367,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "El numero maximo de puntos de degradado que se pueden definir para el color de fuente es 10. El distractor 24 corresponde a la capacidad del Portapapeles, no a los puntos de degradado."
-  },
-  {
-    "id": "inicio-35",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "Espaciado entre caracteres",
-    "tema": "Fuente",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0338",
-    "enunciado": "En el cuadro de dialogo Fuente, el campo Interletraje para fuentes activa el ajuste automatico del espacio entre determinados pares de caracteres a partir de un tamano minimo de fuente expresado en puntos.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. El Interletraje para fuentes aplica el ajuste automatico de espacio entre pares de caracteres unicamente cuando la fuente supera el tamano minimo indicado en el campo, que se expresa en puntos. Por debajo de ese tamano el interletraje no se aplica."
   },
   {
     "id": "inicio-152",
@@ -3253,87 +3089,6 @@
     "explicacion": "El desplegable Ligaduras ofrece 5 opciones: Ninguna, Solo estandar, Estandar y contextuales, Historicas y discrecionales, y Todas. Solo estandar activa únicamente las ligaduras más comunes como fi, fl, ff, ffi y ffl, que son las habituales en tipografía occidental."
   },
   {
-    "id": "inicio-227",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "emparejamiento",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "OpenType",
-    "tema": "Fuente",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0481",
-    "enunciado": "Relaciona cada opción OpenType con su función:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Ligaduras"
-        },
-        {
-          "id": "2",
-          "label": "Estilos de número"
-        },
-        {
-          "id": "3",
-          "label": "Espaciado entre números"
-        },
-        {
-          "id": "4",
-          "label": "Conjuntos estilísticos"
-        },
-        {
-          "id": "5",
-          "label": "Usar alternativas contextuales"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Une visualmente dos o más caracteres en un único símbolo tipográfico"
-        },
-        {
-          "id": "B",
-          "label": "Controla si los números tienen altura uniforme (alineada) o variable (antigua)"
-        },
-        {
-          "id": "C",
-          "label": "Controla si los números ocupan el mismo ancho (tabular) o ancho variable (proporcional)"
-        },
-        {
-          "id": "D",
-          "label": "Aplica un conjunto alternativo de formas de letra diseñado por el tipógrafo"
-        },
-        {
-          "id": "E",
-          "label": "Ajusta automáticamente las formas de los caracteres según el contexto de los caracteres adyacentes"
-        },
-        {
-          "id": "F",
-          "label": "Cambia el color de los caracteres según el tema activo"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D",
-        "5": "E"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D",
-      "5": "E"
-    },
-    "explicacion": "Ligaduras: une caracteres. Estilos de número: altura uniforme vs. variable. Espaciado entre números: ancho fijo (tabular, útil en tablas) vs. variable (proporcional). Conjuntos estilísticos: variantes alternativas de diseño de toda la fuente. Alternativas contextuales: ajusta formas según el contexto. El distractor F no corresponde a ninguna opción OpenType real."
-  },
-  {
     "id": "inicio-228",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -3478,187 +3233,6 @@
     "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión; como Mayús+- da _, también se escribe Ctrl+_) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario (sep 2026). ⚠️ Ojo: el volcado también lista Ctrl+= para subíndice, pero esa combinación no funciona en este Word."
   },
   {
-    "id": "inicio-259",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "Atajos de formato",
-    "tema": "Fuente",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0513",
-    "enunciado": "Relaciona cada atajo con lo que hace sobre el tamaño y el formato de fuente en Word 365 (versión española):",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Ctrl + Mayús + >"
-        },
-        {
-          "id": "2",
-          "label": "Ctrl + <"
-        },
-        {
-          "id": "3",
-          "label": "Ctrl + Alt + Mayús + >"
-        },
-        {
-          "id": "4",
-          "label": "Ctrl + Alt + <"
-        },
-        {
-          "id": "5",
-          "label": "Ctrl + Mayús + -"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Agranda la fuente al siguiente valor de la lista"
-        },
-        {
-          "id": "B",
-          "label": "Reduce la fuente al valor anterior de la lista"
-        },
-        {
-          "id": "C",
-          "label": "Agranda la fuente de punto en punto"
-        },
-        {
-          "id": "D",
-          "label": "Reduce la fuente de punto en punto"
-        },
-        {
-          "id": "E",
-          "label": "Aplica o quita el subíndice"
-        },
-        {
-          "id": "F",
-          "label": "Aplica o quita el superíndice"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D",
-        "5": "E"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D",
-      "5": "E"
-    },
-    "explicacion": "La tecla «<>» con Ctrl controla el tamaño: con Mayús (>) agranda, sin Mayús (<) reduce; añadir Alt lo pasa de \"valor de la lista\" a \"de punto en punto\". Ctrl+Mayús+- aplica o quita el subíndice. El superíndice (distractor F) NO tiene atajo en esta instalación: solo desde el cuadro Fuente (Ctrl+M) o el botón de la cinta."
-  },
-  {
-    "id": "inicio-260",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "Atajos de formato",
-    "tema": "Fuente",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0514",
-    "enunciado": "Relaciona cada atajo con la acción que ejecuta sobre la fuente en la versión española de Word 365:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Ctrl + N"
-        },
-        {
-          "id": "2",
-          "label": "Ctrl + K"
-        },
-        {
-          "id": "3",
-          "label": "Ctrl + S"
-        },
-        {
-          "id": "4",
-          "label": "Ctrl + Mayús + D"
-        },
-        {
-          "id": "5",
-          "label": "Ctrl + Mayús + L"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Negrita"
-        },
-        {
-          "id": "B",
-          "label": "Cursiva"
-        },
-        {
-          "id": "C",
-          "label": "Subrayado sencillo"
-        },
-        {
-          "id": "D",
-          "label": "Subrayado doble"
-        },
-        {
-          "id": "E",
-          "label": "Versalitas"
-        },
-        {
-          "id": "F",
-          "label": "Subrayado solo palabras"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D",
-        "5": "E"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D",
-      "5": "E"
-    },
-    "explicacion": "Ctrl+N: negrita. Ctrl+K: cursiva. Ctrl+S: subrayado sencillo. Ctrl+Mayús+D: subrayado doble. Ctrl+Mayús+L: versalitas. El distractor F (subrayado solo palabras) corresponde a Ctrl+Mayús+P, no a ninguno de los atajos de la lista."
-  },
-  {
-    "id": "inicio-261",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "verdadero_falso",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "Atajos de formato",
-    "tema": "Fuente",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0515",
-    "enunciado": "En la versión española de Word 365, el atajo Ctrl+Mayús+P posiciona el cursor en el campo Tamaño de fuente de la cinta.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: Ctrl+Mayús+P activa o desactiva el subrayado de solo palabras (SubrayadoPalabras). No hay atajo que lleve el foco a la caja de tamaño de la cinta; el cuadro de diálogo Fuente con el foco en Tamaño se abre con Ctrl+Mayús+M."
-  },
-  {
     "id": "inicio-262",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -3695,51 +3269,6 @@
     "explicacion": "Ctrl+Barra espaciadora elimina el formato de carácter manual del texto seleccionado, restaurando los atributos de fuente del estilo aplicado. Su alcance es más limitado que el botón Borrar todo el formato, que además elimina el formato de párrafo y los estilos. Ctrl+Q elimina solo el formato de párrafo manual. Prueba en vivo del usuario (sep 2026). ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+W bajo dos comandos (cerrar documento y «quitar formato de párrafo»); en la práctica quita el formato de párrafo, no cierra nada."
   },
   {
-    "id": "inicio-264",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "seleccion_multiple",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "Atajos version espanola",
-    "tema": "Fuente",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0518",
-    "enunciado": "¿Cuáles de los siguientes atajos están verificados en fuentes españolas de oposiciones para Word 365 y aplican correctamente en la versión española del programa?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+N para negrita"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+K para cursiva"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+S para subrayado sencillo"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+F para buscar (como en la versión inglesa)"
-      },
-      {
-        "letter": "E",
-        "text": "Ctrl+B para abrir el panel de navegación"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "E"
-    ],
-    "explicacion": "En la versión española de Word 365: Ctrl+N es negrita, Ctrl+K es cursiva, Ctrl+S es subrayado sencillo y Ctrl+B abre el panel de navegación. La opción D es incorrecta porque Ctrl+F en español aplica la sangría francesa, no abre el buscador (eso es Ctrl+F en la versión inglesa)."
-  },
-  {
     "id": "inicio-265",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -3774,52 +3303,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "El botón Borrar todo el formato del grupo Fuente es la única opción que elimina en una sola acción el formato de carácter, el formato de párrafo y los estilos aplicados. Ctrl+Barra espaciadora solo borra el formato de carácter. Ctrl+Q solo borra el formato de párrafo. Aplicar el estilo Normal cambia el estilo pero puede dejar formato manual solapado."
-  },
-  {
-    "id": "inicio-271",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "Efectos",
-    "tema": "Fuente",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0525",
-    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre las diferencias entre los efectos Versalitas y MAYÚSCULAS del cuadro de diálogo Fuente son correctas?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Versalitas solo afecta visualmente a las letras que estaban en minúscula"
-      },
-      {
-        "letter": "B",
-        "text": "MAYÚSCULAS es solo un efecto visual; el texto subyacente no cambia"
-      },
-      {
-        "letter": "C",
-        "text": "La opción MAYÚSCULAS del menú Cambiar mayúsculas edita realmente los caracteres del texto"
-      },
-      {
-        "letter": "D",
-        "text": "Versalitas y MAYÚSCULAS del cuadro Fuente son ambas efectos visuales que no modifican el texto subyacente"
-      },
-      {
-        "letter": "E",
-        "text": "Si se copia texto con MAYÚSCULAS del cuadro Fuente a otro documento sin formato, aparecerá en minúsculas si así fue escrito originalmente"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E"
-    ],
-    "explicacion": "Todas las afirmaciones son correctas. Versalitas solo cambia la apariencia de las minúsculas. MAYÚSCULAS del cuadro Fuente es solo visual y no modifica los caracteres reales. La opción MAYÚSCULAS del menú Cambiar mayúsculas sí edita los caracteres. Ambos efectos del cuadro Fuente son visuales. Al copiar texto con MAYÚSCULAS (efecto visual) a otro lugar sin formato, aparecerá tal como fue escrito originalmente."
   },
   {
     "id": "inicio-278",
@@ -3892,25 +3375,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Correcto. En la versión española de Word 365, Ctrl+M abre el cuadro de diálogo Fuente con el foco en el nombre de la tipografía (Ctrl+Mayús+F hace lo mismo). NO aplica sangría: la sangría se aumenta con Ctrl+H. En la versión inglesa Ctrl+M sí aumenta la sangría izquierda — de ahí la confusión. Prueba en vivo del usuario (sep 2026)."
-  },
-  {
-    "id": "inicio-284",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Fuente",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "fuente",
-    "subtopic": "Color de resaltado",
-    "tema": "Fuente",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0538",
-    "enunciado": "El color de resaltado del texto es la única excepción documentada en Word 365 que no se elimina al usar el botón Borrar todo el formato, ni con Ctrl+Barra espaciadora, ni con Ctrl+Q.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. El color de resaltado es la única excepción documentada: no se elimina con ninguno de los tres métodos de borrado de formato (Borrar todo el formato, Ctrl+Barra espaciadora, Ctrl+Q). La única forma de quitarlo es acceder al desplegable Color de resaltado del texto en el grupo Fuente y seleccionar Sin color."
   },
   {
     "id": "inicio-286",
@@ -5597,6 +5061,542 @@
     "explicacion": "Superíndice NO tiene atajo en esta instalación (probado en vivo: ni Ctrl+Mayús+=, ni Ctrl+Mayús++, ni Ctrl+Alt++). Solo se activa desde el botón o la casilla del cuadro Fuente."
   },
   {
+    "id": "inicio-29",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "OpenType",
+    "tema": "Fuente",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0280",
+    "enunciado": "¿Cuales de las siguientes afirmaciones sobre el campo Ligaduras de la pestana Avanzado del cuadro de dialogo Fuente son correctas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Una ligadura es la union visual de dos o mas caracteres"
+      },
+      {
+        "letter": "B",
+        "text": "Hay 5 opciones disponibles en el desplegable de Ligaduras"
+      },
+      {
+        "letter": "C",
+        "text": "La opcion Todas incluye tanto las historicas como las discrecionales"
+      },
+      {
+        "letter": "D",
+        "text": "Las ligaduras solo estan disponibles para tipografias TrueType antiguas"
+      },
+      {
+        "letter": "E",
+        "text": "La opcion Solo estandar aplica unicamente las combinaciones de caracteres mas comunes"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explicacion": "Las ligaduras son uniones de dos o mas caracteres. El desplegable ofrece 5 opciones: Ninguna, Solo estandar, Estandar y contextuales, Historicas y discrecionales, y Todas. La opcion Todas incluye todos los tipos, incluidas historicas y discrecionales. La opcion incorrecta es D: las ligaduras son una caracteristica OpenType, no exclusiva de TrueType antiguo."
+  },
+  {
+    "id": "inicio-264",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "seleccion_multiple",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Atajos version espanola",
+    "tema": "Fuente",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0518",
+    "enunciado": "¿Cuáles de los siguientes atajos están verificados en fuentes españolas de oposiciones para Word 365 y aplican correctamente en la versión española del programa?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+N para negrita"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+K para cursiva"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+S para subrayado sencillo"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+F para buscar (como en la versión inglesa)"
+      },
+      {
+        "letter": "E",
+        "text": "Ctrl+B para abrir el panel de navegación"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explicacion": "En la versión española de Word 365: Ctrl+N es negrita, Ctrl+K es cursiva, Ctrl+S es subrayado sencillo y Ctrl+B abre el panel de navegación. La opción D es incorrecta porque Ctrl+F en español aplica la sangría francesa, no abre el buscador (eso es Ctrl+F en la versión inglesa)."
+  },
+  {
+    "id": "inicio-271",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Efectos",
+    "tema": "Fuente",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0525",
+    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre las diferencias entre los efectos Versalitas y MAYÚSCULAS del cuadro de diálogo Fuente son correctas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Versalitas solo afecta visualmente a las letras que estaban en minúscula"
+      },
+      {
+        "letter": "B",
+        "text": "MAYÚSCULAS es solo un efecto visual; el texto subyacente no cambia"
+      },
+      {
+        "letter": "C",
+        "text": "La opción MAYÚSCULAS del menú Cambiar mayúsculas edita realmente los caracteres del texto"
+      },
+      {
+        "letter": "D",
+        "text": "Versalitas y MAYÚSCULAS del cuadro Fuente son ambas efectos visuales que no modifican el texto subyacente"
+      },
+      {
+        "letter": "E",
+        "text": "Si se copia texto con MAYÚSCULAS del cuadro Fuente a otro documento sin formato, aparecerá en minúsculas si así fue escrito originalmente"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explicacion": "Todas las afirmaciones son correctas. Versalitas solo cambia la apariencia de las minúsculas. MAYÚSCULAS del cuadro Fuente es solo visual y no modifica los caracteres reales. La opción MAYÚSCULAS del menú Cambiar mayúsculas sí edita los caracteres. Ambos efectos del cuadro Fuente son visuales. Al copiar texto con MAYÚSCULAS (efecto visual) a otro lugar sin formato, aparecerá tal como fue escrito originalmente."
+  },
+  {
+    "id": "inicio-15",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Subrayado",
+    "tema": "Fuente",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0274",
+    "enunciado": "En el cuadro de dialogo Fuente, el campo Color de subrayado permite asignar al subrayado un color diferente al del propio texto subrayado.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. Los campos Color de fuente y Color de subrayado son independientes entre si y pueden tener valores distintos. El color del subrayado no hereda obligatoriamente el color del texto."
+  },
+  {
+    "id": "inicio-35",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Espaciado entre caracteres",
+    "tema": "Fuente",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0338",
+    "enunciado": "En el cuadro de dialogo Fuente, el campo Interletraje para fuentes activa el ajuste automatico del espacio entre determinados pares de caracteres a partir de un tamano minimo de fuente expresado en puntos.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. El Interletraje para fuentes aplica el ajuste automatico de espacio entre pares de caracteres unicamente cuando la fuente supera el tamano minimo indicado en el campo, que se expresa en puntos. Por debajo de ese tamano el interletraje no se aplica."
+  },
+  {
+    "id": "inicio-261",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "verdadero_falso",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Atajos de formato",
+    "tema": "Fuente",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0515",
+    "enunciado": "En la versión española de Word 365, el atajo Ctrl+Mayús+P posiciona el cursor en el campo Tamaño de fuente de la cinta.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: Ctrl+Mayús+P activa o desactiva el subrayado de solo palabras (SubrayadoPalabras). No hay atajo que lleve el foco a la caja de tamaño de la cinta; el cuadro de diálogo Fuente con el foco en Tamaño se abre con Ctrl+Mayús+M."
+  },
+  {
+    "id": "inicio-284",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Color de resaltado",
+    "tema": "Fuente",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0538",
+    "enunciado": "El color de resaltado del texto es la única excepción documentada en Word 365 que no se elimina al usar el botón Borrar todo el formato, ni con Ctrl+Barra espaciadora, ni con Ctrl+Q.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. El color de resaltado es la única excepción documentada: no se elimina con ninguno de los tres métodos de borrado de formato (Borrar todo el formato, Ctrl+Barra espaciadora, Ctrl+Q). La única forma de quitarlo es acceder al desplegable Color de resaltado del texto en el grupo Fuente y seleccionar Sin color."
+  },
+  {
+    "id": "inicio-13",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Atajos de formato",
+    "tema": "Fuente",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0013",
+    "enunciado": "Relaciona cada formato de fuente con su atajo de teclado:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Negrita"
+        },
+        {
+          "id": "2",
+          "label": "Cursiva"
+        },
+        {
+          "id": "3",
+          "label": "Subrayado sencillo"
+        },
+        {
+          "id": "4",
+          "label": "Subrayado doble"
+        },
+        {
+          "id": "5",
+          "label": "Subrayado solo palabras"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Ctrl + N"
+        },
+        {
+          "id": "B",
+          "label": "Ctrl + K"
+        },
+        {
+          "id": "C",
+          "label": "Ctrl + S"
+        },
+        {
+          "id": "D",
+          "label": "Ctrl + Mayus + D"
+        },
+        {
+          "id": "E",
+          "label": "Ctrl + Mayus + P"
+        },
+        {
+          "id": "F",
+          "label": "Ctrl + Mayus + W"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E"
+    },
+    "explicacion": "Negrita: Ctrl+N. Cursiva: Ctrl+K. Subrayado sencillo: Ctrl+S. Subrayado doble: Ctrl+Mayus+D. Subrayado solo palabras: Ctrl+Mayus+P. El distractor F (Ctrl+Mayus+W) abre el panel Aplicar estilos, no es un formato de fuente."
+  },
+  {
+    "id": "inicio-227",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "OpenType",
+    "tema": "Fuente",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0481",
+    "enunciado": "Relaciona cada opción OpenType con su función:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ligaduras"
+        },
+        {
+          "id": "2",
+          "label": "Estilos de número"
+        },
+        {
+          "id": "3",
+          "label": "Espaciado entre números"
+        },
+        {
+          "id": "4",
+          "label": "Conjuntos estilísticos"
+        },
+        {
+          "id": "5",
+          "label": "Usar alternativas contextuales"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Une visualmente dos o más caracteres en un único símbolo tipográfico"
+        },
+        {
+          "id": "B",
+          "label": "Controla si los números tienen altura uniforme (alineada) o variable (antigua)"
+        },
+        {
+          "id": "C",
+          "label": "Controla si los números ocupan el mismo ancho (tabular) o ancho variable (proporcional)"
+        },
+        {
+          "id": "D",
+          "label": "Aplica un conjunto alternativo de formas de letra diseñado por el tipógrafo"
+        },
+        {
+          "id": "E",
+          "label": "Ajusta automáticamente las formas de los caracteres según el contexto de los caracteres adyacentes"
+        },
+        {
+          "id": "F",
+          "label": "Cambia el color de los caracteres según el tema activo"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E"
+    },
+    "explicacion": "Ligaduras: une caracteres. Estilos de número: altura uniforme vs. variable. Espaciado entre números: ancho fijo (tabular, útil en tablas) vs. variable (proporcional). Conjuntos estilísticos: variantes alternativas de diseño de toda la fuente. Alternativas contextuales: ajusta formas según el contexto. El distractor F no corresponde a ninguna opción OpenType real."
+  },
+  {
+    "id": "inicio-259",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Atajos de formato",
+    "tema": "Fuente",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0513",
+    "enunciado": "Relaciona cada atajo con lo que hace sobre el tamaño y el formato de fuente en Word 365 (versión española):",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ctrl + Mayús + >"
+        },
+        {
+          "id": "2",
+          "label": "Ctrl + <"
+        },
+        {
+          "id": "3",
+          "label": "Ctrl + Alt + Mayús + >"
+        },
+        {
+          "id": "4",
+          "label": "Ctrl + Alt + <"
+        },
+        {
+          "id": "5",
+          "label": "Ctrl + Mayús + -"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Agranda la fuente al siguiente valor de la lista"
+        },
+        {
+          "id": "B",
+          "label": "Reduce la fuente al valor anterior de la lista"
+        },
+        {
+          "id": "C",
+          "label": "Agranda la fuente de punto en punto"
+        },
+        {
+          "id": "D",
+          "label": "Reduce la fuente de punto en punto"
+        },
+        {
+          "id": "E",
+          "label": "Aplica o quita el subíndice"
+        },
+        {
+          "id": "F",
+          "label": "Aplica o quita el superíndice"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E"
+    },
+    "explicacion": "La tecla «<>» con Ctrl controla el tamaño: con Mayús (>) agranda, sin Mayús (<) reduce; añadir Alt lo pasa de \"valor de la lista\" a \"de punto en punto\". Ctrl+Mayús+- aplica o quita el subíndice. El superíndice (distractor F) NO tiene atajo en esta instalación: solo desde el cuadro Fuente (Ctrl+M) o el botón de la cinta."
+  },
+  {
+    "id": "inicio-260",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Atajos de formato",
+    "tema": "Fuente",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0514",
+    "enunciado": "Relaciona cada atajo con la acción que ejecuta sobre la fuente en la versión española de Word 365:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ctrl + N"
+        },
+        {
+          "id": "2",
+          "label": "Ctrl + K"
+        },
+        {
+          "id": "3",
+          "label": "Ctrl + S"
+        },
+        {
+          "id": "4",
+          "label": "Ctrl + Mayús + D"
+        },
+        {
+          "id": "5",
+          "label": "Ctrl + Mayús + L"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Negrita"
+        },
+        {
+          "id": "B",
+          "label": "Cursiva"
+        },
+        {
+          "id": "C",
+          "label": "Subrayado sencillo"
+        },
+        {
+          "id": "D",
+          "label": "Subrayado doble"
+        },
+        {
+          "id": "E",
+          "label": "Versalitas"
+        },
+        {
+          "id": "F",
+          "label": "Subrayado solo palabras"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E"
+    },
+    "explicacion": "Ctrl+N: negrita. Ctrl+K: cursiva. Ctrl+S: subrayado sencillo. Ctrl+Mayús+D: subrayado doble. Ctrl+Mayús+L: versalitas. El distractor F (subrayado solo palabras) corresponde a Ctrl+Mayús+P, no a ninguno de los atajos de la lista."
+  },
+  {
     "id": "inicio-36",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Marcas de formato",
@@ -5631,96 +5631,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "El simbolo ¶ representa la marca de parrafo que se genera cada vez que se pulsa Intro. Se denomina RTM (Retorno de carro Manual). No debe confundirse con el RTA (Retorno de carro Automatico), que es el salto de linea que Word inserta automaticamente al llegar al margen derecho y que no genera ningun simbolo visible."
-  },
-  {
-    "id": "inicio-37",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Marcas de formato",
-    "tipo": "emparejamiento",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-marcas",
-    "subtopic": "Mostrar todo",
-    "tema": "Marcas de formato",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0283",
-    "enunciado": "Relaciona cada marca de formato con el elemento que representa cuando Mostrar todo esta activado:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "¶"
-        },
-        {
-          "id": "2",
-          "label": "·"
-        },
-        {
-          "id": "3",
-          "label": "→"
-        },
-        {
-          "id": "4",
-          "label": "□"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Espacio en blanco"
-        },
-        {
-          "id": "B",
-          "label": "Tabulador"
-        },
-        {
-          "id": "C",
-          "label": "Parrafo (RTM)"
-        },
-        {
-          "id": "D",
-          "label": "Celda de tabla"
-        },
-        {
-          "id": "E",
-          "label": "Salto de pagina"
-        }
-      ],
-      "correct": {
-        "1": "C",
-        "2": "A",
-        "3": "B",
-        "4": "D"
-      }
-    },
-    "respuesta": {
-      "1": "C",
-      "2": "A",
-      "3": "B",
-      "4": "D"
-    },
-    "explicacion": "¶ representa la marca de parrafo (RTM). · representa un espacio en blanco. → representa un tabulador. □ representa una celda de tabla. El distractor E (salto de pagina) aparece como una linea discontinua con texto, no como uno de estos simbolos."
-  },
-  {
-    "id": "inicio-38",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Marcas de formato",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-marcas",
-    "subtopic": "RTM y RTA",
-    "tema": "Marcas de formato",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0284",
-    "enunciado": "Las siglas RTM corresponden a Retorno de carro Manual y representan la marca que genera la tecla Intro, mientras que RTA corresponde a Retorno de carro Automatico y representa el salto de linea que Word inserta automaticamente al llegar al margen.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. RTM (Retorno de carro Manual) lo genera el usuario al pulsar Intro y crea un nuevo parrafo con su marca ¶ visible. RTA (Retorno de carro Automatico) lo inserta Word automaticamente al llegar al margen derecho sin crear parrafo ni marca visible."
   },
   {
     "id": "inicio-39",
@@ -5831,6 +5741,96 @@
     "explicacion": "**Mostrar todo.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+Mayús+8. Muestra u oculta las marcas de párrafo (¶), tabulaciones y espacios. En el teclado español la combinación es también Ctrl+( (Mayús+8 = «(»)."
   },
   {
+    "id": "inicio-38",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Marcas de formato",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-marcas",
+    "subtopic": "RTM y RTA",
+    "tema": "Marcas de formato",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0284",
+    "enunciado": "Las siglas RTM corresponden a Retorno de carro Manual y representan la marca que genera la tecla Intro, mientras que RTA corresponde a Retorno de carro Automatico y representa el salto de linea que Word inserta automaticamente al llegar al margen.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. RTM (Retorno de carro Manual) lo genera el usuario al pulsar Intro y crea un nuevo parrafo con su marca ¶ visible. RTA (Retorno de carro Automatico) lo inserta Word automaticamente al llegar al margen derecho sin crear parrafo ni marca visible."
+  },
+  {
+    "id": "inicio-37",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Marcas de formato",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-marcas",
+    "subtopic": "Mostrar todo",
+    "tema": "Marcas de formato",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0283",
+    "enunciado": "Relaciona cada marca de formato con el elemento que representa cuando Mostrar todo esta activado:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "¶"
+        },
+        {
+          "id": "2",
+          "label": "·"
+        },
+        {
+          "id": "3",
+          "label": "→"
+        },
+        {
+          "id": "4",
+          "label": "□"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Espacio en blanco"
+        },
+        {
+          "id": "B",
+          "label": "Tabulador"
+        },
+        {
+          "id": "C",
+          "label": "Parrafo (RTM)"
+        },
+        {
+          "id": "D",
+          "label": "Celda de tabla"
+        },
+        {
+          "id": "E",
+          "label": "Salto de pagina"
+        }
+      ],
+      "correct": {
+        "1": "C",
+        "2": "A",
+        "3": "B",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "C",
+      "2": "A",
+      "3": "B",
+      "4": "D"
+    },
+    "explicacion": "¶ representa la marca de parrafo (RTM). · representa un espacio en blanco. → representa un tabulador. □ representa una celda de tabla. El distractor E (salto de pagina) aparece como una linea discontinua con texto, no como uno de estos simbolos."
+  },
+  {
     "id": "inicio-40",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Alineación",
@@ -5901,87 +5901,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Con alineacion Justificada la ultima linea del parrafo se alinea a la izquierda y no se distribuye hasta el margen derecho. Este es el comportamiento que la diferencia de la alineacion Distribuida, que si extiende la ultima linea hasta el margen derecho."
-  },
-  {
-    "id": "inicio-42",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Alineación",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-alineacion",
-    "subtopic": "Atajos alineacion",
-    "tema": "Alineación",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0042",
-    "enunciado": "Relaciona cada tipo de alineacion con su atajo de teclado:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Alinear a la izquierda"
-        },
-        {
-          "id": "2",
-          "label": "Centrar"
-        },
-        {
-          "id": "3",
-          "label": "Alinear a la derecha"
-        },
-        {
-          "id": "4",
-          "label": "Justificar"
-        },
-        {
-          "id": "5",
-          "label": "Distribuir"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Ctrl + Q"
-        },
-        {
-          "id": "B",
-          "label": "Ctrl + T"
-        },
-        {
-          "id": "C",
-          "label": "Ctrl + D"
-        },
-        {
-          "id": "D",
-          "label": "Ctrl + J"
-        },
-        {
-          "id": "E",
-          "label": "Ctrl + Mayus + J"
-        },
-        {
-          "id": "F",
-          "label": "Ctrl + E"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D",
-        "5": "E"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D",
-      "5": "E"
-    },
-    "explicacion": "Izquierda: Ctrl+Q. Centrar: Ctrl+T. Derecha: Ctrl+D. Justificar: Ctrl+J. Distribuir: Ctrl+Mayus+J. El distractor Ctrl+E es Seleccionar todo el documento, no una alineacion. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-167",
@@ -6416,6 +6335,87 @@
     "explicacion": "Ctrl+R no hace absolutamente nada en esta instalación. Alinear a la derecha es Ctrl+D."
   },
   {
+    "id": "inicio-42",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": "Atajos alineacion",
+    "tema": "Alineación",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0042",
+    "enunciado": "Relaciona cada tipo de alineacion con su atajo de teclado:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Alinear a la izquierda"
+        },
+        {
+          "id": "2",
+          "label": "Centrar"
+        },
+        {
+          "id": "3",
+          "label": "Alinear a la derecha"
+        },
+        {
+          "id": "4",
+          "label": "Justificar"
+        },
+        {
+          "id": "5",
+          "label": "Distribuir"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Ctrl + Q"
+        },
+        {
+          "id": "B",
+          "label": "Ctrl + T"
+        },
+        {
+          "id": "C",
+          "label": "Ctrl + D"
+        },
+        {
+          "id": "D",
+          "label": "Ctrl + J"
+        },
+        {
+          "id": "E",
+          "label": "Ctrl + Mayus + J"
+        },
+        {
+          "id": "F",
+          "label": "Ctrl + E"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E"
+    },
+    "explicacion": "Izquierda: Ctrl+Q. Centrar: Ctrl+T. Derecha: Ctrl+D. Justificar: Ctrl+J. Distribuir: Ctrl+Mayus+J. El distractor Ctrl+E es Seleccionar todo el documento, no una alineacion. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
     "id": "inicio-43",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Sangría",
@@ -6704,77 +6704,6 @@
     "explicacion": "Ctrl+Mayús+H reduce la sangría francesa ya aplicada. Ctrl+F la aplica o la quita del todo. Ni Ctrl+Mayús+F ni Ctrl+Mayús+M tocan la sangría: Ctrl+Mayús+M abre el cuadro Fuente con el foco en el campo Tamaño. Confirmado en el volcado v2608 y por prueba en vivo."
   },
   {
-    "id": "inicio-252",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Sangría",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-sangria",
-    "subtopic": "Atajos de sangria",
-    "tema": "Sangría",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0506",
-    "enunciado": "Relaciona cada atajo de sangría con su acción en la versión española de Word 365:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Ctrl + H"
-        },
-        {
-          "id": "2",
-          "label": "Ctrl + F"
-        },
-        {
-          "id": "3",
-          "label": "Ctrl + Mayús + H"
-        },
-        {
-          "id": "4",
-          "label": "Ctrl + W"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Aplica sangría (izquierda) al párrafo"
-        },
-        {
-          "id": "B",
-          "label": "Aplica o quita la sangría francesa"
-        },
-        {
-          "id": "C",
-          "label": "Reduce la sangría francesa"
-        },
-        {
-          "id": "D",
-          "label": "Quita el formato de párrafo, sangrías incluidas"
-        },
-        {
-          "id": "E",
-          "label": "Abre el cuadro de diálogo Fuente"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D"
-    },
-    "explicacion": "Ctrl+H aplica sangría izquierda. Ctrl+F aplica o quita la sangría francesa (primera línea fija, resto sangrado). Ctrl+Mayús+H reduce la sangría francesa. Ctrl+W quita todo el formato de párrafo, sangrías incluidas. Ojo: Ctrl+Mayús+R, al que el volcado asigna 'quitar sangría francesa', NO funciona en esta instalación. El distractor E (cuadro Fuente) es Ctrl+M."
-  },
-  {
     "id": "inicio-349",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Sangría",
@@ -7061,6 +6990,77 @@
     "explicacion": "Ctrl+Mayús+R NO quita la sangría en esta instalación, aunque el volcado se la asigne. Para quitar sangrías se usa Ctrl+W (prueba en vivo del usuario)."
   },
   {
+    "id": "inicio-252",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Sangría",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-sangria",
+    "subtopic": "Atajos de sangria",
+    "tema": "Sangría",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0506",
+    "enunciado": "Relaciona cada atajo de sangría con su acción en la versión española de Word 365:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ctrl + H"
+        },
+        {
+          "id": "2",
+          "label": "Ctrl + F"
+        },
+        {
+          "id": "3",
+          "label": "Ctrl + Mayús + H"
+        },
+        {
+          "id": "4",
+          "label": "Ctrl + W"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Aplica sangría (izquierda) al párrafo"
+        },
+        {
+          "id": "B",
+          "label": "Aplica o quita la sangría francesa"
+        },
+        {
+          "id": "C",
+          "label": "Reduce la sangría francesa"
+        },
+        {
+          "id": "D",
+          "label": "Quita el formato de párrafo, sangrías incluidas"
+        },
+        {
+          "id": "E",
+          "label": "Abre el cuadro de diálogo Fuente"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "explicacion": "Ctrl+H aplica sangría izquierda. Ctrl+F aplica o quita la sangría francesa (primera línea fija, resto sangrado). Ctrl+Mayús+H reduce la sangría francesa. Ctrl+W quita todo el formato de párrafo, sangrías incluidas. Ojo: Ctrl+Mayús+R, al que el volcado asigna 'quitar sangría francesa', NO funciona en esta instalación. El distractor E (cuadro Fuente) es Ctrl+M."
+  },
+  {
     "id": "inicio-47",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Espaciado e interlineado",
@@ -7131,25 +7131,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Las dos opciones usan valores distintos: Agregar espacio antes del parrafo añade 12 pto, mientras que Quitar espacio despues del parrafo elimina 8 pto, que es el espaciado posterior predeterminado en Word 365. No son valores simetricos."
-  },
-  {
-    "id": "inicio-49",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Espaciado e interlineado",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-espaciado",
-    "subtopic": "Nivel de esquema",
-    "tema": "Espaciado e interlineado",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0289",
-    "enunciado": "El nivel de esquema en el cuadro de dialogo Parrafo es un tipo de formato que cambia la apariencia visual del texto, de forma similar a como lo hace la alineacion o el interlineado.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso. El nivel de esquema no es formato: es una estructura jerarquica que determina la posicion del parrafo en la Vista Esquema y en la Tabla de contenido. No cambia la apariencia visual del texto en la vista de impresion. Ofrece 10 opciones: Texto independiente mas los Niveles 1 al 9."
   },
   {
     "id": "inicio-50",
@@ -7584,71 +7565,6 @@
     "explicacion": "No hay atajo para el espaciado entre párrafos: se ajusta desde el grupo Párrafo de la cinta o el diálogo Párrafo. En esta instalación Ctrl+0 restaura el zoom al 100 %, no toca el espaciado. Prueba en vivo del usuario (sep 2026). ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+0 bajo dos comandos (Zoom100 y «espacio antes del párrafo»); en la práctica hace zoom 100 %."
   },
   {
-    "id": "inicio-254",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Espaciado e interlineado",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-espaciado",
-    "subtopic": "Atajos de interlineado",
-    "tema": "Espaciado e interlineado",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0508",
-    "enunciado": "Relaciona cada atajo de interlineado con el tipo que aplica en la versión española de Word 365:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Ctrl + 1"
-        },
-        {
-          "id": "2",
-          "label": "Ctrl + 2"
-        },
-        {
-          "id": "3",
-          "label": "Ctrl + 5 (alfanumérico)"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Interlineado sencillo"
-        },
-        {
-          "id": "B",
-          "label": "Interlineado doble"
-        },
-        {
-          "id": "C",
-          "label": "Interlineado de 1,5 líneas"
-        },
-        {
-          "id": "D",
-          "label": "Interlineado múltiple"
-        },
-        {
-          "id": "E",
-          "label": "Interlineado exacto de 12 pto"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C"
-    },
-    "explicacion": "Ctrl+1 = interlineado sencillo, Ctrl+2 = doble, Ctrl+5 (fila superior) = 1,5 líneas. ⚠️ Ojo: Ctrl+5 del teclado numérico selecciona todo; y en el cuadro Personalizar teclado Ctrl+1 figura bajo «Aplicar Título 1», aunque en la práctica hace interlineado. Prueba en vivo del usuario (sep 2026)."
-  },
-  {
     "id": "inicio-266",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Espaciado e interlineado",
@@ -7933,6 +7849,90 @@
     "explicacion": "Ctrl+0 no toca el interlineado: restaura el zoom al 100 %. Los atajos de interlineado son Ctrl+1/Ctrl+5/Ctrl+2 (sencillo/1,5/doble)."
   },
   {
+    "id": "inicio-49",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": "Nivel de esquema",
+    "tema": "Espaciado e interlineado",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0289",
+    "enunciado": "El nivel de esquema en el cuadro de dialogo Parrafo es un tipo de formato que cambia la apariencia visual del texto, de forma similar a como lo hace la alineacion o el interlineado.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso. El nivel de esquema no es formato: es una estructura jerarquica que determina la posicion del parrafo en la Vista Esquema y en la Tabla de contenido. No cambia la apariencia visual del texto en la vista de impresion. Ofrece 10 opciones: Texto independiente mas los Niveles 1 al 9."
+  },
+  {
+    "id": "inicio-254",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": "Atajos de interlineado",
+    "tema": "Espaciado e interlineado",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0508",
+    "enunciado": "Relaciona cada atajo de interlineado con el tipo que aplica en la versión española de Word 365:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ctrl + 1"
+        },
+        {
+          "id": "2",
+          "label": "Ctrl + 2"
+        },
+        {
+          "id": "3",
+          "label": "Ctrl + 5 (alfanumérico)"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Interlineado sencillo"
+        },
+        {
+          "id": "B",
+          "label": "Interlineado doble"
+        },
+        {
+          "id": "C",
+          "label": "Interlineado de 1,5 líneas"
+        },
+        {
+          "id": "D",
+          "label": "Interlineado múltiple"
+        },
+        {
+          "id": "E",
+          "label": "Interlineado exacto de 12 pto"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explicacion": "Ctrl+1 = interlineado sencillo, Ctrl+2 = doble, Ctrl+5 (fila superior) = 1,5 líneas. ⚠️ Ojo: Ctrl+5 del teclado numérico selecciona todo; y en el cuadro Personalizar teclado Ctrl+1 figura bajo «Aplicar Título 1», aunque en la práctica hace interlineado. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
     "id": "inicio-51",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Bordes y sombreado",
@@ -7967,55 +7967,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "El cuadro de dialogo Bordes y sombreado ofrece 24 estilos de linea de borde diferentes. Los anchos disponibles son: 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 puntos."
-  },
-  {
-    "id": "inicio-52",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Bordes y sombreado",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-bordes",
-    "subtopic": "Anchos de borde",
-    "tema": "Bordes y sombreado",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0296",
-    "enunciado": "¿Cuales de los siguientes anchos de borde estan disponibles en el cuadro de dialogo Bordes y sombreado? Selecciona todos los correctos.",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "1/2 pto"
-      },
-      {
-        "letter": "B",
-        "text": "3/4 pto"
-      },
-      {
-        "letter": "C",
-        "text": "1 pto"
-      },
-      {
-        "letter": "D",
-        "text": "2 pto"
-      },
-      {
-        "letter": "E",
-        "text": "2 1/4 pto"
-      },
-      {
-        "letter": "F",
-        "text": "5 pto"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "E"
-    ],
-    "explicacion": "Los anchos disponibles son: 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 pto. El valor 2 pto no existe en la lista: los valores saltan de 1 1/2 a 2 1/4. El valor 5 pto tampoco existe."
   },
   {
     "id": "inicio-53",
@@ -8162,25 +8113,6 @@
     "explicacion": "En las tramas de Word 365 un porcentaje mayor representa una mayor cantidad de puntos en el estampado superpuesto al fondo. No afecta a la transparencia ni a la saturacion del color, sino a la densidad del patron de puntos."
   },
   {
-    "id": "inicio-57",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Bordes y sombreado",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-bordes",
-    "subtopic": "Sombreado y tramas",
-    "tema": "Bordes y sombreado",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0294",
-    "enunciado": "En Word 365, una trama aplicada sin relleno de fondo pero con un color de trama asignado aparece visualmente como si fuera un relleno solido de ese color.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Cuando se aplica una trama con color pero sin relleno de fondo, el resultado visual es similar al de un relleno solido de ese color. Para que la trama sea visible como patron de puntos sobre un fondo diferente es necesario aplicar tambien un color de relleno."
-  },
-  {
     "id": "inicio-229",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Bordes y sombreado",
@@ -8289,25 +8221,6 @@
     "explicacion": "El desplegable Medir desde ofrece dos opciones: Desde el borde del papel (la distancia se mide desde el borde físico del papel) y Desde el texto (la distancia se mide desde el área de texto del documento). La elección afecta a cómo se posiciona el marco decorativo respecto al contenido."
   },
   {
-    "id": "inicio-232",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Bordes y sombreado",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-bordes",
-    "subtopic": "Borde de pagina",
-    "tema": "Bordes y sombreado",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0486",
-    "enunciado": "En el cuadro de diálogo Bordes y sombreado, las pestañas Bordes y Borde de página comparten exactamente las mismas opciones de configuración, sin ninguna diferencia entre ellas.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso. La pestaña Borde de página tiene opciones exclusivas que no existen en la pestaña Bordes: el desplegable Arte (160 diseños decorativos), el desplegable Aplicar a (todo el documento, esta sección, etc.) y el botón Opciones con el desplegable Medir desde. La pestaña Bordes no tiene ninguna de estas tres opciones."
-  },
-  {
     "id": "inicio-233",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Bordes y sombreado",
@@ -8378,57 +8291,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Las distancias entre el borde y el texto del párrafo en el cuadro de opciones de bordes se expresan en puntos (pto). Se pueden configurar de forma independiente para cada uno de los cuatro lados: Superior, Inferior, Izquierdo y Derecho."
-  },
-  {
-    "id": "inicio-235",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Bordes y sombreado",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-bordes",
-    "subtopic": "Anchos de borde",
-    "tema": "Bordes y sombreado",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0489",
-    "enunciado": "¿Cuáles de los siguientes anchos de borde están disponibles en el cuadro de diálogo Bordes y sombreado? Selecciona todos los correctos.",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "1/2 pto"
-      },
-      {
-        "letter": "B",
-        "text": "1 1/2 pto"
-      },
-      {
-        "letter": "C",
-        "text": "2 1/4 pto"
-      },
-      {
-        "letter": "D",
-        "text": "3 pto"
-      },
-      {
-        "letter": "E",
-        "text": "4 1/2 pto"
-      },
-      {
-        "letter": "F",
-        "text": "6 pto"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "F"
-    ],
-    "explicacion": "Los anchos de borde disponibles en el cuadro Bordes y sombreado son exactamente: 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 puntos. Todas las opciones de esta pregunta corresponden a anchos reales disponibles. Los valores 3/4 y 1 pto no aparecen en las opciones pero también existen."
   },
   {
     "id": "inicio-422",
@@ -8539,6 +8401,144 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "«Estilos rápidos» (la galería de estilos) tiene su propio grupo, «Estilos», independiente del grupo Párrafo."
+  },
+  {
+    "id": "inicio-52",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": "Anchos de borde",
+    "tema": "Bordes y sombreado",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0296",
+    "enunciado": "¿Cuales de los siguientes anchos de borde estan disponibles en el cuadro de dialogo Bordes y sombreado? Selecciona todos los correctos.",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "1/2 pto"
+      },
+      {
+        "letter": "B",
+        "text": "3/4 pto"
+      },
+      {
+        "letter": "C",
+        "text": "1 pto"
+      },
+      {
+        "letter": "D",
+        "text": "2 pto"
+      },
+      {
+        "letter": "E",
+        "text": "2 1/4 pto"
+      },
+      {
+        "letter": "F",
+        "text": "5 pto"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explicacion": "Los anchos disponibles son: 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 pto. El valor 2 pto no existe en la lista: los valores saltan de 1 1/2 a 2 1/4. El valor 5 pto tampoco existe."
+  },
+  {
+    "id": "inicio-235",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": "Anchos de borde",
+    "tema": "Bordes y sombreado",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0489",
+    "enunciado": "¿Cuáles de los siguientes anchos de borde están disponibles en el cuadro de diálogo Bordes y sombreado? Selecciona todos los correctos.",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "1/2 pto"
+      },
+      {
+        "letter": "B",
+        "text": "1 1/2 pto"
+      },
+      {
+        "letter": "C",
+        "text": "2 1/4 pto"
+      },
+      {
+        "letter": "D",
+        "text": "3 pto"
+      },
+      {
+        "letter": "E",
+        "text": "4 1/2 pto"
+      },
+      {
+        "letter": "F",
+        "text": "6 pto"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "explicacion": "Los anchos de borde disponibles en el cuadro Bordes y sombreado son exactamente: 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 puntos. Todas las opciones de esta pregunta corresponden a anchos reales disponibles. Los valores 3/4 y 1 pto no aparecen en las opciones pero también existen."
+  },
+  {
+    "id": "inicio-57",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": "Sombreado y tramas",
+    "tema": "Bordes y sombreado",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0294",
+    "enunciado": "En Word 365, una trama aplicada sin relleno de fondo pero con un color de trama asignado aparece visualmente como si fuera un relleno solido de ese color.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. Cuando se aplica una trama con color pero sin relleno de fondo, el resultado visual es similar al de un relleno solido de ese color. Para que la trama sea visible como patron de puntos sobre un fondo diferente es necesario aplicar tambien un color de relleno."
+  },
+  {
+    "id": "inicio-232",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": "Borde de pagina",
+    "tema": "Bordes y sombreado",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0486",
+    "enunciado": "En el cuadro de diálogo Bordes y sombreado, las pestañas Bordes y Borde de página comparten exactamente las mismas opciones de configuración, sin ninguna diferencia entre ellas.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso. La pestaña Borde de página tiene opciones exclusivas que no existen en la pestaña Bordes: el desplegable Arte (160 diseños decorativos), el desplegable Aplicar a (todo el documento, esta sección, etc.) y el botón Opciones con el desplegable Medir desde. La pestaña Bordes no tiene ninguna de estas tres opciones."
   },
   {
     "id": "inicio-58",
@@ -8719,77 +8719,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "La opcion Incluir numero de nivel desde no esta disponible cuando el nivel usa viñetas. Solo puede utilizarse en niveles con numeracion. Es una restriccion especifica de esta opcion avanzada del panel de lista multinivel."
-  },
-  {
-    "id": "inicio-63",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Listas, viñetas y numeración",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-listas",
-    "subtopic": "Multinivel",
-    "tema": "Listas, viñetas y numeración",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0353",
-    "enunciado": "Relaciona cada atajo con su accion en las listas multinivel:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Alt + Mayus + flecha derecha"
-        },
-        {
-          "id": "2",
-          "label": "Alt + Mayus + flecha izquierda"
-        },
-        {
-          "id": "3",
-          "label": "Tab al inicio de elemento de lista"
-        },
-        {
-          "id": "4",
-          "label": "Mayus + Tab al inicio de elemento de lista"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Aumenta el nivel de sangria (baja un nivel)"
-        },
-        {
-          "id": "B",
-          "label": "Disminuye el nivel de sangria (sube un nivel)"
-        },
-        {
-          "id": "C",
-          "label": "Aumenta el nivel (equivalente a Alt+Mayus+flecha derecha)"
-        },
-        {
-          "id": "D",
-          "label": "Disminuye el nivel (equivalente a Alt+Mayus+flecha izquierda)"
-        },
-        {
-          "id": "E",
-          "label": "Abre el cuadro de lista multinivel"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D"
-    },
-    "explicacion": "En listas multinivel: Alt+Mayus+flecha derecha y Tab aumentan el nivel (bajan un nivel en la jerarquia). Alt+Mayus+flecha izquierda y Mayus+Tab disminuyen el nivel (suben un nivel). Son pares equivalentes con el mismo efecto."
   },
   {
     "id": "inicio-180",
@@ -9660,6 +9589,77 @@
     "explicacion": "El volcado asigna Ctrl+Mayús+L tanto a Versalitas como a Lista con viñetas: es un conflicto interno sin dirimir, no una asignación limpia."
   },
   {
+    "id": "inicio-63",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": "Multinivel",
+    "tema": "Listas, viñetas y numeración",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0353",
+    "enunciado": "Relaciona cada atajo con su accion en las listas multinivel:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Alt + Mayus + flecha derecha"
+        },
+        {
+          "id": "2",
+          "label": "Alt + Mayus + flecha izquierda"
+        },
+        {
+          "id": "3",
+          "label": "Tab al inicio de elemento de lista"
+        },
+        {
+          "id": "4",
+          "label": "Mayus + Tab al inicio de elemento de lista"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Aumenta el nivel de sangria (baja un nivel)"
+        },
+        {
+          "id": "B",
+          "label": "Disminuye el nivel de sangria (sube un nivel)"
+        },
+        {
+          "id": "C",
+          "label": "Aumenta el nivel (equivalente a Alt+Mayus+flecha derecha)"
+        },
+        {
+          "id": "D",
+          "label": "Disminuye el nivel (equivalente a Alt+Mayus+flecha izquierda)"
+        },
+        {
+          "id": "E",
+          "label": "Abre el cuadro de lista multinivel"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "explicacion": "En listas multinivel: Alt+Mayus+flecha derecha y Tab aumentan el nivel (bajan un nivel en la jerarquia). Alt+Mayus+flecha izquierda y Mayus+Tab disminuyen el nivel (suben un nivel). Son pares equivalentes con el mismo efecto."
+  },
+  {
     "id": "inicio-68",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Tabulaciones",
@@ -9730,83 +9730,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Word 365 ofrece 5 tipos de tabulación: Izquierda, Centrada, Derecha, Decimal y Barra. Los primeros cuatro alinean texto de distinta forma. La Barra no alinea texto sino que inserta una línea vertical en la posición indicada."
-  },
-  {
-    "id": "inicio-70",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Tabulaciones",
-    "tipo": "emparejamiento",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-tabulaciones",
-    "subtopic": "Tipos de tabulación",
-    "tema": "Tabulaciones",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0311",
-    "enunciado": "Relaciona cada tipo de tabulación con su comportamiento:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Tabulación izquierda"
-        },
-        {
-          "id": "2",
-          "label": "Tabulación centrada"
-        },
-        {
-          "id": "3",
-          "label": "Tabulación derecha"
-        },
-        {
-          "id": "4",
-          "label": "Tabulación decimal"
-        },
-        {
-          "id": "5",
-          "label": "Tabulación barra"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "El texto se extiende hacia la derecha desde la marca"
-        },
-        {
-          "id": "B",
-          "label": "El texto queda centrado sobre la marca"
-        },
-        {
-          "id": "C",
-          "label": "El texto se extiende hacia la izquierda desde la marca"
-        },
-        {
-          "id": "D",
-          "label": "Alinea los números por el separador decimal, que permanece fijo en la marca"
-        },
-        {
-          "id": "E",
-          "label": "Dibuja una línea vertical en la posición indicada sin alinear texto"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D",
-        "5": "E"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D",
-      "5": "E"
-    },
-    "explicacion": "Izquierda: el texto fluye hacia la derecha. Centrada: el texto se reparte a ambos lados de la marca. Derecha: el texto fluye hacia la izquierda. Decimal: fija el separador decimal en la marca independientemente del número de dígitos. Barra: dibuja una línea vertical, no alinea texto."
   },
   {
     "id": "inicio-71",
@@ -9915,50 +9838,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "El cuadro de diálogo Tabulaciones ofrece 4 opciones de relleno: 1) Ninguno, 2) puntos (......), 3) rayas (------), 4) guion bajo (______). El relleno ocupa el espacio entre el texto y la posición de la tabulación y solo puede configurarse desde este cuadro, no desde la regla."
-  },
-  {
-    "id": "inicio-74",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Tabulaciones",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-tabulaciones",
-    "subtopic": "Relleno",
-    "tema": "Tabulaciones",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0315",
-    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre el relleno de tabulaciones son correctas?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Solo puede aplicarse desde el cuadro de diálogo Tabulaciones, no desde la regla"
-      },
-      {
-        "letter": "B",
-        "text": "Hay 4 opciones: Ninguno, puntos, rayas y guion bajo"
-      },
-      {
-        "letter": "C",
-        "text": "También puede aplicarse haciendo clic directamente en la regla"
-      },
-      {
-        "letter": "D",
-        "text": "Es especialmente útil para maquetar índices, guiando la vista entre título y número de página"
-      },
-      {
-        "letter": "E",
-        "text": "El relleno solo está disponible para la tabulación de tipo Derecha"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explicacion": "El relleno solo es accesible desde el cuadro de diálogo Tabulaciones, no desde la regla. Ofrece 4 opciones. Su uso más habitual es en índices para guiar la vista entre el título y la página. La opción C es falsa (la regla no permite relleno) y la E es falsa (el relleno está disponible para todos los tipos de tabulación)."
   },
   {
     "id": "inicio-75",
@@ -10177,25 +10056,6 @@
     "explicacion": "Las tabulaciones se aplican únicamente al párrafo o párrafos que estén seleccionados en el momento de configurarlas. No afectan a todo el documento ni a la sección. Para aplicarlas a varios párrafos hay que seleccionarlos todos antes de abrir el cuadro."
   },
   {
-    "id": "inicio-81",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Tabulaciones",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-tabulaciones",
-    "subtopic": "Tecla Tab",
-    "tema": "Tabulaciones",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0322",
-    "enunciado": "La tecla Tab siempre inserta una tabulación en cualquier contexto de Word 365, incluidas las celdas de tablas.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso. Dentro de las celdas de una tabla, la tecla Tab no inserta una tabulación sino que mueve el cursor a la siguiente celda. Para insertar un carácter de tabulación dentro de una celda de tabla hay que usar Ctrl+Tab."
-  },
-  {
     "id": "inicio-82",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Tabulaciones",
@@ -10304,6 +10164,220 @@
     "explicacion": "El selector de tabulaciones de la regla tiene 7 opciones en total que rotan con cada clic: los 5 tipos de tabulación (Izquierda, Centrada, Derecha, Decimal y Barra) más Sangría de primera línea y Sangría francesa."
   },
   {
+    "id": "inicio-277",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": "Relleno",
+    "tema": "Tabulaciones",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0531",
+    "enunciado": "Un opositor necesita preparar un índice de contenidos con relleno de puntos entre el título y el número de página, como: 'Introducción .......... 3'. ¿Qué combinación de funciones de la pestaña Inicio debe usar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tabulación derecha con relleno de puntos desde el cuadro de diálogo Tabulaciones"
+      },
+      {
+        "letter": "B",
+        "text": "Tabulación izquierda con relleno de puntos desde la regla"
+      },
+      {
+        "letter": "C",
+        "text": "Tabulación decimal con relleno de rayas desde el cuadro de diálogo Tabulaciones"
+      },
+      {
+        "letter": "D",
+        "text": "Subrayado continuo aplicado desde el grupo Fuente"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Para un índice con puntos entre título y número de página se usa una tabulación de tipo Derecha (para que el número quede alineado por la derecha) con relleno de puntos. Debe configurarse desde el cuadro de diálogo Tabulaciones porque el relleno no está disponible desde la regla. La posición de la tabulación se sitúa en el margen derecho del área de texto."
+  },
+  {
+    "id": "inicio-74",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": "Relleno",
+    "tema": "Tabulaciones",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0315",
+    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre el relleno de tabulaciones son correctas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Solo puede aplicarse desde el cuadro de diálogo Tabulaciones, no desde la regla"
+      },
+      {
+        "letter": "B",
+        "text": "Hay 4 opciones: Ninguno, puntos, rayas y guion bajo"
+      },
+      {
+        "letter": "C",
+        "text": "También puede aplicarse haciendo clic directamente en la regla"
+      },
+      {
+        "letter": "D",
+        "text": "Es especialmente útil para maquetar índices, guiando la vista entre título y número de página"
+      },
+      {
+        "letter": "E",
+        "text": "El relleno solo está disponible para la tabulación de tipo Derecha"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explicacion": "El relleno solo es accesible desde el cuadro de diálogo Tabulaciones, no desde la regla. Ofrece 4 opciones. Su uso más habitual es en índices para guiar la vista entre el título y la página. La opción C es falsa (la regla no permite relleno) y la E es falsa (el relleno está disponible para todos los tipos de tabulación)."
+  },
+  {
+    "id": "inicio-81",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": "Tecla Tab",
+    "tema": "Tabulaciones",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0322",
+    "enunciado": "La tecla Tab siempre inserta una tabulación en cualquier contexto de Word 365, incluidas las celdas de tablas.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso. Dentro de las celdas de una tabla, la tecla Tab no inserta una tabulación sino que mueve el cursor a la siguiente celda. Para insertar un carácter de tabulación dentro de una celda de tabla hay que usar Ctrl+Tab."
+  },
+  {
+    "id": "inicio-86",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": "Naturaleza de las tabulaciones",
+    "tema": "Tabulaciones",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0327",
+    "enunciado": "Una tabulación es un elemento de formato del párrafo, no un carácter de texto, por lo que puede copiarse a otro párrafo usando Copiar formato.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. Las tabulaciones son formato de párrafo, no texto. Esto significa que pueden copiarse a otros párrafos usando Copiar formato (Ctrl+Mayús+C / Ctrl+Mayús+V) igual que cualquier otro formato de párrafo como la alineación o el interlineado."
+  },
+  {
+    "id": "inicio-280",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": "Naturaleza de las tabulaciones",
+    "tema": "Tabulaciones",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0534",
+    "enunciado": "En Word 365, las tabulaciones definidas en el cuadro de diálogo Tabulaciones son formato de párrafo y por tanto pueden copiarse a otros párrafos usando Copiar formato (Ctrl+Mayús+C / Ctrl+Mayús+V), igual que la alineación o el interlineado.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. Las tabulaciones son un atributo de formato de párrafo, no caracteres de texto. Esto significa que se almacenan en la marca de párrafo (¶) y se pueden copiar junto con el resto del formato de párrafo usando Copiar formato. Al usar Copiar formato sobre un párrafo con tabulaciones definidas y aplicarlo a otro párrafo, las tabulaciones se transfieren al párrafo destino."
+  },
+  {
+    "id": "inicio-70",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": "Tipos de tabulación",
+    "tema": "Tabulaciones",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0311",
+    "enunciado": "Relaciona cada tipo de tabulación con su comportamiento:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Tabulación izquierda"
+        },
+        {
+          "id": "2",
+          "label": "Tabulación centrada"
+        },
+        {
+          "id": "3",
+          "label": "Tabulación derecha"
+        },
+        {
+          "id": "4",
+          "label": "Tabulación decimal"
+        },
+        {
+          "id": "5",
+          "label": "Tabulación barra"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "El texto se extiende hacia la derecha desde la marca"
+        },
+        {
+          "id": "B",
+          "label": "El texto queda centrado sobre la marca"
+        },
+        {
+          "id": "C",
+          "label": "El texto se extiende hacia la izquierda desde la marca"
+        },
+        {
+          "id": "D",
+          "label": "Alinea los números por el separador decimal, que permanece fijo en la marca"
+        },
+        {
+          "id": "E",
+          "label": "Dibuja una línea vertical en la posición indicada sin alinear texto"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E"
+    },
+    "explicacion": "Izquierda: el texto fluye hacia la derecha. Centrada: el texto se reparte a ambos lados de la marca. Derecha: el texto fluye hacia la izquierda. Decimal: fija el separador decimal en la marca independientemente del número de dígitos. Barra: dibuja una línea vertical, no alinea texto."
+  },
+  {
     "id": "inicio-85",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Tabulaciones",
@@ -10385,80 +10459,6 @@
     "explicacion": "L → Izquierda. T invertida (⊥) → Centrada. L invertida (┘) → Derecha. T invertida con punto → Decimal. Línea vertical → Barra. El distractor F (Sangría francesa) también aparece en el selector pero con un icono distinto no incluido en esta lista."
   },
   {
-    "id": "inicio-86",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Tabulaciones",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-tabulaciones",
-    "subtopic": "Naturaleza de las tabulaciones",
-    "tema": "Tabulaciones",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0327",
-    "enunciado": "Una tabulación es un elemento de formato del párrafo, no un carácter de texto, por lo que puede copiarse a otro párrafo usando Copiar formato.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Las tabulaciones son formato de párrafo, no texto. Esto significa que pueden copiarse a otros párrafos usando Copiar formato (Ctrl+Mayús+C / Ctrl+Mayús+V) igual que cualquier otro formato de párrafo como la alineación o el interlineado."
-  },
-  {
-    "id": "inicio-277",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Tabulaciones",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-tabulaciones",
-    "subtopic": "Relleno",
-    "tema": "Tabulaciones",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0531",
-    "enunciado": "Un opositor necesita preparar un índice de contenidos con relleno de puntos entre el título y el número de página, como: 'Introducción .......... 3'. ¿Qué combinación de funciones de la pestaña Inicio debe usar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Tabulación derecha con relleno de puntos desde el cuadro de diálogo Tabulaciones"
-      },
-      {
-        "letter": "B",
-        "text": "Tabulación izquierda con relleno de puntos desde la regla"
-      },
-      {
-        "letter": "C",
-        "text": "Tabulación decimal con relleno de rayas desde el cuadro de diálogo Tabulaciones"
-      },
-      {
-        "letter": "D",
-        "text": "Subrayado continuo aplicado desde el grupo Fuente"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Para un índice con puntos entre título y número de página se usa una tabulación de tipo Derecha (para que el número quede alineado por la derecha) con relleno de puntos. Debe configurarse desde el cuadro de diálogo Tabulaciones porque el relleno no está disponible desde la regla. La posición de la tabulación se sitúa en el margen derecho del área de texto."
-  },
-  {
-    "id": "inicio-280",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Tabulaciones",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-tabulaciones",
-    "subtopic": "Naturaleza de las tabulaciones",
-    "tema": "Tabulaciones",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0534",
-    "enunciado": "En Word 365, las tabulaciones definidas en el cuadro de diálogo Tabulaciones son formato de párrafo y por tanto pueden copiarse a otros párrafos usando Copiar formato (Ctrl+Mayús+C / Ctrl+Mayús+V), igual que la alineación o el interlineado.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Las tabulaciones son un atributo de formato de párrafo, no caracteres de texto. Esto significa que se almacenan en la marca de párrafo (¶) y se pueden copiar junto con el resto del formato de párrafo usando Copiar formato. Al usar Copiar formato sobre un párrafo con tabulaciones definidas y aplicarlo a otro párrafo, las tabulaciones se transfieren al párrafo destino."
-  },
-  {
     "id": "inicio-87",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -10529,77 +10529,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Word 365 dispone de 4 tipos de estilo: de párrafo (controla el formato del párrafo completo), de carácter (controla el formato de caracteres seleccionados dentro de un párrafo), de tabla (controla el formato de tablas) y de lista (controla el formato de listas con viñetas o numeración)."
-  },
-  {
-    "id": "inicio-89",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "emparejamiento",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": "Tipos de estilo",
-    "tema": "Estilos",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0336",
-    "enunciado": "Relaciona cada tipo de estilo con lo que controla:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Estilo de párrafo"
-        },
-        {
-          "id": "2",
-          "label": "Estilo de carácter"
-        },
-        {
-          "id": "3",
-          "label": "Estilo de tabla"
-        },
-        {
-          "id": "4",
-          "label": "Estilo de lista"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Formato del párrafo completo: alineación, sangría, interlineado y fuente"
-        },
-        {
-          "id": "B",
-          "label": "Formato de caracteres seleccionados dentro de un párrafo sin afectar al párrafo completo"
-        },
-        {
-          "id": "C",
-          "label": "Formato de celdas, bordes, sombreado y fuente de una tabla"
-        },
-        {
-          "id": "D",
-          "label": "Formato de viñetas o numeración de una lista"
-        },
-        {
-          "id": "E",
-          "label": "Formato de secciones y márgenes de página"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D"
-    },
-    "explicacion": "Párrafo: controla todo el formato del párrafo. Carácter: solo afecta a los caracteres seleccionados. Tabla: formato completo de la tabla incluyendo bordes y sombreado. Lista: formato de viñetas o numeración. El distractor E (secciones y márgenes) no corresponde a ningún tipo de estilo."
   },
   {
     "id": "inicio-90",
@@ -10710,77 +10639,6 @@
     "explicacion": "Ctrl+Mayús+A aplica el estilo Normal al párrafo o texto seleccionado. Ctrl+Mayús+N aplica el formato negrita. Ctrl+Q elimina el formato de párrafo. Ctrl+Mayús+S aplica subrayado."
   },
   {
-    "id": "inicio-93",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": "Atajos de estilos",
-    "tema": "Estilos",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0344",
-    "enunciado": "Relaciona cada atajo con el estilo de título que aplica:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Ctrl + Mayús + 1"
-        },
-        {
-          "id": "2",
-          "label": "Alt + Ctrl + 2"
-        },
-        {
-          "id": "3",
-          "label": "Ctrl + Mayús + 3"
-        },
-        {
-          "id": "4",
-          "label": "Ctrl + Mayús + A"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Título 1"
-        },
-        {
-          "id": "B",
-          "label": "Título 2"
-        },
-        {
-          "id": "C",
-          "label": "Título 3"
-        },
-        {
-          "id": "D",
-          "label": "Estilo Normal"
-        },
-        {
-          "id": "E",
-          "label": "Título 4"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D"
-    },
-    "explicacion": "En esta instalación: Ctrl+Mayús+1 → Título 1, Alt+Ctrl+2 → Título 2 (Ctrl+Mayús+2 NO hace nada), Ctrl+Mayús+3 → Título 3. Ctrl+Mayús+A aplica el estilo Normal. ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+1 como «Aplicar Título 1», pero Ctrl+1 aplica interlineado sencillo. Prueba en vivo del usuario (sep 2026)."
-  },
-  {
     "id": "inicio-94",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -10889,25 +10747,6 @@
     "explicacion": "Solo en este documento guarda el estilo únicamente en el archivo actual y no estará disponible en otros documentos. Documentos nuevos basados en esta plantilla añade el estilo a la plantilla base (Normal.dotx) para que esté disponible automáticamente en todos los documentos nuevos que se creen a partir de ese momento."
   },
   {
-    "id": "inicio-97",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": "Crear estilo",
-    "tema": "Estilos",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0349",
-    "enunciado": "La casilla 'Actualizar automáticamente' en el cuadro de creación de estilos hace que, cada vez que se aplique formato manual a un párrafo con ese estilo, la definición del estilo se actualice sola y el cambio se propague a todos los párrafos que lo usan.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Al activar Actualizar automáticamente, cualquier formato manual que se aplique a un párrafo con ese estilo modifica la definición del estilo y el cambio se propaga automáticamente a todos los demás párrafos del documento que tengan ese mismo estilo aplicado."
-  },
-  {
     "id": "inicio-98",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -10942,56 +10781,6 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "El menú Formato del cuadro de creación de estilos ofrece 9 categorías: Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. Cada una abre su propio cuadro de configuración."
-  },
-  {
-    "id": "inicio-99",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": "Crear estilo",
-    "tema": "Estilos",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0351",
-    "enunciado": "¿Cuáles de las siguientes categorías están disponibles en el menú Formato del cuadro de creación de estilos?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Fuente"
-      },
-      {
-        "letter": "B",
-        "text": "Párrafo"
-      },
-      {
-        "letter": "C",
-        "text": "Idioma"
-      },
-      {
-        "letter": "D",
-        "text": "Marco"
-      },
-      {
-        "letter": "E",
-        "text": "Método abreviado"
-      },
-      {
-        "letter": "F",
-        "text": "Hipervínculo"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E"
-    ],
-    "explicacion": "Las categorías disponibles en el menú Formato del cuadro de estilos son: Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. Hipervínculo no es una opción del menú Formato de estilos."
   },
   {
     "id": "inicio-100",
@@ -11210,25 +10999,6 @@
     "explicacion": "El botón Administrar estilos abre un cuadro centralizado desde el que se puede reorganizar el orden de los estilos, ocultarlos del panel y decidir cuáles aparecen en la galería rápida de la cinta. Es distinto del Inspector de estilo, que solo analiza el formato del texto seleccionado."
   },
   {
-    "id": "inicio-106",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": "Gestión de estilos",
-    "tema": "Estilos",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0360",
-    "enunciado": "Los estilos predefinidos de Word 365 como Normal, Título 1 o Título 2 pueden eliminarse permanentemente de la lista de estilos del documento.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso. Los estilos integrados de Word 365 (Normal, Título 1, Título 2, etc.) no pueden eliminarse permanentemente del documento. La opción Eliminar solo está disponible para estilos personalizados creados por el usuario. Los estilos integrados solo pueden ocultarse de la galería o del panel."
-  },
-  {
     "id": "inicio-107",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -11299,25 +11069,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Bandas en filas pares aplica el formato configurado únicamente a las filas pares de la tabla (segunda, cuarta, sexta...), creando un efecto de franjas alternas. Bandas en filas impares haría lo mismo pero con las filas impares (primera, tercera, quinta...)."
-  },
-  {
-    "id": "inicio-109",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": "Tipos de estilo",
-    "tema": "Estilos",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0363",
-    "enunciado": "En Word 365, los estilos de párrafo pueden incluir formato de fuente, de párrafo, tabulaciones, bordes, idioma y numeración, todo definido en un único estilo.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Un estilo de párrafo puede incorporar simultáneamente todos los tipos de formato disponibles en el menú Formato del cuadro de creación de estilos: fuente, párrafo, tabulaciones, borde, idioma, marco, numeración, método abreviado y efectos de texto."
   },
   {
     "id": "inicio-110",
@@ -11498,25 +11249,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Al activar Agregar a la galería de estilos, el nuevo estilo aparece directamente entre las miniaturas visibles en la cinta (galería rápida del grupo Estilos), permitiendo aplicarlo con un clic sin tener que abrir el panel lateral. No afecta a la disponibilidad en otros documentos, que depende de la opción Solo en este documento / Documentos nuevos."
-  },
-  {
-    "id": "inicio-115",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": "Crear estilo",
-    "tema": "Estilos",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0369",
-    "enunciado": "La opción 'Crear un estilo' disponible en la galería desplegable de la cinta abre el mismo cuadro de diálogo completo que el botón Nuevo estilo del panel lateral de Estilos.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso. La opción Crear un estilo de la galería desplegable de la cinta abre un cuadro simplificado con solo los campos básicos (nombre y tipo). El botón Nuevo estilo del panel lateral abre el cuadro completo con todas las opciones incluyendo el menú Formato con las 9 categorías."
   },
   {
     "id": "inicio-116",
@@ -11915,106 +11647,6 @@
     "explicacion": "La opción Fila de totales del desplegable Aplicar formato a aplica el formato configurado únicamente a la última fila de la tabla. Es la opción adecuada para destacar la fila de totales o resumen con un formato diferenciado del resto de filas de datos."
   },
   {
-    "id": "inicio-237",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "emparejamiento",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": "Estilo de tabla",
-    "tema": "Estilos",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0491",
-    "enunciado": "Relaciona cada opción de 'Aplicar formato a' con la parte de la tabla a la que afecta:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Toda la tabla"
-        },
-        {
-          "id": "2",
-          "label": "Fila de encabezado"
-        },
-        {
-          "id": "3",
-          "label": "Fila de totales"
-        },
-        {
-          "id": "4",
-          "label": "Primera columna"
-        },
-        {
-          "id": "5",
-          "label": "Última columna"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Todas las celdas sin distinción"
-        },
-        {
-          "id": "B",
-          "label": "Primera fila de la tabla"
-        },
-        {
-          "id": "C",
-          "label": "Última fila de la tabla"
-        },
-        {
-          "id": "D",
-          "label": "Columna más a la izquierda"
-        },
-        {
-          "id": "E",
-          "label": "Columna más a la derecha"
-        },
-        {
-          "id": "F",
-          "label": "Filas alternas de la tabla"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D",
-        "5": "E"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D",
-      "5": "E"
-    },
-    "explicacion": "Toda la tabla: todas las celdas. Fila de encabezado: primera fila. Fila de totales: última fila. Primera columna: columna izquierda. Última columna: columna derecha. El distractor F corresponde a las opciones de Bandas en filas, que también existen en el desplegable pero no aparecen en esta pregunta."
-  },
-  {
-    "id": "inicio-238",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": "Tipos de estilo",
-    "tema": "Estilos",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0492",
-    "enunciado": "En Word 365, un estilo de carácter puede incluir formato de párrafo como alineación o interlineado, además del formato de fuente.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso. Un estilo de carácter solo puede contener formato de carácter (fuente, tamaño, color, negrita, cursiva, etc.). No puede incluir formato de párrafo como alineación, sangría o interlineado. Para eso existe el estilo de párrafo, que sí puede contener tanto formato de párrafo como de carácter."
-  },
-  {
     "id": "inicio-239",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -12121,25 +11753,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "La solución más eficiente es crear un estilo de carácter específico para las citas en inglés y asignarle el idioma inglés mediante Formato → Idioma en el cuadro de creación de estilos. Así, cada vez que se aplique ese estilo a una cita, el corrector usará automáticamente el diccionario inglés para esa selección, sin afectar al resto del documento."
-  },
-  {
-    "id": "inicio-273",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": "Estilos predefinidos",
-    "tema": "Estilos",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0527",
-    "enunciado": "En Word 365, si se modifica el estilo Normal cambiando su fuente de Calibri 11 pt a Arial 12 pt, ese cambio afecta automáticamente a todos los estilos del documento que están basados en Normal, como Cuerpo de texto o Texto de globo.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. El estilo Normal es el estilo raíz del que derivan la mayoría de estilos predefinidos de Word mediante el campo Estilo basado en. Al modificar Normal, todos los estilos que heredan de él se actualizan automáticamente. Esta es la razón por la que modificar Normal sin cuidado puede afectar al formato de todo el documento."
   },
   {
     "id": "inicio-341",
@@ -12353,6 +11966,393 @@
     "explicacion": "Ctrl+Mayús+2 no hace nada en esta instalación (probado en vivo). El atajo real de Título 2 es Alt+Ctrl+2."
   },
   {
+    "id": "inicio-99",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Crear estilo",
+    "tema": "Estilos",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0351",
+    "enunciado": "¿Cuáles de las siguientes categorías están disponibles en el menú Formato del cuadro de creación de estilos?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Fuente"
+      },
+      {
+        "letter": "B",
+        "text": "Párrafo"
+      },
+      {
+        "letter": "C",
+        "text": "Idioma"
+      },
+      {
+        "letter": "D",
+        "text": "Marco"
+      },
+      {
+        "letter": "E",
+        "text": "Método abreviado"
+      },
+      {
+        "letter": "F",
+        "text": "Hipervínculo"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explicacion": "Las categorías disponibles en el menú Formato del cuadro de estilos son: Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. Hipervínculo no es una opción del menú Formato de estilos."
+  },
+  {
+    "id": "inicio-97",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Crear estilo",
+    "tema": "Estilos",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0349",
+    "enunciado": "La casilla 'Actualizar automáticamente' en el cuadro de creación de estilos hace que, cada vez que se aplique formato manual a un párrafo con ese estilo, la definición del estilo se actualice sola y el cambio se propague a todos los párrafos que lo usan.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. Al activar Actualizar automáticamente, cualquier formato manual que se aplique a un párrafo con ese estilo modifica la definición del estilo y el cambio se propaga automáticamente a todos los demás párrafos del documento que tengan ese mismo estilo aplicado."
+  },
+  {
+    "id": "inicio-106",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Gestión de estilos",
+    "tema": "Estilos",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0360",
+    "enunciado": "Los estilos predefinidos de Word 365 como Normal, Título 1 o Título 2 pueden eliminarse permanentemente de la lista de estilos del documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso. Los estilos integrados de Word 365 (Normal, Título 1, Título 2, etc.) no pueden eliminarse permanentemente del documento. La opción Eliminar solo está disponible para estilos personalizados creados por el usuario. Los estilos integrados solo pueden ocultarse de la galería o del panel."
+  },
+  {
+    "id": "inicio-109",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Tipos de estilo",
+    "tema": "Estilos",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0363",
+    "enunciado": "En Word 365, los estilos de párrafo pueden incluir formato de fuente, de párrafo, tabulaciones, bordes, idioma y numeración, todo definido en un único estilo.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. Un estilo de párrafo puede incorporar simultáneamente todos los tipos de formato disponibles en el menú Formato del cuadro de creación de estilos: fuente, párrafo, tabulaciones, borde, idioma, marco, numeración, método abreviado y efectos de texto."
+  },
+  {
+    "id": "inicio-115",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Crear estilo",
+    "tema": "Estilos",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0369",
+    "enunciado": "La opción 'Crear un estilo' disponible en la galería desplegable de la cinta abre el mismo cuadro de diálogo completo que el botón Nuevo estilo del panel lateral de Estilos.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso. La opción Crear un estilo de la galería desplegable de la cinta abre un cuadro simplificado con solo los campos básicos (nombre y tipo). El botón Nuevo estilo del panel lateral abre el cuadro completo con todas las opciones incluyendo el menú Formato con las 9 categorías."
+  },
+  {
+    "id": "inicio-238",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Tipos de estilo",
+    "tema": "Estilos",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0492",
+    "enunciado": "En Word 365, un estilo de carácter puede incluir formato de párrafo como alineación o interlineado, además del formato de fuente.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso. Un estilo de carácter solo puede contener formato de carácter (fuente, tamaño, color, negrita, cursiva, etc.). No puede incluir formato de párrafo como alineación, sangría o interlineado. Para eso existe el estilo de párrafo, que sí puede contener tanto formato de párrafo como de carácter."
+  },
+  {
+    "id": "inicio-273",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Estilos predefinidos",
+    "tema": "Estilos",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0527",
+    "enunciado": "En Word 365, si se modifica el estilo Normal cambiando su fuente de Calibri 11 pt a Arial 12 pt, ese cambio afecta automáticamente a todos los estilos del documento que están basados en Normal, como Cuerpo de texto o Texto de globo.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. El estilo Normal es el estilo raíz del que derivan la mayoría de estilos predefinidos de Word mediante el campo Estilo basado en. Al modificar Normal, todos los estilos que heredan de él se actualizan automáticamente. Esta es la razón por la que modificar Normal sin cuidado puede afectar al formato de todo el documento."
+  },
+  {
+    "id": "inicio-89",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Tipos de estilo",
+    "tema": "Estilos",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0336",
+    "enunciado": "Relaciona cada tipo de estilo con lo que controla:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Estilo de párrafo"
+        },
+        {
+          "id": "2",
+          "label": "Estilo de carácter"
+        },
+        {
+          "id": "3",
+          "label": "Estilo de tabla"
+        },
+        {
+          "id": "4",
+          "label": "Estilo de lista"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Formato del párrafo completo: alineación, sangría, interlineado y fuente"
+        },
+        {
+          "id": "B",
+          "label": "Formato de caracteres seleccionados dentro de un párrafo sin afectar al párrafo completo"
+        },
+        {
+          "id": "C",
+          "label": "Formato de celdas, bordes, sombreado y fuente de una tabla"
+        },
+        {
+          "id": "D",
+          "label": "Formato de viñetas o numeración de una lista"
+        },
+        {
+          "id": "E",
+          "label": "Formato de secciones y márgenes de página"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "explicacion": "Párrafo: controla todo el formato del párrafo. Carácter: solo afecta a los caracteres seleccionados. Tabla: formato completo de la tabla incluyendo bordes y sombreado. Lista: formato de viñetas o numeración. El distractor E (secciones y márgenes) no corresponde a ningún tipo de estilo."
+  },
+  {
+    "id": "inicio-93",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Atajos de estilos",
+    "tema": "Estilos",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0344",
+    "enunciado": "Relaciona cada atajo con el estilo de título que aplica:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ctrl + Mayús + 1"
+        },
+        {
+          "id": "2",
+          "label": "Alt + Ctrl + 2"
+        },
+        {
+          "id": "3",
+          "label": "Ctrl + Mayús + 3"
+        },
+        {
+          "id": "4",
+          "label": "Ctrl + Mayús + A"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Título 1"
+        },
+        {
+          "id": "B",
+          "label": "Título 2"
+        },
+        {
+          "id": "C",
+          "label": "Título 3"
+        },
+        {
+          "id": "D",
+          "label": "Estilo Normal"
+        },
+        {
+          "id": "E",
+          "label": "Título 4"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "explicacion": "En esta instalación: Ctrl+Mayús+1 → Título 1, Alt+Ctrl+2 → Título 2 (Ctrl+Mayús+2 NO hace nada), Ctrl+Mayús+3 → Título 3. Ctrl+Mayús+A aplica el estilo Normal. ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+1 como «Aplicar Título 1», pero Ctrl+1 aplica interlineado sencillo. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
+    "id": "inicio-237",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Estilo de tabla",
+    "tema": "Estilos",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0491",
+    "enunciado": "Relaciona cada opción de 'Aplicar formato a' con la parte de la tabla a la que afecta:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Toda la tabla"
+        },
+        {
+          "id": "2",
+          "label": "Fila de encabezado"
+        },
+        {
+          "id": "3",
+          "label": "Fila de totales"
+        },
+        {
+          "id": "4",
+          "label": "Primera columna"
+        },
+        {
+          "id": "5",
+          "label": "Última columna"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Todas las celdas sin distinción"
+        },
+        {
+          "id": "B",
+          "label": "Primera fila de la tabla"
+        },
+        {
+          "id": "C",
+          "label": "Última fila de la tabla"
+        },
+        {
+          "id": "D",
+          "label": "Columna más a la izquierda"
+        },
+        {
+          "id": "E",
+          "label": "Columna más a la derecha"
+        },
+        {
+          "id": "F",
+          "label": "Filas alternas de la tabla"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E"
+    },
+    "explicacion": "Toda la tabla: todas las celdas. Fila de encabezado: primera fila. Fila de totales: última fila. Primera columna: columna izquierda. Última columna: columna derecha. El distractor F corresponde a las opciones de Bandas en filas, que también existen en el desplegable pero no aparecen en esta pregunta."
+  },
+  {
     "id": "inicio-117",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -12425,67 +12425,6 @@
     "explicacion": "El panel de navegación tiene 3 pestañas: Títulos (muestra el índice interactivo de los párrafos con estilos de título aplicados), Páginas (muestra miniaturas de las páginas del documento) y Resultados (muestra vínculos directos a las coincidencias de búsqueda, hasta un máximo de 100 resultados)."
   },
   {
-    "id": "inicio-119",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "emparejamiento",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": "Panel de navegación",
-    "tema": "Edición",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0373",
-    "enunciado": "Relaciona cada pestaña del panel de navegación con su función:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Pestaña Títulos"
-        },
-        {
-          "id": "2",
-          "label": "Pestaña Páginas"
-        },
-        {
-          "id": "3",
-          "label": "Pestaña Resultados"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Muestra un índice interactivo con los párrafos que tienen estilos de título aplicados"
-        },
-        {
-          "id": "B",
-          "label": "Muestra miniaturas de vista previa de cada página del documento"
-        },
-        {
-          "id": "C",
-          "label": "Muestra vínculos directos a los fragmentos de texto que coinciden con la búsqueda, hasta 100 resultados"
-        },
-        {
-          "id": "D",
-          "label": "Muestra el historial de búsquedas recientes"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C"
-    },
-    "explicacion": "Títulos: índice interactivo basado en estilos de título. Páginas: miniaturas de cada página. Resultados: vínculos a las coincidencias de búsqueda con un límite de 100 resultados. El distractor D no corresponde a ninguna pestaña real del panel."
-  },
-  {
     "id": "inicio-120",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -12520,25 +12459,6 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "La pestaña Resultados del panel de navegación muestra un máximo de 100 resultados. Si el documento contiene más de 100 coincidencias del término buscado, la pestaña solo mostrará las primeras 100."
-  },
-  {
-    "id": "inicio-121",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": "Panel de navegación",
-    "tema": "Edición",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0375",
-    "enunciado": "Para que la pestaña Títulos del panel de navegación muestre el índice interactivo del documento, es necesario haber aplicado previamente estilos de título a los párrafos correspondientes desde la pestaña Inicio.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. La pestaña Títulos solo muestra los párrafos que tienen aplicados estilos de título (Título 1, Título 2, etc.). Si el documento usa formato manual en lugar de estilos de título, la pestaña aparecerá vacía o con el mensaje de que no hay títulos detectados."
   },
   {
     "id": "inicio-122",
@@ -12685,87 +12605,6 @@
     "explicacion": "Al pulsar Más >> se despliegan 7 opciones de búsqueda: Coincidir mayúsculas y minúsculas, Solo palabras completas, Usar caracteres comodín, Prefijo, Sufijo, Omitir puntuación y Omitir espacios en blanco. El botón cambia a << Menos para colapsar el panel."
   },
   {
-    "id": "inicio-126",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "emparejamiento",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": "Búsqueda avanzada",
-    "tema": "Edición",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0380",
-    "enunciado": "Relaciona cada opción de búsqueda avanzada con su función:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Coincidir mayúsculas y minúsculas"
-        },
-        {
-          "id": "2",
-          "label": "Solo palabras completas"
-        },
-        {
-          "id": "3",
-          "label": "Usar caracteres comodín"
-        },
-        {
-          "id": "4",
-          "label": "Prefijo"
-        },
-        {
-          "id": "5",
-          "label": "Sufijo"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Busca exactamente la combinación de mayúsculas y minúsculas escrita en el campo"
-        },
-        {
-          "id": "B",
-          "label": "Solo encuentra la palabra exacta delimitada por espacios o puntuación, no si aparece dentro de otra palabra"
-        },
-        {
-          "id": "C",
-          "label": "Permite usar símbolos como * o ? para buscar patrones en lugar de texto literal"
-        },
-        {
-          "id": "D",
-          "label": "Solo encuentra palabras que empiecen exactamente por el fragmento buscado"
-        },
-        {
-          "id": "E",
-          "label": "Solo encuentra palabras que terminen exactamente por el fragmento buscado"
-        },
-        {
-          "id": "F",
-          "label": "Ignora los signos de puntuación al comparar el texto buscado"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D",
-        "5": "E"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D",
-      "5": "E"
-    },
-    "explicacion": "Coincidir may/min: distingue entre Casa y casa. Solo palabras completas: busca 'mal' pero no 'malestar'. Comodín: permite patrones con * y ?. Prefijo: busca palabras que empiezan por el fragmento. Sufijo: busca palabras que terminan por el fragmento. El distractor F corresponde a Omitir puntuación."
-  },
-  {
     "id": "inicio-127",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -12874,25 +12713,6 @@
     "explicacion": "Reemplazar sustituye la coincidencia que está actualmente resaltada y avanza automáticamente a la siguiente, permitiendo revisar y decidir una a una. Reemplazar todos sustituye todas las coincidencias del documento de una sola vez sin revisión individual."
   },
   {
-    "id": "inicio-130",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": "Reemplazar",
-    "tema": "Edición",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0384",
-    "enunciado": "Si se usa Reemplazar todos con el campo 'Reemplazar con' vacío, Word elimina todas las coincidencias del término buscado del documento.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Cuando el campo Reemplazar con está vacío y se pulsa Reemplazar todos, Word sustituye cada coincidencia encontrada por nada, es decir, las elimina. Es una forma de borrar masivamente un término o carácter de todo el documento."
-  },
-  {
     "id": "inicio-131",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -12927,56 +12747,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "En la pestaña Ir a, los valores con signo + o - son relativos a la posición actual. Escribir +4 con Página seleccionado avanza 4 páginas hacia adelante desde donde está el cursor. Para ir a la página 4 directamente se escribiría simplemente 4 sin signo."
-  },
-  {
-    "id": "inicio-132",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": "Ir a",
-    "tema": "Edición",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0386",
-    "enunciado": "¿Cuáles de los siguientes elementos pueden seleccionarse en la lista 'Ir a' del cuadro de diálogo Buscar y reemplazar para saltar directamente a ellos?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Página"
-      },
-      {
-        "letter": "B",
-        "text": "Sección"
-      },
-      {
-        "letter": "C",
-        "text": "Línea"
-      },
-      {
-        "letter": "D",
-        "text": "Marcador"
-      },
-      {
-        "letter": "E",
-        "text": "Comentario"
-      },
-      {
-        "letter": "F",
-        "text": "Columna"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E"
-    ],
-    "explicacion": "La lista Ir a incluye entre otros: Página, Sección, Línea, Marcador, Comentario y Nota al pie. Columna no es un elemento disponible en la lista Ir a. Los elementos exactos visibles en la captura de la fuente son: Página, Sección, Línea, Marcador, Comentario y Nota al pie."
   },
   {
     "id": "inicio-133",
@@ -13085,25 +12855,6 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Seleccionar todo el texto con formato similar analiza el formato del texto actualmente seleccionado y selecciona simultáneamente todos los fragmentos del documento que tienen ese mismo formato aplicado. Es útil para cambiar de una vez el formato de todos los elementos con el mismo estilo manual."
-  },
-  {
-    "id": "inicio-136",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": "Buscar",
-    "tema": "Edición",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0390",
-    "enunciado": "La opción Búsqueda avanzada del grupo Edición abre el mismo panel de navegación lateral que el atajo Ctrl+B pero con opciones adicionales desplegadas.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso. La Búsqueda avanzada abre el cuadro de diálogo modal Buscar y reemplazar en la pestaña Buscar, que es distinto del panel de navegación lateral que abre Ctrl+B. El cuadro de diálogo ofrece opciones avanzadas como Formato, Especial y caracteres comodín que no están disponibles directamente en el panel de navegación."
   },
   {
     "id": "inicio-137",
@@ -14042,25 +13793,6 @@
     "explicacion": "Ctrl+Y tiene comportamiento dual: rehace si hay acciones deshechas pendientes o repite la última acción si no hay nada que rehacer. F4 siempre repite la última acción realizada independientemente del estado del historial de deshacer/rehacer. En la práctica cuando hay acciones para rehacer ambos se comportan igual, pero cuando no hay nada que rehacer solo F4 garantiza la repetición."
   },
   {
-    "id": "inicio-242",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": "Seleccionar",
-    "tema": "Edición",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0496",
-    "enunciado": "En Word 365, el Panel de selección del grupo Edición permite controlar la visibilidad y el orden de apilamiento de los objetos flotantes del documento.",
-    "opciones": [],
-    "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. El Panel de selección muestra una lista de todos los objetos flotantes del documento (imágenes, formas, cuadros de texto, etc.) y permite hacer clic en el icono de ojo junto a cada objeto para mostrarlo u ocultarlo. También permite cambiar el orden de apilamiento arrastrando los objetos en la lista."
-  },
-  {
     "id": "inicio-243",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -14277,132 +14009,6 @@
     "explicacion": "Correcto. En la versión española de Word 365, Ctrl+E selecciona todo el documento (equivale a Seleccionar todo del grupo Edición). Ctrl+T centra el texto. En la versión inglesa es al revés: Ctrl+E centra y Ctrl+A selecciona todo. Prueba en vivo del usuario (sep 2026)."
   },
   {
-    "id": "inicio-275",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "seleccion_multiple",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": "Atajos version espanola",
-    "tema": "Edición",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0529",
-    "enunciado": "¿Cuáles de los siguientes atajos tienen un comportamiento DIFERENTE entre la versión española y la versión inglesa de Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+E (español: seleccionar todo / inglés: centrar)"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+B (español: panel navegación / inglés: negrita)"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+F (español: sangría francesa / inglés: buscar)"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+L (español: reemplazar / inglés: alinear izquierda)"
-      },
-      {
-        "letter": "E",
-        "text": "Ctrl+Z (español y inglés: deshacer)"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "D"
-    ],
-    "explicacion": "Los atajos A, B, C y D tienen comportamiento diferente entre versiones. Ctrl+E: español selecciona todo, inglés centra. Ctrl+B: español abre el panel de navegación, inglés aplica negrita. Ctrl+F: español aplica la sangría francesa, inglés abre el buscador. Ctrl+L: español abre Reemplazar, inglés alinea a la izquierda. Ctrl+Z es universal: deshace en ambas versiones. Prueba en vivo del usuario (sep 2026)."
-  },
-  {
-    "id": "inicio-276",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "emparejamiento",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": "Atajos version espanola",
-    "tema": "Edición",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0530",
-    "enunciado": "Relaciona cada atajo con su función en la versión ESPAÑOLA de Word 365. Todos estos atajos difieren del inglés:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Ctrl + E"
-        },
-        {
-          "id": "2",
-          "label": "Ctrl + B"
-        },
-        {
-          "id": "3",
-          "label": "Ctrl + F"
-        },
-        {
-          "id": "4",
-          "label": "Ctrl + L"
-        },
-        {
-          "id": "5",
-          "label": "Ctrl + T"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Seleccionar todo el documento"
-        },
-        {
-          "id": "B",
-          "label": "Abrir el panel de navegación con cuadro de búsqueda"
-        },
-        {
-          "id": "C",
-          "label": "Aplicar o quitar la sangría francesa"
-        },
-        {
-          "id": "D",
-          "label": "Abrir cuadro Buscar y reemplazar en pestaña Reemplazar"
-        },
-        {
-          "id": "E",
-          "label": "Centrar el párrafo"
-        },
-        {
-          "id": "F",
-          "label": "Aplicar negrita"
-        }
-      ],
-      "correct": {
-        "1": "A",
-        "2": "B",
-        "3": "C",
-        "4": "D",
-        "5": "E"
-      }
-    },
-    "respuesta": {
-      "1": "A",
-      "2": "B",
-      "3": "C",
-      "4": "D",
-      "5": "E"
-    },
-    "explicacion": "Versión española de Word 365: Ctrl+E selecciona todo (inglés: centra). Ctrl+B abre navegación (inglés: negrita). Ctrl+F aplica la sangría francesa (inglés: buscar). Ctrl+L abre Reemplazar (inglés: alinear a la izquierda). Ctrl+T centra (inglés: tabulación). El distractor F (negrita) corresponde a Ctrl+N en español."
-  },
-  {
     "id": "inicio-279",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -14437,51 +14043,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "El procedimiento más eficiente es usar Buscar y reemplazar con el botón Formato en el campo Reemplazar con. Se escribe COVID-19 en Buscar, se escribe COVID-19 en Reemplazar con, y desde el botón Formato → Fuente se configura Versalitas y Color de fuente → Más colores → valores RGB 0,70,127. Al pulsar Reemplazar todos se aplica el formato a todas las apariciones de una vez."
-  },
-  {
-    "id": "inicio-285",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "seleccion_multiple",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": "Deshacer y rehacer",
-    "tema": "Edición",
-    "difficulty": "alta",
-    "sourceQuestionId": "P-0539",
-    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre diferencias entre opciones aparentemente similares de Word 365 son correctas?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Justificada deja la última línea alineada a la izquierda; Distribuida extiende también la última línea hasta el margen derecho"
-      },
-      {
-        "letter": "B",
-        "text": "Conservar líneas juntas impide partir el párrafo; Conservar con el siguiente impide separar ese párrafo del siguiente"
-      },
-      {
-        "letter": "C",
-        "text": "Las viñetas personalizadas se acumulan en la biblioteca; las listas multinivel personalizadas no se acumulan"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Y y F4 son siempre idénticos en todos los contextos de Word 365"
-      },
-      {
-        "letter": "E",
-        "text": "Reiniciar en 1 reinicia la numeración directamente; Establecer valor de numeración abre un cuadro para elegir el número de inicio"
-      }
-    ],
-    "matching": null,
-    "respuesta": [
-      "A",
-      "B",
-      "C",
-      "E"
-    ],
-    "explicacion": "A, B, C y E son correctas. D es incorrecta: Ctrl+Y y F4 no son siempre idénticos. Ctrl+Y rehace si hay acciones deshechas, o repite si no las hay. F4 siempre repite la última acción independientemente del historial. Son equivalentes solo cuando no hay nada que rehacer y existe una acción repetible."
   },
   {
     "id": "inicio-287",
@@ -15750,6 +15311,445 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "El grupo Edición tiene tres comandos: Buscar, Reemplazar y Seleccionar. «Ir a» no es un botón de ese grupo (es un atajo de teclado, Ctrl+I, sin botón propio en la cinta)."
+  },
+  {
+    "id": "inicio-132",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Ir a",
+    "tema": "Edición",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0386",
+    "enunciado": "¿Cuáles de los siguientes elementos pueden seleccionarse en la lista 'Ir a' del cuadro de diálogo Buscar y reemplazar para saltar directamente a ellos?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Página"
+      },
+      {
+        "letter": "B",
+        "text": "Sección"
+      },
+      {
+        "letter": "C",
+        "text": "Línea"
+      },
+      {
+        "letter": "D",
+        "text": "Marcador"
+      },
+      {
+        "letter": "E",
+        "text": "Comentario"
+      },
+      {
+        "letter": "F",
+        "text": "Columna"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explicacion": "La lista Ir a incluye entre otros: Página, Sección, Línea, Marcador, Comentario y Nota al pie. Columna no es un elemento disponible en la lista Ir a. Los elementos exactos visibles en la captura de la fuente son: Página, Sección, Línea, Marcador, Comentario y Nota al pie."
+  },
+  {
+    "id": "inicio-275",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "seleccion_multiple",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Atajos version espanola",
+    "tema": "Edición",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0529",
+    "enunciado": "¿Cuáles de los siguientes atajos tienen un comportamiento DIFERENTE entre la versión española y la versión inglesa de Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+E (español: seleccionar todo / inglés: centrar)"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+B (español: panel navegación / inglés: negrita)"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+F (español: sangría francesa / inglés: buscar)"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+L (español: reemplazar / inglés: alinear izquierda)"
+      },
+      {
+        "letter": "E",
+        "text": "Ctrl+Z (español y inglés: deshacer)"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "Los atajos A, B, C y D tienen comportamiento diferente entre versiones. Ctrl+E: español selecciona todo, inglés centra. Ctrl+B: español abre el panel de navegación, inglés aplica negrita. Ctrl+F: español aplica la sangría francesa, inglés abre el buscador. Ctrl+L: español abre Reemplazar, inglés alinea a la izquierda. Ctrl+Z es universal: deshace en ambas versiones. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
+    "id": "inicio-285",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Deshacer y rehacer",
+    "tema": "Edición",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0539",
+    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre diferencias entre opciones aparentemente similares de Word 365 son correctas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Justificada deja la última línea alineada a la izquierda; Distribuida extiende también la última línea hasta el margen derecho"
+      },
+      {
+        "letter": "B",
+        "text": "Conservar líneas juntas impide partir el párrafo; Conservar con el siguiente impide separar ese párrafo del siguiente"
+      },
+      {
+        "letter": "C",
+        "text": "Las viñetas personalizadas se acumulan en la biblioteca; las listas multinivel personalizadas no se acumulan"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Y y F4 son siempre idénticos en todos los contextos de Word 365"
+      },
+      {
+        "letter": "E",
+        "text": "Reiniciar en 1 reinicia la numeración directamente; Establecer valor de numeración abre un cuadro para elegir el número de inicio"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explicacion": "A, B, C y E son correctas. D es incorrecta: Ctrl+Y y F4 no son siempre idénticos. Ctrl+Y rehace si hay acciones deshechas, o repite si no las hay. F4 siempre repite la última acción independientemente del historial. Son equivalentes solo cuando no hay nada que rehacer y existe una acción repetible."
+  },
+  {
+    "id": "inicio-121",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Panel de navegación",
+    "tema": "Edición",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0375",
+    "enunciado": "Para que la pestaña Títulos del panel de navegación muestre el índice interactivo del documento, es necesario haber aplicado previamente estilos de título a los párrafos correspondientes desde la pestaña Inicio.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. La pestaña Títulos solo muestra los párrafos que tienen aplicados estilos de título (Título 1, Título 2, etc.). Si el documento usa formato manual en lugar de estilos de título, la pestaña aparecerá vacía o con el mensaje de que no hay títulos detectados."
+  },
+  {
+    "id": "inicio-130",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Reemplazar",
+    "tema": "Edición",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0384",
+    "enunciado": "Si se usa Reemplazar todos con el campo 'Reemplazar con' vacío, Word elimina todas las coincidencias del término buscado del documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. Cuando el campo Reemplazar con está vacío y se pulsa Reemplazar todos, Word sustituye cada coincidencia encontrada por nada, es decir, las elimina. Es una forma de borrar masivamente un término o carácter de todo el documento."
+  },
+  {
+    "id": "inicio-136",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Buscar",
+    "tema": "Edición",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0390",
+    "enunciado": "La opción Búsqueda avanzada del grupo Edición abre el mismo panel de navegación lateral que el atajo Ctrl+B pero con opciones adicionales desplegadas.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso. La Búsqueda avanzada abre el cuadro de diálogo modal Buscar y reemplazar en la pestaña Buscar, que es distinto del panel de navegación lateral que abre Ctrl+B. El cuadro de diálogo ofrece opciones avanzadas como Formato, Especial y caracteres comodín que no están disponibles directamente en el panel de navegación."
+  },
+  {
+    "id": "inicio-242",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Seleccionar",
+    "tema": "Edición",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0496",
+    "enunciado": "En Word 365, el Panel de selección del grupo Edición permite controlar la visibilidad y el orden de apilamiento de los objetos flotantes del documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. El Panel de selección muestra una lista de todos los objetos flotantes del documento (imágenes, formas, cuadros de texto, etc.) y permite hacer clic en el icono de ojo junto a cada objeto para mostrarlo u ocultarlo. También permite cambiar el orden de apilamiento arrastrando los objetos en la lista."
+  },
+  {
+    "id": "inicio-119",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Panel de navegación",
+    "tema": "Edición",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0373",
+    "enunciado": "Relaciona cada pestaña del panel de navegación con su función:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Pestaña Títulos"
+        },
+        {
+          "id": "2",
+          "label": "Pestaña Páginas"
+        },
+        {
+          "id": "3",
+          "label": "Pestaña Resultados"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Muestra un índice interactivo con los párrafos que tienen estilos de título aplicados"
+        },
+        {
+          "id": "B",
+          "label": "Muestra miniaturas de vista previa de cada página del documento"
+        },
+        {
+          "id": "C",
+          "label": "Muestra vínculos directos a los fragmentos de texto que coinciden con la búsqueda, hasta 100 resultados"
+        },
+        {
+          "id": "D",
+          "label": "Muestra el historial de búsquedas recientes"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explicacion": "Títulos: índice interactivo basado en estilos de título. Páginas: miniaturas de cada página. Resultados: vínculos a las coincidencias de búsqueda con un límite de 100 resultados. El distractor D no corresponde a ninguna pestaña real del panel."
+  },
+  {
+    "id": "inicio-126",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Búsqueda avanzada",
+    "tema": "Edición",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0380",
+    "enunciado": "Relaciona cada opción de búsqueda avanzada con su función:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Coincidir mayúsculas y minúsculas"
+        },
+        {
+          "id": "2",
+          "label": "Solo palabras completas"
+        },
+        {
+          "id": "3",
+          "label": "Usar caracteres comodín"
+        },
+        {
+          "id": "4",
+          "label": "Prefijo"
+        },
+        {
+          "id": "5",
+          "label": "Sufijo"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Busca exactamente la combinación de mayúsculas y minúsculas escrita en el campo"
+        },
+        {
+          "id": "B",
+          "label": "Solo encuentra la palabra exacta delimitada por espacios o puntuación, no si aparece dentro de otra palabra"
+        },
+        {
+          "id": "C",
+          "label": "Permite usar símbolos como * o ? para buscar patrones en lugar de texto literal"
+        },
+        {
+          "id": "D",
+          "label": "Solo encuentra palabras que empiecen exactamente por el fragmento buscado"
+        },
+        {
+          "id": "E",
+          "label": "Solo encuentra palabras que terminen exactamente por el fragmento buscado"
+        },
+        {
+          "id": "F",
+          "label": "Ignora los signos de puntuación al comparar el texto buscado"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E"
+    },
+    "explicacion": "Coincidir may/min: distingue entre Casa y casa. Solo palabras completas: busca 'mal' pero no 'malestar'. Comodín: permite patrones con * y ?. Prefijo: busca palabras que empiezan por el fragmento. Sufijo: busca palabras que terminan por el fragmento. El distractor F corresponde a Omitir puntuación."
+  },
+  {
+    "id": "inicio-276",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "emparejamiento",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Atajos version espanola",
+    "tema": "Edición",
+    "difficulty": "alta",
+    "sourceQuestionId": "P-0530",
+    "enunciado": "Relaciona cada atajo con su función en la versión ESPAÑOLA de Word 365. Todos estos atajos difieren del inglés:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Ctrl + E"
+        },
+        {
+          "id": "2",
+          "label": "Ctrl + B"
+        },
+        {
+          "id": "3",
+          "label": "Ctrl + F"
+        },
+        {
+          "id": "4",
+          "label": "Ctrl + L"
+        },
+        {
+          "id": "5",
+          "label": "Ctrl + T"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Seleccionar todo el documento"
+        },
+        {
+          "id": "B",
+          "label": "Abrir el panel de navegación con cuadro de búsqueda"
+        },
+        {
+          "id": "C",
+          "label": "Aplicar o quitar la sangría francesa"
+        },
+        {
+          "id": "D",
+          "label": "Abrir cuadro Buscar y reemplazar en pestaña Reemplazar"
+        },
+        {
+          "id": "E",
+          "label": "Centrar el párrafo"
+        },
+        {
+          "id": "F",
+          "label": "Aplicar negrita"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D",
+      "5": "E"
+    },
+    "explicacion": "Versión española de Word 365: Ctrl+E selecciona todo (inglés: centra). Ctrl+B abre navegación (inglés: negrita). Ctrl+F aplica la sangría francesa (inglés: buscar). Ctrl+L abre Reemplazar (inglés: alinear a la izquierda). Ctrl+T centra (inglés: tabulación). El distractor F (negrita) corresponde a Ctrl+N en español."
   },
   {
     "id": "inicio-373",
