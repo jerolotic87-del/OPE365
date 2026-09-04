@@ -504,6 +504,29 @@ total, `sourceQuestionId` `neg2-<sec>-NN`, `generado:true`, `categoria:
 seguro de Word — nunca inventado). Ambas quedan al 5.8 %.
 Generador: `scripts/gen_negativas_2.py` (no confundir con
 `scripts/gen_negativas.py`, la tanda anterior de las otras 9 pestañas).
+**Flashcards de `interfaz` y `diseno` (sep-2026)**: `interfaz` no tenía
+NINGUNA flashcard (0/520) pese a ser la pestaña con más preguntas del
+banco, y `diseno` estaba muy flaca (9/86, ratio 0.10). Se creó
+`data/flashcards/interfaz.json` (nuevo, 48 tarjetas `contenido`, 4 por
+cada uno de sus 12 topics, añadido a `data/flashcards/manifest.json` en
+primera posición por ser la sección primera en `taxonomy.order`) y se
+amplió `diseno.json` con 15 más (5 por topic, incl. el topic `estructura`
+que no tenía ninguna). Total flashcards: 905→968. Contenido basado en
+hechos ya establecidos en este documento (atajos/comportamiento
+verificado en vivo) o comportamiento estándar y seguro de la interfaz de
+Word — sin inventar nada. Generador: `scripts/gen_flashcards_eje7.py`.
+**Bug de test expuesto por este cambio** (no del motor): `tests/
+test_ui_integration.js` paso T elegía "el primer concepto con ≥2
+framings" (`O.LE.CONCEPTS.find(...)`) para forzarlo a asentado+atrasado,
+pero un paso anterior (P, flashcard "Con dificultad") ahora cae en ese
+mismo concepto porque `interfaz:conceptos-generales` pasó a tener
+flashcards y es taxonómicamente el primero — contaminando su estado antes
+de que T lo fuerce. Corregido excluyendo conceptos ya tocados:
+`c.framings.length>=2 && !O.PROGRESS.concepts[c.id]`. Mismo patrón de
+fragilidad que la tolerancia de `test_engine.js` escenario 6 (elegir "el
+primero que cumple X" es frágil a reordenaciones del banco) — si vuelve a
+pasar, aplicar el mismo principio: robustecer la selección, no perseguir
+ids concretos.
 **Balance V/F en bancos heredados (sep-2026)**: `inicio`, `interfaz` y
 `vista` traían V/F desequilibrados de origen (15V/8F, 15V/8F, 8V/15F) sin
 capturas de pantalla frescas que respaldaran tocar el contenido ya

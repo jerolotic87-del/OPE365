@@ -101,7 +101,10 @@ ck((O.PROGRESS.events||[]).filter(e=>e.kind==="fc").length===fcEvBefore+1, "P ·
 goto(D,w,"progress");
 ck(!!D.querySelector(".dim-list") || !!D.querySelector(".empty-panel"), "R · Progreso renderiza");
 // forzar un concepto a asentado+atrasado y comprobar overview
-const cid=O.LE.CONCEPTS.find(c=>c.framings.length>=2).id;
+// (excluye conceptos ya tocados por pasos anteriores del test -p.ej. la
+// flashcard de P puede caer en el primero de la taxonomía- para no
+// contaminar el estado antes de forzarlo aquí)
+const cid=O.LE.CONCEPTS.find(c=>c.framings.length>=2 && !O.PROGRESS.concepts[c.id]).id;
 const t0=Date.UTC(2026,0,5);
 [0,4,11].forEach((d,i)=>O.LE.recordEvent({kind:"q",ref:O.LE.CONCEPT_BY_ID[cid].questionIds[0],concept:cid,framing:["conceptual","ruta","caso"][i],grade:"good",correct:true,ms:1500,ts:t0+d*86400000}));
 O.LE.recalc(t0+100*86400000);
