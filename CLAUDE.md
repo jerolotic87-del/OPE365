@@ -469,7 +469,15 @@ Insertar (29), Disposición (16) y Diseño (10). Fuente:
 `data/imagenes_iconos/<pestaña>/<grupo>_<comando>.png` (recortes del usuario).
 Generador: `scripts/gen_iconos_img.py`. El runner las pinta con
 `qImageHtml(q.imagen)`; `composeSessionQuestion` conserva el campo. Añaden
-~230 KB a questions_all.json.
+~230 KB a questions_all.json. **Filtro `conImagen`** (sep-2026):
+`filterQuestions`/`resolveQuestionIds` (app.js) aceptan `conImagen:true` →
+solo preguntas con imagen; se propaga a `shareCodeForSession`. En la UI:
+asistente de práctica → scope **"Iconos (con imagen)"** (con selector de
+pestaña opcional) y "Repasar preguntas" → desplegable "Con y sin imagen /
+Solo con imagen"; Editor del banco → estado "Con imagen (iconos)". Fuera de
+esos filtros explícitos, las preguntas con imagen siguen mezcladas con las
+demás de su `topic` (deseable: el motor las trata como cualquier framing
+del concepto).
 `archivo-*` (`sourceQuestionId` `vf-archivo-bkNN`, `generado:true`, 42 V/F
 21/21) = **Vista Backstage** (pestaña Archivo): panel de navegación, Inicio/
 Nuevo/Abrir, Información (Proteger documento 6 opciones, Comprobar problemas 3,

@@ -318,6 +318,7 @@ function filterQuestions(opts){
     if(opts.section && opts.section!=="all" && q.section!==opts.section) return false;
     if(opts.topic && opts.topic!=="all" && q.topic!==opts.topic) return false;
     if(opts.subtopic && opts.subtopic!=="all" && q.subtopic!==opts.subtopic) return false;
+    if(opts.conImagen && !q.imagen) return false;
     if(opts.estado && opts.estado!=="all"){
       const st = getQuestionState(q.id);
       if(opts.estado==="marcadas"){ if(!isMarked(q.id)) return false; }
@@ -522,7 +523,8 @@ function composeSessionQuestion(qid, pres){
 function resolveQuestionIds(config, rng){
   let pool = filterQuestions({
     source: config.source, tema: config.tema, tipo: config.tipo, categoria: config.categoria,
-    section: config.section, topic: config.topic, subtopic: config.subtopic
+    section: config.section, topic: config.topic, subtopic: config.subtopic,
+    conImagen: config.conImagen
   });
   if(config.scope === "errores"){
     pool = pool.filter(q=>{ const a=PROGRESS.answers[q.id]; return a && !a.correcta; });
@@ -757,6 +759,7 @@ function deobfuscate(b64, keyStr){
 function shareCodeForSession(s){
   const personalScope = s.config && (s.config.scope==="errores" || s.config.scope==="marcadas" || s.config.scope==="no_respondidas");
   const cfg = { source:s.config.source, tema:s.config.tema, tipo:s.config.tipo, categoria:s.config.categoria,
+                section:s.config.section, topic:s.config.topic, conImagen:s.config.conImagen,
                 qOrder:s.config.qOrder, count:s.questionIds.length, shuffleOptions:s.config.shuffleOptions,
                 minutes:s.config.minutes, mode:s.config.mode };
   const payload = { v:SHARE_VERSION, bv:s.bankVersion, alg:s.randomizationAlgorithmVersion, seed:s.seed, cfg };

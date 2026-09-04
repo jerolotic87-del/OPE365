@@ -902,6 +902,7 @@ function renderWizardWhat(){
     {id:"tema", t:"Tema", d:"Elige un bloque concreto"},
     {id:"tipo", t:"Tipo de ejercicio", d:"Opción única, V/F, multi, emparejar"},
     {id:"categoria", t:"Rutas / atajos", d:"Solo atajos o solo rutas de menú"},
+    {id:"imagen", t:"Iconos (con imagen)", d:"Identificar el icono de un comando"},
     {id:"marcadas", t:"Preguntas marcadas", d:"Tus preguntas guardadas"},
     {id:"errores", t:"Preguntas falladas", d:"Repasar tus errores"},
   ];
@@ -959,6 +960,17 @@ function renderWizardWhat(){
         if(p.getAttribute("data-v")===wizardState.tipo) p.classList.add("active");
         p.addEventListener("click", ()=>{ wizardState.tipo=p.getAttribute("data-v"); $$("#wiz-tipo-pills .pill").forEach(x=>x.classList.remove("active")); p.classList.add("active"); });
       });
+    } else if(wizardState.scope==="imagen"){
+      const secsI = [{id:"all",name:"Todas las pestañas"}].concat(O.TAXONOMY_SECTIONS.map(s=>({id:s.id,name:s.name})));
+      const nImg = O.filterQuestions({ conImagen:true }).length;
+      el.className = "config-panel";
+      el.innerHTML = `
+        <div class="field" style="margin-bottom:0;"><label>Pestaña</label>
+          <select id="wiz-img-section">${secsI.map(s=>`<option value="${s.id}">${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
+        <p class="cp-hint" style="margin:var(--sp-2) 0 0;">${nImg} preguntas con imagen de icono en el banco.</p>`;
+      if(!["all"].concat(O.TAXONOMY_SECTIONS.map(s=>s.id)).includes(wizardState.section)) wizardState.section = "all";
+      $("#wiz-img-section").value = wizardState.section;
+      $("#wiz-img-section").addEventListener("change", ()=> wizardState.section = $("#wiz-img-section").value);
     } else if(wizardState.scope==="categoria"){
       el.className = "config-panel";
       el.innerHTML = `<label class="cp-label">Dimensión</label><div class="pill-row" id="wiz-cat-pills">
@@ -1051,10 +1063,11 @@ function wizardToConfig(){
     mode: wizardState.mode,
     scope: scope === "errores" ? "errores" : scope === "marcadas" ? "marcadas" : null,
     source: "all",
-    section: wizardState.scope==="tema" ? wizardState.section : "all",
+    section: (wizardState.scope==="tema" || wizardState.scope==="imagen") ? wizardState.section : "all",
     topic: wizardState.scope==="tema" ? wizardState.topic : "all",
     tipo: wizardState.scope==="tipo" ? wizardState.tipo : "all",
     categoria: wizardState.scope==="categoria" ? wizardState.categoria : "all",
+    conImagen: wizardState.scope==="imagen",
     count: wizardState.count,
     qOrder: wizardState.qOrder,
     shuffleOptions: wizardState.shuffleOptions,
@@ -1638,6 +1651,7 @@ function renderReviewHub(params){
       <select id="rv-topic"><option value="all">Todos los grupos</option></select>
       <select id="rv-tipo"><option value="all">Todos los tipos</option>${Object.entries(O.TYPE_LABELS).map(([v,l])=>`<option value="${v}">${l}</option>`).join("")}</select>
       <select id="rv-categoria"><option value="all">Rutas y atajos: todo</option><option value="atajo">Solo atajos</option><option value="ruta">Solo rutas</option><option value="concepto">Solo conceptos</option></select>
+      <select id="rv-imagen"><option value="all">Con y sin imagen</option><option value="si">Solo con imagen (iconos)</option></select>
       <input type="search" id="rv-search" placeholder="Buscar…">
       <span class="chip" id="rv-count">0 preguntas</span>
     </div>
@@ -1652,13 +1666,13 @@ function renderReviewHub(params){
     topicSel.innerHTML = `<option value="all">Todos los grupos</option>` + topics.map(t=>`<option value="${t.id}">${O.escapeHtml(t.name)}</option>`).join("");
     topicSel.value = topics.some(t=>t.id===prev) ? prev : "all";
   }
-  ["#rv-estado","#rv-source","#rv-tipo","#rv-categoria","#rv-search"].forEach(sel=> $(sel).addEventListener("input", refresh));
+  ["#rv-estado","#rv-source","#rv-tipo","#rv-categoria","#rv-imagen","#rv-search"].forEach(sel=> $(sel).addEventListener("input", refresh));
   $("#rv-section").addEventListener("input", ()=>{ refreshTopicOptions(); refresh(); });
   $("#rv-topic").addEventListener("input", refresh);
   refreshTopicOptions();
   refresh();
   function refresh(){
-    reviewList = O.filterQuestions({ estado:$("#rv-estado").value, source:$("#rv-source").value, section:$("#rv-section").value, topic:$("#rv-topic").value, tipo:$("#rv-tipo").value, categoria:$("#rv-categoria").value, search:$("#rv-search").value.trim() });
+    reviewList = O.filterQuestions({ estado:$("#rv-estado").value, source:$("#rv-source").value, section:$("#rv-section").value, topic:$("#rv-topic").value, tipo:$("#rv-tipo").value, categoria:$("#rv-categoria").value, conImagen:$("#rv-imagen").value==="si", search:$("#rv-search").value.trim() });
     $("#rv-count").textContent = reviewList.length + " preguntas";
     const bodyEl = $("#rv-body");
     if(!reviewList.length){ bodyEl.innerHTML = `<div class="empty-state"><div class="glyph">${icon('search')}</div><p>No hay preguntas que coincidan con estos filtros.</p></div>`; return; }
@@ -2861,6 +2875,7 @@ function bancoFilterQuestions(f){
     if(f.estado==="corregida" && !(O.ContentEdit && O.ContentEdit.has("q", q.id))) return false;
     if(f.estado==="creada"    && !(O.ContentEdit && O.ContentEdit.isUser("q", q.id))) return false;
     if(f.estado==="sinexpl"   && q.explicacion) return false;
+    if(f.estado==="conimagen" && !q.imagen) return false;
     if(f.estado==="falladas"){ const a=O.PROGRESS.answers[q.id]; if(!a || a.correcta) return false; }
     if(f.estado==="marcadas"  && !O.isMarked(q.id)) return false;
     if(term){
@@ -2982,6 +2997,7 @@ function renderBancoAdmin(){
         <option value="corregida" ${st.estado==="corregida"?'selected':''}>Corregidas (✎)</option>
         <option value="creada" ${st.estado==="creada"?'selected':''}>Creadas por mí</option>
         ${isQ ? `<option value="sinexpl" ${st.estado==="sinexpl"?'selected':''}>Sin explicación</option>
+        <option value="conimagen" ${st.estado==="conimagen"?'selected':''}>Con imagen (iconos)</option>
         <option value="falladas" ${st.estado==="falladas"?'selected':''}>Falladas</option>
         <option value="marcadas" ${st.estado==="marcadas"?'selected':''}>Marcadas</option>` : ``}
       </select>
