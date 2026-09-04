@@ -398,6 +398,42 @@
     "explicacion": "El grupo Páginas de Insertar tiene solo tres comandos: Portada, Página en blanco y Salto de página. «Salto de sección» está en Disposición ▸ Configurar página ▸ Saltos."
   },
   {
+    "id": "insertar-459",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Páginas",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "paginas",
+    "subtopic": null,
+    "tema": "Páginas",
+    "sourceQuestionId": "neg2-insertar-13",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Portada añade una galería de diseños de portada prediseñados."
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Página en blanco añade una página vacía en el punto del cursor."
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Salto de página fuerza al contenido siguiente a empezar en una página nueva."
+      },
+      {
+        "letter": "D",
+        "text": "Una portada insertada desde la galería no se puede editar ni personalizar su texto."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Los campos de una portada prediseñada (título, autor, fecha…) son editables como cualquier texto del documento."
+  },
+  {
     "id": "insertar-206",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Páginas",
@@ -1336,6 +1372,42 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Las tres opciones reales de Autoajuste son Ancho de columna fijo, Autoajustar al contenido y Autoajustar a la ventana. «Autoajustar al papel» no existe."
+  },
+  {
+    "id": "insertar-458",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Tablas",
+    "sourceQuestionId": "neg2-insertar-12",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Una tabla se puede insertar arrastrando en la cuadrícula o especificando filas y columnas en un diálogo."
+      },
+      {
+        "letter": "B",
+        "text": "Se puede convertir texto separado por tabulaciones en una tabla."
+      },
+      {
+        "letter": "C",
+        "text": "Una tabla de Word no admite fórmulas ni cálculos; solo Excel puede hacerlo."
+      },
+      {
+        "letter": "D",
+        "text": "Se puede dibujar una tabla a mano con «Insertar ▸ Tabla ▸ Dibujar tabla»."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Herramientas de tabla ▸ Diseño (Presentación) ▸ Fórmula permite sumas y otras fórmulas básicas dentro de una tabla de Word."
   },
   {
     "id": "insertar-214",
@@ -3229,6 +3301,114 @@
     "explicacion": "Tabla tiene su propio grupo («Tablas»), justo antes de Ilustraciones. Imágenes, Formas e Iconos sí están en el grupo Ilustraciones."
   },
   {
+    "id": "insertar-447",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "neg2-insertar-01",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se pueden insertar imágenes desde «Imágenes de este dispositivo» y desde «Imágenes en línea»."
+      },
+      {
+        "letter": "B",
+        "text": "SmartArt permite crear diagramas y organigramas con texto estructurado."
+      },
+      {
+        "letter": "C",
+        "text": "Una vez insertada una forma, no se puede cambiar su relleno ni su contorno."
+      },
+      {
+        "letter": "D",
+        "text": "Los gráficos (Insertar ▸ Gráfico) abren una hoja de datos de Excel vinculada."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Una forma admite cambiar relleno, contorno y efectos en cualquier momento desde Formato de forma."
+  },
+  {
+    "id": "insertar-448",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "neg2-insertar-02",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se puede insertar una captura de pantalla completa o solo un recorte con «Recorte de pantalla»."
+      },
+      {
+        "letter": "B",
+        "text": "Un icono (Insertar ▸ Iconos) es una imagen vectorial editable en color y forma."
+      },
+      {
+        "letter": "C",
+        "text": "Las imágenes insertadas siempre se ajustan «En línea con el texto» y no se puede cambiar."
+      },
+      {
+        "letter": "D",
+        "text": "SmartArt tiene categorías como Lista, Proceso, Ciclo, Jerarquía y Relación."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El ajuste de texto de una imagen se puede cambiar (cuadrado, estrecho, detrás del texto…) desde Formato de imagen."
+  },
+  {
+    "id": "insertar-449",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Ilustraciones",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "ilustraciones",
+    "subtopic": null,
+    "tema": "Ilustraciones",
+    "sourceQuestionId": "neg2-insertar-03",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Una forma nueva se puede combinar con otras mediante herramientas de «Combinar formas»."
+      },
+      {
+        "letter": "B",
+        "text": "El grupo de Formato de forma aparece solo cuando hay una forma seleccionada (cinta contextual)."
+      },
+      {
+        "letter": "C",
+        "text": "Los modelos 3D solo se pueden ver; no se pueden rotar ni cambiar de perspectiva."
+      },
+      {
+        "letter": "D",
+        "text": "Un gráfico admite cambiar su tipo (barras, líneas, circular…) después de insertarlo."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Los modelos 3D insertados se pueden rotar libremente arrastrando el control central que muestran al seleccionarlos."
+  },
+  {
     "id": "insertar-222",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Ilustraciones",
@@ -4823,6 +5003,42 @@
     "explicacion": "Formato de forma tiene siete grupos: Insertar formas, Estilos de forma, Estilos de WordArt, Texto, Accesibilidad, Organizar y Tamaño. No existe un grupo «Ajustar página» en esa cinta."
   },
   {
+    "id": "insertar-457",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Formato de forma",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "formato-forma",
+    "subtopic": null,
+    "tema": "Formato de forma",
+    "sourceQuestionId": "neg2-insertar-11",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El relleno de una forma puede ser un color sólido, un degradado, una textura o una imagen."
+      },
+      {
+        "letter": "B",
+        "text": "El contorno de una forma se puede cambiar de grosor, color y estilo de línea."
+      },
+      {
+        "letter": "C",
+        "text": "Los efectos de forma incluyen sombra, reflexión, iluminado y bisel."
+      },
+      {
+        "letter": "D",
+        "text": "Una forma no puede tener texto dentro; para eso hace falta un cuadro de texto aparte."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Se puede escribir texto directamente dentro de una forma con «Modificar texto» (clic derecho o F2)."
+  },
+  {
     "id": "insertar-332",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Formato de forma",
@@ -5880,6 +6096,42 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "El grupo Vínculos tiene exactamente tres comandos: Vínculo, Marcador y Referencia cruzada. No existe un comando separado llamado «Hipervínculo interno»."
+  },
+  {
+    "id": "insertar-456",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Vínculos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "vinculos",
+    "subtopic": null,
+    "tema": "Vínculos",
+    "sourceQuestionId": "neg2-insertar-10",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Hipervínculo permite enlazar a un archivo, una página web o un punto del mismo documento."
+      },
+      {
+        "letter": "B",
+        "text": "Un hipervínculo se puede quitar sin borrar el texto, con «Quitar hipervínculo»."
+      },
+      {
+        "letter": "C",
+        "text": "Un marcador sirve para nombrar un punto del documento y poder enlazarlo después."
+      },
+      {
+        "letter": "D",
+        "text": "Los hipervínculos en Word solo pueden apuntar a páginas web; nunca a otro documento."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Un hipervínculo puede apuntar a un archivo local, a otro documento, a un correo electrónico o a un punto del mismo documento, no solo a páginas web."
   },
   {
     "id": "insertar-269",
@@ -8075,6 +8327,78 @@
     "explicacion": "El grupo Encabezado y pie de página de la pestaña Insertar tiene solo tres comandos: Encabezado, Pie de página y Número de página. Fecha y hora está en el grupo Texto."
   },
   {
+    "id": "insertar-452",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Encabezado y pie de página",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "encabezado-pie",
+    "subtopic": null,
+    "tema": "Encabezado y pie de página",
+    "sourceQuestionId": "neg2-insertar-06",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se puede tener un encabezado distinto en la primera página."
+      },
+      {
+        "letter": "B",
+        "text": "«Vincular al anterior» permite que una sección use el mismo encabezado que la anterior."
+      },
+      {
+        "letter": "C",
+        "text": "Los encabezados y pies de página no pueden contener imágenes; solo texto."
+      },
+      {
+        "letter": "D",
+        "text": "Se puede configurar un encabezado diferente para páginas pares e impares."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Un encabezado o pie de página admite imágenes (por ejemplo un logo) igual que cualquier otra zona del documento."
+  },
+  {
+    "id": "insertar-453",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Encabezado y pie de página",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "encabezado-pie",
+    "subtopic": null,
+    "tema": "Encabezado y pie de página",
+    "sourceQuestionId": "neg2-insertar-07",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El número de página se puede insertar en el encabezado, el pie o los márgenes."
+      },
+      {
+        "letter": "B",
+        "text": "Se puede reiniciar la numeración de página en un valor concreto."
+      },
+      {
+        "letter": "C",
+        "text": "Al insertar un número de página, siempre se numeran las páginas desde el número 1 sin poder cambiarlo."
+      },
+      {
+        "letter": "D",
+        "text": "Para editar el encabezado se puede hacer doble clic sobre la zona superior de la página."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "«Formato del número de página» permite iniciar la numeración en cualquier valor, no solo en 1."
+  },
+  {
     "id": "insertar-282",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
@@ -9949,6 +10273,78 @@
     "explicacion": "Símbolo tiene su propio grupo («Símbolos»), al final de la pestaña Insertar. Cuadro de texto, WordArt y Letra capital sí están en el grupo Texto."
   },
   {
+    "id": "insertar-450",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Texto",
+    "sourceQuestionId": "neg2-insertar-04",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Un cuadro de texto se puede vincular a otro para que el texto fluya de uno a otro."
+      },
+      {
+        "letter": "B",
+        "text": "WordArt aplica efectos de texto decorativos predefinidos."
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Objeto solo permite insertar hojas de Excel; ningún otro tipo de archivo."
+      },
+      {
+        "letter": "D",
+        "text": "Se puede insertar la fecha y hora con la opción de «Actualizar automáticamente»."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Insertar ▸ Objeto admite muchos tipos de objeto incrustado (PDF, presentaciones, otros documentos…), no solo Excel."
+  },
+  {
+    "id": "insertar-451",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Texto",
+    "sourceQuestionId": "neg2-insertar-05",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Una letra capital (Insertar ▸ Letra capital) puede colocarse «En texto» o «En margen»."
+      },
+      {
+        "letter": "B",
+        "text": "La línea de firma crea un cuadro para firma digital."
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Número de página inserta un campo dinámico que se actualiza solo."
+      },
+      {
+        "letter": "D",
+        "text": "Los campos (Ctrl+F9) solo pueden usarse para mostrar la fecha; ningún otro dato."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Word tiene decenas de tipos de campo (autor, título, número de página, referencia cruzada…), no solo la fecha."
+  },
+  {
     "id": "insertar-296",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Texto",
@@ -11799,6 +12195,78 @@
     "explicacion": "El cuadro Símbolo solo tiene dos fichas: Símbolos y Caracteres especiales. No existe una ficha «Ecuaciones» ahí (la ecuación es un comando aparte, en el mismo grupo Símbolos)."
   },
   {
+    "id": "insertar-454",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Símbolos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "simbolos",
+    "subtopic": null,
+    "tema": "Símbolos",
+    "sourceQuestionId": "neg2-insertar-08",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Símbolo abre una galería con los símbolos usados recientemente arriba."
+      },
+      {
+        "letter": "B",
+        "text": "«Más símbolos» abre el cuadro de diálogo completo con distintas fuentes y subconjuntos."
+      },
+      {
+        "letter": "C",
+        "text": "Los símbolos insertados no se pueden buscar por su código de carácter Unicode."
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Ecuación abre una cinta contextual propia para escribir fórmulas matemáticas."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El cuadro de diálogo Símbolo tiene un campo «Código de carácter» para localizar un símbolo por su código Unicode."
+  },
+  {
+    "id": "insertar-455",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Símbolos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "simbolos",
+    "subtopic": null,
+    "tema": "Símbolos",
+    "sourceQuestionId": "neg2-insertar-09",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Word trae ecuaciones predefinidas listas para insertar (por ejemplo el área de un círculo)."
+      },
+      {
+        "letter": "B",
+        "text": "Se puede convertir una ecuación a su forma manuscrita para editarla a mano."
+      },
+      {
+        "letter": "C",
+        "text": "Una vez insertado un símbolo, no se le puede asignar un atajo de teclado propio para repetirlo."
+      },
+      {
+        "letter": "D",
+        "text": "El cuadro de diálogo Símbolo recuerda los últimos símbolos usados en la fila superior."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El propio cuadro de diálogo Símbolo tiene un botón «Teclas» para asignarle una combinación propia a un símbolo."
+  },
+  {
     "id": "insertar-313",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Símbolos",
@@ -12322,6 +12790,42 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Las plataformas disponibles son YouTube, SlideShare, Vimeo y TED. Dailymotion no aparece en la lista."
+  },
+  {
+    "id": "insertar-460",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Multimedia",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "multimedia",
+    "subtopic": null,
+    "tema": "Multimedia",
+    "sourceQuestionId": "neg2-insertar-14",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Vídeo en línea permite incrustar un vídeo desde una URL."
+      },
+      {
+        "letter": "B",
+        "text": "Un clip de audio se puede insertar en el documento igual que una imagen."
+      },
+      {
+        "letter": "C",
+        "text": "Los vídeos insertados no se pueden redimensionar; mantienen siempre su tamaño original."
+      },
+      {
+        "letter": "D",
+        "text": "Al insertar un vídeo en línea aparece un control de reproducción sobre el propio documento."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Un vídeo insertado se redimensiona igual que una imagen, arrastrando sus tiradores o desde Formato."
   },
   {
     "id": "insertar-266",

@@ -489,12 +489,21 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 520, insertar 438, inicio 437, archivo 402, vista 144, disposicion 114,
+interfaz 520, insertar 452, inicio 451, archivo 402, vista 144, disposicion 114,
 diseno 86, referencias 84, revisar 82, correspondencia 5.
-Total 2312. 331 preguntas `categoria:"atajo"`, 1035 `"ruta"`, 884
+Total 2340. 331 preguntas `categoria:"atajo"`, 1035 `"ruta"`, 912
 `"concepto"`, 41 `"general"` (sep-2026: `interfaz` reclasificada por
 completo — ver más abajo — quedan sin reclasificar 31 en `vista`, 7 en
 `archivo`, 3 en `inicio`).
+**Densidad de `negativa` nivelada (sep-2026)**: `inicio` e `insertar`
+estaban al 2.7 % (12/437 y 12/438) frente al 6-11 % del resto del banco.
+Se añadieron 14 `opcion_unica` "señale la INCORRECTA" por sección (28
+total, `sourceQuestionId` `neg2-<sec>-NN`, `generado:true`, `categoria:
+"concepto"`), repartidas por topic, cada una con 3 opciones verdaderas +
+1 falsa (hechos ya establecidos en este documento o conocimiento estándar
+seguro de Word — nunca inventado). Ambas quedan al 5.8 %.
+Generador: `scripts/gen_negativas_2.py` (no confundir con
+`scripts/gen_negativas.py`, la tanda anterior de las otras 9 pestañas).
 **Balance V/F en bancos heredados (sep-2026)**: `inicio`, `interfaz` y
 `vista` traían V/F desequilibrados de origen (15V/8F, 15V/8F, 8V/15F) sin
 capturas de pantalla frescas que respaldaran tocar el contenido ya

@@ -1257,6 +1257,78 @@
     "explicacion": "**Copiar formato.** Pestaña Inicio ▸ Portapapeles. Atajo: Alt+Ctrl+C. El pincel: copia el formato del texto seleccionado para aplicarlo en otro sitio (Alt+Ctrl+V lo pega). Doble clic = varios usos."
   },
   {
+    "id": "inicio-458",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null,
+    "tema": "Portapapeles",
+    "sourceQuestionId": "neg2-inicio-08",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Ins copia (método antiguo del portapapeles)."
+      },
+      {
+        "letter": "B",
+        "text": "Mayús+Ins pega."
+      },
+      {
+        "letter": "C",
+        "text": "Mayús+Supr corta."
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Ctrl+V nunca pega el formato; solo divide la ventana."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Prueba en vivo: Alt+Ctrl+V es el atajo de Pegar formato (pincel), no divide ninguna ventana."
+  },
+  {
+    "id": "inicio-459",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": null,
+    "tema": "Portapapeles",
+    "sourceQuestionId": "neg2-inicio-09",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "F2 mueve el texto seleccionado al punto donde se pulse Entrar después."
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+F3 acumula recortes sucesivos en el Spike."
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Mayús+F3 pega todo el contenido del Spike."
+      },
+      {
+        "letter": "D",
+        "text": "Mayús+F2 («Copiar a») mueve el texto y lo borra del origen."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Mayús+F2 es «Copiar a»: copia el texto a otro punto SIN borrarlo del origen y sin tocar el portapapeles normal."
+  },
+  {
     "id": "inicio-5",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Portapapeles",
@@ -5080,6 +5152,114 @@
     "explicacion": "Superíndice NO tiene atajo en esta instalación (probado en vivo: ni Ctrl+Mayús+=, ni Ctrl+Mayús++, ni Ctrl+Alt++). Solo se activa desde el botón o la casilla del cuadro Fuente."
   },
   {
+    "id": "inicio-451",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "neg2-inicio-01",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+M abre el cuadro Fuente con el foco en el campo Fuente (nombre)."
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+Mayús+M abre el mismo cuadro con el foco en Tamaño."
+      },
+      {
+        "letter": "C",
+        "text": "Superíndice tiene un atajo de teclado directo, Ctrl+Mayús++."
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Barra espaciadora quita el formato de carácter aplicado manualmente."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Superíndice NO tiene atajo en esta instalación (prueba en vivo): solo desde la casilla del cuadro Fuente o el botón de la cinta."
+  },
+  {
+    "id": "inicio-452",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "neg2-inicio-02",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El color de subrayado se puede fijar de forma independiente al color de fuente."
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+Mayús+S aplica subrayado."
+      },
+      {
+        "letter": "C",
+        "text": "El subrayado solo admite el estilo de línea simple; no hay otros estilos disponibles."
+      },
+      {
+        "letter": "D",
+        "text": "El tamaño de fuente se puede agrandar de punto en punto con Ctrl+Alt+>."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El cuadro Fuente ofrece varios estilos de subrayado (doble, punteado, ondulado, grueso…), no solo el simple."
+  },
+  {
+    "id": "inicio-453",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "neg2-inicio-03",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Subíndice se activa con Ctrl+Mayús+- (la tecla del guión)."
+      },
+      {
+        "letter": "B",
+        "text": "Superíndice no tiene atajo de teclado en esta instalación."
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+= activa el subíndice en esta instalación."
+      },
+      {
+        "letter": "D",
+        "text": "Superíndice se activa desde la casilla del cuadro Fuente o el botón de la cinta."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Ctrl+= es el esquema internacional; en esta instalación no hace nada (prueba en vivo). El subíndice real es Ctrl+Mayús+-."
+  },
+  {
     "id": "inicio-29",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -7028,6 +7208,42 @@
     "explicacion": "Ctrl+Mayús+R NO quita la sangría en esta instalación, aunque el volcado se la asigne. Para quitar sangrías se usa Ctrl+W (prueba en vivo del usuario)."
   },
   {
+    "id": "inicio-464",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Sangría",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-sangria",
+    "subtopic": null,
+    "tema": "Sangría",
+    "sourceQuestionId": "neg2-inicio-14",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+H aplica sangría."
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+F aplica sangría francesa."
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Mayús+H reduce la sangría francesa."
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+R quita toda la sangría del párrafo."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Prueba en vivo: Ctrl+Mayús+R no quita la sangría en esta instalación; para eso se usa Ctrl+W."
+  },
+  {
     "id": "inicio-252",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Sangría",
@@ -7887,6 +8103,42 @@
     "explicacion": "Ctrl+0 no toca el interlineado: restaura el zoom al 100 %. Los atajos de interlineado son Ctrl+1/Ctrl+5/Ctrl+2 (sencillo/1,5/doble)."
   },
   {
+    "id": "inicio-461",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "neg2-inicio-11",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+1 aplica interlineado sencillo."
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+5 (fila superior) aplica interlineado 1,5."
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+2 aplica interlineado doble."
+      },
+      {
+        "letter": "D",
+        "text": "El interlineado «Exacto» ajusta el espacio automáticamente según el tamaño de fuente más grande de la línea."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "«Exacto» fija un valor de espacio constante sin importar el tamaño de fuente; el que se ajusta solo es «Mínimo»."
+  },
+  {
     "id": "inicio-49",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Espaciado e interlineado",
@@ -8458,6 +8710,42 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "«Estilos rápidos» (la galería de estilos) tiene su propio grupo, «Estilos», independiente del grupo Párrafo."
+  },
+  {
+    "id": "inicio-463",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "neg2-inicio-13",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El botón Bordes permite aplicar un borde solo a un lado del párrafo."
+      },
+      {
+        "letter": "B",
+        "text": "Se puede añadir sombreado de color de fondo a un párrafo desde el mismo grupo."
+      },
+      {
+        "letter": "C",
+        "text": "Los bordes de párrafo solo admiten líneas de un único grosor fijo, sin poder cambiarlo."
+      },
+      {
+        "letter": "D",
+        "text": "«Bordes y sombreado» permite elegir el estilo, color y ancho de la línea."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "El cuadro «Bordes y sombreado» deja elegir el ancho de línea entre varios valores; no está fijado a uno solo."
   },
   {
     "id": "inicio-52",
@@ -9665,6 +9953,42 @@
     "explicacion": "El volcado asigna Ctrl+Mayús+L tanto a Versalitas como a Lista con viñetas: es un conflicto interno sin dirimir, no una asignación limpia."
   },
   {
+    "id": "inicio-460",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "neg2-inicio-10",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Word permite crear listas numeradas, con viñetas y multinivel desde el grupo Párrafo."
+      },
+      {
+        "letter": "B",
+        "text": "Se puede cambiar el símbolo de una viñeta por una imagen o un carácter personalizado."
+      },
+      {
+        "letter": "C",
+        "text": "Una lista multinivel solo admite 3 niveles como máximo."
+      },
+      {
+        "letter": "D",
+        "text": "Se puede reiniciar la numeración de una lista desde el menú contextual."
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Una lista multinivel admite hasta 9 niveles de sangría/numeración, no solo 3."
+  },
+  {
     "id": "inicio-63",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Listas, viñetas y numeración",
@@ -10274,6 +10598,42 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Para un índice con puntos entre título y número de página se usa una tabulación de tipo Derecha (para que el número quede alineado por la derecha) con relleno de puntos. Debe configurarse desde el cuadro de diálogo Tabulaciones porque el relleno no está disponible desde la regla. La posición de la tabulación se sitúa en el margen derecho del área de texto."
+  },
+  {
+    "id": "inicio-462",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": null,
+    "tema": "Tabulaciones",
+    "sourceQuestionId": "neg2-inicio-12",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El diálogo Tabulaciones se abre con Alt,F,T."
+      },
+      {
+        "letter": "B",
+        "text": "Se pueden fijar tabulaciones izquierda, derecha, centrada, decimal y de barra."
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Tab inserta una tabulación real dentro de una celda de tabla."
+      },
+      {
+        "letter": "D",
+        "text": "Las tabulaciones solo se pueden colocar haciendo doble clic en la regla; nunca desde un cuadro de diálogo."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Las tabulaciones se pueden fijar tanto desde la regla como desde el cuadro de diálogo Tabulaciones (Alt,F,T)."
   },
   {
     "id": "inicio-74",
@@ -12059,6 +12419,78 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Ctrl+Mayús+2 no hace nada en esta instalación (probado en vivo). El atajo real de Título 2 es Alt+Ctrl+2."
+  },
+  {
+    "id": "inicio-456",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "neg2-inicio-06",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Actualizar automáticamente» en un estilo aplica los cambios de un párrafo a todo el texto con ese estilo."
+      },
+      {
+        "letter": "B",
+        "text": "Un estilo de párrafo puede incluir a la vez formato de fuente y de párrafo."
+      },
+      {
+        "letter": "C",
+        "text": "Un estilo de carácter se puede quitar sin borrar el texto, aplicando «Predeterminado»."
+      },
+      {
+        "letter": "D",
+        "text": "Los estilos solo se pueden aplicar desde el panel Estilos; no hay galería en la cinta."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "La pestaña Inicio tiene una galería de «Estilos rápidos» visible directamente en la cinta, sin necesidad de abrir el panel."
+  },
+  {
+    "id": "inicio-457",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "neg2-inicio-07",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Mayús+W abre el panel Aplicar estilos."
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+Mayús+1 aplica el estilo Título 1."
+      },
+      {
+        "letter": "C",
+        "text": "Alt+Ctrl+2 aplica el estilo Título 2."
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayús+2 aplica el estilo Título 2."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Prueba en vivo: Ctrl+Mayús+2 no hace nada en esta instalación; Título 2 se aplica con Alt+Ctrl+2."
   },
   {
     "id": "inicio-99",
@@ -15425,6 +15857,78 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "El grupo Edición tiene tres comandos: Buscar, Reemplazar y Seleccionar. «Ir a» no es un botón de ese grupo (es un atajo de teclado, Ctrl+I, sin botón propio en la cinta)."
+  },
+  {
+    "id": "inicio-454",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": null,
+    "tema": "Edición",
+    "sourceQuestionId": "neg2-inicio-04",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Z deshace la última acción."
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+E selecciona todo el documento."
+      },
+      {
+        "letter": "C",
+        "text": "F8 activa el modo de extender selección."
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Retroceso borra la palabra completa a la DERECHA del cursor."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Ctrl+Retroceso borra la palabra hacia la IZQUIERDA del cursor, no a la derecha."
+  },
+  {
+    "id": "inicio-455",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": null,
+    "tema": "Edición",
+    "sourceQuestionId": "neg2-inicio-05",
+    "generado": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+B abre el panel de Navegación."
+      },
+      {
+        "letter": "B",
+        "text": "Alt+Q lleva el foco al cuadro Buscar de la barra de título."
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+I abre el cuadro de diálogo Ir a."
+      },
+      {
+        "letter": "D",
+        "text": "El panel de Navegación (Ctrl+B) solo permite buscar texto; no lista los títulos del documento."
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El panel de Navegación tiene pestañas Títulos / Páginas / Resultados; la de Títulos lista la estructura de encabezados del documento."
   },
   {
     "id": "inicio-132",
