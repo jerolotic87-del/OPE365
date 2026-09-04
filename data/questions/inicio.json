@@ -1177,7 +1177,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+F2 copia el texto seleccionado para moverlo sin cortarlo usando el modo Copiar a. Ctrl+F2 abre el panel de impresión. F2 mueve el texto seleccionado. Alt+F2 no tiene esa función asignada."
+    "explicacion": "Mayús+F2 copia el texto seleccionado para moverlo sin cortarlo usando el modo Copiar a (confirmado en el volcado: comando CopiarTexto). F2 mueve el texto (modo mover). Alt+F2 no tiene esa función. Ctrl+F2 no aparece en el volcado con ninguna función de portapapeles ni de impresión — no se puede afirmar qué hace en esta instalación."
   },
   {
     "id": "inicio-312",
@@ -1247,7 +1247,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F3 mueve el texto seleccionado al portapapeles especial. Ctrl+F2 abre el panel de impresión. Ctrl+F4 cierra el documento activo. Ctrl+Mayús+F3 inserta el contenido del portapapeles especial en el documento."
+    "explicacion": "Ctrl+F3 mueve el texto seleccionado al portapapeles especial (Spike). Ctrl+F4 cierra el documento activo. Ctrl+Mayús+F3 inserta el contenido acumulado del Spike en el documento. Ctrl+F2 no aparece en el volcado con ninguna función asignada — no se puede afirmar qué hace en esta instalación."
   },
   {
     "id": "inicio-318",
