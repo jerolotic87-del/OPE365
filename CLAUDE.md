@@ -6,7 +6,7 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **2472 preguntas** y **971
+de Word 365 de una oposición de ayuntamiento. **2480 preguntas** y **971
 flashcards** (archivo 263, disposicion 100, inicio 148, insertar 147,
 referencias 74, revisar 73, vista 79, diseno 24, interfaz 48,
 correspondencia 15 — un buen tramo de las de archivo/disposicion son
@@ -489,13 +489,30 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 525, insertar 457, inicio 456, archivo 407, vista 144, disposicion 120,
+interfaz 525, insertar 457, inicio 456, archivo 407, vista 144, disposicion 128,
 diseno 90, referencias 153, revisar 82, correspondencia 38.
-Total 2472. (+14: segundo barrido de `data/rutas/referencias.txt` con un
+Total 2480. (+14: segundo barrido de `data/rutas/referencias.txt` con un
 detector de líneas no reflejadas en el banco — de 133 líneas, 40
 candidatas, 13 realmente nuevas tras descartar falsos positivos ya
 cubiertos con otra redacción; +2 en correspondencia del cuadro Nueva
 lista de direcciones. Generador: `scripts/gen_rutas_profundo2.py`.)
+**Barrido del mismo detector sobre el resto de `data/rutas/*.txt`
+(sep-2026)**: `archivo.txt` (23/46 candidatas) e `insertar.txt`
+(105/375) resultaron casi todo ruido del detector — su formato usa
+listas largas de nombres de galería (portadas, temas, colores) que ya
+estaban cubiertas conceptualmente aunque no una por una; comprobado a
+mano con una muestra, ambos bancos ya están bien explotados y NO se
+tocaron. `diseno.txt` (23/127) es sobre todo nombres decorativos de tema/
+color (Azul cálido, Violeta II…), de valor de examen bajo — tampoco se
+tocó. `disposicion.txt` (26/151) sí tenía contenido genuino sin usar
+(ficha Disposición y Papel del cuadro Configurar página, cuadro Columnas,
+cuadro Diseño de objetos flotantes) → **+8 preguntas** (128 en total).
+Generador: `scripts/gen_rutas_profundo3.py`. Método del detector: ancla
+los últimos ~20 caracteres de cada rama del volcado contra
+enunciado+explicación de todo el banco de la sección; sirve para
+localizar candidatos pero SIEMPRE hay que revisar a mano antes de generar
+(alto ratio de falsos positivos en volcados con prosa o listas
+temáticas largas).
 **Segunda pasada en profundidad sobre Correspondencia y Referencias
 (sep-2026)**: el usuario señaló, con razón, que las tandas anteriores se
 habían quedado cortas para lo que dan de sí esos cuadros de diálogo.

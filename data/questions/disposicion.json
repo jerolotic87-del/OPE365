@@ -511,6 +511,78 @@
     "explicacion": "«Columna» es un salto de página, no de sección. Los saltos de sección son Página siguiente, Continua, Página par y Página impar."
   },
   {
+    "id": "disposicion-121",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposición — Configurar página",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "rutas3-disposicion-01",
+    "generado": true,
+    "enunciado": "En el cuadro Configurar página, ficha Disposición, ¿qué opción de «Sección» hace que la nueva sección empiece siempre en una página en blanco?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Empezar sección: Página nueva"
+      },
+      {
+        "letter": "B",
+        "text": "Continua"
+      },
+      {
+        "letter": "C",
+        "text": "Página par"
+      },
+      {
+        "letter": "D",
+        "text": "Alineación vertical"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es la opción por defecto del campo «Empezar sección» en la ficha Disposición del cuadro Configurar página."
+  },
+  {
+    "id": "disposicion-125",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposición — Configurar página",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "rutas3-disposicion-05",
+    "generado": true,
+    "enunciado": "¿Qué campo del cuadro Columnas fija el ancho exacto en centímetros de cada columna?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ancho y espacio"
+      },
+      {
+        "letter": "B",
+        "text": "Preestablecidas"
+      },
+      {
+        "letter": "C",
+        "text": "Número de columnas"
+      },
+      {
+        "letter": "D",
+        "text": "Línea entre columnas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Ancho y espacio» permite fijar el ancho y el espaciado de cada columna por separado, en vez de repartirlas a partes iguales."
+  },
+  {
     "id": "disposicion-2",
     "sourceFile": "disposicion.json",
     "bloque": "Disposición — Configurar página",
@@ -1510,6 +1582,63 @@
     "explicacion": "Ancho: laterales 5,08 · Moderado: laterales 1,91 · ambos 2,54 arriba y abajo."
   },
   {
+    "id": "disposicion-122",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposición — Configurar página",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "rutas3-disposicion-02",
+    "generado": true,
+    "enunciado": "En la ficha Disposición del cuadro Configurar página se puede fijar la Alineación vertical del texto en la página (por ejemplo, Superior).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es el campo «Alineación vertical» de esa ficha, con valores como Superior, Centrada, Justificada o Inferior."
+  },
+  {
+    "id": "disposicion-123",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposición — Configurar página",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "rutas3-disposicion-03",
+    "generado": true,
+    "enunciado": "El cuadro Configurar página, ficha Papel, permite fijar un origen de papel distinto para la primera página que para el resto (por ejemplo, si la primera hoja es membretada).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El campo «Origen del papel» distingue entre «Primera página» y «Otras páginas», cada una con su propia bandeja."
+  },
+  {
+    "id": "disposicion-126",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposición — Configurar página",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "rutas3-disposicion-06",
+    "generado": true,
+    "enunciado": "El cuadro Guiones (Disposición ▸ Configurar página ▸ Guiones ▸ Opciones de guiones…) permite limitar cuántos guiones consecutivos seguidos se permiten al final de línea.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El campo «Limitar guiones consecutivos a» evita que varias líneas seguidas terminen partidas por un guion."
+  },
+  {
     "id": "disposicion-117",
     "sourceFile": "disposicion.json",
     "bloque": "Disposicion — Configurar página",
@@ -1752,6 +1881,28 @@
       "Diseño de impresión"
     ],
     "explicacion": "Disposición ▸ Configurar página; el atajo Alt+Ctrl+D cambia a la vista Diseño de impresión."
+  },
+  {
+    "id": "disposicion-124",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposición — Configurar página",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Configurar página",
+    "sourceQuestionId": "rutas3-disposicion-04",
+    "generado": true,
+    "enunciado": "En el cuadro Columnas (Disposición ▸ Configurar página ▸ Columnas ▸ Más columnas…), el bloque «Preestablecidas» ofrece: Una, [1], Tres, Izquierda y [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Dos",
+      "Derecha"
+    ],
+    "explicacion": "Las cinco distribuciones preestablecidas del cuadro Columnas."
   },
   {
     "id": "disposicion-112",
@@ -2408,6 +2559,42 @@
     "explicacion": "Por defecto está marcada «Alinear al margen», no «Alinear a la página»."
   },
   {
+    "id": "disposicion-127",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposición — Organizar",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "organizar",
+    "subtopic": null,
+    "tema": "Organizar",
+    "sourceQuestionId": "rutas3-disposicion-07",
+    "generado": true,
+    "enunciado": "En el cuadro Diseño (objeto flotante) ▸ ficha Ajuste del texto, ¿qué campo fija cuánto espacio deja el texto alrededor del objeto?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Distancia desde el texto"
+      },
+      {
+        "letter": "B",
+        "text": "Posición"
+      },
+      {
+        "letter": "C",
+        "text": "Tamaño"
+      },
+      {
+        "letter": "D",
+        "text": "Rotación"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Distancia desde el texto» fija por separado el margen superior, inferior, izquierdo y derecho entre el objeto y el texto que lo rodea."
+  },
+  {
     "id": "disposicion-42",
     "sourceFile": "disposicion.json",
     "bloque": "Disposición — Organizar",
@@ -2867,6 +3054,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "La cuadrícula nunca se imprime; el espaciado por defecto es 0,32 cm."
+  },
+  {
+    "id": "disposicion-128",
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposición — Organizar",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "disposicion",
+    "topic": "organizar",
+    "subtopic": null,
+    "tema": "Organizar",
+    "sourceQuestionId": "rutas3-disposicion-08",
+    "generado": true,
+    "enunciado": "«Mover con el texto», dentro de Organizar ▸ Ajustar texto, hace que el objeto flotante se desplace junto con el párrafo al que está anclado si ese párrafo cambia de página.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es la opción contraria a «Posición fija en la página»: ancla el objeto al párrafo en vez de a un punto fijo de la hoja."
   },
   {
     "id": "disposicion-120",
