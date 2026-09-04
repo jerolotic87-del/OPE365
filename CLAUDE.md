@@ -477,7 +477,18 @@ pestaña opcional) y "Repasar preguntas" → desplegable "Con y sin imagen /
 Solo con imagen"; Editor del banco → estado "Con imagen (iconos)". Fuera de
 esos filtros explícitos, las preguntas con imagen siguen mezcladas con las
 demás de su `topic` (deseable: el motor las trata como cualquier framing
-del concepto).
+del concepto). **Bug real encontrado y corregido en la auditoría de
+sep-2026**: `multiplayer.js` (Duelo/Farol/Contra Word) nunca pintaba
+`q.imagen` en la ronda en vivo — una pregunta de icono que caía en una
+partida quedaba con el enunciado ("Observa el icono...") sin la imagen,
+irrespondible. `buildBoard()` (las dos, Duelo y Coop) ahora excluye
+`q.imagen` del pool de selección aleatoria, igual que ya excluía `relleno`.
+Confirmado con `filterQuestions` + el mismo predicado: 0 preguntas con
+imagen cuelan en el pool. Además, `qEditFormHtml`/`fcEditFormHtml` (editor
+✎ y Editor del banco) no mostraban la imagen al corregir texto — se añadió
+una vista previa de solo lectura (`qImageHtml`) al principio del
+formulario; `readQPatch` nunca tocaba el campo `imagen`, así que no había
+pérdida de datos, solo falta de contexto visual al editar.
 `archivo-*` (`sourceQuestionId` `vf-archivo-bkNN`, `generado:true`, 42 V/F
 21/21) = **Vista Backstage** (pestaña Archivo): panel de navegación, Inicio/
 Nuevo/Abrir, Información (Proteger documento 6 opciones, Comprobar problemas 3,

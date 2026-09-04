@@ -2319,6 +2319,7 @@ function qEditFormHtml(q, orig, pfx){
   const editsResp = ["opcion_unica","verdadero_falso","seleccion_multiple"].includes(q.tipo);
   const editsOpts = ["opcion_unica","seleccion_multiple"].includes(q.tipo) && Array.isArray(q.opciones);
   return `
+    ${q.imagen ? `<div class="field"><label>Imagen (no editable aquí)</label>${qImageHtml(q.imagen)}</div>` : ''}
     <div class="field"><label>Enunciado</label>
       <textarea id="${pfx}-enun" rows="3" class="edit-field">${O.escapeHtml(orig.enunciado||"")}</textarea></div>
     ${editsOpts ? `<div class="field"><label>Opciones</label>
@@ -2375,6 +2376,7 @@ function openEditQuestionModal(qid, onDone){
 
 function fcEditFormHtml(orig, pfx){
   return `
+    ${orig.imagen ? `<div class="field"><label>Imagen (no editable aquí)</label>${qImageHtml(orig.imagen)}</div>` : ''}
     <div class="field"><label>Frente</label>
       <textarea id="${pfx}-front" rows="3" class="edit-field">${O.escapeHtml(orig.front||"")}</textarea></div>
     <div class="field"><label>Dorso</label>
