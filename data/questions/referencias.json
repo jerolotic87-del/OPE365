@@ -290,6 +290,42 @@
     "explicacion": "La casilla «Estilos», con su lista de estilos disponibles y el «Nivel de TDC» asignable a cada uno."
   },
   {
+    "id": "referencias-145",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "rutas2-referencias-04",
+    "generado": true,
+    "enunciado": "En Opciones de tabla de contenido / Opciones de tabla de ilustraciones, ¿qué casilla incluye en la tabla los elementos marcados como «campo», además de los estilos elegidos?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Campos de elementos de tabla"
+      },
+      {
+        "letter": "B",
+        "text": "Niveles de esquema"
+      },
+      {
+        "letter": "C",
+        "text": "Restablecer"
+      },
+      {
+        "letter": "D",
+        "text": "Mostrar niveles"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Campos de elementos de tabla» sirve para que entre en la tabla el texto marcado a mano como campo (con Ctrl+F9), sin necesidad de estilo ni nivel de esquema."
+  },
+  {
     "id": "referencias-8",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Tabla de contenido",
@@ -655,6 +691,44 @@
     "explicacion": "Cada nivel de la tabla de contenido tiene su propio estilo TDC N editable desde ese botón."
   },
   {
+    "id": "referencias-143",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "rutas2-referencias-02",
+    "generado": true,
+    "enunciado": "El cuadro Tabla de contenido muestra dos vistas previas a la vez: «Vista preliminar» (con números de página) y «Vista previa de Web» (con hipervínculos, sin números de página).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Son las dos columnas del cuadro: una simula el documento impreso y la otra cómo se vería publicado como página web."
+  },
+  {
+    "id": "referencias-144",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "rutas2-referencias-03",
+    "generado": true,
+    "enunciado": "El campo «Carácter de relleno», presente en los cuadros Tabla de contenido, Tabla de ilustraciones e Índice, admite (ninguno), puntos suspensivos o guiones entre el texto y el número de página.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es el mismo campo y las mismas tres opciones en los tres cuadros que generan un listado con números de página."
+  },
+  {
     "id": "referencias-89",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Tabla de contenido",
@@ -744,6 +818,28 @@
       "Nivel 2"
     ],
     "explicacion": "Las cuatro opciones completas de Agregar texto."
+  },
+  {
+    "id": "referencias-142",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Tabla de contenido",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Tabla de contenido",
+    "sourceQuestionId": "rutas2-referencias-01",
+    "generado": true,
+    "enunciado": "El desplegable «Tabla de contenido», además de Tabla automática 1/2 y Tabla manual, ofrece: [1], Tabla de contenido personalizada…, Quitar tabla de contenido y [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "Más tablas de contenido de Office.com",
+      "Guardar selección en galería de tablas de contenido…"
+    ],
+    "explicacion": "Las seis entradas completas del desplegable, sin contar las tres tablas integradas."
   },
   {
     "id": "referencias-1",
@@ -1773,6 +1869,42 @@
     "explicacion": "El desplegable lista Mendeley Cite, PERLLA, RefWorks Citation Manager, SmartCite for Papers, EndNote Cite While You Write for Word, Citavi Assistant, Lean Library Workspace, Ref-n-Write, EasyBib Add-In for Office 365 y Citavi Assistant Beta. «Zotero Connector» no aparece en esa lista."
   },
   {
+    "id": "referencias-147",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "rutas2-referencias-06",
+    "generado": true,
+    "enunciado": "En el Administrador de fuentes, ¿qué dos listas se muestran una junto a la otra para poder copiar fuentes de una a otra?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Lista general y Lista actual"
+      },
+      {
+        "letter": "B",
+        "text": "Lista general y Lista de marcadores"
+      },
+      {
+        "letter": "C",
+        "text": "Fuentes citadas y Fuentes eliminadas"
+      },
+      {
+        "letter": "D",
+        "text": "Estilo y Bibliografía"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Lista general» son todas las fuentes guardadas alguna vez en el equipo; «Lista actual» son las del documento abierto."
+  },
+  {
     "id": "referencias-30",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Citas y bibliografía",
@@ -2158,6 +2290,25 @@
     "explicacion": "Es la opción «Insertar bibliografía» del propio desplegable, por debajo de los tres diseños integrados."
   },
   {
+    "id": "referencias-146",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Citas y bibliografía",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "citas-bibliografia",
+    "subtopic": null,
+    "tema": "Citas y bibliografía",
+    "sourceQuestionId": "rutas2-referencias-05",
+    "generado": true,
+    "enunciado": "En el Administrador de fuentes, cada fuente aparece marcada como «fuente citada» o como «fuente de marcador de posición», según si ya se ha usado en una cita o solo se ha reservado el hueco con «Agregar nuevo marcador de posición…».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Los dos iconos distintos del Administrador de fuentes distinguen fuentes completas de fuentes pendientes de rellenar."
+  },
+  {
     "id": "referencias-88",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Citas y bibliografía",
@@ -2518,6 +2669,42 @@
     "explicacion": "El cuadro Opciones de tabla de ilustraciones ofrece esa lista de estilos, más amplia que la de Opciones de tabla de contenido (que no incluye «Texto nota pie»)."
   },
   {
+    "id": "referencias-152",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "rutas2-referencias-11",
+    "generado": true,
+    "enunciado": "¿Qué botón del cuadro Título permite quitar un rótulo personalizado que ya no se necesita?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Eliminar rótulo"
+      },
+      {
+        "letter": "B",
+        "text": "Excluir el rótulo del título"
+      },
+      {
+        "letter": "C",
+        "text": "Autotítulo…"
+      },
+      {
+        "letter": "D",
+        "text": "Numeración…"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Eliminar rótulo» borra un rótulo de la lista (los tres rótulos de fábrica —Ecuación, Ilustración, Tabla— no se pueden eliminar)."
+  },
+  {
     "id": "referencias-41",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Títulos",
@@ -2864,6 +3051,44 @@
     "explicacion": "Sirve para distinguir varias tablas de ilustraciones del mismo documento (por ejemplo, una para figuras y otra para tablas)."
   },
   {
+    "id": "referencias-149",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "rutas2-referencias-08",
+    "generado": true,
+    "enunciado": "El cuadro Referencia cruzada tiene una casilla «Incluir más adelante o más atrás», que añade automáticamente esa coletilla según si el elemento referenciado está antes o después en el documento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Word calcula solo, al insertar la referencia, si el elemento queda antes o después y añade el texto correspondiente."
+  },
+  {
+    "id": "referencias-153",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "rutas2-referencias-12",
+    "generado": true,
+    "enunciado": "La casilla «Incluir rótulo y número», en el cuadro Tabla de ilustraciones, controla si la tabla muestra el rótulo completo (por ejemplo «Ilustración 1») o solo el texto del título.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Si se desmarca, la tabla lista solo el texto que se escribió tras el rótulo, sin «Ilustración N»."
+  },
+  {
     "id": "referencias-87",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Títulos",
@@ -2986,6 +3211,28 @@
       "4": "C"
     },
     "explicacion": "Cuatro de los ocho tipos que admite el desplegable «Tipo» del cuadro Referencia cruzada."
+  },
+  {
+    "id": "referencias-148",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Títulos",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Títulos",
+    "sourceQuestionId": "rutas2-referencias-07",
+    "generado": true,
+    "enunciado": "El cuadro Numeración de títulos permite [1] delante del número (por ejemplo «Ilustración II-1») y elegir el [2] que los separa (un guion, por defecto).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      "incluir el número de capítulo",
+      "carácter separador"
+    ],
+    "explicacion": "Las dos opciones del cuadro Numeración de títulos, además del formato de número (1,2,3 / a,b,c / A,B,C / i,ii,iii)."
   },
   {
     "id": "referencias-3",
@@ -3454,6 +3701,44 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Son las dos disposiciones posibles del índice, junto al número de Columnas y el Idioma."
+  },
+  {
+    "id": "referencias-150",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Índice",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "indice",
+    "subtopic": null,
+    "tema": "Índice",
+    "sourceQuestionId": "rutas2-referencias-09",
+    "generado": true,
+    "enunciado": "En el índice generado, una entrada puede remitir a otra en vez de a una página, mostrando «Véase» seguido del texto de la otra entrada (por ejemplo: «Asteroide. Véase Júpiter»).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es el resultado de marcar esa entrada con la opción «Referencia cruzada: Véase» en el cuadro Marcar entrada de índice, en vez de «Página actual»."
+  },
+  {
+    "id": "referencias-151",
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias — Índice",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "referencias",
+    "topic": "indice",
+    "subtopic": null,
+    "tema": "Índice",
+    "sourceQuestionId": "rutas2-referencias-10",
+    "generado": true,
+    "enunciado": "El cuadro Índice permite elegir el idioma usado para ordenar alfabéticamente las entradas.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El campo «Idioma» del cuadro Índice fija el criterio de ordenación alfabética (en esta instalación, Español (España))."
   },
   {
     "id": "referencias-86",

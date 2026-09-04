@@ -144,6 +144,42 @@
     "explicacion": "«Escribir una nueva lista…» abre el cuadro «Nueva lista de direcciones» para crear los registros desde cero."
   },
   {
+    "id": "correspondencia-39",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "rutas2-correspondencia-02",
+    "generado": true,
+    "enunciado": "¿Qué botón del cuadro Nueva lista de direcciones añade un destinatario más a la lista?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Nueva entrada"
+      },
+      {
+        "letter": "B",
+        "text": "Eliminar entrada"
+      },
+      {
+        "letter": "C",
+        "text": "Buscando…"
+      },
+      {
+        "letter": "D",
+        "text": "Personalizar columnas…"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Nueva entrada» añade una fila más a la tabla de destinatarios que se está creando."
+  },
+  {
     "id": "correspondencia-14",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Iniciar combinación de correspondencia",
@@ -180,6 +216,25 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: «Personalizar columnas» permite cambiar las columnas por defecto por las propias."
+  },
+  {
+    "id": "correspondencia-38",
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinación de correspondencia",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Iniciar combinación de correspondencia",
+    "sourceQuestionId": "rutas2-correspondencia-01",
+    "generado": true,
+    "enunciado": "El cuadro «Nueva lista de direcciones» trae por defecto columnas como Tratamiento, Nombre, Apellidos, Dirección, Ciudad, Provincia y Código postal, que se pueden cambiar con «Personalizar columnas…».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Son las columnas estándar que Word propone al crear una lista de destinatarios desde cero."
   },
   {
     "id": "correspondencia-29",

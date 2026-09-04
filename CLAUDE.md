@@ -6,7 +6,7 @@ tiene reglas de fuente estrictas que no son negociables.
 ## Qué es esto
 
 App de estudio offline (un solo HTML, sin backend) para preparar el temario
-de Word 365 de una oposición de ayuntamiento. **2458 preguntas** y **971
+de Word 365 de una oposición de ayuntamiento. **2472 preguntas** y **971
 flashcards** (archivo 263, disposicion 100, inicio 148, insertar 147,
 referencias 74, revisar 73, vista 79, diseno 24, interfaz 48,
 correspondencia 15 — un buen tramo de las de archivo/disposicion son
@@ -490,8 +490,12 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 interfaz 525, insertar 457, inicio 456, archivo 407, vista 144, disposicion 120,
-diseno 90, referencias 141, revisar 82, correspondencia 36.
-Total 2458.
+diseno 90, referencias 153, revisar 82, correspondencia 38.
+Total 2472. (+14: segundo barrido de `data/rutas/referencias.txt` con un
+detector de líneas no reflejadas en el banco — de 133 líneas, 40
+candidatas, 13 realmente nuevas tras descartar falsos positivos ya
+cubiertos con otra redacción; +2 en correspondencia del cuadro Nueva
+lista de direcciones. Generador: `scripts/gen_rutas_profundo2.py`.)
 **Segunda pasada en profundidad sobre Correspondencia y Referencias
 (sep-2026)**: el usuario señaló, con razón, que las tandas anteriores se
 habían quedado cortas para lo que dan de sí esos cuadros de diálogo.
