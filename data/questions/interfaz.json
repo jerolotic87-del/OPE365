@@ -17312,41 +17312,6 @@
     "explicacion": "Las plantillas con macros se guardan con extensión .dotm. Las plantillas sin macros usan .dotx. Los documentos con macros usan .docm. El formato .dot es la plantilla de Word 97-2003, sin soporte completo para macros de versiones modernas."
   },
   {
-    "id": "interfaz-495",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-teclado-ayuda",
-    "subtopic": null,
-    "tema": "Modo de acceso por teclado y ayuda",
-    "sourceQuestionId": "8-140",
-    "enunciado": "¿Cuál de los siguientes atajos muestra u oculta la cinta de opciones en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+F1"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+F2"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+F3"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+F1"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+F1 muestra u oculta la cinta de opciones. Ctrl+F2 abre el panel de impresión. Ctrl+F3 mueve al portapapeles el texto seleccionado usando la función Especial. Alt+F1 inserta un gráfico."
-  },
-  {
     "id": "interfaz-496",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Documentos y archivos",
@@ -17884,15 +17849,15 @@
     "tema": "Barra de estado",
     "sourceQuestionId": "gen-atajo-10",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado muestra el recuento de palabras del documento en Word 365?",
+    "enunciado": "¿Qué atajo actualiza las estadísticas de recuento de palabras del documento en Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+G"
+        "text": "Ctrl+Mayús+O"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+F5"
+        "text": "Ctrl+Mayús+G"
       },
       {
         "letter": "C",
@@ -17905,7 +17870,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Abre o actualiza el cuadro de diálogo Contar palabras, con el número de palabras, caracteres, párrafos y líneas del documento."
+    "explicacion": "Ctrl+Mayús+O recalcula y actualiza el número total de palabras del documento (comando HerramientaVolverAContarPalabras). El contador vive en la barra de estado. Confirmado en el volcado de Personalizar teclado de tu Word 365 (v2608)."
   },
   {
     "id": "interfaz-512",

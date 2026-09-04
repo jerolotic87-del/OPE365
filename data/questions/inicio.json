@@ -3500,7 +3500,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Ctrl+Mayús+W abre el cuadro Aplicar estilo, que permite escribir o seleccionar el nombre de un estilo para aplicarlo rápidamente (confirmado en atajos_oficial.json / cuadro Personalizar teclado). Ctrl+Mayús+S aplica subrayado. Ctrl+Mayús+A aplica el estilo Normal. Ctrl+M abre el cuadro de diálogo Fuente."
+    "explicacion": "Ctrl+Mayús+W abre el cuadro Aplicar estilo, que permite escribir o seleccionar el nombre de un estilo para aplicarlo rápidamente (confirmado en el volcado v2608). Ctrl+Mayús+S aplica subrayado. Ctrl+Mayús+A aplica el estilo Normal. Ctrl+M abre el cuadro de diálogo Fuente."
   },
   {
     "id": "inicio-92",
@@ -9328,7 +9328,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+H reduce la sangría francesa ya aplicada. Ctrl+F la aplica o la quita del todo. Ni Ctrl+Mayús+F ni Ctrl+Mayús+M tocan la sangría: Ctrl+Mayús+M abre el cuadro Fuente con el foco en el campo Tamaño. Confirmado en atajos_oficial.json y por prueba en vivo."
+    "explicacion": "Ctrl+Mayús+H reduce la sangría francesa ya aplicada. Ctrl+F la aplica o la quita del todo. Ni Ctrl+Mayús+F ni Ctrl+Mayús+M tocan la sangría: Ctrl+Mayús+M abre el cuadro Fuente con el foco en el campo Tamaño. Confirmado en el volcado v2608 y por prueba en vivo."
   },
   {
     "id": "inicio-252",
@@ -9399,7 +9399,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Ctrl+H aplica sangría izquierda. Ctrl+F aplica o quita la sangría francesa (primera línea fija, resto sangrado). Ctrl+Mayús+H reduce la sangría francesa. Ctrl+W quita todo el formato de párrafo, sangrías incluidas. Ojo: Ctrl+Mayús+R, al que la tabla oficial asigna 'quitar sangría', NO funciona en esta instalación. El distractor E (cuadro Fuente) es Ctrl+M."
+    "explicacion": "Ctrl+H aplica sangría izquierda. Ctrl+F aplica o quita la sangría francesa (primera línea fija, resto sangrado). Ctrl+Mayús+H reduce la sangría francesa. Ctrl+W quita todo el formato de párrafo, sangrías incluidas. Ojo: Ctrl+Mayús+R, al que el volcado asigna 'quitar sangría francesa', NO funciona en esta instalación. El distractor E (cuadro Fuente) es Ctrl+M."
   },
   {
     "id": "inicio-253",
@@ -11174,7 +11174,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+D alinea a la derecha en español. Ctrl+R no tiene ninguna acción asignada en esta instalación (no aparece en atajos_oficial.json). Ctrl+J justifica. Ctrl+T centra. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+D alinea a la derecha en español. Ctrl+R no tiene ninguna acción asignada en esta instalación (no aparece en el volcado v2608). Ctrl+J justifica. Ctrl+T centra. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-298",
@@ -12017,76 +12017,6 @@
     "explicacion": "Ctrl+Mayús+F8 activa el modo \"Seleccionar columna\": deja la selección enganchada y, moviendo el cursor o haciendo clic, se va extendiendo un bloque rectangular de texto. Se sale con Esc. Ctrl+F8 cambia el tamaño de la ventana. Prueba en vivo del usuario (sep 2026)."
   },
   {
-    "id": "inicio-322",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Voz",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "voz",
-    "subtopic": null,
-    "tema": "Voz",
-    "sourceQuestionId": "8-233",
-    "enunciado": "¿Qué atajo establece el foco en Copilot en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+C"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+C"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+C"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Alt+C"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+C establece el foco en Copilot. Alt+Mayús+C cierra el panel activo. Ctrl+C copia el contenido seleccionado. Ctrl+Alt+C copia el formato del texto seleccionado."
-  },
-  {
-    "id": "inicio-323",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Voz",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "voz",
-    "subtopic": null,
-    "tema": "Voz",
-    "sourceQuestionId": "8-234",
-    "enunciado": "¿Qué atajo invoca Copilot para la selección activa en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+I"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+C"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Ctrl+I"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Mayús+I"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+I invoca Copilot para actuar sobre la selección activa. Alt+C establece el foco en Copilot sin selección específica. Alt+Ctrl+I abre la vista previa de impresión. Alt+Mayús+I marca una cita para la tabla de autoridades."
-  },
-  {
     "id": "inicio-324",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -12714,7 +12644,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+1 aplica el estilo Título 1 al párrafo (prueba en vivo). Ctrl+1 aplica interlineado sencillo. Alt+Mayús+1 muestra solo los títulos de nivel 1 en la vista Esquema. Alt+Ctrl+1 no aparece en la tabla oficial de atajos."
+    "explicacion": "Ctrl+Mayús+1 aplica el estilo Título 1 al párrafo (prueba en vivo). Ctrl+1 aplica interlineado sencillo. Alt+Mayús+1 muestra solo los títulos de nivel 1 en la vista Esquema. Alt+Ctrl+1 no aparece en el volcado v2608."
   },
   {
     "id": "inicio-342",
@@ -12749,7 +12679,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+2 aplica el estilo Título 2 al párrafo. Ctrl+Mayús+2 no tiene función asignada como atajo de Título 2 en la tabla oficial. Ctrl+2 aplica interlineado doble. Alt+Mayús+2 muestra los títulos hasta nivel 2 en la vista Esquema."
+    "explicacion": "Alt+Ctrl+2 aplica el estilo Título 2 al párrafo. Ctrl+Mayús+2 no aplica Título 2 en el volcado v2608. Ctrl+2 aplica interlineado doble. Alt+Mayús+2 muestra los títulos hasta nivel 2 en la vista Esquema."
   },
   {
     "id": "inicio-343",
@@ -12784,7 +12714,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+3 aplica el estilo Título 3 al párrafo. Alt+Ctrl+3 no tiene función asignada para Título 3 en la tabla oficial. Ctrl+3 bloquea los campos del documento. Alt+Mayús+3 muestra los títulos hasta nivel 3 en la vista Esquema."
+    "explicacion": "Ctrl+Mayús+3 aplica el estilo Título 3 al párrafo. Alt+Ctrl+3 no aplica Título 3 en el volcado v2608. Ctrl+3 bloquea los campos del documento. Alt+Mayús+3 muestra los títulos hasta nivel 3 en la vista Esquema."
   },
   {
     "id": "inicio-344",
@@ -13099,7 +13029,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+W quita todo el formato de párrafo, sangrías incluidas (prueba en vivo). Ctrl+Mayús+R y Ctrl+R no hacen nada en esta versión, aunque la tabla oficial asigne a Ctrl+Mayús+R 'quitar sangría'. Ctrl+H aplica sangría, no la quita."
+    "explicacion": "Ctrl+W quita todo el formato de párrafo, sangrías incluidas (prueba en vivo). Ctrl+Mayús+R y Ctrl+R no hacen nada en esta versión, aunque el volcado v2608 asigne a Ctrl+Mayús+R 'quitar sangría francesa'. Ctrl+H aplica sangría, no la quita."
   },
   {
     "id": "inicio-353",
@@ -13732,41 +13662,6 @@
     "explicacion": "Alt+[ (corchete abierto) inicia el Dictado de Office para transcribir voz a texto. Alt+] no tiene función asignada para dictado. Ctrl+Alt+[ no tiene función asignada. Alt+Mayús+[ no tiene función asignada para iniciar dictado."
   },
   {
-    "id": "inicio-374",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": null,
-    "tema": "Estilos",
-    "sourceQuestionId": "8-331",
-    "enunciado": "¿Qué atajo aplica el estilo de énfasis al párrafo en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+Mayús+I"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+I"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+A"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+I"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+I aplica el estilo de énfasis al párrafo. Ctrl+I es el atajo de la versión inglesa para cursiva. Ctrl+Mayús+A aplica el estilo Normal. Alt+Ctrl+I abre la vista previa de impresión."
-  },
-  {
     "id": "inicio-375",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -14198,42 +14093,6 @@
     "explicacion": "Aplica o quita el formato de cursiva al texto seleccionado; es una segunda combinación asignada a la misma función que Ctrl+K."
   },
   {
-    "id": "inicio-388",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Estilos",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "estilos",
-    "subtopic": null,
-    "tema": "Estilos",
-    "sourceQuestionId": "gen-atajo-23",
-    "generado": true,
-    "enunciado": "¿Qué atajo alternativo también aplica el estilo Normal en Word 365, además de Ctrl+Mayús+A?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+Abajo"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Mayús+Borrar (Núm 5)"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+V"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+G"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Aplica el estilo Normal al párrafo activo; es una segunda combinación asignada a la misma función que Ctrl+Mayús+A."
-  },
-  {
     "id": "inicio-389",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -14304,42 +14163,6 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Pega el contenido del portapapeles en la posición del cursor; es la combinación más extendida para pegar, junto a la variante Mayús+Insertar."
-  },
-  {
-    "id": "inicio-391",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Edición",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "edicion",
-    "subtopic": null,
-    "tema": "Edición",
-    "sourceQuestionId": "gen-atajo-34",
-    "generado": true,
-    "enunciado": "¿Qué atajo alternativo también selecciona todo el documento en Word 365, además de Ctrl+E y Ctrl+Número 5?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+O"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+I"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Q"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Borrar (Núm 5)"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "Selecciona la totalidad del contenido del documento; es una tercera combinación asignada a la misma función que Ctrl+E y Ctrl+Número 5."
   },
   {
     "id": "inicio-393",

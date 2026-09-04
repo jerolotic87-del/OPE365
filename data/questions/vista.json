@@ -963,7 +963,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Dividir parte la ventana activa en dos paneles que muestran zonas distintas del mismo documento. Nueva ventana abre una segunda ventana del mismo documento; Ver en paralelo y Organizar todo trabajan con varias ventanas o documentos. En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. ATAJOS.docx asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
+    "explicacion": "Dividir parte la ventana activa en dos paneles que muestran zonas distintas del mismo documento. Nueva ventana abre una segunda ventana del mismo documento; Ver en paralelo y Organizar todo trabajan con varias ventanas o documentos. En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
   },
   {
     "id": "vista-28",
@@ -3189,7 +3189,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Dividir parte la ventana activa en dos paneles que muestran distintas zonas del mismo documento, sin abrir una segunda ventana. Nueva ventana abre una segunda ventana independiente del mismo documento. En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. ATAJOS.docx asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
+    "explicacion": "Dividir parte la ventana activa en dos paneles que muestran distintas zonas del mismo documento, sin abrir una segunda ventana. Nueva ventana abre una segunda ventana independiente del mismo documento. En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
   },
   {
     "id": "vista-88",
@@ -3213,7 +3213,7 @@
       "Dividir",
       "Ver en paralelo"
     ],
-    "explicacion": "Esta tríada es uno de los puntos de mayor confusión en el examen. La clave es: Nueva ventana y Dividir trabajan con el mismo documento; Ver en paralelo trabaja con dos documentos distintos. En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. ATAJOS.docx asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
+    "explicacion": "Esta tríada es uno de los puntos de mayor confusión en el examen. La clave es: Nueva ventana y Dividir trabajan con el mismo documento; Ver en paralelo trabaja con dos documentos distintos. En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
   },
   {
     "id": "vista-89",
@@ -4008,42 +4008,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Se divide desde Vista ▸ grupo Ventana ▸ Dividir (y se deshace con Quitar división). En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. ATAJOS.docx asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
-  },
-  {
-    "id": "vista-110",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-204",
-    "enunciado": "¿Qué atajo maximiza la ventana del documento en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ctrl+F10"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+F9"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+F10"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Mayús+F10"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+F10 maximiza la ventana del documento activo. Ctrl+F9 inserta un campo vacío. Alt+F10 no tiene esa función asignada. Ctrl+Mayús+F10 no tiene función asignada para maximizar."
+    "explicacion": "Se divide desde Vista ▸ grupo Ventana ▸ Dividir (y se deshace con Quitar división). En esta instalación Dividir NO tiene atajo de teclado: se hace por Vista ▸ grupo Ventana ▸ Dividir. el volcado v2608 asigna Alt+Ctrl+V a «Dividir ventana», pero en vivo esa combinación hace «Pegar formato» (el pincel Copiar/Pegar formato: Alt+Ctrl+C copia el formato, Alt+Ctrl+V lo pega). Prueba en vivo del usuario."
   },
   {
     "id": "vista-111",
@@ -4221,76 +4186,6 @@
     "explicacion": "Ctrl+Mayús+F6 activa la ventana anterior. Ctrl+F6 activa la ventana siguiente. Alt+Mayús+F6 también activa la ventana anterior como atajo alternativo. Ctrl+Mayús+Tab no tiene esa función asignada para cambiar ventanas de documento."
   },
   {
-    "id": "vista-116",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-210",
-    "enunciado": "¿Qué atajo va al panel siguiente en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "F6"
-      },
-      {
-        "letter": "B",
-        "text": "Mayús+F6"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+F6"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+F6"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "F6 activa el panel siguiente dentro de la ventana de Word. Mayús+F6 activa el panelanterior. Ctrl+F6 cambia entre ventanas de documento. Alt+F6 también cambia entre ventanas de documento como atajo alternativo."
-  },
-  {
-    "id": "vista-117",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-211",
-    "enunciado": "¿Qué atajo va al panel anterior en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Mayús+F6"
-      },
-      {
-        "letter": "B",
-        "text": "F6"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+F6"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Mayús+F6"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Mayús+F6 activa el panel anterior dentro de la ventana de Word. F6 activa el panel siguiente. Ctrl+Mayús+F6 activa la ventana de documento anterior. Alt+Mayús+F6 también activa la ventana de documento anterior como atajo alternativo."
-  },
-  {
     "id": "vista-118",
     "sourceFile": "vista.json",
     "bloque": "Vista — Macros",
@@ -4394,41 +4289,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Ctrl+Av Pág examina el objeto siguiente usando el explorador de objetos. Ctrl+Re Pág examina el objeto anterior. Alt+Ctrl+Fin no tiene función asignada para el explorador. Av Pág baja una pantalla sin usar el explorador de objetos."
-  },
-  {
-    "id": "vista-121",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-237",
-    "enunciado": "¿Qué atajo abre el panel del explorador de objetos para seleccionar el tipo de elemento a examinar en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Ctrl+Inicio"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Inicio"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+Inicio"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+Alt+Inicio"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Inicio abre el panel del explorador de objetos. Ctrl+Inicio va al inicio del documento. Alt+Inicio va al inicio de la fila en una tabla. Ctrl+Alt+Inicio no tiene función asignada para el explorador de objetos."
   },
   {
     "id": "vista-122",
@@ -4641,321 +4501,6 @@
     "explicacion": "Alt+Mayús+T muestra todos los títulos en la vista Esquema. Alt+Mayús+L muestra solo la primera línea de cada párrafo. Alt+T no tiene función asignada para mostrar títulos. Ctrl+Mayús+T abre la búsqueda en referencia."
   },
   {
-    "id": "vista-128",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-302",
-    "enunciado": "¿Qué atajo muestra los títulos hasta el nivel 1 en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+1"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+1"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+1"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+1"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+1 muestra los títulos hasta el nivel 1 en la vista Esquema. Ctrl+Mayús+1 aplica el estilo Título 1 al párrafo activo. Alt+1 no tiene función asignada para mostrar títulos. Ctrl+1 aplica interlineado sencillo."
-  },
-  {
-    "id": "vista-129",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-303",
-    "enunciado": "¿Qué atajo muestra los títulos hasta el nivel 2 en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+2"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+2"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+2"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+2"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+2 muestra los títulos hasta el nivel 2 en la vista Esquema. Ctrl+Mayús+2 no tiene función asignada como atajo de Título 2 en la tabla oficial. Alt+2 no tiene función asignada para mostrar títulos.Ctrl+2 aplica interlineado doble al párrafo."
-  },
-  {
-    "id": "vista-130",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-304",
-    "enunciado": "¿Qué atajo muestra los títulos hasta el nivel 3 en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+3"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+3"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+3"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+3"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+3 muestra los títulos hasta el nivel 3 en la vista Esquema. Ctrl+Mayús+3 aplica el estilo Título 3 al párrafo activo. Alt+3 no tiene función asignada para mostrar títulos. Ctrl+3 bloquea los campos del documento."
-  },
-  {
-    "id": "vista-131",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-305",
-    "enunciado": "¿Qué atajo muestra los títulos hasta el nivel 4 en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+4"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+4"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+4"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+4"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+4 muestra los títulos hasta el nivel 4 en la vista Esquema. Ctrl+Mayús+4 no tiene función asignada para mostrar títulos de nivel 4. Alt+4 no tiene función asignada para mostrar títulos. Ctrl+4 desbloquea los campos."
-  },
-  {
-    "id": "vista-132",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-306",
-    "enunciado": "¿Qué atajo muestra los títulos hasta el nivel 5 en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+5"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+5"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+5"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+5"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+5 muestra los títulos hasta el nivel 5 en la vista Esquema. Ctrl+Mayús+5 no tiene función asignada para mostrar títulos de nivel 5. Alt+5 no tiene función asignada para mostrar títulos. Ctrl+5 aplica interlineado de 1,5 líneas."
-  },
-  {
-    "id": "vista-133",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-307",
-    "enunciado": "¿Qué atajo muestra los títulos hasta el nivel 6 en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+6"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+6"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+6"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+6"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+6 muestra los títulos hasta el nivel 6 en la vista Esquema. Ctrl+Mayús+6 no tiene función asignada para mostrar títulos de nivel 6. Alt+6 no tiene función asignada para mostrar títulos. Ctrl+6 desvincula los campos del documento."
-  },
-  {
-    "id": "vista-134",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-308",
-    "enunciado": "¿Qué atajo muestra los títulos hasta el nivel 7 en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+7"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+7"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+7"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+7"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+7 muestra los títulos hasta el nivel 7 en la vista Esquema. Ctrl+Mayús+7 no tiene función asignada para mostrar títulos de nivel 7. Alt+7 no tiene función asignada para mostrar títulos. Ctrl+7 no tiene función asignada relevante para el esquema."
-  },
-  {
-    "id": "vista-135",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-309",
-    "enunciado": "¿Qué atajo muestra los títulos hasta el nivel 8 en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+8"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+8"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+8"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+8"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+8 muestra los títulos hasta el nivel 8 en la vista Esquema. Ctrl+Mayús+8 muestra u oculta las marcas de formato del documento. Alt+8 no tiene función asignada para mostrar títulos. Ctrl+8 no tiene función asignada relevante para el esquema."
-  },
-  {
-    "id": "vista-136",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Vistas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "vistas",
-    "subtopic": null,
-    "tema": "Vistas",
-    "sourceQuestionId": "8-310",
-    "enunciado": "¿Qué atajo muestra los títulos hasta el nivel 9 en la vista Esquema en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+9"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Mayús+9"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+9"
-      },
-      {
-        "letter": "D",
-        "text": "Ctrl+9"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+9 muestra los títulos hasta el nivel 9 en la vista Esquema. Ctrl+Mayús+9 no tiene función asignada para mostrar títulos de nivel 9. Alt+9 no tiene función asignada para mostrar títulos. Ctrl+9 no tiene función asignada relevante."
-  },
-  {
     "id": "vista-137",
     "sourceFile": "vista.json",
     "bloque": "Vista — Vistas",
@@ -5024,41 +4569,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Alt+Mayús+menos en el teclado numérico contrae un título en la vista Esquema ocultando su contenido. Alt+Mayús+más expande el título. Alt+menos no tiene función asignada para esquema. Ctrl+Mayús+menos no tiene función asignada para contraer títulos."
-  },
-  {
-    "id": "vista-139",
-    "sourceFile": "vista.json",
-    "bloque": "Vista — Ventana",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "vista",
-    "topic": "ventana",
-    "subtopic": null,
-    "tema": "Ventana",
-    "sourceQuestionId": "8-313",
-    "enunciado": "¿Qué atajo va al nivel de objeto en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Ctrl+5"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+5"
-      },
-      {
-        "letter": "C",
-        "text": "Alt+5"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+Mayús+5"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Ctrl+5 va al nivel de objeto en el documento. Ctrl+5 aplica interlineado de 1,5 líneas. Alt+5 no tiene función asignada para nivel de objeto. Alt+Ctrl+Mayús+5 no tiene función asignada para ir al nivel de objeto."
   },
   {
     "id": "vista-140",

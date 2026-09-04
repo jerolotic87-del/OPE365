@@ -137,7 +137,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+K inserta un hipervínculo según la tabla oficial de atajos en español. Ctrl+K aplica cursiva en español. Ctrl+Mayús+K también aplica cursiva. Alt+K no tiene función asignada para hipervínculos."
+    "explicacion": "Alt+Ctrl+K inserta un hipervínculo. Ctrl+K y Ctrl+Mayús+K aplican cursiva. Alt+K no tiene función para hipervínculos."
   },
   {
     "id": "insertar-5",
@@ -243,41 +243,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Alt+X alterna entre el código Unicode y el carácter. Ctrl+X corta. Ctrl+Alt+X no tiene esa función. Mayús+Alt+X no tiene función asignada para conversión Unicode."
-  },
-  {
-    "id": "insertar-8",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Símbolos",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "simbolos",
-    "subtopic": null,
-    "tema": "Símbolos",
-    "sourceQuestionId": "8-159",
-    "enunciado": "¿Qué atajo alterna entre ecuaciones en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+0"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+0"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Alt+0"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Mayús+E"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+0 alterna entre ecuaciones. Alt+0 no tiene esa función. Ctrl+Alt+0 no tiene función asignada para ecuaciones. Alt+Mayús+E no tiene función asignada para ecuaciones."
   },
   {
     "id": "insertar-9",
@@ -488,111 +453,6 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Alt+Mayús+F1 es el atajo alternativo para ir al campo anterior. Alt+F1 va al campo siguiente. Ctrl+Mayús+F1 no tiene función asignada para navegación de campos. Alt+Ctrl+F1 muestra información del sistema de Microsoft."
-  },
-  {
-    "id": "insertar-15",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Encabezado y pie de página",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "encabezado-pie",
-    "subtopic": null,
-    "tema": "Encabezado y pie de página",
-    "sourceQuestionId": "8-170",
-    "enunciado": "¿Qué atajo inserta el campo de fecha en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+F"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+F"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+F"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+F"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+F inserta el campo de fecha. Alt+F no tiene esa función asignada. Ctrl+Mayús+F activa el campo de nombre de fuente en la cinta. Alt+Ctrl+F también aparece asociado a nota al pie en algunas versiones."
-  },
-  {
-    "id": "insertar-16",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Encabezado y pie de página",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "encabezado-pie",
-    "subtopic": null,
-    "tema": "Encabezado y pie de página",
-    "sourceQuestionId": "8-171",
-    "enunciado": "¿Qué atajo inserta el campo de hora en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+H"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+H"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+H"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+H"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+H inserta el campo de hora. Alt+H no tiene esa función. Ctrl+Mayús+H aplica reducción de sangría francesa. Alt+Ctrl+H aplica resaltado al texto seleccionado."
-  },
-  {
-    "id": "insertar-17",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Encabezado y pie de página",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "encabezado-pie",
-    "subtopic": null,
-    "tema": "Encabezado y pie de página",
-    "sourceQuestionId": "8-172",
-    "enunciado": "¿Qué atajo inserta el campo de número de página en Word 365?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Alt+Mayús+P"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+P"
-      },
-      {
-        "letter": "C",
-        "text": "Ctrl+Mayús+P"
-      },
-      {
-        "letter": "D",
-        "text": "Alt+Ctrl+P"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Alt+Mayús+P inserta el campo de número de página. Alt+P no tiene esa función. Ctrl+Mayús+P activa el campo de tamaño de fuente en la cinta. Alt+Ctrl+P activa la vista Normal de Word."
   },
   {
     "id": "insertar-18",

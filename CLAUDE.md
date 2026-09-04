@@ -58,10 +58,10 @@ views.js               toda la interfaz (router simple basado en funciones).
                        inventados); flashcards = 3 grados → LEB.recordFlashcard.
                        Toda llamada a LEB va guardada con `if(O.LEB)`.
 peerjs.min.js          librería de terceros, no tocar
-atajos_oficial.json    tabla extraída de ATAJOS.docx (respaldo histórico)
 data/atajos_word365_v2608.md  VOLCADO COMPLETO de "Personalizar teclado" de la
-                       instalación real del usuario (Word 365 v2608). Referencia
-                       principal de atajos — ver "jerarquía de fuentes".
+                       instalación real del usuario (Word 365 v2608). ÚNICA
+                       fuente de atajos — ver "jerarquía de fuentes". Nada en el
+                       banco puede contradecirlo.
 
 --- artefactos generados (NO editar a mano, ver "Regenerar datos") ---
 questions_all.json     banco de preguntas concatenado — fuente de verdad
@@ -119,27 +119,31 @@ carpeta — genera `OPE365_Word365_Estudio.html`.
 
 ## Regla de oro: jerarquía de fuentes
 
-Cuando una pregunta o un atajo esté en duda, este es el orden de autoridad,
-de mayor a menor:
+Para **atajos de teclado** hay una única fuente y NADA puede contradecirla:
 
-1. **Prueba en vivo del usuario en su propio Word 365** — si dice "lo he
-   probado y hace X", eso manda por encima de cualquier documento.
-2. **`data/atajos_word365_v2608.md`** — volcado COMPLETO del cuadro
-   "Personalizar teclado" de la instalación real del usuario (Word para
-   Microsoft 365 MSO v2608, compilación 16.0.20326.20072, 64 bits),
-   capturado pantalla a pantalla por el usuario (sep-2026). Es la
-   referencia principal, sustituye a `atajos_oficial.json`/`ATAJOS.docx`.
-   Ojo: contiene **conflictos internos reales** (una misma combinación
-   listada bajo dos comandos: `Alt+Ctrl+V` = DocDividir *y* PegarFormato;
-   `Ctrl+0` = Zoom100 *y* AbrirCerrarPárrafo; `Ctrl+W` = DocCerrar *y*
-   DefinirPárrafo; `Ctrl+Mayús+L` = Versalitas *y* ListaConViñetas) y
-   **entradas fósiles que no funcionan** (`Ctrl+=` subíndice) — cuando eso
-   pase, gana la prueba en vivo y se anota.
-3. **`atajos_oficial.json`** / **`ATAJOS.docx`** — volcado anterior, más
-   corto. Ya solo como respaldo histórico.
-4. **PDFs de la academia** (Beatriz R., Adams, MAD…) — están en el Project
-   Knowledge de claude.ai, no en esta carpeta local. Si necesitas su
-   contenido, pide al usuario que los suba o pégalos.
+**`data/atajos_word365_v2608.md`** — volcado COMPLETO del cuadro
+"Personalizar teclado" de la instalación real del usuario (Word para
+Microsoft 365 MSO v2608, compilación 16.0.20326.20072, 64 bits), sacado
+pantalla a pantalla por el usuario, tecla a tecla (sep-2026). **Es LA
+verdad.** Si el banco dice algo que ese archivo no dice, el banco está
+mal: se corrige o se borra la pregunta. Un atajo que no aparezca en ese
+archivo NO existe en este Word — no se pregunta por él.
+
+Dos matices, y solo dos:
+- **Conflictos internos del propio volcado** (misma combinación bajo dos
+  comandos): `Alt+Ctrl+V` = DocDividir *y* PegarFormato → en vivo **pega
+  formato**; `Ctrl+0` = Zoom100 *y* AbrirCerrarPárrafo → **zoom 100 %**;
+  `Ctrl+W` = DocCerrar *y* DefinirPárrafo → **quita formato de párrafo**;
+  `Ctrl+Mayús+L` = Versalitas *y* ListaConViñetas (sin dirimir).
+- **Extras confirmados EN VIVO por el usuario que no salen en el volcado**
+  (lista cerrada, no ampliar sin prueba): `Alt+Ctrl+H` = resaltar ·
+  `Alt+Mayús+F7` = Traductor · `Ctrl+B` = panel Navegación · `Alt+Q` =
+  Buscar de la barra de título · `Ctrl+Tab` = tabulación en celda ·
+  `Windows+F7` = panel Editor · `Ctrl+5` numérico = seleccionar todo.
+
+Para lo que NO es un atajo (rutas de menú, conceptos): PDFs de la academia
+(Beatriz R., Adams, MAD…) en el Project Knowledge de claude.ai — pídeselos
+al usuario si los necesitas.
 
 **`support.microsoft.com` (y su versión ES): 0% fiable — NO usar.** El
 usuario lo ha descartado explícitamente: traducción automática, mezcla
