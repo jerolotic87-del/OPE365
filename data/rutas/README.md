@@ -11,6 +11,7 @@ instalación real de Word 365 (v2608, compilación 16.0.20326.20072).
 | `<pestaña>.txt`             | Volcado completo de rutas de esa pestaña (`Pestaña > Grupo > …`) |
 | `<pestaña>-4opciones.txt`   | Variante del volcado en formato "1 correcta + 3 distractores"    |
 | `<pestaña>_integration_report.md` | Informe de qué se integró como preguntas y qué se descartó |
+| `_dialogos_compartidos.md`   | Cruce: qué rutas abren el mismo cuadro, en qué ficha, desde qué pestañas |
 
 Pestañas: `interfaz`, `archivo`, `inicio`, `insertar`, `diseno`,
 `disposicion`, `referencias`, `revisar`, `vista`, `correspondencia`.

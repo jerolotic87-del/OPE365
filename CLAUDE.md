@@ -66,7 +66,14 @@ data/rutas/            UN .txt POR PESTAÑA con el volcado de rutas de cinta
                        del usuario (`<pestaña>.txt`, `<pestaña>-4opciones.txt`,
                        `<pestaña>_integration_report.md`). Fuente de los bancos
                        de RUTA/concepto. NO se editan a mano. Ver
-                       `data/rutas/README.md`.
+                       `data/rutas/README.md`. `_dialogos_compartidos.md` =
+                       cruce verificado (qué rutas abren el mismo cuadro y en
+                       qué ficha) hecho contra las capturas.
+data/imagenes_rutas/<pestaña>/  capturas de pantalla del usuario (cada menú,
+                       desplegable y cuadro que abrió para transcribir las
+                       rutas). FUENTE DE VERIFICACIÓN — cruzar cualquier duda
+                       de una ruta/cuadro de Disposición, Diseño o Insertar
+                       contra estas imágenes antes que contra nada externo.
 
 --- artefactos generados (NO editar a mano, ver "Regenerar datos") ---
 questions_all.json     banco de preguntas concatenado — fuente de verdad
