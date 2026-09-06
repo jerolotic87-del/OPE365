@@ -112,14 +112,19 @@ Inicio > Fuente > (iniciador del cuadro de diálogo) > cuadro FUENTE
 
 === GRUPO: PÁRRAFO ===
 
-Inicio > Párrafo > Viñetas > (flecha) > (desplegable):
-    Viñetas usadas recientemente
-    Biblioteca de viñetas: Ninguna · ● · ○ · ■ · ✦ · ❖ · ➤ · ✔
-    Viñetas de documento
-    Cambiar nivel de lista >
+Inicio > Párrafo > Viñetas > (flecha) > (desplegable, verificado en vivo sep-2026):
+    Viñetas usadas recientemente   (dinámico)
+    Biblioteca de viñetas: Ninguna + 7 → ● · ○ · ■ · ✦ · ❖ · ➤ · ✔
+    Viñetas de documento           (dinámico; las usadas en el documento actual)
+    Cambiar nivel de lista >       (9 niveles: 1./a./i. repetido tres veces)
     Definir nueva viñeta...
         (cuadro "Definir nueva viñeta": botones [Símbolo...] [Imagen...] [Fuente...],
-         Alineación: Izquierda, Vista previa)
+         «Alineación»: Izquierda / Centrada / Derecha, Vista previa)
+        · [Símbolo...] abre el cuadro «Símbolo» (mapa de caracteres; Fuente:
+          Symbol por defecto; «Símbolos utilizados recientemente»; Código de
+          carácter; «de: Símbolo (decimal)») — el mismo tipo de cuadro que
+          Insertar ▸ Símbolos ▸ Más símbolos
+        · [Fuente...] abre el cuadro «Fuente» (para dar formato a la viñeta)
 Inicio > Párrafo > Numeración > (flecha) > (desplegable, verificado en vivo sep-2026):
     Formatos de número usados recientemente  (dinámico)
     Biblioteca de numeración: Ninguna + 7 formatos → 1.2.3. · 1)2)3) · I.II.III. ·
