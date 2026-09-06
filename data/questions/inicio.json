@@ -1329,6 +1329,78 @@
     "explicacion": "Mayús+F2 es «Copiar a»: copia el texto a otro punto SIN borrarlo del origen y sin tocar el portapapeles normal."
   },
   {
+    "id": "inicio-472",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Pegado especial",
+    "tema": "Portapapeles",
+    "sourceQuestionId": "rutas-inicio-02",
+    "generado": true,
+    "enunciado": "En el cuadro Pegado especial, ¿qué opción inserta el contenido manteniendo un vínculo con el archivo de origen para que se actualice al cambiar este?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Pegar vínculo"
+      },
+      {
+        "letter": "B",
+        "text": "Pegar"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar como icono"
+      },
+      {
+        "letter": "D",
+        "text": "Mantener formato de origen"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El cuadro Pegado especial tiene dos botones de radio: «Pegar» (inserta una copia estática) y «Pegar vínculo» (inserta un vínculo que se actualiza con el origen)."
+  },
+  {
+    "id": "inicio-474",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Opciones de pegado",
+    "tema": "Portapapeles",
+    "sourceQuestionId": "rutas-inicio-04",
+    "generado": true,
+    "enunciado": "La opción «Establecer Pegar predeterminado…» del menú desplegable del botón Pegar, ¿qué abre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Archivo ▸ Opciones ▸ Avanzadas, sección «Cortar, copiar y pegar»"
+      },
+      {
+        "letter": "B",
+        "text": "El cuadro Pegado especial"
+      },
+      {
+        "letter": "C",
+        "text": "El panel Portapapeles"
+      },
+      {
+        "letter": "D",
+        "text": "El cuadro Opciones de autocorrección"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Lleva directamente a la sección «Cortar, copiar y pegar» de Opciones avanzadas de Word, donde se fija el comportamiento por defecto al pegar dentro del mismo documento, entre documentos, desde otros programas, etc."
+  },
+  {
     "id": "inicio-5",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Portapapeles",
@@ -1479,6 +1551,63 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: en ese estado el botón pasa a funcionar como Repetir la última acción, la misma función que la tecla F4."
+  },
+  {
+    "id": "inicio-471",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Pegado especial",
+    "tema": "Portapapeles",
+    "sourceQuestionId": "rutas-inicio-01",
+    "generado": true,
+    "enunciado": "En el cuadro Pegado especial, la lista «Como:» ofrece formatos como «Mapa de bits» y «Mapa de bits independiente del dispositivo».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "La lista «Como:» del cuadro Pegado especial muestra los formatos disponibles según el contenido del Portapapeles (Mapa de bits, Mapa de bits independiente del dispositivo, Texto sin formato, HTML, Objeto…)."
+  },
+  {
+    "id": "inicio-473",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Pegado especial",
+    "tema": "Portapapeles",
+    "sourceQuestionId": "rutas-inicio-03",
+    "generado": true,
+    "enunciado": "El cuadro Pegado especial incluye una casilla «Mostrar como icono».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Al marcarla, en vez del contenido se inserta un icono del objeto; se abre con doble clic."
+  },
+  {
+    "id": "inicio-475",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Opciones de pegado",
+    "tema": "Portapapeles",
+    "sourceQuestionId": "rutas-inicio-05",
+    "generado": true,
+    "enunciado": "El menú desplegable del botón Pegar muestra los iconos de «Opciones de pegado» y, debajo, los enlaces «Pegado especial…» y «Establecer Pegar predeterminado…».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Esa es exactamente la estructura del desplegable de Pegar en Word 365."
   },
   {
     "id": "inicio-3",
@@ -5292,6 +5421,150 @@
     "explicacion": "Ctrl+= es el esquema internacional; en esta instalación no hace nada (prueba en vivo). El subíndice real es Ctrl+Mayús+-."
   },
   {
+    "id": "inicio-481",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-11",
+    "generado": true,
+    "enunciado": "Además de la ficha «Fuente», ¿qué otra ficha tiene el cuadro de diálogo Fuente?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Avanzado"
+      },
+      {
+        "letter": "B",
+        "text": "Espaciado"
+      },
+      {
+        "letter": "C",
+        "text": "Efectos"
+      },
+      {
+        "letter": "D",
+        "text": "Escala"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "La segunda ficha es «Avanzado»: ahí se ajusta la escala horizontal, el espaciado entre caracteres, la posición (subir/bajar), el interletraje y las características OpenType."
+  },
+  {
+    "id": "inicio-482",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Mayúsculas y minúsculas",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-12",
+    "generado": true,
+    "enunciado": "El desplegable «Cambiar mayúsculas y minúsculas» (Aa) del grupo Fuente ofrece varias opciones. Señale la que NO aparece:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tipo oración."
+      },
+      {
+        "letter": "B",
+        "text": "minúscula"
+      },
+      {
+        "letter": "C",
+        "text": "MAYÚSCULAS"
+      },
+      {
+        "letter": "D",
+        "text": "Solo iniciales de cada frase"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Las cinco opciones reales son: «Tipo oración.», «minúscula», «MAYÚSCULAS», «Poner En Mayúsculas Cada Palabra» y «Alternar mayúsculas y minúsculas». «Solo iniciales de cada frase» no existe."
+  },
+  {
+    "id": "inicio-484",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-14",
+    "generado": true,
+    "enunciado": "En el menú Color de fuente ▸ «Degradado», la opción «Más degradados…» abre:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El panel «Formato de texto», con el relleno de texto en modo degradado"
+      },
+      {
+        "letter": "B",
+        "text": "El cuadro Fuente en la ficha Avanzado"
+      },
+      {
+        "letter": "C",
+        "text": "El cuadro Efectos de texto de la cinta Diseño"
+      },
+      {
+        "letter": "D",
+        "text": "El selector «Más colores»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Más degradados…» abre el panel lateral «Formato de texto» con «Relleno de texto: Relleno con degradado» y sus paradas de degradado, dirección y ángulo."
+  },
+  {
+    "id": "inicio-488",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-18",
+    "generado": true,
+    "enunciado": "¿Qué botón del cuadro de diálogo Fuente hace que la fuente elegida pase a ser la de todos los documentos nuevos basados en la plantilla actual?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Establecer como predeterminado"
+      },
+      {
+        "letter": "B",
+        "text": "Efectos de texto:"
+      },
+      {
+        "letter": "C",
+        "text": "Aceptar"
+      },
+      {
+        "letter": "D",
+        "text": "Avanzado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Establecer como predeterminado» pregunta si el cambio afecta solo a este documento o a todos los basados en la plantilla Normal.dotm."
+  },
+  {
     "id": "inicio-29",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -5428,6 +5701,124 @@
     "explicacion": "Todas las afirmaciones son correctas. Versalitas solo cambia la apariencia de las minúsculas. MAYÚSCULAS del cuadro Fuente es solo visual y no modifica los caracteres reales. La opción MAYÚSCULAS del menú Cambiar mayúsculas sí edita los caracteres. Ambos efectos del cuadro Fuente son visuales. Al copiar texto con MAYÚSCULAS (efecto visual) a otro lugar sin formato, aparecerá tal como fue escrito originalmente."
   },
   {
+    "id": "inicio-476",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-06",
+    "generado": true,
+    "enunciado": "El desplegable «Efectos de texto y tipografía» (la A azul del grupo Fuente) tiene, además de la galería rápida de estilos, varios submenús. ¿Cuáles son submenús reales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Contorno"
+      },
+      {
+        "letter": "B",
+        "text": "Sombra"
+      },
+      {
+        "letter": "C",
+        "text": "Reflejo"
+      },
+      {
+        "letter": "D",
+        "text": "Iluminado"
+      },
+      {
+        "letter": "E",
+        "text": "Conjuntos de estilos"
+      },
+      {
+        "letter": "F",
+        "text": "Bisel 3D"
+      },
+      {
+        "letter": "G",
+        "text": "Rotación"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explicacion": "Los submenús reales son Contorno, Sombra, Reflejo, Iluminado, Estilos de número, Ligaduras y Conjuntos de estilos. «Bisel 3D» y «Rotación» pertenecen al formato de forma/WordArt como objeto, no a este menú."
+  },
+  {
+    "id": "inicio-480",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-10",
+    "generado": true,
+    "enunciado": "En el bloque «Efectos» del cuadro de diálogo Fuente (Word 365), ¿qué casillas aparecen?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tachado"
+      },
+      {
+        "letter": "B",
+        "text": "Doble tachado"
+      },
+      {
+        "letter": "C",
+        "text": "Superíndice"
+      },
+      {
+        "letter": "D",
+        "text": "Subíndice"
+      },
+      {
+        "letter": "E",
+        "text": "Versalitas"
+      },
+      {
+        "letter": "F",
+        "text": "Mayúsculas"
+      },
+      {
+        "letter": "G",
+        "text": "Oculto"
+      },
+      {
+        "letter": "H",
+        "text": "Contorno"
+      },
+      {
+        "letter": "I",
+        "text": "Relieve"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "explicacion": "Las siete casillas son Tachado, Doble tachado, Superíndice, Subíndice, Versalitas, Mayúsculas y Oculto. «Contorno» y «Relieve» existían en versiones antiguas pero ya NO están en este cuadro (los efectos de contorno/sombra están ahora en el botón «Efectos de texto:»)."
+  },
+  {
     "id": "inicio-15",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -5521,6 +5912,120 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: Color de fuente y Color de subrayado son campos independientes; el subrayado puede tener un color distinto al del texto."
+  },
+  {
+    "id": "inicio-477",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-07",
+    "generado": true,
+    "enunciado": "El submenú «Efectos de texto y tipografía» incluye «Conjuntos de estilos», que aplica un conjunto estilístico (características OpenType) de la fuente al texto seleccionado.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El submenú muestra un ejemplo «Predeterminado» y varias variantes «Individual» con la frase «El veloz murciélago hindú…»."
+  },
+  {
+    "id": "inicio-478",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-08",
+    "generado": true,
+    "enunciado": "El submenú «Contorno» de Efectos de texto ofrece, además de la paleta de color, las opciones «Grosor» y «Guiones» para el trazo del contorno.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "«Grosor» abre una lista de anchos de línea (+ «Más líneas…») y «Guiones» una lista de patrones de trazo discontinuo (+ «Más líneas…»)."
+  },
+  {
+    "id": "inicio-479",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-09",
+    "generado": true,
+    "enunciado": "El cuadro de diálogo Fuente tiene un botón «Efectos de texto:» en su parte inferior.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Junto a «Establecer como predeterminado», el cuadro Fuente tiene el botón «Efectos de texto:», que abre el panel de efectos (relleno, contorno, sombra, reflejo, iluminado…)."
+  },
+  {
+    "id": "inicio-485",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Resaltar",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-15",
+    "generado": true,
+    "enunciado": "El menú del botón «Color de resaltado del texto» incluye «Sin color» y «Detener resaltado».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "«Sin color» quita el resaltado de la selección; «Detener resaltado» desactiva el modo rotulador (el puntero deja de resaltar al arrastrar)."
+  },
+  {
+    "id": "inicio-486",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "verdadero_falso",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Subíndice y superíndice",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-16",
+    "generado": true,
+    "enunciado": "La información en pantalla del botón Subíndice muestra «Ctrl+=», pero en esta instalación de Word esa combinación no aplica subíndice.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "⚠️ Ojo: el tooltip de la cinta muestra «Subíndice (Ctrl+=)» porque trae el esquema internacional, pero en esta instalación Ctrl+= no hace nada; el subíndice real se aplica con Ctrl+Mayús+- (prueba en vivo del usuario). Superíndice, en cambio, no muestra atajo en su tooltip y tampoco tiene ninguno aquí."
+  },
+  {
+    "id": "inicio-487",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-17",
+    "generado": true,
+    "enunciado": "«Más subrayados…», al final del desplegable del botón Subrayado, abre el cuadro Fuente con el foco en el desplegable «Estilo de subrayado».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Desde ahí se eligen estilos de línea que no están en el desplegable rápido (solo palabras, ondulado doble, etc.) y el «Color de subrayado»."
   },
   {
     "id": "inicio-13",
@@ -5847,6 +6352,77 @@
     "explicacion": "Ctrl+N: negrita. Ctrl+K: cursiva. Ctrl+S: subrayado sencillo. Ctrl+Mayús+D: subrayado doble. Ctrl+Mayús+L: versalitas. El distractor F (subrayado solo palabras) corresponde a Ctrl+Mayús+P, no a ninguno de los atajos de la lista."
   },
   {
+    "id": "inicio-544",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-74",
+    "generado": true,
+    "enunciado": "Relaciona cada opción «Más…» de un desplegable del grupo Fuente/Párrafo con el cuadro o panel que abre:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Subrayado ▸ Más subrayados…"
+        },
+        {
+          "id": "2",
+          "label": "Espaciado ▸ Opciones de interlineado…"
+        },
+        {
+          "id": "3",
+          "label": "Bordes ▸ Bordes y sombreado…"
+        },
+        {
+          "id": "4",
+          "label": "Color de fuente ▸ Degradado ▸ Más degradados…"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Cuadro Fuente, foco en «Estilo de subrayado»"
+        },
+        {
+          "id": "B",
+          "label": "Cuadro Párrafo, ficha «Sangría y espacio»"
+        },
+        {
+          "id": "C",
+          "label": "Cuadro «Bordes y sombreado»"
+        },
+        {
+          "id": "D",
+          "label": "Panel «Formato de texto» (relleno con degradado)"
+        },
+        {
+          "id": "E",
+          "label": "Cuadro «Tabulaciones»"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "explicacion": "Cada «Más…» lleva a un cuadro distinto; ninguno abre el cuadro Tabulaciones (ese está en el desplegable de interlineado y en el cuadro Párrafo)."
+  },
+  {
     "id": "inicio-465",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -5873,6 +6449,33 @@
       ]
     ],
     "explicacion": "Alt+Ctrl+H resalta (prueba en vivo); Ctrl+Mayús+8 muestra/oculta las marcas de formato (¶)."
+  },
+  {
+    "id": "inicio-483",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Mayúsculas y minúsculas",
+    "tema": "Fuente",
+    "sourceQuestionId": "rutas-inicio-13",
+    "generado": true,
+    "enunciado": "El desplegable «Cambiar mayúsculas y minúsculas» ofrece: «Tipo oración.», «minúscula», «MAYÚSCULAS», [1] y [2].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "Poner En Mayúsculas Cada Palabra",
+        "Poner en mayúsculas cada palabra"
+      ],
+      [
+        "Alternar mayúsculas y minúsculas"
+      ]
+    ],
+    "explicacion": "Son las cinco opciones exactas del menú Aa del grupo Fuente."
   },
   {
     "id": "inicio-36",
@@ -6613,6 +7216,116 @@
     "explicacion": "Ctrl+R no hace absolutamente nada en esta instalación. Alinear a la derecha es Ctrl+D."
   },
   {
+    "id": "inicio-499",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "tema": "Alineación",
+    "sourceQuestionId": "rutas-inicio-29",
+    "generado": true,
+    "enunciado": "¿Cuáles son las dos fichas del cuadro de diálogo Párrafo?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Sangría y espacio» y «Líneas y saltos de página»"
+      },
+      {
+        "letter": "B",
+        "text": "«Sangría» y «Espaciado»"
+      },
+      {
+        "letter": "C",
+        "text": "«Párrafo» y «Avanzado»"
+      },
+      {
+        "letter": "D",
+        "text": "«General» y «Tabulaciones»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "La primera reúne alineación, sangría y espaciado; la segunda, el control de líneas viudas/huérfanas, «Conservar con el siguiente», saltos, etc."
+  },
+  {
+    "id": "inicio-501",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "tema": "Alineación",
+    "sourceQuestionId": "rutas-inicio-31",
+    "generado": true,
+    "enunciado": "En el cuadro Párrafo, el desplegable «Alineación» del bloque General ofrece:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Izquierda, Centrada, Derecha, Justificada"
+      },
+      {
+        "letter": "B",
+        "text": "Izquierda, Centrada, Derecha, Distribuida, Justificada"
+      },
+      {
+        "letter": "C",
+        "text": "Superior, Centrada, Inferior"
+      },
+      {
+        "letter": "D",
+        "text": "Izquierda y Derecha únicamente"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Son las cuatro alineaciones horizontales de párrafo; se corresponden con Ctrl+Q, Ctrl+T, Ctrl+D y Ctrl+J en esta instalación."
+  },
+  {
+    "id": "inicio-497",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "tema": "Alineación",
+    "sourceQuestionId": "rutas-inicio-27",
+    "generado": true,
+    "enunciado": "El campo «Nivel de esquema» del cuadro Párrafo admite «Texto independiente» y de «Nivel 1» a «Nivel 9».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Asignar un nivel 1-9 a un párrafo lo hace aparecer en el panel de Navegación y en la Tabla de contenido aunque no tenga estilo de título."
+  },
+  {
+    "id": "inicio-498",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "tema": "Alineación",
+    "sourceQuestionId": "rutas-inicio-28",
+    "generado": true,
+    "enunciado": "La casilla «Contraído de forma predeterminada» del cuadro Párrafo solo se habilita si el «Nivel de esquema» es de Nivel 1 a Nivel 9.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Con «Texto independiente» esa casilla está atenuada: solo tiene sentido contraer/expandir encabezados con nivel de esquema."
+  },
+  {
     "id": "inicio-42",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Alineación",
@@ -7330,6 +8043,61 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Prueba en vivo: Ctrl+Mayús+R no quita la sangría en esta instalación; para eso se usa Ctrl+W."
+  },
+  {
+    "id": "inicio-495",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Sangría",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-sangria",
+    "subtopic": null,
+    "tema": "Sangría",
+    "sourceQuestionId": "rutas-inicio-25",
+    "generado": true,
+    "enunciado": "El campo «Especial» del bloque Sangría del cuadro Párrafo tiene tres valores. Señale el que NO es uno de ellos:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "(ninguna)"
+      },
+      {
+        "letter": "B",
+        "text": "Primera línea"
+      },
+      {
+        "letter": "C",
+        "text": "Sangría francesa"
+      },
+      {
+        "letter": "D",
+        "text": "Sangría simétrica"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Los tres valores de «Especial» son «(ninguna)», «Primera línea» y «Sangría francesa». «Sangrías simétricas» existe, pero es una casilla independiente, no un valor de este desplegable."
+  },
+  {
+    "id": "inicio-496",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Sangría",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-sangria",
+    "subtopic": null,
+    "tema": "Sangría",
+    "sourceQuestionId": "rutas-inicio-26",
+    "generado": true,
+    "enunciado": "Al marcar «Sangrías simétricas» en el cuadro Párrafo, las etiquetas «Izquierda» y «Derecha» pasan a ser «Interior» y «Exterior».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es para documentos que se imprimen a doble cara: la sangría «interior» queda del lado de la encuadernación."
   },
   {
     "id": "inicio-252",
@@ -8227,6 +8995,169 @@
     "explicacion": "«Exacto» fija un valor de espacio constante sin importar el tamaño de fuente; el que se ajusta solo es «Mínimo»."
   },
   {
+    "id": "inicio-490",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "rutas-inicio-20",
+    "generado": true,
+    "enunciado": "¿Qué valor de Interlineado fija una altura de línea en puntos que NO crece aunque la fuente sea más grande (y puede recortar el texto)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Exacto"
+      },
+      {
+        "letter": "B",
+        "text": "Mínimo"
+      },
+      {
+        "letter": "C",
+        "text": "Múltiple"
+      },
+      {
+        "letter": "D",
+        "text": "Doble"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Exacto» impone una altura fija. «Mínimo» también se indica en puntos pero se agranda si el contenido de la línea lo necesita."
+  },
+  {
+    "id": "inicio-491",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "rutas-inicio-21",
+    "generado": true,
+    "enunciado": "El botón desplegable «Espaciado entre líneas y párrafos» de la cinta ofrece, además de los valores 1,0 a 3,0 y «Opciones de interlineado…»:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Agregar espacio antes del párrafo» y «Quitar espacio después del párrafo»"
+      },
+      {
+        "letter": "B",
+        "text": "«Sangría francesa» y «Primera línea»"
+      },
+      {
+        "letter": "C",
+        "text": "«Bordes y sombreado…»"
+      },
+      {
+        "letter": "D",
+        "text": "«Definir nuevo interlineado…»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Según el estado del párrafo, la última línea del menú alterna entre agregar/quitar el espacio anterior y posterior del párrafo."
+  },
+  {
+    "id": "inicio-494",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "rutas-inicio-24",
+    "generado": true,
+    "enunciado": "En el cuadro Párrafo, la casilla «No agregar espacio entre párrafos del mismo estilo» pertenece al bloque:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Espaciado"
+      },
+      {
+        "letter": "B",
+        "text": "Sangría"
+      },
+      {
+        "letter": "C",
+        "text": "General"
+      },
+      {
+        "letter": "D",
+        "text": "Líneas y saltos de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Está junto a los campos Anterior / Posterior / Interlineado del bloque «Espaciado»."
+  },
+  {
+    "id": "inicio-489",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "rutas-inicio-19",
+    "generado": true,
+    "enunciado": "En el cuadro Párrafo, el desplegable «Interlineado» ofrece:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Sencillo"
+      },
+      {
+        "letter": "B",
+        "text": "1,5 líneas"
+      },
+      {
+        "letter": "C",
+        "text": "Doble"
+      },
+      {
+        "letter": "D",
+        "text": "Mínimo"
+      },
+      {
+        "letter": "E",
+        "text": "Exacto"
+      },
+      {
+        "letter": "F",
+        "text": "Múltiple"
+      },
+      {
+        "letter": "G",
+        "text": "Ajustado"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "explicacion": "Los seis valores son Sencillo, 1,5 líneas, Doble, Mínimo, Exacto y Múltiple. «Ajustado» no existe."
+  },
+  {
     "id": "inicio-49",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Espaciado e interlineado",
@@ -8263,6 +9194,25 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: «Múltiple» acepta cualquier valor que se escriba en el campo «En» (1,08, 1,16, 2,5…), no solo 1,5."
+  },
+  {
+    "id": "inicio-492",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "rutas-inicio-22",
+    "generado": true,
+    "enunciado": "«Opciones de interlineado…», dentro del desplegable de interlineado de la cinta, abre el cuadro Párrafo en la ficha «Sangría y espacio».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es la misma ficha que abre el iniciador del grupo Párrafo."
   },
   {
     "id": "inicio-254",
@@ -8328,6 +9278,38 @@
       "3": "C"
     },
     "explicacion": "Ctrl+1 = interlineado sencillo, Ctrl+2 = doble, Ctrl+5 (fila superior) = 1,5 líneas. ⚠️ Ojo: Ctrl+5 del teclado numérico selecciona todo; y en el cuadro Personalizar teclado Ctrl+1 figura bajo «Aplicar Título 1», aunque en la práctica hace interlineado. Prueba en vivo del usuario (sep 2026)."
+  },
+  {
+    "id": "inicio-493",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "relleno",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "rutas-inicio-23",
+    "generado": true,
+    "enunciado": "El desplegable de interlineado de la cinta ofrece los valores [1], 1,15, [2], 2,0, 2,5 y [3].",
+    "opciones": [],
+    "matching": null,
+    "respuesta": [
+      [
+        "1,0",
+        "1.0"
+      ],
+      [
+        "1,5",
+        "1.5"
+      ],
+      [
+        "3,0",
+        "3.0"
+      ]
+    ],
+    "explicacion": "Son los seis valores rápidos del botón «Espaciado entre líneas y párrafos»."
   },
   {
     "id": "inicio-51",
@@ -8836,6 +9818,186 @@
     "explicacion": "El cuadro «Bordes y sombreado» deja elegir el ancho de línea entre varios valores; no está fijado a uno solo."
   },
   {
+    "id": "inicio-502",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "rutas-inicio-32",
+    "generado": true,
+    "enunciado": "En el desplegable del botón «Bordes» del grupo Párrafo, ¿cuál de estas opciones NO aparece?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Línea horizontal"
+      },
+      {
+        "letter": "B",
+        "text": "Dibujar tabla"
+      },
+      {
+        "letter": "C",
+        "text": "Ver cuadrículas"
+      },
+      {
+        "letter": "D",
+        "text": "Autoajustar bordes"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El desplegable de Bordes termina con «Línea horizontal», «Dibujar tabla», «Ver cuadrículas» y «Bordes y sombreado…». «Autoajustar bordes» no existe."
+  },
+  {
+    "id": "inicio-504",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "rutas-inicio-34",
+    "generado": true,
+    "enunciado": "El cuadro «Bordes y sombreado» tiene tres fichas: «Bordes», «Sombreado» y…",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Borde de página"
+      },
+      {
+        "letter": "B",
+        "text": "Marca de agua"
+      },
+      {
+        "letter": "C",
+        "text": "Tramas"
+      },
+      {
+        "letter": "D",
+        "text": "Bordes internos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "La ficha «Borde de página» aplica un marco a toda la página y añade el campo «Arte» con bordes decorativos."
+  },
+  {
+    "id": "inicio-505",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "rutas-inicio-35",
+    "generado": true,
+    "enunciado": "El campo «Arte» (marcos decorativos con dibujos: árboles, corazones, lápices…) del cuadro «Bordes y sombreado» aparece solo en la ficha:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Borde de página"
+      },
+      {
+        "letter": "B",
+        "text": "Bordes"
+      },
+      {
+        "letter": "C",
+        "text": "Sombreado"
+      },
+      {
+        "letter": "D",
+        "text": "Opciones"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Arte» solo tiene sentido para el borde de toda la página; no existe para el borde de un párrafo."
+  },
+  {
+    "id": "inicio-507",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "rutas-inicio-37",
+    "generado": true,
+    "enunciado": "En la ficha «Bordes» de «Bordes y sombreado», el desplegable «Aplicar a» permite elegir entre:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Párrafo y Texto"
+      },
+      {
+        "letter": "B",
+        "text": "Página y Sección"
+      },
+      {
+        "letter": "C",
+        "text": "Documento y Plantilla"
+      },
+      {
+        "letter": "D",
+        "text": "Tabla y Celda"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El borde puede rodear todo el párrafo o solo el texto seleccionado dentro de él."
+  },
+  {
+    "id": "inicio-509",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "rutas-inicio-39",
+    "generado": true,
+    "enunciado": "Además del bloque «Relleno», ¿qué otro bloque tiene la ficha «Sombreado» del cuadro «Bordes y sombreado»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tramas (Estilo y Color)"
+      },
+      {
+        "letter": "B",
+        "text": "Arte"
+      },
+      {
+        "letter": "C",
+        "text": "Valor"
+      },
+      {
+        "letter": "D",
+        "text": "Ancho"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Tramas» aplica un patrón (Claro, 5%, 10%, rayas, cuadrículas…) con su propio color sobre el relleno."
+  },
+  {
     "id": "inicio-52",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Bordes y sombreado",
@@ -8936,6 +10098,60 @@
     "explicacion": "Los anchos de borde disponibles en el cuadro Bordes y sombreado son exactamente: 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 puntos. Todas las opciones de esta pregunta corresponden a anchos reales disponibles. Los valores 3/4 y 1 pto no aparecen en las opciones pero también existen."
   },
   {
+    "id": "inicio-506",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "rutas-inicio-36",
+    "generado": true,
+    "enunciado": "En la ficha «Bordes» del cuadro «Bordes y sombreado», el panel «Valor» ofrece:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ninguno"
+      },
+      {
+        "letter": "B",
+        "text": "Cuadro"
+      },
+      {
+        "letter": "C",
+        "text": "Sombra"
+      },
+      {
+        "letter": "D",
+        "text": "3D"
+      },
+      {
+        "letter": "E",
+        "text": "Personalizado"
+      },
+      {
+        "letter": "F",
+        "text": "Doble"
+      },
+      {
+        "letter": "G",
+        "text": "Relieve"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explicacion": "Los cinco presets de «Valor» son Ninguno, Cuadro, Sombra, 3D y Personalizado. «Doble» es un estilo de línea, no un valor; «Relieve» no existe aquí."
+  },
+  {
     "id": "inicio-57",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Bordes y sombreado",
@@ -8991,6 +10207,124 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: el desplegable de Bordes permite elegir borde superior, inferior, izquierdo o derecho por separado, además de «Bordes y sombreado…» para más opciones."
+  },
+  {
+    "id": "inicio-503",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "rutas-inicio-33",
+    "generado": true,
+    "enunciado": "El desplegable del botón «Bordes» (grupo Párrafo) incluye «Dibujar tabla» y «Ver cuadrículas».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Además de los bordes de párrafo, ese menú da acceso rápido a dibujar una tabla y a mostrar las líneas de cuadrícula no imprimibles."
+  },
+  {
+    "id": "inicio-508",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "rutas-inicio-38",
+    "generado": true,
+    "enunciado": "En la ficha «Borde de página» de «Bordes y sombreado», el desplegable «Aplicar a» incluye la opción «Esta sección: solo la primera página».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "También «Todo el documento», «Esta sección» y «Esta sección: todas menos la primera página»."
+  },
+  {
+    "id": "inicio-510",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "rutas-inicio-40",
+    "generado": true,
+    "enunciado": "El botón «Opciones…» de la ficha «Bordes» de «Bordes y sombreado» fija la distancia (margen) entre el borde y el texto.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Permite ajustar por separado el margen superior, inferior, izquierdo y derecho entre la línea del borde y el contenido del párrafo."
+  },
+  {
+    "id": "inicio-545",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "emparejamiento",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "rutas-inicio-75",
+    "generado": true,
+    "enunciado": "Relaciona cada ficha del cuadro «Bordes y sombreado» con lo que contiene:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Bordes"
+        },
+        {
+          "id": "2",
+          "label": "Borde de página"
+        },
+        {
+          "id": "3",
+          "label": "Sombreado"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Valor/Estilo/Color/Ancho + «Aplicar a: Párrafo o Texto»"
+        },
+        {
+          "id": "B",
+          "label": "Igual que Bordes + campo «Arte» + «Aplicar a: Todo el documento/Sección»"
+        },
+        {
+          "id": "C",
+          "label": "«Relleno» + «Tramas» (Estilo y Color)"
+        },
+        {
+          "id": "D",
+          "label": "«Origen del papel» para la primera página"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explicacion": "«Arte» solo está en «Borde de página»; las tramas solo en «Sombreado»."
   },
   {
     "id": "inicio-58",
@@ -10077,6 +11411,261 @@
     "explicacion": "Una lista multinivel admite hasta 9 niveles de sangría/numeración, no solo 3."
   },
   {
+    "id": "inicio-512",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "rutas-inicio-42",
+    "generado": true,
+    "enunciado": "En el cuadro «Definir nuevo formato de número», ¿qué botón permite cambiar la fuente, el tamaño y el color del número?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Fuente…"
+      },
+      {
+        "letter": "B",
+        "text": "Símbolo…"
+      },
+      {
+        "letter": "C",
+        "text": "Imagen…"
+      },
+      {
+        "letter": "D",
+        "text": "Formato…"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El botón «Fuente…» abre el cuadro Fuente aplicado solo al carácter del número (no al texto del elemento de lista)."
+  },
+  {
+    "id": "inicio-514",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "rutas-inicio-44",
+    "generado": true,
+    "enunciado": "El cuadro «Definir nueva viñeta» ofrece tres orígenes para la viñeta:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Símbolo, Imagen y Fuente"
+      },
+      {
+        "letter": "B",
+        "text": "Símbolo, Ecuación y Color"
+      },
+      {
+        "letter": "C",
+        "text": "Imagen, Icono y Forma"
+      },
+      {
+        "letter": "D",
+        "text": "Texto, Número y Símbolo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Símbolo…» elige un carácter de una fuente; «Imagen…» usa un archivo o imagen en línea; «Fuente…» fija el formato de carácter de la viñeta. Además hay un campo «Alineación»."
+  },
+  {
+    "id": "inicio-516",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "rutas-inicio-46",
+    "generado": true,
+    "enunciado": "En «Definir nueva lista con varios niveles», el botón «Establecer para todos los niveles…» sirve para:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Aplicar de una vez la posición y la sangría a los nueve niveles"
+      },
+      {
+        "letter": "B",
+        "text": "Convertir la lista en una lista de un solo nivel"
+      },
+      {
+        "letter": "C",
+        "text": "Guardar la lista como estilo"
+      },
+      {
+        "letter": "D",
+        "text": "Reiniciar la numeración de todos los niveles"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Fija la posición del primer nivel y el incremento de sangría adicional por nivel, y lo propaga a todos."
+  },
+  {
+    "id": "inicio-517",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "rutas-inicio-47",
+    "generado": true,
+    "enunciado": "El desplegable «Lista multinivel» ofrece, además de «Definir nueva lista multinivel…»:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Definir nuevo estilo de lista…"
+      },
+      {
+        "letter": "B",
+        "text": "Definir nueva viñeta…"
+      },
+      {
+        "letter": "C",
+        "text": "Definir nuevo formato de número…"
+      },
+      {
+        "letter": "D",
+        "text": "Establecer valor de numeración…"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Definir nuevo estilo de lista…» crea un estilo de lista reutilizable (aparece luego en la galería de estilos de lista); «Definir nueva lista multinivel…» define solo el formato para la lista actual."
+  },
+  {
+    "id": "inicio-511",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "rutas-inicio-41",
+    "generado": true,
+    "enunciado": "En la «Biblioteca de numeración» (desplegable del botón Numeración), ¿qué formatos aparecen?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "1. 2. 3."
+      },
+      {
+        "letter": "B",
+        "text": "1) 2) 3)"
+      },
+      {
+        "letter": "C",
+        "text": "I. II. III."
+      },
+      {
+        "letter": "D",
+        "text": "A. B. C."
+      },
+      {
+        "letter": "E",
+        "text": "a) b) c)"
+      },
+      {
+        "letter": "F",
+        "text": "Primero, Segundo, Tercero"
+      },
+      {
+        "letter": "G",
+        "text": "① ② ③"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explicacion": "La biblioteca ofrece «Ninguna», 1.2.3. / 1)2)3) / I.II.III. / A.B.C. / a)b)c) / a.b.c. / i.ii.iii. Los formatos de texto («Primero…») o círculos numerados no están en la biblioteca (se harían con «Definir nuevo formato de número…»)."
+  },
+  {
+    "id": "inicio-513",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "rutas-inicio-43",
+    "generado": true,
+    "enunciado": "El cuadro «Definir nuevo formato de número» tiene un desplegable «Estilo de número» (1,2,3 / I,II,III / a,b,c / 1º,2º,3º / (ninguno)…) y un campo «Alineación» (Izquierda, Centrada, Derecha).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "«Formato de número» permite además añadir texto fijo alrededor del número, p. ej. «Art. 1.-»."
+  },
+  {
+    "id": "inicio-515",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "rutas-inicio-45",
+    "generado": true,
+    "enunciado": "El cuadro «Definir nueva lista con varios niveles» permite configurar de forma independiente cada uno de los 9 niveles de la lista.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Se elige el nivel en la lista «Haga clic en el nivel que desea modificar» (1 a 9) y se define su formato de número, estilo, posición y sangría."
+  },
+  {
+    "id": "inicio-518",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "rutas-inicio-48",
+    "generado": true,
+    "enunciado": "El desplegable «Lista multinivel» muestra una sección «Lista actual» con el formato multinivel aplicado en ese momento, encima de la «Biblioteca de listas».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Debajo aparece la «Biblioteca de listas» con «Ninguna» y los presets (incluidos los que enlazan cada nivel con Título 1, Título 2, Título 3)."
+  },
+  {
     "id": "inicio-63",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Listas, viñetas y numeración",
@@ -10722,6 +12311,42 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Las tabulaciones se pueden fijar tanto desde la regla como desde el cuadro de diálogo Tabulaciones (Alt,F,T)."
+  },
+  {
+    "id": "inicio-500",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": null,
+    "tema": "Tabulaciones",
+    "sourceQuestionId": "rutas-inicio-30",
+    "generado": true,
+    "enunciado": "¿Qué botón hay en la esquina inferior izquierda del cuadro de diálogo Párrafo?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tabulaciones…"
+      },
+      {
+        "letter": "B",
+        "text": "Bordes…"
+      },
+      {
+        "letter": "C",
+        "text": "Sangría…"
+      },
+      {
+        "letter": "D",
+        "text": "Fuente…"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El botón «Tabulaciones…» abre el cuadro donde se definen las paradas de tabulación (posición, alineación, relleno)."
   },
   {
     "id": "inicio-74",
@@ -12581,6 +14206,258 @@
     "explicacion": "Prueba en vivo: Ctrl+Mayús+2 no hace nada en esta instalación; Título 2 se aplica con Alt+Ctrl+2."
   },
   {
+    "id": "inicio-520",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-50",
+    "generado": true,
+    "enunciado": "El menú que aparece bajo la galería de Estilos (flecha «Más») ofrece «Crear un estilo», «Borrar formato» y:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Aplicar estilos…"
+      },
+      {
+        "letter": "B",
+        "text": "Administrar estilos…"
+      },
+      {
+        "letter": "C",
+        "text": "Inspector de estilo"
+      },
+      {
+        "letter": "D",
+        "text": "Nuevo estilo rápido"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Aplicar estilos…» abre un cuadro flotante pequeño para escribir el nombre del estilo y aplicarlo (equivale a Ctrl+Mayús+W)."
+  },
+  {
+    "id": "inicio-521",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-51",
+    "generado": true,
+    "enunciado": "Al crear un estilo nuevo y pulsar «Modificar…», el campo «Tipo de estilo» aparece por defecto como:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Vinculado (párrafo y carácter)"
+      },
+      {
+        "letter": "B",
+        "text": "Párrafo"
+      },
+      {
+        "letter": "C",
+        "text": "Carácter"
+      },
+      {
+        "letter": "D",
+        "text": "Lista"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Vinculado (párrafo y carácter)» aplica formato de párrafo si no hay selección y solo formato de carácter si hay texto seleccionado dentro del párrafo."
+  },
+  {
+    "id": "inicio-524",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-54",
+    "generado": true,
+    "enunciado": "En el cuadro Modificar estilo, ¿qué casilla hace que, al cambiar a mano el formato de cualquier párrafo con ese estilo, se redefina automáticamente el estilo entero?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Actualizar automáticamente"
+      },
+      {
+        "letter": "B",
+        "text": "Agregar a la galería de estilos"
+      },
+      {
+        "letter": "C",
+        "text": "Solo en este documento"
+      },
+      {
+        "letter": "D",
+        "text": "Vinculado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Actualizar automáticamente» es cómodo pero peligroso: un retoque local reformatea todos los párrafos del documento con ese estilo."
+  },
+  {
+    "id": "inicio-525",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-55",
+    "generado": true,
+    "enunciado": "Las dos opciones de alcance al pie del cuadro de creación de estilo son «Solo en este documento» y:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Documentos nuevos basados en esta plantilla"
+      },
+      {
+        "letter": "B",
+        "text": "Todos los documentos abiertos"
+      },
+      {
+        "letter": "C",
+        "text": "Esta sección"
+      },
+      {
+        "letter": "D",
+        "text": "La plantilla y los documentos existentes"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "La segunda guarda el estilo en la plantilla (p. ej. Normal.dotm), de modo que los documentos nuevos lo tendrán."
+  },
+  {
+    "id": "inicio-527",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-57",
+    "generado": true,
+    "enunciado": "El panel Estilos (iniciador del grupo) tiene tres botones en su parte inferior: «Nuevo estilo», «Inspector de estilo» y:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Administrar estilos"
+      },
+      {
+        "letter": "B",
+        "text": "Borrar todo"
+      },
+      {
+        "letter": "C",
+        "text": "Opciones"
+      },
+      {
+        "letter": "D",
+        "text": "Aplicar estilos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Administrar estilos» abre el cuadro completo (Modificar / Recomendar / Restringir / Establecer valores predeterminados)."
+  },
+  {
+    "id": "inicio-529",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-59",
+    "generado": true,
+    "enunciado": "En el cuadro «Opciones del panel Estilos», el desplegable «Seleccionar cómo se ordena la lista» NO ofrece:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Por color"
+      },
+      {
+        "letter": "B",
+        "text": "Alfabético"
+      },
+      {
+        "letter": "C",
+        "text": "Por recomendación"
+      },
+      {
+        "letter": "D",
+        "text": "Fuente"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ofrece «Como en la recomendación», «Alfabético», «Fuente», «Basado en» y «Por tipo». No hay orden «Por color»."
+  },
+  {
+    "id": "inicio-531",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-61",
+    "generado": true,
+    "enunciado": "El «Inspector de estilo» (botón del panel Estilos) muestra:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Por separado el formato de párrafo y el formato de texto (carácter) de la selección, con botones para restablecer cada uno"
+      },
+      {
+        "letter": "B",
+        "text": "La lista de todos los estilos del documento ordenada por uso"
+      },
+      {
+        "letter": "C",
+        "text": "Un historial de los cambios de formato del documento"
+      },
+      {
+        "letter": "D",
+        "text": "Las diferencias entre dos estilos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ayuda a distinguir qué parte del aspecto viene del estilo y qué parte es formato directo (manual), y a quitar solo una de las dos capas."
+  },
+  {
     "id": "inicio-99",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -12629,6 +14506,173 @@
       "E"
     ],
     "explicacion": "Las categorías disponibles en el menú Formato del cuadro de estilos son: Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. Hipervínculo no es una opción del menú Formato de estilos."
+  },
+  {
+    "id": "inicio-519",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-49",
+    "generado": true,
+    "enunciado": "¿Cuáles son estilos reales de la galería de Estilos de la pestaña Inicio?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cita destacada"
+      },
+      {
+        "letter": "B",
+        "text": "Referencia intensa"
+      },
+      {
+        "letter": "C",
+        "text": "Título del libro"
+      },
+      {
+        "letter": "D",
+        "text": "Énfasis intenso"
+      },
+      {
+        "letter": "E",
+        "text": "Encabezado 1"
+      },
+      {
+        "letter": "F",
+        "text": "Nota al margen"
+      },
+      {
+        "letter": "G",
+        "text": "Resaltado fuerte"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "La galería incluye Normal, Sin espaciado, Título 1, Título 2, Título, Subtítulo, Énfasis sutil, Énfasis, Énfasis intenso, Fuerte, Cita, Cita destacada, Referencia sutil, Referencia intensa, Título del libro y Párrafo de lista. «Encabezado 1» se llama aquí «Título 1»; «Nota al margen» y «Resaltado fuerte» no existen."
+  },
+  {
+    "id": "inicio-522",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-52",
+    "generado": true,
+    "enunciado": "El campo «Tipo de estilo» del cuadro de creación/modificación de estilo ofrece:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Párrafo"
+      },
+      {
+        "letter": "B",
+        "text": "Carácter"
+      },
+      {
+        "letter": "C",
+        "text": "Vinculado (párrafo y carácter)"
+      },
+      {
+        "letter": "D",
+        "text": "Tabla"
+      },
+      {
+        "letter": "E",
+        "text": "Lista"
+      },
+      {
+        "letter": "F",
+        "text": "Sección"
+      },
+      {
+        "letter": "G",
+        "text": "Página"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explicacion": "Los cinco tipos son Párrafo, Carácter, Vinculado (párrafo y carácter), Tabla y Lista. No hay tipos «Sección» ni «Página»."
+  },
+  {
+    "id": "inicio-523",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-53",
+    "generado": true,
+    "enunciado": "El menú «Formato ▾» del cuadro Modificar/Crear estilo da acceso a cuadros de:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Fuente"
+      },
+      {
+        "letter": "B",
+        "text": "Párrafo"
+      },
+      {
+        "letter": "C",
+        "text": "Tabulaciones"
+      },
+      {
+        "letter": "D",
+        "text": "Borde"
+      },
+      {
+        "letter": "E",
+        "text": "Numeración"
+      },
+      {
+        "letter": "F",
+        "text": "Método abreviado"
+      },
+      {
+        "letter": "G",
+        "text": "Efectos de texto"
+      },
+      {
+        "letter": "H",
+        "text": "Columnas"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "explicacion": "El menú «Formato ▾» tiene: Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. «Columnas» no está (no es formato de estilo de párrafo)."
   },
   {
     "id": "inicio-97",
@@ -12762,6 +14806,63 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: el estilo de carácter se puede quitar aplicando «Predeterminado» o «Borrar formato» sin tocar el texto."
+  },
+  {
+    "id": "inicio-526",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-56",
+    "generado": true,
+    "enunciado": "El campo «Estilo del párrafo siguiente» define qué estilo se aplica al párrafo que se crea al pulsar Enter tras un párrafo con este estilo.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Por eso «Título 1» suele tener como párrafo siguiente «Normal»: tras el título se sigue escribiendo texto normal."
+  },
+  {
+    "id": "inicio-528",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-58",
+    "generado": true,
+    "enunciado": "El panel Estilos ofrece las casillas «Mostrar vista previa» y «Deshabilitar estilos vinculados».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "«Mostrar vista previa» pinta cada nombre con su formato; «Deshabilitar estilos vinculados» fuerza a que los estilos vinculados actúen siempre como estilo de párrafo."
+  },
+  {
+    "id": "inicio-530",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "rutas-inicio-60",
+    "generado": true,
+    "enunciado": "El cuadro «Opciones del panel Estilos» permite elegir qué estilos mostrar (Recomendado / En uso / En el documento actual / Todos los estilos).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "También decide si se muestran como estilos independientes el formato de párrafo, de fuente y de numeración/viñetas aplicados manualmente."
   },
   {
     "id": "inicio-89",
@@ -16047,6 +18148,186 @@
     "explicacion": "El panel de Navegación tiene pestañas Títulos / Páginas / Resultados; la de Títulos lista la estructura de encabezados del documento."
   },
   {
+    "id": "inicio-532",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Buscar y reemplazar",
+    "tema": "Edición",
+    "sourceQuestionId": "rutas-inicio-62",
+    "generado": true,
+    "enunciado": "La flecha del botón «Buscar» del grupo Edición despliega tres opciones: «Buscar», «Búsqueda avanzada…» e:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ir a…"
+      },
+      {
+        "letter": "B",
+        "text": "Reemplazar…"
+      },
+      {
+        "letter": "C",
+        "text": "Resaltado de lectura"
+      },
+      {
+        "letter": "D",
+        "text": "Buscar en"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Buscar» abre el panel Navegación; «Búsqueda avanzada…» e «Ir a…» abren el cuadro clásico «Buscar y reemplazar» en la ficha correspondiente."
+  },
+  {
+    "id": "inicio-533",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Buscar y reemplazar",
+    "tema": "Edición",
+    "sourceQuestionId": "rutas-inicio-63",
+    "generado": true,
+    "enunciado": "En la ficha «Buscar» del cuadro «Buscar y reemplazar», ¿para qué sirve el botón «Resaltado de lectura ▾»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Resaltar en pantalla todas las coincidencias a la vez (y poder quitarlas)"
+      },
+      {
+        "letter": "B",
+        "text": "Imprimir solo los párrafos con coincidencias"
+      },
+      {
+        "letter": "C",
+        "text": "Marcar las coincidencias con un comentario"
+      },
+      {
+        "letter": "D",
+        "text": "Aplicar color de resaltado permanente al texto encontrado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El resaltado de lectura es temporal (en pantalla); «Borrar resaltado» lo quita. No modifica el formato guardado del documento."
+  },
+  {
+    "id": "inicio-536",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Ir a",
+    "tema": "Edición",
+    "sourceQuestionId": "rutas-inicio-66",
+    "generado": true,
+    "enunciado": "¿Cuántas fichas tiene el cuadro de diálogo «Buscar y reemplazar»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tres: Buscar, Reemplazar e Ir a"
+      },
+      {
+        "letter": "B",
+        "text": "Dos: Buscar y Reemplazar"
+      },
+      {
+        "letter": "C",
+        "text": "Cuatro: Buscar, Reemplazar, Ir a y Opciones"
+      },
+      {
+        "letter": "D",
+        "text": "Una sola"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Ir a» comparte cuadro con Buscar y Reemplazar; se llega a ella con Ctrl+I (Ir a) en esta instalación o desde la flecha del botón Buscar."
+  },
+  {
+    "id": "inicio-539",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Seleccionar",
+    "tema": "Edición",
+    "sourceQuestionId": "rutas-inicio-69",
+    "generado": true,
+    "enunciado": "El desplegable «Seleccionar» del grupo Edición ofrece «Seleccionar todo», «Seleccionar objetos», «Seleccionar texto con formato similar» y:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Panel de selección…"
+      },
+      {
+        "letter": "B",
+        "text": "Seleccionar sección"
+      },
+      {
+        "letter": "C",
+        "text": "Modo extendido"
+      },
+      {
+        "letter": "D",
+        "text": "Seleccionar hasta el final"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Panel de selección…» abre el panel que lista los objetos de la página y permite mostrarlos, ocultarlos o reordenarlos."
+  },
+  {
+    "id": "inicio-540",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Seleccionar",
+    "tema": "Edición",
+    "sourceQuestionId": "rutas-inicio-70",
+    "generado": true,
+    "enunciado": "«Seleccionar texto con formato similar» (menú Seleccionar) sirve para:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Seleccionar de una vez todo el texto del documento que tiene el mismo formato que el texto actual"
+      },
+      {
+        "letter": "B",
+        "text": "Buscar texto parecido en significado"
+      },
+      {
+        "letter": "C",
+        "text": "Aplicar el formato del texto actual al resto del documento"
+      },
+      {
+        "letter": "D",
+        "text": "Seleccionar el párrafo actual y el siguiente"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Útil para cambiar a la vez, por ejemplo, todos los fragmentos que quedaron en un tamaño o color concreto."
+  },
+  {
     "id": "inicio-132",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -16187,6 +18468,109 @@
     "explicacion": "A, B, C y E son correctas. D es incorrecta: Ctrl+Y y F4 no son siempre idénticos. Ctrl+Y rehace si hay acciones deshechas, o repite si no las hay. F4 siempre repite la última acción independientemente del historial. Son equivalentes solo cuando no hay nada que rehacer y existe una acción repetible."
   },
   {
+    "id": "inicio-535",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Buscar y reemplazar",
+    "tema": "Edición",
+    "sourceQuestionId": "rutas-inicio-65",
+    "generado": true,
+    "enunciado": "Al pulsar «Más >>» en el cuadro «Buscar y reemplazar» se muestran opciones de búsqueda. ¿Cuáles son reales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Coincidir mayúsculas y minúsculas"
+      },
+      {
+        "letter": "B",
+        "text": "Solo palabras completas"
+      },
+      {
+        "letter": "C",
+        "text": "Usar caracteres comodín"
+      },
+      {
+        "letter": "D",
+        "text": "Todas las formas de la palabra (inglés)"
+      },
+      {
+        "letter": "E",
+        "text": "Buscar sinónimos automáticamente"
+      },
+      {
+        "letter": "F",
+        "text": "Resaltar resultados en negrita"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "También están «Suena como (inglés)», «Omitir signos de puntuación» y los botones «Formato», «Especial» y «Sin formato». «Buscar sinónimos» y «Resaltar en negrita» no existen ahí."
+  },
+  {
+    "id": "inicio-537",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "seleccion_multiple",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Ir a",
+    "tema": "Edición",
+    "sourceQuestionId": "rutas-inicio-67",
+    "generado": true,
+    "enunciado": "En la ficha «Ir a» del cuadro «Buscar y reemplazar», ¿qué destinos de la lista «Ir a:» son reales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Página"
+      },
+      {
+        "letter": "B",
+        "text": "Sección"
+      },
+      {
+        "letter": "C",
+        "text": "Línea"
+      },
+      {
+        "letter": "D",
+        "text": "Marcador"
+      },
+      {
+        "letter": "E",
+        "text": "Nota al pie"
+      },
+      {
+        "letter": "F",
+        "text": "Estilo"
+      },
+      {
+        "letter": "G",
+        "text": "Palabra"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explicacion": "La lista incluye Página, Sección, Línea, Marcador, Comentario, Nota al pie, Nota al final, Campo, Tabla, Gráfico, Ecuación, Objeto y Título. No se puede «Ir a» un estilo o una palabra concreta desde aquí."
+  },
+  {
     "id": "inicio-121",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -16280,6 +18664,63 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: el cuadro Buscar y reemplazar permite buscar y reemplazar también por formato (negrita, color, estilo…) con el botón «Más» ▸ «Formato»."
+  },
+  {
+    "id": "inicio-534",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Buscar y reemplazar",
+    "tema": "Edición",
+    "sourceQuestionId": "rutas-inicio-64",
+    "generado": true,
+    "enunciado": "El cuadro «Buscar y reemplazar» tiene un botón «Buscar en ▾» que limita la búsqueda a una parte del documento (p. ej. el documento principal, o los encabezados y pies).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Suele usarse tras seleccionar un fragmento: «Buscar en ▸ Selección actual»."
+  },
+  {
+    "id": "inicio-538",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Ir a",
+    "tema": "Edición",
+    "sourceQuestionId": "rutas-inicio-68",
+    "generado": true,
+    "enunciado": "En la ficha «Ir a», si en el número se escribe «+4» el cursor avanza 4 elementos (páginas, líneas…) desde la posición actual.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El propio cuadro lo explica: «escribiendo +4 se desplazará cuatro elementos hacia adelante»; «-2» retrocedería dos."
+  },
+  {
+    "id": "inicio-541",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Seleccionar",
+    "tema": "Edición",
+    "sourceQuestionId": "rutas-inicio-71",
+    "generado": true,
+    "enunciado": "«Panel de selección…» abre un panel que enumera todos los objetos de la página y permite ocultarlos o cambiar su orden de apilamiento.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Su información en pantalla lo describe como «Consulte una lista de todos los objetos… más fácil seleccionarlos, cambiarlos de orden o cambiar su visibilidad»."
   },
   {
     "id": "inicio-119",
@@ -16649,6 +19090,25 @@
     "explicacion": "No existe ningún atajo Ctrl+Mayús+V para Dictar. El atajo real, confirmado en vivo, es Alt+[."
   },
   {
+    "id": "inicio-542",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Voz",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "voz",
+    "subtopic": "Dictado",
+    "tema": "Voz",
+    "sourceQuestionId": "rutas-inicio-72",
+    "generado": true,
+    "enunciado": "El botón «Dictar» del grupo Voz tiene una flecha desplegable para elegir el idioma de dictado y ajustar sus opciones.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El dictado por voz necesita conexión a internet; el idioma se elige en ese desplegable."
+  },
+  {
     "id": "inicio-468",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Voz",
@@ -16779,5 +19239,24 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "**Complementos.** Pestaña Inicio ▸ grupo Complementos. Abre la galería/tienda de complementos de Office para instalar y gestionar add-ins desde el propio documento. No tiene atajo de teclado directo."
+  },
+  {
+    "id": "inicio-543",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Complementos",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "complementos",
+    "subtopic": null,
+    "tema": "Complementos",
+    "sourceQuestionId": "rutas-inicio-73",
+    "generado": true,
+    "enunciado": "El botón «Complementos» del grupo Complementos abre la galería/tienda de complementos de Office, con la sección «Mis complementos».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Desde ahí se instalan complementos (Wikipedia, diccionarios, etc.) que luego aparecen en la cinta o en un panel."
   }
 ]
