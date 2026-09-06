@@ -782,12 +782,22 @@ details.advanced summary:hover{ color:var(--text); }
 .img-empty{ font-size:10.5px; color:var(--text-3); }
 .img-btns{ display:flex; flex-direction:column; gap:6px; }
 
-/* opciones al crear una pregunta */
-.uq-opts{ display:flex; flex-direction:column; gap:7px; }
-.uq-opt{ display:flex; align-items:center; gap:8px; }
-.uq-opt input.uq-correct{ accent-color:var(--good); flex-shrink:0; width:16px; height:16px; }
-.uq-opt input[type="text"]{ flex:1; }
+/* opciones al crear / editar una pregunta — cada fila: [○] [A] [ texto ] */
+.uq-opts{ display:flex; flex-direction:column; gap:6px; }
+/* label.uq-opt vive dentro de .field: hay que ganar a `.field label{display:block;text-transform:uppercase}` */
+.field label.uq-opt, .uq-opt{
+  display:flex; align-items:center; gap:10px; margin:0; padding:6px 9px;
+  border:1px solid var(--border); border-radius:var(--radius-s); background:var(--surface);
+  font:inherit; font-weight:400; text-transform:none; letter-spacing:normal; color:var(--text);
+  transition:border-color .12s var(--ease), background .12s var(--ease);
+}
+.uq-opt:focus-within{ border-color:var(--border-2); }
+.uq-opt:has(input.uq-correct:checked){ border-color:var(--good-line); background:var(--good-dim); }
+.uq-opt input.uq-correct{ accent-color:var(--good); flex-shrink:0; width:15px; height:15px; margin:0; cursor:pointer; }
+.uq-opt .eopt-l{ margin:0; }
 .uq-opt input.uq-correct:checked ~ .eopt-l{ background:var(--good-dim); color:var(--good); border-color:var(--good-line); }
+.uq-opt input[type="text"]{ flex:1; min-width:0; border-color:transparent; background:transparent; padding:5px 6px; }
+.uq-opt input[type="text"]:focus{ border-color:var(--accent-line); background:var(--bg); }
 
 /* Mi contenido */
 .mc-cta-row{ display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-3); }
