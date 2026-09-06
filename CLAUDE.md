@@ -535,6 +535,37 @@ a secas abre el PANEL, no el cuadro), Administrar estilos (Inicio y Diseño),
 «Establecer como predeterminado» (en 7+ cuadros), «Establecer Pegar
 predeterminado» = Opciones ▸ Avanzadas. Generador:
 `scripts/gen_dialogos_compartidos_inicio.py`.
+**Límites numéricos de Word verificados en vivo por el usuario (sep-2026,
+vídeos + capturas)** — usar SOLO estos como distractores/hechos numéricos,
+nada de "16 documentos abiertos" o "32 temas" (inventados y rechazados):
+Portapapeles de Office = **24** elementos · Tamaño de fuente = **1–1638** pt ·
+Lista multinivel = **9** niveles · Desplegable «Estilo de subrayado» del
+**cuadro Fuente** = **17** estilos (18 con «(ninguno)»); el desplegable
+Subrayado de la **cinta** solo tiene ~9 · Estilos de línea de borde en
+*Bordes y sombreado* = **24** · Diseños de **Arte** (Borde de página) =
+**164** · Alineaciones de tabulación = **5** (izq/centro/der/decimal/barra) ·
+Tipos de interlineado = **6** (sencillo/1,5/doble/mínimo/exacto/múltiple) ·
+Especial del cuadro Párrafo = **3** (ninguna/primera línea/francesa). **El
+panel de Navegación NO tiene tope de resultados** (con 64.350 coincidencias
+muestra "Hay demasiados resultados"): "muestra hasta 100/200" es falso, no
+usar.
+**Endurecimiento de distractores — Portapapeles (sep-2026)**: 29 de las 52
+preguntas del topic `portapapeles` reescritas con `scripts/harden_portapapeles.py`.
+Regla fijada con el usuario: distractor = elemento real, o *mecanismo*
+plausible pero falso (FIFO↔LRU, "muestra un aviso"), o entidad real con
+atributo equivocado (F2↔Mayús+F2); NUNCA un número/hecho/entidad inventado;
+la respuesta correcta y todo lo afirmado como hecho debe ser verdad; 4
+opciones en `opcion_unica` (realismo de oposición), más solo en
+`seleccion_multiple`/`emparejamiento`. Cambios clave: `inicio-1` de
+"12/24/32/48" a 3 límites reales; `inicio-247/248/249` reformuladas por
+impugnables (Portapapeles de Office se borra al cerrar TODAS las apps Office
+per Microsoft; Windows guarda 1 salvo historial Win+V; "Ctrl+C dos veces"
+depende de una opción desactivada por defecto); `inicio-281/282`
+reconstruidas con los límites verificados de arriba (sin "navegación
+100/200"); atajos `inicio-308..390` con combinaciones no verificadas
+(`Ctrl+Mayús+C`, `Alt+Insertar`, `Mayús+X`, `Alt+F2`, `Ctrl+Mayús+F2`)
+sustituidas por reales; iconos `inicio-394..397` con distractores del propio
+grupo. **Pendiente**: mismo tratamiento a los otros 12 topics de inicio.json.
 **Corrección de técnica de recorte de icono (sep-2026)**: el usuario
 señaló que los 2 recortes de muestra de la respuesta anterior estaban
 mal centrados (letras cortadas a la derecha, hueco desigual a la

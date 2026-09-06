@@ -12,28 +12,24 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0001",
-    "enunciado": "¿Cuántas acciones de copiar y cortar puede almacenar el Portapapeles de Word 365?",
+    "enunciado": "Los tres numeros son limites reales de Word 365. ¿Cual es la capacidad maxima del Portapapeles de Office (numero de acciones de copiar y cortar que almacena a la vez)?",
     "opciones": [
       {
         "letter": "A",
-        "text": "12"
+        "text": "9 (el maximo de niveles de una lista multinivel)"
       },
       {
         "letter": "B",
-        "text": "24"
+        "text": "17 (los estilos de subrayado del cuadro Fuente)"
       },
       {
         "letter": "C",
-        "text": "32"
-      },
-      {
-        "letter": "D",
-        "text": "48"
+        "text": "24 (el limite del Portapapeles de Office)"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El Portapapeles de Word 365 almacena hasta 24 acciones de copiar y cortar. Al copiar el elemento numero 25, el primero almacenado se elimina automaticamente."
+    "respuesta": "C",
+    "explicacion": "El Portapapeles de Office almacena hasta 24 elementos; al copiar el 25 se descarta el primero almacenado. Los otros dos son limites reales de Word pero de otros elementos: 9 niveles en una lista multinivel y 17 estilos en el desplegable «Estilo de subrayado» del cuadro Fuente."
   },
   {
     "id": "inicio-2",
@@ -124,7 +120,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Copia el texto seleccionado al portapapeles"
+        "text": "Copia el texto seleccionado al portapapeles de Office"
       },
       {
         "letter": "B",
@@ -132,16 +128,16 @@
       },
       {
         "letter": "C",
-        "text": "Abre el cuadro de dialogo Buscar y reemplazar"
+        "text": "Copia el texto a otro lugar sin quitarlo del origen ni tocar el portapapeles"
       },
       {
         "letter": "D",
-        "text": "Activa el modo de edicion de la celda actual"
+        "text": "Activa el modo de edicion de la celda actual (como en Excel)"
       }
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "F2 prepara el texto seleccionado para moverlo sin usar el portapapeles: la barra de estado muestra «¿Dónde quieres moverlo?»; se coloca el cursor en el destino y se pulsa Intro. Para copiar en vez de mover se usa Mayus+F2 («Copiar a»). Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "F2 prepara el texto para moverlo sin usar el portapapeles: la barra de estado muestra «¿Donde quieres moverlo?»; se lleva el cursor al destino y se pulsa Intro. La opcion C describe Mayus+F2 («Copiar a»): copia a otro punto sin borrar el original. La D es el comportamiento de F2 en Excel. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-8",
@@ -164,20 +160,20 @@
       },
       {
         "letter": "B",
-        "text": "Corta la seleccion actual y descarta las anteriores"
+        "text": "Corta la seleccion actual y descarta lo acumulado antes"
       },
       {
         "letter": "C",
-        "text": "Funciona igual que Ctrl+X pero sin limpiar el portapapeles"
+        "text": "Funciona igual que Ctrl+X pero sin tocar el portapapeles de Windows"
       },
       {
         "letter": "D",
-        "text": "Mueve solo la ultima seleccion; las anteriores se ignoran"
+        "text": "Añade la seleccion al Portapapeles de Office (hasta 24 elementos) sin quitarla del documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F3 tiene efecto acumulativo (Spike): cada uso añade la selección actual a las anteriores y la quita del documento. Para soltar todo lo acumulado de golpe se pulsa Ctrl+Mayus+F3. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+F3 es el Spike (portapapeles especial): cada uso CORTA la seleccion y la ACUMULA con las anteriores; Ctrl+Mayus+F3 suelta todo lo acumulado de golpe. El distractor D confunde el Spike con el Portapapeles de Office: aquel corta del documento y no tiene limite de 24. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-142",
@@ -200,11 +196,11 @@
       },
       {
         "letter": "B",
-        "text": "Cortar"
+        "text": "Pegado especial"
       },
       {
         "letter": "C",
-        "text": "Copiar"
+        "text": "Pegar solo el texto, sin formato"
       },
       {
         "letter": "D",
@@ -213,7 +209,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Pegar del grupo Portapapeles inserta en la posición del cursor el contenido almacenado en el portapapeles. Es la operación final del ciclo copiar/cortar y pegar. Su atajo es Ctrl+V."
+    "explicacion": "El boton Pegar (Ctrl+V) inserta el contenido del portapapeles en la posicion del cursor con su formato. «Pegado especial» abre un cuadro para elegir el formato de insercion; «Pegar solo el texto» descarta el formato; «Copiar formato» (pincel) no pega contenido, solo atributos."
   },
   {
     "id": "inicio-143",
@@ -236,7 +232,7 @@
       },
       {
         "letter": "B",
-        "text": "Pegar"
+        "text": "Mover el texto con la tecla F2"
       },
       {
         "letter": "C",
@@ -249,7 +245,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Cortar elimina el texto seleccionado de su posición original y lo almacena en el portapapeles para pegarlo en otro lugar. Es la operación adecuada para mover contenido. Su atajo es Ctrl+X."
+    "explicacion": "Cortar (Ctrl+X) quita el texto de su sitio y lo guarda en el portapapeles para pegarlo en otro lugar. F2 tambien mueve texto, pero es una tecla, no un boton del grupo Portapapeles, y no pasa por el portapapeles. Copiar deja el original; Copiar formato solo maneja atributos."
   },
   {
     "id": "inicio-144",
@@ -276,7 +272,7 @@
       },
       {
         "letter": "C",
-        "text": "Pegar"
+        "text": "Mover al portapapeles especial con Ctrl+F3"
       },
       {
         "letter": "D",
@@ -285,7 +281,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Copiar duplica el texto seleccionado en el portapapeles sin eliminarlo de su posición original. El original permanece intacto y el contenido copiado queda disponible para pegarlo donde se necesite. Su atajo es Ctrl+C."
+    "explicacion": "Copiar (Ctrl+C) duplica el texto en el portapapeles dejando el original intacto. Cortar lo quitaria de su sitio; Ctrl+F3 (Spike) tambien, ademas de acumularlo; Copiar formato solo copia atributos, no el contenido."
   },
   {
     "id": "inicio-145",
@@ -308,11 +304,11 @@
       },
       {
         "letter": "B",
-        "text": "Pegar"
+        "text": "Aplicar estilos"
       },
       {
         "letter": "C",
-        "text": "Cortar"
+        "text": "Borrar todo el formato"
       },
       {
         "letter": "D",
@@ -321,7 +317,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Copiar formato copia el formato del texto seleccionado y lo aplica sobre otro texto al hacer clic. Su atajo de dos pasos es Alt+Ctrl+C para copiar el formato y Alt+Ctrl+V para pegarlo. El icono en la cinta es un pincel situado en el grupo Portapapeles. Prueba en vivo del usuario."
+    "explicacion": "Copiar formato (el pincel, Alt+Ctrl+C) copia los atributos visuales del texto seleccionado para aplicarlos en otro sitio (Alt+Ctrl+V los pega). «Aplicar estilos» asigna un estilo con nombre, no copia atributos sueltos; «Borrar todo el formato» hace lo contrario; «Copiar» duplica el contenido, no el formato. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-146",
@@ -496,12 +492,12 @@
       },
       {
         "letter": "D",
-        "text": "Conservar solo texto"
+        "text": "Insertar objeto (pestaña Insertar ▸ Texto)"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Pegado especial abre un cuadro de diálogo que permite elegir con precisión el formato en que se insertará el contenido: como tabla editable de Word, como imagen, como objeto vinculado al archivo de origen, como texto sin formato, etc. Es especialmente útil al pegar contenido proveniente de otras aplicaciones."
+    "explicacion": "«Pegado especial» abre un cuadro que permite elegir el formato exacto: tabla de Word, imagen, objeto vinculado al Excel de origen, texto sin formato, etc. «Insertar objeto» tambien incrusta contenido de Excel, pero esta en la pestaña Insertar, no dentro del menu Pegar, y no ofrece las opciones de pegado del portapapeles."
   },
   {
     "id": "inicio-151",
@@ -552,28 +548,28 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0501",
-    "enunciado": "¿Cuándo se vacía automáticamente el Portapapeles de Office en Word 365?",
+    "enunciado": "¿Hasta cuando conserva su contenido el Portapapeles de Office en Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Al cerrar el documento activo"
+        "text": "Mientras siga abierta al menos una aplicacion de Office"
       },
       {
         "letter": "B",
-        "text": "Al cerrar todas las aplicaciones de Office"
+        "text": "Mientras el documento donde se copio siga abierto"
       },
       {
         "letter": "C",
-        "text": "Al reiniciar el equipo o al hacer clic en Borrar todo en el panel del Portapapeles"
+        "text": "Mientras no se haya guardado el documento"
       },
       {
         "letter": "D",
-        "text": "Cada vez que se guarda el documento"
+        "text": "Mientras no se cierre el panel del Portapapeles"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El Portapapeles de Office se vacía automáticamente al reiniciar el equipo o cuando el usuario hace clic en el botón Borrar todo del panel del Portapapeles. Cerrar un documento o guardar no vacía el portapapeles; el contenido permanece disponible mientras alguna aplicación de Office siga abierta."
+    "respuesta": "A",
+    "explicacion": "El Portapapeles de Office mantiene sus elementos mientras haya al menos una aplicacion de Office abierta; se vacia al cerrarlas todas o al pulsar «Borrar todo» en su panel. Cerrar un documento concreto, no guardarlo o cerrar el panel no afecta a su contenido."
   },
   {
     "id": "inicio-248",
@@ -592,24 +588,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "No hay diferencia; ambos son el mismo portapapeles con distinto nombre"
+        "text": "No hay diferencia; son el mismo portapapeles con dos nombres"
       },
       {
         "letter": "B",
-        "text": "El Portapapeles de Office almacena hasta 24 elementos y está disponible solo en aplicaciones Office; el Portapapeles de Windows almacena solo 1 elemento pero está disponible en cualquier aplicación"
+        "text": "El Portapapeles de Office guarda hasta 24 elementos y solo funciona en aplicaciones de Office; el Portapapeles de Windows guarda solo el ultimo elemento copiado (salvo que se active el Historial del Portapapeles con Windows+V) y sirve para cualquier aplicacion"
       },
       {
         "letter": "C",
-        "text": "El Portapapeles de Windows almacena hasta 24 elementos; el de Office solo 1"
+        "text": "El Portapapeles de Windows guarda hasta 24 elementos y el de Office solo 1"
       },
       {
         "letter": "D",
-        "text": "El Portapapeles de Office solo almacena texto; el de Windows almacena texto e imágenes"
+        "text": "El Portapapeles de Office solo guarda texto; el de Windows guarda texto e imagenes"
       }
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "El Portapapeles de Office es exclusivo de las aplicaciones Microsoft Office y almacena hasta 24 elementos de forma simultánea, accesibles desde el panel Portapapeles. El Portapapeles de Windows es el portapapeles del sistema operativo, almacena solo el último elemento copiado y está disponible en cualquier aplicación de Windows."
+    "explicacion": "El Portapapeles de Office es propio de las aplicaciones Office y almacena hasta 24 elementos, visibles en su panel. El Portapapeles del sistema (Windows) guarda por defecto solo el ultimo elemento copiado; desde Windows 10/11 se puede activar el Historial del Portapapeles (Windows+V) para guardar varios, pero sigue siendo del sistema, no de Office."
   },
   {
     "id": "inicio-249",
@@ -624,28 +620,28 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0503",
-    "enunciado": "¿Cómo se abre el panel del Portapapeles de Office en Word 365?",
+    "enunciado": "¿Que forma abre SIEMPRE el panel del Portapapeles de Office en Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + C dos veces seguidas"
+        "text": "Con el iniciador de cuadro de dialogo del grupo Portapapeles (la flecha de la esquina)"
       },
       {
         "letter": "B",
-        "text": "Mediante el iniciador de cuadro de diálogo del grupo Portapapeles"
+        "text": "Pulsando Ctrl+C dos veces seguidas"
       },
       {
         "letter": "C",
-        "text": "Desde el menú Ver → Panel del Portapapeles"
+        "text": "Desde Vista ▸ Mostrar ▸ Panel del Portapapeles"
       },
       {
         "letter": "D",
-        "text": "Ambas opciones A y B son correctas"
+        "text": "Con Ctrl+Mayus+V"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El panel del Portapapeles de Office puede abrirse de dos formas: (1) pulsando Ctrl+C dos veces seguidas rápidamente, lo que abre el panel automáticamente; (2) haciendo clic en el iniciador de cuadro de diálogo del grupo Portapapeles (la flecha pequeña en la esquina inferior derecha del grupo). Ambas formas son válidas y están documentadas."
+    "respuesta": "A",
+    "explicacion": "El iniciador de cuadro de dialogo del grupo Portapapeles (flecha inferior derecha del grupo) abre el panel siempre. «Ctrl+C dos veces» solo lo abre si esta activada la opcion correspondiente del panel (desactivada por defecto). En Vista no hay ninguna entrada «Panel del Portapapeles»; Ctrl+Mayus+V pega sin formato."
   },
   {
     "id": "inicio-270",
@@ -664,19 +660,19 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + C repetido varias veces sobre distintas selecciones"
+        "text": "Ctrl+C repetido varias veces sobre distintas selecciones"
       },
       {
         "letter": "B",
-        "text": "Ctrl + F3 sobre cada selección y Mayús + Ctrl + F3 para pegar todo acumulado"
+        "text": "Ctrl+F3 sobre cada seleccion y Ctrl+Mayus+F3 para pegar todo lo acumulado"
       },
       {
         "letter": "C",
-        "text": "Ctrl + X repetido y luego Ctrl + V una sola vez"
+        "text": "Ctrl+X repetido y luego Ctrl+V una sola vez"
       },
       {
         "letter": "D",
-        "text": "F2 sobre cada selección y luego Intro para pegar"
+        "text": "F2 sobre cada seleccion y luego Intro"
       }
     ],
     "matching": null,
@@ -707,16 +703,16 @@
       },
       {
         "letter": "C",
-        "text": "Mayús+Insertar"
+        "text": "Mayus+Insertar"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+C"
+        "text": "Alt+Ctrl+C"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Insertar es el atajo alternativo para copiar. Ctrl+C es el atajo principal para copiar. Mayús+Insertar es el atajo alternativo para pegar. Ctrl+Mayús+C no tiene esa función asignada como copia alternativa."
+    "explicacion": "Ctrl+Insertar es el metodo antiguo para copiar contenido. Ctrl+C es el atajo principal de copiar; Mayus+Insertar pega; Alt+Ctrl+C copia el FORMATO (pincel), no el contenido."
   },
   {
     "id": "inicio-309",
@@ -734,7 +730,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+Insertar"
+        "text": "Mayus+Insertar"
       },
       {
         "letter": "B",
@@ -742,16 +738,16 @@
       },
       {
         "letter": "C",
-        "text": "Alt+Insertar"
+        "text": "Mayus+Supr"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+V"
+        "text": "Ctrl+Mayus+V"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+Insertar es el atajo alternativo para pegar. Ctrl+Insertar copia. Alt+Insertar no tiene esa función asignada. Ctrl+Mayús+V pega solo texto sin formato."
+    "explicacion": "Mayus+Insertar es el metodo antiguo para pegar. Ctrl+Insertar copia; Mayus+Supr corta; Ctrl+Mayus+V pega pero solo el texto sin formato."
   },
   {
     "id": "inicio-310",
@@ -769,7 +765,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+Supr"
+        "text": "Mayus+Supr"
       },
       {
         "letter": "B",
@@ -781,12 +777,12 @@
       },
       {
         "letter": "D",
-        "text": "Mayús+X"
+        "text": "Ctrl+Insertar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+Supr es el atajo alternativo para cortar. Ctrl+X es el atajo principal para cortar. Ctrl+Supr elimina la palabra siguiente al cursor. Mayús+X no tiene función asignada para cortar."
+    "explicacion": "Mayus+Supr es el metodo antiguo para cortar. Ctrl+X es el atajo principal de cortar; Ctrl+Supr borra la palabra a la derecha del cursor sin llevarla al portapapeles; Ctrl+Insertar copia."
   },
   {
     "id": "inicio-311",
@@ -804,7 +800,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+F2"
+        "text": "Mayus+F2"
       },
       {
         "letter": "B",
@@ -816,12 +812,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+F2"
+        "text": "Ctrl+F3"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+F2 copia el texto seleccionado para moverlo sin cortarlo usando el modo Copiar a (confirmado en el volcado: comando CopiarTexto). F2 mueve el texto (modo mover). Alt+F2 no tiene esa función. Ctrl+F2 no aparece en el volcado con ninguna función de portapapeles ni de impresión — no se puede afirmar qué hace en esta instalación."
+    "explicacion": "Mayus+F2 copia el texto a otro punto sin cortarlo («Copiar a»). F2 lo mueve; Ctrl+F2 abre la vista previa de impresion; Ctrl+F3 mueve la seleccion al Spike (portapapeles especial)."
   },
   {
     "id": "inicio-312",
@@ -843,7 +839,7 @@
       },
       {
         "letter": "B",
-        "text": "Mayús+F2"
+        "text": "Mayus+F2"
       },
       {
         "letter": "C",
@@ -851,12 +847,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+F2"
+        "text": "Ctrl+F3"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F2 activa el modo mover: la barra de estado muestra «¿Dónde quieres moverlo?», se lleva el cursor al destino y se pulsa Intro. Mayus+F2 copia («Copiar a»). Ctrl+F2 abre la vista de impresión. Alt+F2 no tiene esa función. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "F2 activa el modo mover: la barra de estado muestra «¿Donde quieres moverlo?», se lleva el cursor al destino y se pulsa Intro. Mayus+F2 copia («Copiar a»); Ctrl+F2 abre la vista previa de impresion; Ctrl+F3 mueve al Spike. Prueba en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-317",
@@ -909,7 +905,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+F3"
+        "text": "Ctrl+Mayus+F3"
       },
       {
         "letter": "B",
@@ -921,12 +917,12 @@
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+F2"
+        "text": "Ctrl+V"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+F3 inserta el contenido acumulado en el portapapeles especial. Ctrl+F3 mueve texto al portapapeles especial. Alt+F3 crea un Autotexto. Ctrl+Mayús+F2 no tiene función asignada para el portapapeles especial."
+    "explicacion": "Ctrl+Mayus+F3 inserta de golpe todo el contenido acumulado en el Spike y lo vacia. Ctrl+F3 mueve texto AL Spike; Alt+F3 crea un elemento de Autotexto; Ctrl+V pega el portapapeles normal, no el Spike."
   },
   {
     "id": "inicio-383",
@@ -945,7 +941,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+0"
+        "text": "Ctrl+Mayus+V"
       },
       {
         "letter": "B",
@@ -953,16 +949,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+Z"
+        "text": "Alt+Ctrl+V"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+Inicio"
+        "text": "Ctrl+Mayus+F3"
       }
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Abre el cuadro Pegado especial, que permite elegir el formato exacto con el que se pega el contenido del portapapeles."
+    "explicacion": "Alt+Ctrl+G abre el cuadro Pegado especial (elegir formato de insercion). Ctrl+Mayus+V pega solo texto; Alt+Ctrl+V pega el FORMATO copiado con el pincel; Ctrl+Mayus+F3 pega el contenido del Spike."
   },
   {
     "id": "inicio-384",
@@ -981,7 +977,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+F"
+        "text": "Alt+Ctrl+G"
       },
       {
         "letter": "B",
@@ -989,16 +985,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+V"
+        "text": "Ctrl+Mayus+V"
       },
       {
         "letter": "D",
-        "text": "Ctrl + <"
+        "text": "Mayus+Insertar"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Pega el contenido del portapapeles como texto sin formato, descartando el formato de origen y adoptando el del destino."
+    "explicacion": "Ctrl+Mayus+V pega el contenido del portapapeles como texto sin formato, adoptando el del destino. Alt+Ctrl+G abre Pegado especial; Alt+Ctrl+V pega el formato del pincel; Mayus+Insertar es el pegado antiguo, que si conserva el formato."
   },
   {
     "id": "inicio-385",
@@ -1017,7 +1013,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+F3"
+        "text": "Ctrl+X"
       },
       {
         "letter": "B",
@@ -1025,7 +1021,7 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+6"
+        "text": "Mayus+Insertar"
       },
       {
         "letter": "D",
@@ -1034,7 +1030,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Copia el contenido seleccionado al portapapeles; es la combinación más extendida para copiar, junto a la variante Ctrl+Insertar."
+    "explicacion": "Ctrl+C es el atajo principal para copiar, junto a la variante antigua Ctrl+Insertar. Ctrl+X corta; Mayus+Insertar pega; Ctrl+Retroceso borra la palabra a la izquierda del cursor."
   },
   {
     "id": "inicio-386",
@@ -1053,15 +1049,15 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Izquierda"
+        "text": "Ctrl+Insertar"
       },
       {
         "letter": "B",
-        "text": "Alt+Entrar"
+        "text": "Ctrl+Supr"
       },
       {
         "letter": "C",
-        "text": "Alt+Arriba"
+        "text": "Ctrl+C"
       },
       {
         "letter": "D",
@@ -1070,7 +1066,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Corta el contenido seleccionado y lo envía al portapapeles; es la combinación más extendida para cortar, junto a la variante Mayús+Supr."
+    "explicacion": "Ctrl+X es el atajo principal para cortar, junto a la variante antigua Mayus+Supr. Ctrl+Insertar y Ctrl+C copian; Ctrl+Supr borra la palabra a la derecha del cursor sin llevarla al portapapeles."
   },
   {
     "id": "inicio-390",
@@ -1089,7 +1085,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+-"
+        "text": "Ctrl+Insertar"
       },
       {
         "letter": "B",
@@ -1097,16 +1093,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+W"
+        "text": "Ctrl+X"
       },
       {
         "letter": "D",
-        "text": "Ctrl+N"
+        "text": "Ctrl+C"
       }
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Pega el contenido del portapapeles en la posición del cursor; es la combinación más extendida para pegar, junto a la variante Mayús+Insertar."
+    "explicacion": "Ctrl+V es el atajo principal para pegar, junto a la variante antigua Mayus+Insertar. Ctrl+Insertar y Ctrl+C copian; Ctrl+X corta."
   },
   {
     "id": "inicio-394",
@@ -1126,15 +1122,15 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Subrayado"
+        "text": "Copiar formato"
       },
       {
         "letter": "B",
-        "text": "Cambiar mayúsculas y minúsculas"
+        "text": "Copiar"
       },
       {
         "letter": "C",
-        "text": "Editor"
+        "text": "Cortar"
       },
       {
         "letter": "D",
@@ -1143,7 +1139,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "**Pegar.** Pestaña Inicio ▸ Portapapeles. Atajo: Ctrl+V. Pega el contenido del Portapapeles en la posición del cursor."
+    "explicacion": "**Pegar.** Pestaña Inicio ▸ Portapapeles. Atajo: Ctrl+V. Los cuatro iconos del grupo Portapapeles se parecen: Pegar (portapapeles con hoja), Copiar (dos hojas), Cortar (tijeras), Copiar formato (pincel)."
   },
   {
     "id": "inicio-395",
@@ -1163,7 +1159,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Disposición ▸ Organizar"
+        "text": "Inicio ▸ Parrafo"
       },
       {
         "letter": "B",
@@ -1175,12 +1171,12 @@
       },
       {
         "letter": "D",
-        "text": "Insertar ▸ Encabezado y pie de página"
+        "text": "Inicio ▸ Edicion"
       }
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "**Copiar.** Pestaña Inicio ▸ Portapapeles. Atajo: Ctrl+C. Copia la selección al Portapapeles sin quitarla del documento."
+    "explicacion": "**Copiar.** Pestaña Inicio ▸ **Portapapeles** (primer grupo de la pestaña Inicio, a la izquierda). Atajo: Ctrl+C. Los grupos vecinos de esa misma pestaña son Fuente, Parrafo, Estilos y Edicion."
   },
   {
     "id": "inicio-396",
@@ -1200,11 +1196,11 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+-"
+        "text": "Ctrl+C"
       },
       {
         "letter": "B",
-        "text": "Ctrl+N"
+        "text": "Ctrl+V"
       },
       {
         "letter": "C",
@@ -1212,12 +1208,12 @@
       },
       {
         "letter": "D",
-        "text": "Ctrl+S"
+        "text": "Ctrl+Z"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "**Cortar.** Pestaña Inicio ▸ Portapapeles. Atajo: Ctrl+X. Quita la selección del documento y la lleva al Portapapeles."
+    "explicacion": "**Cortar.** Pestaña Inicio ▸ Portapapeles. Atajo: **Ctrl+X**. Ctrl+C copia, Ctrl+V pega, Ctrl+Z deshace: los tres son operaciones proximas pero distintas."
   },
   {
     "id": "inicio-397",
@@ -1237,7 +1233,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Alinear a la derecha"
+        "text": "Pegar"
       },
       {
         "letter": "B",
@@ -1245,16 +1241,16 @@
       },
       {
         "letter": "C",
-        "text": "Fuente (nombre)"
+        "text": "Copiar"
       },
       {
         "letter": "D",
-        "text": "Subrayado"
+        "text": "Borrar todo el formato"
       }
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "**Copiar formato.** Pestaña Inicio ▸ Portapapeles. Atajo: Alt+Ctrl+C. El pincel: copia el formato del texto seleccionado para aplicarlo en otro sitio (Alt+Ctrl+V lo pega). Doble clic = varios usos."
+    "explicacion": "**Copiar formato.** Pestaña Inicio ▸ Portapapeles. Atajo: Alt+Ctrl+C. El pincel copia el formato del texto seleccionado para aplicarlo en otro sitio (Alt+Ctrl+V lo pega); doble clic = varios usos. «Borrar todo el formato» (grupo Fuente) hace lo contrario."
   },
   {
     "id": "inicio-458",
@@ -1470,7 +1466,7 @@
       },
       {
         "letter": "C",
-        "text": "Word ofrece 17 tipos de subrayado diferentes"
+        "text": "El desplegable «Estilo de subrayado» del cuadro Fuente ofrece 17 estilos (mas «(ninguno)»)"
       },
       {
         "letter": "D",
@@ -1478,11 +1474,19 @@
       },
       {
         "letter": "E",
-        "text": "El panel de navegación muestra hasta 200 resultados de búsqueda"
+        "text": "El desplegable Subrayado de la cinta ofrece 17 estilos de linea"
       },
       {
         "letter": "F",
-        "text": "El cuadro Bordes y sombreado ofrece 24 estilos de línea de borde"
+        "text": "El cuadro Bordes y sombreado ofrece 24 estilos de linea de borde"
+      },
+      {
+        "letter": "G",
+        "text": "El cuadro Tabulaciones admite 5 tipos de alineacion (izquierda, centro, derecha, decimal y barra)"
+      },
+      {
+        "letter": "H",
+        "text": "El desplegable Interlineado del cuadro Parrafo ofrece 6 tipos (sencillo, 1,5 lineas, doble, minimo, exacto y multiple)"
       }
     ],
     "matching": null,
@@ -1491,9 +1495,11 @@
       "B",
       "C",
       "D",
-      "F"
+      "F",
+      "G",
+      "H"
     ],
-    "explicacion": "Todas son correctas excepto E. El Portapapeles: 24 elementos. Tamaño de fuente: 1 a 1.638 pto. Subrayados: 17 tipos. Niveles multinivel: 9. Estilos de línea de borde: 24. El panel de navegación muestra hasta 100 resultados, no 200; la opción E es incorrecta."
+    "explicacion": "Correctas: A, B, C, D, F, G y H. E es falsa: el desplegable Subrayado de la CINTA ofrece unos 9 estilos rapidos mas «Ninguna» y «Mas subrayados…»; los 17 estilos estan en el desplegable «Estilo de subrayado» del cuadro Fuente (18 entradas contando «(ninguno)»). Numeros verificados en la instalacion del usuario (sep 2026): Portapapeles 24 · tamaño de fuente 1-1638 pto · subrayado 17 (cuadro Fuente) · lista multinivel 9 · estilos de linea de borde 24 · alineaciones de tabulacion 5 · tipos de interlineado 6 · diseños de Arte 164."
   },
   {
     "id": "inicio-6",
@@ -1795,41 +1801,49 @@
         },
         {
           "id": "5",
-          "label": "100"
+          "label": "5"
         },
         {
           "id": "6",
-          "label": "160"
+          "label": "6"
+        },
+        {
+          "id": "7",
+          "label": "164"
         }
       ],
       "right": [
         {
           "id": "A",
-          "label": "Capacidad máxima del Portapapeles de Office"
+          "label": "Capacidad maxima del Portapapeles de Office"
         },
         {
           "id": "B",
-          "label": "Tamaño máximo de fuente en puntos"
+          "label": "Tamaño maximo de fuente en puntos"
         },
         {
           "id": "C",
-          "label": "Número de tipos de subrayado disponibles"
+          "label": "Estilos del desplegable «Estilo de subrayado» del cuadro Fuente"
         },
         {
           "id": "D",
-          "label": "Niveles máximos de una lista multinivel"
+          "label": "Niveles maximos de una lista multinivel"
         },
         {
           "id": "E",
-          "label": "Resultados máximos en el panel de navegación"
+          "label": "Tipos de alineacion de tabulacion (cuadro Tabulaciones)"
         },
         {
           "id": "F",
-          "label": "Diseños de Arte disponibles en Borde de página"
+          "label": "Tipos de interlineado (desplegable del cuadro Parrafo)"
         },
         {
           "id": "G",
-          "label": "Estilos de línea de borde disponibles"
+          "label": "Diseños de Arte en la ficha Borde de pagina"
+        },
+        {
+          "id": "H",
+          "label": "Estilos de linea de borde en Bordes y sombreado"
         }
       ],
       "correct": {
@@ -1838,7 +1852,8 @@
         "3": "C",
         "4": "D",
         "5": "E",
-        "6": "F"
+        "6": "F",
+        "7": "G"
       }
     },
     "respuesta": {
@@ -1847,9 +1862,10 @@
       "3": "C",
       "4": "D",
       "5": "E",
-      "6": "F"
+      "6": "F",
+      "7": "G"
     },
-    "explicacion": "24: Portapapeles de Office. 1.638: tamaño máximo de fuente. 17: tipos de subrayado. 9: niveles de lista multinivel. 100: resultados máximos del panel de navegación. 160: diseños de Arte en Borde de página. El distractor G (estilos de línea de borde: 24) coincide numéricamente con el Portapapeles pero corresponde a un elemento diferente."
+    "explicacion": "24 → Portapapeles de Office. 1.638 → tamaño maximo de fuente (pt). 17 → estilos del desplegable «Estilo de subrayado» del cuadro Fuente. 9 → niveles de una lista multinivel. 5 → tipos de alineacion de tabulacion (izquierda, centro, derecha, decimal, barra). 6 → tipos de interlineado (sencillo, 1,5 lineas, doble, minimo, exacto, multiple). 164 → diseños de Arte (ficha Borde de pagina). El destino H, «estilos de linea de borde», tambien vale 24 (choca con el Portapapeles), pero ningun numero de la izquierda le corresponde: es el señuelo. Numeros verificados en la instalacion del usuario (sep 2026)."
   },
   {
     "id": "inicio-469",
