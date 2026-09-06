@@ -143,10 +143,161 @@ function render(view, params){
   return renderHome();
 }
 
-function qImageHtml(src){
+function qImageHtml(src, ref){
   if(!src) return "";
-  return `<figure class="q-image"><img src="${src}" alt="Imagen del ejercicio"></figure>`;
+  const r = ref ? ` data-imgref="${O.escapeHtml(ref)}"` : "";
+  return `<figure class="q-image"><img class="zoomable" src="${src}" alt="Imagen del ejercicio"${r}>`
+    + `<figcaption class="q-image-hint">Pulsa para ampliar${ref && O.ContentEdit ? " o recortar" : ""}</figcaption></figure>`;
 }
+
+/* ---- Visor / recorte de imagen a pantalla completa (estilo WhatsApp) ----
+   Pulsa cualquier imagen de ejercicio -> se abre grande; pellizca/arrastra
+   para encuadrar; "Guardar recorte" deja solo lo visible dentro del marco
+   y lo guarda como corrección local (PROGRESS.contentOverrides.<kind>.imagen). */
+function openImageLightbox(src, ref){
+  if(document.getElementById("img-lb")) return;
+  const kind = ref && ref.split("|")[0];
+  const id   = ref && ref.slice(ref.indexOf("|") + 1);
+  const canSave = !!(ref && O.ContentEdit && (kind === "q" || kind === "fc"));
+
+  const lb = document.createElement("div");
+  lb.id = "img-lb"; lb.className = "img-lb";
+  lb.innerHTML = `
+    <div class="img-lb-stage" id="img-lb-stage">
+      <img id="img-lb-img" src="${src}" alt="" draggable="false">
+      <div class="img-lb-frame" id="img-lb-frame"></div>
+    </div>
+    <div class="img-lb-bar">
+      <button class="ed-btn" id="img-lb-close">Cerrar</button>
+      ${canSave ? `<button class="ed-btn" id="img-lb-reset">Restablecer</button>
+      <button class="ed-btn is-primary" id="img-lb-save">Guardar recorte</button>` : ''}
+    </div>
+    <p class="img-lb-tip">${canSave ? "Arrastra y pellizca para encuadrar. «Guardar recorte» deja solo lo que quede dentro del marco." : "Arrastra y pellizca para ver los detalles."}</p>`;
+  document.body.appendChild(lb);
+  document.body.style.overflow = "hidden";
+
+  const stage = lb.querySelector("#img-lb-stage");
+  const imgEl = lb.querySelector("#img-lb-img");
+  const frame = lb.querySelector("#img-lb-frame");
+  let scale = 1, tx = 0, ty = 0, min = 1, nw = 0, nh = 0;
+  let fw = 0, fh = 0;                       // tamaño del marco (px de pantalla)
+
+  function layout(){
+    const sr = stage.getBoundingClientRect();
+    const ar = nw / nh;
+    // marco = 82% del area disponible, respetando el aspecto de la imagen
+    let w = sr.width * 0.9, h = sr.height * 0.82;
+    if(w / h > ar) w = h * ar; else h = w / ar;
+    fw = w; fh = h;
+    frame.style.width = w + "px"; frame.style.height = h + "px";
+    min = w / nw;                           // escala a la que la imagen llena el marco
+    if(scale < min) scale = min;
+    render();
+  }
+  function render(){
+    // limita el paneo para que el marco nunca se salga de la imagen
+    const halfExtraX = Math.max(0, (nw * scale - fw) / 2);
+    const halfExtraY = Math.max(0, (nh * scale - fh) / 2);
+    tx = Math.max(-halfExtraX, Math.min(halfExtraX, tx));
+    ty = Math.max(-halfExtraY, Math.min(halfExtraY, ty));
+    imgEl.style.transform = `translate(-50%,-50%) translate(${tx}px,${ty}px) scale(${scale})`;
+  }
+
+  function measure(){ nw = imgEl.naturalWidth; nh = imgEl.naturalHeight; if(nw && nh) layout(); }
+  if(imgEl.complete && imgEl.naturalWidth) measure();
+  else imgEl.addEventListener("load", measure);
+  window.addEventListener("resize", layout);
+
+  // ---- gestos ----
+  const pts = new Map();
+  let startDist = 0, startScale = 1, startMid = null, startTx = 0, startTy = 0;
+  function dist(a, b){ return Math.hypot(a.x - b.x, a.y - b.y); }
+  function mid(a, b){ return { x:(a.x + b.x)/2, y:(a.y + b.y)/2 }; }
+  stage.addEventListener("pointerdown", (e)=>{
+    stage.setPointerCapture(e.pointerId);
+    pts.set(e.pointerId, { x:e.clientX, y:e.clientY });
+    if(pts.size === 2){
+      const [a, b] = [...pts.values()];
+      startDist = dist(a, b); startScale = scale; startMid = mid(a, b);
+      startTx = tx; startTy = ty;
+    }
+  });
+  stage.addEventListener("pointermove", (e)=>{
+    if(!pts.has(e.pointerId)) return;
+    const prev = pts.get(e.pointerId);
+    pts.set(e.pointerId, { x:e.clientX, y:e.clientY });
+    if(pts.size === 1){
+      tx += e.clientX - prev.x; ty += e.clientY - prev.y; render();
+    } else if(pts.size === 2 && startMid){
+      const [a, b] = [...pts.values()];
+      const k = dist(a, b) / (startDist || 1);
+      scale = Math.max(min * 0.5, Math.min(min * 14, startScale * k));
+      const m = mid(a, b);
+      tx = startTx + (m.x - startMid.x);
+      ty = startTy + (m.y - startMid.y);
+      render();
+    }
+  });
+  function up(e){ pts.delete(e.pointerId); if(pts.size < 2) startMid = null; }
+  stage.addEventListener("pointerup", up);
+  stage.addEventListener("pointercancel", up);
+  stage.addEventListener("wheel", (e)=>{
+    e.preventDefault();
+    const r = stage.getBoundingClientRect();
+    const cx = e.clientX - r.left - r.width / 2 - tx;
+    const cy = e.clientY - r.top - r.height / 2 - ty;
+    const k = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    const ns = Math.max(min * 0.5, Math.min(min * 14, scale * k));
+    tx -= cx * (ns / scale - 1); ty -= cy * (ns / scale - 1);
+    scale = ns; render();
+  }, { passive:false });
+
+  function close(){
+    document.body.style.overflow = "";
+    lb.remove();
+    document.removeEventListener("keydown", onKey);
+    window.removeEventListener("resize", layout);
+  }
+  function onKey(e){ if(e.key === "Escape") close(); }
+  document.addEventListener("keydown", onKey);
+  lb.querySelector("#img-lb-close").addEventListener("click", close);
+  lb.addEventListener("click", (e)=>{ if(e.target === lb) close(); });
+
+  const rb = lb.querySelector("#img-lb-reset");
+  if(rb) rb.addEventListener("click", ()=>{ scale = min; tx = 0; ty = 0; render(); });
+
+  const sb = lb.querySelector("#img-lb-save");
+  if(sb) sb.addEventListener("click", ()=>{
+    // rect del marco en pixeles naturales de la imagen
+    let cx = nw / 2 + (-fw / 2 - tx) / scale;
+    let cy = nh / 2 + (-fh / 2 - ty) / scale;
+    let cw = fw / scale, ch = fh / scale;
+    // interseccion con la imagen
+    const x0 = Math.max(0, cx), y0 = Math.max(0, cy);
+    const x1 = Math.min(nw, cx + cw), y1 = Math.min(nh, cy + ch);
+    if(x1 - x0 < 2 || y1 - y0 < 2){ O.toast("El recorte queda fuera de la imagen"); return; }
+    let ow = x1 - x0, oh = y1 - y0;
+    const CAP = 640;
+    const f = Math.min(1, CAP / Math.max(ow, oh));
+    const cv = document.createElement("canvas");
+    cv.width = Math.round(ow * f); cv.height = Math.round(oh * f);
+    const g = cv.getContext("2d");
+    g.fillStyle = "#fff"; g.fillRect(0, 0, cv.width, cv.height);
+    g.drawImage(imgEl, x0, y0, ow, oh, 0, 0, cv.width, cv.height);
+    let out = cv.toDataURL("image/png");
+    if(out.length > 600 * 1024) out = cv.toDataURL("image/jpeg", 0.9);
+    if(out.length > 900 * 1024){ O.toast("El recorte resultante es demasiado grande"); return; }
+    O.ContentEdit.apply(kind, id, { imagen: out });
+    if(O.LEB && O.LEB.recalcNow) O.LEB.recalcNow();
+    close();
+    O.toast("Recorte guardado (corrección local)");
+    if(O.Nav && typeof go === "function") go(O.Nav.view, O.Nav.params);
+  });
+}
+window.addEventListener("click", (e)=>{
+  const im = e.target.closest && e.target.closest("img.zoomable");
+  if(im){ e.preventDefault(); openImageLightbox(im.getAttribute("src"), im.getAttribute("data-imgref") || ""); }
+}, true);
 /* lee un archivo de imagen, lo reduce (máx 520px) y comprime a data URI */
 function readImageFile(file, cb){
   if(!file || !/^image\//.test(file.type||"")){ O.toast("Selecciona un archivo de imagen"); return; }
@@ -1203,7 +1354,7 @@ function renderQuestionCard(q, s, isExam){
         <button class="star ${marked?"on":""}" id="q-star" aria-label="Marcar pregunta">★</button>
       </div>
     </div>
-    ${qImageHtml(q.imagen)}
+    ${qImageHtml(q.imagen, "q|"+q.id)}
     <h3>${O.renderBlank(q.enunciado)}</h3>
     <div id="q-body"></div>
     <div id="q-feedback"></div>
@@ -1701,7 +1852,7 @@ function buildReviewDetailHtml(q){
         <button class="star ${O.isMarked(q.id)?"on":""}" id="rd-star" data-star="${q.id}">★</button>
       </div>
     </div>
-    ${qImageHtml(q.imagen)}
+    ${qImageHtml(q.imagen, "q|"+q.id)}
     <h3>${O.renderBlank(q.enunciado)}</h3>
     <div id="rd-body"></div>
     <div class="feedback-box ${a? (a.correcta?"ok":"bad") : "ok"}" style="margin-top:16px;">
@@ -2008,7 +2159,7 @@ function renderFlashcardsStudy(){
               ${c.priority==="alta" ? `<span class="tag">★ Prioridad alta</span>` : ''}
               ${dominada ? `<span class="tag" style="color:var(--good);border-color:var(--good-line);">Dominada</span>` : ''}
             </div>
-            ${qImageHtml(c.imagen)}
+            ${qImageHtml(c.imagen, "fc|"+c.canonicalId)}
             <div class="ff-text">${formatCardText(c.front)}</div>
             <div class="ff-hint">Mostrar respuesta</div>
           </div>
@@ -2321,7 +2472,7 @@ function qEditFormHtml(q, orig, pfx){
       <span class="edit-hint">La correcta se asocia a la letra por su posición; al estudiar, el orden de las opciones se baraja.</span></div>` : '';
   const tfRow = q.tipo === "verdadero_falso" ? `<div class="field"><label>Respuesta correcta</label>${respuestaControl(q, orig.respuesta, pfx)}</div>` : '';
   return `
-    ${q.imagen ? `<div class="field"><label>Imagen (no editable aquí)</label>${qImageHtml(q.imagen)}</div>` : ''}
+    ${q.imagen ? `<div class="field"><label>Imagen — pulsa para ampliarla o recortarla</label>${qImageHtml(q.imagen, "q|"+q.id)}</div>` : ''}
     <div class="field"><label>Enunciado</label>
       <textarea id="${pfx}-enun" rows="3" class="edit-field">${O.escapeHtml(orig.enunciado||"")}</textarea></div>
     ${optRows}
@@ -2374,9 +2525,9 @@ function openEditQuestionModal(qid, onDone){
   }, {wide:true});
 }
 
-function fcEditFormHtml(orig, pfx){
+function fcEditFormHtml(orig, pfx, fcid){
   return `
-    ${orig.imagen ? `<div class="field"><label>Imagen (no editable aquí)</label>${qImageHtml(orig.imagen)}</div>` : ''}
+    ${orig.imagen ? `<div class="field"><label>Imagen — pulsa para ampliarla o recortarla</label>${qImageHtml(orig.imagen, fcid ? "fc|"+fcid : "")}</div>` : ''}
     <div class="field"><label>Frente</label>
       <textarea id="${pfx}-front" rows="3" class="edit-field">${O.escapeHtml(orig.front||"")}</textarea></div>
     <div class="field"><label>Dorso</label>
@@ -2414,7 +2565,7 @@ function openEditFlashcardModal(canonicalId, onDone){
   showModal(`
     <h3>Editar flashcard</h3>
     <p class="edit-id">${canonicalId} · ${cardTypeLabel(f.cardType)}${f.topic?` · ${O.escapeHtml(f.topic)}`:''}</p>
-    ${fcEditFormHtml(contentEditDisplay("fc", canonicalId), "fc-edit")}
+    ${fcEditFormHtml(contentEditDisplay("fc", canonicalId), "fc-edit", canonicalId)}
     <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes para volcarlo al banco.</p>
     <div class="ed-actions">
       ${(O.GHS && O.GHS.hasToken() && !(O.ContentEdit && O.ContentEdit.isUser("fc", canonicalId))) ? `<button class="ed-btn is-danger" id="fc-edit-delbank" title="Borrar la flashcard del banco (commit a GitHub)">Borrar del banco</button>` : ''}
@@ -2637,7 +2788,7 @@ function openPreviewModal(kind, id, onDone){
       <p class="edit-id">${O.escapeHtml(c.canonicalId)} · ${O.escapeHtml(sectionName(c.section))}${c.topic?` · ${O.escapeHtml(topicName(c.section, c.topic))}`:''}</p>
       <div class="preview-fc">
         <div class="preview-face"><span class="preview-tag">Frente</span>
-          ${qImageHtml(c.imagen)}
+          ${qImageHtml(c.imagen, "fc|"+c.canonicalId)}
           <div class="ff-text">${formatCardText(c.front)}</div></div>
         <div class="preview-face preview-back"><span class="preview-tag">Dorso</span>
           <div class="fb-text">${renderCardBack(c.back)}</div></div>
@@ -2670,7 +2821,7 @@ function openPreviewModal(kind, id, onDone){
     <h3>Vista previa · pregunta</h3>
     <p class="edit-id">${O.escapeHtml(q.id)} · ${q.tipo==="verdadero_falso"?"V/F":q.tipo==="seleccion_multiple"?"Selección múltiple":"Opción única"}${q.negativa?" · negativa":""} · ${O.escapeHtml(sectionName(q.section))}${q.topic?` · ${O.escapeHtml(topicName(q.section, q.topic))}`:''}</p>
     <div class="preview-q">
-      ${qImageHtml(q.imagen)}
+      ${qImageHtml(q.imagen, "q|"+q.id)}
       <p class="preview-enun">${O.escapeHtml(q.enunciado||"")}</p>
       ${body}
       ${expl ? `<div class="preview-expl"><b>Explicación.</b> ${kbdify(O.escapeHtml(expl))}</div>` : `<p class="edit-hint">Sin explicación.</p>`}
@@ -3109,7 +3260,7 @@ function renderBancoAdmin(){
              <button class="ed-btn is-primary" id="bk-ed-openuser">Abrir editor completo</button>
              <button class="ed-btn is-danger" id="bk-ed-deluser">Eliminar</button>
            </div>`
-        : `${isQ ? qEditFormHtml(obj, contentEditDisplay("q", id), "bk-ed") : fcEditFormHtml(contentEditDisplay("fc", id), "bk-ed")}
+        : `${isQ ? qEditFormHtml(obj, contentEditDisplay("q", id), "bk-ed") : fcEditFormHtml(contentEditDisplay("fc", id), "bk-ed", id)}
            <span id="bk-ed-status" class="ed-status">${hasOv?'Corrección local guardada · sin publicar':''}</span>
            <div class="ed-actions bk-ed-actions">
              <button class="ed-btn is-primary" id="bk-ed-save">Guardar</button>

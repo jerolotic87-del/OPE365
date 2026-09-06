@@ -1040,6 +1040,21 @@ archivo, añádele preguntas a ese archivo renumerando la cola.
     predeterminado en todas las sesiones — smart/repaso/concepto/práctica/
     sección/errores/duelo/coop), así que da igual en qué letra se guarde la
     correcta. Test: `tests/test_edit_answer_marker.js`.
+  - **Visor / recorte de imagen (sep-2026)**: `imagen` ya era un campo
+    corregible (`Q_FIELDS`/`FC_FIELDS`) pero no había UI. Ahora `qImageHtml(src, ref)`
+    marca toda imagen de ejercicio como `img.zoomable` con `data-imgref`
+    (`"q|<id>"` / `"fc|<canonicalId>"`); un handler global de click abre
+    `openImageLightbox()` — visor a pantalla completa estilo estado de
+    WhatsApp: pinch/arrastre/rueda para encuadrar dentro de un marco fijo
+    (aspecto = el de la imagen). «Guardar recorte» renderiza SOLO lo que
+    queda dentro del marco a un `<canvas>` (cap 640 px, PNG→JPEG si pesa),
+    lo guarda como corrección local vía `ContentEdit.apply(kind, id, {imagen})`
+    y re-renderiza la vista. Sirve para recortar iconos mal encuadrados
+    (letras de comandos vecinos visibles) desde el móvil. Solo recorta hacia
+    dentro (los datos fuera del recorte original no se recuperan). Sin ref
+    editable = visor de solo lectura. Tests: `tests/test_image_lightbox.js`
+    (jsdom) + `tests/manual_lightbox_qa.mjs` (Chromium real: zoom, pan,
+    canvas, override).
 
 - **`github-sync.js` (`OPE.GHS`)** — publica tu contenido propio (el de
   "Mi contenido") directamente al repo vía la API de GitHub, en UN commit
