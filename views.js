@@ -1549,16 +1549,10 @@ function correctAnswerText(q){
 }
 function showFeedback(el, q, resp){
   const full = cleanExplic(q.explicacion);
-  // parte en frente (siempre visible) + continuación (plegada). La
-  // continuación NO repite el frente: se retoma justo donde se cortó.
-  let head = full, tail = "";
-  if(full.length > 170){
-    let cut = full.lastIndexOf(" ", 170);
-    if(cut < 90) cut = 170;
-    head = full.slice(0, cut).trim();
-    tail = full.slice(cut).trim();
-  }
-  const label = "Continuar leyendo";
+  // La explicación es UN solo bloque continuo. Si es larga, se recorta con
+  // CSS (line-clamp) y un botón debajo la despliega en el sitio — nunca se
+  // parte el texto ni se mete el botón en medio de una frase.
+  const longish = full.length > 240;
   const rightTxt = !resp.correct ? correctAnswerText(q) : null;
   el.innerHTML = `
     <div class="fb ${resp.correct?'fb-ok':'fb-bad'}">
@@ -1567,10 +1561,17 @@ function showFeedback(el, q, resp){
         <span class="fb-verdict">${resp.correct?'Correcto':'Incorrecto'}</span>
         ${rightTxt ? `<span class="fb-right">Correcta: <b>${O.escapeHtml(rightTxt)}</b></span>` : ''}
       </div>
-      ${head ? `<p class="fb-gist">${kbdify(O.escapeHtml(head))}${tail?'…':''}</p>` : ''}
-      ${tail ? `<details class="fb-more"><summary>${label}</summary>
-        <div class="fb-more-body">${kbdify(O.escapeHtml(tail))}</div></details>` : ''}
+      ${full ? `<p class="fb-gist${longish?' is-clamped':''}">${kbdify(O.escapeHtml(full))}</p>` : ''}
+      ${longish ? `<button type="button" class="fb-toggle" aria-expanded="false">Continuar leyendo</button>` : ''}
     </div>`;
+  if(longish){
+    const p = el.querySelector(".fb-gist"), btn = el.querySelector(".fb-toggle");
+    btn.addEventListener("click", ()=>{
+      const clamped = p.classList.toggle("is-clamped");
+      btn.setAttribute("aria-expanded", String(!clamped));
+      btn.textContent = clamped ? "Continuar leyendo" : "Mostrar menos";
+    });
+  }
 }
 
 function submitAnswer(q, s, isExam, answer){
