@@ -13223,28 +13223,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0335",
-    "enunciado": "¿Cuántos tipos de estilo existen en Word 365?",
+    "enunciado": "En el cuadro «Crear nuevo estilo a partir del formato», ¿cuántos valores ofrece el desplegable «Tipo de estilo» en Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2 (párrafo y carácter)"
-      },
-      {
-        "letter": "B",
         "text": "3 (párrafo, carácter y tabla)"
       },
       {
-        "letter": "C",
+        "letter": "B",
         "text": "4 (párrafo, carácter, tabla y lista)"
       },
       {
+        "letter": "C",
+        "text": "5 (párrafo, carácter, vinculado, tabla y lista)"
+      },
+      {
         "letter": "D",
-        "text": "5 (párrafo, carácter, tabla, lista y sección)"
+        "text": "6 (los 5 anteriores más «sección»)"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Word 365 dispone de 4 tipos de estilo: de párrafo (controla el formato del párrafo completo), de carácter (controla el formato de caracteres seleccionados dentro de un párrafo), de tabla (controla el formato de tablas) y de lista (controla el formato de listas con viñetas o numeración)."
+    "explicacion": "El desplegable «Tipo de estilo» ofrece 5 valores: Párrafo, Carácter, **Vinculado (párrafo y carácter)**, Tabla y Lista. «Vinculado» aplica formato de párrafo si no hay selección y solo de carácter si hay texto seleccionado dentro del párrafo. No existe un tipo «Sección». Verificado en vivo del usuario (sep 2026)."
   },
   {
     "id": "inicio-90",

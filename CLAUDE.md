@@ -559,7 +559,12 @@ resultados"): "muestra hasta 100/200" es falso, no usar. · **Biblioteca
 de numeración** = «Ninguna» + **7** formatos · «Definir nuevo formato de
 número» ▸ **Estilo de número** = «(ninguno)» + **12** estilos · **Biblioteca
 de viñetas** = «Ninguna» + **7** viñetas · Arte (Borde de página) =
-«(ninguno)» + **164** diseños.
+«(ninguno)» + **164** diseños · cuadro **Tabulaciones**: Alineación **5**
+(Izquierda/Centro/Derecha/Decimal/Barra), Relleno **4** (Ninguno/`......`/
+`-------`/`___`); selector de la regla = ciclo de **7** (5 tabs + sangría
+1.ª línea + francesa) · **«Tipo de estilo»** (cuadro Crear nuevo estilo) =
+**5** (Párrafo / Carácter / Vinculado (párrafo y carácter) / Tabla / Lista)
+— NO existe tipo «Sección»; `inicio-88` corregido de 4 a 5.
 **Endurecimiento de distractores — Portapapeles (sep-2026)**: 29 de las 52
 preguntas del topic `portapapeles` reescritas con `scripts/harden_portapapeles.py`.
 Regla fijada con el usuario: distractor = elemento real, o *mecanismo*
