@@ -1,0 +1,304 @@
+VOLCADO DE RUTAS — PESTAÑA INICIO — WORD 365 (v2608)
+Extracción del usuario (sep-2026), rama a rama de la cinta + cuadros de diálogo.
+Fuente de verificación: data/imagenes_rutas/inicio/ (156 capturas).
+Referencia para data/questions/inicio.json y data/flashcards/inicio.json.
+"..." = etiqueta truncada en la captura original.
+
+ATAJOS: la fuente de atajos NO es este archivo, es data/atajos_word365_v2608.md.
+Los atajos que aparecen aquí son los que Word muestra en el tooltip de la cinta;
+donde el tooltip contradice la prueba en vivo, MANDA la prueba en vivo (ver
+CLAUDE.md). Conflicto detectado en estas capturas:
+  - Tooltip "Subíndice (Ctrl+=)"  →  en vivo Ctrl+= NO funciona; subíndice real
+    = Ctrl+Mayús+- (CLAUDE.md, prueba en vivo). El tooltip trae el esquema
+    internacional. La pregunta debe llevar la advertencia ⚠️.
+  - Tooltip "Superíndice" NO muestra atajo  →  coincide con la prueba en vivo
+    (superíndice no tiene atajo en esta instalación).
+Atajos confirmados por tooltip (coinciden con esquema clásico ES ya verificado):
+  Negrita = Ctrl+N · Cursiva = Ctrl+K · Subrayado = Ctrl+S ·
+  Aumentar tamaño de fuente = Ctrl+Mayús+> · Disminuir tamaño de fuente = Ctrl+<
+  Tachado, Cambiar mayúsculas y minúsculas, Borrar todo el formato,
+  Efectos de texto y tipografía, Resaltado, Color de fuente = SIN atajo en tooltip.
+
+
+=== GRUPO: PORTAPAPELES ===
+
+Inicio > Portapapeles > Pegar (botón principal)
+Inicio > Portapapeles > Pegar > (flecha) > Opciones de pegado: [Mantener formato de origen] [Imagen]
+Inicio > Portapapeles > Pegar > (flecha) > Pegado especial...
+Inicio > Portapapeles > Pegar > (flecha) > Establecer Pegar predeterminado...
+    (abre Archivo > Opciones > Avanzadas > sección "Cortar, copiar y pegar";
+     "Pegar dentro del mismo documento: Mantener formato de origen (Predeterminado)")
+Inicio > Portapapeles > Pegado especial... (cuadro)
+    Origen: <origen del portapapeles>
+    (o) Pegar   (o) Pegar vínculo
+    Como: [Mapa de bits] [Mapa de bits independiente del dispositivo] ...
+    [ ] Mostrar como icono
+    Resultado: <descripción del formato elegido>
+    [Aceptar] [Cancelar]
+Inicio > Portapapeles > Cortar
+Inicio > Portapapeles > Copiar
+Inicio > Portapapeles > Copiar formato   (tooltip "Copiar formato")
+Inicio > Portapapeles > (iniciador del cuadro de diálogo) > panel Portapapeles
+
+
+=== GRUPO: FUENTE ===
+
+Inicio > Fuente > Fuente (cuadro con nombre, "Aptos (Cuerpo)")
+Inicio > Fuente > Fuente > Fuentes del tema / Fuentes usadas recientemente / Todas las fuentes
+Inicio > Fuente > Tamaño de fuente (cuadro "12")  — lista 8, 9, 10, 11, 12, ...
+Inicio > Fuente > Aumentar tamaño de fuente   (Ctrl+Mayús+>)
+Inicio > Fuente > Disminuir tamaño de fuente   (Ctrl+<)
+Inicio > Fuente > Cambiar mayúsculas y minúsculas (Aa) > (desplegable, 5 opciones):
+    Tipo oración.
+    minúscula
+    MAYÚSCULAS
+    Poner En Mayúsculas Cada Palabra
+    Alternar mayúsculas y minúsculas
+Inicio > Fuente > Borrar todo el formato   (deja el texto normal sin formato)
+Inicio > Fuente > Negrita   (Ctrl+N)
+Inicio > Fuente > Cursiva   (Ctrl+K)
+Inicio > Fuente > Subrayado   (Ctrl+S)
+Inicio > Fuente > Subrayado > (flecha) > (galería de estilos de línea)
+Inicio > Fuente > Subrayado > (flecha) > Ninguna
+Inicio > Fuente > Subrayado > (flecha) > Más subrayados...   (abre cuadro Fuente,
+    despliega "Estilo de subrayado": (ninguno), Solo palabras, sencillo, doble,
+    punteado, discontinuo, ... )
+Inicio > Fuente > Subrayado > (flecha) > Color de subrayado > (paleta)
+Inicio > Fuente > Tachado
+Inicio > Fuente > Subíndice   (tooltip: "Subíndice (Ctrl+=)"  ⚠️ Ctrl+= NO funciona
+    en vivo; el atajo real es Ctrl+Mayús+-)
+Inicio > Fuente > Superíndice   (tooltip SIN atajo — coincide con la prueba en vivo)
+Inicio > Fuente > Efectos de texto y tipografía (A azul) > (desplegable):
+    (galería de 15 estilos rápidos de WordArt)
+    Contorno    > (submenú: sin contorno / colores del tema / colores estándar /
+                   Más colores de contorno / Grosor > (lista + Más líneas...) /
+                   Guiones > (lista + Más líneas...))
+    Sombra      > (submenú: Sin sombra / Exterior / Interior / Perspectiva /
+                   Más opciones de sombra...)
+    Reflejo     > (submenú: Sin reflejo / Variaciones de reflejo /
+                   Opciones de reflejo...)
+    Iluminado   > (submenú: Sin iluminado / Variaciones / Más colores de
+                   iluminado / Opciones de iluminado...)
+    Estilos de número   > (submenú: Predeterminado / Proporcional alineado /
+                   Tabular alineado / Proporcional antiguo / Tabular antiguo /
+                   Formas de cero, etc.)
+    Ligaduras   > (submenú: Ninguno / Estándar solo / Estándar y contextual /
+                   Históricas y discrecionales / Todos)
+    Conjuntos de estilos   > (submenú de conjuntos estilísticos de la fuente)
+Inicio > Fuente > Color de resaltado del texto > (flecha) > (paleta 15 colores)
+Inicio > Fuente > Color de resaltado del texto > (flecha) > Sin color
+Inicio > Fuente > Color de resaltado del texto > (flecha) > Detener resaltado
+Inicio > Fuente > Color de fuente (A roja) > (flecha) > Automático
+Inicio > Fuente > Color de fuente > (flecha) > Colores del tema / Colores estándar
+Inicio > Fuente > Color de fuente > (flecha) > Más colores...
+Inicio > Fuente > Color de fuente > (flecha) > Degradado > (submenú: Sin degradado /
+    Variaciones / Más degradados... )
+    Más degradados... abre el panel "Formato de texto" (Relleno de texto: degradado)
+Inicio > Fuente > (iniciador del cuadro de diálogo) > cuadro FUENTE
+    Fichas: [Fuente] [Avanzado]
+    Ficha Fuente:
+      Fuente: (lista, +Cuerpo, +Títulos, Abadi, ...)
+      Estilo de fuente: Normal / Cursiva / Negrita / Negrita Cursiva
+      Tamaño: 8, 9, 10, 11, 12, ...
+      Color de fuente: Automático / ...
+      Estilo de subrayado: (ninguno) / Solo palabras / sencillo / doble / ...
+      Color de subrayado: Automático / ...
+      Efectos (casillas): Tachado · Doble tachado · Superíndice · Subíndice ·
+                          Versalitas · Mayúsculas · Oculto
+      Vista previa
+      [Establecer como predeterminado] [Efectos de texto:] [Aceptar] [Cancelar]
+    Ficha Avanzado: Escala / Espaciado / Posición / Interletraje / opciones OpenType
+
+
+=== GRUPO: PÁRRAFO ===
+
+Inicio > Párrafo > Viñetas > (flecha) > (desplegable):
+    Viñetas usadas recientemente
+    Biblioteca de viñetas: Ninguna · ● · ○ · ■ · ✦ · ❖ · ➤ · ✔
+    Viñetas de documento
+    Cambiar nivel de lista >
+    Definir nueva viñeta...
+        (cuadro "Definir nueva viñeta": botones [Símbolo...] [Imagen...] [Fuente...],
+         Alineación: Izquierda, Vista previa)
+Inicio > Párrafo > Numeración > (flecha) > (desplegable):
+    Biblioteca de numeración: Ninguna · 1.2.3. · 1)2)3) · I.II.III. · A.B.C. ·
+                              a)b)c) · a.b.c. · i.ii.iii.
+    Cambiar nivel de lista >
+    Definir nuevo formato de número...
+        (cuadro: Estilo de número: (1,2,3,... / a,b,c,... / A,B,C,... / i,ii,iii,... /
+         I,II,III,... / 1º,2º,3º / 001,002,... / árabe con separador de miles ...),
+         botón [Fuente...], Formato de número: "1.", Alineación: Izquierda/Centro/Derecha,
+         Vista previa)
+    Establecer valor de numeración...
+Inicio > Párrafo > Lista multinivel > (flecha) > (desplegable):
+    Lista actual
+    Biblioteca de listas: Ninguna + 7 presets (1)a)i) · 1.1.1. · viñetas ·
+        "Artículo I./Sección 1.01/(a)" con estilos de título · "1 Título1/1.1 Título2" ·
+        "I. Título1/A. Título2" · "Capítulo 1 Título1")
+    Cambiar nivel de lista >
+    Definir nueva lista multinivel...
+        (cuadro "Definir nueva lista con varios niveles": selector de nivel 1-9,
+         "Especifique formato para el número", [Fuente...],
+         "Estilo de número para este nivel" (1,2,3,... / ordinal / cardinal texto /
+          ordinal texto / A,B,C / a,b,c / I,II,III / i,ii,iii / viñeta / ninguno ...),
+         "Incluir número de nivel desde",
+         Posición: Alineación de los números (Izq/Centro/Der), Alineación 0 cm,
+         Sangría de texto en 0,63 cm, [Establecer para todos los niveles...],
+         botón [Más >>])
+    Definir nuevo estilo de lista...
+Inicio > Párrafo > Disminuir sangría   (tooltip "Disminuir sangría")
+Inicio > Párrafo > Aumentar sangría   (tooltip "Aumentar sangría")
+Inicio > Párrafo > Ordenar   (tooltip "Ordenar", SIN atajo — cuadro Ordenar texto)
+Inicio > Párrafo > Mostrar todo (¶)   (tooltip: "Mostrar todo (Ctrl+()" — en teclado ES
+    Ctrl+( es la misma pulsación que Ctrl+Mayús+8)
+Inicio > Párrafo > Alinear a la izquierda   (tooltip: "Alinear a la izquierda (Ctrl+Q)")
+Inicio > Párrafo > Centrar   (tooltip)  [Ctrl+T, esquema clásico ES]
+Inicio > Párrafo > Alinear a la derecha   (tooltip)  [Ctrl+D, esquema clásico ES]
+Inicio > Párrafo > Justificar   (tooltip: "Justificar (Ctrl+J)")
+Inicio > Párrafo > Espaciado entre líneas y párrafos > (flecha) > (desplegable):
+    1,0 · 1,15 · 1,5 · 2,0 · 2,5 · 3,0
+    Opciones de interlineado...   (abre cuadro PÁRRAFO, ficha Sangría y espacio)
+    Agregar espacio antes del párrafo
+    Quitar espacio después del párrafo
+Inicio > Párrafo > Sombreado > (flecha) > (desplegable):
+    Colores del tema · Colores estándar · Sin color · Más colores...
+    (toggle "Solo contraste alto")
+Inicio > Párrafo > Bordes > (flecha) > (desplegable):
+    Borde inferior · Borde superior · Borde izquierdo · Borde derecho
+    Sin borde · Todos los bordes · Bordes externos · Bordes internos
+    Borde horizontal interno · Borde vertical interno
+    Borde diagonal descendente · Borde diagonal ascendente   (deshab. fuera de tabla)
+    Línea horizontal
+    Dibujar tabla   (tooltip)
+    Ver cuadrículas   (tooltip)
+    Bordes y sombreado...
+Inicio > Párrafo > Bordes > (flecha) > Bordes y sombreado... (cuadro)
+    Fichas: [Bordes] [Borde de página] [Sombreado]
+    Ficha Bordes:
+      Valor: Ninguno · Cuadro · Sombra · 3D · Personalizado
+      Estilo (lista de líneas) · Color: Automático · Ancho: ½ pto
+      Vista previa (botones de borde superior/inferior/izq/der)
+      Aplicar a: Párrafo / Texto
+      [Opciones...] (márgenes del borde: superior/inferior/izq/der, "Medir desde")
+      [Línea horizontal...]
+    Ficha Borde de página:
+      igual que Bordes + campo "Arte:" (galería de bordes decorativos: (ninguno) + ~160)
+      Aplicar a: Todo el documento / Esta sección / Esta sección - solo la 1ª página /
+                 Esta sección - todas menos la 1ª
+    Ficha Sombreado:
+      Relleno: Sin color / (paleta)
+      Tramas: Estilo: Claro / 5% / 10% / ... / rayas / cuadrículas ;  Color: Automático
+      Aplicar a: Párrafo / Texto
+Inicio > Párrafo > (iniciador del cuadro de diálogo) > cuadro PÁRRAFO
+    Fichas: [Sangría y espacio] [Líneas y saltos de página]
+    Ficha Sangría y espacio:
+      General:
+        Alineación: Izquierda / Centrada / Derecha / Justificada
+        Nivel de esquema: Texto independiente / Nivel 1 ... Nivel 9
+        [ ] Contraído de forma predeterminada   (activo solo si Nivel 1-9)
+      Sangría:
+        Izquierda: 0 cm · Derecha: 0 cm · [ ] Sangrías simétricas
+        Especial: (ninguna) / Primera línea / Sangría francesa   ·   En: __
+      Espaciado:
+        Anterior: 0 pto · Posterior: 8 pto
+        [ ] No agregar espacio entre párrafos del mismo estilo
+        Interlineado: Sencillo / 1,5 líneas / Doble / Mínimo / Exacto / Múltiple   ·  En: __
+      Vista previa
+      [Tabulaciones...] [Establecer como predeterminado] [Aceptar] [Cancelar]
+    Ficha Líneas y saltos de página:
+      Paginación: Control de líneas viudas y huérfanas / Conservar con el siguiente /
+                  Conservar líneas juntas / Salto de página anterior
+      Excepciones de formato: Suprimir números de línea / No dividir con guiones
+      Cuadro de texto: Ajuste de texto
+
+
+=== GRUPO: ESTILOS ===
+
+Inicio > Estilos > (galería, se ve completa con la flecha "Más"):
+    Normal · Sin espaciado · Título 1 · Título 2 · Título · Subtítulo ·
+    Énfasis sutil · Énfasis · Énfasis intenso · Fuerte · Cita · Cita destacada ·
+    Referencia sutil · Referencia intensa · Título del libro · Párrafo de lista
+Inicio > Estilos > (flecha "Más") > Crear un estilo
+    (cuadro "Crear nuevo estilo a partir del formato": Nombre, Vista previa, [Aceptar]
+     [Modificar...] [Cancelar])
+Inicio > Estilos > (flecha "Más") > Crear un estilo > Modificar...  (cuadro ampliado)
+    Propiedades:
+      Nombre
+      Tipo de estilo: Vinculado (párrafo y carácter) / Párrafo / Carácter / Tabla / Lista
+      Estilo basado en: Normal / ... / (sin estilo)
+      Estilo del párrafo siguiente
+    Formato: fuente, tamaño, N K S, color, alineación, interlineado, espaciado, sangría
+    [ ] Agregar a la galería de estilos   [ ] Actualizar automáticamente
+    (o) Solo en este documento   (o) Documentos nuevos basados en esta plantilla
+    Botón [Formato ▾]:
+      Fuente...
+      Párrafo...
+      Tabulaciones...
+      Borde...
+      Idioma...
+      Marco...
+      Numeración...
+      Método abreviado...
+      Efectos de texto:
+Inicio > Estilos > (iniciador del cuadro de diálogo) > panel ESTILOS
+    Lista: Borrar todo, Normal, Sin espaciado, Título 1, Título 2, Título, ...
+    [ ] Mostrar vista previa
+    [ ] Deshabilitar estilos vinculados
+    Botones inferiores: [Nuevo estilo] [Inspector de estilo] [Administrar estilos]
+    [Opciones...]  (cuadro "Opciones del panel Estilos": qué estilos mostrar / cómo ordenar)
+Inicio > Estilos > panel Estilos > Inspector de estilo
+    (formato de párrafo / formato de texto de la selección, con botones para limpiar)
+Inicio > Estilos > panel Estilos > Administrar estilos
+    Fichas: Modificar / Recomendar / Restringir / Establecer valores predeterminados
+    Ordenar por: Como en la recomendación / Alfabético / Fuente / Basado en / Por tipo
+Inicio > Estilos > panel Estilos > Nuevo estilo   (= mismo cuadro "Crear nuevo estilo")
+
+
+=== GRUPO: EDICIÓN ===
+
+Inicio > Edición > Buscar (botón)   (abre el panel Navegación con el cuadro de búsqueda)
+Inicio > Edición > Buscar > (flecha) > Buscar
+Inicio > Edición > Buscar > (flecha) > Búsqueda avanzada...
+Inicio > Edición > Buscar > (flecha) > Ir a...
+Inicio > Edición > Buscar > (flecha) > Búsqueda avanzada... > cuadro BUSCAR Y REEMPLAZAR
+    Fichas: [Buscar] [Reemplazar] [Ir a]
+    Ficha Buscar:
+      Buscar: ____
+      [Más >>]  [Resaltado de lectura ▾]  [Buscar en ▾]  [Buscar siguiente]  [Cancelar]
+      (Más >>: Opciones de búsqueda — Coincidir mayúsculas y minúsculas / Solo palabras
+       completas / Usar caracteres comodín / Suena como / Todas las formas de la palabra /
+       botones [Formato ▾] [Especial ▾] [Sin formato])
+    Ficha Reemplazar:
+      Buscar: ____   Reemplazar con: ____
+      [Más >>]  [Reemplazar]  [Reemplazar todos]  [Buscar siguiente]  [Cancelar]
+    Ficha Ir a:
+      Ir a: Página / Sección / Línea / Marcador / Comentario / Nota al pie /
+            Nota al final / Campo / Tabla / Gráfico / Ecuación / Objeto / Título
+      Número de la página: ____   ("Escriba + y – para desplazarse según la posición
+      actual. Ejemplo: escribiendo +4 se desplazará cuatro elementos hacia adelante.")
+      [Anterior] [Siguiente] [Cerrar]
+Inicio > Edición > Reemplazar   (tooltip; abre directamente la ficha Reemplazar)
+Inicio > Edición > Seleccionar > (flecha) > (desplegable):
+    Seleccionar todo
+    Seleccionar objetos
+    Seleccionar texto con formato similar
+    Panel de selección...
+
+
+=== GRUPO: VOZ ===
+
+Inicio > Voz > Dictar   (icono de micrófono)
+Inicio > Voz > Dictar > (flecha) > opciones de idioma / configuración del dictado
+
+
+=== GRUPO: EDITOR ===
+
+Inicio > Editor > Editor   (tooltip "Editor"; abre el panel Editor a la derecha)
+    (panel Editor: Correcciones — Ortografía / Gramática ; Perfeccionamientos —
+     Claridad, concisión, formalidad, vocabulario, etc.)
+
+
+=== GRUPO: COMPLEMENTOS ===
+
+Inicio > Complementos > Complementos   (abre la galería/tienda de complementos de Office:
+    "Mis complementos" + "Complementos de Office" destacados)
