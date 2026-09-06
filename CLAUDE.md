@@ -555,7 +555,11 @@ espacios en blanco) — ⚠️ en esta instalación ES-España **NO existen «Su
 como» ni «Todas las formas de la palabra»** (esquema inglés); corregido
 `inicio-535` que las daba por reales. **El panel de Navegación NO tiene
 tope de resultados** (con 64.350 coincidencias muestra "Hay demasiados
-resultados"): "muestra hasta 100/200" es falso, no usar.
+resultados"): "muestra hasta 100/200" es falso, no usar. · **Biblioteca
+de numeración** = «Ninguna» + **7** formatos · «Definir nuevo formato de
+número» ▸ **Estilo de número** = «(ninguno)» + **12** estilos · **Biblioteca
+de viñetas** = «Ninguna» + **7** viñetas · Arte (Borde de página) =
+«(ninguno)» + **164** diseños.
 **Endurecimiento de distractores — Portapapeles (sep-2026)**: 29 de las 52
 preguntas del topic `portapapeles` reescritas con `scripts/harden_portapapeles.py`.
 Regla fijada con el usuario: distractor = elemento real, o *mecanismo*

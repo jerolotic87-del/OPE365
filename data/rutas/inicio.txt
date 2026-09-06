@@ -120,16 +120,21 @@ Inicio > Párrafo > Viñetas > (flecha) > (desplegable):
     Definir nueva viñeta...
         (cuadro "Definir nueva viñeta": botones [Símbolo...] [Imagen...] [Fuente...],
          Alineación: Izquierda, Vista previa)
-Inicio > Párrafo > Numeración > (flecha) > (desplegable):
-    Biblioteca de numeración: Ninguna · 1.2.3. · 1)2)3) · I.II.III. · A.B.C. ·
-                              a)b)c) · a.b.c. · i.ii.iii.
-    Cambiar nivel de lista >
+Inicio > Párrafo > Numeración > (flecha) > (desplegable, verificado en vivo sep-2026):
+    Formatos de número usados recientemente  (dinámico)
+    Biblioteca de numeración: Ninguna + 7 formatos → 1.2.3. · 1)2)3) · I.II.III. ·
+                              A.B.C. · a)b)c) · a.b.c. · i.ii.iii.
+    Formatos de números de documentos  (dinámico; los usados en el documento actual)
+    Cambiar nivel de lista >   (9 niveles: 1./a./i. repetido tres veces)
     Definir nuevo formato de número...
-        (cuadro: Estilo de número: (1,2,3,... / a,b,c,... / A,B,C,... / i,ii,iii,... /
-         I,II,III,... / 1º,2º,3º / 001,002,... / árabe con separador de miles ...),
-         botón [Fuente...], Formato de número: "1.", Alineación: Izquierda/Centro/Derecha,
-         Vista previa)
+        (cuadro «Definir nuevo formato de número»:
+         «Estilo de número»: (ninguno) + 12 estilos → 1,2,3 · I,II,III · i,ii,iii ·
+             A,B,C · a,b,c · 1º,2º,3º · Uno,Dos,Tres · Primero,Segundo,Tercero ·
+             01,02,03 · 001,002,003 · 0001,0002,0003 · 00001,00002,00003
+         botón [Fuente...] · «Formato de número» (campo editable, «1.») ·
+         «Alineación»: Izquierda / Centrada / Derecha · Vista previa)
     Establecer valor de numeración...
+    (Viñetas: «Biblioteca de viñetas» = Ninguna + 7 → ● ○ ■ ✦ ❖ ➤ ✔)
 Inicio > Párrafo > Lista multinivel > (flecha) > (desplegable):
     Lista actual
     Biblioteca de listas: Ninguna + 7 presets (1)a)i) · 1.1.1. · viñetas ·
