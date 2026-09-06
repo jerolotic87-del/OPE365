@@ -545,10 +545,17 @@ Subrayado de la **cinta** solo tiene ~9 · Estilos de línea de borde en
 *Bordes y sombreado* = **24** · Diseños de **Arte** (Borde de página) =
 **164** · Alineaciones de tabulación = **5** (izq/centro/der/decimal/barra) ·
 Tipos de interlineado = **6** (sencillo/1,5/doble/mínimo/exacto/múltiple) ·
-Especial del cuadro Párrafo = **3** (ninguna/primera línea/francesa). **El
-panel de Navegación NO tiene tope de resultados** (con 64.350 coincidencias
-muestra "Hay demasiados resultados"): "muestra hasta 100/200" es falso, no
-usar.
+Especial del cuadro Párrafo = **3** (ninguna/primera línea/francesa) ·
+Ligaduras (Efectos de texto ▸ Ligaduras) = **5** (Ninguna / Solo estándar /
+Estándar y contextuales / Históricas y discrecionales / Todas las
+ligaduras) · **Buscar y reemplazar ▸ «Más >>» ▸ Opciones de búsqueda = 7
+casillas** (Coincidir mayúsculas y minúsculas · Solo palabras completas ·
+Usar caracteres comodín · Prefijo · Sufijo · Omitir puntuación · Omitir
+espacios en blanco) — ⚠️ en esta instalación ES-España **NO existen «Suena
+como» ni «Todas las formas de la palabra»** (esquema inglés); corregido
+`inicio-535` que las daba por reales. **El panel de Navegación NO tiene
+tope de resultados** (con 64.350 coincidencias muestra "Hay demasiados
+resultados"): "muestra hasta 100/200" es falso, no usar.
 **Endurecimiento de distractores — Portapapeles (sep-2026)**: 29 de las 52
 preguntas del topic `portapapeles` reescritas con `scripts/harden_portapapeles.py`.
 Regla fijada con el usuario: distractor = elemento real, o *mecanismo*
