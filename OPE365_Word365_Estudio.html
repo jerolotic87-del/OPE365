@@ -922,10 +922,20 @@ details.advanced summary:hover{ color:var(--text); }
 .fb-right{ font-size:12.5px; color:var(--text-2); }
 .fb-right b{ color:var(--text); }
 .fb-gist{ margin:0; padding:0 14px 10px; font-size:13px; line-height:1.6; color:var(--text); }
-.fb-gist.is-clamped{
+.fb-gist.is-clamped:not(.is-list){
   display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:4; line-clamp:4;
   overflow:hidden;
 }
+.fb-gist.is-list.is-clamped .expl-list > li:nth-child(n+4){ display:none; }
+
+/* explicación en varios puntos: una idea por línea, poca separación */
+.expl-list{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:5px; }
+.expl-list > li{ position:relative; padding-left:14px; }
+.expl-list > li::before{
+  content:"·"; position:absolute; left:3px; top:-.05em;
+  color:var(--text-3); font-weight:700;
+}
+.preview-expl .expl-list, .mp-rev-exp .expl-list, .expl .expl-list{ margin-top:4px; }
 .fb-toggle{
   display:block; width:100%; text-align:left; margin:0; padding:0 14px 12px;
   background:none; border:0; cursor:pointer; font:inherit;
@@ -7464,8 +7474,34 @@ function kbdify(html){
 /* explicación -> HTML seguro para mostrar: escapa, convierte **negrita** de
    Markdown y resalta los atajos. Único punto por el que debe pasar toda
    explicación que se pinte (feedback, repaso, vista previa, multijugador). */
+/* abreviaturas tras las que NO se debe partir en frase nueva */
+const EXPL_ABBR = /(?:\bp|\bej|\bp[aá]g|\bn[uú]m|\bart|\bcap|\bfig|\bvol|\bpto|\bSr|\bSra|\bDr|\baprox|\bm[aá]x|\bm[ií]n)\.$/i;
+/* parte una explicación en segmentos (una idea por línea). Divide en
+   « · », « ; » y en «. » cuando lo que sigue empieza por mayúscula, «(», «¿»,
+   comilla o un atajo — evitando las abreviaturas y los fragmentos muy cortos. */
+function splitExpl(raw){
+  const parts = raw.split(/\s+·\s+/).flatMap(chunk=>{
+    const out = []; let buf = "";
+    chunk.split(/(?<=[.;])\s+(?=[«"“¿(A-ZÁÉÍÓÚÑ]|Ctrl\b|Alt\b|May[uú]s\b|Mays\b|Win|F\d)/)
+      .forEach(seg=>{
+        if(buf && (EXPL_ABBR.test(buf.trim()) || seg.trim().length < 12)){ buf += " " + seg; }
+        else { if(buf) out.push(buf.trim()); buf = seg; }
+      });
+    if(buf) out.push(buf.trim());
+    return out;
+  }).filter(Boolean);
+  return parts;
+}
+function explInline(seg){
+  return kbdify(O.escapeHtml(seg).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"));
+}
+/* explicación -> HTML. Con varios elementos se pinta como lista con una
+   ligera separación (menos fatiga visual); con uno solo, texto corrido. */
 function explHtml(s){
-  return kbdify(O.escapeHtml(cleanExplic(s)).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"));
+  const segs = splitExpl(cleanExplic(s));
+  if(segs.length >= 2)
+    return `<ul class="expl-list">${segs.map(x=>`<li>${explInline(x)}</li>`).join("")}</ul>`;
+  return explInline(segs[0] || "");
 }
 function correctAnswerText(q){
   if(q.tipo==="opcion_unica"){ const o=(q.opciones||[]).find(o=>o.letter===q.respuesta); return o?`${o.letter}) ${o.text}`:q.respuesta; }
@@ -7475,10 +7511,11 @@ function correctAnswerText(q){
 }
 function showFeedback(el, q, resp){
   const full = cleanExplic(q.explicacion);
-  // La explicación es UN solo bloque continuo. Si es larga, se recorta con
-  // CSS (line-clamp) y un botón debajo la despliega en el sitio — nunca se
-  // parte el texto ni se mete el botón en medio de una frase.
-  const longish = full.length > 240;
+  const segs = splitExpl(full);
+  // recorte: lista larga -> se ocultan los puntos a partir del 4.º; párrafo
+  // largo -> line-clamp. Un botón debajo lo despliega en el sitio.
+  const isList = segs.length >= 2;
+  const longish = isList ? segs.length >= 4 : full.length > 240;
   const rightTxt = !resp.correct ? correctAnswerText(q) : null;
   el.innerHTML = `
     <div class="fb ${resp.correct?'fb-ok':'fb-bad'}">
@@ -7487,7 +7524,7 @@ function showFeedback(el, q, resp){
         <span class="fb-verdict">${resp.correct?'Correcto':'Incorrecto'}</span>
         ${rightTxt ? `<span class="fb-right">Correcta: <b>${O.escapeHtml(rightTxt)}</b></span>` : ''}
       </div>
-      ${full ? `<p class="fb-gist${longish?' is-clamped':''}">${explHtml(q.explicacion)}</p>` : ''}
+      ${full ? `<div class="fb-gist${isList?' is-list':''}${longish?' is-clamped':''}">${explHtml(q.explicacion)}</div>` : ''}
       ${longish ? `<button type="button" class="fb-toggle" aria-expanded="false">Continuar leyendo</button>` : ''}
     </div>`;
   if(longish){
@@ -10602,7 +10639,7 @@ function mpDuelReviewHtml(review){
       <p><strong>Tú:</strong> ${O.escapeHtml(meTxt)} ${r.myCorrect?'✓':'✕'}</p>
       <p><strong>${rival}:</strong> ${O.escapeHtml(rvTxt)} ${r.rivalCorrect?'✓':'✕'}</p>
       <p><strong>Correcto:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
-      ${q.explicacion ? `<p class="mp-rev-exp">${explHtml(q.explicacion)}</p>` : ''}`;
+      ${q.explicacion ? `<div class="mp-rev-exp">${explHtml(q.explicacion)}</div>` : ''}`;
     return mpReviewItemHtml(i, r.myCorrect, q.enunciado, body);
   }).join("");
   return mpReviewShell(rows);
@@ -10627,7 +10664,7 @@ function mpCoopReviewHtml(review){
       <p><strong>Word decía:</strong> ${claim ? O.escapeHtml(claim) : (wasTrue ? '(la afirmación tal cual)' : '—')} — era <strong>${wasTrue?'VERDADERO':'FALSO'}</strong></p>
       <p><strong>${me}:</strong> ${lbl(r.myCall,r.myState)} ${r.myRight?'✓':'✕'} · <strong>${rival}:</strong> ${lbl(r.rivalCall,r.rivalState)} ${r.rivalRight?'✓':'✕'}</p>
       <p><strong>Respuesta correcta:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
-      ${q.explicacion ? `<p class="mp-rev-exp">${explHtml(q.explicacion)}</p>` : ''}`;
+      ${q.explicacion ? `<div class="mp-rev-exp">${explHtml(q.explicacion)}</div>` : ''}`;
     return mpReviewItemHtml(i, r.n >= 1, q.enunciado, body);
   }).join("");
   return mpReviewShell(rows);
@@ -10644,7 +10681,7 @@ function mpPokerReviewHtml(review){
     const body = `
       <p>${roleTxt}</p>
       <p><strong>Correcto:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
-      ${q.explicacion ? `<p class="mp-rev-exp">${explHtml(q.explicacion)}</p>` : ''}`;
+      ${q.explicacion ? `<div class="mp-rev-exp">${explHtml(q.explicacion)}</div>` : ''}`;
     return mpReviewItemHtml(i, !!meRight, q.enunciado || "Pregunta", body);
   }).join("");
   return mpReviewShell(rows);
@@ -11172,7 +11209,7 @@ function renderPokerReveal(r){
       <p style="font-size:13px; margin:4px 0;">✅ Respuesta correcta: <strong>${O.escapeHtml(correctOpt.text)}</strong></p>
       <p style="font-size:13px; margin:4px 0; color:var(--text-2);">${O.escapeHtml(mpWasAttackerName(r))} marcó: ${O.escapeHtml(claimOpt.text)}</p>
       ${r.decision==='dudo' ? `<p style="font-size:13px; margin:4px 0; color:var(--text-2);">${O.escapeHtml(mpWasDefenderName(r))} respondió: ${O.escapeHtml(answerOpt.text)}</p>` : ''}
-      ${q.explicacion ? `<p style="font-size:12.5px; color:var(--text-2); margin-top:10px; border-top:1px solid var(--border); padding-top:10px;">${explHtml(q.explicacion)}</p>` : ''}
+      ${q.explicacion ? `<div style="font-size:12.5px; color:var(--text-2); margin-top:10px; border-top:1px solid var(--border); padding-top:10px;">${explHtml(q.explicacion)}</div>` : ''}
     </div>
     <p style="text-align:center; font-size:12px; color:var(--text-3); margin-top:var(--sp-4);">Siguiente turno en un momento…</p>
   `;
