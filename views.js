@@ -2246,20 +2246,14 @@ function afterContentEdit(onDone){
   else go(O.Nav.view, O.Nav.params);
 }
 
+/* Solo verdadero/falso: las opciones de opción única / selección múltiple
+   marcan la correcta con un radio/checkbox por fila en qEditFormHtml
+   (así la respuesta siempre está atada a una opción viva, nunca a una
+   letra "fantasma" que ya no existe). */
 function respuestaControl(q, cur, pfx){
   pfx = pfx || "edit";
-  if(q.tipo === "opcion_unica"){
-    return `<select id="${pfx}-resp" class="edit-field">${q.opciones.map(o=>`<option value="${o.letter}" ${cur===o.letter?'selected':''}>${o.letter}) ${O.escapeHtml(truncate(o.text,40))}</option>`).join("")}</select>`;
-  }
-  if(q.tipo === "verdadero_falso"){
-    const isT = cur===true || cur==="true";
-    return `<div class="segmented" id="${pfx}-resp-tf"><button type="button" class="seg ${isT?'on':''}" data-v="true">Verdadero</button><button type="button" class="seg ${!isT?'on':''}" data-v="false">Falso</button></div>`;
-  }
-  if(q.tipo === "seleccion_multiple"){
-    const arr = Array.isArray(cur) ? cur : [];
-    return `<div class="edit-multi" id="${pfx}-resp-multi">${q.opciones.map(o=>`<label class="echk"><input type="checkbox" value="${o.letter}" ${arr.includes(o.letter)?'checked':''}> ${o.letter}) ${O.escapeHtml(truncate(o.text,44))}</label>`).join("")}</div>`;
-  }
-  return `<p style="font-size:12px;color:var(--text-3);">La respuesta de este tipo de ejercicio no se edita aquí — usa la nota para reportar el problema.</p>`;
+  const isT = cur===true || cur==="true";
+  return `<div class="segmented" id="${pfx}-resp-tf"><button type="button" class="seg ${isT?'on':''}" data-v="true">Verdadero</button><button type="button" class="seg ${!isT?'on':''}" data-v="false">Falso</button></div>`;
 }
 
 /* valores a MOSTRAR en el formulario de edición: los actuales (con la
@@ -2294,9 +2288,12 @@ function readQPatch(root, q, orig, pfx){
   }
   if(editsResp){
     let nr, ori = orig.respuesta;
-    if(q.tipo === "opcion_unica"){ nr = root.querySelector("#"+pfx+"-resp").value; }
+    if(q.tipo === "opcion_unica"){
+      const on = root.querySelector('input.uq-correct[name="'+pfx+'-correct"]:checked');
+      nr = on ? on.getAttribute("data-l") : orig.respuesta;
+    }
     else if(q.tipo === "verdadero_falso"){ const on = root.querySelector("#"+pfx+"-resp-tf .seg.on"); nr = on && on.getAttribute("data-v") === "true"; ori = (ori===true||ori==="true"); }
-    else { nr = [...root.querySelectorAll("#"+pfx+"-resp-multi input:checked")].map(i=>i.value).sort(); ori = Array.isArray(ori)?ori.slice().sort():[]; }
+    else { nr = [...root.querySelectorAll('input.uq-correct[name="'+pfx+'-correct"]:checked')].map(i=>i.getAttribute("data-l")).sort(); ori = Array.isArray(ori)?ori.slice().sort():[]; }
     if(!eq(nr, ori)) patch.respuesta = nr;
   }
   const ne = root.querySelector("#"+pfx+"-expl").value.trim();
@@ -2312,16 +2309,23 @@ function readQPatch(root, q, orig, pfx){
 /* formulario de edición de pregunta (campos), reutilizado por el modal y el
    panel del Editor del banco. `pfx` prefija los ids. */
 function qEditFormHtml(q, orig, pfx){
-  const editsResp = ["opcion_unica","verdadero_falso","seleccion_multiple"].includes(q.tipo);
   const editsOpts = ["opcion_unica","seleccion_multiple"].includes(q.tipo) && Array.isArray(q.opciones);
+  const isMulti = q.tipo === "seleccion_multiple";
+  const correctSet = new Set(Array.isArray(orig.respuesta) ? orig.respuesta : [orig.respuesta]);
+  const optRows = editsOpts ? `<div class="field">
+      <label>Opciones — marca ${isMulti ? "TODAS las correctas" : "la correcta"}</label>
+      <div class="uq-opts">${q.opciones.map(o=>`<label class="uq-opt">
+        <input type="${isMulti ? 'checkbox' : 'radio'}" class="uq-correct" name="${pfx}-correct" data-l="${o.letter}" ${correctSet.has(o.letter)?'checked':''}>
+        <span class="eopt-l">${o.letter}</span>
+        <input type="text" data-${pfx}-opt="${o.letter}" class="edit-field" value="${O.escapeHtml(((orig.opciones||[]).find(x=>x.letter===o.letter)||{}).text||"")}"></label>`).join("")}</div>
+      <span class="edit-hint">La correcta se asocia a la letra por su posición; al estudiar, el orden de las opciones se baraja.</span></div>` : '';
+  const tfRow = q.tipo === "verdadero_falso" ? `<div class="field"><label>Respuesta correcta</label>${respuestaControl(q, orig.respuesta, pfx)}</div>` : '';
   return `
     ${q.imagen ? `<div class="field"><label>Imagen (no editable aquí)</label>${qImageHtml(q.imagen)}</div>` : ''}
     <div class="field"><label>Enunciado</label>
       <textarea id="${pfx}-enun" rows="3" class="edit-field">${O.escapeHtml(orig.enunciado||"")}</textarea></div>
-    ${editsOpts ? `<div class="field"><label>Opciones</label>
-      <div class="edit-opts">${q.opciones.map(o=>`<div class="eopt"><span class="eopt-l">${o.letter}</span>
-        <input type="text" data-${pfx}-opt="${o.letter}" class="edit-field" value="${O.escapeHtml(((orig.opciones||[]).find(x=>x.letter===o.letter)||{}).text||"")}"></div>`).join("")}</div></div>` : ''}
-    ${editsResp ? `<div class="field"><label>Respuesta correcta</label>${respuestaControl(q, orig.respuesta, pfx)}</div>` : ''}
+    ${optRows}
+    ${tfRow}
     <div class="field"><label>Explicación</label>
       <textarea id="${pfx}-expl" rows="3" class="edit-field">${O.escapeHtml(orig.explicacion||"")}</textarea></div>
     <label class="echk" style="margin-bottom:var(--sp-4);"><input type="checkbox" id="${pfx}-neg" ${orig.negativa?'checked':''}> Es una pregunta negativa (pide la opción FALSA / EXCEPTO)</label>

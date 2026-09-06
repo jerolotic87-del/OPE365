@@ -717,12 +717,10 @@ details.advanced summary:hover{ color:var(--text); }
 .edit-warn{ font-size:11px; color:var(--text-3); background:var(--surface); border:1px solid var(--border);
   border-radius:var(--radius-s); padding:8px 10px; margin:var(--sp-3) 0 var(--sp-4); line-height:1.5; }
 .edit-opts{ display:flex; flex-direction:column; gap:6px; }
-.eopt{ display:flex; align-items:center; gap:8px; }
 .eopt-l{ font-family:var(--font-mono); font-size:11px; font-weight:700; width:20px; height:20px; flex-shrink:0;
   display:flex; align-items:center; justify-content:center; border-radius:5px; background:var(--surface-2); color:var(--text-2); border:1px solid var(--border); }
 .echk{ display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--text-2); cursor:pointer; }
 .echk input{ accent-color:var(--accent); }
-.edit-multi{ display:flex; flex-direction:column; gap:6px; }
 
 .ce-list{ display:flex; flex-direction:column; border:1px solid var(--border); border-radius:var(--radius-s);
   overflow:hidden; margin-bottom:var(--sp-3); max-height:320px; overflow-y:auto; }

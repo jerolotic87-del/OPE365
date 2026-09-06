@@ -995,6 +995,20 @@ archivo, añádele preguntas a ese archivo renumerando la cola.
   que `PROGRESS.answers`, los conceptos del motor y `contentHash` (runtime)
   no se ven afectados. Se carga entre app.js y engine.js. Test:
   `tests/test_content_edit.js`.
+  - **Marcador de respuesta correcta (sep-2026)**: el formulario de edición
+    (`qEditFormHtml`, modal ✎ y panel del Editor del banco) ya NO usa un
+    `<select>`/lista aparte para la respuesta correcta — ese control se
+    quedaba con la letra/opción antigua aunque el usuario reescribiera las
+    4 casillas (bug real reportado). Ahora cada fila de opción lleva su
+    propio **radio** (opción única) o **checkbox** (selección múltiple)
+    junto al texto (misma UI que `openUserQuestionModal`); la respuesta
+    queda SIEMPRE atada a una fila viva, solo maneja letras A-D…, y
+    `readQPatch` la lee de `input.uq-correct[name="<pfx>-correct"]:checked`.
+    `respuestaControl` quedó reducido a solo verdadero/falso. El orden de
+    opciones ya se baraja al estudiar (`shuffleOptions:true` es el
+    predeterminado en todas las sesiones — smart/repaso/concepto/práctica/
+    sección/errores/duelo/coop), así que da igual en qué letra se guarde la
+    correcta. Test: `tests/test_edit_answer_marker.js`.
 
 - **`github-sync.js` (`OPE.GHS`)** — publica tu contenido propio (el de
   "Mi contenido") directamente al repo vía la API de GitHub, en UN commit
