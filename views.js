@@ -185,8 +185,12 @@ function openImageLightbox(src, ref){
   function layout(){
     const sr = stage.getBoundingClientRect();
     const ar = nw / nh;
-    // marco = 82% del area disponible, respetando el aspecto de la imagen
-    let w = sr.width * 0.9, h = sr.height * 0.82;
+    // el marco no pasa del area disponible NI de mostrar la imagen a mas de
+    // 8x (los iconos son diminutos, ~25 px; llenar el marco con ellos los
+    // convierte en un borron gigante).
+    const capW = Math.min(sr.width * 0.9, nw * 8);
+    const capH = Math.min(sr.height * 0.82, nh * 8);
+    let w = capW, h = capH;
     if(w / h > ar) w = h * ar; else h = w / ar;
     fw = w; fh = h;
     frame.style.width = w + "px"; frame.style.height = h + "px";
@@ -1541,6 +1545,12 @@ function kbdify(html){
   return html.replace(/\b((?:Ctrl|Alt|Mayús|Shift|Windows|Win|Tab|Esc|Supr|Intro|Enter|Retroceso|AltGr|F(?:1[0-2]|[1-9]))(?:\s*\+\s*(?:Ctrl|Alt|Mayús|Shift|Win|Tab|F(?:1[0-2]|[1-9])|[A-Za-zÑñ0-9ÁÉÍÓÚáéíóú↑↓←→]|Flecha\s\w+))*)\b/g,
     m => `<kbd>${m.replace(/\s*\+\s*/g," + ")}</kbd>`);
 }
+/* explicación -> HTML seguro para mostrar: escapa, convierte **negrita** de
+   Markdown y resalta los atajos. Único punto por el que debe pasar toda
+   explicación que se pinte (feedback, repaso, vista previa, multijugador). */
+function explHtml(s){
+  return kbdify(O.escapeHtml(cleanExplic(s)).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"));
+}
 function correctAnswerText(q){
   if(q.tipo==="opcion_unica"){ const o=(q.opciones||[]).find(o=>o.letter===q.respuesta); return o?`${o.letter}) ${o.text}`:q.respuesta; }
   if(q.tipo==="verdadero_falso") return q.respuesta===true||q.respuesta==="true" ? "Verdadero" : "Falso";
@@ -1561,7 +1571,7 @@ function showFeedback(el, q, resp){
         <span class="fb-verdict">${resp.correct?'Correcto':'Incorrecto'}</span>
         ${rightTxt ? `<span class="fb-right">Correcta: <b>${O.escapeHtml(rightTxt)}</b></span>` : ''}
       </div>
-      ${full ? `<p class="fb-gist${longish?' is-clamped':''}">${kbdify(O.escapeHtml(full))}</p>` : ''}
+      ${full ? `<p class="fb-gist${longish?' is-clamped':''}">${explHtml(q.explicacion)}</p>` : ''}
       ${longish ? `<button type="button" class="fb-toggle" aria-expanded="false">Continuar leyendo</button>` : ''}
     </div>`;
   if(longish){
@@ -1858,7 +1868,7 @@ function buildReviewDetailHtml(q){
     <div id="rd-body"></div>
     <div class="feedback-box ${a? (a.correcta?"ok":"bad") : "ok"}" style="margin-top:16px;">
       <strong>${a ? (a.correcta?"Respondiste correctamente":"Respondiste de forma incorrecta") : "Aún no has respondido esta pregunta"}</strong>
-      ${q.explicacion ? `<div class="expl">${O.escapeHtml(q.explicacion)}</div>` : ''}
+      ${q.explicacion ? `<div class="expl">${explHtml(q.explicacion)}</div>` : ''}
     </div>
     <div class="qnav-footer">
       <button class="btn btn-outline btn-sm" id="rd-prev">${icon('arrowL')}</button>
@@ -2825,7 +2835,7 @@ function openPreviewModal(kind, id, onDone){
       ${qImageHtml(q.imagen, "q|"+q.id)}
       <p class="preview-enun">${O.escapeHtml(q.enunciado||"")}</p>
       ${body}
-      ${expl ? `<div class="preview-expl"><b>Explicación.</b> ${kbdify(O.escapeHtml(expl))}</div>` : `<p class="edit-hint">Sin explicación.</p>`}
+      ${expl ? `<div class="preview-expl"><b>Explicación.</b> ${explHtml(q.explicacion)}</div>` : `<p class="edit-hint">Sin explicación.</p>`}
     </div>
     <div class="actions" style="flex-wrap:wrap;">
       <button class="btn btn-outline btn-sm" id="pv-edit">Editar</button>
@@ -4676,7 +4686,7 @@ function mpDuelReviewHtml(review){
       <p><strong>Tú:</strong> ${O.escapeHtml(meTxt)} ${r.myCorrect?'✓':'✕'}</p>
       <p><strong>${rival}:</strong> ${O.escapeHtml(rvTxt)} ${r.rivalCorrect?'✓':'✕'}</p>
       <p><strong>Correcto:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
-      ${q.explicacion ? `<p class="mp-rev-exp">${O.escapeHtml(q.explicacion)}</p>` : ''}`;
+      ${q.explicacion ? `<p class="mp-rev-exp">${explHtml(q.explicacion)}</p>` : ''}`;
     return mpReviewItemHtml(i, r.myCorrect, q.enunciado, body);
   }).join("");
   return mpReviewShell(rows);
@@ -4701,7 +4711,7 @@ function mpCoopReviewHtml(review){
       <p><strong>Word decía:</strong> ${claim ? O.escapeHtml(claim) : (wasTrue ? '(la afirmación tal cual)' : '—')} — era <strong>${wasTrue?'VERDADERO':'FALSO'}</strong></p>
       <p><strong>${me}:</strong> ${lbl(r.myCall,r.myState)} ${r.myRight?'✓':'✕'} · <strong>${rival}:</strong> ${lbl(r.rivalCall,r.rivalState)} ${r.rivalRight?'✓':'✕'}</p>
       <p><strong>Respuesta correcta:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
-      ${q.explicacion ? `<p class="mp-rev-exp">${O.escapeHtml(q.explicacion)}</p>` : ''}`;
+      ${q.explicacion ? `<p class="mp-rev-exp">${explHtml(q.explicacion)}</p>` : ''}`;
     return mpReviewItemHtml(i, r.n >= 1, q.enunciado, body);
   }).join("");
   return mpReviewShell(rows);
@@ -4718,7 +4728,7 @@ function mpPokerReviewHtml(review){
     const body = `
       <p>${roleTxt}</p>
       <p><strong>Correcto:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
-      ${q.explicacion ? `<p class="mp-rev-exp">${O.escapeHtml(q.explicacion)}</p>` : ''}`;
+      ${q.explicacion ? `<p class="mp-rev-exp">${explHtml(q.explicacion)}</p>` : ''}`;
     return mpReviewItemHtml(i, !!meRight, q.enunciado || "Pregunta", body);
   }).join("");
   return mpReviewShell(rows);
@@ -5246,7 +5256,7 @@ function renderPokerReveal(r){
       <p style="font-size:13px; margin:4px 0;">✅ Respuesta correcta: <strong>${O.escapeHtml(correctOpt.text)}</strong></p>
       <p style="font-size:13px; margin:4px 0; color:var(--text-2);">${O.escapeHtml(mpWasAttackerName(r))} marcó: ${O.escapeHtml(claimOpt.text)}</p>
       ${r.decision==='dudo' ? `<p style="font-size:13px; margin:4px 0; color:var(--text-2);">${O.escapeHtml(mpWasDefenderName(r))} respondió: ${O.escapeHtml(answerOpt.text)}</p>` : ''}
-      ${q.explicacion ? `<p style="font-size:12.5px; color:var(--text-2); margin-top:10px; border-top:1px solid var(--border); padding-top:10px;">${O.escapeHtml(q.explicacion)}</p>` : ''}
+      ${q.explicacion ? `<p style="font-size:12.5px; color:var(--text-2); margin-top:10px; border-top:1px solid var(--border); padding-top:10px;">${explHtml(q.explicacion)}</p>` : ''}
     </div>
     <p style="text-align:center; font-size:12px; color:var(--text-3); margin-top:var(--sp-4);">Siguiente turno en un momento…</p>
   `;
