@@ -489,9 +489,9 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 525, insertar 458, inicio 532, archivo 408, vista 144, disposicion 132,
+interfaz 525, insertar 458, inicio 561, archivo 408, vista 144, disposicion 132,
 diseno 91, referencias 161, revisar 82, correspondencia 46.
-Total 2579.
+Total 2608.
 **Volcado de rutas de la pestaña Inicio + minado (sep-2026)**: el usuario
 aportó 156 capturas de la cinta Inicio (`data/imagenes_rutas/inicio/`, rama
 a rama + todos los cuadros de diálogo/desplegables). Se creó
@@ -516,6 +516,25 @@ Resaltado de lectura, Buscar en, Más>>, ficha Ir a con destinos y sintaxis
 CLAUDE.md): el tooltip muestra "Subíndice (Ctrl+=)" pero en vivo Ctrl+= no
 va (real = Ctrl+Mayús+-); Superíndice sin atajo en el tooltip = coincide
 con la prueba en vivo. Generador: `scripts/gen_rutas_inicio.py`.
+**Cuadros de diálogo compartidos — Inicio (sep-2026)**: a petición del
+usuario («en los exámenes preguntan desde qué lugares se llega a un
+cuadro»), se ampliaron `data/rutas/_dialogos_compartidos.md` (nuevas §§9-13:
+el menú «Formato ▾» de Modificar estilo como concentrador, «Personalizar
+teclado» y sus 4 entradas, panel «Formato de efectos de texto», interlineado
+cinta↔cuadro Párrafo, cuadro de creación de estilo) y se añadieron **+29
+preguntas de interconexión** (`sourceQuestionId` `dlgcompart-inicio-NN`,
+`generado:true`): «¿desde qué opción/ruta se abre el cuadro X?», «¿en qué
+ficha abre?», emparejamiento ruta→ficha. Cuadros: Fuente (lanzador / Ctrl+M
+/ Más subrayados / Formato▾ / botón Fuente de los cuadros Definir…), Párrafo
+(lanzador Inicio y Disposición / Opciones de interlineado / Formato▾),
+Tabulaciones (3 vías + regla; NO hay botón suelto en la cinta), Bordes y
+sombreado (Inicio→ficha Bordes, Diseño→ficha Borde de página, Formato▾),
+Personalizar teclado, panel Formato de efectos de texto, Buscar y reemplazar
+(Reemplazar / Búsqueda avanzada / Ir a = 1 cuadro 3 fichas; el botón Buscar
+a secas abre el PANEL, no el cuadro), Administrar estilos (Inicio y Diseño),
+«Establecer como predeterminado» (en 7+ cuadros), «Establecer Pegar
+predeterminado» = Opciones ▸ Avanzadas. Generador:
+`scripts/gen_dialogos_compartidos_inicio.py`.
 **Corrección de técnica de recorte de icono (sep-2026)**: el usuario
 señaló que los 2 recortes de muestra de la respuesta anterior estaban
 mal centrados (letras cortadas a la derecha, hueco desigual a la

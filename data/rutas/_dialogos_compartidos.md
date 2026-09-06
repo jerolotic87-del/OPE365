@@ -40,7 +40,8 @@ estándar de Word no capturado aquí.
 | Ruta | Ficha en la que abre |
 |---|---|
 | **Diseño** ▸ Fondo de página ▸ Bordes de página | Borde de página ✅ |
-| **Inicio** ▸ Párrafo ▸ Bordes (flecha) ▸ Bordes y sombreado… | Bordes ▫ |
+| **Inicio** ▸ Párrafo ▸ Bordes (flecha) ▸ Bordes y sombreado… | Bordes ✅ |
+| **Inicio** ▸ Estilos ▸ (crear/)Modificar estilo ▸ **Formato ▾ ▸ Borde…** | Bordes ✅ |
 | **Disposición** ▸ Configurar página ▸ lanzador ▸ ficha Disposición ▸ **Bordes…** | Borde de página ▫ |
 | **Tabla** (contextual) ▸ Diseño de tabla ▸ Bordes ▸ Bordes y sombreado… | Bordes ▫ |
 
@@ -58,11 +59,13 @@ estándar de Word no capturado aquí.
 
 ## 3. «Párrafo» (2 fichas: Sangría y espacio · Líneas y saltos de página) ✅
 
-| Ruta |
-|---|
-| **Inicio** ▸ Párrafo ▸ lanzador |
-| **Disposición** ▸ Párrafo ▸ lanzador |
-| Menú contextual (clic derecho en un párrafo) ▸ Párrafo… |
+| Ruta | Nota |
+|---|---|
+| **Inicio** ▸ Párrafo ▸ lanzador | ✅ |
+| **Inicio** ▸ Párrafo ▸ Espaciado entre líneas y párrafos (flecha) ▸ **Opciones de interlineado…** | ✅ abre en «Sangría y espacio» |
+| **Inicio** ▸ Estilos ▸ (crear/)Modificar estilo ▸ **Formato ▾ ▸ Párrafo…** | ✅ |
+| **Disposición** ▸ Párrafo ▸ lanzador | ▫ |
+| Menú contextual (clic derecho en un párrafo) ▸ Párrafo… | ▫ |
 
 Mismo cuadro. Ficha Sangría y espacio: Alineación, Nivel de esquema
 (**Texto independiente** por defecto), Sangría Izq/Der + Especial + En +
@@ -178,9 +181,10 @@ formato de número (1,2,3 / a,b,c / i,ii,iii / *,†,‡,§), numeración
 |---|---|
 | **Columnas** | Disposición ▸ Configurar página ▸ Columnas ▸ Más columnas… ✅ |
 | **Guiones** | Disposición ▸ Configurar página ▸ Guiones ▸ Opciones de guiones… ✅ |
-| **Fuente** | Inicio ▸ Fuente ▸ lanzador · `Ctrl+M` · `Ctrl+Mayús+F` (foco en Fuente) · `Ctrl+Mayús+M` (foco en Tamaño) · menú contextual ▸ Fuente… |
-| **Tabulaciones** | Inicio/Disposición ▸ Párrafo ▸ lanzador ▸ Tabulaciones… · `Alt,O,T` (según ATAJOS) · doble clic en la regla |
-| **Buscar y reemplazar** | Inicio ▸ Edición ▸ Reemplazar (`Ctrl+L` en esta instalación) · Buscar avanzada · Ir a (`Ctrl+I`) — 3 fichas de un mismo cuadro |
+| **Fuente** | Inicio ▸ Fuente ▸ lanzador (tooltip «Fuente (Ctrl+M)») ✅ · `Ctrl+M` · `Ctrl+Mayús+F` (foco en Fuente) · `Ctrl+Mayús+M` (foco en Tamaño) · Inicio ▸ Fuente ▸ Subrayado ▸ **Más subrayados…** (foco en «Estilo de subrayado») ✅ · Inicio ▸ Estilos ▸ Modificar estilo ▸ **Formato ▾ ▸ Fuente…** ✅ · «Definir nuevo formato de número / nueva viñeta / nueva lista multinivel» ▸ **Fuente…** (aplicado solo al número/viñeta) ✅ · menú contextual ▸ Fuente… |
+| **Tabulaciones** | Inicio/Disposición ▸ Párrafo ▸ lanzador ▸ **Tabulaciones…** ✅ · Inicio ▸ Párrafo ▸ Espaciado (flecha) ▸ Opciones de interlineado… ▸ **Tabulaciones…** ✅ · Inicio ▸ Estilos ▸ Modificar estilo ▸ **Formato ▾ ▸ Tabulaciones…** ✅ · `Alt,O,T` (según ATAJOS) · doble clic en la regla |
+| **Buscar y reemplazar** (1 cuadro, 3 fichas) | Inicio ▸ Edición ▸ **Reemplazar** (`Ctrl+L` en esta instalación) → ficha Reemplazar ✅ · Inicio ▸ Edición ▸ Buscar (flecha) ▸ **Búsqueda avanzada…** → ficha Buscar ✅ · Inicio ▸ Edición ▸ Buscar (flecha) ▸ **Ir a…** (`Ctrl+I`) → ficha Ir a ✅ · panel Navegación ▸ lupa ▸ Búsqueda avanzada. Dentro del cuadro se cambia de ficha con clic ✅ |
+| **Numeración / viñetas** (cuadro «Numeración y viñetas» o galería) | Inicio ▸ Párrafo ▸ Numeración/Viñetas/Lista multinivel (flecha) ✅ · Inicio ▸ Estilos ▸ Modificar estilo ▸ **Formato ▾ ▸ Numeración…** ✅ |
 | **Número de página / Formato** | Insertar ▸ Encabezado y pie ▸ Número de página ▸ Formato del número de página… · (contextual) Encabezado y pie ▸ Número de página ▸ Formato… ✅ |
 | **Nota al pie y nota al final** | Referencias ▸ Notas al pie ▸ lanzador |
 | **Cuadrícula y guías** | Disposición ▸ Organizar ▸ Alinear ▸ Configuración de cuadrícula… ✅ · Formato de imagen/forma ▸ Alinear ▸ Configuración de cuadrícula… |
@@ -231,3 +235,77 @@ etc.).
   (misma que `Alt+Ctrl++` del teclado numérico). ✅
 - El cuadro **Bordes y sombreado** conecta Diseño, Inicio, Disposición y
   las cintas de Tabla. ✅
+
+---
+
+## 9. El menú «Formato ▾» del cuadro Modificar/Crear estilo = concentrador ✅
+
+Ruta: **Inicio ▸ Estilos ▸ flecha «Más» ▸ Crear un estilo ▸ Modificar…**
+(o panel Estilos ▸ Nuevo estilo, o clic derecho en un estilo ▸ Modificar…).
+El botón **«Formato ▾»** de la esquina inferior izquierda abre, cada uno,
+un cuadro que también existe por su cuenta en la cinta:
+
+| «Formato ▾ ▸ …» | Abre el mismo cuadro que… |
+|---|---|
+| Fuente… | Inicio ▸ Fuente ▸ lanzador (`Ctrl+M`) |
+| Párrafo… | Inicio ▸ Párrafo ▸ lanzador |
+| Tabulaciones… | Párrafo ▸ lanzador ▸ Tabulaciones… |
+| Borde… | Inicio ▸ Párrafo ▸ Bordes ▸ Bordes y sombreado… |
+| Idioma… | Revisar ▸ Idioma ▸ Establecer idioma de corrección |
+| Marco… | *(marco de texto; sin equivalente directo en la cinta actual)* |
+| Numeración… | Inicio ▸ Párrafo ▸ Numeración/Viñetas/Lista multinivel |
+| Método abreviado… | **Personalizar teclado** (ver §10) |
+| Efectos de texto… | panel «Formato de efectos de texto» (ver §11) |
+
+Cualquier formato que se ponga aquí queda ligado al **estilo**, no al
+párrafo suelto.
+
+## 10. «Personalizar teclado» — un cuadro, varias entradas ✅
+
+Es la fuente de `data/atajos_word365_v2608.md`. Se llega desde:
+
+| Ruta |
+|---|
+| Archivo ▸ Opciones ▸ **Personalizar cinta de opciones** ▸ botón **Personalizar…** (junto a «Métodos abreviados de teclado») |
+| Insertar ▸ Símbolos ▸ Símbolo ▸ Más símbolos… ▸ botón **Teclas…** ✅ |
+| Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▾ ▸ **Método abreviado…** ✅ (con el comando ya fijado en ese estilo) |
+| `Alt+Ctrl++` del **teclado numérico** (el puntero se vuelve ⌘ y se pulsa el comando de la cinta) — CLAUDE.md `archivo-129` |
+
+## 11. Panel lateral «Formato de efectos de texto» ✅
+
+No es un cuadro modal, es un **panel** a la derecha (dos pestañas de icono:
+Relleno y contorno de texto / Efectos). Reúne relleno, contorno, sombra,
+reflejo, iluminado, formato 3D y transformación del texto. Entradas:
+
+| Ruta |
+|---|
+| Inicio ▸ Fuente ▸ lanzador ▸ botón **«Efectos de texto:»** (dentro del cuadro Fuente) ✅ |
+| Inicio ▸ Fuente ▸ Color de fuente (flecha) ▸ Degradado ▸ **Más degradados…** → panel en «Relleno de texto: degradado» ✅ |
+| Inicio ▸ Fuente ▸ Efectos de texto y tipografía ▸ Sombra ▸ **Más opciones de sombra…** → panel en «Sombra» ✅ |
+| … ▸ Reflejo ▸ **Opciones de reflejo…** · … ▸ Iluminado ▸ **Opciones de iluminado…** · … ▸ Contorno ▸ Grosor/Guiones ▸ **Más líneas…** ✅ |
+| Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▾ ▸ **Efectos de texto…** ✅ |
+
+## 12. Interlineado: la cinta y el cuadro Párrafo son el mismo ajuste ✅
+
+- **Inicio ▸ Párrafo ▸ Espaciado entre líneas y párrafos** (botón de la
+  cinta): valores rápidos 1,0 · 1,15 · 1,5 · 2,0 · 2,5 · 3,0.
+- La última entrada de ese menú, **«Opciones de interlineado…»**, abre el
+  **cuadro Párrafo** (ficha Sangría y espacio), cuyo desplegable
+  «Interlineado» ofrece Sencillo · 1,5 líneas · Doble · **Mínimo** ·
+  **Exacto** · **Múltiple** (+ campo «En:»). Mínimo/Exacto/Múltiple **solo**
+  se pueden fijar desde el cuadro, no desde el botón de la cinta.
+- «Agregar/Quitar espacio antes/después del párrafo» de ese mismo menú
+  actúa sobre el «Espaciado Anterior/Posterior» del cuadro Párrafo (lo
+  añade o lo pone a 0); la etiqueta del menú alterna según el estado actual
+  del párrafo.
+
+## 13. Cuadro de creación de estilo — «Crear nuevo estilo a partir del formato» ✅
+
+| Ruta | Formato en que aparece |
+|---|---|
+| Inicio ▸ Estilos ▸ flecha «Más» ▸ **Crear un estilo** | versión reducida (Nombre + Vista previa + [Modificar…]) ✅ |
+| Inicio ▸ Estilos ▸ lanzador (panel Estilos) ▸ botón **Nuevo estilo** (1.º de los 3 de abajo) | versión ampliada directamente ✅ |
+| panel Estilos / galería ▸ clic derecho en un estilo ▸ **Modificar…** | «Modificar estilo» (mismos campos, sin poder cambiar el nombre a otro existente) |
+
+Los 3 botones al pie del panel Estilos: **Nuevo estilo** · **Inspector de
+estilo** · **Administrar estilos** (§5). ✅

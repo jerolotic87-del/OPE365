@@ -1610,6 +1610,25 @@
     "explicacion": "Esa es exactamente la estructura del desplegable de Pegar en Word 365."
   },
   {
+    "id": "inicio-573",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Portapapeles",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "portapapeles",
+    "subtopic": "Opciones de pegado",
+    "tema": "Portapapeles",
+    "sourceQuestionId": "dlgcompart-inicio-28",
+    "generado": true,
+    "enunciado": "«Establecer Pegar predeterminado…» (menú del botón Pegar) lleva a la misma pantalla que «Archivo ▸ Opciones ▸ Avanzadas»: la sección «Cortar, copiar y pegar».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Ahí se configuran «Pegar dentro del mismo documento», «Pegar entre documentos», «Pegar desde otras aplicaciones», «Mostrar el botón Opciones de pegado», etc."
+  },
+  {
     "id": "inicio-3",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Portapapeles",
@@ -5565,6 +5584,150 @@
     "explicacion": "«Establecer como predeterminado» pregunta si el cambio afecta solo a este documento o a todos los basados en la plantilla Normal.dotm."
   },
   {
+    "id": "inicio-546",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "dlgcompart-inicio-01",
+    "generado": true,
+    "enunciado": "Al pulsar «Más subrayados…» al final del desplegable del botón Subrayado, ¿qué se abre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El cuadro de diálogo Fuente, con el foco en «Estilo de subrayado»"
+      },
+      {
+        "letter": "B",
+        "text": "El panel «Formato de efectos de texto»"
+      },
+      {
+        "letter": "C",
+        "text": "El cuadro Párrafo"
+      },
+      {
+        "letter": "D",
+        "text": "El panel Estilos"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Más subrayados…» no es un cuadro propio: lleva al cuadro Fuente (el mismo que abre el lanzador del grupo o Ctrl+M) situando el foco en el desplegable «Estilo de subrayado»."
+  },
+  {
+    "id": "inicio-561",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "dlgcompart-inicio-16",
+    "generado": true,
+    "enunciado": "¿Desde qué botón del cuadro «Símbolo» (Insertar ▸ Símbolos ▸ Símbolo ▸ Más símbolos…) se llega a «Personalizar teclado»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El botón «Teclas…»"
+      },
+      {
+        "letter": "B",
+        "text": "El botón «Autocorrección…»"
+      },
+      {
+        "letter": "C",
+        "text": "El botón «Insertar»"
+      },
+      {
+        "letter": "D",
+        "text": "El desplegable «de:»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Teclas…» abre «Personalizar teclado» para asignar un atajo al símbolo seleccionado; «Autocorrección…» crea una entrada de autocorrección para ese símbolo."
+  },
+  {
+    "id": "inicio-563",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "dlgcompart-inicio-18",
+    "generado": true,
+    "enunciado": "El botón «Efectos de texto:» que aparece en la parte inferior del cuadro de diálogo Fuente, ¿qué abre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El panel lateral «Formato de efectos de texto» (relleno, contorno, sombra, reflejo, iluminado…)"
+      },
+      {
+        "letter": "B",
+        "text": "La galería de estilos rápidos WordArt"
+      },
+      {
+        "letter": "C",
+        "text": "El cuadro «Bordes y sombreado»"
+      },
+      {
+        "letter": "D",
+        "text": "La ficha «Avanzado» del propio cuadro Fuente"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es el mismo panel al que se llega desde «Color de fuente ▸ Degradado ▸ Más degradados…» o desde «Efectos de texto y tipografía ▸ Sombra/Reflejo/Iluminado ▸ Opciones de…»."
+  },
+  {
+    "id": "inicio-572",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "dlgcompart-inicio-27",
+    "generado": true,
+    "enunciado": "El botón «Establecer como predeterminado» del cuadro Fuente también aparece en otros cuadros de Word. ¿En cuáles?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Configurar página, Párrafo y Bordes y sombreado"
+      },
+      {
+        "letter": "B",
+        "text": "Solo en el cuadro Fuente"
+      },
+      {
+        "letter": "C",
+        "text": "Opciones de Word y Centro de confianza"
+      },
+      {
+        "letter": "D",
+        "text": "Tabulaciones y Símbolo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Establecer como predeterminado» está en Configurar página, Columnas, Párrafo, Bordes y sombreado, Fecha y hora, Letra capital y Administrar estilos, además del cuadro Fuente. En todos fija los valores actuales para el documento o para la plantilla."
+  },
+  {
     "id": "inicio-29",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -5819,6 +5982,55 @@
     "explicacion": "Las siete casillas son Tachado, Doble tachado, Superíndice, Subíndice, Versalitas, Mayúsculas y Oculto. «Contorno» y «Relieve» existían en versiones antiguas pero ya NO están en este cuadro (los efectos de contorno/sombra están ahora en el botón «Efectos de texto:»)."
   },
   {
+    "id": "inicio-547",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "dlgcompart-inicio-02",
+    "generado": true,
+    "enunciado": "¿Desde cuáles de estas rutas se abre el cuadro de diálogo Fuente?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Fuente ▸ lanzador (flecha del grupo)"
+      },
+      {
+        "letter": "B",
+        "text": "Ctrl+M"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Fuente ▸ Subrayado ▸ Más subrayados…"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▸ Fuente…"
+      },
+      {
+        "letter": "E",
+        "text": "Inicio ▸ Estilos ▸ flecha «Más» ▸ Aplicar estilos…"
+      },
+      {
+        "letter": "F",
+        "text": "Ctrl+Mayús+L"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "Las cuatro primeras abren el cuadro Fuente. «Aplicar estilos…» abre un cuadro flotante para escribir el nombre de un estilo; Ctrl+Mayús+L aplica lista con viñetas."
+  },
+  {
     "id": "inicio-15",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -6026,6 +6238,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Desde ahí se eligen estilos de línea que no están en el desplegable rápido (solo palabras, ondulado doble, etc.) y el «Color de subrayado»."
+  },
+  {
+    "id": "inicio-564",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de carácter",
+    "tema": "Fuente",
+    "sourceQuestionId": "dlgcompart-inicio-19",
+    "generado": true,
+    "enunciado": "«Más degradados…» (Color de fuente ▸ Degradado), el botón «Efectos de texto:» del cuadro Fuente y «Opciones de sombra…» del submenú de Efectos de texto abren todos el mismo panel lateral de formato de efectos de texto.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Cada ruta abre el panel en la sección que corresponde (relleno, sombra…), pero es el mismo panel."
   },
   {
     "id": "inicio-13",
@@ -7324,6 +7555,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Con «Texto independiente» esa casilla está atenuada: solo tiene sentido contraer/expandir encabezados con nivel de esquema."
+  },
+  {
+    "id": "inicio-551",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Alineación",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "tema": "Alineación",
+    "sourceQuestionId": "dlgcompart-inicio-06",
+    "generado": true,
+    "enunciado": "El grupo «Párrafo» tiene lanzador de cuadro de diálogo en dos pestañas de la cinta —Inicio y Disposición—, y ambas abren el mismo cuadro Párrafo.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "También se llega con clic derecho en un párrafo ▸ «Párrafo…»."
   },
   {
     "id": "inicio-42",
@@ -9103,6 +9353,42 @@
     "explicacion": "Está junto a los campos Anterior / Posterior / Interlineado del bloque «Espaciado»."
   },
   {
+    "id": "inicio-549",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "dlgcompart-inicio-04",
+    "generado": true,
+    "enunciado": "La opción «Opciones de interlineado…», al final del menú del botón «Espaciado entre líneas y párrafos» de la cinta, ¿qué abre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El cuadro Párrafo, ficha «Sangría y espacio»"
+      },
+      {
+        "letter": "B",
+        "text": "El cuadro Párrafo, ficha «Líneas y saltos de página»"
+      },
+      {
+        "letter": "C",
+        "text": "El cuadro Tabulaciones"
+      },
+      {
+        "letter": "D",
+        "text": "El cuadro «Bordes y sombreado»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es exactamente el mismo cuadro (y la misma ficha) que abre el lanzador del grupo Párrafo."
+  },
+  {
     "id": "inicio-489",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Espaciado e interlineado",
@@ -9213,6 +9499,44 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Es la misma ficha que abre el iniciador del grupo Párrafo."
+  },
+  {
+    "id": "inicio-550",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "dlgcompart-inicio-05",
+    "generado": true,
+    "enunciado": "Los interlineados «Mínimo», «Exacto» y «Múltiple» no aparecen en el botón «Espaciado entre líneas y párrafos» de la cinta; solo se pueden fijar desde el desplegable «Interlineado» del cuadro Párrafo.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El botón de la cinta solo ofrece valores fijos (1,0 · 1,15 · 1,5 · 2,0 · 2,5 · 3,0) y el enlace «Opciones de interlineado…», que abre el cuadro Párrafo."
+  },
+  {
+    "id": "inicio-552",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Espaciado e interlineado",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "tema": "Espaciado e interlineado",
+    "sourceQuestionId": "dlgcompart-inicio-07",
+    "generado": true,
+    "enunciado": "El cuadro Párrafo que se abre con «Opciones de interlineado…» es idéntico al que abre el lanzador del grupo Párrafo.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es literalmente el mismo cuadro; la ruta de entrada no cambia su contenido."
   },
   {
     "id": "inicio-254",
@@ -9998,6 +10322,42 @@
     "explicacion": "«Tramas» aplica un patrón (Claro, 5%, 10%, rayas, cuadrículas…) con su propio color sobre el relleno."
   },
   {
+    "id": "inicio-555",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "dlgcompart-inicio-10",
+    "generado": true,
+    "enunciado": "Al abrir «Bordes y sombreado» desde «Inicio ▸ Párrafo ▸ Bordes (flecha) ▸ Bordes y sombreado…», el cuadro aparece en la ficha:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Bordes"
+      },
+      {
+        "letter": "B",
+        "text": "Borde de página"
+      },
+      {
+        "letter": "C",
+        "text": "Sombreado"
+      },
+      {
+        "letter": "D",
+        "text": "Opciones"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Desde Inicio abre en «Bordes» (borde de párrafo/texto). Si se abre desde «Diseño ▸ Fondo de página ▸ Bordes de página» aparece en la ficha «Borde de página»."
+  },
+  {
     "id": "inicio-52",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Bordes y sombreado",
@@ -10152,6 +10512,55 @@
     "explicacion": "Los cinco presets de «Valor» son Ninguno, Cuadro, Sombra, 3D y Personalizado. «Doble» es un estilo de línea, no un valor; «Relieve» no existe aquí."
   },
   {
+    "id": "inicio-557",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "dlgcompart-inicio-12",
+    "generado": true,
+    "enunciado": "¿Desde cuáles de estas rutas se abre el cuadro «Bordes y sombreado»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Párrafo ▸ Bordes (flecha) ▸ Bordes y sombreado…"
+      },
+      {
+        "letter": "B",
+        "text": "Diseño ▸ Fondo de página ▸ Bordes de página"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▸ Borde…"
+      },
+      {
+        "letter": "D",
+        "text": "Disposición ▸ Configurar página ▸ lanzador ▸ ficha Disposición ▸ Bordes…"
+      },
+      {
+        "letter": "E",
+        "text": "Inicio ▸ Párrafo ▸ Sombreado (flecha)"
+      },
+      {
+        "letter": "F",
+        "text": "Diseño ▸ Fondo de página ▸ Color de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "El botón «Sombreado» del grupo Párrafo aplica un color directamente (no abre cuadro); «Color de página» es otra cosa (afecta a toda la hoja)."
+  },
+  {
     "id": "inicio-57",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Bordes y sombreado",
@@ -10264,6 +10673,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Permite ajustar por separado el margen superior, inferior, izquierdo y derecho entre la línea del borde y el contenido del párrafo."
+  },
+  {
+    "id": "inicio-556",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Bordes y sombreado",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-bordes",
+    "subtopic": null,
+    "tema": "Bordes y sombreado",
+    "sourceQuestionId": "dlgcompart-inicio-11",
+    "generado": true,
+    "enunciado": "El cuadro «Bordes y sombreado» es el mismo tanto si se abre desde Inicio (grupo Párrafo) como desde Diseño (Bordes de página): lo único que cambia es la ficha que aparece activa.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "También se llega desde «Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▸ Borde…» y desde las cintas contextuales de Tabla."
   },
   {
     "id": "inicio-545",
@@ -11666,6 +12094,25 @@
     "explicacion": "Debajo aparece la «Biblioteca de listas» con «Ninguna» y los presets (incluidos los que enlazan cada nivel con Título 1, Título 2, Título 3)."
   },
   {
+    "id": "inicio-548",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Listas, viñetas y numeración",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-listas",
+    "subtopic": null,
+    "tema": "Listas, viñetas y numeración",
+    "sourceQuestionId": "dlgcompart-inicio-03",
+    "generado": true,
+    "enunciado": "El botón «Fuente…» de los cuadros «Definir nuevo formato de número», «Definir nueva viñeta» y «Definir nueva lista con varios niveles» abre el cuadro Fuente, pero el formato se aplica solo al carácter del número o de la viñeta, no al texto del elemento de lista.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Es el mismo cuadro Fuente, con un ámbito de aplicación distinto."
+  },
+  {
     "id": "inicio-63",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Listas, viñetas y numeración",
@@ -12349,6 +12796,42 @@
     "explicacion": "El botón «Tabulaciones…» abre el cuadro donde se definen las paradas de tabulación (posición, alineación, relleno)."
   },
   {
+    "id": "inicio-554",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": null,
+    "tema": "Tabulaciones",
+    "sourceQuestionId": "dlgcompart-inicio-09",
+    "generado": true,
+    "enunciado": "El cuadro «Tabulaciones» se puede abrir de varias formas. Señale la que NO es correcta:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Con un botón «Tabulaciones» del grupo Párrafo de la cinta"
+      },
+      {
+        "letter": "B",
+        "text": "Desde el cuadro Párrafo (botón «Tabulaciones…»)"
+      },
+      {
+        "letter": "C",
+        "text": "Desde «Opciones de interlineado…» del menú de interlineado (botón «Tabulaciones…»)"
+      },
+      {
+        "letter": "D",
+        "text": "Con doble clic en un marcador de tabulación de la regla"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "No hay ningún botón «Tabulaciones» directo en la cinta: siempre se llega a través del cuadro Párrafo o de la regla."
+  },
+  {
     "id": "inicio-74",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Tabulaciones",
@@ -12391,6 +12874,55 @@
       "D"
     ],
     "explicacion": "El relleno solo es accesible desde el cuadro de diálogo Tabulaciones, no desde la regla. Ofrece 4 opciones. Su uso más habitual es en índices para guiar la vista entre el título y la página. La opción C es falsa (la regla no permite relleno) y la E es falsa (el relleno está disponible para todos los tipos de tabulación)."
+  },
+  {
+    "id": "inicio-553",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": null,
+    "tema": "Tabulaciones",
+    "sourceQuestionId": "dlgcompart-inicio-08",
+    "generado": true,
+    "enunciado": "¿Desde cuáles de estas rutas se abre el cuadro «Tabulaciones»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio/Disposición ▸ Párrafo ▸ lanzador ▸ botón «Tabulaciones…»"
+      },
+      {
+        "letter": "B",
+        "text": "Inicio ▸ Párrafo ▸ Espaciado (flecha) ▸ Opciones de interlineado… ▸ botón «Tabulaciones…»"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▸ Tabulaciones…"
+      },
+      {
+        "letter": "D",
+        "text": "Doble clic en un marcador de tabulación de la regla"
+      },
+      {
+        "letter": "E",
+        "text": "Vista ▸ Mostrar ▸ Regla"
+      },
+      {
+        "letter": "F",
+        "text": "Botón «Tabulaciones» del grupo Párrafo de la cinta"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "«Vista ▸ Regla» solo muestra la regla; no existe un botón «Tabulaciones» suelto en la cinta (siempre se pasa por el cuadro Párrafo o la regla)."
   },
   {
     "id": "inicio-81",
@@ -14458,6 +14990,114 @@
     "explicacion": "Ayuda a distinguir qué parte del aspecto viene del estilo y qué parte es formato directo (manual), y a quitar solo una de las dos capas."
   },
   {
+    "id": "inicio-559",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "dlgcompart-inicio-14",
+    "generado": true,
+    "enunciado": "Dentro del cuadro Modificar estilo, ¿qué opción del menú «Formato ▾» abre el cuadro «Personalizar teclado»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Método abreviado…"
+      },
+      {
+        "letter": "B",
+        "text": "Marco…"
+      },
+      {
+        "letter": "C",
+        "text": "Efectos de texto…"
+      },
+      {
+        "letter": "D",
+        "text": "Idioma…"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Método abreviado…» abre «Personalizar teclado» con el comando del estilo ya seleccionado, para asignarle una combinación de teclas."
+  },
+  {
+    "id": "inicio-570",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "dlgcompart-inicio-25",
+    "generado": true,
+    "enunciado": "«Crear un estilo» (flecha «Más» de la galería de Estilos) abre una versión reducida del cuadro. ¿Qué hay que pulsar para ver todas las propiedades del estilo?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El botón «Modificar…»"
+      },
+      {
+        "letter": "B",
+        "text": "El botón «Aceptar»"
+      },
+      {
+        "letter": "C",
+        "text": "El botón «Formato»"
+      },
+      {
+        "letter": "D",
+        "text": "La flecha «Más»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El botón «Nuevo estilo» del panel Estilos, en cambio, abre directamente la versión ampliada."
+  },
+  {
+    "id": "inicio-574",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "dlgcompart-inicio-29",
+    "generado": true,
+    "enunciado": "«Aplicar estilos…», al final del menú de la flecha «Más» de la galería de Estilos, abre:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Un cuadro flotante pequeño para escribir el nombre del estilo y aplicarlo (equivale a Ctrl+Mayús+W)"
+      },
+      {
+        "letter": "B",
+        "text": "El panel Estilos completo"
+      },
+      {
+        "letter": "C",
+        "text": "El cuadro «Administrar estilos»"
+      },
+      {
+        "letter": "D",
+        "text": "El Inspector de estilo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es el cuadrito «Aplicar estilos» con una caja de texto autocompletable y los botones «Volver a aplicar» y «Modificar»."
+  },
+  {
     "id": "inicio-99",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -14675,6 +15315,111 @@
     "explicacion": "El menú «Formato ▾» tiene: Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. «Columnas» no está (no es formato de estilo de párrafo)."
   },
   {
+    "id": "inicio-558",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "dlgcompart-inicio-13",
+    "generado": true,
+    "enunciado": "El botón «Formato ▾» del cuadro Modificar/Crear estilo abre, cada una, un cuadro o panel que también existe por su cuenta. ¿Cuáles de estos ofrece?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Fuente"
+      },
+      {
+        "letter": "B",
+        "text": "Párrafo"
+      },
+      {
+        "letter": "C",
+        "text": "Tabulaciones"
+      },
+      {
+        "letter": "D",
+        "text": "Borde (Bordes y sombreado)"
+      },
+      {
+        "letter": "E",
+        "text": "Numeración"
+      },
+      {
+        "letter": "F",
+        "text": "Método abreviado (Personalizar teclado)"
+      },
+      {
+        "letter": "G",
+        "text": "Efectos de texto"
+      },
+      {
+        "letter": "H",
+        "text": "Columnas"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "explicacion": "El menú «Formato ▾» tiene Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. «Columnas» pertenece a la pestaña Disposición y no es formato de estilo de párrafo."
+  },
+  {
+    "id": "inicio-562",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "seleccion_multiple",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "dlgcompart-inicio-17",
+    "generado": true,
+    "enunciado": "¿Desde cuáles de estas rutas se llega al cuadro «Personalizar teclado»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Archivo ▸ Opciones ▸ Personalizar cinta de opciones ▸ botón «Personalizar…»"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Símbolo ▸ Más símbolos… ▸ botón «Teclas…»"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▸ Método abreviado…"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+Ctrl++ del teclado numérico"
+      },
+      {
+        "letter": "E",
+        "text": "Archivo ▸ Opciones ▸ Avanzadas"
+      }
+    ],
+    "matching": null,
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "«Personalizar teclado» está en «Personalizar cinta de opciones» (botón junto a «Métodos abreviados de teclado»), no en «Avanzadas»."
+  },
+  {
     "id": "inicio-97",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -14863,6 +15608,63 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "También decide si se muestran como estilos independientes el formato de párrafo, de fuente y de numeración/viñetas aplicados manualmente."
+  },
+  {
+    "id": "inicio-560",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "dlgcompart-inicio-15",
+    "generado": true,
+    "enunciado": "El cuadro Fuente que se abre desde «Formato ▸ Fuente…» del cuadro Modificar estilo es el mismo que abre el lanzador del grupo Fuente, pero el formato queda ligado al estilo, no al párrafo suelto.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Toda la potencia del cuadro Modificar estilo es esa: reunir Fuente, Párrafo, Bordes, Tabulaciones, Numeración… y aplicarlo al estilo."
+  },
+  {
+    "id": "inicio-569",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "dlgcompart-inicio-24",
+    "generado": true,
+    "enunciado": "El cuadro «Administrar estilos» también se abre desde «Diseño ▸ Espaciado entre párrafos ▸ Espaciado personalizado entre párrafos…» (aparece en su ficha «Establecer valores predeterminados»).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Desde Inicio se llega con el 3.er botón del panel Estilos («Administrar estilos»)."
+  },
+  {
+    "id": "inicio-571",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "tema": "Estilos",
+    "sourceQuestionId": "dlgcompart-inicio-26",
+    "generado": true,
+    "enunciado": "Los tres botones de la parte inferior del panel Estilos son «Nuevo estilo», «Inspector de estilo» y «Administrar estilos».",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "El «Nuevo estilo» abre la versión completa del cuadro de creación de estilo; «Administrar estilos» abre el cuadro de 4 fichas."
   },
   {
     "id": "inicio-89",
@@ -18328,6 +19130,78 @@
     "explicacion": "Útil para cambiar a la vez, por ejemplo, todos los fragmentos que quedaron en un tamaño o color concreto."
   },
   {
+    "id": "inicio-565",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Buscar y reemplazar",
+    "tema": "Edición",
+    "sourceQuestionId": "dlgcompart-inicio-20",
+    "generado": true,
+    "enunciado": "Las opciones «Búsqueda avanzada…» e «Ir a…» de la flecha del botón Buscar (grupo Edición) abren:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El mismo cuadro «Buscar y reemplazar», cada una en su ficha"
+      },
+      {
+        "letter": "B",
+        "text": "Dos cuadros de diálogo distintos"
+      },
+      {
+        "letter": "C",
+        "text": "El panel Navegación en dos pestañas distintas"
+      },
+      {
+        "letter": "D",
+        "text": "El mismo cuadro, siempre en la ficha Buscar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Buscar y reemplazar» es un único cuadro con tres fichas (Buscar, Reemplazar, Ir a); cada ruta lo abre por la suya y dentro se cambia de ficha con un clic."
+  },
+  {
+    "id": "inicio-567",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Buscar y reemplazar",
+    "tema": "Edición",
+    "sourceQuestionId": "dlgcompart-inicio-22",
+    "generado": true,
+    "enunciado": "Sobre el botón «Buscar» del grupo Edición (pulsándolo directamente, sin la flecha). Señale la afirmación FALSA:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Abre el cuadro de diálogo «Buscar y reemplazar» en la ficha Buscar"
+      },
+      {
+        "letter": "B",
+        "text": "Abre el panel Navegación con el cuadro de búsqueda"
+      },
+      {
+        "letter": "C",
+        "text": "El panel Navegación tiene las pestañas Títulos, Páginas y Resultados"
+      },
+      {
+        "letter": "D",
+        "text": "Equivale al atajo Ctrl+B en esta instalación"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El botón «Buscar» a secas abre el PANEL Navegación, no el cuadro clásico. Para el cuadro hay que usar la flecha ▸ «Búsqueda avanzada…»."
+  },
+  {
     "id": "inicio-132",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -18723,6 +19597,25 @@
     "explicacion": "Su información en pantalla lo describe como «Consulte una lista de todos los objetos… más fácil seleccionarlos, cambiarlos de orden o cambiar su visibilidad»."
   },
   {
+    "id": "inicio-566",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "verdadero_falso",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Buscar y reemplazar",
+    "tema": "Edición",
+    "sourceQuestionId": "dlgcompart-inicio-21",
+    "generado": true,
+    "enunciado": "El botón «Reemplazar» del grupo Edición y la opción «Ir a…» del menú del botón Buscar abren el mismo cuadro de diálogo (en fichas distintas).",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "En esta instalación «Reemplazar» equivale a Ctrl+L e «Ir a» a Ctrl+I."
+  },
+  {
     "id": "inicio-119",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -18944,6 +19837,77 @@
       "5": "E"
     },
     "explicacion": "Versión española de Word 365: Ctrl+E selecciona todo (inglés: centra). Ctrl+B abre navegación (inglés: negrita). Ctrl+F aplica la sangría francesa (inglés: buscar). Ctrl+L abre Reemplazar (inglés: alinear a la izquierda). Ctrl+T centra (inglés: tabulación). El distractor F (negrita) corresponde a Ctrl+N en español."
+  },
+  {
+    "id": "inicio-568",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Edición",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": null,
+    "tema": "Edición",
+    "sourceQuestionId": "dlgcompart-inicio-23",
+    "generado": true,
+    "enunciado": "Relaciona cada ruta con la ficha por la que abre su cuadro de diálogo compartido:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Diseño ▸ Fondo de página ▸ Bordes de página"
+        },
+        {
+          "id": "2",
+          "label": "Inicio ▸ Párrafo ▸ Bordes ▸ Bordes y sombreado…"
+        },
+        {
+          "id": "3",
+          "label": "Buscar (flecha) ▸ Ir a…"
+        },
+        {
+          "id": "4",
+          "label": "Buscar (flecha) ▸ Búsqueda avanzada…"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "«Bordes y sombreado»: ficha Borde de página"
+        },
+        {
+          "id": "B",
+          "label": "«Bordes y sombreado»: ficha Bordes"
+        },
+        {
+          "id": "C",
+          "label": "«Buscar y reemplazar»: ficha Ir a"
+        },
+        {
+          "id": "D",
+          "label": "«Buscar y reemplazar»: ficha Buscar"
+        },
+        {
+          "id": "E",
+          "label": "«Configurar página»: ficha Papel"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      }
+    },
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "explicacion": "Bordes y sombreado y Buscar y reemplazar son cada uno un solo cuadro con varias fichas; la ruta de entrada solo decide cuál aparece activa."
   },
   {
     "id": "inicio-373",
