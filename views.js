@@ -4122,6 +4122,22 @@ let mpTimerInterval = null;
 let mpLastRoundExtra = null;
 let mpRoomCode = null;
 let mpFinalExtra = null;
+/* Reloj de ronda y cuenta atrás: los dos vienen del MOTOR (ya sincronizados
+   con el reloj del host vía hostToLocalTime), nunca de un Date.now() local
+   tomado en el momento de pintar — si no, cada móvil arranca su cuenta
+   cuando le llega el mensaje y la partida no empieza a la vez. */
+let mpRoundDeadlineLocal = null, mpRoundDurationMs = null, mpRoundDeadlineFor = -1;
+let mpCountdownAt = null;
+/* Borrador de la respuesta en curso (selección múltiple / emparejamiento).
+   Vive fuera de mpRenderAnswerBody porque la vista se repinta entera ante
+   cualquier evento de conexión o de fase; sin esto, una reconexión a mitad
+   de ronda borraba en silencio lo que el jugador llevaba marcado y la ronda
+   acababa en TIMEOUT. Se descarta al cambiar de ronda o de partida. */
+let mpDraft = { round:-1, sel:null, pairs:null };
+function mpDraftFor(roundIndex){
+  if(mpDraft.round !== roundIndex) mpDraft = { round:roundIndex, sel:null, pairs:null };
+  return mpDraft;
+}
 
 const MP_PRESETS = {
   relampago: { label:"Relámpago", rounds:5, seconds:5 },
@@ -4144,6 +4160,8 @@ function mpReset(){
   mpSession = null; mpDuel = null; mpPoker = null; mpConnPhase = "idle"; mpDuelPhase = "idle"; mpPokerPhase = "idle";
   mpRoomCode = null; mpLastRoundExtra = null; mpFinalExtra = null; mpPokerReveal = null; mpPokerFinal = null;
   mpPokerDeck = []; mpPokerPlayed = {};
+  mpRoundDeadlineLocal = null; mpRoundDurationMs = null; mpRoundDeadlineFor = -1;
+  mpCountdownAt = null; mpDraft = { round:-1, sel:null, pairs:null };
   if(mpTimerInterval){ clearInterval(mpTimerInterval); mpTimerInterval = null; }
   if(mpPressureInterval){ clearInterval(mpPressureInterval); mpPressureInterval = null; }
 }
@@ -4450,6 +4468,16 @@ function mpWireDuelHandlers(){
     },
     onPhase(p, extra){
       mpDuelPhase = p;
+      if(p === "countdown") mpCountdownAt = (extra && extra.startAtLocal) || null;
+      if(p === "round" && extra){
+        // Deadline YA convertido al reloj local por el motor: los dos
+        // dispositivos ven el mismo tiempo restante, y un repintado a mitad
+        // de ronda no reinicia el cronómetro.
+        mpRoundDeadlineFor  = extra.index;
+        mpRoundDeadlineLocal = extra.deadlineLocal || null;
+        mpRoundDurationMs    = extra.duration || null;
+        mpDraftFor(extra.index);              // borrador limpio al entrar en la ronda
+      }
       if(p === "round_end"){
         mpLastRoundExtra = extra;
         setTimeout(()=>{ if(mpDuel) mpDuel.advanceIfHost(); }, 2200);
@@ -4471,6 +4499,23 @@ function mpWireDuelHandlers(){
     },
     onRivalAnswered(){ mpUpdateSelfStatus(); },
   });
+}
+/* Cuenta atrás común a Duelo y Contra Word. Se calcula contra el instante de
+   arranque que fija el HOST (ya traducido al reloj local por el motor), no
+   contra el momento en que a este dispositivo le toca pintar: así los dos
+   ven el mismo "3·2·1" y la ronda 1 les entra a la vez. */
+function mpRenderCountdown(){
+  mainEl().innerHTML = `<div class="view view-narrow"><div class="countdown-hero"><div class="num" id="mp-countdown-num">3</div><p style="color:var(--text-2);">Preparaos…</p></div></div>`;
+  const el = $("#mp-countdown-num");
+  const startAt = mpCountdownAt || (Date.now() + 3200);
+  const paint = ()=>{
+    if(!el || !el.isConnected){ clearInterval(iv); return; }
+    const left = startAt - Date.now();
+    if(left <= 250){ el.textContent = "¡YA!"; clearInterval(iv); return; }
+    el.textContent = String(Math.max(1, Math.ceil((left - 200)/1000)));
+  };
+  const iv = setInterval(paint, 100);
+  paint();
 }
 function mpRerenderCurrentMpView(){
   if(O.Nav.view === "mp-lobby") renderMpLobby();
@@ -4600,13 +4645,7 @@ function renderMpGame(){
     return;
   }
 
-  if(mpDuelPhase === "countdown"){
-    mainEl().innerHTML = `<div class="view view-narrow"><div class="countdown-hero"><div class="num" id="mp-countdown-num">3</div><p style="color:var(--text-2);">Preparaos…</p></div></div>`;
-    let n = 3;
-    const el = $("#mp-countdown-num");
-    const iv = setInterval(()=>{ n--; if(!el) { clearInterval(iv); return; } if(n<=0){ el.textContent="¡YA!"; clearInterval(iv); } else el.textContent = String(n); }, 1000);
-    return;
-  }
+  if(mpDuelPhase === "countdown"){ mpRenderCountdown(); return; }
 
   if(mpDuelPhase === "finished"){ return renderMpResults(); }
 
@@ -4689,6 +4728,9 @@ function mpShowPauseOverlay(){
 
 function mpRenderAnswerBody(q, st){
   const body = $("#mp-q-body");
+  // El cuerpo no existe durante round_end / countdown: onSelfAnswered puede
+  // llegar justo en ese hueco y antes reventaba con "innerHTML of null".
+  if(!body || !q) return;
   const already = !!st.myAnswerState;
   const timedOut = st.myAnswerState === "TIMEOUT";
   if(q.tipo === "opcion_unica"){
@@ -4703,18 +4745,28 @@ function mpRenderAnswerBody(q, st){
     body.innerHTML = `<div class="tf-row"><button class="tf-btn ${chosenTrue?'selected':''}" data-v="true" ${already?"disabled":""}>Verdadero</button><button class="tf-btn ${chosenFalse?'selected':''}" data-v="false" ${already?"disabled":""}>Falso</button></div>`;
     if(!already) $$(".tf-btn", body).forEach(btn=> btn.addEventListener("click", ()=> mpSubmit(btn.getAttribute("data-v")==="true")));
   } else if(q.tipo === "seleccion_multiple"){
-    let sel = (already && !timedOut && Array.isArray(st.myAnswerValue)) ? st.myAnswerValue.slice() : [];
+    const draft = mpDraftFor(st.roundIndex);
+    // Lo ya enviado manda; si aún no se ha enviado, se recupera el borrador
+    // (sobrevive a repintados por reconexión o cambio de fase).
+    const sel = (already && !timedOut && Array.isArray(st.myAnswerValue))
+      ? st.myAnswerValue.slice()
+      : (Array.isArray(draft.sel) ? draft.sel.slice() : []);
+    if(!already) draft.sel = sel;
     body.innerHTML = `<div class="options">${q.opciones.map(o=>{
       const chosen = sel.includes(o.letter);
       return `<button class="option ${chosen?'selected':''}" data-letter="${o.letter}" ${already?"disabled":""}><span class="letter">${o.letter}</span><span>${O.escapeHtml(o.text)}</span></button>`;
-    }).join("")}
+    }).join("")}</div>
       ${!already?`<button class="btn btn-primary btn-sm" id="mp-multi-confirm" style="margin-top:12px;">Confirmar respuesta</button>`:''}`;
     if(!already){
       $$(".option", body).forEach(btn=> btn.addEventListener("click", ()=>{ const l=btn.getAttribute("data-letter"); const i=sel.indexOf(l); if(i>=0) sel.splice(i,1); else sel.push(l); btn.classList.toggle("selected"); }));
       $("#mp-multi-confirm").addEventListener("click", ()=>{ if(!sel.length){ O.toast("Selecciona al menos una opción"); return; } mpSubmit(sel.slice()); });
     }
-  } else if(q.tipo === "emparejamiento"){
-    let pairs = (already && !timedOut && st.myAnswerValue && typeof st.myAnswerValue === "object") ? Object.assign({}, st.myAnswerValue) : {};
+  } else if(q.tipo === "emparejamiento" && q.matching && q.matching.left && q.matching.right){
+    const draft = mpDraftFor(st.roundIndex);
+    let pairs = (already && !timedOut && st.myAnswerValue && typeof st.myAnswerValue === "object")
+      ? Object.assign({}, st.myAnswerValue)
+      : Object.assign({}, draft.pairs || {});
+    if(!already) draft.pairs = pairs;
     let leftId = null;
     function draw(){
       body.innerHTML = `<div class="match-wrap">
@@ -4727,6 +4779,14 @@ function mpRenderAnswerBody(q, st){
       const cbtn = $("#mp-match-confirm"); if(cbtn) cbtn.addEventListener("click", ()=> mpSubmit(Object.assign({},pairs)));
     }
     draw();
+  } else {
+    // Tipo no jugable en Duelo (relleno) o pregunta mal formada colada en el
+    // tablero. Antes el cuerpo se quedaba VACÍO: sin controles, la ronda se
+    // iba a TIMEOUT sin que el jugador pudiera hacer nada ni entender por qué.
+    body.innerHTML = `<p style="color:var(--text-2);font-size:13px;margin:10px 0;">Esta pregunta no se puede responder en una partida en vivo.</p>
+      ${already?'':`<button class="btn btn-outline btn-sm" id="mp-skip-q">Pasar de esta ronda</button>`}`;
+    const skip = $("#mp-skip-q");
+    if(skip) skip.addEventListener("click", ()=> mpSubmit(null));
   }
 }
 function mpSubmit(answer){ mpDuel.submitAnswer(answer); }
@@ -4736,42 +4796,60 @@ function mpUpdateSelfStatus(){
   const st = mpDuel.getState();
   const rival = !!st.rivalAnswerState;
   const coop = mpGameMode === "coop";
-  const other = coop ? "el otro" : "el rival";
+  const other = coop ? "tu compañero" : "el rival";
   if(st.myAnswerState === "SUBMITTED"){
     el.textContent = rival
       ? (coop ? "Ya habéis votado los dos" : "Ambos habéis respondido")
-      : (coop ? `✓ Voto registrado — esperando a ${other}…` : "✓ Respuesta registrada — esperando al rival…");
+      : (coop ? `✓ TU voto está registrado — esperando a ${other}…` : "✓ Respuesta registrada — esperando al rival…");
     el.className = "duel-selfstatus " + (rival ? "waiting" : "submitted");
   } else if(st.myAnswerState === "TIMEOUT"){
     el.textContent = rival ? "Se acabó el tiempo para los dos" : `⏱ Se te acabó el tiempo — esperando a ${other}…`;
     el.className = "duel-selfstatus timedout";
   } else {
-    el.textContent = rival ? `${coop ? 'Tu compañero' : 'Tu rival'} ya ha ${coop?'votado':'respondido'} — te toca` : "Pensando…";
+    // Nunca decir "ya está" a quien no ha contestado: el sujeto va explícito.
+    el.textContent = rival
+      ? (coop ? "Tu compañero ya ha votado — TE FALTA VOTAR A TI" : "Tu rival ya ha respondido — te toca")
+      : (coop ? "Aún no has votado" : "Pensando…");
     el.className = "duel-selfstatus" + (rival ? " rival-ready" : "");
   }
 }
 
 function mpStartTimerTick(st){
+  // Un único intervalo vivo: la vista se repinta muchas veces por ronda
+  // (respuesta propia, evento de conexión, cambio de fase) y sin esto se
+  // apilaban cronómetros; el primero en llegar a 0 hacía clearInterval del
+  // handle GLOBAL, que ya era el del cronómetro nuevo → el reloj se
+  // congelaba a mitad de ronda.
+  if(mpTimerInterval){ clearInterval(mpTimerInterval); mpTimerInterval = null; }
+
   const cfg = st.config || {};
-  const durationMs = (Number(cfg.seconds)||10) * 1000;
-  if(!mpStartTimerTick._roundStartLocal || mpStartTimerTick._round !== st.roundIndex){
-    mpStartTimerTick._roundStartLocal = Date.now();
-    mpStartTimerTick._round = st.roundIndex;
+  const durationMs = (mpRoundDeadlineFor === st.roundIndex && mpRoundDurationMs)
+    ? mpRoundDurationMs : (Number(cfg.seconds)||10) * 1000;
+  // Deadline del motor (ya en reloj local y común a los dos jugadores). Si por
+  // lo que sea no lo tenemos para ESTA ronda, se cae a un arranque local.
+  let deadline = (mpRoundDeadlineFor === st.roundIndex && mpRoundDeadlineLocal) ? mpRoundDeadlineLocal : null;
+  if(!deadline){
+    if(mpStartTimerTick._round !== st.roundIndex || !mpStartTimerTick._fallbackDeadline){
+      mpStartTimerTick._round = st.roundIndex;
+      mpStartTimerTick._fallbackDeadline = Date.now() + durationMs;
+    }
+    deadline = mpStartTimerTick._fallbackDeadline;
   }
-  const startedAt = mpStartTimerTick._roundStartLocal;
-  mpTimerInterval = setInterval(()=>{
+
+  const tick = ()=>{
     const numEl = $("#mp-timer-num"), barEl = $("#mp-timer-bar"), wrapEl = $("#mp-timer-wrap");
-    if(!numEl){ clearInterval(mpTimerInterval); return; }
-    const elapsed = Date.now() - startedAt;
-    const remaining = Math.max(0, durationMs - elapsed);
+    if(!numEl){ if(mpTimerInterval){ clearInterval(mpTimerInterval); mpTimerInterval = null; } return; }
+    const remaining = Math.max(0, deadline - Date.now());
     numEl.textContent = (remaining/1000).toFixed(1) + " s";
     const frac = Math.max(0, Math.min(1, remaining/durationMs));
     barEl.style.width = (frac*100) + "%";
     wrapEl.classList.remove("warn","critical");
     if(frac <= 0.15) wrapEl.classList.add("critical");
     else if(frac <= 0.4) wrapEl.classList.add("warn");
-    if(remaining <= 0) clearInterval(mpTimerInterval);
-  }, 100);
+    if(remaining <= 0 && mpTimerInterval){ clearInterval(mpTimerInterval); mpTimerInterval = null; }
+  };
+  tick();                                   // sin esperar 100 ms a pintar "--"
+  mpTimerInterval = setInterval(tick, 100);
 }
 
 function renderMpRoundEnd(data){
@@ -5022,12 +5100,7 @@ function renderMpCoopGame(){
     $("#mp-exit").addEventListener("click", mpExitToSetup);
     return;
   }
-  if(mpDuelPhase === "countdown"){
-    mainEl().innerHTML = `<div class="view view-narrow"><div class="countdown-hero"><div class="num" id="mp-countdown-num">3</div><p style="color:var(--text-2);">Preparaos…</p></div></div>`;
-    let n = 3; const el = $("#mp-countdown-num");
-    const iv = setInterval(()=>{ n--; if(!el){ clearInterval(iv); return; } if(n<=0){ el.textContent="¡YA!"; clearInterval(iv); } else el.textContent = String(n); }, 1000);
-    return;
-  }
+  if(mpDuelPhase === "countdown"){ mpRenderCountdown(); return; }
   if(mpDuelPhase === "finished") return renderMpCoopResults();
 
   const st = mpDuel.getState();

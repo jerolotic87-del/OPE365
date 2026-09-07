@@ -1636,6 +1636,58 @@ en su lugar:
   transporte mock) y `tests/manual_iconos_mp_qa.mjs` (Chromium real: Contra
   Word y el mazo de Farol).
 
+**Sin pistas en las preguntas de icono (sep-2026):** 74 enunciados (48
+`insertar` + 26 `revisar`) decían de qué pestaña/cinta era el icono («de la
+pestaña Revisar», «de la cinta “Disposición de tabla”», «“Formato de
+imagen”», «“Diseño de tabla”») — media respuesta regalada, porque una de
+las tres cosas que se preguntan ES la pestaña. Normalizados todos al
+enunciado neutro «Observa el icono de la imagen. ¿Qué comando de Word
+representa?». Comprobado que los 5 pares que quedan con enunciado+opciones
+idénticos son iconos distintos con respuesta distinta (no son duplicados).
+
+**Cinco fallos reales de partida arreglados (sep-2026)** — reportados por el
+usuario tras jugar en dos móviles («salió selección múltiple y no dejaba
+marcar, se agotó el tiempo»; «mi novia no votó nada y le salía que sí»; «no
+empieza a la vez»). Todos con test de regresión que FALLA con el código
+anterior (`tests/test_multiplayer_tipos.js`, 59 comprobaciones; QA en
+Chromium real en `tests/manual_mp_tipos_qa.mjs`):
+1. **El borrador de respuesta se perdía en cualquier repintado.** `sel`
+   (selección múltiple) y `pairs` (emparejamiento) vivían en variables
+   locales de `mpRenderAnswerBody`, que se reconstruyen desde
+   `st.myAnswerValue` — vacío hasta CONFIRMAR. La vista se repinta entera
+   ante cada evento de conexión (`onConnState` → `mpRerenderCurrentMpView`),
+   habitual con datos móviles, así que una reconexión a mitad de ronda
+   borraba en silencio lo marcado y la ronda acababa en TIMEOUT. **Es la
+   causa del bug reportado.** Ahora hay un borrador de módulo
+   `mpDraft {round, sel, pairs}` (`mpDraftFor(round)`), que se descarta al
+   cambiar de ronda o de partida.
+2. **El `<div class="options">` de selección múltiple no se cerraba** — el
+   botón «Confirmar respuesta» quedaba DENTRO de la rejilla de opciones.
+3. **Cronómetros apilados.** `mpStartTimerTick` nunca hacía `clearInterval`
+   del anterior: cada repintado creaba otro, y el primero en llegar a 0
+   hacía `clearInterval(mpTimerInterval)` — que ya era el handle del
+   cronómetro NUEVO → el reloj se congelaba a mitad de ronda. Además
+   `_round !== st.roundIndex` no detectaba la ronda 0 de una partida nueva
+   (revancha), y el reloj salía a 0 de entrada.
+4. **El reloj y la cuenta atrás eran LOCALES.** Ambos descontaban desde el
+   `Date.now()` del momento de pintar, así que cada móvil arrancaba su
+   3·2·1 cuando le llegaba el mensaje y cualquier repintado lo reiniciaba a
+   3. Ahora los dos van contra el instante que fija el host y que el motor
+   ya traduce al reloj local (`extra.startAtLocal` de la fase `countdown` y
+   `extra.deadlineLocal` de la fase `round`, vía `hostToLocalTime`) —
+   guardados en `mpCountdownAt` / `mpRoundDeadlineLocal`. Helper compartido
+   `mpRenderCountdown()` para Duelo y Contra Word.
+5. **Mensajes de estado ambiguos en Contra Word.** «Tu compañero ya ha
+   votado — te toca» y «Pensando…» se leían como "ya has votado". Ahora el
+   sujeto va explícito: «Aún no has votado» / «Tu compañero ya ha votado —
+   TE FALTA VOTAR A TI» / «✓ TU voto está registrado…».
+
+Además, endurecido `mpRenderAnswerBody`: sale si no existe `#mp-q-body`
+(llegaba a llamarse en el hueco de `round_end`), exige `q.matching` bien
+formado, y tiene una rama final para cualquier tipo no jugable — antes
+dejaba el cuerpo VACÍO (sin controles, TIMEOUT seguro y sin explicación);
+ahora avisa y ofrece «Pasar de esta ronda».
+
 **Repaso al final (sep-2026):** los tres modos emiten `review` en el
 evento `finished` (pregunta + respuesta de cada uno + correcta +
 `explicacion`). Lo pintan `mpDuelReviewHtml`/`mpCoopReviewHtml`/
