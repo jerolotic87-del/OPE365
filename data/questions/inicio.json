@@ -8025,7 +8025,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "El valor predeterminado de sangria en Word 365 es 1,25 cm. El rango valido va de -55,87 a 55,87 cm, lo que significa que las sangrías izquierda y derecha pueden ser negativas. Este mismo rango se aplica tambien al campo Posicion del cuadro de Tabulaciones."
+    "explicacion": "El valor predeterminado de sangria en Word 365 es 1,25 cm. El rango valido va de -55,87 a 55,87 cm: las sangrias izquierda y derecha (y el campo Posicion del cuadro Tabulaciones) pueden ser negativas. Prueba en vivo del usuario (sep-2026): Word rechaza los valores fuera de ese rango con el aviso «La medida debe estar entre -55,87 cm y 55,87 cm»."
   },
   {
     "id": "inicio-46",
@@ -12632,7 +12632,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "El campo Posición del cuadro de diálogo Tabulaciones admite valores entre -55,87 y 55,87 cm. Este rango es idéntico al del campo de Sangría del cuadro de diálogo Párrafo."
+    "explicacion": "El campo Posicion del cuadro Tabulaciones admite valores entre -55,87 y 55,87 cm (incluidos los negativos). Prueba en vivo del usuario (sep-2026): al teclear un valor fuera de rango Word avisa «La medida debe estar entre -55,87 cm y 55,87 cm». Es el mismo rango del campo de Sangria del cuadro Parrafo."
   },
   {
     "id": "inicio-76",

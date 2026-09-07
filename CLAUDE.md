@@ -639,9 +639,12 @@ esquema internacional / conflicto interno). El PDF corrobora `Ctrl+Mayús+Z`
 — en este Word 365 **esa sección no existe** (era de Office 2013-2016; el
 usuario lo confirmó). separador de páginas al imprimir = **coma** (`archivo-50/51/381`,
 confirmado con el tooltip del campo Páginas) ✅ · `archivo-63` borrada (la
-sección «Comentarios» de Backstage no existe en este Word) ✅. Pendientes:
-desplegable «Aplicar formato a» del cuadro de estilo de tabla (`inicio-107`),
-rango del campo Posición del cuadro Tabulaciones (`inicio-45/75`).
+sección «Comentarios» de Backstage no existe en este Word) ✅ · **campo
+Posición del cuadro Tabulaciones = -55,87 a 55,87 cm, negativos incluidos**
+(`inicio-45/75`) ✅ CONFIRMADO en vivo: al teclear fuera de rango Word avisa
+«La medida debe estar entre -55,87 cm y 55,87 cm»; `-2 cm` se fija sin
+problema. Pendiente: solo el desplegable «Aplicar formato a» del cuadro de
+estilo de tabla (`inicio-107` afirma 9 opciones).
 
 **Mapa de cuadros de diálogo compartidos — cross-pestaña (sep-2026)**: a
 partir de los 9 volcados completos se añadió la **§14** a
