@@ -628,6 +628,22 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Barrido web de huecos de Diseño (sep-2026)**: cruce del banco de Diseño
+(91 preguntas) con josenrique.es (AGE — **0 preguntas oficiales de esta
+pestaña**, es de bajo rendimiento en oposición), daypo, aulaclic. El banco
+ya estaba muy completo. Los huecos reales salieron de volver a cruzar
+`data/rutas/diseno.txt` (volcado del usuario, autoridad) — no de la web →
+**+7** (`diseno-92..98`): submenú «Color de página» (Solo contraste alto /
+Sin color / Más colores / Efectos de relleno), «Sin color» = quitar el
+fondo, las 4 casillas de «Bordes de página ▸ Opciones...» (Alinear bordes /
+Mostrar en primer plano / Rodear encabezado / Rodear pie), «Ancho» del
+borde = 9 valores (1/4 pto a 6 pto), «Guardar selección en galería de
+marcas de agua...» vs «Más marcas de agua de Office.com», casilla
+«Decolorar» de la marca de agua de imagen, «Semitransparente» + disposición
+Diagonal/Horizontal de la de texto. Generador:
+`scripts/gen_diseno_web_volcado.py`. `diseno-74` (color de página no se
+imprime por defecto) ya estaba bien.
+
 **Barrido web de huecos de Insertar + auditoría (sep-2026)**: cruce del
 banco de Insertar (458 preguntas, ya muy explotado) con daypo, josenrique.es
 (oficiales AGE), vence.es, aulaclic, opocademy. Casi todo cubierto. **2
