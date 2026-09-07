@@ -628,6 +628,25 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Barrido web de huecos de Inicio (sep-2026)**: cruce del banco con tests
+de oposición (daypo, josenrique.es = preguntas oficiales AGE, opocademy) y
+sitios de referencia (wordexperto, aulaclic) — SOLO para conceptos/rutas,
+nunca atajos (esas webs usan el esquema internacional, inservible aquí).
+Hueco real encontrado: **técnicas de selección de texto con el ratón**, 0
+preguntas pese a ser pregunta oficial AGE 2016 («triple clic = párrafo»)
+→ **+7** (`inicio-581..587`, topic `edicion` / subtopic «Seleccionar
+texto»): doble clic = palabra · triple clic = párrafo · Ctrl+clic (cuerpo)
+= la frase · Alt+arrastrar = bloque rectangular · área de selección del
+margen izquierdo: 1 clic = línea, 2 = párrafo, 3 (o Ctrl+clic) = todo el
+documento (= Ctrl+E). Comportamiento estándar de Word, sin riesgo de
+esquema. Generador: `scripts/gen_seleccion_raton_inicio.py`. **+1**
+(`inicio-588`): «Color de resaltado» (grupo Fuente, rotulador sobre los
+caracteres, no lo quita «Borrar formato») vs «Sombreado» (grupo Párrafo,
+fondo del párrafo/celda entero). **`inicio-43` («4 tipos de sangría:
+izquierda, derecha, primera línea, francesa») queda VALIDADA** — es
+literalmente la pregunta oficial AGE 2015 nº 3; no tocar. El resto de
+preguntas de esas webs ya estaban cubiertas o eran de otras pestañas.
+
 **PDF «Pestaña Edición» de Beatriz R.T → inicio.json (sep-2026)**: el
 usuario aportó el PDF de la academia de los grupos Portapapeles/Edición de
 la ficha Inicio. Casi todo ya estaba cubierto (deshacer/rehacer/F4,

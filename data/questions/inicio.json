@@ -5781,6 +5781,42 @@
     "generado": true
   },
   {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Fuente",
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de caracter",
+    "tema": "Fuente",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "inicio-588",
+    "sourceQuestionId": "web-inicio-resalt-88",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Que diferencia hay entre «Color de resaltado del texto» y «Sombreado» a la hora de dar color de fondo a unas palabras?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Color de resaltado» esta en el grupo Fuente y colorea solo detras de los caracteres (como un rotulador); «Sombreado» esta en el grupo Parrafo y colorea el fondo de todo el parrafo o celda"
+      },
+      {
+        "letter": "B",
+        "text": "Son exactamente lo mismo, solo cambia el nombre segun la version de Word"
+      },
+      {
+        "letter": "C",
+        "text": "«Color de resaltado» colorea el parrafo entero y «Sombreado» solo las palabras seleccionadas"
+      },
+      {
+        "letter": "D",
+        "text": "«Sombreado» esta en el grupo Fuente y «Color de resaltado» en el grupo Estilos"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Color de resaltado del texto» (grupo Fuente) actua como un rotulador: pinta el fondo unicamente de los caracteres seleccionados y no se quita con «Borrar todo el formato». «Sombreado» (grupo Parrafo) rellena el fondo del parrafo completo (o de la celda de tabla), llegando hasta los margenes."
+  },
+  {
     "id": "inicio-29",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
@@ -19401,6 +19437,186 @@
     "explicacion": "El botón «Buscar» a secas abre el PANEL Navegación, no el cuadro clásico. Para el cuadro hay que usar la flecha ▸ «Búsqueda avanzada…»."
   },
   {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Seleccionar texto",
+    "tema": "Edicion",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "tipo": "opcion_unica",
+    "enunciado": "En Word, ¿qué se selecciona al hacer triple clic sobre cualquier punto de un párrafo?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El párrafo completo"
+      },
+      {
+        "letter": "B",
+        "text": "Solo la palabra sobre la que se hace clic"
+      },
+      {
+        "letter": "C",
+        "text": "La frase (hasta el siguiente punto)"
+      },
+      {
+        "letter": "D",
+        "text": "Toda la página"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Dentro del cuerpo del texto: un clic coloca el punto de inserción, el doble clic selecciona la palabra y el triple clic selecciona todo el párrafo.",
+    "id": "inicio-581",
+    "sourceQuestionId": "web-inicio-selraton-581"
+  },
+  {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Seleccionar texto",
+    "tema": "Edicion",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "tipo": "opcion_unica",
+    "enunciado": "El «área de selección» es la franja del margen izquierdo donde el puntero se convierte en una flecha blanca que apunta a la derecha. ¿Qué se selecciona con UN solo clic en ella?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "La línea completa situada a su derecha"
+      },
+      {
+        "letter": "B",
+        "text": "La palabra más cercana"
+      },
+      {
+        "letter": "C",
+        "text": "El párrafo completo"
+      },
+      {
+        "letter": "D",
+        "text": "Todo el documento"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Desde el área de selección: un clic selecciona la línea, un doble clic el párrafo y un triple clic (o Ctrl+clic) todo el documento.",
+    "id": "inicio-582",
+    "sourceQuestionId": "web-inicio-selraton-582"
+  },
+  {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Seleccionar texto",
+    "tema": "Edicion",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "tipo": "opcion_unica",
+    "enunciado": "Desde el área de selección del margen izquierdo, ¿cómo se selecciona TODO el documento con el ratón?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Haciendo triple clic, o Ctrl+clic, en el área de selección"
+      },
+      {
+        "letter": "B",
+        "text": "Haciendo doble clic en el área de selección"
+      },
+      {
+        "letter": "C",
+        "text": "Haciendo un solo clic en el área de selección"
+      },
+      {
+        "letter": "D",
+        "text": "Arrastrando de arriba abajo por el área de selección con Alt pulsado"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Triple clic en el área de selección selecciona todo el documento; Ctrl+clic en esa misma franja hace lo mismo y equivale a Ctrl+E.",
+    "id": "inicio-583",
+    "sourceQuestionId": "web-inicio-selraton-583"
+  },
+  {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Seleccionar texto",
+    "tema": "Edicion",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "tipo": "opcion_unica",
+    "enunciado": "Manteniendo pulsada la tecla Ctrl y haciendo clic sobre una palabra del texto (no en el margen), ¿qué selecciona Word?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "La frase completa (hasta el punto)"
+      },
+      {
+        "letter": "B",
+        "text": "La palabra sobre la que se hace clic"
+      },
+      {
+        "letter": "C",
+        "text": "El párrafo completo"
+      },
+      {
+        "letter": "D",
+        "text": "Todo el documento"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Ctrl+clic dentro del cuerpo del texto selecciona la oración completa donde está el cursor. (Ctrl+clic en el área de selección del margen, en cambio, selecciona todo el documento.)",
+    "id": "inicio-584",
+    "sourceQuestionId": "web-inicio-selraton-584"
+  },
+  {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Seleccionar texto",
+    "tema": "Edicion",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Qué gesto del ratón permite seleccionar un bloque rectangular (vertical) de texto, por ejemplo una columna de cifras?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Arrastrar con la tecla Alt pulsada"
+      },
+      {
+        "letter": "B",
+        "text": "Arrastrar con la tecla Ctrl pulsada"
+      },
+      {
+        "letter": "C",
+        "text": "Hacer doble clic y arrastrar"
+      },
+      {
+        "letter": "D",
+        "text": "Arrastrar desde el área de selección"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Alt+arrastrar selecciona un bloque rectangular de texto, independiente de las líneas. Con teclado, el modo equivalente es Ctrl+Mayús+F8. Ctrl+arrastrar mueve o (con el texto ya seleccionado) copia.",
+    "id": "inicio-585",
+    "sourceQuestionId": "web-inicio-selraton-585"
+  },
+  {
     "id": "inicio-132",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -19815,6 +20031,25 @@
     "explicacion": "En esta instalación «Reemplazar» equivale a Ctrl+L e «Ir a» a Ctrl+I."
   },
   {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Seleccionar texto",
+    "tema": "Edicion",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "tipo": "verdadero_falso",
+    "enunciado": "Hacer Ctrl+clic en el área de selección del margen izquierdo equivale a pulsar Ctrl+E: selecciona todo el documento.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Verdadero. Ctrl+clic en la franja del margen izquierdo es el equivalente con ratón de Ctrl+E (seleccionar todo).",
+    "id": "inicio-586",
+    "sourceQuestionId": "web-inicio-selraton-586"
+  },
+  {
     "id": "inicio-119",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Edición",
@@ -20107,6 +20342,77 @@
       "4": "D"
     },
     "explicacion": "Bordes y sombreado y Buscar y reemplazar son cada uno un solo cuadro con varias fichas; la ruta de entrada solo decide cuál aparece activa."
+  },
+  {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": "Seleccionar texto",
+    "tema": "Edicion",
+    "negativa": false,
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Doble clic sobre una palabra"
+        },
+        {
+          "id": "2",
+          "label": "Triple clic dentro de un párrafo"
+        },
+        {
+          "id": "3",
+          "label": "Un clic en el área de selección (margen izquierdo)"
+        },
+        {
+          "id": "4",
+          "label": "Triple clic en el área de selección"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "La palabra"
+        },
+        {
+          "id": "B",
+          "label": "El párrafo"
+        },
+        {
+          "id": "C",
+          "label": "La línea"
+        },
+        {
+          "id": "D",
+          "label": "Todo el documento"
+        },
+        {
+          "id": "E",
+          "label": "La frase (hasta el punto)"
+        }
+      ],
+      "correct": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D"
+      }
+    },
+    "generado": true,
+    "categoria": "concepto",
+    "tipo": "emparejamiento",
+    "opciones": [],
+    "enunciado": "Relaciona cada gesto del ratón con lo que selecciona en Word:",
+    "respuesta": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "explicacion": "En el cuerpo del texto: doble clic = palabra, triple clic = párrafo. En el área de selección del margen izquierdo: 1 clic = línea, 2 clics = párrafo, 3 clics = todo el documento. El distractor «la frase» corresponde a Ctrl+clic en el cuerpo.",
+    "id": "inicio-587",
+    "sourceQuestionId": "web-inicio-selraton-587"
   },
   {
     "id": "inicio-373",
