@@ -628,6 +628,31 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Barrido web de huecos de Insertar + auditoría (sep-2026)**: cruce del
+banco de Insertar (458 preguntas, ya muy explotado) con daypo, josenrique.es
+(oficiales AGE), vence.es, aulaclic, opocademy. Casi todo cubierto. **2
+errores sistemáticos encontrados en la tanda de minado P-** (preguntas
+«¿cuál existe realmente en la extracción?» sobre cuadros que probablemente
+NO estaban en las capturas del usuario):
+ - **Formato de número de página**: el banco decía que solo hay 5 formatos
+   y que «I, II, III» (romano mayúscula) NO está — **falso**. Son **6**:
+   `1,2,3` · `-1,-2,-3` · `a,b,c` · `A,B,C` · `i,ii,iii` · `I,II,III`.
+   Corregidas `insertar-84`, `insertar-285`, `insertar-295`.
+ - **Galería del botón Ecuación**: el banco decía que «Teorema de Pitágoras»
+   NO es una ecuación integrada — **falso**, sí lo es (junto a Área del
+   círculo, Fórmula cuadrática, Serie de Taylor, Serie de Fourier, Expansión
+   de una suma, Identidades trigonométricas). Corregidas `insertar-98`,
+   `insertar-318`.
+ - **Pendiente de que el usuario confirme en vivo** (abrir los dos cuadros):
+   son hechos universales de Word y verificados en varias fuentes ES, pero
+   sin captura propia. Si su Word discrepara, revertir. Las otras ~35
+   preguntas que citan «la extracción» sí se apoyan en capturas reales
+   (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
+   formatos de fecha…) y se dejaron.
+**+2** (`insertar-467/468`): las 4 opciones exactas de «Separar texto en»
+del cuadro Convertir texto en tabla (Párrafos/Tabulaciones/Punto y coma/
+Otro) y el comando «Fórmula» de la cinta de tabla.
+
 **Barrido web de huecos de Inicio (sep-2026)**: cruce del banco con tests
 de oposición (daypo, josenrique.es = preguntas oficiales AGE, opocademy) y
 sitios de referencia (wordexperto, aulaclic) — SOLO para conceptos/rutas,

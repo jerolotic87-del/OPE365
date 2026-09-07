@@ -1437,6 +1437,42 @@
     "explicacion": "Herramientas de tabla ▸ Diseño (Presentación) ▸ Fórmula permite sumas y otras fórmulas básicas dentro de una tabla de Word."
   },
   {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Tablas",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "insertar-467",
+    "sourceQuestionId": "web-insertar-tabla-67",
+    "tipo": "opcion_unica",
+    "enunciado": "En el cuadro «Convertir texto en tabla», la seccion «Separar texto en» ofrece estas opciones:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Parrafos, Tabulaciones, Punto y coma y «Otro» (un caracter a elegir)"
+      },
+      {
+        "letter": "B",
+        "text": "Solo Tabulaciones y Comas"
+      },
+      {
+        "letter": "C",
+        "text": "Espacios, Tabulaciones, Comas y Puntos"
+      },
+      {
+        "letter": "D",
+        "text": "Saltos de linea, Tabulaciones y Guiones"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El cuadro «Convertir texto en tabla» separa las columnas por Parrafos, Tabulaciones, Punto y coma o el caracter que se escriba en «Otro» (por ejemplo una coma). Word propone automaticamente el numero de columnas segun el separador mas frecuente del texto seleccionado."
+  },
+  {
     "id": "insertar-214",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Tablas",
@@ -1663,6 +1699,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Justo debajo de las opciones de autoajuste, aparece una casilla con ese texto. Si la marcas, Word recordará el número de columnas, filas y el autoajuste elegido para futuras tablas."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Tablas",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-468",
+    "sourceQuestionId": "web-insertar-tabla-68",
+    "tipo": "verdadero_falso",
+    "enunciado": "Una tabla de Word puede hacer sumas y otros calculos sencillos con el comando «Formula» de la cinta contextual de tabla.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Verdadero. En «Herramientas de tabla ▸ Presentacion ▸ Datos ▸ Formula» se pueden usar funciones como =SUM(ABOVE), =AVERAGE(LEFT), etc. No hace falta Excel para calculos basicos dentro de una tabla."
   },
   {
     "id": "insertar-462",
@@ -7772,22 +7827,22 @@
     "bloque": "Insertar — Encabezado y pie de página",
     "tipo": "opcion_unica",
     "categoria": "ruta",
-    "negativa": false,
+    "negativa": true,
     "section": "insertar",
     "topic": "encabezado-pie",
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-42",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes formatos de número de página está disponible en el cuadro Formato de los números de página de Word 365?",
+    "enunciado": "¿Cual de los siguientes formatos NO aparece en el cuadro «Formato de los numeros de pagina» de Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "01, 02, 03..."
+        "text": "01, 02, 03... (con cero a la izquierda)"
       },
       {
         "letter": "B",
-        "text": "I, II, III..."
+        "text": "a, b, c..."
       },
       {
         "letter": "C",
@@ -7795,12 +7850,12 @@
       },
       {
         "letter": "D",
-        "text": "α, β, γ..."
+        "text": "I, II, III..."
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A los números con cero inicial no existen como formato. B las mayúsculas romanas (I, II, III) no figuran en la extracción; sí figuran las minúsculas (i, ii, iii). D el formato griego no existe. Los formatos reales son: 1,2,3 / -1,-2,-3 / a,b,c / A,B,C / i,ii,iii."
+    "respuesta": "A",
+    "explicacion": "El cuadro «Formato de los numeros de pagina» ofrece 6 formatos: 1,2,3 / -1,-2,-3 / a,b,c / A,B,C / i,ii,iii / I,II,III. Los numeros con cero a la izquierda (01, 02...) no estan."
   },
   {
     "id": "insertar-85",
@@ -8670,8 +8725,8 @@
     "enunciado": "El formato de número de página en romano mayúscula I, II, III está disponible en el cuadro Formato de los números de página de Word 365.",
     "opciones": [],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "Abres el cuadro Formato de los números de página y revisas la lista desplegable. Aparecen 1, 2, 3 / -1, -2, -3 / a, b, c / A, B, C / i, ii, iii. El romano en mayúsculas I, II, III no está en esa lista. Si lo necesitas tendrías que simularlo de otra forma."
+    "respuesta": true,
+    "explicacion": "Verdadero. La lista del cuadro «Formato de los numeros de pagina» incluye 6 formatos: 1,2,3 · -1,-2,-3 · a,b,c · A,B,C · i,ii,iii · I,II,III. El romano en mayusculas se usa, por ejemplo, para numerar las paginas preliminares de una tesis."
   },
   {
     "id": "insertar-286",
@@ -8857,11 +8912,11 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-92",
     "generado": true,
-    "enunciado": "Los cinco formatos de número de página disponibles en Word 365 son: 1,2,3 / -1,-2,-3 / a,b,c / A,B,C / I,II,III.",
+    "enunciado": "En Word 365, el cuadro «Formato de los numeros de pagina» ofrece seis formatos: 1,2,3 / -1,-2,-3 / a,b,c / A,B,C / i,ii,iii / I,II,III.",
     "opciones": [],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "El quinto formato no es el romano en mayúsculas I, II, III sino el romano en minúsculas i, ii, iii. La lista real es: 1,2,3 / -1,-2,-3 / a,b,c / A,B,C / i,ii,iii. El romano en mayúsculas no existe como opción en esta instalación de Word 365."
+    "respuesta": true,
+    "explicacion": "Verdadero. Son seis: arabigo, arabigo entre guiones, letra minuscula, letra mayuscula, romano minuscula y romano mayuscula."
   },
   {
     "id": "insertar-364",
@@ -11208,15 +11263,15 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-56",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes ecuaciones integradas existe realmente en la galería de Ecuación de Word 365?",
+    "enunciado": "¿Cual de las siguientes ecuaciones integradas existe realmente en la galeria del boton Ecuacion de Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Teorema de Pitágoras"
+        "text": "Teorema de Pitagoras"
       },
       {
         "letter": "B",
-        "text": "Expansión Taylor"
+        "text": "Ecuacion de Schrodinger"
       },
       {
         "letter": "C",
@@ -11224,12 +11279,12 @@
       },
       {
         "letter": "D",
-        "text": "Principio de Arquímedes"
+        "text": "Teorema de Bayes"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no figura en la galería integrada de Word 365. C y D son fórmulas físicas reales pero no están en la galería. Las ecuaciones integradas reales incluyen: Área del círculo, Expansión de una suma, Expansión Taylor, Fórmula cuadrática, Identidad trigonométrica 1."
+    "respuesta": "A",
+    "explicacion": "«Teorema de Pitagoras» y «Area del circulo» son dos de las ecuaciones integradas de la galeria, junto a Formula cuadratica, Serie de Taylor, Serie de Fourier, Expansion de una suma e Identidades trigonometricas. Las de las otras opciones no estan en la galeria integrada."
   },
   {
     "id": "insertar-99",
@@ -12604,8 +12659,8 @@
     "enunciado": "El Teorema de Pitágoras es una de las ecuaciones integradas disponibles en la galería de Ecuación de Word 365.",
     "opciones": [],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: las integradas son Área del círculo, Expansión de una suma, Expansión Taylor, Fórmula cuadrática e Identidad trigonométrica 1."
+    "respuesta": true,
+    "explicacion": "Verdadero. El «Teorema de Pitagoras» (a^2 + b^2 = c^2) es una de las ecuaciones integradas del desplegable de Ecuacion, junto con Area del circulo, Formula cuadratica, Serie de Taylor, Serie de Fourier, Expansion de una suma e Identidades trigonometricas."
   },
   {
     "id": "insertar-319",
