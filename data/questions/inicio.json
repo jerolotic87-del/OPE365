@@ -2020,28 +2020,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0275",
-    "enunciado": "En la seccion Efectos del cuadro de dialogo Fuente, ¿cual es la restriccion que afecta a todos los efectos listados?",
+    "enunciado": "En la seccion Efectos del cuadro de dialogo Fuente, ¿que restriccion existe al combinar efectos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Solo pueden aplicarse a texto en mayusculas"
+        "text": "Todos los efectos son mutuamente excluyentes: solo puede haber uno activo a la vez"
       },
       {
         "letter": "B",
-        "text": "No se pueden aplicar a la vez: son mutuamente excluyentes entre si"
+        "text": "Hay tres parejas incompatibles (Tachado/Doble tachado, Superindice/Subindice y Versalitas/Mayusculas): activar uno desactiva a su pareja; el resto se pueden combinar"
       },
       {
         "letter": "C",
-        "text": "Solo Superindice y Subindice son incompatibles; el resto pueden combinarse"
+        "text": "El efecto Oculto no se puede combinar con ningun otro"
       },
       {
         "letter": "D",
-        "text": "Solo pueden aplicarse si el estilo de fuente es Normal"
+        "text": "Los efectos solo se pueden combinar si el texto esta escrito en minusculas"
       }
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "La documentacion establece que los efectos del cuadro Fuente (Tachado, Doble tachado, Superindice, Subindice, Versalitas, Mayusculas y Oculto) no se pueden aplicar a la vez: son mutuamente excluyentes en su totalidad."
+    "explicacion": "Solo tres parejas se excluyen entre si: Tachado/Doble tachado, Superindice/Subindice y Versalitas/Mayusculas (marcar una casilla desmarca automaticamente a su pareja). Los demas efectos son independientes: se puede tener, por ejemplo, texto tachado y en versalitas, u oculto y en superindice a la vez."
   },
   {
     "id": "inicio-17",

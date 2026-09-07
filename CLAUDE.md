@@ -599,6 +599,25 @@ recortado — nunca hacía falta que Claude cortara nada ahí. +1 pregunta
 con imagen (`scripts/gen_icono_complementos.py`). Confirmado con
 `numpy`/patrón de nombre que diseno/disposicion/insertar/referencias no
 tienen más candidatos genuinos sin usar.
+**PDF «Portapapeles y Fuente» de Beatriz R.T → inicio.json (sep-2026)**:
+segundo PDF de la academia (grupo Fuente de la ficha Inicio). El banco ya
+lo cubría entero y mejor (con las correcciones de prueba en vivo): pincel
+doble clic, las 4 zonas de Color de fuente, resaltado que no borra «Borrar
+formato», OpenType solo en fuentes OpenType, Escala = % de ancho, Espaciado
+Normal/Expandido/Comprimido, Posición Elevado/Bajado, ciclo condicional de
+Mayús+F3, Versalitas solo sobre minúsculas, Alt,F,Y = cuadro Fuente,
+subrayado 17 / 3 con atajo, Conjuntos estilísticos, etc. **1 corrección
+real**: `inicio-16` afirmaba que TODOS los efectos del cuadro Fuente son
+«mutuamente excluyentes entre sí» — es falso. Solo se excluyen 3 parejas
+(Tachado/Doble tachado, Superíndice/Subíndice, Versalitas/Mayúsculas);
+Oculto y el resto se combinan. Reformulada (el PDF pág. 6 lo confirma). **0
+preguntas nuevas.** Conflictos del PDF ya conocidos, no integrados: Copiar
+formato `Ctrl+Mayús+C/V`, Subíndice `Ctrl+=`, Superíndice `Ctrl++`,
+`Ctrl+>`/`Ctrl+<` sin Mayús para el tamaño, Versalitas `Ctrl+Mayús+L` (todos
+esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
+prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
+siguen pendientes pero con respaldo de academia.
+
 **PDF «Pestaña Edición» de Beatriz R.T → inicio.json (sep-2026)**: el
 usuario aportó el PDF de la academia de los grupos Portapapeles/Edición de
 la ficha Inicio. Casi todo ya estaba cubierto (deshacer/rehacer/F4,
