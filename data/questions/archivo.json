@@ -948,28 +948,28 @@
     "subtopic": "Propiedades",
     "tema": "Información",
     "sourceQuestionId": "8-17",
-    "enunciado": "¿Qué permite hacer la pestaña Información dentro de la Vista Backstage?",
+    "enunciado": "Quieres ponerle contraseña a un documento, comprobar si lleva datos personales ocultos y consultar sus versiones anteriores. ¿En qué panel de Backstage está todo eso junto?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Proteger el documento, inspeccionarlo y controlar sus versiones"
+        "text": "Información"
       },
       {
         "letter": "B",
-        "text": "Cambiar el tema de color de la interfaz de Word"
+        "text": "Guardar como"
       },
       {
         "letter": "C",
-        "text": "Configurar el intervalo de Autorrecuperación"
+        "text": "Compartir"
       },
       {
         "letter": "D",
-        "text": "Añadir idiomas de edición al documento"
+        "text": "Exportar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La pestaña Información concentra las opciones de protección, inspección y control de versiones. El tema de color se cambia en Opciones → General. El intervalo de Autorrecuperación está en Opciones → Guardar. Los idiomas se gestionan en Opciones → Idioma."
+    "explicacion": "Información concentra las tres cosas: Proteger documento, Comprobar si hay problemas e Historial de versiones, además del panel de propiedades de la derecha. · Guardar como es el distractor con más fundamento: desde su menú Herramientas → Opciones generales también se pone una contraseña de apertura, pero ahí no hay ni inspección ni versiones. · Compartir invita a otras personas y genera vínculos; controla quién entra, no qué lleva dentro el archivo. · Exportar crea un PDF o cambia el tipo de archivo. · Es el panel que más se pregunta en oposición, precisamente porque agrupa cosas que uno esperaría repartidas."
   },
   {
     "id": "archivo-26",
@@ -983,28 +983,28 @@
     "subtopic": "Propiedades",
     "tema": "Información",
     "sourceQuestionId": "8-18",
-    "enunciado": "El panel de propiedades de la pestaña Información se divide en tres grupos. ¿Cuál de las siguientes NO es uno de esos grupos?",
+    "enunciado": "En el panel Información, la columna de la derecha reparte los datos del documento en varios grupos. ¿Cuál de estos NO es uno de ellos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Propiedades"
-      },
-      {
-        "letter": "B",
-        "text": "Historial de cambios"
-      },
-      {
-        "letter": "C",
         "text": "Fechas relacionadas"
       },
       {
-        "letter": "D",
+        "letter": "B",
         "text": "Personas relacionadas"
+      },
+      {
+        "letter": "C",
+        "text": "Documentos relacionados"
+      },
+      {
+        "letter": "D",
+        "text": "Ubicaciones relacionadas"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Los tres grupos son Propiedades, Fechas relacionadas y Personas relacionadas. Historial de cambios no es un grupo del panel de propiedades, aunque el concepto existe en otras partes de Word."
+    "respuesta": "D",
+    "explicacion": "La columna se reparte en Propiedades (Tamaño, Páginas, Palabras, Tiempo de edición, Título, Etiquetas, Comentarios…), Fechas relacionadas, Personas relacionadas y Documentos relacionados. · «Ubicaciones relacionadas» no existe, y es el distractor más difícil del banco en este panel porque sigue exactamente el mismo patrón de nombre que los tres reales; no hay forma de descartarlo por la forma, solo sabiéndolo. · Fechas relacionadas guarda Última modificación, Fecha de creación y Última impresión. · Personas relacionadas guarda Autor y Última modificación realizada por. · Documentos relacionados es el más discreto: contiene un único enlace, «Abrir ubicación de archivos»."
   },
   {
     "id": "archivo-27",
@@ -1018,7 +1018,7 @@
     "subtopic": "Propiedades",
     "tema": "Información",
     "sourceQuestionId": "8-19",
-    "enunciado": "¿En qué grupo del panel de propiedades aparece el dato Última impresión?",
+    "enunciado": "Necesitas saber cuándo se imprimió por última vez un documento. ¿En qué grupo del panel Información aparece ese dato?",
     "opciones": [
       {
         "letter": "A",
@@ -1034,12 +1034,12 @@
       },
       {
         "letter": "D",
-        "text": "Información del archivo"
+        "text": "Documentos relacionados"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Fechas relacionadas incluye Última modificación, Fecha de creación y Última impresión. Propiedades contiene Tamaño, Páginas, Palabras y Tiempo de edición. Personas relacionadas contiene Autor y Última modificación realizada por. Información del archivo no es ningún grupo real."
+    "explicacion": "Fechas relacionadas reúne los tres datos temporales del documento: Última modificación, Fecha de creación y Última impresión. · Propiedades es el grupo grande de arriba, con Tamaño, Páginas, Palabras y Tiempo de edición: «Tiempo de edición» es de tiempo y está aquí, y por eso es el error más frecuente. · Personas relacionadas guarda Autor y Última modificación realizada por, sin la fecha. · Documentos relacionados solo lleva el enlace «Abrir ubicación de archivos». · Los cuatro grupos son reales: aquí no se puede acertar por descarte, hay que saber cuál guarda qué."
   },
   {
     "id": "archivo-28",
@@ -1053,7 +1053,7 @@
     "subtopic": "Propiedades",
     "tema": "Información",
     "sourceQuestionId": "8-20",
-    "enunciado": "¿En qué grupo del panel de propiedades aparece el dato Autor?",
+    "enunciado": "Quieres comprobar quién figura como autor de un documento. ¿En qué grupo del panel Información lo encuentras?",
     "opciones": [
       {
         "letter": "A",
@@ -1069,12 +1069,12 @@
       },
       {
         "letter": "D",
-        "text": "Metadatos del documento"
+        "text": "Documentos relacionados"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Personas relacionadas contiene Autor y Última modificación realizada por. Propiedades contiene datos como Tamaño y Palabras. Fechas relacionadas contiene fechas de creación, modificación e impresión. Metadatos del documento no es ningún grupo del panel de propiedades."
+    "explicacion": "Personas relacionadas contiene Autor y Última modificación realizada por: los dos únicos datos del panel que son nombres de persona. · Propiedades lleva las cifras del archivo (Tamaño, Páginas, Palabras, Tiempo de edición) y los campos de texto Título, Etiquetas y Comentarios; el autor no está ahí, aunque sí aparece en la ficha Resumen de las Propiedades avanzadas. · Fechas relacionadas guarda solo fechas. · Documentos relacionados es el enlace a la carpeta del archivo. · Los cuatro grupos existen, así que la respuesta no se puede sacar descartando nombres raros."
   },
   {
     "id": "archivo-29",
@@ -1088,7 +1088,7 @@
     "subtopic": "Proteger documento",
     "tema": "Información",
     "sourceQuestionId": "8-21",
-    "enunciado": "¿Desde qué ruta se accede al menú que permite proteger y restringir la edición de un documento en Word 365?",
+    "enunciado": "Quieres poner una contraseña de apertura a un documento desde la Vista Backstage. ¿Qué ruta te lleva al menú donde está esa opción?",
     "opciones": [
       {
         "letter": "A",
@@ -1096,20 +1096,20 @@
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Seguridad → Proteger documento"
+        "text": "Archivo → Información → Administrar documento"
       },
       {
         "letter": "C",
-        "text": "Revisar → Proteger → Restringir edición"
+        "text": "Archivo → Información → Comprobar si hay problemas"
       },
       {
         "letter": "D",
-        "text": "Archivo → Información → Comprobar si hay problemas → Proteger documento"
+        "text": "Archivo → Opciones → Centro de confianza"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La ruta directa es Archivo → Información → Proteger documento. No existe Archivo → Opciones → Seguridad. La pestaña Revisar tiene la opción Restringir edición pero no es la ruta del menú principal de protección. Comprobar si hay problemas es un submenú distinto dentro de Información."
+    "explicacion": "Proteger documento es el menú que contiene «Cifrar con contraseña», junto a las otras cinco formas de proteger el archivo. · Administrar documento está justo debajo, en el mismo panel, pero sirve para versiones y para recuperar documentos no guardados. · Comprobar si hay problemas es el vecino de arriba y agrupa Inspeccionar documento, Comprobar accesibilidad y Comprobar compatibilidad: revisa, no protege. · El Centro de confianza existe y es de seguridad, pero configura macros, editores y ubicaciones de confianza para toda la aplicación, no la contraseña de un archivo. · Las cuatro rutas son reales: el ejercicio está en distinguir tres vecinos del mismo panel."
   },
   {
     "id": "archivo-30",
@@ -1123,28 +1123,28 @@
     "subtopic": "Proteger documento",
     "tema": "Información",
     "sourceQuestionId": "8-22",
-    "enunciado": "¿Cuál de las siguientes NO es una opción del menú Proteger documento?",
+    "enunciado": "Despliegas «Proteger documento» en el panel Información. ¿Cuál de estas entradas NO está en ese menú?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Marcar como final"
+        "text": "Abrir siempre como solo lectura"
       },
       {
         "letter": "B",
-        "text": "Cifrar con contraseña"
+        "text": "Restringir el acceso"
       },
       {
         "letter": "C",
-        "text": "Comprimir el documento"
+        "text": "Restringir el formato"
       },
       {
         "letter": "D",
-        "text": "Agregar una firma digital"
+        "text": "Marcar como final"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Las opciones reales son Marcar como final, Cifrar con contraseña, Restringir edición, Restringir acceso y Agregar una firma digital. Comprimir el documento no existe como opción de protección; la compresión se aplica a imágenes desde el botón Herramientas de Guardar como."
+    "explicacion": "El menú tiene seis entradas: Abrir siempre como solo lectura, Cifrar con contraseña, Restringir edición, Restringir el acceso, Agregar una firma digital y Marcar como final. · «Restringir el formato» no está, y es un distractor duro por dos motivos: sigue el patrón de nombre de las dos entradas reales que empiezan por «Restringir», y además el concepto existe de verdad dentro del panel Restringir edición, donde hay una casilla para limitar el formato a los estilos permitidos. Suena real porque casi lo es. · «Abrir siempre como solo lectura» es la primera del menú y la que más se olvida al enumerarlas."
   },
   {
     "id": "archivo-31",
@@ -1158,7 +1158,7 @@
     "subtopic": "Proteger documento",
     "tema": "Información",
     "sourceQuestionId": "8-23",
-    "enunciado": "Un usuario quiere informar a los lectores de que el documento está terminado y no debe editarse más, pero sin aplicar cifrado. ¿Qué opción del menú Proteger documento debe usar?",
+    "enunciado": "Quieres avisar a quien abra el documento de que está terminado y no debería tocarlo, pero sin contraseñas ni permisos: si alguien insiste, que pueda editarlo. ¿Qué opción de Proteger documento usas?",
     "opciones": [
       {
         "letter": "A",
@@ -1166,55 +1166,55 @@
       },
       {
         "letter": "B",
-        "text": "Restringir edición"
+        "text": "Abrir siempre como solo lectura"
       },
       {
         "letter": "C",
-        "text": "Cifrar con contraseña"
+        "text": "Restringir edición"
       },
       {
         "letter": "D",
-        "text": "Agregar una firma digital"
+        "text": "Cifrar con contraseña"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Marcar como final pone el documento en modo de solo lectura e informa a los lectores de que es la versión final. No aplica cifrado ni contraseña. Restringir edición controla tipos de cambios pero no informa del estado final. Cifrar con contraseña protege el acceso con contraseña. Agregar firma digital garantiza integridad mediante una firma invisible."
+    "explicacion": "«Marcar como final» pone el documento en solo lectura y muestra una barra amarilla avisando de que es la versión definitiva. No es una barrera: un clic en «Editar de todos modos» la levanta, y eso es exactamente lo que pide el enunciado. · «Abrir siempre como solo lectura» es el distractor difícil: hace algo parecidísimo, abrir sin permitir cambios y dejar seguir si insistes, pero no comunica que el documento esté terminado, solo pregunta si quieres abrirlo en solo lectura. La diferencia es el aviso, no el bloqueo. · «Restringir edición» sí levanta una barrera real, con la posibilidad de contraseña. · «Cifrar con contraseña» impide hasta abrirlo, que es mucho más de lo que se pide."
   },
   {
     "id": "archivo-32",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Información",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "concepto",
     "negativa": false,
     "section": "archivo",
     "topic": "informacion",
     "subtopic": "Proteger documento",
     "tema": "Información",
     "sourceQuestionId": "8-24",
-    "enunciado": "¿Qué hace la opción Agregar una firma digital dentro del menú Proteger documento?",
+    "enunciado": "Usas «Agregar una firma digital» desde el menú Proteger documento. ¿Qué obtienes exactamente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Garantiza la integridad del documento mediante una firma invisible"
+        "text": "Una firma invisible que deja de ser válida si alguien modifica el documento"
       },
       {
         "letter": "B",
-        "text": "Inserta una línea de firma visible en el cuerpo del documento"
+        "text": "Una línea de firma visible al final del documento, lista para rubricar"
       },
       {
         "letter": "C",
-        "text": "Cifra el archivo con un certificado digital"
+        "text": "Un cifrado del archivo con el certificado digital de quien firma"
       },
       {
         "letter": "D",
-        "text": "Restringe la edición a usuarios con certificado válido"
+        "text": "Un permiso que solo deja editar a quien tenga un certificado válido"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Agregar una firma digital garantiza la integridad con una firma invisible, no visible. La línea de firma visible se inserta desde Insertar. El cifrado con certificado es una función distinta de IRM. Restringir acceso a usuarios certificados corresponde a la opción Restringir acceso, no a firma."
+    "explicacion": "La firma que se añade desde aquí es invisible: no aparece nada en el papel. Su función es garantizar la integridad, y por eso queda invalidada en cuanto alguien modifica el documento después de firmarlo. · La línea de firma visible de la opción B existe de verdad, pero se inserta desde la pestaña Insertar → Línea de firma; es el distractor más peligroso porque las dos cosas se llaman «firma». · Firmar y cifrar no son lo mismo: firmar demuestra quién eres y que nada ha cambiado, cifrar impide leer. Esta opción no cifra nada. · Limitar la edición a quien tenga certificado es «Restringir el acceso», otra entrada del mismo menú."
   },
   {
     "id": "archivo-33",
@@ -1228,11 +1228,11 @@
     "subtopic": "Proteger documento",
     "tema": "Información",
     "sourceQuestionId": "8-25",
-    "enunciado": "¿Qué opción del menú Proteger documento permite conceder acceso solo a determinadas personas?",
+    "enunciado": "Quieres que solo tres compañeros concretos puedan abrir un documento, y que nadie más lo consiga aunque le llegue el archivo. ¿Qué opción de Proteger documento usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Restringir acceso"
+        "text": "Restringir el acceso"
       },
       {
         "letter": "B",
@@ -1249,7 +1249,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Restringir acceso concede acceso a las personas que lo necesiten mediante Information Rights Management. Restringir edición controla los tipos de cambios pero no limita quién puede abrir el archivo. Cifrar con contraseña protege el acceso con contraseña pero no individualiza por persona. Marcar como final solo informa del estado."
+    "explicacion": "«Restringir el acceso» usa la administración de derechos (IRM) para atar los permisos a la identidad de cada persona: el archivo puede circular, pero solo lo abre quien esté en la lista. · «Cifrar con contraseña» es el distractor serio: también impide abrirlo, pero la llave es una palabra, no una persona. Quien reciba la contraseña entra, sea quien sea, y si se filtra no hay forma de revocarla. · «Restringir edición» no controla quién abre, solo qué se puede cambiar una vez dentro. · «Marcar como final» es solo un aviso. · El par que más confunde es A y C: los dos cierran la puerta, pero uno reconoce caras y el otro solo la llave."
   },
   {
     "id": "archivo-34",
@@ -1263,7 +1263,7 @@
     "subtopic": "Comprobar si hay problemas",
     "tema": "Información",
     "sourceQuestionId": "8-26",
-    "enunciado": "¿Qué herramienta debe usar un usuario que quiere eliminar información personal oculta antes de publicar un documento?",
+    "enunciado": "Antes de publicar un documento quieres asegurarte de que no lleva pegado tu nombre ni comentarios ni propiedades ocultas. ¿Qué ruta usas?",
     "opciones": [
       {
         "letter": "A",
@@ -1275,16 +1275,16 @@
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Inspeccionar metadatos"
+        "text": "Archivo → Información → Administrar documento → Inspeccionar documento"
       },
       {
         "letter": "D",
-        "text": "Revisar → Comparar → Inspeccionar documento"
+        "text": "Archivo → Opciones → Centro de confianza → Opciones de privacidad"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El Inspector de documento se encuentra en Archivo → Información → Comprobar si hay problemas → Inspeccionar documento. Proteger documento es un submenú diferente dentro de Información. No existe Inspeccionar metadatos en Opciones → Avanzadas. La pestaña Revisar no contiene ninguna opción de inspección de metadatos."
+    "explicacion": "El Inspector de documento vive en «Comprobar si hay problemas», junto a Comprobar accesibilidad y Comprobar compatibilidad, y es el que busca y elimina información personal, comentarios, revisiones y propiedades ocultas. · Proteger documento y Administrar documento son sus dos vecinos del mismo panel, y ninguno inspecciona nada: uno protege, el otro gestiona versiones. Las tres rutas parten del mismo sitio y solo se distinguen por el submenú, que es exactamente lo que se pregunta. · El Centro de confianza sí tiene «Opciones de privacidad», pero configura el comportamiento de Office en general; no revisa este documento. · Es pregunta oficial recurrente en oposición."
   },
   {
     "id": "archivo-35",
@@ -1298,28 +1298,28 @@
     "subtopic": "Comprobar si hay problemas",
     "tema": "Información",
     "sourceQuestionId": "8-27",
-    "enunciado": "¿Qué busca exactamente la herramienta Inspeccionar documento?",
+    "enunciado": "Lanzas «Inspeccionar documento» sobre un archivo terminado. ¿Qué te va a buscar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Propiedades ocultas, nombre de autor, encabezados y pies de página"
+        "text": "Datos personales, comentarios, revisiones, encabezados y propiedades ocultas"
       },
       {
         "letter": "B",
-        "text": "Errores de compatibilidad con versiones anteriores de Word"
+        "text": "Funciones que se perderán al guardar el archivo en un formato antiguo"
       },
       {
         "letter": "C",
-        "text": "Contenido difícil de leer para personas con discapacidad"
+        "text": "Contenido que resultará difícil de leer a personas con discapacidad"
       },
       {
         "letter": "D",
-        "text": "Errores ortográficos y gramaticales en el documento"
+        "text": "Vínculos rotos, referencias cruzadas caídas y campos sin actualizar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Inspeccionar documento busca propiedades, nombre, encabezados y pies de página, entre otros metadatos ocultos. La compatibilidad la comprueba Comprobar compatibilidad. El contenido inaccesible lo detecta Comprobar accesibilidad. Los errores ortográficos los detecta el corrector."
+    "explicacion": "El Inspector busca lo que viaja escondido dentro del archivo: nombre del autor y otras propiedades, comentarios y marcas de revisión, texto oculto, encabezados y pies, y datos XML personalizados. Después ofrece quitarlo todo de golpe. · La opción B es lo que hace Comprobar compatibilidad, el tercer comando del mismo menú. · La opción C es Comprobar accesibilidad, el segundo. Los tres viven bajo «Comprobar si hay problemas» y se confunden constantemente. · La opción D describe una revisión de integridad que Word no ofrece en este menú, aunque los campos sí se actualizan con F9 desde el documento. · Si en el examen aparecen los tres nombres juntos, la palabra clave es «oculto»: eso es siempre el Inspector."
   },
   {
     "id": "archivo-36",
@@ -1333,63 +1333,63 @@
     "subtopic": "Comprobar si hay problemas",
     "tema": "Información",
     "sourceQuestionId": "8-28",
-    "enunciado": "Un documento fue creado en Word 2003 y el usuario quiere saber qué funciones se perderán al guardarlo en ese formato. ¿Qué debe usar?",
+    "enunciado": "Vas a guardar un documento como .doc para alguien que usa Word 2003 y quieres saber de antemano qué se va a perder por el camino. ¿Qué usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Información → Comprobar si hay problemas → Comprobar compatibilidad"
+        "text": "Información → Comprobar si hay problemas → Comprobar compatibilidad"
       },
       {
         "letter": "B",
-        "text": "Archivo → Información → Comprobar si hay problemas → Inspeccionar documento"
+        "text": "Información → Comprobar si hay problemas → Inspeccionar documento"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Confirmar conversiones del formato al abrir"
+        "text": "Opciones → Avanzadas → Confirmar conversiones del formato al abrir"
       },
       {
         "letter": "D",
-        "text": "Archivo → Guardar como → Tipo → Documento Word 97-2003 → Comprobar"
+        "text": "Guardar como → Herramientas → Opciones para guardar → Compatibilidad"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Comprobar compatibilidad detecta características no compatibles con versiones anteriores. Inspeccionar documento busca metadatos, no incompatibilidades. La opción de Avanzadas confirma conversiones al abrir pero no informa sobre pérdida de funciones. No existe ningún botón Comprobar dentro del desplegable de tipo de archivo."
+    "explicacion": "Comprobar compatibilidad lista, antes de guardar, qué características del documento no existen en versiones anteriores de Word y qué pasará con ellas. · El Inspector es su vecino de menú, pero busca datos ocultos, no incompatibilidades: son los dos comandos que más se intercambian en los exámenes. · «Confirmar conversiones del formato al abrir» existe de verdad en Opciones → Avanzadas, pero actúa al ABRIR archivos de otros formatos, no al guardar, y solo pregunta qué convertidor usar. Es el distractor más fino porque menciona formatos y conversiones. · En Guardar como → Herramientas están Opciones para guardar, Opciones generales, Opciones web y Comprimir imágenes, pero ninguna entrada de compatibilidad."
   },
   {
     "id": "archivo-37",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Información",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "concepto",
     "negativa": false,
     "section": "archivo",
     "topic": "informacion",
     "subtopic": "Comprobar si hay problemas",
     "tema": "Información",
     "sourceQuestionId": "8-29",
-    "enunciado": "¿Qué función tiene Comprobar accesibilidad dentro del menú Comprobar si hay problemas?",
+    "enunciado": "Ejecutas «Comprobar accesibilidad» sobre un documento con imágenes y tablas. ¿Qué te va a señalar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Examinar el contenido que puede ser difícil de leer para personas con discapacidad"
+        "text": "Imágenes sin texto alternativo y tablas sin fila de encabezado, entre otros"
       },
       {
         "letter": "B",
-        "text": "Comprobar que el documento es compatible con lectores de pantalla de versiones anteriores"
+        "text": "Imágenes con poca resolución y tablas que se parten entre dos páginas"
       },
       {
         "letter": "C",
-        "text": "Verificar que las imágenes tienen la resolución adecuada para impresión"
+        "text": "Imágenes con derechos de autor y tablas con datos personales visibles"
       },
       {
         "letter": "D",
-        "text": "Detectar y eliminar contenido restringido por derechos de autor"
+        "text": "Imágenes ancladas a un párrafo y tablas con ancho superior al margen"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Comprobar accesibilidad examina contenido difícil de acceder para personas con discapacidad, como imágenes sin texto alternativo o tablas sin encabezado. No verifica compatibilidad de versiones de lectores de pantalla, ni resolución de imágenes, ni derechos de autor."
+    "explicacion": "El comprobador busca lo que impide entender el documento con un lector de pantalla: imágenes y objetos sin texto alternativo, tablas sin encabezado definido, contraste insuficiente, vínculos con textos poco descriptivos y estilos de título mal usados. · La opción B habla de calidad de impresión y maquetación, que Word no revisa en ningún comando de este menú. · La opción C mezcla dos cosas de otros sitios: los derechos de autor no los revisa Word, y los datos personales son cosa del Inspector de documento. · La opción D describe problemas de diseño reales, pero ninguno es de accesibilidad ni los detecta esta herramienta. · Las cuatro suenan a «revisar el documento»: hay que saber qué revisa cada comando."
   },
   {
     "id": "archivo-38",
@@ -1403,7 +1403,7 @@
     "subtopic": "Administrar documento",
     "tema": "Información",
     "sourceQuestionId": "8-30",
-    "enunciado": "¿Desde qué opción de la Vista Backstage se puede acceder a versiones guardadas previamente y recuperar documentos no guardados?",
+    "enunciado": "Buscas en Backstage el sitio desde donde se recuperan los documentos que se cerraron sin guardar. ¿Dónde está?",
     "opciones": [
       {
         "letter": "A",
@@ -1411,55 +1411,55 @@
       },
       {
         "letter": "B",
-        "text": "Archivo → Reciente → Administrar versiones"
+        "text": "Archivo → Información → Historial de versiones"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Guardar → Administrar documento"
+        "text": "Archivo → Opciones → Guardar → Autorrecuperación"
       },
       {
         "letter": "D",
-        "text": "Archivo → Información → Comprobar si hay problemas → Administrar documento"
+        "text": "Archivo → Información → Comprobar si hay problemas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Administrar documento se encuentra directamente en Archivo → Información y permite trabajar con versiones y recuperar documentos no guardados. No existe Administrar versiones en la sección Reciente. No existe esa opción en Opciones → Guardar. Comprobar si hay problemas es un submenú diferente dentro de Información."
+    "explicacion": "«Administrar documento» despliega «Recuperar documentos no guardados», que abre la carpeta de archivos .asd. El mismo destino se alcanza con el botón «Recuperar documentos sin guardar» del final del panel Abrir. · «Historial de versiones» es el vecino de arriba y es el distractor más creíble: también recupera trabajo anterior, pero solo versiones de un archivo que YA está guardado en OneDrive o SharePoint. Con un archivo local ni siquiera funciona. La diferencia es si el documento llegó a guardarse alguna vez. · En Opciones → Guardar se configura cada cuántos minutos autoguardar y en qué carpeta, pero no se recupera nada desde ahí. · «Comprobar si hay problemas» inspecciona el documento actual."
   },
   {
     "id": "archivo-117",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Información",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "concepto",
     "negativa": false,
     "section": "archivo",
     "topic": "informacion",
     "subtopic": "Proteger documento",
     "tema": "Información",
     "sourceQuestionId": "8-128",
-    "enunciado": "Un usuario necesita que su documento pueda ser editado por personas concretas y solo por ellas. ¿Qué opción del menú Proteger documento debe usar?",
+    "enunciado": "Has aplicado «Restringir edición» con la opción de solo lectura y sin contraseña, y le pasas el archivo a un compañero. ¿Qué puede hacer él?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Restringir acceso"
+        "text": "Abrirlo y leerlo, y levantar la restricción él mismo si quiere editarlo"
       },
       {
         "letter": "B",
-        "text": "Restringir edición"
+        "text": "Abrirlo y leerlo, pero no podrá editarlo de ninguna manera"
       },
       {
         "letter": "C",
-        "text": "Cifrar con contraseña"
+        "text": "No podrá ni abrirlo: Word le pedirá antes una contraseña"
       },
       {
         "letter": "D",
-        "text": "Agregar una firma digital"
+        "text": "No podrá abrirlo salvo que tenga un certificado digital válido"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Restringir acceso usa IRM para conceder acceso únicamente a personas determinadas. Restringir edición controla qué tipo de cambios pueden hacerse pero no limita quién abre el archivo. Cifrar con contraseña protege con una clave pero no individualiza por persona. La firma digital verifica integridad."
+    "explicacion": "Sin contraseña, la restricción es una barrera de cortesía: el panel Restringir edición trae un botón «Suspender la protección» que cualquiera puede pulsar. Protege del descuido, no del que quiere saltársela. · La opción B sería cierta solo si al activar la restricción se hubiera puesto contraseña, que es justo lo que el enunciado descarta. Es el distractor que más cae. · Pedir contraseña para abrir es «Cifrar con contraseña», no restringir edición: son cosas distintas y actúan en momentos distintos. · Exigir certificado es «Restringir el acceso» (IRM). · Restringir edición nunca impide abrir el archivo; solo condiciona lo que se puede hacer dentro."
   },
   {
     "id": "archivo-119",
@@ -1473,7 +1473,7 @@
     "subtopic": "Proteger documento",
     "tema": "Información",
     "sourceQuestionId": "8-130",
-    "enunciado": "¿Cuál de las siguientes opciones del botón Abrir permite abrir un documento sin riesgo de modificarlo accidentalmente?",
+    "enunciado": "Abres un documento tuyo solo para consultarlo y quieres evitar guardar cambios encima del original por descuido, sin que Word lo trate como un archivo peligroso. ¿Qué opción del desplegable Abrir eliges?",
     "opciones": [
       {
         "letter": "A",
@@ -1489,12 +1489,12 @@
       },
       {
         "letter": "D",
-        "text": "A y B son válidas"
+        "text": "Abrir en el explorador"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Tanto Abrir como de solo lectura como Abrir en Vista protegida impiden la modificación accidental, aunque por mecanismos distintos. Solo lectura permite editar si el usuario lo fuerza. Vista protegida añade una capa adicional de seguridad para archivos de origen dudoso. Abrir como copia crea una copia editable, por lo que el original no corre riesgo pero sí la copia."
+    "respuesta": "A",
+    "explicacion": "«Abrir como de solo lectura» abre el archivo con normalidad pero bloquea el guardado encima: si editas y guardas, Word obliga a poner otro nombre. Es exactamente la red de seguridad que pide el enunciado. · «Abrir en Vista protegida» también impide editar, pero por otro motivo: aísla el archivo como si fuera de origen dudoso, sin dejar que ejecute nada, y muestra una barra roja de advertencia. Consigue lo mismo por un camino que el enunciado descarta expresamente. Es el distractor más difícil del cuadro. · «Abrir como copia» sí protege el original, pero abriendo un duplicado: acabas con dos archivos, y no es lo que se pide. · «Abrir en el explorador» abre el documento en el navegador web."
   },
   {
     "id": "archivo-120",
@@ -1508,7 +1508,7 @@
     "subtopic": "Proteger documento",
     "tema": "Información",
     "sourceQuestionId": "8-131",
-    "enunciado": "Un usuario quiere enviar su documento a un compañero pero asegurarse de que no pueda modificarlo en absoluto. ¿Cuál es la protección más robusta para ese fin?",
+    "enunciado": "Vas a enviar un documento por correo y quieres que nadie que lo intercepte pueda siquiera abrirlo. ¿Qué opción de Proteger documento lo consigue?",
     "opciones": [
       {
         "letter": "A",
@@ -1516,20 +1516,20 @@
       },
       {
         "letter": "B",
-        "text": "Marcar como final"
+        "text": "Abrir siempre como solo lectura"
       },
       {
         "letter": "C",
-        "text": "Restringir edición con solo lectura sin contraseña"
+        "text": "Restringir edición"
       },
       {
         "letter": "D",
-        "text": "Agregar una firma digital"
+        "text": "Marcar como final"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Cifrar con contraseña impide incluso la apertura del documento sin la clave, lo que garantiza que nadie no autorizado pueda acceder ni modificar el contenido. Marcar como final es informativo y cualquiera puede desactivarlo. Restringir edición sin contraseña puede ser desactivada por el destinatario. La firma digital verifica integridad pero no impide la edición."
+    "explicacion": "«Cifrar con contraseña» es la única de las cuatro que actúa ANTES de abrir: sin la clave, Word no muestra el contenido, y el archivo por dentro está cifrado de verdad. · Las otras tres se aplican una vez el documento ya está abierto, así que cualquiera que lo intercepte lo lee entero. · «Abrir siempre como solo lectura» solo pregunta si quieres abrirlo sin permitir cambios; basta decir que no. · «Restringir edición» sin contraseña se suspende con un botón, y aun con contraseña deja leer. · «Marcar como final» es un aviso que se quita con un clic. · La diferencia clave no es cuánto molestan, sino en qué momento actúan: solo una impide la lectura."
   },
   {
     "id": "archivo-393",
@@ -1544,7 +1544,7 @@
     "tema": "Información",
     "sourceQuestionId": "neg-archivo-01",
     "generado": true,
-    "enunciado": "¿Cuál de estas NO es una opción del menú Proteger documento?",
+    "enunciado": "Repasas el menú «Proteger documento» del panel Información. ¿Cuál de estas entradas NO está ahí?",
     "opciones": [
       {
         "letter": "A",
@@ -1556,16 +1556,16 @@
       },
       {
         "letter": "C",
-        "text": "Marcar como final"
+        "text": "Comprimir imágenes"
       },
       {
         "letter": "D",
-        "text": "Comprimir imágenes"
+        "text": "Marcar como final"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "«Comprimir imágenes» está en Guardar como ▸ Herramientas, no en el menú Proteger documento (que tiene: solo lectura, cifrar, restringir edición, restringir acceso, firma digital y marcar como final)."
+    "respuesta": "C",
+    "explicacion": "«Comprimir imágenes» existe en Word, pero vive en otro sitio: en el cuadro Guardar como, dentro del menú Herramientas, junto a Opciones para guardar, Opciones generales y Opciones web. Nada que ver con proteger. · El menú Proteger documento tiene seis entradas: Abrir siempre como solo lectura, Cifrar con contraseña, Restringir edición, Restringir el acceso, Agregar una firma digital y Marcar como final. · Es un distractor de los que sí existen pero en el menú equivocado, que son los que de verdad discriminan: quien solo ha memorizado nombres sueltos lo da por bueno."
   },
   {
     "id": "archivo-394",
@@ -1580,7 +1580,7 @@
     "tema": "Información",
     "sourceQuestionId": "neg-archivo-02",
     "generado": true,
-    "enunciado": "¿Cuál de estas NO es una opción de «Comprobar si hay problemas»?",
+    "enunciado": "Despliegas «Comprobar si hay problemas» en el panel Información. ¿Cuál de estas entradas NO aparece?",
     "opciones": [
       {
         "letter": "A",
@@ -1596,12 +1596,12 @@
       },
       {
         "letter": "D",
-        "text": "Comprobar ortografía"
+        "text": "Comprobar privacidad"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "«Comprobar ortografía» no está en ese menú de Backstage: la revisión ortográfica se hace desde la pestaña Revisar, no desde Información."
+    "explicacion": "El menú tiene exactamente tres entradas: Inspeccionar documento, Comprobar accesibilidad y Comprobar compatibilidad. · «Comprobar privacidad» no existe, y es el distractor más traicionero posible aquí: sigue el patrón «Comprobar…» de las otras dos, y además la privacidad SÍ se revisa en este menú, solo que la hace Inspeccionar documento con otro nombre. Todo encaja menos el hecho. · Inspeccionar documento busca datos ocultos y personales. · Comprobar accesibilidad busca contenido difícil de leer con lector de pantalla. · Comprobar compatibilidad avisa de lo que se pierde al guardar en formatos antiguos."
   },
   {
     "id": "archivo-395",
@@ -1616,28 +1616,28 @@
     "tema": "Información",
     "sourceQuestionId": "neg-archivo-03",
     "generado": true,
-    "enunciado": "¿Cuál de estos NO aparece en el panel Información?",
+    "enunciado": "Recorres el panel Información de arriba abajo. ¿Cuál de estos comandos NO está en él?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Propiedades del documento"
+        "text": "Proteger documento"
       },
       {
         "letter": "B",
-        "text": "Fechas relacionadas"
+        "text": "Comprobar si hay problemas"
       },
       {
         "letter": "C",
-        "text": "Personas relacionadas"
+        "text": "Historial de versiones"
       },
       {
         "letter": "D",
-        "text": "Configurar página"
+        "text": "Comparar documentos"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "«Configurar página» está en Disposición y en el panel Imprimir, no en el panel Información."
+    "explicacion": "«Comparar documentos» existe, y hace algo muy propio de la gestión documental: enfrenta dos versiones y marca las diferencias. Pero está en la pestaña Revisar, grupo Comparar, no en Backstage. · El panel Información lleva, en este orden: los botones de Compartir y de rutas, Proteger documento, Comprobar si hay problemas, Historial de versiones, Administrar documento y, a la derecha, las propiedades. · Es el mejor distractor de los cuatro porque suena a «versiones» igual que Historial de versiones, que sí está justo ahí. La diferencia es que uno compara dos archivos y el otro guarda copias del mismo."
   },
   {
     "id": "archivo-397",
@@ -1652,7 +1652,7 @@
     "tema": "Información",
     "sourceQuestionId": "neg-archivo-05",
     "generado": true,
-    "enunciado": "¿Cuál de estas fichas NO tiene el cuadro Propiedades avanzadas?",
+    "enunciado": "Abres Información → Propiedades → Propiedades avanzadas. ¿Cuál de estas fichas NO tiene ese cuadro?",
     "opciones": [
       {
         "letter": "A",
@@ -1673,7 +1673,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "El cuadro Propiedades avanzadas tiene cinco fichas: General, Resumen, Estadísticas, Contenido y Personalizar. No existe una ficha «Seguridad»."
+    "explicacion": "El cuadro tiene cinco fichas: General, Resumen, Estadísticas, Contenido y Personalizar. · «Seguridad» no está, y es un distractor difícil porque un cuadro de propiedades de archivo con una ficha de seguridad es exactamente lo que uno espera: el cuadro de propiedades de Windows sí la tiene. Aquí no. · General muestra tipo, ubicación, tamaño, fechas y atributos. · Resumen es donde se escriben título, asunto, autor, organización y palabras clave. · Estadísticas es de solo lectura: recuentos de páginas, párrafos, líneas, palabras y caracteres. · Contenido lista el título del documento y Personalizar permite crear propiedades propias."
   },
   {
     "id": "archivo-361",
@@ -1688,11 +1688,11 @@
     "tema": "Información",
     "sourceQuestionId": "vf-archivo-bk11",
     "generado": true,
-    "enunciado": "El menú «Proteger documento» tiene seis opciones: Abrir siempre como solo lectura, Cifrar con contraseña, Restringir edición, Restringir el acceso, Agregar una firma digital y Marcar como final.",
+    "enunciado": "El menú «Proteger documento» tiene seis entradas: Abrir siempre como solo lectura, Cifrar con contraseña, Restringir edición, Restringir el acceso, Agregar una firma digital y Marcar como final.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "«Cifrar con contraseña» pone contraseña de apertura; «Restringir edición» limita qué cambios pueden hacer los demás."
+    "explicacion": "Verdadero, y en ese orden. · Las seis se pueden ordenar por lo fuertes que son: Marcar como final solo avisa; Abrir siempre como solo lectura solo pregunta; Restringir edición limita los cambios y admite contraseña; Restringir el acceso ata los permisos a personas concretas; Cifrar con contraseña impide hasta abrir; y Agregar una firma digital no protege, sino que certifica que nada ha cambiado. · La que más se olvida al enumerarlas es la primera, «Abrir siempre como solo lectura», por lo mucho que se parece a Marcar como final."
   },
   {
     "id": "archivo-362",
@@ -1711,7 +1711,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: solo lo pone en modo de solo lectura y avisa a los lectores de que es la versión final; cualquiera puede quitar la marca y seguir editando."
+    "explicacion": "Falso. · Solo pone el documento en solo lectura y muestra una barra amarilla avisando de que es la versión final; sirve para desanimar, no para impedir. · Cualquiera que lo abra puede pulsar «Editar de todos modos» y seguir escribiendo, sin contraseña ni permiso. · Para impedir de verdad hacen falta otras entradas del mismo menú: Restringir edición con contraseña, Restringir el acceso o Cifrar con contraseña."
   },
   {
     "id": "archivo-363",
@@ -1726,11 +1726,11 @@
     "tema": "Información",
     "sourceQuestionId": "vf-archivo-bk13",
     "generado": true,
-    "enunciado": "«Agregar una firma digital» (menú Proteger documento) añade una firma digital invisible que garantiza la integridad del documento.",
+    "enunciado": "«Agregar una firma digital», en el menú Proteger documento, añade una firma invisible que garantiza la integridad del documento.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Si el documento se modifica después, la firma queda invalidada."
+    "explicacion": "Verdadero. · No se ve nada en el documento: la firma va dentro del archivo y se consulta desde el panel Información. · Su valor está en que se invalida sola en cuanto alguien modifica el documento después de firmarlo, y por eso demuestra integridad, no permiso. · No confundirla con la «Línea de firma» de la pestaña Insertar, que sí es visible y está pensada para imprimir y rubricar a mano."
   },
   {
     "id": "archivo-364",
@@ -1745,11 +1745,11 @@
     "tema": "Información",
     "sourceQuestionId": "vf-archivo-bk14",
     "generado": true,
-    "enunciado": "«Inspeccionar documento» y «Comprobar accesibilidad» son la misma herramienta.",
+    "enunciado": "«Inspeccionar documento» y «Comprobar accesibilidad» son dos nombres de la misma herramienta.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: «Inspeccionar documento» busca datos personales y propiedades ocultas antes de publicar; «Comprobar accesibilidad» busca contenido difícil de leer para personas con discapacidad. Ambas están en «Comprobar si hay problemas»."
+    "explicacion": "Falso: son dos comandos distintos, aunque vivan en el mismo menú «Comprobar si hay problemas». · Inspeccionar documento busca lo que viaja escondido (datos personales, comentarios, revisiones, propiedades ocultas) y ofrece quitarlo antes de publicar. · Comprobar accesibilidad busca lo que impide leer el documento con un lector de pantalla: imágenes sin texto alternativo, tablas sin encabezado, contraste bajo. · El tercero del menú es Comprobar compatibilidad, con versiones anteriores de Word."
   },
   {
     "id": "archivo-365",
@@ -1768,7 +1768,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: comprueba qué características no son compatibles con versiones anteriores de Word (para poder guardarlo en .doc sin sorpresas)."
+    "explicacion": "Falso. · Comprueba qué características del documento no existen en versiones anteriores de Word, para saber qué se va a perder al guardarlo en .doc. · La ortografía se revisa desde la pestaña Revisar, o con F7, nunca desde Backstage. · Es una confusión frecuente porque los tres comandos del menú empiezan por «Comprobar» o «Inspeccionar» y suenan todos a repasar el texto."
   },
   {
     "id": "archivo-366",
@@ -1787,7 +1787,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: requiere que el archivo esté en OneDrive o SharePoint. Con un archivo local, Word ofrece «¿Activar el historial de versiones?» subiéndolo a la nube."
+    "explicacion": "Falso. · Necesita que el archivo esté en OneDrive o en SharePoint: las versiones las guarda el servicio de nube, no Word. · Con un archivo local, el comando no lista nada y ofrece «¿Activar el historial de versiones?», que en realidad propone subir el documento a la nube. · No confundirlo con «Administrar documento → Recuperar documentos no guardados», que sí es local y sirve para lo que nunca se llegó a guardar."
   },
   {
     "id": "archivo-367",
@@ -1806,7 +1806,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Es el mismo destino que el botón «Recuperar documentos sin guardar» del panel Abrir."
+    "explicacion": "Verdadero. · Abre la carpeta donde Word deja los archivos .asd de Autorrecuperación, para intentar rescatar lo que no llegó a guardarse nunca. · Es el mismo destino que el botón «Recuperar documentos sin guardar» del final del panel Abrir: dos caminos, un solo sitio. · Cada cuántos minutos se genera ese .asd, y en qué carpeta, se configura en Opciones → Guardar."
   },
   {
     "id": "archivo-368",
@@ -1825,7 +1825,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Se llega también a él desde el desplegable «Propiedades» del panel Información."
+    "explicacion": "Verdadero. · General trae tipo, ubicación, tamaño, nombre MS-DOS, fechas y atributos; Resumen es la única donde se escriben título, asunto, autor y palabras clave; Estadísticas es de solo lectura y da los recuentos; Contenido lista el título del documento; Personalizar permite inventar propiedades propias. · No existe ninguna ficha «Seguridad», por mucho que la haya en el cuadro de propiedades de Windows."
   },
   {
     "id": "archivo-369",
@@ -1840,11 +1840,11 @@
     "tema": "Información",
     "sourceQuestionId": "vf-archivo-bk19",
     "generado": true,
-    "enunciado": "La ficha «Estadísticas» del cuadro Propiedades permite escribir el título y el autor del documento.",
+    "enunciado": "La ficha «Estadísticas» del cuadro Propiedades avanzadas permite escribir el título y el autor del documento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: eso se hace en la ficha «Resumen». «Estadísticas» solo muestra recuentos (páginas, párrafos, líneas, palabras, caracteres) y fechas, en solo lectura."
+    "explicacion": "Falso: esa ficha es de solo lectura. · Estadísticas muestra fechas, quién guardó por última vez, el número de revisión, el tiempo de edición y una tabla con páginas, párrafos, líneas, palabras y caracteres. No se escribe nada en ella. · El título y el autor se escriben en la ficha «Resumen», que es su vecina y la que sí admite datos."
   },
   {
     "id": "archivo-370",
@@ -1859,11 +1859,11 @@
     "tema": "Información",
     "sourceQuestionId": "vf-archivo-bk20",
     "generado": true,
-    "enunciado": "En la ficha «Personalizar» del cuadro Propiedades se pueden crear propiedades propias (nombre, tipo Texto/Fecha/Número/Sí o no, valor) y vincularlas al contenido del documento.",
+    "enunciado": "En la ficha «Personalizar» del cuadro Propiedades avanzadas se pueden crear propiedades propias, con nombre, tipo (Texto, Fecha, Número o Sí o no) y valor, y vincularlas al contenido del documento.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Sirve, por ejemplo, para un campo «Cliente» o «Comprobado por» que luego se inserta con un campo DocProperty."
+    "explicacion": "Verdadero. · La ficha propone nombres ya hechos (Cliente, Comprobado por, Departamento, Destino, Asunto…) pero admite cualquier otro escrito a mano. · La casilla «Vincular al contenido» ata la propiedad a un marcador del documento, de modo que su valor se actualiza solo. · Después, esa propiedad se inserta en el texto con un campo DocProperty, así que un dato se escribe una vez y aparece en todas partes."
   },
   {
     "id": "archivo-371",
@@ -1878,11 +1878,11 @@
     "tema": "Información",
     "sourceQuestionId": "vf-archivo-bk21",
     "generado": true,
-    "enunciado": "El panel «Información» muestra el número de palabras pero no el tiempo total de edición.",
+    "enunciado": "El panel «Información» muestra el número de palabras del documento, pero no el tiempo total de edición.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: muestra ambos; «Tiempo de edición» es uno de los datos de Propiedades."
+    "explicacion": "Falso: muestra los dos. · El grupo Propiedades, arriba de la columna derecha, incluye Tamaño, Páginas, Palabras y Tiempo de edición. · «Tiempo de edición» está en Propiedades y no en «Fechas relacionadas», aunque sea un dato de tiempo: ese es el detalle que se pregunta. · El recuento completo (párrafos, líneas, caracteres) está en la ficha Estadísticas de las Propiedades avanzadas."
   },
   {
     "id": "archivo-39",
