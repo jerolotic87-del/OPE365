@@ -4,35 +4,35 @@
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Vista Backstage",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "atajo",
     "negativa": false,
     "section": "archivo",
     "topic": "backstage",
     "subtopic": null,
     "tema": "Vista Backstage",
     "sourceQuestionId": "8-1",
-    "enunciado": "¿Qué acción abre la Vista Backstage de Office?",
+    "enunciado": "Con un documento abierto y sin tocar el ratón, quieres pasar a la Vista Backstage. ¿Cuál de estos atajos te deja dentro de ella?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Hacer clic en la ficha Archivo"
+        "text": "Ctrl+P"
       },
       {
         "letter": "B",
-        "text": "Hacer clic en la ficha Vista"
+        "text": "Ctrl+F1"
       },
       {
         "letter": "C",
-        "text": "Pulsar Ctrl+B"
+        "text": "Ctrl+W"
       },
       {
         "letter": "D",
-        "text": "Hacer doble clic en la barra de título"
+        "text": "Alt+F4"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La Vista Backstage se abre desde la ficha Archivo. La ficha Vista cambia la visualización del documento. Ctrl+B abre el panel de Navegación. El doble clic en la barra de título maximiza o restaura la ventana."
+    "explicacion": "Ctrl+P abre la Vista Backstage directamente en el panel Imprimir, con la vista previa a la derecha: es la forma más rápida de entrar en Backstage con el teclado. · Ctrl+F1 contrae o expande la cinta de opciones, pero no sale del documento. · Ctrl+W no cierra nada en esta instalación: quita el formato de párrafo de la selección (prueba en vivo del usuario). Es la trampa más eficaz de las cuatro, porque el esquema internacional lo asocia a cerrar. · Alt+F4 cierra el documento activo y, si es el único abierto, cierra Word; nunca abre Backstage. · El par que más confunde es C y D: los dos suenan a «cerrar», que es una entrada del propio Backstage, pero ninguno lo abre."
   },
   {
     "id": "archivo-10",
@@ -46,63 +46,63 @@
     "subtopic": null,
     "tema": "Vista Backstage",
     "sourceQuestionId": "8-2",
-    "enunciado": "En Word 365, con la Vista Backstage abierta, ¿cuál de estos elementos NO pertenece a su panel izquierdo?",
+    "enunciado": "Tienes la Vista Backstage abierta en Word 365. ¿Cuál de estas entradas NO aparece en su panel de la izquierda?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Transformar"
-      },
-      {
-        "letter": "B",
-        "text": "Diseño"
-      },
-      {
-        "letter": "C",
         "text": "Exportar"
       },
       {
-        "letter": "D",
+        "letter": "B",
         "text": "Compartir"
+      },
+      {
+        "letter": "C",
+        "text": "Transformar"
+      },
+      {
+        "letter": "D",
+        "text": "Información"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Diseño es una pestaña de la cinta de opciones, no del panel izquierdo de Backstage. El panel contiene: Inicio, Nuevo, Abrir, Información, Guardar una copia, Imprimir, Compartir, Exportar, Transformar, Cerrar, Cuenta, Comentarios y Opciones."
+    "respuesta": "C",
+    "explicacion": "El panel de la izquierda es, de arriba abajo: Inicio, Nuevo, Abrir, Compartir, Información, Guardar una copia (o Guardar y Guardar como si el archivo está en el equipo), Imprimir, Exportar y Cerrar; separados abajo del todo, Cuenta y Opciones. · Transformar no está entre ellas. Es un distractor difícil porque suena exactamente igual que las demás y porque otras aplicaciones de Office sí han tenido entradas con ese nombre. · Exportar sí está: crea PDF/XPS o cambia el tipo de archivo. · Compartir sí está, y es la puerta de la coautoría. · Información sí está, y agrupa Proteger documento, Comprobar si hay problemas, Historial de versiones y las propiedades. · Ojo con Guardar una copia frente a Guardar como: es la misma entrada, y el nombre cambia según dónde esté el archivo, no según lo que hagas."
   },
   {
     "id": "archivo-11",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Vista Backstage",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "concepto",
     "negativa": false,
     "section": "archivo",
     "topic": "backstage",
     "subtopic": null,
     "tema": "Vista Backstage",
     "sourceQuestionId": "8-3",
-    "enunciado": "Un usuario necesita cerrar el documento activo sin cerrar Word desde la Vista Backstage. ¿Qué opción del panel izquierdo debe pulsar?",
+    "enunciado": "Estás en la Vista Backstage y pulsas «Cerrar» con cambios sin guardar en el documento. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cerrar"
+        "text": "Word pregunta si quieres guardar y después cierra el documento, dejando Word abierto"
       },
       {
         "letter": "B",
-        "text": "Salir"
+        "text": "Word pregunta si quieres guardar y después cierra el documento y la aplicación"
       },
       {
         "letter": "C",
-        "text": "Finalizar"
+        "text": "Word guarda los cambios sin preguntar y después cierra el documento y la aplicación"
       },
       {
         "letter": "D",
-        "text": "Terminar sesión"
+        "text": "Word cierra el documento descartando los cambios y vuelve al panel Inicio"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción Cerrar del panel izquierdo cierra el documento activo sin cerrar Word. Salir no existe en el panel. Finalizar no existe en Word. Terminar sesión pertenece a la sección Cuenta y no cierra el documento."
+    "explicacion": "«Cerrar» actúa solo sobre el documento activo: pregunta si guardar cuando hay cambios pendientes y, tras responder, cierra ese documento y deja Word en marcha. · La opción B describe lo que hace Alt+F4 cuando solo queda un documento abierto: ahí sí se va también la aplicación. · La opción C sería el comportamiento del guardado automático, que solo actúa sobre archivos en la nube y que, aun así, no cierra Word. · La opción D describe un descarte silencioso que Word no hace nunca desde «Cerrar»: perder cambios sin avisar sería un fallo, no una función. · El par que más confunde es A y B: la diferencia no está en si pregunta, sino en si se lleva por delante la aplicación."
   },
   {
     "id": "archivo-12",
@@ -116,28 +116,28 @@
     "subtopic": null,
     "tema": "Vista Backstage",
     "sourceQuestionId": "8-4",
-    "enunciado": "¿Cuál de estas opciones NO permite crear un documento nuevo en Word 365?",
+    "enunciado": "Quieres empezar un documento en blanco en Word 365. ¿Cuál de estas formas NO lo consigue?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Nuevo"
+        "text": "Pulsar Ctrl+U con Word ya abierto"
       },
       {
         "letter": "B",
-        "text": "Ctrl+U"
+        "text": "Pulsar Ctrl+A con Word ya abierto"
       },
       {
         "letter": "C",
-        "text": "Ctrl+A"
+        "text": "Entrar en Archivo → Nuevo y elegir «Documento en blanco»"
       },
       {
         "letter": "D",
-        "text": "Barra de herramientas de acceso rápido"
+        "text": "Usar el botón «Nuevo» añadido a la barra de acceso rápido"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ctrl+A abre un documento existente desde Backstage, no crea uno nuevo. Las formas válidas de crear un documento nuevo son: Archivo → Nuevo, Ctrl+U y el botón correspondiente de la barra de acceso rápido."
+    "respuesta": "B",
+    "explicacion": "Ctrl+A abre un documento existente: lleva a la Vista Backstage, al panel Abrir. No crea nada. · Ctrl+U sí crea un documento nuevo basado en la plantilla Normal, y lo hace de golpe, sin pasar por Backstage. · Archivo → Nuevo → «Documento en blanco» es la ruta larga equivalente, y además da acceso a las plantillas. · El botón «Nuevo» no viene en la barra de acceso rápido de serie, pero se añade desde Opciones → Barra de herramientas de acceso rápido, y entonces crea documentos en blanco. · El par que más confunde es A y B: dos atajos de una sola letra, seguidos en el teclado y los dos del universo Archivo, pero uno crea y el otro abre."
   },
   {
     "id": "archivo-113",
@@ -151,28 +151,28 @@
     "subtopic": null,
     "tema": "Vista Backstage",
     "sourceQuestionId": "8-105",
-    "enunciado": "¿De qué dos formas se puede volver al documento activo desde la Vista Backstage sin cerrar nada?",
+    "enunciado": "Has entrado en la Vista Backstage y quieres volver al documento sin cerrar ni guardar nada. Además de la flecha «←» de arriba a la izquierda, ¿qué tecla te devuelve al documento?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Haciendo clic en la flecha Atrás de la parte superior izquierda del"
+        "text": "Esc"
       },
       {
         "letter": "B",
-        "text": "Haciendo clic en la flecha Atrás o pulsando Ctrl+Z"
+        "text": "Ctrl+Z"
       },
       {
         "letter": "C",
-        "text": "Pulsando Escape o cerrando el panel con el botón X"
+        "text": "Ctrl+W"
       },
       {
         "letter": "D",
-        "text": "Haciendo clic en la flecha Atrás o pulsando Alt+F4"
+        "text": "Alt+F4"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Las dos formas de volver al documento son la flecha Atrás en la parte superior izquierda del panel de navegación y la tecla Escape. Ctrl+Z deshace acciones en el documento pero no cierra Backstage. No hay botón X para cerrar el panel. Alt+F4 cierra la aplicación completa."
+    "explicacion": "Esc cierra la Vista Backstage y devuelve el documento tal como estaba: es la alternativa de teclado a la flecha «←» del panel de navegación. · Ctrl+Z no sale de Backstage; es deshacer, y actúa sobre el documento. · Ctrl+W quita el formato de párrafo de la selección (prueba en vivo del usuario). No cierra Backstage ni el documento, aunque su nombre en el esquema internacional invite a pensarlo. · Alt+F4 sí sale, pero cerrando el documento, que es justo lo que la pregunta pide evitar; si además es el único abierto, cierra Word. · El par que más confunde es A y D: los dos «salen» de Backstage, pero solo uno deja el documento donde estaba."
   },
   {
     "id": "archivo-408",
@@ -363,7 +363,7 @@
     "subtopic": null,
     "tema": "Nuevo documento",
     "sourceQuestionId": "8-5",
-    "enunciado": "¿Qué atajo de teclado crea un nuevo documento en Word 365 versión española?",
+    "enunciado": "Tienes Word abierto y quieres empezar otro documento en blanco al instante, sin pasar por la Vista Backstage. ¿Qué atajo lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -384,7 +384,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Ctrl+U crea un documento nuevo basado en la plantilla Normal. Ctrl+N aplica negrita. Ctrl+O da formato automático al documento. Ctrl+W quita el formato de párrafo, no crea ni cierra documentos. ⚠️ Ojo: el volcado lista Ctrl+W también bajo «cerrar documento», pero en la práctica quita el formato de párrafo."
+    "explicacion": "Ctrl+U crea un documento nuevo basado en la plantilla Normal, sin abrir Backstage ni preguntar nada. · Ctrl+N aplica negrita a la selección: en el esquema español, negrita, subrayado y cursiva son Ctrl+N, Ctrl+S y Ctrl+K. · Ctrl+O aplica Autoformato al documento, que reorganiza estilos de golpe; el susto es grande, pero no crea nada. · Ctrl+W quita el formato de párrafo de la selección (prueba en vivo del usuario), no cierra ni crea documentos. · ⚠️ Ojo: en el esquema internacional Ctrl+N crea documento y Ctrl+O abre. Aquí ninguno de los dos hace eso, y es el error más repetido en los tests copiados de fuentes en inglés."
   },
   {
     "id": "archivo-14",
@@ -3530,28 +3530,28 @@
     "subtopic": "OneDrive",
     "tema": "Compartir",
     "sourceQuestionId": "3-10",
-    "enunciado": "En Word 365, ¿qué función permite registrarse para compartir el documento en la nube en tiempo real?",
+    "enunciado": "Quieres que otra persona edite contigo un documento en tiempo real desde Word 365. ¿Qué es imprescindible antes de poder invitarla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Iniciar sesión"
+        "text": "Haber iniciado sesión con una cuenta Microsoft y tener el archivo en la nube"
       },
       {
         "letter": "B",
-        "text": "Emitir"
+        "text": "Haber guardado el documento en formato .docx en una carpeta de tu equipo"
       },
       {
         "letter": "C",
-        "text": "Compartir"
+        "text": "Haber activado el control de cambios desde la pestaña Revisar del documento"
       },
       {
         "letter": "D",
-        "text": "Mostrar en línea"
+        "text": "Haber añadido a esa persona como contacto en el panel Cuenta de Backstage"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El material asocia \"Iniciar sesión\" con el registro que habilita compartir a través de OneDrive."
+    "explicacion": "La coautoría necesita las dos cosas a la vez: sesión iniciada con una cuenta Microsoft y el archivo alojado en la nube (OneDrive o un sitio de SharePoint). Sin sesión, Word ni siquiera ofrece Compartir; con sesión pero el archivo solo en el equipo, Compartir obliga primero a subirlo. · El formato .docx es necesario para editar en Word, pero un .docx guardado solo en local no se puede coeditar: el problema no es el formato, es dónde está el archivo. · El control de cambios registra quién modifica qué, pero es independiente de la coautoría: funciona igual en un documento local que nadie más abre. · El panel Cuenta no tiene lista de contactos; ahí se gestionan la cuenta, los servicios conectados y la información del producto. A los coautores se les invita desde Compartir, no desde Cuenta. · El par que más confunde es A y C: los dos suenan a «trabajar con otros», pero uno habilita la edición simultánea y el otro solo marca las modificaciones."
   },
   {
     "id": "archivo-4",
@@ -3565,28 +3565,28 @@
     "subtopic": "OneDrive",
     "tema": "Compartir",
     "sourceQuestionId": "3-11",
-    "enunciado": "En Word 365, ¿a través de qué servicio se pueden compartir documentos en tiempo real tras iniciar sesión?",
+    "enunciado": "Trabajas en Word 365 con tu cuenta Microsoft personal y abres «Guardar una copia» para dejar el documento en la nube. ¿Qué destino de nube te ofrece Word directamente en ese panel?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Dropbox"
+        "text": "OneDrive Personal"
       },
       {
         "letter": "B",
-        "text": "Google Drive"
+        "text": "SharePoint Online"
       },
       {
         "letter": "C",
-        "text": "OneDrive"
+        "text": "Microsoft Teams"
       },
       {
         "letter": "D",
-        "text": "SharePoint"
+        "text": "Microsoft Exchange"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El material menciona explícitamente OneDrive."
+    "respuesta": "A",
+    "explicacion": "Con una cuenta personal, el panel Guardar una copia lista «Recientes», «OneDrive: Personal», «Este PC», «Agregar un sitio» y «Examinar». El único destino de nube que aparece ya montado es OneDrive Personal. · SharePoint Online sí admite documentos de Word y coautoría, pero no sale de serie: hay que enlazarlo antes con «Agregar un sitio», y con una cuenta personal ni siquiera está disponible. · Microsoft Teams guarda sus archivos en SharePoint por debajo, pero Word no lo ofrece como destino en este panel. · Microsoft Exchange es el servidor de correo y calendario; no almacena documentos de Word. · El par que más confunde es A y B: los dos guardan documentos y los dos permiten coeditar, y por eso la pregunta no es cuál sirve, sino cuál aparece sin configurar nada."
   },
   {
     "id": "archivo-5",
@@ -3600,28 +3600,28 @@
     "subtopic": "OneDrive",
     "tema": "Compartir",
     "sourceQuestionId": "3-12",
-    "enunciado": "En Word 365, ¿qué ventaja ofrece OneDrive?",
+    "enunciado": "Tienes un documento guardado en OneDrive en lugar de solo en tu equipo. ¿Qué ventaja concreta te da eso?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Permite acceder a los archivos desde cualquier dispositivo con conexión a Internet"
+        "text": "Puedes abrirlo desde cualquier dispositivo donde inicies sesión, si hay conexión"
       },
       {
         "letter": "B",
-        "text": "Permite imprimir documentos en red"
+        "text": "Puedes abrirlo desde cualquier equipo de tu red local aunque no haya conexión"
       },
       {
         "letter": "C",
-        "text": "Permite guardar en un disco duro externo"
+        "text": "Word guarda una copia de seguridad en otra unidad del mismo equipo cada hora"
       },
       {
         "letter": "D",
-        "text": "Permite convertir documentos a PDF"
+        "text": "Puedes abrirlo desde otro dispositivo distinto aunque no tengas conexión"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El texto dice \"OneDrive hará posible que accedamos a nuestros archivos en cualquier momento y desde cualquier dispositivo con conexión a Internet\"."
+    "explicacion": "La ventaja de OneDrive es el acceso desde cualquier dispositivo en el que inicies sesión con la misma cuenta, y para eso hace falta conexión a Internet. · La opción B confunde nube con red local: una carpeta compartida de la red sí funciona sin Internet, pero eso no es OneDrive. · La opción C describe una copia de seguridad local, que es justo lo contrario de tener el archivo fuera del equipo; Autorrecuperación guarda en el propio equipo y no es una ventaja de OneDrive. · La opción D es la trampa: invierte el requisito. Los archivos sincronizados están disponibles sin conexión solo en el dispositivo donde ya se descargaron; en uno distinto, sin conexión, no hay nada que abrir. · El par que más confunde es A y D: solo cambia una palabra, y esa palabra es toda la respuesta."
   },
   {
     "id": "archivo-6",

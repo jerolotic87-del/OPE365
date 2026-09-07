@@ -180,6 +180,37 @@ después de cada borrado):
   `topic`, ahora se agrupan por **tipo de ejercicio** dentro de cada topic
   (ver `data/README.md` regla 2) — `scripts/normalize_order.py` ampliado.
 
+## Guía de estilo de ítems — `docs/GUIA_ESTILO_ITEMS.md`
+
+**Norma del proyecto (sep-2026), se aplica a TODAS las preguntas.** Léela
+entera antes de escribir o reformular un ítem. Lo esencial:
+
+- El enunciado sitúa en una **situación concreta**, nunca «¿qué es…?».
+- **Distractor = opción que responde creíblemente a ESA pregunta.** Que sea
+  del mismo grupo de la cinta NO basta: si el enunciado dice «pegar» y las
+  opciones son Pegar/Copiar/Cortar, cualquiera que sepa leer acierta. El
+  listón es *que el propio creador de Word dude*.
+- **Se pueden INVENTAR distractores.** Un nombre de comando o de opción que
+  no existe pero suena igual de real que el verdadero es mejor distractor
+  que uno real y descartable de un vistazo; la explicación aclara que no
+  existe. (Esto sustituye a la regla anterior de «nunca inventar nada»,
+  que producía opciones de risa.)
+- **Lo que NUNCA se inventa es un hecho afirmado como cierto**: respuesta
+  correcta, atajos, cifras, rutas y todo lo que diga la explicación.
+- Las 4 opciones, de longitud similar; la palabra clave del enunciado en
+  todas; la explicación desmonta cada distractor y señala el par confuso.
+- Fuentes: atajos SOLO del volcado + pruebas en vivo; rutas SOLO de
+  `data/rutas` + capturas; **`support.microsoft.com` sí vale para
+  funciones/definiciones oficiales, nunca para atajos**; academias y tests
+  para redactar claro. **El banco no cita fuentes.**
+
+Reescritura **a mano, ítem por ítem** — ningún script genera contenido.
+`scripts/aplicar_reescritura.py` solo vuelca al JSON el texto ya escrito y
+valida (4 opciones, respuesta viva, sin repetidas, longitudes, explicación).
+
+**Progreso de la reescritura**: `archivo` 9/410 (archivo-3, -4, -5, -9,
+-10, -11, -12, -13, -113).
+
 ## Regla de oro: jerarquía de fuentes
 
 Para **atajos de teclado** hay una única fuente y NADA puede contradecirla:
