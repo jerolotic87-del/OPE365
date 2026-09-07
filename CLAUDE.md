@@ -846,7 +846,13 @@ NO estaban en las capturas del usuario):
    pero **`insertar-170` tenía 2 respuestas válidas** («Microsoft PowerPoint
    Slide» SÍ está) → reformulada a negativa + `insertar-473/474`. También
    confirmado: cuadro «Formato de número de página» completo (§ arriba),
-   «Aplicar formato a» = 13.
+   «Aplicar formato a» = 13, cuadro **«Insertar gráfico»** (Columnas … Mapa,
+   Proyección solar, Rectángulos, Histograma, Cajas y bigotes, Cascada,
+   Embudo, Combinado + secciones Reciente/Plantillas) y menú **«Formas»**
+   (Líneas · Rectángulos · Formas básicas · Flechas de bloque · Formas de
+   ecuación · Diagrama de flujo · Cintas y estrellas · Llamadas) → todas las
+   preguntas de gráfico (`insertar-68/126..131/250..262/388/389`) y de
+   Formas (`insertar-62/118/240..249/437`) verificadas, sin cambios.
  - Las otras preguntas
    que citan «la extracción» sí se apoyan en capturas reales
    (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
