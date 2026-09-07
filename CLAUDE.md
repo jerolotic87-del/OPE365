@@ -48,14 +48,21 @@ github-sync.js        window.OPE.GHS. Publica tu contenido propio a
                        Token en localStorage 'ope365_gh', fuera de PROGRESS.
 multiplayer.js        Duelo · Farol · Contra Word: transporte PeerJS + máquinas de estado
 views.js               toda la interfaz (router simple basado en funciones).
-                       5 áreas (Inicio · Temario · Práctica · Flashcards ·
-                       Progreso). El router `go(view,params)` + la delegación
-                       global `[data-goto]` NO se tocan (tests y multiplayer
-                       dependen de ellos). Inicio = "¿qué estudio ahora?" con
-                       LEB.homeModel; Práctica = elección de intención antes
-                       del asistente; el feedback de pregunta muestra una línea
-                       + explicación plegada (categoría real, no campos
-                       inventados); flashcards = 3 grados → LEB.recordFlashcard.
+                       6 áreas (Inicio · Temario · Práctica · Flashcards ·
+                       Iconos · Progreso). El router `go(view,params)` + la
+                       delegación global `[data-goto]` NO se tocan (tests y
+                       multiplayer dependen de ellos). Inicio = "¿qué estudio
+                       ahora?" con LEB.homeModel; Práctica = elección de
+                       intención antes del asistente; el feedback de pregunta
+                       muestra una línea + explicación plegada (categoría
+                       real, no campos inventados); flashcards = 3 grados →
+                       LEB.recordFlashcard. **Iconos** (`renderIconos`, root
+                       view, sep-2026) = practicar SOLO las ~190 preguntas
+                       con imagen (`conImagen:true`), filtrables por pestaña,
+                       con selector de longitud y "repasar solo los que
+                       fallé"; reutiliza el runner normal vía
+                       `O.buildSession({..., conImagen:true})`. QA:
+                       `tests/manual_iconos_qa.mjs`.
                        Toda llamada a LEB va guardada con `if(O.LEB)`.
 peerjs.min.js          librería de terceros, no tocar
 data/atajos_word365_v2608.md  VOLCADO COMPLETO de "Personalizar teclado" de la

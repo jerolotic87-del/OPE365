@@ -35,6 +35,7 @@ const ICONS = {
   check:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
   target:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>',
   pencil:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>',
+  image:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="M21 16l-5-5-9 9"/></svg>',
 };
 function icon(name){ return ICONS[name] || ""; }
 
@@ -46,13 +47,14 @@ const PRIMARY_TABS = [
   {id:"temario",    label:"Temario",     ic:"layers"},
   {id:"practica",   label:"Práctica",    ic:"study"},
   {id:"flashcards", label:"Flashcards",  ic:"cards"},
+  {id:"iconos",     label:"Iconos",      ic:"image"},
   {id:"progress",   label:"Progreso",    ic:"progress"},
 ];
 
 /* Pila de navegación en memoria para el botón "‹ Atrás".
    Las 5 pestañas raíz son un punto de partida limpio: entrar en una
    vacía la pila. Cualquier otra vista apila la anterior. */
-const ROOT_VIEWS = ["home","temario","practica","flashcards","progress"];
+const ROOT_VIEWS = ["home","temario","practica","flashcards","iconos","progress"];
 let navStack = [];
 
 function groupForView(view){
@@ -61,6 +63,7 @@ function groupForView(view){
   if(["practica","study","test-wizard","test-preview","running","results",
       "review-hub","review-detail","mi-contenido","mp-setup","mp-lobby","mp-game"].includes(view)) return "practica";
   if(["flashcards","flashcards-study"].includes(view)) return "flashcards";
+  if(view==="iconos") return "iconos";
   if(["progress","tests","challenges","challenge-create","challenge-detail",
       "comparison","history","banco"].includes(view)) return "progress";
   return "home";
@@ -137,6 +140,7 @@ function render(view, params){
   if(view==="mp-game") return renderMpGame();
   if(view==="flashcards") return renderFlashcardsHub(params);
   if(view==="flashcards-study") return renderFlashcardsStudy();
+  if(view==="iconos") return renderIconos(params);
   if(view==="temario-detalle") return renderTemarioDetalle(params);
   if(view==="mi-contenido") return renderMyContent();
   if(view==="banco") return renderBancoAdmin(params);
@@ -2241,6 +2245,97 @@ function renderFlashcardsStudy(){
   $("#fc-yes").addEventListener("click", ()=> rate("si"));
   $("#fc-prev").addEventListener("click", ()=>{ fcSession.index = Math.max(0, idx-1); fcSession.revealed=false; renderFlashcardsStudy(); });
   $("#fc-next").addEventListener("click", advance);
+}
+
+/* ---------------------------------------------------------------
+   ICONOS — practicar solo las preguntas CON IMAGEN (reconocer el
+   icono de un comando de la cinta). Reutiliza el runner normal:
+   arma una sesión de práctica con conImagen:true y opcionalmente
+   filtrada por pestaña.
+--------------------------------------------------------------- */
+let iconosHubState = { section:"all", len:20 };
+
+function renderIconos(params){
+  if(params && params.section) iconosHubState.section = params.section;
+  const st = iconosHubState;
+
+  const imgSecs = O.TAXONOMY_SECTIONS.filter(s=> O.filterQuestions({ section:s.id, conImagen:true }).length);
+  const sel = st.section;
+  const pool = O.filterQuestions({ section: sel==="all" ? "all" : sel, conImagen:true });
+  const total = pool.length;
+  const done  = pool.filter(q=> O.getQuestionState(q.id) !== "unanswered").length;
+  const ok    = pool.filter(q=> O.getQuestionState(q.id) === "correct").length;
+  const wrong = pool.filter(q=> O.getQuestionState(q.id) === "incorrect").length;
+  const grandTotal = O.filterQuestions({ conImagen:true }).length;
+
+  const lens = [10, 20, 40, "todas"];
+
+  mainEl().innerHTML = `
+  <div class="view view-narrow">
+    <div class="view-head">
+      <p class="eyebrow">Iconos</p>
+      <h1>Reconocer iconos</h1>
+      <p>Solo las preguntas con imagen: se muestra el icono recortado de un comando de la cinta y eliges cuál es. ${grandTotal} en total.</p>
+    </div>
+
+    <div class="chip-row" id="ic-chips">
+      <button class="chip-btn ${sel==='all'?'on':''}" data-sec="all">Todas</button>
+      ${imgSecs.map(s=>{
+        const n = O.filterQuestions({ section:s.id, conImagen:true }).length;
+        return `<button class="chip-btn ${sel===s.id?'on':''}" data-sec="${s.id}">${O.escapeHtml(s.name)} · ${n}</button>`;
+      }).join("")}
+    </div>
+
+    <div class="test-preview" style="margin:var(--sp-5) 0;">
+      <div class="big">${total}</div>
+      <div class="sub">iconos en esta selección · ${ok} acertados · ${done} vistos</div>
+    </div>
+
+    <div class="field" style="margin-bottom:var(--sp-4);">
+      <label>Cuántos por sesión</label>
+      <div class="segmented" id="ic-len">
+        ${lens.map(l=>`<button class="seg ${String(st.len)===String(l)?'on':''}" data-len="${l}">${l==='todas'?'Todas':l}</button>`).join("")}
+      </div>
+    </div>
+
+    <button class="btn btn-solid btn-block btn-lg" id="ic-start" ${total?'':'disabled'}>${icon('play')} Empezar</button>
+    ${wrong ? `<button class="btn btn-outline btn-block btn-sm" id="ic-wrong" style="margin-top:var(--sp-3);">Repasar solo los que fallé (${wrong})</button>` : ``}
+    ${total===0 ? `<p style="text-align:center;color:var(--muted);font-size:13px;margin-top:var(--sp-4);">No hay iconos en esta pestaña.</p>` : ``}
+
+    <div class="section-block" style="margin-top:var(--sp-7);">
+      <div class="section-title"><h3>Aciertos por pestaña</h3></div>
+      <div class="progress-list">
+        ${imgSecs.map(s=>{
+          const p = O.filterQuestions({ section:s.id, conImagen:true });
+          const t = p.length;
+          const c = p.filter(q=> O.getQuestionState(q.id) === "correct").length;
+          const pc = t ? Math.round((c/t)*100) : 0;
+          return `<button class="progress-row" data-secjump="${s.id}">
+            <div class="pr-main"><div class="pr-name">${O.escapeHtml(s.name)}</div><div class="pr-meta">${c} / ${t} acertados</div></div>
+            <div class="pr-bar"><div class="bar-track good"><i style="width:${pc}%"></i></div></div>
+            <div class="pr-pct">${pc}%</div><span class="pr-chev">${icon('chevronR')}</span>
+          </button>`;
+        }).join("")}
+      </div>
+    </div>
+  </div>`;
+
+  function launch(scope){
+    const s = O.buildSession({
+      mode:"practice", scope: scope || null, source:"all",
+      section: sel==="all" ? "all" : sel,
+      topic:"all", tema:"all", tipo:"all", categoria:"all",
+      conImagen:true, count: st.len, qOrder:"aleatorio", shuffleOptions:true, minutes:null,
+    });
+    if(!s){ O.toast("No hay iconos con esa selección"); return; }
+    O.setSession(s); O.saveSessionSnapshot(); go("running");
+  }
+
+  $$("#ic-chips .chip-btn").forEach(b=> b.addEventListener("click", ()=>{ iconosHubState.section = b.getAttribute("data-sec"); renderIconos(); }));
+  $$("#ic-len .seg").forEach(b=> b.addEventListener("click", ()=>{ iconosHubState.len = b.getAttribute("data-len")==="todas" ? "todas" : Number(b.getAttribute("data-len")); renderIconos(); }));
+  $("#ic-start").addEventListener("click", ()=> launch(null));
+  const w = $("#ic-wrong"); if(w) w.addEventListener("click", ()=> launch("errores"));
+  $$("[data-secjump]").forEach(b=> b.addEventListener("click", ()=>{ iconosHubState.section = b.getAttribute("data-secjump"); renderIconos(); }));
 }
 
 /* ---------------------------------------------------------------
