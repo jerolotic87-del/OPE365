@@ -10292,35 +10292,35 @@
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
     "categoria": "ruta",
-    "negativa": false,
+    "negativa": true,
     "section": "insertar",
     "topic": "texto",
     "subtopic": null,
     "tema": "Texto",
     "sourceQuestionId": "P-137",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes tipos de objeto existe realmente en la lista Crear nuevo del cuadro Objeto de Word 365?",
+    "enunciado": "¿Cual de estos NO aparece en la lista «Tipo de objeto» del cuadro Objeto ▸ Crear nuevo de Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Microsoft PowerPoint Slide"
+        "text": "Microsoft PowerPoint Show"
       },
       {
         "letter": "B",
-        "text": "Microsoft PowerPoint 97-2003 Presentation"
+        "text": "Microsoft PowerPoint Slide"
       },
       {
         "letter": "C",
-        "text": "Microsoft PowerPoint Template"
+        "text": "OpenDocument Presentation"
       },
       {
         "letter": "D",
-        "text": "Microsoft PowerPoint Show"
+        "text": "WordPad Document"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no figuran en la extracción. \"Microsoft PowerPoint 97-2003 Presentation\" sí figura como tipo disponible."
+    "respuesta": "A",
+    "explicacion": "«Microsoft PowerPoint Show» no esta en la lista. Si estan «Microsoft PowerPoint Slide», «...Presentation», «...97-2003 Slide/Presentation» y «...Macro-Enabled Slide/Presentation», ademas de OpenDocument Text/Spreadsheet/Presentation, WordPad Document, Bitmap Image, Package y Organization Chart Add-in. Confirmado con captura del usuario."
   },
   {
     "id": "insertar-425",
@@ -10688,6 +10688,51 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Word tiene decenas de tipos de campo (autor, título, número de página, referencia cruzada…), no solo la fecha."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto",
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-473",
+    "sourceQuestionId": "capt-ins-473",
+    "tipo": "seleccion_multiple",
+    "enunciado": "En «Objeto ▸ Crear nuevo», ¿cuales de estos SI son tipos de objeto disponibles?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Bitmap Image"
+      },
+      {
+        "letter": "B",
+        "text": "WordPad Document"
+      },
+      {
+        "letter": "C",
+        "text": "OpenDocument Text / Spreadsheet / Presentation"
+      },
+      {
+        "letter": "D",
+        "text": "Microsoft Graph Chart"
+      },
+      {
+        "letter": "E",
+        "text": "Microsoft Access Database"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "La lista incluye Bitmap Image, WordPad Document, los 3 formatos OpenDocument, Microsoft Graph Chart, «Package», «Organization Chart Add-in» y los formatos de Excel/PowerPoint/Word (actuales, 97-2003 y con macros). Access NO figura. Confirmado con captura."
   },
   {
     "id": "insertar-296",
@@ -11277,6 +11322,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Además del nombre y el puesto, el cuadro tiene un campo para \"Dirección de correo electrónico del firmante sugerido\". No es obligatorio, pero está disponible."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto",
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-474",
+    "sourceQuestionId": "capt-ins-474",
+    "tipo": "verdadero_falso",
+    "enunciado": "El cuadro «Objeto ▸ Crear nuevo» tiene una casilla «Mostrar como icono» para insertar el objeto como un icono en vez de mostrar su contenido.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "La casilla esta a la derecha de la lista de tipos, tanto en «Crear nuevo» como en «Crear desde un archivo». Al marcarla se puede elegir el icono y su etiqueta."
   },
   {
     "id": "insertar-464",

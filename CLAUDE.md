@@ -840,8 +840,15 @@ NO estaban en las capturas del usuario):
    Expansión Taylor, Fórmula cuadrática, Identidad trigonométrica 1,
    Identidad trigonométrica 2, Serie de Fourier, Teorema binomial y Teorema
    de Pitágoras.
- - Las otras ~35
-   preguntas que citan «la extracción» sí se apoyan en capturas reales
+ - **Capturas del usuario (sep-2026) validan más trozos del minado P-**:
+   cuadro SmartArt = 12 categorías (`insertar-235/236/237` correctas) ·
+   cuadro «Objeto ▸ Crear nuevo» = 23 tipos, `insertar-168/169` correctas
+   pero **`insertar-170` tenía 2 respuestas válidas** («Microsoft PowerPoint
+   Slide» SÍ está) → reformulada a negativa + `insertar-473/474`. También
+   confirmado: cuadro «Formato de número de página» completo (§ arriba),
+   «Aplicar formato a» = 13.
+ - Las otras preguntas
+   que citan «la extracción» sí se apoyan en capturas reales
    (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
    formatos de fecha…) y se dejaron.
 **+2** (`insertar-467/468`): las 4 opciones exactas de «Separar texto en»
