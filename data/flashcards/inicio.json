@@ -869,6 +869,36 @@
     "questionRefs": []
   },
   {
+    "cardId": "F-149",
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Cuántos estilos de subrayado hay en el desplegable del cuadro Fuente? ¿Y en el de la cinta?",
+    "back": "En el cuadro Fuente: 17 (18 con «(ninguno)»). En la cinta solo ~9. Solo los 3 primeros tienen atajo: Ctrl+S, Ctrl+Mayús+D (doble), Ctrl+Mayús+P (solo palabras).",
+    "sourceRefs": [
+      "data/rutas/inicio.txt (volcado del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-152",
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "En la sección «Efectos» del cuadro Fuente, ¿qué efectos se excluyen entre sí?",
+    "back": "Solo 3 parejas: Tachado / Doble tachado, Superíndice / Subíndice y Versalitas / Mayúsculas. Oculto y el resto se combinan libremente.",
+    "sourceRefs": [
+      "data/rutas/inicio.txt (volcado del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
     "cardId": "F-027",
     "section": "inicio",
     "topic": "parrafo-marcas",
@@ -979,6 +1009,21 @@
     "back": "Inicio ▸ Párrafo ▸ Alinear izquierda / Centrar / Alinear derecha / Justificar",
     "sourceRefs": [
       "rutasyatajos.txt §6 (rutas oficiales)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-151",
+    "section": "inicio",
+    "topic": "parrafo-alineacion",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "Atajos de alineación en Word 365 español (esquema clásico).",
+    "back": "Ctrl+Q = izquierda · Ctrl+T = centrar · Ctrl+D = derecha · Ctrl+J = justificar. (Ctrl+R no hace nada en esta instalación.)",
+    "sourceRefs": [
+      "data/rutas/inicio.txt (volcado del usuario)"
     ],
     "knowledgeRefs": [],
     "questionRefs": []
@@ -1196,6 +1241,21 @@
     "back": "Inicio ▸ Párrafo ▸ Interlineado y espaciado entre párrafos",
     "sourceRefs": [
       "rutasyatajos.txt §6 (rutas oficiales)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-150",
+    "section": "inicio",
+    "topic": "parrafo-espaciado",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "Interlineado con la fila superior de números: ¿qué hacen Ctrl+1, Ctrl+5 y Ctrl+2?",
+    "back": "Ctrl+1 = sencillo · Ctrl+5 = 1,5 líneas · Ctrl+2 = doble. (Ctrl+5 en el teclado numérico, en cambio, selecciona todo.)",
+    "sourceRefs": [
+      "data/rutas/inicio.txt (volcado del usuario)"
     ],
     "knowledgeRefs": [],
     "questionRefs": []
@@ -1928,6 +1988,21 @@
     "questionRefs": []
   },
   {
+    "cardId": "F-153",
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Cuántos valores tiene el desplegable «Tipo de estilo» del cuadro Crear/Modificar estilo?",
+    "back": "Cinco: Párrafo, Carácter, Vinculado (párrafo y carácter), Tabla y Lista. NO existe un tipo «Sección».",
+    "sourceRefs": [
+      "data/rutas/inicio.txt (volcado del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
     "cardId": "F-076",
     "section": "inicio",
     "topic": "edicion",
@@ -2400,6 +2475,21 @@
     "back": "Inicio ▸ Edición ▸ Seleccionar",
     "sourceRefs": [
       "rutasyatajos.txt §6 (rutas oficiales)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-154",
+    "section": "inicio",
+    "topic": "edicion",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "En «Buscar y reemplazar ▸ Más >>», ¿cuántas casillas de «Opciones de búsqueda» hay?",
+    "back": "Siete: Coincidir mayúsculas/minúsculas, Solo palabras completas, Usar caracteres comodín, Prefijo, Sufijo, Omitir puntuación, Omitir espacios en blanco. En esta instalación ES-España NO existen «Suena como» ni «Todas las formas de la palabra».",
+    "sourceRefs": [
+      "data/rutas/inicio.txt (volcado del usuario)"
     ],
     "knowledgeRefs": [],
     "questionRefs": []

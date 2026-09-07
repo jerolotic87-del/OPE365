@@ -628,6 +628,26 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Cruce flashcards ↔ volcados de rutas (sep-2026)**: a petición del
+usuario, se comprobó si los matices preguntables de los volcados (nombres
+exactos de listas, cardinalidades, valores por defecto) tenían flashcard
+además de pregunta. Resultado: `archivo` (263 fc), `disposicion` (100),
+`referencias` (74), `inicio` (148) e `insertar` (147) ya cubrían casi todo;
+`diseno` (24 fc) no cubría **ninguno** de los 7 matices clave (sus
+flashcards eran todas ruta/concepto de alto nivel). **2 errores heredados
+del minado P- también estaban en las flashcards de `insertar`** (F-095/096
+= «5 formatos de nº de página, sin I,II,III»; F-135/136 = «Pitágoras no es
+ecuación integrada») → corregidas igual que las preguntas. **+25 flashcards
+`priority:alta`** (`diseno` +10, `inicio` +6, `insertar` +5, `disposicion`
++2, `referencias` +2): espaciado entre párrafos (6), tema Office/Aptos,
+pares de fuentes del tema, 2 categorías de marca de agua, Valor (5) / Ancho
+(9) / Arte (164) del borde de página, subrayado 17, interlineado Ctrl+1/5/2,
+alineación Ctrl+Q/T/D/J, 3 parejas de efectos excluyentes, Tipo de estilo
+(5), Buscar (7 casillas), Convertir texto en tabla, notas al pie = pestaña
+Referencias, fuentes del cuadro Símbolo, eliminar salto de sección, Índice
+Con sangría/Continuo. Generador: `scripts/gen_flashcards_matices_rutas.py`.
+Total flashcards 971→996.
+
 **Revisión completa de Archivo/Backstage (sep-2026)**: el banco (408
 preguntas — el más grande y completo, cubre todo el volcado y el árbol
 entero de Opciones 1-10 veces) no tiene huecos. AGE 2017 (inspeccionar

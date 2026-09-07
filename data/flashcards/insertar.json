@@ -300,6 +300,36 @@
     "questionRefs": []
   },
   {
+    "cardId": "F-148",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "En el cuadro «Convertir texto en tabla», ¿qué opciones ofrece «Separar texto en»?",
+    "back": "Párrafos, Tabulaciones, Punto y coma y «Otro» (un carácter a elegir, p. ej. la coma).",
+    "sourceRefs": [
+      "data/rutas/insertar.txt (volcado del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-149",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Puede una tabla de Word hacer cálculos sin usar Excel?",
+    "back": "Sí: Herramientas de tabla ▸ Presentación ▸ Fórmula, con funciones como =SUM(ABOVE) o =AVERAGE(LEFT).",
+    "sourceRefs": [
+      "data/rutas/insertar.txt (volcado del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
     "cardId": "F-005",
     "section": "insertar",
     "topic": "ilustraciones",
@@ -1220,9 +1250,9 @@
     "topic": "encabezado-pie",
     "subtopic": null,
     "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Cuáles son los cinco formatos de número de página disponibles en Word 365?",
-    "back": "1,2,3 · -1,-2,-3 · a,b,c · A,B,C · i,ii,iii",
+    "priority": "alta",
+    "front": "¿Cuántos formatos de número de página hay en Word 365 y cuáles?",
+    "back": "Seis: 1,2,3 · -1,-2,-3 · a,b,c · A,B,C · i,ii,iii · I,II,III",
     "sourceRefs": [
       "Insertar_Rutas_completas.txt / extracción del usuario (sep-2026)"
     ],
@@ -1235,9 +1265,9 @@
     "topic": "encabezado-pie",
     "subtopic": null,
     "cardType": "contenido",
-    "priority": "normal",
+    "priority": "alta",
     "front": "¿El formato de número de página I, II, III (romano mayúscula) está disponible en Word 365?",
-    "back": "No: solo el romano minúscula i, ii, iii.",
+    "back": "Sí: la lista tiene los seis formatos, romano minúscula (i,ii,iii) Y mayúscula (I,II,III). El mayúsculo se usa para páginas preliminares de tesis.",
     "sourceRefs": [
       "Insertar_Rutas_completas.txt / extracción del usuario (sep-2026)"
     ],
@@ -1345,6 +1375,21 @@
     "back": "Alt+Mayús+P",
     "sourceRefs": [
       "Insertar_Rutas_completas.txt / extracción del usuario (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-152",
+    "section": "insertar",
+    "topic": "encabezado-pie",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Cuántos formatos de número de página hay y cuáles?",
+    "back": "Seis: 1,2,3 · -1,-2,-3 · a,b,c · A,B,C · i,ii,iii · I,II,III.",
+    "sourceRefs": [
+      "data/rutas/insertar.txt (volcado del usuario)"
     ],
     "knowledgeRefs": [],
     "questionRefs": []
@@ -1955,9 +2000,9 @@
     "topic": "simbolos",
     "subtopic": null,
     "cardType": "contenido",
-    "priority": "normal",
-    "front": "¿Cuáles son las ecuaciones integradas de la galería de Ecuación en Word 365?",
-    "back": "Área del círculo, Expansión de una suma, Expansión Taylor, Fórmula cuadrática, Identidad trigonométrica 1.",
+    "priority": "alta",
+    "front": "¿Qué ecuaciones trae la galería integrada del botón Ecuación en Word 365?",
+    "back": "Área del círculo, Teorema de Pitágoras, Fórmula cuadrática, Serie/Expansión de Taylor, Serie de Fourier, Expansión de una suma e Identidades trigonométricas.",
     "sourceRefs": [
       "Insertar_Rutas_completas.txt / extracción del usuario (sep-2026)"
     ],
@@ -1970,9 +2015,9 @@
     "topic": "simbolos",
     "subtopic": null,
     "cardType": "contenido",
-    "priority": "normal",
+    "priority": "alta",
     "front": "¿Están la Ley de Ohm o el Teorema de Pitágoras en la galería integrada de Ecuación?",
-    "back": "No.",
+    "back": "El Teorema de Pitágoras SÍ es una ecuación integrada; la Ley de Ohm NO (habría que escribirla a mano o buscarla en «Más ecuaciones de Office.com»).",
     "sourceRefs": [
       "Insertar_Rutas_completas.txt / extracción del usuario (sep-2026)"
     ],
@@ -2110,6 +2155,36 @@
     "back": "Autocorrección…",
     "sourceRefs": [
       "Insertar_Rutas_completas.txt / extracción del usuario (sep-2026)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-150",
+    "section": "insertar",
+    "topic": "simbolos",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "Las notas al pie y al final, ¿en qué pestaña están?",
+    "back": "En Referencias, grupo «Notas al pie» (no en Insertar). Atajos: Alt+Ctrl+O (pie) y Alt+Ctrl+L (final).",
+    "sourceRefs": [
+      "data/rutas/insertar.txt (volcado del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-151",
+    "section": "insertar",
+    "topic": "simbolos",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "En el cuadro Símbolo, ¿qué fuentes dan símbolos en vez de letras?",
+    "back": "Wingdings, Wingdings 2/3, Webdings y Symbol. Con «(texto normal)» se elige además un «Subconjunto» Unicode (Latín básico, etc.).",
+    "sourceRefs": [
+      "data/rutas/insertar.txt (volcado del usuario)"
     ],
     "knowledgeRefs": [],
     "questionRefs": []
