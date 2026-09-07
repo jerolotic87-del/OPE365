@@ -908,8 +908,17 @@ NO estaban en las capturas del usuario):
    columna izq/der, Combinar/Dividir celdas, Dividir tabla, Alto, Ancho,
    Distribuir filas/columnas, Dirección del texto, Márgenes de celda,
    Ordenar, Repetir filas de título, Convertir en texto, Fórmula. Generador:
-   `scripts/gen_iconos_disposicion_tabla.py`. Total preguntas con imagen:
-   ~160.
+   `scripts/gen_iconos_disposicion_tabla.py`. **+26 preguntas CON IMAGEN**
+   (`img-revisar-NN`) de los iconos de la pestaña **Revisar**
+   (`data/imagenes_rutas/revisar/icono_*.PNG`) — primera tanda con imagen
+   fuera de insertar/diseño/disposición/referencias: Editor, Ortografía y
+   gramática, Sinónimos, Contar palabras, Leer en voz alta, Comprobar
+   accesibilidad, Traducir, Idioma, Nuevo/Eliminar comentario, Comentario
+   ant/sig, Mostrar comentarios, Control de cambios, Aceptar/Rechazar,
+   Cambio ant/sig, «Todas las revisiones», Mostrar revisiones, Panel de
+   revisiones, Filtrar todo el marcado, Comparar, Bloquear autores,
+   Restringir edición, Ocultar entrada de lápiz. Generador:
+   `scripts/gen_iconos_revisar.py`. Total preguntas con imagen: ~186.
  - Las otras preguntas
    que citan «la extracción» sí se apoyan en capturas reales
    (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
