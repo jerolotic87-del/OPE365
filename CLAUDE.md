@@ -786,13 +786,13 @@ NO estaban en las capturas del usuario):
    («Empezar con el estilo» = Título 1-9; «Numeración de páginas» =
    Continuar / Iniciar en).
  - **Galería del botón Ecuación**: el banco decía que «Teorema de Pitágoras»
-   NO es una ecuación integrada — **falso**, sí lo es (junto a Área del
-   círculo, Fórmula cuadrática, Serie de Taylor, Serie de Fourier, Expansión
-   de una suma, Identidades trigonométricas). Corregidas `insertar-98`,
-   `insertar-318`.
- - **Pendiente de confirmar en vivo**: solo la galería de Ecuación (el punto
-   de página ya está confirmado con captura). Es un hecho universal de Word
-   y verificado en fuentes ES, pero sin captura propia. Las otras ~35
+   NO es una ecuación integrada — **falso**. Corregidas `insertar-98`,
+   `insertar-318` + flashcards `F-135/136`. ✅ **CONFIRMADO con captura**: la
+   galería «Integrado» tiene **9**: Área del círculo, Expansión de una suma,
+   Expansión Taylor, Fórmula cuadrática, Identidad trigonométrica 1,
+   Identidad trigonométrica 2, Serie de Fourier, Teorema binomial y Teorema
+   de Pitágoras.
+ - Las otras ~35
    preguntas que citan «la extracción» sí se apoyan en capturas reales
    (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
    formatos de fecha…) y se dejaron.
