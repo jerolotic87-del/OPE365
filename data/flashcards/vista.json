@@ -273,6 +273,36 @@
     "questionRefs": []
   },
   {
+    "cardId": "F-072",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Que vistas tienen boton en la barra de estado inferior y cuales solo en la cinta?",
+    "back": "Barra de estado: Modo de lectura, Diseno de impresion, Diseno web (+ conmutador Concentracion). Solo en la cinta: Esquema y Borrador.",
+    "sourceRefs": [
+      "data/rutas/vista.txt (captura del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-073",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "Borrador vs Diseno de impresion: ¿que NO se ve en Borrador?",
+    "back": "Borrador no muestra graficos, imagenes ni encabezados/pies de pagina; solo texto, con la misma longitud de linea que la impresion. Se sale volviendo a «Diseno de impresion».",
+    "sourceRefs": [
+      "data/rutas/vista.txt (captura del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
     "cardId": "E-005",
     "section": "vista",
     "topic": "vistas",
@@ -464,6 +494,21 @@
     "back": "Vista ▸ Movimiento de página ▸ Vertical / En paralelo",
     "sourceRefs": [
       "rutasyatajos.txt §6 (rutas oficiales)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-075",
+    "section": "vista",
+    "topic": "movimiento-pagina",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "«Vertical» vs «En paralelo» (grupo Movimiento de pagina).",
+    "back": "Vertical = scroll normal hacia abajo (por defecto). En paralelo = las paginas se pasan de lado, como hojear un libro (pensado para pantalla tactil). No confundir con «Ver en paralelo» del grupo Ventana (dos documentos distintos).",
+    "sourceRefs": [
+      "data/rutas/vista.txt (captura del usuario)"
     ],
     "knowledgeRefs": [],
     "questionRefs": []
@@ -692,6 +737,21 @@
     "back": "Vista ▸ Zoom ▸ Ancho de página",
     "sourceRefs": [
       "rutasyatajos.txt §6 (rutas oficiales)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-074",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "Los 3 botones de presentacion del grupo Zoom.",
+    "back": "Una pagina (encaja una pagina entera) · Varias paginas (varias a la vez) · Ancho de pagina (el ancho del papel, con margenes, ocupa la ventana). «Ancho del texto» solo esta en el cuadro Zoom.",
+    "sourceRefs": [
+      "data/rutas/vista.txt (captura del usuario)"
     ],
     "knowledgeRefs": [],
     "questionRefs": []
@@ -968,6 +1028,21 @@
     "back": "Vista ▸ Ventana ▸ Cambiar ventanas",
     "sourceRefs": [
       "rutasyatajos.txt §6 (rutas oficiales)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-076",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "«Nueva ventana», «Ver en paralelo», «Desplazamiento sincronico», «Restablecer posicion de la ventana».",
+    "back": "Nueva ventana = otra vista del MISMO documento. Ver en paralelo = dos documentos lado a lado. Desplazamiento sincronico = mover uno mueve el otro. Restablecer posicion = iguala el tamano de las dos ventanas en paralelo.",
+    "sourceRefs": [
+      "data/rutas/vista.txt (captura del usuario)"
     ],
     "knowledgeRefs": [],
     "questionRefs": []

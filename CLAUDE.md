@@ -628,6 +628,20 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Vista — captura de la cinta + web (sep-2026)**: el usuario aportó
+`data/imagenes_rutas/vista/cinta.PNG` (solo la cinta; esta pestaña casi no
+tiene desplegables ni cuadros). Se creó `data/rutas/vista.txt` con la
+estructura de grupos. El banco (144 preguntas, de la integración de
+`vista_procesada_fuente.md`) ya estaba muy completo. **+7 preguntas**
+(`vista-159..165`) + **+5 flashcards**: Modo de lectura = maximiza espacio y
+se sale con Esc (pregunta oficial AGE 2018), los 3 botones de Zoom (Una
+página / Varias páginas / Ancho de página) y qué hace cada uno, «Movimiento
+de página ▸ En paralelo» (pasar páginas como un libro, ≠ «Ver en paralelo»
+del grupo Ventana), Esquema y Borrador NO están en la barra de estado (solo
+Modo lectura/Diseño impresión/Diseño web + Concentración), «Nueva ventana»
+= misma copia del documento, grupo SharePoint. Generado inline (sin
+script guardado). vista.json 144→151.
+
 **Revisar — 44 capturas del usuario (sep-2026)**: el usuario aportó
 `data/imagenes_rutas/revisar/` (44 pantallazos) → **primer volcado propio de
 esta pestaña**, `data/rutas/revisar.txt` (antes NO existía; era el hueco

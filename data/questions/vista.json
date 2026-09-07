@@ -997,6 +997,42 @@
     "explicacion": "La «Vista previa de impresión» no es un botón del grupo Vistas: se accede desde Archivo ▸ Imprimir. El grupo Vistas tiene Modo de lectura, Diseño de impresión, Diseño Web, Vista Esquema y Vista Borrador."
   },
   {
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vista",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "vista-159",
+    "sourceQuestionId": "capt-vista-159",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Que vista de Word 365 maximiza el espacio de la pantalla para leer, ocultando la cinta y los encabezados/pies, y se abandona pulsando Esc?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Modo de lectura"
+      },
+      {
+        "letter": "B",
+        "text": "Diseno web"
+      },
+      {
+        "letter": "C",
+        "text": "Borrador"
+      },
+      {
+        "letter": "D",
+        "text": "Esquema"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "En 2010 se llamaba «Lectura de pantalla completa». Muestra dos paginas si caben y una barra superior minima; Esc vuelve a la vista anterior."
+  },
+  {
     "id": "vista-8",
     "sourceFile": "vista.json",
     "bloque": "Vista — Vistas",
@@ -1250,6 +1286,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Son las cinco vistas del grupo, con Modo de lectura como la primera de la galería."
+  },
+  {
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Vistas",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vista",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "vista-163",
+    "sourceQuestionId": "capt-vista-163",
+    "tipo": "verdadero_falso",
+    "enunciado": "Las vistas Esquema y Borrador tienen boton en la barra de estado inferior de Word, igual que Modo de lectura, Diseno de impresion y Diseno web.",
+    "opciones": [],
+    "respuesta": false,
+    "explicacion": "Falso: en la barra de estado inferior solo estan Modo de lectura, Diseno de impresion y Diseno web (mas el conmutador de Concentracion). Esquema y Borrador solo se activan desde la pestana Vista."
   },
   {
     "id": "vista-9",
@@ -1875,6 +1930,42 @@
     "explicacion": "Concentración oculta toda la interfaz con fondo oscuro y se sale con Esc. El Lector inmersivo reúne foco de líneas, espaciado, división por sílabas y lectura en voz alta para mejorar la comprensión y la fluidez de lectura. Los dos están en el grupo Inmersivo de la pestaña Vista."
   },
   {
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Movimiento-pagina",
+    "section": "vista",
+    "topic": "movimiento-pagina",
+    "subtopic": null,
+    "tema": "Vista",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "vista-162",
+    "sourceQuestionId": "capt-vista-162",
+    "tipo": "opcion_unica",
+    "enunciado": "En el grupo «Movimiento de pagina», ¿que hace la opcion «En paralelo»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Las paginas se pasan de lado a lado, como al hojear un libro (util con pantalla tactil)"
+      },
+      {
+        "letter": "B",
+        "text": "Muestra dos documentos distintos lado a lado"
+      },
+      {
+        "letter": "C",
+        "text": "Divide la ventana en dos paneles"
+      },
+      {
+        "letter": "D",
+        "text": "Sincroniza el desplazamiento de dos ventanas"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "La opcion por defecto es «Vertical» (scroll hacia abajo). «En paralelo» NO es lo mismo que «Ver en paralelo» del grupo Ventana (eso son dos documentos)."
+  },
+  {
     "id": "vista-16",
     "sourceFile": "vista.json",
     "bloque": "Vista — Movimiento de página",
@@ -2376,6 +2467,78 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "Ctrl++ acerca el zoom, no lo aleja. El que aleja es Ctrl+- (de 10 en 10 puntos)."
+  },
+  {
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Zoom",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": null,
+    "tema": "Vista",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "vista-160",
+    "sourceQuestionId": "capt-vista-160",
+    "tipo": "opcion_unica",
+    "enunciado": "En el grupo Zoom hay tres botones de presentacion rapida. ¿Cuales son?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Una pagina, Varias paginas y Ancho de pagina"
+      },
+      {
+        "letter": "B",
+        "text": "25 %, 50 % y 100 %"
+      },
+      {
+        "letter": "C",
+        "text": "Vertical, Horizontal y Ajustado"
+      },
+      {
+        "letter": "D",
+        "text": "Lectura, Impresion y Web"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Una pagina» encaja una pagina entera; «Varias paginas» muestra varias a la vez; «Ancho de pagina» hace que el ancho del papel ocupe la ventana. El boton «100%» esta aparte."
+  },
+  {
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Zoom",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": null,
+    "tema": "Vista",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "vista-161",
+    "sourceQuestionId": "capt-vista-161",
+    "tipo": "opcion_unica",
+    "enunciado": "En el grupo Zoom, ¿que hace el boton «Ancho de pagina»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ajusta el zoom para que el ancho del papel (con sus margenes) ocupe toda la ventana"
+      },
+      {
+        "letter": "B",
+        "text": "Ajusta el zoom para que solo el texto, sin margenes, ocupe el ancho"
+      },
+      {
+        "letter": "C",
+        "text": "Muestra dos paginas una al lado de otra"
+      },
+      {
+        "letter": "D",
+        "text": "Pone el zoom al 100 %"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Ancho de pagina» incluye los margenes; «Ancho del texto» (solo en el cuadro Zoom) los excluye; «Una pagina» encaja la pagina entera."
   },
   {
     "id": "vista-21",
@@ -3464,6 +3627,42 @@
     "explicacion": "El Panel de navegación está en el grupo Mostrar, no en el grupo Ventana."
   },
   {
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Ventana",
+    "section": "vista",
+    "topic": "ventana",
+    "subtopic": null,
+    "tema": "Vista",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "vista-164",
+    "sourceQuestionId": "capt-vista-164",
+    "tipo": "opcion_unica",
+    "enunciado": "«Nueva ventana» del grupo Ventana, ¿que abre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Otra ventana que muestra el MISMO documento (los cambios se ven en las dos)"
+      },
+      {
+        "letter": "B",
+        "text": "Un documento nuevo en blanco"
+      },
+      {
+        "letter": "C",
+        "text": "Una copia independiente del documento"
+      },
+      {
+        "letter": "D",
+        "text": "El documento en el navegador web"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Sirve para ver dos partes del mismo documento a la vez. «Organizar todo» coloca todas las ventanas abiertas; «Restablecer posicion de la ventana» iguala el tamano de dos ventanas puestas «en paralelo»."
+  },
+  {
     "id": "vista-33",
     "sourceFile": "vista.json",
     "bloque": "Vista — Ventana",
@@ -4543,6 +4742,25 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: el elemento es Propiedades (correcto), pero la fuente NO proporciona descripción funcional específica de ese botón. No debe inventarse una descripción."
+  },
+  {
+    "sourceFile": "vista.json",
+    "bloque": "Vista — Sharepoint",
+    "section": "vista",
+    "topic": "sharepoint",
+    "subtopic": null,
+    "tema": "Vista",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "vista-165",
+    "sourceQuestionId": "capt-vista-165",
+    "tipo": "verdadero_falso",
+    "enunciado": "El grupo «SharePoint» de la pestana Vista, con el boton «Propiedades», solo es util cuando el documento esta guardado en un sitio de SharePoint.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Muestra y edita las propiedades del documento definidas en la biblioteca de SharePoint. Si el documento es local, no aporta nada."
   },
   {
     "id": "vista-43",
