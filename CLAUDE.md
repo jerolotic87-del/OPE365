@@ -208,10 +208,17 @@ Reescritura **a mano, ítem por ítem** — ningún script genera contenido.
 `scripts/aplicar_reescritura.py` solo vuelca al JSON el texto ya escrito y
 valida (4 opciones, respuesta viva, sin repetidas, longitudes, explicación).
 
-**Progreso de la reescritura**: `archivo` 141/410 — cerrados enteros los
-topics `backstage`, `nuevo`, `abrir`, `informacion`, `guardar`, `imprimir`,
-`compartir`, `exportar`, `cerrar` y `cuenta`. Queda solo el bloque
-`opciones-*` (269 preguntas).
+**Progreso de la reescritura**: `archivo` 180/410 — cerrados enteros todos
+los topics salvo `opciones-*`, del que van hechos `opciones-general` y
+`opciones-presentacion`. Quedan 230 preguntas de `opciones-*`.
+
+**Chivato de longitud**: `scripts/aplicar_reescritura.py` avisa cuando la
+opción correcta es la más larga o la más corta **con hueco** (ratio >1,5 y
+más de 12 caracteres de diferencia con su vecina). No basta con que las
+cuatro midan parecido — los nombres reales de la interfaz miden lo que
+miden —; lo que delata es que la buena sea la única que destaca. Al pasarlo
+sobre `archivo.json` entero salieron 22 casos, 18 de ellos en los bloques
+`opciones-*` todavía sin reescribir: sirve como lista de trabajo.
 
 **Efecto secundario en el motor (sep-2026), ya resuelto**: `framingOf()` de
 `engine.js` deducía un framing `"caso"` de la REDACCIÓN del enunciado

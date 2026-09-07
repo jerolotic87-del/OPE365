@@ -60,9 +60,24 @@ def main(patch_path):
                     print("  !!", qid, "respuesta", q.get("respuesta"), "no está en", letras); return 1
             if len(set(textos)) != len(textos):
                 print("  !!", qid, "tiene opciones repetidas"); return 1
+            # Lo que delata una pregunta no es que las opciones midan distinto
+            # (los nombres reales de la interfaz miden lo que miden), sino que
+            # la CORRECTA sea la única larga o la única corta. Se avisa solo
+            # cuando hay un hueco claro entre ella y su vecina más próxima.
             largos = [len(o["text"]) for o in ops]
-            if largos and max(largos) > 2.2 * min(largos):
-                avisos.append("%s: longitudes muy desiguales %s" % (qid, largos))
+            if len(largos) >= 3:
+                L = {o["letter"]: len(o["text"]) for o in ops}
+                r = q.get("respuesta")
+                rs = r if isinstance(r, list) else [r]
+                buenas = [L[x] for x in rs if x in L]
+                otras = sorted(L[k] for k in L if k not in rs)
+                for c in buenas:
+                    if otras and c < otras[0] and otras[0] > 1.5 * c and otras[0] - c > 12:
+                        avisos.append("%s: la correcta es la MÁS CORTA con hueco (%d vs %d)"
+                                      % (qid, c, otras[0])); break
+                    if otras and c > otras[-1] and c > 1.5 * otras[-1] and c - otras[-1] > 12:
+                        avisos.append("%s: la correcta es la MÁS LARGA con hueco (%d vs %d)"
+                                      % (qid, c, otras[-1])); break
             expl = (q.get("explicacion") or "")
             if len(expl) < 120:
                 avisos.append("%s: explicación demasiado corta (%d)" % (qid, len(expl)))

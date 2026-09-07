@@ -4290,28 +4290,28 @@
     "subtopic": "General",
     "tema": "Opciones",
     "sourceQuestionId": "8-56",
-    "enunciado": "¿Desde qué ruta se configura el tema de color de la interfaz de Word?",
+    "enunciado": "Cambias el tema de Office desde Archivo → Cuenta. ¿Desde qué otro sitio de Word se cambia exactamente lo mismo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → General → Personalizar la copia de Microsoft Office"
+        "text": "Opciones → General → Personalizar la copia de Microsoft Office"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Presentación → Tema de interfaz"
+        "text": "Opciones → Presentación → Opciones de presentación de página"
       },
       {
         "letter": "C",
-        "text": "Archivo → Cuenta → Tema de Office"
+        "text": "Opciones → Accesibilidad → Comentarios de la aplicación"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Avanzadas → Apariencia e interfaz"
+        "text": "Opciones → Avanzadas → Mostrar contenido del documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El tema de color se configura en Archivo → Opciones → General dentro de la sección Personalizar la copia de Microsoft Office. La opción Cuenta en Backstage también permite cambiar el tema, pero la ruta dentro de Opciones es la que se configura de forma centralizada. Presentación controla la visualización del documento, no de la interfaz."
+    "explicacion": "El tema de Office tiene dos puertas que llevan al mismo ajuste: el panel Cuenta de Backstage y la sección «Personalizar la copia de Microsoft Office» de Opciones → General. Cambiarlo en una se refleja en la otra, porque es la misma configuración de la aplicación. · Presentación decide qué se ve del DOCUMENTO en pantalla y al imprimir (marcas de formato, espacio entre páginas, resaltados), no el aspecto del programa. · Accesibilidad ajusta el texto alternativo y el comportamiento del comprobador. · Avanzadas → Mostrar contenido del documento controla si se ven marcadores, códigos de campo o imágenes, otra vez del documento. · Las cuatro son secciones reales: la trampa es que las tres falsas suenan todas a «cómo se ve algo»."
   },
   {
     "id": "archivo-65",
@@ -4325,28 +4325,28 @@
     "subtopic": "General",
     "tema": "Opciones",
     "sourceQuestionId": "8-57",
-    "enunciado": "¿Desde qué ruta se cambia el nombre de usuario y las iniciales que Word usa al realizar revisiones y comentarios?",
+    "enunciado": "Los comentarios que insertas aparecen firmados con un nombre que ya no usas, y quieres cambiar ese nombre y sus iniciales. ¿Dónde?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → General → Personalizar la copia de Microsoft Office"
+        "text": "Opciones → General → Personalizar la copia de Microsoft Office"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Identificación de usuario"
+        "text": "Archivo → Cuenta → Información del usuario"
       },
       {
         "letter": "C",
-        "text": "Archivo → Información → Propiedades → Cambiar autor"
+        "text": "Opciones → Revisión → Al corregir la ortografía en Word"
       },
       {
         "letter": "D",
-        "text": "Archivo → Cuenta → Perfil → Nombre de usuario"
+        "text": "Información → Propiedades → Mostrar todas las propiedades"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El nombre de usuario y las iniciales se configuran en Archivo → Opciones → General dentro de Personalizar la copia de Microsoft Office. No existe Identificación de usuario en Avanzadas. Las propiedades del documento muestran el autor pero no permiten cambiar el nombre de usuario global. La sección Cuenta muestra la cuenta de Microsoft pero no el nombre de usuario para revisiones."
+    "explicacion": "El nombre de usuario y las iniciales que Word estampa en comentarios y marcas de revisión están en Opciones → General, dentro de «Personalizar la copia de Microsoft Office», y justo debajo hay una casilla para que se usen siempre esos valores aunque inicies sesión con otra cuenta. · El panel Cuenta muestra el nombre de la cuenta de Microsoft, que es otra cosa: puedes tener ahí un nombre y firmar los comentarios con otro. Ese es el matiz que se pregunta. · Revisión configura el corrector, no la identidad. · Las propiedades del documento tienen un campo Autor, pero es del archivo concreto y no cambia con qué nombre firmas los comentarios nuevos."
   },
   {
     "id": "archivo-66",
@@ -4360,28 +4360,28 @@
     "subtopic": "General",
     "tema": "Opciones",
     "sourceQuestionId": "8-58",
-    "enunciado": "¿Desde qué ruta se activa la pantalla de inicio que aparece al abrir Word 365?",
+    "enunciado": "Al abrir Word te salta la pantalla con las plantillas y los documentos recientes, y prefieres que entre directo a un documento en blanco. ¿En qué sección de Opciones → General lo quitas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → General → Opciones de inicio"
+        "text": "Opciones de inicio"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Presentación → Pantalla de inicio"
+        "text": "Opciones de arranque"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Mostrar pantalla de inicio"
+        "text": "Configuración de privacidad"
       },
       {
         "letter": "D",
-        "text": "Archivo → Cuenta → Configuración de inicio"
+        "text": "Opciones de interfaz de usuario"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción para mostrar la pantalla de inicio al iniciar Word se encuentra en Archivo → Opciones → General dentro de Opciones de inicio. No existe esa opción en Presentación ni en Avanzadas ni en la sección Cuenta."
+    "explicacion": "«Opciones de inicio» es la última sección del panel General, y ahí está la casilla «Mostrar la pantalla Inicio cuando se inicie esta aplicación», junto a las extensiones que Word quiere abrir por defecto. · «Opciones de arranque» no existe: es el mismo concepto con otra palabra, y sin haber visto el panel no hay forma de saber cuál de las dos es la buena. Ese es todo el ejercicio. · «Opciones de interfaz de usuario» es la sección de arriba y también habla de lo que se ve al usar Word (minibarra, vista previa activa, contraer la cinta), pero de la sesión ya empezada, no del arranque. · «Configuración de privacidad» es el bloque de experiencias conectadas y datos de diagnóstico."
   },
   {
     "id": "archivo-67",
@@ -4395,28 +4395,28 @@
     "subtopic": "General",
     "tema": "Opciones",
     "sourceQuestionId": "8-59",
-    "enunciado": "Para permitir la edición simultánea en documentos que contienen macros, ¿desde qué ruta se activa esa opción?",
+    "enunciado": "Un documento con macros no deja que dos personas lo editen a la vez. ¿En qué sección de Opciones → General se habilita la coautoría para archivos con macros?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → General → Opciones de coautoría"
+        "text": "Opciones de coautoría para archivos con macros"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Colaboración en tiempo real"
+        "text": "Personalizar la copia de Microsoft Office"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Guardar → Habilitar coautoría en archivos con macros"
+        "text": "Opciones de interfaz de usuario"
       },
       {
         "letter": "D",
-        "text": "Archivo → Compartir → Configurar coautoría con macros"
+        "text": "Configuración de privacidad"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción para permitir coautoría en archivos con macros está en Archivo → Opciones → General dentro de Opciones de coautoría. No existe esa opción en Avanzadas ni en Guardar ni en la sección Compartir."
+    "explicacion": "Es una sección propia del panel General con ese nombre exacto, y contiene una única casilla. Existe porque un archivo con macros no se puede coeditar sin más: hay que aceptar explícitamente el riesgo. · Buscarlo en el Centro de confianza sería lo lógico, y ahí falla casi todo el mundo: el Centro de confianza decide si las macros se EJECUTAN, y esto decide si el archivo que las lleva se puede editar entre varios. · «Personalizar la copia de Microsoft Office» guarda el nombre de usuario, el fondo y el tema. · «Opciones de interfaz de usuario» y «Configuración de privacidad» son las otras dos secciones reales del panel, y ninguna toca la coautoría."
   },
   {
     "id": "archivo-68",
@@ -4430,7 +4430,7 @@
     "subtopic": "General",
     "tema": "Opciones",
     "sourceQuestionId": "8-60",
-    "enunciado": "¿Cuántas categorías tiene el cuadro de diálogo Opciones de Word 365?",
+    "enunciado": "Abres Archivo → Opciones y miras la columna de la izquierda. ¿Cuántas categorías tiene el cuadro Opciones de Word?",
     "opciones": [
       {
         "letter": "A",
@@ -4438,20 +4438,20 @@
       },
       {
         "letter": "B",
-        "text": "Ocho"
-      },
-      {
-        "letter": "C",
         "text": "Nueve"
       },
       {
-        "letter": "D",
+        "letter": "C",
         "text": "Trece"
+      },
+      {
+        "letter": "D",
+        "text": "Ocho"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Las once categorías son General, Presentación, Revisión, Guardar, Idioma, Accesibilidad, Avanzadas, Personalizar cinta de opciones, Barra de herramientas de acceso rápido, Complementos y Centro de confianza."
+    "explicacion": "Son once: General, Presentación, Revisión, Guardar, Idioma, Accesibilidad, Avanzadas, Personalizar cinta de opciones, Barra de herramientas de acceso rápido, Complementos y Centro de confianza. · Se cuentan de menos con facilidad porque las cuatro últimas van separadas por una línea del resto: son las de personalizar y proteger la aplicación, frente a las siete primeras que configuran cómo trabaja Word. Quedarse en las siete de arriba, o en nueve al añadir un par, es el error habitual. · «Accesibilidad» es de las más recientes y mucha gente ni la ha visto, lo que hace fácil quedarse en diez."
   },
   {
     "id": "archivo-134",
@@ -4466,28 +4466,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-01",
     "generado": true,
-    "enunciado": "Trabajas con Word en un equipo con dos monitores y notas que la interfaz se ve borrosa o con el texto poco nítido en la segunda pantalla. ¿Dónde configurarías Word para mejorar cómo se ve la aplicación en pantallas múltiples?",
+    "enunciado": "Trabajas con dos monitores y en el segundo el texto de Word se ve borroso. En Opciones → General → Opciones de interfaz de usuario, ¿qué eliges en «Cuando se utilizan varias pantallas»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de interfaz de usuario ▸ Contraer la cinta de opciones automáticamente"
+        "text": "Optimizar la apariencia"
       },
       {
         "letter": "B",
-        "text": "Opciones de interfaz de usuario ▸ Estilo de información en pantalla"
+        "text": "Optimizar para compatibilidad"
       },
       {
         "letter": "C",
-        "text": "Opciones de interfaz de usuario ▸ Optimizar la apariencia"
+        "text": "Habilitar vista previa activa"
       },
       {
         "letter": "D",
-        "text": "Opciones de interfaz de usuario ▸ Mostrar minibarra de herramientas al seleccionar"
+        "text": "Estilo de información en pantalla"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Opciones de interfaz de usuario → Cuando se utilizan varias pantallas → Optimizar la apariencia. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "«Optimizar la apariencia» le dice a Office que redibuje la interfaz a la resolución real de cada pantalla: el texto sale nítido, a costa de que algunas funciones antiguas puedan comportarse raro. · «Optimizar para compatibilidad» es la otra mitad de la MISMA pareja de botones, y es la que produce el texto borroso: Office dibuja a una resolución y Windows escala la imagen. Elegir mal entre estas dos es exactamente el problema del enunciado, por eso son las dos únicas respuestas plausibles. · «Habilitar vista previa activa» y «Estilo de información en pantalla» están en esa misma sección pero no tienen nada que ver con las pantallas. · El cambio exige reiniciar Office para verse."
   },
   {
     "id": "archivo-135",
@@ -4502,28 +4502,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-02",
     "generado": true,
-    "enunciado": "Usas Word con varios monitores y experimentas un comportamiento de visualización extraño al mover la ventana entre pantallas. ¿Dónde encontrarías la opción para priorizar la compatibilidad y tratar de resolver esos problemas de visualización?",
+    "enunciado": "Al mover la ventana de Word de un monitor a otro se descoloca y algún complemento antiguo deja de dibujarse bien. ¿Qué eliges en «Cuando se utilizan varias pantallas»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de interfaz de usuario ▸ Contraer la cinta de opciones automáticamente"
+        "text": "Optimizar para compatibilidad"
       },
       {
         "letter": "B",
-        "text": "Opciones de interfaz de usuario ▸ Optimizar para compatibilidad"
+        "text": "Optimizar la apariencia"
       },
       {
         "letter": "C",
-        "text": "Opciones de interfaz de usuario ▸ Optimizar la apariencia"
+        "text": "Contraer la cinta de opciones automáticamente"
       },
       {
         "letter": "D",
-        "text": "Opciones de interfaz de usuario ▸ Contraer el cuadro de Búsqueda de Microsoft de manera predeterminada"
+        "text": "Actualizar el contenido del documento al arrastrar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Opciones de interfaz de usuario → Cuando se utilizan varias pantallas → Optimizar para compatibilidad. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "«Optimizar para compatibilidad» renuncia a la nitidez para que todo se dibuje del modo clásico: el texto sale algo más borroso en pantallas de alta resolución, pero desaparecen los problemas de complementos y ventanas que no se recolocan. · «Optimizar la apariencia» es la opción contraria de la misma pareja, la que da texto nítido y puede provocar justo lo que describe el enunciado. Son las dos caras de un mismo botón. · Contraer la cinta y actualizar al arrastrar son casillas vecinas de la misma sección, sin relación con los monitores. · Como el ajuste toca el motor de dibujo, no se aplica hasta reiniciar Office."
   },
   {
     "id": "archivo-136",
@@ -4538,28 +4538,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-03",
     "generado": true,
-    "enunciado": "Cada vez que seleccionas texto en Word te aparece una pequeña barra flotante con opciones de formato y te resulta molesta. ¿Dónde irías para desactivarla?",
+    "enunciado": "Cada vez que seleccionas texto aparece flotando una barrita con la fuente, el tamaño y la negrita, y te estorba. ¿Qué casilla de Opciones de interfaz de usuario desactivas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de interfaz de usuario ▸ Contraer la cinta de opciones automáticamente"
+        "text": "Mostrar minibarra de herramientas al seleccionar"
       },
       {
         "letter": "B",
-        "text": "Opciones de interfaz de usuario ▸ Actualizar el contenido del documento al arrastrar"
+        "text": "Habilitar vista previa activa"
       },
       {
         "letter": "C",
-        "text": "Opciones de interfaz de usuario ▸ Optimizar la apariencia"
+        "text": "Contraer la cinta de opciones automáticamente"
       },
       {
         "letter": "D",
-        "text": "Opciones de interfaz de usuario ▸ Mostrar minibarra de herramientas al seleccionar"
+        "text": "Mostrar información sobre herramientas del documento"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Opciones de interfaz de usuario → Mostrar minibarra de herramientas al seleccionar. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "Esa barrita se llama minibarra de herramientas y aparece atenuada al seleccionar, ganando opacidad si acercas el puntero. La casilla que la controla lleva su nombre exacto. · «Habilitar vista previa activa» es lo que hace que el texto cambie de aspecto al pasar el ratón por los estilos: también es un efecto que se dispara solo al pasar el puntero, y por eso se confunde. La diferencia es que una muestra un menú y la otra previsualiza el resultado. · Contraer la cinta afecta a la cinta entera, no a la selección. · La información sobre herramientas del documento son los emergentes de hipervínculos y comentarios, y ni siquiera está en este panel: vive en Presentación."
   },
   {
     "id": "archivo-137",
@@ -4574,28 +4574,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-04",
     "generado": true,
-    "enunciado": "Al pasar el ratón por los estilos o fuentes de la cinta, Word solía mostrarte cómo quedaría el formato aplicado antes de hacer clic, pero ahora ya no lo hace. ¿Dónde activarías de nuevo esa función?",
+    "enunciado": "Antes, al pasar el ratón por la galería de estilos, el texto del documento cambiaba de aspecto para enseñarte el resultado. Ha dejado de hacerlo. ¿Qué casilla reactivas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de interfaz de usuario ▸ Habilitar vista previa activa"
+        "text": "Habilitar vista previa activa"
       },
       {
         "letter": "B",
-        "text": "Opciones de interfaz de usuario ▸ Optimizar la apariencia"
+        "text": "Mostrar minibarra de herramientas al seleccionar"
       },
       {
         "letter": "C",
-        "text": "Opciones de interfaz de usuario ▸ Optimizar para compatibilidad"
+        "text": "Actualizar el contenido del documento al arrastrar"
       },
       {
         "letter": "D",
-        "text": "Opciones de interfaz de usuario ▸ Contraer la cinta de opciones automáticamente"
+        "text": "Optimizar la apariencia"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Opciones de interfaz de usuario → Habilitar vista previa activa. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "explicacion": "La vista previa activa es la que aplica el formato «en falso» mientras el puntero está encima de la galería y lo retira al salir, sin tocar el documento hasta que haces clic. Desactivarla acelera Word en equipos lentos, y por eso a veces está apagada. · «Actualizar el contenido del documento al arrastrar» es el distractor más fino de los cuatro: también es una previsualización en tiempo real, pero al mover objetos, no al pasar por la cinta. Los dos son «ver el resultado antes de confirmarlo», aplicados a gestos distintos. · La minibarra muestra comandos, no previsualiza nada. · «Optimizar la apariencia» es de las pantallas múltiples."
   },
   {
     "id": "archivo-138",
@@ -4610,28 +4610,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-05",
     "generado": true,
-    "enunciado": "Cuando arrastras un objeto o imagen dentro del documento, el contenido no se recoloca hasta que sueltas el ratón, y quieres que se actualice en tiempo real mientras arrastras. ¿Dónde lo configurarías?",
+    "enunciado": "Al arrastrar una imagen por el documento, el texto no se recoloca hasta que sueltas el botón, y quieres verlo fluir mientras arrastras. ¿Qué casilla activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de interfaz de usuario ▸ Optimizar la apariencia"
+        "text": "Actualizar el contenido del documento al arrastrar"
       },
       {
         "letter": "B",
-        "text": "Opciones de interfaz de usuario ▸ Contraer el cuadro de Búsqueda de Microsoft de manera predeterminada"
+        "text": "Contraer el cuadro de Búsqueda de Microsoft de manera predeterminada"
       },
       {
         "letter": "C",
-        "text": "Opciones de interfaz de usuario ▸ Estilo de información en pantalla"
+        "text": "Estilo de información en pantalla"
       },
       {
         "letter": "D",
-        "text": "Opciones de interfaz de usuario ▸ Actualizar el contenido del documento al arrastrar"
+        "text": "Habilitar vista previa activa"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Opciones de interfaz de usuario → Actualizar el contenido del documento al arrastrar. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "Con esta casilla activada, Word recalcula el flujo del texto en cada píxel del arrastre; desactivada, espera a que sueltes el botón. Es un ajuste de rendimiento: en documentos largos o con muchas imágenes, apagarlo va bastante más suave. · «Habilitar vista previa activa» es la previsualización hermana, pero de la cinta: cambia el aspecto del texto al pasar por una galería de estilos. Las dos anticipan un resultado antes de confirmarlo, y ahí está la confusión; una responde al arrastre y la otra al puntero sobre la cinta. · «Estilo de información en pantalla» decide cuánto texto llevan los emergentes de la cinta. · «Contraer el cuadro de Búsqueda de Microsoft» encoge el buscador de la barra de título. · Las cuatro conviven en Opciones → General → Opciones de interfaz de usuario."
   },
   {
     "id": "archivo-139",
@@ -4646,28 +4646,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-06",
     "generado": true,
-    "enunciado": "Quieres que la cinta de opciones de Word se contraiga sola tras usar un comando, de forma permanente, para ganar espacio de edición. ¿Dónde activarías ese comportamiento automático?",
+    "enunciado": "Quieres que la cinta se repliegue sola después de usar un comando, para ganar altura de pantalla, y que ese comportamiento sea el de siempre. ¿Qué casilla activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de interfaz de usuario ▸ Optimizar para compatibilidad"
+        "text": "Contraer la cinta de opciones automáticamente"
       },
       {
         "letter": "B",
-        "text": "Opciones de interfaz de usuario ▸ Habilitar vista previa activa"
+        "text": "Contraer el cuadro de Búsqueda de Microsoft de manera predeterminada"
       },
       {
         "letter": "C",
-        "text": "Opciones de interfaz de usuario ▸ Estilo de información en pantalla"
+        "text": "Optimizar para compatibilidad"
       },
       {
         "letter": "D",
-        "text": "Opciones de interfaz de usuario ▸ Contraer la cinta de opciones automáticamente"
+        "text": "Habilitar vista previa activa"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Opciones de interfaz de usuario → Contraer la cinta de opciones automáticamente. Atajo relacionado: Ctrl+F1. Ctrl+F1, el doble clic en una pestaña o el clic derecho > Contraer la cinta son gestos MANUALES y puntuales; esta opción activa el contraído AUTOMÁTICO y permanente tras cada uso."
+    "respuesta": "A",
+    "explicacion": "Esta casilla deja la cinta contraída de forma permanente: se despliega al hacer clic en una ficha y se vuelve a plegar en cuanto usas un comando. · La opción B es el distractor de más nivel porque empieza igual, con «Contraer», y es igual de real: pero encoge el cuadro de búsqueda de la barra de título, que es otro elemento y ocupa otro sitio. Leer solo la primera palabra te cuesta la pregunta. · Ctrl+F1 hace lo mismo que esta casilla pero de forma puntual, para ese momento; la casilla lo fija. También se consigue con doble clic en cualquier ficha o desde el menú contextual de la cinta."
   },
   {
     "id": "archivo-140",
@@ -4682,28 +4682,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-07",
     "generado": true,
-    "enunciado": "La barra de búsqueda de Microsoft de la parte superior de Word ocupa espacio y prefieres que aparezca reducida por defecto. ¿Dónde lo configurarías?",
+    "enunciado": "El cuadro de búsqueda de la barra de título te parece demasiado ancho y prefieres que salga reducido a un icono. ¿Qué casilla activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de interfaz de usuario ▸ Optimizar para compatibilidad"
+        "text": "Contraer el cuadro de Búsqueda de Microsoft de manera predeterminada"
       },
       {
         "letter": "B",
-        "text": "Opciones de interfaz de usuario ▸ Actualizar el contenido del documento al arrastrar"
+        "text": "Contraer la barra de título de manera predeterminada"
       },
       {
         "letter": "C",
-        "text": "Opciones de interfaz de usuario ▸ Contraer el cuadro de Búsqueda de Microsoft de manera predeterminada"
+        "text": "Contraer la cinta de opciones automáticamente"
       },
       {
         "letter": "D",
-        "text": "Opciones de interfaz de usuario ▸ Optimizar la apariencia"
+        "text": "Mostrar minibarra de herramientas al seleccionar"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Opciones de interfaz de usuario → Contraer el cuadro de Búsqueda de Microsoft de manera predeterminada. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "El cuadro de Búsqueda de Microsoft es el de la barra de título, al que también se llega con Alt+Q. Esta casilla lo deja encogido de partida y solo se expande al pulsarlo. · «Contraer la barra de título» no existe, y está puesta porque el cuadro de búsqueda VIVE en la barra de título: quien recuerde dónde está el elemento pero no el nombre exacto de la casilla, cae aquí. · «Contraer la cinta de opciones automáticamente» sí existe y también empieza por «Contraer», pero pliega la cinta entera, que está debajo y es otro elemento. Las dos conviven en esta misma sección. · La minibarra es la que sale al seleccionar texto. · Encoger el cuadro no lo desactiva: Alt+Q sigue llevando el foco hasta él."
   },
   {
     "id": "archivo-141",
@@ -4718,28 +4718,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-08",
     "generado": true,
-    "enunciado": "Al escribir un comentario en Word de un compañero aparece un botón \"Publicar\" que no existe en tu equipo, donde los comentarios se confirman solos al escribir. ¿Dónde activarías la experiencia de comentarios moderna?",
+    "enunciado": "En el equipo de un compañero, al escribir un comentario aparece un botón «Publicar» y en el tuyo el comentario se confirma solo. ¿Qué casilla marca esa diferencia?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de interfaz de usuario ▸ Habilitar comentarios modernos"
+        "text": "Habilitar comentarios modernos"
       },
       {
         "letter": "B",
-        "text": "Opciones de interfaz de usuario ▸ Mostrar minibarra de herramientas al seleccionar"
+        "text": "Mostrar minibarra de herramientas al seleccionar"
       },
       {
         "letter": "C",
-        "text": "Opciones de interfaz de usuario ▸ Estilo de información en pantalla"
+        "text": "Habilitar vista previa activa"
       },
       {
         "letter": "D",
-        "text": "Opciones de interfaz de usuario ▸ Contraer el cuadro de Búsqueda de Microsoft de manera predeterminada"
+        "text": "Mostrar información sobre herramientas del documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Opciones de interfaz de usuario → Habilitar comentarios modernos. Con comentarios modernos, el comentario se inserta con Alt+Ctrl+A y se confirma con Ctrl+Entrar (el botón Publicar). Esta opción NO tiene atajo para activarse."
+    "explicacion": "Con los comentarios modernos activados, el comentario no existe hasta que pulsas «Publicar» (o Ctrl+Entrar), y se pueden mencionar personas y responder en hilo. Sin ellos, el comentario clásico queda escrito en el globo en cuanto tecleas. · Las otras tres casillas conviven en la misma sección y todas cambian algo de la interfaz, pero ninguna toca los comentarios. · La información sobre herramientas del documento sí afecta a los comentarios de refilón, porque es la que muestra el emergente al pasar por una marca de comentario, pero no cambia cómo se escriben; además está en Presentación, no aquí."
   },
   {
     "id": "archivo-142",
@@ -4754,28 +4754,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-09",
     "generado": true,
-    "enunciado": "Al pasar el ratón por los botones de la cinta, Word muestra ventanas emergentes describiendo cada función. Quieres cambiar si se muestran con detalle, de forma breve, o no se muestran. ¿Dónde lo ajustarías?",
+    "enunciado": "Al pasar el ratón por los botones de la cinta salen recuadros explicando cada comando. Quieres que salgan más escuetos, o quitarlos. ¿Qué ajuste tocas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de interfaz de usuario ▸ Contraer la cinta de opciones automáticamente"
+        "text": "Estilo de información en pantalla"
       },
       {
         "letter": "B",
-        "text": "Opciones de interfaz de usuario ▸ Optimizar para compatibilidad"
+        "text": "Mostrar información sobre herramientas del documento"
       },
       {
         "letter": "C",
-        "text": "Opciones de interfaz de usuario ▸ Mostrar minibarra de herramientas al seleccionar"
+        "text": "Mostrar minibarra de herramientas al seleccionar"
       },
       {
         "letter": "D",
-        "text": "Opciones de interfaz de usuario ▸ Estilo de información en pantalla"
+        "text": "Habilitar vista previa activa"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Opciones de interfaz de usuario → Estilo de información en pantalla. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "Es un desplegable, no una casilla, y ofrece tres niveles: mostrar descripciones de características, no mostrarlas (solo el nombre) y no mostrar ninguna información. · La opción B es el distractor duro y muchos la marcan: también son emergentes al pasar el puntero, pero sobre el DOCUMENTO (hipervínculos, marcas de comentario), no sobre la cinta, y además está en el panel Presentación. Mismo gesto, distinto sitio y distinto panel. · La minibarra aparece al seleccionar, no al pasar por encima. · La vista previa activa cambia el aspecto del texto, no muestra texto explicativo."
   },
   {
     "id": "archivo-143",
@@ -4790,28 +4790,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-12",
     "generado": true,
-    "enunciado": "Usas Word con varias cuentas de Microsoft y quieres que el nombre de usuario y las iniciales sean siempre los mismos, sea cual sea la cuenta con la que hayas iniciado sesión. ¿Dónde activarías esa opción?",
+    "enunciado": "Usas Word con dos cuentas Microsoft distintas y quieres que tus comentarios se firmen siempre igual, entres con la que entres. ¿Qué activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Personalizar la copia de Microsoft Office ▸ Tema de Office"
+        "text": "Usar siempre estos valores sin tener en cuenta la cuenta de inicio de sesión"
       },
       {
         "letter": "B",
-        "text": "Personalizar la copia de Microsoft Office ▸ Usar siempre estos valores sin tener en cuenta la cuenta de inicio de sesión en Office"
+        "text": "No cambiar nunca el color de la página del documento"
       },
       {
         "letter": "C",
-        "text": "Personalizar la copia de Microsoft Office ▸ No cambiar nunca el color de la página del documento"
+        "text": "Mostrar la pantalla Inicio cuando se inicie esta aplicación"
       },
       {
         "letter": "D",
-        "text": "Personalizar la copia de Microsoft Office ▸ Nombre de usuario"
+        "text": "Usar siempre esta cuenta para las experiencias conectadas"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Personalizar la copia de Microsoft Office → Usar siempre estos valores sin tener en cuenta la cuenta de inicio de sesión en Office. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "Esa casilla está justo debajo del nombre de usuario y las iniciales, en «Personalizar la copia de Microsoft Office», y sirve exactamente para eso: fijar la identidad con la que Word firma comentarios y revisiones, por encima de la cuenta con la que hayas iniciado sesión. · La opción D no existe, y es el distractor más peligroso de la tanda porque suena idéntico al real y encaja con el enunciado: quien no recuerde el texto exacto la marca sin dudar. · «No cambiar nunca el color de la página» está en la misma sección, pero es de aspecto. · La pantalla Inicio es de «Opciones de inicio»."
   },
   {
     "id": "archivo-144",
@@ -4826,28 +4826,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-13",
     "generado": true,
-    "enunciado": "Quieres personalizar Word con un diseño decorativo en la barra superior de la aplicación, por ejemplo uno con estrellas o circuitos. ¿Dónde elegirías ese elemento decorativo?",
+    "enunciado": "Quieres que la barra superior de Word lleve un dibujo decorativo, de esos con circuitos o nubes. ¿Qué ajuste eliges?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Personalizar la copia de Microsoft Office ▸ Iniciales"
+        "text": "Fondo de Office"
       },
       {
         "letter": "B",
-        "text": "Personalizar la copia de Microsoft Office ▸ Fondo de Office"
+        "text": "Tema de Office"
       },
       {
         "letter": "C",
-        "text": "Personalizar la copia de Microsoft Office ▸ Nombre de usuario"
+        "text": "No cambiar nunca el color de la página del documento"
       },
       {
         "letter": "D",
-        "text": "Personalizar la copia de Microsoft Office ▸ Tema de Office"
+        "text": "Combinación de colores de Office"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Personalizar la copia de Microsoft Office → Fondo de Office. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "«Fondo de Office» es el desplegable de los dibujitos decorativos de la banda superior: circuitos, nubes, garabatos, lápices… o «Sin fondo». · «Tema de Office» es su vecino inmediato y es lo que casi todo el mundo marca: pero eso decide el color general de la interfaz (Colorido, Gris oscuro, Negro, Blanco, Usar configuración del sistema), no el dibujo. Los dos están en la misma sección y se cambian de la misma forma; solo se distinguen por lo que hacen. · «Combinación de colores de Office» no existe con ese nombre: es el nombre que tenía en versiones antiguas, y está puesto justo para eso. · Los dos ajustes reales aparecen también en el panel Cuenta."
   },
   {
     "id": "archivo-145",
@@ -4862,28 +4862,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-15",
     "generado": true,
-    "enunciado": "Has puesto un tema de Office oscuro y ahora el fondo de la página del documento también se ve oscuro y dificulta la lectura. ¿Dónde activarías la opción para que el color de la página no se vea afectado por el tema?",
+    "enunciado": "Has puesto el tema Negro y ahora la hoja del documento también se ve oscura, lo que te cansa la vista. ¿Qué casilla activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Personalizar la copia de Microsoft Office ▸ Iniciales"
+        "text": "No cambiar nunca el color de la página del documento"
       },
       {
         "letter": "B",
-        "text": "Personalizar la copia de Microsoft Office ▸ Nombre de usuario"
+        "text": "Usar siempre estos valores sin tener en cuenta la cuenta de inicio de sesión"
       },
       {
         "letter": "C",
-        "text": "Personalizar la copia de Microsoft Office ▸ Tema de Office"
+        "text": "Optimizar la apariencia"
       },
       {
         "letter": "D",
-        "text": "Personalizar la copia de Microsoft Office ▸ No cambiar nunca el color de la página del documento"
+        "text": "Mostrar imágenes y colores de fondo en la vista Diseño de impresión"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Personalizar la copia de Microsoft Office → No cambiar nunca el color de la página del documento. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "Con el tema Negro, Word oscurece también la hoja para que el conjunto sea coherente. Esta casilla lo impide: la interfaz sigue oscura y la página se queda blanca, como en el papel. · La opción D es el mejor distractor posible aquí porque existe de verdad y habla de colores de fondo y de la vista Diseño de impresión, pero se refiere al fondo que TÚ le hayas puesto al documento (Diseño → Color de página), no al oscurecimiento del tema. Una es del documento y la otra de la aplicación. · Las otras dos comparten sección o panel pero no tienen que ver con el color de la hoja."
   },
   {
     "id": "archivo-146",
@@ -4898,28 +4898,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-16",
     "generado": true,
-    "enunciado": "Quieres saber qué información envía Word a Microsoft de forma obligatoria para el funcionamiento del servicio, independientemente de tu configuración de privacidad. ¿Dónde lo consultarías dentro de las opciones de Word?",
+    "enunciado": "Quieres saber qué información manda Word a Microsoft de forma obligatoria, pase lo que pase con tu configuración. ¿Qué apartado consultas en Configuración de privacidad?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Configuración de privacidad ▸ Activar experiencias que descargan contenido en línea"
+        "text": "Datos de diagnóstico necesarios"
       },
       {
         "letter": "B",
-        "text": "Configuración de privacidad ▸ Activar experiencias que analizan su contenido"
+        "text": "Enviar datos de uso y diagnóstico adicionales a Microsoft"
       },
       {
         "letter": "C",
-        "text": "Configuración de privacidad ▸ Datos de diagnóstico necesarios"
+        "text": "Activar experiencias que analizan su contenido"
       },
       {
         "letter": "D",
-        "text": "Configuración de privacidad ▸ Enviar datos de uso y diagnóstico adicionales a Microsoft"
+        "text": "Activar experiencias que descargan contenido en línea"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Configuración de privacidad → Configuración de privacidad... → Datos de diagnóstico necesarios. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "«Datos de diagnóstico necesarios» es el bloque que no se puede apagar: recoge lo mínimo para que Office funcione y sea seguro, y el cuadro solo deja leer qué incluye. Que no tenga interruptor es justo lo que lo hace la respuesta. · La opción B es su pareja opcional, la que sí se activa y desactiva, y por eso es la que más se marca: son los dos niveles del mismo apartado, uno obligatorio y otro voluntario. · Las opciones C y D son del otro bloque del cuadro, «Experiencias conectadas», que no van de telemetría sino de funciones que necesitan internet."
   },
   {
     "id": "archivo-147",
@@ -4934,28 +4934,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-17",
     "generado": true,
-    "enunciado": "Prefieres que Word no envíe a Microsoft información adicional sobre cómo utilizas la aplicación, más allá de lo estrictamente necesario. ¿Dónde desactivarías esa opción?",
+    "enunciado": "No quieres que Word informe a Microsoft de cómo usas el programa más allá de lo imprescindible. ¿Qué desactivas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Configuración de privacidad ▸ Enviar datos de uso y diagnóstico adicionales a Microsoft"
+        "text": "Enviar datos de uso y diagnóstico adicionales a Microsoft"
       },
       {
         "letter": "B",
-        "text": "Configuración de privacidad ▸ Activar todas las experiencias conectadas"
+        "text": "Datos de diagnóstico necesarios"
       },
       {
         "letter": "C",
-        "text": "Configuración de privacidad ▸ Activar experiencias que analizan su contenido"
+        "text": "Activar todas las experiencias conectadas"
       },
       {
         "letter": "D",
-        "text": "Configuración de privacidad ▸ Activar experiencias que descargan contenido en línea"
+        "text": "Activar experiencias que analizan su contenido"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Configuración de privacidad → Configuración de privacidad... → Datos de diagnóstico opcionales → Enviar datos de uso y diagnóstico adicionales a Microsoft. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "explicacion": "Es la casilla del bloque de datos de diagnóstico OPCIONALES: al quitarla, Word deja de enviar la telemetría añadida y se queda solo con la obligatoria. · «Datos de diagnóstico necesarios» es el otro nivel del mismo apartado y no se puede desactivar: solo se puede consultar qué recoge. Marcarla es el error clásico, porque el nombre suena a lo que uno quiere quitar. · Las experiencias conectadas son otra cosa: apagarlas no reduce la telemetría, sino que deja sin funcionar el Editor, la traducción o las imágenes en línea. Confundir privacidad con conectividad cuesta funciones que sí querías."
   },
   {
     "id": "archivo-148",
@@ -4970,28 +4970,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-18",
     "generado": true,
-    "enunciado": "Funciones como el Editor, la traducción automática o la revisión inteligente han dejado de funcionar. Sospechas que las experiencias conectadas que analizan el contenido del documento están desactivadas. ¿Dónde las volverías a habilitar?",
+    "enunciado": "El Editor, el traductor y las sugerencias inteligentes han dejado de funcionar, y sospechas del bloque de privacidad. ¿Qué vuelves a activar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Configuración de privacidad ▸ Activar experiencias que descargan contenido en línea"
+        "text": "Activar experiencias que analizan su contenido"
       },
       {
         "letter": "B",
-        "text": "Configuración de privacidad ▸ Datos de diagnóstico necesarios"
+        "text": "Activar experiencias que descargan contenido en línea"
       },
       {
         "letter": "C",
-        "text": "Configuración de privacidad ▸ Activar todas las experiencias conectadas"
+        "text": "Activar todas las experiencias conectadas"
       },
       {
         "letter": "D",
-        "text": "Configuración de privacidad ▸ Activar experiencias que analizan su contenido"
+        "text": "Datos de diagnóstico necesarios"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Configuración de privacidad → Configuración de privacidad... → Experiencias conectadas → Experiencias que analizan el contenido → Activar experiencias que analizan su contenido. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "Las experiencias conectadas están partidas en dos, y esa división es el conocimiento que se mide. Las que ANALIZAN el contenido son las que leen lo que has escrito para devolverte algo: Editor, Traductor, Diseñador, dictado. · Las que DESCARGAN contenido en línea solo traen material de fuera sin mirar tu documento: plantillas de Office.com, imágenes de archivo, iconos. Por eso la opción B no arregla el Editor. · «Activar todas las experiencias conectadas» es el interruptor general que engloba a las dos, y apagarlo lo apaga todo; sirve para desactivar en bloque, pero no es el ajuste concreto que falta aquí. · Los datos de diagnóstico son telemetría, no funciones."
   },
   {
     "id": "archivo-149",
@@ -4999,35 +4999,35 @@
     "bloque": "Archivo — Opciones",
     "tipo": "opcion_unica",
     "categoria": "ruta",
-    "negativa": true,
+    "negativa": false,
     "section": "archivo",
     "topic": "opciones-general",
     "subtopic": "General",
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-19",
     "generado": true,
-    "enunciado": "Al intentar insertar una imagen en línea o usar una plantilla de Office.com, Word indica que esa función no está disponible. ¿Dónde activarías las experiencias conectadas que descargan contenido desde internet?",
+    "enunciado": "Al intentar insertar una imagen de archivo o buscar una plantilla de Office.com, Word dice que no está disponible. ¿Qué activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Configuración de privacidad ▸ Activar experiencias que analizan su contenido"
+        "text": "Activar experiencias que descargan contenido en línea"
       },
       {
         "letter": "B",
-        "text": "Configuración de privacidad ▸ Activar todas las experiencias conectadas"
+        "text": "Activar experiencias que analizan su contenido"
       },
       {
         "letter": "C",
-        "text": "Configuración de privacidad ▸ Activar experiencias que descargan contenido en línea"
+        "text": "Activar todas las experiencias conectadas"
       },
       {
         "letter": "D",
-        "text": "Configuración de privacidad ▸ Enviar datos de uso y diagnóstico adicionales a Microsoft"
+        "text": "Enviar datos de uso y diagnóstico adicionales a Microsoft"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Configuración de privacidad → Configuración de privacidad... → Experiencias conectadas → Experiencias que descargan contenido en línea → Activar experiencias que descargan contenido en línea. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "respuesta": "A",
+    "explicacion": "Las plantillas en línea, las imágenes de archivo, los iconos y los modelos 3D vienen de fuera sin que Word mire tu documento: son experiencias de DESCARGA. · Las que analizan el contenido son las otras, las que leen lo escrito para sugerir algo (Editor, Traductor, Diseñador). Distinguir los dos grupos es lo que separa esta pregunta de la anterior, y es literalmente cómo está dividido el cuadro. · El interruptor general apagaría o encendería los dos a la vez, así que sirve, pero es matar moscas a cañonazos y no es el ajuste que pide el enunciado. · La telemetría de la opción D no habilita ninguna función."
   },
   {
     "id": "archivo-150",
@@ -5042,28 +5042,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-gen-20",
     "generado": true,
-    "enunciado": "Por política de tu organización necesitas desactivar desde un único punto todas las funciones de Word que requieren servicios en la nube, incluidas las de análisis de contenido y descarga de recursos en línea. ¿Dónde lo harías?",
+    "enunciado": "Por política de tu organización tienes que dejar Word sin ninguna función que dependa de servicios en la nube, de una sola vez. ¿Qué desactivas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Configuración de privacidad ▸ Activar todas las experiencias conectadas"
+        "text": "Activar todas las experiencias conectadas"
       },
       {
         "letter": "B",
-        "text": "Configuración de privacidad ▸ Datos de diagnóstico necesarios"
+        "text": "Activar experiencias que analizan su contenido"
       },
       {
         "letter": "C",
-        "text": "Configuración de privacidad ▸ Enviar datos de uso y diagnóstico adicionales a Microsoft"
+        "text": "Activar experiencias que descargan contenido en línea"
       },
       {
         "letter": "D",
-        "text": "Configuración de privacidad ▸ Activar experiencias que analizan su contenido"
+        "text": "Enviar datos de uso y diagnóstico adicionales a Microsoft"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → General → Configuración de privacidad → Configuración de privacidad... → Experiencias conectadas → Todas las experiencias conectadas → Activar todas las experiencias conectadas. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
+    "explicacion": "Es el interruptor que engloba a los otros dos: al quitarlo se van a la vez las experiencias que analizan el contenido y las que descargan material, y las dos casillas de debajo quedan deshabilitadas. · Las opciones B y C son cada una la mitad del trabajo: desactivar solo una deja la otra viva, y el enunciado pide dejarlo todo apagado de una vez. Son correctas a medias, que es la forma más limpia de montar un distractor. · Los datos de diagnóstico son telemetría: quitarlos no desactiva ninguna función, y dejarlos no reactiva ninguna."
   },
   {
     "sourceFile": "archivo.json",
@@ -5079,7 +5079,7 @@
     "id": "archivo-409",
     "sourceQuestionId": "dlgcross-archivo-409",
     "tipo": "seleccion_multiple",
-    "enunciado": "El cuadro «Opciones de Word» se abre desde Archivo ▸ Opciones, pero tambien desde atajos dentro de otros cuadros. ¿Cuales de estos llevan a un panel concreto de «Opciones de Word»?",
+    "enunciado": "El cuadro «Opciones de Word» se abre desde Archivo ▸ Opciones, pero también desde botones repartidos por otros cuadros de diálogo. ¿Cuáles de estos llevan a un panel concreto de «Opciones de Word»?",
     "opciones": [
       {
         "letter": "A",
@@ -5091,15 +5091,15 @@
       },
       {
         "letter": "C",
-        "text": "Configurar pagina ▸ Papel ▸ Opciones de impresion… → panel «Mostrar»"
+        "text": "Configurar página ▸ Papel ▸ Opciones de impresión… → panel «Presentación»"
       },
       {
         "letter": "D",
-        "text": "Barra de acceso rapido ▸ Mas comandos… → panel «Barra de herramientas de acceso rapido»"
+        "text": "Barra de acceso rápido ▸ Más comandos… → panel «Barra de herramientas»"
       },
       {
         "letter": "E",
-        "text": "Archivo ▸ Imprimir ▸ Imprimir"
+        "text": "Insertar ▸ Encabezado ▸ Editar encabezado → panel «Presentación»"
       }
     ],
     "respuesta": [
@@ -5108,7 +5108,7 @@
       "C",
       "D"
     ],
-    "explicacion": "Muchos «Opciones…» / «Preferencias…» / «Establecer … predeterminado» repartidos por la interfaz abren el cuadro «Opciones de Word» ya posicionado en el panel adecuado."
+    "explicacion": "Word reparte por la interfaz botones con nombres del tipo «Opciones…», «Preferencias…» o «Establecer … predeterminado» que no abren un cuadro propio: abren el cuadro Opciones de Word ya colocado en el panel que toca. Es un tema recurrente en oposición, porque obliga a conocer el destino y no solo el camino. · Las cuatro primeras son reales, cada una a un panel distinto. · La quinta tiene exactamente la misma forma pero es falsa: «Editar encabezado» entra en la zona de encabezado del documento y activa su cinta contextual, sin abrir ninguna configuración. · La C es la que más sorprende de las verdaderas: desde el cuadro Configurar página se acaba en el panel Presentación, que es donde viven de verdad las opciones de impresión del contenido."
   },
   {
     "id": "archivo-69",
@@ -5122,28 +5122,28 @@
     "subtopic": "Presentación",
     "tema": "Opciones",
     "sourceQuestionId": "8-61",
-    "enunciado": "¿Desde qué ruta se configura si Word debe mostrar siempre las marcas de tabulación en el documento?",
+    "enunciado": "Quieres que las marcas de tabulación se vean SIEMPRE, aunque el botón ¶ de la cinta esté apagado. ¿En qué sección de Opciones → Presentación lo activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Presentación → Mostrar siempre estas marcas de formato"
+        "text": "Mostrar siempre estas marcas de formato en la pantalla"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Tabulaciones"
+        "text": "Mostrar siempre estas marcas de formato al imprimir"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de pantalla → Tabulaciones"
+        "text": "Opciones de presentación en pantalla"
       },
       {
         "letter": "D",
-        "text": "Inicio → Párrafo → Mostrar todo → Configurar marcas permanentes"
+        "text": "Opciones de presentación de página"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La visualización permanente de marcas de formato como tabulaciones se configura en Archivo → Opciones → Presentación dentro de Mostrar siempre estas marcas de formato en la pantalla. La sección Avanzadas controla otras opciones de visualización pero no este apartado. El botón Mostrar todo de Inicio es temporal y no guarda la configuración."
+    "explicacion": "Esa sección tiene una casilla por cada marca (tabulaciones, espacios, marcas de párrafo, texto oculto, guiones opcionales, anclajes de objeto) y una última para mostrarlas todas. Lo que se marca aquí se ve siempre, con el botón ¶ apagado o encendido: por eso la sección se llama «siempre». · La opción B no existe, y es la más peligrosa: cambia una sola palabra del nombre real, y encima la idea es verosímil porque en este mismo panel SÍ hay una sección de impresión con casillas parecidas («Imprimir texto oculto»). Solo se descarta sabiendo el nombre exacto. · «Opciones de presentación en pantalla» tampoco existe; la real es «Opciones de presentación de página», que decide qué se ve del documento (espacio entre páginas, resaltados, emergentes), no las marcas de formato."
   },
   {
     "id": "archivo-70",
@@ -5157,28 +5157,28 @@
     "subtopic": "Presentación",
     "tema": "Opciones",
     "sourceQuestionId": "8-62",
-    "enunciado": "¿Desde qué ruta se configura si Word debe imprimir los colores e imágenes de fondo del documento?",
+    "enunciado": "El documento tiene un color de fondo puesto desde Diseño y al imprimir sale en blanco. ¿Qué casilla de Opciones → Presentación → Opciones de impresión activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Presentación → Opciones de impresión"
+        "text": "Imprimir imágenes y colores de fondo"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de impresión"
+        "text": "Imprimir dibujos creados en Word"
       },
       {
         "letter": "C",
-        "text": "Archivo → Imprimir → Configuración → Imprimir fondo"
+        "text": "Imprimir propiedades del documento"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Guardar → Opciones de impresión de fondo"
+        "text": "Imprimir texto oculto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Las opciones de impresión relacionadas con el contenido del documento como colores e imágenes de fondo están en Archivo → Opciones → Presentación dentro de Opciones de impresión. En Avanzadas hay opciones de impresión diferentes. No existe una opción de fondo en el panel Imprimir ni en Opciones → Guardar."
+    "explicacion": "Word no imprime el color de página ni las imágenes de fondo por defecto, para no gastar tinta: hay que pedirlo expresamente con esta casilla. Es de las cosas que más desconciertan, porque en pantalla se ve perfectamente. · «Imprimir dibujos creados en Word» se refiere a formas, cuadros de texto y WordArt, que son objetos del documento, no fondo. Es el distractor bueno porque también va de «lo que se ve pero no sale». · «Imprimir propiedades del documento» añade una hoja aparte con título, autor y demás. · «Imprimir texto oculto» saca el texto marcado como oculto. · Las cuatro son casillas reales de la misma sección."
   },
   {
     "id": "archivo-71",
@@ -5192,28 +5192,28 @@
     "subtopic": "Presentación",
     "tema": "Opciones",
     "sourceQuestionId": "8-63",
-    "enunciado": "¿Desde qué ruta se activa la opción que hace que Word muestre el espacio en blanco entre páginas en la vista Diseño de impresión?",
+    "enunciado": "En vista Diseño de impresión has perdido el hueco gris que separa una página de la siguiente y ahora el texto va seguido. ¿Qué casilla lo devuelve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Presentación → Mostrar espacio en blanco entre páginas"
+        "text": "Mostrar espacio en blanco entre páginas en la vista Diseño de impresión"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Mostrar contenido → Espacio entre páginas"
+        "text": "Mostrar marcas de resaltado"
       },
       {
         "letter": "C",
-        "text": "Vista → Diseño de impresión → Configurar espacio entre páginas"
+        "text": "Mostrar información sobre herramientas del documento al mantener el puntero"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → General → Opciones de visualización de página"
+        "text": "Mostrar imágenes y colores de fondo en la vista Diseño de impresión"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción se encuentra en Archivo → Opciones → Presentación dentro de Opciones de presentación de página. No está en Avanzadas, ni es accesible desde la pestaña Vista ni desde Opciones → General."
+    "explicacion": "Es una casilla de «Opciones de presentación de página». Al quitarla, Word junta las páginas y ahorra pantalla; al ponerla, vuelve el margen gris entre hojas. · Lo mismo se consigue sin entrar en Opciones: haciendo doble clic en la línea que separa dos páginas, que es como la gente lo desactiva sin querer y luego no sabe recuperarlo. · La opción D es el mejor distractor porque tiene una redacción casi calcada, acabando igual en «en la vista Diseño de impresión», y también es real: pero controla los fondos, no la separación. · Las otras dos son casillas vecinas de la misma sección."
   },
   {
     "id": "archivo-151",
@@ -5228,28 +5228,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-02",
     "generado": true,
-    "enunciado": "Has resaltado varios fragmentos de texto con color, pero ya no los ves en pantalla aunque el resaltado sigue aplicado. ¿Dónde activarías la opción para que los resaltados vuelvan a mostrarse?",
+    "enunciado": "Habías resaltado varios párrafos con el rotulador y han dejado de verse en pantalla, aunque el resaltado sigue aplicado. ¿Qué casilla lo devuelve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de impresión ▸ Imprimir propiedades del documento"
+        "text": "Mostrar marcas de resaltado"
       },
       {
         "letter": "B",
-        "text": "Opciones de presentación de página ▸ Mostrar marcas de resaltado"
+        "text": "Mostrar marcas de sombreado"
       },
       {
         "letter": "C",
-        "text": "Opciones de presentación de página ▸ Mostrar información sobre herramientas del documento al mantener el puntero"
+        "text": "Mostrar espacio en blanco entre páginas en la vista Diseño de impresión"
       },
       {
         "letter": "D",
-        "text": "Opciones de presentación de página ▸ Mostrar espacio en blanco entre páginas en la vista Diseño de impresión"
+        "text": "Mostrar imágenes y colores de fondo en la vista Diseño de impresión"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Opciones de presentación de página → Mostrar marcas de resaltado. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "«Mostrar marcas de resaltado» oculta o muestra el resaltado sin quitarlo: el formato sigue en el texto y vuelve a verse al reactivar la casilla, y además afecta a la impresión. Sirve para revisar un documento lleno de marcas sin borrarlas. · «Mostrar marcas de sombreado» no existe, y aprovecha la confusión de verdad que hay detrás: el resaltado es del grupo Fuente (el rotulador sobre los caracteres) y el sombreado es del grupo Párrafo (el fondo del párrafo entero). Son dos formatos distintos y solo el primero tiene casilla aquí. · La opción D también habla de colores y de lo que se ve, pero es el fondo de la página y las imágenes de fondo, no el rotulador. · La C es la vecina que controla la separación entre hojas."
   },
   {
     "id": "archivo-152",
@@ -5264,28 +5264,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-03",
     "generado": true,
-    "enunciado": "Al pasar el ratón sobre hipervínculos y marcas de comentario del documento solían aparecer ventanas emergentes con información contextual, pero ya no. ¿Dónde lo reactivarías?",
+    "enunciado": "Al pasar el ratón por un hipervínculo o por una marca de comentario ya no aparece el recuadro con la información. ¿Qué casilla lo reactiva?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Marcas de párrafo"
+        "text": "Mostrar información sobre herramientas del documento al mantener el puntero"
       },
       {
         "letter": "B",
-        "text": "Opciones de presentación de página ▸ Mostrar espacio en blanco entre páginas en la vista Diseño de impresión"
+        "text": "Estilo de información en pantalla"
       },
       {
         "letter": "C",
-        "text": "Opciones de presentación de página ▸ Mostrar marcas de resaltado"
+        "text": "Mostrar marcas de resaltado"
       },
       {
         "letter": "D",
-        "text": "Opciones de presentación de página ▸ Mostrar información sobre herramientas del documento al mantener el puntero"
+        "text": "Mostrar espacio en blanco entre páginas en la vista Diseño de impresión"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Opciones de presentación de página → Mostrar información sobre herramientas del documento al mantener el puntero. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Esta casilla, del panel Presentación, controla los emergentes que salen sobre el DOCUMENTO: la dirección de un hipervínculo, el texto de un comentario, la nota al pie. · «Estilo de información en pantalla» es el distractor de máximo nivel de todo este bloque, y cae muchísimo: hace exactamente lo mismo pero sobre la CINTA, y además vive en otro panel, en General → Opciones de interfaz de usuario. Mismo gesto del ratón, dos ajustes distintos en dos sitios distintos. · Las otras dos son casillas vecinas de esta misma sección, sin relación con los emergentes."
   },
   {
     "id": "archivo-153",
@@ -5300,28 +5300,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-05",
     "generado": true,
-    "enunciado": "Quieres comprobar si hay espacios dobles entre palabras. ¿Dónde activarías la visualización de los espacios como puntos en pantalla?",
+    "enunciado": "Sospechas que el documento tiene dobles espacios entre palabras y quieres verlos como puntitos, de forma permanente. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Marcas de párrafo"
+        "text": "Espacios"
       },
       {
         "letter": "B",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Guiones opcionales"
+        "text": "Texto oculto"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Caracteres de tabulación"
+        "text": "Marcas de párrafo"
       },
       {
         "letter": "D",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Espacios"
+        "text": "Anclajes de objeto"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Mostrar siempre estas marcas de formato en la pantalla → Espacios. Atajo relacionado: Ctrl+Mayús+8. Ctrl+Mayús+8 (o ¶ en Inicio ▸ Párrafo) muestra todas las marcas a la vez."
+    "respuesta": "A",
+    "explicacion": "En «Mostrar siempre estas marcas de formato en la pantalla», la casilla «Espacios» pinta cada espacio como un punto centrado a media altura, así que un doble espacio se ve como dos puntos seguidos. · Las tres falsas son casillas hermanas de la misma lista y cada una tiene su símbolo: el texto oculto se marca con un subrayado de puntos, la marca de párrafo es el ¶ y el anclaje de objeto es un ancla en el margen. La pregunta no es si existen, sino qué dibuja cada una. · Ctrl+Mayús+8 enseña todas a la vez, pero de forma temporal: lo que se marca aquí se queda puesto aunque el botón ¶ de la cinta esté apagado."
   },
   {
     "id": "archivo-154",
@@ -5336,28 +5336,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-06",
     "generado": true,
-    "enunciado": "Quieres ver dónde termina cada párrafo para revisar la estructura. ¿Dónde activarías la visualización del símbolo ¶ al final de cada párrafo?",
+    "enunciado": "Quieres ver el símbolo ¶ al final de cada párrafo para revisar la estructura del documento, y que no se quite al apagar el botón de la cinta. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Caracteres de tabulación"
+        "text": "Marcas de párrafo"
       },
       {
         "letter": "B",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Texto oculto"
+        "text": "Texto oculto"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Anclajes de objeto"
+        "text": "Anclajes de objeto"
       },
       {
         "letter": "D",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Marcas de párrafo"
+        "text": "Caracteres de tabulación"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Mostrar siempre estas marcas de formato en la pantalla → Marcas de párrafo. Atajo relacionado: Ctrl+Mayús+8. Ctrl+Mayús+8 (o ¶ en Inicio ▸ Párrafo) muestra todas las marcas a la vez."
+    "respuesta": "A",
+    "explicacion": "La marca de párrafo es el ¶ que cierra cada párrafo y, aunque parezca decorativa, guarda todo su formato: al borrarla, el párrafo hereda el formato del siguiente. Por eso conviene verla al reorganizar un documento. · Las otras tres son casillas de la misma lista con símbolos distintos: el texto oculto se marca con un subrayado de puntos, el anclaje de objeto con un ancla en el margen y la tabulación con una flecha. · Ojo con la diferencia entre esta casilla y el botón ¶ de la cinta: el botón enseña todas las marcas mientras está pulsado; la casilla deja fija esta."
   },
   {
     "id": "archivo-155",
@@ -5372,28 +5372,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-07",
     "generado": true,
-    "enunciado": "Sabes que el documento tiene fragmentos de texto oculto pero no los ves. ¿Dónde activarías que ese texto oculto se muestre con su subrayado discontinuo?",
+    "enunciado": "Te consta que el documento lleva fragmentos marcados como texto oculto y quieres verlos en pantalla, subrayados con puntos. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Caracteres de tabulación"
+        "text": "Texto oculto"
       },
       {
         "letter": "B",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Anclajes de objeto"
+        "text": "Anclajes de objeto"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Texto oculto"
+        "text": "Espacios"
       },
       {
         "letter": "D",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Espacios"
+        "text": "Guiones opcionales"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Mostrar siempre estas marcas de formato en la pantalla → Texto oculto. Atajo relacionado: Ctrl+Mayús+8. Ctrl+Mayús+8 muestra todas las marcas a la vez."
+    "respuesta": "A",
+    "explicacion": "El texto oculto es un atributo del cuadro Fuente: el texto sigue en el documento pero no se muestra ni se imprime. Esta casilla lo saca a la vista con un subrayado de puntos, sin quitarle el atributo. · Hay una casilla gemela pero de impresión, «Imprimir texto oculto», en la sección Opciones de impresión de este mismo panel: verlo y imprimirlo son dos permisos distintos, y ese es el matiz que suele caer. · Las otras tres son casillas hermanas de la lista, cada una con su símbolo. · Ojo también: el Inspector de documento avisa del texto oculto como contenido a revisar antes de publicar."
   },
   {
     "id": "archivo-156",
@@ -5408,28 +5408,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-08",
     "generado": true,
-    "enunciado": "Has insertado guiones opcionales en palabras largas para controlar los saltos de línea y no sabes dónde están. ¿Dónde activarías su visualización en pantalla?",
+    "enunciado": "Has metido guiones opcionales en palabras largas para controlar dónde se parten, y ahora no sabes en qué palabras están. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Guiones opcionales"
+        "text": "Guiones opcionales"
       },
       {
         "letter": "B",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Mostrar todas las marcas de formato"
+        "text": "Marcas de párrafo"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Marcas de párrafo"
+        "text": "Caracteres de tabulación"
       },
       {
         "letter": "D",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Caracteres de tabulación"
+        "text": "Mostrar todas las marcas de formato"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Mostrar siempre estas marcas de formato en la pantalla → Guiones opcionales. Atajo relacionado: Ctrl+Mayús+8. Ctrl+Mayús+8 muestra todas las marcas a la vez."
+    "explicacion": "El guion opcional solo se dibuja cuando la palabra cae a final de línea y hay que partirla; el resto del tiempo es invisible, y por eso hace falta esta casilla para localizarlos. · La opción D es el distractor interesante: también los mostraría, porque enciende todas las marcas de golpe. Pero el enunciado pide ver los guiones, no llenar el documento de símbolos; y en un examen, entre una opción concreta y una general que la incluye, la respuesta es la concreta. · Las otras dos son casillas hermanas, para el ¶ y para las tabulaciones."
   },
   {
     "id": "archivo-157",
@@ -5444,28 +5444,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-09",
     "generado": true,
-    "enunciado": "Tienes varios objetos flotantes y quieres ver visualmente a qué párrafo está anclado cada uno. ¿Dónde activarías esa visualización?",
+    "enunciado": "Tienes varias imágenes flotando por el documento y quieres ver a qué párrafo está sujeta cada una. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Espacios"
+        "text": "Anclajes de objeto"
       },
       {
         "letter": "B",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Marcas de párrafo"
+        "text": "Marcas de párrafo"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Texto oculto"
+        "text": "Texto oculto"
       },
       {
         "letter": "D",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Anclajes de objeto"
+        "text": "Espacios"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Mostrar siempre estas marcas de formato en la pantalla → Anclajes de objeto. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "El ancla es el iconito que aparece en el margen izquierdo, a la altura del párrafo al que está atado el objeto. Saberlo importa: si borras ese párrafo, el objeto se va con él, y si el ancla está bloqueada el objeto no se mueve de esa página. · Las otras tres son casillas hermanas de la misma lista, pero marcan caracteres del texto, no objetos. La de marcas de párrafo es la que más se confunde aquí, porque el ancla también se muestra junto a un párrafo: pero una señala dónde acaba el párrafo y la otra a qué párrafo pertenece la imagen."
   },
   {
     "id": "archivo-158",
@@ -5480,28 +5480,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-10",
     "generado": true,
-    "enunciado": "Quieres activar desde un único punto la visualización de todas las marcas de formato del documento, sin activarlas una a una. ¿Dónde lo harías desde las opciones de Word?",
+    "enunciado": "Quieres encender de golpe todas las marcas de formato desde las opciones de Word, sin ir casilla por casilla. ¿Cuál marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Texto oculto"
+        "text": "Mostrar todas las marcas de formato"
       },
       {
         "letter": "B",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Espacios"
+        "text": "Mostrar todas las marcas de formato al imprimir"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Marcas de párrafo"
+        "text": "Marcas de párrafo"
       },
       {
         "letter": "D",
-        "text": "Mostrar siempre estas marcas de formato en la pantalla ▸ Mostrar todas las marcas de formato"
+        "text": "Texto oculto"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Mostrar siempre estas marcas de formato en la pantalla → Mostrar todas las marcas de formato. Atajo relacionado: Ctrl+Mayús+8. Ctrl+Mayús+8 hace exactamente lo mismo desde el teclado; también el botón ¶ de Inicio ▸ Párrafo."
+    "respuesta": "A",
+    "explicacion": "Es la última casilla de la lista y, al marcarla, activa y bloquea todas las de arriba: equivale a dejar pulsado el botón ¶ de la cinta de forma permanente. · La opción B no existe. Es el distractor de más nivel de este bloque porque el panel SÍ tiene una sección de impresión con casillas gemelas de las de pantalla («Texto oculto» arriba, «Imprimir texto oculto» abajo), así que una casilla «…al imprimir» encaja perfectamente con cómo está montado el panel. · Las otras dos son casillas individuales de esa misma lista. · El equivalente rápido y temporal es Ctrl+Mayús+8, que en el teclado español es la misma pulsación que Ctrl+(: el atajo se apaga al volver a pulsarlo, y la casilla se queda."
   },
   {
     "id": "archivo-159",
@@ -5516,28 +5516,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-11",
     "generado": true,
-    "enunciado": "Al imprimir, las formas y cuadros de texto creados con las herramientas de Word no salen en el papel, aunque sí se ven en pantalla. ¿Dónde activarías su impresión?",
+    "enunciado": "Has hecho un esquema con formas y cuadros de texto, se ven perfectamente en pantalla y al imprimir salen las hojas sin ellos. ¿Qué casilla activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de impresión ▸ Actualizar campos antes de imprimir"
+        "text": "Imprimir dibujos creados en Word"
       },
       {
         "letter": "B",
-        "text": "Opciones de impresión ▸ Imprimir texto oculto"
+        "text": "Imprimir imágenes y colores de fondo"
       },
       {
         "letter": "C",
-        "text": "Opciones de impresión ▸ Imprimir dibujos creados en Word"
+        "text": "Imprimir texto oculto"
       },
       {
         "letter": "D",
-        "text": "Opciones de impresión ▸ Imprimir propiedades del documento"
+        "text": "Actualizar campos antes de imprimir"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Opciones de impresión → Imprimir dibujos creados en Word. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "«Dibujos creados en Word» son exactamente eso: formas, cuadros de texto, WordArt y todo lo dibujado con las herramientas del programa. Sin esta casilla se ven pero no se imprimen. · «Imprimir imágenes y colores de fondo» es el distractor de nivel, porque también va de cosas visibles que no salen en papel: pero se refiere al color de página y a las imágenes de fondo, que son del fondo del documento, no objetos colocados encima. · Las otras dos son casillas vecinas de la misma sección, para el texto oculto y para refrescar los campos."
   },
   {
     "id": "archivo-160",
@@ -5552,28 +5552,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-13",
     "generado": true,
-    "enunciado": "Quieres que al imprimir se incluya automáticamente una página adicional con la información de resumen del documento (título, autor…). ¿Dónde activarías esa opción?",
+    "enunciado": "Quieres que cada vez que imprimas salga además una hoja con el título, el autor y demás datos del archivo. ¿Qué casilla activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de impresión ▸ Imprimir imágenes y colores de fondo"
+        "text": "Imprimir propiedades del documento"
       },
       {
         "letter": "B",
-        "text": "Opciones de impresión ▸ Imprimir propiedades del documento"
+        "text": "Imprimir dibujos creados en Word"
       },
       {
         "letter": "C",
-        "text": "Opciones de impresión ▸ Imprimir dibujos creados en Word"
+        "text": "Imprimir texto oculto"
       },
       {
         "letter": "D",
-        "text": "Opciones de impresión ▸ Actualizar campos antes de imprimir"
+        "text": "Actualizar datos vinculados antes de imprimir"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Opciones de impresión → Imprimir propiedades del documento. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Añade una página aparte, al final del trabajo, con la información de resumen del documento: título, autor, asunto, fechas y demás propiedades. Es lo mismo que se ve en Información y en el cuadro Propiedades avanzadas, pero en papel. · No confundirlo con «Información del documento» del desplegable del panel Imprimir, que imprime ESO EN LUGAR del documento; esta casilla lo imprime ADEMÁS. Es la distinción que se pregunta. · Las otras tres son casillas vecinas de Opciones de impresión."
   },
   {
     "id": "archivo-161",
@@ -5588,28 +5588,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-14",
     "generado": true,
-    "enunciado": "El documento tiene fragmentos marcados como texto oculto y necesitas una copia impresa que los incluya. ¿Dónde activarías esa opción?",
+    "enunciado": "El documento lleva fragmentos con el atributo de texto oculto y necesitas una copia impresa que los incluya. ¿Qué casilla activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de impresión ▸ Imprimir propiedades del documento"
+        "text": "Imprimir texto oculto"
       },
       {
         "letter": "B",
-        "text": "Opciones de impresión ▸ Imprimir texto oculto"
+        "text": "Texto oculto"
       },
       {
         "letter": "C",
-        "text": "Opciones de impresión ▸ Actualizar campos antes de imprimir"
+        "text": "Imprimir propiedades del documento"
       },
       {
         "letter": "D",
-        "text": "Opciones de impresión ▸ Imprimir dibujos creados en Word"
+        "text": "Imprimir dibujos creados en Word"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Opciones de impresión → Imprimir texto oculto. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Ver el texto oculto y imprimirlo son dos permisos separados, y esta es la casilla de imprimir, en la sección Opciones de impresión. · La opción B es la casilla gemela del mismo panel, unas líneas más arriba, en «Mostrar siempre estas marcas de formato»: esa lo saca en pantalla con un subrayado de puntos, pero no lo lleva al papel. Tener las dos en el mismo panel con nombres casi idénticos es exactamente lo que hace buena la pregunta, y hay que leer si empieza por «Imprimir». · Las otras dos son casillas vecinas de la misma sección de impresión."
   },
   {
     "id": "archivo-162",
@@ -5624,28 +5624,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-15",
     "generado": true,
-    "enunciado": "Tienes campos dinámicos (números de página, fechas) y al imprimir los valores en papel están desactualizados. ¿Dónde activarías la actualización automática de campos justo antes de imprimir?",
+    "enunciado": "El documento tiene campos de número de página y de fecha, y en el papel salen valores viejos. ¿Qué casilla activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de impresión ▸ Imprimir imágenes y colores de fondo"
+        "text": "Actualizar campos antes de imprimir"
       },
       {
         "letter": "B",
-        "text": "Opciones de impresión ▸ Imprimir dibujos creados en Word"
+        "text": "Actualizar datos vinculados antes de imprimir"
       },
       {
         "letter": "C",
-        "text": "Opciones de impresión ▸ Actualizar datos vinculados antes de imprimir"
+        "text": "Imprimir propiedades del documento"
       },
       {
         "letter": "D",
-        "text": "Opciones de impresión ▸ Actualizar campos antes de imprimir"
+        "text": "Imprimir texto oculto"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Opciones de impresión → Actualizar campos antes de imprimir. Atajo relacionado: F9. Para actualizarlos a mano: Ctrl+E (seleccionar todo) y F9."
+    "respuesta": "A",
+    "explicacion": "Los campos son elementos internos de Word (número de página, fecha, referencias cruzadas, índices) y esta casilla los recalcula justo antes de mandar a imprimir. · La opción B es su vecina inmediata y la que más confusión genera, con razón: también actualiza antes de imprimir, pero datos VINCULADOS, es decir, información traída de otro archivo, como una tabla pegada desde Excel con vínculo. Lo interno lo actualiza una y lo externo la otra. · A mano, F9 actualiza los campos seleccionados, y con Ctrl+E y luego F9 se actualiza el documento entero. · Las otras dos casillas no actualizan nada."
   },
   {
     "id": "archivo-163",
@@ -5660,28 +5660,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-pres-16",
     "generado": true,
-    "enunciado": "El documento tiene tablas vinculadas a un archivo de Excel y al imprimir los datos no reflejan los últimos cambios del origen. ¿Dónde activarías la actualización automática de esos vínculos antes de imprimir?",
+    "enunciado": "El documento incluye una tabla pegada desde Excel con vínculo y al imprimir no salen los últimos datos del origen. ¿Qué casilla activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de impresión ▸ Imprimir dibujos creados en Word"
+        "text": "Actualizar datos vinculados antes de imprimir"
       },
       {
         "letter": "B",
-        "text": "Opciones de impresión ▸ Imprimir texto oculto"
+        "text": "Actualizar campos antes de imprimir"
       },
       {
         "letter": "C",
-        "text": "Opciones de impresión ▸ Actualizar datos vinculados antes de imprimir"
+        "text": "Imprimir dibujos creados en Word"
       },
       {
         "letter": "D",
-        "text": "Opciones de impresión ▸ Imprimir propiedades del documento"
+        "text": "Imprimir imágenes y colores de fondo"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Presentación → Opciones de impresión → Actualizar datos vinculados antes de imprimir. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Los datos vinculados son los que vienen de otro archivo: una tabla o un gráfico pegados con vínculo desde Excel. Esta casilla vuelve a leer el origen antes de imprimir. · La opción B es la vecina de la que hay que distinguirla: actualiza los CAMPOS de Word, que son internos (número de página, fecha, referencias), y no sabe nada de archivos externos. La pregunta se reduce a si el dato viene de dentro o de fuera del documento. · Si el archivo de origen se ha movido o renombrado, el vínculo se rompe y esta casilla no puede arreglarlo: hay que repararlo desde el cuadro de vínculos."
   },
   {
     "id": "archivo-72",
