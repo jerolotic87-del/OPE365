@@ -1314,3 +1314,44 @@ details.meta-panel summary{ cursor:pointer; font-size:11.5px; color:var(--text-3
   .duel-player .score{ font-size:20px; }
   .countdown-hero .num{ font-size:60px; }
 }
+
+/* ============================================================
+   FAROL — modo apuestas (monedas)
+   La apuesta es VISIBLE para el rival: es el mecanismo del juego,
+   así que se pinta grande y sin ambigüedad.
+   ============================================================ */
+.preset-row{ display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-3); }
+
+.poker-money{ display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-3); margin-bottom:var(--sp-4); }
+.poker-money .pm-side{ background:var(--surface); border:1.5px solid var(--border); border-radius:var(--radius-m); padding:var(--sp-3); text-align:center; }
+.poker-money .pm-side.lead{ border-color:var(--accent); }
+.poker-money .pm-name{ font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--text-3); }
+.poker-money .pm-coins{ font-size:22px; font-weight:800; font-variant-numeric:tabular-nums; margin:2px 0 6px; }
+.poker-money .pm-farol{ font-size:12px; letter-spacing:1px; min-height:16px; }
+.poker-money .pm-none{ font-size:10.5px; letter-spacing:0; color:var(--text-3); text-transform:uppercase; }
+.coin-bar{ height:5px; border-radius:3px; background:var(--border); overflow:hidden; margin-bottom:6px; }
+.coin-bar i{ display:block; height:100%; background:var(--accent); transition:width .35s ease; }
+
+/* fichas de apuesta del atacante */
+.bet-chips{ display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
+.bet-chip{ width:46px; height:46px; border-radius:50%; border:2px solid var(--border); background:var(--surface);
+  color:var(--text); font-size:17px; font-weight:800; font-variant-numeric:tabular-nums; cursor:pointer; }
+.bet-chip.on{ border-color:var(--accent); background:var(--accent-dim); color:var(--accent-ink); transform:scale(1.08); }
+
+/* la apuesta, tal como la ve el defensor */
+.bet-shout{ text-align:center; margin-top:var(--sp-5); padding:var(--sp-4); border-radius:var(--radius-m);
+  background:var(--accent-dim); border:1.5px solid var(--accent-line); }
+.bet-shout .bs-n{ font-size:40px; font-weight:800; line-height:1; color:var(--accent-ink); font-variant-numeric:tabular-nums; }
+.bet-shout .bs-t{ font-size:12px; color:var(--text-2); margin-top:2px; }
+.bet-shout .bs-s{ font-size:11.5px; color:var(--text-3); margin-top:6px; }
+
+.poker-truth{ text-align:center; font-size:12.5px; margin-top:var(--sp-4); padding:8px; border-radius:var(--radius-s); }
+.poker-truth.ok{ background:var(--good-dim, rgba(60,180,120,.12)); color:var(--good); }
+.poker-truth.lie{ background:var(--warn-dim, rgba(230,170,60,.12)); color:var(--warn); }
+.poker-hint{ text-align:center; font-size:11.5px; color:var(--text-3); margin-top:8px; line-height:1.45; }
+
+.reveal-read{ font-size:15px; font-weight:800; margin:4px 0 6px; }
+.reveal-read.win{ color:var(--good); }
+.reveal-read.lose{ color:var(--bad); }
+.reveal-stacks{ font-size:12px; color:var(--text-2); margin-top:4px; font-variant-numeric:tabular-nums; }
+.bust-line{ font-size:13px; font-weight:700; color:var(--warn); margin-top:6px; }

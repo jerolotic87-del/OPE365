@@ -46,7 +46,7 @@ function boot(){
 
 /* Deja al HOST en el turno 0 de una partida de Farol, con un invitado
    headless que juega por la API del motor. */
-async function abrirFarol(){
+async function abrirFarol(opts){
   const ctx = boot();
   const { w, D, O, MP } = ctx;
   await waitFor(()=> O.Nav.view === "home", 5000, "init de views.js");
@@ -73,6 +73,7 @@ async function abrirFarol(){
   gS.guestJoinRoom("MOCK1", "Rival");
 
   await waitFor(()=> !!D.querySelector("#poker-confirm-deck"), 10000, "lobby de Farol del host");
+  click(`[data-fmode="${(opts&&opts.modo) || "clasico"}"]`);
 
   // mazo del invitado: 5 cartas del mismo tipo que la app sugiere al host
   const pool = O.QUESTIONS.filter(q=> q.categoria==="atajo" && q.tipo==="opcion_unica" && !q.negativa).map(q=>q.id);
@@ -89,6 +90,7 @@ async function abrirFarol(){
 const hostUI = D => ({
   eligeCarta:  !!D.querySelector("[data-play-card]"),
   eligeClaim:  !!D.querySelector("[data-claim]"),
+  eligeApuesta:!!D.querySelector("#poker-bet-go"),
   decide:      !!D.querySelector("#poker-confio"),
   responde:    !!D.querySelector("[data-defend]"),
   noDisponible: /Carta no disponible/.test(D.body.textContent||""),
@@ -101,7 +103,11 @@ function jugarInvitado(ctx, opts){
   if(!r) return false;
   if(r.attackerIsMe){
     if(!r.qid){ gG.playCard(o.qidFalso || ctx.guestDeck[r.turn % ctx.guestDeck.length]); return true; }
-    if(!r.claim){ const q = O.Q_BY_ID[r.qid]; gG.submitClaim(q ? q.opciones[0].letter : "A"); return true; }
+    if(!r.claim){
+      const q = r.q || O.Q_BY_ID[r.qid];
+      gG.submitClaim(q ? q.opciones[0].letter : "A", (o.apuesta || 2));
+      return true;
+    }
   } else if(r.claim && !r.decision){ gG.decideConfio(); return true; }
   return false;
 }
@@ -281,6 +287,189 @@ async function main(){
      "Mensaje antiguo: se avisa en pantalla en vez de quedarse en blanco");
   ok(errs.length === 0, `Mensaje antiguo: sin errores de JS (${errs.slice(0,2).join(" | ")||0})`);
   ok(!!D.querySelector("#mp-game-exit"), "Mensaje antiguo: el botón de salir sigue disponible");
+  ctx.gS.destroy();
+}
+
+
+/* ═════════════ MODO APUESTAS ═════════════ */
+
+/* Dos motores headless enfrentados: comprueba los PAGOS exactos sin pasar
+   por la interfaz. El host ataca en el turno 0, el invitado defiende. */
+function mesaApuestas(ctxBoot){
+  const { O, MP } = ctxBoot;
+  const pair = MP.createMockPair();
+  const sA = MP.createSession(pair.a), sB = MP.createSession(pair.b);
+  const A = MP.createPokerGame(sA), B = MP.createPokerGame(sB);
+  A.setHandlers({ onPhase:()=>{} });
+  B.setHandlers({ onPhase:()=>{} });
+  sA.hostCreateRoom("Host"); sB.guestJoinRoom("MOCK1","Invitado");
+  const pool = O.QUESTIONS.filter(q=> q.categoria==="atajo" && q.tipo==="opcion_unica" && !q.negativa);
+  A.setMyDeck(pool.slice(0,5).map(q=>q.id));
+  B.setMyDeck(pool.slice(5,10).map(q=>q.id));
+  A.setMode("apuestas"); B.setMode("apuestas");
+  return { pair, sA, sB, A, B, O, esperar:(pred,ms)=> waitFor(pred, ms||4000, "mesa") };
+}
+const otraLetra = (q, salvo) => q.opciones.map(o=>o.letter).find(l=> l !== salvo);
+
+{
+  const ctxBoot = boot();
+  await waitFor(()=> ctxBoot.O.Nav.view === "home", 5000, "init");
+
+  /* — la tabla de pagos, caso por caso — */
+  const casos = [
+    { nom:"miente y cuela",        miente:true,  decision:"confio", resp:"ok",   bet:5, espera:-5 },
+    { nom:"miente y le pillan",    miente:true,  decision:"dudo",   resp:"ok",   bet:4, espera:+4 },
+    { nom:"honesto y le creen",    miente:false, decision:"confio", resp:"ok",   bet:3, espera:+3 },
+    { nom:"honesto y dudan de el", miente:false, decision:"dudo",   resp:"ok",   bet:3, espera:-3 },
+    { nom:"duda bien sin saberla", miente:true,  decision:"dudo",   resp:"mal",  bet:5, espera:+1 },
+  ];
+  for(const c of casos){
+    const m = mesaApuestas(ctxBoot);
+    m.A.confirmReady(); m.B.confirmReady();
+    await m.esperar(()=> !!m.A.getRound() && !!m.B.getRound());
+    const qid = m.A.getState().deckIds[0];
+    const q = m.O.Q_BY_ID[qid];
+    const correcta = q.respuesta, falsa = otraLetra(q, correcta);
+    m.A.playCard(qid);
+    await m.esperar(()=> !!m.B.getRound().qid);
+    m.A.submitClaim(c.miente ? falsa : correcta, c.bet);
+    await m.esperar(()=> !!m.B.getRound().claim);
+    if(c.decision === "confio") m.B.decideConfio();
+    else m.B.decideDudo(c.resp === "ok" ? correcta : falsa);
+    await m.esperar(()=> m.A.getHistory().length > 0 && m.B.getHistory().length > 0);
+
+    const def = m.B.getState(), atk = m.A.getState();
+    const delta = def.myCoins - 20;
+    ok(delta === c.espera,
+       `Pagos · ${c.nom}: el defensor ${c.espera>=0?"gana":"pierde"} ${Math.abs(c.espera)} (fue ${delta})`);
+    ok(atk.myCoins + def.myCoins === 40,
+       `Pagos · ${c.nom}: suma cero, las pilas siguen sumando 40 (${atk.myCoins}+${def.myCoins})`);
+    ok(atk.rivalCoins === def.myCoins,
+       `Pagos · ${c.nom}: los dos dispositivos ven el mismo marcador`);
+    m.sA.destroy(); m.sB.destroy();
+  }
+
+  /* — subida x2 — */
+  {
+    const m = mesaApuestas(ctxBoot);
+    m.A.confirmReady(); m.B.confirmReady();
+    await m.esperar(()=> !!m.A.getRound() && !!m.B.getRound());
+    const qid = m.A.getState().deckIds[0], q = m.O.Q_BY_ID[qid];
+    const correcta = q.respuesta, falsa = otraLetra(q, correcta);
+    m.A.playCard(qid);
+    await m.esperar(()=> !!m.B.getRound().qid);
+    m.A.submitClaim(falsa, 3);
+    await m.esperar(()=> !!m.B.getRound().claim);
+    m.B.decideDudo(correcta, { raise:true });
+    await m.esperar(()=> m.B.getHistory().length > 0);
+    ok(m.B.getState().myCoins === 26,
+       `Subida x2: cazar un farol de 3 subiendo paga 6 (fue ${m.B.getState().myCoins-20})`);
+    m.sA.destroy(); m.sB.destroy();
+  }
+
+  /* — comodin 50/50: cobras la mitad — */
+  {
+    const m = mesaApuestas(ctxBoot);
+    m.A.confirmReady(); m.B.confirmReady();
+    await m.esperar(()=> !!m.A.getRound() && !!m.B.getRound());
+    const qid = m.A.getState().deckIds[0], q = m.O.Q_BY_ID[qid];
+    const correcta = q.respuesta, falsa = otraLetra(q, correcta);
+    m.A.playCard(qid);
+    await m.esperar(()=> !!m.B.getRound().qid);
+    m.A.submitClaim(falsa, 4);
+    await m.esperar(()=> !!m.B.getRound().claim);
+    const keep = m.B.useWildcard();
+    ok(Array.isArray(keep) && keep.length === 2 && keep.includes(correcta),
+       "50/50: deja 2 letras y la correcta esta entre ellas");
+    m.B.decideDudo(correcta);
+    await m.esperar(()=> m.B.getHistory().length > 0);
+    ok(m.B.getState().myCoins === 22,
+       `50/50: cazar un farol de 4 con comodin paga 2 (fue ${m.B.getState().myCoins-20})`);
+    m.sA.destroy(); m.sB.destroy();
+  }
+
+  /* — farol sin ficha: pagas el doble — */
+  {
+    const m = mesaApuestas(ctxBoot);
+    m.A.confirmReady(); m.B.confirmReady();
+    await m.esperar(()=> !!m.A.getRound() && !!m.B.getRound());
+    let gastadas = 0, comprobado = false, vueltas = 0;
+    while(!comprobado && vueltas++ < 12){
+      const r = m.A.getRound();
+      if(!r) break;
+      if(!r.attackerIsMe){                       // turno del rival: se salta
+        const antesTurno = r.turn;
+        m.A.nextTurn();
+        await m.esperar(()=> (m.A.getRound()||{}).turn > antesTurno);
+        continue;
+      }
+      const hist = m.A.getHistory().length;
+      const qid = m.A.getState().deckIds[gastadas % 5];
+      const q = m.O.Q_BY_ID[qid];
+      const correcta = q.respuesta, falsa = otraLetra(q, correcta);
+      const sinFicha = m.A.getState().myFarolTokens === 0;
+      m.A.playCard(qid);
+      await m.esperar(()=> !!m.B.getRound().qid);
+      m.A.submitClaim(falsa, 2);                 // siempre miente, apostando 2
+      await m.esperar(()=> !!m.B.getRound().claim);
+      const antes = m.B.getState().myCoins;
+      if(sinFicha) m.B.decideDudo(correcta);     // pillarle justo sin ficha
+      else m.B.decideConfio();                   // colársela mientras le quedan
+      await m.esperar(()=> m.A.getHistory().length > hist);
+      if(sinFicha){
+        ok(m.B.getState().myCoins - antes === 4,
+           `Farol sin ficha: pillarle una apuesta de 2 paga 4, no 2 (fue ${m.B.getState().myCoins - antes})`);
+        comprobado = true;
+      } else {
+        gastadas++;
+        const t = m.A.getRound().turn;
+        m.A.nextTurn();
+        await m.esperar(()=> (m.A.getRound()||{}).turn > t);
+      }
+    }
+    ok(gastadas === 3, `Farol sin ficha: antes se gastan las 3 fichas (fueron ${gastadas})`);
+    ok(comprobado, "Farol sin ficha: se llega a comprobar el pago doble");
+    m.sA.destroy(); m.sB.destroy();
+  }
+}
+
+/* — partida completa en apuestas, conducida desde la UI del host — */
+{
+  const ctx = await abrirFarol({ modo:"apuestas" });
+  const { D, click, g, errs } = ctx;
+  let apuestas = 0, subio = false, fichasVistas = 0, final = null;
+  ctx.gG.setHandlers({ onPhase:(p,x)=>{ ctx.g.phase=p; ctx.g.extra=x; if(p==="finished") final = x; } });
+
+  await avanzar(ctx, ()=> g.phase === "finished", 150000, ui=>{
+    if(ui.noDisponible) return true;
+    if(ui.eligeCarta){ click(D.querySelector("[data-play-card]")); return true; }
+    if(ui.eligeClaim){ click(D.querySelector("[data-claim]")); return true; }
+    if(ui.eligeApuesta){
+      const chips = D.querySelectorAll("[data-bet]");
+      fichasVistas = Math.max(fichasVistas, chips.length);
+      if(chips.length > 1) click(chips[1]);
+      apuestas++;
+      click("#poker-bet-go");
+      return true;
+    }
+    if(ui.decide){ click(apuestas % 2 ? "#poker-dudo" : "#poker-confio"); return true; }
+    if(ui.responde){
+      if(!subio && D.querySelector("#poker-raise")){ subio = true; click("#poker-raise"); }
+      const libre = D.querySelector("[data-defend]:not([disabled])") || D.querySelector("[data-defend]");
+      click(libre);
+      return true;
+    }
+    return false;
+  });
+
+  ok(fichasVistas >= 2, `Apuestas: el atacante elige la cifra con fichas (${fichasVistas} disponibles)`);
+  ok(apuestas >= 4, `Apuestas: se apuesta en cada ataque del host (${apuestas})`);
+  ok(subio, "Apuestas: se llego a usar la subida x2");
+  ok(g.phase === "finished", `Apuestas: la partida termina (fase ${g.phase})`);
+  ok(final && final.coins === true, "Apuestas: el resultado final viene marcado como partida de monedas");
+  ok(final && (final.myCoins + final.rivalCoins === 40 || !!final.bustBy),
+     `Apuestas: las pilas cierran cuadradas (${final && final.myCoins} + ${final && final.rivalCoins})`);
+  ok(errs.length === 0, `Apuestas: sin errores de JS (${errs.slice(0,2).join(" | ")||0})`);
   ctx.gS.destroy();
 }
 

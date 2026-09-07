@@ -57,12 +57,17 @@ await pg.evaluate(()=>{
 await pg.waitForSelector("#poker-confirm-deck", { timeout:15000 });
 const mazo = await pg.evaluate(()=> document.querySelectorAll("#poker-deck-list .qlist-item").length);
 ok(mazo === 5, `Lobby: el mazo sugerido trae 5 cartas (${mazo})`);
+const modos = await pg.evaluate(()=> Array.from(document.querySelectorAll("[data-fmode]"))
+  .map(b=>({ m:b.getAttribute("data-fmode"), sel:b.classList.contains("selected") })));
+ok(modos.length === 2, `Lobby: se puede elegir entre los 2 modos (${modos.length})`);
+ok((modos.find(m=>m.m==="apuestas")||{}).sel, "Lobby: Apuestas viene elegido por defecto");
 await pg.click("#poker-confirm-deck");
 await pg.evaluate(()=> window.__gG.confirmReady());
 
 /* ── partida completa: el host juega por pantalla, el invitado por la API ── */
 const t0 = Date.now();
 let dudos = 0, confios = 0, comodin = false, comodinOk = null, blancos = 0;
+let apuestas = 0, chipsInfo = null, betShout = null, subio = false, monedasOk = true;
 while(Date.now() - t0 < 180000){
   const fase = await pg.evaluate(()=> window.__gPhase);
   if(fase === "finished") break;
@@ -70,6 +75,8 @@ while(Date.now() - t0 < 180000){
   const ui = await pg.evaluate(()=>({
     carta:   !!document.querySelector("[data-play-card]"),
     claim:   !!document.querySelector("[data-claim]"),
+    apuesta: !!document.querySelector("#poker-bet-go"),
+    raise:   !!document.querySelector("#poker-raise"),
     decide:  !!document.querySelector("#poker-confio"),
     defiende:!!document.querySelector("[data-defend]"),
     wc:      !!document.querySelector("#poker-wildcard"),
@@ -83,7 +90,30 @@ while(Date.now() - t0 < 180000){
 
   if(ui.carta)       await pg.click("[data-play-card]");
   else if(ui.claim)  await pg.click("[data-claim]");
+  else if(ui.apuesta){
+    if(apuestas === 0){
+      // primera apuesta: mirar que las fichas y el aviso se ven de verdad
+      chipsInfo = await pg.evaluate(()=>{
+        const chips = Array.from(document.querySelectorAll(".bet-chip"));
+        const on = chips.find(c=> c.classList.contains("on"));
+        return { n:chips.length, redonda: chips[0] && Math.abs(chips[0].getBoundingClientRect().width - chips[0].getBoundingClientRect().height) < 2,
+                 marcada: !!on, aviso: /ver.{0,3} la cifra|verá la cifra/i.test(document.body.textContent||"") };
+      });
+    }
+    const chips = await pg.$$(".bet-chip");
+    if(chips.length > 2) await chips[2].click();
+    apuestas++;
+    await pg.click("#poker-bet-go");
+  }
   else if(ui.decide){
+    if(betShout === null){
+      betShout = await pg.evaluate(()=>{
+        const el = document.querySelector(".bet-shout .bs-n");
+        if(!el) return null;
+        return { n: el.textContent.trim(), px: Math.round(parseFloat(getComputedStyle(el).fontSize)),
+                 faroles: /faroles|Sin faroles/i.test(document.body.textContent||"") };
+      });
+    }
     if(dudos <= confios){ dudos++; await pg.click("#poker-dudo"); }
     else { confios++; await pg.click("#poker-confio"); }
   }
@@ -106,6 +136,7 @@ while(Date.now() - t0 < 180000){
       const tras = await pg.evaluate(()=> document.querySelectorAll("#poker-defend-options .option:not([disabled])").length);
       ok(tras === 2, `50/50: sigue aplicado tras un repintado (${tras} opciones vivas)`);
     }
+    if(!subio && ui.raise){ subio = true; await pg.click("#poker-raise"); }
     await pg.click("#poker-defend-options .option:not([disabled])");
   }
   else {
@@ -119,6 +150,11 @@ while(Date.now() - t0 < 180000){
       } else if(r.claim && !r.decision) g.decideConfio();
     });
   }
+  const suma = await pg.evaluate(()=>{
+    const c = Array.from(document.querySelectorAll(".poker-money .pm-coins")).map(e=> parseInt(e.textContent.replace(/\D/g,""),10));
+    return c.length === 2 ? c[0] + c[1] : null;
+  });
+  if(suma !== null && suma !== 40) monedasOk = false;
   await pg.waitForTimeout(60);
 }
 
@@ -131,6 +167,16 @@ ok(comodinOk && comodinOk.total === 4 && comodinOk.vivas === 2 && comodinOk.muer
 ok(comodinOk && comodinOk.opacas, "50/50: las descartadas se ven apagadas, no solo deshabilitadas");
 ok(comodinOk && comodinOk.avisa, "50/50: se avisa en pantalla de que ya se usó");
 ok(blancos === 0, `Partida: ninguna pantalla se queda en blanco (${blancos})`);
+ok(apuestas >= 4, `Apuestas: el host apostó en cada ataque (${apuestas})`);
+ok(chipsInfo && chipsInfo.n >= 5, `Apuestas: se pintan las fichas para elegir cuánto (${chipsInfo && chipsInfo.n})`);
+ok(chipsInfo && chipsInfo.redonda, "Apuestas: las fichas se ven redondas (CSS aplicado)");
+ok(chipsInfo && chipsInfo.marcada, "Apuestas: hay una ficha marcada por defecto");
+ok(chipsInfo && chipsInfo.aviso, "Apuestas: se avisa de que el rival VERÁ la cifra");
+ok(betShout && Number(betShout.n) >= 1, `Defensor: ve la apuesta del rival (${betShout && betShout.n} 🪙)`);
+ok(betShout && betShout.px >= 28, `Defensor: la apuesta se pinta grande (${betShout && betShout.px}px)`);
+ok(betShout && betShout.faroles, "Defensor: ve cuántos faroles le quedan al rival");
+ok(subio, "Defensor: la subida ×2 está disponible y se puede usar");
+ok(monedasOk, "Marcador: las dos pilas suman siempre 40 durante toda la partida");
 
 const final = await pg.evaluate(()=> window.__gFinal);
 ok(final && Array.isArray(final.review) && final.review.length === 10,

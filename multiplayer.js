@@ -1068,6 +1068,9 @@ function createCoopGame(session){
 --------------------------------------------------------------- */
 const FAROL_TOKENS_PER_PLAYER = 3;
 const POKER_ROUNDS_PER_DECK = 5; // cartas por mazo → nº de turnos que ataca cada jugador
+const COINS_START = 20;          // modo apuestas: pila inicial de cada jugador
+const BET_MAX = 5;               // apuesta normal máxima
+const BET_MAX_BEHIND = 8;        // …ampliada si vas COMEBACK_THRESHOLD monedas por detrás
 
 function createPokerGame(session){
   let handlers = {};
@@ -1087,6 +1090,16 @@ function createPokerGame(session){
   let myDudoTotal = 0, myDudoCorrect = 0;
 
   const COMEBACK_THRESHOLD = 8;
+
+  /* ---------- Modo APUESTAS (monedas) ----------
+     El atacante fija una apuesta VISIBLE; el defensor apuesta a leerle.
+     Suma cero: las dos pilas suman siempre COINS_START*2, asi que el
+     marcador se lee de un vistazo. Ver la tabla de pagos en payCoins(). */
+  let mode = "clasico";                 // "clasico" | "apuestas" — lo fija el host
+  let myCoins = COINS_START, rivalCoins = COINS_START;
+  let myBiggestBluff = 0;               // mayor apuesta con la que colo un farol
+  let myReads = 0, myReadsRight = 0;    // veces que defendi / acerte la lectura
+  let bustBy = null;                    // "me" | "rival" si la partida acaba por ruina
 
   // Estado de la ronda en curso
   let round = null; // { turn, attackerIsMe, qid, claim, decision, answer, resolved, comebackActive, wildcardUsed }
@@ -1114,10 +1127,12 @@ function createPokerGame(session){
     if(msg.type === "poker_ready"){ readyFlags.rival = true; checkBothReady(); return; }
     if(msg.type === "poker_start"){
       totalRounds = msg.totalRounds;
+      mode = msg.mode || "clasico";
       turnIndex = -1;
       beginTurn(0, msg.firstAttackerIsHost);
       return;
     }
+    if(msg.type === "game_end"){ finishMatch(); return; }
     if(msg.type === "poker_next_turn"){
       if(session.getRole() === "host") return; // el host ya avanzó localmente al enviar este mensaje
       if(msg.turn === turnIndex) return; // reenvío idempotente (p.ej. tras reconexión)
@@ -1139,7 +1154,8 @@ function createPokerGame(session){
     if(msg.type === "poker_claim"){
       if(!round || msg.turn !== turnIndex || round.attackerIsMe || round.claim) return;
       round.claim = msg.claim;
-      emitPhase("defender_decide", { qid: round.qid, claim: round.claim });
+      round.bet = clampBet(msg.bet);
+      emitPhase("defender_decide", { qid: round.qid, claim: round.claim, bet: round.bet });
       return;
     }
     if(msg.type === "poker_decision"){
@@ -1147,6 +1163,7 @@ function createPokerGame(session){
       round.decision = msg.decision;
       round.answer = msg.decision === "dudo" ? msg.answer : round.claim;
       round.wildcardUsed = !!msg.wildcardUsed;
+      round.raised = !!msg.raised;
       resolveTurn();
       return;
     }
@@ -1154,9 +1171,9 @@ function createPokerGame(session){
       const sent = lastSentForTurn[turnIndex] || {};
       if(round && round.attackerIsMe){
         if(sent.card) session.send({type:"poker_card", turn:turnIndex, qid:round.qid, q:roundQuestion()});
-        if(sent.claim) session.send({type:"poker_claim", turn:turnIndex, claim:round.claim});
+        if(sent.claim) session.send({type:"poker_claim", turn:turnIndex, claim:round.claim, bet:round.bet});
       } else if(round){
-        if(sent.decision) session.send({type:"poker_decision", turn:turnIndex, decision:round.decision, answer:round.answer, wildcardUsed:round.wildcardUsed});
+        if(sent.decision) session.send({type:"poker_decision", turn:turnIndex, decision:round.decision, answer:round.answer, wildcardUsed:round.wildcardUsed, raised:round.raised});
       }
       return;
     }
@@ -1166,7 +1183,7 @@ function createPokerGame(session){
     if(readyFlags.mine && readyFlags.rival && session.getRole() === "host"){
       const rounds = 2 * POKER_ROUNDS_PER_DECK;
       totalRounds = rounds;
-      session.send({type:"poker_start", totalRounds:rounds, firstAttackerIsHost:true});
+      session.send({type:"poker_start", totalRounds:rounds, firstAttackerIsHost:true, mode});
       turnIndex = -1;
       beginTurn(0, true);
     }
@@ -1196,6 +1213,22 @@ function createPokerGame(session){
     emitPhase(attackerIsMe ? "attacker_select_card" : "defender_wait_card", { turn, total:totalRounds, attackerIsMe, comebackActive, asalto:isAsaltoTurn(turn) });
   }
 
+  /* Tope de apuesta: nunca más de lo que hay en la mesa (así ninguna pila
+     puede quedar en negativo) y nunca más de BET_MAX… salvo que vayas muy
+     por detrás, donde sube a BET_MAX_BEHIND. La remontada deja de ser un
+     regalo automático y pasa a ser una DECISIÓN tuya: puedes apostar más,
+     pero también perder más. */
+  function maxBet(){
+    if(mode !== "apuestas") return 1;
+    const tope = (rivalCoins - myCoins) >= COMEBACK_THRESHOLD ? BET_MAX_BEHIND : BET_MAX;
+    return Math.max(1, Math.min(tope, myCoins, rivalCoins));
+  }
+  function clampBet(b){
+    if(mode !== "apuestas") return 1;
+    const n = Math.floor(Number(b) || 1);
+    return Math.max(1, Math.min(n, BET_MAX_BEHIND, myCoins, rivalCoins));
+  }
+
   // La pregunta del turno: la recibida por valor manda; el banco local es
   // solo el respaldo (mensajes de una version anterior de la app).
   function roundQuestion(){ return (round && (round.q || O.Q_BY_ID[round.qid])) || null; }
@@ -1213,12 +1246,13 @@ function createPokerGame(session){
     emitPhase("attacker_answer", { qid });
   }
 
-  function submitClaim(claim){
+  function submitClaim(claim, bet){
     if(!round || !round.attackerIsMe || !round.qid || round.claim) return;
     round.claim = claim;
+    round.bet = clampBet(bet);
     lastSentForTurn[turnIndex].claim = true;
-    session.send({type:"poker_claim", turn:turnIndex, claim});
-    emitPhase("attacker_wait_defender", {});
+    session.send({type:"poker_claim", turn:turnIndex, claim, bet:round.bet});
+    emitPhase("attacker_wait_defender", { bet: round.bet });
   }
 
   function decideConfio(){
@@ -1228,11 +1262,12 @@ function createPokerGame(session){
     session.send({type:"poker_decision", turn:turnIndex, decision:"confio", wildcardUsed:false});
     resolveTurn();
   }
-  function decideDudo(answer){
+  function decideDudo(answer, opts){
     if(!round || round.attackerIsMe || round.decision) return;
     round.decision = "dudo"; round.answer = answer;
+    round.raised = !!(opts && opts.raise);
     lastSentForTurn[turnIndex].decision = true;
-    session.send({type:"poker_decision", turn:turnIndex, decision:"dudo", answer, wildcardUsed:!!round.wildcardUsed});
+    session.send({type:"poker_decision", turn:turnIndex, decision:"dudo", answer, wildcardUsed:!!round.wildcardUsed, raised:round.raised});
     resolveTurn();
   }
 
@@ -1250,11 +1285,74 @@ function createPokerGame(session){
     return [q.respuesta, keptWrong];
   }
 
+  /* ---------- Modo APUESTAS: pagos ----------
+     Se apuesta a la LECTURA, no a la respuesta: el atacante gana si le
+     malinterpretan (le creen mintiendo, o dudan de él diciendo la verdad) y
+     el defensor gana si acierta el diagnóstico. Por eso apostar fuerte es
+     bueno con verdad Y con mentira según a quién tengas enfrente — que es
+     lo que hace que la apuesta VISIBLE signifique algo.
+       · lectura acertada del defensor ....... el defensor cobra la apuesta
+       · lectura fallada ..................... la cobra el atacante
+       · dudó bien pero falla su respuesta ... solo 1 (olió el farol, no sabe
+                                               la verdad: dudar a ciegas no paga)
+       · subir (defensor) .................... ×2 lo que gana Y lo que pierde
+       · 50/50 ............................... la mitad de lo que gana (mín. 1);
+                                               lo que pierde, igual
+       · farol SIN ficha pillado ............. el atacante paga el doble
+     Suma cero siempre: lo que uno gana, el otro lo pierde. */
+  function payCoins(){
+    const q = roundQuestion();
+    const attackerTruthful = round.claim === q.respuesta;
+    const dudo = round.decision === "dudo";
+    const readRight = attackerTruthful ? !dudo : dudo;
+    const answerRight = round.answer === q.respuesta;
+    const iAmAttacker = round.attackerIsMe;
+
+    // La ficha de farol se gasta al mentir; sin ficha se puede mentir igual,
+    // pero sale el doble de caro si te pillan. Así el contador público de
+    // faroles («le quedan 0») insinúa honestidad sin garantizarla: hasta el
+    // último turno sigue habiendo duda.
+    let sinFicha = false;
+    if(!attackerTruthful){
+      const left = iAmAttacker ? myFarolTokens : rivalFarolTokens;
+      if(left > 0){ if(iAmAttacker) myFarolTokens--; else rivalFarolTokens--; }
+      else sinFicha = true;
+    }
+
+    let B = Math.max(1, Number(round.bet) || 1);
+    if(round.raised) B *= 2;
+
+    let toDefender;
+    if(readRight){
+      toDefender = (dudo && !answerRight) ? 1 : B;
+      if(round.wildcardUsed && toDefender > 1) toDefender = Math.max(1, Math.round(toDefender/2));
+      if(sinFicha) toDefender *= 2;
+    } else {
+      toDefender = -B;
+    }
+    // nunca por encima de lo que hay en la mesa
+    const attackerCoins = iAmAttacker ? myCoins : rivalCoins;
+    const defenderCoins = iAmAttacker ? rivalCoins : myCoins;
+    toDefender = Math.max(-defenderCoins, Math.min(toDefender, attackerCoins));
+
+    if(iAmAttacker){ myCoins -= toDefender; rivalCoins += toDefender; }
+    else { myCoins += toDefender; rivalCoins -= toDefender; }
+
+    if(!attackerTruthful && !dudo && iAmAttacker) myBiggestBluff = Math.max(myBiggestBluff, B);
+    if(!iAmAttacker){ myReads++; if(readRight) myReadsRight++; }
+
+    return { attackerTruthful, readRight, answerRight, sinFicha, B,
+             attackerPts: iAmAttacker ? -toDefender : toDefender,
+             defenderPts: iAmAttacker ? toDefender : -toDefender,
+             toDefender };
+  }
+
   function resolveTurn(){
     if(!round || round.resolved || round.decision === null) return;
     round.resolved = true;
     const q = roundQuestion();
     if(!q){ emitPhase("error", {message:"Pregunta no disponible"}); return; }
+    if(mode === "apuestas") return resolveTurnCoins(q);
     const correct = q.respuesta;
     const attackerTruthful = round.claim === correct;
     const defenderCorrect = round.answer === correct;
@@ -1316,8 +1414,43 @@ function createPokerGame(session){
     emitPhase("reveal", result);
   }
 
+  function resolveTurnCoins(q){
+    const r = payCoins();
+    const iAmAttacker = round.attackerIsMe;
+    if(iAmAttacker && r.attackerTruthful) myCorrect++;
+    if(!iAmAttacker && r.answerRight && round.decision === "dudo") myCorrect++;
+    if(iAmAttacker && !r.attackerTruthful && !r.readRight) myBluffsSuccessful++;
+    if(!iAmAttacker && !r.attackerTruthful){
+      rivalBluffCount++;
+      if(round.decision === "confio") trustedRivalBluffCount++;
+      else if(r.answerRight) detectedRivalBluffCount++;
+      if(r.readRight) myBluffsDetectedByMe++;
+    }
+    if(!iAmAttacker && round.decision === "dudo"){ myDudoTotal++; if(r.answerRight) myDudoCorrect++; }
+
+    const result = {
+      turn: round.turn, question:q, attackerIsMe: iAmAttacker,
+      claim: round.claim, decision: round.decision, answer: round.answer, correct: q.respuesta,
+      attackerTruthful: r.attackerTruthful, defenderCorrect: r.answerRight,
+      attackerPts: r.attackerPts, defenderPts: r.defenderPts,
+      farolConsumedByAttacker: !r.attackerTruthful && !r.sinFicha,
+      comebackActive: false, wildcardUsed: !!round.wildcardUsed, asalto: false,
+      // propios del modo apuestas
+      coins: true, bet: round.bet, raised: !!round.raised, pot: r.B,
+      readRight: r.readRight, sinFicha: r.sinFicha,
+      myCoins, rivalCoins,
+      myScore: myCoins, rivalScore: rivalCoins,   // compat con la UI del marcador
+    };
+    matchHistory.push(result);
+    emitPhase("reveal", result);
+    // Ruina: la partida acaba en el acto, sin esperar a los 10 turnos.
+    if(myCoins <= 0) bustBy = "me";
+    else if(rivalCoins <= 0) bustBy = "rival";
+  }
+
   function nextTurn(){
     if(session.getRole() !== "host") return;
+    if(bustBy){ session.send({type:"game_end"}); finishMatch(); return; }
     const next = turnIndex + 1;
     session.send({type:"poker_next_turn", turn:next});
     beginTurn(next, true);
@@ -1326,9 +1459,14 @@ function createPokerGame(session){
     if(ended) return;
     ended = true;
     emitPhase("finished", {
-      myScore, rivalScore, myCorrect, myBluffsSuccessful, myBluffsDetectedByMe,
+      coins: mode === "apuestas", myCoins, rivalCoins, bustBy,
+      myBiggestBluff, myReads, myReadsRight,
+      myScore: mode === "apuestas" ? myCoins : myScore,
+      rivalScore: mode === "apuestas" ? rivalCoins : rivalScore,
+      myCorrect, myBluffsSuccessful, myBluffsDetectedByMe,
       rivalBluffCount, trustedRivalBluffCount, detectedRivalBluffCount, myDudoTotal, myDudoCorrect,
-      outcome: myScore>rivalScore ? "victory" : myScore<rivalScore ? "defeat" : "draw",
+      outcome: (()=>{ const a = mode==="apuestas" ? myCoins : myScore, b = mode==="apuestas" ? rivalCoins : rivalScore;
+                      return a>b ? "victory" : a<b ? "defeat" : "draw"; })(),
       review: matchHistory.map(r=>({
         question: r.question, attackerIsMe: r.attackerIsMe, claim: r.claim,
         decision: r.decision, answer: r.answer, correct: r.correct,
@@ -1340,6 +1478,7 @@ function createPokerGame(session){
   return {
     setHandlers(h){ handlers = h; },
     setMyDeck,
+    setMode(m){ if(!totalRounds) mode = (m === "apuestas") ? "apuestas" : "clasico"; },
     confirmReady(){ readyFlags.mine = true; session.send({type:"poker_ready"}); checkBothReady(); },
     playCard, submitClaim, decideConfio, decideDudo, useWildcard, nextTurn,
     getRound(){ return round; },
@@ -1348,6 +1487,8 @@ function createPokerGame(session){
       turnIndex, totalRounds, myScore, rivalScore, myFarolTokens, rivalFarolTokens,
       myCorrect, myBluffsSuccessful, myBluffsDetectedByMe, deckIds:myDeckIds,
       myWildcardUsed, myComebackAvailable, asalto: isAsaltoTurn(turnIndex),
+      mode, myCoins, rivalCoins, maxBet: maxBet(), bet: round && round.bet, bustBy,
+      rivalFarolTokens,
     }; },
   };
 }

@@ -4112,7 +4112,7 @@ document.addEventListener("DOMContentLoaded", init);
    sin conexión; esta es la única parte que la necesita.
 ================================================================ */
 const MP = window.OPE_MP;
-let mpSetupState = { role:null, name:"", mode:"duelo", preset:"clasica", rounds:15, seconds:10, scope:"todo", section:"all", topic:"all", tipo:"all", categoria:"all", joinCode:"", raceMode:false };
+let mpSetupState = { role:null, name:"", mode:"duelo", preset:"clasica", rounds:15, seconds:10, scope:"todo", section:"all", topic:"all", tipo:"all", categoria:"all", joinCode:"", raceMode:false, farolMode:"apuestas" };
 let mpSession = null, mpDuel = null, mpPoker = null, mpGameMode = "duelo";
 let mpConnPhase = "idle";
 let mpDuelPhase = "idle";
@@ -4123,6 +4123,11 @@ let mpPokerReveal = null, mpPokerFinal = null, mpPokerDeck = [], mpPokerPlayed =
    que NO puede perderse en un repintado (antes se aplicaba tocando el DOM a
    posteriori y cualquier re-render devolvía las 4 opciones: pagado por nada). */
 let mpPokerWildcardKeep = null;   // { turn, letters:[a,b] }
+/* Modo apuestas: la respuesta elegida y la apuesta viven aquí hasta que el
+   atacante confirma, atadas al turno — igual que el 50/50, para que un
+   repintado a mitad de decisión no borre lo que llevabas puesto. */
+let mpPokerBet = null;            // { turn, claim, bet }
+let mpPokerRaise = false;         // el defensor ha marcado "subir x2" en este turno
 let mpTimerInterval = null;
 let mpLastRoundExtra = null;
 let mpRoomCode = null;
@@ -4165,6 +4170,7 @@ function mpReset(){
   mpSession = null; mpDuel = null; mpPoker = null; mpConnPhase = "idle"; mpDuelPhase = "idle"; mpPokerPhase = "idle";
   mpRoomCode = null; mpLastRoundExtra = null; mpFinalExtra = null; mpPokerReveal = null; mpPokerFinal = null;
   mpPokerDeck = []; mpPokerPlayed = {}; mpPokerWildcardKeep = null;
+  mpPokerBet = null; mpPokerRaise = false;
   mpRoundDeadlineLocal = null; mpRoundDurationMs = null; mpRoundDeadlineFor = -1;
   mpCountdownAt = null; mpDraft = { round:-1, sel:null, pairs:null };
   if(mpTimerInterval){ clearInterval(mpTimerInterval); mpTimerInterval = null; }
@@ -5222,6 +5228,7 @@ function mpWirePokerHandlers(){
     onConnState(){ /* ya gestionado por el puente de mpStartAsHost/Guest */ },
     onPhase(p, extra){
       mpPokerPhase = p;
+      if(p === "attacker_select_card" || p === "defender_wait_card") mpPokerRaise = false;
       if(p === "reveal"){
         mpPokerReveal = extra;
         setTimeout(()=>{ if(mpPoker) mpPoker.nextTurn(); }, 3200);
@@ -5278,7 +5285,19 @@ function renderPokerLobby(view){
     <div class="actions" style="margin-top:var(--sp-4); justify-content:flex-start;">
       <button class="btn btn-outline btn-sm" id="poker-shuffle-all">Barajar mazo completo</button>
     </div>
-    <div class="security-note">🎭 3 faroles de alto valor por jugador — pasado ese límite, mentir sigue siendo posible pero vale menos puntos.</div>
+    <div class="poker-mode" style="margin-top:var(--sp-5);">
+      <p class="eyebrow" style="margin-bottom:var(--sp-2);">Cómo se puntúa</p>
+      <div class="preset-row">
+        <button class="preset-card ${mpSetupState.farolMode==='apuestas'?'selected':''}" data-fmode="apuestas">
+          <div class="t">🪙 Apuestas</div><div class="d">20 monedas · tú decides cuánto vale cada ronda</div></button>
+        <button class="preset-card ${mpSetupState.farolMode==='clasico'?'selected':''}" data-fmode="clasico">
+          <div class="t">Clásico</div><div class="d">puntos fijos por ronda</div></button>
+      </div>
+    </div>
+    ${mpSetupState.farolMode==='apuestas' ? `
+      <div class="security-note">🪙 <strong>20 monedas cada uno.</strong> Al atacar eliges la respuesta <em>y cuánto apuestas</em> (1-5) — y tu rival <strong>ve la apuesta</strong>. No apuestas a la respuesta: apuestas a que <strong>no te lee</strong>. Si acierta si mientes o no, se lleva la apuesta; si falla, te la llevas tú. Al dudar hay que dar la respuesta: olerse el farol sin saberla solo paga 1. La partida acaba a los 10 turnos o cuando alguien se quede sin monedas.</div>
+      <div class="security-note">🎭 3 faroles por jugador, <strong>a la vista de los dos</strong>. Sin fichas puedes seguir mintiendo, pero si te pillan pagas el doble.</div>
+    ` : `<div class="security-note">🎭 3 faroles de alto valor por jugador — pasado ese límite, mentir sigue siendo posible pero vale menos puntos.</div>`}
     <button class="btn btn-solid btn-block" id="poker-confirm-deck" style="margin-top:var(--sp-5);" ${readyDisabled?'disabled':''}>${readyDisabled ? 'Esperando a tu rival…' : 'Confirmar mazo'}</button>
     <button class="btn btn-ghost btn-block" id="mp-exit" style="margin-top:10px;">Salir</button>
   `;
@@ -5291,8 +5310,14 @@ function renderPokerLobby(view){
     });
   });
   $("#poker-shuffle-all").addEventListener("click", ()=>{ mpPokerDeck = pokerSuggestDeck(); renderPokerLobby(mainEl()); });
+  $$("[data-fmode]").forEach(b=> b.addEventListener("click", ()=>{
+    if(readyDisabled) return;                       // el mazo ya está confirmado
+    mpSetupState.farolMode = b.getAttribute("data-fmode");
+    renderPokerLobby(mainEl());
+  }));
   $("#poker-confirm-deck").addEventListener("click", (e)=>{
     mpPoker.setMyDeck(mpPokerDeck);
+    if(mpPoker.setMode) mpPoker.setMode(mpSetupState.farolMode);
     mpPoker.confirmReady();
     mpPokerPhase = "waiting_ready";
     renderPokerLobby(mainEl());
@@ -5304,20 +5329,22 @@ function renderPokerGame(){
   if(mpPokerPhase === "finished"){ return renderPokerResults(); }
   const st = mpPoker.getState();
   const round = mpPoker.getRound();
+  const coins = st.mode === "apuestas";
   const asaltoNow = round ? st.asalto : false;
 
   const header = `
     <div class="session-topbar">
       <button class="exit" id="mp-game-exit">${icon('arrowL')} Salir</button>
       <span class="counter">Turno ${st.turnIndex+1} / ${st.totalRounds}</span>
-      <span class="chip">🎭 ${st.myFarolTokens}</span>
+      ${coins ? `<span class="chip">🪙 ${st.myCoins}</span>` : `<span class="chip">🎭 ${st.myFarolTokens}</span>`}
     </div>
-    ${asaltoNow ? `<div class="security-note" style="text-align:center; border-color:var(--warn); color:var(--warn); margin-bottom:var(--sp-3);">⚡ ¡Asalto de faroles! Los faroles y las detecciones valen más esta ronda.</div>` : ``}
-    ${round && round.comebackActive ? `<div class="security-note" style="text-align:center; border-color:var(--accent-line); color:var(--accent-ink); margin-bottom:var(--sp-3);">🔥 Remontada activa: ${round.attackerIsMe?'tus':O.escapeHtml(mpSession.getRivalName())+' sus'} puntos de esta ronda se duplican.</div>` : ``}
+    ${!coins && asaltoNow ? `<div class="security-note" style="text-align:center; border-color:var(--warn); color:var(--warn); margin-bottom:var(--sp-3);">⚡ ¡Asalto de faroles! Los faroles y las detecciones valen más esta ronda.</div>` : ``}
+    ${!coins && round && round.comebackActive ? `<div class="security-note" style="text-align:center; border-color:var(--accent-line); color:var(--accent-ink); margin-bottom:var(--sp-3);">🔥 Remontada activa: ${round.attackerIsMe?'tus':O.escapeHtml(mpSession.getRivalName())+' sus'} puntos de esta ronda se duplican.</div>` : ``}
+    ${coins ? pokerMoneyRowHtml(st) : `
     <div class="duel-players-row">
       <div class="duel-player self"><div class="name"><span class="status-dot"></span>Tú</div><div class="score">${st.myScore}</div></div>
       <div class="duel-player"><div class="name"><span class="status-dot"></span>${O.escapeHtml(mpSession.getRivalName())}</div><div class="score">${st.rivalScore}</div></div>
-    </div>
+    </div>`}
     ${renderPokerHistoryStrip()}`;
 
   let body = "";
@@ -5378,6 +5405,38 @@ function pokerQNotAvailable(){
     <h3>Carta no disponible</h3><p>La pregunta que ha jugado tu rival no está en tu banco. Salid y empezad otra partida.</p></div>`;
 }
 
+/* ¿Estamos en modo apuestas? Lo dice el motor (lo fijó el host y viajó en
+   poker_start), nunca mpSetupState — el invitado no eligió nada. */
+function pokerCoins(){ const st = mpPoker && mpPoker.getState(); return !!(st && st.mode === "apuestas"); }
+function pokerBetDraft(turn){
+  if(!mpPokerBet || mpPokerBet.turn !== turn) mpPokerBet = { turn, claim:null, bet:1 };
+  return mpPokerBet;
+}
+/* Pila de monedas: se lee de un vistazo sin contar números. */
+function coinStackHtml(n, max){
+  const tope = max || 20;
+  const pct = Math.max(0, Math.min(100, Math.round(n/tope*100)));
+  return `<div class="coin-bar"><i style="width:${pct}%"></i></div>`;
+}
+function pokerMoneyRowHtml(st){
+  const rivalName = O.escapeHtml(mpSession.getRivalName());
+  const total = st.myCoins + st.rivalCoins;
+  return `<div class="poker-money">
+    <div class="pm-side ${st.myCoins>=st.rivalCoins?'lead':''}">
+      <div class="pm-name">Tú</div>
+      <div class="pm-coins">🪙 ${st.myCoins}</div>
+      ${coinStackHtml(st.myCoins, total)}
+      <div class="pm-farol">${"🎭".repeat(st.myFarolTokens)||"<span class='pm-none'>sin faroles</span>"}</div>
+    </div>
+    <div class="pm-side ${st.rivalCoins>st.myCoins?'lead':''}">
+      <div class="pm-name">${rivalName}</div>
+      <div class="pm-coins">🪙 ${st.rivalCoins}</div>
+      ${coinStackHtml(st.rivalCoins, total)}
+      <div class="pm-farol">${"🎭".repeat(st.rivalFarolTokens)||"<span class='pm-none'>sin faroles</span>"}</div>
+    </div>
+  </div>`;
+}
+
 function renderPokerAttackerUI(round, phase){
   if(phase === "attacker_select_card"){
     const played = new Set(Object.keys(mpPokerPlayed));
@@ -5396,6 +5455,38 @@ function renderPokerAttackerUI(round, phase){
   if(phase === "attacker_answer"){
     const q = round.q || O.Q_BY_ID[round.qid];
     if(!q) return pokerQNotAvailable();
+    const st = mpPoker.getState();
+    const coins = pokerCoins();
+    const draft = coins ? pokerBetDraft(round.turn) : null;
+
+    // Paso 2 del modo apuestas: ya hay respuesta elegida, ahora cuánto vale.
+    if(coins && draft.claim){
+      const opt = q.opciones.find(o=>o.letter===draft.claim) || {letter:draft.claim, text:""};
+      const dice = opt.letter === q.respuesta;
+      const tope = st.maxBet;
+      const subeTope = tope > 5;
+      return `
+        <div class="surface qcard" style="padding:var(--sp-6);">
+          <p class="eyebrow" style="margin-bottom:var(--sp-2);">Vas a presentar</p>
+          <div class="option selected" style="pointer-events:none;"><span class="letter">${O.escapeHtml(String(opt.letter))}</span><span>${O.escapeHtml(opt.text)}</span></div>
+          <p class="poker-truth ${dice?'ok':'lie'}">${dice
+            ? "✔ Es la respuesta correcta — vas de cara."
+            : `🎭 Es FALSA — vas de farol${st.myFarolTokens>0?` (te quedan ${st.myFarolTokens} fichas)`:` <strong>sin fichas: si te pillan pagas el doble</strong>`}.`}</p>
+
+          <p class="eyebrow" style="margin:var(--sp-5) 0 var(--sp-2);">¿Cuánto apuestas?</p>
+          <p class="poker-hint">Tu rival <strong>verá la cifra</strong>. Ganas si NO te lee; pierdes lo mismo si te lee.</p>
+          <div class="bet-chips" id="poker-bet-chips">
+            ${Array.from({length:tope}, (_,i)=>i+1).map(n=>
+              `<button class="bet-chip ${draft.bet===n?'on':''}" data-bet="${n}">${n}</button>`).join("")}
+          </div>
+          ${subeTope?`<p class="poker-hint">🔥 Vas por detrás: puedes llegar hasta ${tope}.</p>`:''}
+          <div class="actions" style="margin-top:var(--sp-5);">
+            <button class="btn btn-ghost btn-sm" id="poker-bet-back">Cambiar respuesta</button>
+            <button class="btn btn-solid" id="poker-bet-go">Apostar ${draft.bet} 🪙</button>
+          </div>
+        </div>`;
+    }
+
     return `
       <p style="text-align:center; color:var(--text-2); font-size:13px; margin:var(--sp-4) 0;">Elige la respuesta que quieres presentar.</p>
       <div class="surface qcard" style="padding:var(--sp-6);">
@@ -5419,16 +5510,28 @@ function renderPokerDefenderUI(round, phase){
   if(!q) return pokerQNotAvailable();
   if(phase === "defender_decide"){
     const claimOpt = q.opciones.find(o=>o.letter===round.claim) || { letter:round.claim||"?", text:"(opción desconocida)" };
+    const st = mpPoker.getState();
+    const coins = pokerCoins();
+    const apuesta = coins ? `
+      <div class="bet-shout">
+        <div class="bs-n">${round.bet||1}</div>
+        <div class="bs-t">🪙 apuesta ${O.escapeHtml(mpSession.getRivalName())}</div>
+        <div class="bs-s">${st.rivalFarolTokens>0
+          ? `Le quedan ${"🎭".repeat(st.rivalFarolTokens)} faroles`
+          : `<strong>Sin faroles</strong> — si miente ahora, paga el doble`}</div>
+      </div>` : "";
     return `
       <div class="surface qcard" style="padding:var(--sp-6);">
         ${mpQuestionImage(q)}
         <h3>${O.renderBlank(q.enunciado)}</h3>
         <div class="security-note" style="margin-bottom:var(--sp-4);">Tu rival ha marcado:</div>
         <div class="option selected" style="pointer-events:none;"><span class="letter">${O.escapeHtml(String(claimOpt.letter))}</span><span>${O.escapeHtml(claimOpt.text)}</span></div>
-        <p style="text-align:center; font-weight:700; margin-top:var(--sp-5);">¿Te fías?</p>
+        ${apuesta}
+        <p style="text-align:center; font-weight:700; margin-top:var(--sp-5);">${coins?`¿Miente?`:`¿Te fías?`}</p>
+        ${coins?`<p class="poker-hint">Aciertes o falles, se juegan ${round.bet||1} 🪙.</p>`:''}
         <div class="tf-row" style="margin-top:var(--sp-3);">
-          <button class="tf-btn" id="poker-confio">🤝 CONFÍO</button>
-          <button class="tf-btn" id="poker-dudo">🧐 DUDO</button>
+          <button class="tf-btn" id="poker-confio">🤝 ${coins?'VA DE CARA':'CONFÍO'}</button>
+          <button class="tf-btn" id="poker-dudo">🧐 ${coins?'MIENTE':'DUDO'}</button>
         </div>
       </div>`;
   }
@@ -5446,8 +5549,13 @@ function renderPokerDefenderUI(round, phase){
         const fuera = keep && !keep.includes(o.letter);
         return `<button class="option" data-defend="${o.letter}" ${fuera?`disabled style="opacity:.35;pointer-events:none;"`:``}><span class="letter">${o.letter}</span><span>${O.escapeHtml(o.text)}</span></button>`;
       }).join("")}</div>
-      ${keep ? `<p class="coop-hint" style="margin-top:var(--sp-3);">🃏 50/50 usado — vale la mitad de puntos si aciertas.</p>`
-             : (wildcardAvailable ? `<button class="btn btn-outline btn-sm" id="poker-wildcard" style="margin-top:var(--sp-4);">🃏 50/50 (elimina 2 — vale la mitad de puntos si aciertas)</button>` : ``)}
+      ${keep ? `<p class="coop-hint" style="margin-top:var(--sp-3);">🃏 50/50 usado — vale la mitad si aciertas.</p>`
+             : (wildcardAvailable ? `<button class="btn btn-outline btn-sm" id="poker-wildcard" style="margin-top:var(--sp-4);">🃏 50/50 (elimina 2 — vale la mitad si aciertas)</button>` : ``)}
+      ${pokerCoins() ? `
+        <button class="btn ${mpPokerRaise?'btn-solid':'btn-outline'} btn-sm" id="poker-raise" style="margin-top:var(--sp-3);">
+          ${mpPokerRaise?`🔥 Subida activa — se juegan ${(round.bet||1)*2} 🪙`:`🔥 Subir a ${(round.bet||1)*2} 🪙`}
+        </button>
+        <p class="poker-hint">Subir dobla lo que ganas <em>y</em> lo que pierdes. Si dudas bien pero fallas la respuesta, solo cobras 1.</p>` : ``}
     </div>`;
 }
 
@@ -5460,7 +5568,26 @@ function wirePokerGameHandlers(round, phase){
     }));
   }
   if(round && round.attackerIsMe && phase === "attacker_answer"){
-    $$("[data-claim]").forEach(btn=> btn.addEventListener("click", ()=> mpPoker.submitClaim(btn.getAttribute("data-claim"))));
+    if(pokerCoins()){
+      const draft = pokerBetDraft(round.turn);
+      // paso 1: elegir la respuesta que se presenta
+      $$("[data-claim]").forEach(btn=> btn.addEventListener("click", ()=>{
+        draft.claim = btn.getAttribute("data-claim");
+        draft.bet = Math.min(draft.bet || 1, mpPoker.getState().maxBet);
+        renderPokerGame();
+      }));
+      // paso 2: cuánto se apuesta
+      $$("[data-bet]").forEach(btn=> btn.addEventListener("click", ()=>{
+        draft.bet = Number(btn.getAttribute("data-bet")) || 1;
+        renderPokerGame();
+      }));
+      const back = $("#poker-bet-back");
+      if(back) back.addEventListener("click", ()=>{ draft.claim = null; renderPokerGame(); });
+      const go = $("#poker-bet-go");
+      if(go) go.addEventListener("click", ()=> mpPoker.submitClaim(draft.claim, draft.bet));
+    } else {
+      $$("[data-claim]").forEach(btn=> btn.addEventListener("click", ()=> mpPoker.submitClaim(btn.getAttribute("data-claim"))));
+    }
   }
   if(round && !round.attackerIsMe && phase === "defender_decide"){
     // Estos botones NO existen si la carta del rival no está en nuestro banco
@@ -5469,10 +5596,12 @@ function wirePokerGameHandlers(round, phase){
     // enganchar el resto de manejadores de la vista.
     const cf = $("#poker-confio"), du = $("#poker-dudo");
     if(cf) cf.addEventListener("click", ()=> mpPoker.decideConfio());
-    if(du) du.addEventListener("click", ()=>{ mpPokerPhase = "defender_answer"; renderPokerGame(); });
+    if(du) du.addEventListener("click", ()=>{ mpPokerRaise = false; mpPokerPhase = "defender_answer"; renderPokerGame(); });
   }
   if(round && !round.attackerIsMe && phase === "defender_answer"){
-    $$("[data-defend]").forEach(btn=> btn.addEventListener("click", ()=> mpPoker.decideDudo(btn.getAttribute("data-defend"))));
+    $$("[data-defend]").forEach(btn=> btn.addEventListener("click", ()=> mpPoker.decideDudo(btn.getAttribute("data-defend"), { raise: mpPokerRaise })));
+    const rz = $("#poker-raise");
+    if(rz) rz.addEventListener("click", ()=>{ mpPokerRaise = !mpPokerRaise; renderPokerGame(); });
     const wc = $("#poker-wildcard");
     if(wc) wc.addEventListener("click", ()=>{
       const keep = mpPoker.useWildcard();
@@ -5507,13 +5636,28 @@ function renderPokerReveal(r){
   const extraNotes = [];
   if(r.asalto) extraNotes.push("⚡ Asalto de faroles");
   if(r.comebackActive) extraNotes.push("🔥 Remontada (puntos duplicados)");
-  if(r.wildcardUsed) extraNotes.push("🃏 50/50 usado (puntos a la mitad)");
+  if(r.wildcardUsed) extraNotes.push(r.coins ? "🃏 50/50 usado (cobras la mitad)" : "🃏 50/50 usado (puntos a la mitad)");
+  if(r.coins && r.raised) extraNotes.push("🔥 Apuesta subida ×2");
+  if(r.coins && r.sinFicha) extraNotes.push("🎭 Farol sin ficha: paga doble");
+
+  // En apuestas lo que importa no es acertar la pregunta: es la LECTURA.
+  let lectura = "";
+  if(r.coins){
+    const leyoBien = r.readRight;
+    lectura = myWasAttacker
+      ? (leyoBien ? "Te ha leído 👁️" : "No te ha leído 😎")
+      : (leyoBien ? "👁️ LE HAS LEÍDO" : "😎 TE HA ENGAÑADO");
+    if(leyoBien && r.decision === "dudo" && !r.defenderCorrect)
+      lectura += " — pero sin saber la respuesta, solo 1 🪙";
+  }
 
   return `
     <div class="round-end-panel">
       <div class="verdict ${r.attackerTruthful?'ok':'bad'}">${verdictLine}</div>
+      ${r.coins ? `<p class="reveal-read ${(myPts>0)?'win':'lose'}">${lectura}</p>` : ''}
       ${detectLine ? `<p style="font-size:13px; color:var(--text-2); margin-bottom:var(--sp-2);">${detectLine}</p>` : ''}
-      <div class="pts">${myPts>0?'+':''}${myPts} puntos</div>
+      <div class="pts">${myPts>0?'+':''}${myPts} ${r.coins?'🪙':'puntos'}</div>
+      ${r.coins ? `<p class="reveal-stacks">Tú ${r.myCoins} 🪙 · ${O.escapeHtml(mpSession.getRivalName())} ${r.rivalCoins} 🪙</p>` : ''}
       ${extraNotes.length ? `<p style="font-size:11.5px; color:var(--text-3); margin-top:6px;">${extraNotes.join(' · ')}</p>` : ''}
     </div>
     <div class="surface pad-5" style="margin-top:var(--sp-4);">
@@ -5539,12 +5683,17 @@ function renderPokerResults(){
   <div class="view view-narrow">
     <div class="victory-hero ${outcomeClass}">
       <h1>${outcomeLabel}</h1>
-      <p style="color:var(--text-2); font-size:13px;">${f.myScore} — ${f.rivalScore} puntos</p>
+      <p style="color:var(--text-2); font-size:13px;">${f.myScore} — ${f.rivalScore} ${f.coins?'🪙':'puntos'}</p>
+      ${f.bustBy ? `<p class="bust-line">${f.bustBy==='rival' ? `Le has dejado sin monedas 💥` : `Te has quedado sin monedas 💥`}</p>` : ''}
     </div>
     <div class="result-stats">
-      <div class="stat-cell"><div class="num">${f.myCorrect}</div><div class="label">Respuestas correctas</div></div>
-      <div class="stat-cell"><div class="num">${f.myBluffsSuccessful}</div><div class="label">🎭 Faroles logrados</div></div>
-      <div class="stat-cell"><div class="num">${f.myBluffsDetectedByMe}</div><div class="label">👁️ Faroles detectados</div></div>
+      ${f.coins
+        ? `<div class="stat-cell"><div class="num">${f.myBiggestBluff||0}</div><div class="label">🎭 Mayor farol colado</div></div>
+           <div class="stat-cell"><div class="num">${f.myReads?Math.round(f.myReadsRight/f.myReads*100):0}%</div><div class="label">👁️ Lecturas acertadas</div></div>
+           <div class="stat-cell"><div class="num">${f.myBluffsSuccessful}</div><div class="label">Faroles que colaron</div></div>`
+        : `<div class="stat-cell"><div class="num">${f.myCorrect}</div><div class="label">Respuestas correctas</div></div>
+           <div class="stat-cell"><div class="num">${f.myBluffsSuccessful}</div><div class="label">🎭 Faroles logrados</div></div>
+           <div class="stat-cell"><div class="num">${f.myBluffsDetectedByMe}</div><div class="label">👁️ Faroles detectados</div></div>`}
     </div>
     <div class="section-block">
       <div class="section-title"><h3>Cómo has leído a ${O.escapeHtml(mpSession.getRivalName())}</h3></div>

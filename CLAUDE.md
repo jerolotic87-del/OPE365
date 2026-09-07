@@ -1726,6 +1726,51 @@ formado, y tiene una rama final para cualquier tipo no jugable — antes
 dejaba el cuerpo VACÍO (sin controles, TIMEOUT seguro y sin explicación);
 ahora avisa y ofrece «Pasar de esta ronda».
 
+**Farol · modo APUESTAS (sep-2026).** Modo de puntuación nuevo, y el
+predeterminado; el «Clásico» (tabla de puntos fija) sigue disponible en el
+lobby. Se elige antes de confirmar el mazo y viaja al invitado en
+`poker_start` (`msg.mode`) — el invitado no elige nada.
+
+**La idea:** no se apuesta a la respuesta, se apuesta a la LECTURA. El
+atacante fija una apuesta **visible** (1-5 🪙) y gana si su rival le
+malinterpreta — le creen mintiendo, o dudan de él diciendo la verdad. Por
+eso apostar fuerte es bueno con verdad Y con mentira según a quién tengas
+enfrente, y por eso la apuesta tiene que verse: si fuera secreta, la
+estrategia óptima sería trivial (máximo cuando sabes, mínimo cuando no) y
+no induciría ningún farol.
+
+- **20 monedas cada uno, suma cero** — las dos pilas suman siempre 40, así
+  que el marcador se lee de un vistazo. La partida acaba a los 10 turnos o
+  **cuando alguien se queda sin monedas** (`bustBy`).
+- **Pagos** (`payCoins()` en multiplayer.js): lectura acertada → el defensor
+  cobra la apuesta · lectura fallada → la cobra el atacante · dudó bien pero
+  falla su propia respuesta → solo **1** (olerse el farol sin saber la verdad
+  no paga) · **subir ×2** (defensor, al dudar) dobla lo que gana y lo que
+  pierde · **50/50** reduce a la mitad lo que cobra, no lo que pierde ·
+  **farol sin ficha pillado → el atacante paga el doble**.
+- **Tope de apuesta**: `maxBet()` = mín(5, mi pila, su pila), y sube a **8**
+  si vas 8+ monedas por detrás. Sustituye a la «remontada» automática del
+  modo clásico: en vez de regalarte puntos, te deja arriesgar más — es una
+  decisión, no un regalo.
+- **Las 3 fichas de farol son públicas** y se pintan en la fila de monedas de
+  los dos jugadores. Sin fichas **se puede seguir mintiendo**, pero sale el
+  doble de caro si te pillan: así «le quedan 0 faroles» insinúa honestidad
+  sin garantizarla y la duda sobrevive hasta el último turno.
+- **UI**: el atacante gana un paso (carta → respuesta → **apuesta**), con la
+  respuesta y la cifra guardadas en `mpPokerBet {turn, claim, bet}` — fuera
+  del render, por la misma razón que el 50/50 y el borrador de Duelo: un
+  repintado no puede borrarlas. La subida vive en `mpPokerRaise` y se
+  descarta al cambiar de turno. `pokerCoins()` es el único sitio que decide
+  si estamos en apuestas, y lo lee del MOTOR (nunca de `mpSetupState`: el
+  invitado no eligió modo).
+- Tests: `tests/test_multiplayer_farol.js` sube a **53 comprobaciones** —
+  los 5 casos de la tabla de pagos verificados con dos motores headless
+  enfrentados (incluida la suma cero y que los dos dispositivos ven el mismo
+  marcador), subida ×2, 50/50, farol sin ficha, y una partida entera en
+  apuestas desde la UI. `tests/manual_farol_qa.mjs` la juega en Chromium
+  real y comprueba además lo visual (fichas redondas, la apuesta a 40px en
+  la pantalla del defensor, las pilas cuadrando a 40 en todo momento).
+
 **Repaso al final (sep-2026):** los tres modos emiten `review` en el
 evento `finished` (pregunta + respuesta de cada uno + correcta +
 `explicacion`). Lo pintan `mpDuelReviewHtml`/`mpCoopReviewHtml`/
