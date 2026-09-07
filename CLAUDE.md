@@ -880,6 +880,20 @@ NO estaban en las capturas del usuario):
    = Ninguno/Cuadro/**Todos/Cuadrícula**/Personalizado (la ficha Borde de
    página cambia Todos/Cuadrícula por **Sombra/3D**). Generador:
    `scripts/gen_tablas_contextual.py`.
+ - **Cinta contextual «Formato de imagen»** — 52 capturas del usuario
+   (`data/imagenes_rutas/formato_imagen/`, sep-2026) →
+   `data/rutas/formato_imagen.txt`. 5 grupos: Ajustar (Quitar fondo →
+   pestaña Eliminación del fondo · Correcciones [nitidez + brillo/contraste]
+   · Color [saturación/tono/volver a colorear/definir color transparente] ·
+   Efectos artísticos · Transparencia · Comprimir · Cambiar imagen [5
+   orígenes] · Restablecer imagen [imagen / imagen y tamaño]) · Estilos de
+   imagen (galería · Borde de imagen · Efectos de la imagen [7 submenús] ·
+   Diseño de imagen → SmartArt) · Accesibilidad (Texto alternativo) ·
+   Organizar · Tamaño (Recortar [+ a la forma / relación de aspecto /
+   Rellenar / Ajustar] · Alto · Ancho · lanzador → cuadro Disposición,
+   estilo de ajuste = 7). El banco casi no lo cubría → **+14**
+   (`insertar-499..512`) + 6 flashcards. Generador:
+   `scripts/gen_formato_imagen.py`.
  - Las otras preguntas
    que citan «la extracción» sí se apoyan en capturas reales
    (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
