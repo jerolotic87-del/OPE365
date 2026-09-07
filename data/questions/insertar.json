@@ -1662,6 +1662,438 @@
     "negativa": false,
     "matching": null,
     "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-485",
+    "sourceQuestionId": "capt-tabctx-485",
+    "tipo": "opcion_unica",
+    "enunciado": "El cuadro «Propiedades de tabla» (Disposicion de tabla ▸ Propiedades), ¿cuantas fichas tiene y cuales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "5: Tabla · Fila · Columna · Celda · Texto alternativo"
+      },
+      {
+        "letter": "B",
+        "text": "3: Tabla · Fila · Columna"
+      },
+      {
+        "letter": "C",
+        "text": "4: Tabla · Fila · Columna · Celda"
+      },
+      {
+        "letter": "D",
+        "text": "2: Diseno · Disposicion"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "La ficha «Texto alternativo» (Titulo + Descripcion) es para accesibilidad. En la ficha Tabla estan el «Ajuste del texto» (Ninguno/Alrededor) y el boton «Posicionamiento…»."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-486",
+    "sourceQuestionId": "capt-tabctx-486",
+    "tipo": "opcion_unica",
+    "enunciado": "En la ficha «Fila» del cuadro Propiedades de tabla, el desplegable «Alto de fila» ofrece:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Minimo y Exacto"
+      },
+      {
+        "letter": "B",
+        "text": "Automatico y Fijo"
+      },
+      {
+        "letter": "C",
+        "text": "Sencillo y Doble"
+      },
+      {
+        "letter": "D",
+        "text": "Ajustado y Libre"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Minimo» = la fila crece si el contenido no cabe; «Exacto» = alto fijo aunque el contenido se corte. En la misma ficha: «Permitir dividir las filas entre paginas» y «Repetir como fila de encabezado en cada pagina»."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-487",
+    "sourceQuestionId": "capt-tabctx-487",
+    "tipo": "opcion_unica",
+    "enunciado": "En la ficha «Celda» del cuadro Propiedades de tabla, ¿que 3 opciones de «Alineacion vertical» hay?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Arriba · Centro · Abajo"
+      },
+      {
+        "letter": "B",
+        "text": "Izquierda · Centro · Derecha"
+      },
+      {
+        "letter": "C",
+        "text": "Superior · Media · Inferior · Justificada"
+      },
+      {
+        "letter": "D",
+        "text": "Solo Centro"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Es la alineacion del contenido dentro de la celda en el eje vertical. La horizontal (izq/centro/der) se combina con estas 3 en los 9 botones del grupo Alineacion de la cinta."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-489",
+    "sourceQuestionId": "capt-tabctx-489",
+    "tipo": "opcion_unica",
+    "enunciado": "El desplegable «Eliminar» del grupo «Filas y columnas», ¿que 4 opciones tiene?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Eliminar celdas… · Eliminar columnas · Eliminar filas · Eliminar tabla"
+      },
+      {
+        "letter": "B",
+        "text": "Eliminar borde · Eliminar sombreado · Eliminar estilo · Eliminar tabla"
+      },
+      {
+        "letter": "C",
+        "text": "Deshacer · Cortar · Borrar contenido · Eliminar tabla"
+      },
+      {
+        "letter": "D",
+        "text": "Solo «Eliminar filas» y «Eliminar columnas»"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Eliminar celdas…» abre un cuadro para elegir como se recolocan las celdas restantes."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-490",
+    "sourceQuestionId": "capt-tabctx-490",
+    "tipo": "opcion_unica",
+    "enunciado": "El lanzador (flecha ↘) del grupo «Filas y columnas» abre el cuadro «Insertar celdas». ¿Que 4 opciones ofrece?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Desplazar las celdas hacia la derecha · Desplazar las celdas hacia abajo · Insertar una fila completa · Insertar una columna completa"
+      },
+      {
+        "letter": "B",
+        "text": "Arriba · Abajo · Izquierda · Derecha"
+      },
+      {
+        "letter": "C",
+        "text": "1 fila · 2 filas · 1 columna · 2 columnas"
+      },
+      {
+        "letter": "D",
+        "text": "Combinar · Dividir · Insertar · Eliminar"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El mismo cuadro «Insertar celdas» aparece tambien al elegir «Insertar celdas…» del menu Eliminar (mal nombre) o desde el menu contextual ▸ Insertar."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-491",
+    "sourceQuestionId": "capt-tabctx-491",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Que hace «Dividir tabla» (grupo Combinar de Disposicion de tabla)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Parte la tabla en dos: la fila donde esta el cursor pasa a ser la primera fila de la nueva tabla"
+      },
+      {
+        "letter": "B",
+        "text": "Divide cada celda de la tabla en dos"
+      },
+      {
+        "letter": "C",
+        "text": "Reparte la tabla entre dos columnas de la pagina"
+      },
+      {
+        "letter": "D",
+        "text": "Separa el texto de la tabla en parrafos"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Entre las dos tablas queda un parrafo vacio. «Dividir celdas», en cambio, parte la celda seleccionada en el numero de filas/columnas que se indique."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-492",
+    "sourceQuestionId": "capt-tabctx-492",
+    "tipo": "opcion_unica",
+    "enunciado": "El desplegable «Autoajustar» del grupo «Tamano de celda» tiene 3 opciones. ¿Cuales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autoajustar al contenido · Autoajustar a la ventana · Ancho de columna fijo"
+      },
+      {
+        "letter": "B",
+        "text": "Al texto · A la pagina · Al margen"
+      },
+      {
+        "letter": "C",
+        "text": "Pequeno · Mediano · Grande"
+      },
+      {
+        "letter": "D",
+        "text": "Filas · Columnas · Celdas"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Al contenido» encoge/agranda las columnas segun lo que contienen; «A la ventana» estira la tabla al ancho de la pagina; «Ancho de columna fijo» congela los anchos actuales."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-494",
+    "sourceQuestionId": "capt-tabctx-494",
+    "tipo": "opcion_unica",
+    "enunciado": "«Repetir filas de titulo» (grupo Datos de Disposicion de tabla), ¿para que sirve y que requisito tiene?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Repite la fila (o filas) de encabezado al principio de cada pagina cuando la tabla ocupa varias; el cursor debe estar en la primera fila"
+      },
+      {
+        "letter": "B",
+        "text": "Duplica la primera fila justo debajo de si misma"
+      },
+      {
+        "letter": "C",
+        "text": "Bloquea la fila de encabezado para que no se edite"
+      },
+      {
+        "letter": "D",
+        "text": "Aplica el estilo «Fila de encabezado» a todas las filas"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Es la misma opcion que la casilla «Repetir como fila de encabezado en cada pagina» de Propiedades de tabla ▸ Fila. Solo tiene efecto si la tabla se parte entre paginas."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-495",
+    "sourceQuestionId": "capt-tabctx-495",
+    "tipo": "opcion_unica",
+    "enunciado": "«Convertir en texto» (grupo Datos), al deshacer una tabla, ¿que permite elegir?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El caracter que separara las columnas (marca de parrafo, tabulacion, punto y coma u otro)"
+      },
+      {
+        "letter": "B",
+        "text": "El tipo de letra del texto resultante"
+      },
+      {
+        "letter": "C",
+        "text": "Si conservar o no los bordes"
+      },
+      {
+        "letter": "D",
+        "text": "El numero de columnas de destino"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Es la operacion inversa de «Insertar ▸ Tabla ▸ Convertir texto en tabla»."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-496",
+    "sourceQuestionId": "capt-tabctx-496",
+    "tipo": "opcion_unica",
+    "enunciado": "El comando «Formula» (fx, grupo Datos), ¿que calculos permite y con que sintaxis?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Calculos simples (SUMA, PROMEDIO, RECUENTO…) con expresiones como =SUM(ABOVE) o =AVERAGE(LEFT)"
+      },
+      {
+        "letter": "B",
+        "text": "Solo sumar la columna de la izquierda"
+      },
+      {
+        "letter": "C",
+        "text": "Cualquier formula de Excel copiada tal cual"
+      },
+      {
+        "letter": "D",
+        "text": "Solo contar el numero de filas"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "ABOVE/BELOW/LEFT/RIGHT indican el rango de celdas. Word NO recalcula solo: hay que actualizar el campo (F9)."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-497",
+    "sourceQuestionId": "capt-tabctx-497",
+    "tipo": "opcion_unica",
+    "enunciado": "«Ver cuadriculas» (grupo Tabla de Disposicion de tabla), ¿que muestra?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Las lineas de division de la tabla que no tienen borde, como guia en pantalla; no se imprimen"
+      },
+      {
+        "letter": "B",
+        "text": "La cuadricula de fondo del documento entero"
+      },
+      {
+        "letter": "C",
+        "text": "Una regla dentro de cada celda"
+      },
+      {
+        "letter": "D",
+        "text": "Los margenes de celda en rojo"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Utiles para trabajar con tablas sin bordes. Son las mismas «lineas de cuadricula» de tabla que en versiones antiguas estaban en el menu Tabla."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-498",
+    "sourceQuestionId": "capt-tabctx-498",
+    "tipo": "opcion_unica",
+    "enunciado": "En «Bordes y sombreado» abierto desde una tabla (ficha «Bordes»), el campo «Valor» ofrece 5 opciones. ¿Cuales, y en que se diferencia de la ficha «Borde de pagina»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ninguno · Cuadro · Todos · Cuadricula · Personalizado (la ficha Borde de pagina cambia «Todos»/«Cuadricula» por «Sombra»/«3D»)"
+      },
+      {
+        "letter": "B",
+        "text": "Son exactamente los mismos 5 valores en las dos fichas"
+      },
+      {
+        "letter": "C",
+        "text": "Ninguno · Simple · Doble · Triple · Personalizado"
+      },
+      {
+        "letter": "D",
+        "text": "Solo tiene «Ninguno» y «Cuadro»"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Todos» pone borde a todas las lineas (exteriores e interiores); «Cuadricula» pone borde grueso exterior y fino interior. «Sombra» y «3D» solo tienen sentido para el borde de la pagina."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
     "categoria": "ruta",
     "id": "insertar-479",
     "sourceQuestionId": "capt-ins-479",
@@ -1696,6 +2128,50 @@
       "D"
     ],
     "explicacion": "Las 6 casillas activan o desactivan el formato especial de cada zona del estilo de tabla aplicado. «Diagonal de celda» no es una de ellas."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-488",
+    "sourceQuestionId": "capt-tabctx-488",
+    "tipo": "seleccion_multiple",
+    "enunciado": "El grupo «Alineacion» de la pestana «Disposicion de tabla» contiene:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "9 botones de alineacion del contenido de la celda"
+      },
+      {
+        "letter": "B",
+        "text": "«Direccion del texto» (gira el texto de la celda; se pulsa varias veces)"
+      },
+      {
+        "letter": "C",
+        "text": "«Margenes de celda»"
+      },
+      {
+        "letter": "D",
+        "text": "«Ordenar»"
+      },
+      {
+        "letter": "E",
+        "text": "«Sangria francesa»"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "«Ordenar» esta en el grupo Datos. «Direccion del texto» cicla entre horizontal, vertical de abajo arriba y vertical de arriba abajo."
   },
   {
     "id": "insertar-214",
@@ -1962,6 +2438,25 @@
     "opciones": [],
     "respuesta": true,
     "explicacion": "Son una ayuda visual (lineas de puntos azules) para ver la estructura de una tabla sin bordes; nunca salen en el papel."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-493",
+    "sourceQuestionId": "capt-tabctx-493",
+    "tipo": "verdadero_falso",
+    "enunciado": "«Distribuir filas» iguala el alto de las filas seleccionadas y «Distribuir columnas» iguala el ancho de las columnas seleccionadas.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Estan en el grupo «Tamano de celda», junto a los campos Alto y Ancho y al menu Autoajustar."
   },
   {
     "id": "insertar-462",

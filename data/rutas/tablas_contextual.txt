@@ -1,0 +1,125 @@
+VOLCADO DE RUTAS — CINTAS CONTEXTUALES DE TABLA — WORD 365 (v2608)
+Extracción del usuario, rama a rama (20 capturas en
+data/imagenes_rutas/diseño_de_tabla/ + 39 en
+data/imagenes_rutas/disposicion_de_tabla/, sep-2026).
+Aparecen al hacer clic dentro de una tabla. Base de refuerzo de
+data/questions/insertar.json (topic tablas).
+
+=========================================================
+PESTAÑA «DISEÑO DE TABLA» — 3 grupos
+=========================================================
+
+--- Grupo «Opciones de estilo de tabla» (6 casillas) ---
+Columna izquierda:
+  Fila de encabezado   — "Muestra formato especial para la primera fila de la tabla."
+  Fila de totales      — "Muestra el formato especial de la última fila de la tabla."
+  Filas con bandas     — "Muestra filas con bandas, en las que las filas pares tienen
+                          un formato diferente a las impares."
+Columna derecha:
+  Primera columna      — "Muestra el formato especial para la primera columna de la tabla."
+  Última columna       — "Muestra el formato especial para la última columna de la tabla."
+  Columnas con bandas  — "Muestra columnas con bandas, en las que las columnas pares
+                          tienen un formato diferente a las impares."
+
+--- Grupo «Estilos de tabla» ---
+  Galería de estilos (flecha «Más»): 3 categorías —
+     Tablas sin formato · Tablas con cuadrícula · Tablas de lista
+     al pie: Modificar estilo de tabla… · Borrar · Nuevo estilo de tabla…
+     → cuadro «Crear/Modificar estilo» de tabla; desplegable «Aplicar formato a» = 13
+       (Toda la tabla · Con encabezado · Fila Total · Primera/Última columna ·
+        Bandas en filas impares/pares · Bandas en columnas impares/pares ·
+        Celda superior/inferior izquierda/derecha)
+  Sombreado (▾) — "Cambia el color que está detrás del texto, párrafo o tabla
+                   seleccionados." (Solo contraste alto · Colores del tema · estándar · Sin color · Más colores)
+
+--- Grupo «Bordes» ---
+  Estilos de borde (▾) — "Permite dar formato a bordes específicos de la tabla
+     usando un estilo común o alguno que haya aplicado recientemente."
+     (Bordes de tema · Bordes usados recientemente · Muestrario de bordes)
+  [desplegable estilo de línea]  (sólida / punteada / discontinua / …)
+  Grosor de pluma (½ pto ▾): ¼ · ½ · ¾ · 1 · 1½ · 2¼ · 3 · 4½ · 6 pto  (9)
+  Color de la pluma (▾) — "Cambia el color de los bordes nuevos." (Automático · Colores del tema · …)
+  Bordes (▾) — Borde inferior/superior/izquierdo/derecho · Sin borde · Todos los bordes ·
+     Bordes externos · Bordes internos · … · Bordes y sombreado…
+  Copiar borde — "Permite aplicar formato a bordes específicos de la tabla. Para cambiar
+     el aspecto de los bordes que está modificando, use los menús de estilo, grosor y color de pluma."
+  [lanzador ↘] → cuadro «Bordes y sombreado» (Aplicar a: Tabla)
+     Ficha «Bordes»: Valor = Ninguno · Cuadro · Todos · Cuadrícula · Personalizado  (5)
+        (⚠️ distinto de la ficha «Borde de página», cuyo Valor = Ninguno · Cuadro ·
+         Sombra · 3D · Personalizado — "Todos"/"Cuadrícula" solo en Bordes; "Sombra"/"3D" solo en Borde de página)
+     Aplicar a (bordes de tabla): Texto · Párrafo · Celda · Tabla
+
+=========================================================
+PESTAÑA «DISPOSICIÓN DE TABLA» — 7 grupos
+=========================================================
+
+--- Grupo «Tabla» ---
+  Seleccionar (▾): Seleccionar celda · Seleccionar columna · Seleccionar fila · Seleccionar tabla
+  Ver cuadrículas — "Muestra u oculta las líneas de cuadrícula en la tabla."
+     (líneas de puntos que marcan las celdas sin borde; NO se imprimen)
+  Propiedades — "Muestra el cuadro de diálogo Propiedades de tabla para cambiar las
+     propiedades avanzadas de la tabla, como las opciones de sangría y ajuste del texto."
+  > [Cuadro: Propiedades de tabla] — 5 fichas: Tabla · Fila · Columna · Celda · Texto alternativo
+     Ficha Tabla:  Tamaño (Ancho preferido, Medir en: Centímetros / Porcentaje) ·
+        Alineación (Ajustar a la izquierda / Ajustar al centro / Derecha + Sangría a la izquierda) ·
+        Ajuste del texto (Ninguno / Alrededor + botón «Posicionamiento…») ·
+        botón «Bordes y sombreado…» · botón «Opciones…» → [Cuadro: Opciones de la tabla]
+           Márgenes de celdas predeterminados (Sup 0 · Inf 0 · Izq 0,19 · Der 0,19 cm) ·
+           "Permitir espaciado entre celdas" · "Ajustar automáticamente el tamaño al contenido"
+     Ficha Fila:   Especificar alto · Alto de fila: Mínimo / Exacto ·
+        "Permitir dividir las filas entre páginas" · "Repetir como fila de encabezado en cada página" ·
+        Fila anterior / Fila siguiente
+     Ficha Columna: Ancho preferido · Medir en (Centímetros / Porcentaje) · Columna anterior / siguiente
+     Ficha Celda:  Ancho preferido · Medir en · Alineación vertical (Arriba / Centro / Abajo) ·
+        botón «Opciones…» → [Cuadro: Opciones de celda]
+           Márgenes de celda ("Iguales que toda la tabla") · "Ajustar texto" · "Reducir texto hasta ajustarlo"
+     Ficha Texto alternativo: Título · Descripción (accesibilidad)
+
+--- Grupo «Dibujar» ---
+  Dibujar tabla — "Diseñe su propia tabla dibujando usted mismo los bordes de celda,
+     fila y columna. Puede incluso dibujar líneas diagonales y celdas dentro de las celdas."
+  Borrador (de tabla) — "Borra los bordes de una tabla que especifique para crear celdas combinadas."
+
+--- Grupo «Filas y columnas» ---
+  Eliminar (▾): Eliminar celdas… · Eliminar columnas · Eliminar filas · Eliminar tabla
+     ("Eliminar tabla: Elimina las filas, columnas o celdas de toda la tabla.")
+  Insertar fila Arriba    — "Agrega una nueva fila directamente por encima de la fila actual."
+  Insertar fila Inferior  — "Agrega una nueva fila directamente por debajo de la fila actual."
+  Insertar columna a la izquierda — "…a la izquierda de la columna actual."
+  Insertar columna a la derecha   — "…a la derecha de la columna actual."
+  [lanzador ↘] → [Cuadro: Insertar celdas] — 4 opciones:
+     Desplazar las celdas hacia la derecha · Desplazar las celdas hacia abajo ·
+     Insertar una fila completa · Insertar una columna completa
+
+--- Grupo «Combinar» ---
+  Combinar celdas — "Combine las celdas seleccionadas en una celda."
+  Dividir celdas  — "Divida la celda actual en varias celdas." (pide nº de columnas y filas)
+  Dividir tabla   — "Divida la tabla en dos tablas. La fila seleccionada será la primera fila
+     de la nueva tabla." (atajo estándar Ctrl+Mayús+Entrar — no confirmado en el volcado v2608)
+
+--- Grupo «Tamaño de celda» ---
+  Autoajustar (▾): Autoajustar al contenido · Autoajustar a la ventana · Ancho de columna fijo  (3)
+  Alto  (campo, p. ej. 0,53 cm)
+  Ancho (campo, p. ej. 3 cm)
+  Distribuir filas    — "Distribuye el alto de las filas seleccionadas igualmente entre ellas."
+  Distribuir columnas — "Distribuye el ancho de las columnas seleccionadas igualmente entre ellas."
+  [lanzador ↘] → cuadro «Propiedades de tabla»
+
+--- Grupo «Alineación» ---
+  9 botones de alineación de contenido de celda (arriba/centro/abajo × izquierda/centro/derecha)
+  Dirección del texto — "Cambia la dirección del texto de las celdas seleccionadas.
+     Haga clic en el botón varias veces para ver las direcciones disponibles."
+     (horizontal → vertical de abajo arriba → vertical de arriba abajo → horizontal)
+  Márgenes de celda — "Personaliza los márgenes de celda y el espaciado entre las mismas."
+
+--- Grupo «Datos» ---
+  Ordenar — "Organiza la selección actual por orden alfabético o numérico."
+     (cuadro Ordenar: hasta 3 criterios, Tipo Texto/Número/Fecha, Ascendente/Descendente,
+      "La lista tiene: Con/Sin encabezado")
+  Repetir filas de título — "Marca varias filas como filas de encabezado. Si la tabla se
+     extiende a lo largo de varias páginas, se repetirá la fila de encabezado en cada página."
+     (= misma casilla que Propiedades de tabla ▸ Fila ▸ "Repetir como fila de encabezado")
+  Convertir en texto — "Convierte la tabla en texto normal. Puede seleccionar qué carácter
+     desea utilizar para separar las columnas." (Marcas de párrafo / Tabulaciones / Punto y coma / Otro)
+  Fórmula (fx) — "Agrega una fórmula a una celda para realizar un cálculo simple como
+     PROMEDIO, SUMA o RECUENTO." (=SUM(ABOVE), =AVERAGE(LEFT), formato de número, Pegar función)

@@ -863,15 +863,23 @@ NO estaban en las capturas del usuario):
    Info. documento · Info. usuario · Numeración · Vínculos y referencias.
    +`insertar-475/477`. **El minado P- de Insertar queda validado casi por
    completo.**
- - **Cintas contextuales de tabla** (capturas sep-2026): «Diseño de tabla» =
-   3 grupos (Opciones de estilo de tabla [6 casillas: Fila de encabezado ·
-   Fila de totales · Filas con bandas · Primera columna · Última columna ·
-   Columnas con bandas] · Estilos de tabla · Bordes); «Disposición de tabla»
-   = 7 grupos (Tabla · Dibujar · Filas y columnas · Combinar · Tamaño de
-   celda · Alineación · Datos). El banco no tenía casi nada de estas cintas →
-   **+7** (`insertar-478..484`): las 2 pestañas, las 6 casillas, Combinar,
-   Distribuir filas/columnas, Repetir filas de título, los 9 botones de
-   alineación, Ver cuadrículas.
+ - **Cintas contextuales de tabla** — el usuario aportó 59 capturas rama a
+   rama (`data/imagenes_rutas/diseño_de_tabla/` 20 + `disposicion_de_tabla/`
+   39, sep-2026) → **`data/rutas/tablas_contextual.txt`** (volcado propio).
+   «Diseño de tabla» = 3 grupos (Opciones de estilo de tabla [6 casillas] ·
+   Estilos de tabla · Bordes [Estilos de borde, grosor 9, Color de la pluma,
+   Bordes, Copiar borde, lanzador→Bordes y sombreado]). «Disposición de
+   tabla» = 7 grupos (Tabla · Dibujar · Filas y columnas · Combinar · Tamaño
+   de celda · Alineación · Datos). **+7 (`insertar-478..484`) + +14
+   (`insertar-485..498`) + 6 flashcards**: cuadro Propiedades de tabla (5
+   fichas; Alto de fila Mínimo/Exacto; alineación vertical celda
+   Arriba/Centro/Abajo), menú Eliminar (4), cuadro Insertar celdas (4),
+   Dividir tabla vs Dividir celdas, Autoajustar (3), Distribuir filas/
+   columnas, Repetir filas de título, Convertir en texto, Fórmula
+   (=SUM(ABOVE)), Ver cuadrículas, y el campo «Valor» de Bordes y sombreado
+   = Ninguno/Cuadro/**Todos/Cuadrícula**/Personalizado (la ficha Borde de
+   página cambia Todos/Cuadrícula por **Sombra/3D**). Generador:
+   `scripts/gen_tablas_contextual.py`.
  - Las otras preguntas
    que citan «la extracción» sí se apoyan en capturas reales
    (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
