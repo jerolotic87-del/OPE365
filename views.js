@@ -3009,7 +3009,7 @@ function openContentEditsModal(){
 
   showModal(`
     <h3>Exportar tu contenido</h3>
-    <p>${users.length} creada${users.length===1?'':'s'} · ${items.length} corrección${items.length===1?'':'es'}. Se aplican al abrir la app.</p>
+    <p>${users.length} creada${users.length===1?'':'s'} · ${items.length} ${items.length===1?'corrección':'correcciones'}. Se aplican al abrir la app.</p>
     <div class="field" style="margin-top:var(--sp-4);"><label>JSON para volcar al banco (data/)</label>
       <textarea id="ce-export" rows="7" readonly class="edit-field" style="font-family:var(--font-mono);font-size:11px;"></textarea></div>
     <div class="actions" style="justify-content:flex-start;flex-wrap:wrap;margin-bottom:var(--sp-4);">
@@ -3227,6 +3227,7 @@ function bancoSaveEditor(kind, id){
   if(row){ row.classList.toggle("has-ov", ov); const bd = row.querySelector(".badge"); if(bd) bd.textContent = ov ? "✎" : "·"; }
   const pub = $("#bk-ed-publish"); if(pub) pub.disabled = !ov;
   const rev = $("#bk-ed-revert"); if(rev) rev.disabled = !ov;
+  bancoRefreshPubBar();          // el contador de "sin publicar" sube/baja al vuelo
 }
 function bancoSaveStatus(msg, bad){
   const el = $("#bk-ed-status"); if(!el) return;
@@ -3272,11 +3273,107 @@ function bancoPublishEdit(kind, id, onDone){
   );
 }
 
+/* Publica DE GOLPE todas las correcciones pendientes: un solo commit para
+   todas, en vez de uno por pregunta. Es lo que hacía falta al corregir en
+   tanda desde el Editor del banco. */
+function bancoPublishAll(onDone){
+  if(!O.GHS || !O.GHS.hasToken()){ O.toast("Configura el token de GitHub"); openGitHubModal(); return; }
+  const pend = pendingEdits();
+  if(!pend.length){ O.toast("No hay correcciones pendientes"); return; }
+  const nq = pend.filter(x=>x.kind==="q").length, nf = pend.filter(x=>x.kind!=="q").length;
+  const resumen = [nq?`${nq} pregunta${nq===1?"":"s"}`:"", nf?`${nf} flashcard${nf===1?"":"s"}`:""].filter(Boolean).join(" y ");
+  const lista = pend.slice(0,12).map(x=>`<li><code>${O.escapeHtml(x.id)}</code> — ${O.escapeHtml((x.label||"").slice(0,60))}</li>`).join("");
+
+  confirmDanger(
+    `Publicar ${pend.length} correccion${pend.length===1?"":"es"}`,
+    `Se escriben <strong>${resumen}</strong> en <code>data/</code> de ${O.escapeHtml(O.GHS.repoLabel())}, en <strong>UN solo commit</strong>.
+     Queda permanente y para todos los dispositivos (~1-2 min en desplegarse).
+     <ul style="margin:10px 0 0; padding-left:18px; font-size:12px; color:var(--text-2); max-height:180px; overflow:auto;">${lista}
+     ${pend.length>12?`<li>…y ${pend.length-12} más</li>`:""}</ul>`,
+    async ()=>{
+      closeModal(); O.toast(`Publicando ${pend.length} correcciones…`);
+      try{
+        const r = await O.GHS.applyEditsToBank(pend.map(x=>({ kind:x.kind, id:x.id })));
+        // solo se dan por incorporadas las que SÍ se escribieron
+        (r.ok||[]).forEach(x=> O.ContentEdit.bake(x.kind, x.id));
+        if(O.LEB) O.LEB.recalcNow();
+        O.toast("");
+        const fall = r.fallidos || [];
+        showModal(`<h3>${(r.ok||[]).length} ${(r.ok||[]).length===1?'corrección':'correcciones'} publicada${(r.ok||[]).length===1?'':'s'} ✓</h3>
+          <p>Un commit: <code>${r.shaShort}</code>.</p>
+          ${fall.length ? `<p style="color:var(--warn);font-size:12.5px;">${fall.length} no se pudo${fall.length===1?"":"n"} publicar y sigue${fall.length===1?"":"n"} guardada${fall.length===1?"":"s"} en local:</p>
+            <ul style="font-size:12px;color:var(--text-2);padding-left:18px;">${fall.slice(0,8).map(f=>`<li><code>${O.escapeHtml(f.id)}</code> — ${O.escapeHtml(f.error)}</li>`).join("")}</ul>` : ``}
+          <p style="font-size:12px;color:var(--text-2);">Ficheros: ${r.files.map(f=>`<code>${O.escapeHtml(f)}</code>`).join(" · ")}.</p>
+          <div class="actions"><button class="btn btn-ghost" id="pa-x">Entendido</button></div>`,
+          (root)=> root.querySelector("#pa-x").addEventListener("click", ()=>{ closeModal(); (onDone||(()=>{}))(); }));
+      }catch(e){
+        O.toast("");
+        showModal(`<h3>No se pudo publicar</h3><p style="color:var(--bad,#f87171);">${O.escapeHtml(e.message)}</p>
+          <p style="font-size:12px;color:var(--text-2);">Nada se ha tocado en el repositorio. Tus correcciones siguen guardadas en local.</p>
+          <div class="actions"><button class="btn btn-outline btn-sm" id="pa-cfg">Configuración</button><button class="btn btn-ghost" id="pa-c">Cerrar</button></div>`,
+          (root)=>{ root.querySelector("#pa-c").addEventListener("click", closeModal);
+            root.querySelector("#pa-cfg").addEventListener("click", ()=>{ closeModal(); openGitHubModal(); }); });
+      }
+    }
+  );
+}
+/* Repinta el contador de la barra sin tocar el resto de la vista: se llama
+   en cada autoguardado del editor, así el número sube/baja según editas. */
+function bancoRefreshPubBar(){
+  const bar = document.getElementById("bk-pubbar");
+  if(!bar) return;
+  const n = pendingEdits().length;
+  bar.classList.toggle("on", n > 0);
+  const txt = bar.querySelector(".pb-txt");
+  if(txt) txt.innerHTML = (n
+    ? `<strong>${n}</strong> ${n===1?'corrección':'correcciones'} sin publicar`
+    : `Sin correcciones pendientes`) +
+    `<span class="pb-sub">${n ? "Se publican todas juntas en un solo commit." : "Edita cualquier fila y aparecerán aquí."}</span>`;
+  const all = bar.querySelector("#bk-pub-all"), ver = bar.querySelector("#bk-pub-ver");
+  if(all){ all.disabled = !n; all.textContent = `Publicar las ${n||""} 🚀`; }
+  if(ver) ver.disabled = !n;
+}
+/* lista legible de lo pendiente, por si quieres repasar antes de publicar */
+function bancoShowPending(){
+  const pend = pendingEdits();
+  if(!pend.length){ O.toast("No hay correcciones pendientes"); return; }
+  showModal(`<h3>${pend.length} ${pend.length===1?'corrección':'correcciones'} sin publicar</h3>
+    <div class="qlist" style="max-height:52vh;overflow:auto;">
+      ${pend.map(x=>`<button class="qlist-item" data-pend="${O.escapeHtml(x.kind)}|${O.escapeHtml(x.id)}" style="cursor:pointer;">
+        <div style="flex:1;"><div class="qtext">${O.escapeHtml((x.label||"(sin texto)").slice(0,90))}</div>
+        <div class="qmeta">${O.escapeHtml(x.id)} · ${x.kind==="fc"?"flashcard":"pregunta"} · campos: ${O.escapeHtml((x.fields||[]).join(", ")||"—")}</div></div>
+      </button>`).join("")}
+    </div>
+    <div class="actions" style="margin-top:var(--sp-4);">
+      <button class="btn btn-ghost" id="pv-x">Cerrar</button>
+      <button class="btn btn-solid" id="pv-go">Publicar las ${pend.length} 🚀</button>
+    </div>`,
+    (root)=>{
+      root.querySelector("#pv-x").addEventListener("click", closeModal);
+      root.querySelector("#pv-go").addEventListener("click", ()=>{ closeModal(); bancoPublishAll(()=> go("banco")); });
+      root.querySelectorAll("[data-pend]").forEach(b=> b.addEventListener("click", ()=>{
+        const [kind, id] = b.getAttribute("data-pend").split("|");
+        closeModal();
+        bancoState.tab = kind === "fc" ? "fc" : "q";
+        bancoState.estado = "corregida";
+        bancoState.selId = id;
+        go("banco");
+      }));
+    }, {wide:true});
+}
+
+/* correcciones pendientes de publicar (el contenido propio va por "Mi contenido") */
+function pendingEdits(){
+  if(!O.ContentEdit || !O.ContentEdit.list) return [];
+  return O.ContentEdit.list().filter(x=> !(O.ContentEdit.isUser && O.ContentEdit.isUser(x.kind, x.id)));
+}
+
 function renderBancoAdmin(){
   if(!bancoIsAdmin()){ O.toast("Solo con GitHub conectado"); return go("progress"); }
   const st = bancoState;
   const isQ = st.tab === "q";
   const totalQ = O.QUESTIONS.length, totalFc = O.FLASHCARDS.length;
+  const pendientes = pendingEdits();
 
   mainEl().innerHTML = `
   <div class="view">
@@ -3285,6 +3382,19 @@ function renderBancoAdmin(){
       <p class="eyebrow">Admin · ${O.escapeHtml(O.GHS.repoLabel())}</p>
       <h1>Editor del banco</h1>
       <p>Clic en una fila para editarla en el panel de la derecha (se guarda solo, como corrección local). "Borrar del banco" hace commit al repo.</p>
+    </div>
+
+    <div class="publish-bar ${pendientes.length?'on':''}" id="bk-pubbar">
+      <div class="pb-txt">
+        ${pendientes.length
+          ? `<strong>${pendientes.length}</strong> ${pendientes.length===1?'corrección':'correcciones'} sin publicar`
+          : `Sin correcciones pendientes`}
+        <span class="pb-sub">${pendientes.length ? "Se publican todas juntas en un solo commit." : "Edita cualquier fila y aparecerán aquí."}</span>
+      </div>
+      <div class="pb-btns">
+        <button class="btn btn-ghost btn-sm" id="bk-pub-ver" ${pendientes.length?"":"disabled"}>Ver cuáles</button>
+        <button class="btn btn-solid" id="bk-pub-all" ${pendientes.length?"":"disabled"}>Publicar las ${pendientes.length||""} 🚀</button>
+      </div>
     </div>
 
     <div class="pill-row" style="margin-bottom:var(--sp-4);">
@@ -3314,6 +3424,10 @@ function renderBancoAdmin(){
       <div class="bk-editor" id="bk-editor"><div class="bk-editor-empty">Selecciona una fila para editarla.</div></div>
     </div>
   </div>`;
+
+  const pubAll = $("#bk-pub-all"), pubVer = $("#bk-pub-ver");
+  if(pubAll) pubAll.addEventListener("click", ()=> bancoPublishAll(()=> go("banco")));
+  if(pubVer) pubVer.addEventListener("click", bancoShowPending);
 
   function refreshTopics(){
     const sec = O.TAXONOMY_SECTIONS.find(s=>s.id===$("#bk-section").value);
@@ -3345,6 +3459,7 @@ function renderBancoAdmin(){
     readFilters();
     curList = currentList();
     $("#bk-count").textContent = `${curList.length} / ${isQ?totalQ:totalFc}`;
+    bancoRefreshPubBar();
     if(!curList.length){
       body.innerHTML = `<div class="empty-state"><div class="glyph">${icon('search')}</div><p>Nada coincide.</p></div>`;
       renderEditor(null); return;

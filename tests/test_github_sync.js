@@ -188,6 +188,116 @@ async function main(){
   assert(!O.ContentEdit.has("q", "inicio-7") && O.Q_BY_ID["inicio-7"].explicacion === "EXPLICACIÓN CORREGIDA",
     "bake() quita el override pero conserva los valores corregidos");
 
+  /* --- publicar TODAS las correcciones de golpe: UN commit ---
+     Antes solo se podía de una en una: 8 correcciones = 8 commits y 8
+     confirmaciones. Aquí se comprueba que salga un único commit, que toque
+     cada fichero de sección UNA vez y que los artefactos se regeneren una
+     sola vez por tipo. */
+  {
+    const secQ = { inicio:[{ id:"inicio-7", section:"inicio", enunciado:"a" },
+                           { id:"inicio-8", section:"inicio", enunciado:"b" }],
+                   vista: [{ id:"vista-1", section:"vista", enunciado:"c" }] };
+    const secF = { inicio:[{ cardId:"F-001", section:"inicio", front:"f1", back:"b1" }] };
+    const lotBlobs = []; const lotCalls = [];
+    window.fetch = async (url, opts)=>{
+      opts = opts || {};
+      const method = opts.method || "GET";
+      lotCalls.push(method + " " + url.replace("https://api.github.com",""));
+      const j = (obj, status)=> ({ ok:(status||200)<300, status:status||200, json: async ()=>obj });
+      if(/\/repos\/[^/]+\/[^/]+$/.test(url)) return j({ full_name:"jerolotic87-del/OPE365", permissions:{ push:true } });
+      const mq = /\/contents\/data\/questions\/([a-z]+)\.json/.exec(url);
+      if(mq) return secQ[mq[1]]
+        ? j({ sha:"s", content: Buffer.from(JSON.stringify(secQ[mq[1]]),"utf-8").toString("base64") })
+        : j({ message:"Not Found" }, 404);
+      const mf = /\/contents\/data\/flashcards\/([a-z]+)\.json/.exec(url);
+      if(mf) return secF[mf[1]]
+        ? j({ sha:"s", content: Buffer.from(JSON.stringify(secF[mf[1]]),"utf-8").toString("base64") })
+        : j({ message:"Not Found" }, 404);
+      if(url.indexOf("/git/ref/heads/main") >= 0) return j({ object:{ sha:"H" } });
+      if(url.indexOf("/git/commits/H") >= 0) return j({ tree:{ sha:"T" } });
+      if(method === "POST" && url.indexOf("/git/blobs") >= 0){ lotBlobs.push(JSON.parse(opts.body)); return j({ sha:"b"+lotBlobs.length }); }
+      if(method === "POST" && url.indexOf("/git/trees") >= 0) return j({ sha:"NT" });
+      if(method === "POST" && url.indexOf("/git/commits") >= 0) return j({ sha:"lote99commit" });
+      if(method === "PATCH" && url.indexOf("/git/refs/heads/main") >= 0) return j({});
+      return j({ message:"no simulada: "+url }, 404);
+    };
+
+    // 4 correcciones repartidas en 3 ficheros distintos + 1 imposible
+    O.ContentEdit.apply("q",  "inicio-7", { explicacion:"LOTE A" });
+    O.ContentEdit.apply("q",  "inicio-8", { explicacion:"LOTE B" });
+    O.ContentEdit.apply("q",  "vista-1",  { explicacion:"LOTE C" });
+    O.ContentEdit.apply("fc", "inicio:F-001", { back:"LOTE D" });
+    assert(O.ContentEdit.list().length >= 4, "hay 4+ correcciones pendientes");
+
+    const lr = await O.GHS.applyEditsToBank();
+    assert(lr.shaShort === "lote99c", "el lote devuelve el sha corto del commit");
+
+    const commits = lotCalls.filter(c=> c.startsWith("POST ") && /\/git\/commits$/.test(c.split(" ")[1]));
+    assert(commits.length === 1, "UN SOLO commit para las 4 correcciones (fueron " + commits.length + ")");
+    const patches = lotCalls.filter(c=> c.startsWith("PATCH ") && c.indexOf("/git/refs/heads/main") >= 0);
+    assert(patches.length === 1, "la rama se actualiza una sola vez (fueron " + patches.length + ")");
+
+    assert(lr.ok.length === 4, "informa de las 4 publicadas (fueron " + lr.ok.length + ")");
+    assert(lr.fallidos.length === 0, "ninguna falla con los 3 ficheros disponibles");
+
+    // cada fichero de seccion se baja UNA vez, no una por correccion
+    const getsInicio = lotCalls.filter(c=> c.indexOf("/contents/data/questions/inicio.json") >= 0);
+    assert(getsInicio.length === 1, "inicio.json se lee una sola vez pese a tener 2 correcciones (fueron " + getsInicio.length + ")");
+
+    // artefactos una sola vez por tipo
+    const paths = lr.files;
+    assert(paths.filter(x=> x === "questions_data.js").length === 1, "questions_data.js se regenera una vez");
+    assert(paths.filter(x=> x === "flashcards_data.js").length === 1, "flashcards_data.js se regenera una vez");
+    assert(paths.indexOf("data/questions/inicio.json") >= 0 && paths.indexOf("data/questions/vista.json") >= 0
+        && paths.indexOf("data/flashcards/inicio.json") >= 0, "toca los 3 ficheros de seccion");
+
+    // el contenido escrito lleva las correcciones
+    const txts = lotBlobs.map(x=> Buffer.from(x.content,"base64").toString("utf-8"));
+    assert(txts.some(t=> t.indexOf("LOTE A") >= 0 && t.indexOf("LOTE B") >= 0),
+      "las 2 correcciones de inicio van en el MISMO fichero escrito");
+    assert(txts.some(t=> t.indexOf("LOTE C") >= 0), "la de vista tambien se escribe");
+    assert(txts.some(t=> t.indexOf("LOTE D") >= 0), "la flashcard tambien se escribe");
+
+    ["inicio-7","inicio-8","vista-1"].forEach(id=> O.ContentEdit.bake("q", id));
+    O.ContentEdit.bake("fc", "inicio:F-001");
+  }
+
+  /* --- un item que no se puede escribir no tumba el resto --- */
+  {
+    const secQ = { inicio:[{ id:"inicio-7", section:"inicio", enunciado:"a" }] };
+    window.fetch = async (url, opts)=>{
+      opts = opts || {};
+      const method = opts.method || "GET";
+      const j = (obj, status)=> ({ ok:(status||200)<300, status:status||200, json: async ()=>obj });
+      if(/\/repos\/[^/]+\/[^/]+$/.test(url)) return j({ full_name:"jerolotic87-del/OPE365", permissions:{ push:true } });
+      const mq = /\/contents\/data\/questions\/([a-z]+)\.json/.exec(url);
+      if(mq) return secQ[mq[1]]
+        ? j({ sha:"s", content: Buffer.from(JSON.stringify(secQ[mq[1]]),"utf-8").toString("base64") })
+        : j({ message:"Not Found" }, 404);   // vista.json NO existe en el repo
+      if(url.indexOf("/git/ref/heads/main") >= 0) return j({ object:{ sha:"H" } });
+      if(url.indexOf("/git/commits/H") >= 0) return j({ tree:{ sha:"T" } });
+      if(method === "POST" && url.indexOf("/git/blobs") >= 0) return j({ sha:"bb" });
+      if(method === "POST" && url.indexOf("/git/trees") >= 0) return j({ sha:"NT" });
+      if(method === "POST" && url.indexOf("/git/commits") >= 0) return j({ sha:"parcial9commit" });
+      if(method === "PATCH" && url.indexOf("/git/refs/heads/main") >= 0) return j({});
+      return j({ message:"no simulada: "+url }, 404);
+    };
+    O.ContentEdit.apply("q", "inicio-7", { explicacion:"SOBREVIVE" });
+    O.ContentEdit.apply("q", "vista-1",  { explicacion:"NO SE PUEDE" });
+    const pr = await O.GHS.applyEditsToBank();
+    assert(pr.ok.length === 1 && pr.ok[0].id === "inicio-7", "publica la que sí se puede");
+    assert(pr.fallidos.length === 1 && pr.fallidos[0].id === "vista-1", "informa de la que no, sin tumbar el lote");
+    assert(O.ContentEdit.has("q", "vista-1"), "la fallida sigue guardada en local");
+    O.ContentEdit.bake("q", "inicio-7"); O.ContentEdit.revert("q", "vista-1");
+  }
+
+  // lote sin nada pendiente -> error claro
+  {
+    let threwLote = false;
+    try{ await O.GHS.applyEditsToBank(); }catch(e){ threwLote = /correcciones pendientes/.test(e.message); }
+    assert(threwLote, "el lote sin pendientes lanza un error explicativo");
+  }
+
   // sin token -> test() falla antes de tocar nada
   O.GHS.forget();
   assert(O.GHS.hasToken() === false, "forget borra el token");

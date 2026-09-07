@@ -1486,6 +1486,27 @@ archivo, añádele preguntas a ese archivo renumerando la cola.
     regenera el artefacto, un commit. La UI llama después a
     `ContentEdit.bake(kind, id)` (borra el registro de override SIN restaurar:
     los valores corregidos se quedan, desaparece el badge "corregida").
+  - **`GHS.applyEditsToBank(items)` — publicar TODAS las correcciones en UN
+    commit (sep-2026).** Antes solo existía el publicado suelto
+    (`applyEditToBank`): corregir 8 preguntas en una tanda eran 8 commits y 8
+    confirmaciones, y no había ningún botón que las mandara juntas. Ahora se
+    agrupa por fichero, se baja cada `data/<tipo>/<section>.json` UNA vez, se
+    meten todas sus correcciones y los artefactos se regeneran una sola vez —
+    un único commit. Un item que no se pueda escribir (sección indeducible,
+    fichero que no existe, id que no está en el repo) **no tumba el lote**:
+    se publica el resto y se devuelve en `fallidos`, y su corrección local se
+    conserva. La UI solo hace `bake()` de los que están en `ok`. Los helpers
+    `applyQuestionInto`/`applyCardInto` los comparten el publicado suelto y el
+    de lote, para que los dos escriban exactamente lo mismo.
+    UI: **barra fija arriba del Editor del banco** (`.publish-bar`, siempre
+    visible) con el número de correcciones sin publicar, «Ver cuáles» (lista
+    modal, con salto a cada una) y «Publicar las N 🚀». El contador se repinta
+    en cada autoguardado del editor vía `bancoRefreshPubBar()`, sin
+    re-renderizar la vista. Tests: bloque nuevo en
+    `tests/test_github_sync.js` (verifica **un solo** POST /git/commits y un
+    solo PATCH de la rama para 4 correcciones en 3 ficheros) y
+    `tests/manual_publish_lote_qa.mjs` (Chromium real, API de GitHub
+    mockeada — nunca toca el repo).
   - **Vista `banco` ("Editor del banco", `renderBancoAdmin` en views.js)** —
     consola tipo Anki-Browse SOLO visible con token de GitHub (`bancoIsAdmin()`
     = `GHS.hasToken()`; de facto solo el dueño). Toggle Preguntas/Flashcards,

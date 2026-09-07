@@ -287,6 +287,132 @@ async function publish(sel){
    ContentEdit) del item `id` en data/<tipo>/<section>.json y
    regenera el artefacto. Un commit. La UI llama después a
    ContentEdit.bake() para dar la corrección por incorporada.     */
+/* Vuelca los campos corregidos de UNA pregunta / flashcard sobre el array
+   ya parseado de su fichero de data/. Lo comparten el publicado suelto y el
+   publicado en lote — así los dos escriben exactamente lo mismo. */
+function applyQuestionInto(arr, id, q){
+  const entry = arr.find(x=> x.id === id);
+  if(!entry) throw new Error(`${id} no está en el fichero de su sección.`);
+  entry.enunciado = String(q.enunciado || "").trim();
+  if(Array.isArray(q.opciones) && Array.isArray(entry.opciones)){
+    entry.opciones = entry.opciones.map(o=>{
+      const src = q.opciones.find(x=> x.letter === o.letter);
+      return { letter: o.letter, text: src ? String(src.text || "").trim() : o.text };
+    });
+  }
+  entry.respuesta = q.respuesta;
+  entry.explicacion = String(q.explicacion || "").trim();
+  entry.negativa = !!q.negativa;
+  if(q.imagen) entry.imagen = q.imagen;
+  return entry;
+}
+function applyCardInto(arr, cardId, card, id){
+  const entry = arr.find(c=> c.cardId === cardId);
+  if(!entry) throw new Error(`${id || cardId} no está en el fichero de su sección.`);
+  entry.front = String(card.front || "").trim();
+  entry.back  = String(card.back || "").trim();
+  entry.priority = card.priority === "alta" ? "alta" : "normal";
+  if(card.imagen) entry.imagen = card.imagen;
+  return entry;
+}
+/* sección a la que pertenece un id, para saber qué fichero tocar */
+function sectionOfQuestion(id){
+  const q = O.Q_BY_ID && O.Q_BY_ID[id];
+  const m = /^(.+)-\d+$/.exec(id || "");
+  return (q && (q.sourceFile || "").replace(/\.json$/, "")) || (q && q.section) || (m && m[1]) || null;
+}
+function sectionOfCard(id){
+  const c = O.F_BY_ID && O.F_BY_ID[id];
+  const m = /^([^:]+):(.+)$/.exec(id || "");
+  return (c && c.section) || (m && m[1]) || null;
+}
+
+/* --- publicar TODAS las correcciones pendientes de golpe -------
+   Un único commit para todo, en vez de uno por pregunta: agrupa por
+   fichero, se baja cada data/<tipo>/<section>.json UNA vez, mete todas
+   sus correcciones y regenera los artefactos una sola vez.
+
+   `items` = [{kind:"q"|"fc", id}] — si no se pasa, coge todo lo que haya
+   en ContentEdit.list() que no sea contenido propio (eso va por publish()).
+   Devuelve { sha, ok:[...], fallidos:[{id,error}] }: un item que no se
+   pueda escribir NO tumba el resto — se informa y se publica lo demás. */
+async function applyEditsToBank(items){
+  await test();
+  const lista = (items && items.length ? items : (O.ContentEdit ? O.ContentEdit.list() : []))
+    .filter(it=> !(O.ContentEdit && O.ContentEdit.isUser(it.kind, it.id)));
+  if(!lista.length) throw new Error("No hay correcciones pendientes que publicar.");
+
+  const porFichero = {};   // path -> { kind, section, items:[] }
+  const fallidos = [];
+  for(const it of lista){
+    const kind = it.kind === "fc" ? "fc" : "q";
+    const section = kind === "fc" ? sectionOfCard(it.id) : sectionOfQuestion(it.id);
+    if(!section){ fallidos.push({ id:it.id, error:"no se puede deducir la sección" }); continue; }
+    const path = kind === "fc" ? `data/flashcards/${section}.json` : `data/questions/${section}.json`;
+    (porFichero[path] = porFichero[path] || { kind, section, items:[] }).items.push(it);
+  }
+  if(!Object.keys(porFichero).length) throw new Error("Ninguna corrección se pudo situar en su fichero.");
+
+  const files = [];
+  const ok = [];
+  let tocaPreguntas = false, tocaCards = false;
+
+  for(const path of Object.keys(porFichero)){
+    const grupo = porFichero[path];
+    let f;
+    try{ f = await getFile(path); }
+    catch(e){ grupo.items.forEach(it=> fallidos.push({ id:it.id, error:"no se pudo leer "+path })); continue; }
+    if(!f.existed){ grupo.items.forEach(it=> fallidos.push({ id:it.id, error:"no existe "+path })); continue; }
+
+    let arr;
+    try{ arr = JSON.parse(f.text); }
+    catch(e){ grupo.items.forEach(it=> fallidos.push({ id:it.id, error:path+" no es JSON válido" })); continue; }
+
+    let cambiados = 0;
+    for(const it of grupo.items){
+      try{
+        if(grupo.kind === "fc"){
+          const card = O.F_BY_ID && O.F_BY_ID[it.id];
+          if(!card) throw new Error("no está en el banco cargado");
+          const m = /^([^:]+):(.+)$/.exec(it.id || "");
+          applyCardInto(arr, card.cardId || (m && m[2]), card, it.id);
+        } else {
+          const q = O.Q_BY_ID && O.Q_BY_ID[it.id];
+          if(!q) throw new Error("no está en el banco cargado");
+          applyQuestionInto(arr, it.id, q);
+        }
+        cambiados++; ok.push({ kind:grupo.kind, id:it.id });
+      }catch(e){ fallidos.push({ id:it.id, error:(e && e.message) || String(e) }); }
+    }
+    if(!cambiados) continue;
+    files.push({ path, content: JSON.stringify(arr, null, 2) + "\n" });
+    if(grupo.kind === "fc") tocaCards = true; else tocaPreguntas = true;
+  }
+
+  if(!files.length){
+    const e = new Error("No se pudo publicar ninguna corrección." +
+      (fallidos.length ? " Motivo del primero: " + fallidos[0].error : ""));
+    e.fallidos = fallidos;
+    throw e;
+  }
+
+  // artefactos: una sola vez, no uno por item
+  if(tocaPreguntas){
+    files.push({ path:"questions_data.js", content: dataJs("__OPE365_DATA__", bankQuestions()) });
+    files.push({ path:"questions_all.json", content: JSON.stringify(bankQuestions()).replace(/<\/script/gi, "<\\/script") });
+  }
+  if(tocaCards){
+    files.push({ path:"flashcards_data.js", content: dataJs("__OPE365_FLASHCARDS__", bankCards()) });
+  }
+
+  const nq = ok.filter(x=>x.kind==="q").length, nf = ok.filter(x=>x.kind==="fc").length;
+  const partes = [];
+  if(nq) partes.push(`${nq} pregunta${nq===1?"":"s"}`);
+  if(nf) partes.push(`${nf} flashcard${nf===1?"":"s"}`);
+  const sha = await commitFiles(files, `contenido: corregidas ${partes.join(" y ")} desde la app`);
+  return { sha, shaShort: sha.slice(0,7), ok, fallidos, files: files.map(x=>x.path) };
+}
+
 async function applyEditToBank(kind, id){
   await test();
   if(O.ContentEdit && O.ContentEdit.isUser(kind, id))
@@ -303,11 +429,7 @@ async function applyEditToBank(kind, id){
     const f = await getFile(path);
     if(!f.existed) throw new Error("No existe " + path + " en el repo.");
     const arr = JSON.parse(f.text);
-    const entry = arr.find(c=> c.cardId === cardId);
-    if(!entry) throw new Error(`${id} no está en ${path}.`);
-    entry.front = String(card.front || "").trim();
-    entry.back  = String(card.back || "").trim();
-    entry.priority = card.priority === "alta" ? "alta" : "normal";
+    applyCardInto(arr, cardId, card, id);
     const files = [
       { path, content: JSON.stringify(arr, null, 2) + "\n" },
       { path: "flashcards_data.js", content: dataJs("__OPE365_FLASHCARDS__", bankCards()) },
@@ -325,18 +447,7 @@ async function applyEditToBank(kind, id){
   const f = await getFile(path);
   if(!f.existed) throw new Error("No existe " + path + " en el repo.");
   const arr = JSON.parse(f.text);
-  const entry = arr.find(x=> x.id === id);
-  if(!entry) throw new Error(`${id} no está en ${path}.`);
-  entry.enunciado = String(q.enunciado || "").trim();
-  if(Array.isArray(q.opciones) && Array.isArray(entry.opciones)){
-    entry.opciones = entry.opciones.map(o=>{
-      const src = q.opciones.find(x=> x.letter === o.letter);
-      return { letter: o.letter, text: src ? String(src.text || "").trim() : o.text };
-    });
-  }
-  entry.respuesta = q.respuesta;
-  entry.explicacion = String(q.explicacion || "").trim();
-  entry.negativa = !!q.negativa;
+  applyQuestionInto(arr, id, q);
   const files = [
     { path, content: JSON.stringify(arr, null, 2) + "\n" },
     { path: "questions_data.js", content: dataJs("__OPE365_DATA__", bankQuestions()) },
@@ -409,7 +520,7 @@ function pendingCount(){
 
 O.GHS = {
   cfg, setCfg, forget, hasToken, repoLabel,
-  test, publish, applyEditToBank, deleteFromBank, pendingCount,
+  test, publish, applyEditToBank, applyEditsToBank, deleteFromBank, pendingCount,
   commitFiles, getFile, cleanCard, cleanQuestion, nextCardNum, nextQNum, // testables
 };
 
