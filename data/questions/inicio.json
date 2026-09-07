@@ -6869,6 +6869,114 @@
     "explicacion": "**Mostrar todo.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+Mayús+8. Muestra u oculta las marcas de párrafo (¶), tabulaciones y espacios. En el teclado español la combinación es también Ctrl+( (Mayús+8 = «(»)."
   },
   {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "parrafo-marcas",
+    "subtopic": "Caracteres de no separacion",
+    "tema": "Parrafo",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "enunciado": "Quieres que «Real Decreto» y su número no se separen nunca en dos líneas distintas. ¿Qué escribes entre las dos palabras?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Un espacio de no separación con Ctrl+Mayús+Espacio"
+      },
+      {
+        "letter": "B",
+        "text": "Un espacio normal pulsando Ctrl+Espacio"
+      },
+      {
+        "letter": "C",
+        "text": "Un tabulador con la tecla Tab"
+      },
+      {
+        "letter": "D",
+        "text": "Un salto de línea manual con Mayús+Intro"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El espacio de no separación (Ctrl+Mayús+Espacio, comando «Espacio de no separación» del cuadro Personalizar teclado) une las dos palabras: Word nunca romperá la línea entre ellas. Ctrl+Espacio no inserta un espacio: quita el formato de carácter manual de la selección.",
+    "id": "inicio-575",
+    "sourceQuestionId": "pdf-inicio-edic-575"
+  },
+  {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "parrafo-marcas",
+    "subtopic": "Caracteres de no separacion",
+    "tema": "Parrafo",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "enunciado": "¿Qué efecto tiene insertar un espacio de no separación entre dos palabras?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Impide que Word divida esas dos palabras en líneas distintas; siempre quedan juntas"
+      },
+      {
+        "letter": "B",
+        "text": "Duplica el ancho del espacio entre ambas palabras"
+      },
+      {
+        "letter": "C",
+        "text": "Convierte las dos palabras en una sola a efectos del corrector ortográfico"
+      },
+      {
+        "letter": "D",
+        "text": "Impide que el espacio pueda borrarse con Retroceso o Suprimir"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El espacio (y el guión) de no separación bloquean la ruptura de línea en ese punto: las palabras a ambos lados se mantienen siempre en la misma línea. No cambia el ancho del espacio, ni la ortografía, ni impide borrarlo.",
+    "id": "inicio-576",
+    "sourceQuestionId": "pdf-inicio-edic-576"
+  },
+  {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "parrafo-marcas",
+    "subtopic": "Caracteres de no separacion",
+    "tema": "Parrafo",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "enunciado": "Además del atajo de teclado, ¿desde dónde se inserta con el ratón un espacio o un guión de no separación?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Símbolos ▸ Más símbolos… ▸ pestaña «Caracteres especiales»"
+      },
+      {
+        "letter": "B",
+        "text": "Inicio ▸ Párrafo ▸ Mostrar todo"
+      },
+      {
+        "letter": "C",
+        "text": "Disposición ▸ Configurar página ▸ Guiones"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Texto ▸ Elementos rápidos"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "La pestaña «Caracteres especiales» del cuadro Símbolo (Insertar ▸ Símbolos ▸ Más símbolos) lista el espacio de no separación, el guión de no separación y el guión opcional, con su método abreviado al lado. «Guiones» de Disposición controla la partición automática de palabras, no inserta caracteres.",
+    "id": "inicio-577",
+    "sourceQuestionId": "pdf-inicio-edic-577"
+  },
+  {
     "id": "inicio-38",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Marcas de formato",
@@ -6886,6 +6994,44 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Verdadero. RTM (Retorno de carro Manual) lo genera el usuario al pulsar Intro y crea un nuevo parrafo con su marca ¶ visible. RTA (Retorno de carro Automatico) lo inserta Word automaticamente al llegar al margen derecho sin crear parrafo ni marca visible."
+  },
+  {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "parrafo-marcas",
+    "subtopic": "Caracteres de no separacion",
+    "tema": "Parrafo",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "enunciado": "Con Mostrar todo (¶) activado, el espacio de no separación se ve con un símbolo distinto al del espacio normal (que es un punto centrado).",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Verdadero. Word marca el espacio normal con un punto centrado a media altura y el espacio de no separación con un pequeño círculo elevado (°), de modo que se distinguen de un vistazo cuando se muestran las marcas de formato.",
+    "id": "inicio-578",
+    "sourceQuestionId": "pdf-inicio-edic-578"
+  },
+  {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio - Edicion",
+    "section": "inicio",
+    "topic": "parrafo-marcas",
+    "subtopic": "Caracteres de no separacion",
+    "tema": "Parrafo",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "enunciado": "El guión de no separación evita que una palabra escrita con guión (por ejemplo «artículo-1») se parta al final de la línea justo por ese guión.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Verdadero. El guión de no separación se escribe y se ve como un guión normal, pero Word no lo usa como punto de corte de línea: la palabra compuesta queda entera. (En este Word el comando figura en el cuadro Personalizar teclado como «Guión de no separación».)",
+    "id": "inicio-579",
+    "sourceQuestionId": "pdf-inicio-edic-579"
   },
   {
     "id": "inicio-37",

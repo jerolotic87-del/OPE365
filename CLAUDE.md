@@ -599,6 +599,24 @@ recortado — nunca hacía falta que Claude cortara nada ahí. +1 pregunta
 con imagen (`scripts/gen_icono_complementos.py`). Confirmado con
 `numpy`/patrón de nombre que diseno/disposicion/insertar/referencias no
 tienen más candidatos genuinos sin usar.
+**PDF «Pestaña Edición» de Beatriz R.T → inicio.json (sep-2026)**: el
+usuario aportó el PDF de la academia de los grupos Portapapeles/Edición de
+la ficha Inicio. Casi todo ya estaba cubierto (deshacer/rehacer/F4,
+opciones de pegado ×4, Ctrl+Supr/Ctrl+Retroceso, saltos, F2/Mayús+F2,
+Spike, selección no contigua con Ctrl, arrastrar para mover/copiar). Único
+hueco real: **espacio / guión de no separación** (0 preguntas) → **+5**
+(`inicio-575..579`, `sourceQuestionId` `pdf-inicio-edic-NN`, `generado:true`,
+topic `parrafo-marcas`): atajo `Ctrl+Mayús+Espacio` (está en el volcado
+v2608), qué hace (bloquea la ruptura de línea entre las dos palabras), ruta
+con ratón (Insertar ▸ Símbolos ▸ Más símbolos ▸ «Caracteres especiales»),
+símbolo distinto con Mostrar todo, y el guión de no separación. Generador:
+`scripts/gen_edicion_pdf_inicio.py`. **Conflictos del PDF NO integrados**
+(usa el esquema internacional / choca con prueba en vivo): «Copiar formato =
+`Ctrl+Mayús+C/V`» (aquí es `Alt+Ctrl+C/V`, ya resuelto); «el panel de
+Navegación busca hasta 100 resultados» (en vivo NO hay tope, ya resuelto);
+«guión de no separación = `Ctrl+Mayús+_`» (el volcado v2608 lo asigna a
+`Alt+Mayús+-` — no se afirma el atajo en las preguntas, solo el concepto).
+
 **Auditoría de cobertura + demo de recorte de icono (sep-2026)**: a
 petición del usuario, se auditó qué quedaba realmente por cubrir en todo
 el banco (no solo referencias/correspondencia): iconos sin convertir,
