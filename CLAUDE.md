@@ -779,7 +779,12 @@ NO estaban en las capturas del usuario):
    `1,2,3` · `-1,-2,-3` · `a,b,c` · `A,B,C` · `i,ii,iii` · `I,II,III`.
    Corregidas `insertar-84`, `insertar-285`, `insertar-295`. ✅ **CONFIRMADO
    con captura del usuario** (desplegable «Formato de número» abierto, se ven
-   los 6, `I, II, III` incluido).
+   los 6, `I, II, III` incluido). Las capturas revelaron además que
+   `insertar-145` estaba mal (decía que «guión largo» NO es un separador de
+   «Incluir número de capítulo» — sí lo es; los 5 son guión/punto/dos
+   puntos/guión largo/guión corto) → reformulada. +`insertar-469/470`
+   («Empezar con el estilo» = Título 1-9; «Numeración de páginas» =
+   Continuar / Iniciar en).
  - **Galería del botón Ecuación**: el banco decía que «Teorema de Pitágoras»
    NO es una ecuación integrada — **falso**, sí lo es (junto a Área del
    círculo, Fórmula cuadrática, Serie de Taylor, Serie de Fourier, Expansión

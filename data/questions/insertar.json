@@ -8230,28 +8230,28 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-112",
     "generado": true,
-    "enunciado": "Dentro de la opción Incluir número de capítulo del cuadro Formato de los números de página, ¿cuál de los siguientes separadores existe realmente?",
+    "enunciado": "El desplegable «Usar separador» de la opcion «Incluir numero de capitulo» (cuadro Formato de los numeros de pagina), ¿que separadores ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "/ (barra)"
+        "text": "Guion, punto, dos puntos, guion largo y guion corto (5)"
       },
       {
         "letter": "B",
-        "text": "– (guión largo)"
+        "text": "Solo el guion"
       },
       {
         "letter": "C",
-        "text": "- (guión)"
+        "text": "Guion, coma y punto y coma"
       },
       {
         "letter": "D",
-        "text": "· (punto medio)"
+        "text": "Barra, guion y punto medio"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A la barra no figura en la extracción. B el guión largo no figura. D el punto medio no figura. La extracción real muestra: - (guión)."
+    "respuesta": "A",
+    "explicacion": "Son 5 separadores entre el numero de capitulo y el de pagina: - (guion) por defecto, . (punto), : (dos puntos), guion largo y guion corto."
   },
   {
     "id": "insertar-146",
@@ -8653,6 +8653,42 @@
     "explicacion": "«Formato del número de página» permite iniciar la numeración en cualquier valor, no solo en 1."
   },
   {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Encabezado y pie de pagina",
+    "section": "insertar",
+    "topic": "encabezado-pie",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-469",
+    "sourceQuestionId": "capt-ins-469",
+    "tipo": "opcion_unica",
+    "enunciado": "En «Incluir numero de capitulo» del cuadro Formato de los numeros de pagina, el desplegable «Empezar con el estilo», ¿que valores ofrece?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Titulo 1 a Titulo 9"
+      },
+      {
+        "letter": "B",
+        "text": "Solo Titulo 1"
+      },
+      {
+        "letter": "C",
+        "text": "Titulo 1, Titulo 2 y Titulo 3"
+      },
+      {
+        "letter": "D",
+        "text": "Cualquier estilo del documento, no solo titulos"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Los 9 niveles de estilo de titulo (Titulo 1..Titulo 9); el valor por defecto es Titulo 1. Word usa ese estilo para saber donde empieza cada capitulo."
+  },
+  {
     "id": "insertar-282",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Encabezado y pie de página",
@@ -8974,6 +9010,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "En la sección Numeración de páginas del cuadro, tienes dos opciones: un botón de opción para continuar la numeración de la sección anterior, y otro para iniciar en un número que tú escribes. Son las dos opciones disponibles."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Encabezado y pie de pagina",
+    "section": "insertar",
+    "topic": "encabezado-pie",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-470",
+    "sourceQuestionId": "capt-ins-470",
+    "tipo": "verdadero_falso",
+    "enunciado": "En el cuadro Formato de los numeros de pagina, la seccion «Numeracion de paginas» permite «Continuar desde la seccion anterior» o «Iniciar en» un numero concreto.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Son las dos opciones al pie del cuadro: por defecto la numeracion continua desde la seccion previa; «Iniciar en» reinicia la cuenta (util para empezar en 1 tras las paginas preliminares)."
   },
   {
     "id": "insertar-19",
