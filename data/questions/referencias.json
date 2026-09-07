@@ -1315,6 +1315,42 @@
     "explicacion": "El botón «Convertir…» del cuadro Notas al pie y notas al final abre el cuadro «Convertir notas»."
   },
   {
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias - Notas al pie",
+    "section": "referencias",
+    "topic": "notas",
+    "subtopic": null,
+    "tema": "Referencias",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "referencias-165",
+    "sourceQuestionId": "web-referencias-165",
+    "tipo": "opcion_unica",
+    "enunciado": "En el cuadro «Notas al pie y notas al final», ¿qué tres opciones ofrece «Numeración»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Continua, Reiniciar cada sección y Reiniciar cada página"
+      },
+      {
+        "letter": "B",
+        "text": "Ascendente, Descendente y Aleatoria"
+      },
+      {
+        "letter": "C",
+        "text": "Arábiga, Romana y Alfabética"
+      },
+      {
+        "letter": "D",
+        "text": "Por capítulo, Por página y Por autor"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Numeración» = Continua (numera sin parar en todo el documento), Reiniciar cada sección o Reiniciar cada página. El formato del número (1,2,3 / a,b,c / *,†,‡...) es un campo aparte, igual que «Iniciar en»."
+  },
+  {
     "id": "referencias-20",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Notas al pie",
@@ -1563,6 +1599,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Sus tres opciones: al pie→al final, al final→al pie, e intercambiar ambas."
+  },
+  {
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias - Notas al pie",
+    "section": "referencias",
+    "topic": "notas",
+    "subtopic": null,
+    "tema": "Referencias",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "referencias-164",
+    "sourceQuestionId": "web-referencias-164",
+    "tipo": "verdadero_falso",
+    "enunciado": "En el cuadro «Notas al pie y notas al final», el diseño de la nota al pie permite elegir el número de columnas: «Coincidencia de diseño de sección» o entre 1 y 4 columnas.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "El desplegable «Columnas» de la sección «Diseño de nota al pie» ofrece: Coincidencia de diseño de sección (por defecto), 1, 2, 3 o 4 columnas para la zona de notas al pie."
   },
   {
     "id": "referencias-85",
@@ -2950,6 +3005,42 @@
     "explicacion": "«Eliminar rótulo» borra un rótulo de la lista (los tres rótulos de fábrica —Ecuación, Ilustración, Tabla— no se pueden eliminar)."
   },
   {
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias - Títulos",
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Referencias",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "referencias-162",
+    "sourceQuestionId": "web-referencias-162",
+    "tipo": "opcion_unica",
+    "enunciado": "En el cuadro Referencia cruzada, con «Tipo = Elemento numerado», ¿cuáles son las opciones del desplegable «Referencia a»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Número de página, Número de párrafo, Número de párrafo (sin contexto), Número de párrafo (en contexto), Texto de párrafo y «Más adelante o más atrás»"
+      },
+      {
+        "letter": "B",
+        "text": "Solo Número de página y Texto de párrafo"
+      },
+      {
+        "letter": "C",
+        "text": "Título, Marcador, Nota al pie y Ecuación"
+      },
+      {
+        "letter": "D",
+        "text": "Negrita, Cursiva, Subrayado y Normal"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El contenido de «Referencia a» depende del «Tipo» elegido. Para un elemento numerado son esas seis opciones; «Más adelante o más atrás» inserta automáticamente las palabras «más adelante» o «más atrás» según dónde esté el elemento respecto a la referencia."
+  },
+  {
     "id": "referencias-156",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Títulos",
@@ -3376,6 +3467,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Si se desmarca, la tabla lista solo el texto que se escribió tras el rótulo, sin «Ilustración N»."
+  },
+  {
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias - Títulos",
+    "section": "referencias",
+    "topic": "titulos",
+    "subtopic": null,
+    "tema": "Referencias",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "referencias-163",
+    "sourceQuestionId": "web-referencias-163",
+    "tipo": "verdadero_falso",
+    "enunciado": "En el cuadro Referencia cruzada, la opción «Referencia a ▸ Más adelante o más atrás» inserta el texto «más adelante» o «más atrás» según la posición del elemento respecto al punto donde se inserta la referencia.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Word decide la palabra en función de si el elemento referenciado va antes o después de la referencia; si el documento cambia, al actualizar campos (F9) se recalcula. Suele combinarse con «Insertar como hipervínculo»."
   },
   {
     "id": "referencias-87",

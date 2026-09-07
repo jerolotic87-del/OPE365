@@ -628,6 +628,17 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Barrido web de huecos de Referencias (sep-2026)**: cruce del banco (161
+preguntas, ya con dos pasadas profundas + PDF academia + iconos + trampas)
+con josenrique.es (AGE) y aulaclic. La pregunta oficial AGE 2022 (nota al
+pie = `Alt+Ctrl+O`) y AGE 2024 (índice para términos) **confirman el
+banco**. **Sin errores.** Solo 2 huecos → **+4** (`referencias-162..165`):
+el desplegable «Referencia a» del cuadro Referencia cruzada (6 opciones
+para Tipo=Elemento numerado) y qué hace «Más adelante o más atrás»; el
+desplegable «Columnas» del diseño de nota al pie (Coincidencia de diseño de
+sección / 1-4) y las 3 opciones de «Numeración» (Continua / Reiniciar
+sección / Reiniciar página).
+
 **Barrido web de huecos de Disposición (sep-2026)**: cruce del banco (132
 preguntas, ya muy completo — casi cada valor del volcado tiene 1-9
 preguntas) con josenrique.es (AGE: 0 preguntas oficiales exclusivas de esta
