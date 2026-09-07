@@ -416,9 +416,11 @@ function createDuelGame(session){
       let pool = O.filterQuestions({
         section: config.section || "all", topic: config.topic || "all",
         tema: config.tema || "all", tipo: config.tipo || "all", categoria: config.categoria || "all",
+        conImagen: !!config.conImagen,   // "Solo iconos" del asistente
       }).filter(q=>
         q.tipo !== "relleno"          // no hay UI para escribir huecos en un duelo a reloj
-        && !q.imagen                  // el runner de Duelo/Farol no pinta imágenes: la pregunta quedaría sin la imagen que menciona
+        // Las preguntas con imagen SÍ entran: el runner de Duelo las pinta
+        // (mpQuestionImage) y la imagen viaja dentro de config.qPayload.
         && !q.creado                  // el contenido propio de un jugador no lo tiene el otro
         && !/^usr-/.test(q.id || "")
       );
@@ -772,9 +774,12 @@ function createCoopGame(session){
         let pool = O.filterQuestions({
           section: config.section || "all", topic: config.topic || "all",
           tema: config.tema || "all", tipo: config.tipo || "all", categoria: config.categoria || "all",
+          conImagen: !!config.conImagen,   // "Solo iconos" del asistente
         }).filter(q=>
           q.tipo !== "relleno"          // relleno no tiene distractores: Word no puede "equivocarse" sin inventar contenido
-          && !q.imagen                  // el runner de Contra Word no pinta imágenes
+          // Las preguntas con imagen SÍ entran: Contra Word pinta el icono
+          // (mpQuestionImage) encima de la afirmación y la rama `opt` de
+          // buildWordPlan las convierte bien ("Word dice que es X, ¿verdad?").
           && !q.creado && !/^usr-/.test(q.id || "")
         );
         pool = O.seededShuffle(pool, O.mulberry32((seed >>> 0)));

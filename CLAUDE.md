@@ -62,7 +62,12 @@ views.js               toda la interfaz (router simple basado en funciones).
                        con selector de longitud y "repasar solo los que
                        fallé"; reutiliza el runner normal vía
                        `O.buildSession({..., conImagen:true})`. QA:
-                       `tests/manual_iconos_qa.mjs`.
+                       `tests/manual_iconos_qa.mjs`. `groupForView` marca
+                       "Iconos" en la nav durante `running`/`results`/
+                       `review-hub` si la sesión en curso es `conImagen`
+                       — se deduce del propio config, sin estado aparte.
+                       Los modos multijugador también juegan iconos: ver
+                       "Imágenes en multijugador".
                        Toda llamada a LEB va guardada con `if(O.LEB)`.
 peerjs.min.js          librería de terceros, no tocar
 data/atajos_word365_v2608.md  VOLCADO COMPLETO de "Personalizar teclado" de la
@@ -1194,14 +1199,14 @@ pestaña opcional) y "Repasar preguntas" → desplegable "Con y sin imagen /
 Solo con imagen"; Editor del banco → estado "Con imagen (iconos)". Fuera de
 esos filtros explícitos, las preguntas con imagen siguen mezcladas con las
 demás de su `topic` (deseable: el motor las trata como cualquier framing
-del concepto). **Bug real encontrado y corregido en la auditoría de
-sep-2026**: `multiplayer.js` (Duelo/Farol/Contra Word) nunca pintaba
-`q.imagen` en la ronda en vivo — una pregunta de icono que caía en una
-partida quedaba con el enunciado ("Observa el icono...") sin la imagen,
-irrespondible. `buildBoard()` (las dos, Duelo y Coop) ahora excluye
-`q.imagen` del pool de selección aleatoria, igual que ya excluía `relleno`.
-Confirmado con `filterQuestions` + el mismo predicado: 0 preguntas con
-imagen cuelan en el pool. Además, `qEditFormHtml`/`fcEditFormHtml` (editor
+del concepto). **Bug real encontrado en la auditoría de sep-2026**:
+`multiplayer.js` (Duelo/Farol/Contra Word) nunca pintaba `q.imagen` en la
+ronda en vivo — una pregunta de icono que caía en una partida quedaba con
+el enunciado ("Observa el icono...") sin la imagen, irrespondible. Como
+parche inmediato, `buildBoard()` (Duelo y Coop) excluyó `q.imagen` del
+pool. **RESUELTO DE VERDAD en sep-2026 — ver "Imágenes en multijugador"
+más abajo**: ahora los tres modos pintan el icono y la exclusión se ha
+retirado. Además, `qEditFormHtml`/`fcEditFormHtml` (editor
 ✎ y Editor del banco) no mostraban la imagen al corregir texto — se añadió
 una vista previa de solo lectura (`qImageHtml`) al principio del
 formulario; `readQPatch` nunca tocaba el campo `imagen`, así que no había
@@ -1587,6 +1592,49 @@ Conexión: **un solo broker PeerJS** para ambos (probar varios sin canal
 previo los separa) + ICE con TURN (OpenRelay); con datos móviles/CGNAT
 sin TURN propio la conexión directa falla y hay que jugar en Wi-Fi
 (la pantalla de error lo dice + despliega `OPE_MP.getNetLog()`).
+
+**Imágenes en multijugador (sep-2026):** los tres modos ya juegan preguntas
+CON IMAGEN. Antes `buildBoard()` las excluía (`&& !q.imagen`) porque ningún
+render de multijugador pintaba el icono; **la exclusión se ha retirado** y
+en su lugar:
+- **`mpQuestionImage(q)`** (views.js) es el único punto que resuelve la
+  imagen de una pregunta en partida: usa `q.imagen` del payload y cae a
+  `Q_BY_ID[q.id].imagen` si faltara (payloads de versiones anteriores y el
+  mazo de Farol, que viaja solo por ids). Se llama **sin `ref`** a
+  propósito: en partida el visor es de SOLO LECTURA — no se puede recortar
+  ni guardar una corrección local del banco a mitad de una ronda.
+- Sitios que lo pintan: ronda de **Duelo** (`renderMpGame`), panel de fin de
+  ronda (`renderMpRoundEnd`, las dos ramas), ronda de **Contra Word**
+  (`renderMpCoopGame`, encima de la afirmación) y su fin de ronda
+  (`mpCoopRoundEnd`), las **3 fases de Farol** (elegir respuesta / esperar
+  claim / defender), y los **3 repasos finales** (`mpDuelReviewHtml`,
+  `mpCoopReviewHtml`, `mpPokerReviewHtml`).
+- **Listas de cartas de Farol** (mazo del lobby y "elige tu carta"): llevan
+  una miniatura `.mp-card-thumb` NO zoomable — sin ella las cartas de icono
+  son indistinguibles (comparten enunciado literal), y usar `.zoomable` ahí
+  abriría el visor en vez de jugar la carta.
+- **Contra Word** convierte una pregunta de icono por la rama `opt` de
+  `buildWordPlan`: contexto = enunciado, claim = el texto de una opción
+  ("Word responde: Insertar ▸ Texto"). Funciona sin tocar el generador.
+- **Bug preexistente arreglado de paso:** `pokerCardPool()` filtra por
+  `categoria==="atajo"` pero NUNCA excluyó imágenes, al contrario que
+  Duelo/Coop — las **7** preguntas de icono con `categoria:"atajo"` ya
+  salían como cartas de Farol sin icono, irrespondibles. Ahora se pintan.
+- **Asistente**: el `<select id="mp-scope">` (Duelo y Contra Word) tiene la
+  opción **«Solo iconos (con imagen)»** → `config.conImagen`, que
+  `buildBoard` pasa a `filterQuestions`. Con esa opción el selector de tipo
+  se fuerza a "Todos" y se deshabilita (todas las preguntas con imagen son
+  `opcion_unica`; cruzarlo con V/F daría 0 preguntas).
+- **Peso del payload**: la imagen viaja POR VALOR dentro de `config.qPayload`
+  (coherente con "tablero por valor"): ~850 B de media por pregunta, así que
+  un tablero de 40 rondas de iconos suma ~35 KB. Se mantiene por valor a
+  propósito — quitarla reintroduciría el fallo de "al invitado le falta la
+  pregunta". (Aparte: `diseno-7` pesa 50 KB, es el único recorte sin versión
+  sin rótulo; si algún día molesta, recortarlo.) Los **códigos de compartir
+  NO llevan imágenes** (solo ids + config): siguen en ~400 caracteres.
+- Tests: `tests/test_multiplayer_iconos.js` (motor + UI del host en jsdom con
+  transporte mock) y `tests/manual_iconos_mp_qa.mjs` (Chromium real: Contra
+  Word y el mazo de Farol).
 
 **Repaso al final (sep-2026):** los tres modos emiten `review` en el
 evento `finished` (pregunta + respuesta de cada uno + correcta +

@@ -60,6 +60,12 @@ let navStack = [];
 function groupForView(view){
   if(view==="home") return "home";
   if(["temario","temario-detalle"].includes(view)) return "temario";
+  // Una sesión de SOLO iconos pertenece al área "Iconos", venga del hub de
+  // Iconos o del asistente de Práctica (scope "Iconos (con imagen)"): se
+  // deduce del propio config de la sesión, sin llevar estado aparte.
+  if(["running","results","review-hub"].includes(view)){
+    try{ const s = O.getSession(); if(s && s.config && s.config.conImagen) return "iconos"; }catch(e){}
+  }
   if(["practica","study","test-wizard","test-preview","running","results",
       "review-hub","review-detail","mi-contenido","mp-setup","mp-lobby","mp-game"].includes(view)) return "practica";
   if(["flashcards","flashcards-study"].includes(view)) return "flashcards";
@@ -152,6 +158,19 @@ function qImageHtml(src, ref){
   const r = ref ? ` data-imgref="${O.escapeHtml(ref)}"` : "";
   return `<figure class="q-image"><img class="zoomable" src="${src}" alt="Imagen del ejercicio"${r}>`
     + `<figcaption class="q-image-hint">Pulsa para ampliar${ref && O.ContentEdit ? " o recortar" : ""}</figcaption></figure>`;
+}
+
+/* Imagen de una pregunta EN MULTIJUGADOR.
+   - El tablero viaja por valor en `config.qPayload`, así que `q.imagen` ya
+     suele venir en el objeto; el fallback a `Q_BY_ID` cubre payloads viejos
+     (de una versión anterior que las excluía) y el mazo de Farol, que viaja
+     solo por ids.
+   - Sin `ref`: en mitad de una partida el visor es de SOLO LECTURA (no se
+     puede recortar ni guardar una corrección local del banco). */
+function mpQuestionImage(q){
+  if(!q) return "";
+  const src = q.imagen || (q.id && O.Q_BY_ID[q.id] && O.Q_BY_ID[q.id].imagen) || "";
+  return src ? qImageHtml(src) : "";
 }
 
 /* ---- Visor / recorte de imagen a pantalla completa (estilo WhatsApp) ----
@@ -4210,6 +4229,7 @@ function renderMpModeFields(){
             <option value="todo" ${mpSetupState.scope==='todo'?'selected':''}>Todo el temario</option>
             <option value="pestana" ${mpSetupState.scope==='pestana'?'selected':''}>Por pestaña y grupo</option>
             <option value="categoria" ${mpSetupState.scope==='categoria'?'selected':''}>Por categoría (rutas/atajos)</option>
+            <option value="imagen" ${mpSetupState.scope==='imagen'?'selected':''}>Solo iconos (con imagen)</option>
           </select></div>
           <div class="field" id="mp-sec-field" style="${mpSetupState.scope==='pestana'?'':'display:none;'}"><label>Pestaña</label><select id="mp-section">${O.TAXONOMY_SECTIONS.filter(s=>s.topics&&s.topics.length).map(s=>`<option value="${s.id}" ${mpSetupState.section===s.id?'selected':''}>${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
           <div class="field" id="mp-top-field" style="${mpSetupState.scope==='pestana'?'':'display:none;'}"><label>Grupo</label><select id="mp-topic"></select></div>
@@ -4263,6 +4283,7 @@ function renderMpModeFields(){
           <option value="todo" ${mpSetupState.scope==='todo'?'selected':''}>Todo el temario</option>
           <option value="pestana" ${mpSetupState.scope==='pestana'?'selected':''}>Por pestaña y grupo</option>
           <option value="categoria" ${mpSetupState.scope==='categoria'?'selected':''}>Por categoría (rutas/atajos)</option>
+          <option value="imagen" ${mpSetupState.scope==='imagen'?'selected':''}>Solo iconos (con imagen)</option>
         </select></div>
         <div class="field" id="mp-sec-field" style="${mpSetupState.scope==='pestana'?'':'display:none;'}"><label>Pestaña</label><select id="mp-section">${O.TAXONOMY_SECTIONS.filter(s=>s.topics&&s.topics.length).map(s=>`<option value="${s.id}" ${mpSetupState.section===s.id?'selected':''}>${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
         <div class="field" id="mp-top-field" style="${mpSetupState.scope==='pestana'?'':'display:none;'}"><label>Grupo</label><select id="mp-topic"></select></div>
@@ -4317,13 +4338,27 @@ function mpWireContentSelectors(){
     });
     topSel.addEventListener("change", ()=> mpSetupState.topic = topSel.value || "all");
   }
-  scopeSel.addEventListener("change", ()=>{
-    mpSetupState.scope = scopeSel.value;
+  // Con "Solo iconos" el tipo de ejercicio no aporta nada: TODAS las preguntas
+  // con imagen son de opción única. Se fuerza a "Todos" y se deshabilita para
+  // que no se pueda pedir un cruce imposible (p. ej. iconos + V/F = 0 preguntas).
+  const tipoSelEl = $("#mp-tipo");
+  function syncScopeFields(){
     const pest = mpSetupState.scope==="pestana";
     const secF=$("#mp-sec-field"), topF=$("#mp-top-field"), catF=$("#mp-cat-field");
     if(secF) secF.style.display = pest ? "" : "none";
     if(topF) topF.style.display = pest ? "" : "none";
     if(catF) catF.style.display = mpSetupState.scope==="categoria" ? "" : "none";
+    if(tipoSelEl){
+      const soloIconos = mpSetupState.scope==="imagen";
+      if(soloIconos){ mpSetupState.tipo = "all"; tipoSelEl.value = "all"; }
+      tipoSelEl.disabled = soloIconos;
+      const wrap = tipoSelEl.closest(".field"); if(wrap) wrap.style.opacity = soloIconos ? ".5" : "";
+    }
+  }
+  syncScopeFields();
+  scopeSel.addEventListener("change", ()=>{
+    mpSetupState.scope = scopeSel.value;
+    syncScopeFields();
   });
   const catSel = $("#mp-categoria"); if(catSel) catSel.addEventListener("change", ()=> mpSetupState.categoria = catSel.value);
 }
@@ -4384,6 +4419,7 @@ function mpCreateGameEngine(isHost){
     section: mpSetupState.scope==="pestana" ? mpSetupState.section : "all",
     topic: mpSetupState.scope==="pestana" ? mpSetupState.topic : "all",
     categoria: mpSetupState.scope==="categoria" ? mpSetupState.categoria : "all",
+    conImagen: mpSetupState.scope==="imagen",
   };
   if(mpGameMode === "farol"){
     mpPoker = MP.createPokerGame(mpSession);
@@ -4604,6 +4640,7 @@ function renderMpGame(){
         <div class="duel-timer" id="mp-timer-wrap"><div class="t-num" id="mp-timer-num">--</div><div class="t-bar"><i id="mp-timer-bar" style="width:100%;"></i></div></div>
         <div class="surface qcard" style="padding:var(--sp-6);" id="mp-qcard">
           <div class="qcard-top"><div class="qcard-meta"><span class="tag tag-type">${tipoLabel(q.tipo)}</span></div></div>
+          ${mpQuestionImage(q)}
           <h3>${O.renderBlank(q.enunciado)}</h3>
           <div id="mp-q-body"></div>
         </div>
@@ -4751,6 +4788,7 @@ function renderMpRoundEnd(data){
     return `
     <div class="round-end-panel">
       <div class="verdict ${won ? (mine.correct?'ok':'bad') : 'bad'}">${label}</div>
+      ${mpQuestionImage(data.question)}
       ${won ? `<p style="font-size:13px; color:var(--text-2);">${mine.correct?'✓ Acierto':'✕ Fallo'} · +${mine.points} puntos</p>` : `<p style="font-size:12.5px; color:var(--text-2);">No te ha dado tiempo a responder esta.</p>`}
     </div>`;
   }
@@ -4758,6 +4796,7 @@ function renderMpRoundEnd(data){
   return `
   <div class="round-end-panel">
     <div class="verdict ${meOk?'ok':'bad'}">${meOk ? '¡Correcto!' : (data.me.state==='TIMEOUT' ? 'Tiempo agotado' : 'Incorrecto')}</div>
+    ${mpQuestionImage(data.question)}
     <div class="pts">+${data.me.points} puntos</div>
     <div class="round-end-vs">
       <div><strong>Tú</strong><br>${meOk?'✓ Acierto':'✕ Fallo'} · +${data.me.points}</div>
@@ -4805,6 +4844,7 @@ function mpDuelReviewHtml(review){
     const meTxt = r.myState === "TIMEOUT" ? "Sin responder a tiempo" : mpAnswerToText(q, r.myAnswer);
     const rvTxt = r.rivalState === "TIMEOUT" ? "Sin responder a tiempo" : mpAnswerToText(q, r.rivalAnswer);
     const body = `
+      ${mpQuestionImage(q)}
       <p><strong>Tú:</strong> ${O.escapeHtml(meTxt)} ${r.myCorrect?'✓':'✕'}</p>
       <p><strong>${rival}:</strong> ${O.escapeHtml(rvTxt)} ${r.rivalCorrect?'✓':'✕'}</p>
       <p><strong>Correcto:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
@@ -4830,6 +4870,7 @@ function mpCoopReviewHtml(review){
     const claim = mpCoopPlanClaimPlain(r.plan);
     const lbl = (call,state)=> state === "TIMEOUT" ? "sin voto" : (call === "V" ? "Verdadero" : "Falso");
     const body = `
+      ${mpQuestionImage(q)}
       <p><strong>Word decía:</strong> ${claim ? O.escapeHtml(claim) : (wasTrue ? '(la afirmación tal cual)' : '—')} — era <strong>${wasTrue?'VERDADERO':'FALSO'}</strong></p>
       <p><strong>${me}:</strong> ${lbl(r.myCall,r.myState)} ${r.myRight?'✓':'✕'} · <strong>${rival}:</strong> ${lbl(r.rivalCall,r.rivalState)} ${r.rivalRight?'✓':'✕'}</p>
       <p><strong>Respuesta correcta:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
@@ -4848,6 +4889,7 @@ function mpPokerReviewHtml(review){
       ? `Atacaste afirmando «${O.escapeHtml(String(r.claim))}» — ${r.attackerTruthful ? 'decías la verdad' : 'era farol'}`
       : `Defendiste: ${r.decision === "dudo" ? 'DUDÉ' : 'CONFIÉ'} · el rival ${r.attackerTruthful ? 'decía la verdad' : 'faroleaba'}`;
     const body = `
+      ${mpQuestionImage(q)}
       <p>${roleTxt}</p>
       <p><strong>Correcto:</strong> ${O.escapeHtml(mpCoopCorrectText(q))}</p>
       ${q.explicacion ? `<div class="mp-rev-exp">${explHtml(q.explicacion)}</div>` : ''}`;
@@ -4958,6 +5000,7 @@ function mpCoopRoundEnd(data){
   const correct = !wasTrue ? mpCoopCorrectText(data.question) : "";
   return `<div class="round-end-panel">
     <div class="verdict ${teamOk?'ok':'bad'}">${verdict}</div>
+    ${mpQuestionImage(data.question)}
     <p style="font-size:13px;color:var(--text-2);margin:2px 0 8px;">Era <strong style="color:var(--text);">${wasTrue?'VERDADERO':'FALSO'}</strong></p>
     ${correct ? `<p class="coop-hint" style="margin-bottom:10px;">Lo correcto: <strong style="color:var(--text)">${O.escapeHtml(correct)}</strong></p>` : ''}
     <div class="round-end-vs">
@@ -5017,6 +5060,7 @@ function renderMpCoopGame(){
       ${roundEndData ? mpCoopRoundEnd(roundEndData) : `
         <div class="duel-timer" id="mp-timer-wrap"><div class="t-num" id="mp-timer-num">--</div><div class="t-bar"><i id="mp-timer-bar" style="width:100%;"></i></div></div>
         <div class="surface qcard coop-card" style="padding:var(--sp-6);">
+          ${mpQuestionImage(q)}
           ${mpCoopClaimHtml(st.plan)}
           <div id="mp-coop-body"></div>
         </div>
@@ -5143,8 +5187,11 @@ function renderPokerLobby(view){
     <div class="qlist" id="poker-deck-list">
       ${mpPokerDeck.map((qid,i)=>{
         const q = O.Q_BY_ID[qid]; const mastered = O.PROGRESS.answers[qid] && O.PROGRESS.answers[qid].correcta;
+        // sin la miniatura, varias cartas de icono se ven idénticas (comparten enunciado)
+        const thumb = q.imagen ? `<img class="mp-card-thumb" src="${q.imagen}" alt="">` : "";
         return `<div class="qlist-item" style="cursor:default;">
           <span class="chip" style="flex-shrink:0;">${mastered?'✓ Dominado':'Nuevo'}</span>
+          ${thumb}
           <div style="flex:1;"><div class="qtext">${O.renderBlank(truncate(q.enunciado,90))}</div></div>
           <button class="btn btn-ghost btn-sm" data-swap="${i}" title="Cambiar carta">🔀</button>
         </div>`;
@@ -5261,7 +5308,11 @@ function renderPokerAttackerUI(round, phase){
       <p style="text-align:center; color:var(--text-2); font-size:13px; margin:var(--sp-4) 0;">Elige la carta que quieres jugar.</p>
       <div class="qlist">${available.map(qid=>{
         const q = O.Q_BY_ID[qid];
-        return `<button class="qlist-item" data-play-card="${qid}"><div class="qtext">${O.renderBlank(truncate(q.enunciado,90))}</div></button>`;
+        // miniatura NO zoomable: en esta lista el clic tiene que jugar la carta,
+        // no abrir el visor. Sin ella, las cartas de icono son indistinguibles
+        // entre sí (todas comparten el mismo enunciado).
+        const thumb = q.imagen ? `<img class="mp-card-thumb" src="${q.imagen}" alt="">` : "";
+        return `<button class="qlist-item" data-play-card="${qid}">${thumb}<div class="qtext">${O.renderBlank(truncate(q.enunciado,90))}</div></button>`;
       }).join("")}</div>`;
   }
   if(phase === "attacker_answer"){
@@ -5270,6 +5321,7 @@ function renderPokerAttackerUI(round, phase){
     return `
       <p style="text-align:center; color:var(--text-2); font-size:13px; margin:var(--sp-4) 0;">Elige la respuesta que quieres presentar.</p>
       <div class="surface qcard" style="padding:var(--sp-6);">
+        ${mpQuestionImage(q)}
         <h3>${O.renderBlank(q.enunciado)}</h3>
         <div class="options">${q.opciones.map(o=>`<button class="option" data-claim="${o.letter}"><span class="letter">${o.letter}</span><span>${O.escapeHtml(o.text)}</span></button>`).join("")}</div>
       </div>`;
@@ -5290,6 +5342,7 @@ function renderPokerDefenderUI(round, phase){
     const claimOpt = q.opciones.find(o=>o.letter===round.claim) || { letter:round.claim||"?", text:"(opción desconocida)" };
     return `
       <div class="surface qcard" style="padding:var(--sp-6);">
+        ${mpQuestionImage(q)}
         <h3>${O.renderBlank(q.enunciado)}</h3>
         <div class="security-note" style="margin-bottom:var(--sp-4);">Tu rival ha marcado:</div>
         <div class="option selected" style="pointer-events:none;"><span class="letter">${O.escapeHtml(String(claimOpt.letter))}</span><span>${O.escapeHtml(claimOpt.text)}</span></div>
@@ -5304,6 +5357,7 @@ function renderPokerDefenderUI(round, phase){
   const wildcardAvailable = !mpPoker.getState().myWildcardUsed;
   return `
     <div class="surface qcard" style="padding:var(--sp-6);">
+      ${mpQuestionImage(q)}
       <h3>${O.renderBlank(q.enunciado)}</h3>
       <p style="text-align:center; color:var(--text-2); font-size:13px; margin-bottom:var(--sp-3);">Elige tu propia respuesta.</p>
       <div class="options" id="poker-defend-options">${q.opciones.map(o=>`<button class="option" data-defend="${o.letter}"><span class="letter">${o.letter}</span><span>${O.escapeHtml(o.text)}</span></button>`).join("")}</div>

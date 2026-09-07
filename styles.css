@@ -693,6 +693,9 @@ details.advanced summary:hover{ color:var(--text); }
 .badge-incorrect{ background:var(--bad-dim); color:var(--bad); }
 .badge-unanswered{ background:var(--surface-2); color:var(--text-3); }
 .qlist-item .qtext{ font-size:13px; line-height:1.4; color:var(--text); }
+/* miniatura de icono en la lista de cartas de Farol (no zoomable) */
+.qlist-item .mp-card-thumb{ flex-shrink:0; height:34px; width:auto; max-width:52px; object-fit:contain;
+  background:#fff; border:1px solid var(--border); border-radius:var(--radius-s); padding:3px; }
 .qlist-item .qmeta{ font-size:10.5px; color:var(--text-3); margin-top:4px; font-family:var(--font-mono); }
 .star{ margin-left:auto; flex-shrink:0; font-size:15px; color:var(--text-3); background:none; border:none; cursor:pointer; padding:2px; }
 .star.on{ color:var(--warn); }

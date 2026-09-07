@@ -47,6 +47,22 @@ ck(!!D.getElementById("ic-start"), "B2 · Iconos: hub con botón Empezar");
     const s0 = O.getSession();
     ck(s0 && s0.questions.length>0 && s0.questions.every(q=>!!q.imagen), "B2 · Iconos: la sesión son solo preguntas con imagen");
     ck(!!D.querySelector(".q-image img"), "B2 · Iconos: el runner pinta la imagen del ejercicio");
+
+    // B3 · compartir un test de iconos: el código lleva conImagen y la
+    // sesión se reconstruye con las imágenes intactas (se resuelven del
+    // banco local por id — las data URI NO viajan en el código).
+    w.TextEncoder = w.TextEncoder || global.TextEncoder;   // jsdom no lo expone; los navegadores sí
+    w.TextDecoder = w.TextDecoder || global.TextDecoder;
+    const code = O.shareCodeForSession(s0);
+    const parsed = O.parseShareCode(code);
+    ck(!!parsed && parsed.type === "T" && parsed.payload.cfg.conImagen === true,
+       "B3 · el código de test compartido conserva conImagen");
+    const rec = parsed ? O.sessionFromTestPayload(parsed.payload) : null;
+    ck(rec && rec.session && rec.session.questions.length === s0.questions.length
+       && rec.session.questions.every(q=>!!q.imagen),
+       "B3 · el test compartido se reconstruye con todas las imágenes");
+    ck(code.length < 2000, `B3 · el código sigue siendo compacto (${code.length} chars: las imágenes no viajan en él)`);
+
     O.setSession(null); O.saveSessionSnapshot();
   }
 }
