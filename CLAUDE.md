@@ -630,6 +630,18 @@ esquema internacional / conflicto interno). El PDF corrobora `Ctrl+Mayús+Z`
 = borrar formato de fuente → **confirmado en vivo (sep-2026)**, ver punto de
 `Ctrl+Mayús+Z` arriba (`inicio-363/364`).
 
+**Confirmaciones en vivo del usuario (sep-2026)**: `insertar-84/285/295`
+(6 formatos de nº de página, `I,II,III` incluido) ✅ · galería de Ecuación =
+9 integradas con Teorema de Pitágoras (`insertar-98/318`) ✅ ·
+`Ctrl+Mayús+Z` = «Restablecer carácter», igual que `Ctrl+Barra espaciadora`
+(`inicio-363/364`) ✅ · **`archivo-63` BORRADA**: preguntaba por la sección
+«Comentarios» de Backstage (Enviar una sonrisa / desaprobación / sugerencia)
+— en este Word 365 **esa sección no existe** (era de Office 2013-2016; el
+usuario lo confirmó). Pendientes: separador `;` en Impresión personalizada
+(`archivo-50/51/381`), desplegable «Aplicar formato a» del cuadro de estilo
+de tabla (`inicio-107`), rango del campo Posición del cuadro Tabulaciones
+(`inicio-45/75`).
+
 **Mapa de cuadros de diálogo compartidos — cross-pestaña (sep-2026)**: a
 partir de los 9 volcados completos se añadió la **§14** a
 `data/rutas/_dialogos_compartidos.md` (mapa de qué cuadros se abren desde
