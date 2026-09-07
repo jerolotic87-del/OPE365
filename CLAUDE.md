@@ -322,9 +322,11 @@ silencio ni elijas arbitrariamente.
   `Ctrl+Mayús+8` mostrar/ocultar marcas de formato (= `Ctrl+(` en teclado
   ES) · `Ctrl+M` diálogo Fuente · `Mayús+F3` rotar mayús/minús/tipo
   oración · `Ctrl+Mayús+-` subíndice. Borrada `inicio-392` (`Ctrl+Mayús+0`
-  subíndice: la tabla lo lista pero en vivo no hace nada). **Pendiente**:
-  `Ctrl+Mayús+Z` = "Restablecer carácter" (en ATAJOS.docx, sin probar —
-  `inicio-363/364`).
+  subíndice: la tabla lo lista pero en vivo no hace nada). **`Ctrl+Mayús+Z`
+  = "Restablecer carácter" CONFIRMADO en vivo (sep-2026)**: sobre texto con
+  negrita+cursiva+subrayado+color+fuente+tamaño, lo devuelve todo al formato
+  de carácter del párrafo — igual que `Ctrl+Barra espaciadora`
+  (`inicio-363/364`).
 - **Tanda 3 (sep-2026):** `Ctrl+Tab` = tabulación real dentro de una celda
   de tabla (`inicio-82`) · `Alt,F,T` = abre el diálogo Tabulaciones
   (`inicio-77`) · `Alt+Fin` = va al final de la fila de la tabla
@@ -624,9 +626,9 @@ Inicio: **Conjuntos estilísticos = hasta 20** → **+1** (`inicio-580`).
 Total del PDF Fuente: **1 pregunta nueva.** Conflictos del PDF ya conocidos, no integrados: Copiar
 formato `Ctrl+Mayús+C/V`, Subíndice `Ctrl+=`, Superíndice `Ctrl++`,
 `Ctrl+>`/`Ctrl+<` sin Mayús para el tamaño, Versalitas `Ctrl+Mayús+L` (todos
-esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
-prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
-siguen pendientes pero con respaldo de academia.
+esquema internacional / conflicto interno). El PDF corrobora `Ctrl+Mayús+Z`
+= borrar formato de fuente → **confirmado en vivo (sep-2026)**, ver punto de
+`Ctrl+Mayús+Z` arriba (`inicio-363/364`).
 
 **Mapa de cuadros de diálogo compartidos — cross-pestaña (sep-2026)**: a
 partir de los 9 volcados completos se añadió la **§14** a
