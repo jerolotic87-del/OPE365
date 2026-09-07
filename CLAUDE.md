@@ -853,13 +853,25 @@ NO estaban en las capturas del usuario):
    ecuación · Diagrama de flujo · Cintas y estrellas · Llamadas) → todas las
    preguntas de gráfico (`insertar-68/126..131/250..262/388/389`) y de
    Formas (`insertar-62/118/240..249/437`) verificadas, sin cambios.
- - Cuadro **«Campo»** y menú **«Elementos rápidos»** verificados con capturas
-   (sep-2026): `insertar-88/151/152/153` (Extracto, Fax de la compañía, Fecha
-   de publicación, Dirección de la compañía = propiedades del documento
-   reales) y `insertar-157/158` (CreateDate, AutoNum = nombres de campo
-   reales) → todas correctas. +`insertar-475/477`: menú Elementos rápidos (5
-   entradas), submenú Propiedad del documento (15), categorías del cuadro
-   Campo. **El minado P- de Insertar queda validado casi por completo.**
+ - Cuadro **«Campo»** y menú **«Elementos rápidos»** verificados con 31
+   capturas (sep-2026): `insertar-88/151/152/153` (Extracto, Fax de la
+   compañía, Fecha de publicación, Dirección de la compañía = propiedades del
+   documento reales) y `insertar-157/158` (CreateDate en «Fecha y hora»,
+   AutoNum en «Numeración» = nombres de campo reales) → todas correctas.
+   Categorías del cuadro Campo: [Todos] · Automatización · Combinar
+   correspondencia · Ecuaciones y fórmulas · Fecha y hora · Índice y tablas ·
+   Info. documento · Info. usuario · Numeración · Vínculos y referencias.
+   +`insertar-475/477`. **El minado P- de Insertar queda validado casi por
+   completo.**
+ - **Cintas contextuales de tabla** (capturas sep-2026): «Diseño de tabla» =
+   3 grupos (Opciones de estilo de tabla [6 casillas: Fila de encabezado ·
+   Fila de totales · Filas con bandas · Primera columna · Última columna ·
+   Columnas con bandas] · Estilos de tabla · Bordes); «Disposición de tabla»
+   = 7 grupos (Tabla · Dibujar · Filas y columnas · Combinar · Tamaño de
+   celda · Alineación · Datos). El banco no tenía casi nada de estas cintas →
+   **+7** (`insertar-478..484`): las 2 pestañas, las 6 casillas, Combinar,
+   Distribuir filas/columnas, Repetir filas de título, los 9 botones de
+   alineación, Ver cuadrículas.
  - Las otras preguntas
    que citan «la extracción» sí se apoyan en capturas reales
    (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,

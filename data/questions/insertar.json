@@ -1473,6 +1473,231 @@
     "explicacion": "El cuadro «Convertir texto en tabla» separa las columnas por Parrafos, Tabulaciones, Punto y coma o el caracter que se escriba en «Otro» (por ejemplo una coma). Word propone automaticamente el numero de columnas segun el separador mas frecuente del texto seleccionado."
   },
   {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "insertar-478",
+    "sourceQuestionId": "capt-ins-478",
+    "tipo": "opcion_unica",
+    "enunciado": "Al hacer clic dentro de una tabla aparecen dos pestanas contextuales. ¿Como se llaman en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Diseno de tabla» y «Disposicion de tabla»"
+      },
+      {
+        "letter": "B",
+        "text": "«Herramientas de tabla» y «Formato»"
+      },
+      {
+        "letter": "C",
+        "text": "«Diseno» y «Presentacion»"
+      },
+      {
+        "letter": "D",
+        "text": "«Tabla» y «Bordes»"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Diseno de tabla» (3 grupos: Opciones de estilo de tabla · Estilos de tabla · Bordes) y «Disposicion de tabla» (7 grupos: Tabla · Dibujar · Filas y columnas · Combinar · Tamano de celda · Alineacion · Datos)."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "insertar-480",
+    "sourceQuestionId": "capt-ins-480",
+    "tipo": "opcion_unica",
+    "enunciado": "¿En que grupo de la pestana «Disposicion de tabla» estan «Combinar celdas», «Dividir celdas» y «Dividir tabla»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Combinar"
+      },
+      {
+        "letter": "B",
+        "text": "Filas y columnas"
+      },
+      {
+        "letter": "C",
+        "text": "Tamano de celda"
+      },
+      {
+        "letter": "D",
+        "text": "Datos"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Dividir tabla» parte la tabla en dos a partir de la fila del cursor; «Combinar/Dividir celdas» actua sobre la seleccion."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "insertar-481",
+    "sourceQuestionId": "capt-ins-481",
+    "tipo": "opcion_unica",
+    "enunciado": "En «Disposicion de tabla ▸ Tamano de celda», ¿que hacen «Distribuir filas» y «Distribuir columnas»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Igualan el alto de todas las filas / el ancho de todas las columnas seleccionadas"
+      },
+      {
+        "letter": "B",
+        "text": "Reparten la tabla entre varias paginas"
+      },
+      {
+        "letter": "C",
+        "text": "Ordenan filas y columnas alfabeticamente"
+      },
+      {
+        "letter": "D",
+        "text": "Convierten la tabla en columnas de texto"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Junto a ellos estan «Autoajustar» (al contenido / a la ventana / ancho de columna fijo) y los campos Alto y Ancho."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "insertar-482",
+    "sourceQuestionId": "capt-ins-482",
+    "tipo": "opcion_unica",
+    "enunciado": "El comando «Repetir filas de titulo» de «Disposicion de tabla ▸ Datos», ¿para que sirve?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Repite automaticamente la fila (o filas) de encabezado al principio de cada pagina cuando la tabla ocupa varias"
+      },
+      {
+        "letter": "B",
+        "text": "Duplica la primera fila de la tabla"
+      },
+      {
+        "letter": "C",
+        "text": "Bloquea la primera fila para que no se pueda editar"
+      },
+      {
+        "letter": "D",
+        "text": "Ordena la tabla por la primera columna"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Requiere que el cursor este en la primera fila (o en las filas de encabezado seleccionadas). En el mismo grupo Datos: Ordenar, Convertir en texto y Formula."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "insertar-483",
+    "sourceQuestionId": "capt-ins-483",
+    "tipo": "opcion_unica",
+    "enunciado": "En «Disposicion de tabla ▸ Alineacion», ¿cuantos botones de alineacion de contenido de celda hay?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "9 (combinando arriba/centro/abajo con izquierda/centro/derecha)"
+      },
+      {
+        "letter": "B",
+        "text": "3 (izquierda, centro, derecha)"
+      },
+      {
+        "letter": "C",
+        "text": "4 (las 4 esquinas)"
+      },
+      {
+        "letter": "D",
+        "text": "6"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Ademas de los 9 botones, el grupo Alineacion tiene «Direccion del texto» (gira el texto de la celda 90 grados) y «Margenes de celda»."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "insertar-479",
+    "sourceQuestionId": "capt-ins-479",
+    "tipo": "seleccion_multiple",
+    "enunciado": "El grupo «Opciones de estilo de tabla» (pestana Diseno de tabla) tiene 6 casillas. ¿Cuales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Fila de encabezado"
+      },
+      {
+        "letter": "B",
+        "text": "Fila de totales"
+      },
+      {
+        "letter": "C",
+        "text": "Filas con bandas"
+      },
+      {
+        "letter": "D",
+        "text": "Primera columna / Ultima columna / Columnas con bandas"
+      },
+      {
+        "letter": "E",
+        "text": "Diagonal de celda"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "Las 6 casillas activan o desactivan el formato especial de cada zona del estilo de tabla aplicado. «Diagonal de celda» no es una de ellas."
+  },
+  {
     "id": "insertar-214",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Tablas",
@@ -1718,6 +1943,25 @@
     "opciones": [],
     "respuesta": true,
     "explicacion": "Verdadero. En «Herramientas de tabla ▸ Presentacion ▸ Datos ▸ Formula» se pueden usar funciones como =SUM(ABOVE), =AVERAGE(LEFT), etc. No hace falta Excel para calculos basicos dentro de una tabla."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Tablas",
+    "section": "insertar",
+    "topic": "tablas",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "insertar-484",
+    "sourceQuestionId": "capt-ins-484",
+    "tipo": "verdadero_falso",
+    "enunciado": "El comando «Ver cuadriculas» de «Disposicion de tabla» muestra u oculta las lineas de division de la tabla que NO tienen borde, y esas lineas no se imprimen.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Son una ayuda visual (lineas de puntos azules) para ver la estructura de una tabla sin bordes; nunca salen en el papel."
   },
   {
     "id": "insertar-462",
