@@ -366,6 +366,51 @@
     "explicacion": "Las tres primeras son fichas de UN MISMO cuadro de diálogo compartido. «Tabla de autoridades» es un comando y un cuadro aparte, de la pestaña Referencias pero fuera de ese cuadro."
   },
   {
+    "sourceFile": "referencias.json",
+    "bloque": "Referencias",
+    "section": "referencias",
+    "topic": "tabla-contenido",
+    "subtopic": null,
+    "tema": "Referencias",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "referencias-166",
+    "sourceQuestionId": "dlgcross-referencias-166",
+    "tipo": "seleccion_multiple",
+    "enunciado": "El cuadro «Modificar estilo» (para retocar el aspecto de un estilo con nombre), ¿desde cuales de estas rutas se abre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Estilos ▸ clic derecho en un estilo ▸ Modificar…"
+      },
+      {
+        "letter": "B",
+        "text": "Diseno ▸ Formato del documento ▸ Administrar estilos ▸ Modificar…"
+      },
+      {
+        "letter": "C",
+        "text": "Referencias ▸ Tabla de contenido ▸ Tabla de contenido personalizada… ▸ Modificar… (estilos TDC 1..9)"
+      },
+      {
+        "letter": "D",
+        "text": "Referencias ▸ Indice ▸ Insertar indice ▸ Modificar… (estilos Indice 1..9)"
+      },
+      {
+        "letter": "E",
+        "text": "Vista ▸ Vistas ▸ Esquema"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "El mismo cuadro de edicion de estilos se alcanza desde Inicio, Diseno y desde los cuadros de TDC / Indice / Tabla de ilustraciones de Referencias (ahi para los estilos TDC/Indice/Tabla de ilustraciones)."
+  },
+  {
     "id": "referencias-8",
     "sourceFile": "referencias.json",
     "bloque": "Referencias — Tabla de contenido",

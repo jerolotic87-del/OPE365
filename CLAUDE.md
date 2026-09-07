@@ -628,6 +628,25 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Mapa de cuadros de diálogo compartidos — cross-pestaña (sep-2026)**: a
+partir de los 9 volcados completos se añadió la **§14** a
+`data/rutas/_dialogos_compartidos.md` (mapa de qué cuadros se abren desde
+varias pestañas: Configurar página, Bordes y sombreado, Fuente, Párrafo,
+Tabulaciones, Referencia cruzada, Símbolo, Modificar estilo, Panel de
+navegación, Zoom, Contar palabras, Comprobar accesibilidad, Opciones de
+Word, Buscar y reemplazar, Traductor — con la regla de en qué ficha abren
+según la ruta). El banco tenía 81 preguntas de este tipo pero 45 en archivo
++ 30 en inicio; el resto de pestañas casi a 0. **+19 preguntas** +**8
+flashcards** repartidas por la sección que "posee" cada cuadro
+(`sourceQuestionId` `dlgcross-<sec>-NN`): disposición +5 (Configurar
+página/Párrafo/Tabulaciones), diseño +2 (Bordes y sombreado y su ficha),
+insertar +2 (Referencia cruzada 2 pestañas, botones del cuadro Símbolo),
+referencias +1 (cuadro Modificar estilo desde TDC/Índice), vista +3
+(Zoom/Contar palabras vía barra de estado, Panel de navegación 3 vías),
+revisar +2 (Comprobar accesibilidad 3 puertas, Traductor), archivo +2
+(Opciones de Word desde varios «Opciones…»/«Preferencias…», ruta de la
+ficha Programador). Generador: `scripts/gen_dialogos_compartidos_cross.py`.
+
 **Interfaz — cruce web (sep-2026)**: la única sección sin volcado de rutas
 (es transversal). El banco (525 preguntas — el mayor) ya cubría casi todo:
 Alt/F10 = modo de acceso por teclado (KeyTips), barra de estado (nº página/

@@ -5062,6 +5062,51 @@
     "explicacion": "Ruta completa: Archivo → Opciones → General → Configuración de privacidad → Configuración de privacidad... → Experiencias conectadas → Todas las experiencias conectadas → Activar todas las experiencias conectadas. No tiene atajo: se llega solo por Archivo → Opciones con el ratón (o Alt + KeyTips)."
   },
   {
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo",
+    "section": "archivo",
+    "topic": "opciones-general",
+    "subtopic": null,
+    "tema": "Archivo",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "archivo-409",
+    "sourceQuestionId": "dlgcross-archivo-409",
+    "tipo": "seleccion_multiple",
+    "enunciado": "El cuadro «Opciones de Word» se abre desde Archivo ▸ Opciones, pero tambien desde atajos dentro de otros cuadros. ¿Cuales de estos llevan a un panel concreto de «Opciones de Word»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Revisar ▸ Idioma ▸ Preferencias de idioma… → panel «Idioma»"
+      },
+      {
+        "letter": "B",
+        "text": "Inicio ▸ Pegar ▸ Establecer Pegar predeterminado… → panel «Avanzadas»"
+      },
+      {
+        "letter": "C",
+        "text": "Configurar pagina ▸ Papel ▸ Opciones de impresion… → panel «Mostrar»"
+      },
+      {
+        "letter": "D",
+        "text": "Barra de acceso rapido ▸ Mas comandos… → panel «Barra de herramientas de acceso rapido»"
+      },
+      {
+        "letter": "E",
+        "text": "Archivo ▸ Imprimir ▸ Imprimir"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "Muchos «Opciones…» / «Preferencias…» / «Establecer … predeterminado» repartidos por la interfaz abren el cuadro «Opciones de Word» ya posicionado en el panel adecuado."
+  },
+  {
     "id": "archivo-69",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Opciones",
@@ -13247,6 +13292,42 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "A diferencia de la cinta de opciones, la personalización de la barra de acceso rápido es total: puedes quitar y reordenar todo. Pero solo admite comandos sueltos: no galerías, listas desplegables ni estilos individuales. Sus botones predeterminados son Guardar automáticamente, Guardar, Deshacer, Rehacer y Personalizar."
+  },
+  {
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo",
+    "section": "archivo",
+    "topic": "opciones-personalizar",
+    "subtopic": null,
+    "tema": "Archivo",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "archivo-410",
+    "sourceQuestionId": "dlgcross-archivo-410",
+    "tipo": "opcion_unica",
+    "enunciado": "Para anadir la ficha «Programador» a la cinta, la ruta es:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Archivo ▸ Opciones ▸ Personalizar cinta de opciones ▸ marcar «Programador»"
+      },
+      {
+        "letter": "B",
+        "text": "Vista ▸ Mostrar ▸ Programador"
+      },
+      {
+        "letter": "C",
+        "text": "Archivo ▸ Opciones ▸ Complementos"
+      },
+      {
+        "letter": "D",
+        "text": "Clic derecho en la cinta ▸ Programador"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "En «Personalizar cinta de opciones», la lista de la derecha son las Fichas principales; se marca la casilla de «Programador». Ahi tambien se crean fichas y grupos propios."
   },
   {
     "id": "archivo-108",

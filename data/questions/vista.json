@@ -1033,6 +1033,42 @@
     "explicacion": "En 2010 se llamaba «Lectura de pantalla completa». Muestra dos paginas si caben y una barra superior minima; Esc vuelve a la vista anterior."
   },
   {
+    "sourceFile": "vista.json",
+    "bloque": "Vista",
+    "section": "vista",
+    "topic": "vistas",
+    "subtopic": null,
+    "tema": "Vista",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "vista-168",
+    "sourceQuestionId": "dlgcross-vista-168",
+    "tipo": "opcion_unica",
+    "enunciado": "El cuadro «Contar palabras», ¿desde donde se abre ademas de «Revisar ▸ Contar palabras»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Haciendo clic en «Palabras: N» de la barra de estado"
+      },
+      {
+        "letter": "B",
+        "text": "Vista ▸ Mostrar ▸ Contar"
+      },
+      {
+        "letter": "C",
+        "text": "Archivo ▸ Informacion ▸ Propiedades"
+      },
+      {
+        "letter": "D",
+        "text": "No se puede abrir desde otro sitio"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El recuento «Palabras: N» de la barra de estado abre el cuadro «Contar palabras» (Paginas, Palabras, Caracteres con/sin espacios, Parrafos, Lineas)."
+  },
+  {
     "id": "vista-8",
     "sourceFile": "vista.json",
     "bloque": "Vista — Vistas",
@@ -2123,6 +2159,50 @@
     "explicacion": "El Lector inmersivo pertenece al Grupo Inmersivo. 'Panel de movimiento de página' no existe como tal."
   },
   {
+    "sourceFile": "vista.json",
+    "bloque": "Vista",
+    "section": "vista",
+    "topic": "mostrar",
+    "subtopic": null,
+    "tema": "Vista",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "vista-167",
+    "sourceQuestionId": "dlgcross-vista-167",
+    "tipo": "seleccion_multiple",
+    "enunciado": "¿Desde cuales de estas rutas se abre / activa el «Panel de navegacion»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Vista ▸ Mostrar ▸ casilla «Panel de navegacion»"
+      },
+      {
+        "letter": "B",
+        "text": "Inicio ▸ Edicion ▸ Buscar"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+B (en esta instalacion)"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Vinculos ▸ Marcador"
+      },
+      {
+        "letter": "E",
+        "text": "Referencias ▸ Tabla de contenido"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "El panel de navegacion (fichas Titulos / Paginas / Resultados) se abre desde la casilla de Vista, desde «Buscar» de Inicio y con Ctrl+B. Desde su lupa se llega a «Busqueda avanzada» = cuadro Buscar y reemplazar."
+  },
+  {
     "id": "vista-19",
     "sourceFile": "vista.json",
     "bloque": "Vista — Mostrar",
@@ -2539,6 +2619,42 @@
     ],
     "respuesta": "A",
     "explicacion": "«Ancho de pagina» incluye los margenes; «Ancho del texto» (solo en el cuadro Zoom) los excluye; «Una pagina» encaja la pagina entera."
+  },
+  {
+    "sourceFile": "vista.json",
+    "bloque": "Vista",
+    "section": "vista",
+    "topic": "zoom",
+    "subtopic": null,
+    "tema": "Vista",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "vista-166",
+    "sourceQuestionId": "dlgcross-vista-166",
+    "tipo": "opcion_unica",
+    "enunciado": "El cuadro de dialogo «Zoom», ¿desde donde se abre ademas de «Vista ▸ Zoom ▸ Zoom»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Doble clic en el indicador de porcentaje de la barra de estado"
+      },
+      {
+        "letter": "B",
+        "text": "Doble clic en la regla"
+      },
+      {
+        "letter": "C",
+        "text": "Archivo ▸ Opciones ▸ Presentacion"
+      },
+      {
+        "letter": "D",
+        "text": "Clic derecho en la cinta"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El % de la barra de estado (abajo a la derecha, junto al deslizador) abre el cuadro Zoom al hacer clic."
   },
   {
     "id": "vista-21",

@@ -1474,6 +1474,50 @@
     "explicacion": "El submenú de Comprobar accesibilidad contiene: Comprobar accesibilidad, Texto alternativo, Panel de navegación, Concentración y Opciones: accesibilidad. Agregar al diccionario pertenece al corrector; Leer en voz alta al grupo Voz."
   },
   {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar",
+    "section": "revisar",
+    "topic": "accesibilidad",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "revisar-101",
+    "sourceQuestionId": "dlgcross-revisar-101",
+    "tipo": "seleccion_multiple",
+    "enunciado": "El «Comprobador de accesibilidad», ¿desde cuales de estas rutas se abre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Revisar ▸ Accesibilidad ▸ Comprobar accesibilidad"
+      },
+      {
+        "letter": "B",
+        "text": "Archivo ▸ Informacion ▸ Comprobar si hay problemas ▸ Comprobar accesibilidad"
+      },
+      {
+        "letter": "C",
+        "text": "El aviso «Accesibilidad» de la barra de estado"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Estilos ▸ Inspector de estilo"
+      },
+      {
+        "letter": "E",
+        "text": "Insertar ▸ Texto ▸ Objeto"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explicacion": "«Comprobar si hay problemas» de Backstage ofrece Inspeccionar documento / Comprobar accesibilidad / Comprobar compatibilidad; la de accesibilidad abre el mismo panel que el boton de Revisar."
+  },
+  {
     "id": "revisar-59",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Accesibilidad",
@@ -1637,6 +1681,42 @@
     "matching": null,
     "respuesta": "D",
     "explicacion": "No existe un atajo Ctrl+Mayús+T para el Traductor. El atajo real, confirmado en vivo (no está en el volcado), es Alt+Mayús+F7."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar",
+    "section": "revisar",
+    "topic": "idioma",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "revisar-102",
+    "sourceQuestionId": "dlgcross-revisar-102",
+    "tipo": "opcion_unica",
+    "enunciado": "El panel «Traductor», ¿desde donde se abre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Revisar ▸ Idioma ▸ Traducir ▸ Traducir seleccion / Traducir documento (o Alt+Mayus+F7)"
+      },
+      {
+        "letter": "B",
+        "text": "Archivo ▸ Opciones ▸ Idioma"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Edicion ▸ Buscar"
+      },
+      {
+        "letter": "D",
+        "text": "Vista ▸ Inmersivo ▸ Immersive Reader"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El menu «Traducir» tiene Traducir seleccion (ficha Seleccion), Traducir documento (ficha Documento) y Preferencias de Traductor. Alt+Mayus+F7 abre el panel directamente."
   },
   {
     "id": "revisar-25",

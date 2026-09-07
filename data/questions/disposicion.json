@@ -728,6 +728,42 @@
     "sourceQuestionId": "web-disposicion-138"
   },
   {
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion",
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Disposicion",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "disposicion-140",
+    "sourceQuestionId": "dlgcross-disposicion-140",
+    "tipo": "opcion_unica",
+    "enunciado": "Segun por donde entres al cuadro «Configurar pagina», abre en una ficha u otra. ¿En cual abre si entras por «Mas tamanos de papel…»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Papel"
+      },
+      {
+        "letter": "B",
+        "text": "Margenes"
+      },
+      {
+        "letter": "C",
+        "text": "Disposicion"
+      },
+      {
+        "letter": "D",
+        "text": "Siempre en Margenes"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Margenes personalizados…» abre en la ficha Margenes; «Mas tamanos de papel…» en Papel; el lanzador del grupo, en la ultima ficha usada (normalmente Margenes)."
+  },
+  {
     "id": "disposicion-132",
     "sourceFile": "disposicion.json",
     "bloque": "Disposicion — Configurar página",
@@ -771,6 +807,51 @@
       "E"
     ],
     "explicacion": "Los cinco preajustes reales son Normal, Estrecho, Moderado, Ancho y Reflejado. «Justificado» no es un preajuste de márgenes: es un tipo de alineación de párrafo."
+  },
+  {
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion",
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Disposicion",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "disposicion-139",
+    "sourceQuestionId": "dlgcross-disposicion-139",
+    "tipo": "seleccion_multiple",
+    "enunciado": "¿Desde cuales de estas rutas se abre el cuadro «Configurar pagina»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Disposicion ▸ Configurar pagina ▸ lanzador (flecha del grupo)"
+      },
+      {
+        "letter": "B",
+        "text": "Disposicion ▸ Configurar pagina ▸ Margenes ▸ Margenes personalizados…"
+      },
+      {
+        "letter": "C",
+        "text": "Disposicion ▸ Configurar pagina ▸ Tamano ▸ Mas tamanos de papel…"
+      },
+      {
+        "letter": "D",
+        "text": "Archivo ▸ Imprimir ▸ enlace «Configurar pagina»"
+      },
+      {
+        "letter": "E",
+        "text": "Inicio ▸ Parrafo ▸ lanzador"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "El cuadro «Configurar pagina» (3 fichas: Margenes / Papel / Disposicion) se abre desde la pestana Disposicion por 3 vias y desde Archivo ▸ Imprimir. El lanzador de Inicio ▸ Parrafo abre el cuadro Parrafo, no este."
   },
   {
     "id": "disposicion-2",
@@ -1883,6 +1964,25 @@
     "sourceQuestionId": "web-disposicion-137"
   },
   {
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion",
+    "section": "disposicion",
+    "topic": "configurar-pagina",
+    "subtopic": null,
+    "tema": "Disposicion",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "disposicion-141",
+    "sourceQuestionId": "dlgcross-disposicion-141",
+    "tipo": "verdadero_falso",
+    "enunciado": "Las galerias Margenes, Orientacion y Tamano del panel Archivo ▸ Imprimir son las mismas que las de la pestana Disposicion, y el enlace «Configurar pagina» abre el mismo cuadro.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "El panel Imprimir de Backstage es un espejo de Disposicion ▸ Configurar pagina; ademas anade Copias, Intercaladas, paginas por hoja, etc., que no estan en la cinta Disposicion."
+  },
+  {
     "id": "disposicion-117",
     "sourceFile": "disposicion.json",
     "bloque": "Disposicion — Configurar página",
@@ -2257,6 +2357,87 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "**Espaciado.** Pestaña Disposición ▸ Párrafo. No tiene atajo de teclado directo. Fija directamente en la cinta el espacio antes y después del párrafo, en puntos, sin abrir el cuadro Párrafo."
+  },
+  {
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion",
+    "section": "disposicion",
+    "topic": "parrafo-disposicion",
+    "subtopic": null,
+    "tema": "Disposicion",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "disposicion-143",
+    "sourceQuestionId": "dlgcross-disposicion-143",
+    "tipo": "opcion_unica",
+    "enunciado": "El cuadro «Tabulaciones», ¿desde donde NO se puede abrir?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Desde un boton propio en el grupo Parrafo de la cinta"
+      },
+      {
+        "letter": "B",
+        "text": "Desde el cuadro Parrafo (boton «Tabulaciones…» abajo a la izquierda)"
+      },
+      {
+        "letter": "C",
+        "text": "Haciendo doble clic en la regla"
+      },
+      {
+        "letter": "D",
+        "text": "Desde Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▾ ▸ Tabulaciones…"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "No hay un boton «Tabulaciones» suelto en la cinta: siempre se llega a traves del cuadro Parrafo, de la regla o del menu Formato ▾ de un estilo."
+  },
+  {
+    "sourceFile": "disposicion.json",
+    "bloque": "Disposicion",
+    "section": "disposicion",
+    "topic": "parrafo-disposicion",
+    "subtopic": null,
+    "tema": "Disposicion",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "ruta",
+    "id": "disposicion-142",
+    "sourceQuestionId": "dlgcross-disposicion-142",
+    "tipo": "seleccion_multiple",
+    "enunciado": "¿Desde cuales de estas rutas se abre el CUADRO «Parrafo» (fichas Sangria y espacio / Lineas y saltos)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inicio ▸ Parrafo ▸ lanzador"
+      },
+      {
+        "letter": "B",
+        "text": "Disposicion ▸ Parrafo ▸ lanzador"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Espaciado entre lineas y parrafos ▸ Opciones de interlineado…"
+      },
+      {
+        "letter": "D",
+        "text": "Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▾ ▸ Parrafo…"
+      },
+      {
+        "letter": "E",
+        "text": "Vista ▸ Mostrar ▸ Regla"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "El cuadro Parrafo es identico se abra desde Inicio o desde Disposicion. Mínimo/Exacto/Múltiple del interlineado solo se fijan desde este cuadro, no desde el boton de la cinta."
   },
   {
     "id": "disposicion-35",

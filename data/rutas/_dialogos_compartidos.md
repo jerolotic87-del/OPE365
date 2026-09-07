@@ -309,3 +309,32 @@ reflejo, iluminado, formato 3D y transformación del texto. Entradas:
 
 Los 3 botones al pie del panel Estilos: **Nuevo estilo** · **Inspector de
 estilo** · **Administrar estilos** (§5). ✅
+
+## 14. Cuadros/paneles que se abren desde VARIAS PESTAÑAS (mapa cross-pestaña) ✅
+
+Añadido tras completar los 9 volcados (sep-2026). Estos son los cuadros
+cuya "gracia de examen" es *desde qué pestañas* se llega:
+
+| Cuadro / panel | Pestañas y rutas de entrada |
+|---|---|
+| **Configurar página** (3 fichas) | **Disposición** (lanzador · Márgenes personalizados · Más tamaños de papel · Más columnas→no, va al de Columnas) · **Archivo ▸ Imprimir ▸ Configurar página** |
+| **Bordes y sombreado** (3 fichas) | **Inicio** ▸ Párrafo ▸ Bordes ▸ Bordes y sombreado (ficha *Bordes*) · **Diseño** ▸ Fondo de página ▸ Bordes de página (ficha *Borde de página*) · **Disposición** ▸ Configurar página ▸ ficha Disposición ▸ Bordes · cinta **Tabla** ▸ Bordes ▸ Bordes y sombreado · Inicio ▸ Estilos ▸ Modificar ▸ Formato ▾ ▸ Borde |
+| **Cuadro Fuente** | **Inicio** ▸ Fuente (lanzador) · `Ctrl+M` · `Ctrl+Mayús+F` · `Ctrl+Mayús+M` · Inicio ▸ Estilos ▸ Modificar ▸ Formato ▾ ▸ Fuente · **Correspondencia** ▸ Sobres/Etiquetas ▸ Opciones ▸ Dirección/Remite ▸ Fuente… (cuadro titulado "Dirección sobre" / "Remite") |
+| **Cuadro Párrafo** (2 fichas) | **Inicio** ▸ Párrafo (lanzador) · **Disposición** ▸ Párrafo (lanzador) · Inicio ▸ Espaciado entre líneas ▸ Opciones de interlineado… · Inicio ▸ Estilos ▸ Modificar ▸ Formato ▾ ▸ Párrafo |
+| **Tabulaciones** | **Inicio** y **Disposición** ▸ Párrafo (lanzador) ▸ Tabulaciones… · doble clic en la regla · Inicio ▸ Estilos ▸ Modificar ▸ Formato ▾ ▸ Tabulaciones · NO hay botón suelto en la cinta |
+| **Referencia cruzada** | **Insertar** ▸ Vínculos ▸ Referencia cruzada · **Referencias** ▸ Títulos ▸ Referencia cruzada (mismo cuadro exacto) |
+| **Símbolo** (2 fichas: Símbolos / Caracteres especiales) | **Insertar** ▸ Símbolos ▸ Símbolo ▸ Más símbolos… (única entrada, pero botón «Teclas…» → *Personalizar teclado* y «Autocorrección…» → *Autocorrección*) |
+| **Cuadro Estilo / Modificar estilo** | **Inicio** ▸ Estilos (galería/panel) · **Diseño** ▸ Formato del documento ▸ (Administrar estilos) · **Referencias** ▸ TDC/Índice/Tabla de ilustraciones ▸ Modificar… |
+| **Panel de Navegación** | **Vista** ▸ Mostrar ▸ Panel de navegación (casilla) · **Inicio** ▸ Edición ▸ Buscar · `Ctrl+B` (en esta instalación) · el mismo panel del que sale «Búsqueda avanzada» → cuadro Buscar y reemplazar |
+| **Cuadro Zoom** | **Vista** ▸ Zoom ▸ Zoom · **doble clic en el indicador de %** de la barra de estado |
+| **Contar palabras** (cuadro) | **Revisar** ▸ Revisión ▸ Contar palabras · **clic en «Palabras: N»** de la barra de estado |
+| **Comprobar accesibilidad** | **Revisar** ▸ Accesibilidad ▸ Comprobar accesibilidad · **Archivo** ▸ Información ▸ Comprobar si hay problemas ▸ Comprobar accesibilidad · aviso de la barra de estado |
+| **Opciones de Word** (cuadro con ~11 paneles) | **Archivo** ▸ Opciones · **Revisar** ▸ Idioma ▸ Preferencias de idioma… (→ panel *Idioma*) · **Inicio** ▸ Pegar ▸ Establecer Pegar predeterminado… (→ panel *Avanzadas*) · Configurar página ▸ Papel ▸ Opciones de impresión… (→ panel *Mostrar*) · Barra de acceso rápido ▸ Más comandos… (→ panel *Barra de herramientas de acceso rápido*) |
+| **Buscar y reemplazar** (1 cuadro, 3 fichas: Buscar / Reemplazar / Ir a) | **Inicio** ▸ Edición ▸ Reemplazar (`Ctrl+L`) → ficha Reemplazar · Buscar ▸ Búsqueda avanzada → ficha Buscar · Buscar ▸ Ir a (`Ctrl+I` / `F5`) → ficha Ir a · panel Navegación ▸ lupa ▸ opciones |
+| **Traductor** (panel) | **Revisar** ▸ Idioma ▸ Traducir ▸ Traducir selección / Traducir documento · `Alt+Mayús+F7` |
+
+**Regla mnemotécnica de fichas**: un cuadro de 2-3 fichas **abre en la ficha
+que corresponde a la ruta**: Bordes y sombreado abre en *Bordes* desde
+Inicio y en *Borde de página* desde Diseño; Buscar y reemplazar abre en
+*Reemplazar*, *Buscar* o *Ir a* según el comando; Configurar página abre en
+*Márgenes* / *Papel* / *Disposición* según por dónde entres.
