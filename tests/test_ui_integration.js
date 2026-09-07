@@ -31,7 +31,25 @@ ck(!!O.LEB, "A · LEB presente");
 ck(O.QUESTIONS.length>=1342 && O.FLASHCARDS.length>=407, `A · ${O.QUESTIONS.length} preguntas / ${O.FLASHCARDS.length} flashcards`);
 
 // ===== B) navegación =====
-["home","temario","practica","flashcards","progress"].forEach(v=>{ goto(D,w,v); ck(!D.querySelector(".error")&&errs.length===0, "B · nav "+v); });
+["home","temario","practica","flashcards","iconos","progress"].forEach(v=>{ goto(D,w,v); ck(!D.querySelector(".error")&&errs.length===0, "B · nav "+v); });
+
+// ===== B2) Iconos: hub y sesión de solo preguntas con imagen =====
+goto(D,w,"iconos");
+ck(!!D.getElementById("ic-start"), "B2 · Iconos: hub con botón Empezar");
+{
+  const big = D.querySelector(".test-preview .big");
+  const nImg = O.filterQuestions({conImagen:true}).length;
+  ck(big && Number(big.textContent) === nImg, `B2 · Iconos: contador = ${nImg} preguntas con imagen`);
+  click(D,w,"#ic-start");
+  const started = O.Nav.view==="running";
+  ck(started, "B2 · Iconos: «Empezar» arranca la sesión");
+  if(started){
+    const s0 = O.getSession();
+    ck(s0 && s0.questions.length>0 && s0.questions.every(q=>!!q.imagen), "B2 · Iconos: la sesión son solo preguntas con imagen");
+    ck(!!D.querySelector(".q-image img"), "B2 · Iconos: el runner pinta la imagen del ejercicio");
+    O.setSession(null); O.saveSessionSnapshot();
+  }
+}
 
 // ===== C) inicio =====
 goto(D,w,"home");
