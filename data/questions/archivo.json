@@ -3350,6 +3350,42 @@
     "explicacion": "El cuadro Configurar página tiene tres fichas: Márgenes, Papel y Disposición. No existe una ficha «Fuente» ahí (eso es un cuadro distinto)."
   },
   {
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Imprimir",
+    "section": "archivo",
+    "topic": "imprimir",
+    "subtopic": null,
+    "tema": "Imprimir",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "archivo-411",
+    "sourceQuestionId": "capt-arch-411",
+    "tipo": "opcion_unica",
+    "enunciado": "En el panel Imprimir, el desplegable de intercalacion muestra dos ejemplos: «1;2;3  1;2;3» y «1;1;1  2;2;2  3;3;3». ¿Cual es cual?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«1;2;3  1;2;3» = Intercaladas · «1;1;1  2;2;2  3;3;3» = Sin intercalar"
+      },
+      {
+        "letter": "B",
+        "text": "«1;2;3  1;2;3» = Sin intercalar · «1;1;1  2;2;2  3;3;3» = Intercaladas"
+      },
+      {
+        "letter": "C",
+        "text": "Los dos son «Intercaladas», cambia solo el numero de copias"
+      },
+      {
+        "letter": "D",
+        "text": "«1;1;1» significa imprimir solo la pagina 1 tres veces"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Intercaladas = juego completo tras juego completo (1,2,3 / 1,2,3). Sin intercalar = todas las copias de cada pagina juntas (1,1,1 / 2,2,2 / 3,3,3). Word usa «;» como separador en el ejemplo por el esquema de listas de Windows en espanol."
+  },
+  {
     "id": "archivo-377",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Imprimir",
@@ -3366,7 +3402,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Con una sola copia da igual; la diferencia importa al imprimir varias copias de un documento de varias páginas."
+    "explicacion": "Verdadero. En esta instalacion Word lo muestra literalmente como «Intercaladas: 1;2;3  1;2;3» y «Sin intercalar: 1;1;1  2;2;2  3;3;3» (el punto y coma es el separador de listas de Windows en espanol). Con una sola copia da igual; la diferencia importa al imprimir varias copias de un documento de varias paginas."
   },
   {
     "id": "archivo-378",
