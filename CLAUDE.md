@@ -628,6 +628,18 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Interfaz — cruce web (sep-2026)**: la única sección sin volcado de rutas
+(es transversal). El banco (525 preguntas — el mayor) ya cubría casi todo:
+Alt/F10 = modo de acceso por teclado (KeyTips), barra de estado (nº página/
+idioma/palabras), contraer la cinta (Ctrl+F1, doble clic, menú contextual),
+personalizar cinta, fichas contextuales, barra de título, reglas, modo
+Insertar/sobrescribir. **2 huecos** → **+5** (`interfaz-529..533`) + **+3
+flashcards**: la ficha **«Programador» NO está visible por defecto** (se
+activa en Opciones ▸ Personalizar cinta — pregunta oficial AGE 2024) y su
+ruta; el **iniciador/lanzador de cuadro de diálogo** (la flechita ↘ de la
+esquina de algunos grupos; no todos lo tienen); la ficha «Complementos»
+solo aparece con complementos. interfaz.json 525→530.
+
 **Vista — captura de la cinta + web (sep-2026)**: el usuario aportó
 `data/imagenes_rutas/vista/cinta.PNG` (solo la cinta; esta pestaña casi no
 tiene desplegables ni cuadros). Se creó `data/rutas/vista.txt` con la

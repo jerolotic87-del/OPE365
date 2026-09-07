@@ -6612,6 +6612,150 @@
     "explicacion": "Alt+Mayús+C cierra el panel de la ventana activa. Ctrl+W quita el formato de párrafo. Ctrl+Mayús+C no tiene función asignada. Alt+Ctrl+C copia el formato de la selección (pincel)."
   },
   {
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz",
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Interfaz",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "interfaz-529",
+    "sourceQuestionId": "web-interfaz-529",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Cual de estas pestanas NO aparece en la cinta de Word 365 de forma predeterminada y hay que habilitarla?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Programador"
+      },
+      {
+        "letter": "B",
+        "text": "Correspondencia"
+      },
+      {
+        "letter": "C",
+        "text": "Disposicion"
+      },
+      {
+        "letter": "D",
+        "text": "Revisar"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "La ficha «Programador» (macros, controles de formulario, XML, complementos COM) se activa en Archivo ▸ Opciones ▸ Personalizar cinta de opciones, marcando su casilla en la lista de la derecha."
+  },
+  {
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz",
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Interfaz",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "interfaz-530",
+    "sourceQuestionId": "web-interfaz-530",
+    "tipo": "opcion_unica",
+    "enunciado": "Para mostrar la ficha «Programador» en la cinta, ¿que ruta se sigue?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Archivo ▸ Opciones ▸ Personalizar cinta de opciones ▸ marcar «Programador»"
+      },
+      {
+        "letter": "B",
+        "text": "Vista ▸ Mostrar ▸ Programador"
+      },
+      {
+        "letter": "C",
+        "text": "Archivo ▸ Opciones ▸ Avanzadas ▸ Mostrar"
+      },
+      {
+        "letter": "D",
+        "text": "Clic derecho en la cinta ▸ Mostrar todas las fichas"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "En ese panel, la lista de la derecha son las «Fichas principales»; se marca o desmarca la casilla de cada una y se pueden crear fichas y grupos propios."
+  },
+  {
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz",
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Interfaz",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "interfaz-531",
+    "sourceQuestionId": "web-interfaz-531",
+    "tipo": "opcion_unica",
+    "enunciado": "La flecha diagonal pequena en la esquina inferior derecha de algunos grupos de la cinta se llama:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Iniciador (o lanzador) de cuadro de dialogo"
+      },
+      {
+        "letter": "B",
+        "text": "Selector de grupo"
+      },
+      {
+        "letter": "C",
+        "text": "Boton de mas opciones"
+      },
+      {
+        "letter": "D",
+        "text": "Ancla de grupo"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Abre el cuadro de dialogo (o el panel) completo con todas las opciones de ese grupo (p. ej. el iniciador del grupo Fuente abre el cuadro Fuente). No todos los grupos lo tienen."
+  },
+  {
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz",
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Interfaz",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "interfaz-533",
+    "sourceQuestionId": "web-interfaz-533",
+    "tipo": "opcion_unica",
+    "enunciado": "La ficha «Complementos» de la cinta de Word 365, ¿cuando aparece?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Solo cuando hay instalado algun complemento que anade comandos a la cinta"
+      },
+      {
+        "letter": "B",
+        "text": "Siempre, es una ficha fija"
+      },
+      {
+        "letter": "C",
+        "text": "Solo en el Modo de lectura"
+      },
+      {
+        "letter": "D",
+        "text": "Solo si se activa en Personalizar cinta"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Es una ficha que Word muestra automaticamente si un complemento coloca botones ahi; si no hay complementos de ese tipo, no se ve."
+  },
+  {
     "id": "interfaz-163",
     "sourceFile": "interfaz.json",
     "bloque": "Interfaz — Ventana y cinta de opciones",
@@ -6740,6 +6884,25 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso: se desactiva de la misma forma que se activa, desde el desplegable de la barra de herramientas de acceso rápido."
+  },
+  {
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz",
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Interfaz",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "interfaz-532",
+    "sourceQuestionId": "web-interfaz-532",
+    "tipo": "verdadero_falso",
+    "enunciado": "Todos los grupos de todas las pestanas de la cinta tienen un iniciador de cuadro de dialogo (la flechita de la esquina).",
+    "opciones": [],
+    "respuesta": false,
+    "explicacion": "Falso: solo lo tienen los grupos cuyo cuadro de dialogo aporta opciones que no caben en la cinta (Portapapeles, Fuente, Parrafo, Estilos, Configurar pagina...). Grupos como «Zoom» o «Ventana» no lo tienen."
   },
   {
     "id": "interfaz-158",
