@@ -900,7 +900,16 @@ NO estaban en las capturas del usuario):
    Comprimir, Cambiar/Restablecer imagen, Borde de imagen, Efectos de la
    imagen, Diseño de imagen, Texto alternativo, Posición, Ajustar texto,
    Panel de selección, Alinear, Agrupar, Girar, Recortar, Alto, Ancho).
-   Generador: `scripts/gen_iconos_formato_imagen.py`.
+   Generador: `scripts/gen_iconos_formato_imagen.py`. **+23 preguntas CON
+   IMAGEN** (`img-distab-NN`) de los iconos de **«Disposición de tabla»**
+   (`data/imagenes_rutas/disposicion_de_tabla/icono_*.PNG` +
+   `margenes_celda.PNG`): Seleccionar, Ver cuadrículas, Propiedades, Dibujar
+   tabla, Borrador, Eliminar, Insertar fila arriba/inferior, Insertar
+   columna izq/der, Combinar/Dividir celdas, Dividir tabla, Alto, Ancho,
+   Distribuir filas/columnas, Dirección del texto, Márgenes de celda,
+   Ordenar, Repetir filas de título, Convertir en texto, Fórmula. Generador:
+   `scripts/gen_iconos_disposicion_tabla.py`. Total preguntas con imagen:
+   ~160.
  - Las otras preguntas
    que citan «la extracción» sí se apoyan en capturas reales
    (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
