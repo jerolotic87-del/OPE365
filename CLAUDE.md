@@ -628,6 +628,19 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Barrido web de huecos de Disposición (sep-2026)**: cruce del banco (132
+preguntas, ya muy completo — casi cada valor del volcado tiene 1-9
+preguntas) con josenrique.es (AGE: 0 preguntas oficiales exclusivas de esta
+pestaña), aulaclic, customguide. **Sin errores en el banco.** Huecos reales
+→ **+6** (`disposicion-133..138`): al eliminar un salto de sección la
+sección anterior adopta el formato de la posterior (trampa clásica, 0
+preguntas), cómo localizar el salto (Mostrar todo), el cuadro «Números de
+línea ▸ Opciones» (campos Iniciar en / Del texto / Intervalo y Numeración
+Continua/Reiniciar página/Reiniciar sección), qué hace «Intervalo», la
+casilla «Suprimir notas al final» de la ficha Disposición del cuadro
+Configurar página, y Guiones ▸ «Manuales» (Word pregunta palabra por
+palabra). Generador: `scripts/gen_disposicion_web_volcado.py`.
+
 **Barrido web de huecos de Diseño (sep-2026)**: cruce del banco de Diseño
 (91 preguntas) con josenrique.es (AGE — **0 preguntas oficiales de esta
 pestaña**, es de bajo rendimiento en oposición), daypo, aulaclic. El banco
