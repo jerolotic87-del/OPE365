@@ -5744,6 +5744,43 @@
     "explicacion": "«Establecer como predeterminado» está en Configurar página, Columnas, Párrafo, Bordes y sombreado, Fecha y hora, Letra capital y Administrar estilos, además del cuadro Fuente. En todos fija los valores actuales para el documento o para la plantilla."
   },
   {
+    "id": "inicio-580",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Fuente",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "fuente",
+    "subtopic": "Formato de caracter",
+    "tema": "Fuente",
+    "difficulty": "alta",
+    "sourceQuestionId": "pdf-inicio-fuente-80",
+    "enunciado": "En el desplegable «Conjuntos estilisticos» (cuadro Fuente ▸ Avanzado ▸ Caracteristicas OpenType), ademas de «Predeterminado», ¿cuantos conjuntos numerados ofrece como maximo Word?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Hasta 20 (numerados del 1 al 20)"
+      },
+      {
+        "letter": "B",
+        "text": "Hasta 5"
+      },
+      {
+        "letter": "C",
+        "text": "Hasta 9"
+      },
+      {
+        "letter": "D",
+        "text": "Hasta 12"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El desplegable muestra «Predeterminado» y hasta 20 conjuntos numerados. Cada tipografia OpenType define cuantos de esos conjuntos trae realmente disenados, por lo que en muchas fuentes solo unos pocos producen un cambio visible.",
+    "generado": true
+  },
+  {
     "id": "inicio-29",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",

@@ -610,8 +610,18 @@ subrayado 17 / 3 con atajo, Conjuntos estilísticos, etc. **1 corrección
 real**: `inicio-16` afirmaba que TODOS los efectos del cuadro Fuente son
 «mutuamente excluyentes entre sí» — es falso. Solo se excluyen 3 parejas
 (Tachado/Doble tachado, Superíndice/Subíndice, Versalitas/Mayúsculas);
-Oculto y el resto se combinan. Reformulada (el PDF pág. 6 lo confirma). **0
-preguntas nuevas.** Conflictos del PDF ya conocidos, no integrados: Copiar
+Oculto y el resto se combinan. Reformulada (el PDF pág. 6 lo confirma: el
+título literal es «Efectos: No se pueden aplicar a la vez:» seguido de las
+3 parejas). **Revisión visual de las 14 páginas de los 2 PDF (sep-2026)**:
+la extracción de texto se saltó la tabla de la ficha «Caracteres
+especiales» del cuadro Símbolo (EDIC pág. 1) con los atajos © `Alt+Ctrl+C`,
+® `Alt+Ctrl+R`, ™ `Alt+Ctrl+T`, … `Alt+Ctrl+.`, guión largo `Alt+Ctrl+-`
+(numérico), guión corto `Ctrl+-` (numérico), guión de no separación
+`Ctrl+Mayús+_`, espacio de no separación `Ctrl+Mayús+Espacio`. El banco
+cubre los NOMBRES de esos caracteres (`insertar-185..192`) pero no sus
+atajos → hueco real, pero de la pestaña **Insertar**. Único hueco de
+Inicio: **Conjuntos estilísticos = hasta 20** → **+1** (`inicio-580`).
+Total del PDF Fuente: **1 pregunta nueva.** Conflictos del PDF ya conocidos, no integrados: Copiar
 formato `Ctrl+Mayús+C/V`, Subíndice `Ctrl+=`, Superíndice `Ctrl++`,
 `Ctrl+>`/`Ctrl+<` sin Mayús para el tamaño, Versalitas `Ctrl+Mayús+L` (todos
 esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
