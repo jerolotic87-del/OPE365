@@ -1,0 +1,145 @@
+VOLCADO DE RUTAS — PESTAÑA REVISAR — WORD 365 (v2608)
+Extracción del usuario, rama a rama de la cinta y de los cuadros de
+diálogo (44 capturas en data/imagenes_rutas/revisar/, sep-2026).
+Primera vez que esta pestaña tiene volcado propio. Base de refuerzo de
+data/questions/revisar.json.
+
+Orden de grupos de la cinta (captura "cinta.PNG"):
+  Revisión · Voz · Accesibilidad · Idioma · Comentarios · Seguimiento ·
+  [Comparar] · Proteger · Entrada de lápiz
+
+===== GRUPO REVISIÓN =====
+Revisar > Revisión > Editor            (atajo F7)
+  Tooltip: "Comprobar la ortografía, la gramática y las sugerencias de escritura."
+  (F7 y Windows+F7 abren el mismo panel Editor; Alt+F7 = ir al siguiente error ortográfico)
+Revisar > Revisión > Ortografía y gramática [desplegable]:
+    > Ortografía
+    > Ortografía y gramática   (marcada por defecto)
+Revisar > Revisión > Sinónimos         (atajo Mayús+F7)
+  Tooltip: "¿Se ha quedado sin palabras? Deje que le sugiramos otra forma
+  de expresar lo que quiere decir."  → abre el panel Sinónimos
+Revisar > Revisión > Contar palabras
+  > [Cuadro: Contar palabras] Estadísticas: Páginas · Palabras ·
+    Caracteres (sin espacios) · Caracteres (con espacios) · Párrafos · Líneas
+  > casilla "Incluir cuadros de texto, notas al pie y notas al final"
+
+===== GRUPO VOZ =====
+Revisar > Voz > Leer en voz alta       (atajo Alt+Ctrl+Espacio)
+  Tooltip: "Lee el texto en voz alta y lo resalta cada palabra mientras se lee."
+
+===== GRUPO ACCESIBILIDAD =====
+Revisar > Accesibilidad > Comprobar accesibilidad [desplegable]:
+    > Comprobar accesibilidad   → panel "Asistente de accesibilidad"
+        ("¡Esto se ve bien! No se encontraron propuestas."; sección "Color y contraste")
+    > Texto alternativo
+    > Panel de navegación
+
+===== GRUPO IDIOMA =====
+Revisar > Idioma > Traducir [desplegable]:
+    > Traducir selección   ("Traduce la selección con Traductor de Microsoft")  → panel Traductor, ficha Selección
+    > Traducir documento   ("Crea una copia traducida de su documento...")      → panel Traductor, ficha Documento
+    > Preferencias de Traductor...
+  (panel Traductor: "Del: Detectar automáticamente"; Preferencias: "Ofrecer
+   traducir el contenido que no esté en un idioma que entiendo" Sí/No + "+ Agregar un idioma")
+  (atajo Alt+Mayús+F7 = abre el Traductor)
+Revisar > Idioma > Idioma [desplegable]:
+    > Establecer idioma de corrección...
+    > Preferencias de idioma...   → [Opciones de Word ▸ Idioma]
+        "Idioma para mostrar de Office": 1. Hacer coincidir con Microsoft Windows [Español] <preferido>, 2. Español
+        "Corrección e idiomas de creación de Office": Español (España) <preferido>,
+            Español (España - alfabetización tradicional)
+        casilla "Almacenar mis idiomas de creación en la nube para mi cuenta"
+
+===== GRUPO COMENTARIOS =====
+Revisar > Comentarios > Nuevo comentario     (atajo Alt+Ctrl+A)
+  Tooltip: "Agrega una nota sobre esta parte del documento."
+  > globo de comentario: nombre del autor + campo de texto +
+    "Sugerencia: Presione Ctrl + Entrar para publicar." + botón enviar
+Revisar > Comentarios > Eliminar [desplegable]:
+    > Eliminar
+    > Eliminar todos los comentarios mostrados
+    > Eliminar todos los comentarios del documento
+    > Eliminar todos los comentarios resueltos
+Revisar > Comentarios > Anterior      ("Comentario anterior: Salta al comentario anterior.")
+Revisar > Comentarios > Siguiente     ("Comentario siguiente: Se desplaza al comentario siguiente.")
+Revisar > Comentarios > Mostrar comentarios [desplegable]:  Contextual · Lista
+
+===== GRUPO SEGUIMIENTO (control y visualización del marcado) =====
+Revisar > Seguimiento > Filtrar todo el marcado [desplegable]:
+    > Restablecer todos los filtros
+    > Filtrar por > "@me menciona" (entre otros)
+Revisar > Seguimiento > Control de cambios     (atajo Ctrl+Mayús+E)
+  Tooltip: "Permite estar al tanto de los cambios realizados en el documento."
+  [desplegable]: Para todos los usuarios · Solo los míos · Bloquear seguimiento...
+  > [Cuadro: Bloquear seguimiento] "Impida que otros autores desactiven el
+    control de cambios." · Escribir contraseña (opcional) / Repetir para
+    confirmar · "(Esta no es una característica de seguridad)."
+Revisar > Seguimiento > [desplegable "Todas las revisiones"] (Display for Review):
+    > Revisiones simples · Todas las revisiones · Sin revisión · Original
+Revisar > Seguimiento > Mostrar revisiones [desplegable]:
+    > Inserciones y eliminaciones (marcada)
+    > Formato (marcada)
+    > Globos >  (submenú: Mostrar revisiones en globos ·
+                 Mostrar todas las revisiones en línea ·
+                 Mostrar solo formato en los globos)
+    > Personas específicas >  (submenú: Todos los revisores · <cada revisor>)
+    > Resaltar actualizaciones
+    > Otros autores
+Revisar > Seguimiento > Panel de revisiones  (vertical / horizontal)
+
+Revisar > Seguimiento > Aceptar [desplegable]:
+    > Aceptar e ir al siguiente
+    > Aceptar este cambio
+    > Aceptar todos los cambios mostrados
+    > Aceptar todos los cambios
+    > Aceptar todos los cambios y detener seguimiento
+Revisar > Seguimiento > Rechazar [desplegable]:
+    > Rechazar y continuar con la siguiente
+    > Rechazar cambio
+    > Rechazar todos los cambios mostrados
+    > Rechazar todos los cambios
+    > Rechazar todos los cambios y detener seguimiento
+Revisar > Seguimiento > Anterior  ("Cambio anterior: Salta a la marca de revisión anterior.")
+Revisar > Seguimiento > Siguiente ("Cambio siguiente.")
+
+===== GRUPO COMPARAR =====
+Revisar > Comparar > Comparar [desplegable]:
+    > Comparar...   ("Compara dos versiones de un documento (estilo jurídico).")
+    > Combinar...   ("Combina revisiones de varios autores en un documento único.")
+    > Mostrar documentos de origen >
+  > [Cuadro: Comparar documentos] / [Cuadro: Combinar documentos]:
+      Documento original · Documento revisado · "Etiquetar cambios con"
+      "Configuración de la comparación" (casillas): Inserciones y eliminaciones
+        (fija) · Movimientos · Comentarios · Formato · Cambios de mayúsculas y
+        minúsculas · Espacio en blanco · Tablas · Encabezados y pies de página ·
+        Notas al pie y notas al final · Cuadros de texto · Campos
+      "Mostrar cambios a:"  (o) Nivel de carácter  (o) Nivel de palabra
+      "Mostrar cambios en:" (o) Documento original (o) Documento revisado (o) Documento nuevo
+
+===== GRUPO PROTEGER =====
+Revisar > Proteger > Bloquear autores [desplegable]
+  Tooltip: "Evita que otros usuarios hagan cambios en el texto seleccionado.
+  Es como marcar el territorio."
+  (deshabilitado si el documento no está en una ubicación compartida admitida)
+Revisar > Proteger > Restringir edición  → panel "Restringir edición":
+    1. Restricciones de formato: "Limitar el formato a una selección de estilos" + Configuración...
+    2. Restricciones de edición: "Permitir solo este tipo de edición en el documento:"
+         desplegable: Sin cambios (Solo lectura) · Marcas de revisión ·
+                      Comentarios · Rellenar formularios
+    3. Comenzar a aplicar: "Sí, aplicar la protección" (pide contraseña)
+
+===== GRUPO ENTRADA DE LÁPIZ =====
+Revisar > Entrada de lápiz > Ocultar entrada de lápiz [desplegable]:
+    > Ocultar entrada de lápiz
+    > Eliminar todos los trazos en el documento
+
+===== ATAJOS (data/atajos_word365_v2608.md) =====
+  F7            = Ortografía y gramática / Editor
+  Alt+F7        = ir al siguiente error ortográfico
+  Mayús+F7      = Sinónimos (panel)
+  Windows+F7    = panel Editor (= F7)
+  Alt+Mayús+F7  = abrir el Traductor (prueba en vivo; no está en el volcado v2608)
+  Alt+Ctrl+A    = insertar comentario
+  Ctrl+Entrar   = publicar el comentario que se está escribiendo (dentro del globo)
+  Ctrl+Mayús+E  = activar/desactivar el control de cambios
+  Alt+Ctrl+Espacio = Leer en voz alta

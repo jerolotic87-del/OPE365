@@ -677,6 +677,78 @@
     "explicacion": "Ctrl+F7 no está documentado con esa función. El Editor se abre con F7 (y, confirmado en vivo, también con Windows+F7)."
   },
   {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revision",
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "atajo",
+    "id": "revisar-99",
+    "sourceQuestionId": "capt-rev-99",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Que hace la tecla Alt+F7 en Word 365?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Salta al siguiente error ortografico del documento"
+      },
+      {
+        "letter": "B",
+        "text": "Abre el Editor completo"
+      },
+      {
+        "letter": "C",
+        "text": "Cambia el idioma de correccion"
+      },
+      {
+        "letter": "D",
+        "text": "Cuenta las palabras"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "F7 abre la revision completa (Editor); Alt+F7 va directamente marcando el siguiente error ortografico; Mayus+F7 abre Sinonimos."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revision",
+    "section": "revisar",
+    "topic": "revision-ortografica",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-100",
+    "sourceQuestionId": "capt-rev-100",
+    "tipo": "opcion_unica",
+    "enunciado": "El boton «Ortografia y gramatica» tiene una flecha con dos modos. ¿Cuales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Ortografia» (solo ortografia) y «Ortografia y gramatica» (ambas, marcada por defecto)"
+      },
+      {
+        "letter": "B",
+        "text": "«Rapida» y «Exhaustiva»"
+      },
+      {
+        "letter": "C",
+        "text": "«Espanol» e «Ingles»"
+      },
+      {
+        "letter": "D",
+        "text": "«Documento» y «Seleccion»"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Permite desactivar la comprobacion gramatical y revisar solo la ortografia."
+  },
+  {
     "id": "revisar-28",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Revisión ortográfica y gramatical",
@@ -1905,6 +1977,78 @@
     "explicacion": "Ctrl+E selecciona todo el documento; no tiene nada que ver con el control de cambios. El atajo real es Ctrl+Mayús+E."
   },
   {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-91",
+    "sourceQuestionId": "capt-rev-91",
+    "tipo": "opcion_unica",
+    "enunciado": "El desplegable «Aceptar» del grupo Seguimiento incluye, entre otras, ¿que opcion para terminar de golpe?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Aceptar todos los cambios» y «Aceptar todos los cambios y detener seguimiento»"
+      },
+      {
+        "letter": "B",
+        "text": "«Aceptar y guardar»"
+      },
+      {
+        "letter": "C",
+        "text": "«Aceptar y cerrar»"
+      },
+      {
+        "letter": "D",
+        "text": "«Aceptar y comparar»"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Tambien tiene «Aceptar e ir al siguiente», «Aceptar este cambio» y «Aceptar todos los cambios mostrados» (segun el filtro). «Rechazar» tiene la lista simetrica."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-92",
+    "sourceQuestionId": "capt-rev-92",
+    "tipo": "opcion_unica",
+    "enunciado": "¿Que hace «Bloquear seguimiento» (dentro del boton Control de cambios)?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Impide que otros autores desactiven el control de cambios; puede pedir una contrasena, pero «no es una caracteristica de seguridad»"
+      },
+      {
+        "letter": "B",
+        "text": "Bloquea el documento como solo lectura para todos"
+      },
+      {
+        "letter": "C",
+        "text": "Guarda una copia de seguridad de las revisiones"
+      },
+      {
+        "letter": "D",
+        "text": "Impide anadir mas comentarios"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El propio cuadro avisa de que la contrasena no cifra nada: solo evita que se apague el control de cambios sin conocerla."
+  },
+  {
     "id": "revisar-8",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Seguimiento",
@@ -2028,6 +2172,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "Ambos están en Seguimiento, junto con Control de cambios y Todas las revisiones."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Seguimiento",
+    "section": "revisar",
+    "topic": "seguimiento",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-93",
+    "sourceQuestionId": "capt-rev-93",
+    "tipo": "verdadero_falso",
+    "enunciado": "El atajo Ctrl+Mayus+E activa o desactiva el control de cambios.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Ctrl+Mayus+E (HerramientActDesactMarcasCambio). El boton «Control de cambios» tambien ofrece «Para todos los usuarios» / «Solo los mios»."
   },
   {
     "id": "revisar-54",
@@ -2272,6 +2435,87 @@
     "explicacion": "Combinar... integra revisiones de varios autores en un documento único."
   },
   {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Comparar",
+    "section": "revisar",
+    "topic": "comparar",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-94",
+    "sourceQuestionId": "capt-rev-94",
+    "tipo": "opcion_unica",
+    "enunciado": "El boton «Comparar» del grupo Comparar tiene dos comandos principales. ¿En que se diferencian «Comparar...» y «Combinar...»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Comparar» enfrenta DOS versiones de un documento (estilo juridico); «Combinar» fusiona las revisiones de VARIOS autores en un unico documento"
+      },
+      {
+        "letter": "B",
+        "text": "«Comparar» es para texto y «Combinar» para tablas"
+      },
+      {
+        "letter": "C",
+        "text": "«Comparar» crea un PDF y «Combinar» un DOCX"
+      },
+      {
+        "letter": "D",
+        "text": "Son sinonimos; cambia solo el nombre segun la version"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Hay un tercer comando, «Mostrar documentos de origen», para elegir que paneles se ven durante la comparacion."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Comparar",
+    "section": "revisar",
+    "topic": "comparar",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-95",
+    "sourceQuestionId": "capt-rev-95",
+    "tipo": "seleccion_multiple",
+    "enunciado": "En el cuadro «Comparar documentos», ademas de elegir el documento original y el revisado, ¿que se puede configurar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Mostrar cambios a:» nivel de caracter o nivel de palabra"
+      },
+      {
+        "letter": "B",
+        "text": "«Mostrar cambios en:» documento original, revisado o nuevo"
+      },
+      {
+        "letter": "C",
+        "text": "Que elementos comparar (movimientos, comentarios, formato, tablas, notas...)"
+      },
+      {
+        "letter": "D",
+        "text": "La etiqueta con la que se marcan los cambios"
+      },
+      {
+        "letter": "E",
+        "text": "El interlineado del documento resultante"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "«Inserciones y eliminaciones» siempre se compara (casilla fija). Lo habitual es dejar «documento nuevo» para no tocar los originales."
+  },
+  {
     "id": "revisar-14",
     "sourceFile": "revisar.json",
     "bloque": "Revisar — Proteger",
@@ -2414,6 +2658,42 @@
     "matching": null,
     "respuesta": "B",
     "explicacion": "Revisar ▸ Proteger ▸ Proteger ▼ ▸ Restringir edición: abre el panel donde se acotan los cambios de formato y de edición permitidos y se activa la protección con contraseña."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-96",
+    "sourceQuestionId": "capt-rev-96",
+    "tipo": "opcion_unica",
+    "enunciado": "En el panel «Restringir edicion», seccion 2 «Restricciones de edicion», ¿que valores ofrece el desplegable de tipo de edicion permitida?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Sin cambios (Solo lectura); Marcas de revision; Comentarios; Rellenar formularios"
+      },
+      {
+        "letter": "B",
+        "text": "Lectura; Escritura; Administrador"
+      },
+      {
+        "letter": "C",
+        "text": "Bajo; Medio; Alto"
+      },
+      {
+        "letter": "D",
+        "text": "Texto; Imagenes; Tablas; Todo"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Marcas de revision» obliga a que todo cambio quede como control de cambios; «Comentarios» solo deja comentar; «Rellenar formularios» solo deja escribir en los controles de formulario."
   },
   {
     "id": "revisar-46",
@@ -2578,6 +2858,25 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "La ruta es Revisar → Proteger → Proteger ▼ → Restringir edición → abre el panel."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Proteger",
+    "section": "revisar",
+    "topic": "proteger",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-97",
+    "sourceQuestionId": "capt-rev-97",
+    "tipo": "verdadero_falso",
+    "enunciado": "«Bloquear autores» evita que otros usuarios editen el texto que has seleccionado, pero solo funciona si el documento esta guardado en una ubicacion compartida admitida.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Si el documento es local, el comando aparece deshabilitado («No se guardo el documento en una ubicacion compartida admitida»)."
   },
   {
     "id": "revisar-82",
@@ -3063,5 +3362,321 @@
     "matching": null,
     "respuesta": "C",
     "explicacion": "Son funciones opuestas: Dictar convierte VOZ en texto; Leer en voz alta convierte TEXTO en voz. No son lo mismo."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Comentarios",
+    "section": "revisar",
+    "topic": "comentarios",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-83",
+    "sourceQuestionId": "capt-rev-83",
+    "tipo": "opcion_unica",
+    "enunciado": "Dentro del globo de un comentario nuevo, ¿que combinacion lo publica?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ctrl+Entrar"
+      },
+      {
+        "letter": "B",
+        "text": "Solo Entrar"
+      },
+      {
+        "letter": "C",
+        "text": "Mayus+Entrar"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Mayus+Entrar"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El propio globo lo indica: «Sugerencia: Presione Ctrl + Entrar para publicar». El comentario se inserta con Alt+Ctrl+A o con «Nuevo comentario»."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Comentarios",
+    "section": "revisar",
+    "topic": "comentarios",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-84",
+    "sourceQuestionId": "capt-rev-84",
+    "tipo": "opcion_unica",
+    "enunciado": "El desplegable «Eliminar» del grupo Comentarios ofrece cuatro opciones. ¿Cuales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Eliminar; Eliminar todos los comentarios mostrados; Eliminar todos los comentarios del documento; Eliminar todos los comentarios resueltos"
+      },
+      {
+        "letter": "B",
+        "text": "Eliminar; Deshacer; Rehacer; Vaciar"
+      },
+      {
+        "letter": "C",
+        "text": "Eliminar comentario; Eliminar autor; Eliminar hilo; Eliminar seccion"
+      },
+      {
+        "letter": "D",
+        "text": "Solo «Eliminar» y «Eliminar todos»"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«...mostrados» depende del filtro activo; «...resueltos» solo borra los hilos marcados como resueltos."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Comentarios",
+    "section": "revisar",
+    "topic": "comentarios",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-85",
+    "sourceQuestionId": "capt-rev-85",
+    "tipo": "opcion_unica",
+    "enunciado": "El boton «Mostrar comentarios» del grupo Comentarios permite verlos en dos disposiciones. ¿Cuales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Contextual (en el margen, junto al texto) y Lista (panel lateral con todos)"
+      },
+      {
+        "letter": "B",
+        "text": "Globos y Notas al pie"
+      },
+      {
+        "letter": "C",
+        "text": "Vertical y Horizontal"
+      },
+      {
+        "letter": "D",
+        "text": "Resumido y Detallado"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Contextual» ancla cada comentario al texto; «Lista» abre un panel con todos los hilos seguidos."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Comentarios",
+    "section": "revisar",
+    "topic": "comentarios",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-86",
+    "sourceQuestionId": "capt-rev-86",
+    "tipo": "verdadero_falso",
+    "enunciado": "El atajo para insertar un comentario en Word 365 es Alt+Ctrl+A.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Alt+Ctrl+A (InsertarComentario). No confundir con Alt+Ctrl+M, que en Word estandar es comentario pero aqui esta reasignado a la combinacion de correspondencia."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revision — marcas y visualizacion",
+    "section": "revisar",
+    "topic": "revision-marcado",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-87",
+    "sourceQuestionId": "capt-rev-87",
+    "tipo": "opcion_unica",
+    "enunciado": "El desplegable de «visualizacion del marcado» (junto a «Mostrar revisiones») ofrece cuatro modos. ¿Cuales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Revisiones simples; Todas las revisiones; Sin revision; Original"
+      },
+      {
+        "letter": "B",
+        "text": "Borrador; Final; Original; Comparado"
+      },
+      {
+        "letter": "C",
+        "text": "Insertado; Eliminado; Movido; Formato"
+      },
+      {
+        "letter": "D",
+        "text": "Autor 1; Autor 2; Todos; Ninguno"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Revisiones simples» muestra una linea roja en el margen; «Sin revision» oculta las marcas pero NO las quita; «Original» muestra el texto antes de los cambios."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revision — marcas y visualizacion",
+    "section": "revisar",
+    "topic": "revision-marcado",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-89",
+    "sourceQuestionId": "capt-rev-89",
+    "tipo": "opcion_unica",
+    "enunciado": "El submenu «Globos» de «Mostrar revisiones» tiene tres opciones. ¿Cuales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Mostrar revisiones en globos; Mostrar todas las revisiones en linea; Mostrar solo formato en los globos"
+      },
+      {
+        "letter": "B",
+        "text": "Globos a la izquierda; Globos a la derecha; Sin globos"
+      },
+      {
+        "letter": "C",
+        "text": "Globos grandes; Globos pequenos; Globos automaticos"
+      },
+      {
+        "letter": "D",
+        "text": "Un globo por autor; Un globo por cambio; Un globo por pagina"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«...en linea» pega los cambios dentro del texto; «...solo formato en los globos» deja las inserciones/eliminaciones en linea y manda al margen solo los cambios de formato."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revision — marcas y visualizacion",
+    "section": "revisar",
+    "topic": "revision-marcado",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-90",
+    "sourceQuestionId": "capt-rev-90",
+    "tipo": "opcion_unica",
+    "enunciado": "En el desplegable «Filtrar todo el marcado», ¿que se puede hacer?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Restablecer todos los filtros y filtrar por criterios como «@me menciona»"
+      },
+      {
+        "letter": "B",
+        "text": "Cambiar el color de las marcas"
+      },
+      {
+        "letter": "C",
+        "text": "Bloquear el control de cambios"
+      },
+      {
+        "letter": "D",
+        "text": "Exportar las revisiones a un archivo"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Sirve para ver solo parte del marcado (por persona, por tipo, menciones...) sin perder el resto."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Revision — marcas y visualizacion",
+    "section": "revisar",
+    "topic": "revision-marcado",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-88",
+    "sourceQuestionId": "capt-rev-88",
+    "tipo": "seleccion_multiple",
+    "enunciado": "¿Cuales de estas opciones aparecen en el desplegable «Mostrar revisiones»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Inserciones y eliminaciones"
+      },
+      {
+        "letter": "B",
+        "text": "Formato"
+      },
+      {
+        "letter": "C",
+        "text": "Globos"
+      },
+      {
+        "letter": "D",
+        "text": "Personas especificas"
+      },
+      {
+        "letter": "E",
+        "text": "Ortografia"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "«Globos» y «Personas especificas» tienen submenu. «Ortografia» no esta ahi."
+  },
+  {
+    "sourceFile": "revisar.json",
+    "bloque": "Revisar — Entrada de lapiz",
+    "section": "revisar",
+    "topic": "entrada-lapiz",
+    "subtopic": null,
+    "tema": "Revisar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "revisar-98",
+    "sourceQuestionId": "capt-rev-98",
+    "tipo": "opcion_unica",
+    "enunciado": "El desplegable «Ocultar entrada de lapiz» del grupo Entrada de lapiz ofrece dos opciones. ¿Cuales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Ocultar entrada de lapiz; Eliminar todos los trazos en el documento"
+      },
+      {
+        "letter": "B",
+        "text": "Ocultar; Mostrar"
+      },
+      {
+        "letter": "C",
+        "text": "Lapiz; Resaltador; Borrador"
+      },
+      {
+        "letter": "D",
+        "text": "Convertir en texto; Convertir en forma"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Ocultar» solo deja de mostrar los trazos manuscritos; «Eliminar todos los trazos» los borra de verdad."
   }
 ]

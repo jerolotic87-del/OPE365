@@ -628,6 +628,25 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Revisar — 44 capturas del usuario (sep-2026)**: el usuario aportó
+`data/imagenes_rutas/revisar/` (44 pantallazos) → **primer volcado propio de
+esta pestaña**, `data/rutas/revisar.txt` (antes NO existía; era el hueco
+marcado en este documento). Los topics `comentarios`, `revision-marcado` y
+`entrada-lapiz` estaban a 0. **+18 preguntas** (`revisar-83..100`) + **+7
+flashcards** (`F-070..076`): globo de comentario (Ctrl+Entrar publica),
+menú Eliminar comentarios (4), Mostrar comentarios (Contextual/Lista),
+`Alt+Ctrl+A`; desplegable de visualización del marcado (Revisiones simples/
+Todas/Sin revisión/Original), Mostrar revisiones + submenú Globos (3),
+Filtrar todo el marcado; menús Aceptar/Rechazar (5 c/u), Bloquear
+seguimiento («no es una característica de seguridad»), `Ctrl+Mayús+E`;
+Comparar vs Combinar + cuadro Comparar documentos; Restringir edición (4
+tipos: Sin cambios/Marcas de revisión/Comentarios/Rellenar formularios),
+Bloquear autores (necesita ubicación compartida); Ocultar entrada de lápiz
+(2); `Alt+F7` = siguiente error ortográfico; desplegable Ortografía /
+Ortografía y gramática. Generador: `scripts/gen_revisar_capturas.py`.
+`Mayús+F7` = Sinónimos y `Alt+Ctrl+A` = comentario confirmados en el
+volcado v2608. revisar.json 82→100.
+
 **Correspondencia — 59 capturas del usuario (sep-2026)**: el usuario aportó
 `data/imagenes_rutas/correspondencia/` (59 pantallazos, rama a rama + todos
 los cuadros de diálogo). Se **reescribió `data/rutas/correspondencia.txt`**
