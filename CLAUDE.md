@@ -637,10 +637,11 @@ esquema internacional / conflicto interno). El PDF corrobora `Ctrl+Mayús+Z`
 (`inicio-363/364`) ✅ · **`archivo-63` BORRADA**: preguntaba por la sección
 «Comentarios» de Backstage (Enviar una sonrisa / desaprobación / sugerencia)
 — en este Word 365 **esa sección no existe** (era de Office 2013-2016; el
-usuario lo confirmó). Pendientes: separador `;` en Impresión personalizada
-(`archivo-50/51/381`), desplegable «Aplicar formato a» del cuadro de estilo
-de tabla (`inicio-107`), rango del campo Posición del cuadro Tabulaciones
-(`inicio-45/75`).
+usuario lo confirmó). separador de páginas al imprimir = **coma** (`archivo-50/51/381`,
+confirmado con el tooltip del campo Páginas) ✅ · `archivo-63` borrada (la
+sección «Comentarios» de Backstage no existe en este Word) ✅. Pendientes:
+desplegable «Aplicar formato a» del cuadro de estilo de tabla (`inicio-107`),
+rango del campo Posición del cuadro Tabulaciones (`inicio-45/75`).
 
 **Mapa de cuadros de diálogo compartidos — cross-pestaña (sep-2026)**: a
 partir de los 9 volcados completos se añadió la **§14** a
@@ -752,14 +753,16 @@ preguntas — el más grande y completo, cubre todo el volcado y el árbol
 entero de Opciones 1-10 veces) no tiene huecos. AGE 2017 (inspeccionar
 info personal antes de compartir) y AGE 2021 («Comprobar si hay problemas»
 NO ofrece «Restringir edición») ya están cubiertas. daypo/aulaclic no
-tienen contenido de Backstage. **1 conflicto corregido**: `archivo-50/51/
-381` decían que el punto y coma NO es separador válido en «Impresión
-personalizada» — pero el volcado del usuario (`data/rutas/archivo.txt`)
-muestra el ejemplo de Word como `1;3;7`: en ES-España Word usa `;` (el
-separador de listas de Windows) y el campo acepta coma **y** punto y coma.
-Suavizadas las 3 (sin afirmar que `;` sea inválido). **Pendiente de que el
-usuario confirme en vivo**: escribir `1;3;7` en el campo Páginas. **0
-preguntas nuevas.**
+tienen contenido de Backstage. **`archivo-50/51/381` — resuelto con captura
+del tooltip (sep-2026)**: el tooltip del campo «Páginas» del panel Imprimir
+dice literalmente *«Escriba números de página e rangos separados por COMAS…
+Por ejemplo, escriba 1, 3, 5–12 o p1s1, p1s2, p1s3–p8s3»*. El separador
+canónico es la **coma** (y el rango con guion; sección con formato `pNsN`).
+Las 3 preguntas quedan con base coma. (El `;` aparece en el ejemplo del
+desplegable de *intercalación* — `1;2;3` — porque es el separador de listas
+de Windows ES, pero el tooltip del campo Páginas manda: coma.) `archivo-411`
+= emparejar `1;2;3`/`1;1;1` con Intercaladas/Sin intercalar. **0 preguntas
+nuevas de la revisión inicial.**
 
 **Barrido web de huecos de Referencias (sep-2026)**: cruce del banco (161
 preguntas, ya con dos pasadas profundas + PDF academia + iconos + trampas)

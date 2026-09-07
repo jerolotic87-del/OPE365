@@ -3184,11 +3184,11 @@
     "subtopic": null,
     "tema": "Imprimir",
     "sourceQuestionId": "8-42",
-    "enunciado": "Para imprimir solo las paginas sueltas 1, 3, 7 y 9 (no consecutivas), ¿que sintaxis se escribe en el campo Paginas?",
+    "enunciado": "Para imprimir solo las paginas sueltas 1, 3, 7 y 9 (no consecutivas), ¿que se escribe en el campo Paginas del panel Imprimir?",
     "opciones": [
       {
         "letter": "A",
-        "text": "1,3,7,9  (o 1;3;7;9)"
+        "text": "1, 3, 7, 9"
       },
       {
         "letter": "B",
@@ -3205,7 +3205,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Las paginas sueltas se separan con coma; en esta instalacion ES-Espana el ejemplo que muestra Word en pantalla usa el punto y coma (1;3;7) porque es el separador de listas de Windows en espanol, y el campo acepta ambos. El guion se reserva para intervalos consecutivos (p. ej. 5-9)."
+    "explicacion": "El propio cuadro lo indica: «Escriba numeros de pagina e rangos separados por comas... Por ejemplo, escriba 1, 3, 5-12». La coma separa paginas sueltas; el guion define un rango consecutivo (5-12)."
   },
   {
     "id": "archivo-51",
@@ -3219,11 +3219,11 @@
     "subtopic": null,
     "tema": "Imprimir",
     "sourceQuestionId": "8-43",
-    "enunciado": "Para imprimir desde la página 1 hasta la 10, más las páginas 12 y 16, ¿qué sintaxis es correcta?",
+    "enunciado": "Para imprimir de la pagina 1 a la 10, mas las paginas 12 y 16, ¿que sintaxis es correcta en el campo Paginas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "1-10,12,16"
+        "text": "1-10, 12, 16"
       },
       {
         "letter": "B",
@@ -3231,7 +3231,7 @@
       },
       {
         "letter": "C",
-        "text": "1/10,12,16"
+        "text": "1/10, 12, 16"
       },
       {
         "letter": "D",
@@ -3240,7 +3240,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Se combina el guion para el intervalo consecutivo (1-10) con el separador de paginas sueltas para 12 y 16. Ese separador es la coma (o el punto y coma en esta instalacion espanola). La barra y los guiones encadenados no valen."
+    "explicacion": "Se combina el guion para el rango consecutivo (1-10) con la coma para las paginas sueltas (12 y 16). Para rangos de una seccion concreta se usa el formato pNsN (p. ej. p1s2-p7s2)."
   },
   {
     "id": "archivo-52",
@@ -3478,7 +3478,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: ademas de paginas sueltas admite intervalos (1-10), combinaciones (1-10,12,16) y paginas de una seccion concreta (p1s2-p7s2). El separador de paginas sueltas es la coma; en esta instalacion ES-Espana el ejemplo en pantalla aparece con punto y coma (1;3;7) y el campo acepta los dos."
+    "explicacion": "Falso: ademas de paginas sueltas admite rangos con guion (1-10), combinaciones (1-10,12,16) y paginas de una seccion concreta con el formato pNsN (p1s2-p7s2). El separador de paginas sueltas es la COMA, como dice el tooltip del campo: «separados por comas»."
   },
   {
     "id": "archivo-382",
