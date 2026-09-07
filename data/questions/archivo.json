@@ -3045,35 +3045,35 @@
     "tema": "Imprimir",
     "difficulty": "alta",
     "sourceQuestionId": "Q-007",
-    "enunciado": "Un usuario quiere verificar los saltos de página y la distribución general del texto antes de imprimir, pudiendo ver varias páginas al mismo tiempo. ¿Qué vista debe usar?",
+    "enunciado": "Quieres ver cómo va a quedar el documento impreso antes de mandarlo a la impresora. ¿Dónde está esa vista previa en Word 365?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Diseño de impresión"
+        "text": "En el panel Imprimir de la Vista Backstage, a la derecha de la configuración"
       },
       {
         "letter": "B",
-        "text": "Modo de lectura"
+        "text": "En la pestaña Vista, grupo Vistas, con el botón Vista preliminar"
       },
       {
         "letter": "C",
-        "text": "Vista Esquema"
+        "text": "En la pestaña Disposición, grupo Configurar página, con el lanzador"
       },
       {
         "letter": "D",
-        "text": "Vista Preliminar"
+        "text": "En la barra de estado, junto a los botones de cambio de vista"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Vista Preliminar muestra páginas completas a tamaño reducido para comprobar saltos, distribución y formato antes de imprimir. Atajo Ctrl+Alt+I confirmado por fuentes de oposiciones ES."
+    "respuesta": "A",
+    "explicacion": "Desde Word 2010 la vista preliminar dejó de ser una vista aparte y se fundió con el panel Imprimir: la configuración a la izquierda y la previsualización a la derecha, actualizándose en cuanto tocas márgenes, tamaño u orientación. · La opción B es el mejor distractor del banco en este punto, porque hasta Word 2003 existía exactamente ese botón en el menú Archivo y mucha gente lo sigue buscando en la cinta. En la pestaña Vista de hoy están Modo de lectura, Diseño de impresión, Diseño web, Esquema y Borrador, pero ninguna vista preliminar. · Disposición configura la página, sin previsualizar. · Los botones de la barra de estado cambian entre Modo de lectura, Diseño de impresión y Diseño web."
   },
   {
     "id": "archivo-2",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Imprimir",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "atajo",
     "negativa": false,
     "section": "archivo",
     "topic": "imprimir",
@@ -3082,28 +3082,28 @@
     "difficulty": "alta",
     "sourceQuestionId": "Q-067",
     "generado": true,
-    "enunciado": "Un opositor afirma que la Vista Preliminar es un botón del Grupo Vistas cuyo atajo es Ctrl+Alt+I., ¿La afirmación es incorrecta?",
+    "enunciado": "Además de Ctrl+P, ¿qué combinación lleva directamente al panel Imprimir con su vista previa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El atajo: el real es Ctrl+Alt+P"
+        "text": "Alt+Ctrl+I"
       },
       {
         "letter": "B",
-        "text": "Su ubicación: no es un botón del Grupo Vistas; se accede desde Archivo → Imprimir"
+        "text": "Alt+Ctrl+P"
       },
       {
         "letter": "C",
-        "text": "Ambas partes son incorrectas"
+        "text": "Ctrl+Mayús+P"
       },
       {
         "letter": "D",
-        "text": "Ninguna: la afirmación es completamente correcta"
+        "text": "Alt+Mayús+I"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El atajo Ctrl+Alt+I está confirmado por fuentes ES de oposiciones. Lo incorrecto es la ubicación: Vista Preliminar no es un botón del Grupo Vistas sino que se accede desde Archivo → Imprimir."
+    "explicacion": "El comando que muestra la pestaña Imprimir tiene varias combinaciones asignadas: Ctrl+P, Alt+Ctrl+I y Ctrl+Mayús+F12. La «I» viene de la vista preliminar de las versiones antiguas, y por eso resulta tan poco intuitiva. · Alt+Ctrl+P es el distractor perfecto porque es la que cualquiera inventaría: la P de imprimir con un modificador más. No está asignada. · Ctrl+Mayús+P y Alt+Mayús+I tampoco tienen función en esta instalación. · Las tres falsas son verosímiles precisamente por su forma; aquí no hay nada que descartar por absurdo."
   },
   {
     "id": "archivo-48",
@@ -3117,28 +3117,28 @@
     "subtopic": null,
     "tema": "Imprimir",
     "sourceQuestionId": "8-40",
-    "enunciado": "¿Dónde se encuentra el comando Imprimir dentro de la Vista Backstage?",
+    "enunciado": "Buscas dónde configurar copias, impresora y márgenes antes de imprimir. ¿Dónde está el panel Imprimir?",
     "opciones": [
       {
         "letter": "A",
-        "text": "En el panel de navegación izquierdo de la Vista Backstage"
+        "text": "En el panel de navegación de la Vista Backstage, bajo Guardar"
       },
       {
         "letter": "B",
-        "text": "En la pestaña Inicio de la cinta de opciones"
+        "text": "En la pestaña Disposición, grupo Configurar página, botón Imprimir"
       },
       {
         "letter": "C",
-        "text": "En la barra de estado en la parte inferior del documento"
+        "text": "En la barra de herramientas de acceso rápido, siempre visible"
       },
       {
         "letter": "D",
-        "text": "En el grupo Páginas de la pestaña Insertar"
+        "text": "En la pestaña Vista, grupo Vistas, botón Vista preliminar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Imprimir se accede desde el panel izquierdo de la Vista Backstage. No está en la pestaña Inicio ni en la barra de estado ni en la pestaña Insertar."
+    "explicacion": "Imprimir es una entrada del panel de navegación de Backstage, entre Guardar una copia y Exportar. · La opción B mezcla dos cosas reales: Disposición → Configurar página existe, y desde el panel Imprimir hay un enlace que abre ese mismo cuadro, pero el camino no va en ese sentido. · La opción C es la más creíble de las tres falsas: el botón «Impresión rápida» SÍ se puede añadir a la barra de acceso rápido desde su menú desplegable, pero no viene de serie y además imprime directamente, sin abrir ningún panel. · La vista preliminar de la opción D dejó de ser un botón de la cinta hace muchas versiones."
   },
   {
     "id": "archivo-49",
@@ -3152,11 +3152,11 @@
     "subtopic": null,
     "tema": "Imprimir",
     "sourceQuestionId": "8-41",
-    "enunciado": "¿Cuál de los siguientes atajos NO abre el panel de impresión en Word 365?",
+    "enunciado": "Word tiene varias combinaciones que abren el panel Imprimir. ¿Cuál de estas NO lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Alt+F2"
+        "text": "Alt+Ctrl+F2"
       },
       {
         "letter": "B",
@@ -3173,7 +3173,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Alt+F2 abre el cuadro Abrir, no la impresión. Los atajos que muestran la pestaña Imprimir son Ctrl+P, Alt+Ctrl+I y Ctrl+Mayús+F12."
+    "explicacion": "Alt+Ctrl+F2 abre un documento existente: es la combinación alternativa de Ctrl+F12, nada que ver con imprimir. · Las otras tres están asignadas al mismo comando y las tres muestran la pestaña Imprimir. Que un solo comando tenga tres atajos es habitual en la familia Archivo: Guardar tiene otros tres. · Ctrl+Mayús+F12 es la que más sorprende, porque F12 a secas es Guardar como y Ctrl+F12 es Abrir: la misma tecla con tres modificadores da tres comandos distintos, y añadiendo Mayús+Ctrl aparece imprimir. · Aquí las cuatro son reales; hay que saber a qué comando pertenece cada una."
   },
   {
     "id": "archivo-50",
@@ -3187,7 +3187,7 @@
     "subtopic": null,
     "tema": "Imprimir",
     "sourceQuestionId": "8-42",
-    "enunciado": "Para imprimir solo las paginas sueltas 1, 3, 7 y 9 (no consecutivas), ¿que se escribe en el campo Paginas del panel Imprimir?",
+    "enunciado": "Necesitas imprimir solo las páginas 1, 3, 7 y 9, que no son consecutivas. ¿Qué escribes en el campo Páginas del panel Imprimir?",
     "opciones": [
       {
         "letter": "A",
@@ -3195,20 +3195,20 @@
       },
       {
         "letter": "B",
-        "text": "1-3-7-9"
+        "text": "1; 3; 7; 9"
       },
       {
         "letter": "C",
-        "text": "1:3:7:9"
+        "text": "1-3-7-9"
       },
       {
         "letter": "D",
-        "text": "1 a 3 a 7 a 9"
+        "text": "1 3 7 9"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El propio cuadro lo indica: «Escriba numeros de pagina e rangos separados por comas... Por ejemplo, escriba 1, 3, 5-12». La coma separa paginas sueltas; el guion define un rango consecutivo (5-12)."
+    "explicacion": "El tooltip del propio campo lo dice literalmente: números de página y rangos separados por COMAS, con el ejemplo «1, 3, 5-12». · El punto y coma de la opción B es el distractor con más fundamento de todo el banco en este apartado: aparece en la propia pantalla de Imprimir, en los ejemplos del desplegable de intercalación («1;2;3  1;2;3»), porque ahí Word usa el separador de listas de Windows en español. Verlo ahí y darlo por bueno para el campo Páginas es el error natural. Manda el tooltip del campo: coma. · El guion no separa páginas sueltas, define rangos: 1-3 son tres páginas seguidas. · Los espacios sin separador no sirven."
   },
   {
     "id": "archivo-51",
@@ -3222,7 +3222,7 @@
     "subtopic": null,
     "tema": "Imprimir",
     "sourceQuestionId": "8-43",
-    "enunciado": "Para imprimir de la pagina 1 a la 10, mas las paginas 12 y 16, ¿que sintaxis es correcta en el campo Paginas?",
+    "enunciado": "Quieres imprimir de la página 1 a la 10, y además las páginas 12 y 16. ¿Qué escribes en el campo Páginas?",
     "opciones": [
       {
         "letter": "A",
@@ -3230,11 +3230,11 @@
       },
       {
         "letter": "B",
-        "text": "1 a 10 y 12 y 16"
+        "text": "1-10; 12; 16"
       },
       {
         "letter": "C",
-        "text": "1/10, 12, 16"
+        "text": "1-10, 12-16"
       },
       {
         "letter": "D",
@@ -3243,7 +3243,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Se combina el guion para el rango consecutivo (1-10) con la coma para las paginas sueltas (12 y 16). Para rangos de una seccion concreta se usa el formato pNsN (p. ej. p1s2-p7s2)."
+    "explicacion": "Se combinan las dos reglas: guion para el tramo consecutivo y coma para separar lo que va suelto. · La opción C es la trampa fina, y la que más se cuela por leer deprisa: es una sintaxis perfectamente válida, pero imprime de la 12 a la 16, cinco páginas en vez de dos. Word la aceptaría sin protestar y el error solo se ve en el papel. · El punto y coma de la opción B viene de los ejemplos de intercalación de la misma pantalla, donde Word sí lo usa; en el campo Páginas el separador es la coma. · Encadenar todo con guiones no define nada coherente."
   },
   {
     "id": "archivo-52",
@@ -3257,7 +3257,7 @@
     "subtopic": null,
     "tema": "Imprimir",
     "sourceQuestionId": "8-44",
-    "enunciado": "Para imprimir de la página 1 a la 7 de la sección 2, ¿qué sintaxis debe introducirse en el campo Páginas?",
+    "enunciado": "El documento tiene varias secciones con numeración propia. Quieres imprimir de la página 1 a la 7, pero solo las de la sección 2. ¿Qué escribes?",
     "opciones": [
       {
         "letter": "A",
@@ -3273,12 +3273,12 @@
       },
       {
         "letter": "D",
-        "text": "1s2-7s2"
+        "text": "p1s2-p7"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La sintaxis correcta para páginas de sección es pNsN, donde p indica página y s indica sección. El orden siempre es página primero, sección después, por lo que s2p1 invierte el orden y es incorrecto. Las otras opciones son variantes inventadas."
+    "explicacion": "El formato es pNsN: primero la página, después la sección, y los dos extremos del rango escritos enteros. El tooltip del campo trae el ejemplo «p1s1, p1s2, p1s3-p8s3». · La opción B pone la sección delante, que es como se dice en voz alta («de la sección 2, páginas 1 a 7»), y por eso es la que más se marca. · Las opciones C y D cualifican solo un extremo del rango y dejan el otro suelto: Word no sabría a qué sección pertenece ese número. Son dos formas del mismo error, una por cada lado. · Sin la p delante, el número se interpreta como página del documento entero, no de la sección."
   },
   {
     "id": "archivo-399",
@@ -3297,24 +3297,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "«Intercaladas» imprime 1,2,3,1,2,3..."
+        "text": "El desplegable de páginas por hoja llega hasta 16"
       },
       {
         "letter": "B",
-        "text": "Se puede imprimir a doble cara manualmente"
+        "text": "Se puede imprimir a doble cara aunque la impresora no lo haga sola"
       },
       {
         "letter": "C",
-        "text": "El máximo de páginas por hoja es 16"
+        "text": "El menú Márgenes es la misma galería que la de la pestaña Disposición"
       },
       {
         "letter": "D",
-        "text": "El máximo de páginas por hoja es 4"
+        "text": "El desplegable Tamaño solo ofrece A4, A5 y Carta"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "El desplegable de páginas por hoja llega hasta 16 (1, 2, 4, 6, 8, 16), no se queda en 4."
+    "explicacion": "El desplegable Tamaño trae diez papeles antes de «Más tamaños de papel…»: Carta, Tabloide, Oficio, Estamento, Ejecutivo, A3, A4, A5, B4 (JIS) y B5 (JIS), cada uno con sus medidas. Quedarse en tres es muy corto. · Las páginas por hoja van 1, 2, 4, 6, 8 y 16, más «Escalar al tamaño del papel». · «Imprimir manualmente a doble cara» resuelve el caso de la impresora simple: saca las impares, avisa para dar la vuelta al papel y luego imprime las pares. · La galería de Márgenes es literalmente la misma que la de Disposición, con Normal, Estrecho, Moderado, Ancho, Reflejado y la última configuración personalizada."
   },
   {
     "id": "archivo-402",
@@ -3329,7 +3329,7 @@
     "tema": "Imprimir",
     "sourceQuestionId": "neg-archivo-10",
     "generado": true,
-    "enunciado": "¿Cuál de estas fichas NO tiene el cuadro Configurar página cuando se abre desde el panel Imprimir?",
+    "enunciado": "Pulsas el enlace «Configurar página» al pie del panel Imprimir. ¿Cuál de estas fichas NO tiene el cuadro que se abre?",
     "opciones": [
       {
         "letter": "A",
@@ -3345,12 +3345,12 @@
       },
       {
         "letter": "D",
-        "text": "Fuente"
+        "text": "Impresión"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "El cuadro Configurar página tiene tres fichas: Márgenes, Papel y Disposición. No existe una ficha «Fuente» ahí (eso es un cuadro distinto)."
+    "explicacion": "El cuadro tiene tres fichas y solo tres: Márgenes, Papel y Disposición. · Una ficha «Impresión» es exactamente lo que uno esperaría en un cuadro al que se llega desde el panel Imprimir, y ahí está la trampa: el cuadro no es del panel Imprimir, es el mismo de Disposición → Configurar página, y por eso no sabe nada de impresoras. · Márgenes lleva también la orientación y la disposición de varias páginas. · Papel lleva el tamaño y el origen del papel. · Disposición lleva encabezados y pies, alineación vertical, bordes y números de línea."
   },
   {
     "sourceFile": "archivo.json",
@@ -3366,27 +3366,27 @@
     "id": "archivo-411",
     "sourceQuestionId": "capt-arch-411",
     "tipo": "opcion_unica",
-    "enunciado": "En el panel Imprimir, el desplegable de intercalacion muestra dos ejemplos: «1;2;3  1;2;3» y «1;1;1  2;2;2  3;3;3». ¿Cual es cual?",
+    "enunciado": "Imprimes 3 copias de un documento de 3 páginas. El desplegable de intercalación muestra dos ejemplos: «1;2;3  1;2;3» y «1;1;1  2;2;2  3;3;3». ¿Cuál es cuál?",
     "opciones": [
       {
         "letter": "A",
-        "text": "«1;2;3  1;2;3» = Intercaladas · «1;1;1  2;2;2  3;3;3» = Sin intercalar"
+        "text": "«1;2;3  1;2;3» son Intercaladas y «1;1;1  2;2;2» Sin intercalar"
       },
       {
         "letter": "B",
-        "text": "«1;2;3  1;2;3» = Sin intercalar · «1;1;1  2;2;2  3;3;3» = Intercaladas"
+        "text": "«1;2;3  1;2;3» son Sin intercalar y «1;1;1  2;2;2» Intercaladas"
       },
       {
         "letter": "C",
-        "text": "Los dos son «Intercaladas», cambia solo el numero de copias"
+        "text": "Las dos son Intercaladas y cambia solo el número de copias pedidas"
       },
       {
         "letter": "D",
-        "text": "«1;1;1» significa imprimir solo la pagina 1 tres veces"
+        "text": "«1;1;1  2;2;2» significa imprimir tres veces solo las páginas 1 y 2"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Intercaladas = juego completo tras juego completo (1,2,3 / 1,2,3). Sin intercalar = todas las copias de cada pagina juntas (1,1,1 / 2,2,2 / 3,3,3). Word usa «;» como separador en el ejemplo por el esquema de listas de Windows en espanol."
+    "explicacion": "Intercalar es sacar el documento entero de principio a fin y luego repetirlo: 1,2,3 · 1,2,3 · 1,2,3. Sales con los juegos ya ordenados y listos para grapar. · Sin intercalar agrupa por página: las tres copias de la 1, luego las tres de la 2. Es más rápido para la impresora y te deja montones que hay que ordenar a mano. · La opción B invierte los dos, que es el error clásico porque «intercalar» suena a mezclar. · El punto y coma de los ejemplos es el separador de listas de Windows en español; no tiene nada que ver con el campo Páginas, donde el separador es la coma."
   },
   {
     "id": "archivo-377",
@@ -3401,11 +3401,11 @@
     "tema": "Imprimir",
     "sourceQuestionId": "vf-archivo-bk27",
     "generado": true,
-    "enunciado": "En el panel Imprimir, «Intercaladas» imprime 1-2-3, 1-2-3…; «Sin intercalar» imprime todas las copias de la página 1, luego todas las de la 2…",
+    "enunciado": "En el panel Imprimir, «Intercaladas» saca el documento entero y luego lo repite (1-2-3, 1-2-3…), mientras que «Sin intercalar» saca todas las copias de la página 1, luego todas las de la 2…",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero. En esta instalacion Word lo muestra literalmente como «Intercaladas: 1;2;3  1;2;3» y «Sin intercalar: 1;1;1  2;2;2  3;3;3» (el punto y coma es el separador de listas de Windows en espanol). Con una sola copia da igual; la diferencia importa al imprimir varias copias de un documento de varias paginas."
+    "explicacion": "Verdadero. · En esta instalación el desplegable lo muestra literalmente como «Intercaladas: 1;2;3  1;2;3» y «Sin intercalar: 1;1;1  2;2;2  3;3;3». · Intercalado sale ordenado y listo para grapar; sin intercalar es más rápido para la impresora pero deja montones por página. · El punto y coma de esos ejemplos es el separador de listas de Windows en español, y no debe copiarse al campo Páginas: ahí el separador es la coma."
   },
   {
     "id": "archivo-378",
@@ -3420,11 +3420,11 @@
     "tema": "Imprimir",
     "sourceQuestionId": "vf-archivo-bk28",
     "generado": true,
-    "enunciado": "El desplegable «N páginas por hoja» del panel Imprimir llega como máximo a 4 páginas por hoja.",
+    "enunciado": "El desplegable de páginas por hoja del panel Imprimir llega como máximo a 4 páginas por hoja.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: ofrece 1, 2, 4, 6, 8 y 16 páginas por hoja, más «Escalar al tamaño del papel»."
+    "explicacion": "Falso: llega hasta 16. · Los valores son 1, 2, 4, 6, 8 y 16 páginas por hoja, y debajo aparece «Escalar al tamaño del papel». · No confundir esto con «2 páginas por hoja» de Configurar página → Márgenes → Varias páginas, que reorganiza el documento de verdad; lo del panel Imprimir solo afecta a cómo se reparte en el papel."
   },
   {
     "id": "archivo-379",
@@ -3443,7 +3443,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: es exactamente la misma galería (Normal 2,5/3, Estrecho 1,27, Moderado, Ancho, Reflejado, Última configuración personalizada, Márgenes personalizados…). Lo mismo ocurre con Tamaño y Orientación."
+    "explicacion": "Falso: es exactamente la misma galería. · Trae Normal (2,5 arriba y abajo, 3 a los lados), Estrecho (1,27), Moderado, Ancho, Reflejado (interior 3,18 y exterior 2,54), la última configuración personalizada y «Márgenes personalizados…». · Lo mismo ocurre con el enlace «Configurar página» del pie del panel: abre el mismo cuadro de tres fichas que el lanzador de Disposición. Backstage no duplica esos cuadros, los reutiliza."
   },
   {
     "id": "archivo-380",
@@ -3458,11 +3458,11 @@
     "tema": "Imprimir",
     "sourceQuestionId": "vf-archivo-bk30",
     "generado": true,
-    "enunciado": "El desplegable «Imprimir todas las páginas» del panel Imprimir también permite imprimir la lista de estilos, la de entradas de autotexto o la de asignaciones de teclas del documento.",
+    "enunciado": "El desplegable «Imprimir todas las páginas» del panel Imprimir permite también imprimir la lista de estilos, la de entradas de autotexto o la de asignaciones de teclas del documento.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "En la sección «Información del documento» de ese desplegable: Información del documento, Lista de revisiones, Estilos, Entradas de texto automático, Asignaciones de teclas."
+    "explicacion": "Verdadero, y es de las cosas más desconocidas del panel. · Ese desplegable tiene tres bloques: qué parte del Documento imprimir (todo, la selección, la página actual o una impresión personalizada); una sección «Información del documento» con Información del documento, Lista de revisiones, Estilos, Entradas de texto automático y Asignaciones de teclas; y tres interruptores (imprimir con revisiones, solo impares, solo pares). · «Asignaciones de teclas» imprime la lista de métodos abreviados personalizados: útil justo después de reasignar atajos."
   },
   {
     "id": "archivo-381",
@@ -3477,11 +3477,11 @@
     "tema": "Imprimir",
     "sourceQuestionId": "vf-archivo-bk31",
     "generado": true,
-    "enunciado": "«Impresión personalizada» solo admite páginas sueltas separadas por comas, como 1,3,7.",
+    "enunciado": "«Impresión personalizada» solo admite páginas sueltas separadas por comas, como 1, 3, 7.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: ademas de paginas sueltas admite rangos con guion (1-10), combinaciones (1-10,12,16) y paginas de una seccion concreta con el formato pNsN (p1s2-p7s2). El separador de paginas sueltas es la COMA, como dice el tooltip del campo: «separados por comas»."
+    "explicacion": "Falso: admite bastante más. · Rangos con guion (1-10), combinaciones de rango y sueltas (1-10, 12, 16) y páginas de una sección concreta con el formato pNsN (p1s2-p7s2). · El separador de la lista es la coma, tal como indica el tooltip del propio campo. · El punto y coma que aparece en los ejemplos de intercalación de esa misma pantalla es otra cosa: el separador de listas de Windows en español."
   },
   {
     "id": "archivo-382",
@@ -3496,11 +3496,11 @@
     "tema": "Imprimir",
     "sourceQuestionId": "vf-archivo-bk32",
     "generado": true,
-    "enunciado": "El enlace «Configurar página» al pie del panel Imprimir abre el mismo cuadro «Configurar página» (Márgenes / Papel / Disposición) que la pestaña Disposición.",
+    "enunciado": "El enlace «Configurar página» del pie del panel Imprimir abre el mismo cuadro (Márgenes / Papel / Disposición) que el lanzador de la pestaña Disposición.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Es el mismo diálogo, con las mismas tres fichas."
+    "explicacion": "Verdadero: es el mismo diálogo, con las mismas tres fichas. · Es un ejemplo de cuadro compartido, de los que más se preguntan en oposición: el mismo cuadro con dos puertas distintas. · Ojo con una consecuencia práctica: como el cuadro no pertenece al panel Imprimir, no tiene ninguna ficha de impresora ni de copias. Lo que se toca ahí es la página, no la impresión."
   },
   {
     "id": "archivo-383",
@@ -3515,11 +3515,11 @@
     "tema": "Imprimir",
     "sourceQuestionId": "vf-archivo-bk33",
     "generado": true,
-    "enunciado": "Si la impresora seleccionada solo imprime a una cara, en el panel Imprimir no hay ninguna forma de hacer doble cara.",
+    "enunciado": "Si la impresora seleccionada solo imprime por una cara, en el panel Imprimir no hay ninguna forma de hacer doble cara.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: existe «Imprimir manualmente a doble cara»: Word imprime las caras impares, avisa para recargar el papel y luego imprime las pares."
+    "explicacion": "Falso. · El desplegable ofrece «Imprimir manualmente a doble cara»: Word imprime primero una cara, avisa con un mensaje para que des la vuelta al papel y lo vuelvas a meter, y entonces imprime la otra. · Con una impresora dúplex aparece además la opción automática, con la elección de girar por el lado largo o por el corto. · Es una de esas opciones que la gente busca en la impresora y está en Word."
   },
   {
     "id": "archivo-3",
@@ -3554,7 +3554,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La coautoría necesita las dos cosas a la vez: sesión iniciada con una cuenta Microsoft y el archivo alojado en la nube (OneDrive o un sitio de SharePoint). Sin sesión, Word ni siquiera ofrece Compartir; con sesión pero el archivo solo en el equipo, Compartir obliga primero a subirlo. · El formato .docx es necesario para editar en Word, pero un .docx guardado solo en local no se puede coeditar: el problema no es el formato, es dónde está el archivo. · El control de cambios registra quién modifica qué, pero es independiente de la coautoría: funciona igual en un documento local que nadie más abre. · El panel Cuenta no tiene lista de contactos; ahí se gestionan la cuenta, los servicios conectados y la información del producto. A los coautores se les invita desde Compartir, no desde Cuenta. · El par que más confunde es A y C: los dos suenan a «trabajar con otros», pero uno habilita la edición simultánea y el otro solo marca las modificaciones."
+    "explicacion": "La coautoría necesita las dos cosas a la vez: sesión iniciada con una cuenta Microsoft y el archivo alojado en la nube. Si el documento está solo en el equipo, el panel Compartir no ofrece invitar a nadie: propone primero cargarlo a OneDrive. · El formato .docx hace falta para editar en Word, pero un .docx guardado solo en local no se puede coeditar: el problema no es el formato, es dónde está el archivo. · El control de cambios registra quién modifica qué, pero es independiente de la coautoría: funciona igual en un documento local que nadie más abre. · El panel Cuenta no tiene lista de contactos; gestiona la cuenta, los servicios conectados y la información del producto. · El par que más confunde es A y C: los dos suenan a «trabajar con otros»."
   },
   {
     "id": "archivo-4",
@@ -3631,35 +3631,35 @@
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Compartir",
     "tipo": "opcion_unica",
-    "categoria": "concepto",
+    "categoria": "ruta",
     "negativa": false,
     "section": "archivo",
     "topic": "compartir",
     "subtopic": "Coautoría en tiempo real",
     "tema": "Compartir",
     "sourceQuestionId": "3-32",
-    "enunciado": "En Word 365, para poder compartir un documento en tiempo real y permitir la coautoría con otros usuarios a través de OneDrive, ¿qué paso es imprescindible realizar antes de compartir el enlace?",
+    "enunciado": "Abres el panel Compartir con un documento guardado solo en tu equipo. ¿Qué te ofrece Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar el documento en formato .pdf para evitar que lo modifiquen."
+        "text": "Cargarlo a OneDrive, o adjuntar una copia en su lugar"
       },
       {
         "letter": "B",
-        "text": "Iniciar sesión en Word con una cuenta Microsoft."
+        "text": "Invitar por correo, y avisar de que el archivo se subirá al enviar"
       },
       {
         "letter": "C",
-        "text": "Activar el modo táctil para facilitar la edición en tablets."
+        "text": "Copiar un vínculo de acceso que caduca a los siete días"
       },
       {
         "letter": "D",
-        "text": "Cerrar el documento y volver a abrirlo desde la nube."
+        "text": "Elegir permisos de edición o de solo lectura antes de subirlo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Es imprescindible iniciar sesión con una cuenta Microsoft para habilitar la coautoría y el uso compartido a través de OneDrive."
+    "respuesta": "A",
+    "explicacion": "Con el archivo en local, el panel se parte en dos: arriba «Cargue el documento para compartirlo», con OneDrive como destino, y debajo «Adjuntar una copia en su lugar», que manda el archivo por correo como Documento de Word o como PDF. · La opción B describe un comportamiento razonable que Word no tiene: no sube nada por su cuenta; primero se carga y después se comparte. · Los vínculos con caducidad existen en OneDrive, pero se configuran allí y no en este panel, ni con ese plazo fijo. · Los permisos de edición o solo lectura se eligen al invitar, es decir DESPUÉS de que el archivo esté en la nube: aquí todavía no hay nada que permitir."
   },
   {
     "id": "archivo-7",
@@ -3673,28 +3673,28 @@
     "subtopic": "OneDrive",
     "tema": "Compartir",
     "sourceQuestionId": "3-49",
-    "enunciado": "En Word 365, ¿cuál es el nombre del servicio de almacenamiento en la nube mencionado?",
+    "enunciado": "Compartes un documento desde OneDrive y eliges «Cualquier persona con el vínculo puede editar». ¿Qué implica eso?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Dropbox"
+        "text": "Quien reciba el vínculo puede editar aunque no tenga cuenta Microsoft"
       },
       {
         "letter": "B",
-        "text": "Google Drive"
+        "text": "Solo pueden editar quienes tengan cuenta Microsoft e inicien sesión"
       },
       {
         "letter": "C",
-        "text": "OneDrive"
+        "text": "Cada persona recibe un vínculo distinto ligado a su dirección de correo"
       },
       {
         "letter": "D",
-        "text": "iCloud"
+        "text": "El vínculo deja de funcionar en cuanto lo abre la primera persona"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "OneDrive es el servicio mencionado."
+    "respuesta": "A",
+    "explicacion": "Es la diferencia clave entre los dos tipos de vínculo. «Cualquier persona con el vínculo» es abierto: quien lo tenga entra, sin identificarse, y si se reenvía sigue funcionando para el siguiente. · La opción B describe el otro tipo, el vínculo restringido a personas concretas, que sí exige iniciar sesión y no sirve reenviado. Confundir los dos es el error que de verdad importa aquí, porque uno de ellos deja el documento a merced de cualquiera que reciba la dirección. · Los vínculos no son personales por defecto ni de un solo uso. · Cuando el documento está solo en el equipo, este panel ni siquiera aparece: primero hay que cargarlo."
   },
   {
     "id": "archivo-8",
@@ -3708,28 +3708,28 @@
     "subtopic": "OneDrive",
     "tema": "Compartir",
     "sourceQuestionId": "3-50",
-    "enunciado": "En Word 365, ¿qué permite hacer OneDrive?",
+    "enunciado": "Un compañero y tú tenéis abierto a la vez el mismo documento en OneDrive. ¿Qué pasa mientras los dos escribís?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Compartir el documento en tiempo real"
+        "text": "Cada uno ve el cursor del otro y los cambios van apareciendo mientras escribe"
       },
       {
         "letter": "B",
-        "text": "Imprimir el documento"
+        "text": "El segundo en abrirlo lo recibe en solo lectura hasta que el primero lo cierre"
       },
       {
         "letter": "C",
-        "text": "Corregir la ortografía"
+        "text": "Los cambios de cada uno se ven al guardar, y Word avisa si chocan"
       },
       {
         "letter": "D",
-        "text": "Cambiar el formato"
+        "text": "Word bloquea el párrafo que cada uno está tocando y avisa al otro con un icono"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "OneDrive permite compartir y acceder desde cualquier dispositivo."
+    "explicacion": "Eso es la coautoría: Word muestra un cursor de color con el nombre de cada persona y va propagando lo que escribe, sin que nadie tenga que guardar. · La opción B describe lo que pasaba con los documentos en una carpeta de red compartida, y sigue pasando hoy con un archivo local abierto por dos personas: es la respuesta correcta para el escenario equivocado, y por eso es el mejor distractor. · La opción C describe un modelo de sincronización por guardado, que no es como funciona. · Word no bloquea párrafos; sí lo hace SharePoint con la desprotección de archivos, pero eso es otra cosa y hay que activarlo."
   },
   {
     "id": "archivo-53",
@@ -3743,28 +3743,28 @@
     "subtopic": null,
     "tema": "Compartir",
     "sourceQuestionId": "8-45",
-    "enunciado": "¿Qué opción del panel Compartir permite enviar el documento como archivo adjunto?",
+    "enunciado": "En el panel Compartir eliges no subir el documento a la nube y mandarlo por correo. ¿Cómo se llama esa opción y qué te deja elegir?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Enviar una copia"
+        "text": "«Adjuntar una copia en su lugar», como Documento de Word o como PDF"
       },
       {
         "letter": "B",
-        "text": "Copiar vínculo"
+        "text": "«Enviar una copia», como Documento de Word, PDF o documento XPS"
       },
       {
         "letter": "C",
-        "text": "Enviar vínculo"
+        "text": "«Enviar por correo electrónico», como archivo adjunto o como cuerpo del mensaje"
       },
       {
         "letter": "D",
-        "text": "Adjuntar al correo"
+        "text": "«Compartir una copia», como Documento de Word o como página web"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Enviar una copia envía el documento como archivo adjunto. Copiar vínculo copia el enlace de acceso al archivo en la nube, no el archivo en sí. Enviar vínculo permite compartir el archivo mediante un enlace. Adjuntar al correo no existe como opción en el panel Compartir."
+    "explicacion": "El panel Compartir se divide en dos: arriba la carga a OneDrive y debajo «Adjuntar una copia en su lugar», con dos formatos, Documento de Word y PDF. · Las tres falsas son variantes del mismo nombre con un formato de más o de menos, que es como hay que montar este tipo de pregunta: si una sola opción dijera «adjuntar» y las demás otra cosa, se acertaría sin saber nada. · El XPS de la opción B existe en Word, pero está en Exportar, no aquí. · Enviar el documento como cuerpo del mensaje fue una opción real en versiones antiguas y hoy no está en este panel."
   },
   {
     "id": "archivo-54",
@@ -3778,28 +3778,28 @@
     "subtopic": null,
     "tema": "Compartir",
     "sourceQuestionId": "8-46",
-    "enunciado": "¿Cuál de estos elementos NO aparece en el panel Compartir de Word 365?",
+    "enunciado": "Repasas el panel Compartir con un documento que aún está en tu equipo. ¿Cuál de estas cosas NO vas a encontrar ahí?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Descargar como PDF"
+        "text": "La carga del documento a OneDrive"
       },
       {
         "letter": "B",
-        "text": "Campos Para y Mensaje"
+        "text": "Adjuntar una copia como Documento de Word"
       },
       {
         "letter": "C",
-        "text": "Botón Copiar vínculo"
+        "text": "Adjuntar una copia como PDF"
       },
       {
         "letter": "D",
-        "text": "Opciones de permisos"
+        "text": "Crear un documento PDF/XPS"
       }
     ],
     "matching": null,
-    "respuesta": "A",
-    "explicacion": "Descargar como PDF no existe en el panel Compartir. La exportación a PDF se realiza desde Archivo → Exportar. El panel Compartir contiene campos Para y Mensaje, botones Enviar, Copiar vínculo y Enviar una copia, y opciones de permisos de acceso."
+    "respuesta": "D",
+    "explicacion": "«Crear documento PDF/XPS» es una entrada del panel Exportar, no del de Compartir. · Es un distractor exigente porque en Compartir sí se puede mandar el documento convertido a PDF: la diferencia es que ahí el PDF va como adjunto de un correo, y en Exportar se genera un archivo PDF que se guarda donde tú digas. El mismo formato con dos propósitos distintos. · Con el archivo en local, el panel Compartir solo ofrece esas tres cosas: cargarlo a OneDrive, o adjuntar una copia como Word o como PDF. Las invitaciones y los vínculos aparecen después, cuando ya está en la nube."
   },
   {
     "id": "archivo-400",
@@ -3830,12 +3830,12 @@
       },
       {
         "letter": "D",
-        "text": "Enviar por fax"
+        "text": "Adjuntar una copia como Documento XPS"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "El panel Compartir no ofrece envío por fax. Las opciones reales son subir a OneDrive o adjuntar una copia (Word o PDF)."
+    "explicacion": "Al adjuntar, el panel ofrece exactamente dos formatos: Documento de Word y PDF. El XPS no está. · Es el distractor más difícil que admite esta pregunta porque el XPS existe de verdad en Word y aparece justo al lado, en Exportar → «Crear documento PDF/XPS», emparejado siempre con el PDF. Quien lo tenga asociado al PDF lo dará por bueno aquí. · Que la lista de arriba sea de dos y no de tres es exactamente el matiz que se pregunta."
   },
   {
     "id": "archivo-384",
@@ -3854,7 +3854,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: ofrece «Adjuntar una copia en su lugar» como Documento de Word o como PDF, además de la carga a OneDrive."
+    "explicacion": "Falso. · Debajo de la carga a la nube está «Adjuntar una copia en su lugar», con dos formatos: Documento de Word y PDF. · Es la salida para cuando no se quiere o no se puede usar la nube: en vez de compartir el archivo, se manda una copia, con la diferencia de fondo de que a partir de ahí cada uno tiene la suya y ya no hay coautoría. · El XPS no está entre esos dos formatos, aunque sí aparezca en el panel Exportar."
   },
   {
     "id": "archivo-385",
@@ -3873,7 +3873,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: hay que subirlo a OneDrive o SharePoint; si no, solo se puede adjuntar una copia por correo."
+    "explicacion": "Falso: es justo el requisito. · El archivo tiene que estar en OneDrive o en un sitio de SharePoint; si está solo en el equipo, el panel Compartir propone cargarlo antes de nada. · La alternativa que ofrece mientras tanto es adjuntar una copia por correo, que no es lo mismo: cada persona acaba con su propio archivo y los cambios no se juntan solos. · El segundo requisito es tener la sesión iniciada con una cuenta Microsoft."
   },
   {
     "id": "archivo-55",
@@ -3887,28 +3887,28 @@
     "subtopic": null,
     "tema": "Exportar",
     "sourceQuestionId": "8-47",
-    "enunciado": "¿Desde qué ruta se crea un documento PDF o XPS en Word 365?",
+    "enunciado": "Quieres generar un PDF del documento desde el panel Exportar. ¿Qué opción usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Exportar → Crear documento PDF/XPS"
+        "text": "Crear documento PDF/XPS"
       },
       {
         "letter": "B",
-        "text": "Archivo → Guardar como → Tipo → PDF"
+        "text": "Cambiar el tipo de archivo"
       },
       {
         "letter": "C",
-        "text": "Archivo → Compartir → Exportar como PDF"
+        "text": "Guardar como otro tipo de archivo"
       },
       {
         "letter": "D",
-        "text": "Archivo → Imprimir → Imprimir a PDF de Microsoft"
+        "text": "Adjuntar una copia en su lugar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La ruta específica para crear PDF o XPS es Archivo → Exportar → Crear documento PDF/XPS. Guardar como con tipo PDF también funciona pero no es la ruta de Exportar. Compartir no tiene opción de exportar a PDF. Imprimir a PDF es una impresora virtual del sistema, no una función de exportación de Word."
+    "explicacion": "El panel Exportar tiene dos entradas y esta es la primera: «Crear documento PDF/XPS», que avisa de que el PDF conserva diseño, formato, fuentes e imágenes y que el contenido no se podrá cambiar con facilidad. · «Cambiar el tipo de archivo» es la otra entrada del mismo panel, y es el distractor bueno: también acaba guardando en otro formato, pero su lista incluye .docx, .doc, .odt, .dotx, .txt, .rtf y .mht, y precisamente NO el PDF, que tiene su propio botón. · «Guardar como otro tipo de archivo» es el último elemento de esa lista, un atajo al cuadro Guardar como completo. · «Adjuntar una copia» es del panel Compartir."
   },
   {
     "id": "archivo-56",
@@ -3922,63 +3922,63 @@
     "subtopic": null,
     "tema": "Exportar",
     "sourceQuestionId": "8-48",
-    "enunciado": "¿Cuál de estos formatos NO aparece en las opciones de Cambiar el tipo de archivo dentro de Exportar?",
+    "enunciado": "Abres Exportar → «Cambiar el tipo de archivo». ¿Cuál de estos formatos NO aparece en esa lista?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".pptx"
+        "text": "Texto de OpenDocument (*.odt)"
       },
       {
         "letter": "B",
-        "text": ".docx"
+        "text": "Documento de Word 97-2003 (*.doc)"
       },
       {
         "letter": "C",
-        "text": ".odt"
+        "text": "Página web de un solo archivo (*.mht)"
       },
       {
         "letter": "D",
-        "text": ".mht"
+        "text": "Documento PDF (*.pdf)"
       }
     ],
     "matching": null,
-    "respuesta": "A",
-    "explicacion": "El formato .pptx es de PowerPoint y no aparece en las opciones de tipo de archivo de Word. Los formatos disponibles en Cambiar el tipo de archivo son: .docx, .doc, .odt, .txt, .rtf, .mht y .html, entre otros."
+    "respuesta": "D",
+    "explicacion": "El PDF no está en «Cambiar el tipo de archivo»: tiene su propio botón justo encima, «Crear documento PDF/XPS». Que el formato más usado del panel no esté en la lista de formatos es exactamente lo que hace buena esta pregunta. · La lista se divide en «Tipos de archivo de documento» (Documento .docx, Documento de Word 97-2003 .doc, Texto de OpenDocument .odt y Plantilla .dotx) y «Otros tipos de archivo» (Texto sin formato .txt, Formato RTF .rtf, Página web de un solo archivo .mht y «Guardar como otro tipo de archivo»). · Desde el cuadro Guardar como sí se llega al PDF por el desplegable Tipo: son dos caminos con listas distintas."
   },
   {
     "id": "archivo-57",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Exportar",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "concepto",
     "negativa": false,
     "section": "archivo",
     "topic": "exportar",
     "subtopic": "Transformar a PDF/XPS",
     "tema": "Exportar",
     "sourceQuestionId": "8-49",
-    "enunciado": "¿Qué hace la opción Transformar disponible en la Vista Backstage?",
+    "enunciado": "Generas un PDF con «Crear documento PDF/XPS» y luego quieres seguir editando ese PDF en Word. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Convierte el documento en una página web mediante Microsoft Sway"
+        "text": "Word puede abrirlo y convertirlo, avisando de que el resultado puede no ser idéntico"
       },
       {
         "letter": "B",
-        "text": "Convierte el documento en una presentación de PowerPoint"
+        "text": "Word lo abre tal cual y se edita como cualquier documento, sin conversión"
       },
       {
         "letter": "C",
-        "text": "Convierte el documento a formato HTML estándar y lo publica en la web"
+        "text": "Word no puede abrir archivos PDF: hay que volver al .docx original"
       },
       {
         "letter": "D",
-        "text": "Transforma el documento en un formulario editable de Office"
+        "text": "Word lo abre en Vista protegida y solo permite leerlo o imprimirlo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Transformar utiliza Microsoft Sway para convertir el documento en una página web interactiva. No convierte a PowerPoint, eso se haría desde Exportar en algunas versiones. No genera HTML estándar directamente. No crea formularios editables."
+    "explicacion": "Word abre PDF, pero no los edita: los convierte a un documento de Word, y avisa antes de que el resultado puede diferir del original, sobre todo con muchas imágenes o maquetación compleja. El PDF de partida no se toca. · La opción B contradice el aviso del propio panel Exportar, que dice que el contenido del PDF «no se puede cambiar con facilidad»: precisamente porque hace falta convertirlo. · La opción C era cierta hasta Word 2010, y es el distractor que arrastra mucha gente. · La Vista protegida existe y sí aparece con archivos descargados de internet, pero no es lo que impide editar un PDF, y basta con habilitar la edición para salir de ella."
   },
   {
     "id": "archivo-386",
@@ -3997,7 +3997,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Ambas acaban abriendo un cuadro «Guardar como» con el formato elegido."
+    "explicacion": "Verdadero, solo esas dos. · Las dos acaban abriendo un cuadro de guardado con el formato ya elegido, así que Exportar es en el fondo un atajo con las opciones más habituales por delante. · La diferencia práctica está en la lista: el PDF y el XPS solo salen por el primer botón, y el resto de formatos (.docx, .doc, .odt, .dotx, .txt, .rtf, .mht) por el segundo."
   },
   {
     "id": "archivo-387",
@@ -4016,7 +4016,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: el propio panel avisa de que «el contenido no se puede cambiar con facilidad». El PDF conserva diseño, formato, fuentes e imágenes, pero no es editable como un .docx."
+    "explicacion": "Falso. · El propio panel lo advierte: el PDF conserva diseño, formato, fuentes e imágenes, pero «el contenido no se puede cambiar con facilidad». · Word sí puede ABRIR un PDF, pero lo que hace es convertirlo a un documento de Word, avisando de que el resultado puede no ser idéntico al original. Convertir no es editar el PDF. · Lo prudente es conservar siempre el .docx: el PDF es el resultado, no el documento de trabajo."
   },
   {
     "id": "archivo-388",
@@ -4031,11 +4031,11 @@
     "tema": "Exportar",
     "sourceQuestionId": "vf-archivo-bk38",
     "generado": true,
-    "enunciado": "«Cambiar el tipo de archivo» (Exportar) ofrece, entre otros, .docx, .doc, .odt, .dotx, .txt, .rtf y .mht, más «Guardar como otro tipo de archivo».",
+    "enunciado": "«Cambiar el tipo de archivo» (Exportar) ofrece, entre otros, .docx, .doc, .odt, .dotx, .txt, .rtf y .mht, además de «Guardar como otro tipo de archivo».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Es una selección de los formatos más habituales; la lista completa está en el «Tipo» del cuadro Guardar como."
+    "explicacion": "Verdadero, y la lista está partida en dos bloques: «Tipos de archivo de documento» (.docx, .doc, .odt y .dotx) y «Otros tipos de archivo» (.txt, .rtf, .mht y el acceso al cuadro Guardar como completo). · Es una selección de los formatos más habituales: la lista entera, con las quince y pico entradas, está en el desplegable «Tipo» del cuadro Guardar como. · El PDF y el XPS no están aquí: tienen su propio botón encima."
   },
   {
     "id": "archivo-58",
@@ -4049,7 +4049,7 @@
     "subtopic": null,
     "tema": "Cerrar",
     "sourceQuestionId": "8-50",
-    "enunciado": "¿Qué atajo cierra el documento activo sin cerrar Word?",
+    "enunciado": "Tienes tres documentos abiertos y quieres cerrar solo el que estás viendo, dejando Word y los otros dos como están. ¿Qué atajo usas?",
     "opciones": [
       {
         "letter": "A",
@@ -4061,16 +4061,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Q"
+        "text": "Ctrl+W"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+F4"
+        "text": "Ctrl+Q"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F4 cierra el documento activo manteniendo Word abierto. Alt+F4 va cerrando los documentos abiertos uno a uno y, cuando solo queda uno, al volver a pulsarlo cierra Word. Ctrl+Q no tiene función de cierre. Ctrl+Mayús+F4 no existe como atajo de cierre. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+F4 cierra el documento activo y no toca ni la aplicación ni los otros documentos. Prueba en vivo del usuario. · Alt+F4 también cerraría este, pero es el camino de salir de Word: va cerrando uno a uno y, cuando queda el último, cierra el programa. Con tres documentos abiertos parecería que hace lo mismo, y ahí está el peligro. · Ctrl+W es la trampa histórica: en el esquema internacional cierra la ventana, y aquí quita el formato de párrafo de la selección. · Ctrl+Q alinea el párrafo a la izquierda. · Las cuatro hacen algo real; dos suenan a cerrar y ninguna de esas dos es la buena."
   },
   {
     "id": "archivo-59",
@@ -4084,28 +4084,28 @@
     "subtopic": null,
     "tema": "Cerrar",
     "sourceQuestionId": "8-51",
-    "enunciado": "¿Cómo sabe un usuario que el documento que tiene abierto está en modo de compatibilidad con Word 97-2003?",
+    "enunciado": "Abres un documento antiguo y quieres saber si está en modo de compatibilidad con Word 97-2003. ¿Dónde lo ves?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Aparece el texto Modo de compatibilidad entre corchetes en la barra de título"
+        "text": "En la barra de título, entre corchetes junto al nombre del archivo"
       },
       {
         "letter": "B",
-        "text": "La cinta de opciones cambia de color y muestra un aviso"
+        "text": "En la barra de estado, a la izquierda del número de página"
       },
       {
         "letter": "C",
-        "text": "Word muestra un cuadro de diálogo al abrir el documento"
+        "text": "En una barra amarilla bajo la cinta, con un botón para convertirlo"
       },
       {
         "letter": "D",
-        "text": "La barra de estado muestra un icono de advertencia junto al número de páginas"
+        "text": "En la cinta, que pierde color y oculta los comandos no compatibles"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El indicador visual es el texto entre corchetes en la barra de título. La cinta no cambia de color. No hay cuadro de diálogo automático. La barra de estado no muestra iconos de advertencia de compatibilidad."
+    "explicacion": "Aparece en la barra de título, escrito entre corchetes justo después del nombre: «Documento1.doc [Modo de compatibilidad]». Es el único aviso permanente. · La opción C es el distractor de mayor nivel, porque Word usa exactamente ese recurso para otras cosas: la barra amarilla de «Marcar como final», la de «Habilitar edición» de la Vista protegida y la roja de archivos peligrosos. Para el modo de compatibilidad no la usa. · La barra de estado muestra páginas, palabras e idioma, no el modo. · La cinta no cambia de aspecto: lo que hace Word es desactivar por dentro las funciones que el formato antiguo no admite."
   },
   {
     "id": "archivo-60",
@@ -4119,28 +4119,28 @@
     "subtopic": null,
     "tema": "Cerrar",
     "sourceQuestionId": "8-52",
-    "enunciado": "¿Desde dónde se convierte un documento en modo de compatibilidad al formato actual de Word 365?",
+    "enunciado": "Tienes abierto un documento en modo de compatibilidad y quieres pasarlo al formato actual de Word. ¿Dónde está el botón Convertir?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Información"
+        "text": "Archivo → Información → botón Convertir"
       },
       {
         "letter": "B",
-        "text": "Archivo → Guardar como → Tipo → Documento de Word"
+        "text": "Archivo → Exportar → Cambiar el tipo de archivo"
       },
       {
         "letter": "C",
-        "text": "Revisar → Convertir documento"
+        "text": "Archivo → Guardar como → Tipo → Documento de Word"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Avanzadas → Convertir a formato actual"
+        "text": "Archivo → Opciones → Guardar → Formato predeterminado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La conversión se realiza desde Archivo → Información donde aparece el botón Convertir cuando el documento está en modo compatibilidad. Guardar como con tipo docx también funciona pero no es la ruta de Convertir. No existe Convertir documento en la pestaña Revisar ni en Avanzadas."
+    "explicacion": "Con un documento en modo de compatibilidad, el panel Información añade un botón «Convertir» que actualiza el archivo al formato actual, conservando el mismo nombre y sustituyendo el original. · Las opciones B y C llegan a un resultado parecido, y por eso son buenos distractores: guardar como .docx crea un archivo nuevo en el formato moderno. Pero eso es guardar una copia, no convertir; el original se queda como estaba y acabas con dos archivos. La pregunta es por el botón, no por el rodeo. · La opción D cambia el formato con el que se guardará a partir de ahora, no toca el documento abierto."
   },
   {
     "id": "archivo-404",
@@ -4168,7 +4168,7 @@
         "Ctrl + F4"
       ]
     ],
-    "explicacion": "F12 abre Guardar como; Ctrl+F4 cierra el documento activo sin cerrar el programa (prueba en vivo del usuario)."
+    "explicacion": "F12 abre Guardar como, para elegir nombre, carpeta y formato. · Ctrl+F4 cierra el documento activo sin cerrar el programa, prueba en vivo del usuario. · Ojo con sus vecinos: Mayús+F12 guarda a secas y Ctrl+F12 abre; Alt+F4 cierra el documento y, si es el último, también Word. · Ctrl+W no cierra nada en esta instalación: quita el formato de párrafo."
   },
   {
     "id": "archivo-61",
@@ -4182,7 +4182,7 @@
     "subtopic": null,
     "tema": "Cuenta",
     "sourceQuestionId": "8-53",
-    "enunciado": "¿Desde qué opción de la Vista Backstage se pueden agregar o quitar cuentas de servicios en la nube como OneDrive o SharePoint?",
+    "enunciado": "Quieres cambiar el tema de Office, ver con qué cuenta has iniciado sesión y comprobar la versión exacta de Word. ¿Dónde está todo eso?",
     "opciones": [
       {
         "letter": "A",
@@ -4190,20 +4190,20 @@
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → General → Agregar cuenta"
+        "text": "Archivo → Opciones → General"
       },
       {
         "letter": "C",
-        "text": "Archivo → Información → Administrar cuentas"
+        "text": "Archivo → Información"
       },
       {
         "letter": "D",
-        "text": "Archivo → Compartir → Agregar cuenta de almacenamiento"
+        "text": "Archivo → Opciones → Idioma"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La sección Cuenta en la Vista Backstage gestiona las cuentas de servicios en la nube. No existe Agregar cuenta en Opciones → General. Administrar cuentas no es una opción dentro de Información. Compartir no gestiona cuentas de almacenamiento."
+    "explicacion": "El panel Cuenta reúne las tres cosas: la información del usuario y los servicios conectados, el fondo y el tema de Office, y el bloque «Acerca de Word» con la versión y el número de compilación. · Opciones → General es el mejor distractor, y con motivo: ahí también están el tema de Office y el nombre de usuario, así que una de las tres sí aparece. Lo que no hay es ni la cuenta ni la versión. · Información es del documento abierto, no de la aplicación: sus propiedades, su protección y sus versiones. · Opciones → Idioma configura los idiomas de edición y de la interfaz, que es donde mucha gente busca los datos de la cuenta por asociación con la configuración regional."
   },
   {
     "id": "archivo-62",
@@ -4217,28 +4217,28 @@
     "subtopic": null,
     "tema": "Cuenta",
     "sourceQuestionId": "8-54",
-    "enunciado": "¿Dónde se encuentra la opción Cuenta dentro del panel de navegación de la Vista Backstage?",
+    "enunciado": "Recorres con la vista el panel de navegación de Backstage buscando «Cuenta». ¿Dónde está?",
     "opciones": [
       {
         "letter": "A",
-        "text": "En la parte inferior del panel de navegación"
+        "text": "Abajo del todo, separada del resto, justo encima de Opciones"
       },
       {
         "letter": "B",
-        "text": "En la parte superior, entre Nuevo y Abrir"
+        "text": "Arriba del todo, entre Inicio y Nuevo"
       },
       {
         "letter": "C",
-        "text": "Dentro de la sección Opciones"
+        "text": "En el medio, entre Compartir y Exportar"
       },
       {
         "letter": "D",
-        "text": "En la parte central, entre Compartir y Exportar"
+        "text": "Dentro de Información, en el bloque de propiedades"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Cuenta está situada en la parte inferior del panel de navegación de Backstage, junto a Comentarios y Opciones. No está en la parte superior ni en la central ni dentro de Opciones."
+    "explicacion": "Cuenta y Opciones van juntas al final del panel, separadas de las demás por un espacio en blanco. La separación no es decorativa: marca que esas dos no actúan sobre el documento sino sobre la aplicación entera, mientras que todo lo de arriba (Nuevo, Abrir, Información, Guardar, Imprimir, Compartir, Exportar, Cerrar) sí. · Las otras tres opciones colocan Cuenta entre las entradas que sí son del documento, que es justo la confusión que la separación pretende evitar."
   },
   {
     "id": "archivo-389",
@@ -4257,7 +4257,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Desde ahí se ven la cuenta de usuario, los servicios conectados y «Acerca de Word»."
+    "explicacion": "Verdadero, y las dos van separadas del resto por un espacio en blanco. · Esa separación marca que Cuenta y Opciones son de la APLICACIÓN, mientras que todo lo de arriba actúa sobre el documento abierto. · Desde Cuenta se ven el usuario y los servicios conectados, se cambian el fondo y el tema de Office y se consulta «Acerca de Word» con la versión y la compilación."
   },
   {
     "id": "archivo-390",
@@ -4276,7 +4276,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: «Cuenta» gestiona el usuario, el fondo y tema de Office y los servicios conectados. Los márgenes se cambian en Disposición o en Archivo ▸ Opciones."
+    "explicacion": "Falso: Cuenta no toca el documento. · Gestiona el usuario, los servicios conectados, el fondo y el tema de Office, y muestra la información del producto. · Los márgenes y el tamaño de papel se cambian en la pestaña Disposición, o en el cuadro Configurar página; para que valgan como predeterminados, con el botón «Establecer como predeterminado» de ese mismo cuadro, que los guarda en la plantilla Normal.dotm."
   },
   {
     "id": "archivo-64",

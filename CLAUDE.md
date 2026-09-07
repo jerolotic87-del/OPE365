@@ -208,8 +208,10 @@ Reescritura **a mano, ítem por ítem** — ningún script genera contenido.
 `scripts/aplicar_reescritura.py` solo vuelca al JSON el texto ya escrito y
 valida (4 opciones, respuesta viva, sin repetidas, longitudes, explicación).
 
-**Progreso de la reescritura**: `archivo` 101/410 — topics `backstage`,
-`nuevo`, `abrir`, `informacion` y `guardar` cerrados enteros.
+**Progreso de la reescritura**: `archivo` 141/410 — cerrados enteros los
+topics `backstage`, `nuevo`, `abrir`, `informacion`, `guardar`, `imprimir`,
+`compartir`, `exportar`, `cerrar` y `cuenta`. Queda solo el bloque
+`opciones-*` (269 preguntas).
 
 **Efecto secundario en el motor (sep-2026), ya resuelto**: `framingOf()` de
 `engine.js` deducía un framing `"caso"` de la REDACCIÓN del enunciado
