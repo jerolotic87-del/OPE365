@@ -777,15 +777,17 @@ NO estaban en las capturas del usuario):
  - **Formato de número de página**: el banco decía que solo hay 5 formatos
    y que «I, II, III» (romano mayúscula) NO está — **falso**. Son **6**:
    `1,2,3` · `-1,-2,-3` · `a,b,c` · `A,B,C` · `i,ii,iii` · `I,II,III`.
-   Corregidas `insertar-84`, `insertar-285`, `insertar-295`.
+   Corregidas `insertar-84`, `insertar-285`, `insertar-295`. ✅ **CONFIRMADO
+   con captura del usuario** (desplegable «Formato de número» abierto, se ven
+   los 6, `I, II, III` incluido).
  - **Galería del botón Ecuación**: el banco decía que «Teorema de Pitágoras»
    NO es una ecuación integrada — **falso**, sí lo es (junto a Área del
    círculo, Fórmula cuadrática, Serie de Taylor, Serie de Fourier, Expansión
    de una suma, Identidades trigonométricas). Corregidas `insertar-98`,
    `insertar-318`.
- - **Pendiente de que el usuario confirme en vivo** (abrir los dos cuadros):
-   son hechos universales de Word y verificados en varias fuentes ES, pero
-   sin captura propia. Si su Word discrepara, revertir. Las otras ~35
+ - **Pendiente de confirmar en vivo**: solo la galería de Ecuación (el punto
+   de página ya está confirmado con captura). Es un hecho universal de Word
+   y verificado en fuentes ES, pero sin captura propia. Las otras ~35
    preguntas que citan «la extracción» sí se apoyan en capturas reales
    (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
    formatos de fecha…) y se dejaron.
