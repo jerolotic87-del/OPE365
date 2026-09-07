@@ -1682,6 +1682,44 @@ Chromium real en `tests/manual_mp_tipos_qa.mjs`):
    sujeto va explícito: «Aún no has votado» / «Tu compañero ya ha votado —
    TE FALTA VOTAR A TI» / «✓ TU voto está registrado…».
 
+**Farol — 4 fallos reales (sep-2026).** Es el modo por turnos y **sin
+reloj**: aquí un fallo no "se agota", deja la partida **colgada**, que es
+peor. Test de regresión `tests/test_multiplayer_farol.js` (25
+comprobaciones, partida completa de 10 turnos conducida desde la UI del
+host) + `tests/manual_farol_qa.mjs` (Chromium real). 7 de las 25 fallan
+con el código anterior:
+1. **La carta viajaba SOLO por id.** Si al defensor le faltaba esa pregunta
+   (Pages sin redesplegar entre los dos móviles, contenido propio, una
+   borrada), `resolveTurn` no encontraba `Q_BY_ID[qid]`, emitía `error` con
+   `round.resolved` ya en `true` y **la partida se quedaba colgada para él**
+   mientras el otro avanzaba. Ahora la carta viaja **POR VALOR** en el
+   mensaje `poker_card` (`msg.q`), igual que el tablero de Duelo/Contra
+   Word; el banco local queda como respaldo (`roundQuestion()` en el motor,
+   `round.q || Q_BY_ID[...]` en la UI). Una carta por turno, no las 10 de
+   golpe.
+2. **El comodín 50/50 se perdía en cualquier repintado.** Se aplicaba
+   tocando el DOM *después* de renderizar (`btn.disabled = true`), así que
+   un re-render devolvía las 4 opciones — y ya estaba pagado (vale la mitad
+   de puntos). Ahora las 2 letras vivas se guardan en `mpPokerWildcardKeep
+   {turn, letters}` y se pintan **desde el estado**; la pantalla avisa
+   «🃏 50/50 usado».
+3. **Los reenvíos de `resume_request` echaban al defensor atrás.** Tras una
+   reconexión el atacante reenvía carta y afirmación; al reprocesarse,
+   un defensor que ya había pulsado DUDO volvía a «¿Te fías?» **perdiendo
+   el comodín recién gastado**. `poker_card` / `poker_claim` /
+   `poker_decision` son ahora idempotentes (se ignoran si el campo ya está
+   puesto) y llevan guarda de `round` nulo.
+4. **Crash con carta no disponible.** `wirePokerGameHandlers` hacía
+   `$("#poker-confio").addEventListener` sin comprobar null; cuando se
+   pintaba `pokerQNotAvailable()` esos botones no existen → `TypeError` que
+   abortaba el resto del cableado de la vista (tira de historial, texto de
+   presión). Guardado.
+
+Nota: `useWildcard()` usa `Math.random()` — es la única excepción
+consciente a la regla de "nada de `Math.random`", porque el 50/50 es
+LOCAL del defensor (elige qué distractor conserva) y no debe reproducirse
+en el otro dispositivo ni entre partidas.
+
 Además, endurecido `mpRenderAnswerBody`: sale si no existe `#mp-q-body`
 (llegaba a llamarse en el hueco de `round_end`), exige `q.matching` bien
 formado, y tiene una rama final para cualquier tipo no jugable — antes

@@ -1124,20 +1124,26 @@ function createPokerGame(session){
       beginTurn(msg.turn, true);
       return;
     }
+    // Carta y afirmación son IRREPETIBLES dentro de un turno: playCard y
+    // submitClaim se niegan a sobrescribir, así que un mensaje repetido solo
+    // puede venir del reenvío de resume_request tras una reconexión. Si se
+    // reprocesa, el defensor que ya pulsó DUDO vuelve a «¿Te fías?» y pierde
+    // el comodín que acaba de gastar → se ignoran de forma idempotente.
     if(msg.type === "poker_card"){
-      if(msg.turn !== turnIndex || round.attackerIsMe) return; // solo el defensor procesa la carta del rival
+      if(!round || msg.turn !== turnIndex || round.attackerIsMe || round.qid) return; // solo el defensor procesa la carta del rival
       round.qid = msg.qid;
+      round.q = msg.q || null;      // la carta viaja POR VALOR (ver playCard)
       emitPhase("defender_wait_claim", {});
       return;
     }
     if(msg.type === "poker_claim"){
-      if(msg.turn !== turnIndex || round.attackerIsMe) return;
+      if(!round || msg.turn !== turnIndex || round.attackerIsMe || round.claim) return;
       round.claim = msg.claim;
       emitPhase("defender_decide", { qid: round.qid, claim: round.claim });
       return;
     }
     if(msg.type === "poker_decision"){
-      if(msg.turn !== turnIndex || !round.attackerIsMe) return;
+      if(!round || msg.turn !== turnIndex || !round.attackerIsMe || round.decision) return;
       round.decision = msg.decision;
       round.answer = msg.decision === "dudo" ? msg.answer : round.claim;
       round.wildcardUsed = !!msg.wildcardUsed;
@@ -1147,7 +1153,7 @@ function createPokerGame(session){
     if(msg.type === "resume_request"){
       const sent = lastSentForTurn[turnIndex] || {};
       if(round && round.attackerIsMe){
-        if(sent.card) session.send({type:"poker_card", turn:turnIndex, qid:round.qid});
+        if(sent.card) session.send({type:"poker_card", turn:turnIndex, qid:round.qid, q:roundQuestion()});
         if(sent.claim) session.send({type:"poker_claim", turn:turnIndex, claim:round.claim});
       } else if(round){
         if(sent.decision) session.send({type:"poker_decision", turn:turnIndex, decision:round.decision, answer:round.answer, wildcardUsed:round.wildcardUsed});
@@ -1190,11 +1196,20 @@ function createPokerGame(session){
     emitPhase(attackerIsMe ? "attacker_select_card" : "defender_wait_card", { turn, total:totalRounds, attackerIsMe, comebackActive, asalto:isAsaltoTurn(turn) });
   }
 
+  // La pregunta del turno: la recibida por valor manda; el banco local es
+  // solo el respaldo (mensajes de una version anterior de la app).
+  function roundQuestion(){ return (round && (round.q || O.Q_BY_ID[round.qid])) || null; }
+
   function playCard(qid){
     if(!round || !round.attackerIsMe || round.qid) return;
     round.qid = qid;
+    round.q = O.Q_BY_ID[qid] || null;
     lastSentForTurn[turnIndex].card = true;
-    session.send({type:"poker_card", turn:turnIndex, qid});
+    // POR VALOR, igual que el tablero de Duelo/Contra Word: si solo viajara el
+    // id y al defensor le faltara esa pregunta (Pages sin redesplegar entre los
+    // dos moviles, contenido propio, una borrada), resolveTurn no podia puntuar
+    // y la partida se quedaba COLGADA para el, no solo sin pintar.
+    session.send({type:"poker_card", turn:turnIndex, qid, q:round.q});
     emitPhase("attacker_answer", { qid });
   }
 
@@ -1226,7 +1241,7 @@ function createPokerGame(session){
   // si finalmente acierta (nunca es gratis).
   function useWildcard(){
     if(myWildcardUsed || !round || round.attackerIsMe || round.decision || !round.qid) return null;
-    const q = O.Q_BY_ID[round.qid];
+    const q = roundQuestion();
     if(!q) return null;
     myWildcardUsed = true;
     round.wildcardUsed = true;
@@ -1238,7 +1253,7 @@ function createPokerGame(session){
   function resolveTurn(){
     if(!round || round.resolved || round.decision === null) return;
     round.resolved = true;
-    const q = O.Q_BY_ID[round.qid];
+    const q = roundQuestion();
     if(!q){ emitPhase("error", {message:"Pregunta no disponible"}); return; }
     const correct = q.respuesta;
     const attackerTruthful = round.claim === correct;

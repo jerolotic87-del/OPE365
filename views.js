@@ -4118,6 +4118,11 @@ let mpConnPhase = "idle";
 let mpDuelPhase = "idle";
 let mpPokerPhase = "idle";
 let mpPokerReveal = null, mpPokerFinal = null, mpPokerDeck = [], mpPokerPlayed = {};
+/* Comodín 50/50 de Farol: las 2 letras que quedan vivas, atadas al turno.
+   Se gasta 1 vez por partida y cuesta la mitad de los puntos de la ronda, así
+   que NO puede perderse en un repintado (antes se aplicaba tocando el DOM a
+   posteriori y cualquier re-render devolvía las 4 opciones: pagado por nada). */
+let mpPokerWildcardKeep = null;   // { turn, letters:[a,b] }
 let mpTimerInterval = null;
 let mpLastRoundExtra = null;
 let mpRoomCode = null;
@@ -4159,7 +4164,7 @@ function mpReset(){
   if(mpSession){ try{ mpSession.destroy(); }catch(e){} }
   mpSession = null; mpDuel = null; mpPoker = null; mpConnPhase = "idle"; mpDuelPhase = "idle"; mpPokerPhase = "idle";
   mpRoomCode = null; mpLastRoundExtra = null; mpFinalExtra = null; mpPokerReveal = null; mpPokerFinal = null;
-  mpPokerDeck = []; mpPokerPlayed = {};
+  mpPokerDeck = []; mpPokerPlayed = {}; mpPokerWildcardKeep = null;
   mpRoundDeadlineLocal = null; mpRoundDurationMs = null; mpRoundDeadlineFor = -1;
   mpCountdownAt = null; mpDraft = { round:-1, sel:null, pairs:null };
   if(mpTimerInterval){ clearInterval(mpTimerInterval); mpTimerInterval = null; }
@@ -5389,7 +5394,7 @@ function renderPokerAttackerUI(round, phase){
       }).join("")}</div>`;
   }
   if(phase === "attacker_answer"){
-    const q = O.Q_BY_ID[round.qid];
+    const q = round.q || O.Q_BY_ID[round.qid];
     if(!q) return pokerQNotAvailable();
     return `
       <p style="text-align:center; color:var(--text-2); font-size:13px; margin:var(--sp-4) 0;">Elige la respuesta que quieres presentar.</p>
@@ -5409,7 +5414,8 @@ function renderPokerDefenderUI(round, phase){
   if(phase === "defender_wait_claim"){
     return `<div class="conn-status-panel"><div class="conn-spinner"></div><h3 id="mp-pressure-text" data-msgs='${JSON.stringify(["Pensando…","Decidiendo su respuesta…"])}'>Pensando…</h3><p>${O.escapeHtml(mpSession.getRivalName())} está decidiendo su respuesta.</p></div>`;
   }
-  const q = O.Q_BY_ID[round.qid];
+  // La carta llega POR VALOR dentro del mensaje; el banco local es el respaldo.
+  const q = round.q || O.Q_BY_ID[round.qid];
   if(!q) return pokerQNotAvailable();
   if(phase === "defender_decide"){
     const claimOpt = q.opciones.find(o=>o.letter===round.claim) || { letter:round.claim||"?", text:"(opción desconocida)" };
@@ -5428,13 +5434,20 @@ function renderPokerDefenderUI(round, phase){
   }
   // defender_answer (tras pulsar DUDO)
   const wildcardAvailable = !mpPoker.getState().myWildcardUsed;
+  // El 50/50 se pinta desde el estado, no tocando el DOM después: así
+  // sobrevive a cualquier repintado (ya está pagado con puntos).
+  const keep = (mpPokerWildcardKeep && mpPokerWildcardKeep.turn === round.turn) ? mpPokerWildcardKeep.letters : null;
   return `
     <div class="surface qcard" style="padding:var(--sp-6);">
       ${mpQuestionImage(q)}
       <h3>${O.renderBlank(q.enunciado)}</h3>
       <p style="text-align:center; color:var(--text-2); font-size:13px; margin-bottom:var(--sp-3);">Elige tu propia respuesta.</p>
-      <div class="options" id="poker-defend-options">${q.opciones.map(o=>`<button class="option" data-defend="${o.letter}"><span class="letter">${o.letter}</span><span>${O.escapeHtml(o.text)}</span></button>`).join("")}</div>
-      ${wildcardAvailable ? `<button class="btn btn-outline btn-sm" id="poker-wildcard" style="margin-top:var(--sp-4);">🃏 50/50 (elimina 2 — vale la mitad de puntos si aciertas)</button>` : ``}
+      <div class="options" id="poker-defend-options">${q.opciones.map(o=>{
+        const fuera = keep && !keep.includes(o.letter);
+        return `<button class="option" data-defend="${o.letter}" ${fuera?`disabled style="opacity:.35;pointer-events:none;"`:``}><span class="letter">${o.letter}</span><span>${O.escapeHtml(o.text)}</span></button>`;
+      }).join("")}</div>
+      ${keep ? `<p class="coop-hint" style="margin-top:var(--sp-3);">🃏 50/50 usado — vale la mitad de puntos si aciertas.</p>`
+             : (wildcardAvailable ? `<button class="btn btn-outline btn-sm" id="poker-wildcard" style="margin-top:var(--sp-4);">🃏 50/50 (elimina 2 — vale la mitad de puntos si aciertas)</button>` : ``)}
     </div>`;
 }
 
@@ -5450,8 +5463,13 @@ function wirePokerGameHandlers(round, phase){
     $$("[data-claim]").forEach(btn=> btn.addEventListener("click", ()=> mpPoker.submitClaim(btn.getAttribute("data-claim"))));
   }
   if(round && !round.attackerIsMe && phase === "defender_decide"){
-    $("#poker-confio").addEventListener("click", ()=> mpPoker.decideConfio());
-    $("#poker-dudo").addEventListener("click", ()=>{ mpPokerPhase = "defender_answer"; renderPokerGame(); });
+    // Estos botones NO existen si la carta del rival no está en nuestro banco
+    // (se pinta pokerQNotAvailable en su lugar): sin la guarda, el render
+    // entero reventaba con "addEventListener of null" y se quedaban sin
+    // enganchar el resto de manejadores de la vista.
+    const cf = $("#poker-confio"), du = $("#poker-dudo");
+    if(cf) cf.addEventListener("click", ()=> mpPoker.decideConfio());
+    if(du) du.addEventListener("click", ()=>{ mpPokerPhase = "defender_answer"; renderPokerGame(); });
   }
   if(round && !round.attackerIsMe && phase === "defender_answer"){
     $$("[data-defend]").forEach(btn=> btn.addEventListener("click", ()=> mpPoker.decideDudo(btn.getAttribute("data-defend"))));
@@ -5459,10 +5477,8 @@ function wirePokerGameHandlers(round, phase){
     if(wc) wc.addEventListener("click", ()=>{
       const keep = mpPoker.useWildcard();
       if(!keep) return;
-      $$("#poker-defend-options .option").forEach(btn=>{
-        if(!keep.includes(btn.getAttribute("data-defend"))){ btn.disabled = true; btn.style.opacity = ".35"; btn.style.pointerEvents = "none"; }
-      });
-      wc.remove();
+      mpPokerWildcardKeep = { turn: round.turn, letters: keep };
+      renderPokerGame();          // se repinta desde el estado, no se parchea el DOM
     });
   }
 }
