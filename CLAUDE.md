@@ -208,8 +208,21 @@ Reescritura **a mano, ítem por ítem** — ningún script genera contenido.
 `scripts/aplicar_reescritura.py` solo vuelca al JSON el texto ya escrito y
 valida (4 opciones, respuesta viva, sin repetidas, longitudes, explicación).
 
-**Progreso de la reescritura**: `archivo` 67/410 — topics `backstage`,
-`nuevo`, `abrir` e `informacion` cerrados enteros.
+**Progreso de la reescritura**: `archivo` 101/410 — topics `backstage`,
+`nuevo`, `abrir`, `informacion` y `guardar` cerrados enteros.
+
+**Efecto secundario en el motor (sep-2026), ya resuelto**: `framingOf()` de
+`engine.js` deducía un framing `"caso"` de la REDACCIÓN del enunciado
+(`/necesit|quieres|un usuario|estás trabajando/`…). Como la guía exige situar
+TODOS los enunciados, ese patrón acaba casando con casi todo el banco y deja
+de discriminar; peor, infla los framings de un concepto solo porque dos de sus
+preguntas dicen «quieres», que no es evidencia de transferencia. **Retirado**:
+los seis framings restantes son estructurales (`tipo`, `categoria`,
+`negativa`). Medido antes de tocar nada: cambiaban de framing 56 preguntas de
+2822 y **ningún** concepto bajaba de los 2 framings que exige `deriveMastery`.
+Lo destapó el escenario 6 de `tests/test_engine.js` (falsos positivos 2→5 con
+solo 8 preguntas reescritas). Diagnóstico reutilizable en
+`tests/diag_engine_falsepos.js`.
 
 ## Regla de oro: jerarquía de fuentes
 

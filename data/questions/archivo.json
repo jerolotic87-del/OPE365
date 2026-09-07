@@ -1896,7 +1896,7 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-31",
-    "enunciado": "¿Cuál de estos atajos ejecuta Guardar en Word 365 versión española?",
+    "enunciado": "Llevas media hora escribiendo y quieres guardar sin soltar el teclado ni abrir ningún cuadro. ¿Qué atajo guarda directamente?",
     "opciones": [
       {
         "letter": "A",
@@ -1912,12 +1912,12 @@
       },
       {
         "letter": "D",
-        "text": "Ctrl+Alt+G"
+        "text": "Alt+Ctrl+G"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+G guarda el documento (⚠️ en Word estándar Ctrl+G es «Ir a»; aquí está reasignado a Guardar). Ctrl+S aplica subrayado. Mayús+F11 pasa al campo anterior. Ctrl+Alt+G = Alt+Ctrl+G abre Pegado especial. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+G guarda el documento con su nombre y ubicación actuales, sin preguntar nada. · Ctrl+S es el distractor que más cae, y con motivo: es «Save» en el esquema internacional. Aquí subraya el texto seleccionado. · Mayús+F11 pasa al campo anterior del documento; su pareja F11 pasa al siguiente. · Alt+Ctrl+G abre Pegado especial. · Los cuatro existen y los cuatro hacen algo: no se puede acertar descartando el que suene raro. · Guardar tiene además otras dos combinaciones válidas, Mayús+F12 y Alt+Mayús+F2."
   },
   {
     "id": "archivo-40",
@@ -1931,7 +1931,7 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-32",
-    "enunciado": "¿Cuál de estos atajos ejecuta Guardar como en Word 365?",
+    "enunciado": "Tienes un documento ya guardado y quieres crear otro archivo a partir de él, con otro nombre. ¿Qué atajo abre Guardar como?",
     "opciones": [
       {
         "letter": "A",
@@ -1952,7 +1952,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F12 abre Guardar como. F11 pasa al campo siguiente. Mayús+F12 ejecuta Guardar, no Guardar como. Ctrl+F12 abre el cuadro Abrir. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "F12 abre Guardar como, para elegir nombre, carpeta y formato. · Mayús+F12 es la trampa fina: la misma tecla con un modificador, y hace Guardar a secas, que sobrescribe el archivo actual sin preguntar. Confundirlas es perder el original. · Ctrl+F12 completa el trío: abre el cuadro Abrir. Tres combinaciones sobre F12 y tres comandos distintos de Archivo. · F11 no es de esta familia: pasa al campo siguiente del documento. · Prueba en vivo del usuario."
   },
   {
     "id": "archivo-41",
@@ -1966,28 +1966,28 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-33",
-    "enunciado": "¿Qué ocurre cuando se usa Guardar por primera vez en un documento que aún no tiene nombre?",
+    "enunciado": "Escribes en un documento recién creado, que nunca has guardado, y pulsas Ctrl+G. ¿Qué pasa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se abre automáticamente el cuadro de diálogo Guardar como"
+        "text": "Word abre el cuadro Guardar como para que elijas nombre y carpeta"
       },
       {
         "letter": "B",
-        "text": "Se guarda automáticamente en la carpeta Documentos con un nombre temporal"
+        "text": "Word lo guarda en Documentos con el nombre que dé la primera línea"
       },
       {
         "letter": "C",
-        "text": "Word muestra un mensaje de error indicando que el archivo no tiene nombre"
+        "text": "Word avisa de que el documento no tiene nombre y no guarda nada"
       },
       {
         "letter": "D",
-        "text": "Se genera un archivo temporal con extensión .asd en la carpeta de recuperación"
+        "text": "Word lo guarda como archivo de Autorrecuperación hasta que le des nombre"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Cuando el documento no tiene nombre, cualquier orden de guardar abre el cuadro Guardar como para que el usuario asigne nombre y ubicación. Word no guarda automáticamente con nombre temporal. No hay mensaje de error. Los archivos .asd son de Autorrecuperación, no del guardado manual."
+    "explicacion": "Mientras el documento no tenga nombre y sitio, Guardar no puede sobrescribir nada, así que se comporta como Guardar como y abre el cuadro. A partir de la segunda vez ya guarda en silencio. · La opción B describe algo que Word sí hace a medias: propone como nombre la primera línea del texto, pero lo propone dentro del cuadro, no guarda solo. Es el distractor más creíble por eso. · Word no da ningún error: la situación es completamente normal. · Los archivos de Autorrecuperación existen y se van creando mientras escribes, pero son una red de seguridad paralela, no el resultado de pulsar Guardar."
   },
   {
     "id": "archivo-42",
@@ -2001,7 +2001,7 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-34",
-    "enunciado": "¿Qué campos incluye el cuadro de diálogo Guardar como de Word 365?",
+    "enunciado": "Abres el cuadro de diálogo Guardar como. Debajo del nombre del archivo aparecen varios campos editables. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
@@ -2009,20 +2009,20 @@
       },
       {
         "letter": "B",
-        "text": "Nombre de archivo, Tipo, Contraseña, Etiquetas y Guardar miniatura"
+        "text": "Nombre de archivo, Tipo, Autores, Etiquetas, Asunto y Guardar miniatura"
       },
       {
         "letter": "C",
-        "text": "Nombre de archivo, Tipo, Autores, Permisos, Título y Guardar miniatura"
+        "text": "Nombre de archivo, Tipo, Autores, Contraseña, Título y Guardar miniatura"
       },
       {
         "letter": "D",
-        "text": "Nombre de archivo, Tipo, Autores, Etiquetas, Resumen y Guardar miniatura"
+        "text": "Nombre de archivo, Tipo, Autores, Etiquetas, Título y Guardar como PDF"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Los campos reales son Nombre de archivo, Tipo, Autores, Etiquetas, Título y la casilla Guardar miniatura. Contraseña no aparece directamente en esos campos sino en Herramientas → Opciones generales. Permisos no es un campo del cuadro. Resumen no es ningún campo del cuadro."
+    "explicacion": "Los campos son Nombre de archivo, Tipo, Autores, Etiquetas y Título, más la casilla Guardar miniatura. · «Asunto» existe como propiedad del documento, pero se escribe en la ficha Resumen de las Propiedades avanzadas, no en este cuadro. · La contraseña tampoco está entre los campos: se pone desde Herramientas → Opciones generales, dentro de este mismo cuadro pero en otro sitio. · «Guardar como PDF» no es una casilla: el PDF es una entrada más del desplegable Tipo. · Las cuatro listas se diferencian en una sola palabra, así que hay que tener el cuadro visto de verdad."
   },
   {
     "id": "archivo-43",
@@ -2030,34 +2030,34 @@
     "bloque": "Archivo — Guardar y Guardar como",
     "tipo": "opcion_unica",
     "categoria": "concepto",
-    "negativa": true,
+    "negativa": false,
     "section": "archivo",
     "topic": "guardar",
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-35",
-    "enunciado": "¿Cuál de estos formatos NO aparece en la lista de tipos de archivo de Guardar como en Word 365?",
+    "enunciado": "Despliegas «Tipo» en el cuadro Guardar como para exportar el documento. ¿Cuál de estos formatos SÍ está en la lista?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".pages"
+        "text": "Documento XPS (*.xps)"
       },
       {
         "letter": "B",
-        "text": ".odt"
+        "text": "Documento de WordPerfect (*.wpd)"
       },
       {
         "letter": "C",
-        "text": ".rtf"
+        "text": "Texto de OpenOffice (*.sxw)"
       },
       {
         "letter": "D",
-        "text": ".mht"
+        "text": "Documento de Works (*.wps)"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El formato .pages es exclusivo de Apple Pages y no aparece en Word. Los formatos .odt, .rtf y .mht sí están disponibles en la lista de tipos de archivo de Guardar como."
+    "explicacion": "XPS es el formato de documento fijo de Microsoft, la respuesta de la casa al PDF, y sigue estando en la lista de Word 365 junto al propio PDF. Sorprende porque casi nadie lo usa. · Los otros tres son formatos reales de procesadores de texto de la competencia, y Word llegó a abrirlos o guardarlos en versiones antiguas mediante convertidores. Ya no aparecen en la lista. · El formato libre que SÍ está es otro: «Texto de OpenDocument (*.odt)», el de LibreOffice, que se confunde continuamente con el .sxw de la opción C. · Aquí no vale descartar por sonar raro: los cuatro suenan igual de raro."
   },
   {
     "id": "archivo-44",
@@ -2071,28 +2071,28 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-36",
-    "enunciado": "Para establecer una contraseña de apertura en un documento, ¿qué ruta se debe seguir desde el cuadro Guardar como?",
+    "enunciado": "Estás en el cuadro Guardar como y quieres ponerle al documento una contraseña para abrirlo. Despliegas el menú Herramientas. ¿Qué entrada eliges?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Herramientas → Opciones generales"
+        "text": "Opciones generales…"
       },
       {
         "letter": "B",
-        "text": "Herramientas → Opciones de seguridad"
+        "text": "Opciones para guardar…"
       },
       {
         "letter": "C",
-        "text": "Herramientas → Opciones para guardar"
+        "text": "Opciones web…"
       },
       {
         "letter": "D",
-        "text": "Herramientas → Comprimir imágenes"
+        "text": "Conectar a unidad de red…"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La contraseña de apertura se configura en Herramientas → Opciones generales dentro del cuadro Guardar como. Opciones de seguridad no existe como opción real en ese menú. Opciones para guardar también existe en Herramientas pero no gestiona contraseñas. Comprimir imágenes reduce el tamaño del archivo, no gestiona acceso."
+    "explicacion": "«Opciones generales» es el cuadro pequeño donde están la contraseña de apertura, la contraseña de escritura y la casilla de recomendar solo lectura. · «Opciones para guardar» es el distractor de más nivel: por el nombre parece el sitio natural, pero lleva directamente a Archivo → Opciones → Guardar, que configura el formato predeterminado y la Autorrecuperación, no las contraseñas de este archivo. · «Opciones web» ajusta cómo se comporta el documento guardado como página web. · «Conectar a unidad de red» monta una carpeta de red para poder guardar en ella. · Las cuatro son reales: no hay ninguna inventada que descartar, solo hay que saber cuál es cuál."
   },
   {
     "id": "archivo-45",
@@ -2106,28 +2106,28 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-37",
-    "enunciado": "¿Qué contiene el cuadro Opciones generales accesible desde Herramientas en Guardar como?",
+    "enunciado": "Abres Herramientas → Opciones generales desde el cuadro Guardar como. ¿Qué te ofrece ese cuadro?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Contraseña de apertura, contraseña de escritura, solo lectura recomendado,"
+        "text": "Contraseña de apertura, contraseña de escritura y recomendar solo lectura"
       },
       {
         "letter": "B",
-        "text": "Contraseña de apertura, contraseña de escritura, cifrado AES y firma digital"
+        "text": "Contraseña de apertura, contraseña de escritura y cifrado con certificado"
       },
       {
         "letter": "C",
-        "text": "Contraseña de apertura, permisos de usuario, restricciones de edición"
+        "text": "Contraseña de apertura, permisos por usuario y restricciones de edición"
       },
       {
         "letter": "D",
-        "text": "Contraseña de apertura, contraseña de escritura, resolución de imagen"
+        "text": "Contraseña de apertura, contraseña de escritura y firma digital invisible"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Opciones generales contiene exactamente: contraseña de apertura, contraseña de escritura, recomendado en modo de solo lectura, proteger documento y seguridad de macros. No incluye cifrado AES ni firma digital de forma directa, ni permisos de usuario, ni resolución de imagen."
+    "explicacion": "El cuadro tiene las dos contraseñas y la casilla «Se recomienda solo lectura», más los botones Proteger documento… y Seguridad de macros…. · Las dos contraseñas no son lo mismo y es lo que más se pregunta: la de apertura impide ver el documento; la de escritura deja abrirlo en solo lectura a quien no la sepa. · El cifrado con certificado y los permisos por usuario existen en Word, pero en «Restringir el acceso» del menú Proteger documento, no aquí. · La firma digital invisible también existe, y también está en Proteger documento. · Las tres opciones falsas mezclan este cuadro con su vecino de Backstage, que es la confusión real."
   },
   {
     "id": "archivo-46",
@@ -2141,28 +2141,28 @@
     "subtopic": "Autorrecuperación",
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-38",
-    "enunciado": "¿Desde qué ruta se configura el intervalo de tiempo de la Autorrecuperación en Word 365?",
+    "enunciado": "Quieres que Word guarde la información de Autorrecuperación cada 5 minutos en lugar de cada 10. ¿En qué panel de Opciones lo cambias?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Guardar → Guardar información de Autorrecuperación cada"
+        "text": "Guardar"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Guardar información de Autorrecuperación cada"
+        "text": "Avanzadas"
       },
       {
         "letter": "C",
-        "text": "Archivo → Información → Administrar documento → Configurar Autorrecuperación"
+        "text": "General"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → General → Autoguardado y Autorrecuperación"
+        "text": "Revisión"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La configuración de Autorrecuperación está en Archivo → Opciones → Guardar. No se encuentra en Avanzadas ni en Información ni en General. Administrar documento gestiona versiones ya guardadas, no configura el intervalo de guardado automático."
+    "explicacion": "El panel Guardar reúne todo lo relacionado con guardar: el formato predeterminado, el intervalo de Autorrecuperación, la carpeta donde se dejan esos archivos y la ubicación local predeterminada. · Avanzadas es el distractor serio porque también tiene una sección «Guardar», con cosas como crear siempre copia de seguridad o guardar en segundo plano; pero el intervalo no está ahí. · General es la apariencia y el nombre de usuario. · Revisión es la ortografía y la gramática. · Los cuatro son paneles reales del cuadro Opciones."
   },
   {
     "id": "archivo-47",
@@ -2176,28 +2176,28 @@
     "subtopic": "Autorrecuperación",
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-39",
-    "enunciado": "¿Desde dónde se puede acceder a los archivos guardados automáticamente por la Autorrecuperación?",
+    "enunciado": "Quieres saber en qué carpeta del disco deja Word los archivos de Autorrecuperación, y cambiarla. ¿Dónde se hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Información"
+        "text": "Archivo → Opciones → Guardar → Ubicación de archivo con Autorrecuperación"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Guardar → Ver archivos de Autorrecuperación"
+        "text": "Archivo → Opciones → Avanzadas → General → Ubicación de archivos…"
       },
       {
         "letter": "C",
-        "text": "Archivo → Reciente → Archivos de Autorrecuperación"
+        "text": "Archivo → Información → Administrar documento → Recuperar no guardados"
       },
       {
         "letter": "D",
-        "text": "Archivo → Abrir → Examinar → Carpeta de recuperación"
+        "text": "Archivo → Opciones → Centro de confianza → Ubicaciones de confianza"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El acceso a los archivos autoguardados se realiza desde Archivo → Información. No existe ningún enlace directo en Opciones → Guardar para ver esos archivos. La sección Reciente no tiene una subsección de Autorrecuperación. El explorador de archivos no es la vía recomendada."
+    "explicacion": "En Opciones → Guardar está el campo «Ubicación de archivo con Autorrecuperación», con el botón Examinar para cambiarlo, justo debajo del intervalo de minutos. · La opción B es el distractor más difícil de todos: ese cuadro existe de verdad, se llega desde Avanzadas → General → «Ubicación de archivos…» y lista carpetas de Word, pero es donde se fijan las de documentos, plantillas e inicio, no la de Autorrecuperación. · «Administrar documento» abre esa carpeta para rescatar un archivo, pero no dice cuál es ni deja cambiarla. · Las ubicaciones de confianza del Centro de confianza son carpetas desde las que se permite ejecutar macros: hablan de carpetas, pero de otra cosa."
   },
   {
     "id": "archivo-114",
@@ -2211,7 +2211,7 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-106",
-    "enunciado": "¿Cuál de los siguientes atajos cierra la aplicación Word completa y no solo el documento activo?",
+    "enunciado": "Tienes un solo documento abierto y quieres cerrar Word entero con el teclado. ¿Qué atajo llega a cerrar el programa?",
     "opciones": [
       {
         "letter": "A",
@@ -2232,7 +2232,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+F4 es el único que llega a cerrar Word: primero cierra los documentos abiertos uno a uno y, cuando solo queda uno, al pulsarlo de nuevo cierra el programa. Ctrl+F4 cierra solo el documento activo. Ctrl+W quita el formato de párrafo (no cierra nada). Ctrl+R no tiene ninguna acción asignada en la versión española."
+    "explicacion": "Alt+F4 va cerrando los documentos abiertos uno a uno y, cuando ya solo queda uno, al volver a pulsarlo cierra la aplicación. Es el único de los cuatro que llega al programa. · Ctrl+F4 cierra el documento activo y deja Word abierto, aunque no quede ningún documento. · Ctrl+W es el gran engaño de esta lista: en el esquema internacional cierra la ventana, pero aquí quita el formato de párrafo de la selección. Prueba en vivo del usuario. · Ctrl+R no hace absolutamente nada en esta instalación. · Tres de los cuatro suenan a cerrar y solo uno cierra."
   },
   {
     "id": "archivo-115",
@@ -2246,28 +2246,28 @@
     "subtopic": "Autorrecuperación",
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-126",
-    "enunciado": "Un usuario quiere recuperar un documento que cerró por error sin guardar. ¿Cuáles son las DOS rutas válidas para hacerlo?",
+    "enunciado": "Ya conoces la ruta Información → Administrar documento para recuperar documentos sin guardar. Hay un segundo sitio en Backstage que lleva exactamente a lo mismo. ¿Cuál es?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Reciente → Recuperar documentos sin guardar y"
+        "text": "El botón del final del panel Abrir"
       },
       {
         "letter": "B",
-        "text": "Archivo → Abrir → Examinar → Carpeta .asd y"
+        "text": "El botón del final del panel Inicio"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Guardar → Ver archivos de recuperación y"
+        "text": "Un enlace del panel Compartir"
       },
       {
         "letter": "D",
-        "text": "Archivo → Información → Comprobar si hay problemas → Recuperar y"
+        "text": "El botón Restaurar del Historial de versiones"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Las dos rutas válidas son Archivo → Reciente → Recuperar documentos sin guardar y Archivo → Información → Administrar documento → Recuperar documentos no guardados. Las demás combinaciones mezclan rutas reales con rutas inventadas."
+    "explicacion": "Al final del panel Abrir, debajo de la lista de recientes, está el botón «Recuperar documentos sin guardar», que abre la misma carpeta de archivos .asd. Dos caminos, un solo destino. · El panel Inicio también lista documentos recientes y por eso resulta creíble, pero no lleva ese botón: acaba en «Más documentos →». · Compartir gestiona invitaciones y vínculos; no toca archivos locales. · El Historial de versiones sí restaura trabajo anterior, pero solo de archivos ya guardados en OneDrive o SharePoint; con un documento que nunca se guardó no tiene nada que restaurar. Esa es la diferencia de fondo: lo no guardado y lo guardado antes son dos problemas distintos."
   },
   {
     "id": "archivo-116",
@@ -2281,28 +2281,28 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-127",
-    "enunciado": "¿Cuál de las siguientes afirmaciones describe correctamente la diferencia entre Inspeccionar documento y Comprobar compatibilidad?",
+    "enunciado": "Ejecutas «Inspeccionar documento», Word encuentra propiedades y datos personales, y pulsas «Quitar todo». ¿Qué conviene saber antes de hacerlo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Inspeccionar documento busca metadatos e información personal oculta;"
+        "text": "Lo quitado no se recupera deshaciendo: conviene guardar una copia antes"
       },
       {
         "letter": "B",
-        "text": "Inspeccionar documento detecta funciones incompatibles con versiones"
+        "text": "Lo quitado se puede recuperar con Ctrl+Z mientras no cierres el documento"
       },
       {
         "letter": "C",
-        "text": "Ambas opciones buscan metadatos ocultos pero en distintos formatos"
+        "text": "Word guarda una copia de seguridad automática antes de quitar nada"
       },
       {
         "letter": "D",
-        "text": "Inspeccionar documento comprueba la accesibilidad del contenido;"
+        "text": "Lo quitado se recupera desde el Historial de versiones aunque el archivo sea local"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Inspeccionar documento busca propiedades, nombre de autor, encabezados y metadatos ocultos. Comprobar compatibilidad comprueba características no compatibles con versiones anteriores. Las opciones B, C y D invierten o confunden ambas funciones."
+    "explicacion": "El propio Inspector avisa de ello antes de actuar: los resultados de la eliminación no se pueden deshacer, así que lo prudente es guardar una copia del documento antes de inspeccionarlo. · La opción B es lo que todo el mundo da por hecho, y es justo lo que no funciona aquí; por eso es el distractor que más cae. · Word no crea ninguna copia de seguridad por su cuenta al inspeccionar; la casilla «Crear siempre una copia de seguridad» existe, pero está en Opciones → Avanzadas y actúa al guardar. · El Historial de versiones solo existe con el archivo en OneDrive o SharePoint, y la opción D lo da por bueno también en local, que es falso."
   },
   {
     "id": "archivo-118",
@@ -2316,63 +2316,63 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-129",
-    "enunciado": "¿Cuál de las siguientes rutas permite cambiar el formato de guardado predeterminado Y configurar el intervalo de Autorrecuperación en un solo cuadro de opciones?",
+    "enunciado": "Quieres cambiar el formato con el que Word guarda por defecto y, de paso, el intervalo de Autorrecuperación. ¿Qué panel de Opciones tiene las dos cosas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Guardar"
+        "text": "Guardar"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas"
+        "text": "Avanzadas"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → General"
+        "text": "General"
       },
       {
         "letter": "D",
-        "text": "Archivo → Información → Administrar documento"
+        "text": "Accesibilidad"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La pestaña Guardar del cuadro Opciones contiene tanto el formato predeterminado de guardado como el intervalo de Autorrecuperación. Avanzadas tiene opciones de guardado pero no el formato predeterminado. General no contiene ninguna de las dos. Administrar documento no es un cuadro de configuración."
+    "explicacion": "El panel Guardar abre con el desplegable «Guardar archivos en formato» y, justo debajo, el intervalo de Autorrecuperación y su carpeta. Las dos cosas en la primera pantalla. · Avanzadas tiene su propia sección «Guardar», con la copia de seguridad automática y el guardado en segundo plano, pero ni el formato predeterminado ni el intervalo. Es el distractor de nivel porque de verdad contiene opciones de guardado. · General es apariencia, nombre de usuario y opciones de inicio. · Accesibilidad configura el texto alternativo y las sugerencias del comprobador. · Los cuatro son paneles reales de Opciones."
   },
   {
     "id": "archivo-121",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Guardar y Guardar como",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "concepto",
     "negativa": false,
     "section": "archivo",
     "topic": "guardar",
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-132",
-    "enunciado": "¿Cuál es la diferencia entre las opciones Guardar y Guardar como en Word 365?",
+    "enunciado": "Un documento ya está guardado con nombre y carpeta. ¿En qué se diferencian Guardar y Guardar como a partir de ese momento?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar almacena el documento con su nombre y ubicación actuales;"
+        "text": "Guardar sobrescribe el archivo actual; Guardar como crea otro y deja el original"
       },
       {
         "letter": "B",
-        "text": "Guardar siempre abre el cuadro de diálogo; Guardar como guarda"
+        "text": "Guardar abre siempre el cuadro de diálogo; Guardar como guarda en silencio"
       },
       {
         "letter": "C",
-        "text": "Guardar solo funciona con documentos ya guardados anteriormente;"
+        "text": "Guardar solo escribe los cambios nuevos; Guardar como reescribe el archivo entero"
       },
       {
         "letter": "D",
-        "text": "Guardar usa Ctrl+G; Guardar como usa Ctrl+Mayús+G"
+        "text": "Guardar mantiene el formato; Guardar como convierte siempre el archivo a PDF"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Guardar almacena con los parámetros actuales y solo abre el cuadro de diálogo si el documento no tiene nombre todavía. Guardar como siempre permite cambiar nombre, formato y ubicación. El atajo de Guardar como es F12, no Ctrl+Mayús+G."
+    "explicacion": "Guardar escribe encima del archivo que ya existe, sin preguntar. Guardar como abre el cuadro para elegir otro nombre, otra carpeta u otro formato, y a partir de ahí trabajas sobre el archivo nuevo: el original se queda como estaba. · La opción B invierte exactamente los dos comportamientos, que es el error más común. · La opción C suena técnica y verosímil, pero Word no hace guardado incremental de ese modo desde el punto de vista del usuario. · Guardar como no convierte a nada por su cuenta: el PDF es solo una entrada más del desplegable Tipo. · Único matiz: la primera vez, con un documento sin nombre, Guardar se comporta como Guardar como."
   },
   {
     "id": "archivo-122",
@@ -2386,7 +2386,7 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-133",
-    "enunciado": "¿Cuál de los siguientes tipos de archivo permite guardar macros de VBA junto con el contenido del documento?",
+    "enunciado": "Has grabado una macro de VBA y quieres guardar el documento sin perderla. ¿Con qué tipo de archivo lo guardas?",
     "opciones": [
       {
         "letter": "A",
@@ -2407,7 +2407,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El formato .docm es el documento de Word habilitado para macros. El formato .docx no permite almacenar macros de VBA. El formato .dotx es una plantilla sin macros. El formato .rtf no soporta macros de VBA."
+    "explicacion": "La «m» final es la marca de «habilitado con macros»: .docm es el documento que las conserva. Si guardas en .docx, Word avisa de que las macros se van a perder. · .dotx es plantilla y además sin macros, así que falla por partida doble; la plantilla que sí las admite es .dotm. · .rtf conserva el formato del texto pero no guarda código. · La regla vale para los cuatro formatos modernos: la x no admite macros y la m sí, tanto en documentos como en plantillas."
   },
   {
     "id": "archivo-123",
@@ -2421,7 +2421,7 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-135",
-    "enunciado": "¿Cuál de las siguientes extensiones corresponde a una plantilla de Word sin macros en Word 365?",
+    "enunciado": "Has montado un modelo de informe y quieres guardarlo como plantilla, sin macros, en el formato actual de Word. ¿Qué extensión le corresponde?",
     "opciones": [
       {
         "letter": "A",
@@ -2433,16 +2433,16 @@
       },
       {
         "letter": "C",
-        "text": ".docx"
+        "text": ".dot"
       },
       {
         "letter": "D",
-        "text": ".dot"
+        "text": ".docx"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La extensión .dotx es la plantilla de Word sin macros. La extensión .dotm es la plantilla con macros. La extensión .docx es el documento estándar. La extensión .dot es la plantilla del formato antiguo Word 97-2003."
+    "explicacion": "Las cuatro son reales y las cuatro están en el desplegable Tipo, así que hay que leer las dos condiciones del enunciado: plantilla y sin macros. · .dotx cumple las dos: «dot» de plantilla y «x» de sin macros. · .dotm es plantilla pero con macros. · .dot es plantilla y sin macros, pero del formato antiguo, de Word 97-2003, y el enunciado pide el actual: es el distractor que exige leer con cuidado. · .docx es del formato actual y sin macros, pero es un documento, no una plantilla."
   },
   {
     "id": "archivo-124",
@@ -2456,28 +2456,28 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-136",
-    "enunciado": "¿Cuál de los siguientes formatos NO está disponible en la lista de tipos de archivo del cuadro Guardar como de Word 365?",
+    "enunciado": "Repasas el desplegable «Tipo» del cuadro Guardar como. ¿Cuál de estos formatos NO está en la lista?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".xlsx"
+        "text": "Documento XML de Word 2003 (*.xml)"
       },
       {
         "letter": "B",
-        "text": ".pdf"
+        "text": "Página web, filtrada"
       },
       {
         "letter": "C",
-        "text": ".odt"
+        "text": "Plantilla de Word 97-2003 (*.dot)"
       },
       {
         "letter": "D",
-        "text": ".xps"
+        "text": "Libro de Excel (*.xlsx)"
       }
     ],
     "matching": null,
-    "respuesta": "A",
-    "explicacion": "El formato .xlsx es de Excel y no aparece en Word. Los formatos .pdf, .odt y .xps sí están disponibles en la lista de tipos de archivo de Guardar como en Word 365."
+    "respuesta": "D",
+    "explicacion": "Word no guarda hojas de cálculo: .xlsx no aparece en su lista, por mucho que las dos aplicaciones sean de Office. · Los otros tres sí están, y están puestos precisamente porque casi nadie los usa: «Documento XML de Word 2003» convive en la lista con «Documento XML de Word» (son dos entradas distintas con la misma extensión), «Página web, filtrada» acompaña a «Página web» y «Página web de un solo archivo», y «Plantilla de Word 97-2003 (*.dot)» sigue ahí junto a .dotx y .dotm. · Quien solo conozca .docx y .pdf falla esta pregunta aunque acierte por eliminación."
   },
   {
     "id": "archivo-125",
@@ -2491,7 +2491,7 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-137",
-    "enunciado": "¿Qué sintaxis se usa para imprimir solo las páginas de la sección 1 que van desde la página 1 hasta la página 4?",
+    "enunciado": "En el panel Imprimir escribes en el campo Páginas para sacar de la página 1 a la 4, pero solo las de la sección 1. ¿Cómo se escribe?",
     "opciones": [
       {
         "letter": "A",
@@ -2512,7 +2512,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La sintaxis correcta para páginas por sección es pNsN donde p indica página y s indica sección, siempre en ese orden. Las opciones B, C y D alteran el orden o el formato de la sintaxis."
+    "explicacion": "La sintaxis es pNsN: primero la p de página y su número, después la s de sección y el suyo, y cada extremo del rango se escribe completo. El propio tooltip del campo lo indica con el ejemplo «p1s1, p1s2, p1s3-p8s3». · La opción B pone la sección delante, que es como lo diría cualquiera en voz alta y por eso engaña. · La opción C se come la p, y sin ella Word no sabe que el número es una página. · La opción D solo cualifica el extremo final del rango y deja el inicial suelto; el rango tiene que estar completo por los dos lados. · Los separadores del campo son la coma para listas y el guion para rangos."
   },
   {
     "id": "archivo-127",
@@ -2526,7 +2526,7 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-151",
-    "enunciado": "¿Qué atajo abre un archivo existente desde la Vista Backstage en Word 365 versión española?",
+    "enunciado": "Quieres que Word te muestre la Vista Backstage con la lista de documentos recientes, para elegir uno. ¿Qué atajo lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -2547,7 +2547,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+A abre Abrir desde Backstage. Ctrl+O da formato automático al documento. Ctrl+F12 abre el cuadro de diálogo Abrir. Ctrl+Mayús+A aplica el estilo Normal. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+A abre Backstage por el panel Abrir, con los recientes y la columna de orígenes. · Ctrl+F12 también abre, y es el distractor bueno: lleva al cuadro de diálogo Abrir de Windows, que no tiene lista de recientes ni panel de Backstage. El enunciado pide justo lo otro. · Ctrl+O da formato automático al documento entero: no abre nada, y es el que hereda la confusión del «Open» inglés. · Ctrl+Mayús+A aplica el estilo Normal a la selección. · Los cuatro existen; dos abren algo y solo uno abre lo que se pide."
   },
   {
     "id": "archivo-128",
@@ -2561,7 +2561,7 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-152",
-    "enunciado": "¿Qué atajo alternativo también abre un archivo existente en Word 365 además de Ctrl+A?",
+    "enunciado": "Además de Ctrl+F12, hay otra combinación que lleva al cuadro de diálogo Abrir. ¿Cuál?",
     "opciones": [
       {
         "letter": "A",
@@ -2569,20 +2569,20 @@
       },
       {
         "letter": "B",
-        "text": "Alt+F2"
+        "text": "Alt+Mayús+F2"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+F2"
+        "text": "Alt+F2"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+F2"
+        "text": "Ctrl+Mayús+F2"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+F2 es el atajo alternativo para abrir un documento. Alt+F2 no tiene función asignada para abrir. Ctrl+Mayús+F2 no existe como atajo de apertura. Alt+Mayús+F2 guarda el documento, no lo abre."
+    "explicacion": "Alt+Ctrl+F2 está asignado al mismo comando que Ctrl+F12: abrir un documento existente. Muchos comandos de Archivo tienen dos o tres combinaciones. · Alt+Mayús+F2 es el distractor de máximo nivel: se diferencia en una sola tecla y también es real, pero guarda el documento, igual que Ctrl+G y Mayús+F12. Un dedo de más y en vez de abrir has guardado. · Alt+F2 y Ctrl+Mayús+F2 no tienen función asignada. · Las cuatro son combinaciones sobre F2 con modificadores distintos: aquí no hay forma de descartar por la forma."
   },
   {
     "id": "archivo-129",
@@ -2596,28 +2596,28 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-314",
-    "enunciado": "¿Qué atajo abre el cuadro de personalización de métodos abreviados de teclado en Word 365?",
+    "enunciado": "Quieres abrir el cuadro «Personalizar teclado» para reasignar atajos a tu gusto. ¿Qué combinación lo abre directamente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Ctrl+más (teclado numérico)"
+        "text": "Alt+Ctrl+signo más del teclado numérico"
       },
       {
         "letter": "B",
-        "text": "Ctrl+más"
+        "text": "Ctrl+signo más del teclado numérico"
       },
       {
         "letter": "C",
-        "text": "Alt+más"
+        "text": "Alt+Mayús+signo más del teclado numérico"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+más"
+        "text": "Ctrl+Mayús+signo más del teclado numérico"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl++ del teclado numérico abre el cuadro para personalizar los métodos abreviados de teclado. Ctrl++ del numérico acerca el zoom. Alt++ y Ctrl+Mayús++ no tienen función (el superíndice no tiene atajo en este Word)."
+    "explicacion": "Alt+Ctrl con el signo más del teclado NUMÉRICO abre «Personalizar teclado», el mismo cuadro al que se llega por Opciones → Personalizar cinta → Personalizar…. Prueba en vivo del usuario. · Tiene que ser el más del bloque numérico: con el de la fila superior no funciona, y ese detalle es la mitad de la pregunta. · Ctrl con el más del numérico acerca el zoom. · Las otras dos combinaciones no tienen función asignada. · Es un atajo raro de recordar precisamente porque sirve para reasignar los demás."
   },
   {
     "id": "archivo-130",
@@ -2631,7 +2631,7 @@
     "subtopic": null,
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-330",
-    "enunciado": "¿Qué atajo muestra la información del sistema de Microsoft en Word 365?",
+    "enunciado": "¿Qué combinación lanza la aplicación Información del sistema de Microsoft desde Word?",
     "opciones": [
       {
         "letter": "A",
@@ -2647,12 +2647,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+Mayús+F1"
+        "text": "Alt+Mayús+F1"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+F1 inicia la Información del sistema de Microsoft. Alt+F1 pasa al campo siguiente. Ctrl+F1 no tiene función asignada en este Word. Alt+Ctrl+Mayús+F1 no tiene función."
+    "explicacion": "Alt+Ctrl+F1 abre la Información del sistema de Microsoft, la herramienta que resume hardware, controladores y componentes instalados. Es de los atajos más olvidados del programa. · Ctrl+F1 sí tiene función, y muy visible: contrae o expande la cinta de opciones. Es el distractor más peligroso porque cualquiera lo ha pulsado sin querer alguna vez. · Alt+F1 pasa al campo siguiente del documento, igual que F11. · Alt+Mayús+F1 hace lo contrario: pasa al campo anterior, igual que Mayús+F11. · Las cuatro están asignadas: ninguna se puede descartar por estar libre."
   },
   {
     "id": "archivo-131",
@@ -2667,28 +2667,28 @@
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "gen-atajo-8",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado abre el cuadro de impresión en Word 365?",
+    "enunciado": "Quieres ver la vista previa de impresión y ajustar copias y márgenes antes de imprimir. ¿Qué atajo te lleva ahí?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+C"
+        "text": "Ctrl+P"
       },
       {
         "letter": "B",
-        "text": "Mayús+Abajo"
+        "text": "Ctrl+F12"
       },
       {
         "letter": "C",
-        "text": "Mayús+F1"
+        "text": "Mayús+F12"
       },
       {
         "letter": "D",
-        "text": "Ctrl+P"
+        "text": "Alt+Ctrl+F1"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Abre la vista Backstage de Impresión, donde se configuran las opciones de impresión antes de enviar el documento a la impresora."
+    "respuesta": "A",
+    "explicacion": "Ctrl+P abre la Vista Backstage por el panel Imprimir, con la vista previa a la derecha y toda la configuración a la izquierda: impresora, copias, intercalado, orientación, tamaño, márgenes y páginas por hoja. · Ctrl+F12 abre el cuadro Abrir. · Mayús+F12 guarda el documento, sin avisar. · Alt+Ctrl+F1 lanza la Información del sistema de Microsoft. · Los cuatro son atajos reales de la familia Archivo, así que no hay ninguno descartable: hay que saber cuál es cuál."
   },
   {
     "id": "archivo-132",
@@ -2703,28 +2703,28 @@
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "gen-atajo-26",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también guarda el documento en Word 365, además de Ctrl+G?",
+    "enunciado": "Además de Ctrl+G, ¿cuál de estas combinaciones guarda el documento?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+F5"
+        "text": "Mayús+F12"
       },
       {
         "letter": "B",
-        "text": "Ctrl+W"
+        "text": "F12"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Arriba"
+        "text": "Ctrl+F12"
       },
       {
         "letter": "D",
-        "text": "Mayús+F12"
+        "text": "Alt+Ctrl+F2"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Guarda el documento activo; es una segunda combinación asignada a la misma función que Ctrl+G."
+    "respuesta": "A",
+    "explicacion": "Mayús+F12 guarda el documento, exactamente igual que Ctrl+G: mismo comando, otra combinación. · Las cuatro giran alrededor de F12 y F2, y las cuatro son reales, así que el ejercicio consiste en distinguir cuatro comandos de Archivo que se parecen mucho al teclearlos. · F12 abre Guardar como, que no es lo mismo: pide nombre y sitio. · Ctrl+F12 abre el cuadro Abrir. · Alt+Ctrl+F2 también abre. · Guardar tiene todavía una tercera combinación: Alt+Mayús+F2."
   },
   {
     "id": "archivo-133",
@@ -2739,28 +2739,28 @@
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "gen-atajo-27",
     "generado": true,
-    "enunciado": "¿Qué otro atajo alternativo también guarda el documento en Word 365, además de Ctrl+G y Mayús+F12?",
+    "enunciado": "Guardar tiene tres combinaciones asignadas en esta instalación. Dos son Ctrl+G y Mayús+F12. ¿Cuál es la tercera?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+Z"
-      },
-      {
-        "letter": "B",
         "text": "Alt+Mayús+F2"
       },
       {
+        "letter": "B",
+        "text": "Alt+Ctrl+F2"
+      },
+      {
         "letter": "C",
-        "text": "Ctrl+Mayús+U"
+        "text": "Alt+Mayús+F1"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+W"
+        "text": "Alt+F1"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Guarda el documento activo; es una tercera combinación asignada a la misma función que Ctrl+G y Mayús+F12."
+    "respuesta": "A",
+    "explicacion": "Alt+Mayús+F2 es la tercera combinación de Guardar. · Alt+Ctrl+F2 se diferencia en una sola tecla y hace lo contrario de guardar: abre un documento existente. Confundirlas es el error clásico, y por eso es el mejor distractor posible aquí. · Alt+Mayús+F1 pasa al campo anterior del documento y Alt+F1 al siguiente: las dos son de navegación por campos, nada que ver con Archivo, pero comparten la misma pinta. · Las cuatro están asignadas: ninguna sobra."
   },
   {
     "id": "archivo-396",
@@ -2775,28 +2775,28 @@
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "neg-archivo-04",
     "generado": true,
-    "enunciado": "¿Cuál de estas NO es una opción del menú Herramientas del cuadro Guardar como?",
+    "enunciado": "Despliegas el menú Herramientas del cuadro Guardar como. ¿Cuál de estas entradas NO aparece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones para guardar..."
+        "text": "Opciones para guardar…"
       },
       {
         "letter": "B",
-        "text": "Opciones generales..."
+        "text": "Opciones generales…"
       },
       {
         "letter": "C",
-        "text": "Comprimir imágenes..."
+        "text": "Comprimir imágenes…"
       },
       {
         "letter": "D",
-        "text": "Comprobar accesibilidad..."
+        "text": "Comprobar accesibilidad…"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "El menú Herramientas de Guardar como tiene: Conectar a unidad de red, Opciones para guardar, Opciones generales, Opciones web y Comprimir imágenes. No incluye Comprobar accesibilidad."
+    "explicacion": "El menú tiene cinco entradas: Conectar a unidad de red, Opciones para guardar, Opciones generales, Opciones web y Comprimir imágenes. · «Comprobar accesibilidad» existe en Word, y hasta en tres sitios distintos (Revisar, Información → Comprobar si hay problemas y la barra de estado), pero no aquí. Es el tipo de distractor que solo se descarta sabiendo el menú, no razonando: revisar la accesibilidad antes de guardar sería de lo más lógico. · «Comprimir imágenes» es el que sorprende por estar: reduce el peso de las fotos justo antes de escribir el archivo, que es donde tiene sentido."
   },
   {
     "id": "archivo-398",
@@ -2811,28 +2811,28 @@
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "neg-archivo-06",
     "generado": true,
-    "enunciado": "¿Cuál de estos NO es un formato disponible en Guardar como?",
+    "enunciado": "Repasas el desplegable «Tipo» de Guardar como. ¿Cuál de estas entradas NO existe en él?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".docx"
+        "text": "Página web, filtrada"
       },
       {
         "letter": "B",
-        "text": ".docm"
+        "text": "Documento Open XML estricto (*.docx)"
       },
       {
         "letter": "C",
-        "text": ".odt"
+        "text": "Documento XML de Word 2003 (*.xml)"
       },
       {
         "letter": "D",
-        "text": ".pages"
+        "text": "Documento de Apple Pages (*.pages)"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "«.pages» es el formato de Apple Pages y no aparece en la lista de Word. Sí están .docx, .docm (con macros) y .odt (OpenDocument)."
+    "explicacion": "Word no guarda en el formato de Apple Pages: ni lo abre ni lo escribe. · Las otras tres son entradas reales y de las menos conocidas de la lista, puestas a propósito para que no se acierte por descarte. «Documento Open XML estricto» comparte extensión .docx con el documento normal pero se ciñe al estándar ISO sin extensiones de Microsoft. «Página web, filtrada» guarda HTML quitando el marcado propio de Office. «Documento XML de Word 2003» convive con «Documento XML de Word»: dos entradas distintas con la misma extensión .xml. · El formato de la competencia que SÍ está es «Texto de OpenDocument (*.odt)»."
   },
   {
     "id": "archivo-401",
@@ -2847,28 +2847,28 @@
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "neg-archivo-09",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre Guardar es FALSA?",
+    "enunciado": "¿Cuál de estas afirmaciones sobre Guardar y Guardar como es FALSA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Si el documento está en OneDrive, Backstage muestra «Guardar una copia»"
+        "text": "Con el archivo en OneDrive, el panel de Backstage muestra «Guardar una copia»"
       },
       {
         "letter": "B",
-        "text": "Si está guardado en local, muestra «Guardar como»"
+        "text": "Con el archivo en el equipo, el panel muestra «Guardar» y «Guardar como»"
       },
       {
         "letter": "C",
-        "text": "Guardar sobrescribe el archivo actual"
+        "text": "La primera vez en un documento nuevo, Guardar abre el cuadro Guardar como"
       },
       {
         "letter": "D",
-        "text": "La primera vez que usas Guardar en un documento nuevo, lo borra sin preguntar"
+        "text": "Guardar como sobrescribe el archivo original y no deja copia de él"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Guardar nunca borra nada: la primera vez que se usa en un documento sin nombre se comporta como Guardar como y pide dónde guardarlo."
+    "explicacion": "Guardar como hace justo lo contrario: crea un archivo nuevo con el nombre, la carpeta o el formato que elijas, y el original se queda intacto en su sitio. El que sobrescribe es Guardar. · Las otras tres son ciertas y describen el mismo mecanismo desde tres ángulos: el nombre de la entrada cambia según dónde viva el archivo, y Guardar solo pregunta cuando aún no hay nada que sobrescribir. · La opción D es peligrosa porque describe con exactitud lo que hace el otro comando: quien tenga los dos cambiados de sitio en la cabeza la dará por buena."
   },
   {
     "id": "archivo-372",
@@ -2887,7 +2887,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "«Opciones para guardar…» lleva a Archivo ▸ Opciones ▸ Guardar."
+    "explicacion": "Verdadero, y son exactamente esas cinco. · «Opciones para guardar…» no abre nada propio: lleva a Archivo → Opciones → Guardar, el mismo panel de siempre. · «Opciones generales…» es el que guarda las contraseñas de apertura y de escritura de este documento. · «Comprimir imágenes…» es el que más sorprende de la lista, porque parece de la pestaña Formato de imagen; aquí tiene sentido porque reduce el peso justo antes de escribir el archivo."
   },
   {
     "id": "archivo-373",
@@ -2902,11 +2902,11 @@
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "vf-archivo-bk23",
     "generado": true,
-    "enunciado": "«Opciones generales» (Herramientas del cuadro Guardar como) es donde se pone una contraseña de apertura o de escritura del documento.",
+    "enunciado": "«Opciones generales», en el menú Herramientas del cuadro Guardar como, es donde se pone la contraseña de apertura o la de escritura del documento.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "También «Recomendado solo lectura» y la opción de crear siempre una copia de seguridad."
+    "explicacion": "Verdadero. · Son dos contraseñas distintas y es la distinción que más se pregunta: la de apertura impide ver el documento a quien no la tenga; la de escritura deja abrirlo en solo lectura y solo pide la clave para poder modificarlo. · El mismo cuadro trae la casilla «Se recomienda solo lectura» y los botones Proteger documento… y Seguridad de macros…. · La contraseña de apertura también se puede poner desde Información → Proteger documento → Cifrar con contraseña: son dos puertas al mismo sitio."
   },
   {
     "id": "archivo-374",
@@ -2925,7 +2925,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: sí lo incluye («Texto de OpenDocument (*.odt)»), junto a .docx, .docm, .doc, .dotx, .pdf, .xps, .rtf, .txt, .htm, .mht, .xml…"
+    "explicacion": "Falso: sí lo incluye, como «Texto de OpenDocument (*.odt)». · Es el formato libre de LibreOffice y OpenOffice, y Word lo lee y lo escribe desde hace versiones. · Se confunde con el .sxw del antiguo OpenOffice, ese sí ausente de la lista. · La lista completa pasa de quince entradas e incluye también .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .xps, .rtf, .txt, las tres variantes de página web y dos de XML."
   },
   {
     "id": "archivo-375",
@@ -2944,7 +2944,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Un .docx no puede guardar macros de VBA; hay que usar .docm."
+    "explicacion": "Verdadero, y la regla es sistemática: la última letra dice si el archivo admite macros. · «x» significa sin macros (.docx documento, .dotx plantilla) y «m» significa con macros (.docm documento, .dotm plantilla). · Un .docx no puede guardar código VBA: al intentarlo, Word avisa de que las macros se perderán. · Los formatos antiguos .doc y .dot no distinguen: los dos admitían macros, y de ahí venían buena parte de los problemas de seguridad que motivaron la separación."
   },
   {
     "id": "archivo-376",
@@ -2963,7 +2963,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: «Guardar» sobrescribe el archivo actual; «Guardar como» crea una copia con otro nombre, ubicación o formato. Solo la primera vez (documento sin nombre), «Guardar» se comporta como «Guardar como»."
+    "explicacion": "Falso. · Guardar sobrescribe el archivo actual sin preguntar; Guardar como abre el cuadro para crear otro archivo con distinto nombre, carpeta o formato, dejando el original intacto. · Hay un único caso en que coinciden: la primera vez, cuando el documento aún no tiene nombre, Guardar no tiene nada que sobrescribir y se comporta como Guardar como. · Tras un Guardar como sigues trabajando sobre el archivo NUEVO, no sobre el viejo: es lo que más despista al usarlo para hacer copias de seguridad."
   },
   {
     "id": "archivo-406",
@@ -3030,7 +3030,7 @@
       "3": "B",
       "4": "C"
     },
-    "explicacion": "El sufijo «m» siempre indica que el archivo admite macros de VBA; «x» indica que no las admite."
+    "explicacion": "La última letra de la extensión es la que manda: «x» significa sin macros y «m» significa habilitado con macros. · Las tres primeras letras dicen si es documento (doc) o plantilla (dot). · Combinando las dos reglas salen las cuatro: .docx documento sin macros, .docm documento con macros, .dotx plantilla sin macros, .dotm plantilla con macros. · Los formatos antiguos .doc y .dot no hacían esa distinción, y esa es precisamente la razón por la que se separaron a partir de Word 2007."
   },
   {
     "id": "archivo-1",

@@ -137,8 +137,16 @@ function framingOf(q){
   if(q.categoria === "atajo") return "atajo";
   if(q.negativa || q.tipo === "seleccion_multiple") return "discriminacion";
   if(q.categoria === "ruta") return "ruta";
-  if(/necesit|quieres|has (copiado|escrito|pegado)|un usuario|est[áa]s (trabajando|redactando|maquetando)|para conseguir|quer[íi]as/i.test(q.enunciado||""))
-    return "caso";
+  // Antes había aquí un framing "caso" deducido de la REDACCIÓN del enunciado
+  // (/necesit|quieres|un usuario|estás trabajando/…). Se retiró en sep-2026 al
+  // adoptar la guía de estilo, que exige situar TODOS los enunciados: con esa
+  // norma el patrón acaba casando con casi todo el banco y "caso" deja de
+  // discriminar nada — peor aún, infla los framings de un concepto solo porque
+  // dos de sus preguntas usan la palabra "quieres", que no es evidencia de
+  // transferencia. Los seis framings restantes son ESTRUCTURALES (tipo,
+  // categoria, negativa), no dependen de cómo esté escrito el texto.
+  // Medido al retirarlo: 56 preguntas de 2822 cambiaban de framing y NINGÚN
+  // concepto bajaba de los 2 framings que exige deriveMastery.
   return "conceptual";
 }
 
