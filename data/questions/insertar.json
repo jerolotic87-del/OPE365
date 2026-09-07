@@ -10700,6 +10700,78 @@
     "matching": null,
     "generado": true,
     "categoria": "concepto",
+    "id": "insertar-475",
+    "sourceQuestionId": "capt-ins-475",
+    "tipo": "opcion_unica",
+    "enunciado": "El boton «Elementos rapidos» (Insertar ▸ Texto) despliega un menu. ¿Que 5 entradas tiene?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Autotexto · Propiedad del documento · Campo… · Organizador de bloques de creacion… · Guardar seleccion en una galeria de elementos rapidos"
+      },
+      {
+        "letter": "B",
+        "text": "Autotexto · Fecha y hora · WordArt · Letra capital · Objeto"
+      },
+      {
+        "letter": "C",
+        "text": "Portada · Pagina en blanco · Salto de pagina · Encabezado · Pie"
+      },
+      {
+        "letter": "D",
+        "text": "Campo · Marcador · Referencia cruzada · Hipervinculo · Comentario"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Autotexto» y «Propiedad del documento» abren submenu; «Campo…» abre el cuadro Campo; el «Organizador de bloques de creacion» gestiona todos los bloques guardados."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto",
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": true,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-476",
+    "sourceQuestionId": "capt-ins-476",
+    "tipo": "opcion_unica",
+    "enunciado": "En el submenu «Elementos rapidos ▸ Propiedad del documento», ¿que propiedad NO aparece?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Numero de revisiones"
+      },
+      {
+        "letter": "B",
+        "text": "Extracto"
+      },
+      {
+        "letter": "C",
+        "text": "Fax de la compania"
+      },
+      {
+        "letter": "D",
+        "text": "Fecha de publicacion"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El submenu tiene 15 propiedades: Administrador, Asunto, Autor, Categoria, Comentarios, Compania, Direccion de correo electronico de la compania, Direccion de la compania, Estado, Extracto, Fax de la compania, Fecha de publicacion, Palabras clave, Telefono de la compania y Titulo. «Numero de revisiones» es un dato del panel Informacion, no una propiedad insertable aqui."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto",
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
     "id": "insertar-473",
     "sourceQuestionId": "capt-ins-473",
     "tipo": "seleccion_multiple",
@@ -10733,6 +10805,51 @@
       "D"
     ],
     "explicacion": "La lista incluye Bitmap Image, WordPad Document, los 3 formatos OpenDocument, Microsoft Graph Chart, «Package», «Organization Chart Add-in» y los formatos de Excel/PowerPoint/Word (actuales, 97-2003 y con macros). Access NO figura. Confirmado con captura."
+  },
+  {
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Texto",
+    "section": "insertar",
+    "topic": "texto",
+    "subtopic": null,
+    "tema": "Insertar",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "insertar-477",
+    "sourceQuestionId": "capt-ins-477",
+    "tipo": "seleccion_multiple",
+    "enunciado": "El cuadro «Campo» (Elementos rapidos ▸ Campo…) agrupa los campos por «Categorias». ¿Cuales de estas SI son categorias?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Combinar correspondencia"
+      },
+      {
+        "letter": "B",
+        "text": "Ecuaciones y formulas"
+      },
+      {
+        "letter": "C",
+        "text": "Fecha y hora"
+      },
+      {
+        "letter": "D",
+        "text": "Vinculos y referencias"
+      },
+      {
+        "letter": "E",
+        "text": "Macros y complementos"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "Las categorias son: [Todos], Automatizacion, Combinar correspondencia, Ecuaciones y formulas, Fecha y hora, Indice y tablas, Info. documento, Info. usuario, Numeracion, Resumen del documento y Vinculos y referencias. Con «[Todos]» se ven todos los nombres de campo (CreateDate, AutoNum, MergeField, Page, NumPages...)."
   },
   {
     "id": "insertar-296",

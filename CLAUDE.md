@@ -853,6 +853,13 @@ NO estaban en las capturas del usuario):
    ecuación · Diagrama de flujo · Cintas y estrellas · Llamadas) → todas las
    preguntas de gráfico (`insertar-68/126..131/250..262/388/389`) y de
    Formas (`insertar-62/118/240..249/437`) verificadas, sin cambios.
+ - Cuadro **«Campo»** y menú **«Elementos rápidos»** verificados con capturas
+   (sep-2026): `insertar-88/151/152/153` (Extracto, Fax de la compañía, Fecha
+   de publicación, Dirección de la compañía = propiedades del documento
+   reales) y `insertar-157/158` (CreateDate, AutoNum = nombres de campo
+   reales) → todas correctas. +`insertar-475/477`: menú Elementos rápidos (5
+   entradas), submenú Propiedad del documento (15), categorías del cuadro
+   Campo. **El minado P- de Insertar queda validado casi por completo.**
  - Las otras preguntas
    que citan «la extracción» sí se apoyan en capturas reales
    (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
