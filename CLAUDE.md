@@ -628,6 +628,27 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Correspondencia — 59 capturas del usuario (sep-2026)**: el usuario aportó
+`data/imagenes_rutas/correspondencia/` (59 pantallazos, rama a rama + todos
+los cuadros de diálogo). Se **reescribió `data/rutas/correspondencia.txt`**
+desde cero (antes era una reconstrucción del PDF de la academia, mucho más
+pobre). **1 error corregido**: `correspondencia-38` decía que la lista trae
+una columna «Dirección» — son **«Campo de dirección 1» y «Campo de dirección
+2»** (13 campos en total). **Atajos**: los 4 canónicos del volcado v2608
+(Alt+Mayús+D/M/K/E) son correctos en el banco; `Alt+Mayús+J` (insertar
+campo) es solo del PDF; **`Alt+Mayús+N` NO combina** (es vincular
+encabezado/pie). **+15 preguntas** (`correspondencia-48..62`) + **+6
+flashcards** (`F-016..021`): cuadro Insertar línea de saludo (Querido/
+Queridísimo/Estimado/(ninguno) + saludos para nombres no válidos), Insertar
+campo de combinación (Campos de dirección vs Campos de base de datos),
+Insertar bloque de direcciones (opciones de país), los 13 campos, cuadro
+«Revisar e informar de errores» (3 modos), Sobre 10 por defecto, ficha
+Opciones de impresión, ficha Etiquetas (página entera vs una sola),
+«Detalles...» de etiqueta (Número horizontal/vertical), casillas de
+inclusión en «Destinatarios de combinar correspondencia», «Directorio»,
+Resaltar campos ≠ Vista previa, ficha Sobres. Generador:
+`scripts/gen_correspondencia_capturas.py`.
+
 **Cruce flashcards ↔ volcados de rutas (sep-2026)**: a petición del
 usuario, se comprobó si los matices preguntables de los volcados (nombres
 exactos de listas, cardinalidades, valores por defecto) tenían flashcard

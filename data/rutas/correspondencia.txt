@@ -1,80 +1,223 @@
 VOLCADO DE RUTAS — PESTAÑA CORRESPONDENCIA — WORD 365 (v2608)
-Extraído por Claude de las capturas de pantalla del PDF de la academia
-"14. Combinación de correspondencia" (Beatriz R.T., aportado por el
-usuario, sep-2026) — el texto plano del PDF no recogía los desplegables
-ni los cuadros de diálogo, así que se renderizaron las 8 páginas como
-imagen y se transcribieron rama a rama. Referencia. Base del banco
-data/questions/correspondencia.json.
+Extracción del usuario, rama a rama de la cinta y de todos los cuadros de
+diálogo (59 capturas en data/imagenes_rutas/correspondencia/, sep-2026).
+Sustituye a la versión anterior, que se había reconstruido del PDF de la
+academia. Referencia. Base del banco data/questions/correspondencia.json.
+Datos de ejemplo del origen usado en las capturas: lista.mdb (Access),
+registros Gómez/Laura, Ruiz/Javier, Serrano/Marta, Molina/Pedro; campos
+propios Nombre, Apellidos, Nombre de la organización, Ciudad, Importe, Email.
+
+===== GRUPO CREAR =====
 
 Correspondencia > Crear > Sobres
+  Tooltip: "¿Va a enviar correo? Necesitará un sobre. Puede elegir el
+  tamaño y el formato de la dirección, y agregar franqueo electrónico."
 Correspondencia > Crear > Etiquetas
+  Tooltip: "¿Va a enviar correo? Necesitará una etiqueta. Puede escoger
+  entre tamaños comunes y etiquetas especializadas, tales como etiquetas
+  de CD o DVD."
 
-Correspondencia > Iniciar combinación de correspondencia > Iniciar combinación de correspondencia > Cartas
-Correspondencia > Iniciar combinación de correspondencia > Iniciar combinación de correspondencia > Mensajes de correo electrónico
-Correspondencia > Iniciar combinación de correspondencia > Iniciar combinación de correspondencia > Sobres...
-Correspondencia > Iniciar combinación de correspondencia > Iniciar combinación de correspondencia > Etiquetas...
-Correspondencia > Iniciar combinación de correspondencia > Iniciar combinación de correspondencia > Directorio
-Correspondencia > Iniciar combinación de correspondencia > Iniciar combinación de correspondencia > Documento normal de Word
-Correspondencia > Iniciar combinación de correspondencia > Iniciar combinación de correspondencia > Paso a paso por el Asistente para combinar correspondencia...
-Correspondencia > Iniciar combinación de correspondencia > Seleccionar destinatarios > Escribir una nueva lista...
-Correspondencia > Iniciar combinación de correspondencia > Seleccionar destinatarios > Usar una lista existente...
-Correspondencia > Iniciar combinación de correspondencia > Seleccionar destinatarios > Elegir de los contactos de Outlook...
-Correspondencia > Iniciar combinación de correspondencia > Seleccionar destinatarios > Escribir una nueva lista... > [Cuadro: Nueva lista de direcciones] > Nueva entrada
-Correspondencia > Iniciar combinación de correspondencia > Seleccionar destinatarios > Escribir una nueva lista... > [Cuadro: Nueva lista de direcciones] > Eliminar entrada
-Correspondencia > Iniciar combinación de correspondencia > Seleccionar destinatarios > Escribir una nueva lista... > [Cuadro: Nueva lista de direcciones] > Buscando...
-Correspondencia > Iniciar combinación de correspondencia > Seleccionar destinatarios > Escribir una nueva lista... > [Cuadro: Nueva lista de direcciones] > Personalizar columnas...
-Correspondencia > Iniciar combinación de correspondencia > Editar lista de destinatarios > [Cuadro: Destinatarios de combinar correspondencia] > Restringir lista de destinatarios > Ordenar...
-Correspondencia > Iniciar combinación de correspondencia > Editar lista de destinatarios > [Cuadro: Destinatarios de combinar correspondencia] > Restringir lista de destinatarios > Filtrar...
-Correspondencia > Iniciar combinación de correspondencia > Editar lista de destinatarios > [Cuadro: Destinatarios de combinar correspondencia] > Restringir lista de destinatarios > Buscar duplicados...
-Correspondencia > Iniciar combinación de correspondencia > Editar lista de destinatarios > [Cuadro: Destinatarios de combinar correspondencia] > Restringir lista de destinatarios > Buscar destinatario...
-Correspondencia > Iniciar combinación de correspondencia > Editar lista de destinatarios > [Cuadro: Destinatarios de combinar correspondencia] > Restringir lista de destinatarios > Validar direcciones...
-Correspondencia > Iniciar combinación de correspondencia > Editar lista de destinatarios > [Cuadro: Destinatarios de combinar correspondencia] > Edición...
-Correspondencia > Iniciar combinación de correspondencia > Editar lista de destinatarios > [Cuadro: Destinatarios de combinar correspondencia] > Actualizar
+Correspondencia > Crear > Sobres > [Cuadro: Sobres y etiquetas] (2 fichas: Sobres / Etiquetas)
+  Ficha Sobres:
+    > Dirección (campo de texto) + icono "Insertar dirección" (libreta)
+    > Agregar franqueo electrónico (casilla)
+    > Remite (campo de texto) + casilla "Omitir"
+    > Vista previa · Papel
+    > botones: Imprimir · Agregar al documento · Opciones... · Propiedades de franqueo electrónico...
+    > "Compruebe si el sobre está listo antes de imprimir."
+  Ficha Etiquetas:
+    > Dirección + casilla "Usar dirección de remite"
+    > Imprimir: (o) Página entera con la misma etiqueta  (o) Solo una etiqueta (Fila / Columna)
+    > Etiqueta (muestra marca y nº de producto, p. ej. "APLI, APLI 01214")
+    > botones: Imprimir · Nuevo documento · Opciones... · Propiedades de franqueo electrónico...
+
+Correspondencia > Crear > Sobres > Opciones... > [Cuadro: Opciones de sobre] (2 fichas: Opciones de sobre / Opciones de impresión)
+  Ficha "Opciones de sobre":
+    > Tamaño de sobre (por defecto "Sobre 10 (4 1/8 x 9 1/2 pda.)")
+        lista: Sobre 6 3/4, Sobre 9, Sobre 10, Sobre 11, Sobre 12, Sobre 14,
+               B4, B5, B6, C3, C4, C5, C6, C65, DL, E4, E5, E6, E65,
+               Italiano, M5, M65, Monarch, Oficio USA, Carta USA, Tamaño personal...
+    > Dirección: botón Fuente...  ·  Desde la izquierda (Autom.)  ·  Desde arriba (Autom.)
+    > Remite:    botón Fuente...  ·  Desde la izquierda (Autom.)  ·  Desde arriba (Autom.)
+    > Vista previa
+  Ficha "Opciones de impresión":
+    > Impresora (nombre)
+    > Método de alimentación (6 iconos de orientación/posición del sobre)
+    > (o) Boca arriba   (o) Boca abajo
+    > Girar en sentido del reloj (casilla)
+    > Alimentación desde (Bandeja predeterminada)
+    > botón Restablecer
+    > "Word recomienda utilizar la alimentación de sobres mencionada. Si
+       este método no funciona en su impresora, seleccione el método correcto."
+
+Correspondencia > Crear > Sobres > Opciones... > Dirección > Fuente... > [Cuadro: Dirección sobre] = cuadro Fuente estándar (fichas Fuente / Avanzado)
+Correspondencia > Crear > Sobres > Opciones... > Remite > Fuente...    > [Cuadro: Remite] = cuadro Fuente estándar (fichas Fuente / Avanzado)
+
+Correspondencia > Crear > Etiquetas > Opciones... > [Cuadro: Opciones para etiquetas]
+  > Información de impresora: (o) Impresoras de alimentación continua
+                              (o) Impresoras de páginas  ·  Bandeja (Bandeja predeterminada)
+  > Información de etiquetas:
+      > Marcas de etiquetas (por defecto APLI; lista larga de proveedores:
+        Microsoft, 3M/Post-it Asia Pacific/EU/North America, Ace Label, Adetec,
+        A-ONE, APLI, APLI-AGIPA, APLI-DECADRY, Avery A4/A5, Avery US Letter,
+        Avery Zweckform, C-Line Products, Compulabel, Croxley, DURABLE,
+        ERO Etikett, Formtec, Herlitz PBS, HERMA, Hisago, INETA, KOKUYO,
+        LINDO, Lorenz Bell, MACtac Starliner, MAY+SPIES, Office Depot,
+        Office Star, OnlineLabels.com, Planet, PLUS Corporation, Printec,
+        RAYFILM, Riklabel, Sigel GmbH, TANEX, Tico, Tower, Unistat)
+      > "Buscar actualizaciones en Office.com"
+      > Número de producto (p. ej. APLI 01209, 01212, 01213, 01214, 01223, 01224...)
+      > Información de etiquetas (panel derecho): Tipo (Dirección), Alto (3,7 cm),
+        Ancho (10,5 cm), Tamaño de página (21,1 cm x 29,69 cm)
+  > botones: Detalles... · Nueva etiqueta... · Eliminar
+
+Correspondencia > Crear > Etiquetas > Opciones... > Detalles... > [Cuadro: <ref> - Información]
+  > Vista previa con diagrama (Margen superior, Márgenes laterales, Extremo
+    horiz., Extremo vertical, Ancho, Alto, Número vertical, Número horizontal)
+  > campos: Nombre de etiqueta · Margen superior · Margen lateral ·
+    Extremo vertical · Extremo horizontal · Alto de etiqueta · Ancho de etiqueta ·
+    Número horizontal · Número vertical · Tamaño de página · Ancho de página · Alto de página
+
+===== GRUPO INICIAR COMBINACIÓN DE CORRESPONDENCIA =====
+
+Correspondencia > Iniciar combinación de correspondencia > [menú] (7 opciones):
+  Cartas · Mensajes de correo electrónico · Sobres... · Etiquetas... ·
+  Directorio · Documento normal de Word ·
+  Paso a paso por el Asistente para combinar correspondencia...
+
+Correspondencia > Seleccionar destinatarios > [menú] (3 opciones):
+  Escribir una nueva lista... · Usar una lista existente... ·
+  Elegir de los contactos de Outlook...
+  Tooltip: "Permite elegir la lista de personas a las que se desea enviar
+  el documento. Podrá escribir una nueva lista, usar una existente o
+  seleccionar contactos de Outlook."
+
+Correspondencia > Seleccionar destinatarios > Escribir una nueva lista... > [Cuadro: Nueva lista de direcciones]
+  > tabla de destinatarios (columnas = campos)
+  > botones: Nueva entrada · Buscando... · Eliminar entrada · Personalizar columnas... · Aceptar · Cancelar
+  > Buscando... > [Cuadro: Buscar entrada]: Buscar (texto) ·
+      Buscar en: (o) Todos los campos  (o) Este campo (desplegable con los 13 campos) · Buscar siguiente
+  > Personalizar columnas... > [Cuadro: Personalizar lista de direcciones]
+      > "Nombres de campo" — los 13 campos predeterminados:
+          Tratamiento · Nombre · Apellidos · Nombre de la organización ·
+          Campo de dirección 1 · Campo de dirección 2 · Ciudad · Provincia ·
+          Código postal · País o región · Teléfono privado · Teléfono del trabajo ·
+          Dirección de correo electrónico
+      > botones: Agregar... · Eliminar · Cambiar nombre... · Subir · Bajar
+  (al Aceptar la nueva lista, Word pide guardarla como archivo .mdb)
+
+Correspondencia > Seleccionar destinatarios > Usar una lista existente... > [Cuadro: Seleccionar archivos de origen de datos]
+  > navegador de archivos; orígenes válidos: base de datos Access (.mdb/.accdb),
+    libro de Excel, tabla o lista de Word, archivo de texto delimitado,
+    "+Conectar con nuevo origen de datos.odc", "+Nueva conexión con SQL Server.odc"
+  > requisito: los campos en columnas, un registro por fila
+
+Correspondencia > Editar lista de destinatarios > [Cuadro: Destinatarios de combinar correspondencia]
+  > tabla con casilla de verificación por destinatario (marcar/desmarcar para incluir/excluir)
+  > Origen de datos (lista) + botones Edición... · Actualizar
+  > "Restringir lista de destinatarios" (5 comandos):
+      Ordenar... · Filtrar... · Buscar duplicados... · Buscar destinatario... · Validar direcciones...
+  (deshabilitado en la cinta hasta que hay una lista seleccionada)
+
+===== GRUPO ESCRIBIR E INSERTAR CAMPOS =====
 
 Correspondencia > Escribir e insertar campos > Resaltar campos de combinación
-Correspondencia > Escribir e insertar campos > Bloque de direcciones
-Correspondencia > Escribir e insertar campos > Línea de saludo
-Correspondencia > Escribir e insertar campos > Insertar campo combinado (Nombre, Apellidos, Dirección, CP, Ciudad, Teléfono — según las columnas del origen de datos)
-Correspondencia > Escribir e insertar campos > Reglas > Preguntar...
-Correspondencia > Escribir e insertar campos > Reglas > Rellenar...
-Correspondencia > Escribir e insertar campos > Reglas > Si...Entonces...Sino...
-Correspondencia > Escribir e insertar campos > Reglas > Registro de combinación n.º
-Correspondencia > Escribir e insertar campos > Reglas > Secuencia de combinación n.º
-Correspondencia > Escribir e insertar campos > Reglas > Próximo registro
-Correspondencia > Escribir e insertar campos > Reglas > Próximo registro si...
-Correspondencia > Escribir e insertar campos > Reglas > Asignar marcador...
-Correspondencia > Escribir e insertar campos > Reglas > Saltar registro si...
-Correspondencia > Escribir e insertar campos > Asignar campos > [Cuadro: Asignar campos] empareja los campos estándar de Word con las columnas del origen de datos
-Correspondencia > Escribir e insertar campos > Actualizar etiquetas (solo necesario al crear etiquetas; no hace falta para carta impresa ni correo electrónico)
+  Tooltip: "Resalta los campos del documento. De esta forma es más fácil
+  ver dónde se insertará el contenido de la lista de destinatarios."
 
-Correspondencia > Vista previa de resultados > Vista previa de resultados (alterna nombres de campo / datos reales)
-Correspondencia > Vista previa de resultados > Primer registro / Registro anterior / número de registro / Registro siguiente / Último registro
+Correspondencia > Escribir e insertar campos > Bloque de direcciones > [Cuadro: Insertar bloque de direcciones]
+  > "Insertar el nombre del destinatario en este formato:" (lista de formatos de nombre)
+  > Insertar el nombre de la organización (casilla)
+  > Insertar la dirección postal (casilla), con:
+      (o) No incluir nunca el país ni la región en la dirección
+      (o) Incluir siempre el país o la región en la dirección
+      (o) Solo incluir la región o el país si es distinto de: [España]
+  > Dar formato a la dirección en función del país o región de destino (casilla)
+  > Vista previa · Corregir problemas > botón "Asignar campos..."
+
+Correspondencia > Escribir e insertar campos > Línea de saludo > [Cuadro: Insertar línea de saludo]
+  > "Formato de la línea de saludo:" 3 desplegables:
+      [1] Querido / Queridísimo / Estimado / (ninguno)
+      [2] formato del nombre (p. ej. "Javier Saavedra hijo", "Javier", ...)
+      [3] puntuación:  :  /  ,  /  (ninguno)
+  > "Línea de saludo para nombres de destinatarios no válidos:"
+      A quién corresponda: / Estimado Sr.: / Estimada Srta.: / (ninguno)
+  > Vista previa (p. ej. "Querido/a Laura Gómez:")
+  > Corregir problemas > botón "Asignar campos..."
+
+Correspondencia > Escribir e insertar campos > Insertar campo combinado (parte inferior del botón)
+  > menú desplegable con los campos del origen real (Nombre, Apellidos,
+    Nombre_de_la_organización, Ciudad, Importe, Email...)
+  > (flecha del botón) > [Cuadro: Insertar campo de combinación]
+      (o) Campos de dirección   → ~30 campos normalizados (Identificador único,
+          Tratamiento de cortesía, Nombre, Segundo nombre, Apellidos, Sufijo,
+          Sobrenombre, Puesto, Organización, Dirección 1/2/3, Ciudad, Provincia,
+          Código postal, País o región, Teléfono del trabajo, Fax del trabajo,
+          Teléfono privado, Fax privado, Dirección de correo electrónico,
+          Página web, datos de la pareja o cónyuge, guías fonéticas, Departamento)
+      (o) Campos de base de datos → los campos reales del origen (Nombre,
+          Apellidos, Nombre de la organización, Ciudad, Importe, Email)
+      > botones: Asignar campos... · Insertar · Cancelar
+
+Correspondencia > Escribir e insertar campos > Reglas > [menú] (9 reglas):
+  Preguntar... · Rellenar... · Si...Entonces...Sino... ·
+  Registro de combinación n.º · Secuencia de combinación n.º ·
+  Próximo registro · Próximo registro si... · Asignar marcador... · Saltar registro si...
+  Tooltip: "Especificar reglas para la combinación de correspondencia. Por
+  ejemplo, puede usar 'Si...Entonces...Sino' para mostrar un número de
+  teléfono local a los destinatarios que se encuentren cerca y otro
+  internacional a los que se encuentren fuera del país."
+
+Correspondencia > Escribir e insertar campos > Asignar campos > [Cuadro: Asignar campos]
+  Tooltip: "La asignación de campos permite indicar a Word el significado
+  de diferentes campos en la lista de destinatarios. Por ejemplo, puede
+  indicar que el campo personalizado 'Particular' equivale al campo
+  integrado 'Teléfono particular'."
+  > secciones "Requerido para el bloque de direcciones" / "Requerido para la
+    línea de saludo" e "Información opcional", cada fila con un desplegable
+    (campo real ↔ campo integrado; valor "(no coincide)" si no hay equivalencia)
+  > casilla "Recordar esta asignación para este conjunto de orígenes de datos en este equipo"
+
+Correspondencia > Escribir e insertar campos > Actualizar etiquetas
+  Tooltip: "Si está creando etiquetas, actualícelas todas en el documento
+  para utilizar la información de la lista de destinatarios. Para la
+  combinación de correspondencia en una carta impresa o correo
+  electrónico, este comando no es necesario."
+  (Word inserta automáticamente «Próximo registro» en todas las celdas de
+   etiqueta salvo la primera; «Actualizar etiquetas» propaga el diseño de
+   la primera celda al resto.)
+
+===== GRUPO VISTA PREVIA DE RESULTADOS =====
+
+Correspondencia > Vista previa de resultados > Vista previa de resultados
+  Tooltip: "Conecta la información de la lista de destinatarios a los
+  campos de combinación para ver qué aspecto tendrá el documento final."
+Correspondencia > Vista previa de resultados > [navegación de registros]  |< < [n.º] > >|
 Correspondencia > Vista previa de resultados > Buscar destinatario
-Correspondencia > Vista previa de resultados > Comprobación de errores
+  Tooltip: "Busca un destinatario específico y salta al documento de ese
+  usuario para visualizarlo en vista previa."
+Correspondencia > Vista previa de resultados > Comprobación de errores   (atajo Alt+Mayús+K)
+  Tooltip: "Indique a Word cómo controlar los errores que se puedan
+  producir durante la combinación de correspondencia. También podrá
+  simular la combinación de correspondencia para ver si se produce algún error."
+  > [Cuadro: Revisar e informar de errores] (3 opciones):
+      (o) Simular la combinación e informar de los errores en un documento nuevo.
+      (o) Completar la combinación deteniéndose para informar de los errores.
+      (o) Completar la combinación sin detenerse. Informar de los errores en un documento nuevo.
 
-Correspondencia > Finalizar > Finalizar y combinar > Editar documentos individuales...
-Correspondencia > Finalizar > Finalizar y combinar > Imprimir documentos...
-Correspondencia > Finalizar > Finalizar y combinar > Enviar mensajes de correo electrónico...
+===== GRUPO FINALIZAR =====
 
-Correspondencia > Sobres... > [Cuadro: Opciones de sobre] > ficha Opciones de sobre > Tamaño de sobre
-Correspondencia > Sobres... > [Cuadro: Opciones de sobre] > ficha Opciones de sobre > Dirección > Fuente...
-Correspondencia > Sobres... > [Cuadro: Opciones de sobre] > ficha Opciones de sobre > Dirección > Desde la izquierda / Desde arriba (Autom.)
-Correspondencia > Sobres... > [Cuadro: Opciones de sobre] > ficha Opciones de sobre > Remite > Fuente...
-Correspondencia > Sobres... > [Cuadro: Opciones de sobre] > ficha Opciones de sobre > Remite > Desde la izquierda / Desde arriba (Autom.)
-Correspondencia > Sobres... > [Cuadro: Opciones de sobre] > ficha Opciones de impresión
+Correspondencia > Finalizar > Finalizar y combinar > [menú] (3 opciones):
+  Editar documentos individuales... · Imprimir documentos... ·
+  Enviar mensajes de correo electrónico...
 
-Correspondencia > Etiquetas... > [Cuadro: Opciones para etiquetas] > Información de impresora > Impresoras de alimentación continua
-Correspondencia > Etiquetas... > [Cuadro: Opciones para etiquetas] > Información de impresora > Impresoras de páginas > Bandeja
-Correspondencia > Etiquetas... > [Cuadro: Opciones para etiquetas] > Información de etiquetas > Marcas de etiquetas (APLI, ...)
-Correspondencia > Etiquetas... > [Cuadro: Opciones para etiquetas] > Información de etiquetas > Buscar actualizaciones en Office.com
-Correspondencia > Etiquetas... > [Cuadro: Opciones para etiquetas] > Información de etiquetas > Número de producto (p. ej. APLI 01209, APLI 01212...)
-Correspondencia > Etiquetas... > [Cuadro: Opciones para etiquetas] > Información de etiquetas > Tipo / Alto / Ancho / Tamaño de página (según el producto elegido)
-Correspondencia > Etiquetas... > [Cuadro: Opciones para etiquetas] > Detalles... / Nueva etiqueta... / Eliminar
-
-Atajos de teclado (confirmados en el PDF de la academia, no en el
-volcado v2608 de Personalizar teclado — mismo esquema clásico español):
-Alt+Mayús+M Combinar al imprimir
-Alt+Mayús+D Combinar en documento
-Alt+Mayús+K Revisar Combinación de correspondencia
-Alt+Mayús+E Abre un origen de datos para la combinación de correspondencia
-Alt+Mayús+J Inserta un campo de combinación de correspondencia
+===== ATAJOS =====
+Del volcado v2608 (data/atajos_word365_v2608.md) — LOS 4 CANÓNICOS:
+  Alt+Mayús+D  = CombinarEnDocumento  (recopila los resultados en un documento nuevo)
+  Alt+Mayús+M  = CombinarAlimprimir   (envía los resultados a la impresora)
+  Alt+Mayús+K  = CombinarRevisar      (comprueba errores en la combinación)
+  Alt+Mayús+E  = CombinarModificarOrigenDatos (abre el origen de datos para editarlo)
+Solo del PDF de la academia (NO en el volcado v2608):
+  Alt+Mayús+J  = insertar un campo de combinación en el punto del cursor
+⚠️ Alt+Mayús+N en esta instalación NO combina: es FormatoEncabPieVinculado
+   (vincular el encabezado/pie con la sección anterior).

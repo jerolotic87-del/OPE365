@@ -180,6 +180,114 @@
     "explicacion": "«Nueva entrada» añade una fila más a la tabla de destinatarios que se está creando."
   },
   {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinacion de correspondencia",
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-52",
+    "sourceQuestionId": "capt-corr-52",
+    "tipo": "opcion_unica",
+    "enunciado": "En el cuadro «Buscar entrada» (dentro de «Nueva lista de direcciones»), ¿donde se puede buscar?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "En «Todos los campos» o en «Este campo» (uno concreto de los 13)"
+      },
+      {
+        "letter": "B",
+        "text": "Solo en el campo Nombre"
+      },
+      {
+        "letter": "C",
+        "text": "Solo en Nombre y Apellidos"
+      },
+      {
+        "letter": "D",
+        "text": "En cualquier documento abierto"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Se abre con el boton «Buscando...» del cuadro «Nueva lista de direcciones»."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinacion de correspondencia",
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-58",
+    "sourceQuestionId": "capt-corr-58",
+    "tipo": "opcion_unica",
+    "enunciado": "En el cuadro «Destinatarios de combinar correspondencia», ¿como se excluye a un destinatario concreto de la combinacion?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Desmarcando su casilla de verificacion en la primera columna de la tabla"
+      },
+      {
+        "letter": "B",
+        "text": "Borrando su fila con la tecla Supr"
+      },
+      {
+        "letter": "C",
+        "text": "No se puede: hay que editar el origen de datos"
+      },
+      {
+        "letter": "D",
+        "text": "Cambiando su Tratamiento a «(ninguno)»"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Las casillas marcan quien entra en la combinacion sin tocar el origen de datos. «Restringir lista de destinatarios» (Ordenar / Filtrar / Buscar duplicados / Buscar destinatario / Validar direcciones) ayuda a depurar la lista."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Iniciar combinacion de correspondencia",
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-59",
+    "sourceQuestionId": "capt-corr-59",
+    "tipo": "opcion_unica",
+    "enunciado": "En el menu «Iniciar combinacion de correspondencia», ¿que hace la opcion «Directorio»?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Combina todos los registros en una sola pagina, uno tras otro (catalogo, listado telefonico...), sin salto de pagina entre ellos"
+      },
+      {
+        "letter": "B",
+        "text": "Crea una carpeta en el disco con un archivo por destinatario"
+      },
+      {
+        "letter": "C",
+        "text": "Abre el directorio de contactos de Outlook"
+      },
+      {
+        "letter": "D",
+        "text": "Genera un indice alfabetico de los destinatarios"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "A diferencia de «Cartas» (una pagina por registro), «Directorio» pone todos los registros seguidos en el mismo documento."
+  },
+  {
     "id": "correspondencia-40",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Iniciar combinación de correspondencia",
@@ -313,11 +421,11 @@
     "tema": "Iniciar combinación de correspondencia",
     "sourceQuestionId": "rutas2-correspondencia-01",
     "generado": true,
-    "enunciado": "El cuadro «Nueva lista de direcciones» trae por defecto columnas como Tratamiento, Nombre, Apellidos, Dirección, Ciudad, Provincia y Código postal, que se pueden cambiar con «Personalizar columnas…».",
+    "enunciado": "El cuadro «Nueva lista de direcciones» trae 13 columnas por defecto (Tratamiento, Nombre, Apellidos, Nombre de la organizacion, Campo de direccion 1, Campo de direccion 2, Ciudad, Provincia, Codigo postal, Pais o region, Telefono privado, Telefono del trabajo y Direccion de correo electronico), y se pueden cambiar con «Personalizar columnas...».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Son las columnas estándar que Word propone al crear una lista de destinatarios desde cero."
+    "explicacion": "Son los 13 campos estandar. Ojo: no existe una columna llamada solo «Direccion»; son «Campo de direccion 1» y «Campo de direccion 2». «Personalizar columnas...» abre el cuadro «Personalizar lista de direcciones» (Agregar / Eliminar / Cambiar nombre / Subir / Bajar)."
   },
   {
     "id": "correspondencia-47",
@@ -749,6 +857,150 @@
     "explicacion": "«Si…Entonces…Sino…» es la regla condicional clásica del grupo Reglas."
   },
   {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-48",
+    "sourceQuestionId": "capt-corr-48",
+    "tipo": "opcion_unica",
+    "enunciado": "En el cuadro «Insertar linea de saludo», ¿que opciones ofrece el primer desplegable del formato del saludo?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Querido, Queridisimo, Estimado y (ninguno)"
+      },
+      {
+        "letter": "B",
+        "text": "Sr., Sra., Srta. y Dr."
+      },
+      {
+        "letter": "C",
+        "text": "Hola, Buenos dias, Atentamente y Un saludo"
+      },
+      {
+        "letter": "D",
+        "text": "Formal, Informal y Neutro"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El primer desplegable elige la palabra inicial (Querido / Queridisimo / Estimado / (ninguno)); el segundo el formato del nombre y el tercero la puntuacion (: , o (ninguno))."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-49",
+    "sourceQuestionId": "capt-corr-49",
+    "tipo": "opcion_unica",
+    "enunciado": "En «Insertar linea de saludo», la «Linea de saludo para nombres de destinatarios no validos» sirve para los registros sin nombre. ¿Que opciones tiene?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "A quien corresponda:, Estimado Sr.:, Estimada Srta.: y (ninguno)"
+      },
+      {
+        "letter": "B",
+        "text": "Solo «A quien corresponda:»"
+      },
+      {
+        "letter": "C",
+        "text": "Cliente, Usuario y Destinatario"
+      },
+      {
+        "letter": "D",
+        "text": "Deja la linea en blanco siempre"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Cuando un registro no tiene un nombre valido, Word usa ese saludo generico en su lugar."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-50",
+    "sourceQuestionId": "capt-corr-50",
+    "tipo": "opcion_unica",
+    "enunciado": "El boton «Insertar campo de combinacion» abre un cuadro con dos modos. ¿Cuales y en que se diferencian?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Campos de direccion» (lista normalizada de ~30 campos) y «Campos de base de datos» (los campos reales del origen de datos)"
+      },
+      {
+        "letter": "B",
+        "text": "«Campos de texto» y «Campos numericos»"
+      },
+      {
+        "letter": "C",
+        "text": "«Campos visibles» y «Campos ocultos»"
+      },
+      {
+        "letter": "D",
+        "text": "«Campos de Word» y «Campos de Excel»"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Campos de base de datos» inserta el nombre real de la columna del origen; «Campos de direccion» inserta un campo normalizado que luego se traduce con «Asignar campos»."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-51",
+    "sourceQuestionId": "capt-corr-51",
+    "tipo": "opcion_unica",
+    "enunciado": "En «Insertar bloque de direcciones», ¿que se puede decidir sobre el pais o la region?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "No incluirlo nunca, incluirlo siempre, o incluirlo solo si es distinto de un pais dado (p. ej. Espana)"
+      },
+      {
+        "letter": "B",
+        "text": "Solo se puede incluir o no incluir"
+      },
+      {
+        "letter": "C",
+        "text": "Word siempre incluye el pais y no se puede quitar"
+      },
+      {
+        "letter": "D",
+        "text": "El pais solo aparece en los sobres, nunca en el bloque de direcciones"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Ademas hay una casilla «Dar formato a la direccion en funcion del pais o region de destino»."
+  },
+  {
     "id": "correspondencia-41",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Escribir e insertar campos",
@@ -854,6 +1106,44 @@
     "matching": null,
     "respuesta": true,
     "explicacion": "«Reglas» añade lógica condicional y otros campos especiales a la combinación."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-60",
+    "sourceQuestionId": "capt-corr-60",
+    "tipo": "verdadero_falso",
+    "enunciado": "«Actualizar etiquetas» propaga el diseno de la primera celda de etiqueta al resto y solo es necesario al combinar etiquetas, no al combinar cartas o correos.",
+    "opciones": [],
+    "respuesta": true,
+    "explicacion": "Word inserta «Proximo registro» automaticamente en todas las celdas de etiqueta salvo la primera; «Actualizar etiquetas» copia a esas celdas los campos y el formato de la primera."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Escribir e insertar campos",
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-61",
+    "sourceQuestionId": "capt-corr-61",
+    "tipo": "verdadero_falso",
+    "enunciado": "El boton «Resaltar campos de combinacion» rellena los campos con datos reales de la lista.",
+    "opciones": [],
+    "respuesta": false,
+    "explicacion": "Falso: solo sombrea los campos «<<Campo>>» para verlos mejor en el documento. Quien muestra los datos reales es «Vista previa de resultados»."
   },
   {
     "id": "correspondencia-7",
@@ -1186,6 +1476,150 @@
     "explicacion": "El remite del ejemplo es «Comida Natural / C/ Naturaleza nº 3 / Madrid», fijo para todos los sobres; el destinatario sí cambia con cada registro."
   },
   {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear",
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-54",
+    "sourceQuestionId": "capt-corr-54",
+    "tipo": "opcion_unica",
+    "enunciado": "En «Opciones de sobre», ¿que tamano de sobre viene seleccionado por defecto?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Sobre 10 (4 1/8 x 9 1/2 pda.)"
+      },
+      {
+        "letter": "B",
+        "text": "DL (110 x 220 mm)"
+      },
+      {
+        "letter": "C",
+        "text": "C5 (162 x 229 mm)"
+      },
+      {
+        "letter": "D",
+        "text": "A4"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "La lista incluye ~25 tamanos: Sobre 6 3/4/9/10/11/12/14, serie B, serie C (C3..C65), DL, serie E, Italiano, M5/M65, Monarch, Oficio USA, Carta USA y «Tamano personal...»."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear",
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-55",
+    "sourceQuestionId": "capt-corr-55",
+    "tipo": "opcion_unica",
+    "enunciado": "En la ficha «Opciones de impresion» de «Opciones de sobre», ¿que se configura?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El metodo de alimentacion (6 posiciones), boca arriba / boca abajo, «Girar en sentido del reloj» y la bandeja de origen"
+      },
+      {
+        "letter": "B",
+        "text": "El color y el tamano de la fuente de la direccion"
+      },
+      {
+        "letter": "C",
+        "text": "El numero de copias y la intercalacion"
+      },
+      {
+        "letter": "D",
+        "text": "El margen respecto al borde del sobre"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El boton «Restablecer» vuelve al metodo que Word recomienda para la impresora."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear",
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-56",
+    "sourceQuestionId": "capt-corr-56",
+    "tipo": "opcion_unica",
+    "enunciado": "En la ficha «Etiquetas» del cuadro «Sobres y etiquetas», ¿que dos modos de impresion hay?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Pagina entera con la misma etiqueta» o «Solo una etiqueta» (indicando Fila y Columna)"
+      },
+      {
+        "letter": "B",
+        "text": "«Todas las etiquetas» o «Etiquetas pares»"
+      },
+      {
+        "letter": "C",
+        "text": "«Etiqueta de direccion» o «Etiqueta de remite»"
+      },
+      {
+        "letter": "D",
+        "text": "«Imprimir ahora» o «Guardar para despues»"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "«Solo una etiqueta» sirve para imprimir en una hoja ya empezada, indicando la posicion exacta (fila/columna) de la etiqueta libre."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear",
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-57",
+    "sourceQuestionId": "capt-corr-57",
+    "tipo": "opcion_unica",
+    "enunciado": "En «Opciones para etiquetas», el boton «Detalles...» abre un cuadro con la geometria de la etiqueta. ¿Que campos incluye?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Margenes, alto y ancho de etiqueta, y «Numero horizontal» / «Numero vertical» (etiquetas por fila y por columna)"
+      },
+      {
+        "letter": "B",
+        "text": "Solo el nombre de la marca comercial"
+      },
+      {
+        "letter": "C",
+        "text": "El color y el gramaje del papel"
+      },
+      {
+        "letter": "D",
+        "text": "La fuente y el tamano del texto"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "Tambien «Nueva etiqueta...» crea una definicion propia y «Eliminar» borra una personalizada."
+  },
+  {
     "id": "correspondencia-45",
     "sourceFile": "correspondencia.json",
     "bloque": "Correspondencia — Crear (sobres y etiquetas)",
@@ -1223,6 +1657,51 @@
       "B"
     ],
     "explicacion": "El cuadro Opciones de sobre solo tiene dos fichas: Opciones de sobre y Opciones de impresión. La Vista previa es un panel dentro de la primera ficha, no una ficha aparte."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Crear",
+    "section": "correspondencia",
+    "topic": "crear-sobres-etiquetas",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-62",
+    "sourceQuestionId": "capt-corr-62",
+    "tipo": "seleccion_multiple",
+    "enunciado": "En la ficha «Sobres» del cuadro «Sobres y etiquetas», ¿que elementos aparecen?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Campo «Direccion»"
+      },
+      {
+        "letter": "B",
+        "text": "Campo «Remite» con una casilla «Omitir»"
+      },
+      {
+        "letter": "C",
+        "text": "Casilla «Agregar franqueo electronico»"
+      },
+      {
+        "letter": "D",
+        "text": "Botones «Imprimir» y «Agregar al documento»"
+      },
+      {
+        "letter": "E",
+        "text": "Un desplegable para elegir el estilo de cita"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "«Omitir» quita el remite del sobre. «Agregar al documento» inserta el sobre como primera pagina; «Imprimir» lo manda directo a la impresora. El estilo de cita es de la pestana Referencias."
   },
   {
     "id": "correspondencia-10",
@@ -1411,6 +1890,42 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Muestra los datos reales en lugar de los nombres de campo, con navegación entre registros y búsqueda de un destinatario concreto."
+  },
+  {
+    "sourceFile": "correspondencia.json",
+    "bloque": "Correspondencia — Vista previa de resultados",
+    "section": "correspondencia",
+    "topic": "vista-previa-resultados",
+    "subtopic": null,
+    "tema": "Correspondencia",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "correspondencia-53",
+    "sourceQuestionId": "capt-corr-53",
+    "tipo": "opcion_unica",
+    "enunciado": "El cuadro «Revisar e informar de errores» (Comprobacion de errores, Alt+Mayus+K) ofrece tres modos. ¿Cuales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Simular la combinacion e informar en un documento nuevo; completar deteniendose en cada error; completar sin detenerse e informar al final"
+      },
+      {
+        "letter": "B",
+        "text": "Ignorar errores; corregir errores; cancelar"
+      },
+      {
+        "letter": "C",
+        "text": "Errores leves; errores graves; todos los errores"
+      },
+      {
+        "letter": "D",
+        "text": "Revisar antes; revisar durante; revisar despues"
+      }
+    ],
+    "respuesta": "A",
+    "explicacion": "El primero es una prueba en seco (no combina de verdad); los otros dos si combinan."
   },
   {
     "id": "correspondencia-19",

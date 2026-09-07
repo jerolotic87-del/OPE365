@@ -45,6 +45,36 @@
     "questionRefs": []
   },
   {
+    "cardId": "F-016",
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "¿Cuantos campos trae por defecto la lista de destinatarios y cuales son los de direccion?",
+    "back": "13 campos. Los de direccion son «Campo de direccion 1» y «Campo de direccion 2» (no hay uno llamado solo «Direccion»). Se editan con «Personalizar columnas...».",
+    "sourceRefs": [
+      "data/rutas/correspondencia.txt (volcado del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-017",
+    "section": "correspondencia",
+    "topic": "iniciar-combinacion",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "Menu «Iniciar combinacion de correspondencia»: los 7 tipos.",
+    "back": "Cartas, Mensajes de correo electronico, Sobres, Etiquetas, Directorio, Documento normal de Word y «Paso a paso por el Asistente...». «Directorio» = todos los registros en una sola pagina.",
+    "sourceRefs": [
+      "data/rutas/correspondencia.txt (volcado del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
     "cardId": "F-006",
     "section": "correspondencia",
     "topic": "campos-combinacion",
@@ -135,6 +165,51 @@
     "questionRefs": []
   },
   {
+    "cardId": "F-018",
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "«Insertar campo de combinacion»: ¿que diferencia hay entre «Campos de direccion» y «Campos de base de datos»?",
+    "back": "«Campos de base de datos» = los nombres reales de las columnas del origen. «Campos de direccion» = campos normalizados de Word, que hay que emparejar con los reales mediante «Asignar campos».",
+    "sourceRefs": [
+      "data/rutas/correspondencia.txt (volcado del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-019",
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "Linea de saludo: opciones del primer desplegable y de «nombres no validos».",
+    "back": "Primer desplegable: Querido / Queridisimo / Estimado / (ninguno). Para nombres no validos: A quien corresponda: / Estimado Sr.: / Estimada Srta.: / (ninguno).",
+    "sourceRefs": [
+      "data/rutas/correspondencia.txt (volcado del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-021",
+    "section": "correspondencia",
+    "topic": "campos-combinacion",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "Los 4 atajos canonicos de la combinacion de correspondencia.",
+    "back": "Alt+Mayus+D = a documento nuevo · Alt+Mayus+M = a la impresora · Alt+Mayus+K = comprobar errores · Alt+Mayus+E = editar el origen de datos. (Alt+Mayus+N NO combina: vincula encabezado/pie.)",
+    "sourceRefs": [
+      "data/rutas/correspondencia.txt (volcado del usuario)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
     "cardId": "F-015",
     "section": "correspondencia",
     "topic": "finalizar",
@@ -220,6 +295,21 @@
     "back": "Correspondencia ▸ Vista previa de resultados ▸ Comprobación de errores",
     "sourceRefs": [
       "rutasyatajos.txt §6 (rutas oficiales)"
+    ],
+    "knowledgeRefs": [],
+    "questionRefs": []
+  },
+  {
+    "cardId": "F-020",
+    "section": "correspondencia",
+    "topic": "vista-previa-resultados",
+    "subtopic": null,
+    "cardType": "contenido",
+    "priority": "alta",
+    "front": "«Comprobacion de errores» (Alt+Mayus+K): los 3 modos.",
+    "back": "1) Simular la combinacion e informar en un documento nuevo (prueba en seco). 2) Completar deteniendose en cada error. 3) Completar sin detenerse e informar al final.",
+    "sourceRefs": [
+      "data/rutas/correspondencia.txt (volcado del usuario)"
     ],
     "knowledgeRefs": [],
     "questionRefs": []
