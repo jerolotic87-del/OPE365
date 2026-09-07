@@ -198,6 +198,16 @@ formato de número (1,2,3 / a,b,c / i,ii,iii / *,†,‡,§), numeración
 | **Encabezado y pie de página** | 6: Encabezado y pie de página · Insertar · Navegación · Opciones · Posición · Cerrar | editar el encabezado o el pie ✅ |
 | **Formato de forma** | 7: Insertar formas · Estilos de forma · Estilos de WordArt · Texto · Accesibilidad · Organizar · Tamaño | seleccionar una forma o cuadro de texto ✅ |
 | **eSignature** | grupo propio «eSignature» dentro de la pestaña **Insertar** (comando: Campos de eSignature); exige documento **.docx** (mensaje «Save this document as a .docx file to use eSignature») ✅ |
+| **Diseño de tabla** | 3: Opciones de estilo de tabla (6 casillas: Fila de encabezado · Fila de totales · Filas con bandas · Primera columna · Última columna · Columnas con bandas) · Estilos de tabla (galería + Sombreado + Estilos de borde) · Bordes | clic dentro de una tabla ✅ |
+| **Disposición de tabla** | 7: Tabla (Seleccionar · Ver cuadrículas · Propiedades) · Dibujar · Filas y columnas · Combinar · Tamaño de celda · Alineación · Datos (Ordenar · Repetir filas de título · Convertir en texto · Fórmula) | clic dentro de una tabla ✅ |
+
+**Galería de estilos de tabla** (Diseño de tabla ▸ Estilos de tabla ▸ Más):
+3 categorías — Tablas sin formato · Tablas con cuadrícula · Tablas de lista.
+Al pie: «Modificar estilo de tabla…» · «Borrar» · «Nuevo estilo de tabla…».
+El cuadro «Crear/Modificar estilo» de tabla tiene el desplegable **«Aplicar
+formato a»** con **13** valores (Toda la tabla · Con encabezado · Fila Total
+· Primera/Última columna · Bandas en filas impares/pares · Bandas en
+columnas impares/pares · Celda superior/inferior izquierda/derecha). ✅
 
 ## Comando «Establecer como predeterminado» — aparece en varios cuadros
 

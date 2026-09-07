@@ -13946,28 +13946,28 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0361",
-    "enunciado": "Al crear un estilo de tabla, el desplegable 'Aplicar formato a' determina a qué parte de la tabla se aplica el formato configurado a continuación. ¿Cuántas opciones ofrece este desplegable?",
+    "enunciado": "Al crear un estilo de tabla, el desplegable «Aplicar formato a» determina a que parte de la tabla se aplica el formato. ¿Cuantas opciones ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "4 (Toda la tabla, Fila de encabezado, Primera columna, Última columna)"
+        "text": "8"
       },
       {
         "letter": "B",
-        "text": "6 (Toda la tabla, Fila de encabezado, Primera columna, Última columna, Fila de totales, Primera fila)"
+        "text": "9"
       },
       {
         "letter": "C",
-        "text": "8 (Toda la tabla, Fila de encabezado, Primera columna, Última columna, Bandas en filas pares, Bandas en filas impares, Bandas en columnas pares, Bandas en columnas impares)"
+        "text": "13"
       },
       {
         "letter": "D",
-        "text": "9 (las 8 anteriores más Fila de totales)"
+        "text": "5"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El desplegable Aplicar formato a del cuadro de estilo de tabla ofrece 9 opciones: Toda la tabla, Fila de encabezado, Primera columna, Última columna, Fila de totales, Bandas en filas pares, Bandas en filas impares, Bandas en columnas pares y Bandas en columnas impares."
+    "respuesta": "C",
+    "explicacion": "Son 13: Toda la tabla, Con encabezado, Fila Total, Primera columna, Ultima columna, Bandas en filas impares, Bandas en filas pares, Bandas en columnas impares, Bandas en columnas pares, Celda superior izquierda, Celda superior derecha, Celda inferior izquierda y Celda inferior derecha. (Las 4 ultimas —las 4 esquinas de celda— suelen pasarse por alto.) Nombres exactos de esta instalacion: «Con encabezado» (no «Fila de encabezado») y «Fila Total» (no «Fila de totales»). Confirmado con captura del usuario."
   },
   {
     "id": "inicio-108",
@@ -14562,7 +14562,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Fila de totales"
+        "text": "Fila Total"
       },
       {
         "letter": "B",
@@ -14579,7 +14579,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción Fila de totales del desplegable Aplicar formato a aplica el formato configurado únicamente a la última fila de la tabla. Es la opción adecuada para destacar la fila de totales o resumen con un formato diferenciado del resto de filas de datos."
+    "explicacion": "La opcion «Fila Total» del desplegable «Aplicar formato a» aplica el formato configurado unicamente a la ultima fila de la tabla. Es la adecuada para destacar la fila de totales o resumen."
   },
   {
     "id": "inicio-239",
@@ -15655,6 +15655,51 @@
     "explicacion": "«Personalizar teclado» está en «Personalizar cinta de opciones» (botón junto a «Métodos abreviados de teclado»), no en «Avanzadas»."
   },
   {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Estilo de tabla",
+    "tema": "Estilos",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "inicio-589",
+    "sourceQuestionId": "capt-inicio-589",
+    "tipo": "seleccion_multiple",
+    "enunciado": "Ademas de «Toda la tabla», filas/columnas de encabezado, total, primera/ultima y las bandas, el desplegable «Aplicar formato a» de un estilo de tabla incluye cuatro opciones para las esquinas. ¿Cuales?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Celda superior izquierda"
+      },
+      {
+        "letter": "B",
+        "text": "Celda superior derecha"
+      },
+      {
+        "letter": "C",
+        "text": "Celda inferior izquierda"
+      },
+      {
+        "letter": "D",
+        "text": "Celda inferior derecha"
+      },
+      {
+        "letter": "E",
+        "text": "Celda central"
+      }
+    ],
+    "respuesta": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explicacion": "Las 4 celdas de esquina permiten dar un formato distinto a cada vertice de la tabla (util p. ej. para el cruce encabezado/primera columna). «Celda central» no existe."
+  },
+  {
     "id": "inicio-97",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -15902,6 +15947,25 @@
     "explicacion": "El «Nuevo estilo» abre la versión completa del cuadro de creación de estilo; «Administrar estilos» abre el cuadro de 4 fichas."
   },
   {
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Estilos",
+    "section": "inicio",
+    "topic": "estilos",
+    "subtopic": "Estilo de tabla",
+    "tema": "Estilos",
+    "negativa": false,
+    "matching": null,
+    "generado": true,
+    "categoria": "concepto",
+    "id": "inicio-590",
+    "sourceQuestionId": "capt-inicio-590",
+    "tipo": "verdadero_falso",
+    "enunciado": "En el desplegable «Aplicar formato a» de un estilo de tabla, esta instalacion de Word nombra las opciones como «Fila de encabezado» y «Fila de totales».",
+    "opciones": [],
+    "respuesta": false,
+    "explicacion": "Falso: en esta instalacion se llaman «Con encabezado» y «Fila Total». El concepto es el mismo (primera fila / ultima fila)."
+  },
+  {
     "id": "inicio-89",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Estilos",
@@ -16066,11 +16130,11 @@
         },
         {
           "id": "2",
-          "label": "Fila de encabezado"
+          "label": "Con encabezado"
         },
         {
           "id": "3",
-          "label": "Fila de totales"
+          "label": "Fila Total"
         },
         {
           "id": "4",
@@ -16122,7 +16186,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Toda la tabla: todas las celdas. Fila de encabezado: primera fila. Fila de totales: última fila. Primera columna: columna izquierda. Última columna: columna derecha. El distractor F corresponde a las opciones de Bandas en filas, que también existen en el desplegable pero no aparecen en esta pregunta."
+    "explicacion": "Toda la tabla: todas las celdas. Con encabezado: primera fila. Fila Total: última fila. Primera columna: columna izquierda. Última columna: columna derecha. El distractor F corresponde a las opciones de Bandas en filas, que también existen en el desplegable pero no aparecen en esta pregunta."
   },
   {
     "id": "inicio-467",

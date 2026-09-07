@@ -643,8 +643,17 @@ sección «Comentarios» de Backstage no existe en este Word) ✅ · **campo
 Posición del cuadro Tabulaciones = -55,87 a 55,87 cm, negativos incluidos**
 (`inicio-45/75`) ✅ CONFIRMADO en vivo: al teclear fuera de rango Word avisa
 «La medida debe estar entre -55,87 cm y 55,87 cm»; `-2 cm` se fija sin
-problema. Pendiente: solo el desplegable «Aplicar formato a» del cuadro de
-estilo de tabla (`inicio-107` afirma 9 opciones).
+problema. **desplegable «Aplicar formato a» del cuadro de estilo de tabla**
+(`inicio-107`) ✅ CONFIRMADO con captura: son **13**, no 9 — Toda la tabla ·
+**Con encabezado** · **Fila Total** · Primera columna · Última columna ·
+Bandas en filas impares/pares · Bandas en columnas impares/pares · **Celda
+superior/inferior izquierda/derecha** (las 4 esquinas). Los nombres en esta
+instalación son «Con encabezado» y «Fila Total» (no «Fila de encabezado» /
+«Fila de totales»). `inicio-107` reformulada (9→13), `inicio-236/237`
+renombradas, +`inicio-589/590`. **Todos los pendientes de confirmación en
+vivo cerrados.** De paso, «Tipo de estilo» = 5 y la galería de estilos de
+tabla = 3 categorías (Tablas sin formato · con cuadrícula · de lista) también
+quedan confirmados con captura.
 
 **Mapa de cuadros de diálogo compartidos — cross-pestaña (sep-2026)**: a
 partir de los 9 volcados completos se añadió la **§14** a
