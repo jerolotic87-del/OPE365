@@ -187,36 +187,37 @@
     "tema": "Vista Backstage",
     "sourceQuestionId": "sm2-archivo-01",
     "generado": true,
-    "enunciado": "¿Cuáles de estos atajos SÍ funcionan en esta instalación de Word 365?",
+    "enunciado": "De los siguientes atajos, ¿cuáles hacen algo en esta instalación de Word 365? (marca todos los que funcionen)",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+G (Guardar)"
+        "text": "Ctrl+G"
       },
       {
         "letter": "B",
-        "text": "Ctrl+U (Nuevo documento)"
+        "text": "Ctrl+U"
       },
       {
         "letter": "C",
-        "text": "Ctrl+F4 (cerrar documento sin cerrar Word)"
+        "text": "Ctrl+F4"
       },
       {
         "letter": "D",
-        "text": "Ctrl+R (no hace nada)"
+        "text": "Ctrl+R"
       },
       {
         "letter": "E",
-        "text": "Ctrl+Alt+F2 (no abre el panel de impresión)"
+        "text": "Alt+Ctrl+F2"
       }
     ],
     "matching": null,
     "respuesta": [
       "A",
       "B",
-      "C"
+      "C",
+      "E"
     ],
-    "explicacion": "Ctrl+G, Ctrl+U y Ctrl+F4 son atajos reales confirmados. Ctrl+R no hace nada en esta instalación (prueba en vivo) y Ctrl+Alt+F2 NO abre el panel de impresión, pese a aparecer en alguna fuente."
+    "explicacion": "Ctrl+G guarda el documento. · Ctrl+U crea uno nuevo basado en la plantilla Normal. · Ctrl+F4 cierra el documento activo y deja Word abierto. · Alt+Ctrl+F2 abre el cuadro de diálogo Abrir: es la combinación alternativa de Ctrl+F12, y aunque parezca inventada por lo rebuscada, es real. · Ctrl+R es el único que no hace absolutamente nada aquí (prueba en vivo del usuario). Parece el más creíble de los cinco porque en el esquema internacional alinea a la derecha, pero en esta instalación alinear a la derecha es Ctrl+D. · La trampa está montada al revés a propósito: el que suena raro funciona y el que suena normal no."
   },
   {
     "id": "archivo-351",
@@ -231,11 +232,11 @@
     "tema": "Vista Backstage",
     "sourceQuestionId": "vf-archivo-bk01",
     "generado": true,
-    "enunciado": "La Vista Backstage se abre con la pestaña Archivo y se sale de ella volviendo al documento con la flecha «←» de arriba a la izquierda o con Esc.",
+    "enunciado": "La Vista Backstage ocupa toda la ventana y no se comporta como una ficha más de la cinta: se entra con la ficha Archivo y se vuelve al documento con la flecha «←» de arriba a la izquierda o con Esc.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "No es una pestaña de la cinta normal: ocupa toda la ventana."
+    "explicacion": "Verdadero. · Backstage sustituye la ventana entera en lugar de desplegar una banda de comandos como el resto de fichas: por eso no se cierra haciendo clic fuera. · Las dos salidas son la flecha «←» del vértice superior izquierdo y la tecla Esc, y ninguna de las dos toca el documento. · Ctrl+W no sirve para salir, aunque el esquema internacional invite a pensarlo: aquí quita el formato de párrafo."
   },
   {
     "id": "archivo-352",
@@ -250,11 +251,11 @@
     "tema": "Vista Backstage",
     "sourceQuestionId": "vf-archivo-bk02",
     "generado": true,
-    "enunciado": "El panel de navegación de Backstage incluye, de arriba abajo: Inicio, Nuevo, Abrir, Compartir, Información, Guardar, Guardar como, Imprimir, Exportar, Cerrar y, abajo, Cuenta y Opciones.",
+    "enunciado": "Con un documento guardado en el equipo, el panel de navegación de Backstage incluye, de arriba abajo: Inicio, Nuevo, Abrir, Compartir, Información, Guardar, Guardar como, Imprimir, Exportar y Cerrar; separados abajo del todo, Cuenta y Opciones.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "«Cuenta» y «Opciones» quedan separados al final del panel."
+    "explicacion": "Verdadero. · Cuenta y Opciones quedan destacados al final del panel, separados del resto por un espacio, porque no actúan sobre el documento sino sobre la aplicación. · Ojo con el detalle de Guardar y Guardar como: aparecen los dos cuando el archivo está en el equipo, pero se funden en un único «Guardar una copia» cuando el archivo vive en OneDrive. · «Transformar» no está en este panel, por mucho que suene a entrada de Backstage."
   },
   {
     "id": "archivo-353",
@@ -269,11 +270,11 @@
     "tema": "Vista Backstage",
     "sourceQuestionId": "vf-archivo-bk03",
     "generado": true,
-    "enunciado": "Cuando el documento está guardado en OneDrive, Backstage muestra «Guardar como»; cuando está en el equipo local, muestra «Guardar una copia».",
+    "enunciado": "Con el documento guardado en OneDrive, el panel de Backstage muestra «Guardar como»; con el documento en el equipo local, muestra «Guardar una copia».",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: es al revés. En OneDrive aparece «Guardar una copia» (para no romper el original en la nube); en local, «Guardar como»."
+    "explicacion": "Falso: es exactamente al revés. · En OneDrive aparece «Guardar una copia», porque el original ya se está guardando solo en la nube y lo que tiene sentido ofrecer es sacar una copia aparte sin tocarlo. · En el equipo local aparecen «Guardar» y «Guardar como», porque ahí sí hay que decidir cuándo y dónde se escribe. · Es un cambio de nombre de la misma entrada del panel según dónde esté el archivo, no dos entradas distintas."
   },
   {
     "id": "archivo-354",
@@ -288,11 +289,11 @@
     "tema": "Vista Backstage",
     "sourceQuestionId": "vf-archivo-bk04",
     "generado": true,
-    "enunciado": "El panel «Inicio» de Backstage solo muestra la lista de documentos recientes.",
+    "enunciado": "Al abrir Word y entrar en el panel «Inicio» de Backstage, lo único que se ve es la lista de documentos recientes.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: arriba tiene la sección «Nueva» (plantillas) y las pestañas Recientes, Favoritos y Compartidos conmigo."
+    "explicacion": "Falso. · Arriba hay una sección «Nueva» con «Documento en blanco» y varias plantillas destacadas, más un enlace «Más plantillas →». · Debajo están las pestañas Recientes, Favoritos y Compartidos conmigo, con un buscador de archivos y las columnas Nombre y Fecha de modificación. · Recientes es solo una de las tres pestañas, y ni siquiera es todo lo que ocupa la pantalla."
   },
   {
     "id": "archivo-355",
@@ -307,11 +308,11 @@
     "tema": "Vista Backstage",
     "sourceQuestionId": "vf-archivo-bk05",
     "generado": true,
-    "enunciado": "«Cerrar» (Backstage) cierra el documento activo pero no la aplicación Word, y pregunta si guardar cuando hay cambios pendientes.",
+    "enunciado": "«Cerrar», en el panel izquierdo de Backstage, cierra el documento activo pero no la aplicación, y pregunta si guardar cuando quedan cambios pendientes.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Para cerrar Word entero se usa la X de la ventana o Alt+F4 con un solo documento abierto."
+    "explicacion": "Verdadero. · Actúa solo sobre el documento activo: al terminar, Word sigue abierto. · Si hay cambios sin guardar, aparece el aviso de guardar antes de cerrar; nunca descarta en silencio. · Para cerrar Word entero está la X de la ventana, o Alt+F4 cuando ya solo queda un documento abierto. · Ctrl+F4 hace lo mismo que esta entrada: cierra el documento y deja Word en marcha."
   },
   {
     "id": "archivo-391",
@@ -326,11 +327,11 @@
     "tema": "Vista Backstage",
     "sourceQuestionId": "vf-archivo-bk41",
     "generado": true,
-    "enunciado": "El panel «Información» no ofrece forma de copiar la ruta del archivo ni de abrir su carpeta; hay que hacerlo desde el Explorador.",
+    "enunciado": "El panel «Información» no ofrece ninguna forma de copiar la ruta del archivo ni de abrir la carpeta que lo contiene: para eso hay que salir al Explorador de Windows.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: tiene los botones «Copiar ruta de acceso», «Copiar ruta de acceso local» y «Abrir ubicación de archivo»."
+    "explicacion": "Falso. · Junto al nombre del archivo, arriba del panel, hay tres botones: «Copiar ruta de acceso», «Copiar ruta de acceso local» y «Abrir ubicación de archivo». · Las dos rutas no son lo mismo: en un archivo de OneDrive, una devuelve la dirección web y la otra la ruta de la copia sincronizada en el equipo. · «Abrir ubicación de archivo» sí lanza el Explorador, pero ya situado en la carpeta correcta, que es justo lo que la afirmación niega que exista."
   },
   {
     "id": "archivo-392",
@@ -345,11 +346,11 @@
     "tema": "Vista Backstage",
     "sourceQuestionId": "vf-archivo-bk42",
     "generado": true,
-    "enunciado": "«Guardar una copia» y «Guardar como» pueden guardar en OneDrive, en «Este PC» o en un sitio de SharePoint añadido con «Agregar un sitio».",
+    "enunciado": "«Guardar una copia» y «Guardar como» permiten guardar en OneDrive, en «Este PC» o en un sitio de SharePoint previamente enlazado con «Agregar un sitio».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "El centro del panel muestra el nombre, el tipo y un botón Guardar, con «Más opciones…» para el cuadro completo."
+    "explicacion": "Verdadero. · La columna de la izquierda del panel lista Recientes, OneDrive, Este PC, «Agregar un sitio» y «Examinar». · El centro muestra el nombre del archivo, el desplegable de tipo y el botón Guardar, con «Más opciones…» para saltar al cuadro de diálogo completo. · SharePoint no aparece de serie: hay que enlazarlo antes con «Agregar un sitio», y con una cuenta personal no está disponible."
   },
   {
     "id": "archivo-13",
@@ -398,28 +399,28 @@
     "subtopic": null,
     "tema": "Nuevo documento",
     "sourceQuestionId": "8-6",
-    "enunciado": "Al crear un documento nuevo sin diseño previo, ¿qué plantilla se utiliza?",
+    "enunciado": "Creas un documento con «Documento en blanco» desde el panel Nuevo. ¿En qué plantilla se basa ese documento?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Plantilla En blanco"
+        "text": "Normal.dotm"
       },
       {
         "letter": "B",
-        "text": "Plantilla Documento vacío"
+        "text": "Normal.dot"
       },
       {
         "letter": "C",
-        "text": "Plantilla Normal.dot"
+        "text": "Blanco.dotx"
       },
       {
         "letter": "D",
-        "text": "Plantilla Predeterminada"
+        "text": "Documento.dotm"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La plantilla denominada En blanco inicia un archivo vacío. Documento vacío es una denominación incorrecta. Normal.dot es la plantilla global pero no es la que el usuario selecciona directamente. Predeterminada no existe como nombre de plantilla en la interfaz."
+    "explicacion": "Todo documento en blanco hereda de Normal.dotm, la plantilla global de Word. Por eso, si cambias la fuente o los márgenes y guardas el cambio en ella, todos los documentos en blanco que crees después salen así. · Normal.dot es el nombre que tenía esa misma plantilla hasta Word 2003, antes de que la extensión pasara a distinguir si admite macros. Sigue existiendo en instalaciones antiguas, pero no es la de Word 365. · Blanco.dotx y Documento.dotm no existen: están puestas porque suenan igual de plausibles que la correcta, y no se pueden descartar sin saber el nombre real. · El par que más confunde es A y B: solo cambia la extensión, y esa letra de más es toda la diferencia."
   },
   {
     "id": "archivo-356",
@@ -434,11 +435,11 @@
     "tema": "Nuevo documento",
     "sourceQuestionId": "vf-archivo-bk06",
     "generado": true,
-    "enunciado": "El panel «Nuevo» solo ofrece «Documento en blanco», sin acceso a plantillas en línea.",
+    "enunciado": "El panel «Nuevo» de Backstage solo ofrece «Documento en blanco», sin acceso a plantillas en línea.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: tiene un buscador de plantillas en línea y búsquedas sugeridas (Empresa, Tarjetas, Cartas, Educación, Currículos y cartas de presentación, Vacaciones)."
+    "explicacion": "Falso. · Junto a «Documento en blanco» hay una galería de plantillas destacadas y un buscador de plantillas en línea. · Bajo el buscador aparecen búsquedas sugeridas: Empresa, Tarjetas, Cartas, Educación, Currículos y cartas de presentación, y Vacaciones. · Las plantillas en línea requieren conexión: sin ella el panel se queda solo con «Documento en blanco», que es probablemente el origen de la confusión."
   },
   {
     "id": "archivo-357",
@@ -457,7 +458,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Cualquier cambio de fuente, márgenes o estilos que se guarde en Normal.dotm afecta a los documentos en blanco futuros."
+    "explicacion": "Verdadero. · Normal.dotm es la plantilla global: define la fuente, el tamaño, los márgenes, el interlineado y los estilos de partida. · Cualquier cambio que se guarde en ella afecta a todos los documentos en blanco futuros, no al que tienes delante. · La extensión .dotm indica que admite macros; hasta Word 2003 la misma plantilla se llamaba Normal.dot."
   },
   {
     "id": "archivo-403",
@@ -482,14 +483,16 @@
       ],
       [
         "Ctrl+F12",
-        "Ctrl + F12"
+        "Ctrl + F12",
+        "Alt+Ctrl+F2",
+        "Alt + Ctrl + F2"
       ],
       [
         "Ctrl+G",
         "Ctrl + G"
       ]
     ],
-    "explicacion": "Ctrl+U crea un documento nuevo, Ctrl+F12 abre el cuadro de diálogo Abrir y Ctrl+G guarda (esquema clásico de esta instalación)."
+    "explicacion": "Ctrl+U crea un documento nuevo basado en la plantilla Normal. · Ctrl+F12 abre el cuadro de diálogo Abrir, y Alt+Ctrl+F2 hace exactamente lo mismo: son dos combinaciones para el mismo comando, y las dos se dan por válidas. · Ctrl+G guarda el documento. · Ninguno de los tres coincide con el esquema internacional: allí serían Ctrl+N, Ctrl+O y Ctrl+S, y los tres hacen aquí otra cosa."
   },
   {
     "id": "archivo-15",
@@ -503,28 +506,28 @@
     "subtopic": null,
     "tema": "Abrir",
     "sourceQuestionId": "8-7",
-    "enunciado": "¿Cuál de estas rutas NO permite abrir un archivo existente en Word 365?",
+    "enunciado": "Quieres abrir un documento que ya existe en tu equipo. ¿Cuál de estas formas NO te sirve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Abrir"
+        "text": "Ctrl+F12"
       },
       {
         "letter": "B",
-        "text": "Ctrl+U"
-      },
-      {
-        "letter": "C",
         "text": "Ctrl+A"
       },
       {
+        "letter": "C",
+        "text": "Alt+Ctrl+F2"
+      },
+      {
         "letter": "D",
-        "text": "Barra de herramientas de acceso rápido"
+        "text": "Ctrl+U"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+U crea un documento nuevo, no abre uno existente. Las formas válidas de abrir un archivo son: Archivo → Abrir, Ctrl+A y el botón de la barra de herramientas de acceso rápido."
+    "respuesta": "D",
+    "explicacion": "Ctrl+U crea un documento nuevo en blanco: es lo contrario de abrir uno que ya existe. · Ctrl+F12 y Alt+Ctrl+F2 son dos combinaciones para el mismo comando y llevan directamente al cuadro de diálogo Abrir de Windows, saltándose Backstage. · Ctrl+A también abre, pero por otro camino: deja la Vista Backstage en el panel Abrir, con la lista de recientes. Panel y cuadro son sitios distintos para lo mismo, y conviene no mezclarlos. · La trampa está montada al revés: Alt+Ctrl+F2 parece la opción rara y descartable, y es real; Ctrl+U parece de la familia y es la única que no abre nada."
   },
   {
     "id": "archivo-16",
@@ -538,28 +541,28 @@
     "subtopic": null,
     "tema": "Abrir",
     "sourceQuestionId": "8-8",
-    "enunciado": "¿Qué muestra Word al pulsar la opción Abrir desde la Vista Backstage?",
+    "enunciado": "Pulsas «Abrir» en el panel izquierdo de la Vista Backstage. ¿Qué te encuentras?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Una lista de archivos editados recientemente y ubicaciones para examinar"
+        "text": "Los orígenes donde buscar a la izquierda y la lista de recientes a la derecha"
       },
       {
         "letter": "B",
-        "text": "Únicamente los archivos anclados a favoritos"
+        "text": "El cuadro de diálogo Abrir de Windows, ya situado en la última carpeta usada"
       },
       {
         "letter": "C",
-        "text": "Solo los archivos guardados en OneDrive"
+        "text": "Los orígenes donde buscar a la izquierda, sin ninguna lista hasta elegir uno"
       },
       {
         "letter": "D",
-        "text": "El explorador de Windows directamente"
+        "text": "La lista de recientes a pantalla completa, con los anclados arriba del todo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Al pulsar Abrir se muestra la lista de archivos recientes y, si el archivo no está en la lista, se ofrecen ubicaciones para examinarlo. No se muestran solo anclados ni solo archivos en la nube, y el explorador de Windows no se abre directamente sino a través del botón Examinar."
+    "explicacion": "El panel Abrir tiene dos columnas: a la izquierda los orígenes (Recientes, Compartidos conmigo, OneDrive: Personal, Este PC, Agregar un sitio y Examinar) y a la derecha el contenido del origen seleccionado, que de entrada es la lista de documentos recientes. · La opción B describe lo que hacen Ctrl+F12 y Alt+Ctrl+F2, que se saltan este panel y van al cuadro de Windows: es el distractor más peligroso porque es cierto, pero de otra forma de abrir. · La opción C es falsa porque la lista de recientes ya está cargada sin elegir nada. · La opción D quita la columna de orígenes, que es justo lo que convierte esto en un panel y no en una lista. · Abajo del todo del panel hay además un botón «Recuperar documentos sin guardar»."
   },
   {
     "id": "archivo-17",
@@ -573,28 +576,28 @@
     "subtopic": null,
     "tema": "Abrir",
     "sourceQuestionId": "8-9",
-    "enunciado": "¿Qué atajo de teclado abre el cuadro de diálogo Abrir en Word 365?",
+    "enunciado": "Quieres saltarte el panel Abrir de Backstage y que Word te ponga directamente el cuadro de diálogo Abrir de Windows. ¿Qué atajo lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+A"
-      },
-      {
-        "letter": "B",
         "text": "Ctrl+F12"
       },
       {
+        "letter": "B",
+        "text": "Ctrl+A"
+      },
+      {
         "letter": "C",
-        "text": "Alt+Ctrl+F2"
+        "text": "Ctrl+O"
       },
       {
         "letter": "D",
-        "text": "Ctrl+O"
+        "text": "Ctrl+U"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+F12 abre el cuadro de diálogo Abrir (Alt+Ctrl+F2 es la combinación alternativa). Ctrl+A abre Abrir desde Backstage, no el cuadro clásico. Ctrl+O da formato automático, no abre nada. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Ctrl+F12 abre el cuadro de diálogo Abrir de Windows sin pasar por Backstage. Alt+Ctrl+F2 hace exactamente lo mismo: son dos combinaciones para el mismo comando. · Ctrl+A también abre, pero lleva al panel Abrir de la Vista Backstage, que es precisamente lo que la pregunta quiere evitar. Esa es la distinción que se está midiendo. · Ctrl+O aplica Autoformato al documento entero: reorganiza estilos de golpe y no abre nada. · Ctrl+U crea un documento nuevo. · ⚠️ Ojo: en el esquema internacional Ctrl+O es «Open». Aquí no abre: da formato automático."
   },
   {
     "id": "archivo-18",
@@ -608,28 +611,28 @@
     "subtopic": "Recientes, anclar y quitar",
     "tema": "Abrir",
     "sourceQuestionId": "8-10",
-    "enunciado": "¿Cómo se fija un archivo en la lista de documentos recientes para que no desaparezca de ella?",
+    "enunciado": "Quieres que un documento concreto no desaparezca nunca de tu lista de recientes, por muchos archivos que abras después. ¿Qué gesto lo consigue?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Haciendo clic en el icono de chincheta que aparece al pasar el puntero"
+        "text": "Pasar el puntero por encima y pulsar la chincheta que aparece a su derecha"
       },
       {
         "letter": "B",
-        "text": "Haciendo clic derecho y eligiendo Fijar a la lista"
+        "text": "Pasar el puntero por encima y pulsar la estrella que aparece a su derecha"
       },
       {
         "letter": "C",
-        "text": "Arrastrando el archivo a la sección Favoritos"
+        "text": "Arrastrarlo hasta la pestaña «Favoritos» de la parte superior de la lista"
       },
       {
         "letter": "D",
-        "text": "Desde Archivo → Opciones → Avanzadas → Anclar documento"
+        "text": "Hacer doble clic en su nombre y confirmar el aviso que muestra Word"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El icono de chincheta aparece al pasar el puntero sobre el archivo en la lista de recientes. Fijar a la lista es terminología de Windows pero no la opción exacta de Word. La sección Favoritos no existe en este contexto. No hay ninguna ruta en Opciones → Avanzadas para anclar documentos."
+    "explicacion": "El icono de chincheta solo se ve al pasar el puntero por encima de la fila, a la derecha del nombre. Un clic ancla el archivo y lo sube a la parte de arriba de la lista, donde ya no lo desplaza ningún archivo nuevo. · La estrella de la opción B no existe en esta lista, pero es un distractor difícil porque sí hay una pestaña «Favoritos» y una estrella sería el icono lógico para ella. · Arrastrar tampoco funciona: la pestaña Favoritos se llena precisamente con los archivos anclados con la chincheta, no arrastrando. · El doble clic sobre el nombre abre el documento, sin más aviso ni confirmación. · Los anclados y los favoritos acaban siendo lo mismo, y por eso B y C son los que más dudas generan."
   },
   {
     "id": "archivo-19",
@@ -643,28 +646,28 @@
     "subtopic": "Recientes, anclar y quitar",
     "tema": "Abrir",
     "sourceQuestionId": "8-11",
-    "enunciado": "Un archivo aparece anclado en la lista de recientes y el usuario quiere desanclarlo. ¿Qué debe hacer?",
+    "enunciado": "Un documento aparece anclado arriba del todo en la lista de recientes y quieres que vuelva a comportarse como los demás, pero sin que desaparezca de la lista. ¿Qué haces?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Volver a hacer clic en la chincheta del archivo"
+        "text": "Volver a pulsar su chincheta"
       },
       {
         "letter": "B",
-        "text": "Hacer clic derecho y elegir Quitar de la lista"
+        "text": "Pulsar su chincheta manteniendo Ctrl"
       },
       {
         "letter": "C",
-        "text": "Seleccionar el archivo y pulsar Supr"
+        "text": "Clic derecho sobre él y elegir «Quitar de la lista»"
       },
       {
         "letter": "D",
-        "text": "Desde Archivo → Opciones → General → Desanclar documento"
+        "text": "Arrastrarlo fuera de la zona de anclados"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Un segundo clic en la chincheta desancla el archivo. Quitar de la lista lo elimina de la lista por completo, no lo desancla. Supr no tiene efecto sobre la lista de recientes desde Backstage. No existe esa ruta en Opciones → General."
+    "explicacion": "La chincheta funciona como un interruptor: el primer clic ancla y el segundo desancla. El archivo baja a su sitio por fecha y sigue estando en la lista. · La opción C es el distractor fuerte porque existe de verdad, pero hace algo distinto y más drástico: saca el archivo de la lista entera, que es exactamente lo que la pregunta pide evitar. · Mantener Ctrl no cambia el comportamiento de la chincheta; ese modificador no pinta nada aquí. · Arrastrar tampoco: la posición en la lista la decide el estado de anclado y la fecha, no el ratón. · El par que más confunde es A y C: los dos quitan algo, pero uno quita el anclaje y el otro quita el archivo."
   },
   {
     "id": "archivo-20",
@@ -678,28 +681,28 @@
     "subtopic": "Recientes, anclar y quitar",
     "tema": "Abrir",
     "sourceQuestionId": "8-12",
-    "enunciado": "¿Qué procedimiento elimina un archivo de la lista de documentos recientes en Word 365?",
+    "enunciado": "Quieres que un documento deje de aparecer en la lista de recientes de Word, pero sin borrarlo del disco. ¿Qué haces?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Clic derecho sobre el archivo y elegir Quitar de la lista"
+        "text": "Clic derecho sobre él y elegir «Quitar de la lista»"
       },
       {
         "letter": "B",
-        "text": "Hacer clic en la chincheta para desanclarlo"
+        "text": "Clic derecho sobre él y elegir «Borrar los elementos anclados»"
       },
       {
         "letter": "C",
-        "text": "Seleccionar el archivo y pulsar la tecla Supr"
+        "text": "Pulsar su chincheta para desanclarlo de la lista"
       },
       {
         "letter": "D",
-        "text": "Desde Archivo → Información → Administrar documento → Quitar de recientes"
+        "text": "Seleccionarlo en la lista y pulsar la tecla Supr"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El menú contextual con clic derecho ofrece la opción Quitar de la lista. La chincheta solo ancla o desancla, no elimina. Supr eliminaría el archivo del disco, no de la lista. La ruta de Administrar documento gestiona versiones, no la lista de recientes."
+    "explicacion": "«Quitar de la lista» retira esa entrada del historial de recientes y deja el archivo intacto en su carpeta: la lista es solo un registro de accesos. · Desanclar con la chincheta no lo quita de la lista, solo lo devuelve a su orden por fecha; seguirá visible mientras sea reciente. · La opción B invierte el sentido de una acción parecida que sí existe para vaciar el historial de golpe, pero no sirve para un archivo suelto. · Supr no actúa sobre la lista de recientes desde Backstage; y si alguien espera que borre el archivo del disco, tampoco es eso lo que se pide. · El par que más confunde es A y C: los dos se hacen sobre la misma fila y los dos lo quitan de algún sitio."
   },
   {
     "id": "archivo-21",
@@ -713,7 +716,7 @@
     "subtopic": "Opciones del botón Abrir",
     "tema": "Abrir",
     "sourceQuestionId": "8-13",
-    "enunciado": "¿Cuál de las siguientes NO es una opción del desplegable del botón Abrir en Word 365?",
+    "enunciado": "Estás en el cuadro de diálogo Abrir y despliegas la flecha del botón «Abrir». ¿Cuál de estas opciones NO aparece en ese desplegable?",
     "opciones": [
       {
         "letter": "A",
@@ -721,7 +724,7 @@
       },
       {
         "letter": "B",
-        "text": "Abrir en modo formulario"
+        "text": "Abrir en modo lectura"
       },
       {
         "letter": "C",
@@ -734,7 +737,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "Abrir en modo formulario no existe entre las opciones del botón. Las opciones reales son: Abrir, Abrir como de solo lectura, Abrir como copia, Abrir en el explorador, Abrir con transformación, Abrir en Vista protegida, Abrir y reparar y Mostrar versiones anteriores."
+    "explicacion": "El desplegable ofrece: Abrir, Abrir como de solo lectura, Abrir como copia, Abrir en el explorador, Abrir con transformación, Abrir en Vista protegida, Abrir y reparar y Mostrar versiones anteriores. «Abrir en modo lectura» no está entre ellas. · Es un distractor especialmente duro porque el «Modo de lectura» sí existe en Word, pero es una vista de la pestaña Vista, no una forma de abrir el archivo. · «Abrir como de solo lectura» es lo que se confunde con él: impide guardar encima, pero abre en la vista normal. · «Abrir en Vista protegida» añade una capa de seguridad para archivos de origen dudoso. · «Abrir y reparar» intenta recuperar el contenido de un archivo dañado."
   },
   {
     "id": "archivo-22",
@@ -748,7 +751,7 @@
     "subtopic": "Opciones del botón Abrir",
     "tema": "Abrir",
     "sourceQuestionId": "8-14",
-    "enunciado": "Un usuario sospecha que un documento puede estar dañado. ¿Qué opción del desplegable del botón Abrir debería usar para intentar recuperarlo?",
+    "enunciado": "Un documento no termina de abrirse y sospechas que está dañado. Despliegas la flecha del botón «Abrir». ¿Qué opción eliges para intentar recuperar su contenido?",
     "opciones": [
       {
         "letter": "A",
@@ -756,11 +759,11 @@
       },
       {
         "letter": "B",
-        "text": "Abrir en Vista protegida"
+        "text": "Abrir con transformación"
       },
       {
         "letter": "C",
-        "text": "Abrir como copia"
+        "text": "Abrir en Vista protegida"
       },
       {
         "letter": "D",
@@ -769,7 +772,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Abrir y reparar intenta recuperar el contenido de un archivo dañado. Vista protegida abre el archivo en modo de solo lectura restringido por motivos de seguridad. Abrir como copia crea una copia editable. Mostrar versiones anteriores accede al historial de versiones."
+    "explicacion": "«Abrir y reparar» hace justo eso: Word intenta reconstruir el archivo y rescatar todo el contenido que pueda antes de mostrarlo. · «Abrir con transformación» aplica una hoja de transformación XML al abrir; suena a arreglar el archivo y no lo es. · «Abrir en Vista protegida» no repara nada: aísla el archivo por seguridad, en solo lectura, para que no ejecute nada peligroso. · «Mostrar versiones anteriores» busca copias anteriores guardadas por Windows o por la nube; sirve si el daño es reciente y hay una versión previa, pero no repara el archivo que tienes. · Las cuatro son opciones reales del mismo desplegable: aquí no vale descartar por el nombre, hay que saber qué hace cada una."
   },
   {
     "id": "archivo-23",
@@ -783,7 +786,7 @@
     "subtopic": "Recuperación de documentos",
     "tema": "Abrir",
     "sourceQuestionId": "8-15",
-    "enunciado": "¿Qué extensión tienen los archivos de recuperación automática de Word 365?",
+    "enunciado": "Word se cierra de golpe y al volver a abrirlo te ofrece recuperar el documento en el que estabas. ¿Qué extensión tiene el archivo que ha usado para guardar ese trabajo?",
     "opciones": [
       {
         "letter": "A",
@@ -791,7 +794,7 @@
       },
       {
         "letter": "B",
-        "text": ".tmp"
+        "text": ".wbk"
       },
       {
         "letter": "C",
@@ -799,12 +802,12 @@
       },
       {
         "letter": "D",
-        "text": ".wbk"
+        "text": ".tmp"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Los archivos de recuperación sin guardar tienen extensión .asd. Los archivos .tmp son temporales genéricos del sistema. Los .bak son copias de seguridad de algunas aplicaciones pero no de Word. Los .wbk son copias de seguridad de Word pero del proceso de guardado, no de recuperación."
+    "explicacion": "Los archivos de Autorrecuperación de Word tienen extensión .asd, y son los que alimentan el panel de recuperación al reabrir la aplicación. · .wbk es también de Word, pero de otra cosa: es la copia de seguridad que se crea al guardar cuando está activada la opción «Crear siempre una copia de seguridad». Es el distractor más difícil de los tres, porque es la única otra extensión que Word usa de verdad. · .bak es la extensión genérica de copia de seguridad de muchos programas, pero no la que usa Word. · .tmp son archivos temporales del sistema, que Word también crea, pero que no sirven para recuperar nada. · El par que más confunde es A y B: los dos son de Word y los dos protegen tu trabajo, pero uno guarda mientras escribes y el otro solo al guardar."
   },
   {
     "id": "archivo-24",
@@ -818,7 +821,7 @@
     "subtopic": "Recuperación de documentos",
     "tema": "Abrir",
     "sourceQuestionId": "8-16",
-    "enunciado": "¿Desde qué ruta se pueden recuperar documentos que se cerraron sin guardar en Word 365?",
+    "enunciado": "Cerraste un documento sin guardar y quieres intentar recuperarlo desde Word. ¿Qué ruta lleva a los documentos no guardados?",
     "opciones": [
       {
         "letter": "A",
@@ -826,55 +829,55 @@
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Guardar → Recuperar documentos no guardados"
+        "text": "Archivo → Información → Comprobar si hay problemas → Recuperar no guardados"
       },
       {
         "letter": "C",
-        "text": "Archivo → Abrir → Examinar → Archivos de recuperación"
+        "text": "Archivo → Opciones → Guardar → Recuperar documentos no guardados"
       },
       {
         "letter": "D",
-        "text": "Archivo → Información → Comprobar si hay problemas → Recuperar documento"
+        "text": "Archivo → Abrir → Examinar → Archivos de Autorrecuperación"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La ruta correcta es Archivo → Información → Administrar documento → Recuperar documentos no guardados. También existe la ruta Archivo → Reciente → Recuperar documentos sin guardar. Las opciones B, C y D son rutas inventadas que mezclan secciones reales con comandos que no existen en ellas."
+    "explicacion": "La ruta es Información → Administrar documento → «Recuperar documentos no guardados», y abre la carpeta donde Word deja los .asd. Hay un segundo camino equivalente: el botón «Recuperar documentos sin guardar» del final del panel Abrir. · «Comprobar si hay problemas» existe y está en el mismo panel Información, justo al lado: inspecciona el documento, comprueba accesibilidad y compatibilidad. No recupera nada. · En Opciones → Guardar sí se configura cada cuántos minutos se autoguarda y en qué carpeta, pero eso es la configuración, no el rescate. · En Abrir → Examinar no hay ninguna entrada de Autorrecuperación: es el cuadro de Windows normal. · Las cuatro rutas empiezan por Archivo y las tres falsas cruzan una sección real con un comando que no vive en ella: por eso no se descartan de un vistazo."
   },
   {
     "id": "archivo-126",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Abrir",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "atajo",
     "negativa": false,
     "section": "archivo",
     "topic": "abrir",
     "subtopic": null,
     "tema": "Abrir",
     "sourceQuestionId": "8-138",
-    "enunciado": "¿Qué ocurre si se usa el atajo Ctrl+A en Word 365 versión española?",
+    "enunciado": "Con un documento abierto pulsas Ctrl+A en Word 365 en español. ¿Qué pasa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Abre un documento existente desde la Vista Backstage"
+        "text": "Word abre la Vista Backstage por el panel Abrir"
       },
       {
         "letter": "B",
-        "text": "Selecciona todo el contenido del documento"
+        "text": "Word abre el cuadro de diálogo Abrir de Windows"
       },
       {
         "letter": "C",
-        "text": "Aplica alineación izquierda al párrafo activo"
+        "text": "Word selecciona todo el contenido del documento"
       },
       {
         "letter": "D",
-        "text": "Abre el cuadro de diálogo Abrir directamente"
+        "text": "Word aplica alineación izquierda al párrafo activo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "En la versión española Ctrl+A equivale a Abrir con Backstage. En la versión inglesa Ctrl+A selecciona todo, que en español es Ctrl+E. El cuadro de diálogo Abrir se abre con Ctrl+F12. Ctrl+A no alinea a la izquierda, eso es Ctrl+Q."
+    "explicacion": "Ctrl+A lleva al panel Abrir dentro de la Vista Backstage, con la lista de recientes y los orígenes. · La opción B es la trampa fina: ese cuadro también es «Abrir», pero se llega con Ctrl+F12 o Alt+Ctrl+F2, no con Ctrl+A. Saber que existen los dos sitios es lo que separa a quien ha usado el programa de quien ha memorizado una tabla. · Seleccionar todo es Ctrl+E en esta instalación. · Alinear a la izquierda es Ctrl+Q. · ⚠️ Ojo: en el esquema internacional Ctrl+A selecciona todo, y ese es el error más repetido en los tests copiados de fuentes en inglés."
   },
   {
     "id": "archivo-358",
@@ -889,11 +892,11 @@
     "tema": "Abrir",
     "sourceQuestionId": "vf-archivo-bk08",
     "generado": true,
-    "enunciado": "El panel «Abrir» tiene, al final, un botón «Recuperar documentos sin guardar».",
+    "enunciado": "El panel «Abrir» tiene, al final del todo, un botón «Recuperar documentos sin guardar».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Abre la carpeta de archivos de autoguardado de documentos que se cerraron sin guardar."
+    "explicacion": "Verdadero. · Ese botón abre la carpeta donde Word deja los archivos de Autorrecuperación (.asd) de documentos que se cerraron sin guardar. · Es el segundo camino para lo mismo que Información → Administrar documento → «Recuperar documentos no guardados»; conviene conocer los dos porque en los exámenes se pregunta indistintamente por cualquiera de ellos."
   },
   {
     "id": "archivo-359",
@@ -908,11 +911,11 @@
     "tema": "Abrir",
     "sourceQuestionId": "vf-archivo-bk09",
     "generado": true,
-    "enunciado": "En el panel «Abrir», los documentos recientes se agrupan por Hoy, Ayer, Esta semana y Semana pasada, y se pueden marcar como Favoritos con la chincheta.",
+    "enunciado": "En el panel «Abrir», los documentos recientes se agrupan por Hoy, Ayer, Esta semana y Semana pasada, y se pueden marcar como favoritos con la chincheta.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "También hay pestañas «Documentos» y «Carpetas» y un buscador de archivos."
+    "explicacion": "Verdadero. · La agrupación por antigüedad es automática y no se puede desactivar desde el panel. · La chincheta aparece al pasar el puntero por la fila; al pulsarla, el archivo sube arriba del todo y pasa a la pestaña Favoritos. · El panel tiene además un buscador «Buscar un archivo» y dos pestañas, Documentos y Carpetas, para filtrar qué se lista."
   },
   {
     "id": "archivo-360",
@@ -931,7 +934,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: ofrece Recientes, Compartidos conmigo, OneDrive: Personal, Este PC, Agregar un sitio y Examinar."
+    "explicacion": "Falso. · La columna de orígenes ofrece Recientes, Compartidos conmigo, OneDrive: Personal, Este PC, «Agregar un sitio» y «Examinar». · «Compartidos conmigo» y OneDrive son de nube, y «Agregar un sitio» sirve precisamente para enlazar un sitio de SharePoint. · «Este PC» y «Examinar» son las dos únicas entradas locales de la lista, así que lo local es la excepción y no la regla."
   },
   {
     "id": "archivo-25",

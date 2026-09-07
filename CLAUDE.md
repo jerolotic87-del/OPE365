@@ -208,8 +208,8 @@ Reescritura **a mano, ítem por ítem** — ningún script genera contenido.
 `scripts/aplicar_reescritura.py` solo vuelca al JSON el texto ya escrito y
 valida (4 opciones, respuesta viva, sin repetidas, longitudes, explicación).
 
-**Progreso de la reescritura**: `archivo` 9/410 (archivo-3, -4, -5, -9,
--10, -11, -12, -13, -113).
+**Progreso de la reescritura**: `archivo` 35/410 — topics `backstage`,
+`nuevo` y `abrir` cerrados enteros.
 
 ## Regla de oro: jerarquía de fuentes
 
