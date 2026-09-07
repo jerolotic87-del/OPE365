@@ -628,6 +628,20 @@ esquema internacional / conflicto interno). El PDF sí corrobora (aún sin
 prueba en vivo) `Ctrl+Mayús+Z` = borrar formato de fuente → `inicio-363/364`
 siguen pendientes pero con respaldo de academia.
 
+**Revisión completa de Archivo/Backstage (sep-2026)**: el banco (408
+preguntas — el más grande y completo, cubre todo el volcado y el árbol
+entero de Opciones 1-10 veces) no tiene huecos. AGE 2017 (inspeccionar
+info personal antes de compartir) y AGE 2021 («Comprobar si hay problemas»
+NO ofrece «Restringir edición») ya están cubiertas. daypo/aulaclic no
+tienen contenido de Backstage. **1 conflicto corregido**: `archivo-50/51/
+381` decían que el punto y coma NO es separador válido en «Impresión
+personalizada» — pero el volcado del usuario (`data/rutas/archivo.txt`)
+muestra el ejemplo de Word como `1;3;7`: en ES-España Word usa `;` (el
+separador de listas de Windows) y el campo acepta coma **y** punto y coma.
+Suavizadas las 3 (sin afirmar que `;` sea inválido). **Pendiente de que el
+usuario confirme en vivo**: escribir `1;3;7` en el campo Páginas. **0
+preguntas nuevas.**
+
 **Barrido web de huecos de Referencias (sep-2026)**: cruce del banco (161
 preguntas, ya con dos pasadas profundas + PDF academia + iconos + trampas)
 con josenrique.es (AGE) y aulaclic. La pregunta oficial AGE 2022 (nota al

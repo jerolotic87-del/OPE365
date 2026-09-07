@@ -3184,11 +3184,11 @@
     "subtopic": null,
     "tema": "Imprimir",
     "sourceQuestionId": "8-42",
-    "enunciado": "Para imprimir únicamente las páginas 1, 3, 7 y 9 de un documento, ¿qué sintaxis se debe introducir en el campo Páginas?",
+    "enunciado": "Para imprimir solo las paginas sueltas 1, 3, 7 y 9 (no consecutivas), ¿que sintaxis se escribe en el campo Paginas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "1,3,7,9"
+        "text": "1,3,7,9  (o 1;3;7;9)"
       },
       {
         "letter": "B",
@@ -3196,16 +3196,16 @@
       },
       {
         "letter": "C",
-        "text": "1;3;7;9"
+        "text": "1:3:7:9"
       },
       {
         "letter": "D",
-        "text": "1+3+7+9"
+        "text": "1 a 3 a 7 a 9"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La coma separa páginas sueltas no consecutivas. El guion define rangos de páginas consecutivas. El punto y coma y el signo más no son separadores válidos en el campo Páginas de Word."
+    "explicacion": "Las paginas sueltas se separan con coma; en esta instalacion ES-Espana el ejemplo que muestra Word en pantalla usa el punto y coma (1;3;7) porque es el separador de listas de Windows en espanol, y el campo acepta ambos. El guion se reserva para intervalos consecutivos (p. ej. 5-9)."
   },
   {
     "id": "archivo-51",
@@ -3227,7 +3227,7 @@
       },
       {
         "letter": "B",
-        "text": "1-10;12;16"
+        "text": "1 a 10 y 12 y 16"
       },
       {
         "letter": "C",
@@ -3240,7 +3240,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Se combina el guion para el rango consecutivo (1-10) con la coma para páginas sueltas adicionales (12 y 16). El punto y coma, la barra y los guiones concatenados no son sintaxis válida en Word."
+    "explicacion": "Se combina el guion para el intervalo consecutivo (1-10) con el separador de paginas sueltas para 12 y 16. Ese separador es la coma (o el punto y coma en esta instalacion espanola). La barra y los guiones encadenados no valen."
   },
   {
     "id": "archivo-52",
@@ -3442,7 +3442,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: admite también rangos (1-10), combinaciones (1-10,12,16) y páginas de una sección concreta (p1s2-p7s2)."
+    "explicacion": "Falso: ademas de paginas sueltas admite intervalos (1-10), combinaciones (1-10,12,16) y paginas de una seccion concreta (p1s2-p7s2). El separador de paginas sueltas es la coma; en esta instalacion ES-Espana el ejemplo en pantalla aparece con punto y coma (1;3;7) y el campo acepta los dos."
   },
   {
     "id": "archivo-382",
