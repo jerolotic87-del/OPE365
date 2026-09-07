@@ -893,7 +893,14 @@ NO estaban en las capturas del usuario):
    Rellenar / Ajustar] · Alto · Ancho · lanzador → cuadro Disposición,
    estilo de ajuste = 7). El banco casi no lo cubría → **+14**
    (`insertar-499..512`) + 6 flashcards. Generador:
-   `scripts/gen_formato_imagen.py`.
+   `scripts/gen_formato_imagen.py`. **+21 preguntas CON IMAGEN**
+   (`sourceQuestionId` `img-fimg-NN`) de los 21 recortes de icono sin rótulo
+   que el usuario dejó en `data/imagenes_rutas/formato_imagen/icono_*.PNG`
+   (Quitar fondo, Correcciones, Color, Efectos artísticos, Transparencia,
+   Comprimir, Cambiar/Restablecer imagen, Borde de imagen, Efectos de la
+   imagen, Diseño de imagen, Texto alternativo, Posición, Ajustar texto,
+   Panel de selección, Alinear, Agrupar, Girar, Recortar, Alto, Ancho).
+   Generador: `scripts/gen_iconos_formato_imagen.py`.
  - Las otras preguntas
    que citan «la extracción» sí se apoyan en capturas reales
    (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
