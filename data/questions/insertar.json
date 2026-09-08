@@ -7673,28 +7673,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-67",
     "generado": true,
-    "enunciado": "¿En qué pestaña contextual se encuentra el comando Editar forma?",
+    "revisada": true,
+    "enunciado": "Has escrito dentro de un rectángulo y ahora quieres que esa misma caja, con su texto y su formato, sea una elipse. ¿Dónde está el comando?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Formato de imagen > Insertar formas > Editar forma"
+        "text": "Formato de forma ▸ Insertar formas ▸ Editar forma"
       },
       {
         "letter": "B",
-        "text": "Formato de forma > Insertar formas > Editar forma"
+        "text": "Formato de forma ▸ Estilos de forma ▸ Editar forma"
       },
       {
         "letter": "C",
-        "text": "Formato de forma > Estilos de forma > Editar forma"
+        "text": "Formato de imagen ▸ Insertar formas ▸ Editar forma"
       },
       {
         "letter": "D",
-        "text": "Herramientas de dibujo > Diseño > Editar forma"
+        "text": "Herramientas de dibujo ▸ Diseño ▸ Editar forma"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A \"Formato de imagen\" es una cinta contextual diferente (aparece con imágenes, no con formas). C el grupo Estilos de forma no contiene Editar forma. D en Word 365 la pestaña contextual no se llama \"Herramientas de dibujo\"."
+    "respuesta": "A",
+    "explicacion": "«Editar forma» está en el primer grupo de la cinta, «Insertar formas», que es el que trae la galería de figuras y «Dibujar cuadro de texto»; desde ahí se sustituye la figura por otra o se retoca su contorno, y el texto y los colores se conservan. · El grupo «Estilos de forma», el de al lado, solo cambia el aspecto: relleno, contorno y efectos, nunca la figura. · «Formato de imagen» es la cinta de las fotos, no la de las formas. · Y «Herramientas de dibujo» era el rótulo que englobaba esta cinta en versiones anteriores; hoy la pestaña va suelta y se llama «Formato de forma»."
   },
   {
     "id": "insertar-110",
@@ -7709,28 +7710,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-68",
     "generado": true,
-    "enunciado": "¿En qué grupo de la cinta contextual Formato de forma se encuentra el comando Ajustar texto?",
+    "revisada": true,
+    "enunciado": "Quieres que el texto del documento rodee una forma en lugar de dejarle una franja vacía. ¿En qué grupo de «Formato de forma» está ese comando?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Estilos de forma"
-      },
-      {
-        "letter": "B",
-        "text": "Tamaño"
-      },
-      {
-        "letter": "C",
         "text": "Organizar"
       },
       {
-        "letter": "D",
+        "letter": "B",
         "text": "Texto"
+      },
+      {
+        "letter": "C",
+        "text": "Estilos de forma"
+      },
+      {
+        "letter": "D",
+        "text": "Tamaño"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A Estilos de forma contiene Relleno, Contorno y Efectos. B Tamaño contiene Alto y Ancho. D Texto contiene Dirección del texto, Alinear texto y Crear vínculo. Ajustar texto está en Organizar."
+    "respuesta": "A",
+    "explicacion": "«Ajustar texto» decide cómo se comporta el texto del DOCUMENTO alrededor del objeto, así que va con lo que coloca la forma en la página: Posición, Traer adelante, Enviar atrás, Panel de selección, Alinear, Agrupar y Girar. · El grupo «Texto» es el descarte que decide la pregunta, y ese es el matiz: allí se trata el texto de DENTRO de la forma, con Dirección del texto, Alinear texto y Crear vínculo. Dos grupos que hablan de texto y se ocupan de textos distintos. · «Estilos de forma» pinta y «Tamaño» mide."
   },
   {
     "id": "insertar-111",
@@ -7745,11 +7747,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-69",
     "generado": true,
-    "enunciado": "¿Qué grupo de la cinta contextual Formato de forma contiene los comandos Traer adelante y Enviar atrás?",
+    "revisada": true,
+    "enunciado": "Dos formas se solapan y quieres que la de detrás pase al frente. ¿En qué grupo de «Formato de forma» está el comando?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Estilos de forma"
+        "text": "Organizar"
       },
       {
         "letter": "B",
@@ -7757,16 +7760,16 @@
       },
       {
         "letter": "C",
-        "text": "Tamaño"
+        "text": "Estilos de forma"
       },
       {
         "letter": "D",
-        "text": "Organizar"
+        "text": "Tamaño"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "A, B y C son grupos reales de esa cinta pero no contienen esos comandos. Traer adelante y Enviar atrás forman parte del grupo Organizar."
+    "respuesta": "A",
+    "explicacion": "«Traer adelante» y «Enviar atrás» pertenecen a Organizar, que es el grupo de todo lo que tiene que ver con dónde está la forma respecto a la página y a los demás objetos: capas, alineación, agrupación, giro y ajuste de texto. · Los tres descartes son grupos reales de la misma cinta, y esa es la dificultad: hay que saber el reparto, no si existen. Insertar formas dibuja, Estilos de forma pinta y Tamaño mide. · Cuando hay muchos objetos apilados, el «Panel de selección» del mismo grupo va mejor que subir y bajar de uno en uno."
   },
   {
     "id": "insertar-112",
@@ -7781,28 +7784,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-70",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece al grupo Estilos de WordArt de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Quieres que las letras escritas dentro de una forma sean verdes, sin tocar el color de fondo de la forma. ¿Qué comando lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Dirección del texto"
+        "text": "Relleno de texto, en Estilos de WordArt"
       },
       {
         "letter": "B",
-        "text": "Relleno de texto"
+        "text": "Relleno de forma, en Estilos de forma"
       },
       {
         "letter": "C",
-        "text": "Ajustar texto"
+        "text": "Contorno de forma, en Estilos de forma"
       },
       {
         "letter": "D",
-        "text": "Efectos de forma"
+        "text": "Dirección del texto, en el grupo Texto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A pertenece al grupo Texto. C pertenece al grupo Organizar. D pertenece al grupo Estilos de forma (no Estilos de WordArt). El grupo Estilos de WordArt contiene: Relleno de texto, Contorno de texto y Efectos de texto."
+    "respuesta": "A",
+    "explicacion": "El grupo Estilos de WordArt tiene tres comandos y los tres trabajan sobre las LETRAS: Relleno de texto, Contorno de texto y Efectos de texto. · Los tres del grupo anterior, Estilos de forma, se llaman igual pero acaban en «de forma» y trabajan sobre la CAJA: Relleno de forma, Contorno de forma y Efectos de forma. Confundirlos es el error más frecuente de esta cinta, y por eso «Relleno de forma» es el descarte que decide la pregunta: pintaría el fondo de verde, no las letras. · Basta con leer la última palabra del comando para saber sobre qué actúa."
   },
   {
     "id": "insertar-113",
@@ -7817,19 +7821,20 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-71",
     "generado": true,
-    "enunciado": "¿Qué grupo de la cinta contextual Formato de forma contiene el comando Texto alternativo, destinado a la accesibilidad del documento?",
+    "revisada": true,
+    "enunciado": "Quieres describir una forma para quien lea el documento con un lector de pantalla. ¿En qué grupo de «Formato de forma» está el comando?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Texto"
+        "text": "Accesibilidad"
       },
       {
         "letter": "B",
-        "text": "Organizar"
+        "text": "Texto"
       },
       {
         "letter": "C",
-        "text": "Accesibilidad"
+        "text": "Organizar"
       },
       {
         "letter": "D",
@@ -7837,8 +7842,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A el grupo Texto contiene Dirección del texto, Alinear texto y Crear vínculo, no Texto alternativo. B Organizar gestiona posición y orden, no accesibilidad. D Estilos de forma gestiona apariencia visual."
+    "respuesta": "A",
+    "explicacion": "«Texto alternativo» tiene grupo propio, «Accesibilidad», con ese único botón, igual que ocurre en la cinta de las imágenes. Al tener un solo comando es el grupo que más se olvida al enumerar la cinta. · El grupo «Texto» es el descarte que decide la pregunta, porque el nombre del comando lleva la palabra texto; pero allí se trata el texto que se ve escrito dentro de la forma, y el alternativo es precisamente el que no se ve, el que solo se oye. · Es lo que reclama el comprobador de accesibilidad de la pestaña Revisar."
   },
   {
     "id": "insertar-114",
@@ -7853,28 +7858,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-72",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece al grupo Texto de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Has escrito dentro de una forma y quieres que ese texto se apoye en la parte de abajo de la caja en lugar de en el centro. ¿Qué comando lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Contorno de texto"
+        "text": "Alinear texto, en el grupo Texto"
       },
       {
         "letter": "B",
-        "text": "Alinear texto"
+        "text": "Alinear, en el grupo Organizar"
       },
       {
         "letter": "C",
-        "text": "Panel de selección"
+        "text": "Dirección del texto, en el grupo Texto"
       },
       {
         "letter": "D",
-        "text": "Relleno de forma"
+        "text": "Posición, en el grupo Organizar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A pertenece a Estilos de WordArt. C pertenece al grupo Organizar. D pertenece a Estilos de forma. El grupo Texto contiene: Dirección del texto, Alinear texto y Crear vínculo."
+    "respuesta": "A",
+    "explicacion": "«Alinear texto» coloca el texto dentro de la caja en el eje vertical: arriba, en medio o abajo. Comparte grupo con «Dirección del texto», que lo gira, y con «Crear vínculo», que encadena cuadros. · «Alinear», del grupo Organizar, es el descarte que decide la pregunta: los nombres se parecen muchísimo y hace algo muy distinto, cuadrar varios objetos entre sí o respecto a la página. La palabra que los separa es «texto». · Y «Posición» coloca la forma entera en la página, no lo que hay dentro."
   },
   {
     "id": "insertar-193",
@@ -7889,28 +7895,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-160",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Estilos de forma de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Quieres poner una sombra a la caja de una forma, no a las letras que tiene dentro. ¿Qué comando lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Relleno de texto"
-      },
-      {
-        "letter": "B",
         "text": "Efectos de forma"
       },
       {
+        "letter": "B",
+        "text": "Efectos de texto"
+      },
+      {
         "letter": "C",
-        "text": "Contorno de texto"
+        "text": "Contorno de forma"
       },
       {
         "letter": "D",
-        "text": "Dirección del texto"
+        "text": "Relleno de forma"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A y C pertenecen al grupo Estilos de WordArt, no a Estilos de forma. D pertenece al grupo Texto. El grupo Estilos de forma contiene: Relleno de forma, Contorno de forma, Efectos de forma."
+    "respuesta": "A",
+    "explicacion": "«Efectos de forma» cierra el grupo Estilos de forma y despliega los siete de siempre: preestablecer, sombra, reflexión, iluminado, bordes suaves, bisel y giro 3D, los mismos que ofrecen las imágenes y el WordArt. · «Efectos de texto», del grupo siguiente, es el descarte que decide la pregunta: hace exactamente lo mismo pero sobre las letras, y a simple vista una sombra puede parecer la misma sombra. · Los otros dos comandos del grupo son «Relleno de forma», que pinta el interior, y «Contorno de forma», que pinta el borde."
   },
   {
     "id": "insertar-194",
@@ -7925,28 +7932,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-161",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Estilos de forma de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Quieres que una forma tenga el fondo de un color y el borde de otro. ¿Qué dos comandos necesitas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Contorno de texto"
+        "text": "Relleno de forma y Contorno de forma"
       },
       {
         "letter": "B",
-        "text": "Relleno de forma"
+        "text": "Relleno de forma y Contorno de texto"
       },
       {
         "letter": "C",
-        "text": "Efectos de texto"
+        "text": "Relleno de texto y Contorno de forma"
       },
       {
         "letter": "D",
-        "text": "Alinear texto"
+        "text": "Relleno de texto y Contorno de texto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A y C pertenecen a Estilos de WordArt. D pertenece al grupo Texto. \"Relleno de forma\" sí pertenece a Estilos de forma."
+    "respuesta": "A",
+    "explicacion": "Los dos están en el grupo Estilos de forma, junto a «Efectos de forma», y actúan sobre la caja: uno pinta el interior y el otro la línea del borde, con su color, su grosor y su tipo de trazo. · Las combinaciones con «de texto» son del grupo siguiente, Estilos de WordArt, y harían lo equivalente pero sobre las letras: el relleno de las letras y su perfilado. · La galería del propio grupo Estilos de forma ofrece combinaciones ya hechas de relleno y contorno, para aplicar las dos cosas de un clic."
   },
   {
     "id": "insertar-195",
@@ -7961,15 +7969,16 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-162",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Estilos de WordArt de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Quieres perfilar las letras de dentro de una forma con un borde de color distinto al relleno de esas letras. ¿Qué comando lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Relleno de forma"
+        "text": "Contorno de texto"
       },
       {
         "letter": "B",
-        "text": "Efectos de forma"
+        "text": "Contorno de forma"
       },
       {
         "letter": "C",
@@ -7977,12 +7986,12 @@
       },
       {
         "letter": "D",
-        "text": "Panel de selección"
+        "text": "Relleno de texto"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A y B pertenecen a Estilos de forma. D pertenece a Organizar. \"Efectos de texto\" sí pertenece a Estilos de WordArt."
+    "respuesta": "A",
+    "explicacion": "Es el segundo de los tres comandos del grupo Estilos de WordArt, y dibuja el perfil de cada letra, con su color, su grosor y su tipo de línea; combinado con «Relleno de texto» da esas letras huecas o de dos colores típicas de un rótulo. · «Contorno de forma» es el descarte que decide la pregunta, y pinta el borde de la caja, no el de las letras. · «Efectos de texto» añade sombra, reflejo o bisel, que no es perfilar. · La palabra final del comando dice siempre sobre qué actúa."
   },
   {
     "id": "insertar-196",
@@ -7997,28 +8006,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-163",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Organizar de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Has dibujado un diagrama con seis formas y quieres moverlas todas a la vez sin que se descoloquen. ¿Qué comando lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Dirección del texto"
+        "text": "Agrupar, en el grupo Organizar"
       },
       {
         "letter": "B",
-        "text": "Texto alternativo"
+        "text": "Alinear, en el grupo Organizar"
       },
       {
         "letter": "C",
-        "text": "Agrupar"
+        "text": "Posición, en el grupo Organizar"
       },
       {
         "letter": "D",
-        "text": "Contorno de forma"
+        "text": "Editar forma, en el grupo Insertar formas"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A pertenece al grupo Texto. B pertenece al grupo Accesibilidad. D pertenece a Estilos de forma. \"Agrupar\" sí pertenece al grupo Organizar."
+    "respuesta": "A",
+    "explicacion": "«Agrupar» convierte varias formas seleccionadas en un solo objeto, de modo que se mueven, se estiran y se formatean juntas; el mismo botón ofrece desagrupar y reagrupar. Hace falta tener dos o más objetos seleccionados y que ninguno esté en línea con el texto. · «Alinear» es el descarte que decide la pregunta: también trabaja con varios a la vez, pero solo los coloca y luego siguen siendo independientes. · El «Nuevo lienzo de dibujo» consigue algo parecido, pero se crea antes de dibujar, no después."
   },
   {
     "id": "insertar-197",
@@ -8033,28 +8043,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-164",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Organizar de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Quieres voltear una flecha para que apunte al lado contrario. ¿Qué comando de «Formato de forma» lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Crear vínculo"
+        "text": "Girar, en el grupo Organizar"
       },
       {
         "letter": "B",
-        "text": "Girar"
+        "text": "Editar forma, en el grupo Insertar formas"
       },
       {
         "letter": "C",
-        "text": "Relleno de texto"
+        "text": "Dirección del texto, en el grupo Texto"
       },
       {
         "letter": "D",
-        "text": "Alto"
+        "text": "Posición, en el grupo Organizar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A pertenece al grupo Texto. C pertenece a Estilos de WordArt. D pertenece al grupo Tamaño. \"Girar\" sí pertenece al grupo Organizar."
+    "respuesta": "A",
+    "explicacion": "El botón «Girar» ofrece los dos giros de 90°, el volteo horizontal y el vertical, y «Más opciones de giro…» para escribir el ángulo exacto. Voltear no es lo mismo que girar: uno refleja como un espejo y el otro rota, y en una flecha simétrica el resultado puede coincidir. · «Dirección del texto» es el descarte que decide la pregunta: gira, sí, pero solo las letras de dentro; la forma se queda como estaba. · Para un ángulo cualquiera está también el tirador circular de encima de la forma."
   },
   {
     "id": "insertar-198",
@@ -8069,28 +8080,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-165",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Organizar de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Una forma ha quedado tapada por otras y no consigues seleccionarla con el ratón. ¿Qué comando te da la lista de todos los objetos de la página?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Efectos de forma"
+        "text": "Panel de selección, en el grupo Organizar"
       },
       {
         "letter": "B",
-        "text": "Ancho"
+        "text": "Traer adelante, en el grupo Organizar"
       },
       {
         "letter": "C",
-        "text": "Panel de selección"
+        "text": "Agrupar, en el grupo Organizar"
       },
       {
         "letter": "D",
-        "text": "Fuente del texto alternativo"
+        "text": "Editar forma, en el grupo Insertar formas"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A pertenece a Estilos de forma. B pertenece al grupo Tamaño. D no existe. \"Panel de selección\" sí pertenece al grupo Organizar."
+    "respuesta": "A",
+    "explicacion": "Abre un panel a la derecha con todos los objetos en su orden de apilamiento, y desde ahí se selecciona el que sea, se le cambia el nombre, se sube o se baja de capa y se oculta con el icono del ojo. Es la salida cuando el objeto no se puede pinchar porque otro está encima. · «Traer adelante» es el descarte que decide la pregunta: resuelve el mismo problema pero a ciegas y solo con lo que ya esté seleccionado, que es justo lo que aquí no se consigue. · Para agrupar hay que poder seleccionar antes."
   },
   {
     "id": "insertar-199",
@@ -8105,28 +8117,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-166",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Organizar de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Quieres colocar una forma en una de las nueve posiciones fijas de la página, sin arrastrarla a ojo. ¿Qué comando lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar como icono"
+        "text": "Posición, en el grupo Organizar"
       },
       {
         "letter": "B",
-        "text": "Posición"
+        "text": "Alinear, en el grupo Organizar"
       },
       {
         "letter": "C",
-        "text": "Fuente"
+        "text": "Ajustar texto, en el grupo Organizar"
       },
       {
         "letter": "D",
-        "text": "Contorno de texto"
+        "text": "Alinear texto, en el grupo Texto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A es una opción del cuadro Objeto, no un comando de la cinta de forma. C pertenece al formato de carácter. D pertenece a Estilos de WordArt. \"Posición\" sí pertenece al grupo Organizar."
+    "respuesta": "A",
+    "explicacion": "«Posición» despliega una cuadrícula de nueve colocaciones (las tres franjas verticales por las tres horizontales), todas con ajuste cuadrado, más «Más opciones de diseño…», que lleva al cuadro Disposición. · «Alinear» es el descarte que decide la pregunta, porque también coloca respecto a la página; la diferencia es que allí se elige un solo borde o el centro, y aquí las dos coordenadas de una vez. · Elegir una posición de la cuadrícula impone además un ajuste de texto, así que los dos comandos están relacionados."
   },
   {
     "id": "insertar-200",
@@ -8141,28 +8154,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-167",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Organizar de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Tienes cuatro cuadros de texto a distintas alturas y quieres cuadrarlos todos por su borde superior. ¿Qué comando lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Índice"
+        "text": "Alinear, en el grupo Organizar"
       },
       {
         "letter": "B",
-        "text": "Alinear"
+        "text": "Alinear texto, en el grupo Texto"
       },
       {
         "letter": "C",
-        "text": "Acento"
+        "text": "Posición, en el grupo Organizar"
       },
       {
         "letter": "D",
-        "text": "Límite y logaritmo"
+        "text": "Agrupar, en el grupo Organizar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son estructuras del editor de ecuaciones, no comandos de Organizar. \"Alinear\" sí pertenece al grupo Organizar."
+    "respuesta": "A",
+    "explicacion": "«Alinear» cuadra los objetos seleccionados por el borde que se elija o los reparte a distancias iguales con «Distribuir»; también deja decidir si la referencia son ellos mismos, la página o el margen. · «Alinear texto» es el descarte que decide la pregunta: nombre casi idéntico y ámbito completamente distinto, porque coloca el texto DENTRO de una forma. · «Posición» solo trabaja con una forma cada vez. · Y agrupar los uniría sin cuadrarlos: seguirían igual de desiguales, pero moviéndose juntos."
   },
   {
     "id": "insertar-201",
@@ -8177,28 +8191,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-168",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Texto de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Quieres que el texto escrito dentro de una forma se lea en vertical. ¿Qué comando de «Formato de forma» lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ajustar texto"
+        "text": "Dirección del texto, en el grupo Texto"
       },
       {
         "letter": "B",
-        "text": "Crear vínculo"
+        "text": "Alinear texto, en el grupo Texto"
       },
       {
         "letter": "C",
-        "text": "Relleno de forma"
+        "text": "Girar, en el grupo Organizar"
       },
       {
         "letter": "D",
-        "text": "Traer adelante"
+        "text": "Efectos de texto, en Estilos de WordArt"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A pertenece al grupo Organizar. C pertenece a Estilos de forma. D pertenece al grupo Organizar. \"Crear vínculo\" sí pertenece al grupo Texto (permite vincular el flujo de texto entre cuadros de texto)."
+    "respuesta": "A",
+    "explicacion": "«Dirección del texto» gira las letras dentro de la caja sin mover la caja, que es lo que se necesita para rotular una franja estrecha en vertical. Comparte grupo con «Alinear texto» y «Crear vínculo». · «Girar» es el descarte que decide la pregunta: también rota, pero el objeto entero, así que la forma quedaría tumbada de lado junto con su texto. · «Alinear texto» coloca el texto arriba, en medio o abajo, sin girarlo. · Y los efectos de texto añaden sombra o bisel, no orientan."
   },
   {
     "id": "insertar-202",
@@ -8213,28 +8228,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-169",
     "generado": true,
-    "enunciado": "¿Qué comando del grupo Texto de la cinta contextual Formato de forma permite que el texto fluya de un cuadro de texto a otro cuando el primero se queda sin espacio?",
+    "revisada": true,
+    "enunciado": "Un cuadro de texto se ha quedado corto y quieres que lo que no cabe continúe en otro cuadro de la página siguiente. ¿Qué comando lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ajustar texto"
+        "text": "Crear vínculo, en el grupo Texto"
       },
       {
         "letter": "B",
-        "text": "Dirección del texto"
+        "text": "Ajustar texto, en el grupo Organizar"
       },
       {
         "letter": "C",
-        "text": "Crear vínculo"
+        "text": "Alinear texto, en el grupo Texto"
       },
       {
         "letter": "D",
-        "text": "Alinear texto"
+        "text": "Agrupar, en el grupo Organizar"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A controla cómo el texto del documento rodea la forma, no el flujo entre cuadros. B cambia la orientación del texto dentro del cuadro. D controla la alineación vertical del texto. \"Crear vínculo\" es el comando que enlaza cuadros de texto para que el contenido fluya de uno al siguiente."
+    "respuesta": "A",
+    "explicacion": "Se selecciona el cuadro que se ha desbordado, se pulsa el comando y luego se pincha el cuadro de destino, que tiene que estar vacío: a partir de ahí el texto fluye solo del uno al otro, como en una maquetación de revista, y si se agranda el primero, el segundo se vacía en consecuencia. · «Agrupar» es el descarte que decide la pregunta, porque también «une» dos cuadros, pero solo para moverlos juntos: el texto no pasa de uno a otro. · «Ajustar texto» habla del texto del documento, no del de dentro."
   },
   {
     "id": "insertar-203",
@@ -8249,28 +8265,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-170",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Tamaño de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "Comparas el grupo Tamaño de «Formato de forma» con el de «Formato de imagen». ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Posición"
+        "text": "El de imagen tiene además «Recortar»; el de forma solo tiene Alto y Ancho"
       },
       {
         "letter": "B",
-        "text": "Ancho"
+        "text": "El de forma tiene además «Recortar»; el de imagen solo tiene Alto y Ancho"
       },
       {
         "letter": "C",
-        "text": "Ajustar texto"
+        "text": "En nada: los dos tienen Recortar, Alto y Ancho"
       },
       {
         "letter": "D",
-        "text": "Alinear"
+        "text": "El de forma tiene además «Escala»; el de imagen solo tiene Alto y Ancho"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D pertenecen al grupo Organizar. El grupo Tamaño contiene únicamente: Alto y Ancho."
+    "respuesta": "A",
+    "explicacion": "Tiene su lógica: recortar significa esconder un trozo del contenido, y una forma no tiene contenido que esconder, solo un contorno que se estira. Lo más parecido en una forma es cambiarla por otra con «Editar forma». · La versión con los papeles cambiados es el descarte que decide la pregunta y hay que leerla despacio. · La escala en porcentaje sí existe para las dos, pero no como campo de la cinta: está en la ficha Tamaño del cuadro Disposición, al que se llega por «Más opciones de diseño…»."
   },
   {
     "id": "insertar-204",
@@ -8285,28 +8302,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-171",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Insertar formas de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "El grupo «Insertar formas» de la cinta Formato de forma incluye «Dibujar cuadro de texto». ¿Qué sentido tiene si ya existe Insertar ▸ Texto ▸ Cuadro de texto?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Relleno de forma"
+        "text": "Ninguna diferencia de fondo: es el mismo cuadro de texto, a mano en la cinta que ya se está usando"
       },
       {
         "letter": "B",
-        "text": "Editar forma"
+        "text": "Este dibuja un cuadro que no admite formato, solo texto sin adornos"
       },
       {
         "letter": "C",
-        "text": "Agrupar"
+        "text": "Este dibuja el cuadro dentro de la forma seleccionada, como una capa hija"
       },
       {
         "letter": "D",
-        "text": "Texto alternativo"
+        "text": "Este inserta un cuadro ya vinculado al anterior, para que el texto fluya"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A pertenece a Estilos de forma. C pertenece a Organizar. D pertenece a Accesibilidad. El grupo Insertar formas contiene: Editar forma y Dibujar cuadro de texto."
+    "respuesta": "A",
+    "explicacion": "Un cuadro de texto no es más que una forma rectangular preparada para escribir dentro, así que Word lo pone donde hace falta: en la pestaña Insertar para empezar de cero, y en la cinta de forma para seguir dibujando sin cambiar de pestaña. Las dos vías dan exactamente el mismo objeto. · Vincular dos cuadros es otro comando distinto, «Crear vínculo», del grupo Texto, y es el descarte que decide la pregunta. · Que admite formato lo demuestra la propia cinta: relleno, contorno y efectos funcionan igual que en cualquier forma."
   },
   {
     "id": "insertar-205",
@@ -8321,28 +8339,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "P-172",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes comandos pertenece realmente al grupo Insertar formas de la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "¿Qué comandos, además de la galería de figuras, tiene el grupo «Insertar formas» de la cinta Formato de forma?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Contorno de forma"
+        "text": "Editar forma y Dibujar cuadro de texto"
       },
       {
         "letter": "B",
-        "text": "Dirección del texto"
+        "text": "Editar forma y Combinar formas"
       },
       {
         "letter": "C",
-        "text": "Dibujar cuadro de texto"
+        "text": "Editar forma y Nuevo lienzo de dibujo"
       },
       {
         "letter": "D",
-        "text": "Enviar atrás"
+        "text": "Dibujar cuadro de texto y Agrupar"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A pertenece a Estilos de forma. B pertenece al grupo Texto. D pertenece a Organizar. \"Dibujar cuadro de texto\" sí pertenece al grupo Insertar formas."
+    "respuesta": "A",
+    "explicacion": "El grupo abre la cinta por la izquierda y es el único que sirve para CREAR: la galería para añadir otra figura, «Editar forma» para cambiar la que ya hay por otra o retocar su contorno, y «Dibujar cuadro de texto» para trazar uno sin volver a la pestaña Insertar. · «Combinar formas» es el descarte que decide la pregunta, porque existe de verdad y se usa mucho para fabricar figuras nuevas uniendo o restando otras; lo que no es es un botón de este grupo. · «Agrupar» y el lienzo de dibujo tampoco están aquí: uno vive en Organizar y el otro en el menú Formas de la pestaña Insertar."
   },
   {
     "id": "insertar-439",
@@ -8357,28 +8376,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "neg-insertar-05",
     "generado": true,
-    "enunciado": "¿Cuál de estos grupos NO pertenece a la cinta contextual Formato de forma?",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO es un grupo de la cinta contextual «Formato de forma»:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar formas"
+        "text": "Ajustar"
       },
       {
         "letter": "B",
-        "text": "Estilos de forma"
+        "text": "Insertar formas"
       },
       {
         "letter": "C",
-        "text": "Accesibilidad"
+        "text": "Estilos de WordArt"
       },
       {
         "letter": "D",
-        "text": "Ajustar página"
+        "text": "Accesibilidad"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Formato de forma tiene siete grupos: Insertar formas, Estilos de forma, Estilos de WordArt, Texto, Accesibilidad, Organizar y Tamaño. No existe un grupo «Ajustar página» en esa cinta."
+    "respuesta": "A",
+    "explicacion": "Los siete grupos son Insertar formas, Estilos de forma, Estilos de WordArt, Texto, Accesibilidad, Organizar y Tamaño. · «Ajustar» sí existe, pero en la cinta de al lado, la de «Formato de imagen», y es el que trae Quitar fondo, Correcciones, Color, Efectos artísticos, Transparencia, Comprimir, Cambiar y Restablecer. Ese es justo el motivo de que engañe: son cintas hermanas y se solapan en varios grupos, Organizar y Tamaño entre ellos. · Retocar la luz o el color no tiene sentido en una forma, que se pinta con un relleno."
   },
   {
     "id": "insertar-457",
@@ -8393,28 +8413,29 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "neg2-insertar-11",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre las formas:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El relleno de una forma puede ser un color sólido, un degradado, una textura o una imagen."
+        "text": "Una forma no admite texto dentro: para eso hay que superponerle un cuadro de texto"
       },
       {
         "letter": "B",
-        "text": "El contorno de una forma se puede cambiar de grosor, color y estilo de línea."
+        "text": "El relleno de una forma puede ser un color, un degradado, una textura o una imagen"
       },
       {
         "letter": "C",
-        "text": "Los efectos de forma incluyen sombra, reflexión, iluminado y bisel."
+        "text": "El contorno admite cambios de color, de grosor y de tipo de línea"
       },
       {
         "letter": "D",
-        "text": "Una forma no puede tener texto dentro; para eso hace falta un cuadro de texto aparte."
+        "text": "Los efectos de forma incluyen sombra, reflexión, iluminado y bisel"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Se puede escribir texto directamente dentro de una forma con «Modificar texto» (clic derecho o F2)."
+    "respuesta": "A",
+    "explicacion": "Se escribe dentro de casi cualquier forma sin más que seleccionarla y empezar a teclear, o con «Modificar texto» del menú contextual; ese texto se formatea desde el grupo Estilos de WordArt y se coloca desde el grupo Texto. De hecho, un cuadro de texto no es otra cosa que una forma rectangular preparada para eso. · Las otras tres son ciertas y describen los tres comandos del grupo Estilos de forma. · La excepción son las líneas y los conectores, que al no tener superficie no admiten ni relleno ni texto dentro."
   },
   {
     "id": "insertar-332",
@@ -8429,11 +8450,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-133",
     "generado": true,
-    "enunciado": "La cinta contextual Formato de forma hay que activarla manualmente desde la pestaña Ver.",
+    "revisada": true,
+    "enunciado": "La cinta «Formato de forma» hay que activarla a mano desde la pestaña Vista.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: aparece sola al seleccionar una forma y desaparece al deseleccionarla."
+    "explicacion": "Aparece sola en cuanto se selecciona una forma y desaparece al pinchar fuera: es una pestaña contextual, y ese comportamiento es común a todas (Formato de imagen, Diseño de tabla, Disposición de tabla, Formato de gráfico). · La pestaña Vista maneja los modos de ver el documento, las reglas y las ventanas, y no activa ninguna cinta contextual. · Las pestañas que sí se activan a mano son otras, como «Programador», que se enciende en Opciones ▸ Personalizar cinta porque no está visible de fábrica."
   },
   {
     "id": "insertar-333",
@@ -8448,11 +8470,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-134",
     "generado": true,
-    "enunciado": "El comando Texto alternativo de la cinta Formato de forma sirve para añadir una descripción de la forma que pueden leer los lectores de pantalla.",
+    "revisada": true,
+    "enunciado": "El «Texto alternativo» de la cinta Formato de forma es una descripción que se lee en voz alta con un lector de pantalla, y no se ve en el documento.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Insertas un gráfico de barras en el documento. Una persona con discapacidad visual que use un lector de pantalla no puede ver el gráfico. Si escribes en Texto alternativo \"Gráfico de barras que muestra las ventas por trimestre\", el lector de pantalla leerá esa descripción en voz alta."
+    "explicacion": "Es información que viaja con el objeto pero no se imprime ni se muestra: quien vea el documento no la nota, y quien lo escuche recibe la descripción en el lugar donde está la forma. Por eso una frase como «gráfico de barras con las ventas por trimestre» vale más que «imagen1». · El panel ofrece además marcar el objeto como decorativo, para que el lector lo ignore, y es lo que conviene con una línea o un adorno. · Es lo que reclama el comprobador de accesibilidad de la pestaña Revisar."
   },
   {
     "id": "insertar-334",
@@ -8467,11 +8490,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-135",
     "generado": true,
-    "enunciado": "El comando Ajustar texto controla cómo fluye el texto del documento alrededor de la forma.",
+    "revisada": true,
+    "enunciado": "«Ajustar texto» decide cómo fluye el texto del documento alrededor de la forma.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Insertas una imagen en mitad de un párrafo. Con Ajustar texto > Cuadrado el texto rodea la imagen por todos lados. Con Ajustar texto > Detrás del texto la imagen queda detrás del texto como una marca de agua. Con Ajustar texto > En línea con el texto la imagen se comporta como un carácter más dentro del párrafo."
+    "explicacion": "Sus siete estilos van desde tratarla como un carácter más del párrafo hasta sacarla del flujo por completo, poniéndola detrás o delante del texto; los intermedios se diferencian en cuánto se ciñe el texto al contorno real. · Está en el grupo Organizar, no en el grupo Texto, porque el texto del que habla es el del documento, no el de dentro de la forma. Esa distinción es la clave de toda esta cinta: los comandos que acaban en «texto» pueden referirse a dos textos distintos, y hay que mirar el grupo para saber a cuál."
   },
   {
     "id": "insertar-335",
@@ -8486,11 +8510,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-136",
     "generado": true,
-    "enunciado": "El comando Crear vínculo del grupo Texto de la cinta Formato de forma permite añadir un hipervínculo a una página web dentro de la forma.",
+    "revisada": true,
+    "enunciado": "«Crear vínculo», en el grupo Texto de la cinta Formato de forma, sirve para poner un hipervínculo a una página web dentro de la forma.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Tienes dos cuadros de texto: el primero se queda sin espacio cuando escribes un texto largo. Seleccionas el primero, haces clic en Crear vínculo y después en el segundo cuadro de texto. Ahora el texto desbordado del primero continúa automáticamente en el segundo. No tiene nada que ver con hipervínculos a páginas web, eso se hace con Insertar > Vínculos > Vínculo."
+    "explicacion": "Sirve para encadenar dos cuadros de texto: lo que no cabe en el primero continúa automáticamente en el segundo, que debe estar vacío. Es una herramienta de maquetación, como la de una revista con un artículo que sigue en otra página. · Un hipervínculo se pone con Insertar ▸ Vínculos ▸ Vínculo, o con Ctrl+Alt+K, y funciona igual sobre una forma que sobre una palabra suelta. · La confusión es puramente de nombre: la palabra «vínculo» se usa en Word para cosas muy distintas, y aquí no hay ninguna dirección de internet de por medio."
   },
   {
     "id": "insertar-336",
@@ -8505,11 +8530,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-137",
     "generado": true,
-    "enunciado": "Los comandos Traer adelante y Enviar atrás del grupo Organizar controlan el orden de superposición cuando varias formas se solapan.",
+    "revisada": true,
+    "enunciado": "«Traer adelante» y «Enviar atrás» deciden qué forma tapa a cuál cuando dos se solapan.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Tienes un rectángulo azul y una estrella amarilla que se solapan. La estrella queda tapada por el rectángulo. Seleccionas la estrella y haces clic en Traer adelante. La estrella pasa a estar por encima del rectángulo y ya se ve completa. Enviar atrás haría lo contrario."
+    "explicacion": "Cada objeto flotante ocupa una capa, y esos dos botones lo suben o lo bajan un escalón; sus desplegables incluyen además «Traer al frente» y «Enviar al fondo», que lo llevan de golpe al extremo. · Con dos o tres objetos se maneja bien así, pero cuando hay muchos apilados conviene el «Panel de selección» del mismo grupo, que muestra la pila entera y deja arrastrar. · Ojo: un objeto en línea con el texto no participa en esas capas, porque se comporta como una letra del párrafo."
   },
   {
     "id": "insertar-337",
@@ -8524,11 +8550,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-138",
     "generado": true,
-    "enunciado": "El comando Alinear del grupo Organizar solo funciona cuando hay varias formas seleccionadas al mismo tiempo.",
+    "revisada": true,
+    "enunciado": "«Alinear», del grupo Organizar, solo funciona si hay varias formas seleccionadas a la vez.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Seleccionas una sola forma y usas Alinear > Centrar horizontalmente. La forma se desplaza al centro horizontal de la página. No necesitas varias formas. Con una sola forma, Alinear la posiciona respecto a la página o al margen. Con varias formas seleccionadas las alinea entre sí."
+    "explicacion": "Con una sola forma también sirve, siempre que la referencia sea la página o el margen: entonces «Centrar horizontalmente» la lleva al centro de la página. Esa referencia se elige en el propio menú, con «Alinear a la página» o «Alinear al margen». · Lo que sí necesita varias formas es la opción de distribuir, que reparte el espacio a distancias iguales, y también «Agrupar». · La confusión viene de que la mayoría lo usa siempre con varias, que es el caso típico, y de que su nombre se parece al de «Alinear texto», del grupo Texto."
   },
   {
     "id": "insertar-338",
@@ -8543,11 +8570,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-139",
     "generado": true,
-    "enunciado": "El comando Girar del grupo Organizar incluye opciones de volteo horizontal y vertical, además de la rotación en ángulos.",
+    "revisada": true,
+    "enunciado": "«Girar», del grupo Organizar, incluye también voltear en horizontal y en vertical.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Tienes una flecha que apunta a la derecha y necesitas que apunte a la izquierda. En lugar de girarla 180 grados, usas Girar > Voltear horizontalmente. La flecha queda apuntando a la izquierda sin ningún desplazamiento vertical. El menú Girar incluye también Girar 90 grados a la derecha, Girar 90 grados a la izquierda y Voltear verticalmente."
+    "explicacion": "Su menú tiene los dos giros de 90°, los dos volteos y «Más opciones de giro…», que lleva al cuadro Disposición para escribir el ángulo exacto. · Girar y voltear no son lo mismo: uno rota la figura y el otro la refleja como un espejo. En una flecha que apunta a la derecha, voltearla en horizontal la deja apuntando a la izquierda en el mismo sitio, mientras que girarla 180° la rota entera y puede desplazarla si no es simétrica. Con texto dentro la diferencia se ve enseguida, porque el volteo no invierte las letras."
   },
   {
     "id": "insertar-339",
@@ -8562,11 +8590,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-140",
     "generado": true,
-    "enunciado": "Los comandos del grupo Estilos de forma y los del grupo Estilos de WordArt actúan sobre el mismo elemento.",
+    "revisada": true,
+    "enunciado": "Los comandos del grupo «Estilos de forma» y los de «Estilos de WordArt» actúan sobre el mismo elemento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Tienes un rectángulo con texto dentro. Cambias el Relleno de forma (grupo Estilos de forma) a azul: el fondo del rectángulo se vuelve azul. Cambias el Relleno de texto (grupo Estilos de WordArt) a blanco: las letras dentro del rectángulo se vuelven blancas. Uno afecta a la forma en sí, el otro al texto que contiene."
+    "explicacion": "Unos pintan la caja y otros las letras de dentro, y por eso los nombres van en parejas: relleno de forma frente a relleno de texto, contorno de forma frente a contorno de texto, efectos de forma frente a efectos de texto. Poner el relleno de forma en azul y el de texto en blanco da una caja azul con letras blancas; confundirlos deja letras azules sobre fondo blanco. · La regla para no equivocarse es leer la última palabra del comando, no la primera: ahí está siempre sobre qué actúa."
   },
   {
     "id": "insertar-340",
@@ -8581,11 +8610,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-141",
     "generado": true,
-    "enunciado": "El grupo Tamaño de la cinta contextual Formato de forma contiene únicamente los campos Alto y Ancho.",
+    "revisada": true,
+    "enunciado": "El grupo Tamaño de la cinta «Formato de forma» tiene solo dos campos: Alto y Ancho.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Al seleccionar una forma y mirar el extremo derecho de la cinta Formato de forma, el grupo Tamaño muestra dos campos: Alto y Ancho. Puedes escribir valores exactos en centímetros directamente en esos campos para ajustar las dimensiones con precisión. No hay ningún campo más en ese grupo."
+    "explicacion": "Cierra la cinta por la derecha y no lleva nada más: dos casillas para escribir las medidas en centímetros. · Lo que no está ahí y sí en la cinta hermana de las imágenes es «Recortar», porque una forma no tiene contenido que esconder, solo un contorno que se estira. · Para lo demás —trabajar en porcentaje, escribir un ángulo de giro exacto o desbloquear la relación de aspecto— hay que abrir el cuadro Disposición con el lanzador del grupo, en su ficha Tamaño."
   },
   {
     "id": "insertar-341",
@@ -8600,11 +8630,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-142",
     "generado": true,
-    "enunciado": "La cinta contextual Formato de forma contiene exactamente seis grupos.",
+    "revisada": true,
+    "enunciado": "La cinta contextual «Formato de forma» tiene seis grupos.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: contiene siete (Insertar formas, Estilos de forma, Estilos de WordArt, Texto, Accesibilidad, Organizar y Tamaño)."
+    "explicacion": "Son siete: Insertar formas, Estilos de forma, Estilos de WordArt, Texto, Accesibilidad, Organizar y Tamaño. · El que suele quedarse fuera al contarlos es «Accesibilidad», porque tiene un solo botón, «Texto alternativo», y pasa desapercibido entre dos grupos grandes. Le ocurre lo mismo en la cinta de las imágenes. · La cuenta se recuerda mejor por su lógica: uno para crear, dos para pintar (la caja y las letras), uno para el texto de dentro, uno para la accesibilidad, uno para colocar y uno para medir."
   },
   {
     "id": "insertar-342",
@@ -8619,11 +8650,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-143",
     "generado": true,
-    "enunciado": "El grupo Accesibilidad de la cinta Formato de forma contiene los comandos Texto alternativo y Comprobar accesibilidad.",
+    "revisada": true,
+    "enunciado": "El grupo Accesibilidad de la cinta «Formato de forma» tiene dos botones: Texto alternativo y Comprobar accesibilidad.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: en esa cinta el grupo Accesibilidad contiene únicamente Texto alternativo."
+    "explicacion": "Solo tiene uno, «Texto alternativo», y de ahí que sea el grupo que más se olvida al enumerar la cinta. · «Comprobar accesibilidad» existe, pero en la pestaña Revisar, y examina el documento entero: entre otras cosas, avisa precisamente de los objetos que no tienen texto alternativo. Los dos comandos trabajan sobre lo mismo desde sitios distintos, uno objeto a objeto y el otro de una pasada. · La cinta de las imágenes repite el mismo grupo, también con un solo botón."
   },
   {
     "id": "insertar-343",
@@ -8638,11 +8670,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-144",
     "generado": true,
-    "enunciado": "El grupo Insertar formas de la cinta contextual Formato de forma contiene los comandos Editar forma y Combinar formas.",
+    "revisada": true,
+    "enunciado": "El grupo «Insertar formas» de la cinta Formato de forma tiene los botones «Editar forma» y «Combinar formas».",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: contiene Editar forma y Dibujar cuadro de texto."
+    "explicacion": "Los dos botones del grupo son «Editar forma» y «Dibujar cuadro de texto», además de la galería de figuras. · «Combinar formas» existe de verdad y hace algo muy útil —unir dos figuras, restar una de otra o quedarse con lo que se solapa, para fabricar formas que no están en el menú—, pero se llega a él por el menú contextual con dos o más formas seleccionadas, no desde este grupo. Que sea un comando real y de este mismo terreno es lo que hace creíble la afirmación."
   },
   {
     "id": "insertar-344",
@@ -8657,11 +8690,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-145",
     "generado": true,
-    "enunciado": "El grupo Texto de la cinta contextual Formato de forma contiene los comandos Dirección del texto, Alinear texto y Crear vínculo.",
+    "revisada": true,
+    "enunciado": "El grupo Texto de la cinta «Formato de forma» tiene tres botones: Dirección del texto, Alinear texto y Crear vínculo.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Al seleccionar una forma con texto dentro y mirar el grupo Texto de la cinta Formato de forma, encuentras exactamente esos tres comandos. Dirección del texto controla si el texto va horizontal, vertical o en otro ángulo. Alinear texto controla la alineación vertical dentro de la forma. Crear vínculo enlaza el flujo de texto entre dos cuadros de texto cuando el primero se desborda."
+    "explicacion": "Los tres se ocupan del texto que está DENTRO de la forma: uno lo gira, otro lo apoya arriba, en medio o abajo, y el tercero encadena dos cuadros para que lo que no cabe en uno siga en el otro. · Ninguno de ellos toca el texto del documento: de eso se encarga «Ajustar texto», que está en Organizar. Esa es la trampa recurrente de esta cinta, porque cuatro comandos de dos grupos distintos llevan la palabra «texto» en el nombre y hablan de dos textos que no tienen nada que ver."
   },
   {
     "id": "insertar-345",
@@ -8676,11 +8710,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-146",
     "generado": true,
-    "enunciado": "El grupo Organizar de la cinta contextual Formato de forma contiene, además, los comandos Recortar y Comprimir imágenes.",
+    "revisada": true,
+    "enunciado": "El grupo Organizar de la cinta «Formato de forma» incluye también «Recortar» y «Comprimir imágenes».",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: Recortar y Comprimir imágenes son de la cinta Formato de imagen. El grupo Organizar de Formato de forma tiene Posición, Ajustar texto, Traer adelante, Enviar atrás, Panel de selección, Alinear, Agrupar y Girar."
+    "explicacion": "Ese grupo tiene ocho comandos y todos van de colocación: Posición, Ajustar texto, Traer adelante, Enviar atrás, Panel de selección, Alinear, Agrupar y Girar. · Los dos citados son de la cinta hermana, «Formato de imagen»: recortar está en su grupo Tamaño y comprimir en su grupo Ajustar. Ninguno tendría sentido aquí, porque una forma no guarda píxeles que recortar ni peso que reducir. · Las dos cintas comparten los grupos Organizar, Tamaño y Accesibilidad casi idénticos, y por eso se mezclan con tanta facilidad."
   },
   {
     "id": "insertar-346",
@@ -8695,11 +8730,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-147",
     "generado": true,
-    "enunciado": "El comando Agrupar del grupo Organizar permite combinar varias formas en un único objeto para moverlas y redimensionarlas juntas.",
+    "revisada": true,
+    "enunciado": "«Agrupar», del grupo Organizar, convierte varias formas en un solo objeto que se mueve y se redimensiona junto.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Tienes un diagrama formado por cinco formas sueltas. Las seleccionas todas manteniendo pulsada la tecla Mayús, vas a Organizar > Agrupar y las cinco formas se convierten en un único objeto. Ahora puedes moverlas, girarlas o redimensionarlas todas a la vez sin que pierdan su posición relativa entre ellas."
+    "explicacion": "Se seleccionan con Mayús pulsada y, al agrupar, pasan a comportarse como uno: se mueven, se giran y se estiran conservando su posición relativa; el mismo botón ofrece desagrupar y reagrupar. · Hay una condición que suele olvidarse: ningún objeto puede estar en línea con el texto, porque los que están dentro del párrafo no participan en la capa de objetos flotantes, y con uno solo así el botón queda apagado. · Un lienzo de dibujo consigue algo parecido, pero se crea antes de dibujar."
   },
   {
     "id": "insertar-347",
@@ -8714,11 +8750,12 @@
     "tema": "Formato de forma",
     "sourceQuestionId": "vf-insertar-148",
     "generado": true,
-    "enunciado": "El comando Panel de selección del grupo Organizar muestra una lista de todos los objetos del documento y permite ocultarlos o cambiar su orden.",
+    "revisada": true,
+    "enunciado": "El «Panel de selección» del grupo Organizar lista los objetos de la página y permite ocultarlos o cambiar su orden.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Tienes un documento con diez imágenes y formas superpuestas y no consigues seleccionar la que está debajo. Abres el Panel de selección desde Organizar > Panel de selección y aparece una lista con el nombre de todos los objetos del documento. Puedes hacer clic en el ojo junto a cada objeto para ocultarlo temporalmente, y puedes arrastrar los objetos en la lista para cambiar su orden de superposición."
+    "explicacion": "Aparece a la derecha con los objetos en su orden de apilamiento; desde ahí se selecciona el que sea aunque esté tapado, se le cambia el nombre, se sube o se baja de capa arrastrándolo, y se oculta con el icono del ojo. · Es la salida cuando hay tantos objetos superpuestos que no se puede pinchar el de debajo, cosa que «Traer adelante» no resuelve, porque para usarlo hay que haberlo seleccionado antes. · Solo muestra objetos flotantes: los que están en línea con el texto no aparecen en la lista."
   },
   {
     "id": "insertar-3",
@@ -8732,7 +8769,8 @@
     "subtopic": null,
     "tema": "Vínculos",
     "sourceQuestionId": "8-146",
-    "enunciado": "¿Qué atajo inserta un marcador en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres ponerle nombre a un punto del documento para poder volver a él o referenciarlo. ¿Qué combinación abre el cuadro Marcador?",
     "opciones": [
       {
         "letter": "A",
@@ -8753,7 +8791,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+F5 abre el cuadro de diálogo Marcador. Ctrl+F5 restaura el tamaño del documento. Alt+Mayús+F5 no tiene función asignada para marcadores. Ctrl+Mayús+F4 no tiene función asignada relevante."
+    "explicacion": "El cuadro Personalizar teclado la registra bajo el comando EdiciónMarcador, descrito como «asigna un nombre a la selección», que es exactamente lo que hace un marcador. · Ctrl+F5 es el descarte que decide la pregunta y no tiene nada que ver: restaura la ventana del documento a su tamaño normal, es decir, la saca de maximizada. Que se diferencien en una sola tecla es lo peligroso. · La familia de F5 en esta instalación es amplia: F5 a secas abre «Ir a», Alt+F5 restaura la ventana de la aplicación y Mayús+F5 vuelve al punto de inserción anterior."
   },
   {
     "id": "insertar-4",
@@ -8767,7 +8805,8 @@
     "subtopic": null,
     "tema": "Vínculos",
     "sourceQuestionId": "8-149",
-    "enunciado": "¿Qué atajo inserta un hipervínculo en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres convertir en enlace una palabra seleccionada sin ir a la cinta. ¿Qué combinación abre el cuadro de hipervínculo?",
     "opciones": [
       {
         "letter": "A",
@@ -8783,12 +8822,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+K"
+        "text": "Alt+Mayús+K"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+K inserta un hipervínculo. Ctrl+K y Ctrl+Mayús+K aplican cursiva. Alt+K no tiene función para hipervínculos."
+    "explicacion": "Es el comando HipervínculoInsertarVínculo, y hay que pulsar las tres teclas: sin Alt, la cosa cambia por completo. · Ctrl+K y Ctrl+Mayús+K son los descartes que deciden la pregunta, porque las dos ponen **cursiva** en esta instalación en español. Quien venga del esquema internacional en inglés, donde Ctrl+K sí es el hipervínculo, se lleva la sorpresa de ver el texto en cursiva. · Alt+Mayús+K está ocupada por CombinarRevisar, de la combinación de correspondencia. · Todo esto sale del cuadro Personalizar teclado de esta instalación."
   },
   {
     "id": "insertar-35",
@@ -8802,7 +8841,8 @@
     "subtopic": null,
     "tema": "Vínculos",
     "sourceQuestionId": "8-268",
-    "enunciado": "¿Qué atajo navega hacia atrás en hipervínculos en Word 365?",
+    "revisada": true,
+    "enunciado": "Has pinchado un hipervínculo interno y has saltado a otra parte del documento. ¿Qué combinación te devuelve al punto de partida?",
     "opciones": [
       {
         "letter": "A",
@@ -8823,7 +8863,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Izquierda navega hacia atrás en el historialde hipervínculos visitados. Ctrl+Izquierda mueve el cursor una palabra a la izquierda sin navegar hipervínculos. Alt+Mayús+Izquierda promueve el título un nivel en el esquema. Ctrl+Alt+Izquierda no tiene función asignada para navegación de hipervínculos."
+    "explicacion": "Es el comando HipervínculoHaciaAtrás, y funciona como la flecha de retroceso de un navegador: recorre el historial de saltos. Su simétrica es Alt+Derecha, para volver hacia delante. · Ctrl+Izquierda es el descarte que decide la pregunta, porque es la que casi todo el mundo tiene en los dedos: mueve el cursor una palabra a la izquierda, sin navegar a ningún sitio. · Alt+Mayús+Izquierda sube un nivel un título en el esquema. · Y hay otra manera de volver al punto anterior sin usar el historial: Mayús+F5."
   },
   {
     "id": "insertar-36",
@@ -8837,7 +8877,8 @@
     "subtopic": null,
     "tema": "Vínculos",
     "sourceQuestionId": "8-269",
-    "enunciado": "¿Qué atajo navega hacia delante en hipervínculos en Word 365?",
+    "revisada": true,
+    "enunciado": "Después de retroceder por el historial de hipervínculos, ¿qué combinación avanza otra vez hacia delante?",
     "opciones": [
       {
         "letter": "A",
@@ -8858,7 +8899,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Derecha navega hacia delante en el historial de hipervínculos visitados. Ctrl+Derecha mueve el cursor una palabra a la derecha sin navegar hipervínculos. Alt+Mayús+Derecha degrada el nivel del título en el esquema. Ctrl+Alt+Derecha no tiene función asignada para navegación de hipervínculos."
+    "explicacion": "Es HipervínculoHaciaDelante, la pareja simétrica de Alt+Izquierda, y las dos juntas funcionan como los botones de retroceso y avance de un navegador. · Ctrl+Derecha es el descarte que decide la pregunta: mueve el cursor una palabra a la derecha, que es lo que se pulsa por costumbre. · Alt+Mayús+Derecha baja un nivel un título en el esquema, y es la que forma pareja con Alt+Mayús+Izquierda: dos parejas de flechas con Alt que hacen cosas muy distintas según lleven o no la tecla Mayús."
   },
   {
     "id": "insertar-72",
@@ -8873,28 +8914,29 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-30",
     "generado": true,
-    "enunciado": "¿Qué ruta abre el cuadro de diálogo Insertar hipervínculo completo, con todas las opciones de destino?",
+    "revisada": true,
+    "enunciado": "¿Cómo se llama en este Word el comando del grupo Vínculos que abre el cuadro para insertar un enlace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Vínculos > Hipervínculo > Insertar hipervínculo..."
+        "text": "Vínculo"
       },
       {
         "letter": "B",
-        "text": "Insertar > Vínculos > Vínculo > Insertar vínculo..."
+        "text": "Hipervínculo"
       },
       {
         "letter": "C",
-        "text": "Insertar > Vínculos > Vínculo > Nuevo vínculo..."
+        "text": "Nuevo vínculo"
       },
       {
         "letter": "D",
-        "text": "Insertar > Texto > Vínculo > Insertar vínculo..."
+        "text": "Insertar hipervínculo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A usa \"Hipervínculo\" como nombre del comando, que es como aparece en versiones antiguas de Word pero en la extracción real el comando se llama \"Vínculo\". C \"Nuevo vínculo\" no existe. D sitúa el comando en el grupo Texto."
+    "respuesta": "A",
+    "explicacion": "El botón de la cinta se llama «Vínculo», a secas, aunque el cuadro que abre siga titulándose «Insertar hipervínculo» y el comando de teclado se llame HipervínculoInsertarVínculo. · «Hipervínculo» es el descarte que decide la pregunta porque es como se llamaba el botón en las versiones anteriores, y así aparece en casi todo el material de estudio. · El grupo Vínculos tiene tres botones: Vínculo, Marcador y Referencia cruzada. · Al enlace se llega también con Alt+Ctrl+K o desde el menú contextual del texto seleccionado."
   },
   {
     "id": "insertar-73",
@@ -8909,15 +8951,16 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-31",
     "generado": true,
-    "enunciado": "Dentro del cuadro Insertar hipervínculo, ¿cuál de las siguientes opciones de Vincular a existe realmente?",
+    "revisada": true,
+    "enunciado": "Abres el cuadro «Insertar hipervínculo» y miras la columna «Vincular a» de la izquierda. ¿Cuál de estos destinos está?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Dirección FTP"
+        "text": "Lugar de este documento"
       },
       {
         "letter": "B",
-        "text": "Lugar de este documento"
+        "text": "Dirección FTP"
       },
       {
         "letter": "C",
@@ -8929,8 +8972,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe como opción diferenciada. C no existe. D no existe en ese cuadro. Las opciones reales son: Archivo o página web existente, Lugar de este documento, Crear nuevo documento, Dirección de correo electrónico."
+    "respuesta": "A",
+    "explicacion": "Los cuatro destinos son: archivo o página web existente, lugar de este documento, crear nuevo documento y dirección de correo electrónico. El segundo es el que sirve para saltar a un título o a un marcador del propio archivo, y por eso muestra un árbol con ellos. · «Dirección FTP» es el descarte que decide la pregunta: una dirección de ese tipo se puede escribir, pero en el campo de dirección del primer destino, no como destino propio. · El correo electrónico sí lo es, y añade un campo para el asunto del mensaje."
   },
   {
     "id": "insertar-74",
@@ -8945,28 +8988,29 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-32",
     "generado": true,
-    "enunciado": "¿Qué ruta abre el cuadro de diálogo que permite asignar un nombre a una posición concreta del documento para poder referenciarla o navegar hasta ella?",
+    "revisada": true,
+    "enunciado": "Quieres marcar un punto del documento con un nombre para poder apuntar a él desde una referencia cruzada. ¿Qué ruta lo crea?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Vínculos > Referencia cruzada > Marcador"
+        "text": "Insertar ▸ Vínculos ▸ Marcador, y pulsar Agregar"
       },
       {
         "letter": "B",
-        "text": "Insertar > Vínculos > Marcador"
+        "text": "Insertar ▸ Vínculos ▸ Referencia cruzada ▸ Marcador"
       },
       {
         "letter": "C",
-        "text": "Insertar > Texto > Elementos rápidos > Marcador"
+        "text": "Insertar ▸ Vínculos ▸ Vínculo ▸ Lugar de este documento"
       },
       {
         "letter": "D",
-        "text": "Insertar > Vínculos > Vínculo > Lugar de este documento > Marcador"
+        "text": "Insertar ▸ Texto ▸ Elementos rápidos ▸ Marcador"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A confunde Referencia cruzada con Marcador (aunque el cuadro de Referencia cruzada puede referenciar marcadores, no los crea). C sitúa Marcador en Elementos rápidos. D describe una navegación dentro del cuadro de hipervínculo, no la creación de un marcador."
+    "respuesta": "A",
+    "explicacion": "«Marcador» es un botón propio del grupo Vínculos, entre Vínculo y Referencia cruzada, y abre el cuadro donde se escribe el nombre y se pulsa Agregar. También se llega con Ctrl+Mayús+F5. · Los dos primeros descartes son los que deciden la pregunta, porque describen sitios donde los marcadores SÍ aparecen: el cuadro de referencia cruzada los ofrece como tipo de elemento al que apuntar, y el de hipervínculo los muestra en el árbol de «Lugar de este documento». Pero los dos los LEEN; ninguno los crea."
   },
   {
     "id": "insertar-75",
@@ -8981,28 +9025,29 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-33",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes opciones existe realmente dentro del cuadro de diálogo Marcador de Word 365?",
+    "revisada": true,
+    "enunciado": "El cuadro «Marcador» tiene tres botones de acción. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Vincular al marcador"
+        "text": "Agregar · Eliminar · Ir a"
       },
       {
         "letter": "B",
-        "text": "Ir a"
+        "text": "Agregar · Eliminar · Vincular al marcador"
       },
       {
         "letter": "C",
-        "text": "Copiar marcador"
+        "text": "Agregar · Eliminar · Copiar marcador"
       },
       {
         "letter": "D",
-        "text": "Exportar marcadores"
+        "text": "Agregar · Eliminar · Exportar marcadores"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe como botón en ese cuadro. C y D no existen. Las acciones reales son: Agregar, Eliminar, Ir a."
+    "respuesta": "A",
+    "explicacion": "«Agregar» crea el marcador con el nombre escrito arriba, «Eliminar» quita el seleccionado en la lista, e «Ir a» salta al punto donde está sin cerrar el cuadro, lo que lo convierte en una herramienta de navegación además de creación. · Los tres descartes describen cosas que se hacen con marcadores, pero desde otros sitios: vincular a uno es cosa del cuadro de hipervínculo. · El cuadro tiene además una casilla para mostrar los marcadores ocultos, los que crea Word por su cuenta al montar índices y referencias."
   },
   {
     "id": "insertar-76",
@@ -9017,15 +9062,16 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-34",
     "generado": true,
-    "enunciado": "¿Con qué criterios puede ordenarse la lista de marcadores dentro del cuadro de diálogo Marcador?",
+    "revisada": true,
+    "enunciado": "La lista del cuadro «Marcador» se puede ordenar de dos maneras. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Por fecha de creación o por nombre"
+        "text": "Por nombre o por posición"
       },
       {
         "letter": "B",
-        "text": "Por nombre o por posición"
+        "text": "Por nombre o por fecha de creación"
       },
       {
         "letter": "C",
@@ -9037,8 +9083,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A \"fecha de creación\" no existe. C \"tipo\" no existe. D \"longitud\" no existe. Las opciones reales de orden son: Nombre y Posición."
+    "respuesta": "A",
+    "explicacion": "Son dos botones de opción justo debajo de la lista. Por nombre los ordena alfabéticamente, que es cómodo para encontrar uno concreto; por posición los pone en el orden en que aparecen en el documento, que es lo útil para recorrerlo de principio a fin. · La fecha de creación es el descarte que decide la pregunta, y es creíble porque suena a cualquier lista de archivos; un marcador no guarda esa información. · Tampoco hay tipos: todos los marcadores son iguales, solo cambia si son visibles u ocultos."
   },
   {
     "id": "insertar-77",
@@ -9053,28 +9099,29 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-35",
     "generado": true,
-    "enunciado": "¿Qué ruta abre el cuadro de diálogo que permite insertar una referencia dinámica a una tabla, ilustración, nota al pie o marcador dentro del mismo documento?",
+    "revisada": true,
+    "enunciado": "Quieres escribir «véase la tabla 3 en la página 12» de forma que los números se actualicen solos si la tabla cambia de sitio. ¿Qué comando lo hace desde la pestaña Insertar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Vínculos > Vínculo > Lugar de este documento"
+        "text": "Insertar ▸ Vínculos ▸ Referencia cruzada"
       },
       {
         "letter": "B",
-        "text": "Insertar > Vínculos > Marcador > Referencia"
+        "text": "Insertar ▸ Vínculos ▸ Vínculo ▸ Lugar de este documento"
       },
       {
         "letter": "C",
-        "text": "Insertar > Vínculos > Referencia cruzada"
+        "text": "Insertar ▸ Vínculos ▸ Marcador"
       },
       {
         "letter": "D",
-        "text": "Referencias > Títulos > Referencia cruzada"
+        "text": "Insertar ▸ Texto ▸ Elementos rápidos ▸ Campo"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A crea un hipervínculo interno, no una referencia cruzada dinámica. B no existe como subruta. D es una ruta real de Word (la pestaña Referencias también tiene acceso a Referencia cruzada), pero la ruta de la pestaña Insertar es la que se pide."
+    "respuesta": "A",
+    "explicacion": "La referencia cruzada inserta un campo que se actualiza con F9, así que el número de página o de tabla sigue siendo correcto aunque se añada contenido antes. · El descarte que decide la pregunta es el hipervínculo interno: también salta al sitio, pero su texto es fijo y no se entera de nada si la tabla se mueve. · El mismo cuadro está en Referencias ▸ Títulos, y es exactamente el mismo, no una versión reducida. · El campo suelto sí podría hacerlo, pero escribiéndolo a mano; este cuadro lo monta solo."
   },
   {
     "id": "insertar-78",
@@ -9089,19 +9136,20 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-36",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes tipos de elemento referenciable existe realmente dentro del cuadro Referencia cruzada de Word 365?",
+    "revisada": true,
+    "enunciado": "Abres el cuadro «Referencia cruzada» y despliegas «Tipo». ¿Cuál de estos aparece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cuadro de texto"
-      },
-      {
-        "letter": "B",
         "text": "Elemento numerado"
       },
       {
-        "letter": "C",
+        "letter": "B",
         "text": "Encabezado de sección"
+      },
+      {
+        "letter": "C",
+        "text": "Cuadro de texto"
       },
       {
         "letter": "D",
@@ -9109,8 +9157,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A los cuadros de texto no son tipos disponibles en ese cuadro. C no existe como tipo (los títulos con estilo Título sí, pero no se llaman \"Encabezado de sección\"). D no existe. Los tipos reales incluyen: Elemento numerado, Marcador, Nota al pie, Nota al final, Ecuación, Ilustración, Tabla."
+    "respuesta": "A",
+    "explicacion": "La lista de tipos son elemento numerado, título, marcador, nota al pie, nota al final, ecuación, ilustración y tabla: en total ocho. · «Encabezado de sección» es el descarte que decide la pregunta, porque los títulos SÍ son un tipo, pero se llaman «Título» a secas y solo aparecen si el documento usa los estilos de título; llamarlos encabezado los confunde además con el encabezado de página, que es otra cosa. · Los tres últimos tipos solo aparecen si el documento tiene esos elementos rotulados con «Insertar título»."
   },
   {
     "id": "insertar-79",
@@ -9125,19 +9173,20 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-37",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes opciones de Referencia a existe dentro del cuadro Referencia cruzada de Word 365?",
+    "revisada": true,
+    "enunciado": "En el cuadro «Referencia cruzada», ¿cuál de estas opciones del desplegable «Referencia a» existe?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Número de sección"
-      },
-      {
-        "letter": "B",
         "text": "Número de página"
       },
       {
-        "letter": "C",
+        "letter": "B",
         "text": "Número de línea"
+      },
+      {
+        "letter": "C",
+        "text": "Número de sección"
       },
       {
         "letter": "D",
@@ -9145,8 +9194,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe. C no existe. D no existe. Las opciones reales de \"Referencia a\" incluyen: Número de página, Número de párrafo, Texto de párrafo, Más adelante o más atrás, entre otras."
+    "respuesta": "A",
+    "explicacion": "El contenido del desplegable cambia según el tipo elegido arriba, pero «Número de página» está siempre: es lo que produce ese «en la página 12» que se actualiza solo. · Los tres descartes son numeraciones que Word maneja de verdad en otros sitios —los números de línea están en Disposición y las secciones se ven en la barra de estado—, pero no se pueden referenciar desde aquí. Que existan como concepto es lo que los hace creíbles. · Otra opción constante es «Más adelante o más atrás», que escribe esa palabra según dónde caiga el elemento."
   },
   {
     "id": "insertar-132",
@@ -9161,15 +9210,16 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-99",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes opciones de Referencia a existe realmente dentro del cuadro Referencia cruzada cuando el tipo seleccionado es \"Elemento numerado\"?",
+    "revisada": true,
+    "enunciado": "Con el tipo «Elemento numerado» seleccionado, ¿cuál de estas opciones ofrece el desplegable «Referencia a»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Texto completo del elemento"
+        "text": "Número de párrafo (sin contexto)"
       },
       {
         "letter": "B",
-        "text": "Número de párrafo (sin contexto)"
+        "text": "Texto completo del elemento"
       },
       {
         "letter": "C",
@@ -9181,8 +9231,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe con ese nombre exacto; la opción real es \"Texto de párrafo\". C no existe. D no existe. \"Número de párrafo (sin contexto)\" sí figura en la extracción."
+    "respuesta": "A",
+    "explicacion": "Con ese tipo, el desplegable ofrece seis opciones, entre ellas el número de párrafo en tres versiones: normal, «sin contexto» y «con contexto». La diferencia está en cuánta jerarquía se arrastra: en una lista numerada como 2.1.3, la versión sin contexto escribe solo el último nivel y la de con contexto el número entero. · «Texto completo del elemento» es el descarte que decide la pregunta: la opción existe pero se llama «Texto de párrafo». · El capítulo aparece en otros sitios de Word, como el formato de número de página, pero no aquí."
   },
   {
     "id": "insertar-133",
@@ -9197,7 +9247,8 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-100",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes opciones de Referencia a existe realmente en el cuadro Referencia cruzada de Word 365?",
+    "revisada": true,
+    "enunciado": "Una de las opciones de «Referencia a» escribe automáticamente si el elemento citado está antes o después del punto donde se inserta. ¿Cómo se llama?",
     "opciones": [
       {
         "letter": "A",
@@ -9218,7 +9269,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B, C y D son formas alternativas de expresar la misma idea pero no son el nombre real de la opción. El nombre exacto es \"Más adelante o más atrás\"."
+    "explicacion": "Inserta la palabra que corresponda según dónde caiga el elemento, y se recalcula si el documento se reordena, de modo que un «véase la tabla 3 más adelante» no se queda mal escrito cuando esa tabla pasa a estar antes. · Los tres descartes dicen lo mismo con otras palabras, y ese es todo el problema: la pregunta va del rótulo exacto, no del concepto. · Suele combinarse con otra referencia al mismo elemento: una para el número y otra para la palabra, insertadas una detrás de otra."
   },
   {
     "id": "insertar-134",
@@ -9233,15 +9284,16 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-101",
     "generado": true,
-    "enunciado": "¿Qué opción del cuadro Referencia cruzada hace que la referencia insertada funcione también como enlace de navegación dentro del documento?",
+    "revisada": true,
+    "enunciado": "Quieres que la referencia cruzada que vas a insertar sirva además para saltar al elemento citado con un clic. ¿Qué casilla hay que marcar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Vincular al elemento"
+        "text": "Insertar como hipervínculo"
       },
       {
         "letter": "B",
-        "text": "Insertar como hipervínculo"
+        "text": "Vincular al elemento"
       },
       {
         "letter": "C",
@@ -9253,8 +9305,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son denominaciones plausibles pero incorrectas. El nombre real de la casilla es \"Insertar como hipervínculo\"."
+    "respuesta": "A",
+    "explicacion": "Viene marcada de fábrica, así que las referencias cruzadas suelen ser navegables sin que uno se lo proponga: se pulsa con Ctrl y el cursor salta al elemento. Si se desmarca, el número sigue actualizándose pero deja de ser un enlace, que es lo que conviene en un documento pensado solo para imprimir. · Los tres descartes son nombres de lo más razonables y ninguno existe. · Es una de las dos casillas del cuadro; la otra es «Incluir más adelante o más atrás»."
   },
   {
     "id": "insertar-135",
@@ -9269,28 +9321,29 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-102",
     "generado": true,
-    "enunciado": "¿Qué opción del cuadro Referencia cruzada añade automáticamente las palabras \"más adelante\" o \"más atrás\" junto al número de referencia para indicar la posición relativa del elemento referenciado?",
+    "revisada": true,
+    "enunciado": "El cuadro «Referencia cruzada» tiene una casilla y una opción del desplegable con nombres casi iguales. ¿Cómo se llama la CASILLA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar posición relativa"
-      },
-      {
-        "letter": "B",
-        "text": "Añadir indicador de posición"
-      },
-      {
-        "letter": "C",
         "text": "Incluir más adelante o más atrás"
       },
       {
+        "letter": "B",
+        "text": "Más adelante o más atrás"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar posición relativa"
+      },
+      {
         "letter": "D",
-        "text": "Texto de orientación automática"
+        "text": "Añadir indicador de posición"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A, B y D no existen con esos nombres. El nombre real de la casilla es \"Incluir más adelante o más atrás\"."
+    "respuesta": "A",
+    "explicacion": "Son dos controles distintos y conviene no mezclarlos. La casilla, con «Incluir» delante, añade esa palabra AL LADO de la referencia que se esté insertando: se obtiene «la tabla 3 más adelante» de una vez. · La opción del desplegable «Referencia a», sin «Incluir», inserta ÚNICAMENTE esa palabra, sin número, y sirve para colocarla donde uno quiera dentro de la frase. · Ese es el descarte que decide la pregunta, y es el mismo texto menos una palabra. · La casilla solo se activa cuando la opción elegida no es ya la de posición relativa."
   },
   {
     "id": "insertar-136",
@@ -9305,15 +9358,16 @@
     "tema": "Vínculos",
     "sourceQuestionId": "P-103",
     "generado": true,
-    "enunciado": "¿Qué casilla del cuadro Marcador permite visualizar también los marcadores que Word crea automáticamente de forma interna (por ejemplo, los asociados a referencias cruzadas)?",
+    "revisada": true,
+    "enunciado": "Quieres ver en el cuadro Marcador también los marcadores que Word se crea por su cuenta al montar índices y referencias. ¿Qué casilla lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar marcadores del sistema"
+        "text": "Marcadores ocultos"
       },
       {
         "letter": "B",
-        "text": "Marcadores ocultos"
+        "text": "Mostrar marcadores del sistema"
       },
       {
         "letter": "C",
@@ -9325,8 +9379,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son denominaciones plausibles pero incorrectas. El nombre real de la casilla es \"Marcadores ocultos\". ENCABEZADO Y PIE — NÚMERO DE PÁGINA (SUBRUTAS)"
+    "respuesta": "A",
+    "explicacion": "Word crea marcadores propios sin avisar, con nombres que empiezan por guion bajo, cada vez que se monta una tabla de contenido, un índice o una referencia cruzada; la casilla los saca a la lista. · Conviene mirarla antes de dar por hecho que un documento no tiene marcadores, y conviene no borrarlos: quitar uno de esos rompe la referencia que lo usaba. · Los tres descartes describen la idea con palabras razonables y ninguno es el rótulo. · Debajo están los tres botones del cuadro: Agregar, Eliminar e Ir a."
   },
   {
     "id": "insertar-418",
@@ -9341,29 +9395,30 @@
     "tema": "Vínculos",
     "sourceQuestionId": "img-insertar-13",
     "generado": true,
+    "revisada": true,
     "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAqCAYAAADMKGkhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHjSURBVFhH7Zg/T8JAGMZfnZn5FjArDHUxTmgY0bAaQpyEVWn8DIYvQJQIm0zEpf0K8ilgZq8+l6sh6vXe610uaXK/pOkf7n36cLl7eu1R9g1VkGO5rxzBuG+Ccd8E474Jxn0TjPumssZLLbLSNKXV6p02m0/a7/fyqpparUaNRpM6nUuKokhetQTGTZhMHrJu9ypbLN6y7XYrrxaDdmiPOtS7wKjH4/hR7IfDO6rX6+LYhN1uR9PpsziO4yexL42wzyBJEtFj3F5WgXroQM8G9uTEmO71rkv19CGohw70bGAbx0SMojN5Zgd0oGcD2zjSw7a3c6DDSaMi2MYRaZhcOhCV4/GILi7Oqd0+/bMB6EAPoB3ao84IOda1jEb3ItKK4EYlfoceKBuVzlIFN8WmSx1VquB6rsHB6AGkMseNSp051Z/6D6O1Sv7QGAxuablc/Ix5XVSiHdqjDqgePiZRab1WWa8/xASbzV7EjfMJeIjJWgV/st+/EbqFiH63pNU6kUdu4OgZDRUV3KjkcBiVRTgxjmGQpok8swM60NPhxDjG7nz+at3rqIcO9HQ4MY4J12w2xZK1rHnUoR46nJcNJ8aBKip1oB0nKn/j/Pu4r9e68GHfN8G4b4Jx3wTjvqmocaIvnC3J0AKDSjwAAAAASUVORK5CYII=",
     "opciones": [
       {
         "letter": "A",
-        "text": "Inicio ▸ Párrafo"
+        "text": "Insertar ▸ Vínculos"
       },
       {
         "letter": "B",
-        "text": "Inicio ▸ Editor"
+        "text": "Insertar ▸ Texto"
       },
       {
         "letter": "C",
-        "text": "Inicio ▸ Portapapeles"
+        "text": "Referencias ▸ Citas y bibliografía"
       },
       {
         "letter": "D",
-        "text": "Insertar ▸ Vínculos"
+        "text": "Inicio ▸ Edición"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "**Vínculo.** Pestaña Insertar ▸ Vínculos. Atajo: Alt+Ctrl+K. Inserta un hipervínculo a una página web, a un archivo, a un lugar del documento o a una dirección de correo. Aquí el atajo es Alt+Ctrl+K (Ctrl+K es Cursiva)."
+    "respuesta": "A",
+    "explicacion": "Es **Vínculo**, primero del grupo Vínculos en la pestaña Insertar. Enlaza a una página web, a un archivo, a un punto del propio documento o a una dirección de correo, y su atajo es **Alt+Ctrl+K**. · Ojo con el atajo: Ctrl+K a secas, sin Alt, pone cursiva en esta instalación en español, y es el error que se arrastra del esquema internacional. · Sus dos compañeros de grupo son Marcador y Referencia cruzada, que también «enlazan» pero hacia dentro del documento."
   },
   {
     "id": "insertar-419",
@@ -9378,29 +9433,30 @@
     "tema": "Vínculos",
     "sourceQuestionId": "img-insertar-14",
     "generado": true,
+    "revisada": true,
     "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAqCAYAAAD8pHgAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFvSURBVGhDY/wPBAzDCDBB6WEDRj002MGohwY7GPXQYAfDzkNkVazW1pZQFvHA1dWVoaGhCcqjHSDbQwcOHILyCAMHBzsGbm5uBisrK5p7im5Jrrm5heHYsWNAD9VBRWgD6OYhIyNjuniKroUCPTxF91KO1p4akGKblp4aEA+BAK08RbdimxA4evQ4lEUZoIuHCAGQh6nloQFLcrQCox6iBmBlZUXB1EpuIDAgeQjkCcaUTVAefvB/jh+URRwYUA81R1tDRbCD2qVHSfbQaB4a7GDUQ4MdjHposINRDw12MOqhwQ5GPUQLcOHeK4beDafBGMSmBJDdOKUEgLoLoMZpqrsuw4HLjxnef/7OUOejBpZr2nKLQZCXk8FBV5Zh9s7L9GltUwOAPMTJxsIQZS7DUO2twqAowgUWv//mG0Pr1jsMy04+Yfj+6w/JHmIAeWgggGnzwf9H77yF8jABSA6khlQwYDFEKzBayg1uwMAAAFkCZ1YakkP2AAAAAElFTkSuQmCC",
     "opciones": [
       {
         "letter": "A",
-        "text": "Inicio ▸ Editor"
-      },
-      {
-        "letter": "B",
         "text": "Insertar ▸ Vínculos"
       },
       {
+        "letter": "B",
+        "text": "Insertar ▸ Encabezado y pie de página"
+      },
+      {
         "letter": "C",
-        "text": "Inicio ▸ Edición"
+        "text": "Referencias ▸ Índice"
       },
       {
         "letter": "D",
-        "text": "Diseño ▸ Fondo de página"
+        "text": "Inicio ▸ Edición"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "**Marcador.** Pestaña Insertar ▸ Vínculos. Atajo: no tiene atajo de teclado en esta instalación. Crea un punto con nombre en el documento al que se puede saltar o hacer referencia. Se ordena por Nombre o por Posición."
+    "respuesta": "A",
+    "explicacion": "Es **Marcador**, del grupo Vínculos en la pestaña Insertar. Da nombre a un punto del documento para poder saltar a él o apuntarle desde una referencia; su cuadro tiene los botones Agregar, Eliminar e Ir a, y la lista se ordena por nombre o por posición. Se abre también con Ctrl+Mayús+F5. · «Referencias ▸ Índice» es el descarte que decide la pregunta, porque las entradas de índice también son marcas invisibles puestas en un punto del texto; la diferencia es que aquellas construyen una lista al final y estas solo sirven de destino."
   },
   {
     "id": "insertar-420",
@@ -9415,6 +9471,7 @@
     "tema": "Vínculos",
     "sourceQuestionId": "img-insertar-15",
     "generado": true,
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAArCAYAAADIWo5HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADLSURBVGhD7ZhBCoMwFERjIUsPVISieG5RCtID9QBtA7PRhUib/Pwy8+AzydKHToLN60Mg5oKkRQKQtEgAkhYJQNJCLyDbRajrrlj9xro+sLIhq4BluWP3HX1/MxegDkDSYiogxng41q9/wrQD0kN6K8sqAjyVpToASYsEIGkpKuA5DpvxSFEB7TRvxiP6BJC0SACyKvuy3E9JdBVG0iIBSFroBZj+FU7F5a0Eswk4i04BZ0gAkpYqHZCDvy1Bb6gDkLRIAJIWcgEhvAFulXWmoi/w6QAAAABJRU5ErkJggg==",
     "opciones": [
@@ -9424,11 +9481,11 @@
       },
       {
         "letter": "B",
-        "text": "Letra capital"
+        "text": "Marcador"
       },
       {
         "letter": "C",
-        "text": "Captura"
+        "text": "Vínculo"
       },
       {
         "letter": "D",
@@ -9437,7 +9494,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Referencia cruzada.** Pestaña Insertar ▸ Vínculos. Atajo: no tiene atajo de teclado en esta instalación. Inserta una referencia a otro elemento (título, marcador, nota, ilustración, tabla, ecuación) que se actualiza sola. Mismo cuadro que Referencias ▸ Títulos ▸ Referencia cruzada."
+    "explicacion": "Es **Referencia cruzada**, último del grupo Vínculos en la pestaña Insertar. Inserta un campo que apunta a otro elemento del documento —un título, un marcador, una nota, una ilustración, una tabla o una ecuación— y cuyo número se actualiza al refrescar los campos. · Es exactamente el mismo cuadro que el de Referencias ▸ Títulos ▸ Referencia cruzada. · Sus dos vecinos son los descartes que deciden la pregunta: el marcador CREA el destino y el vínculo salta a él con texto fijo; solo la referencia cruzada se actualiza sola."
   },
   {
     "id": "insertar-440",
@@ -9452,28 +9509,29 @@
     "tema": "Vínculos",
     "sourceQuestionId": "neg-insertar-06",
     "generado": true,
-    "enunciado": "¿Cuál de estos comandos NO pertenece al grupo Vínculos de Insertar?",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO es un comando del grupo Vínculos de la pestaña Insertar:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Vínculo"
+        "text": "Hipervínculo interno"
       },
       {
         "letter": "B",
-        "text": "Marcador"
+        "text": "Vínculo"
       },
       {
         "letter": "C",
-        "text": "Referencia cruzada"
+        "text": "Marcador"
       },
       {
         "letter": "D",
-        "text": "Hipervínculo interno"
+        "text": "Referencia cruzada"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El grupo Vínculos tiene exactamente tres comandos: Vínculo, Marcador y Referencia cruzada. No existe un comando separado llamado «Hipervínculo interno»."
+    "respuesta": "A",
+    "explicacion": "El grupo tiene exactamente tres botones, y los tres verdaderos son esos. · Enlazar a un punto del propio documento sí se puede, y muy fácilmente, pero no con un botón aparte: se hace desde el mismo cuadro de «Vínculo», eligiendo «Lugar de este documento» en la columna de la izquierda. Que la función exista es lo que hace creíble el nombre inventado. · Otro camino para lo mismo es la referencia cruzada con la casilla «Insertar como hipervínculo» marcada, que además mantiene el número al día."
   },
   {
     "id": "insertar-456",
@@ -9488,28 +9546,29 @@
     "tema": "Vínculos",
     "sourceQuestionId": "neg2-insertar-10",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre los vínculos:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar ▸ Hipervínculo permite enlazar a un archivo, una página web o un punto del mismo documento."
+        "text": "Un hipervínculo de Word solo puede apuntar a una página web"
       },
       {
         "letter": "B",
-        "text": "Un hipervínculo se puede quitar sin borrar el texto, con «Quitar hipervínculo»."
+        "text": "El cuadro de vínculo permite enlazar a un archivo o a un punto del propio documento"
       },
       {
         "letter": "C",
-        "text": "Un marcador sirve para nombrar un punto del documento y poder enlazarlo después."
+        "text": "Un hipervínculo se quita sin borrar el texto, con «Quitar hipervínculo»"
       },
       {
         "letter": "D",
-        "text": "Los hipervínculos en Word solo pueden apuntar a páginas web; nunca a otro documento."
+        "text": "Un marcador nombra un punto del documento para poder enlazarlo después"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Un hipervínculo puede apuntar a un archivo local, a otro documento, a un correo electrónico o a un punto del mismo documento, no solo a páginas web."
+    "respuesta": "A",
+    "explicacion": "El cuadro ofrece cuatro destinos, y solo el primero incluye las páginas web: también se puede apuntar a un archivo del disco, a un lugar del propio documento (un título o un marcador), crear un documento nuevo o abrir un correo con el destinatario ya puesto. · Las otras tres son ciertas. · «Quitar hipervínculo» está en el menú contextual del enlace y deja el texto intacto, que es lo que se busca al pegar contenido de una web y querer solo las palabras."
   },
   {
     "sourceFile": "insertar.json",
@@ -9525,27 +9584,28 @@
     "id": "insertar-471",
     "sourceQuestionId": "dlgcross-insertar-471",
     "tipo": "opcion_unica",
-    "enunciado": "El cuadro «Referencia cruzada» se abre desde DOS pestanas distintas. ¿Cuales?",
+    "revisada": true,
+    "enunciado": "El cuadro «Referencia cruzada» se abre desde dos pestañas distintas. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar (grupo Vinculos) y Referencias (grupo Titulos)"
+        "text": "Insertar (grupo Vínculos) y Referencias (grupo Títulos)"
       },
       {
         "letter": "B",
-        "text": "Insertar y Revisar"
+        "text": "Insertar (grupo Vínculos) y Referencias (grupo Índice)"
       },
       {
         "letter": "C",
-        "text": "Referencias y Disposicion"
+        "text": "Referencias (grupo Títulos) y Disposición (grupo Organizar)"
       },
       {
         "letter": "D",
-        "text": "Solo desde Insertar"
+        "text": "Insertar (grupo Vínculos) y Revisar (grupo Comentarios)"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Es exactamente el mismo cuadro: «Insertar ▸ Vinculos ▸ Referencia cruzada» y «Referencias ▸ Titulos ▸ Referencia cruzada»."
+    "explicacion": "Es el mismo cuadro, no una versión reducida: da igual por dónde se entre. Tiene sentido que esté en las dos, porque referenciar es a la vez insertar algo en el texto y remitir a otro elemento. · En Referencias vive en el grupo Títulos, junto a «Insertar título» e «Insertar tabla de ilustraciones», y no en el grupo Índice, que es el descarte que decide la pregunta: los rótulos que crea «Insertar título» son precisamente uno de los tipos a los que se puede referenciar. · Este reparto de un mismo cuadro entre varias pestañas se repite en Word con Bordes y sombreado, Fuente o Párrafo."
   },
   {
     "id": "insertar-269",
@@ -9560,11 +9620,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-65",
     "generado": true,
-    "enunciado": "El atajo Alt+Ctrl+K inserta un hipervínculo en el documento, equivalente a Insertar > Vínculos > Vínculo.",
+    "revisada": true,
+    "enunciado": "Alt+Ctrl+K abre el mismo cuadro que Insertar ▸ Vínculos ▸ Vínculo.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Seleccionas la palabra \"normativa\" en tu documento y pulsas Alt+Ctrl+K. Se abre directamente el cuadro Insertar hipervínculo con el texto \"normativa\" ya en el campo de texto para mostrar, listo para que pegues la URL de destino. Es exactamente lo mismo que ir al menú."
+    "explicacion": "Es el comando HipervínculoInsertarVínculo del cuadro Personalizar teclado. Si hay una palabra seleccionada, aparece ya escrita en el campo «Texto» del cuadro, lista para ponerle la dirección. · Ojo con quitarle el Alt: Ctrl+K, y también Ctrl+Mayús+K, ponen **cursiva** en esta instalación en español. En el esquema internacional en inglés Ctrl+K sí es el hipervínculo, y de ahí que se falle tanto. · Al mismo cuadro se llega además desde el menú contextual del texto seleccionado."
   },
   {
     "id": "insertar-270",
@@ -9579,11 +9640,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-66",
     "generado": true,
-    "enunciado": "Un marcador en Word es un enlace a una página web externa asociado a una palabra del documento.",
+    "revisada": true,
+    "enunciado": "Un marcador de Word es un enlace a una página web asociado a una palabra del documento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Creas un marcador llamado Articulo5 en el párrafo donde está el artículo 5 de tu documento. Ese marcador no abre ninguna web: simplemente señala esa posición dentro del mismo documento. Desde cualquier otro punto puedes crear un hipervínculo o una referencia cruzada que lleve al lector directamente a Articulo5."
+    "explicacion": "Un marcador no lleva a ninguna parte: es un punto del propio documento al que se le pone nombre, y ni siquiera se ve al leerlo. Lo que sí puede llevar hasta él es otra cosa: un hipervínculo con destino «Lugar de este documento», o una referencia cruzada de tipo Marcador. · Dicho de otro modo, el marcador es el destino, no el enlace. · De ahí que los tres botones de su cuadro sean Agregar, Eliminar e Ir a, y no ninguno de abrir nada."
   },
   {
     "id": "insertar-271",
@@ -9598,11 +9660,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-67",
     "generado": true,
-    "enunciado": "El cuadro de Marcador permite ordenar la lista de marcadores por nombre o por fecha de creación.",
+    "revisada": true,
+    "enunciado": "La lista del cuadro Marcador se puede ordenar por nombre o por fecha de creación.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: las dos únicas ordenaciones son por Nombre y por Posición."
+    "explicacion": "Las dos ordenaciones son por nombre y por posición. La segunda es la más útil cuando se quiere recorrer el documento de principio a fin, porque los muestra en el orden en que aparecen. · La fecha suena razonable porque es la ordenación de cualquier lista de archivos, pero un marcador no guarda cuándo se creó: solo su nombre y dónde está. · Debajo de esos dos botones está la casilla «Marcadores ocultos», para ver también los que crea Word por su cuenta."
   },
   {
     "id": "insertar-272",
@@ -9617,11 +9680,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-68",
     "generado": true,
-    "enunciado": "El atajo Ctrl+Mayús+F5 abre el cuadro de diálogo Marcador.",
+    "revisada": true,
+    "enunciado": "Ctrl+Mayús+F5 abre el cuadro Marcador.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Pulsas Ctrl+Mayús+F5 desde cualquier parte del documento y se abre el cuadro Marcador directamente, listo para que escribas el nombre del nuevo marcador y hagas clic en Agregar. No hace falta ir a la pestaña Insertar."
+    "explicacion": "Está en el cuadro Personalizar teclado como EdiciónMarcador, «asigna un nombre a la selección». · Conviene fijar la familia entera de F5 en esta instalación, porque se prestan a confusión: F5 a secas abre «Ir a», Mayús+F5 vuelve al punto de inserción anterior, Ctrl+F5 restaura la ventana del documento y Alt+F5 la de la aplicación. Cinco combinaciones sobre la misma tecla y ninguna se parece a las demás en lo que hace. · «Ir a» y el marcador se tocan: el cuadro de Ir a permite saltar precisamente a un marcador."
   },
   {
     "id": "insertar-273",
@@ -9636,11 +9700,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-69",
     "generado": true,
-    "enunciado": "Una referencia cruzada no se actualiza sola si cambia la numeración del elemento referenciado: hay que reescribirla a mano.",
+    "revisada": true,
+    "enunciado": "Una referencia cruzada es un campo: su número se pone al día al actualizar los campos, no en el mismo instante en que cambia el elemento citado.",
     "opciones": [],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: se actualiza al actualizar los campos del documento (F9 con la selección o con todo seleccionado)."
+    "respuesta": true,
+    "explicacion": "Se actualiza con F9 sobre la referencia o sobre todo el documento seleccionado, y también al imprimir si esa opción está activada en Opciones ▸ Mostrar. Mientras tanto puede enseñar un número viejo, y ese es el fallo clásico de un documento largo. · Lo importante es que el dato correcto se recupera sin tocar el texto, al contrario de lo que pasa con un número escrito a mano, que hay que buscar y corregir uno por uno. · Es el mismo comportamiento que el comando «Fórmula» de las tablas, que tampoco recalcula solo."
   },
   {
     "id": "insertar-274",
@@ -9655,11 +9720,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-70",
     "generado": true,
-    "enunciado": "El cuadro de Referencia cruzada no permite referenciar notas al pie ni notas al final.",
+    "revisada": true,
+    "enunciado": "El cuadro «Referencia cruzada» permite apuntar a una nota al pie y a una nota al final.",
     "opciones": [],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: sí las permite, además de elemento numerado, marcador, ilustración, tabla y ecuación."
+    "respuesta": true,
+    "explicacion": "Las dos figuran en el desplegable «Tipo», junto a elemento numerado, título, marcador, ecuación, ilustración y tabla: ocho tipos en total. · Referenciar una nota inserta su número de marca, que se actualiza si se añaden notas antes; es la forma correcta de escribir «véase la nota 4» sin tener que revisarlo cada vez. · Los tipos que dependen de rótulos —ilustración, tabla y ecuación— solo aparecen en la lista si el documento tiene elementos rotulados con «Insertar título», y el tipo «Título» solo si se usan los estilos de título."
   },
   {
     "id": "insertar-275",
@@ -9674,11 +9740,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-71",
     "generado": true,
-    "enunciado": "Al activar Insertar como hipervínculo en el cuadro Referencia cruzada, el texto de la referencia se convierte en un enlace que lleva directamente al elemento referenciado.",
+    "revisada": true,
+    "enunciado": "Con «Insertar como hipervínculo» marcada, el texto de la referencia cruzada se convierte además en un enlace que salta al elemento citado.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Insertas una referencia cruzada a la Ilustración 2 con esa casilla marcada. En el documento aparece el texto \"Ilustración 2\" subrayado en azul. Al hacer Ctrl+clic sobre él, el cursor salta directamente a la ilustración 2, igual que un hipervínculo normal."
+    "explicacion": "Al pulsarlo con Ctrl, el cursor viaja hasta la ilustración, la tabla o el título referenciado. La casilla viene marcada de fábrica, así que las referencias suelen ser navegables sin que uno lo haya pedido. · No se ven de azul y subrayadas como los enlaces normales: mantienen el aspecto del texto, y solo el puntero delata que llevan a algún sitio. · Es lo que convierte un documento largo en algo manejable en pantalla, y lo que conviene desmarcar si está pensado solo para imprimir."
   },
   {
     "id": "insertar-276",
@@ -9693,11 +9760,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-72",
     "generado": true,
-    "enunciado": "La Referencia cruzada y el Marcador pertenecen a grupos distintos dentro de la pestaña Insertar.",
+    "revisada": true,
+    "enunciado": "«Referencia cruzada» y «Marcador» están en grupos distintos de la pestaña Insertar.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Abres la pestaña Insertar y buscas los dos comandos. Tanto Referencia cruzada como Marcador (y también Vínculo) están en el mismo grupo: el grupo Vínculos. No están separados en grupos distintos."
+    "explicacion": "Comparten el grupo Vínculos, junto con «Vínculo»: son los tres únicos botones que tiene. · Están juntos porque hacen las tres piezas del mismo mecanismo: el marcador crea el destino, el vínculo salta a él con un texto fijo y la referencia cruzada salta y además mantiene el número al día. · El grupo se llama «Vínculos» aunque solo uno de los tres se llame así, y ese detalle basta para descartar la afirmación sin pensar más."
   },
   {
     "id": "insertar-277",
@@ -9712,11 +9780,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-73",
     "generado": true,
-    "enunciado": "El cuadro de Referencia cruzada no admite Ecuación como tipo de elemento a referenciar.",
+    "revisada": true,
+    "enunciado": "El cuadro «Referencia cruzada» no admite «Ecuación» como tipo de elemento a referenciar.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: sí admite Ecuación (y Tabla) en el desplegable de tipos."
+    "explicacion": "Sí la admite: es uno de los ocho tipos, junto a elemento numerado, título, marcador, nota al pie, nota al final, ilustración y tabla. · Ahora bien, para que aparezca en la lista tiene que haber ecuaciones ROTULADAS con «Insertar título», porque lo que referencia es el rótulo, no la fórmula. Lo mismo vale para ilustración y tabla, y de ahí que en un documento recién empezado la lista de tipos se vea más corta. · El tipo «Título» solo aparece si se usan los estilos de título."
   },
   {
     "id": "insertar-278",
@@ -9731,11 +9800,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-75",
     "generado": true,
-    "enunciado": "La casilla Marcadores ocultos del cuadro Marcador muestra los marcadores que Word crea automáticamente de forma interna, por ejemplo los asociados a referencias cruzadas.",
+    "revisada": true,
+    "enunciado": "La casilla «Marcadores ocultos» del cuadro Marcador saca a la lista los que Word crea por su cuenta.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Insertas varias referencias cruzadas en tu documento. Word crea marcadores internos con nombres que empiezan por guión bajo para gestionar esas referencias. Normalmente no los ves en el cuadro Marcador. Al marcar Marcadores ocultos, esos marcadores aparecen en la lista junto a los que has creado tú manualmente."
+    "explicacion": "Word marca puntos del documento sin avisar cada vez que se monta una tabla de contenido, un índice o una referencia cruzada, porque necesita saber a dónde apuntan. Esos marcadores llevan nombres que empiezan por guion bajo y normalmente no se ven. · Conviene mirar la casilla antes de dar por hecho que un documento no tiene marcadores, y conviene no borrar lo que aparezca ahí sin saber qué es: si algo apuntaba a ese punto, deja de encontrarlo."
   },
   {
     "id": "insertar-348",
@@ -9750,11 +9820,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-152",
     "generado": true,
-    "enunciado": "El atajo Alt+F9 inserta un campo vacío en el documento, listo para escribir el código de campo manualmente.",
+    "revisada": true,
+    "enunciado": "Alt+F9 inserta un campo vacío, listo para escribir dentro el código a mano.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: el que inserta el campo vacío es Ctrl+F9. Alt+F9 muestra u oculta los códigos de campo."
+    "explicacion": "El que inserta el campo vacío, con sus llaves especiales, es **Ctrl+F9**, registrado como InsertarCampoCarácter. Esas llaves no se pueden teclear: hay que crearlas con ese atajo. · **Alt+F9** hace otra cosa muy distinta: enseña u oculta los códigos de TODOS los campos del documento, para ver qué hay detrás de cada resultado. Si solo interesa la selección, la combinación es Mayús+F9. · Y F9 a secas actualiza. Tres teclas de función sobre la misma tecla y tres papeles distintos: crear, ver y actualizar."
   },
   {
     "id": "insertar-349",
@@ -9769,11 +9840,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-153",
     "generado": true,
-    "enunciado": "El atajo F9 actualiza todos los campos seleccionados o, si no hay nada seleccionado, el campo donde está el cursor.",
+    "revisada": true,
+    "enunciado": "F9 actualiza los campos seleccionados o, si no hay selección, el campo donde esté el cursor.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Tienes una referencia cruzada que dice \"Tabla 3\" pero acabas de añadir una tabla antes y ahora debería decir \"Tabla 4\". Haces clic sobre la referencia y pulsas F9. El campo se actualiza al instante. Si seleccionas todo el documento con Ctrl+E y pulsas F9, se actualizan todos los campos a la vez."
+    "explicacion": "Es el comando ActualizarCampos, y con Ctrl+E antes (seleccionar todo) refresca el documento entero de una vez, que es lo que hay que hacer antes de imprimir un texto lleno de referencias. · El mismo comando responde también a Alt+Mayús+U. · Lo que NO hace es enseñar el código: eso es Alt+F9. Y si se quiere congelar el resultado y perder el campo para siempre, la combinación es Ctrl+Mayús+F9, o Ctrl+6, que lo desvinculan."
   },
   {
     "id": "insertar-350",
@@ -9788,11 +9860,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-154",
     "generado": true,
-    "enunciado": "El atajo Alt+F9 muestra u oculta los códigos de campo en lugar de sus valores.",
+    "revisada": true,
+    "enunciado": "Alt+F9 alterna entre ver los códigos de campo y ver sus resultados.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Tu documento muestra la fecha 03/09/2026. Pulsas Alt+F9 y en lugar de la fecha aparece el código { DATE @ \"dd/MM/yyyy\" } o similar. Vuelves a pulsar Alt+F9 y el código desaparece y vuelve a mostrar el valor. Este atajo es especialmente útil para depurar campos que no muestran el valor esperado."
+    "explicacion": "Donde se leía una fecha aparece su código entre llaves, y al volver a pulsarlo se deshace. Es la forma de averiguar por qué un campo no muestra lo que debería, y de corregir el código a mano. · Actúa sobre todo el documento; para hacerlo solo en lo seleccionado está **Mayús+F9**, que es su versión local y se confunde con facilidad. · No hay que confundirlo con Ctrl+F9, que crea un campo nuevo, ni con F9, que lo actualiza."
   },
   {
     "id": "insertar-351",
@@ -9807,11 +9880,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-155",
     "generado": true,
-    "enunciado": "El atajo Alt+Ctrl+K abre el cuadro Insertar hipervínculo, mientras que Alt+Izquierda navega hacia atrás por el historial de hipervínculos visitados en el documento.",
+    "revisada": true,
+    "enunciado": "Alt+Ctrl+K abre el cuadro de hipervínculo y Alt+Izquierda retrocede por el historial de saltos.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Haces clic en un hipervínculo interno que te lleva al apartado 5 del documento. Pulsas Alt+Izquierda y el cursor vuelve al punto desde donde hiciste clic, igual que el botón Atrás de un navegador. Alt+Derecha haría el recorrido inverso."
+    "explicacion": "Las dos figuran en el cuadro Personalizar teclado como HipervínculoInsertarVínculo e HipervínculoHaciaAtrás, y Alt+Derecha es la simétrica hacia delante: funcionan como los botones de un navegador. · Con Alt+Izquierda se vuelve por el camino recorrido, salto a salto. Hay otra manera de volver al punto de inserción anterior sin usar ese historial, **Mayús+F5**, que además funciona aunque no se haya seguido ningún enlace y recuerda las tres últimas posiciones de edición."
   },
   {
     "id": "insertar-353",
@@ -9826,11 +9900,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-158",
     "generado": true,
-    "enunciado": "El atajo Alt+Ctrl+O inserta una nota al final del documento.",
+    "revisada": true,
+    "enunciado": "Alt+Ctrl+O inserta una nota al final del documento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Alt+Ctrl+O inserta una Nota al pie, no una nota al final. La nota al pie aparece en la parte inferior de la página donde está la marca. La nota al final aparece agrupada al final de todo el documento o de la sección. Para la nota al final el atajo es Alt+Ctrl+L."
+    "explicacion": "Inserta una nota **al pie**, la que sale abajo en la misma página donde está la marca. La nota **al final**, que se agrupa toda junta al terminar el documento o la sección, es **Alt+Ctrl+L**. · Las dos son de la pestaña Referencias, no de Insertar, aunque su parecido con el resto de marcas las traiga a esta conversación. · Y las dos se pueden referenciar desde el cuadro Referencia cruzada, donde figuran como tipos distintos precisamente porque son cosas distintas."
   },
   {
     "id": "insertar-354",
@@ -9845,11 +9920,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-159",
     "generado": true,
-    "enunciado": "El atajo Ctrl+Mayús+F5 y el comando Insertar > Vínculos > Marcador abren el mismo cuadro de diálogo.",
+    "revisada": true,
+    "enunciado": "Ctrl+Mayús+F5 y F5 abren el mismo cuadro de diálogo.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Pulsas Ctrl+Mayús+F5 y se abre el cuadro Marcador con su lista de marcadores existentes y los botones Agregar, Eliminar e Ir a. Ahora cierras y vas manualmente a Insertar > Vínculos > Marcador. Se abre exactamente el mismo cuadro. Son dos caminos al mismo destino."
+    "respuesta": false,
+    "explicacion": "Ctrl+Mayús+F5 abre el cuadro **Marcador**, para poner nombre a un punto; **F5** a secas abre **«Ir a»**, que salta a una página, una sección, una línea o, entre otras cosas, a un marcador. Se tocan, pero no son el mismo cuadro: uno CREA destinos y el otro va a ellos. · Al cuadro Marcador se llega también por Insertar ▸ Vínculos ▸ Marcador, y ahí sí es exactamente el mismo. · Completan la familia Mayús+F5, que vuelve al punto de inserción anterior, y Ctrl+F5, que restaura la ventana."
   },
   {
     "id": "insertar-355",
@@ -9864,11 +9940,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-160",
     "generado": true,
-    "enunciado": "El atajo Alt+F3 y el comando Insertar > Texto > Elementos rápidos > Autotexto > Guardar selección en galería de autotexto realizan la misma operación.",
+    "revisada": true,
+    "enunciado": "Alt+F3 hace lo mismo que Elementos rápidos ▸ Autotexto ▸ «Guardar selección en galería de autotexto».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Seleccionas un bloque de texto con formato y pulsas Alt+F3. Se abre el cuadro Crear nuevo bloque de creación con el contenido seleccionado listo para guardar en la galería de Autotexto. Es exactamente lo mismo que recorrer la ruta del menú, pero mucho más rápido."
+    "explicacion": "Es el comando CrearAutotexto: con un bloque seleccionado, abre el cuadro «Crear nuevo bloque de creación» con el contenido ya dentro, listo para ponerle nombre. · Su pareja es **F3**, que hace lo contrario: escribes el nombre del autotexto y al pulsarla lo sustituye por su contenido. · Y hay dos primos que trabajan con el autotexto especial, el Spike: Ctrl+F3 va cortando trozos y acumulándolos, y Ctrl+Mayús+F3 los suelta todos de golpe."
   },
   {
     "id": "insertar-356",
@@ -9883,11 +9960,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-161",
     "generado": true,
-    "enunciado": "El atajo F3 funciona aunque el texto escrito antes del cursor no coincida exactamente con el nombre de un bloque de creación: Word busca el más parecido.",
+    "revisada": true,
+    "enunciado": "F3 funciona aunque lo escrito antes del cursor no coincida exactamente con el nombre del bloque: Word busca el más parecido.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: el nombre debe coincidir exactamente o F3 no hace nada."
+    "explicacion": "El nombre tiene que coincidir; si no, la tecla no hace nada y no avisa de nada, que es lo que despista. · Lo que sí propone Word a medida que se escribe es la sugerencia flotante del autocompletar, y esa se acepta con Intro, no con F3. Son dos mecanismos distintos para lo mismo y se confunden. · La forma segura de insertar un autotexto cuyo nombre no se recuerda es la galería de Elementos rápidos, donde salen todos con su vista previa."
   },
   {
     "id": "insertar-357",
@@ -9902,11 +9980,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-162",
     "generado": true,
-    "enunciado": "El atajo Alt+Mayús+I marca una entrada de índice en el documento.",
+    "revisada": true,
+    "enunciado": "Alt+Mayús+I marca una entrada de índice.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: Alt+Mayús+X marca una entrada de índice. Alt+Mayús+I marca una cita para la tabla de autoridades."
+    "explicacion": "Marca una **cita** para la tabla de autoridades, que es el listado de referencias legales de un documento jurídico: el comando se llama MarcarCita. · La entrada de índice se marca con **Alt+Mayús+X** (MarcarElementoÍndice). · Y aún hay una tercera de la misma familia: **Alt+Mayús+B** marca un elemento para la tabla de contenido. Tres combinaciones con Alt+Mayús para tres listas distintas del final de un documento, y por eso se cruzan tanto en los exámenes."
   },
   {
     "id": "insertar-358",
@@ -9921,11 +10000,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-163",
     "generado": true,
-    "enunciado": "El atajo Alt+Mayús+X marca un elemento de tabla de contenido en el documento.",
+    "revisada": true,
+    "enunciado": "Alt+Mayús+X marca un elemento para la tabla de contenido.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: Alt+Mayús+X marca una entrada de índice. El elemento de tabla de contenido se marca con Alt+Mayús+B."
+    "explicacion": "Marca una entrada de **índice**, la lista alfabética de términos con sus páginas que va al final. El elemento de tabla de contenido se marca con **Alt+Mayús+B** (MarcarElementoTDC), y sirve para incluir en la tabla un texto que no lleva estilo de título. · La tercera de la familia es Alt+Mayús+I, para las citas de la tabla de autoridades. · Tres combinaciones con Alt+Mayús para tres listas distintas del final de un documento, y se cruzan constantemente en los exámenes: índice, tabla de contenido y tabla de autoridades."
   },
   {
     "id": "insertar-359",
@@ -9940,11 +10020,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-164",
     "generado": true,
-    "enunciado": "El atajo Alt+Mayús+I marca una cita bibliográfica en el documento.",
+    "revisada": true,
+    "enunciado": "Alt+Mayús+I marca una cita para la tabla de autoridades.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Estás redactando un documento jurídico y quieres marcar una cita de jurisprudencia para incluirla en una tabla de autoridades. Seleccionas el texto de la cita y pulsas Alt+Mayús+I. Se abre el cuadro Marcar cita lista para confirmar la entrada."
+    "explicacion": "Es el comando MarcarCita, y abre el cuadro «Marcar cita» con el texto seleccionado ya dentro, para clasificarlo por categorías: casos, estatutos, reglamentos. Es la herramienta de los documentos jurídicos. · Sus dos parientes son Alt+Mayús+X, para las entradas de índice, y Alt+Mayús+B, para los elementos de tabla de contenido. · Las tres viven en la pestaña Referencias y las tres dejan en el documento un campo oculto que solo se ve con las marcas de formato activadas."
   },
   {
     "id": "insertar-367",
@@ -9959,11 +10040,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-189",
     "generado": true,
-    "enunciado": "El cuadro Marcador permite ordenar la lista de marcadores por nombre o por posición en el documento.",
+    "revisada": true,
+    "enunciado": "El botón «Ir a» del cuadro Marcador salta al marcador seleccionado sin cerrar el cuadro.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "En la parte inferior del cuadro hay dos botones de opción: \"Nombre\" y \"Posición\". Puedes elegir cómo quieres ver la lista de marcadores. Si necesitas encontrarlos en el orden en que aparecen en el documento, eliges Posición."
+    "explicacion": "Eso lo convierte en una herramienta de navegación además de creación: se va saltando de marcador en marcador con el cuadro abierto, comprobando que cada uno está donde debe. Los otros dos botones son Agregar y Eliminar. · Para recorrer el documento en orden conviene poner antes la lista «por posición» en lugar de «por nombre», que son las dos únicas ordenaciones. · El cuadro «Ir a», que se abre con F5, también permite saltar a un marcador, pero eligiéndolo de una lista desplegable."
   },
   {
     "id": "insertar-368",
@@ -9978,11 +10060,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-190",
     "generado": true,
-    "enunciado": "El cuadro Marcador incluye una casilla para mostrar \"Marcadores ocultos\", que Word crea internamente para referencias cruzadas, índices y otros elementos.",
+    "revisada": true,
+    "enunciado": "Los marcadores que Word crea por su cuenta llevan nombres que empiezan por guion bajo.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Normalmente solo ves los marcadores que has creado tú. Si marcas esa casilla, aparecen también los marcadores que Word genera automáticamente (con nombres que empiezan por guión bajo). Esto es útil para depurar o entender qué está pasando con las referencias."
+    "explicacion": "Es la señal para distinguirlos de los propios, y aparecen en cuanto se marca la casilla «Marcadores ocultos» del cuadro. Word los va poniendo al montar tablas de contenido, índices y referencias cruzadas, porque necesita saber a qué punto apunta cada cosa. · No conviene borrarlos: lo que los usaba deja de encontrar su destino. · Tampoco conviene empezar un marcador propio con guion bajo, porque se mezclaría con ellos; los nombres tampoco admiten espacios."
   },
   {
     "id": "insertar-369",
@@ -9997,11 +10080,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-191",
     "generado": true,
-    "enunciado": "En el cuadro Referencia cruzada, el tipo \"Ecuación\" está disponible en el desplegable de tipos.",
+    "revisada": true,
+    "enunciado": "El tipo «Ecuación» aparece en el cuadro Referencia cruzada aunque el documento no tenga ninguna ecuación rotulada.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Además de Elemento numerado, Marcador, Nota al pie, Nota al final, Ilustración y Tabla, también aparece Ecuación. Si tienes ecuaciones numeradas, puedes referenciarlas directamente desde este cuadro."
+    "respuesta": false,
+    "explicacion": "Los tipos que dependen de un rótulo —ilustración, tabla y ecuación— solo aparecen en la lista si hay elementos rotulados con «Insertar título», porque lo que se referencia es el rótulo, no el objeto. En un documento recién empezado la lista de tipos se ve mucho más corta por eso. · Lo mismo le pasa a «Título», que solo sale si se usan los estilos de título. · Los ocho tipos posibles son elemento numerado, título, marcador, nota al pie, nota al final, ecuación, ilustración y tabla."
   },
   {
     "id": "insertar-370",
@@ -10016,11 +10100,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-192",
     "generado": true,
-    "enunciado": "En el cuadro Referencia cruzada, la opción \"Referencia a\" incluye \"Número de página\", \"Número de párrafo\" y \"Texto de párrafo\" entre otras.",
+    "revisada": true,
+    "enunciado": "El contenido del desplegable «Referencia a» cambia según el tipo de elemento elegido arriba.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Cuando seleccionas un tipo de elemento, el campo \"Referencia a\" se actualiza con las opciones disponibles. Para elementos numerados, puedes elegir mostrar solo el número, el número de página, el texto del párrafo, o incluso \"Más adelante o más atrás\"."
+    "explicacion": "Tiene su lógica: de un título se puede citar su texto, su número o su página, pero de una nota al pie interesa sobre todo su número de marca, así que Word ofrece en cada caso lo que tiene sentido. · Con «Elemento numerado» salen seis opciones, entre ellas el número de párrafo en tres versiones —normal, sin contexto y en contexto—, que se diferencian en cuánta jerarquía arrastran de una lista como 2.1.3. · «Número de página» y «Más adelante o más atrás» están siempre."
   },
   {
     "id": "insertar-371",
@@ -10035,11 +10120,12 @@
     "tema": "Vínculos",
     "sourceQuestionId": "vf-insertar-193",
     "generado": true,
-    "enunciado": "En el cuadro Referencia cruzada, la casilla \"Insertar como hipervínculo\" está disponible y, si se marca, el texto de la referencia se convierte en un enlace.",
+    "revisada": true,
+    "enunciado": "Si se desmarca «Insertar como hipervínculo», la referencia deja de ser un enlace y también deja de actualizarse.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Al pie del cuadro hay una casilla con ese texto. Si está marcada, al hacer Ctrl+clic sobre la referencia saltarás directamente al elemento referenciado. Si no, el texto de la referencia es estático y no lleva a ninguna parte."
+    "respuesta": false,
+    "explicacion": "Deja de ser un enlace, pero sigue siendo un campo: su número se pone al día igual al actualizar los campos con F9. Son dos cosas independientes, y confundirlas es el error que decide la pregunta. · La casilla viene marcada de fábrica, así que lo normal es que las referencias sean navegables con Ctrl+clic. · Desmarcarla tiene sentido en un documento pensado solo para papel, donde el enlace no aporta nada y solo puede molestar al hacer clic sin querer."
   },
   {
     "id": "insertar-465",
@@ -10054,6 +10140,7 @@
     "tema": "Vínculos",
     "sourceQuestionId": "emp-insertar-01",
     "generado": true,
+    "revisada": true,
     "enunciado": "Relaciona cada atajo con lo que inserta o hace:",
     "opciones": [],
     "matching": {
@@ -10106,7 +10193,7 @@
       "3": "B",
       "4": "C"
     },
-    "explicacion": "Cuatro atajos ya verificados en el banco, agrupados aquí en un único emparejamiento."
+    "explicacion": "Los cuatro salen del cuadro Personalizar teclado de esta instalación. **Ctrl+Mayús+F5** es EdiciónMarcador, «asigna un nombre a la selección». **Alt+Ctrl+A** es InsertarComentario, y conviene fijarlo porque muchos manuales dan otro. **Alt+F3** es CrearAutotexto, cuya pareja es F3, que hace lo contrario: convierte el nombre escrito en su contenido. · **Alt+X** es el más raro de los cuatro y el más útil de conocer: escrito un código como 20AC, al pulsarlo se convierte en el carácter (€), y pulsado sobre un carácter enseña su código. Es la vía rápida para meter un símbolo sin abrir ningún cuadro."
   },
   {
     "id": "insertar-463",
@@ -10121,7 +10208,8 @@
     "tema": "Vínculos",
     "sourceQuestionId": "rell-insertar-03",
     "generado": true,
-    "enunciado": "Escribe el atajo de cada acción: insertar un marcador → [1]. insertar un comentario → [2].",
+    "revisada": true,
+    "enunciado": "Completa: para poner nombre a un punto del documento, [1]; para insertar un comentario, [2].",
     "opciones": [],
     "matching": null,
     "respuesta": [
@@ -10134,7 +10222,7 @@
         "Ctrl+Alt+A"
       ]
     ],
-    "explicacion": "Ctrl+Mayús+F5 inserta un marcador; Alt+Ctrl+A inserta un comentario."
+    "explicacion": "Los dos figuran en el cuadro Personalizar teclado de esta instalación, como EdiciónMarcador e InsertarComentario. · El del comentario es de los que más se falla, porque circulan otras combinaciones en los manuales, y en esta instalación es esa. · Del marcador conviene recordar además el resto de su familia sobre la misma tecla de función: F5 abre «Ir a», Mayús+F5 vuelve al punto de inserción anterior y Ctrl+F5 restaura la ventana del documento."
   },
   {
     "id": "insertar-27",

@@ -45,7 +45,9 @@ def main():
     problemas = 0
     for q in qs:
         ex = q.get("explicacion") or ""
-        if LETRA.search(ex):
+        # solo tiene sentido en items con opciones rotuladas A/B/C...
+        con_letras = q.get("tipo") in ("opcion_unica", "seleccion_multiple")
+        if con_letras and LETRA.search(ex):
             print("  LETRA en explicacion:", q["id"], "->", LETRA.search(ex).group(0)); problemas += 1
         if len(ex) < 120:
             print("  explicacion corta (%d):" % len(ex), q["id"]); problemas += 1
