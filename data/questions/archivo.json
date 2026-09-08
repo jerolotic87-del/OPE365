@@ -11267,28 +11267,28 @@
     "subtopic": "Avanzadas — Impresión",
     "tema": "Opciones",
     "sourceQuestionId": "8-90",
-    "enunciado": "¿Desde qué ruta se activa la opción que hace que Word actualice automáticamente los campos antes de imprimir?",
+    "enunciado": "Los números de página y las fechas de tu documento salen desactualizados en el papel. ¿Qué casilla de Avanzadas → Imprimir lo arregla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de impresión → Actualizar campos"
+        "text": "Actualizar campos antes de imprimir"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Presentación → Opciones de impresión → Actualizar campos"
+        "text": "Actualizar datos vinculados antes de imprimir"
       },
       {
         "letter": "C",
-        "text": "Archivo → Imprimir → Configuración → Actualizar campos antes de imprimir"
+        "text": "Imprimir los códigos de campo en lugar de sus valores"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Guardar → Actualizar campos al imprimir"
+        "text": "Imprimir en segundo plano"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La actualización de campos antes de imprimir se configura en Archivo → Opciones → Avanzadas → Opciones de impresión. En Presentación hay opciones de impresión pero no incluyen la actualización de campos. No existe esa opción en el panel Imprimir ni en Guardar."
+    "explicacion": "Recalcula los campos internos de Word (número de página, fecha, referencias cruzadas, índices) justo antes de mandar a imprimir. · «Actualizar datos vinculados antes de imprimir» es su vecina y actúa sobre lo que viene de FUERA, como una tabla pegada desde Excel con vínculo: interno frente a externo, y esa es la distinción. · «Imprimir los códigos de campo» empeora el problema, porque saca en el papel el código en lugar del valor. · A mano, F9 actualiza los campos seleccionados; con Ctrl+E y luego F9 se actualiza el documento entero."
   },
   {
     "id": "archivo-99",
@@ -11302,28 +11302,28 @@
     "subtopic": "Avanzadas — Impresión",
     "tema": "Opciones",
     "sourceQuestionId": "8-91",
-    "enunciado": "¿Desde qué ruta se activa la impresión en orden inverso para que la última página salga primera de la impresora?",
+    "enunciado": "Tu impresora deja las hojas boca arriba y acabas siempre reordenando el taco a mano. ¿Qué casilla de Avanzadas → Imprimir lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de impresión → Imprimir páginas"
+        "text": "Imprimir páginas en orden inverso"
       },
       {
         "letter": "B",
-        "text": "Archivo → Imprimir → Configuración → Imprimir en orden inverso"
+        "text": "Imprimir en el anverso de la hoja para impresión a doble cara"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Presentación → Opciones de impresión → Orden inverso"
+        "text": "Imprimir en segundo plano"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → General → Imprimir páginas en orden inverso"
+        "text": "Utilizar calidad de borrador"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Esta opción está en Archivo → Opciones → Avanzadas → Opciones de impresión. No existe directamente en el panel Imprimir de Backstage ni en Presentación ni en General."
+    "explicacion": "Manda la última página primero, de modo que al terminar el taco queda ordenado. Es un ajuste de la impresora, no del documento: la numeración no se toca. · «Imprimir en el anverso de la hoja» pertenece a la pareja de casillas del doble cara manual, y también cambia el ORDEN en que salen las hojas, por eso es el distractor bueno: pero lo hace para poder darles la vuelta, no para dejarlas ordenadas. · No confundirlo con «Intercaladas» del panel Imprimir, que decide si se agrupan por juego o por página."
   },
   {
     "id": "archivo-100",
@@ -11337,28 +11337,28 @@
     "subtopic": "Avanzadas — Impresión",
     "tema": "Opciones",
     "sourceQuestionId": "8-92",
-    "enunciado": "¿Desde qué ruta se configura la opción que ajusta el contenido para que quepa en papel A4 cuando el documento está configurado para otro tamaño?",
+    "enunciado": "Recibes documentos maquetados en tamaño Carta y tu impresora solo tiene A4. ¿Qué casilla de Avanzadas → Imprimir lo resuelve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de impresión → Ajustar el contenido"
+        "text": "Ajustar el contenido a tamaño de papel A4 o 8,5 x 11"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Presentación → Opciones de impresión → Ajustar a A4"
+        "text": "Imprimir en el anverso de la hoja para impresión a doble cara"
       },
       {
         "letter": "C",
-        "text": "Archivo → Imprimir → Escalar → Ajustar a A4"
+        "text": "Imprimir los códigos de campo en lugar de sus valores"
       },
       {
         "letter": "D",
-        "text": "Disposición → Tamaño → Ajustar contenido a A4"
+        "text": "Bandeja predeterminada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El ajuste de contenido a A4 está en Archivo → Opciones → Avanzadas → Opciones de impresión. No está en Presentación ni en el panel Imprimir como escala ni en la pestaña Disposición."
+    "explicacion": "Reescala al vuelo entre esos dos tamaños, que son los que más se cruzan entre documentos europeos y americanos, sin tocar la configuración de página del documento. · No confundirlo con «Escalar al tamaño del papel» del panel Imprimir, que hace algo parecido pero para cualquier tamaño y solo en esa impresión: aquí es una preferencia permanente y limitada a esos dos formatos. · «Bandeja predeterminada» también es de papel, pero de qué bandeja se coge, no de qué tamaño se ajusta. · Las otras dos son de calidad y de orden."
   },
   {
     "id": "archivo-101",
@@ -11372,28 +11372,28 @@
     "subtopic": "Avanzadas — Impresión",
     "tema": "Opciones",
     "sourceQuestionId": "8-93",
-    "enunciado": "Para configurar la impresión a doble cara manualmente cuando la impresora no lo soporta de forma automática, ¿qué opciones se usan en Word 365?",
+    "enunciado": "Tu impresora no tiene dúplex y quieres controlar cómo se imprime cada cara para poder dar la vuelta al papel. ¿Qué casillas de Avanzadas → Imprimir usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Imprimir en el anverso de la hoja e"
+        "text": "Imprimir en el anverso y en el reverso de la hoja, que son dos casillas"
       },
       {
         "letter": "B",
-        "text": "Archivo → Imprimir → Imprimir en ambas caras → Manual"
+        "text": "Imprimir páginas en orden inverso, marcándola y desmarcándola"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Presentación → Opciones de impresión → Doble cara manual"
+        "text": "Imprimir en segundo plano, con la bandeja predeterminada"
       },
       {
         "letter": "D",
-        "text": "Disposición → Configurar página → Doble cara"
+        "text": "Ajustar el contenido a tamaño de papel A4 o 8,5 x 11"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Las opciones para impresión manual a doble cara están en Archivo → Opciones → Avanzadas. El panel Imprimir ofrece doble cara automática si la impresora lo soporta, pero no la manual. No existe esa opción en Presentación ni en Disposición."
+    "explicacion": "Son dos casillas separadas, una para cada cara, pensadas para el doble cara manual: se imprime primero un conjunto de hojas, se les da la vuelta y se imprime el otro. · «Imprimir páginas en orden inverso» es el distractor bueno porque también se usa en ese proceso, para que el segundo pase encaje con el primero, pero por sí sola no separa las caras. · La alternativa más cómoda es «Imprimir manualmente a doble cara» del propio panel Imprimir, que hace lo mismo guiándote con un aviso para recargar el papel."
   },
   {
     "id": "archivo-301",
@@ -11408,28 +11408,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-065",
     "generado": true,
-    "enunciado": "Quieres imprimir rápido un borrador para revisarlo en papel sin gastar tinta, con calidad reducida. ¿Dónde lo activas?",
+    "enunciado": "Quieres sacar un borrador rápido para revisar en papel, sin gastar tinta ni tiempo. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Imprimir ▸ Imprimir en segundo plano"
+        "text": "Utilizar calidad de borrador"
       },
       {
         "letter": "B",
-        "text": "Imprimir ▸ Imprimir páginas en orden inverso"
+        "text": "Imprimir en segundo plano"
       },
       {
         "letter": "C",
-        "text": "Imprimir ▸ Utilizar calidad de borrador"
+        "text": "Imprimir solo los datos de un formulario"
       },
       {
         "letter": "D",
-        "text": "Imprimir ▸ Imprimir etiquetas XML"
+        "text": "Imprimir etiquetas XML"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Imprimir → Utilizar calidad de borrador. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Imprime con la calidad reducida de la impresora: más rápido y con menos tinta, a costa del acabado. Depende del controlador, así que en algunas impresoras no cambia nada. · Ojo con no confundir esto con la VISTA Borrador, que es otra cosa: una es cómo se ve en pantalla y esta cómo sale en papel. Comparten nombre y nada más. · «Imprimir en segundo plano» también hace la impresión menos molesta, pero por otra vía: te devuelve el control de Word mientras se envía. · Las otras dos imprimen contenidos concretos, no cambian la calidad."
   },
   {
     "id": "archivo-302",
@@ -11444,28 +11444,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-066",
     "generado": true,
-    "enunciado": "Cada vez que imprimes, Word se bloquea hasta que termina de enviar el trabajo a la impresora. ¿Dónde activas la impresión en segundo plano?",
+    "enunciado": "Cada vez que imprimes, Word se queda bloqueado hasta que termina de mandar el trabajo. ¿Qué casilla lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Imprimir ▸ Imprimir etiquetas XML"
+        "text": "Imprimir en segundo plano"
       },
       {
         "letter": "B",
-        "text": "Imprimir ▸ Utilizar calidad de borrador"
+        "text": "Utilizar calidad de borrador"
       },
       {
         "letter": "C",
-        "text": "Imprimir ▸ Imprimir en segundo plano"
+        "text": "Permitir guardar en segundo plano"
       },
       {
         "letter": "D",
-        "text": "Imprimir ▸ Imprimir páginas en orden inverso"
+        "text": "Imprimir páginas en orden inverso"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Imprimir → Imprimir en segundo plano. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Con ella, Word te devuelve el control mientras el trabajo se envía a la impresora; se paga con algo de memoria y con que la impresión pueda ir algo más lenta. · «Permitir guardar en segundo plano» es el mejor distractor posible: es la casilla hermana, con la misma idea aplicada al guardado, y está en la sección Guardar del mismo panel Avanzadas. Word tiene las dos y hay que saber a qué sección pertenece cada una. · «Utilizar calidad de borrador» acelera la impresión pero no desbloquea Word."
   },
   {
     "id": "archivo-303",
@@ -11480,28 +11480,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-068",
     "generado": true,
-    "enunciado": "Tienes un documento con esquema XML adjunto y quieres que al imprimir aparezcan las etiquetas XML. ¿Dónde lo activas?",
+    "enunciado": "Trabajas con un documento que lleva un esquema XML adjunto y necesitas que las etiquetas salgan en el papel. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Imprimir ▸ Imprimir etiquetas XML"
+        "text": "Imprimir etiquetas XML"
       },
       {
         "letter": "B",
-        "text": "Imprimir ▸ Imprimir páginas en orden inverso"
+        "text": "Imprimir los códigos de campo en lugar de sus valores"
       },
       {
         "letter": "C",
-        "text": "Imprimir ▸ Utilizar calidad de borrador"
+        "text": "Imprimir solo los datos de un formulario"
       },
       {
         "letter": "D",
-        "text": "Imprimir ▸ Imprimir en segundo plano"
+        "text": "Imprimir PostScript sobre el texto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Imprimir → Imprimir etiquetas XML. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "explicacion": "Las cuatro son casillas reales de la sección Imprimir y las cuatro cambian QUÉ se imprime en lugar de cómo, así que ninguna se descarta por rara: es un bloque de casos especiales. · Esta saca las etiquetas del esquema XML aplicado al documento. · «Imprimir los códigos de campo» hace lo análogo con los campos de Word: enseña el código en vez del resultado. Las dos revelan estructura interna, y por eso se confunden. · «Imprimir solo los datos de un formulario» omite el diseño. · «Imprimir PostScript sobre el texto» es para campos PRINT en impresoras PostScript."
   },
   {
     "id": "archivo-304",
@@ -11516,28 +11516,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-069",
     "generado": true,
-    "enunciado": "Necesitas una copia impresa que muestre los códigos de campo ({ PAGE }, { DATE }) en lugar de sus valores. ¿Dónde lo activas?",
+    "enunciado": "Necesitas una copia en papel que muestre { PAGE } y { DATE } en vez de sus resultados, para revisar la estructura. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Imprimir ▸ Imprimir páginas en orden inverso"
+        "text": "Imprimir los códigos de campo en lugar de sus valores"
       },
       {
         "letter": "B",
-        "text": "Imprimir ▸ Utilizar calidad de borrador"
+        "text": "Mostrar códigos de campo en lugar de sus valores"
       },
       {
         "letter": "C",
-        "text": "Imprimir ▸ Imprimir los códigos de campo en lugar de sus valores"
+        "text": "Imprimir etiquetas XML"
       },
       {
         "letter": "D",
-        "text": "Imprimir ▸ Imprimir en segundo plano"
+        "text": "Actualizar campos antes de imprimir"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Imprimir → Imprimir los códigos de campo en lugar de sus valores. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Aquí está el matiz de toda la pregunta: hay DOS casillas casi idénticas en el mismo panel Avanzadas, y la única diferencia es la primera palabra. «Mostrar códigos de campo» está en la sección «Mostrar contenido de documento» y afecta a la pantalla; esta, en la sección Imprimir, afecta al papel. Se pueden tener puestas por separado. · «Actualizar campos antes de imprimir» hace justo lo contrario de lo que se pide: refresca los valores para que salgan bien. · «Imprimir etiquetas XML» revela estructura, pero del esquema XML."
   },
   {
     "id": "archivo-305",
@@ -11552,28 +11552,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-074",
     "generado": true,
-    "enunciado": "Tu impresora tiene varias bandejas y quieres cambiar cuál usa Word por defecto. ¿Dónde lo configuras?",
+    "enunciado": "Tu impresora tiene varias bandejas y Word coge siempre la que no quieres. ¿Qué ajuste de Avanzadas → Imprimir cambias?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Imprimir ▸ Utilizar calidad de borrador"
+        "text": "Bandeja predeterminada"
       },
       {
         "letter": "B",
-        "text": "Imprimir ▸ Bandeja predeterminada"
+        "text": "Ajustar el contenido a tamaño de papel A4 o 8,5 x 11"
       },
       {
         "letter": "C",
-        "text": "Imprimir ▸ Imprimir en segundo plano"
+        "text": "Imprimir en segundo plano"
       },
       {
         "letter": "D",
-        "text": "Imprimir ▸ Imprimir páginas en orden inverso"
+        "text": "Utilizar calidad de borrador"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Imprimir → Bandeja predeterminada. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es un desplegable, no una casilla, y fija de qué bandeja coge el papel Word por defecto. · Conviene saber que hay un ajuste parecido pero por documento, en Configurar página ▸ Papel ▸ Origen del papel, donde además se puede pedir una bandeja para la primera página y otra para el resto (típico del papel con membrete). Uno es la preferencia general y el otro la del documento concreto, y el segundo manda. · «Ajustar el contenido a tamaño de papel» también es de papel, pero de tamaño."
   },
   {
     "id": "archivo-306",
@@ -11588,28 +11588,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-075",
     "generado": true,
-    "enunciado": "Tienes un documento con instrucciones PostScript incrustadas y necesitas que se impriman sobre el texto en una impresora compatible. ¿Dónde lo activas?",
+    "enunciado": "El documento lleva campos PRINT con instrucciones PostScript y necesitas que se ejecuten sobre el texto. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Imprimir ▸ Imprimir en segundo plano"
+        "text": "Imprimir PostScript sobre el texto"
       },
       {
         "letter": "B",
-        "text": "Imprimir ▸ Utilizar calidad de borrador"
+        "text": "Imprimir etiquetas XML"
       },
       {
         "letter": "C",
-        "text": "Imprimir ▸ Imprimir páginas en orden inverso"
+        "text": "Imprimir los códigos de campo en lugar de sus valores"
       },
       {
         "letter": "D",
-        "text": "Imprimir ▸ Imprimir PostScript sobre el texto"
+        "text": "Utilizar calidad de borrador"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Imprimir → Imprimir PostScript sobre el texto. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es una casilla muy específica: hace que el código PostScript incrustado en campos PRINT se imprima ENCIMA del texto en lugar de debajo, y solo tiene sentido con una impresora PostScript. Sirve, por ejemplo, para marcas de agua generadas por la impresora. · Las otras tres son casillas reales de la misma sección y todas van de imprimir algo que normalmente no se imprime, así que el bloque entero es coherente: la pregunta es qué imprime cada una. · Si la impresora no es PostScript, la casilla no hace nada."
   },
   {
     "id": "archivo-307",
@@ -11624,28 +11624,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-076",
     "generado": true,
-    "enunciado": "Has creado un formulario y necesitas imprimir solo los datos rellenados, sin el diseño, porque usarás papel preimpreso. ¿Dónde lo activas?",
+    "enunciado": "Has hecho un formulario y vas a imprimirlo sobre papel preimpreso, así que solo quieres que salgan los datos rellenados. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Imprimir ▸ Imprimir en segundo plano"
+        "text": "Imprimir solo los datos de un formulario"
       },
       {
         "letter": "B",
-        "text": "Imprimir ▸ Imprimir solo los datos de un formulario"
+        "text": "Guardar datos de formulario como archivo de texto delimitado"
       },
       {
         "letter": "C",
-        "text": "Imprimir ▸ Utilizar calidad de borrador"
+        "text": "Imprimir los códigos de campo en lugar de sus valores"
       },
       {
         "letter": "D",
-        "text": "Imprimir ▸ Imprimir páginas en orden inverso"
+        "text": "Imprimir etiquetas XML"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Imprimir → Imprimir solo los datos de un formulario. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Imprime solo lo escrito en los campos de formulario, dejando fuera las etiquetas, las líneas y el resto del diseño, que es exactamente lo que ya viene impreso en el papel. · La opción B es la pareja de la que hay que distinguirla: hace lo mismo pero para exportar en vez de para imprimir, guardando los datos en un archivo de texto delimitado, y vive en otra sección del mismo panel, «Mantener la fidelidad al compartir este documento». Imprimir los datos y exportarlos son dos casillas distintas con la misma idea. · Las otras dos revelan estructura interna."
   },
   {
     "id": "archivo-308",
@@ -11660,28 +11660,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-077",
     "generado": true,
-    "enunciado": "Al cerrar Word te pregunta si guardar los cambios en la plantilla Normal.dotm aunque no recuerdas haber tocado nada. ¿Dónde activas o desactivas esa pregunta?",
+    "enunciado": "Al cerrar Word te pregunta si guardar los cambios en la plantilla Normal, y tú no recuerdas haber tocado nada. ¿Qué casilla controla ese aviso?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar ▸ Preguntar antes de guardar la plantilla Normal"
+        "text": "Preguntar antes de guardar la plantilla Normal"
       },
       {
         "letter": "B",
-        "text": "Guardar ▸ Copiar los archivos guardados de forma remota en el equipo y actualizar el archivo remoto al guardar"
+        "text": "Crear siempre copia de seguridad"
       },
       {
         "letter": "C",
-        "text": "Guardar ▸ Crear siempre copia de seguridad"
+        "text": "Permitir guardar en segundo plano"
       },
       {
         "letter": "D",
-        "text": "Guardar ▸ Permitir guardar en segundo plano"
+        "text": "Copiar en el equipo los archivos guardados de forma remota"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Guardar → Preguntar antes de guardar la plantilla Normal. Si está desactivada, Word guarda los cambios en la plantilla Normal silenciosamente."
+    "explicacion": "Con la casilla puesta, Word avisa antes de tocar Normal.dotm; sin ella, guarda los cambios en silencio. Conviene tenerla marcada: cualquier cambio en esa plantilla afecta a TODOS los documentos en blanco futuros, y la pregunta suele saltar por cosas involuntarias, como haber añadido una entrada de autotexto o cambiado la fuente predeterminada. · Las otras tres son las casillas restantes de la sección Guardar del panel Avanzadas: la copia de seguridad, el guardado en segundo plano y la copia local de archivos remotos. Las cuatro son reales."
   },
   {
     "id": "archivo-309",
@@ -11696,28 +11696,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-078",
     "generado": true,
-    "enunciado": "Quieres que cada vez que guardes, Word cree automáticamente una copia de seguridad de la versión anterior en la misma carpeta. ¿Dónde lo activas?",
+    "enunciado": "Quieres que cada guardado deje en la misma carpeta una copia con la versión anterior del documento. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar ▸ Copiar los archivos guardados de forma remota en el equipo y actualizar el archivo remoto al guardar"
+        "text": "Crear siempre copia de seguridad"
       },
       {
         "letter": "B",
-        "text": "Guardar ▸ Preguntar antes de guardar la plantilla Normal"
+        "text": "Permitir guardar en segundo plano"
       },
       {
         "letter": "C",
-        "text": "Guardar ▸ Crear siempre copia de seguridad"
+        "text": "Preguntar antes de guardar la plantilla Normal"
       },
       {
         "letter": "D",
-        "text": "Guardar ▸ Permitir guardar en segundo plano"
+        "text": "Copiar en el equipo los archivos guardados de forma remota"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Guardar → Crear siempre copia de seguridad. Solo se mantiene UNA copia (.wbk) por documento: al guardar se sobrescribe con la versión previa al último guardado."
+    "respuesta": "A",
+    "explicacion": "Genera un archivo «Copia de seguridad de <nombre>.wbk» junto al original cada vez que guardas, con el contenido ANTERIOR. Solo guarda una generación: la copia de hoy sustituye a la de ayer. · Las otras tres son las casillas restantes de la sección Guardar del panel Avanzadas, todas reales, así que aquí no hay nada descartable: el guardado en segundo plano, el aviso de la plantilla Normal y la copia local de archivos remotos. · No confundir esta copia con la Autorrecuperación, que vive en el panel Guardar y protege de un cierre inesperado: esta protege de haber guardado un cambio que no querías. De ahí que Word tenga dos extensiones distintas, .wbk aquí y .asd allí."
   },
   {
     "id": "archivo-310",
@@ -11732,28 +11732,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-079",
     "generado": true,
-    "enunciado": "Word tarda mucho al guardar documentos de un servidor de red porque escribe directo en la red. ¿Dónde activas que trabaje con copia local y solo actualice el servidor al guardar?",
+    "enunciado": "Trabajas con documentos en una carpeta de red y Word va lentísimo porque escribe directamente en el servidor. ¿Qué casilla lo mejora?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar ▸ Permitir guardar en segundo plano"
+        "text": "Copiar en el equipo los archivos guardados de forma remota"
       },
       {
         "letter": "B",
-        "text": "Guardar ▸ Crear siempre copia de seguridad"
+        "text": "Guardar información de Autorrecuperación cada cierto número de minutos"
       },
       {
         "letter": "C",
-        "text": "Guardar ▸ Preguntar antes de guardar la plantilla Normal"
+        "text": "Permitir guardar en segundo plano"
       },
       {
         "letter": "D",
-        "text": "Guardar ▸ Copiar los archivos guardados de forma remota en el equipo y actualizar el archivo remoto al guardar"
+        "text": "Crear siempre copia de seguridad"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Guardar → Copiar los archivos guardados de forma remota en el equipo y actualizar el archivo remoto al guardar. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Word trabaja con una copia local y solo actualiza el archivo de la red al guardar, que es donde está la ganancia con una conexión lenta. · «Permitir guardar en segundo plano» es el distractor bueno porque también quita la sensación de lentitud, pero de otro modo: te deja seguir escribiendo mientras guarda. Una reduce el trabajo por la red y la otra lo esconde. · La Autorrecuperación tampoco resuelve esto: escribe copias de rescate cada pocos minutos, y con un archivo en red incluso puede empeorar la sensación. Además vive en el panel Guardar, no en Avanzadas. · «Crear siempre copia de seguridad» añade una escritura más por cada guardado."
   },
   {
     "id": "archivo-311",
@@ -11768,28 +11768,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-080",
     "generado": true,
-    "enunciado": "Al guardar documentos grandes Word se bloquea unos segundos y no puedes seguir escribiendo. ¿Dónde activas el guardado en segundo plano?",
+    "enunciado": "Al guardar documentos grandes Word se queda unos segundos sin responder. ¿Qué casilla lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar ▸ Copiar los archivos guardados de forma remota en el equipo y actualizar el archivo remoto al guardar"
+        "text": "Permitir guardar en segundo plano"
       },
       {
         "letter": "B",
-        "text": "Guardar ▸ Crear siempre copia de seguridad"
+        "text": "Imprimir en segundo plano"
       },
       {
         "letter": "C",
-        "text": "Guardar ▸ Preguntar antes de guardar la plantilla Normal"
+        "text": "Copiar en el equipo los archivos guardados de forma remota"
       },
       {
         "letter": "D",
-        "text": "Guardar ▸ Permitir guardar en segundo plano"
+        "text": "Crear siempre copia de seguridad"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Guardar → Permitir guardar en segundo plano. Conviene activarla antes que \"Crear siempre copia de seguridad\"."
+    "respuesta": "A",
+    "explicacion": "Con ella, Word escribe el archivo mientras te deja seguir trabajando; se nota un pequeño indicador en la barra de estado. · «Imprimir en segundo plano» es la casilla hermana, con la misma idea aplicada a la impresora, y está en la sección Imprimir del mismo panel Avanzadas. Saber cuál vive en cada sección es el ejercicio. · «Crear siempre copia de seguridad» va en dirección contraria: hace el guardado más lento, porque además del archivo escribe la copia .wbk."
   },
   {
     "id": "archivo-102",
@@ -11803,28 +11803,28 @@
     "subtopic": "Avanzadas — General",
     "tema": "Opciones",
     "sourceQuestionId": "8-94",
-    "enunciado": "Para que Word solicite confirmación antes de convertir un documento de otro formato al abrirlo, ¿desde qué ruta se activa esa opción?",
+    "enunciado": "Al abrir archivos que no son de Word quieres que el programa te pregunte con qué convertidor abrirlos. ¿Qué casilla de Avanzadas → General marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Confirmar conversiones del formato de"
+        "text": "Confirmar conversiones del formato de archivo al abrir"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Guardar → Confirmar conversiones al abrir"
+        "text": "Actualizar vínculos automáticos al abrir"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → General → Preguntar antes de convertir formatos"
+        "text": "Abrir siempre los archivos cifrados en esta aplicación"
       },
       {
         "letter": "D",
-        "text": "Archivo → Abrir → Opciones → Confirmar conversión de formato"
+        "text": "Permitir abrir un documento en la vista Borrador"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La confirmación de conversiones al abrir está en Archivo → Opciones → Avanzadas. No está en Guardar ni en General. La sección Abrir de Backstage no tiene opciones de configuración."
+    "explicacion": "Sin ella, Word decide solo qué convertidor usa; con ella, muestra el cuadro para elegir. Es un truco clásico para abrir archivos dañados o con formato dudoso eligiendo «Recuperar texto de cualquier archivo». · No confundirla con «Comprobar compatibilidad» de Información, que actúa al GUARDAR en formatos antiguos: esta es al abrir. · Las otras tres son casillas reales de la misma sección o del mismo panel, sobre vínculos, archivos cifrados y la vista de apertura."
   },
   {
     "id": "archivo-103",
@@ -11838,28 +11838,28 @@
     "subtopic": "Avanzadas — General",
     "tema": "Opciones",
     "sourceQuestionId": "8-95",
-    "enunciado": "¿Desde qué ruta se activa la opción que permite abrir un documento directamente en la vista Borrador?",
+    "enunciado": "Prefieres trabajar en la vista Borrador y quieres que los documentos se abran ya en ella. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Permitir abrir un documento en la"
+        "text": "Permitir abrir un documento en la vista Borrador"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Presentación → Abrir documentos en vista Borrador"
+        "text": "Usar fuente de borrador en vistas Borrador y Esquema"
       },
       {
         "letter": "C",
-        "text": "Vista → Borrador → Establecer como vista predeterminada"
+        "text": "Utilizar calidad de borrador"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → General → Vista predeterminada al abrir → Borrador"
+        "text": "Expandir todos los títulos al abrir un documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción está en Archivo → Opciones → Avanzadas. No existe en Presentación ni en General. La pestaña Vista no tiene opción para establecer la vista como predeterminada al abrir."
+    "explicacion": "Hay que entender bien qué hace: no fuerza la vista Borrador siempre, sino que permite que un documento se abra en ella si así se guardó. Word recuerda la vista en la que estaba cada archivo. · Las opciones B y C comparten la palabra «borrador» y no tienen nada que ver: una cambia la fuente con la que se dibuja el texto en esa vista, por rendimiento, y la otra es la calidad reducida de IMPRESIÓN. Tres cosas distintas llamadas borrador, dos de ellas en este mismo panel. · «Expandir todos los títulos» también actúa al abrir, pero sobre el plegado."
   },
   {
     "id": "archivo-104",
@@ -11873,28 +11873,28 @@
     "subtopic": "Avanzadas — General",
     "tema": "Opciones",
     "sourceQuestionId": "8-96",
-    "enunciado": "¿Desde qué ruta se configura la opción para que Word actualice automáticamente los vínculos con otros archivos al abrir el documento?",
+    "enunciado": "Tu documento tiene tablas vinculadas a un Excel y quieres que se refresquen solas al abrirlo. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Actualizar vínculos automáticos al abrir"
+        "text": "Actualizar vínculos automáticos al abrir"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Guardar → Actualizar vínculos automáticos al abrir"
+        "text": "Actualizar datos vinculados antes de imprimir"
       },
       {
         "letter": "C",
-        "text": "Archivo → Información → Administrar documento → Actualizar vínculos al abrir"
+        "text": "Actualizar campos antes de imprimir"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → General → Actualizar vínculos al abrir documento"
+        "text": "Confirmar conversiones del formato de archivo al abrir"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La actualización automática de vínculos al abrir se configura en Archivo → Opciones → Avanzadas. No está en Guardar ni en General. Administrar documento gestiona versiones del propio documento, no vínculos."
+    "explicacion": "Es la única de las cuatro que actúa AL ABRIR: las otras dos actualizaciones se disparan al imprimir. Word tiene ajustes separados para los dos momentos, y esa es la distinción que se mide. · «Actualizar datos vinculados antes de imprimir» hace lo mismo pero en el otro momento; «Actualizar campos antes de imprimir» refresca los campos internos, que no son vínculos externos. · Si el archivo de origen se ha movido o renombrado, ninguna de las tres arregla nada: el vínculo hay que repararlo desde el cuadro de vínculos."
   },
   {
     "id": "archivo-270",
@@ -11909,28 +11909,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-030",
     "generado": true,
-    "enunciado": "Al hacer doble clic en un .docx desde el explorador se abre en el navegador en vez de en la aplicación de escritorio. ¿Dónde cambias esa preferencia?",
+    "enunciado": "Al hacer doble clic en un .docx del explorador se te abre en el navegador en vez de en Word de escritorio. ¿Qué ajuste lo cambia?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mantener la fidelidad al compartir este documento ▸ Guardar datos de formulario como archivo de texto delimitado"
+        "text": "Preferencia de apertura de archivos: abrir archivos de Office usando…"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Habilitar Hacer clic y escribir"
+        "text": "General: abrir siempre los archivos cifrados en esta aplicación"
       },
       {
         "letter": "C",
-        "text": "General ▸ Confirmar conversiones del formato de archivo al abrir"
+        "text": "General: confirmar conversiones del formato de archivo al abrir"
       },
       {
         "letter": "D",
-        "text": "Preferencia de apertura de archivos ▸ Abrir archivos de Word, Excel y PowerPoint usando"
+        "text": "Opciones de edición: habilitar Hacer clic y escribir"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Preferencia de apertura de archivos → Abrir archivos de Word, Excel y PowerPoint usando. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es un desplegable de su propia sección al final del panel Avanzadas, y decide si los archivos de Word, Excel y PowerPoint se abren en la aplicación de escritorio o en la versión web. · «Abrir siempre los archivos cifrados en esta aplicación» es el distractor de más nivel porque hace algo casi idéntico, pero solo para archivos cifrados: es un caso particular del mismo problema, con casilla propia. · «Confirmar conversiones del formato de archivo al abrir» también actúa al abrir, pero elige convertidor, no aplicación."
   },
   {
     "id": "archivo-271",
@@ -11945,28 +11945,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-031",
     "generado": true,
-    "enunciado": "Usas una tableta con lápiz digital y al tocar el documento con el lápiz empieza a dibujar en vez de mover el cursor y seleccionar. ¿Dónde cambias el comportamiento predeterminado del lápiz a puntero de selección?",
+    "enunciado": "En una tableta, al tocar el documento con el lápiz Word se pone a dibujar en vez de dejarte seleccionar. ¿Qué casilla lo cambia?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar contenido de documento ▸ Mostrar dibujos y cuadros de texto en pantalla"
+        "text": "Usar el lápiz para seleccionar e interactuar con el contenido"
       },
       {
         "letter": "B",
-        "text": "Lápiz ▸ Habilitar el dibujo y mantener el gesto de entrada manuscrita a forma durante la entrada manuscrita"
+        "text": "Habilitar el dibujo y mantener el gesto de entrada manuscrita a forma"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ Realizar un seguimiento de formato"
+        "text": "Opciones de edición: permitir arrastrar y colocar el texto"
       },
       {
         "letter": "D",
-        "text": "Lápiz ▸ Usar el lápiz para seleccionar e interactuar con contenido de manera predeterminada"
+        "text": "Mostrar contenido de documento: mostrar dibujos y cuadros de texto"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Lápiz → Usar el lápiz para seleccionar e interactuar con contenido de manera predeterminada. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "La sección «Lápiz» del panel Avanzadas tiene solo dos casillas y son las dos primeras opciones: esta hace que el lápiz se comporte como un puntero, y la otra que dibuje y reconozca gestos. Elegir mal entre ellas es exactamente el problema del enunciado, así que ninguna de las dos se descarta. · Lo mismo se conmuta desde la pestaña Dibujar de la cinta, con el botón de selección; esta casilla decide el comportamiento por defecto. · Las otras dos opciones son de secciones distintas y no tocan el lápiz."
   },
   {
     "id": "archivo-272",
@@ -11981,28 +11981,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-032",
     "generado": true,
-    "enunciado": "Usas el lápiz para anotar a mano y quieres que Word reconozca los gestos manuscritos y los convierta en formas geométricas al dibujar. ¿Dónde lo activas?",
+    "enunciado": "Anotas a mano con el lápiz y quieres que Word convierta en formas geométricas lo que dibujas. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Habilitar el dibujo y mantener el gesto de entrada manuscrita a forma"
       },
       {
         "letter": "B",
-        "text": "Lápiz ▸ Habilitar el dibujo y mantener el gesto de entrada manuscrita a forma durante la entrada manuscrita"
+        "text": "Usar el lápiz para seleccionar e interactuar con el contenido"
       },
       {
         "letter": "C",
-        "text": "Lápiz ▸ Usar el lápiz para seleccionar e interactuar con contenido de manera predeterminada"
+        "text": "Opciones de edición: crear automáticamente lienzo de dibujo al insertar autoformas"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ No crear automáticamente ningún hipervínculo de la captura de pantalla"
+        "text": "Mostrar contenido de documento: mostrar dibujos y cuadros de texto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Lápiz → Habilitar el dibujo y mantener el gesto de entrada manuscrita a forma durante la entrada manuscrita. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es la otra casilla de la sección «Lápiz», la que activa el dibujo y el reconocimiento de trazos: dibujas un círculo torcido y Word lo convierte en un círculo. · La opción B es su pareja y hace justo lo contrario, dejar el lápiz como puntero de selección. Las dos casillas de la sección son las dos únicas respuestas posibles y hay que saber cuál es cuál. · La opción C también va de dibujo y de formas, pero es del lienzo contenedor que agrupa autoformas insertadas desde la cinta, no del lápiz."
   },
   {
     "id": "archivo-273",
@@ -12017,28 +12017,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-033",
     "generado": true,
-    "enunciado": "Has recortado y ajustado varias imágenes y quieres reducir el tamaño del archivo eliminando los datos originales de esas ediciones. ¿Dónde lo activas?",
+    "enunciado": "Has recortado y ajustado muchas imágenes y quieres que el archivo adelgace tirando los datos de esas ediciones. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tamaño y calidad de la imagen ▸ Resolución predeterminada"
+        "text": "Descartar datos de edición"
       },
       {
         "letter": "B",
-        "text": "Tamaño y calidad de la imagen ▸ No comprimir las imágenes del archivo"
+        "text": "No comprimir las imágenes del archivo"
       },
       {
         "letter": "C",
-        "text": "Tamaño y calidad de la imagen ▸ Descartar datos de edición"
+        "text": "Resolución predeterminada"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Mostrar barra de desplazamiento horizontal"
+        "text": "Incrustar solo los caracteres utilizados en el documento"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Tamaño y calidad de la imagen → Descartar datos de edición. Los cambios sobre las imágenes se vuelven irreversibles: no se podrán restaurar a su estado original."
+    "respuesta": "A",
+    "explicacion": "Word guarda la imagen original además de la editada para poder deshacer un recorte más adelante; esta casilla tira esos datos y el archivo adelgaza mucho en documentos con muchas fotos recortadas. El precio es que «Restablecer imagen» deja de poder devolver el original. · «No comprimir las imágenes del archivo» empuja en dirección contraria: conserva la calidad y engorda el archivo. · «Resolución predeterminada» decide con qué calidad se insertan. Las tres son de la sección «Tamaño y calidad de la imagen» y las tres negocian tamaño contra calidad."
   },
   {
     "id": "archivo-274",
@@ -12053,28 +12053,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-034",
     "generado": true,
-    "enunciado": "Tienes imágenes de alta calidad y al guardar Word las comprime automáticamente reduciendo su calidad. ¿Dónde desactivas esa compresión para conservar la calidad original?",
+    "enunciado": "Al guardar, Word te está bajando la calidad de las fotos y quieres conservarlas como estaban. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de diseño para ▸ No poner espacios extra al principio de la página"
+        "text": "No comprimir las imágenes del archivo"
       },
       {
         "letter": "B",
-        "text": "Tamaño y calidad de la imagen ▸ No comprimir las imágenes del archivo"
+        "text": "Descartar datos de edición"
       },
       {
         "letter": "C",
-        "text": "Tamaño y calidad de la imagen ▸ Descartar datos de edición"
+        "text": "Resolución predeterminada"
       },
       {
         "letter": "D",
-        "text": "Tamaño y calidad de la imagen ▸ Resolución predeterminada"
+        "text": "Tamaño y calidad de la imagen"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Tamaño y calidad de la imagen → No comprimir las imágenes del archivo. Puede aumentar considerablemente el tamaño del archivo."
+    "respuesta": "A",
+    "explicacion": "Word comprime las imágenes al guardar para que el archivo no se dispare; esta casilla lo impide y conserva los píxeles originales, a costa del tamaño. · «Resolución predeterminada» es el distractor con más fundamento: también decide la calidad, pero es un desplegable con valores (330 ppp, 220, 150, 96 y alta fidelidad) y actúa al INSERTAR, no al guardar. Momentos distintos del mismo problema. · «Descartar datos de edición» adelgaza el archivo por otra vía. · La opción D es el nombre de la sección, no un ajuste."
   },
   {
     "id": "archivo-275",
@@ -12089,28 +12089,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-035",
     "generado": true,
-    "enunciado": "Al insertar imágenes se pixelan o pierden calidad y quieres que Word las inserte con compresión mínima y máxima fidelidad. ¿Dónde cambias la resolución predeterminada a Alta fidelidad?",
+    "enunciado": "Las imágenes que insertas pierden nitidez y quieres que entren con la máxima calidad posible. ¿Qué ajuste cambias?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tamaño y calidad de la imagen ▸ Resolución predeterminada"
+        "text": "Resolución predeterminada"
       },
       {
         "letter": "B",
-        "text": "Tamaño y calidad de la imagen ▸ Descartar datos de edición"
+        "text": "No comprimir las imágenes del archivo"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Optimizar el posicionamiento de los caracteres para diseño en lugar de legibilidad"
+        "text": "Descartar datos de edición"
       },
       {
         "letter": "D",
-        "text": "Tamaño y calidad de la imagen ▸ No comprimir las imágenes del archivo"
+        "text": "Usar el posicionamiento de subpíxeles para suavizar las fuentes"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Tamaño y calidad de la imagen → Resolución predeterminada. Alternativa puntual: seleccionar la imagen ▸ Formato de imagen ▸ Comprimir imágenes cambia la resolución de imágenes concretas."
+    "explicacion": "Es un desplegable con 330, 220, 150 y 96 ppp más «Alta fidelidad», que es el valor que no comprime nada al insertar. · «No comprimir las imágenes del archivo» consigue algo muy parecido y es el distractor serio, pero es una casilla y actúa al GUARDAR: insertar y guardar son dos momentos, y una imagen puede degradarse en cualquiera de los dos. Conviene tocar los dos ajustes si la calidad importa. · «Usar el posicionamiento de subpíxeles» también habla de nitidez, pero de las fuentes en pantalla."
   },
   {
     "id": "archivo-276",
@@ -12125,28 +12125,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-036",
     "generado": true,
-    "enunciado": "Tienes gráficos y quieres que las etiquetas y propiedades de un punto de datos concreto se muevan con él si cambia el orden de los datos. ¿Dónde lo activas?",
+    "enunciado": "En un gráfico quieres que las etiquetas y el formato de un punto de datos lo acompañen si cambia el orden de los datos. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "General ▸ Actualizar vínculos automáticos al abrir"
+        "text": "Las propiedades siguen el punto de datos del gráfico"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Mostrar botones emergentes para agregar filas y columnas en tablas"
+        "text": "Actualizar vínculos automáticos al abrir"
       },
       {
         "letter": "C",
-        "text": "Mostrar contenido de documento ▸ Mostrar marcas de recorte"
+        "text": "Actualizar datos vinculados antes de imprimir"
       },
       {
         "letter": "D",
-        "text": "Gráfico ▸ Las propiedades siguen el punto de datos de gráfico"
+        "text": "Descartar datos de edición"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Gráfico → Las propiedades siguen el punto de datos de gráfico. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es la única casilla de la sección «Gráfico» del panel Avanzadas. Sin ella, el formato y las etiquetas se quedan pegados a una POSICIÓN de la serie; con ella, viajan con el dato. Se nota al reordenar o filtrar los datos de origen. · Las opciones B y C son los dos ajustes de actualización de vínculos, y son los distractores razonables porque un gráfico de Word suele estar vinculado a Excel: pero deciden CUÁNDO se refrescan los datos, no a quién se pega el formato. Refrescar y seguir al dato son problemas distintos."
   },
   {
     "id": "archivo-298",
@@ -12161,28 +12161,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-062",
     "generado": true,
-    "enunciado": "Quieres que Word active las características tipográficas avanzadas de las fuentes OpenType (ligaduras, alternativas estilísticas…). ¿Dónde lo activas de forma global?",
+    "enunciado": "Quieres que Word aproveche las ligaduras y demás recursos tipográficos de las fuentes OpenType. ¿Qué casilla de Tipografía avanzada marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tipografía avanzada ▸ Usar guiones"
+        "text": "Usar tipografía avanzada"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Marcar incoherencias de formato"
+        "text": "Usar justificación inteligente"
       },
       {
         "letter": "C",
-        "text": "Tipografía avanzada ▸ Usar justificación inteligente"
+        "text": "Usar guiones"
       },
       {
         "letter": "D",
-        "text": "Tipografía avanzada ▸ Usar tipografía avanzada"
+        "text": "Optimizar el posicionamiento de los caracteres para diseño"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Tipografía avanzada → Usar tipografía avanzada. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es el interruptor general de la sección: habilita las características OpenType para todo el documento, y por debajo cuelgan las opciones de ligaduras, conjuntos estilísticos y demás que se afinan por texto desde el cuadro Fuente ▸ Avanzado. · Las tres son casillas de la misma sección y las tres mejoran el aspecto del texto, así que ninguna se descarta: la justificación inteligente reparte el espacio y los guiones parten palabras. · «Optimizar el posicionamiento de los caracteres» es del panel Presentación y va de fidelidad al papel."
   },
   {
     "id": "archivo-299",
@@ -12197,28 +12197,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-063",
     "generado": true,
-    "enunciado": "El texto justificado tiene espacios entre palabras irregulares y poco elegantes. ¿Dónde activas la justificación inteligente para que Word distribuya el espacio de forma más refinada?",
+    "enunciado": "El texto justificado te queda con espacios entre palabras muy desiguales. ¿Qué casilla de Tipografía avanzada lo mejora?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tipografía avanzada ▸ Usar guiones"
+        "text": "Usar justificación inteligente"
       },
       {
         "letter": "B",
-        "text": "Tipografía avanzada ▸ Usar tipografía avanzada"
+        "text": "Usar guiones"
       },
       {
         "letter": "C",
-        "text": "Tipografía avanzada ▸ Usar justificación inteligente"
+        "text": "Usar tipografía avanzada"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Mostrar barra de desplazamiento vertical"
+        "text": "No expandir espacios de carácter al terminar línea con Mayús+Entrar"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Tipografía avanzada → Usar justificación inteligente. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Reparte el espacio sobrante con criterios tipográficos en vez de estirar todos los huecos por igual, que es lo que produce los ríos blancos del texto justificado. · «Usar guiones» es el distractor de más nivel: ataca el mismo problema por otro lado, partiendo palabras al final de línea para que quede menos hueco que repartir. Las dos mejoran el justificado y se complementan; la pregunta es cuál reparte el espacio. · La opción D también va de espacios en una línea justificada, pero solo del caso concreto de terminar con Mayús+Entrar, y está en otra sección."
   },
   {
     "id": "archivo-300",
@@ -12233,28 +12233,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-064",
     "generado": true,
-    "enunciado": "Quieres activar el uso de guiones tipográficos para dividir palabras largas al final de línea y mejorar el texto justificado. ¿Dónde lo activas desde Tipografía avanzada?",
+    "enunciado": "Quieres que Word parta las palabras largas al final de línea para que el texto justificado quede más compacto. ¿Qué casilla de Tipografía avanzada marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tipografía avanzada ▸ Usar guiones"
+        "text": "Usar guiones"
       },
       {
         "letter": "B",
-        "text": "Tipografía avanzada ▸ Usar tipografía avanzada"
+        "text": "Usar justificación inteligente"
       },
       {
         "letter": "C",
-        "text": "Tipografía avanzada ▸ Usar justificación inteligente"
+        "text": "Usar tipografía avanzada"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Usar modo Sobrescribir"
+        "text": "Permitir guiones entre páginas o columnas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Tipografía avanzada → Usar guiones. Los guiones también se gestionan desde Disposición ▸ Configurar página ▸ Guiones, con más opciones (automático, manual…)."
+    "explicacion": "Es el ajuste global de la sección Tipografía avanzada. No confundirlo con el comando «Guiones» de la pestaña Disposición, que activa la partición para un documento concreto y ofrece el modo automático, el manual y sus opciones. · «Permitir guiones entre páginas o columnas» es el distractor de máximo nivel: también va de guiones, también es del panel Avanzadas, pero está en «Opciones de diseño para» y solo decide si la partición puede caer justo en el salto de página o de columna. Uno enciende la partición y el otro la deja llegar hasta el borde."
   },
   {
     "id": "archivo-312",
@@ -12269,28 +12269,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-081",
     "generado": true,
-    "enunciado": "Has creado un formulario y quieres exportar los datos rellenados en texto plano separado por tabulaciones para otra aplicación. ¿Dónde lo activas?",
+    "enunciado": "Has hecho un formulario y quieres sacar los datos rellenados a un archivo de texto separado por tabuladores. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mantener la fidelidad al compartir este documento ▸ Guardar datos de formulario como archivo de texto delimitado"
+        "text": "Guardar datos de formulario como archivo de texto delimitado"
       },
       {
         "letter": "B",
-        "text": "Tipografía avanzada ▸ Usar justificación inteligente"
+        "text": "Imprimir solo los datos de un formulario"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Incrustar datos lingüísticos"
       },
       {
         "letter": "D",
-        "text": "Mantener la fidelidad al compartir este documento ▸ Incrustar datos lingüísticos"
+        "text": "Incrustar fuentes en el archivo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Mantener la fidelidad al compartir este documento → Guardar datos de formulario como archivo de texto delimitado. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "explicacion": "Está en la sección «Mantener la fidelidad al compartir este documento», que lleva el nombre del documento entre corchetes: lo que se marca ahí se guarda dentro del archivo. Con ella, al guardar se genera un texto delimitado con los valores de los campos, listo para otra aplicación. · «Imprimir solo los datos de un formulario» es la pareja de la que hay que distinguirla: mismo contenido, otro destino, el papel, y otra sección del panel. · Las otras dos son las demás casillas de esta misma sección, sobre idiomas y fuentes."
   },
   {
     "id": "archivo-313",
@@ -12305,28 +12305,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-082",
     "generado": true,
-    "enunciado": "Vas a compartir un documento multilingüe y quieres conservar los metadatos de idioma de cada fragmento para que el corrector funcione en otros equipos. ¿Dónde lo activas?",
+    "enunciado": "Vas a compartir un documento con fragmentos en varios idiomas y quieres que el corrector siga funcionando bien en el equipo de destino. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Usar cursor inteligente"
+        "text": "Incrustar datos lingüísticos"
       },
       {
         "letter": "B",
-        "text": "Mantener la fidelidad al compartir este documento ▸ Guardar datos de formulario como archivo de texto delimitado"
+        "text": "Incrustar fuentes en el archivo"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Mostrar botones emergentes para agregar filas y columnas en tablas"
+        "text": "Guardar datos de formulario como archivo de texto delimitado"
       },
       {
         "letter": "D",
-        "text": "Mantener la fidelidad al compartir este documento ▸ Incrustar datos lingüísticos"
+        "text": "Almacenar mis idiomas de creación en la nube para mi cuenta"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Mantener la fidelidad al compartir este documento → Incrustar datos lingüísticos. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Guarda dentro del archivo la marca de idioma de cada fragmento, de modo que en otro equipo el corrector sepa qué revisar en cada trozo sin tener que marcarlo otra vez. · «Incrustar fuentes en el archivo» es su vecina de sección y funciona igual de concepto (meter algo dentro del archivo para que viaje con él), pero con las tipografías: es el mejor distractor porque comparte la palabra y la lógica. · La opción D también va de idiomas, pero sincroniza TU configuración entre TUS equipos, no viaja con el documento."
   },
   {
     "id": "archivo-314",
@@ -12341,28 +12341,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-085",
     "generado": true,
-    "enunciado": "Has instalado un complemento y cuando falla no recibes ningún mensaje. ¿Dónde activas que Word muestre los errores de interfaz de los complementos?",
+    "enunciado": "Un complemento falla y no ves ningún mensaje de error. ¿Qué casilla de Avanzadas → General marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "General ▸ Confirmar conversiones del formato de archivo al abrir"
+        "text": "Mostrar errores de interfaz de usuario del complemento"
       },
       {
         "letter": "B",
-        "text": "General ▸ Actualizar vínculos automáticos al abrir"
+        "text": "Confirmar conversiones del formato de archivo al abrir"
       },
       {
         "letter": "C",
-        "text": "General ▸ Abrir siempre los archivos cifrados en esta aplicación"
+        "text": "Abrir siempre los archivos cifrados en esta aplicación"
       },
       {
         "letter": "D",
-        "text": "General ▸ Mostrar errores de interfaz de usuario en el complemento"
+        "text": "Actualizar vínculos automáticos al abrir"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → General → Mostrar errores de interfaz de usuario en el complemento. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Sin esta casilla, los errores de la interfaz de un complemento se tragan en silencio y el complemento simplemente no aparece o no responde; con ella, Word muestra el mensaje. Es la casilla que hay que marcar antes de dar un complemento por roto. · Las otras tres son las demás casillas de la sección General del panel Avanzadas, todas reales: conversiones al abrir, archivos cifrados y vínculos automáticos. · Si el complemento no llega ni a cargarse, el sitio a mirar es el panel Complementos y el Centro de confianza."
   },
   {
     "id": "archivo-315",
@@ -12377,28 +12377,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-086",
     "generado": true,
-    "enunciado": "Tienes archivos cifrados asociados a Word y quieres que siempre se abran en la aplicación de escritorio. ¿Dónde activas esa preferencia?",
+    "enunciado": "Los documentos cifrados asociados a Word se te abren en la versión web y los quieres en la de escritorio. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "General ▸ Confirmar conversiones del formato de archivo al abrir"
+        "text": "Abrir siempre los archivos cifrados en esta aplicación"
       },
       {
         "letter": "B",
-        "text": "General ▸ Mostrar errores de interfaz de usuario en el complemento"
+        "text": "Preferencia de apertura de archivos: abrir archivos de Office usando…"
       },
       {
         "letter": "C",
-        "text": "General ▸ Actualizar vínculos automáticos al abrir"
+        "text": "Confirmar conversiones del formato de archivo al abrir"
       },
       {
         "letter": "D",
-        "text": "General ▸ Abrir siempre los archivos cifrados en esta aplicación"
+        "text": "Mostrar errores de interfaz de usuario del complemento"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → General → Abrir siempre los archivos cifrados en esta aplicación. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es una casilla de la sección General y cubre el caso concreto de los archivos cifrados, que por seguridad no se pueden abrir en la versión web. · La opción B es el ajuste general del mismo asunto, en su propia sección al final del panel, y es el mejor distractor posible: decide dónde se abren los archivos de Office en general. Uno es la regla y el otro la excepción para lo cifrado, y hay que saber cuál pide el enunciado. · «Confirmar conversiones» también actúa al abrir, pero elige convertidor."
   },
   {
     "id": "archivo-316",
@@ -12413,28 +12413,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-087",
     "generado": true,
-    "enunciado": "Quieres cambiar las carpetas predeterminadas que usa Word para documentos, plantillas, autorrecuperación y otros tipos de archivo. ¿Dónde accedes al cuadro que las lista y permite cambiar?",
+    "enunciado": "Quieres revisar y cambiar de una vez todas las carpetas que Word usa por defecto (documentos, plantillas, inicio, autorrecuperación). ¿Qué botón abre ese cuadro?",
     "opciones": [
       {
         "letter": "A",
-        "text": "General ▸ Mostrar errores de interfaz de usuario en el complemento"
+        "text": "Ubicaciones de archivos…"
       },
       {
         "letter": "B",
-        "text": "General ▸ Actualizar vínculos automáticos al abrir"
+        "text": "Opciones web…"
       },
       {
         "letter": "C",
-        "text": "General ▸ Ubicaciones de archivos..."
+        "text": "Ubicación predeterminada de archivos locales"
       },
       {
         "letter": "D",
-        "text": "General ▸ Confirmar conversiones del formato de archivo al abrir"
+        "text": "Ubicación de archivo con Autorrecuperación"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → General → Ubicaciones de archivos.... Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es un BOTÓN al final de la sección General del panel Avanzadas, y abre un cuadro con la lista completa de tipos de archivo y su carpeta, para modificarlas una a una. Es el sitio donde están juntas todas. · Las opciones C y D son campos sueltos del panel GUARDAR, cada uno para una sola carpeta: son los distractores con más fundamento porque hacen lo mismo pero de uno en uno y desde otro panel. La pregunta pide el cuadro que las lista todas. · «Opciones web…» es el botón vecino, para el guardado como página web."
   },
   {
     "id": "archivo-317",
@@ -12449,28 +12449,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-088",
     "generado": true,
-    "enunciado": "Vas a guardar el documento como página web y quieres configurar la codificación, el navegador de destino o el formato de las imágenes exportadas. ¿Dónde accedes a esas opciones?",
+    "enunciado": "Vas a guardar el documento como página web y quieres fijar la codificación y el formato de las imágenes exportadas. ¿Qué botón abre esas opciones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "General ▸ Opciones web..."
+        "text": "Opciones web…"
       },
       {
         "letter": "B",
-        "text": "General ▸ Confirmar conversiones del formato de archivo al abrir"
+        "text": "Ubicaciones de archivos…"
       },
       {
         "letter": "C",
-        "text": "General ▸ Mostrar errores de interfaz de usuario en el complemento"
+        "text": "Mostrar píxeles para las características de HTML"
       },
       {
         "letter": "D",
-        "text": "General ▸ Actualizar vínculos automáticos al abrir"
+        "text": "Confirmar conversiones del formato de archivo al abrir"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → General → Opciones web.... Sin atajo: solo por Archivo → Opciones con el ratón."
+    "explicacion": "Es un botón de la sección General del panel Avanzadas y abre un cuadro con varias fichas: exploradores de destino, archivos y carpetas, imágenes, codificación y fuentes. · Al mismo cuadro se llega desde el menú Herramientas del cuadro Guardar como: dos puertas, un solo sitio, que es de lo que más se pregunta. · «Mostrar píxeles para las características de HTML» es el distractor de nivel porque también es de web y también está en Avanzadas, pero es una casilla de unidades de medida, no la configuración del guardado como página web."
   },
   {
     "id": "archivo-318",
@@ -12485,28 +12485,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-089",
     "generado": true,
-    "enunciado": "Algunos caracteres subrayados quedan cortados por la línea de subrayado y quieres que Word añada espacio adicional. ¿Dónde lo activas?",
+    "enunciado": "En texto subrayado, las letras con rasgo descendente quedan cortadas por la línea. ¿Qué casilla de «Opciones de diseño para» lo arregla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de diseño para ▸ Suprimir espaciado de líneas adicional al final de la página"
+        "text": "Agregar espacio para los caracteres subrayados"
       },
       {
         "letter": "B",
-        "text": "Opciones de diseño para ▸ No expandir espacios de carácter al terminar línea con MAYÚS+ENTRAR"
+        "text": "No poner espacios extra al principio de la página"
       },
       {
         "letter": "C",
-        "text": "Opciones de diseño para ▸ Agregar espacio para los caracteres subrayados"
+        "text": "Suprimir espaciado de líneas adicional al final de la página"
       },
       {
         "letter": "D",
-        "text": "Opciones de diseño para ▸ No poner espacios extra al principio de la página"
+        "text": "No expandir espacios de carácter al terminar línea con Mayús+Entrar"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de diseño para → Agregar espacio para los caracteres subrayados. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Añade un poco de aire bajo la línea base para que el subrayado no corte la g, la j o la p. · Las cuatro son casillas reales de «Opciones de diseño para», una sección que lleva el nombre del documento entre corchetes y que agrupa ajustes de compatibilidad tipográfica muy finos: lo que se marca ahí viaja dentro del archivo. Son de las opciones más oscuras del cuadro y por eso salen en los tests. · Las otras tres tocan espacios, pero al principio de página, al final de página y en las líneas cortadas con Mayús+Entrar."
   },
   {
     "id": "archivo-319",
@@ -12521,28 +12521,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-090",
     "generado": true,
-    "enunciado": "Al usar Mayús+Entrar en texto justificado, los espacios entre caracteres se expanden en esa línea de forma antiestética. ¿Dónde activas que no ocurra?",
+    "enunciado": "Al cortar una línea con Mayús+Entrar en un párrafo justificado, esa línea queda con los caracteres estirados. ¿Qué casilla lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de diseño para ▸ Suprimir espaciado de líneas adicional al final de la página"
+        "text": "No expandir espacios de carácter al terminar línea con Mayús+Entrar"
       },
       {
         "letter": "B",
-        "text": "Opciones de diseño para ▸ No poner espacios extra al principio de la página"
+        "text": "Usar justificación inteligente"
       },
       {
         "letter": "C",
-        "text": "Opciones de diseño para ▸ No expandir espacios de carácter al terminar línea con MAYÚS+ENTRAR"
+        "text": "Agregar espacio para los caracteres subrayados"
       },
       {
         "letter": "D",
-        "text": "Opciones de diseño para ▸ Agregar espacio para los caracteres subrayados"
+        "text": "No poner espacios extra al principio de la página"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de diseño para → No expandir espacios de carácter al terminar línea con MAYÚS+ENTRAR. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Mayús+Entrar inserta un salto de línea sin terminar el párrafo, y Word justifica esa línea como si fuera una línea normal: la estira de margen a margen. Esta casilla le dice que no lo haga. · «Usar justificación inteligente» es el distractor bueno porque también mejora el justificado y también reparte espacio, pero de forma general y desde la sección Tipografía avanzada. Una es la regla general y la otra el caso concreto del salto de línea manual. · Las otras dos son casillas vecinas de la misma sección."
   },
   {
     "id": "archivo-320",
@@ -12557,28 +12557,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-091",
     "generado": true,
-    "enunciado": "Al inicio de algunas páginas aparece un espacio en blanco extra antes del primer párrafo que no consigues quitar. ¿Dónde activas que Word no lo inserte?",
+    "enunciado": "Al principio de algunas páginas te aparece un hueco extra antes del primer párrafo que no consigues quitar. ¿Qué casilla lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de diseño para ▸ No poner espacios extra al principio de la página"
+        "text": "No poner espacios extra al principio de la página"
       },
       {
         "letter": "B",
-        "text": "Opciones de diseño para ▸ Suprimir espaciado de líneas adicional al final de la página"
+        "text": "Suprimir espaciado de líneas adicional al final de la página"
       },
       {
         "letter": "C",
-        "text": "Opciones de diseño para ▸ Agregar espacio para los caracteres subrayados"
+        "text": "Agregar espacio para los caracteres subrayados"
       },
       {
         "letter": "D",
-        "text": "Opciones de diseño para ▸ No expandir espacios de carácter al terminar línea con MAYÚS+ENTRAR"
+        "text": "No expandir espacios de carácter al terminar línea con Mayús+Entrar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de diseño para → No poner espacios extra al principio de la página. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "explicacion": "Es un ajuste de compatibilidad: algunas versiones antiguas de Word añadían el espaciado anterior del párrafo también al empezar página, y esta casilla lo suprime. · La opción B es su reflejo exacto y el distractor perfecto: hace lo mismo pero al FINAL de la página. Las dos están seguidas, las dos hablan de espacio sobrante y solo se distinguen por dónde aparece; hay que leer si el hueco está arriba o abajo. · Antes de tocar esto conviene descartar lo obvio: el espaciado anterior del propio párrafo, en el cuadro Párrafo."
   },
   {
     "id": "archivo-321",
@@ -12593,28 +12593,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-092",
     "generado": true,
-    "enunciado": "Al final de algunas páginas aparece un espaciado de línea extra que desplaza el contenido y quieres suprimirlo. ¿Dónde lo activas?",
+    "enunciado": "Al final de algunas páginas se cuela un espaciado de línea de más que descoloca el contenido. ¿Qué casilla lo suprime?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de diseño para ▸ No poner espacios extra al principio de la página"
+        "text": "Suprimir espaciado de líneas adicional al final de la página"
       },
       {
         "letter": "B",
-        "text": "Opciones de diseño para ▸ Agregar espacio para los caracteres subrayados"
+        "text": "No poner espacios extra al principio de la página"
       },
       {
         "letter": "C",
-        "text": "Opciones de diseño para ▸ No expandir espacios de carácter al terminar línea con MAYÚS+ENTRAR"
+        "text": "Agregar espacio para los caracteres subrayados"
       },
       {
         "letter": "D",
-        "text": "Opciones de diseño para ▸ Suprimir espaciado de líneas adicional al final de la página"
+        "text": "Permitir guiones entre páginas o columnas"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de diseño para → Suprimir espaciado de líneas adicional al final de la página. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es la pareja simétrica de «No poner espacios extra al principio de la página», y las dos son ajustes de compatibilidad con versiones antiguas: una limpia arriba y otra abajo. Están seguidas y se confunden por sistema, así que la respuesta se juega en dónde dice el enunciado que está el hueco. · «Agregar espacio para los caracteres subrayados» también añade o quita espacio vertical, pero por el subrayado. · «Permitir guiones entre páginas o columnas» es la otra casilla de la sección, sobre la partición de palabras."
   },
   {
     "id": "archivo-322",
@@ -12629,28 +12629,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-093",
     "generado": true,
-    "enunciado": "Tienes palabras con guiones opcionales y quieres que aparezcan también en el salto entre página y página, o entre columnas. ¿Dónde lo activas?",
+    "enunciado": "Tienes la partición de palabras activada y quieres que también pueda partir justo en el salto entre dos páginas o dos columnas. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de diseño para ▸ No expandir espacios de carácter al terminar línea con MAYÚS+ENTRAR"
+        "text": "Permitir guiones entre páginas o columnas"
       },
       {
         "letter": "B",
-        "text": "Opciones de diseño para ▸ Permitir guiones entre páginas o columnas"
+        "text": "Usar guiones"
       },
       {
         "letter": "C",
-        "text": "Opciones de diseño para ▸ Agregar espacio para los caracteres subrayados"
+        "text": "Usar reglas de salto de línea"
       },
       {
         "letter": "D",
-        "text": "Opciones de diseño para ▸ No poner espacios extra al principio de la página"
+        "text": "Usar justificación inteligente"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de diseño para → Permitir guiones entre páginas o columnas. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es un ajuste de compatibilidad de «Opciones de diseño para» y solo decide si la partición puede caer en el borde, no si hay partición. · «Usar guiones» es el distractor de máximo nivel: es el interruptor general de la partición, y está en la sección Tipografía avanzada del mismo panel. Sin él no hay guiones que permitir en ningún sitio, así que uno depende del otro. El enunciado dice expresamente que la partición ya está activada. · «Usar reglas de salto de línea» es la casilla vecina, para los idiomas asiáticos."
   },
   {
     "id": "archivo-323",
@@ -12665,28 +12665,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-094",
     "generado": true,
-    "enunciado": "Trabajas con texto en idiomas asiáticos y necesitas que Word aplique sus reglas de salto de línea. ¿Dónde lo activas?",
+    "enunciado": "Trabajas con texto en idiomas asiáticos y necesitas que Word aplique sus reglas para decidir dónde cortar la línea. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de diseño para ▸ No poner espacios extra al principio de la página"
+        "text": "Usar reglas de salto de línea"
       },
       {
         "letter": "B",
-        "text": "Opciones de diseño para ▸ No expandir espacios de carácter al terminar línea con MAYÚS+ENTRAR"
+        "text": "Permitir guiones entre páginas o columnas"
       },
       {
         "letter": "C",
-        "text": "Opciones de diseño para ▸ Agregar espacio para los caracteres subrayados"
+        "text": "Usar justificación inteligente"
       },
       {
         "letter": "D",
-        "text": "Opciones de diseño para ▸ Usar reglas de salto de línea"
+        "text": "Usar tipografía avanzada"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de diseño para → Usar reglas de salto de línea. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "En chino, japonés y coreano no se corta en cualquier punto: hay caracteres que no pueden empezar ni terminar línea, y esta casilla aplica esas reglas. · «Permitir guiones entre páginas o columnas» es su vecina de sección y también decide dónde puede romperse el texto, pero con guiones y en un idioma occidental. Las dos van de dónde se corta la línea, que es lo que las hace confundibles. · Las opciones C y D son de Tipografía avanzada: reparto del espacio y características OpenType."
   },
   {
     "id": "archivo-105",
