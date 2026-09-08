@@ -11060,15 +11060,15 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0347",
-    "enunciado": "¿Cuantos estilos de lista numerada ofrece por defecto la biblioteca de numeracion de Word 365?",
+    "enunciado": "Despliegas la flecha del botón Numeración y miras la «Biblioteca de numeración». Además de «Ninguna», ¿cuántos formatos ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "5"
+        "text": "7"
       },
       {
         "letter": "B",
-        "text": "7"
+        "text": "5"
       },
       {
         "letter": "C",
@@ -11076,12 +11076,12 @@
       },
       {
         "letter": "D",
-        "text": "16"
+        "text": "9"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La «Biblioteca de numeración» del desplegable Numeración ofrece «Ninguna» + 7 formatos (1.2.3 · 1)2)3) · I.II.III · A.B.C · a)b)c · a.b.c · i.ii.iii). Aparte, el cuadro «Definir nuevo formato de número» tiene en «Estilo de número» «(ninguno)» + 12 estilos (los anteriores más 1º,2º,3º, Uno/Dos/Tres, Primero/Segundo/Tercero y 01/001/0001/00001). La «Biblioteca de viñetas» tiene «Ninguna» + 7 viñetas. Verificado en vivo (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Siete formatos más «Ninguna»: 1.2.3., 1)2)3), I.II.III., A.B.C., a)b)c), a.b.c. e i.ii.iii. La biblioteca de viñetas tiene exactamente el mismo reparto, «Ninguna» más siete, y la de listas multinivel también. Prueba en vivo del usuario. · «12» es el descarte con más fundamento, y por una buena razón: son los estilos del desplegable «Estilo de número» del cuadro «Definir nuevo formato de número», que añade a los anteriores 1º 2º 3º, Uno Dos Tres, Primero Segundo Tercero y las series con ceros a la izquierda. Es decir, la galería rápida ofrece siete y el cuadro completo, doce. · «9» son los niveles de una lista multinivel."
   },
   {
     "id": "inicio-59",
@@ -11096,28 +11096,28 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0298",
-    "enunciado": "¿Que ocurre con las viñetas personalizadas creadas por el usuario en la biblioteca de viñetas de Word 365?",
+    "enunciado": "Despliegas la flecha del botón Viñetas y ves que el menú está partido en tres secciones con encabezado. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sustituyen a las predeterminadas una vez creadas"
+        "text": "Viñetas usadas recientemente · Biblioteca de viñetas · Viñetas de documento"
       },
       {
         "letter": "B",
-        "text": "Se acumulan en la biblioteca junto con las 7 predeterminadas"
+        "text": "Viñetas usadas recientemente · Biblioteca de viñetas · Viñetas personalizadas"
       },
       {
         "letter": "C",
-        "text": "Se guardan solo en el documento actual, no en la biblioteca general"
+        "text": "Viñetas del tema · Biblioteca de viñetas · Viñetas de documento"
       },
       {
         "letter": "D",
-        "text": "No se acumulan; la biblioteca siempre muestra solo las 7 predeterminadas"
+        "text": "Biblioteca de viñetas · Viñetas de documento · Viñetas de la plantilla"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Las viñetas personalizadas se acumulan en la biblioteca junto con las 7 predeterminadas. Este comportamiento es distinto al de las listas multinivel personalizadas, que NO se acumulan en su biblioteca."
+    "respuesta": "A",
+    "explicacion": "La primera recoge las últimas que se han usado, la segunda es la galería fija con «Ninguna» más siete viñetas, y la tercera reúne las que ya aparecen en el documento abierto, para reutilizarlas sin volver a definirlas. · «Viñetas personalizadas» no existe como sección: las que uno crea acaban en «usadas recientemente» y en «de documento», que es lo que hace tan creíble ese descarte. · Tampoco hay viñetas «del tema» ni «de la plantilla»: el tema decide colores y fuentes, no marcas de lista. · Al pie del menú están «Cambiar nivel de lista», con submenú, y «Definir nueva viñeta…»."
   },
   {
     "id": "inicio-60",
@@ -11132,28 +11132,28 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "alta",
     "sourceQuestionId": "P-0299",
-    "enunciado": "¿Cual es la diferencia en cuanto a la conservacion en biblioteca entre las viñetas personalizadas y las listas multinivel personalizadas?",
+    "enunciado": "Comparas el desplegable del botón Viñetas con el del botón Lista multinivel. ¿Qué sección tiene el segundo que no tiene el primero?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Las listas multinivel personalizadas se acumulan; las viñetas personalizadas no se acumulan"
+        "text": "«Lista actual», que enseña la lista donde está el cursor"
       },
       {
         "letter": "B",
-        "text": "Las viñetas personalizadas se acumulan en la biblioteca; las listas multinivel personalizadas no se acumulan"
+        "text": "«Listas usadas recientemente», con las últimas aplicadas"
       },
       {
         "letter": "C",
-        "text": "Ambas se acumulan en sus respectivas bibliotecas"
+        "text": "«Listas de documento», con las que ya usa el archivo"
       },
       {
         "letter": "D",
-        "text": "Ninguna se acumula; ambas se guardan solo en el documento actual"
+        "text": "«Biblioteca de listas», con «Ninguna» y siete estilos"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Las viñetas personalizadas se acumulan en la biblioteca junto con las 7 predeterminadas. Las listas multinivel personalizadas NO se acumulan en su biblioteca, a diferencia de las viñetas y la numeracion. Es una distincion especifica documentada en Word 365."
+    "respuesta": "A",
+    "explicacion": "El de multinivel abre con «Lista actual», que muestra en pequeño la lista en la que está el cursor, y sigue con «Biblioteca de listas», con «Ninguna» más siete estilos. Esa primera sección no tiene equivalente en el de viñetas. · «Biblioteca» sí la tienen los dos, con nombres paralelos, y por eso es el descarte que más cae. · Las secciones de «usadas recientemente» y «de documento» son del menú de viñetas, no del de multinivel: están al revés. · Los dos menús terminan igual, con «Cambiar nivel de lista»; el de multinivel añade además dos entradas, «Definir nueva lista multinivel…» y «Definir nuevo estilo de lista…»."
   },
   {
     "id": "inicio-61",
@@ -11168,19 +11168,19 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0352",
-    "enunciado": "¿Cuantos niveles admite como maximo una lista multinivel en Word 365?",
+    "enunciado": "Estás montando el articulado de una ordenanza con apartados dentro de apartados. ¿Hasta cuántos niveles admite una lista multinivel de Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "5"
+        "text": "9"
       },
       {
         "letter": "B",
-        "text": "7"
+        "text": "5"
       },
       {
         "letter": "C",
-        "text": "9"
+        "text": "7"
       },
       {
         "letter": "D",
@@ -11188,8 +11188,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Una lista multinivel admite como maximo 9 niveles en Word 365. Cada nivel puede configurarse de forma independiente con su propio estilo de numero, fuente, sangria y formato."
+    "respuesta": "A",
+    "explicacion": "Nueve niveles, cada uno con su estilo de número, su fuente, su sangría y su separador, todos configurables por separado en el cuadro «Definir nueva lista multinivel…». · El nueve no es casual y conviene tenerlo atado a sus vecinos: hay nueve estilos de título, Título 1 a Título 9, y el campo «Nivel de esquema» del cuadro Párrafo ofrece esos mismos nueve más «Texto independiente». Los tres números coinciden porque describen la misma jerarquía. · «7» son los estilos de la biblioteca de listas, y también los formatos de las bibliotecas de numeración y de viñetas: es la cifra que más se cuela aquí por estar en el mismo menú."
   },
   {
     "id": "inicio-62",
@@ -11204,28 +11204,28 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "alta",
     "sourceQuestionId": "P-0300",
-    "enunciado": "En una lista multinivel personalizada, la opcion avanzada Incluir numero de nivel desde permite mostrar en un nivel el numero del nivel superior. ¿Puede utilizarse esta opcion cuando el nivel usa viñetas en lugar de numeracion?",
+    "enunciado": "En el cuadro «Definir nueva lista multinivel» pulsas «Más» y buscas la opción «Incluir número de nivel desde», pero aparece apagada. ¿Por qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Si; puede incluirse el numero de cualquier nivel superior independientemente del tipo de marcador"
+        "text": "Porque el nivel en el que estás usa viñeta en vez de numeración"
       },
       {
         "letter": "B",
-        "text": "No; esta opcion no esta disponible cuando el nivel usa viñetas"
+        "text": "Porque estás en el nivel 1 y no hay ningún nivel superior del que tomar el número"
       },
       {
         "letter": "C",
-        "text": "Si, pero solo si el nivel superior tambien usa numeracion"
+        "text": "Porque el nivel superior usa un estilo de número distinto del de este nivel"
       },
       {
         "letter": "D",
-        "text": "Solo con viñetas de tipo simbolo, no con viñetas de imagen"
+        "text": "Porque la lista todavía no se ha aplicado a ningún párrafo del documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La opcion Incluir numero de nivel desde no esta disponible cuando el nivel usa viñetas. Solo puede utilizarse en niveles con numeracion. Es una restriccion especifica de esta opcion avanzada del panel de lista multinivel."
+    "respuesta": "A",
+    "explicacion": "Esa opción sirve para construir numeraciones encadenadas del tipo 1.1, 1.1.1 o «Artículo 3, apartado 2», tomando prestado el número de un nivel de más arriba. Si el nivel activo lleva una viñeta y no un número, no hay nada que encadenar, y Word la apaga. · Estar en el nivel 1 es el descarte con más fundamento, porque también es una situación en la que no hay nada de arriba que incluir; pero lo que decide aquí es el tipo de marcador, no la posición. · Que los estilos de número no coincidan no impide nada: precisamente se pueden mezclar romanos con arábigos. · Y la lista se configura antes de aplicarse."
   },
   {
     "id": "inicio-180",
@@ -11240,28 +11240,28 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "baja",
     "sourceQuestionId": "P-0434",
-    "enunciado": "Antes de aplicar viñetas a una lista, quieres ver de un vistazo la galería de estilos de viñeta ya preparados, tanto símbolos como imágenes, con una vista previa de cada uno. ¿Dónde puedes desplegar esa galería?",
+    "enunciado": "Quieres poner viñetas a una lista y prefieres elegir la marca de la galería en vez de teclear nada. ¿Dónde está esa galería?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Biblioteca de viñetas"
+        "text": "En la sección «Biblioteca de viñetas» del desplegable del botón Viñetas"
       },
       {
         "letter": "B",
-        "text": "Definir nueva viñeta"
+        "text": "En el cuadro «Definir nueva viñeta», al pulsar su botón «Símbolo»"
       },
       {
         "letter": "C",
-        "text": "Ajustar sangrías de lista"
+        "text": "En la sección «Biblioteca de listas» del desplegable de Lista multinivel"
       },
       {
         "letter": "D",
-        "text": "Cambiar nivel de lista"
+        "text": "En el cuadro «Ajustar sangrías de lista», al elegir el separador"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La Biblioteca de viñetas se despliega al hacer clic en la flecha del botón Viñetas del grupo Párrafo. Muestra una galería con los 7 estilos predeterminados más las viñetas personalizadas que se hayan creado previamente, con vista previa de cada una."
+    "explicacion": "La galería vive en el propio desplegable del botón, entre las secciones de «usadas recientemente» y «de documento», y ofrece «Ninguna» más siete viñetas con su vista previa. · El cuadro «Definir nueva viñeta» es el descarte más fino, porque su botón «Símbolo» también enseña marcas para elegir: pero eso es el cuadro Símbolo completo, con todos los caracteres de todas las fuentes, no una galería preparada de siete. Uno es elegir, el otro es diseñar. · La biblioteca de listas es la de multinivel, con jerarquías de tres niveles, no viñetas sueltas. · Y «Ajustar sangrías de lista» solo mide distancias."
   },
   {
     "id": "inicio-181",
@@ -11276,28 +11276,28 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0435",
-    "enunciado": "Ninguna de las viñetas de la galería rápida te convence y quieres crear una viñeta propia, eligiendo tú mismo el carácter o la imagen que la representa. ¿Qué opción debes seleccionar dentro del menú de Viñetas?",
+    "enunciado": "Ninguna viñeta de la galería te sirve y quieres usar como marca un carácter de otra fuente o una imagen tuya. ¿Qué entrada del desplegable de Viñetas te lleva ahí?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Definir nueva viñeta"
+        "text": "Definir nueva viñeta…"
       },
       {
         "letter": "B",
-        "text": "Biblioteca de viñetas"
+        "text": "Cambiar nivel de lista"
       },
       {
         "letter": "C",
-        "text": "Ajustar sangrías de lista"
+        "text": "Viñetas de documento"
       },
       {
         "letter": "D",
-        "text": "Cambiar nivel de lista"
+        "text": "Definir nuevo estilo de lista…"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Definir nueva viñeta abre el cuadro de diálogo donde se puede elegir un símbolo tipográfico, una imagen o un carácter de cualquier fuente instalada como marca de viñeta personalizada. Las viñetas personalizadas creadas se acumulan en la biblioteca junto con las 7 predeterminadas."
+    "explicacion": "Es la única entrada de ese menú que abre un cuadro para construir la viñeta: dentro están los botones «Símbolo», «Imagen» y «Fuente», más la alineación. Una vez creada, la viñeta pasa a aparecer en las secciones de recientes y de documento. · «Cambiar nivel de lista» es la otra entrada del pie del menú, y despliega un submenú para mover el párrafo a otro nivel de la jerarquía: no crea nada. · «Viñetas de documento» es un encabezado de sección, no una orden. · Y «Definir nuevo estilo de lista…» sí existe, pero en el desplegable de Lista multinivel, y crea un estilo con nombre, no una viñeta."
   },
   {
     "id": "inicio-182",
@@ -11312,19 +11312,19 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0436",
-    "enunciado": "Ya dentro del cuadro para crear una viñeta personalizada, quieres usar como marca un carácter concreto de la fuente Wingdings, como una estrella o una mano señalando. ¿Qué botón debes utilizar?",
+    "enunciado": "En el cuadro «Definir nueva viñeta» quieres una marca sacada de la fuente Wingdings, como una mano señalando. ¿Qué botón te lleva a elegirla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Símbolo"
+        "text": "Símbolo…"
       },
       {
         "letter": "B",
-        "text": "Imagen"
+        "text": "Imagen…"
       },
       {
         "letter": "C",
-        "text": "Fuente"
+        "text": "Fuente…"
       },
       {
         "letter": "D",
@@ -11333,7 +11333,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Símbolo dentro del cuadro Definir nueva viñeta abre el cuadro de diálogo de símbolos donde se puede seleccionar cualquier carácter de cualquier fuente instalada, incluyendo Wingdings, Webdings o Symbol. Una vez seleccionado el símbolo se puede modificar su fuente y tamaño con el botón Fuente."
+    "explicacion": "«Símbolo…» abre el cuadro Símbolo, donde se elige la fuente en el desplegable de arriba —Wingdings, Webdings, Symbol— y luego el carácter concreto. · «Fuente…» es el descarte que decide la pregunta, y la confusión tiene fundamento: también abre un cuadro donde se ve una lista de fuentes, pero es el cuadro Fuente, y sirve para dar tamaño y color a la marca YA elegida, no para elegirla. Primero se escoge el carácter, después se le da formato. · «Imagen…» busca un archivo gráfico o una imagen en línea. · Y «Alineación» es un desplegable, no un botón: decide si la marca queda a la izquierda, centrada o a la derecha de su hueco."
   },
   {
     "id": "inicio-183",
@@ -11348,19 +11348,19 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0437",
-    "enunciado": "Ya dentro del cuadro para crear una viñeta personalizada, quieres usar el logotipo del Ayuntamiento como marca de cada elemento de la lista, en vez de un carácter tipográfico. ¿Qué botón debes utilizar?",
+    "enunciado": "Quieres que cada punto de la lista lleve el escudo del ayuntamiento en vez de un carácter tipográfico. En «Definir nueva viñeta», ¿qué botón usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Imagen"
+        "text": "Imagen…"
       },
       {
         "letter": "B",
-        "text": "Símbolo"
+        "text": "Símbolo…"
       },
       {
         "letter": "C",
-        "text": "Fuente"
+        "text": "Fuente…"
       },
       {
         "letter": "D",
@@ -11369,7 +11369,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Imagen dentro del cuadro Definir nueva viñeta permite seleccionar un archivo de imagen del equipo o de la galería de imágenes para usarlo como marca de viñeta. Es la opción adecuada cuando se quiere usar un logotipo, icono o cualquier imagen gráfica como viñeta."
+    "explicacion": "«Imagen…» permite traer un archivo del equipo o buscar una imagen en línea, y la coloca como marca de cada elemento. Word la escala al tamaño del texto, así que conviene que el archivo tenga fondo transparente si no se quiere un recuadro blanco. · «Símbolo…» solo ofrece caracteres de fuentes instaladas: con Wingdings se puede llegar a marcas muy gráficas, pero no a un logotipo concreto. Es el descarte con más fundamento, porque mucha gente resuelve así lo que parece pedir una imagen. · «Fuente…» da formato a un carácter, y sobre una imagen no se aplica. · Y «Alineación» solo coloca la marca dentro de su hueco."
   },
   {
     "id": "inicio-184",
@@ -11384,19 +11384,19 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0438",
-    "enunciado": "Ya elegido el carácter que hará de viñeta personalizada, quieres agrandarlo y ponerlo en un color distinto al del texto de la lista. ¿Qué botón debes utilizar dentro del cuadro de nueva viñeta?",
+    "enunciado": "Ya has elegido el carácter que hará de viñeta y ahora lo quieres más grande y en rojo, sin tocar el color del texto de la lista. En «Definir nueva viñeta», ¿qué botón usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Fuente"
+        "text": "Fuente…"
       },
       {
         "letter": "B",
-        "text": "Símbolo"
+        "text": "Símbolo…"
       },
       {
         "letter": "C",
-        "text": "Imagen"
+        "text": "Imagen…"
       },
       {
         "letter": "D",
@@ -11405,7 +11405,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Fuente dentro del cuadro Definir nueva viñeta abre el cuadro de diálogo Fuente completo, donde se puede cambiar el tamaño, el color y otros atributos tipográficos del carácter seleccionado como viñeta, de forma independiente al formato del texto de la lista."
+    "explicacion": "«Fuente…» abre el cuadro Fuente completo aplicado solo a la marca: allí se le cambia el tamaño, el color, la negrita o incluso la tipografía, y el texto de la lista se queda como estaba. Es lo que permite viñetas rojas y grandes con texto negro normal. · «Símbolo…» serviría para cambiar el carácter, no para darle formato: es el paso anterior, y ese es el orden que hay que tener claro. · «Imagen…» sustituiría el carácter por un archivo gráfico. · Y «Alineación» decide si la marca queda a la izquierda, centrada o a la derecha dentro del espacio reservado, sin tocar su aspecto."
   },
   {
     "id": "inicio-185",
@@ -11420,28 +11420,28 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0439",
-    "enunciado": "Has hecho clic derecho directamente sobre la viñeta de una lista, sin seleccionar el texto, y quieres ajustar con precisión tanto la posición de la marca como la separación entre la viñeta y el texto que la sigue. ¿Qué opción debes elegir en ese menú contextual?",
+    "enunciado": "Haces clic derecho sobre la viñeta de una lista y quieres ajustar a la vez a qué distancia del margen queda la marca y a cuánta empieza el texto. ¿Qué eliges en ese menú?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ajustar sangrías de lista"
+        "text": "Ajustar sangrías de lista…"
       },
       {
         "letter": "B",
-        "text": "Reiniciar en 1"
+        "text": "Definir nueva viñeta…"
       },
       {
         "letter": "C",
-        "text": "Continuar numeración"
+        "text": "Establecer valor de numeración…"
       },
       {
         "letter": "D",
-        "text": "Establecer valor de numeración"
+        "text": "Aumentar sangría"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ajustar sangrías de lista abre el cuadro donde se puede configurar la Posición de la viñeta (distancia desde el margen izquierdo hasta la marca) y la Sangría de texto (distancia desde el margen hasta el inicio del texto), así como el tipo de separador entre la viñeta y el texto."
+    "explicacion": "Ese cuadro tiene exactamente los dos campos que pide el enunciado —«Posición de viñeta» y «Sangría de texto»— y además un desplegable para elegir qué separa la marca del texto: tabulación, espacio o nada. · «Definir nueva viñeta» cambia la marca, no dónde se coloca. · «Establecer valor de numeración» es de listas numeradas y no aparece con viñetas. · «Aumentar sangría» es el descarte con más fundamento porque también mueve la lista hacia dentro: lo hace a saltos de tabulación y arrastrando marca y texto a la vez, mientras que aquí se ajustan por separado y al milímetro."
   },
   {
     "id": "inicio-186",
@@ -11456,7 +11456,7 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0440",
-    "enunciado": "Has hecho clic derecho sobre el número de un elemento en mitad de una lista numerada larga, porque a partir de ahí quieres que empiece una numeración nueva desde el principio, con ese elemento pasando a ser el número 1. ¿Qué opción debes elegir en ese menú contextual?",
+    "enunciado": "En mitad de una lista numerada larga quieres que el elemento donde estás pase a ser el número 1 y que la cuenta siga desde ahí. ¿Qué eliges en su menú contextual?",
     "opciones": [
       {
         "letter": "A",
@@ -11468,16 +11468,16 @@
       },
       {
         "letter": "C",
-        "text": "Establecer valor de numeración"
+        "text": "Establecer valor de numeración…"
       },
       {
         "letter": "D",
-        "text": "Ajustar sangrías de lista"
+        "text": "Ajustar sangrías de lista…"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Reiniciar en 1 hace que la numeración de la lista comience de nuevo desde 1 a partir del elemento sobre el que se hace clic derecho. Es la forma más rápida de dividir una lista numerada en dos secuencias independientes."
+    "explicacion": "«Reiniciar en 1» parte la lista en dos secuencias independientes justo ahí, en un clic y sin cuadros de por medio. · «Establecer valor de numeración…» es el descarte que decide la pregunta, porque consigue lo mismo y bastante más: abre un cuadro donde se elige entre iniciar lista nueva o continuar la anterior y se escribe el número exacto de arranque. Si lo que se quiere es empezar en 1, es dar un rodeo. · «Continuar numeración» hace lo contrario: engancha este tramo con la lista anterior. · Y «Ajustar sangrías de lista» no toca los números, solo las distancias."
   },
   {
     "id": "inicio-187",
@@ -11492,7 +11492,7 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0441",
-    "enunciado": "Una lista numerada se ha visto interrumpida por un párrafo de texto en medio, y el segundo tramo de la lista ha vuelto a empezar en 1; haces clic derecho sobre ese número y quieres que retome la numeración justo donde se quedó el primer tramo. ¿Qué opción debes elegir en ese menú contextual?",
+    "enunciado": "Un párrafo de texto ha partido en dos una lista numerada y el segundo tramo ha vuelto a empezar por 1. Quieres que retome la cuenta donde se quedó. ¿Qué eliges en su menú contextual?",
     "opciones": [
       {
         "letter": "A",
@@ -11504,16 +11504,16 @@
       },
       {
         "letter": "C",
-        "text": "Establecer valor de numeración"
+        "text": "Establecer valor de numeración…"
       },
       {
         "letter": "D",
-        "text": "Ajustar sangrías de lista"
+        "text": "Ajustar sangrías de lista…"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Continuar numeración hace que el tramo de lista seleccionado retome la secuencia numérica de la lista anterior en lugar de empezar desde 1. Word busca la lista numerada más cercana anterior en el documento y continúa desde el número siguiente."
+    "explicacion": "«Continuar numeración» busca la lista numerada anterior más cercana y sigue por el número que toca, sin que haya que saber cuál es. · «Establecer valor de numeración…» también lo consigue, y de hecho tiene una opción llamada «Continuar a partir de la lista anterior»: es el descarte más difícil, porque es el camino largo hacia el mismo sitio. La diferencia práctica es que con el cuadro hay que decidir y escribir; con la entrada directa, no. · «Reiniciar en 1» es justo el problema que se quiere arreglar. · Y las sangrías no tienen nada que ver con la cuenta."
   },
   {
     "id": "inicio-188",
@@ -11528,28 +11528,28 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0442",
-    "enunciado": "Haciendo clic derecho sobre el número de un elemento de una lista, quieres abrir un cuadro de diálogo donde decidir si esa lista es nueva o continúa la anterior, y escribir el número exacto por el que debe empezar. ¿Qué opción debes elegir en ese menú contextual?",
+    "enunciado": "Necesitas que una lista empiece en el número 7 porque continúa un anexo anterior. ¿Qué entrada del menú contextual te deja escribir ese número?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Establecer valor de numeración"
+        "text": "Establecer valor de numeración…"
       },
       {
         "letter": "B",
-        "text": "Reiniciar en 1"
-      },
-      {
-        "letter": "C",
         "text": "Continuar numeración"
       },
       {
+        "letter": "C",
+        "text": "Reiniciar en 1"
+      },
+      {
         "letter": "D",
-        "text": "Ajustar sangrías de lista"
+        "text": "Ajustar sangrías de lista…"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Establecer valor de numeración abre el cuadro de diálogo donde se puede elegir entre Iniciar nueva lista o Continuar a partir de la lista anterior, y además especificar el número exacto de inicio mediante el campo Establecer valor en. Es la opción más completa para controlar la numeración."
+    "explicacion": "Es la única de las cuatro que abre un cuadro, y trae dos cosas: la elección entre «Iniciar nueva lista» y «Continuar a partir de la lista anterior», y el campo «Establecer valor en», donde se escribe el número exacto de arranque. Sin ella no hay forma de empezar en 7. · «Continuar numeración» y «Reiniciar en 1» son las versiones rápidas de esos dos casos, pero sin permitir elegir cifra: una sigue por donde toque y la otra empieza por 1. Ese es el reparto entre las tres, y por eso las tres conviven en el mismo menú. · Y las sangrías miden distancias, no números."
   },
   {
     "id": "inicio-189",
@@ -11564,28 +11564,28 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0443",
-    "enunciado": "Antes de aplicar una lista jerárquica con varios niveles a un documento, quieres ver de un vistazo los siete estilos de lista multinivel ya preparados por Word. ¿Dónde puedes desplegar esa galería?",
+    "enunciado": "Quieres aplicar una jerarquía de apartados ya preparada, del tipo «1 / 1.1 / 1.1.1», sin configurar nada. ¿Dónde la encuentras?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Biblioteca de listas"
+        "text": "En la sección «Biblioteca de listas» del desplegable de Lista multinivel"
       },
       {
         "letter": "B",
-        "text": "Definir nueva lista multinivel"
+        "text": "En la sección «Lista actual» de ese mismo desplegable"
       },
       {
         "letter": "C",
-        "text": "Cambiar nivel de lista"
+        "text": "En el cuadro «Definir nueva lista multinivel…»"
       },
       {
         "letter": "D",
-        "text": "Definir nuevo estilo de lista"
+        "text": "En la sección «Biblioteca de numeración» del desplegable de Numeración"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La Biblioteca de listas se despliega al hacer clic en la flecha del botón Lista multinivel del grupo Párrafo. Muestra los 7 estilos predeterminados de lista multinivel disponibles en Word 365. A diferencia de las viñetas, las listas multinivel personalizadas no se acumulan en esta biblioteca."
+    "explicacion": "La «Biblioteca de listas» ofrece «Ninguna» más siete jerarquías ya montadas, entre ellas la de 1 / 1.1 / 1.1.1 y varias enlazadas a los estilos de título, del tipo «Artículo I / Sección 1.01» o «Capítulo 1». · «Lista actual» es la sección de encima, y solo enseña la lista donde está el cursor: es el descarte con más fundamento porque está en el mismo menú y también dibuja una jerarquía. · El cuadro «Definir nueva lista multinivel…» sirve para construir una desde cero, con sus nueve niveles: llega al mismo sitio dando mucha más vuelta. · Y la biblioteca de numeración solo tiene listas de un nivel."
   },
   {
     "id": "inicio-190",
@@ -11600,15 +11600,15 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0444",
-    "enunciado": "Ninguno de los siete estilos de lista multinivel de la galería rápida encaja con lo que necesitas, y quieres crear tú mismo una lista jerárquica personalizada, configurando hasta nueve niveles distintos. ¿Qué opción debes seleccionar dentro del menú de Lista multinivel?",
+    "enunciado": "Ninguno de los siete estilos de la biblioteca de listas te sirve y quieres montar tú la jerarquía, nivel por nivel. ¿Qué entrada del desplegable de Lista multinivel usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Definir nueva lista multinivel"
+        "text": "Definir nueva lista multinivel…"
       },
       {
         "letter": "B",
-        "text": "Biblioteca de listas"
+        "text": "Definir nuevo estilo de lista…"
       },
       {
         "letter": "C",
@@ -11616,12 +11616,12 @@
       },
       {
         "letter": "D",
-        "text": "Definir nuevo estilo de lista"
+        "text": "Definir nuevo formato de número…"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Definir nueva lista multinivel abre el cuadro de diálogo completo donde se pueden configurar hasta 9 niveles, cada uno con su propio estilo de número, formato, fuente, sangría y separador. El botón Más del cuadro despliega las opciones avanzadas incluyendo la vinculación a estilos."
+    "explicacion": "Abre el cuadro donde se configuran los nueve niveles uno a uno: estilo de número, formato, fuente, alineación, sangría y separador, y con el botón «Más» aparecen las opciones avanzadas, entre ellas vincular cada nivel a un estilo de título. · «Definir nuevo estilo de lista…» es el descarte que decide la pregunta, y también existe en ese mismo menú: la diferencia es que aquel crea un estilo CON NOMBRE, que queda guardado y se puede reutilizar y modificar como cualquier estilo, mientras que este define el formato de la lista que se está usando. · «Cambiar nivel de lista» mueve un párrafo de nivel. · Y «Definir nuevo formato de número…» está en el menú de Numeración, para listas de un solo nivel."
   },
   {
     "id": "inicio-191",
@@ -11636,7 +11636,7 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0445",
-    "enunciado": "Ya dentro del cuadro para crear una lista multinivel personalizada, con el nivel 2 seleccionado, quieres que sus marcadores sean letras minúsculas en vez de números arábigos. ¿Qué desplegable debes utilizar?",
+    "enunciado": "En el cuadro «Definir nueva lista multinivel», con el nivel 2 marcado, quieres que sus marcadores sean letras minúsculas en vez de números. ¿Qué desplegable usas?",
     "opciones": [
       {
         "letter": "A",
@@ -11644,11 +11644,11 @@
       },
       {
         "letter": "B",
-        "text": "Formato de número"
+        "text": "Formato de número para este nivel"
       },
       {
         "letter": "C",
-        "text": "Fuente"
+        "text": "Incluir número de nivel desde"
       },
       {
         "letter": "D",
@@ -11657,7 +11657,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El desplegable Estilo de número para este nivel permite elegir el tipo de marcador para cada nivel de la lista: números arábigos (1, 2, 3), letras minúsculas (a, b, c), letras mayúsculas (A, B, C), números romanos en minúsculas (i, ii, iii), números romanos en mayúsculas (I, II, III) y viñetas, entre otros."
+    "explicacion": "Ese desplegable es el que decide la clase de marcador de cada nivel: arábigos, letras minúsculas o mayúsculas, romanos en una y otra caja, ordinales, y también viñetas. Se elige nivel a nivel, marcando antes el número en la lista de la izquierda. · «Formato de número» es el descarte que decide la pregunta, porque está justo encima y su nombre se parece muchísimo: pero ese es el campo donde se escribe lo que rodea al marcador —paréntesis, puntos, la palabra «Artículo»—, no de qué clase es. Uno elige el tipo, el otro lo decora. · «Incluir número de nivel desde» encadena el número de un nivel superior. · Y la alineación solo coloca el marcador dentro de su hueco."
   },
   {
     "id": "inicio-192",
@@ -11672,7 +11672,7 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0446",
-    "enunciado": "Ya elegido el estilo de número de un nivel, quieres que después de cada número aparezca un paréntesis de cierre, como '1)', en vez de un simple punto. ¿Qué campo debes editar dentro del cuadro de lista multinivel?",
+    "enunciado": "Ya elegido el estilo de número de un nivel, quieres que tras cada número aparezca un paréntesis de cierre, «1)», en vez de un punto. ¿Qué campo editas?",
     "opciones": [
       {
         "letter": "A",
@@ -11684,16 +11684,16 @@
       },
       {
         "letter": "C",
-        "text": "Fuente"
+        "text": "Alineación de los números"
       },
       {
         "letter": "D",
-        "text": "Alineación de los números"
+        "text": "Especificar formato para el número, botón Fuente"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El campo Formato de número muestra el número generado automáticamente y permite añadir texto antes o después, como paréntesis, puntos, guiones o cualquier otro carácter. El número generado aparece sombreado en gris dentro del campo y no debe borrarse; solo se añaden los caracteres adicionales alrededor."
+    "explicacion": "En ese campo aparece el número que Word genera, sombreado en gris, y alrededor se escribe lo que haga falta: un paréntesis, un guion, la palabra «Artículo» o «Apartado». Lo sombreado no se toca ni se borra; si se borra, el nivel deja de numerar. · «Estilo de número para este nivel» decide si el marcador es 1, a, i o A, no lo que lo acompaña: es el par que hay que separar. · La alineación coloca el conjunto dentro de su hueco. · Y el botón «Fuente» da formato al marcador —tamaño, color, negrita— sin cambiar ni el tipo ni lo que lo rodea. Tres cosas distintas sobre el mismo número: qué es, qué lleva alrededor y cómo se ve."
   },
   {
     "id": "inicio-193",
@@ -11708,28 +11708,28 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0447",
-    "enunciado": "El cuadro de lista multinivel solo te muestra las opciones básicas y necesitas acceder a un panel adicional con opciones avanzadas, como vincular un nivel a un estilo de Word o decidir a qué alcance se aplican los cambios. ¿Qué botón debes utilizar para desplegar ese panel?",
+    "enunciado": "El cuadro «Definir nueva lista multinivel» solo enseña las opciones básicas y necesitas llegar a las avanzadas. ¿Qué pulsas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Más"
+        "text": "El botón «Más»"
       },
       {
         "letter": "B",
-        "text": "Menos"
+        "text": "El botón «Establecer para todos los niveles»"
       },
       {
         "letter": "C",
-        "text": "Establecer para todos los niveles"
+        "text": "El botón «Fuente»"
       },
       {
         "letter": "D",
-        "text": "Incluir número de nivel desde"
+        "text": "El desplegable «Aplicar cambios a»"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Más del cuadro Definir nueva lista multinivel expande el panel derecho con opciones avanzadas: Vincular nivel al estilo, Aplicar cambios a, Iniciar en y Reiniciar la lista después de. Una vez desplegado el panel el botón cambia a Menos para colapsarlo."
+    "explicacion": "«Más» despliega la mitad derecha del cuadro, donde aparecen «Vincular nivel al estilo», «Nivel que se mostrará en la galería», «Nombre de campo de lista», «Iniciar en», «Reiniciar la lista después de» y «Aplicar cambios a». Una vez abierto, el botón pasa a llamarse «Menos» para volver a plegarlo. · «Establecer para todos los niveles» sí es un botón, pero abre un cuadro auxiliar de posiciones: es el descarte con más fundamento porque también amplía lo que se puede hacer. · «Aplicar cambios a» es precisamente una de las opciones que solo aparecen DESPUÉS de pulsar «Más», así que no puede ser la puerta. · Y «Fuente» da formato al marcador."
   },
   {
     "id": "inicio-194",
@@ -11744,7 +11744,7 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "alta",
     "sourceQuestionId": "P-0448",
-    "enunciado": "Ya con el panel avanzado desplegado, quieres que cada vez que apliques el estilo Título 1 a un párrafo del documento, ese párrafo reciba automáticamente la numeración del nivel 1 de la lista multinivel, sin tener que aplicar la lista a mano. ¿Qué desplegable debes utilizar?",
+    "enunciado": "Quieres que aplicar el estilo Título 1 a un párrafo le dé sola la numeración del nivel 1 de tu lista, sin tener que aplicar la lista aparte. ¿Qué desplegable del panel avanzado lo consigue?",
     "opciones": [
       {
         "letter": "A",
@@ -11756,7 +11756,7 @@
       },
       {
         "letter": "C",
-        "text": "Iniciar en"
+        "text": "Nivel que se mostrará en la galería"
       },
       {
         "letter": "D",
@@ -11765,7 +11765,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El desplegable Vincular nivel al estilo asocia el nivel seleccionado de la lista multinivel con un estilo de Word. A partir de ese momento, cada vez que se aplique ese estilo a un párrafo, el párrafo recibirá automáticamente la numeración de ese nivel. Es la base del sistema de numeración automática de capítulos."
+    "explicacion": "Ese desplegable ata un nivel de la lista a un estilo, y a partir de ahí el estilo arrastra la numeración: es la base del articulado automático de un reglamento o de la numeración de capítulos que luego alimenta la tabla de contenido. · «Aplicar cambios a» decide el alcance del cambio —el párrafo, la lista entera o de aquí en adelante—, no a qué estilo se engancha. · «Nivel que se mostrará en la galería» solo elige qué se ve en la miniatura del menú. · Y «Reiniciar la lista después de» dice tras qué nivel superior vuelve la cuenta a empezar, que es lo que hace que el apartado 1 de cada artículo sea siempre 1."
   },
   {
     "id": "inicio-195",
@@ -11780,7 +11780,7 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "alta",
     "sourceQuestionId": "P-0449",
-    "enunciado": "Quieres que el nivel 2 de una lista multinivel muestre como prefijo el número del nivel 1, de modo que los elementos queden numerados como 1.1, 1.2, 2.1... ¿Qué desplegable debes utilizar dentro del cuadro de lista multinivel?",
+    "enunciado": "Quieres que el nivel 2 se numere como 1.1, 1.2, 2.1, arrastrando delante el número del nivel 1. ¿Qué desplegable usas?",
     "opciones": [
       {
         "letter": "A",
@@ -11788,20 +11788,20 @@
       },
       {
         "letter": "B",
-        "text": "Establecer para todos los niveles"
-      },
-      {
-        "letter": "C",
         "text": "Vincular nivel al estilo"
       },
       {
+        "letter": "C",
+        "text": "Reiniciar la lista después de"
+      },
+      {
         "letter": "D",
-        "text": "Aplicar cambios a"
+        "text": "Establecer para todos los niveles"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El desplegable Incluir número de nivel desde permite insertar en el campo Formato de número el número de un nivel superior como prefijo. Seleccionando Nivel 1 en ese desplegable con el Nivel 2 activo, el formato resultante será 1.1, 1.2, 2.1, etc. Esta opción no está disponible cuando el nivel usa viñetas en lugar de numeración."
+    "explicacion": "Al elegir «Nivel 1» en ese desplegable, Word inserta el número del nivel superior dentro del campo «Formato de número», delante del propio, y de ahí sale el 1.1. Si el nivel activo usa viñeta en vez de número, la opción aparece apagada. · «Reiniciar la lista después de» es el descarte que decide la pregunta, y suele hacer falta a la vez: dice que la cuenta del nivel 2 vuelva a 1 en cuanto avance el nivel 1. Pero eso es cuándo se reinicia, no qué se muestra. · «Vincular nivel al estilo» engancha el nivel a un estilo de párrafo. · Y «Establecer para todos los niveles» solo reparte sangrías."
   },
   {
     "id": "inicio-196",
@@ -11816,7 +11816,7 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "alta",
     "sourceQuestionId": "P-0450",
-    "enunciado": "En vez de ajustar uno por uno los nueve niveles de una lista multinivel, quieres definir de golpe la posición del primer nivel y el incremento que se sumará automáticamente a cada nivel siguiente. ¿Qué botón debes utilizar dentro del cuadro de lista multinivel?",
+    "enunciado": "En vez de ajustar la sangría de los nueve niveles uno a uno, quieres fijar la del primero y el incremento que se sumará a cada nivel siguiente. ¿Qué botón usas?",
     "opciones": [
       {
         "letter": "A",
@@ -11824,20 +11824,20 @@
       },
       {
         "letter": "B",
-        "text": "Incluir número de nivel desde"
-      },
-      {
-        "letter": "C",
         "text": "Más"
       },
       {
-        "letter": "D",
+        "letter": "C",
         "text": "Aplicar cambios a"
+      },
+      {
+        "letter": "D",
+        "text": "Establecer valor de numeración"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Establecer para todos los niveles abre un cuadro auxiliar donde se define la sangría del primer nivel y el incremento que se añade a cada nivel sucesivo. Esto aplica la configuración de posición a todos los niveles de una vez, ahorrando tener que ajustar cada uno individualmente."
+    "explicacion": "Abre un cuadro auxiliar con tres medidas: dónde empieza el marcador del primer nivel, dónde empieza su texto y cuánto se añade en cada nivel sucesivo. Con eso, los nueve niveles quedan escalonados de una vez y con la misma separación. · «Más» despliega el panel avanzado, que es otra cosa: allí están los vínculos con estilos y los reinicios. Es el descarte más fino porque también «abre más opciones». · «Aplicar cambios a» decide sobre qué parte del documento actúa lo que se está tocando. · Y «Establecer valor de numeración» ni siquiera está en este cuadro: es una entrada del menú contextual de una lista ya aplicada, y sirve para elegir por qué número empieza."
   },
   {
     "id": "inicio-267",
@@ -11852,28 +11852,28 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "alta",
     "sourceQuestionId": "P-0521",
-    "enunciado": "Un usuario necesita que al aplicar el estilo Título 1 a un párrafo, ese párrafo reciba automáticamente la numeración jerárquica del documento (1., 2., 3...) sin tener que aplicar la lista multinivel manualmente cada vez. ¿Qué combinación de elementos de la pestaña Inicio debe configurar?",
+    "enunciado": "Quieres que el estilo Título 1 arrastre siempre la numeración jerárquica del documento. ¿Cuántas rutas distintas hay para dejarlo atado, y cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Crear un estilo nuevo basado en Normal y activar Actualizar automáticamente"
+        "text": "Dos: «Vincular nivel al estilo» de la lista multinivel, o Modificar estilo ▸ Formato ▾ ▸ Numeración"
       },
       {
         "letter": "B",
-        "text": "Desde el cuadro de Lista multinivel personalizada, usar Vincular nivel al estilo para asociar el nivel 1 al estilo Título 1"
+        "text": "Una sola: «Vincular nivel al estilo» del cuadro de lista multinivel"
       },
       {
         "letter": "C",
-        "text": "Desde el cuadro de Estilo, usar el menú Formato → Numeración para asignar la lista"
+        "text": "Una sola: Modificar estilo ▸ Formato ▾ ▸ Numeración"
       },
       {
         "letter": "D",
-        "text": "Tanto B como C son formas válidas y producen el mismo resultado"
+        "text": "Dos: «Vincular nivel al estilo», o marcar «Actualizar automáticamente» en el estilo"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Existen dos rutas válidas para vincular la numeración automática a un estilo: (B) desde el cuadro de Lista multinivel → opción avanzada Vincular nivel al estilo, y (C) desde el cuadro de creación/modificación de estilo → menú Formato → Numeración. Ambas rutas configuran exactamente el mismo vínculo y producen el mismo resultado."
+    "respuesta": "A",
+    "explicacion": "Las dos rutas atan exactamente el mismo vínculo y dan el mismo resultado; se llega por donde resulte más cómodo, desde la lista o desde el estilo. Es otro caso del patrón de Word de varias puertas para un mismo ajuste. · Las dos opciones que dan una sola vía aciertan la ruta y fallan en el número, y por eso son las que más caen: cada una es cierta por su cuenta. · «Actualizar automáticamente» existe en el cuadro de estilo, pero hace algo muy distinto y bastante peligroso: que el estilo se redefina solo con cualquier cambio de formato que se haga sobre un párrafo que lo lleve."
   },
   {
     "id": "inicio-272",
@@ -11888,28 +11888,28 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "alta",
     "sourceQuestionId": "P-0526",
-    "enunciado": "Un usuario trabaja en un informe con numeración automática de capítulos basada en lista multinivel vinculada a estilos de título. Necesita que el capítulo 3 empiece en 5 en lugar de 3, porque los dos primeros capítulos están en un documento separado. ¿Cuál es el procedimiento correcto desde el panel avanzado de la lista multinivel?",
+    "enunciado": "Un informe usa numeración automática de capítulos vinculada a estilos, y el capítulo 3 tiene que aparecer como el 5 porque los dos primeros están en otro documento. ¿Cómo lo haces sin romper el resto?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Hacer clic derecho sobre el número y elegir Reiniciar en 1, luego editar manualmente"
+        "text": "Clic derecho en su número ▸ «Establecer valor de numeración» ▸ Iniciar nueva lista ▸ valor 5"
       },
       {
         "letter": "B",
-        "text": "En el panel avanzado de Definir nueva lista multinivel, usar el campo Iniciar en del nivel 1 y escribir 3"
+        "text": "En «Definir nueva lista multinivel», campo «Iniciar en» del nivel 1, escribir 5"
       },
       {
         "letter": "C",
-        "text": "En el panel avanzado de Definir nueva lista multinivel, usar el campo Iniciar en del nivel 1 y escribir 5"
+        "text": "Clic derecho en su número ▸ «Reiniciar en 1» y luego corregir el número a mano"
       },
       {
         "letter": "D",
-        "text": "Hacer clic derecho sobre el número y elegir Establecer valor de numeración → Iniciar nueva lista → Establecer valor en 5"
+        "text": "En «Definir nueva lista multinivel», desplegable «Reiniciar la lista después de», elegir Nivel 1"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "La forma más directa y precisa es hacer clic derecho sobre el número del primer elemento del capítulo y elegir «Establecer valor de numeración». En el cuadro se marca «Iniciar nueva lista» y se escribe el valor que toque. · Las opciones que pasan por el campo «Iniciar en» del panel avanzado de «Definir nueva lista multinivel» modifican la DEFINICIÓN de la lista, así que afectan a todos los sitios donde se use, mientras que el clic derecho actúa solo sobre ese punto concreto del documento. Es la diferencia entre cambiar la plantilla y cambiar un caso. · «Reiniciar en 1» existe en el menú contextual, pero solo devuelve la numeración al principio: no permite elegir en qué número empezar."
+    "respuesta": "A",
+    "explicacion": "El menú contextual actúa sobre ESE punto del documento y deja intacta la definición de la lista, así que el resto de capítulos siguen numerándose solos. · El campo «Iniciar en» del cuadro es el descarte con más fundamento, porque también consigue que empiece en 5: pero cambia la DEFINICIÓN, de modo que afecta a todos los sitios donde se use esa lista. Es la diferencia entre corregir un caso y cambiar la plantilla. · «Reiniciar en 1» solo devuelve la cuenta al principio y no deja elegir cifra, y «corregir a mano» un número automático significa escribirlo como texto, con lo que deja de actualizarse. · «Reiniciar la lista después de» decide cuándo vuelve a empezar un nivel inferior."
   },
   {
     "id": "inicio-416",
@@ -11929,24 +11929,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Negrita"
+        "text": "Viñetas"
       },
       {
         "letter": "B",
-        "text": "Centrar"
+        "text": "Numeración"
       },
       {
         "letter": "C",
-        "text": "Tachado"
+        "text": "Lista multinivel"
       },
       {
         "letter": "D",
-        "text": "Viñetas"
+        "text": "Aumentar sangría"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "**Viñetas.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Crea una lista con viñetas. La flecha abre la biblioteca de viñetas. (El volcado asigna Ctrl+Mayús+L a esta acción, pero también a «Versalitas»: conflicto sin dirimir.)"
+    "respuesta": "A",
+    "explicacion": "**Viñetas.** Pestaña Inicio ▸ Párrafo, el primer botón del grupo. Su icono son tres renglones con un punto delante de cada uno; la flecha abre el menú con las viñetas usadas recientemente, la biblioteca de siete, las del documento y «Definir nueva viñeta…». · Numeración y Lista multinivel son sus dos vecinos inmediatos y el mismo dibujo con otro marcador: números en el primero, una escalera numerada en el segundo. Distinguirlos es toda la pregunta. · Aumentar sangría lleva renglones con una flecha hacia la derecha. · ⚠️ El cuadro Personalizar teclado asigna Ctrl+Mayús+L a la lista con viñetas, pero también a Versalitas: un conflicto interno sin resolver."
   },
   {
     "id": "inicio-417",
@@ -11966,24 +11966,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Inicio ▸ Editor"
-      },
-      {
-        "letter": "B",
         "text": "Inicio ▸ Párrafo"
       },
       {
+        "letter": "B",
+        "text": "Inicio ▸ Estilos"
+      },
+      {
         "letter": "C",
-        "text": "Inicio ▸ Voz"
+        "text": "Referencias ▸ Tabla de contenido"
       },
       {
         "letter": "D",
-        "text": "Insertar ▸ Multimedia"
+        "text": "Insertar ▸ Texto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "**Numeración.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Crea una lista numerada. La flecha permite elegir el formato de número y «Establecer valor de numeración»."
+    "respuesta": "A",
+    "explicacion": "**Numeración.** Pestaña Inicio ▸ **Párrafo**, entre Viñetas y Lista multinivel. Su flecha abre la «Biblioteca de numeración», con «Ninguna» más siete formatos, y las entradas «Definir nuevo formato de número…» y «Establecer valor de numeración…». · Referencias ▸ Tabla de contenido es el descarte con más fundamento, porque los dos mundos se tocan: una lista multinivel vinculada a estilos de título es lo que alimenta la numeración de capítulos de un índice. Pero el botón que numera párrafos está en Inicio. · Estilos aplica conjuntos de formato con nombre. · E Insertar ▸ Texto es el de WordArt y Elementos rápidos."
   },
   {
     "id": "inicio-418",
@@ -12003,24 +12003,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Bordes"
-      },
-      {
-        "letter": "B",
-        "text": "Pegar"
-      },
-      {
-        "letter": "C",
         "text": "Lista multinivel"
       },
       {
+        "letter": "B",
+        "text": "Numeración"
+      },
+      {
+        "letter": "C",
+        "text": "Viñetas"
+      },
+      {
         "letter": "D",
-        "text": "Cortar"
+        "text": "Ordenar"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Lista multinivel.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Crea listas con varios niveles de sangría y numeración jerárquica (1, 1.1, 1.1.1…)."
+    "respuesta": "A",
+    "explicacion": "**Lista multinivel.** Pestaña Inicio ▸ Párrafo, el tercero de la fila. Su icono dibuja los renglones escalonados, con marcadores a distintas alturas, que es justo lo que hace: jerarquías del tipo 1, 1.1, 1.1.1, hasta nueve niveles. · Numeración y Viñetas son sus vecinos y comparten el esquema del dibujo, con los renglones todos a la misma altura: el escalonado es lo único que los separa. · Ordenar lleva una A, una Z y una flecha, y clasifica párrafos o filas alfabética o numéricamente. · Ninguno de los cuatro tiene atajo limpio: al de viñetas el cuadro Personalizar teclado le asigna Ctrl+Mayús+L, pero compartido con Versalitas."
   },
   {
     "id": "inicio-424",
@@ -12040,24 +12040,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Cursiva"
-      },
-      {
-        "letter": "B",
-        "text": "Numeración"
-      },
-      {
-        "letter": "C",
         "text": "Ordenar"
       },
       {
+        "letter": "B",
+        "text": "Lista multinivel"
+      },
+      {
+        "letter": "C",
+        "text": "Numeración"
+      },
+      {
         "letter": "D",
-        "text": "Aumentar sangría"
+        "text": "Mostrar todo"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Ordenar.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Ordena alfabética o numéricamente las líneas, los párrafos o las filas de una tabla seleccionados."
+    "respuesta": "A",
+    "explicacion": "**Ordenar.** Pestaña Inicio ▸ Párrafo. Su icono lleva una A sobre una Z con una flecha, y clasifica alfabética o numéricamente las líneas, los párrafos o las filas de tabla que estén seleccionados. Sorprende encontrarlo en este grupo, porque suena a herramienta de tabla, pero funciona igual sobre una lista suelta. · Numeración y Lista multinivel son los descartes con más fundamento: los tres botones están pegados y los tres tienen que ver con listas, pero aquellos crean el marcador y este reordena el contenido. · Mostrar todo es el ¶ del extremo del grupo, y solo enciende y apaga las marcas de formato."
   },
   {
     "id": "inicio-439",
@@ -12072,28 +12072,28 @@
     "tema": "Listas, viñetas y numeración",
     "sourceQuestionId": "neg-inicio-08",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre listas es FALSA?",
+    "enunciado": "Repasas lo que sabes de los tres botones de lista del grupo Párrafo. ¿Cuál de estas afirmaciones es FALSA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Viñetas y Numeración están en el grupo Párrafo"
+        "text": "Viñetas, Numeración y Lista multinivel están los tres en ese grupo"
       },
       {
         "letter": "B",
-        "text": "Lista multinivel permite niveles jerárquicos (1, 1.1, 1.1.1...)"
+        "text": "La lista multinivel llega hasta nueve niveles de jerarquía"
       },
       {
         "letter": "C",
-        "text": "El atajo de Viñetas es Ctrl+Mayús+L sin ninguna ambigüedad"
+        "text": "Ctrl+Mayús+L es el atajo de Viñetas, sin ninguna ambigüedad"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+L también está asignado a Versalitas en el volcado"
+        "text": "Las tres bibliotecas ofrecen «Ninguna» más siete opciones"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "El volcado asigna Ctrl+Mayús+L tanto a Versalitas como a Lista con viñetas: es un conflicto interno sin dirimir, no una asignación limpia."
+    "explicacion": "⚠️ El cuadro Personalizar teclado de esta instalación asigna Ctrl+Mayús+L a dos comandos a la vez: Versalitas y Lista con viñetas. Es un conflicto interno sin dirimir, así que no se puede dar por buena como atajo limpio de las viñetas. · Las otras tres son ciertas y merece la pena fijarlas juntas: los tres botones son vecinos en el grupo Párrafo; la jerarquía llega a nueve niveles, tantos como estilos de título; y las tres bibliotecas —numeración, viñetas y listas— tienen el mismo reparto de «Ninguna» más siete opciones, coincidencia que ayuda a recordarlas."
   },
   {
     "id": "inicio-460",
@@ -12108,28 +12108,28 @@
     "tema": "Listas, viñetas y numeración",
     "sourceQuestionId": "neg2-inicio-10",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Repasas lo que se puede hacer con las listas desde el grupo Párrafo. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Word permite crear listas numeradas, con viñetas y multinivel desde el grupo Párrafo."
+        "text": "Las tres clases de lista se aplican desde ese grupo"
       },
       {
         "letter": "B",
-        "text": "Se puede cambiar el símbolo de una viñeta por una imagen o un carácter personalizado."
+        "text": "La marca de una viñeta puede ser un carácter o una imagen propia"
       },
       {
         "letter": "C",
-        "text": "Una lista multinivel solo admite 3 niveles como máximo."
+        "text": "Una lista multinivel admite tres niveles como máximo"
       },
       {
         "letter": "D",
-        "text": "Se puede reiniciar la numeración de una lista desde el menú contextual."
+        "text": "La numeración se puede reiniciar desde el menú contextual"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Una lista multinivel admite hasta 9 niveles de sangría/numeración, no solo 3."
+    "explicacion": "Una lista multinivel admite nueve niveles, no tres. El tres cuela porque es lo que se ve en las miniaturas de la biblioteca, que enseñan solo los tres primeros para que quepan; pero al abrir «Definir nueva lista multinivel…» aparece la lista de niveles del 1 al 9. · Las otras tres son ciertas: viñetas, numeración y multinivel están los tres en Párrafo; «Definir nueva viñeta» ofrece «Símbolo…» e «Imagen…» para poner un carácter de cualquier fuente o un archivo propio; y el clic derecho sobre un número da «Reiniciar en 1», «Continuar numeración» y «Establecer valor de numeración…»."
   },
   {
     "id": "inicio-512",
@@ -12144,7 +12144,7 @@
     "tema": "Listas, viñetas y numeración",
     "sourceQuestionId": "rutas-inicio-42",
     "generado": true,
-    "enunciado": "En el cuadro «Definir nuevo formato de número», ¿qué botón permite cambiar la fuente, el tamaño y el color del número?",
+    "enunciado": "En el cuadro «Definir nuevo formato de número» quieres que el número salga en rojo y más grande, sin tocar el texto de los elementos. ¿Qué botón usas?",
     "opciones": [
       {
         "letter": "A",
@@ -12160,12 +12160,12 @@
       },
       {
         "letter": "D",
-        "text": "Formato…"
+        "text": "Alineación"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón «Fuente…» abre el cuadro Fuente aplicado solo al carácter del número (no al texto del elemento de lista)."
+    "explicacion": "«Fuente…» abre el cuadro Fuente aplicado únicamente al carácter del número, así que se le puede dar tamaño, color, negrita o incluso otra tipografía sin que el texto del elemento cambie. Es el mismo botón, con el mismo alcance, que aparece en «Definir nueva viñeta» y en el cuadro de lista multinivel. · «Símbolo…» e «Imagen…» no están en este cuadro: pertenecen al de viñetas, porque una viñeta puede ser cualquier carácter o un gráfico, mientras que un número lo genera Word. Ese es el reparto que hay que tener claro entre los dos cuadros. · Y «Alineación» solo coloca el número dentro de su hueco: izquierda, centro o derecha."
   },
   {
     "id": "inicio-514",
@@ -12180,28 +12180,28 @@
     "tema": "Listas, viñetas y numeración",
     "sourceQuestionId": "rutas-inicio-44",
     "generado": true,
-    "enunciado": "El cuadro «Definir nueva viñeta» ofrece tres orígenes para la viñeta:",
+    "enunciado": "El cuadro «Definir nueva viñeta» tiene tres botones en su parte superior. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Símbolo, Imagen y Fuente"
+        "text": "Símbolo… · Imagen… · Fuente…"
       },
       {
         "letter": "B",
-        "text": "Símbolo, Ecuación y Color"
+        "text": "Símbolo… · Imagen… · Icono…"
       },
       {
         "letter": "C",
-        "text": "Imagen, Icono y Forma"
+        "text": "Símbolo… · Ecuación… · Color…"
       },
       {
         "letter": "D",
-        "text": "Texto, Número y Símbolo"
+        "text": "Texto… · Número… · Símbolo…"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Símbolo…» elige un carácter de una fuente; «Imagen…» usa un archivo o imagen en línea; «Fuente…» fija el formato de carácter de la viñeta. Además hay un campo «Alineación»."
+    "explicacion": "Los dos primeros eligen QUÉ hará de viñeta —un carácter de cualquier fuente instalada, o un archivo de imagen— y el tercero decide CÓMO se ve lo elegido, con el cuadro Fuente aplicado solo a esa marca. Debajo hay además un desplegable «Alineación» y una vista previa. · «Icono…» es el descarte con más fundamento, porque los iconos existen en Word: pero están en Insertar ▸ Ilustraciones y se colocan como objetos en el texto, no como marca de lista. · «Ecuación» y «Color» no son botones de este cuadro; el color se cambia desde «Fuente…». · Y «Texto» y «Número» no son orígenes de viñeta: para números está el otro cuadro."
   },
   {
     "id": "inicio-516",
@@ -12216,28 +12216,28 @@
     "tema": "Listas, viñetas y numeración",
     "sourceQuestionId": "rutas-inicio-46",
     "generado": true,
-    "enunciado": "En «Definir nueva lista con varios niveles», el botón «Establecer para todos los niveles…» sirve para:",
+    "enunciado": "En el cuadro de lista multinivel pulsas «Establecer para todos los niveles…». ¿Qué hace ese cuadro auxiliar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Aplicar de una vez la posición y la sangría a los nueve niveles"
+        "text": "Reparte de una vez la posición y la sangría entre los nueve niveles"
       },
       {
         "letter": "B",
-        "text": "Convertir la lista en una lista de un solo nivel"
+        "text": "Da a los nueve niveles el mismo estilo de número"
       },
       {
         "letter": "C",
-        "text": "Guardar la lista como estilo"
+        "text": "Guarda la lista como un estilo reutilizable"
       },
       {
         "letter": "D",
-        "text": "Reiniciar la numeración de todos los niveles"
+        "text": "Reinicia a la vez la numeración de los nueve niveles"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Fija la posición del primer nivel y el incremento de sangría adicional por nivel, y lo propaga a todos."
+    "explicacion": "Pide tres medidas —dónde empieza el marcador del nivel 1, dónde empieza su texto y cuánto se añade en cada nivel siguiente— y con eso escalona los nueve de golpe, con la misma separación entre ellos. Solo toca posiciones. · Igualar el estilo de número sería lo contrario de para lo que sirve una lista multinivel, donde cada nivel suele llevar un marcador distinto: es el descarte que más cae, porque el nombre del botón invita a pensar en «lo mismo para todos». · Guardar la lista como estilo se hace con «Definir nuevo estilo de lista…», en el mismo desplegable. · Y reiniciar la numeración se decide con «Reiniciar la lista después de», en el panel avanzado."
   },
   {
     "id": "inicio-517",
@@ -12252,7 +12252,7 @@
     "tema": "Listas, viñetas y numeración",
     "sourceQuestionId": "rutas-inicio-47",
     "generado": true,
-    "enunciado": "El desplegable «Lista multinivel» ofrece, además de «Definir nueva lista multinivel…»:",
+    "enunciado": "Al pie del desplegable «Lista multinivel», además de «Cambiar nivel de lista» y de «Definir nueva lista multinivel…», hay una entrada más. ¿Cuál?",
     "opciones": [
       {
         "letter": "A",
@@ -12273,7 +12273,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Definir nuevo estilo de lista…» crea un estilo de lista reutilizable (aparece luego en la galería de estilos de lista); «Definir nueva lista multinivel…» define solo el formato para la lista actual."
+    "explicacion": "«Definir nuevo estilo de lista…» crea un estilo CON NOMBRE, que queda guardado, se puede modificar después como cualquier estilo y aparece en la galería de estilos de lista. La otra entrada, «Definir nueva lista multinivel…», solo define el formato de la lista que se esté usando. Esa es la diferencia entre las dos, y explica por qué conviven. · «Definir nueva viñeta…» está en el menú de Viñetas y «Definir nuevo formato de número…» en el de Numeración: cada botón tiene su propia entrada de «definir». · Y «Establecer valor de numeración…» aparece en el menú de Numeración y en el contextual de una lista ya aplicada."
   },
   {
     "id": "inicio-511",
@@ -12288,7 +12288,7 @@
     "tema": "Listas, viñetas y numeración",
     "sourceQuestionId": "rutas-inicio-41",
     "generado": true,
-    "enunciado": "En la «Biblioteca de numeración» (desplegable del botón Numeración), ¿qué formatos aparecen?",
+    "enunciado": "Repasas la «Biblioteca de numeración», la galería que abre la flecha del botón Numeración. ¿Qué formatos están de verdad en ella?",
     "opciones": [
       {
         "letter": "A",
@@ -12327,7 +12327,7 @@
       "D",
       "E"
     ],
-    "explicacion": "La biblioteca ofrece «Ninguna», 1.2.3. / 1)2)3) / I.II.III. / A.B.C. / a)b)c) / a.b.c. / i.ii.iii. Los formatos de texto («Primero…») o círculos numerados no están en la biblioteca (se harían con «Definir nuevo formato de número…»)."
+    "explicacion": "La biblioteca ofrece «Ninguna» más siete formatos: los cinco de esta lista más a.b.c. e i.ii.iii. Todos son cifras o letras con un punto o un paréntesis, sin más adorno. · «Primero, Segundo, Tercero» es el falso con más fundamento, porque ese estilo SÍ existe en Word: está en el desplegable «Estilo de número» del cuadro «Definir nuevo formato de número», que amplía los siete de la galería hasta doce añadiendo ordinales, palabras y series con ceros. Existe, pero no en la galería rápida. · Los círculos numerados no están en ninguno de los dos sitios: para algo así habría que usar una viñeta con un carácter de una fuente que los traiga."
   },
   {
     "id": "inicio-513",
@@ -12342,11 +12342,11 @@
     "tema": "Listas, viñetas y numeración",
     "sourceQuestionId": "rutas-inicio-43",
     "generado": true,
-    "enunciado": "El cuadro «Definir nuevo formato de número» tiene un desplegable «Estilo de número» (1,2,3 / I,II,III / a,b,c / 1º,2º,3º / (ninguno)…) y un campo «Alineación» (Izquierda, Centrada, Derecha).",
+    "enunciado": "El cuadro «Definir nuevo formato de número» tiene un desplegable «Estilo de número» y un desplegable «Alineación» con tres valores.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "«Formato de número» permite además añadir texto fijo alrededor del número, p. ej. «Art. 1.-»."
+    "explicacion": "Verdadero. «Estilo de número» ofrece «(ninguno)» más doce estilos: los siete de la galería rápida más los ordinales 1º 2º 3º, las palabras Uno Dos Tres y Primero Segundo Tercero, y las series con ceros a la izquierda. «Alineación» tiene Izquierda, Centrada y Derecha, y decide cómo se coloca el marcador dentro del hueco que tiene reservado. · Entre los dos está el campo «Formato de número», donde el número generado aparece sombreado en gris y alrededor se escribe lo que haga falta, como «Art. 1.-». · Y abajo, el botón «Fuente…» da formato solo a ese marcador."
   },
   {
     "id": "inicio-515",
@@ -12361,11 +12361,11 @@
     "tema": "Listas, viñetas y numeración",
     "sourceQuestionId": "rutas-inicio-45",
     "generado": true,
-    "enunciado": "El cuadro «Definir nueva lista con varios niveles» permite configurar de forma independiente cada uno de los 9 niveles de la lista.",
+    "enunciado": "El cuadro «Definir nueva lista con varios niveles» obliga a dar el mismo estilo de número a los nueve niveles.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Se elige el nivel en la lista «Haga clic en el nivel que desea modificar» (1 a 9) y se define su formato de número, estilo, posición y sangría."
+    "respuesta": false,
+    "explicacion": "Falso, y sería lo contrario de para lo que sirve: cada nivel se configura por separado, y de hecho lo normal es que unos lleven arábigos, otros letras y otros romanos. Se elige el nivel en la lista «Haga clic en el nivel que desea modificar», del 1 al 9, y a partir de ahí todo lo que se toque —estilo de número, formato, fuente, posición y sangría— vale solo para ese. · Lo que sí permite igualar de una vez son las POSICIONES, con el botón «Establecer para todos los niveles…», que reparte la sangría de forma escalonada. Esa es la única cosa que se aplica en bloque, y de ahí puede venir la confusión."
   },
   {
     "id": "inicio-518",
@@ -12380,11 +12380,11 @@
     "tema": "Listas, viñetas y numeración",
     "sourceQuestionId": "rutas-inicio-48",
     "generado": true,
-    "enunciado": "El desplegable «Lista multinivel» muestra una sección «Lista actual» con el formato multinivel aplicado en ese momento, encima de la «Biblioteca de listas».",
+    "enunciado": "El desplegable «Lista multinivel» enseña una sección «Lista actual» con el formato aplicado en ese momento, por encima de la «Biblioteca de listas».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Debajo aparece la «Biblioteca de listas» con «Ninguna» y los presets (incluidos los que enlazan cada nivel con Título 1, Título 2, Título 3)."
+    "explicacion": "Verdadero, y es una sección que no tiene el menú de Viñetas, cuyas tres secciones son «usadas recientemente», «Biblioteca de viñetas» y «de documento». · Debajo aparece la «Biblioteca de listas», con «Ninguna» y siete estilos, entre ellos varios que enlazan cada nivel con Título 1, Título 2 y Título 3: son los que sirven para numerar capítulos y alimentar después la tabla de contenido. · El menú se cierra con «Cambiar nivel de lista», que despliega un submenú, «Definir nueva lista multinivel…» y «Definir nuevo estilo de lista…»."
   },
   {
     "id": "inicio-548",
@@ -12399,11 +12399,11 @@
     "tema": "Listas, viñetas y numeración",
     "sourceQuestionId": "dlgcompart-inicio-03",
     "generado": true,
-    "enunciado": "El botón «Fuente…» de los cuadros «Definir nuevo formato de número», «Definir nueva viñeta» y «Definir nueva lista con varios niveles» abre el cuadro Fuente, pero el formato se aplica solo al carácter del número o de la viñeta, no al texto del elemento de lista.",
+    "enunciado": "El botón «Fuente…» de los cuadros de definir viñeta, formato de número y lista multinivel aplica el formato tanto al marcador como al texto del elemento de lista.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Es el mismo cuadro Fuente, con un ámbito de aplicación distinto."
+    "respuesta": false,
+    "explicacion": "Falso: es el cuadro Fuente de siempre, pero su alcance se limita al carácter del marcador —la viñeta o el número—, y el texto del elemento se queda como estaba. Eso es lo que permite listas con viñetas rojas y grandes sobre texto negro normal. · Para cambiar el texto hay que seleccionarlo y formatearlo aparte, o modificar el estilo del párrafo. · Es un buen ejemplo de un mismo cuadro con distinto ámbito según desde dónde se abra: el mismo cuadro Fuente afecta a la selección si se abre con Ctrl+M, y solo al marcador si se abre desde estos tres botones."
   },
   {
     "id": "inicio-63",
@@ -12418,63 +12418,57 @@
     "tema": "Listas, viñetas y numeración",
     "difficulty": "media",
     "sourceQuestionId": "P-0353",
-    "enunciado": "Relaciona cada atajo con su accion en las listas multinivel:",
+    "enunciado": "Relaciona cada forma de mover un elemento dentro de una lista multinivel con lo que hace:",
     "opciones": [],
     "matching": {
       "left": [
         {
           "id": "1",
-          "label": "Alt + Mayus + flecha derecha"
+          "label": "Tab, con el cursor al principio del elemento"
         },
         {
           "id": "2",
-          "label": "Alt + Mayus + flecha izquierda"
+          "label": "Mayús+Tab, con el cursor al principio del elemento"
         },
         {
           "id": "3",
-          "label": "Tab al inicio de elemento de lista"
-        },
-        {
-          "id": "4",
-          "label": "Mayus + Tab al inicio de elemento de lista"
+          "label": "«Cambiar nivel de lista» del desplegable"
         }
       ],
       "right": [
         {
           "id": "A",
-          "label": "Aumenta el nivel de sangria (baja un nivel)"
+          "label": "Baja el elemento un nivel en la jerarquía"
         },
         {
           "id": "B",
-          "label": "Disminuye el nivel de sangria (sube un nivel)"
+          "label": "Sube el elemento un nivel en la jerarquía"
         },
         {
           "id": "C",
-          "label": "Aumenta el nivel (equivalente a Alt+Mayus+flecha derecha)"
+          "label": "Despliega un submenú para elegir el nivel de destino"
         },
         {
           "id": "D",
-          "label": "Disminuye el nivel (equivalente a Alt+Mayus+flecha izquierda)"
+          "label": "Reinicia la numeración del elemento desde 1"
         },
         {
           "id": "E",
-          "label": "Abre el cuadro de lista multinivel"
+          "label": "Convierte el elemento en texto sin lista"
         }
       ],
       "correct": {
         "1": "A",
         "2": "B",
-        "3": "C",
-        "4": "D"
+        "3": "C"
       }
     },
     "respuesta": {
       "1": "A",
       "2": "B",
-      "3": "C",
-      "4": "D"
+      "3": "C"
     },
-    "explicacion": "En listas multinivel: Alt+Mayus+flecha derecha y Tab aumentan el nivel (bajan un nivel en la jerarquia). Alt+Mayus+flecha izquierda y Mayus+Tab disminuyen el nivel (suben un nivel). Son pares equivalentes con el mismo efecto."
+    "explicacion": "Dentro de una lista, el tabulador cambia de significado: al principio de un elemento no inserta una tabulación, baja el elemento un nivel, y con Mayús lo sube. En cualquier otro punto del elemento sí tabula normalmente, y esa es la única condición que hay que recordar. · «Cambiar nivel de lista» hace lo mismo pero saltando directamente al nivel que se elija en su submenú, sin ir de uno en uno. · De los dos destinos que quedan sueltos, reiniciar la numeración se hace desde el menú contextual, con «Reiniciar en 1»; y quitar la lista se consigue volviendo a pulsar el botón de Viñetas o Numeración, que funcionan como interruptores."
   },
   {
     "id": "inicio-68",
