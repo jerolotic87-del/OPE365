@@ -4,7 +4,7 @@
 No genera contenido: solo mete en data/questions/<section>.json el texto ya
 escrito en un fichero JSON de patch { "<id>": {campos...}, ... }.
 Campos admitidos: enunciado, opciones, respuesta, explicacion, negativa,
-categoria, tipo. Todo lo demás del ítem (id, section, topic, imagen,
+categoria, tipo, matching. Todo lo demás del ítem (id, section, topic, imagen,
 sourceQuestionId…) se conserva intacto.
 
     py -3.11 scripts/aplicar_reescritura.py <patch.json>
@@ -44,7 +44,7 @@ def main(patch_path):
                 print("  !! no existe:", qid); return 1
             for k, v in campos.items():
                 if k not in ("enunciado", "opciones", "respuesta", "explicacion",
-                             "negativa", "categoria", "tipo"):
+                             "negativa", "categoria", "tipo", "matching"):
                     print("  !! campo no admitido:", k, "en", qid); return 1
                 q[k] = v
 
@@ -58,6 +58,26 @@ def main(patch_path):
                     print("  !!", qid, "tiene", len(ops), "opciones (deben ser 4)"); return 1
                 if q.get("respuesta") not in letras:
                     print("  !!", qid, "respuesta", q.get("respuesta"), "no está en", letras); return 1
+            if tipo == "emparejamiento":
+                m = q.get("matching") or {}
+                izq = [x["id"] for x in m.get("left", [])]
+                der = [x["id"] for x in m.get("right", [])]
+                cor = m.get("correct") or {}
+                if not izq or not der:
+                    print("  !!", qid, "emparejamiento sin columnas"); return 1
+                if sorted(cor.keys()) != sorted(izq):
+                    print("  !!", qid, "correct no cubre exactamente la columna izquierda"); return 1
+                fuera = [v for v in cor.values() if v not in der]
+                if fuera:
+                    print("  !!", qid, "correct apunta fuera de la derecha:", fuera); return 1
+                if len(set(cor.values())) != len(cor):
+                    print("  !!", qid, "dos elementos emparejados con el mismo destino"); return 1
+                if q.get("respuesta") != cor:
+                    print("  !!", qid, "respuesta y matching.correct no coinciden"); return 1
+                for col in ("left", "right"):
+                    et = [x["label"].strip().lower() for x in m.get(col, [])]
+                    if len(set(et)) != len(et):
+                        print("  !!", qid, "etiquetas repetidas en la columna", col); return 1
             if len(set(textos)) != len(textos):
                 print("  !!", qid, "tiene opciones repetidas"); return 1
             # Lo que delata una pregunta no es que las opciones midan distinto
@@ -71,7 +91,9 @@ def main(patch_path):
                 rs = r if isinstance(r, list) else [r]
                 buenas = [L[x] for x in rs if x in L]
                 otras = sorted(L[k] for k in L if k not in rs)
-                for c in buenas:
+                # El chivato solo tiene sentido con UNA correcta: si la mitad
+                # de las opciones lo son, que una sea corta no delata nada.
+                for c in (buenas if len(buenas) == 1 else []):
                     if otras and c < otras[0] and otras[0] > 1.5 * c and otras[0] - c > 12:
                         avisos.append("%s: la correcta es la MÁS CORTA con hueco (%d vs %d)"
                                       % (qid, c, otras[0])); break

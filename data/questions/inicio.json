@@ -12,24 +12,28 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0001",
-    "enunciado": "Los tres numeros son limites reales de Word 365. ¿Cual es la capacidad maxima del Portapapeles de Office (numero de acciones de copiar y cortar que almacena a la vez)?",
+    "enunciado": "Llevas un rato copiando fragmentos sueltos con el panel Portapapeles abierto y te preguntas cuántos recortes te va a guardar antes de empezar a tirar los primeros. ¿Cuál es su capacidad?",
     "opciones": [
       {
         "letter": "A",
-        "text": "9 (el maximo de niveles de una lista multinivel)"
+        "text": "12 elementos"
       },
       {
         "letter": "B",
-        "text": "17 (los estilos de subrayado del cuadro Fuente)"
+        "text": "20 elementos"
       },
       {
         "letter": "C",
-        "text": "24 (el limite del Portapapeles de Office)"
+        "text": "24 elementos"
+      },
+      {
+        "letter": "D",
+        "text": "48 elementos"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "El Portapapeles de Office almacena hasta 24 elementos; al copiar el 25 se descarta el primero almacenado. Los otros dos son limites reales de Word pero de otros elementos: 9 niveles en una lista multinivel y 17 estilos en el desplegable «Estilo de subrayado» del cuadro Fuente."
+    "explicacion": "El Portapapeles de Office guarda 24 elementos como máximo. Es un tope fijo del programa: ni el propio panel ni Opciones ofrecen ninguna forma de subirlo. · «20» es la cifra que se cuela desde otro sitio de Word, los conjuntos estilísticos que puede llegar a ofrecer una fuente en Efectos de texto; no tiene nada que ver con el portapapeles. · «12» y «48» son la mitad y el doble justos del número bueno, y por eso suenan tan razonables como él, pero no corresponden a ningún límite real. · Cuidado con no confundir esta cifra con la del portapapeles de Windows, que guarda un solo elemento salvo que se active su historial."
   },
   {
     "id": "inicio-2",
@@ -44,28 +48,28 @@
     "tema": "Portapapeles",
     "difficulty": "alta",
     "sourceQuestionId": "P-0268",
-    "enunciado": "Al copiar el elemento numero 25 en el Portapapeles de Word 365, ¿que ocurre con los elementos ya almacenados?",
+    "enunciado": "Tienes el panel Portapapeles con sus 24 huecos ocupados y copias un fragmento más. ¿Qué hace Word con lo que ya había guardado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se elimina el primer elemento almacenado para hacer sitio al nuevo"
+        "text": "Descarta el elemento más antiguo del panel y coloca el nuevo el primero de la lista"
       },
       {
         "letter": "B",
-        "text": "Word muestra un aviso preguntando si se desea vaciar el portapapeles"
+        "text": "Descarta el elemento que lleva más tiempo sin pegarse, sea o no el más antiguo"
       },
       {
         "letter": "C",
-        "text": "El elemento numero 25 no se almacena y se pierde"
+        "text": "Avisa de que el panel está lleno y pide vaciarlo antes de poder seguir copiando"
       },
       {
         "letter": "D",
-        "text": "Se elimina el elemento que lleva mas tiempo sin usarse"
+        "text": "Guarda el nuevo solo en el portapapeles de Windows y deja el panel como estaba"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El Portapapeles usa politica FIFO por insercion: al superar los 24 elementos, elimina automaticamente el primero que se almaceno para hacer hueco al nuevo."
+    "explicacion": "El panel funciona por orden de entrada: cuando llega el elemento 25 se va el que entró primero, y el recién copiado aparece arriba del todo. · Descartar «el que lleva más tiempo sin usarse» es un criterio de uso reciente, el que emplea una caché; aquí da igual cuántas veces hayas pegado un elemento, lo único que cuenta es cuándo entró. Es la opción que más cuesta descartar porque describe un mecanismo perfectamente sensato. · Word no interrumpe el trabajo con ningún aviso de panel lleno: el desbordamiento es silencioso. · Y el fragmento nuevo sí entra en el panel, además de quedar en el portapapeles de Windows: los dos almacenes se llenan a la vez, no es uno u otro."
   },
   {
     "id": "inicio-4",
@@ -80,7 +84,7 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0004",
-    "enunciado": "Al pegar texto en Word 365, ¿que opcion aplica el programa de forma predeterminada?",
+    "enunciado": "Copias un párrafo de una página web abierta en el navegador y lo pegas en Word con Ctrl+V, sin tocar el botón de opciones de pegado que aparece al lado. ¿Con qué comportamiento lo pega Word recién instalado?",
     "opciones": [
       {
         "letter": "A",
@@ -88,20 +92,20 @@
       },
       {
         "letter": "B",
-        "text": "Conservar solo texto"
-      },
-      {
-        "letter": "C",
         "text": "Mantener formato de origen"
       },
       {
+        "letter": "C",
+        "text": "Usar estilos de destino"
+      },
+      {
         "letter": "D",
-        "text": "Pegar como imagen"
+        "text": "Conservar solo el texto"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La opcion predeterminada al pegar en Word 365 es Mantener formato de origen, que conserva el formato que tenia el texto en su documento de origen."
+    "respuesta": "A",
+    "explicacion": "La sección «Cortar, copiar y pegar» de Opciones ▸ Avanzadas tiene cuatro desplegables, uno por procedencia, y el de «Pegar desde otras aplicaciones» viene de fábrica en Combinar formato: el texto se adapta al párrafo de destino pero conserva sus negritas y cursivas. · «Mantener formato de origen» es el valor de fábrica de los otros dos casos corrientes, «Pegar dentro del mismo documento» y «Pegar entre documentos». De ahí sale el error: se da por hecho que es el predeterminado siempre, y con contenido llegado de fuera de Word no lo es. · «Usar estilos de destino» solo es predeterminado en el cuarto desplegable, el de pegar entre documentos cuando hay conflicto entre definiciones de estilos. · «Conservar solo el texto» se puede elegir en los cuatro desplegables, pero no es el valor de fábrica de ninguno."
   },
   {
     "id": "inicio-7",
@@ -116,28 +120,28 @@
     "tema": "Portapapeles",
     "difficulty": "alta",
     "sourceQuestionId": "P-0007",
-    "enunciado": "¿Que hace exactamente la tecla F2 sobre texto seleccionado en Word 365?",
+    "enunciado": "Quieres mover un párrafo a otro punto del documento sin perder lo que ya tenías copiado en el portapapeles. Lo seleccionas y pulsas F2. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Copia el texto seleccionado al portapapeles de Office"
+        "text": "Word espera a que lleves el cursor al destino y pulses Intro para trasladarlo allí"
       },
       {
         "letter": "B",
-        "text": "Prepara el texto seleccionado para moverlo: al colocarse en el destino y pulsar Intro, el texto se desplaza alli"
+        "text": "Word lo lleva al destino que marques pero deja además el original donde estaba"
       },
       {
         "letter": "C",
-        "text": "Copia el texto a otro lugar sin quitarlo del origen ni tocar el portapapeles"
+        "text": "Word lo guarda en un almacén aparte que se vacía de golpe al soltarlo entero"
       },
       {
         "letter": "D",
-        "text": "Activa el modo de edicion de la celda actual (como en Excel)"
+        "text": "Word lo corta al portapapeles y lo mantiene ahí hasta que pulses Intro"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "F2 prepara el texto para moverlo sin usar el portapapeles: la barra de estado muestra «¿Donde quieres moverlo?»; se lleva el cursor al destino y se pulsa Intro. La opción «Copia el texto a otro lugar sin…» describe Mayus+F2 («Copiar a»): copia a otro punto sin borrar el original. La opción «Activa el modo de edicion de la…» es el comportamiento de F2 en Excel. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "F2 mueve texto sin pasar por el portapapeles: al pulsarlo, la barra de estado pregunta a dónde llevarlo, se sitúa el cursor en el destino y se pulsa Intro. Lo que tuvieras copiado sigue intacto. Prueba en vivo del usuario. · Dejar además el original donde estaba es lo que hace Mayús+F2, «Copiar a»: mismo mecanismo, pero copiando en vez de moviendo. Es el par que más se confunde de los cuatro. · El almacén aparte que se vacía al soltarlo entero es el Spike, que se llena con Ctrl+F3 y se descarga con Ctrl+Mayús+F3; tampoco toca el portapapeles, pero acumula varios fragmentos, no uno. · Y la opción que dice que corta al portapapeles se contradice con el propio enunciado: si F2 lo usara, se llevaría por delante lo que tenías copiado."
   },
   {
     "id": "inicio-8",
@@ -152,28 +156,28 @@
     "tema": "Portapapeles",
     "difficulty": "alta",
     "sourceQuestionId": "P-0266",
-    "enunciado": "Al usar Ctrl+F3 varias veces sobre distintas selecciones antes de pegar, ¿que comportamiento especifico tiene este atajo?",
+    "enunciado": "Vas seleccionando párrafos sueltos repartidos por el documento y pulsando Ctrl+F3 en cada uno, para juntarlos después en otro sitio. ¿Qué hace Word en cada pulsación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Acumula todas las selecciones una a una para pegarlas juntas despues con Ctrl+Mayus+F3"
+        "text": "Corta el fragmento y lo suma a los anteriores en un mismo bloque acumulado"
       },
       {
         "letter": "B",
-        "text": "Corta la seleccion actual y descarta lo acumulado antes"
+        "text": "Corta el fragmento y con él sustituye lo acumulado en la pulsación anterior"
       },
       {
         "letter": "C",
-        "text": "Funciona igual que Ctrl+X pero sin tocar el portapapeles de Windows"
+        "text": "Copia el fragmento y lo suma como un elemento más del panel Portapapeles"
       },
       {
         "letter": "D",
-        "text": "Añade la seleccion al Portapapeles de Office (hasta 24 elementos) sin quitarla del documento"
+        "text": "Copia el fragmento y lo suma a los anteriores, dejándolo también en su sitio"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F3 es el Spike (portapapeles especial): cada uso CORTA la seleccion y la ACUMULA con las anteriores; Ctrl+Mayus+F3 suelta todo lo acumulado de golpe. El distractor D confunde el Spike con el Portapapeles de Office: aquel corta del documento y no tiene limite de 24. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+F3 es el Spike: cada pulsación corta el fragmento del documento y lo añade a lo ya acumulado, de manera que Ctrl+Mayús+F3 lo suelta todo junto y en el mismo orden en que se recogió. Prueba en vivo del usuario. · La opción que dice que sustituye lo anterior describe un almacén de un solo hueco, justo lo contrario de para lo que sirve el Spike. · Las dos que hablan de copiar fallan en lo mismo: el Spike va vaciando el documento a su paso, no deja el original donde estaba. · Y la que lo manda al panel Portapapeles confunde los dos almacenes: el panel guarda hasta 24 elementos por separado y se pegan de uno en uno; el Spike es un único bloque, sin límite de piezas y sin poder elegir cuál sale."
   },
   {
     "id": "inicio-142",
@@ -188,35 +192,35 @@
     "tema": "Portapapeles",
     "difficulty": "baja",
     "sourceQuestionId": "P-0396",
-    "enunciado": "Has copiado un párrafo de otro documento y quieres colocar ese contenido guardado en el portapapeles en la posición actual del cursor. ¿Qué botón debes utilizar en el grupo Portapapeles?",
+    "enunciado": "Has copiado un párrafo y, en vez de pulsar la mitad de arriba del botón Pegar, pulsas la flecha de abajo. ¿Qué te ofrece ese desplegable?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Pegar"
+        "text": "Los iconos de Opciones de pegado, «Pegado especial…» y «Establecer Pegar predeterminado…»"
       },
       {
         "letter": "B",
-        "text": "Pegado especial"
+        "text": "Los iconos de Opciones de pegado, «Pegado especial…» y «Borrar todo»"
       },
       {
         "letter": "C",
-        "text": "Pegar solo el texto, sin formato"
+        "text": "Los iconos de Opciones de pegado, «Pegar todo» y «Pegar vínculo…»"
       },
       {
         "letter": "D",
-        "text": "Copiar formato"
+        "text": "La lista de los últimos elementos copiados, para elegir cuál de ellos pegar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El boton Pegar (Ctrl+V) inserta el contenido del portapapeles en la posicion del cursor con su formato. «Pegado especial» abre un cuadro para elegir el formato de insercion; «Pegar solo el texto» descarta el formato; «Copiar formato» (pincel) no pega contenido, solo atributos."
+    "explicacion": "El desplegable del botón Pegar trae tres cosas y solo tres: la fila de iconos bajo el rótulo «Opciones de pegado:», la entrada «Pegado especial…» y la entrada «Establecer Pegar predeterminado…», que abre Opciones ▸ Avanzadas. · «Pegar todo» y «Borrar todo» existen, pero son los dos botones de la parte de arriba del panel Portapapeles, que se abre con el iniciador de la esquina del grupo y no desde esta flecha. · «Pegar vínculo» también existe, y también está un nivel más adentro: es una de las dos opciones de la izquierda del cuadro Pegado especial. · Elegir entre los últimos elementos copiados es una función real de Word, pero de ese mismo panel Portapapeles: es el distractor con más fundamento, porque describe algo que existe puesto en el sitio equivocado."
   },
   {
     "id": "inicio-143",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Portapapeles",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
     "topic": "portapapeles",
@@ -224,28 +228,28 @@
     "tema": "Portapapeles",
     "difficulty": "baja",
     "sourceQuestionId": "P-0397",
-    "enunciado": "Necesitas mover un párrafo entero de sitio dentro del mismo informe: quitarlo de donde está ahora y guardarlo para pegarlo más abajo. ¿Qué botón debes utilizar en el grupo Portapapeles?",
+    "enunciado": "Estás moviendo texto con el teclado y necesitas quitar el párrafo seleccionado de su sitio dejándolo en el portapapeles para pegarlo luego. Además de Ctrl+X, ¿qué otra combinación hace exactamente eso?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cortar"
+        "text": "Mayús+Supr"
       },
       {
         "letter": "B",
-        "text": "Mover el texto con la tecla F2"
+        "text": "Ctrl+Supr"
       },
       {
         "letter": "C",
-        "text": "Copiar"
+        "text": "Mayús+Insertar"
       },
       {
         "letter": "D",
-        "text": "Copiar formato"
+        "text": "Ctrl+Insertar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Cortar (Ctrl+X) quita el texto de su sitio y lo guarda en el portapapeles para pegarlo en otro lugar. F2 tambien mueve texto, pero es una tecla, no un boton del grupo Portapapeles, y no pasa por el portapapeles. Copiar deja el original; Copiar formato solo maneja atributos."
+    "explicacion": "Mayús+Supr es la pareja antigua de Ctrl+X: el cuadro Personalizar teclado le asigna el mismo comando, EdiciónCortar, «corta la selección y la coloca en el Portapapeles». · Ctrl+Insertar y Mayús+Insertar completan ese trío de la misma época, pero son las parejas de Ctrl+C y Ctrl+V: copiar y pegar. Mayús+Insertar es la que más se cuela aquí, porque comparte con la buena la tecla que se pulsa junto a Mayús. · Ctrl+Supr sí quita texto, pero borra la palabra siguiente y, en palabras del propio cuadro, «sin colocarla en el Portapapeles»: se pierde, no queda disponible para pegar, que es justo lo que aquí hace falta. Su simétrica es Ctrl+Retroceso, que borra la palabra anterior con la misma condición."
   },
   {
     "id": "inicio-144",
@@ -260,28 +264,28 @@
     "tema": "Portapapeles",
     "difficulty": "baja",
     "sourceQuestionId": "P-0398",
-    "enunciado": "Necesitas duplicar un párrafo para pegarlo en otro punto del documento, dejando el original intacto donde está. ¿Qué botón debes utilizar en el grupo Portapapeles?",
+    "enunciado": "Quieres que un párrafo aparezca dos veces en el documento y prefieres duplicarlo arrastrando con el ratón, sin tocar el portapapeles ni los botones de la cinta. ¿Cómo se hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Copiar"
+        "text": "Arrastrar la selección hasta el destino manteniendo pulsada la tecla Ctrl"
       },
       {
         "letter": "B",
-        "text": "Cortar"
+        "text": "Arrastrar la selección hasta el destino manteniendo pulsada la tecla Mayús"
       },
       {
         "letter": "C",
-        "text": "Mover al portapapeles especial con Ctrl+F3"
+        "text": "Arrastrar la selección hasta el destino manteniendo pulsada la tecla Alt"
       },
       {
         "letter": "D",
-        "text": "Copiar formato"
+        "text": "Arrastrar la selección hasta el destino y pulsar Ctrl justo después de soltar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Copiar (Ctrl+C) duplica el texto en el portapapeles dejando el original intacto. Cortar lo quitaria de su sitio; Ctrl+F3 (Spike) tambien, ademas de acumularlo; Copiar formato solo copia atributos, no el contenido."
+    "explicacion": "Arrastrar y soltar mueve el texto; con Ctrl pulsado durante el arrastre lo copia, y el puntero lo avisa con un signo + . Nada de esto pasa por el portapapeles, así que lo que tuvieras copiado sigue ahí. La casilla que lo habilita es «Permitir arrastrar y colocar el texto», en Opciones ▸ Avanzadas, y viene marcada de fábrica. · Con Mayús el arrastre no copia: Mayús es la tecla de extender la selección, no la de duplicar. · Alt sí hace algo, y por eso es el mejor distractor de los tres: con Alt pulsado el ratón selecciona un bloque rectangular de texto, que es otra función distinta del mismo gesto. · Pulsar Ctrl después de soltar llega tarde: la decisión de mover o copiar se toma en el momento de soltar, no después."
   },
   {
     "id": "inicio-145",
@@ -296,28 +300,28 @@
     "tema": "Portapapeles",
     "difficulty": "baja",
     "sourceQuestionId": "P-0399",
-    "enunciado": "Un título ya tiene aplicado exactamente el tipo de letra, tamaño y color que quieres, y en vez de configurar esos mismos atributos a mano en otro título distinto, quieres copiar solo ese formato con el ratón y aplicarlo directamente sobre el segundo título. ¿Qué botón debes utilizar en el grupo Portapapeles?",
+    "enunciado": "Tienes un título con el formato que quieres y hay otros cinco repartidos por el documento a los que dárselo. ¿Qué haces para no tener que volver al título original cada vez?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Copiar formato"
+        "text": "Doble clic en Copiar formato: el pincel se queda activo hasta que pulses Esc"
       },
       {
         "letter": "B",
-        "text": "Aplicar estilos"
+        "text": "Un clic en Copiar formato: el pincel se queda activo hasta que pulses Esc"
       },
       {
         "letter": "C",
-        "text": "Borrar todo el formato"
+        "text": "Doble clic en Copiar formato y arrastrar el pincel sobre los cinco de una vez"
       },
       {
         "letter": "D",
-        "text": "Copiar"
+        "text": "Un clic en Copiar formato por cada título, volviendo al original entre uno y otro"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Copiar formato (el pincel, Alt+Ctrl+C) copia los atributos visuales del texto seleccionado para aplicarlos en otro sitio (Alt+Ctrl+V los pega). «Aplicar estilos» asigna un estilo con nombre, no copia atributos sueltos; «Borrar todo el formato» hace lo contrario; «Copiar» duplica el contenido, no el formato. Prueba en vivo del usuario."
+    "explicacion": "El pincel Copiar formato distingue el clic sencillo del doble: con un clic aplica el formato una sola vez y se apaga solo; con doble clic queda enganchado y lo va aplicando tantas veces como haga falta, hasta que se suelta con Esc o volviendo a pulsar el botón. · Decir que un solo clic lo deja activo es exactamente la mitad equivocada de esa pareja, y es el error que más se comete. · Arrastrar el pincel «sobre los cinco de una vez» no llega a ningún sitio: cada aplicación es un clic o un arrastre sobre texto contiguo, y estos cinco títulos están repartidos por el documento. · Ir y volver al original con un clic cada vez sí acaba funcionando, pero es precisamente el trabajo que la pregunta pide ahorrarse."
   },
   {
     "id": "inicio-146",
@@ -332,7 +336,7 @@
     "tema": "Portapapeles",
     "difficulty": "baja",
     "sourceQuestionId": "P-0400",
-    "enunciado": "Has copiado un párrafo con un formato muy elaborado desde otro documento y, al pegarlo, quieres que conserve exactamente ese mismo formato de origen, sin adaptarse al estilo del documento donde lo pegas. ¿Qué opción de pegado debes elegir?",
+    "enunciado": "Pegas en tu informe un párrafo copiado de otro documento de Word y quieres que llegue exactamente con el aspecto que tenía allí, sin adaptarse al estilo del documento donde cae. ¿Qué opción de pegado eliges?",
     "opciones": [
       {
         "letter": "A",
@@ -344,16 +348,16 @@
       },
       {
         "letter": "C",
-        "text": "Imagen"
+        "text": "Usar estilos de destino"
       },
       {
         "letter": "D",
-        "text": "Conservar solo texto"
+        "text": "Conservar solo el texto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mantener formato de origen es la opción predeterminada al pegar en Word 365. Conserva íntegramente el formato del texto copiado sin adaptarlo al estilo del documento de destino."
+    "explicacion": "«Mantener formato de origen» trae el texto tal cual venía —su fuente, su tamaño, su color, su espaciado— sin adaptarlo a nada. Es además el valor de fábrica al pegar dentro del mismo documento y entre documentos, así que suele ser lo que ocurre si se pega con Ctrl+V y no se toca el botoncito de opciones. · «Combinar formato» hace justo lo contrario en lo esencial: adapta el texto al párrafo de destino y solo respeta los matices sueltos, como una negrita o una cursiva. Es la pareja confusa de esta pregunta. · «Usar estilos de destino» busca en el documento de llegada el estilo equivalente y se lo aplica, con lo que el aspecto vuelve a cambiar. · «Conservar solo el texto» tira todo el formato y deja las palabras peladas."
   },
   {
     "id": "inicio-147",
@@ -368,7 +372,7 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0401",
-    "enunciado": "Has copiado una frase que en el documento de origen tenía algunas palabras en negrita y otras en cursiva, y al pegarla en un párrafo con un estilo distinto quieres que adopte el formato del nuevo párrafo mientras conserva esos matices de negrita y cursiva. ¿Qué opción de pegado debes elegir?",
+    "enunciado": "Copias una frase que tenía algunas palabras en negrita y otras en cursiva y la pegas en un párrafo con otro estilo. Quieres que se adapte a ese párrafo pero sin perder esas negritas y cursivas. ¿Qué opción de pegado eliges?",
     "opciones": [
       {
         "letter": "A",
@@ -380,16 +384,16 @@
       },
       {
         "letter": "C",
-        "text": "Imagen"
+        "text": "Usar estilos de destino"
       },
       {
         "letter": "D",
-        "text": "Conservar solo texto"
+        "text": "Conservar solo el texto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Combinar formato fusiona el formato del texto de origen con el del párrafo de destino. El resultado conserva los dos formatos: el texto adopta el estilo del párrafo donde se pega pero mantiene los atributos específicos como negrita o cursiva que tenía en origen."
+    "explicacion": "«Combinar formato» es exactamente ese término medio: el texto adopta la fuente, el tamaño y el estilo del párrafo donde cae, y a la vez conserva el formato que se había aplicado palabra a palabra, como la negrita y la cursiva. Es además el valor de fábrica al pegar desde otras aplicaciones. · «Mantener formato de origen» conservaría también la fuente, el tamaño y el color de origen, que es precisamente lo que aquí no se quiere. · «Usar estilos de destino» parte de otro criterio: busca el estilo equivalente en el documento de llegada y se lo asigna al párrafo, en vez de limitarse a igualarlo con el párrafo donde se pega. Es el distractor más fino de los tres. · «Conservar solo el texto» borra hasta la última negrita."
   },
   {
     "id": "inicio-148",
@@ -404,7 +408,7 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0402",
-    "enunciado": "Has copiado una tabla compleja de otro documento y, en vez de pegarla como una tabla editable, quieres que se inserte como una imagen fija que no se pueda modificar como texto. ¿Qué opción de pegado debes elegir?",
+    "enunciado": "Has copiado de otro documento una tabla con un diseño muy trabajado y quieres meterla en el tuyo tal como se ve, sin que nadie pueda editar sus celdas ni se descoloque al cambiar la fuente del documento. ¿Qué opción de pegado eliges?",
     "opciones": [
       {
         "letter": "A",
@@ -420,12 +424,12 @@
       },
       {
         "letter": "D",
-        "text": "Conservar solo texto"
+        "text": "Conservar solo el texto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción Imagen pega el contenido copiado como una imagen estática no editable. Es útil cuando se quiere preservar la apariencia visual de un elemento complejo sin que el destinatario pueda modificar su contenido como texto o tabla."
+    "explicacion": "«Imagen» convierte lo copiado en un objeto gráfico: se ve exactamente igual y se puede escalar o recortar como cualquier imagen, pero deja de ser texto, así que ni se edita celda a celda ni le afectan los cambios de fuente del documento. · «Mantener formato de origen» pegaría la tabla con su aspecto, sí, pero como tabla de Word: editable y sujeta a esos cambios. Es la respuesta que parece buena si solo se lee la primera mitad del enunciado. · «Combinar formato» la adaptaría al estilo del documento de destino, justo lo que se quiere evitar. · «Conservar solo el texto» deshace la tabla y deja el contenido de las celdas como texto corrido. · Ojo: qué iconos de pegado aparecen depende de lo que haya en el portapapeles, y «Imagen» solo se ofrece cuando lo copiado se puede convertir en gráfico."
   },
   {
     "id": "inicio-149",
@@ -440,28 +444,28 @@
     "tema": "Portapapeles",
     "difficulty": "baja",
     "sourceQuestionId": "P-0403",
-    "enunciado": "Has copiado un párrafo con muchísimo formato y varias imágenes de otro documento, y solo quieres quedarte con las palabras, sin ningún formato ni objeto, adoptando directamente el estilo del párrafo donde lo pegas. ¿Qué opción de pegado debes elegir?",
+    "enunciado": "Copias de una página web un bloque con listas numeradas, colores e imágenes y eliges la opción de pegado «Conservar solo el texto», con Word recién instalado. ¿Qué acaba entrando en el documento?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Conservar solo texto"
+        "text": "El texto, y además las viñetas y la numeración de las listas"
       },
       {
         "letter": "B",
-        "text": "Mantener formato de origen"
+        "text": "El texto pelado; las viñetas y la numeración se pierden con el resto"
       },
       {
         "letter": "C",
-        "text": "Combinar formato"
+        "text": "El texto y las imágenes, que entran en línea y sin formato"
       },
       {
         "letter": "D",
-        "text": "Imagen"
+        "text": "El texto, con los colores del original pero sin su fuente ni su tamaño"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Conservar solo texto elimina todo el formato y los objetos del contenido copiado, pegando únicamente el texto plano. El texto resultante adopta el estilo del párrafo de destino. Es la opción más limpia cuando solo se necesita el contenido textual."
+    "explicacion": "«Conservar solo el texto» descarta el formato y los objetos, pero no del todo: en la sección «Cortar, copiar y pegar» de Opciones ▸ Avanzadas viene marcada de fábrica la casilla «Conservar viñetas y números al pegar texto con la opción Conservar solo texto», así que las listas siguen siendo listas. Quien desmarque esa casilla sí se queda con el texto pelado. · Por eso la opción que da las viñetas por perdidas es la que casi todo el mundo marca: describe con exactitud el comportamiento, pero con esa casilla desactivada. · Las imágenes no sobreviven a esta opción en ningún caso: son precisamente de lo que se deshace. · Y los colores son formato directo, de lo primero que se descarta."
   },
   {
     "id": "inicio-150",
@@ -476,28 +480,28 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0404",
-    "enunciado": "Has copiado una tabla de una hoja de Excel y, en vez de pegarla directamente, quieres elegir exactamente en qué formato se inserta en Word: como tabla editable, como imagen o como objeto vinculado que se actualice si cambia el Excel original. ¿Qué opción debes elegir dentro del menú Pegar?",
+    "enunciado": "Has copiado un rango de celdas de una hoja de Excel y quieres insertarlo en Word de forma que se actualice solo cuando cambien esos datos en el Excel. Desde la flecha del botón Pegar, ¿qué camino lleva a eso?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Pegado especial"
+        "text": "«Pegado especial…» y, en el cuadro, marcar la opción «Pegar vínculo»"
       },
       {
         "letter": "B",
-        "text": "Establecer Pegar predeterminado"
+        "text": "«Pegado especial…» y, en el cuadro, marcar la casilla «Mostrar como icono»"
       },
       {
         "letter": "C",
-        "text": "Mantener formato de origen"
+        "text": "«Pegado especial…» y, en el cuadro, dejar marcada la opción «Pegar»"
       },
       {
         "letter": "D",
-        "text": "Insertar objeto (pestaña Insertar ▸ Texto)"
+        "text": "«Establecer Pegar predeterminado…» y elegir allí el formato vinculado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Pegado especial» abre un cuadro que permite elegir el formato exacto: tabla de Word, imagen, objeto vinculado al Excel de origen, texto sin formato, etc. «Insertar objeto» tambien incrusta contenido de Excel, pero esta en la pestaña Insertar, no dentro del menu Pegar, y no ofrece las opciones de pegado del portapapeles."
+    "explicacion": "El cuadro Pegado especial tiene a la izquierda dos opciones excluyentes: «Pegar», que inserta una copia congelada, y «Pegar vínculo», que deja el contenido enlazado al archivo de origen para que se actualice cuando aquel cambie. Es la única de las cuatro que crea el vínculo. · Dejar marcada «Pegar» es lo que se hace por inercia, y es exactamente lo que hay que cambiar aquí: por eso es el distractor que más cae. · «Mostrar como icono» es una casilla aparte del mismo cuadro; cambia cómo se ve el objeto, que pasa a ser un icono en el que hay que hacer clic, pero no tiene nada que ver con que se actualice o no. · «Establecer Pegar predeterminado…» lleva a Opciones ▸ Avanzadas para fijar qué hará Ctrl+V de aquí en adelante, y allí no hay ningún ajuste de vínculos. · Ojo: «Pegar vínculo» aparece atenuado cuando el origen del portapapeles es desconocido y no se puede enlazar con nada."
   },
   {
     "id": "inicio-151",
@@ -512,28 +516,28 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0405",
-    "enunciado": "Estás cansado de que Word pegue siempre con formato completo por defecto y quieres cambiar la configuración general para que, a partir de ahora, el comportamiento predeterminado al pegar dentro del mismo documento sea conservar solo el texto. ¿Qué opción debes elegir dentro del menú Pegar?",
+    "enunciado": "Quieres que a partir de ahora Ctrl+V pegue sin formato el texto que traes de una página web, pero que dentro del mismo documento siga pegando como hasta ahora. Abres «Establecer Pegar predeterminado…». ¿Qué desplegable tienes que tocar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Establecer Pegar predeterminado"
+        "text": "Pegar desde otras aplicaciones"
       },
       {
         "letter": "B",
-        "text": "Pegado especial"
+        "text": "Pegar entre documentos"
       },
       {
         "letter": "C",
-        "text": "Mantener formato de origen"
+        "text": "Pegar dentro del mismo documento"
       },
       {
         "letter": "D",
-        "text": "Conservar solo texto"
+        "text": "Pegar entre documentos cuando haya conflicto entre definiciones de estilos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Establecer Pegar predeterminado abre las opciones de Word donde se puede configurar el comportamiento predeterminado del pegado en distintos contextos: dentro del mismo documento, entre documentos, desde otras aplicaciones, etc. Desde ahí se puede cambiar el valor predeterminado de Mantener formato de origen a cualquier otra opción."
+    "explicacion": "«Establecer Pegar predeterminado…» lleva a la sección «Cortar, copiar y pegar» de Opciones ▸ Avanzadas, donde hay cuatro desplegables, uno por procedencia del contenido. Un navegador no es Word, así que lo que se pega desde él cae en «Pegar desde otras aplicaciones», que de fábrica está en Combinar formato. · «Pegar dentro del mismo documento» es el que el enunciado pide expresamente NO tocar, y es donde va todo el mundo por ser el primero de la lista. · «Pegar entre documentos» solo entra en juego entre dos documentos de Word. · El cuarto es un caso particular de ese mismo, y solo se aplica cuando los dos documentos definen de forma distinta un mismo estilo; su valor de fábrica es Usar estilos de destino."
   },
   {
     "id": "inicio-247",
@@ -548,28 +552,28 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0501",
-    "enunciado": "¿Hasta cuando conserva su contenido el Portapapeles de Office en Word 365?",
+    "enunciado": "Has ido llenando el panel Portapapeles a lo largo de la mañana y quieres saber cuándo se te va a vaciar solo. ¿Hasta cuándo conserva sus elementos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mientras siga abierta al menos una aplicacion de Office"
+        "text": "Mientras siga abierta al menos una aplicación de Office"
       },
       {
         "letter": "B",
-        "text": "Mientras el documento donde se copio siga abierto"
+        "text": "Mientras siga abierto el documento en el que se copiaron"
       },
       {
         "letter": "C",
-        "text": "Mientras no se haya guardado el documento"
+        "text": "Mientras no se cierre el panel Portapapeles"
       },
       {
         "letter": "D",
-        "text": "Mientras no se cierre el panel del Portapapeles"
+        "text": "Mientras no se apague o se reinicie el equipo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El Portapapeles de Office mantiene sus elementos mientras haya al menos una aplicacion de Office abierta; se vacia al cerrarlas todas o al pulsar «Borrar todo» en su panel. Cerrar un documento concreto, no guardarlo o cerrar el panel no afecta a su contenido."
+    "explicacion": "Los elementos del panel viven mientras quede abierta alguna aplicación de Office; al cerrar la última se pierden. También se vacía a mano con el botón «Borrar todo» de la parte de arriba del panel. · Cerrar el documento donde se copiaron no borra nada: el panel es de la aplicación, no del archivo, y por eso se puede copiar en un documento y pegar en otro. · Cerrar el panel tampoco: solo se oculta la lista, que sigue llenándose por detrás. · Y aguantar hasta apagar el equipo es lo que hace el portapapeles de Windows con su último elemento, no este panel: es el distractor que más se parece a la respuesta buena, porque los dos hablan de sobrevivir a algo."
   },
   {
     "id": "inicio-248",
@@ -584,28 +588,28 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0502",
-    "enunciado": "¿Cuál es la diferencia entre el Portapapeles de Office y el Portapapeles de Windows en Word 365?",
+    "enunciado": "Copias un párrafo en Word y lo pegas en el Bloc de notas, que no es una aplicación de Office. ¿Qué portapapeles ha hecho ese viaje?",
     "opciones": [
       {
         "letter": "A",
-        "text": "No hay diferencia; son el mismo portapapeles con dos nombres"
+        "text": "El de Windows, porque el de Office solo sirve dentro de las aplicaciones de Office"
       },
       {
         "letter": "B",
-        "text": "El Portapapeles de Office guarda hasta 24 elementos y solo funciona en aplicaciones de Office; el Portapapeles de Windows guarda solo el ultimo elemento copiado (salvo que se active el Historial del Portapapeles con Windows+V) y sirve para cualquier aplicacion"
+        "text": "El de Office, porque es el que recoge todo lo que se copia desde Word"
       },
       {
         "letter": "C",
-        "text": "El Portapapeles de Windows guarda hasta 24 elementos y el de Office solo 1"
+        "text": "El de Office, que se encarga de entregar el contenido a las aplicaciones ajenas"
       },
       {
         "letter": "D",
-        "text": "El Portapapeles de Office solo guarda texto; el de Windows guarda texto e imagenes"
+        "text": "El de Windows, que para eso guarda hasta 24 elementos como el de Office"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El Portapapeles de Office es propio de las aplicaciones Office y almacena hasta 24 elementos, visibles en su panel. El Portapapeles del sistema (Windows) guarda por defecto solo el ultimo elemento copiado; desde Windows 10/11 se puede activar el Historial del Portapapeles (Windows+V) para guardar varios, pero sigue siendo del sistema, no de Office."
+    "respuesta": "A",
+    "explicacion": "Al copiar en Word el fragmento entra a la vez en los dos almacenes, pero cada uno tiene su alcance: el panel de Office solo lo sirve dentro de Office, y quien entrega el contenido a cualquier otro programa es el portapapeles de Windows. · Decir que es el de Office porque recoge lo copiado desde Word es cierto solo a medias: lo recoge, sí, pero no es quien lo entrega fuera. Es el error más común y el distractor más difícil de descartar. · Tampoco existe ese papel de intermediario: el de Office no reparte nada a programas ajenos. · Y el de Windows guarda un solo elemento, no 24; para tener varios hay que activar aparte su historial con Windows+V."
   },
   {
     "id": "inicio-249",
@@ -620,28 +624,28 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0503",
-    "enunciado": "¿Que forma abre SIEMPRE el panel del Portapapeles de Office en Word 365?",
+    "enunciado": "Quieres abrir el panel Portapapeles de Office para ver todo lo que llevas copiado. ¿Qué forma lo abre siempre, sin depender de ningún ajuste previo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Con el iniciador de cuadro de dialogo del grupo Portapapeles (la flecha de la esquina)"
+        "text": "El iniciador de cuadro de diálogo del grupo Portapapeles, la flecha de su esquina"
       },
       {
         "letter": "B",
-        "text": "Pulsando Ctrl+C dos veces seguidas"
+        "text": "Pulsar Ctrl+C dos veces seguidas"
       },
       {
         "letter": "C",
-        "text": "Desde Vista ▸ Mostrar ▸ Panel del Portapapeles"
+        "text": "La casilla Portapapeles del grupo Mostrar de la pestaña Vista"
       },
       {
         "letter": "D",
-        "text": "Con Ctrl+Mayus+V"
+        "text": "La combinación Ctrl+Mayús+V"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El iniciador de cuadro de dialogo del grupo Portapapeles (flecha inferior derecha del grupo) abre el panel siempre. «Ctrl+C dos veces» solo lo abre si esta activada la opcion correspondiente del panel (desactivada por defecto). En Vista no hay ninguna entrada «Panel del Portapapeles»; Ctrl+Mayus+V pega sin formato."
+    "explicacion": "El iniciador de la esquina inferior derecha del grupo Portapapeles abre el panel siempre, sin condiciones. · Pulsar Ctrl+C dos veces también lo abre, pero solo si está activado ese comportamiento en el botón «Opciones» del propio panel, y viene desactivado: por eso falla el «siempre» que pide el enunciado, y por eso es el distractor que más cae. · El grupo Mostrar de la pestaña Vista tiene tres casillas —Regla, Líneas de la cuadrícula y Panel de navegación—, ninguna del portapapeles. · Ctrl+Mayús+V no abre ningún panel: el cuadro Personalizar teclado le asigna el comando Pegar solo texto."
   },
   {
     "id": "inicio-270",
@@ -656,28 +660,28 @@
     "tema": "Portapapeles",
     "difficulty": "alta",
     "sourceQuestionId": "P-0524",
-    "enunciado": "Un usuario necesita mover varios fragmentos de texto no consecutivos a una nueva posición del documento, acumulándolos todos antes de pegarlos juntos. ¿Qué atajo permite esta operación de acumulación en Word 365?",
+    "enunciado": "Has recogido cuatro fragmentos con Ctrl+F3 y los sueltas todos con Ctrl+Mayús+F3. Unas líneas más abajo vuelves a pulsar Ctrl+Mayús+F3. ¿Qué pega esta segunda vez?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+C repetido varias veces sobre distintas selecciones"
+        "text": "Nada: la primera pulsación dejó el acumulador vacío"
       },
       {
         "letter": "B",
-        "text": "Ctrl+F3 sobre cada seleccion y Ctrl+Mayus+F3 para pegar todo lo acumulado"
+        "text": "Los mismos cuatro fragmentos, porque soltarlos no vacía el acumulador"
       },
       {
         "letter": "C",
-        "text": "Ctrl+X repetido y luego Ctrl+V una sola vez"
+        "text": "Solo el último de los cuatro fragmentos recogidos"
       },
       {
         "letter": "D",
-        "text": "F2 sobre cada seleccion y luego Intro"
+        "text": "Los cuatro fragmentos, pero en orden inverso al de recogida"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+F3 tiene efecto acumulativo: cada vez que se usa sobre una selección, la corta y la añade al Acumulador. Al usar Mayús+Ctrl+F3 se pega en la posición del cursor todo el contenido acumulado de una vez. Ctrl+C repetido solo conserva el último elemento en el portapapeles de Windows; para acumular varios elementos habría que usar el panel del Portapapeles de Office."
+    "respuesta": "A",
+    "explicacion": "El cuadro Personalizar teclado lo describe sin margen de duda: Ctrl+Mayús+F3 «vacía el elemento de Autotexto especial e inserta todo su contenido en el documento». Vaciar y pegar son la misma acción, así que a la segunda pulsación ya no queda nada que soltar. · Pensar que se conserva para volver a pegarlo es lo natural si se piensa en el portapapeles de siempre, donde Ctrl+V se puede repetir cuantas veces se quiera: ahí está la trampa, y es el distractor más difícil de descartar. · Este acumulador tampoco se queda con un solo fragmento ni les da la vuelta: suelta el bloque entero y en el mismo orden en que se fue recogiendo."
   },
   {
     "id": "inicio-308",
@@ -691,7 +695,7 @@
     "subtopic": null,
     "tema": "Portapapeles",
     "sourceQuestionId": "8-181",
-    "enunciado": "¿Qué atajo copia el contenido al portapapeles mediante el método alternativo de teclado en Word 365?",
+    "enunciado": "Un compañero copia y pega sin usar Ctrl+C ni Ctrl+V: se maneja con las teclas Insertar y Suprimir, del juego antiguo de Windows. ¿Cuál de esas combinaciones copia la selección al portapapeles?",
     "opciones": [
       {
         "letter": "A",
@@ -699,20 +703,20 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+C"
+        "text": "Mayús+Insertar"
       },
       {
         "letter": "C",
-        "text": "Mayus+Insertar"
+        "text": "Mayús+Supr"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+C"
+        "text": "Ctrl+Supr"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Insertar es el metodo antiguo para copiar contenido. Ctrl+C es el atajo principal de copiar; Mayus+Insertar pega; Alt+Ctrl+C copia el FORMATO (pincel), no el contenido."
+    "explicacion": "Ctrl+Insertar comparte comando con Ctrl+C: en el cuadro Personalizar teclado las dos figuran bajo EdiciónCopiar, «copia la selección y la coloca en el Portapapeles». · Mayús+Insertar es la pareja de Ctrl+V, EdiciónPegar, y es la que más se confunde con esta porque también lleva la tecla Insertar: lo que cambia es la tecla que la acompaña. · Mayús+Supr es la pareja de Ctrl+X, EdiciónCortar. · Ctrl+Supr es la única de las cuatro que no toca el portapapeles: borra la palabra siguiente y, en palabras del propio cuadro, «sin colocarla en el Portapapeles»."
   },
   {
     "id": "inicio-309",
@@ -726,11 +730,11 @@
     "subtopic": null,
     "tema": "Portapapeles",
     "sourceQuestionId": "8-182",
-    "enunciado": "¿Qué atajo alternativo pega el contenido del portapapeles en Word 365 además de Ctrl+V?",
+    "enunciado": "Sigues con ese juego antiguo de teclas y ahora te toca volcar en el documento lo que acabas de guardar en el portapapeles. ¿Qué combinación lo pega?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayus+Insertar"
+        "text": "Mayús+Insertar"
       },
       {
         "letter": "B",
@@ -738,16 +742,16 @@
       },
       {
         "letter": "C",
-        "text": "Mayus+Supr"
+        "text": "Mayús+Supr"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayus+V"
+        "text": "Ctrl+Mayús+Insertar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayus+Insertar es el metodo antiguo para pegar. Ctrl+Insertar copia; Mayus+Supr corta; Ctrl+Mayus+V pega pero solo el texto sin formato."
+    "explicacion": "Mayús+Insertar es la pareja antigua de Ctrl+V: el cuadro Personalizar teclado le da el comando EdiciónPegar, «inserta el contenido del Portapapeles en el punto de inserción». · Ctrl+Insertar copia, y es su reflejo exacto: misma tecla Insertar, distinta acompañante. Quien se equivoque aquí no pega nada, sino que vuelve a copiar lo que ya tenía seleccionado. · Mayús+Supr corta, que es el tercer miembro del trío. · Ctrl+Mayús+Insertar no existe: no tiene ningún comando asignado en esta instalación, aunque suene a variante razonable de las otras tres."
   },
   {
     "id": "inicio-310",
@@ -761,28 +765,28 @@
     "subtopic": null,
     "tema": "Portapapeles",
     "sourceQuestionId": "8-183",
-    "enunciado": "¿Qué atajo corta el contenido al portapapeles mediante el método alternativo en Word 365?",
+    "enunciado": "Quieres quitar una palabra de su sitio y tenerla lista para pegarla más adelante. Pulsas Ctrl+Supr sobre ella y luego Ctrl+V unas líneas más abajo, pero no aparece nada. ¿Por qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayus+Supr"
+        "text": "Porque Ctrl+Supr borra la palabra sin llegar a colocarla en el portapapeles"
       },
       {
         "letter": "B",
-        "text": "Ctrl+X"
+        "text": "Porque Ctrl+Supr solo funciona si la palabra estaba seleccionada entera"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Supr"
+        "text": "Porque Ctrl+Supr la manda al acumulador y hay que soltarla con Ctrl+Mayús+F3"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Insertar"
+        "text": "Porque Ctrl+Supr borra la palabra anterior y el cursor estaba al final del texto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayus+Supr es el metodo antiguo para cortar. Ctrl+X es el atajo principal de cortar; Ctrl+Supr borra la palabra a la derecha del cursor sin llevarla al portapapeles; Ctrl+Insertar copia."
+    "explicacion": "El cuadro Personalizar teclado lo dice con todas las letras: Ctrl+Supr «elimina la palabra siguiente sin colocarla en el Portapapeles». Se pierde, y por eso Ctrl+V pega lo que hubiera antes o nada. Para quitar dejándolo disponible hay que usar Ctrl+X o su pareja antigua, Mayús+Supr. · Ctrl+Supr no necesita selección previa: trabaja desde donde esté el cursor. · Quien lo mande al acumulador es Ctrl+F3, y ese sí se suelta con Ctrl+Mayús+F3: el mecanismo que describe esa opción existe, pero con otro atajo. Es el distractor con más fundamento. · Y borrar la palabra anterior es Ctrl+Retroceso, la simétrica, que también borra sin pasar por el portapapeles."
   },
   {
     "id": "inicio-311",
@@ -796,28 +800,28 @@
     "subtopic": null,
     "tema": "Portapapeles",
     "sourceQuestionId": "8-184",
-    "enunciado": "¿Qué atajo copia el texto seleccionado al modo Copiar a de Word 365 (mover sin cortar)?",
+    "enunciado": "Quieres duplicar un párrafo en otro punto del documento sin tocar lo que tienes guardado en el portapapeles. ¿Qué combinación arranca el modo «Copiar a»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayus+F2"
+        "text": "Mayús+F2"
       },
       {
         "letter": "B",
-        "text": "Ctrl+F2"
-      },
-      {
-        "letter": "C",
         "text": "F2"
       },
       {
-        "letter": "D",
+        "letter": "C",
         "text": "Ctrl+F3"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+F3"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayus+F2 copia el texto a otro punto sin cortarlo («Copiar a»). F2 lo mueve; Ctrl+F2 abre la vista previa de impresion; Ctrl+F3 mueve la seleccion al Spike (portapapeles especial)."
+    "explicacion": "Mayús+F2 activa «Copiar a»: se lleva el cursor al destino, se pulsa Intro y el texto aparece allí sin desaparecer de su sitio y sin pasar por el portapapeles. Prueba en vivo del usuario. · F2 hace lo mismo pero moviendo: el original se va de donde estaba. Es el par que hay que tener claro, porque solo los separa la tecla Mayús. · Ctrl+F3 también deja el portapapeles intacto, pero corta el fragmento y lo guarda en el acumulador especial para soltarlo después: ni lo duplica ni lo coloca donde quieres en ese momento. · Alt+F3 guarda la selección como elemento de Autotexto en la plantilla activa, con su nombre, para reutilizarla otro día; no la copia a otro punto del documento."
   },
   {
     "id": "inicio-312",
@@ -831,28 +835,28 @@
     "subtopic": null,
     "tema": "Portapapeles",
     "sourceQuestionId": "8-185",
-    "enunciado": "¿Qué atajo mueve el texto seleccionado a otra posición sin usar el portapapeles en Word 365?",
+    "enunciado": "Pulsas F2 con un párrafo seleccionado y la barra de estado cambia para preguntarte algo. ¿Qué te está pidiendo Word en ese momento?",
     "opciones": [
       {
         "letter": "A",
-        "text": "F2"
+        "text": "Que lleves el cursor al destino y pulses Intro"
       },
       {
         "letter": "B",
-        "text": "Mayus+F2"
+        "text": "Que selecciones también el destino y luego pulses Intro"
       },
       {
         "letter": "C",
-        "text": "Ctrl+F2"
+        "text": "Que confirmes con Intro que quieres borrar la selección"
       },
       {
         "letter": "D",
-        "text": "Ctrl+F3"
+        "text": "Que elijas mover o copiar pulsando Intro o Mayús+Intro"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F2 activa el modo mover: la barra de estado muestra «¿Donde quieres moverlo?», se lleva el cursor al destino y se pulsa Intro. Mayus+F2 copia («Copiar a»); Ctrl+F2 abre la vista previa de impresion; Ctrl+F3 mueve al Spike. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "F2 arranca el modo mover y la barra de estado pregunta a dónde llevarlo; basta con hacer clic o desplazarse hasta el punto de destino y pulsar Intro para que el texto se traslade allí, sin pasar por el portapapeles. Prueba en vivo del usuario. · No hay que seleccionar nada en el destino: lo que Word necesita es un punto de inserción, no un tramo de texto, y seleccionar allí algo lo sustituiría. · Tampoco borra nada: mover no es eliminar, y el texto reaparece íntegro en su nuevo sitio. · Y no ofrece elegir entre mover y copiar sobre la marcha: copiar en vez de mover se decide antes, pulsando Mayús+F2 en lugar de F2."
   },
   {
     "id": "inicio-317",
@@ -866,7 +870,7 @@
     "subtopic": null,
     "tema": "Portapapeles",
     "sourceQuestionId": "8-202",
-    "enunciado": "¿Qué atajo mueve el texto o gráfico seleccionado al portapapeles especial en Word 365?",
+    "enunciado": "Vas a ir recogiendo trozos sueltos repartidos por el documento en el acumulador especial de Word, para soltarlos luego todos juntos en otro sitio. ¿Con qué combinación se recoge cada trozo?",
     "opciones": [
       {
         "letter": "A",
@@ -874,20 +878,20 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+F2"
+        "text": "Ctrl+Mayús+F3"
       },
       {
         "letter": "C",
-        "text": "Ctrl+F4"
+        "text": "Alt+F3"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+F3"
+        "text": "Ctrl+F4"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F3 mueve el texto seleccionado al portapapeles especial (Spike). Ctrl+F4 cierra el documento activo. Ctrl+Mayús+F3 inserta el contenido acumulado del Spike en el documento. Ctrl+F2 no aparece en el volcado con ninguna función asignada — no se puede afirmar qué hace en esta instalación."
+    "explicacion": "Ctrl+F3 es el comando Especial: «elimina la selección y la agrega al elemento de Autotexto especial», lo que se conoce como cortar al acumulador. Cada pulsación suma un trozo más al mismo bloque. · Ctrl+Mayús+F3 es su reverso y el paso siguiente: vacía ese acumulador y suelta todo lo recogido en el documento. Confundir las dos es lo fácil, porque solo las separa la tecla Mayús. · Alt+F3 guarda la selección como elemento de Autotexto en la plantilla activa, con nombre propio y para reutilizarla cuando haga falta: se le parece en la idea de guardar, pero no acumula ni corta. · Ctrl+F4 no tiene nada que ver: cierra el documento activo sin cerrar Word."
   },
   {
     "id": "inicio-318",
@@ -901,11 +905,11 @@
     "subtopic": null,
     "tema": "Portapapeles",
     "sourceQuestionId": "8-203",
-    "enunciado": "¿Qué atajo inserta el contenido del portapapeles especial en el documento en Word 365?",
+    "enunciado": "Ya has recogido cuatro trozos de texto con Ctrl+F3 y colocas el cursor donde quieres que aparezcan todos juntos. ¿Qué combinación los suelta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayus+F3"
+        "text": "Ctrl+Mayús+F3"
       },
       {
         "letter": "B",
@@ -917,12 +921,12 @@
       },
       {
         "letter": "D",
-        "text": "Ctrl+V"
+        "text": "Alt+Mayús+F3"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayus+F3 inserta de golpe todo el contenido acumulado en el Spike y lo vacia. Ctrl+F3 mueve texto AL Spike; Alt+F3 crea un elemento de Autotexto; Ctrl+V pega el portapapeles normal, no el Spike."
+    "explicacion": "Ctrl+Mayús+F3 «vacía el elemento de Autotexto especial e inserta todo su contenido en el documento»: suelta los cuatro trozos de una vez, en el orden en que se recogieron, y deja el acumulador a cero. · Ctrl+F3 es el que los ha ido metiendo ahí; volver a pulsarlo con el cursor donde quieres pegar no suelta nada, y si hubiera algo seleccionado se lo llevaría también. Es la confusión clásica de este par. · Alt+F3 pertenece al Autotexto normal: guarda la selección como bloque con nombre en la plantilla, no descarga el acumulador. · Alt+Mayús+F3 no existe: no hay ningún comando asignado a esa combinación en esta instalación, aunque encaje bien con las otras tres."
   },
   {
     "id": "inicio-383",
@@ -937,28 +941,28 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "gen-atajo-13",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado abre el cuadro de diálogo Pegado especial en Word 365?",
+    "enunciado": "Has copiado un gráfico de Excel y quieres abrir con el teclado el cuadro que te deja elegir en qué formato entra en Word. ¿Qué combinación lo abre en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayus+V"
-      },
-      {
-        "letter": "B",
         "text": "Alt+Ctrl+G"
       },
       {
-        "letter": "C",
+        "letter": "B",
         "text": "Alt+Ctrl+V"
       },
       {
+        "letter": "C",
+        "text": "Alt+Ctrl+C"
+      },
+      {
         "letter": "D",
-        "text": "Ctrl+Mayus+F3"
+        "text": "Ctrl+Mayús+V"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Alt+Ctrl+G abre el cuadro Pegado especial (elegir formato de insercion). Ctrl+Mayus+V pega solo texto; Alt+Ctrl+V pega el FORMATO copiado con el pincel; Ctrl+Mayus+F3 pega el contenido del Spike."
+    "respuesta": "A",
+    "explicacion": "Alt+Ctrl+G es aquí EdiciónPegadoEspecial: «inserta el contenido del Portapapeles como objeto vinculado o con otro formato», que es exactamente el cuadro Pegado especial. · ⚠️ Ojo: casi todos los manuales dan Alt+Ctrl+V como atajo de Pegado especial, y en esta instalación esa combinación está ocupada por otra cosa: pega el formato copiado con el pincel. Es la trampa de esta pregunta y el motivo de que convenga fijarla. · Alt+Ctrl+C es la otra mitad de ese pincel: copia el formato del texto seleccionado para que Alt+Ctrl+V lo pegue. · Ctrl+Mayús+V pega, pero solo el texto y sin abrir ningún cuadro: no da a elegir formato, lo impone."
   },
   {
     "id": "inicio-384",
@@ -973,11 +977,11 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "gen-atajo-14",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado pega únicamente el texto, sin formato, en Word 365?",
+    "enunciado": "Traes un párrafo de una página web y quieres pegarlo limpio, solo las palabras, sin desplegar el menú del botón Pegar ni tocar el botoncito de opciones que sale después. ¿Qué combinación lo hace de un golpe?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Ctrl+G"
+        "text": "Ctrl+Mayús+V"
       },
       {
         "letter": "B",
@@ -985,16 +989,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayus+V"
+        "text": "Alt+Ctrl+G"
       },
       {
         "letter": "D",
-        "text": "Mayus+Insertar"
+        "text": "Mayús+Insertar"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ctrl+Mayus+V pega el contenido del portapapeles como texto sin formato, adoptando el del destino. Alt+Ctrl+G abre Pegado especial; Alt+Ctrl+V pega el formato del pincel; Mayus+Insertar es el pegado antiguo, que si conserva el formato."
+    "respuesta": "A",
+    "explicacion": "Ctrl+Mayús+V tiene asignado el comando Pegar solo texto: mete el contenido pelado, que adopta el formato del párrafo donde cae, sin pasar por ningún menú. · Alt+Ctrl+V también pega, pero el formato copiado con el pincel, no el contenido: si no has copiado antes un formato con Alt+Ctrl+C no hace nada útil. Es el distractor que más cae, porque en otros manuales esa combinación es la de Pegado especial. · Alt+Ctrl+G sí abre el cuadro Pegado especial, donde se puede llegar a lo mismo eligiendo «Texto sin formato», pero por el camino largo y con un cuadro de por medio, que es lo que el enunciado descarta. · Mayús+Insertar es la pareja antigua de Ctrl+V y pega con todo el formato."
   },
   {
     "id": "inicio-385",
@@ -1009,28 +1013,28 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "gen-atajo-20",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también copia al portapapeles en Word 365, además de Ctrl+Insertar?",
+    "enunciado": "Abres el cuadro Personalizar teclado, buscas el comando EdiciónCopiar y ves que tiene dos combinaciones asignadas a la vez. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+X"
+        "text": "Ctrl+C y Ctrl+Insertar"
       },
       {
         "letter": "B",
-        "text": "Ctrl+C"
+        "text": "Ctrl+C y Mayús+Insertar"
       },
       {
         "letter": "C",
-        "text": "Mayus+Insertar"
+        "text": "Ctrl+C y Alt+Ctrl+C"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Retroceso"
+        "text": "Ctrl+C y Ctrl+Mayús+C"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+C es el atajo principal para copiar, junto a la variante antigua Ctrl+Insertar. Ctrl+X corta; Mayus+Insertar pega; Ctrl+Retroceso borra la palabra a la izquierda del cursor."
+    "respuesta": "A",
+    "explicacion": "EdiciónCopiar tiene dos teclas asignadas, Ctrl+C y Ctrl+Insertar, y por eso las dos hacen exactamente lo mismo: «copia la selección y la coloca en el Portapapeles». · Mayús+Insertar comparte la tecla Insertar pero pertenece a EdiciónPegar, que es otro comando. · Alt+Ctrl+C es Copiar formato, el pincel: copia los atributos del texto, no el texto. Es el distractor más fino de los tres, porque también empieza por «copiar» y también trabaja sobre la selección. · Ctrl+Mayús+C es la combinación de copiar formato en el esquema internacional, y en esta instalación no tiene ningún comando asignado."
   },
   {
     "id": "inicio-386",
@@ -1045,11 +1049,11 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "gen-atajo-21",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también corta al portapapeles en Word 365, además de Mayús+Supr?",
+    "enunciado": "Necesitas quitar un trozo de texto de su sitio para volver a colocarlo unas líneas más abajo. De estas cuatro formas de quitarlo, ¿cuál lo deja en el portapapeles para poder pegarlo después?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Insertar"
+        "text": "Ctrl+X"
       },
       {
         "letter": "B",
@@ -1057,16 +1061,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+C"
+        "text": "Ctrl+Retroceso"
       },
       {
         "letter": "D",
-        "text": "Ctrl+X"
+        "text": "La tecla Supr"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ctrl+X es el atajo principal para cortar, junto a la variante antigua Mayus+Supr. Ctrl+Insertar y Ctrl+C copian; Ctrl+Supr borra la palabra a la derecha del cursor sin llevarla al portapapeles."
+    "respuesta": "A",
+    "explicacion": "Las cuatro quitan texto, pero solo Ctrl+X lo guarda: es EdiciónCortar, «corta la selección y la coloca en el Portapapeles», y su pareja antigua es Mayús+Supr. · Ctrl+Supr elimina la palabra siguiente y Ctrl+Retroceso la anterior, las dos, en palabras del propio cuadro Personalizar teclado, «sin colocarla en el Portapapeles»: lo borrado se pierde. · La tecla Supr a secas borra el carácter siguiente, o la selección entera si hay algo seleccionado, y tampoco pasa por el portapapeles. · La diferencia no está en cuánto texto se quita, sino en si Word se queda con una copia: por eso las tres últimas dejan un Ctrl+V que pegaría lo que hubiera copiado antes, o nada."
   },
   {
     "id": "inicio-390",
@@ -1081,28 +1085,28 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "gen-atajo-31",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también pega el contenido del portapapeles en Word 365, además de Mayús+Insertar?",
+    "enunciado": "Pegas con Ctrl+V y el texto llega con el formato de origen; un compañero pega lo mismo con Mayús+Insertar y le ocurre exactamente igual. ¿Por qué se comportan las dos combinaciones de la misma forma?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Insertar"
+        "text": "Porque el cuadro Personalizar teclado asigna a las dos el mismo comando, EdiciónPegar"
       },
       {
         "letter": "B",
-        "text": "Ctrl+V"
+        "text": "Porque las dos llaman a Pegar solo texto y Word repone después el formato de origen"
       },
       {
         "letter": "C",
-        "text": "Ctrl+X"
+        "text": "Porque Mayús+Insertar es un alias que Windows traduce a Ctrl+V antes de llegar a Word"
       },
       {
         "letter": "D",
-        "text": "Ctrl+C"
+        "text": "Porque Word pega siempre con el mismo formato, sea cual sea la combinación usada"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+V es el atajo principal para pegar, junto a la variante antigua Mayus+Insertar. Ctrl+Insertar y Ctrl+C copian; Ctrl+X corta."
+    "respuesta": "A",
+    "explicacion": "No son dos funciones parecidas: son la misma. En el cuadro Personalizar teclado, Ctrl+V y Mayús+Insertar aparecen juntas bajo EdiciónPegar, «inserta el contenido del Portapapeles en el punto de inserción», igual que Ctrl+C comparte comando con Ctrl+Insertar y Ctrl+X con Mayús+Supr. · Pegar solo texto es un comando distinto, el de Ctrl+Mayús+V, y desde luego no repone ningún formato: lo quita. · Windows no traduce combinaciones a otras: quien decide qué hace cada tecla dentro de Word es la propia asignación del programa, y por eso se puede cambiar desde ese cuadro. · Y Word no pega siempre igual: para eso están las opciones de pegado y los cuatro valores predeterminados de Opciones ▸ Avanzadas."
   },
   {
     "id": "inicio-394",
@@ -1159,7 +1163,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Inicio ▸ Parrafo"
+        "text": "Inicio ▸ Párrafo"
       },
       {
         "letter": "B",
@@ -1171,12 +1175,12 @@
       },
       {
         "letter": "D",
-        "text": "Inicio ▸ Edicion"
+        "text": "Inicio ▸ Edición"
       }
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "**Copiar.** Pestaña Inicio ▸ **Portapapeles** (primer grupo de la pestaña Inicio, a la izquierda). Atajo: Ctrl+C. Los grupos vecinos de esa misma pestaña son Fuente, Parrafo, Estilos y Edicion."
+    "explicacion": "**Copiar.** Pestaña Inicio ▸ **Portapapeles**, el primer grupo de la pestaña, en el extremo izquierdo. Atajo: Ctrl+C, con Ctrl+Insertar como pareja antigua. · Los otros tres grupos existen y están en esa misma pestaña, ordenados de izquierda a derecha después de Portapapeles: Fuente, Párrafo, Estilos y Edición. Ninguno de ellos guarda comandos de copiar o pegar; Edición es el que más confunde porque agrupa Buscar, Reemplazar y Seleccionar, que también son operaciones sobre el texto."
   },
   {
     "id": "inicio-396",
@@ -1213,7 +1217,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "**Cortar.** Pestaña Inicio ▸ Portapapeles. Atajo: **Ctrl+X**. Ctrl+C copia, Ctrl+V pega, Ctrl+Z deshace: los tres son operaciones proximas pero distintas."
+    "explicacion": "**Cortar.** Pestaña Inicio ▸ Portapapeles. Atajo: **Ctrl+X**, con Mayús+Supr como pareja antigua. · Ctrl+C copia y Ctrl+V pega: son los otros dos vértices del mismo triángulo, y los tres iconos viven pegados en el mismo grupo, así que la confusión está servida si solo se mira de reojo. · Ctrl+Z deshace, que es una operación de la pestaña Inicio pero no del grupo Portapapeles: vive en la barra de herramientas de acceso rápido, arriba del todo."
   },
   {
     "id": "inicio-397",
@@ -1250,7 +1254,7 @@
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "**Copiar formato.** Pestaña Inicio ▸ Portapapeles. Atajo: Alt+Ctrl+C. El pincel copia el formato del texto seleccionado para aplicarlo en otro sitio (Alt+Ctrl+V lo pega); doble clic = varios usos. «Borrar todo el formato» (grupo Fuente) hace lo contrario."
+    "explicacion": "**Copiar formato.** Pestaña Inicio ▸ Portapapeles. Atajo: Alt+Ctrl+C para copiar el formato y Alt+Ctrl+V para pegarlo. · El pincel copia los atributos visuales del texto seleccionado —fuente, tamaño, color, negrita— para aplicarlos en otro sitio; con un clic se usa una vez y con doble clic queda enganchado hasta que se pulsa Esc. · «Copiar» duplica el contenido, no el aspecto: es el par que más se confunde porque los dos empiezan igual. · «Pegar» inserta lo que haya en el portapapeles. · «Borrar todo el formato» está en el grupo Fuente y hace justo lo contrario: deja el texto desnudo."
   },
   {
     "id": "inicio-458",
@@ -1265,28 +1269,28 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "neg2-inicio-08",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Estás repasando las parejas de atajos antiguas del portapapeles. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Ins copia (método antiguo del portapapeles)."
+        "text": "Ctrl+Insertar copia, y comparte comando con Ctrl+C"
       },
       {
         "letter": "B",
-        "text": "Mayús+Ins pega."
+        "text": "Mayús+Insertar pega, y comparte comando con Ctrl+V"
       },
       {
         "letter": "C",
-        "text": "Mayús+Supr corta."
+        "text": "Mayús+Supr corta, y comparte comando con Ctrl+X"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+V nunca pega el formato; solo divide la ventana."
+        "text": "Ctrl+Supr corta, y comparte comando con Mayús+Supr"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Prueba en vivo: Alt+Ctrl+V es el atajo de Pegar formato (pincel), no divide ninguna ventana."
+    "explicacion": "Ctrl+Supr no corta: elimina la palabra siguiente «sin colocarla en el Portapapeles», así que lo que se lleva no se puede pegar después. Quien corta de verdad es Mayús+Supr, la pareja antigua de Ctrl+X, y comparten comando entre ellas dos, no con Ctrl+Supr. · Las otras tres afirmaciones son las tres parejas reales que recoge el cuadro Personalizar teclado: EdiciónCopiar con Ctrl+C y Ctrl+Insertar, EdiciónPegar con Ctrl+V y Mayús+Insertar, y EdiciónCortar con Ctrl+X y Mayús+Supr. · La confusión es fácil porque Ctrl+Supr y Mayús+Supr solo se diferencian en la tecla modificadora y las dos hacen desaparecer texto: lo que las separa es si Word se queda con una copia."
   },
   {
     "id": "inicio-459",
@@ -1301,28 +1305,28 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "neg2-inicio-09",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Estás repasando las formas de mover texto que no pasan por el portapapeles. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "F2 mueve el texto seleccionado al punto donde se pulse Entrar después."
+        "text": "F2 lleva el texto seleccionado al punto donde pulses Intro después"
       },
       {
         "letter": "B",
-        "text": "Ctrl+F3 acumula recortes sucesivos en el Spike."
+        "text": "Ctrl+F3 va acumulando recortes sucesivos en un mismo bloque"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+F3 pega todo el contenido del Spike."
+        "text": "Ctrl+Mayús+F3 suelta todo lo acumulado y deja ese bloque vacío"
       },
       {
         "letter": "D",
-        "text": "Mayús+F2 («Copiar a») mueve el texto y lo borra del origen."
+        "text": "Mayús+F2 lleva el texto al destino y lo borra de donde estaba"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Mayús+F2 es «Copiar a»: copia el texto a otro punto SIN borrarlo del origen y sin tocar el portapapeles normal."
+    "explicacion": "Mayús+F2 es «Copiar a»: deja el texto donde estaba y coloca además una copia en el destino. Quien lo borra del origen es F2, su pareja sin Mayús, y ahí está justamente la diferencia entre las dos. · Las otras tres son correctas. F2 mueve: la barra de estado pregunta a dónde, se lleva el cursor allí y se pulsa Intro. · Ctrl+F3 corta cada selección y la suma a un bloque acumulado, sin límite de piezas. · Y Ctrl+Mayús+F3 vacía ese bloque e inserta su contenido de una vez, de modo que no se puede volver a pegar sin recogerlo otra vez. · Ninguna de las cuatro toca el portapapeles, así que lo que tuvieras copiado con Ctrl+C sigue intacto durante toda la operación."
   },
   {
     "id": "inicio-472",
@@ -1337,28 +1341,28 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "rutas-inicio-02",
     "generado": true,
-    "enunciado": "En el cuadro Pegado especial, ¿qué opción inserta el contenido manteniendo un vínculo con el archivo de origen para que se actualice al cambiar este?",
+    "enunciado": "Has abierto el cuadro Pegado especial y ves que, según lo que marcas en la lista «Como:», el recuadro de la parte de abajo va cambiando de texto. ¿Qué te está diciendo ese recuadro?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Pegar vínculo"
+        "text": "Qué hará Word con lo pegado si eliges ese formato"
       },
       {
         "letter": "B",
-        "text": "Pegar"
+        "text": "De qué aplicación procede el contenido del portapapeles"
       },
       {
         "letter": "C",
-        "text": "Mostrar como icono"
+        "text": "Qué otros formatos quedan disponibles para ese contenido"
       },
       {
         "letter": "D",
-        "text": "Mantener formato de origen"
+        "text": "Cuánto va a crecer el documento al pegar con ese formato"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El cuadro Pegado especial tiene dos botones de radio: «Pegar» (inserta una copia estática) y «Pegar vínculo» (inserta un vínculo que se actualiza con el origen)."
+    "explicacion": "Ese recuadro se llama «Resultado» y describe con una frase lo que va a pasar con el formato que tengas seleccionado; por ejemplo, al elegir un mapa de bits avisa de que inserta el contenido como imagen, que puede ocupar bastante memoria y espacio en disco pero se verá exactamente igual que en pantalla. · La procedencia la indica «Origen», arriba del todo, y cuando Word no puede identificarla pone «Desconocido»; ese es el dato que más se confunde con este, porque los dos son texto informativo del mismo cuadro. · Los formatos alternativos son justo lo que ya está listado encima, en «Como:»; el recuadro no los repite, explica el que esté marcado. · Y el cuadro no calcula ningún tamaño de archivo: solo advierte, con palabras, de que un formato puede ser pesado."
   },
   {
     "id": "inicio-474",
@@ -1373,28 +1377,28 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "rutas-inicio-04",
     "generado": true,
-    "enunciado": "La opción «Establecer Pegar predeterminado…» del menú desplegable del botón Pegar, ¿qué abre?",
+    "enunciado": "Un compañero ha cambiado en su Word lo que hace Ctrl+V de forma predeterminada, y cuenta que llegó a ese ajuste desde el propio menú del botón Pegar. ¿Qué entrada usó y a dónde le llevó?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo ▸ Opciones ▸ Avanzadas, sección «Cortar, copiar y pegar»"
+        "text": "«Establecer Pegar predeterminado…», que abre Opciones ▸ Avanzadas ▸ Cortar, copiar y pegar"
       },
       {
         "letter": "B",
-        "text": "El cuadro Pegado especial"
+        "text": "«Establecer Pegar predeterminado…», que abre el cuadro Pegado especial ya configurado"
       },
       {
         "letter": "C",
-        "text": "El panel Portapapeles"
+        "text": "«Pegado especial…», que deja fijado como predeterminado el formato que se elija allí"
       },
       {
         "letter": "D",
-        "text": "El cuadro Opciones de autocorrección"
+        "text": "«Opciones…» del panel Portapapeles, donde se marca el formato de pegado por defecto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Lleva directamente a la sección «Cortar, copiar y pegar» de Opciones avanzadas de Word, donde se fija el comportamiento por defecto al pegar dentro del mismo documento, entre documentos, desde otros programas, etc."
+    "explicacion": "«Establecer Pegar predeterminado…» es un atajo de navegación: salta directamente a la sección «Cortar, copiar y pegar» de Opciones ▸ Avanzadas, donde están los cuatro desplegables que deciden cómo pega Ctrl+V según de dónde venga el contenido. · Ese mismo nombre con otro destino es el distractor más creíble, porque suena a que el ajuste se hace ahí mismo, en el cuadro Pegado especial; pero ese cuadro decide un pegado concreto, el de ahora, y no deja memoria de nada. · Por eso tampoco vale elegir un formato en «Pegado especial…» y esperar que se quede puesto: hay que repetirlo cada vez. · Y el botón «Opciones» del panel Portapapeles existe, pero controla cómo y cuándo aparece el propio panel, no con qué formato se pega."
   },
   {
     "id": "inicio-5",
@@ -1409,7 +1413,7 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0005",
-    "enunciado": "¿Cuales de las siguientes son opciones disponibles en el menu de Opciones de pegado de Word 365?",
+    "enunciado": "Estás repasando cómo se llaman exactamente las opciones de pegado de Word para no confundirlas en el examen. ¿Cuáles de estos nombres corresponden a opciones de pegado que existen de verdad?",
     "opciones": [
       {
         "letter": "A",
@@ -1421,15 +1425,19 @@
       },
       {
         "letter": "C",
-        "text": "Conservar solo texto"
+        "text": "Conservar solo el texto"
       },
       {
         "letter": "D",
-        "text": "Pegar como imagen"
+        "text": "Imagen"
       },
       {
         "letter": "E",
-        "text": "Pegar con hipervinculos"
+        "text": "Adaptar al estilo de destino"
+      },
+      {
+        "letter": "F",
+        "text": "Pegar con hipervínculos"
       }
     ],
     "matching": null,
@@ -1439,7 +1447,7 @@
       "C",
       "D"
     ],
-    "explicacion": "Las cuatro opciones de pegado son: Mantener formato de origen, Combinar formato, Pegar como imagen y Conservar solo texto. Pegar con hipervinculos no es una opcion del menu de pegado rapido."
+    "explicacion": "«Mantener formato de origen», «Combinar formato», «Conservar solo el texto» e «Imagen» son nombres reales; a ellos se suma «Usar estilos de destino», que aparece entre los valores predeterminados de Opciones ▸ Avanzadas. · «Adaptar al estilo de destino» no existe: está calcado de ese último nombre real, y por eso es el que más se cuela. · «Pegar con hipervínculos» tampoco: suena a opción de pegado porque empieza por «Pegar», pero no está entre ellas. · Cuidado con dar por hecho que siempre se ofrecen todas: los iconos que aparecen dependen de lo que haya en el portapapeles, y con un contenido que no sea texto de Word pueden salir solo dos."
   },
   {
     "id": "inicio-281",
@@ -1454,7 +1462,7 @@
     "tema": "Portapapeles",
     "difficulty": "alta",
     "sourceQuestionId": "P-0535",
-    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre la capacidad de almacenamiento de distintos elementos de Word 365 son correctas?",
+    "enunciado": "Estás repasando las cifras de Word que suelen preguntarse porque se confunden entre sí. ¿Cuáles de estas afirmaciones son correctas?",
     "opciones": [
       {
         "letter": "A",
@@ -1466,7 +1474,7 @@
       },
       {
         "letter": "C",
-        "text": "El desplegable «Estilo de subrayado» del cuadro Fuente ofrece 17 estilos (mas «(ninguno)»)"
+        "text": "El desplegable «Estilo de subrayado» del cuadro Fuente ofrece 17 estilos, más «(ninguno)»"
       },
       {
         "letter": "D",
@@ -1474,19 +1482,19 @@
       },
       {
         "letter": "E",
-        "text": "El desplegable Subrayado de la cinta ofrece 17 estilos de linea"
+        "text": "El desplegable Subrayado de la cinta ofrece esos mismos 17 estilos de línea"
       },
       {
         "letter": "F",
-        "text": "El cuadro Bordes y sombreado ofrece 24 estilos de linea de borde"
+        "text": "El cuadro Bordes y sombreado ofrece 24 estilos de línea de borde"
       },
       {
         "letter": "G",
-        "text": "El cuadro Tabulaciones admite 5 tipos de alineacion (izquierda, centro, derecha, decimal y barra)"
+        "text": "El cuadro Tabulaciones admite 5 tipos de alineación: izquierda, centro, derecha, decimal y barra"
       },
       {
         "letter": "H",
-        "text": "El desplegable Interlineado del cuadro Parrafo ofrece 6 tipos (sencillo, 1,5 lineas, doble, minimo, exacto y multiple)"
+        "text": "El desplegable Interlineado del cuadro Párrafo ofrece 6 tipos: sencillo, 1,5 líneas, doble, mínimo, exacto y múltiple"
       }
     ],
     "matching": null,
@@ -1499,7 +1507,7 @@
       "G",
       "H"
     ],
-    "explicacion": "Correctas: A, B, C, D, F, G y H. E es falsa: el desplegable Subrayado de la CINTA ofrece unos 9 estilos rapidos mas «Ninguna» y «Mas subrayados…»; los 17 estilos estan en el desplegable «Estilo de subrayado» del cuadro Fuente (18 entradas contando «(ninguno)»). Numeros verificados en la instalacion del usuario (sep 2026): Portapapeles 24 · tamaño de fuente 1-1638 pto · subrayado 17 (cuadro Fuente) · lista multinivel 9 · estilos de linea de borde 24 · alineaciones de tabulacion 5 · tipos de interlineado 6 · diseños de Arte 164."
+    "explicacion": "Todas son ciertas menos una: la que atribuye al desplegable Subrayado de la CINTA los 17 estilos de línea. Ese desplegable rápido ofrece alrededor de nueve, más «Ninguna» y «Más subrayados…»; los 17 están en el desplegable «Estilo de subrayado» del cuadro Fuente, que con «(ninguno)» suma 18 entradas. Es la confusión clásica entre el atajo de la cinta y el cuadro completo, y por eso las dos afirmaciones sobre subrayado aparecen juntas. · El resto son cifras comprobadas en esta instalación: 24 elementos en el Portapapeles de Office, de 1 a 1.638 puntos en Tamaño de fuente, 9 niveles en una lista multinivel, 24 estilos de línea en Bordes y sombreado, 5 alineaciones de tabulación y 6 tipos de interlineado. · Ojo con el 24: sale dos veces, en el portapapeles y en los bordes, y no tiene nada que ver un caso con otro. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-6",
@@ -1514,11 +1522,11 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0006",
-    "enunciado": "La opcion Combinar formato al pegar texto fusiona el formato del texto copiado con el formato del documento de destino, de modo que ninguno de los dos formatos se pierde.",
+    "enunciado": "Al pegar con «Combinar formato», el texto adopta el formato del párrafo donde cae y conserva a la vez el formato directo que traía, como la negrita o la cursiva de palabras sueltas.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero. Combinar formato fusiona ambos formatos: el del texto de origen y el del parrafo de destino. El resultado conserva los dos."
+    "explicacion": "Verdadero. «Combinar formato» es el término medio entre las otras dos opciones corrientes: la fuente, el tamaño y el estilo los pone el párrafo de destino, y los matices que se habían aplicado palabra a palabra en el origen sobreviven. Por eso es lo que interesa cuando se trae texto de fuera y se quiere que encaje sin quedar plano. Es además el valor de fábrica del desplegable «Pegar desde otras aplicaciones», en la sección «Cortar, copiar y pegar» de Opciones ▸ Avanzadas."
   },
   {
     "id": "inicio-9",
@@ -1533,11 +1541,11 @@
     "tema": "Portapapeles",
     "difficulty": "alta",
     "sourceQuestionId": "P-0267",
-    "enunciado": "Cuando no existe ninguna accion que deshacer en el historial, el boton Rehacer de la barra de Acceso rapido pasa a funcionar como Repetir, ejecutando la misma funcion que la tecla F4.",
+    "enunciado": "Cuando no queda ninguna acción que rehacer, el botón Rehacer de la barra de acceso rápido pasa a funcionar como Repetir, la misma función que la tecla F4.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero. El boton Rehacer tiene tres estados: (1) hay acciones para rehacer, actua como Rehacer con Ctrl+Y; (2) no hay nada que rehacer pero si una accion reciente repetible, actua como Repetir igual que F4; (3) no hay nada que rehacer ni repetir, boton inactivo."
+    "explicacion": "Verdadero. Ese botón tiene tres estados: rehace mientras haya algo deshecho; si no queda nada que rehacer pero sí una acción reciente repetible, cambia a Repetir; y si tampoco hay nada que repetir, se apaga. · La equivalencia con F4 no es casual: en el cuadro Personalizar teclado, Ctrl+Y, F4 y Alt+Entrar comparten el mismo comando, EdiciónRehacerORepetir, «repite la última acción». · Rehacer a secas tiene además su propia combinación, Alt+Mayús+Retroceso, que es la que «rehace la última acción deshecha» sin ambigüedad."
   },
   {
     "id": "inicio-444",
@@ -1552,11 +1560,11 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "bal-inicio-01",
     "generado": true,
-    "enunciado": "El botón Rehacer de la barra de acceso rápido, cuando no hay ninguna acción que rehacer, se queda simplemente desactivado y no ofrece ninguna otra función.",
+    "enunciado": "Cuando no queda ninguna acción que rehacer, el botón Rehacer de la barra de acceso rápido se limita a quedarse desactivado y no ofrece ninguna otra función.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: en ese estado el botón pasa a funcionar como Repetir la última acción, la misma función que la tecla F4."
+    "explicacion": "Falso. En ese punto el botón no se apaga todavía: cambia a Repetir la última acción, lo mismo que hace la tecla F4. Solo se desactiva cuando no queda ni algo que rehacer ni algo que repetir. · Es un botón con tres estados, no dos, y esa es la razón de que a veces parezca que «rehace» algo que nunca se deshizo: en realidad está repitiendo. · Ctrl+Y, F4 y Alt+Entrar comparten el comando que repite; el que rehace en sentido estricto es Alt+Mayús+Retroceso."
   },
   {
     "id": "inicio-471",
@@ -1571,11 +1579,11 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "rutas-inicio-01",
     "generado": true,
-    "enunciado": "En el cuadro Pegado especial, la lista «Como:» ofrece formatos como «Mapa de bits» y «Mapa de bits independiente del dispositivo».",
+    "enunciado": "La lista «Como:» del cuadro Pegado especial ofrece siempre los mismos formatos, con independencia de lo que se haya copiado.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "La lista «Como:» del cuadro Pegado especial muestra los formatos disponibles según el contenido del Portapapeles (Mapa de bits, Mapa de bits independiente del dispositivo, Texto sin formato, HTML, Objeto…)."
+    "respuesta": false,
+    "explicacion": "Falso. Esa lista se arma con los formatos en que Word puede entregar lo que hay en ese momento en el portapapeles, así que cambia con cada contenido: una captura de pantalla ofrece «Mapa de bits» y «Mapa de bits independiente del dispositivo», mientras que un texto copiado de otro documento ofrece HTML, texto con formato, texto sin formato o el objeto de origen. · Lo mismo pasa un nivel más arriba, en el desplegable del botón Pegar: los iconos de opciones de pegado que aparecen dependen de lo copiado. · El recuadro «Resultado», debajo de la lista, explica con una frase qué hará el formato que tengas marcado."
   },
   {
     "id": "inicio-473",
@@ -1590,11 +1598,11 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "rutas-inicio-03",
     "generado": true,
-    "enunciado": "El cuadro Pegado especial incluye una casilla «Mostrar como icono».",
+    "enunciado": "El cuadro Pegado especial incluye una casilla «Mostrar como icono» que, al marcarla, inserta un icono en lugar del contenido.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Al marcarla, en vez del contenido se inserta un icono del objeto; se abre con doble clic."
+    "explicacion": "Verdadero. La casilla está a la derecha de la lista «Como:», y al marcarla el documento recibe un icono del objeto en vez de su contenido a la vista; se abre con doble clic. Es útil para adjuntar un archivo dentro del documento sin que ocupe espacio en la página. · No hay que confundirla con las dos opciones de la izquierda, «Pegar» y «Pegar vínculo», que deciden otra cosa: si el contenido queda congelado o enlazado al archivo de origen. Se pueden combinar: un vínculo mostrado como icono es perfectamente posible."
   },
   {
     "id": "inicio-475",
@@ -1609,11 +1617,11 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "rutas-inicio-05",
     "generado": true,
-    "enunciado": "El menú desplegable del botón Pegar muestra los iconos de «Opciones de pegado» y, debajo, los enlaces «Pegado especial…» y «Establecer Pegar predeterminado…».",
+    "enunciado": "El menú desplegable del botón Pegar contiene, además de los iconos de Opciones de pegado, las entradas «Pegado especial…» y «Pegar todo».",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Esa es exactamente la estructura del desplegable de Pegar en Word 365."
+    "respuesta": false,
+    "explicacion": "Falso. Las dos entradas de ese desplegable son «Pegado especial…» y «Establecer Pegar predeterminado…», no «Pegar todo». · «Pegar todo» existe, pero es uno de los dos botones de la parte de arriba del panel Portapapeles —el otro es «Borrar todo»—, y ese panel se abre con el iniciador de la esquina del grupo, no con la flecha del botón Pegar. · La confusión tiene su lógica: los dos sitios sirven para pegar y están en el mismo grupo de la cinta, a un par de centímetros uno de otro. La diferencia es que el desplegable trabaja con el último elemento copiado y el panel con los hasta 24 que guarda Office."
   },
   {
     "id": "inicio-573",
@@ -1628,11 +1636,11 @@
     "tema": "Portapapeles",
     "sourceQuestionId": "dlgcompart-inicio-28",
     "generado": true,
-    "enunciado": "«Establecer Pegar predeterminado…» (menú del botón Pegar) lleva a la misma pantalla que «Archivo ▸ Opciones ▸ Avanzadas»: la sección «Cortar, copiar y pegar».",
+    "enunciado": "«Establecer Pegar predeterminado…», en el menú del botón Pegar, lleva a la misma pantalla que Archivo ▸ Opciones ▸ Avanzadas: la sección «Cortar, copiar y pegar».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Ahí se configuran «Pegar dentro del mismo documento», «Pegar entre documentos», «Pegar desde otras aplicaciones», «Mostrar el botón Opciones de pegado», etc."
+    "explicacion": "Verdadero. Es un atajo de navegación hacia un sitio al que también se llega por el camino largo. Allí están los cuatro desplegables que deciden cómo pega Ctrl+V según la procedencia del contenido —dentro del mismo documento, entre documentos, entre documentos con conflicto de estilos y desde otras aplicaciones— y varias casillas relacionadas, entre ellas «Mostrar el botón Opciones de pegado al pegar contenido» y «Conservar viñetas y números al pegar texto con la opción Conservar solo texto». · Cambiar algo ahí afecta a todos los documentos, no solo al abierto: no es un ajuste del archivo, es del programa."
   },
   {
     "id": "inicio-3",
@@ -1647,7 +1655,7 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0003",
-    "enunciado": "Relaciona cada accion del Portapapeles con su atajo de teclado:",
+    "enunciado": "Relaciona cada acción del grupo Portapapeles con la combinación que la ejecuta:",
     "opciones": [],
     "matching": {
       "left": [
@@ -1703,7 +1711,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Cortar: Ctrl+X. Copiar: Ctrl+C. Pegar: Ctrl+V. Copiar formato: Alt+Ctrl+C (y para pegar el formato copiado, Alt+Ctrl+V). El distractor Ctrl+Z es Deshacer. Prueba en vivo del usuario."
+    "explicacion": "Cortar es Ctrl+X, copiar Ctrl+C y pegar Ctrl+V, las tres con su pareja antigua: Mayús+Supr, Ctrl+Insertar y Mayús+Insertar respectivamente. · Copiar formato es Alt+Ctrl+C, y su reverso, pegar ese formato, es Alt+Ctrl+V. ⚠️ Ojo: en la mayoría de manuales el pincel es Ctrl+Mayús+C y Ctrl+Mayús+V, que aquí no hacen eso; Ctrl+Mayús+V pega solo texto. Prueba en vivo del usuario. · El señuelo, Ctrl+Z, es Deshacer: no pertenece al grupo Portapapeles aunque se use constantemente al lado de estas cuatro."
   },
   {
     "id": "inicio-10",
@@ -1718,7 +1726,7 @@
     "tema": "Portapapeles",
     "difficulty": "media",
     "sourceQuestionId": "P-0010",
-    "enunciado": "Relaciona cada atajo con su accion en el historial de operaciones:",
+    "enunciado": "Relaciona cada combinación con lo que hace sobre el historial de acciones:",
     "opciones": [],
     "matching": {
       "left": [
@@ -1732,39 +1740,49 @@
         },
         {
           "id": "3",
-          "label": "F4"
+          "label": "Alt + Mayús + Retroceso"
+        },
+        {
+          "id": "4",
+          "label": "Mayús + F4"
         }
       ],
       "right": [
         {
           "id": "A",
-          "label": "Deshacer la ultima accion"
+          "label": "Deshacer la última acción"
         },
         {
           "id": "B",
-          "label": "Rehacer o repetir la ultima accion"
+          "label": "Repetir la última acción"
         },
         {
           "id": "C",
-          "label": "Repetir la ultima accion"
+          "label": "Rehacer la última acción deshecha"
         },
         {
           "id": "D",
-          "label": "Abrir historial de operaciones"
+          "label": "Repetir la última búsqueda"
+        },
+        {
+          "id": "E",
+          "label": "Abrir el historial de acciones"
         }
       ],
       "correct": {
         "1": "A",
         "2": "B",
-        "3": "C"
+        "3": "C",
+        "4": "D"
       }
     },
     "respuesta": {
       "1": "A",
       "2": "B",
-      "3": "C"
+      "3": "C",
+      "4": "D"
     },
-    "explicacion": "Ctrl+Z deshace. Ctrl+Y rehace o repite segun el contexto. F4 siempre repite la ultima accion. El distractor D no corresponde a ninguno de los tres atajos."
+    "explicacion": "Ctrl+Z deshace, y comparte comando con Alt+Retroceso. · Ctrl+Y repite: en el cuadro Personalizar teclado va junto a F4 y Alt+Entrar bajo el mismo comando, EdiciónRehacerORepetir, así que las tres hacen exactamente lo mismo. Por eso conviene no dar por hecho que Ctrl+Y «rehace»: rehacer en sentido estricto es Alt+Mayús+Retroceso, y ese es el par que más se confunde de los cuatro. · Mayús+F4 repite la última búsqueda, no la última acción; su alternativa es Alt+Ctrl+Y. · El destino que sobra no corresponde a ninguna: Word no tiene ningún panel de historial de acciones que se abra con una combinación."
   },
   {
     "id": "inicio-282",
@@ -1779,7 +1797,7 @@
     "tema": "Portapapeles",
     "difficulty": "alta",
     "sourceQuestionId": "P-0536",
-    "enunciado": "Relaciona cada dato numérico con el elemento de Word 365 al que corresponde:",
+    "enunciado": "Relaciona cada cifra con el elemento de Word al que corresponde:",
     "opciones": [],
     "matching": {
       "left": [
@@ -1865,7 +1883,7 @@
       "6": "F",
       "7": "G"
     },
-    "explicacion": "24 → Portapapeles de Office. 1.638 → tamaño maximo de fuente (pt). 17 → estilos del desplegable «Estilo de subrayado» del cuadro Fuente. 9 → niveles de una lista multinivel. 5 → tipos de alineacion de tabulacion (izquierda, centro, derecha, decimal, barra). 6 → tipos de interlineado (sencillo, 1,5 lineas, doble, minimo, exacto, multiple). 164 → diseños de Arte (ficha Borde de pagina). El destino H, «estilos de linea de borde», tambien vale 24 (choca con el Portapapeles), pero ningun numero de la izquierda le corresponde: es el señuelo. Numeros verificados en la instalacion del usuario (sep 2026)."
+    "explicacion": "24 → capacidad del Portapapeles de Office. 1.638 → tamaño máximo de fuente en puntos. 17 → estilos del desplegable «Estilo de subrayado» del cuadro Fuente. 9 → niveles de una lista multinivel. 5 → tipos de alineación del cuadro Tabulaciones: izquierda, centro, derecha, decimal y barra. 6 → tipos de interlineado: sencillo, 1,5 líneas, doble, mínimo, exacto y múltiple. 164 → diseños de Arte de la ficha Borde de página. · El destino que se queda sin pareja, «estilos de línea de borde», también vale 24, igual que el portapapeles: ahí está el señuelo, porque invita a colocar el 24 en el sitio equivocado y dejar suelto el elemento correcto. · Cifras comprobadas en esta instalación. Prueba en vivo del usuario."
   },
   {
     "id": "inicio-469",
@@ -1897,7 +1915,7 @@
         "Mayús + Supr"
       ]
     ],
-    "explicacion": "Ctrl+Ins copia, Mayús+Ins pega, Mayús+Supr corta (método clásico del portapapeles, además de Ctrl+C/V/X)."
+    "explicacion": "Ctrl+Insertar copia, Mayús+Insertar pega y Mayús+Supr corta. No son atajos parecidos a los de siempre: son literalmente los mismos comandos. En el cuadro Personalizar teclado, cada uno aparece junto a su equivalente moderno bajo una sola entrada —EdiciónCopiar, EdiciónPegar y EdiciónCortar—, de modo que Ctrl+C y Ctrl+Insertar son dos teclas para una misma orden. · La cuarta de la familia, Ctrl+Supr, no pertenece a ella: borra la palabra siguiente sin colocarla en el portapapeles."
   },
   {
     "id": "inicio-11",
