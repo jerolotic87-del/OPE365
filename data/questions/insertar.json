@@ -12505,7 +12505,8 @@
     "subtopic": null,
     "tema": "Texto",
     "sourceQuestionId": "8-186",
-    "enunciado": "¿Qué atajo crea un Autotexto en Word 365?",
+    "revisada": true,
+    "enunciado": "Escribes muy a menudo el mismo párrafo de pie de escrito y quieres guardarlo para reutilizarlo. ¿Qué combinación crea el autotexto?",
     "opciones": [
       {
         "letter": "A",
@@ -12521,12 +12522,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+F3"
+        "text": "Ctrl+Mayús+F3"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+F3 crea un Autotexto a partir del texto seleccionado. F3 inserta un bloque de creación existente. Ctrl+F3 mueve el texto seleccionado al portapapeles especial. Alt+Ctrl+F3 no tiene función asignada para Autotexto."
+    "explicacion": "Es CrearAutotexto: con el bloque seleccionado, abre el cuadro «Crear nuevo bloque de creación» con el contenido ya dentro, para ponerle nombre y galería. · **F3** es el descarte que decide la pregunta y hace lo contrario: convierte el nombre escrito en su contenido. Una crea y la otra inserta. · Ctrl+F3 y Ctrl+Mayús+F3 son del Spike, un autotexto especial: la primera va cortando trozos y acumulándolos, y la segunda los suelta todos de golpe."
   },
   {
     "id": "insertar-22",
@@ -12540,7 +12541,8 @@
     "subtopic": null,
     "tema": "Texto",
     "sourceQuestionId": "8-220",
-    "enunciado": "¿Qué atajo inserta un bloque de creación en Word 365?",
+    "revisada": true,
+    "enunciado": "Has escrito el nombre de un autotexto guardado y quieres que Word lo sustituya por su contenido. ¿Qué tecla lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -12561,7 +12563,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F3 inserta un bloque de creación existente. Alt+F3 crea un Autotexto nuevo. Ctrl+F3 mueve el texto seleccionado al portapapeles especial. Mayús+F3 cambia entre tipos de capitalización."
+    "explicacion": "Es InsertarAutotexto, y basta con dejar el cursor detrás del nombre escrito. Tiene una combinación alternativa larguísima, Alt+Ctrl+Mayús+G. · El nombre debe coincidir exactamente; si no, la tecla no hace nada y no avisa. · **Mayús+F3** es el descarte que decide la pregunta porque también transforma lo escrito, pero de otra manera: rota entre mayúsculas, minúsculas y tipo oración. · Alt+F3 crea el autotexto en lugar de insertarlo, y Ctrl+F3 corta al Spike."
   },
   {
     "id": "insertar-23",
@@ -12575,7 +12577,8 @@
     "subtopic": null,
     "tema": "Texto",
     "sourceQuestionId": "8-221",
-    "enunciado": "¿Qué atajo alternativo también inserta un bloque de creación además de F3?",
+    "revisada": true,
+    "enunciado": "Además de F3, ¿qué combinación inserta un bloque de creación por su nombre?",
     "opciones": [
       {
         "letter": "A",
@@ -12596,7 +12599,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Mayús+G inserta un bloque de creación (Autotexto), igual que F3. Alt+Ctrl+G abre Pegado especial. Ctrl+Mayús+G no tiene función en este Word. Alt+Mayús+G tampoco."
+    "explicacion": "El cuadro Personalizar teclado la registra junto a F3 bajo InsertarAutotexto. Son cuatro teclas para lo que F3 hace con una, así que en la práctica nadie la usa; interesa reconocerla. · **Alt+Ctrl+G** es el descarte que decide la pregunta y sí existe: es Pegado especial en esta instalación, con la advertencia de que el atajo estándar de ese comando sería Alt+Ctrl+V, que aquí está ocupada por el pincel. Una letra menos y se cae en un comando de otra familia."
   },
   {
     "id": "insertar-37",
@@ -12610,7 +12613,8 @@
     "subtopic": null,
     "tema": "Texto",
     "sourceQuestionId": "8-317",
-    "enunciado": "¿Qué atajo inserta un separador de estilos en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres que un título y el párrafo siguiente compartan renglón sin que el título deje de contar como título para la tabla de contenido. ¿Qué combinación inserta el separador de estilos?",
     "opciones": [
       {
         "letter": "A",
@@ -12626,12 +12630,12 @@
       },
       {
         "letter": "D",
-        "text": "Ctrl+Alt+Mayús+Entrar"
+        "text": "Ctrl+Mayús+Entrar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Entrar inserta un separador de estilos. Ctrl+Entrar inserta un salto de página. Alt+Entrar repite la última acción. Ctrl+Alt+Mayús+Entrar no tiene función asignada para separador de estilos."
+    "explicacion": "Es InsertarSeparadorEstilo: une dos párrafos de modo que se vean en la misma línea pero cada uno conserve su estilo, que es como se consiguen esos títulos «Artículo 1.» seguidos del texto en la misma línea y recogidos igualmente en la tabla de contenido. · **Ctrl+Entrar** es el descarte que decide la pregunta y hace casi lo contrario: parte la página con un salto. · Alt+Entrar repite la última acción, igual que Ctrl+Y y F4. · Ctrl+Mayús+Entrar inserta un salto de columna."
   },
   {
     "id": "insertar-87",
@@ -12646,28 +12650,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-45",
     "generado": true,
-    "enunciado": "¿Qué ruta permite insertar un cuadro de texto dibujado manualmente con el cursor en la posición deseada?",
+    "revisada": true,
+    "enunciado": "Quieres trazar tú el cuadro de texto, con el tamaño y en el sitio que decidas. ¿Qué entrada del menú Cuadro de texto lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Texto > Cuadro de texto > Cuadro de texto simple"
+        "text": "Dibujar cuadro de texto"
       },
       {
         "letter": "B",
-        "text": "Insertar > Texto > Cuadro de texto > Dibujar cuadro de texto"
+        "text": "Cuadro de texto simple"
       },
       {
         "letter": "C",
-        "text": "Insertar > Ilustraciones > Formas > Cuadro de texto"
+        "text": "Cuadro de texto libre"
       },
       {
         "letter": "D",
-        "text": "Insertar > Texto > Cuadro de texto > Cuadro de texto libre"
+        "text": "Barra lateral con bandas"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A inserta un cuadro de texto prediseñado con formato, no lo dibuja libremente. C las Formas sí tienen un comando equivalente (Dibujar cuadro de texto) pero la ruta del grupo Texto es la que se pide. D no existe."
+    "respuesta": "A",
+    "explicacion": "Está al final del menú, debajo de la galería «Integrado», y convierte el puntero en una cruz para arrastrar. · **«Cuadro de texto simple»** es el descarte que decide la pregunta: es el primero de la galería y su nombre suena a lo más básico posible, pero inserta un cuadro ya hecho, con su tamaño y su formato, en medio de la página. · «Barra lateral con bandas» es otro de la galería, de los que se apoyan en un lateral. · Al mismo comando se llega desde la cinta Formato de forma, grupo Insertar formas."
   },
   {
     "id": "insertar-88",
@@ -12682,11 +12687,12 @@
     "tema": "Texto",
     "sourceQuestionId": "P-46",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes propiedades del documento puede insertarse mediante Elementos rápidos > Propiedad del documento?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas es una de las propiedades que ofrece «Elementos rápidos ▸ Propiedad del documento»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Número de revisiones"
+        "text": "Extracto"
       },
       {
         "letter": "B",
@@ -12694,7 +12700,7 @@
       },
       {
         "letter": "C",
-        "text": "Extracto"
+        "text": "Número de revisiones"
       },
       {
         "letter": "D",
@@ -12702,8 +12708,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A no existe como propiedad insertable. B la ruta del archivo es un campo (FileName), no una propiedad del documento en ese submenú. D no existe. \"Extracto\" sí figura en la extracción real como propiedad disponible."
+    "respuesta": "A",
+    "explicacion": "El submenú ofrece las propiedades que se rellenan en la ficha del documento: administrador, asunto, autor, categoría, comentarios, compañía con su dirección, teléfono y fax, estado, extracto, fecha de publicación, palabras clave y título. Insertadas así son campos, de modo que al cambiar la propiedad cambian en todo el documento. · **La ruta del archivo** es el descarte que decide la pregunta: se puede insertar, pero no desde aquí, porque no es una propiedad rellenable sino un dato del sistema; se hace con «Campo…» o con «Información del documento» de la cinta de encabezado."
   },
   {
     "id": "insertar-89",
@@ -12718,28 +12724,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-47",
     "generado": true,
-    "enunciado": "¿Qué ruta permite insertar un campo de Word que muestre automáticamente la fecha de creación del documento?",
+    "revisada": true,
+    "enunciado": "Quieres insertar la fecha en que se creó el archivo, no la de hoy. ¿Qué ruta lo consigue?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Texto > Fecha y hora > Actualizar automáticamente"
+        "text": "Elementos rápidos ▸ Campo… ▸ CreateDate"
       },
       {
         "letter": "B",
-        "text": "Insertar > Texto > Elementos rápidos > Campo... > CreateDate"
+        "text": "Texto ▸ Fecha y hora, marcando «Actualizar automáticamente»"
       },
       {
         "letter": "C",
-        "text": "Insertar > Texto > Elementos rápidos > Propiedad del documento > Fecha de creación"
+        "text": "Elementos rápidos ▸ Propiedad del documento ▸ Fecha de creación"
       },
       {
         "letter": "D",
-        "text": "Insertar > Encabezado y pie de página > Encabezado y pie de página > Fecha y hora"
+        "text": "Encabezado y pie de página ▸ Fecha y hora"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A \"Fecha y hora\" inserta la fecha actual del sistema, no la fecha de creación del archivo. C \"Fecha de creación\" no existe como propiedad del documento en ese submenú (sí existe CreateDate como campo). D también puede insertar fecha, pero es la fecha actual del sistema en el encabezado, no la fecha de creación del documento."
+    "respuesta": "A",
+    "explicacion": "El cuadro «Campo» tiene una categoría «Fecha y hora» con CreateDate, SaveDate, PrintDate y Date: cada una es un dato distinto del archivo. · **«Fecha y hora» con actualización automática** es el descarte que decide la pregunta, y es justo el contrario de lo que se pide: muestra siempre el día en que se abre el documento. · «Propiedad del documento» sí ofrece «Fecha de publicación», pero es una propiedad que se rellena a mano, no la fecha real de creación. · El botón del encabezado inserta también la fecha de hoy."
   },
   {
     "id": "insertar-90",
@@ -12754,28 +12761,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-48",
     "generado": true,
-    "enunciado": "¿Qué ruta permite gestionar, editar las propiedades y eliminar los bloques de creación guardados en todas las galerías de Word?",
+    "revisada": true,
+    "enunciado": "Quieres ver, editar o borrar todos los bloques de creación que hay guardados, sean de la galería que sean. ¿Qué ruta lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Texto > Elementos rápidos > Autotexto > Administrar autotextos"
+        "text": "Elementos rápidos ▸ Organizador de bloques de creación…"
       },
       {
         "letter": "B",
-        "text": "Insertar > Texto > Elementos rápidos > Organizador de bloques de creación..."
+        "text": "Elementos rápidos ▸ Autotexto ▸ Administrar autotextos"
       },
       {
         "letter": "C",
-        "text": "Archivo > Opciones > Avanzado > Administrar bloques de creación"
+        "text": "Elementos rápidos ▸ Administrar galería…"
       },
       {
         "letter": "D",
-        "text": "Insertar > Texto > Elementos rápidos > Administrar galería..."
+        "text": "Archivo ▸ Opciones ▸ Avanzadas ▸ Administrar bloques de creación"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe como subopción. C no existe en esa ruta. D \"Administrar galería\" no existe; el nombre real es \"Organizador de bloques de creación\"."
+    "respuesta": "A",
+    "explicacion": "Abre una lista con todo lo guardado —portadas, encabezados, tablas rápidas, autotextos, bibliografías— con su galería y su plantilla, más una vista previa y los botones «Editar propiedades…», «Eliminar» e «Insertar». Es el único sitio desde el que se puede BORRAR un bloque guardado por error. · Los tres descartes son nombres razonables y ninguno existe. · Guardar uno nuevo se hace desde cada galería, o con «Guardar selección en una galería de elementos rápidos…»."
   },
   {
     "id": "insertar-91",
@@ -12790,28 +12798,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-49",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes posiciones de Letra capital existe realmente en Word 365?",
+    "revisada": true,
+    "enunciado": "El cuadro «Letra capital» ofrece tres posiciones. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "En columna"
+        "text": "Ninguna · En texto · En margen"
       },
       {
         "letter": "B",
-        "text": "En margen"
+        "text": "Ninguna · En texto · En columna"
       },
       {
         "letter": "C",
-        "text": "Sobre el párrafo"
+        "text": "Ninguna · En texto · Sobre el párrafo"
       },
       {
         "letter": "D",
-        "text": "Flotante"
+        "text": "Ninguna · En texto · Flotante"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe. C no existe. D no existe. Las posiciones reales son: Ninguno, En texto, En margen."
+    "respuesta": "A",
+    "explicacion": "«En texto» encaja la letra dentro del párrafo, que se ciñe a su alrededor; «En margen» la saca fuera, al margen izquierdo, y el párrafo se queda recto; «Ninguna» la quita. Las tres están también en el propio menú del botón, sin abrir el cuadro. · Los tres descartes son nombres verosímiles y ninguno figura; «Flotante» despista especialmente porque es el término que Word usa para los objetos que salen del flujo del texto, que es más o menos lo que hace la de margen. · El cuadro añade la fuente, las líneas que ocupa y la distancia al texto."
   },
   {
     "id": "insertar-92",
@@ -12826,28 +12835,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-50",
     "generado": true,
-    "enunciado": "¿Qué ruta permite configurar cuántas líneas de texto debe ocupar en altura la letra capital?",
+    "revisada": true,
+    "enunciado": "Quieres que la letra capital ocupe cuatro renglones en lugar de tres. ¿Qué campo del cuadro lo fija?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Texto > Letra capital > Opciones de letra capital... > Alto en líneas"
+        "text": "Líneas que ocupa"
       },
       {
         "letter": "B",
-        "text": "Insertar > Texto > Letra capital > Opciones de letra capital... > Líneas que ocupa"
+        "text": "Alto en líneas"
       },
       {
         "letter": "C",
-        "text": "Formato de carácter > Letra capital > Tamaño en líneas"
+        "text": "Tamaño en líneas"
       },
       {
         "letter": "D",
-        "text": "Insertar > Texto > Letra capital > En texto > Tamaño"
+        "text": "Altura de la capital"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A usa \"Alto en líneas\", que suena técnico pero no es el nombre real del campo. C no existe como ruta. D no existe."
+    "respuesta": "A",
+    "explicacion": "Está en el bloque «Opciones» del cuadro y viene con el valor 3, que es la altura clásica de una capital. Sus vecinos son «Fuente», que trae «+Cuerpo», y «Distancia desde el texto», a 0 cm. · Los tres descartes suenan más técnicos y por eso resultan creíbles, pero ninguno es el rótulo. · La medida es en LÍNEAS, no en puntos: la letra se agranda sola para ocupar tantos renglones como se pida, así que cambiar el interlineado del párrafo también cambia su tamaño."
   },
   {
     "id": "insertar-93",
@@ -12862,28 +12872,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-51",
     "generado": true,
-    "enunciado": "¿Qué información puede especificarse en el cuadro Configuración de firma que aparece al insertar una Línea de firma de Microsoft Office?",
+    "revisada": true,
+    "enunciado": "Insertas una «Línea de firma de Microsoft Office» y se abre el cuadro «Configuración de firma». ¿Cuál de estos datos se puede rellenar ahí?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Número de serie del certificado digital"
+        "text": "El puesto del firmante sugerido"
       },
       {
         "letter": "B",
-        "text": "Puesto del firmante sugerido"
+        "text": "El número de serie del certificado digital"
       },
       {
         "letter": "C",
-        "text": "Fecha de caducidad de la firma"
+        "text": "La fecha de caducidad de la firma"
       },
       {
         "letter": "D",
-        "text": "Proveedor del servicio de firma"
+        "text": "El proveedor del servicio de firma"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A el número de serie del certificado no se introduce en ese cuadro. C no existe ese campo. D \"Agregar servicios de firma\" es una opción separada en el menú Línea de firma, no un campo del cuadro Configuración. Los campos reales del cuadro son: Firmante sugerido, Puesto, Correo electrónico, Instrucciones, y las casillas de comentarios y fecha."
+    "respuesta": "A",
+    "explicacion": "El cuadro pide el firmante sugerido, su puesto, su correo e instrucciones para él, y ofrece dos casillas: permitir que añada comentarios al firmar y mostrar la fecha en la línea. Todo eso es información que se imprime o guía al que firmará después. · **El proveedor del servicio** es el descarte que decide la pregunta, porque sí aparece en el menú del botón, como «Agregar servicios de firma…», pero no es un campo de este cuadro. · Los datos del certificado los pone quien firma, en su momento, no quien prepara el hueco."
   },
   {
     "id": "insertar-94",
@@ -12898,28 +12909,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-52",
     "generado": true,
-    "enunciado": "¿Qué opción del cuadro Fecha y hora hace que la fecha insertada se actualice cada vez que se abre o imprime el documento?",
+    "revisada": true,
+    "enunciado": "Quieres que la fecha del documento muestre siempre el día en que se abre, no el día en que se escribió. ¿Qué casilla del cuadro «Fecha y hora» hay que marcar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Vincular al calendario del sistema"
-      },
-      {
-        "letter": "B",
         "text": "Actualizar automáticamente"
       },
       {
+        "letter": "B",
+        "text": "Fecha dinámica"
+      },
+      {
         "letter": "C",
-        "text": "Sincronizar con el servidor"
+        "text": "Vincular al calendario del sistema"
       },
       {
         "letter": "D",
-        "text": "Fecha dinámica"
+        "text": "Sincronizar con el servidor"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no existen como opciones en ese cuadro. El nombre real del campo es \"Actualizar automáticamente\". Si no está marcado, la fecha queda como texto estático."
+    "respuesta": "A",
+    "explicacion": "Marcada, la fecha se inserta como campo y se pone al día al abrir o al imprimir; sin marcar, entra como texto fijo y se queda con el día en que se escribió. Es la diferencia entre una plantilla que se rellena sola y un documento fechado que no debe cambiar nunca. · Ojo con eso último: en un escrito con valor de registro casi siempre se quiere lo segundo. · El cuadro tiene además la lista de formatos disponibles, el idioma y el botón «Establecer como predeterminado»."
   },
   {
     "id": "insertar-95",
@@ -12934,28 +12946,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-53",
     "generado": true,
-    "enunciado": "¿Qué ruta permite insertar en el documento un objeto de otra aplicación (por ejemplo, una hoja de cálculo Excel o una presentación PowerPoint) creándolo desde cero dentro de Word?",
+    "revisada": true,
+    "enunciado": "Quieres crear desde cero, dentro de Word, una hoja de Excel incrustada como objeto. ¿Qué ruta lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Texto > Objeto > Insertar texto de archivo..."
+        "text": "Texto ▸ Objeto ▸ Objeto… ▸ ficha «Crear nuevo»"
       },
       {
         "letter": "B",
-        "text": "Insertar > Texto > Objeto > Objeto... > Crear desde un archivo"
+        "text": "Texto ▸ Objeto ▸ Objeto… ▸ ficha «Crear desde un archivo»"
       },
       {
         "letter": "C",
-        "text": "Insertar > Texto > Objeto > Objeto... > Crear nuevo"
+        "text": "Texto ▸ Objeto ▸ «Insertar texto de archivo…»"
       },
       {
         "letter": "D",
-        "text": "Insertar > Tablas > Tabla > Hoja de cálculo de Excel"
+        "text": "Tablas ▸ Tabla ▸ «Hoja de cálculo de Excel»"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A importa el contenido de un archivo de texto, no crea un objeto OLE nuevo. B crea el objeto a partir de un archivo ya existente en el disco. D inserta una hoja Excel pero desde el grupo Tablas y sin cuadro de diálogo."
+    "respuesta": "A",
+    "explicacion": "Esa ficha da la lista de tipos de objeto instalados —hojas de Excel de varias versiones, gráficos, presentaciones, imágenes de mapa de bits— y crea uno vacío dentro del documento, con la casilla «Mostrar como icono» si se prefiere no verlo desplegado. · «Crear desde un archivo» es el descarte que decide la pregunta y parte de algo que ya existe en el disco. · La entrada del menú Tabla lleva al mismo objeto de Excel por un atajo, sin pasar por el cuadro ni dejar elegir el tipo."
   },
   {
     "id": "insertar-96",
@@ -12970,19 +12983,20 @@
     "tema": "Texto",
     "sourceQuestionId": "P-54",
     "generado": true,
-    "enunciado": "¿Qué opción debe activarse en el cuadro Objeto > Crear desde un archivo para que el contenido del archivo externo se actualice automáticamente en Word cuando el archivo de origen cambie?",
+    "revisada": true,
+    "enunciado": "Insertas una hoja de Excel con «Crear desde un archivo» y quieres que lo que se vea en Word cambie cuando cambie el archivo original. ¿Qué casilla hay que marcar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar como icono"
+        "text": "Vincular al archivo"
       },
       {
         "letter": "B",
-        "text": "Incrustar documento"
+        "text": "Mostrar como icono"
       },
       {
         "letter": "C",
-        "text": "Vincular al archivo"
+        "text": "Incrustar documento"
       },
       {
         "letter": "D",
@@ -12990,8 +13004,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A cambia la visualización a un icono pero no vincula. B no existe como opción; \"incrustar\" describe el comportamiento sin vínculo, no es una casilla. D no existe como opción en ese cuadro."
+    "respuesta": "A",
+    "explicacion": "Sin marcarla, Word guarda una copia dentro del documento y el original deja de importar; marcada, guarda la ruta y va a buscar el contenido, así que el documento deja de ser autónomo y hay que llevarse los dos archivos juntos. · **«Mostrar como icono»** es el descarte que decide la pregunta: solo cambia cómo se ve, un icono en vez del contenido desplegado, y se puede combinar con la otra. · «Incrustar» describe lo que pasa cuando NO se vincula, pero no es ninguna casilla."
   },
   {
     "id": "insertar-97",
@@ -13006,28 +13020,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-55",
     "generado": true,
-    "enunciado": "¿Qué ruta permite importar el texto completo de un documento externo de Word o texto sin formato e incorporarlo al documento activo en la posición del cursor?",
+    "revisada": true,
+    "enunciado": "Quieres volcar el texto entero de otro documento dentro del que tienes abierto, en el punto del cursor y editable como cualquier párrafo. ¿Qué ruta lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Texto > Objeto > Objeto... > Crear desde un archivo"
+        "text": "Texto ▸ Objeto ▸ «Insertar texto de archivo…»"
       },
       {
         "letter": "B",
-        "text": "Insertar > Texto > Objeto > Insertar texto de archivo..."
+        "text": "Texto ▸ Objeto ▸ Objeto… ▸ «Crear desde un archivo»"
       },
       {
         "letter": "C",
-        "text": "Archivo > Abrir > Insertar en documento actual"
+        "text": "Texto ▸ Elementos rápidos ▸ «Importar texto…»"
       },
       {
         "letter": "D",
-        "text": "Insertar > Texto > Elementos rápidos > Importar texto..."
+        "text": "Archivo ▸ Abrir ▸ «Insertar en el documento actual»"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A incrusta el archivo como objeto OLE, no importa el texto directamente al flujo del documento. C no existe como opción en Archivo. D no existe."
+    "respuesta": "A",
+    "explicacion": "Es la segunda entrada del botón Objeto, y trae el contenido al flujo del documento: los párrafos se mezclan con los que ya había y se editan como propios. Sirve para juntar varios documentos en uno. · **«Crear desde un archivo»** es el descarte que decide la pregunta: también parte de un archivo del disco, pero lo mete como objeto incrustado, un bloque que se abre con su programa y no se puede editar como texto de Word. · Las otras dos rutas no existen."
   },
   {
     "id": "insertar-151",
@@ -13042,15 +13057,16 @@
     "tema": "Texto",
     "sourceQuestionId": "P-118",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes propiedades existe realmente dentro de Elementos rápidos > Propiedad del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "Entre las propiedades del documento que ofrece «Elementos rápidos», hay un bloque dedicado a los datos de contacto de la organización. ¿Cuál de estas es una de ellas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Departamento"
+        "text": "Fax de la compañía"
       },
       {
         "letter": "B",
-        "text": "Fax de la compañía"
+        "text": "Departamento"
       },
       {
         "letter": "C",
@@ -13062,8 +13078,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no figura en la extracción. C y D tampoco. \"Fax de la compañía\" sí figura en la lista real de propiedades del documento."
+    "respuesta": "A",
+    "explicacion": "El bloque de compañía son cuatro: «Compañía», «Dirección de la compañía», «Teléfono de la compañía», «Dirección de correo electrónico de la compañía» y «Fax de la compañía». Se ven en un membrete o en un pie institucional, y al ser campos se rellenan una vez y aparecen igual en todo el documento. · Los tres descartes son datos de gestión interna, del tipo que uno esperaría en un formulario de empresa, y ninguno figura: la lista de propiedades de Word es la misma para todos y no se puede ampliar desde este submenú."
   },
   {
     "id": "insertar-152",
@@ -13078,28 +13094,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-119",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes propiedades existe realmente dentro de Elementos rápidos > Propiedad del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "Una de las propiedades del documento se llama «Fecha de publicación». ¿Qué muestra?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Número de versión"
+        "text": "Lo que se haya escrito en ella: es una propiedad que se rellena a mano"
       },
       {
         "letter": "B",
-        "text": "Fecha de publicación"
+        "text": "La fecha en que se creó el archivo, tomada del sistema"
       },
       {
         "letter": "C",
-        "text": "Historial de revisiones"
+        "text": "La fecha de la última vez que se guardó"
       },
       {
         "letter": "D",
-        "text": "Última modificación"
+        "text": "La fecha de hoy, actualizada al abrir el documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe como propiedad insertable en ese submenú. C y D no existen. \"Fecha de publicación\" sí figura en la extracción real."
+    "respuesta": "A",
+    "explicacion": "Las propiedades del documento son casillas que rellena el autor, no datos que Word calcule: aparecen vacías o con un rótulo hasta que se escribe algo, y lo escrito se guarda en la ficha del archivo. · Las fechas automáticas son otra cosa y viven en el cuadro «Campo», con nombres como CreateDate, SaveDate, PrintDate y Date, que son justamente los tres descartes. · Insertada como propiedad, la fecha de publicación se puede cambiar desde Archivo ▸ Información y se actualiza en todo el documento a la vez."
   },
   {
     "id": "insertar-153",
@@ -13107,18 +13124,19 @@
     "bloque": "Insertar — Texto",
     "tipo": "opcion_unica",
     "categoria": "ruta",
-    "negativa": false,
+    "negativa": true,
     "section": "insertar",
     "topic": "texto",
     "subtopic": null,
     "tema": "Texto",
     "sourceQuestionId": "P-120",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes propiedades existe realmente dentro de Elementos rápidos > Propiedad del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "De estas cuatro, señale la que NO es una propiedad del documento de las que ofrece «Elementos rápidos»:",
     "opciones": [
       {
         "letter": "A",
-        "text": "País de la compañía"
+        "text": "Sede central"
       },
       {
         "letter": "B",
@@ -13126,16 +13144,16 @@
       },
       {
         "letter": "C",
-        "text": "Sede central"
+        "text": "Categoría"
       },
       {
         "letter": "D",
-        "text": "Sucursal"
+        "text": "Estado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no existen con esos nombres. \"Dirección de la compañía\" sí figura en la extracción."
+    "respuesta": "A",
+    "explicacion": "Las tres verdaderas están en la lista, que va en orden alfabético: administrador, asunto, autor, categoría, comentarios, compañía y sus datos de contacto, estado, extracto, fecha de publicación, palabras clave y título. · «Sede central» suena de lo más razonable junto a las de compañía y no está: la lista es fija y la misma en cualquier instalación. · Todas ellas se ven y se editan también en Archivo ▸ Información, en el panel de propiedades, y las insertadas en el texto son campos que se actualizan a la vez."
   },
   {
     "id": "insertar-154",
@@ -13150,15 +13168,16 @@
     "tema": "Texto",
     "sourceQuestionId": "P-121",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes propiedades existe realmente dentro de Elementos rápidos > Propiedad del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "Hay una propiedad del documento pensada para un resumen breve de su contenido. ¿Cómo se llama exactamente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Resumen ejecutivo"
+        "text": "Extracto"
       },
       {
         "letter": "B",
-        "text": "Extracto"
+        "text": "Resumen ejecutivo"
       },
       {
         "letter": "C",
@@ -13170,8 +13189,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son sinónimos plausibles pero el nombre exacto de la propiedad es \"Extracto\"."
+    "respuesta": "A",
+    "explicacion": "Es una palabra sola, como casi todos los rótulos de esta lista: asunto, autor, categoría, estado, título. Los nombres largos y explicativos de los tres descartes son precisamente lo que delata que no son de aquí. · No hay que confundirla con «Comentarios», que es otra propiedad de la misma lista y también admite texto libre: en la ficha del archivo, aquella es la descripción del contenido y esta las notas sueltas. · Los dos se rellenan igual, desde Archivo ▸ Información."
   },
   {
     "id": "insertar-155",
@@ -13186,7 +13205,8 @@
     "tema": "Texto",
     "sourceQuestionId": "P-122",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes propiedades existe realmente dentro de Elementos rápidos > Propiedad del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "¿Cómo se llama la propiedad del documento donde se anotan los términos por los que se quiere poder buscar el archivo?",
     "opciones": [
       {
         "letter": "A",
@@ -13207,7 +13227,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B, C y D son denominaciones alternativas pero el nombre real es \"Palabras clave\"."
+    "explicacion": "En el submenú de propiedades aparece con ese nombre, aunque el explorador de Windows y el propio panel de Archivo ▸ Información las llamen «Etiquetas»: son el mismo dato con dos rótulos, y ese es el descarte que decide la pregunta. · Nada de esto tiene que ver con el índice del final de un documento, que se construye marcando entradas con Alt+Mayús+X desde la pestaña Referencias: aquello está dentro del texto y esto es información sobre el archivo."
   },
   {
     "id": "insertar-156",
@@ -13222,15 +13242,16 @@
     "tema": "Texto",
     "sourceQuestionId": "P-123",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes propiedades existe realmente dentro de Elementos rápidos > Propiedad del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "¿Cómo se llama la propiedad del documento destinada a la persona responsable de él?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Nombre del responsable"
+        "text": "Administrador"
       },
       {
         "letter": "B",
-        "text": "Administrador"
+        "text": "Nombre del responsable"
       },
       {
         "letter": "C",
@@ -13242,8 +13263,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son denominaciones plausibles pero el nombre exacto de la propiedad es \"Administrador\"."
+    "respuesta": "A",
+    "explicacion": "Es la primera de la lista, por orden alfabético, y no debe confundirse con «Autor», que es quien lo escribió: en un expediente pueden ser personas distintas, y por eso Word mantiene las dos. · Los tres descartes son cargos verosímiles y ninguno figura. · El nombre viene del inglés Manager, y su traducción como «Administrador» despista, porque en informática esa palabra suele significar otra cosa; aquí es simplemente quien responde del documento."
   },
   {
     "id": "insertar-157",
@@ -13258,28 +13279,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-124",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes nombres de campo existe realmente dentro del cuadro Campo de Word 365 (accesible desde Elementos rápidos)?",
+    "revisada": true,
+    "enunciado": "En el cuadro «Campo», categoría «Fecha y hora», ¿cuál de estos nombres de campo existe?",
     "opciones": [
       {
         "letter": "A",
-        "text": "DocumentRevision"
-      },
-      {
-        "letter": "B",
         "text": "CreateDate"
       },
       {
-        "letter": "C",
+        "letter": "B",
         "text": "FileCreatedOn"
       },
       {
-        "letter": "D",
+        "letter": "C",
         "text": "DocCreationDate"
+      },
+      {
+        "letter": "D",
+        "text": "DocumentRevision"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no son nombres de campo reales en Word. \"CreateDate\" sí figura en la extracción real como nombre de campo oficial."
+    "respuesta": "A",
+    "explicacion": "Los nombres de campo son cortos y en inglés, sin espacios, y esa categoría reúne CreateDate, SaveDate, PrintDate, Date y Time: la fecha de creación, la de la última vez que se guardó, la de la última impresión y la de hoy. · Los tres descartes imitan el patrón con palabras de más, que es lo que los delata. · La lista completa del cuadro está ordenada alfabéticamente y arranca con Fórmula, AddressBlock, Advance, Ask, Author, AutoNum…"
   },
   {
     "id": "insertar-158",
@@ -13294,15 +13316,16 @@
     "tema": "Texto",
     "sourceQuestionId": "P-125",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes nombres de campo existe realmente dentro del cuadro Campo de Word 365?",
+    "revisada": true,
+    "enunciado": "En el cuadro «Campo», categoría «Numeración», ¿cuál de estos nombres de campo existe?",
     "opciones": [
       {
         "letter": "A",
-        "text": "AutoCount"
+        "text": "AutoNum"
       },
       {
         "letter": "B",
-        "text": "AutoNum"
+        "text": "AutoCount"
       },
       {
         "letter": "C",
@@ -13314,8 +13337,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no son nombres de campo reales. \"AutoNum\" sí figura en la extracción como nombre de campo oficial."
+    "respuesta": "A",
+    "explicacion": "AutoNum numera párrafos de forma automática, y tiene dos parientes en la misma lista, AutoNumLgl para la numeración legal (1.1.1) y AutoNumOut para la de esquema. · Los tres descartes copian el estilo de los nombres reales y ninguno existe. · Para numerar párrafos dentro de una frase hay además un atajo directo, Ctrl+Mayús+Y, que inserta el campo ListNum sin pasar por el cuadro. · El cuadro «Campo» ordena los nombres alfabéticamente y permite filtrarlos por categoría."
   },
   {
     "id": "insertar-159",
@@ -13330,15 +13353,16 @@
     "tema": "Texto",
     "sourceQuestionId": "P-126",
     "generado": true,
-    "enunciado": "¿Qué opción del cuadro Campo de Word 365 permite que el valor del campo no cambie aunque se actualicen todos los campos del documento?",
+    "revisada": true,
+    "enunciado": "Has dado formato a mano al resultado de un campo y no quieres perderlo al actualizarlo. ¿Qué casilla del cuadro «Campo» lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Bloquear campo al guardar"
+        "text": "Conservar formato al actualizar"
       },
       {
         "letter": "B",
-        "text": "Conservar formato al actualizar"
+        "text": "Bloquear campo al guardar"
       },
       {
         "letter": "C",
@@ -13350,8 +13374,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no existen con esos nombres. La casilla real se llama \"Conservar formato al actualizar\"."
+    "respuesta": "A",
+    "explicacion": "Marcada, al pulsar F9 el campo recalcula su contenido pero mantiene la negrita, el color o el tamaño que se le hayan puesto; sin ella, cada actualización devuelve el formato de partida. · Lo que NO hace es congelar el VALOR: el número o la fecha se actualizan igual. Para eso hay que bloquear el campo, con Ctrl+3, o desvincularlo del todo con Ctrl+6, y ninguna de las dos cosas está en este cuadro. Esa confusión entre formato y valor es la que decide la pregunta. · La otra casilla del cuadro es «Códigos de campo», que enseña el código en bruto."
   },
   {
     "id": "insertar-160",
@@ -13366,28 +13390,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-127",
     "generado": true,
-    "enunciado": "¿Cuáles son las tres acciones disponibles sobre un bloque de creación seleccionado dentro del Organizador de bloques de creación?",
+    "revisada": true,
+    "enunciado": "¿Qué tres botones ofrece el «Organizador de bloques de creación» sobre el elemento seleccionado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar, Duplicar y Eliminar"
+        "text": "Editar propiedades… · Eliminar · Insertar"
       },
       {
         "letter": "B",
-        "text": "Editar propiedades, Eliminar e Insertar"
+        "text": "Insertar · Duplicar · Eliminar"
       },
       {
         "letter": "C",
-        "text": "Copiar, Mover y Eliminar"
+        "text": "Copiar · Mover · Eliminar"
       },
       {
         "letter": "D",
-        "text": "Renombrar, Insertar y Archivar"
+        "text": "Renombrar · Insertar · Archivar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A \"Duplicar\" no existe. C \"Copiar\" y \"Mover\" no existen en ese cuadro. D \"Renombrar\" y \"Archivar\" no existen. Las tres acciones reales son: Editar propiedades, Eliminar, Insertar. TEXTO — LETRA CAPITAL (CUADRO DE DIÁLOGO)"
+    "respuesta": "A",
+    "explicacion": "«Editar propiedades…» abre el mismo cuadro con el que se guardó, para cambiarle el nombre, la galería, la categoría o la plantilla; «Eliminar» es la única forma de borrar un bloque guardado por error, y «Insertar» lo coloca en el documento. · Los descartes son verbos de lo más razonables para una lista de elementos y ninguno está: no hay duplicar, ni copiar, ni renombrar por separado, porque cambiar el nombre se hace desde «Editar propiedades». · La lista es común a todas las galerías: portadas, encabezados, tablas rápidas, autotextos."
   },
   {
     "id": "insertar-161",
@@ -13402,28 +13427,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-128",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes opciones puede configurarse dentro del cuadro Letra capital de Word 365?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas cosas se configura dentro del cuadro «Letra capital»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Color de la letra capital"
+        "text": "La distancia desde el texto"
       },
       {
         "letter": "B",
-        "text": "Distancia desde el texto"
+        "text": "El color de la letra capital"
       },
       {
         "letter": "C",
-        "text": "Tamaño en puntos"
+        "text": "Su tamaño en puntos"
       },
       {
         "letter": "D",
-        "text": "Estilo de borde"
+        "text": "El estilo de su borde"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A el color no se configura en ese cuadro (se hace desde Formato de carácter). C el tamaño se expresa en número de líneas que ocupa, no en puntos. D no existe. Las opciones reales del cuadro son: Posición, Fuente, Líneas que ocupa, Distancia desde el texto."
+    "respuesta": "A",
+    "explicacion": "El cuadro tiene cuatro cosas y nada más: la posición (ninguna, en texto o en margen), la fuente, las líneas que ocupa y la distancia desde el texto, a 0 cm de partida. · **El tamaño en puntos** es el descarte que decide la pregunta, porque el tamaño sí se decide aquí... pero en líneas, no en puntos: la letra se agranda sola hasta ocupar los renglones que se pidan. · El color se cambia después, seleccionando la letra y usando el grupo Fuente como con cualquier carácter."
   },
   {
     "id": "insertar-162",
@@ -13438,19 +13464,20 @@
     "tema": "Texto",
     "sourceQuestionId": "P-129",
     "generado": true,
-    "enunciado": "¿Cuál es el valor predeterminado del campo Líneas que ocupa en el cuadro Letra capital de Word 365?",
+    "revisada": true,
+    "enunciado": "¿Con cuántas líneas viene de partida el campo «Líneas que ocupa» del cuadro «Letra capital»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2"
+        "text": "3"
       },
       {
         "letter": "B",
-        "text": "4"
+        "text": "2"
       },
       {
         "letter": "C",
-        "text": "3"
+        "text": "4"
       },
       {
         "letter": "D",
@@ -13458,8 +13485,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A, B y D son valores plausibles pero el valor predeterminado real es 3, tal como figura en la extracción."
+    "respuesta": "A",
+    "explicacion": "Tres renglones es la altura clásica de una capital de imprenta, la que se ve en los libros, y es lo que Word propone. · El valor es en LÍNEAS, no en puntos, así que la letra se agranda o encoge sola si cambia el interlineado del párrafo. · Los otros campos del cuadro vienen con «+Cuerpo» como fuente y 0 cm de distancia desde el texto. · Con la posición «En margen» conviene subir algo el número, porque al salirse del texto la letra se ve más pequeña de lo que es."
   },
   {
     "id": "insertar-163",
@@ -13474,28 +13501,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-130",
     "generado": true,
-    "enunciado": "¿Cuál es el valor predeterminado del campo Distancia desde el texto en el cuadro Letra capital de Word 365?",
+    "revisada": true,
+    "enunciado": "¿Qué valor trae de partida el campo «Distancia desde el texto» del cuadro «Letra capital»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "0,5 cm"
+        "text": "0 cm"
       },
       {
         "letter": "B",
-        "text": "1 cm"
-      },
-      {
-        "letter": "C",
         "text": "0,3 cm"
       },
       {
+        "letter": "C",
+        "text": "0,5 cm"
+      },
+      {
         "letter": "D",
-        "text": "0 cm"
+        "text": "1 cm"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "A, B y C son valores con separación, pero el valor predeterminado real es 0 cm, tal como figura en la extracción. TEXTO — LÍNEA DE FIRMA (CUADRO DE DIÁLOGO)"
+    "respuesta": "A",
+    "explicacion": "Cero: la capital queda pegada al párrafo, y hay que subir el valor a mano si se quiere aire alrededor. Los tres descartes son separaciones pequeñas y razonables, y por eso engañan, pero Word no reserva ninguna. · Es el único campo del cuadro que se mide en centímetros; los otros son una posición, una fuente y un número de líneas. · Con la posición «En texto» el ajuste se nota enseguida, porque el párrafo se ciñe al contorno de la letra."
   },
   {
     "id": "insertar-164",
@@ -13510,28 +13538,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-131",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes casillas existe realmente dentro del cuadro Configuración de firma al insertar una Línea de firma de Microsoft Office?",
+    "revisada": true,
+    "enunciado": "En el cuadro «Configuración de firma» hay una casilla para que la línea muestre cuándo se firmó. ¿Cómo se llama?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar sello de tiempo de la firma"
-      },
-      {
-        "letter": "B",
         "text": "Mostrar la fecha en la línea de firma"
       },
       {
+        "letter": "B",
+        "text": "Mostrar el sello de tiempo de la firma"
+      },
+      {
         "letter": "C",
-        "text": "Incluir timestamp del servidor"
+        "text": "Incluir marca de tiempo del servidor"
       },
       {
         "letter": "D",
-        "text": "Registrar fecha de firma automáticamente"
+        "text": "Registrar la fecha de firma automáticamente"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no existen con esos nombres. La casilla real se llama \"Mostrar la fecha en la línea de firma\"."
+    "respuesta": "A",
+    "explicacion": "Es una de las dos casillas del cuadro, y hace que debajo del trazo aparezca la fecha en que se firmó, además del nombre y el puesto. La otra permite que el firmante añada comentarios. · Los tres descartes usan vocabulario de certificación digital, que suena de lo más apropiado y es justo el terreno donde Word no entra en este cuadro: aquí solo se prepara el hueco y lo que se verá impreso; lo que hace criptográficamente válida una firma lo aporta el certificado de quien firma, más tarde."
   },
   {
     "id": "insertar-165",
@@ -13546,28 +13575,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-132",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes casillas existe realmente dentro del cuadro Configuración de firma?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas casillas está en el cuadro «Configuración de firma»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Exigir certificado digital válido"
+        "text": "Permitir que el firmante agregue comentarios al firmar"
       },
       {
         "letter": "B",
-        "text": "Permitir que el firmante agregue comentarios en el cuadro de diálogo Firmar"
+        "text": "Exigir un certificado digital válido para poder firmar"
       },
       {
         "letter": "C",
-        "text": "Notificar al firmante por correo electrónico"
+        "text": "Notificar al firmante por correo electrónico al abrirlo"
       },
       {
         "letter": "D",
-        "text": "Bloquear el documento tras la firma"
+        "text": "Bloquear el documento en cuanto se estampe la firma"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no existen como casillas de ese cuadro. La casilla real es \"Permitir que el firmante agregue comentarios en el cuadro de diálogo Firmar\". TEXTO — FECHA Y HORA (CUADRO DE DIÁLOGO)"
+    "respuesta": "A",
+    "explicacion": "Le abre al firmante un espacio para escribir el motivo o una observación al firmar, que queda guardada con la firma. Es la primera de las dos casillas; la segunda es «Mostrar la fecha en la línea de firma». · Los descartes describen medidas de seguridad muy razonables y ninguno es una casilla de aquí. La tercera engaña especialmente porque el cuadro sí pide el correo del firmante: lo pide para identificarlo, no para escribirle. · Bloquear el documento al firmarlo ocurre de todos modos, sin necesidad de marcar nada."
   },
   {
     "id": "insertar-166",
@@ -13582,28 +13612,29 @@
     "tema": "Texto",
     "sourceQuestionId": "P-133",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes formatos de fecha existe realmente en el cuadro Fecha y hora de Word 365 (instalación en español de España)?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estos formatos aparece en la lista del cuadro «Fecha y hora» de esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "DD-MMM-AAAA"
-      },
-      {
-        "letter": "B",
         "text": "3-sep-26"
       },
       {
-        "letter": "C",
+        "letter": "B",
         "text": "03.09.2026"
       },
       {
-        "letter": "D",
+        "letter": "C",
         "text": "September 3, 2026"
+      },
+      {
+        "letter": "D",
+        "text": "DD-MMM-AAAA"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A es notación de código de formato, no un formato de visualización. C el separador de puntos no figura en la extracción. D es el formato en inglés; la instalación es en español. El formato real \"3-sep-26\" sí figura en la extracción."
+    "respuesta": "A",
+    "explicacion": "La lista muestra ejemplos con la fecha de hoy, no plantillas: 03/09/2026, «jueves, 3 de septiembre de 2026», 03/09/26, 3-sep-26 y varios más, todos en español. · **«DD-MMM-AAAA»** es el descarte que decide la pregunta, porque es la notación con la que se ESCRIBE un formato de fecha dentro del código de un campo, no lo que se ve en esta lista. · El formato con puntos y el inglés dependen del idioma, y arriba del cuadro hay un desplegable «Idioma», con Español (España) elegido."
   },
   {
     "id": "insertar-167",
@@ -13618,15 +13649,16 @@
     "tema": "Texto",
     "sourceQuestionId": "P-134",
     "generado": true,
-    "enunciado": "¿Qué opción del cuadro Fecha y hora permite que el formato seleccionado sea el que aparezca por defecto la próxima vez que se abra ese cuadro?",
+    "revisada": true,
+    "enunciado": "Siempre usas el mismo formato de fecha y quieres que el cuadro se abra ya con él elegido. ¿Qué botón lo consigue?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar como favorito"
+        "text": "Establecer como predeterminado"
       },
       {
         "letter": "B",
-        "text": "Establecer como predeterminado"
+        "text": "Guardar como favorito"
       },
       {
         "letter": "C",
@@ -13638,8 +13670,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no existen. El botón real se llama \"Establecer como predeterminado\". TEXTO — OBJETO (CUADRO DE DIÁLOGO)"
+    "respuesta": "A",
+    "explicacion": "Es el mismo rótulo que aparece en los cuadros Fuente, Párrafo y Configurar página, y hace siempre lo mismo: guardar la elección para las próximas veces, no solo para este documento. Word lo repite en todos los cuadros donde tiene sentido, así que conviene reconocerlo. · Los tres descartes son nombres de lo más razonables y ninguno existe en Word. · En el mismo cuadro están la lista de formatos, el idioma y la casilla «Actualizar automáticamente»."
   },
   {
     "id": "insertar-168",
@@ -13654,15 +13686,16 @@
     "tema": "Texto",
     "sourceQuestionId": "P-135",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes tipos de objeto existe realmente en la lista Crear nuevo del cuadro Objeto de Word 365?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estos tipos aparece en la lista de «Objeto ▸ Crear nuevo»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Microsoft Access Database"
+        "text": "Microsoft Graph Chart"
       },
       {
         "letter": "B",
-        "text": "Microsoft Graph Chart"
+        "text": "Microsoft Access Database"
       },
       {
         "letter": "C",
@@ -13674,8 +13707,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A Microsoft Access no figura en la extracción real de ese cuadro. C Visio tampoco. D Adobe Acrobat tampoco. \"Microsoft Graph Chart\" sí figura en la extracción."
+    "respuesta": "A",
+    "explicacion": "La lista tiene 23 tipos y depende de lo que haya instalado en el equipo, pero Graph Chart viene siempre: es el editor de gráficos veterano de Office, el mismo que aparece al insertar un gráfico en una tabla de PowerPoint. · Los tres descartes son programas conocidísimos que no figuran aquí, y ese es el motivo de que engañen: solo aparecen los tipos cuyo programa está instalado y registrado como servidor de objetos. · Junto a Graph están las hojas de Excel en varias versiones, presentaciones, OpenDocument, WordPad y Bitmap Image."
   },
   {
     "id": "insertar-169",
@@ -13690,7 +13723,8 @@
     "tema": "Texto",
     "sourceQuestionId": "P-136",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes tipos de objeto existe realmente en la lista Crear nuevo del cuadro Objeto de Word 365?",
+    "revisada": true,
+    "enunciado": "En la lista de «Objeto ▸ Crear nuevo» hay varias entradas de Excel. ¿Cuál de estas es una de ellas?",
     "opciones": [
       {
         "letter": "A",
@@ -13711,7 +13745,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B, C y D no figuran en la extracción real. \"Microsoft Excel Macro-Enabled Worksheet\" sí figura como tipo de objeto disponible."
+    "explicacion": "Las entradas de Excel son cinco: Worksheet, Worksheet 97-2003, Binary Worksheet, Macro-Enabled Worksheet y Chart. Se distinguen en el formato del archivo incrustado, igual que las extensiones .xlsx, .xls, .xlsb y .xlsm. · Los tres descartes nombran cosas que existen dentro de Excel —plantillas, tablas dinámicas, cuadros de mando— pero no son tipos de objeto incrustable: lo que se incrusta es un libro entero, y las tablas dinámicas o los paneles van dentro de él."
   },
   {
     "id": "insertar-170",
@@ -13726,7 +13760,8 @@
     "tema": "Texto",
     "sourceQuestionId": "P-137",
     "generado": true,
-    "enunciado": "¿Cual de estos NO aparece en la lista «Tipo de objeto» del cuadro Objeto ▸ Crear nuevo de Word 365?",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO aparece en la lista «Tipo de objeto» de «Objeto ▸ Crear nuevo»:",
     "opciones": [
       {
         "letter": "A",
@@ -13747,7 +13782,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Microsoft PowerPoint Show» no esta en la lista. Si estan «Microsoft PowerPoint Slide», «...Presentation», «...97-2003 Slide/Presentation» y «...Macro-Enabled Slide/Presentation», ademas de OpenDocument Text/Spreadsheet/Presentation, WordPad Document, Bitmap Image, Package y Organization Chart Add-in. Confirmado con captura del usuario."
+    "explicacion": "La lista incluye de PowerPoint la diapositiva y la presentación, cada una en su versión actual, en 97-2003 y en la habilitada para macros, además de las de OpenDocument. Lo que no ofrece es el formato «Show», el de presentación autoejecutable, que es un modo de ABRIR un archivo, no un tipo de documento que se pueda crear vacío. Confirmado con captura del usuario. · La lista tiene 23 tipos en total, y también están Bitmap Image, Package y Organization Chart Add-in."
   },
   {
     "id": "insertar-425",
@@ -13762,6 +13797,7 @@
     "tema": "Texto",
     "sourceQuestionId": "img-insertar-20",
     "generado": true,
+    "revisada": true,
     "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAsCAYAAADW6LDXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVGhD7Zi/S0JRFMdPEVSalCSRFFYQ0g8aEirihTgHDRH9FQ4t0dwcLQ1NrW1RDYFTg1jWJkT0A4l+WFRDYqFZUVTvXI5R2GLqecS5H7jc+77nwXsffLzzvBUfJiCMSppFoaWloKWloKWloKWlUNQXWdt8jFYAF9M+WpWXUlyzaOmTqT7oXNiH1vUgpeXlanzx65qWSefAG+EAZXNYIo0YxjCEwxE64iEQ8EM0uktHhaPf3lKwTHpo6UgNK7BEeiP+AE+v75DMvsHyXpJSPiyRXj1Igc9th363DTZP05TyYYl07OYRBlps5rCr9VnqhSo8sEvPRW/VHBxsghmjWa1XDlNq5oJdOnKeBsNTR0egHnPMOGGV3rnMwPHdM4x6GygBmOh1qgxrXLBKr5mPcaOtCsa89ZSAWmOGNS5YpbcSGeh21ao29X1ghjUu2KRRDvvydiINs+HrHwMzzp7NJo39uMtVo/6N/TawxtWzWaSxD2M/9rc7KMkHa/iLc/RsFmnsw1nzs3Oyx0lJPrkaR89mkQ7F72HE44AOZzUl+WANz8Fzy43eRJCCSGm9MVgo4reA/3oDhVKKaxb99v6P6Le3FLS0FLS0FARKA3wCM8fvcyUQuWoAAAAASUVORK5CYII=",
     "opciones": [
@@ -13771,20 +13807,20 @@
       },
       {
         "letter": "B",
-        "text": "Disposición ▸ Configurar página"
+        "text": "Insertar ▸ Ilustraciones"
       },
       {
         "letter": "C",
-        "text": "Inicio ▸ Fuente"
+        "text": "Inicio ▸ Párrafo"
       },
       {
         "letter": "D",
-        "text": "Insertar ▸ Ilustraciones"
+        "text": "Disposición ▸ Configurar página"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Cuadro de texto.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta un cuadro con texto que se puede colocar libremente. Ofrece cuadros integrados y «Dibujar un cuadro de texto»."
+    "explicacion": "Es **Cuadro de texto**, primero del grupo Texto en la pestaña Insertar. Su menú trae la galería «Integrado», con el cuadro simple y una colección de barras laterales con nombres de tema, y al final «Dibujar cuadro de texto». No tiene atajo de teclado en esta instalación. · «Insertar ▸ Ilustraciones» es el descarte que decide la pregunta, porque un cuadro de texto no deja de ser una forma rectangular preparada para escribir, y de hecho se dibuja también desde la cinta Formato de forma; pero su botón propio está en Texto."
   },
   {
     "id": "insertar-426",
@@ -13799,12 +13835,13 @@
     "tema": "Texto",
     "sourceQuestionId": "img-insertar-21",
     "generado": true,
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMKSURBVFhH7ZhLSFRRGMe/HmrOZE7amGXjVNigrtJFtbCgWhgZBD2gRRpERAQF0aagx6JFLYKgQNqmLQJ7IFSMUAQ9oFpkJKSUmZNp5qRZNjOVQzX/b+65jWXD3HvumRi4v805Z67X+d/v/r+HTvkZgzKIqdqaMdiCVWMLVo0tWDW24GS0dn2k6sZndORWn/aJcdLW6U7e7aem9iCFx3/weVNlAZ1Zv5D3RkhLhHe39tD5x+9ZrCMr/pWLC2bwahSlgntGvtK6C53U9nKUz7VLXHqE83Om8WoUZYLh14Yr3dQZjPB5z7K5VFOax3vQUOXWdsZQIvjcw0E61Bagvk/f2QJnNyyiw6tKqP1diK8XOqbzagbLBaMCnL4/wK/ek59Np2q9tLF8Nl8LhqK8FjmzeDWDZYLh1+0t3dT8NMjnCncuNW0u08WCD+FxXnHNLJYIfvBmjP16L/CZzyu9s8i/o+KvSiD8XDTzP0YYybXr2iv2K0ByXdxaxvtE8FCCkrxsbWccKcFoBvuvv9br64m1Hk6uyXgyEE84YLZCANOC4Vc0A4CsR3IlEwKPA5kKAQwLFs1A+BUMh6PU0jGsi5qM3tFvvMpUCGBIMPy65dILPXmQXCLj8QB1zV3/HGyCIfkKAVIWDL+iGSCaoH6pm5ML1QDexauGl1HWMJFh0ElEJKUz21xLFqQ0rR242UtXn4/wHsm1d3kx7VtRzOdE8HP+2Nwg5gVE8+jqBbH6G+XkBHg4maRLKhiePOgP6BmOKB5f45nQDP4E9xy7/XaCx6vnO/XfcWdnpelJDSS1RMdQhCJatNBmL2/zJRULIAZWwfwg/CrE4u3IiAUpWQLDTJ3PZerLcG/jo0G2CR4AnpchpaSDX81GBvfmakN7qSuHVxkMlTWziMoiW4OBcsGJ5c1XKOdfoFxw/1i8/oIa7++/OMyiXPDQl3iHs6JCAOWCRRv3WpBwQH2EtRlijkM+4YBywaLxuJ1yY6VAueAb9eU81VXNc2qfyJG2f1VZhfIIW40tWDW2YNVkmGCiX+hEKYnaXWVvAAAAAElFTkSuQmCC",
     "opciones": [
       {
         "letter": "A",
-        "text": "Número de página"
+        "text": "WordArt"
       },
       {
         "letter": "B",
@@ -13812,16 +13849,16 @@
       },
       {
         "letter": "C",
-        "text": "Iconos"
+        "text": "Cuadro de texto"
       },
       {
         "letter": "D",
-        "text": "WordArt"
+        "text": "Elementos rápidos"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "**WordArt.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta texto decorativo con estilos de relleno, contorno y efectos."
+    "respuesta": "A",
+    "explicacion": "Es **WordArt**, del grupo Texto en la pestaña Insertar. Inserta un texto decorativo con relleno, contorno y efectos, dentro de un objeto que se coloca donde se quiera. No tiene atajo de teclado en esta instalación. · **Letra capital** es el descarte que decide la pregunta: las dos agrandan y adornan letras, pero aquella actúa sobre la primera letra de un párrafo del documento, que sigue siendo texto normal, y esta crea un objeto flotante aparte. · Un WordArt se formatea con la cinta Formato de forma, en su grupo Estilos de WordArt."
   },
   {
     "id": "insertar-427",
@@ -13836,6 +13873,7 @@
     "tema": "Texto",
     "sourceQuestionId": "img-insertar-22",
     "generado": true,
+    "revisada": true,
     "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVEhLtZW7isJQEIZHhYBioUSIRQI2gq2glVZ5Tp8koFioVUCtAkmjnRe8VBFEOZsZZ8XoWXNx/UByZiL8nLn8yYgAkOB5HiwWC8jlcmCaJmfTk+XnC5vNBgzDoDOKfor0RofDAWzbhlarRbe6XC7Qbrf5rZxer8enP0ChZ2azmZhMJnRerVbCsiyx3+8pTou0dMfjESqVCp01TQNFUWC9XlOclhchLNX5fAZd1zkDUCqV/l8I+4O3yefznAGoVqsk/olYaBhOpxOMRiOo1+tQq9U4e2M8HkOhUIBms8mZMImGwXVdMRwOOQrjOI7o9/scJSdUOtwd7IcMHIrr9Uo9TMNdCHvj+z71Q0a5XKbSbbdbziTj3qP5fE43ikO32w0NSxzuQoPBAFRVpd87gl6RNTUaDc7ciBoGEsK6o5+h5WCJ3jGdTqnEnU6HM/GgHmHdi8VipAiC/0GhpDuVxd15tJwocL/QkgIP5Ew8ssvlkr45j5YTBa7AbrfjKB6ZwAnEu42X8fsZeXSQWMPA56/yYqrfAeAHFvhyFi8WlN8AAAAASUVORK5CYII=",
     "opciones": [
@@ -13845,7 +13883,7 @@
       },
       {
         "letter": "B",
-        "text": "Insertar ▸ Tablas"
+        "text": "Inicio ▸ Fuente"
       },
       {
         "letter": "C",
@@ -13858,7 +13896,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Letra capital.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Agranda la primera letra del párrafo ocupando varias líneas (por defecto 3): «En texto» o «En margen»."
+    "explicacion": "Es **Letra capital**, del grupo Texto en la pestaña Insertar. Agranda la primera letra del párrafo hasta ocupar varios renglones, tres de partida, con las posiciones «En texto» y «En margen» y un cuadro de opciones. No tiene atajo de teclado en esta instalación. · «Inicio ▸ Fuente» es el descarte que decide la pregunta, porque lo que hace es agrandar una letra, que suena a formato de carácter; pero no es un tamaño lo que se elige, sino cuántas líneas ocupa, y eso obliga a recolocar el párrafo entero."
   },
   {
     "id": "insertar-428",
@@ -13873,29 +13911,30 @@
     "tema": "Texto",
     "sourceQuestionId": "img-insertar-23",
     "generado": true,
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAsCAYAAAAwwXuTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADYSURBVGhD7dYxCsJAEAXQ1cI7yYKktYq9J/AKQhAJeAVPYG8q2yAs3slGE5gi2jjKLNm//tc4W36YP3Hy6LiMTeU3WwyIjgHRMSC67AOafOi9n8tkK4SbTL8zC9i2V3nZKIqFSUB2EF2UFZ1tLjJ9535cymS3otEC1msvL53qFKIEZAfRMSA6XlEN/pMZETuo8b6iu2or02f7+iDTK3ZQiR1EN3oHh4Z9TLqDfcCyXMlLp2nOUQKyg+h4ZDT+7shY4JFRYgc1+hWNIZkOpowdRMeA6BgQm3NP40SfDspSD/MAAAAASUVORK5CYII=",
     "opciones": [
       {
         "letter": "A",
-        "text": "Página en blanco"
-      },
-      {
-        "letter": "B",
-        "text": "Portada"
-      },
-      {
-        "letter": "C",
         "text": "Elementos rápidos"
       },
       {
+        "letter": "B",
+        "text": "Cuadro de texto"
+      },
+      {
+        "letter": "C",
+        "text": "Objeto"
+      },
+      {
         "letter": "D",
-        "text": "Vídeos en línea"
+        "text": "Portada"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Elementos rápidos.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta bloques de creación reutilizables: Autotexto, Propiedad del documento, Campo… y el «Organizador de bloques de creación»."
+    "respuesta": "A",
+    "explicacion": "Es **Elementos rápidos**, del grupo Texto en la pestaña Insertar. Reúne todo lo reutilizable: el submenú Autotexto, las propiedades del documento, el cuadro «Campo…», el «Organizador de bloques de creación…» y «Guardar selección en una galería de elementos rápidos…». No tiene atajo de teclado en esta instalación. · **Portada** es el descarte que decide la pregunta: también es una galería de bloques de creación, y de hecho sus portadas aparecen dentro del Organizador; la diferencia es que aquella tiene botón propio, en el grupo Páginas."
   },
   {
     "id": "insertar-429",
@@ -13910,16 +13949,17 @@
     "tema": "Texto",
     "sourceQuestionId": "img-insertar-24",
     "generado": true,
+    "revisada": true,
     "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAZCAYAAAAv3j5gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVEhL7ZbNSsNAEMcnX6ASEItgLwrVq57qoU1BcvUB6tE3EPEl6lHBt1B8hyDU+gAeKxG8KIitICr5IPpfN6Ys3TQbsHjoD5aZnRl2MpPZEC35hqaAzuWfM0tUmlmi0hRK1Go1uSZnUoz0whY5PI9ut8c1DhKNw3EaSRAEbI3qsiXGixRqneddcU3OpJj/1bq8FYZhEkURk6mtdOvGoes6WZZFpmmSYRhMYg+7bds8KiO3dbK+4+D7YUBnN4/k+a/08hFTZd4gt7ZIB40qDfxbqte3efQPyhXhiZFk/7JP/uCTTnfXqH+4xST2sC/VNnl0hnIiVINKlhdMutjbIGfVJtfdYRJ72OEXUUqkaRqTaNdRc4XpIrDDL1IqEd4JKhgFVaWVwS+ilCidG7z464c3pgMMTbpgh1+kVCJM10nviekisMMvojwMcRyzEX5+j6h9fvdbGST2sMMvovwJwmXsdI7ZCMvu0XpljkdnTOm/jugLkJ9ULx/W5KkAAAAASUVORK5CYII=",
     "opciones": [
       {
         "letter": "A",
-        "text": "Disposición ▸ Configurar página"
+        "text": "Insertar ▸ Texto"
       },
       {
         "letter": "B",
-        "text": "Insertar ▸ Texto"
+        "text": "Insertar ▸ Encabezado y pie de página"
       },
       {
         "letter": "C",
@@ -13927,12 +13967,12 @@
       },
       {
         "letter": "D",
-        "text": "Inicio ▸ Voz"
+        "text": "Disposición ▸ Configurar página"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "**Fecha y hora.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta la fecha o la hora en varios formatos, con opción de «Actualizar automáticamente» (como campo)."
+    "respuesta": "A",
+    "explicacion": "Es **Fecha y hora**, del grupo Texto en la pestaña Insertar. Abre un cuadro con los formatos disponibles, el idioma, la casilla «Actualizar automáticamente» y el botón «Establecer como predeterminado». No tiene atajo de teclado en esta instalación. · «Insertar ▸ Encabezado y pie de página» es el descarte que decide la pregunta, porque un botón llamado igual SÍ existe... pero en la CINTA CONTEXTUAL que se abre al editar un encabezado, no en el grupo de la pestaña Insertar, que solo tiene Encabezado, Pie de página y Número de página."
   },
   {
     "id": "insertar-430",
@@ -13947,6 +13987,7 @@
     "tema": "Texto",
     "sourceQuestionId": "img-insertar-25",
     "generado": true,
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAYAAADkgu3FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACrSURBVEhLY/wPBAx0AExQmuZg1CKyAcHEYG1tCWURB44ePQ5loQGQRfiAlZXF/1+/fhGFQWpxAYJBB3IhKysrTkwswBl0jCmboCzc4P8cP4bfv39DeQwMDg52OIMOr0XN0dZQHiaoXXqUehYRAqRYhDMxMCRvxBrhMAySBwFkMYoSA7XAqEVkg4FPdcQCqqU6UKEKcjUuTCwY+DiCAWpVEwQtohYYbvmIgQEAsQmNa1tKSh8AAAAASUVORK5CYII=",
     "opciones": [
@@ -13956,20 +13997,20 @@
       },
       {
         "letter": "B",
-        "text": "WordArt"
-      },
-      {
-        "letter": "C",
         "text": "Elementos rápidos"
       },
       {
+        "letter": "C",
+        "text": "Cuadro de texto"
+      },
+      {
         "letter": "D",
-        "text": "Referencia cruzada"
+        "text": "Línea de firma"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Objeto.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta un objeto incrustado o vinculado (Crear nuevo / Crear desde un archivo). La flecha añade «Insertar texto de archivo…», que incorpora el contenido como texto."
+    "explicacion": "Es **Objeto**, del grupo Texto en la pestaña Insertar. Su cuadro tiene dos fichas, «Crear nuevo», con la lista de tipos instalados, y «Crear desde un archivo», con las casillas «Vincular al archivo» y «Mostrar como icono». La flecha del botón añade «Insertar texto de archivo…», que trae el contenido como texto editable en vez de como objeto. No tiene atajo de teclado en esta instalación. · Esa segunda entrada es la clave: incrustar y volcar texto son cosas distintas y salen del mismo botón."
   },
   {
     "id": "insertar-431",
@@ -13984,29 +14025,30 @@
     "tema": "Texto",
     "sourceQuestionId": "img-insertar-26",
     "generado": true,
+    "revisada": true,
     "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGLSURBVEhLY/wPBAw0BkxQmqZg1BKSAF0sIZi6rK0toSxM4OrqytDQ0ATl4QEgS/ABKyuL/79+/cLAIHFXV+f/9fW1UJW4AUXB1dzcwnDs2DGG7u4uqAh2QJElRkbGYIscHR3B/LSN9xjke84xFG57AObDAMURb2pqxmBiYsoQs/oOw+EHnxj6PeUY1l17B5WFALIt4eHhYbhw4TwDExMT2IL7778zGElyM1TtfsxgK88HVQUBZFuyfftOsC9gFswPUASLm0jzMiwJVQGzYYAsS5iZmVF8ALKg8cBzBkZGRgwLQIBkS0i1AARIsgRkEMyCs8++YFhw9uwZqEpUQLIlRx99Zjj/4isDFysTQ+KG+3AL/v37x1BVVQlViQpIsgQUVNtvfWD49ec/ww8gVhTkhFvw9+9fhi9fvkBVogKiLQG5GAQevP/JEK4rzNDmJodiAT5AVAF54MAhBpWJl6Ei2MGdfF0GBwc7hqNHj0NFkAC4BMMDcBWQ2DBILTZAUVGPDWDzyXBprTAwAABZnE+4Q3YEqQAAAABJRU5ErkJggg==",
     "opciones": [
       {
         "letter": "A",
-        "text": "Inicio ▸ Fuente"
-      },
-      {
-        "letter": "B",
-        "text": "Insertar ▸ Páginas"
-      },
-      {
-        "letter": "C",
         "text": "Insertar ▸ Texto"
       },
       {
+        "letter": "B",
+        "text": "Insertar ▸ eSignature"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar ▸ Ilustraciones"
+      },
+      {
         "letter": "D",
-        "text": "Insertar ▸ Multimedia"
+        "text": "Revisar ▸ Proteger"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Línea de firma.** Pestaña Insertar ▸ Texto. Atajo: no tiene atajo de teclado en esta instalación. Inserta una línea de firma de Microsoft Office con el nombre y el puesto del firmante. Distinta de eSignature."
+    "respuesta": "A",
+    "explicacion": "Es **Línea de firma**, del grupo Texto en la pestaña Insertar. Coloca el trazo con el nombre y el puesto de quien debe firmar, a partir del cuadro «Configuración de firma». No tiene atajo de teclado en esta instalación. · **«Insertar ▸ eSignature»** es el descarte que decide la pregunta, y es de los buenos: existe, es un grupo propio de esta misma pestaña y también va de firmas, pero es el servicio de firma electrónica en la nube, otra cosa. · Su menú ofrece además «Agregar servicios de firma…»."
   },
   {
     "id": "insertar-443",
@@ -14021,28 +14063,29 @@
     "tema": "Texto",
     "sourceQuestionId": "neg-insertar-09",
     "generado": true,
-    "enunciado": "¿Cuál de estos comandos NO está en el grupo Texto de Insertar?",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO está en el grupo Texto de la pestaña Insertar:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cuadro de texto"
+        "text": "Símbolo"
       },
       {
         "letter": "B",
-        "text": "WordArt"
+        "text": "Cuadro de texto"
       },
       {
         "letter": "C",
-        "text": "Letra capital"
+        "text": "WordArt"
       },
       {
         "letter": "D",
-        "text": "Símbolo"
+        "text": "Letra capital"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Símbolo tiene su propio grupo («Símbolos»), al final de la pestaña Insertar. Cuadro de texto, WordArt y Letra capital sí están en el grupo Texto."
+    "respuesta": "A",
+    "explicacion": "«Símbolo» tiene grupo propio, «Símbolos», el último de la pestaña, y comparte sitio con «Ecuación». · El grupo Texto tiene siete botones: Cuadro de texto, Elementos rápidos, WordArt, Letra capital, Línea de firma, Fecha y hora y Objeto. · La confusión viene de que todo lo que inserta el grupo Símbolos son también caracteres, y de que un símbolo se comporta como una letra más del párrafo; la diferencia práctica es que los del grupo Texto crean casi siempre un objeto o un campo, y un símbolo es texto puro."
   },
   {
     "id": "insertar-450",
@@ -14057,28 +14100,29 @@
     "tema": "Texto",
     "sourceQuestionId": "neg2-insertar-04",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre el grupo Texto:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un cuadro de texto se puede vincular a otro para que el texto fluya de uno a otro."
+        "text": "«Objeto» solo permite insertar hojas de Excel y ningún otro tipo"
       },
       {
         "letter": "B",
-        "text": "WordArt aplica efectos de texto decorativos predefinidos."
+        "text": "Dos cuadros de texto se pueden encadenar para que el texto fluya de uno a otro"
       },
       {
         "letter": "C",
-        "text": "Insertar ▸ Objeto solo permite insertar hojas de Excel; ningún otro tipo de archivo."
+        "text": "WordArt aplica al texto estilos decorativos ya preparados"
       },
       {
         "letter": "D",
-        "text": "Se puede insertar la fecha y hora con la opción de «Actualizar automáticamente»."
+        "text": "La fecha se puede insertar con la casilla «Actualizar automáticamente» marcada"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Insertar ▸ Objeto admite muchos tipos de objeto incrustado (PDF, presentaciones, otros documentos…), no solo Excel."
+    "respuesta": "A",
+    "explicacion": "La lista de «Crear nuevo» tiene 23 tipos: hojas de Excel en cuatro formatos, presentaciones y diapositivas de PowerPoint, los tres de OpenDocument, WordPad, Bitmap Image, Microsoft Graph Chart y algunos más. Y con «Crear desde un archivo» se puede incrustar cualquier archivo cuyo programa esté instalado. · Las otras tres son ciertas. · El encadenado de cuadros se hace con «Crear vínculo», de la cinta Formato de forma, no desde este grupo."
   },
   {
     "id": "insertar-451",
@@ -14093,28 +14137,29 @@
     "tema": "Texto",
     "sourceQuestionId": "neg2-insertar-05",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre los campos:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Una letra capital (Insertar ▸ Letra capital) puede colocarse «En texto» o «En margen»."
+        "text": "Un campo solo sirve para mostrar la fecha; no hay campos de otro tipo"
       },
       {
         "letter": "B",
-        "text": "La línea de firma crea un cuadro para firma digital."
+        "text": "Una letra capital se puede colocar «En texto» o «En margen»"
       },
       {
         "letter": "C",
-        "text": "Insertar ▸ Número de página inserta un campo dinámico que se actualiza solo."
+        "text": "El número de página insertado es un campo que se actualiza solo"
       },
       {
         "letter": "D",
-        "text": "Los campos (Ctrl+F9) solo pueden usarse para mostrar la fecha; ningún otro dato."
+        "text": "La línea de firma prepara el hueco para una firma digital"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Word tiene decenas de tipos de campo (autor, título, número de página, referencia cruzada…), no solo la fecha."
+    "respuesta": "A",
+    "explicacion": "El cuadro «Campo» agrupa decenas de campos en categorías: fecha y hora, información del documento, del usuario, numeración, vínculos y referencias, índices y tablas, combinación de correspondencia, ecuaciones y automatización. La fecha es solo una de ellas. · De hecho, casi todo lo automático de un documento es un campo por dentro: el número de página, la referencia cruzada, la tabla de contenido y hasta el total de páginas. · Las otras tres afirmaciones son ciertas."
   },
   {
     "sourceFile": "insertar.json",
@@ -14130,27 +14175,28 @@
     "id": "insertar-475",
     "sourceQuestionId": "capt-ins-475",
     "tipo": "opcion_unica",
-    "enunciado": "El boton «Elementos rapidos» (Insertar ▸ Texto) despliega un menu. ¿Que 5 entradas tiene?",
+    "revisada": true,
+    "enunciado": "¿Qué entradas tiene el menú del botón «Elementos rápidos»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Autotexto · Propiedad del documento · Campo… · Organizador de bloques de creacion… · Guardar seleccion en una galeria de elementos rapidos"
+        "text": "Autotexto · Propiedad del documento · Campo… · Organizador de bloques de creación… · Guardar selección en una galería de elementos rápidos…"
       },
       {
         "letter": "B",
-        "text": "Autotexto · Fecha y hora · WordArt · Letra capital · Objeto"
+        "text": "Autotexto · Propiedad del documento · Campo… · Organizador de bloques de creación… · Importar texto…"
       },
       {
         "letter": "C",
-        "text": "Portada · Pagina en blanco · Salto de pagina · Encabezado · Pie"
+        "text": "Autotexto · Fecha y hora · WordArt · Letra capital · Objeto"
       },
       {
         "letter": "D",
-        "text": "Campo · Marcador · Referencia cruzada · Hipervinculo · Comentario"
+        "text": "Campo · Marcador · Referencia cruzada · Vínculo · Comentario"
       }
     ],
     "respuesta": "A",
-    "explicacion": "«Autotexto» y «Propiedad del documento» abren submenu; «Campo…» abre el cuadro Campo; el «Organizador de bloques de creacion» gestiona todos los bloques guardados."
+    "explicacion": "Las dos primeras abren submenú, la tercera abre el cuadro «Campo», la cuarta el organizador de todo lo guardado y la quinta guarda lo seleccionado. Es el botón que reúne todo lo reutilizable de Word. · El descarte que decide la pregunta cambia la última por «Importar texto…», que no existe: traer el contenido de otro documento se hace con «Objeto ▸ Insertar texto de archivo…». · El tercer descarte enumera botones del propio grupo Texto y el cuarto, del grupo Vínculos."
   },
   {
     "sourceFile": "insertar.json",
@@ -14166,11 +14212,12 @@
     "id": "insertar-476",
     "sourceQuestionId": "capt-ins-476",
     "tipo": "opcion_unica",
-    "enunciado": "En el submenu «Elementos rapidos ▸ Propiedad del documento», ¿que propiedad NO aparece?",
+    "revisada": true,
+    "enunciado": "De estas cuatro, señale la que NO está en «Elementos rápidos ▸ Propiedad del documento»:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Numero de revisiones"
+        "text": "Número de revisiones"
       },
       {
         "letter": "B",
@@ -14178,15 +14225,15 @@
       },
       {
         "letter": "C",
-        "text": "Fax de la compania"
+        "text": "Fax de la compañía"
       },
       {
         "letter": "D",
-        "text": "Fecha de publicacion"
+        "text": "Fecha de publicación"
       }
     ],
     "respuesta": "A",
-    "explicacion": "El submenu tiene 15 propiedades: Administrador, Asunto, Autor, Categoria, Comentarios, Compania, Direccion de correo electronico de la compania, Direccion de la compania, Estado, Extracto, Fax de la compania, Fecha de publicacion, Palabras clave, Telefono de la compania y Titulo. «Numero de revisiones» es un dato del panel Informacion, no una propiedad insertable aqui."
+    "explicacion": "El submenú tiene quince propiedades por orden alfabético: administrador, asunto, autor, categoría, comentarios, compañía con su dirección, teléfono, fax y correo, estado, extracto, fecha de publicación, palabras clave y título. · El número de revisiones sí es un dato del documento, y se ve en el panel de Archivo ▸ Información, pero no se puede insertar desde aquí: lo cuenta Word y no se rellena a mano, mientras que todo lo de este submenú son casillas que escribe el autor. Esa es la línea que separa unas cosas de otras."
   },
   {
     "sourceFile": "insertar.json",
@@ -14202,7 +14249,8 @@
     "id": "insertar-473",
     "sourceQuestionId": "capt-ins-473",
     "tipo": "seleccion_multiple",
-    "enunciado": "En «Objeto ▸ Crear nuevo», ¿cuales de estos SI son tipos de objeto disponibles?",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estos son tipos de objeto de la lista «Objeto ▸ Crear nuevo»?",
     "opciones": [
       {
         "letter": "A",
@@ -14214,7 +14262,7 @@
       },
       {
         "letter": "C",
-        "text": "OpenDocument Text / Spreadsheet / Presentation"
+        "text": "OpenDocument Text, Spreadsheet y Presentation"
       },
       {
         "letter": "D",
@@ -14223,6 +14271,10 @@
       {
         "letter": "E",
         "text": "Microsoft Access Database"
+      },
+      {
+        "letter": "F",
+        "text": "Adobe Acrobat Document"
       }
     ],
     "respuesta": [
@@ -14231,7 +14283,7 @@
       "C",
       "D"
     ],
-    "explicacion": "La lista incluye Bitmap Image, WordPad Document, los 3 formatos OpenDocument, Microsoft Graph Chart, «Package», «Organization Chart Add-in» y los formatos de Excel/PowerPoint/Word (actuales, 97-2003 y con macros). Access NO figura. Confirmado con captura."
+    "explicacion": "Los cuatro verdaderos están entre los 23 tipos, junto a las hojas de Excel en cuatro formatos, las presentaciones y diapositivas de PowerPoint, «Package» y «Organization Chart Add-in». Confirmado con captura del usuario. · Los dos descartes son programas conocidísimos que no figuran, y ese es el motivo de que engañen: la lista solo muestra los tipos cuyo programa está instalado y registrado como servidor de objetos. Un PDF sí se puede incrustar, pero por la otra ficha, «Crear desde un archivo»."
   },
   {
     "sourceFile": "insertar.json",
@@ -14247,7 +14299,8 @@
     "id": "insertar-477",
     "sourceQuestionId": "capt-ins-477",
     "tipo": "seleccion_multiple",
-    "enunciado": "El cuadro «Campo» (Elementos rapidos ▸ Campo…) agrupa los campos por «Categorias». ¿Cuales de estas SI son categorias?",
+    "revisada": true,
+    "enunciado": "El cuadro «Campo» agrupa los campos por categorías. ¿Cuáles de estas lo son?",
     "opciones": [
       {
         "letter": "A",
@@ -14255,7 +14308,7 @@
       },
       {
         "letter": "B",
-        "text": "Ecuaciones y formulas"
+        "text": "Ecuaciones y fórmulas"
       },
       {
         "letter": "C",
@@ -14263,11 +14316,15 @@
       },
       {
         "letter": "D",
-        "text": "Vinculos y referencias"
+        "text": "Vínculos y referencias"
       },
       {
         "letter": "E",
         "text": "Macros y complementos"
+      },
+      {
+        "letter": "F",
+        "text": "Estilos y formato"
       }
     ],
     "respuesta": [
@@ -14276,7 +14333,7 @@
       "C",
       "D"
     ],
-    "explicacion": "Las categorias son: [Todos], Automatizacion, Combinar correspondencia, Ecuaciones y formulas, Fecha y hora, Indice y tablas, Info. documento, Info. usuario, Numeracion, Resumen del documento y Vinculos y referencias. Con «[Todos]» se ven todos los nombres de campo (CreateDate, AutoNum, MergeField, Page, NumPages...)."
+    "explicacion": "Las categorías del desplegable son «[Todos]», Automatización, Combinar correspondencia, Ecuaciones y fórmulas, Fecha y hora, Índice y tablas, Info. documento, Info. usuario, Numeración y Vínculos y referencias. Con «[Todos]» se ven todos los nombres seguidos, por orden alfabético. · Los dos descartes son terrenos que Word maneja de sobra, pero por otras vías: las macros desde la pestaña Programador y los estilos desde Inicio. Un campo no aplica formato, muestra un dato."
   },
   {
     "id": "insertar-296",
@@ -14291,11 +14348,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-94",
     "generado": true,
-    "enunciado": "Un cuadro de texto se comporta siempre como un carácter más dentro del párrafo y no puede moverse libremente por la página.",
+    "revisada": true,
+    "enunciado": "Un cuadro de texto se comporta siempre como un carácter más del párrafo y no se puede mover libremente.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: un cuadro de texto puede colocarse en cualquier posición con independencia del flujo del texto, según el ajuste que se elija."
+    "explicacion": "Nace flotante y se arrastra a donde se quiera, con el texto del documento rodeándolo según el ajuste elegido. De hecho, esa es su razón de ser: colocar un texto donde el flujo normal no llega, como un destacado en un lateral o un pie junto a una imagen. · Sí se puede hacer que se comporte como un carácter, eligiendo «En línea con el texto» en «Ajustar texto», pero es la excepción y hay que pedirla. · Por dentro es una forma rectangular preparada para escribir, y se formatea con la cinta Formato de forma."
   },
   {
     "id": "insertar-297",
@@ -14310,11 +14368,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-95",
     "generado": true,
-    "enunciado": "El comando Elementos rápidos > Autotexto permite guardar un fragmento de texto con su formato para reutilizarlo en otros documentos.",
+    "revisada": true,
+    "enunciado": "«Elementos rápidos ▸ Autotexto» permite guardar un fragmento con su formato para reutilizarlo en otros documentos.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Siempre terminas tus informes con el mismo párrafo de cierre con firma, cargo y fecha en negrita. Lo seleccionas, vas a Insertar > Texto > Elementos rápidos > Autotexto > Guardar selección en galería de autotexto y le das el nombre CierreFormal. La próxima vez escribes CierreFormal y pulsas F3 y Word inserta el bloque completo con todo su formato."
+    "explicacion": "Se selecciona el bloque, se guarda con «Guardar selección en galería de autotexto» o con Alt+F3, se le pone un nombre, y a partir de ahí basta con escribir ese nombre y pulsar F3 para que aparezca entero, con negritas, tablas o imágenes incluidas. · Que sirva en OTROS documentos depende de dónde se guarde: la galería propone la plantilla Normal, que es común a todo Word; si se guarda en el documento actual, solo vale ahí. Ese detalle está en el cuadro, en el campo «Guardar en»."
   },
   {
     "id": "insertar-298",
@@ -14329,11 +14388,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-98",
     "generado": true,
-    "enunciado": "Elementos rápidos > Campo y Elementos rápidos > Propiedad del documento abren el mismo cuadro de diálogo.",
+    "revisada": true,
+    "enunciado": "«Campo…» y «Propiedad del documento» abren el mismo cuadro de diálogo.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Al elegir Propiedad del documento > Autor, Word inserta directamente el campo con el nombre del autor sin abrir ningún cuadro. Al elegir Campo, se abre un cuadro completo con más de setenta tipos de campo disponibles, cada uno con sus propias opciones de formato. Son dos accesos completamente distintos."
+    "explicacion": "«Propiedad del documento» es un submenú: se elige «Autor» y el campo entra en el documento sin más. «Campo…» abre un cuadro grande, con las categorías a la izquierda, la lista de nombres, las propiedades de cada uno y las casillas «Conservar formato al actualizar» y «Códigos de campo». · Los dos acaban insertando un campo, y por eso se confunden: uno es la vía rápida a lo habitual y el otro la vía completa, con la que se llega a cualquier campo de Word, incluidos los del submenú."
   },
   {
     "id": "insertar-299",
@@ -14348,11 +14408,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-99",
     "generado": true,
-    "enunciado": "El Organizador de bloques de creación permite eliminar bloques guardados en las galerías de Word.",
+    "revisada": true,
+    "enunciado": "El «Organizador de bloques de creación» permite eliminar bloques guardados en las galerías.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Con el tiempo has acumulado bloques de Autotexto obsoletos. Abres el Organizador desde Insertar > Texto > Elementos rápidos > Organizador de bloques de creación, seleccionas el bloque que ya no necesitas y haces clic en Eliminar. Desaparece de la galería definitivamente."
+    "explicacion": "Es el único sitio desde el que se puede borrar uno: las galerías solo dejan insertar y guardar. Se selecciona en la lista, se ve la vista previa a la derecha y se pulsa «Eliminar». Sus otros dos botones son «Editar propiedades…», para cambiarle el nombre o la galería, e «Insertar». · La lista reúne TODO lo guardado, no solo los autotextos: portadas, encabezados, pies, números de página, tablas rápidas y bibliografías, con la galería y la plantilla de cada uno."
   },
   {
     "id": "insertar-300",
@@ -14367,11 +14428,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-100",
     "generado": true,
-    "enunciado": "La Letra capital solo puede colocarse dentro del texto ocupando varias líneas del párrafo.",
+    "revisada": true,
+    "enunciado": "La letra capital solo se puede colocar dentro del texto, ocupando varias líneas del párrafo.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Al abrir Insertar > Texto > Letra capital ves tres opciones: Ninguno, En texto (la letra grande ocupa varias líneas dentro del párrafo) y En margen (la letra aparece fuera del área de texto, en el margen izquierdo). No está limitada a la posición En texto."
+    "explicacion": "Hay dos posiciones, y la segunda es «En margen», que saca la letra fuera del área de texto, al margen izquierdo, dejando el párrafo recto. Es la que se ve en muchos libros y da un aire más señorial. · La primera, «En texto», encaja la letra dentro y hace que el párrafo se ciña a su contorno. · La tercera opción del menú, «Ninguna», es la que quita la capital. · Las tres están en el menú del botón y también en el cuadro de opciones."
   },
   {
     "id": "insertar-301",
@@ -14386,11 +14448,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-101",
     "generado": true,
-    "enunciado": "El valor predeterminado de Líneas que ocupa en el cuadro Letra capital es 2.",
+    "revisada": true,
+    "enunciado": "El campo «Fuente» del cuadro «Letra capital» viene con «+Cuerpo», es decir, la fuente del tema.",
     "opciones": [],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: el valor predeterminado es 3 líneas."
+    "respuesta": true,
+    "explicacion": "«+Cuerpo» no es una fuente concreta sino un puntero a la que el tema del documento use para el texto corrido, de modo que si se cambia el tema, la capital cambia con él. Es lo mismo que aparece en el cuadro Fuente al mirar un párrafo normal. · Aquí se puede elegir otra distinta a propósito, que es lo habitual cuando se busca una capital de aspecto decorativo. · Los otros campos del cuadro son «Líneas que ocupa», con 3, y «Distancia desde el texto», a 0 cm."
   },
   {
     "id": "insertar-302",
@@ -14405,11 +14468,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-102",
     "generado": true,
-    "enunciado": "El valor predeterminado de Distancia desde el texto en el cuadro Letra capital es 0,5 cm.",
+    "revisada": true,
+    "enunciado": "«Distancia desde el texto», en el cuadro Letra capital, viene con 0,5 cm.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Insertas una Letra capital sin tocar el cuadro de opciones y observas que el texto del párrafo queda pegado a la letra capital sin separación visible. Eso es porque el valor predeterminado es 0 cm, no 0,5 cm. Si quieres separación tienes que modificar ese campo manualmente."
+    "explicacion": "Viene con **0 cm**: la capital queda pegada al párrafo y hay que subir el valor a mano si se quiere aire alrededor. Con la posición «En texto» se nota enseguida, porque el texto se ciñe al contorno de la letra sin separación. · Es el único campo del cuadro que se mide en centímetros; los demás son una posición, una fuente y un número de líneas. · Media décima de centímetro suele bastar para que la capital respire, pero es una decisión de quien maqueta, no algo que Word haga por su cuenta."
   },
   {
     "id": "insertar-303",
@@ -14424,11 +14488,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-103",
     "generado": true,
-    "enunciado": "La Línea de firma de Microsoft Office y el servicio eSignature son dos sistemas distintos y no son intercambiables.",
+    "revisada": true,
+    "enunciado": "La «Línea de firma de Microsoft Office» y el servicio eSignature son dos cosas distintas.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "La Línea de firma de Microsoft Office inserta un objeto en el documento que permite firmar digitalmente con un certificado instalado localmente. eSignature es un servicio en la nube de Microsoft 365 que envía el documento a un firmante externo a través de un proveedor de firma electrónica. Uno es local, el otro es un servicio online."
+    "explicacion": "La línea de firma es un objeto que se inserta en el documento y se firma en el propio equipo, con un certificado digital instalado; eSignature es un servicio en la nube que manda el documento a un firmante externo a través de un proveedor. Uno es local y el otro va por internet. · En la cinta también están separados: la línea de firma está en el grupo Texto y eSignature tiene grupo propio en la misma pestaña. · El menú de la línea de firma incluye además «Agregar servicios de firma…», que es por donde se conectan proveedores externos."
   },
   {
     "id": "insertar-304",
@@ -14443,11 +14508,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-104",
     "generado": true,
-    "enunciado": "Al insertar una fecha con Actualizar automáticamente desactivado, Word inserta un campo que se actualiza cada vez que se abre el documento.",
+    "revisada": true,
+    "enunciado": "Con «Actualizar automáticamente» SIN marcar, la fecha insertada se pone al día cada vez que se abre el documento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Insertas la fecha 03/09/2026 con esa opción desactivada. Abres el documento seis meses después y la fecha sigue mostrando 03/09/2026. Word ha insertado texto estático, no un campo dinámico. Para que la fecha cambie sola hay que marcar Actualizar automáticamente en el momento de insertarla."
+    "explicacion": "Sin marcar, Word inserta texto normal y la fecha se queda congelada en el día en que se escribió: seis meses después sigue diciendo lo mismo. · Marcada, entra como campo y muestra siempre el día actual. · La elección importa más de lo que parece: en un escrito con valor de registro casi siempre se quiere la fecha fija, y en una plantilla que se reutiliza, la variable. · Si se insertó fija y se quiere cambiar, hay que borrarla y volver a insertarla, porque la casilla decide en el momento de crear."
   },
   {
     "id": "insertar-305",
@@ -14462,11 +14528,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-105",
     "generado": true,
+    "revisada": true,
     "enunciado": "WordArt se inserta desde el grupo Ilustraciones de la pestaña Insertar.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: WordArt está en el grupo Texto."
+    "explicacion": "Está en el grupo **Texto**, junto a Cuadro de texto, Elementos rápidos, Letra capital, Línea de firma, Fecha y hora y Objeto. · La confusión tiene su lógica, porque lo que inserta es un objeto flotante que se coloca donde se quiera y se formatea con la cinta Formato de forma, igual que una figura. Pero por dentro sigue siendo texto: se puede seguir escribiendo, se corrige la ortografía y se busca con Ctrl+B. · Su formato específico está en el grupo Estilos de WordArt de esa cinta contextual."
   },
   {
     "id": "insertar-306",
@@ -14481,11 +14548,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-106",
     "generado": true,
-    "enunciado": "WordArt y la Letra capital se insertan desde grupos distintos de la pestaña Insertar.",
+    "revisada": true,
+    "enunciado": "WordArt y Letra capital se insertan desde grupos distintos de la pestaña Insertar.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: los dos están en el grupo Texto."
+    "explicacion": "Los dos están en el grupo Texto, uno al lado del otro. · Se parecen en que agrandan y adornan letras, pero funcionan al revés: la letra capital actúa sobre la primera letra de un párrafo del documento, que sigue formando parte de él, y WordArt crea un objeto aparte, flotante, con su propio contenido. · De ahí una consecuencia práctica: la capital se recoloca sola si el párrafo se mueve, y el WordArt se queda donde estaba salvo que se ancle."
   },
   {
     "id": "insertar-307",
@@ -14500,11 +14568,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-107",
     "generado": true,
-    "enunciado": "Un cuadro de texto y un objeto OLE incrustado son el mismo tipo de elemento en Word.",
+    "revisada": true,
+    "enunciado": "Un cuadro de texto y un objeto incrustado son el mismo tipo de elemento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Insertas un cuadro de texto y escribes \"Ver anexo\". Insertas un objeto OLE con una hoja de Excel. Al hacer doble clic en el cuadro de texto, simplemente entras en modo edición de texto. Al hacer doble clic en el objeto Excel, se abre Excel dentro del documento con todas sus herramientas. Son elementos de naturaleza completamente distinta."
+    "explicacion": "El cuadro de texto es de Word: se hace doble clic y se escribe dentro, con las herramientas de siempre. Un objeto incrustado pertenece a otro programa, y al hacer doble clic Word cede el sitio a la cinta de ese programa —Excel, por ejemplo— para editarlo dentro del documento. · La diferencia se nota al enviar el archivo: el cuadro de texto viaja sin problemas, y el objeto necesita que el destinatario tenga instalado el programa correspondiente para poder editarlo, aunque se vea igual."
   },
   {
     "id": "insertar-308",
@@ -14519,11 +14588,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-108",
     "generado": true,
-    "enunciado": "El campo CreateDate insertado mediante Elementos rápidos > Campo muestra la fecha en que se abrió el documento por última vez.",
+    "revisada": true,
+    "enunciado": "El campo CreateDate muestra la fecha en que se abrió el documento por última vez.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Creas un documento el 1 de enero, lo modificas el 15 de marzo y lo abres para revisarlo el 3 de septiembre. El campo CreateDate siempre mostrará 1 de enero, que fue cuando se creó el archivo. Para la última modificación existe SaveDate y para la fecha actual del sistema existe Date."
+    "explicacion": "Muestra la fecha de CREACIÓN del archivo, y no cambia nunca: un documento creado en enero, modificado en marzo y abierto en septiembre sigue mostrando enero. · La categoría «Fecha y hora» del cuadro «Campo» tiene uno para cada cosa: CreateDate para la creación, SaveDate para la última vez que se guardó, PrintDate para la última impresión y Date para el día de hoy. Abrir el documento no queda registrado en ninguno: solo guardarlo. · Los cuatro se actualizan con F9."
   },
   {
     "id": "insertar-309",
@@ -14538,11 +14608,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-109",
     "generado": true,
-    "enunciado": "Una Línea de firma de Microsoft Office requiere que el firmante tenga un certificado digital válido para completar la firma.",
+    "revisada": true,
+    "enunciado": "Para completar una «Línea de firma de Microsoft Office» el firmante necesita un certificado digital.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Envías un contrato con una Línea de firma al receptor. Cuando este hace doble clic en la línea para firmar, Word le pide que seleccione un certificado digital. Si no tiene uno instalado o no dispone de un id. digital emitido por un proveedor reconocido, no puede completar el proceso de firma."
+    "explicacion": "Al hacer doble clic en la línea, Word pide seleccionar un identificador digital; sin uno instalado, ofrece obtenerlo de un proveedor y no deja seguir. Esa es la diferencia entre esto y escribir un nombre encima de una raya: la firma queda asociada criptográficamente al documento y este se marca como final. · El cuadro de configuración que se rellena al insertarla solo prepara el hueco: firmante sugerido, puesto, correo e instrucciones. Quien firma aporta lo demás."
   },
   {
     "id": "insertar-310",
@@ -14557,11 +14628,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-110",
     "generado": true,
-    "enunciado": "El comando Objeto > Insertar texto de archivo incorpora el archivo externo como un objeto incrustado, no como texto.",
+    "revisada": true,
+    "enunciado": "«Objeto ▸ Insertar texto de archivo…» incorpora el archivo como objeto incrustado.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: incorpora el contenido como texto integrado en el flujo del documento, no como objeto."
+    "explicacion": "Vuelca el CONTENIDO en el flujo del documento: los párrafos se mezclan con los que ya había y se editan como propios. Es lo que se usa para juntar varios documentos en uno. · Incrustar es lo que hace la otra vía, «Objeto… ▸ Crear desde un archivo», que deja un bloque cerrado que se abre con su programa. · Las dos entradas salen del mismo botón, y ahí está la trampa: comparten menú y hacen cosas opuestas, una integra y la otra encapsula."
   },
   {
     "id": "insertar-311",
@@ -14576,11 +14648,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-111",
     "generado": true,
-    "enunciado": "Un objeto creado con Objeto > Crear desde un archivo con Vincular al archivo activo es una copia independiente del archivo original que no cambia aunque el original se modifique.",
+    "revisada": true,
+    "enunciado": "Un objeto insertado con «Crear desde un archivo» y «Vincular al archivo» marcada es una copia independiente que no cambia aunque cambie el original.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Vinculas una hoja Excel de presupuesto a tu informe Word. El departamento de contabilidad actualiza esa hoja con los datos definitivos. La próxima vez que abres el Word, este te pregunta si quieres actualizar los vínculos. Aceptas y el objeto en Word refleja los datos actualizados. No es una copia fija: está conectado al original."
+    "explicacion": "Marcada esa casilla, lo que se guarda es la ruta, no el contenido: al abrir el documento Word ofrece actualizar los vínculos y trae lo que haya en el archivo original. · Eso obliga a llevarse los dos archivos juntos y a que la ruta siga siendo válida, que es el precio de la comodidad. · Sin marcarla es cuando se guarda una copia dentro del documento y el original deja de importar. · Los vínculos se revisan y se rompen desde Archivo ▸ Información ▸ «Editar vínculos a archivos»."
   },
   {
     "id": "insertar-312",
@@ -14595,11 +14668,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-112",
     "generado": true,
-    "enunciado": "La diferencia entre Autotexto y un bloque de creación es que el Autotexto solo puede contener texto sin formato, mientras que el bloque de creación puede incluir tablas, imágenes y otros elementos.",
+    "revisada": true,
+    "enunciado": "La diferencia entre un autotexto y un bloque de creación es que el autotexto solo admite texto sin formato.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "El Autotexto es simplemente un tipo de bloque de creación guardado en la galería de Autotexto. Puede contener texto con formato, tablas, imágenes o cualquier otro contenido, exactamente igual que cualquier otro bloque de creación. La diferencia no es el tipo de contenido sino la galería donde se almacena."
+    "explicacion": "Un autotexto ES un bloque de creación: lo único que lo distingue es la galería en la que está guardado. Admite exactamente lo mismo que los demás —texto con formato, tablas, imágenes, campos— y se gestiona desde el mismo Organizador. · Las otras galerías de bloques son las portadas, los encabezados, los pies, los números de página, las tablas rápidas, las ecuaciones y las bibliografías. · La galería decide dónde aparece el bloque en la interfaz, no lo que puede contener."
   },
   {
     "id": "insertar-372",
@@ -14614,11 +14688,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-194",
     "generado": true,
-    "enunciado": "En el cuadro Letra capital, la posición \"En margen\" está disponible junto a \"En texto\" y \"Ninguno\".",
+    "revisada": true,
+    "enunciado": "El cuadro «Letra capital» ofrece la posición «En margen» además de «En texto» y «Ninguna».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Al abrir Opciones de letra capital, ves tres opciones de posición: Ninguna, En texto y En margen. Si eliges En margen, la letra grande se coloca fuera del área de texto, en el margen izquierdo."
+    "explicacion": "Son las tres posiciones, y están tanto en el menú del botón como en el cuadro de opciones. «En margen» saca la letra fuera del área de texto, al margen izquierdo, y el párrafo se queda recto; «En texto» la encaja dentro y el párrafo se ciñe a su contorno. · Con «En margen» conviene subir el número de líneas, porque al salirse del bloque de texto la letra se ve más pequeña de lo que es. · Las dos ocupan el mismo número de renglones: lo que cambia es dónde caen."
   },
   {
     "id": "insertar-373",
@@ -14633,11 +14708,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-195",
     "generado": true,
-    "enunciado": "En el cuadro Letra capital, el campo \"Distancia desde el texto\" tiene un valor predeterminado de 0,5 cm.",
+    "revisada": true,
+    "enunciado": "En el cuadro «Letra capital», la altura de la letra se fija en puntos.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "El valor predeterminado es 0 cm, no 0,5. La letra queda pegada al texto del párrafo si no cambias ese valor. Si quieres separación, tienes que modificarlo manualmente."
+    "explicacion": "Se fija en LÍNEAS, con el campo «Líneas que ocupa», que viene con 3: la letra se agranda sola hasta ocupar tantos renglones del párrafo como se pida. Por eso, si se cambia el interlineado del párrafo, la capital cambia de tamaño con él. · Es una manera de medir poco habitual y es lo que suele fallarse. · El tamaño en puntos sí se puede tocar después, seleccionando la letra y usando el grupo Fuente, pero entonces deja de encajar con los renglones."
   },
   {
     "id": "insertar-374",
@@ -14652,11 +14728,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-196",
     "generado": true,
-    "enunciado": "El cuadro Fecha y hora solo ofrece formatos numéricos (tipo 03/09/2026).",
+    "revisada": true,
+    "enunciado": "El cuadro «Fecha y hora» solo ofrece formatos numéricos, del tipo 03/09/2026.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: ofrece también formatos con el día de la semana y el mes con nombre, como jueves, 3 de septiembre de 2026."
+    "explicacion": "La lista mezcla formatos numéricos con otros escritos en palabras, como «jueves, 3 de septiembre de 2026», y abreviados, como «3-sep-26»; también hay formatos de hora y combinaciones de fecha y hora. · Todos se muestran con la fecha de hoy, no como plantillas: lo que se ve es exactamente lo que se va a insertar. · Los nombres de los meses y de los días dependen del desplegable «Idioma», que en esta instalación viene con Español (España)."
   },
   {
     "id": "insertar-375",
@@ -14671,11 +14748,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-197",
     "generado": true,
-    "enunciado": "En el cuadro Fecha y hora, el idioma predeterminado es \"Español (España)\".",
+    "revisada": true,
+    "enunciado": "El desplegable «Idioma» del cuadro «Fecha y hora» viene con Español (España).",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Al abrir el cuadro, el campo Idioma ya aparece con \"Español (España)\" seleccionado. Si tienes configurado Word en español, ese es el idioma que usa para los nombres de los meses y días."
+    "explicacion": "De él dependen los nombres de los meses y de los días y el orden de la fecha, así que al cambiarlo cambia toda la lista de formatos que se ofrece debajo. · Es útil cuando hay que redactar un documento en otro idioma sin cambiar el de todo Word. · El idioma que se elija aquí queda asociado a la fecha insertada, así que si más tarde se actualiza el campo, sigue mostrándose en ese idioma. · Los otros controles del cuadro son la lista de formatos, «Actualizar automáticamente» y «Establecer como predeterminado»."
   },
   {
     "id": "insertar-376",
@@ -14690,11 +14768,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-198",
     "generado": true,
-    "enunciado": "El cuadro Fecha y hora incluye una opción \"Actualizar automáticamente\" que, si se marca, convierte la fecha en un campo que se actualiza cada vez que se abre el documento.",
+    "revisada": true,
+    "enunciado": "Marcar «Actualizar automáticamente» en el cuadro «Fecha y hora» convierte la fecha en un campo que muestra siempre el día actual.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Al insertar la fecha, puedes marcar esa casilla para que no sea texto estático, sino un campo DATE que siempre muestre la fecha actual del sistema. Si no la marcas, la fecha queda fija."
+    "explicacion": "Deja de ser texto y pasa a ser un campo DATE, que se refresca al abrir el documento y al imprimirlo, y también con F9. · Sin marcarla, la fecha entra como texto fijo con el día en que se escribió. · La elección hay que hacerla al insertar, porque la casilla no está disponible después; para cambiar de idea hay que borrar la fecha y volver a ponerla. · Para la fecha real de creación del archivo, que es otra cosa, el campo es CreateDate, del cuadro «Campo»."
   },
   {
     "id": "insertar-377",
@@ -14709,11 +14788,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-199",
     "generado": true,
-    "enunciado": "En el cuadro Objeto, la pestaña \"Crear nuevo\" muestra una lista de tipos de objeto que incluye \"Bitmap Image\" y \"Microsoft Excel Worksheet\".",
+    "revisada": true,
+    "enunciado": "La lista de «Objeto ▸ Crear nuevo» incluye tanto «Bitmap Image» como «Microsoft Excel Worksheet».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "En la lista de tipos de objeto disponibles para insertar desde el cuadro, aparecen tanto imágenes de mapa de bits como hojas de cálculo de Excel, gráficos de Microsoft Graph, presentaciones de PowerPoint, etc."
+    "explicacion": "Son dos de los 23 tipos, junto a las otras hojas de Excel (97-2003, binaria y con macros), Microsoft Graph Chart, las presentaciones y diapositivas de PowerPoint, los tres formatos de OpenDocument, WordPad Document, Package y Organization Chart Add-in. · «Bitmap Image» abre el editor de imágenes del sistema dentro de Word, que es una reliquia todavía útil para un dibujo rápido. · La lista no es fija: depende de qué programas haya instalados y registrados como servidores de objetos en el equipo."
   },
   {
     "id": "insertar-378",
@@ -14728,11 +14808,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-200",
     "generado": true,
-    "enunciado": "En el cuadro Objeto, la pestaña \"Crear desde un archivo\" permite vincular el objeto al archivo original mediante la opción \"Vincular al archivo\".",
+    "revisada": true,
+    "enunciado": "La ficha «Crear desde un archivo» del cuadro «Objeto» tiene una casilla «Vincular al archivo».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Si seleccionas un archivo existente y marcas \"Vincular al archivo\", el objeto insertado no es una copia, sino un vínculo. Si el archivo original cambia, el objeto en Word se actualizará."
+    "explicacion": "Marcada, Word guarda la ruta en vez del contenido y va a buscarlo cada vez, así que el objeto refleja los cambios del original; sin marcarla, guarda una copia dentro del documento y el original deja de importar. · La otra casilla de esa ficha es «Mostrar como icono», que solo cambia cómo se ve y puede combinarse con la anterior. · Vincular obliga a llevarse los dos archivos juntos, y los vínculos se revisan desde Archivo ▸ Información ▸ «Editar vínculos a archivos»."
   },
   {
     "id": "insertar-379",
@@ -14747,11 +14828,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-201",
     "generado": true,
-    "enunciado": "Existe una opción \"Insertar texto de archivo\", accesible desde el menú Objeto, que permite incorporar el contenido de otro documento como texto normal.",
+    "revisada": true,
+    "enunciado": "«Insertar texto de archivo…», en el menú del botón Objeto, trae el contenido de otro documento como texto normal.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Desde Insertar > Texto > Objeto > Insertar texto de archivo... puedes seleccionar un archivo de Word y su contenido se vierte en el documento actual como texto plano con formato, sin incrustarlo como objeto."
+    "explicacion": "Los párrafos entran en el flujo del documento, con su formato, y se editan como propios: es la vía para juntar varios archivos en uno. · Es lo contrario de la otra entrada del mismo botón, «Objeto…», que incrusta un bloque cerrado que se abre con su programa. Que las dos cosas salgan del mismo menú es lo que las hace confundibles. · El cuadro que abre es el de abrir archivos de siempre, y admite documentos de Word, texto plano y otros formatos que Word sepa leer."
   },
   {
     "id": "insertar-380",
@@ -14766,11 +14848,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-202",
     "generado": true,
-    "enunciado": "En el cuadro Campo, la lista de nombres de campos no incluye Author ni CreateDate.",
+    "revisada": true,
+    "enunciado": "La lista de nombres del cuadro «Campo» no incluye Author ni CreateDate.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: la lista incluye Author, CreateDate, Comments y muchos más."
+    "explicacion": "Incluye los dos, y muchos más: la lista va por orden alfabético y arranca con Fórmula, AddressBlock, Advance, Ask, Author, AutoNum, AutoNumLgl, AutoNumOut, AutoText, AutoTextList, BarCode, Bibliography, Citation, Comments, Compare, CreateDate, Database… · Author es la información del usuario y CreateDate la fecha de creación del archivo, así que están en categorías distintas: «Info. usuario» y «Fecha y hora». Con «[Todos]» elegido en el desplegable de categorías se ven todos seguidos."
   },
   {
     "id": "insertar-381",
@@ -14785,11 +14868,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-203",
     "generado": true,
-    "enunciado": "En el cuadro Campo, existe una opción \"Conservar formato al actualizar\" que evita que el campo pierda el formato aplicado manualmente.",
+    "revisada": true,
+    "enunciado": "La casilla «Conservar formato al actualizar» del cuadro «Campo» impide que el campo pierda el formato que se le haya dado a mano.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "En la parte inferior del cuadro aparece una casilla con esa etiqueta. Si la marcas, el campo mantendrá el formato (fuente, tamaño, negrita, etc.) que le hayas aplicado, aunque se actualice su valor."
+    "explicacion": "Marcada, al pulsar F9 el campo recalcula su contenido pero mantiene la negrita, el color o el tamaño que se le hayan aplicado; sin ella, cada actualización devuelve el formato de partida. · Lo que no hace es congelar el VALOR: para eso hay que bloquear el campo con Ctrl+3, o desvincularlo del todo con Ctrl+6, y ninguna de esas dos cosas está en este cuadro. · La otra casilla del cuadro es «Códigos de campo», que enseña el código en bruto en vez del resultado."
   },
   {
     "id": "insertar-384",
@@ -14804,11 +14888,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-206",
     "generado": true,
-    "enunciado": "En el cuadro Configuración de firma, se puede especificar el nombre y el puesto del firmante sugerido.",
+    "revisada": true,
+    "enunciado": "El cuadro «Configuración de firma» permite indicar el nombre y el puesto de quien debe firmar.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Al insertar una Línea de firma de Microsoft Office, el cuadro que aparece tiene campos para \"Firmante sugerido\" y \"Puesto del firmante sugerido\". Son obligatorios si quieres que la línea de firma tenga sentido."
+    "explicacion": "Son sus dos primeros campos, «Firmante sugerido» y «Puesto del firmante sugerido», y lo que se escriba se imprime debajo del trazo: por eso la línea de firma tiene sentido aunque nadie llegue a firmarla digitalmente. · El cuadro pide además el correo del firmante e instrucciones para él, y ofrece dos casillas: permitir comentarios al firmar y mostrar la fecha. · Nada de esto es la firma en sí: solo prepara el hueco. Quien firma aporta su certificado."
   },
   {
     "id": "insertar-385",
@@ -14823,11 +14908,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-207",
     "generado": true,
-    "enunciado": "En el cuadro Configuración de firma, hay una casilla para \"Mostrar la fecha en la línea de firma\" que, si se marca, incluirá la fecha de la firma.",
+    "revisada": true,
+    "enunciado": "El cuadro «Configuración de firma» tiene una casilla para mostrar la fecha en la línea de firma.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Además de los campos del firmante, hay una casilla con ese texto. Si la marcas, la línea de firma mostrará también la fecha en que se firmó, junto con el nombre y el cargo."
+    "explicacion": "Al marcarla, debajo del trazo aparece la fecha en que se firmó, junto al nombre y el puesto. Es una de las dos casillas del cuadro; la otra permite al firmante añadir comentarios al firmar. · La fecha la pone Word en el momento de la firma, no quien prepara el documento: por eso es una casilla y no un campo donde escribir. · Es una diferencia útil frente a una raya dibujada a mano, donde la fecha hay que teclearla y no acredita nada."
   },
   {
     "id": "insertar-391",
@@ -14842,11 +14928,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-213",
     "generado": true,
-    "enunciado": "El Organizador de bloques de creación permite insertar un bloque directamente desde el cuadro de diálogo.",
+    "revisada": true,
+    "enunciado": "El «Organizador de bloques de creación» permite insertar un bloque en el documento desde el propio cuadro.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Además de eliminar, el organizador tiene un botón \"Insertar\" que te permite colocar el bloque seleccionado en el documento sin cerrar el cuadro."
+    "explicacion": "Tiene tres botones y ese es uno: «Editar propiedades…», «Eliminar» e «Insertar». · Insertar desde aquí es útil precisamente cuando no se recuerda en qué galería quedó guardado algo, porque la lista los reúne todos con su galería, su categoría y su plantilla, y muestra una vista previa. · Los otros dos botones son los que no tienen alternativa en ningún otro sitio: borrar un bloque guardado y cambiarle el nombre o la galería solo se puede hacer desde aquí."
   },
   {
     "id": "insertar-393",
@@ -14861,11 +14948,12 @@
     "tema": "Texto",
     "sourceQuestionId": "vf-insertar-215",
     "generado": true,
-    "enunciado": "En el cuadro Configuración de firma, se puede añadir un correo electrónico del firmante sugerido.",
+    "revisada": true,
+    "enunciado": "El cuadro «Configuración de firma» incluye un campo para el correo electrónico del firmante sugerido.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Además del nombre y el puesto, el cuadro tiene un campo para \"Dirección de correo electrónico del firmante sugerido\". No es obligatorio, pero está disponible."
+    "explicacion": "Es el tercero de los cuatro campos, después del nombre y el puesto y antes de las instrucciones, y no es obligatorio. Sirve para identificar a quien debe firmar, no para escribirle: Word no manda ningún aviso desde aquí. · Mandar el documento a un firmante externo es cosa de eSignature, el servicio en la nube que tiene grupo propio en esta misma pestaña. · Nada de lo que se rellena aquí es la firma: solo prepara el hueco y lo que se verá impreso."
   },
   {
     "sourceFile": "insertar.json",
@@ -14881,10 +14969,11 @@
     "id": "insertar-474",
     "sourceQuestionId": "capt-ins-474",
     "tipo": "verdadero_falso",
-    "enunciado": "El cuadro «Objeto ▸ Crear nuevo» tiene una casilla «Mostrar como icono» para insertar el objeto como un icono en vez de mostrar su contenido.",
+    "revisada": true,
+    "enunciado": "El cuadro «Objeto» tiene una casilla «Mostrar como icono» que inserta el objeto como un icono en lugar de mostrar su contenido.",
     "opciones": [],
     "respuesta": true,
-    "explicacion": "La casilla esta a la derecha de la lista de tipos, tanto en «Crear nuevo» como en «Crear desde un archivo». Al marcarla se puede elegir el icono y su etiqueta."
+    "explicacion": "Está a la derecha de la lista de tipos y aparece en las dos fichas, «Crear nuevo» y «Crear desde un archivo»; al marcarla se puede elegir el icono y la etiqueta que lo acompaña. · Es lo que conviene cuando el objeto es un anexo que solo interesa a quien quiera abrirlo, o cuando desplegarlo ocuparía páginas enteras. · Se puede combinar con «Vincular al archivo», así que un anexo puede ser a la vez un icono y un vínculo al original."
   },
   {
     "id": "insertar-464",
@@ -14899,7 +14988,8 @@
     "tema": "Texto",
     "sourceQuestionId": "rell-insertar-04",
     "generado": true,
-    "enunciado": "Escribe el atajo de cada acción: crear un Autotexto a partir de la selección → [1]. alternar entre el código Unicode y el carácter de un símbolo → [2].",
+    "revisada": true,
+    "enunciado": "Completa: para guardar la selección como autotexto, [1]; para convertir un código Unicode en su carácter y al revés, [2].",
     "opciones": [],
     "matching": null,
     "respuesta": [
@@ -14912,7 +15002,7 @@
         "Alt + X"
       ]
     ],
-    "explicacion": "Alt+F3 crea un elemento de Autotexto; Alt+X alterna el carácter bajo el cursor con su código Unicode."
+    "explicacion": "Los dos figuran en el cuadro Personalizar teclado como CrearAutotexto y ActDesactCódigoCaracteres. · El primero abre el cuadro «Crear nuevo bloque de creación» con lo seleccionado ya dentro; su pareja es F3, que hace lo contrario, convertir el nombre escrito en su contenido. · El segundo es el más útil de conocer y el menos conocido: escrito 20AC, al pulsarlo aparece el €; pulsado sobre un carácter, enseña su código. Es la vía rápida para meter un símbolo sin abrir el cuadro Símbolo."
   },
   {
     "id": "insertar-7",
