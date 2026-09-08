@@ -16305,28 +16305,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0371",
-    "enunciado": "¿Qué atajo abre el panel de navegación con el cuadro de búsqueda en Word 365?",
+    "enunciado": "Quieres buscar una palabra dentro del documento y que Word te enseñe todas las coincidencias en un panel lateral. ¿Qué combinación lo abre en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + F"
+        "text": "Ctrl+B"
       },
       {
         "letter": "B",
-        "text": "Ctrl + B"
+        "text": "Ctrl+F"
       },
       {
         "letter": "C",
-        "text": "Ctrl + H"
+        "text": "Ctrl+L"
       },
       {
         "letter": "D",
-        "text": "Ctrl + I"
+        "text": "Ctrl+I"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+B abre el panel de Navegación con el cuadro de búsqueda dentro del documento (pestañas Títulos / Páginas / Resultados). Ctrl+L abre Reemplazar. F5 abre Ir a. Alt+Q lleva el foco al Buscar de la barra de título. Prueba en vivo del usuario."
+    "respuesta": "A",
+    "explicacion": "Ctrl+B abre el panel de Navegación con el cuadro de búsqueda y sus tres fichas, Títulos, Páginas y Resultados. Prueba en vivo del usuario. La B es de «buscar», siguiendo la lógica del esquema español. · ⚠️ Ctrl+F es el descarte que más cae, porque en el esquema internacional es «find»: aquí aplica sangría francesa, y quien lo pulse por costumbre se encontrará el párrafo descolocado sin entender por qué. · Ctrl+L abre el cuadro Buscar y reemplazar en su ficha Reemplazar. · Y Ctrl+I lo abre en la ficha Ir a, igual que F5. Cuatro letras y cuatro destinos distintos, todos relacionados con buscar."
   },
   {
     "id": "inicio-118",
@@ -16341,28 +16341,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0372",
-    "enunciado": "¿Cuántas pestañas tiene el panel de navegación de Word 365 y cuáles son?",
+    "enunciado": "Abres el panel de Navegación. ¿Cuántas fichas tiene y cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2 pestañas: Títulos y Páginas"
+        "text": "3: Títulos, Páginas y Resultados"
       },
       {
         "letter": "B",
-        "text": "3 pestañas: Títulos, Páginas y Resultados"
+        "text": "3: Buscar, Reemplazar e Ir a"
       },
       {
         "letter": "C",
-        "text": "4 pestañas: Títulos, Páginas, Resultados y Búsqueda avanzada"
+        "text": "2: Títulos y Páginas"
       },
       {
         "letter": "D",
-        "text": "3 pestañas: Buscar, Reemplazar e Ir a"
+        "text": "4: Títulos, Páginas, Resultados y Búsqueda avanzada"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El panel de navegación tiene 3 pestañas: Títulos (muestra el índice interactivo de los párrafos con estilos de título aplicados), Páginas (muestra miniaturas de las páginas del documento) y Resultados (muestra vínculos directos a las coincidencias de búsqueda, hasta un máximo de 100 resultados)."
+    "respuesta": "A",
+    "explicacion": "«Títulos» enseña el esquema del documento a partir de los párrafos con nivel de esquema, y permite contraerlos y arrastrarlos para reordenar apartados enteros. «Páginas» muestra miniaturas. Y «Resultados» lista las coincidencias de lo que se busque en el cuadro de arriba. · «Buscar, Reemplazar e Ir a» son las tres fichas del CUADRO Buscar y reemplazar, que es otra cosa: ese es el descarte que decide la pregunta, porque también son tres y también van de búsqueda. Uno es un panel lateral y el otro un cuadro de diálogo. · «Búsqueda avanzada» sí existe, pero como entrada del menú de la lupa del panel, no como ficha."
   },
   {
     "id": "inicio-120",
@@ -16377,28 +16377,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0374",
-    "enunciado": "¿Cuál es el número máximo de resultados que muestra la pestaña Resultados del panel de navegación?",
+    "enunciado": "Buscas en el panel de Navegación una palabra muy frecuente y la ficha Resultados no te da la lista. ¿Qué ha pasado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "50"
+        "text": "Que hay demasiadas coincidencias y Word lo dice en vez de listarlas"
       },
       {
         "letter": "B",
-        "text": "75"
+        "text": "Que la ficha se para en las 100 primeras y ha llegado al tope"
       },
       {
         "letter": "C",
-        "text": "100"
+        "text": "Que la ficha se para en las 200 primeras y ha llegado al tope"
       },
       {
         "letter": "D",
-        "text": "200"
+        "text": "Que la ficha solo lista títulos y páginas, no palabras sueltas"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La pestaña Resultados del panel de navegación muestra un máximo de 100 resultados. Si el documento contiene más de 100 coincidencias del término buscado, la pestaña solo mostrará las primeras 100."
+    "respuesta": "A",
+    "explicacion": "El panel no tiene un tope fijo de resultados: cuando las coincidencias son demasiadas para listarlas, avisa con un «Hay demasiados resultados» en vez de enseñar un trozo. Comprobado con más de sesenta mil coincidencias. Prueba en vivo del usuario. · ⚠️ Las cifras de 100 y 200 circulan por muchos manuales y apuntes como si fueran el límite, y no lo son: por eso son los dos descartes de esta pregunta y conviene desconfiar de ellas si aparecen en un examen. · Y la ficha Resultados sí lista palabras sueltas: es precisamente lo que hace. Los títulos y las páginas tienen sus propias fichas."
   },
   {
     "id": "inicio-122",
@@ -16413,28 +16413,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0376",
-    "enunciado": "¿Qué atajo abre el cuadro de diálogo Buscar y reemplazar posicionado en la pestaña Reemplazar?",
+    "enunciado": "Quieres sustituir todas las apariciones de una palabra por otra. ¿Qué combinación abre el cuadro directamente en la ficha Reemplazar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + B"
+        "text": "Ctrl+L"
       },
       {
         "letter": "B",
-        "text": "Ctrl + L"
+        "text": "Ctrl+B"
       },
       {
         "letter": "C",
-        "text": "Ctrl + I"
+        "text": "Ctrl+H"
       },
       {
         "letter": "D",
-        "text": "F5"
+        "text": "Ctrl+I"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+L abre el cuadro de diálogo Buscar y reemplazar en la pestaña Reemplazar en la versión española de Word 365. Ctrl+B abre el panel de navegación. Ctrl+I y F5 abren el cuadro en la pestaña Ir a."
+    "respuesta": "A",
+    "explicacion": "Ctrl+L abre Buscar y reemplazar en su ficha Reemplazar. · ⚠️ Ctrl+H es la trampa del esquema internacional, donde es «replace»: aquí aumenta la sangría izquierda, así que el párrafo se mueve y no aparece ningún cuadro. Es el descarte más caro de los tres. · Ctrl+B abre el panel de Navegación, que busca pero no reemplaza. · Y Ctrl+I abre el mismo cuadro pero en la ficha Ir a. · Fíjate en que las tres fichas del cuadro son el mismo cuadro: desde cualquiera de ellas se puede pasar a las otras dos con un clic, así que estos atajos solo deciden en cuál se aterriza."
   },
   {
     "id": "inicio-123",
@@ -16449,28 +16449,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0377",
-    "enunciado": "¿Qué dos atajos abren el cuadro de diálogo Buscar y reemplazar posicionado en la pestaña Ir a?",
+    "enunciado": "Quieres saltar directamente a la página 47 de un informe largo. ¿Qué combinaciones abren el cuadro en la ficha «Ir a»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + B y Ctrl + L"
+        "text": "Ctrl+I y F5"
       },
       {
         "letter": "B",
-        "text": "Ctrl + I y F5"
+        "text": "Ctrl+I y F4"
       },
       {
         "letter": "C",
-        "text": "Ctrl + L y F5"
+        "text": "Ctrl+G y F5"
       },
       {
         "letter": "D",
-        "text": "Ctrl + G y F5"
+        "text": "Ctrl+L y F5"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Tanto Ctrl+I como F5 abren el cuadro de diálogo Buscar y reemplazar directamente en la pestaña Ir a en la versión española de Word 365. Ctrl+B abre el panel de navegación y Ctrl+L abre la pestaña Reemplazar."
+    "respuesta": "A",
+    "explicacion": "Las dos comparten el comando EdiciónIrA y abren el cuadro en esa ficha, donde se elige el tipo de elemento —página, sección, línea, marcador, comentario, nota, tabla, gráfico— y se escribe su número. · Ctrl+G es el descarte con más fundamento por partida doble: en Word estándar es precisamente «Ir a», y aquí está reasignado a Guardar, con lo que quien lo pulse guardará el documento en lugar de navegar. · F4 repite la última acción, del mismo grupo que Ctrl+Y y Alt+Entrar. · Y Ctrl+L abre el mismo cuadro en la ficha Reemplazar."
   },
   {
     "id": "inicio-124",
@@ -16485,28 +16485,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0378",
-    "enunciado": "¿Cuántas pestañas tiene el cuadro de diálogo Buscar y reemplazar y cuáles son?",
+    "enunciado": "Abres el cuadro «Buscar y reemplazar». ¿Cuántas fichas tiene y cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2 pestañas: Buscar y Reemplazar"
+        "text": "3: Buscar, Reemplazar e Ir a"
       },
       {
         "letter": "B",
-        "text": "3 pestañas: Buscar, Reemplazar e Ir a"
+        "text": "3: Buscar, Reemplazar y Búsqueda avanzada"
       },
       {
         "letter": "C",
-        "text": "4 pestañas: Buscar, Reemplazar, Ir a y Avanzado"
+        "text": "2: Buscar y Reemplazar"
       },
       {
         "letter": "D",
-        "text": "3 pestañas: Buscar, Avanzado e Ir a"
+        "text": "4: Buscar, Reemplazar, Ir a y Formato"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El cuadro de diálogo Buscar y reemplazar tiene 3 pestañas: Buscar (para localizar texto), Reemplazar (para buscar y sustituir texto) e Ir a (para saltar a un elemento específico del documento por tipo y número)."
+    "respuesta": "A",
+    "explicacion": "Un solo cuadro con tres fichas, y a cada una se llega con su propio atajo: Ctrl+L cae en Reemplazar, y Ctrl+I y F5 en Ir a. Una vez dentro se salta de una a otra con un clic. · «Búsqueda avanzada» es el descarte con más fundamento: existe, pero es la entrada del menú de la lupa del panel de Navegación que abre este mismo cuadro en su ficha Buscar. Un nombre de ruta, no de ficha. · «Formato» tampoco es una ficha: es uno de los botones que aparecen al pulsar «Más >>», junto a «Especial» y «Sin formato». · ⚠️ Ojo: el botón «Buscar» a secas de la cinta abre el PANEL, no este cuadro."
   },
   {
     "id": "inicio-125",
@@ -16521,15 +16521,15 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0379",
-    "enunciado": "En el cuadro de diálogo Buscar y reemplazar, el botón 'Más >>' despliega las opciones avanzadas de búsqueda. ¿Cuántas opciones de búsqueda aparecen en ese panel expandido?",
+    "enunciado": "Pulsas «Más >>» en el cuadro Buscar y reemplazar y se despliegan las opciones de búsqueda. ¿Cuántas casillas hay en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "5"
+        "text": "7"
       },
       {
         "letter": "B",
-        "text": "7"
+        "text": "5"
       },
       {
         "letter": "C",
@@ -16541,8 +16541,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Al pulsar Más >> se despliegan 7 opciones de búsqueda: Coincidir mayúsculas y minúsculas, Solo palabras completas, Usar caracteres comodín, Prefijo, Sufijo, Omitir puntuación y Omitir espacios en blanco. El botón cambia a << Menos para colapsar el panel."
+    "respuesta": "A",
+    "explicacion": "Siete: Coincidir mayúsculas y minúsculas, Solo palabras completas, Usar caracteres comodín, Prefijo, Sufijo, Omitir puntuación y Omitir espacios en blanco. El botón pasa entonces a llamarse «<< Menos». Prueba en vivo del usuario. · ⚠️ Ojo con las cifras más altas: en muchos manuales aparecen además «Suena como» y «Todas las formas de la palabra», que pertenecen al esquema en inglés y en esta instalación NO existen. Contarlas lleva a nueve, que es justo el descarte que más cae. · Bajo esas casillas están los desplegables «Buscar» —con Todo, Hacia adelante y Hacia atrás— y los botones Formato, Especial y Sin formato."
   },
   {
     "id": "inicio-127",
@@ -16557,15 +16557,15 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0381",
-    "enunciado": "En el cuadro de Buscar y reemplazar, ¿qué botón permite buscar texto que además tenga un formato concreto aplicado, como un color de resaltado o un estilo de fuente específico?",
+    "enunciado": "Quieres localizar solo las apariciones de una palabra que además estén en negrita. En el cuadro desplegado, ¿qué botón te lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Especial"
+        "text": "Formato"
       },
       {
         "letter": "B",
-        "text": "Formato"
+        "text": "Especial"
       },
       {
         "letter": "C",
@@ -16577,8 +16577,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El botón Formato del cuadro Buscar y reemplazar permite añadir condiciones de formato a la búsqueda, de modo que solo se encuentren las coincidencias que además tengan ese formato aplicado. Sin formato cancela esa condición y vuelve a buscar solo por texto."
+    "respuesta": "A",
+    "explicacion": "«Formato» despliega un menú con Fuente, Párrafo, Tabulaciones, Idioma, Marco, Estilo y Resaltar: se elige la condición y queda escrita bajo el campo de búsqueda. Se pueden encadenar varias, y también dejar el campo de texto vacío para buscar solo por formato, que es como se localizan de golpe todos los párrafos con un estilo determinado. · «Sin formato» es su reverso y el descarte que decide la pregunta: borra las condiciones ya puestas, y hay que pulsarlo antes de la siguiente búsqueda o Word seguirá filtrando por ellas sin que se note. · «Especial» busca caracteres invisibles. · Y «Más >>» es el botón que despliega todo esto."
   },
   {
     "id": "inicio-128",
@@ -16593,28 +16593,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0382",
-    "enunciado": "En el cuadro de Buscar y reemplazar, ¿qué botón permite buscar elementos que no pueden escribirse directamente como texto en el campo de búsqueda, como marcas de párrafo, saltos de página o tabuladores?",
+    "enunciado": "Quieres buscar las marcas de párrafo o los tabuladores del documento, que no se pueden teclear en el campo de búsqueda. ¿Qué botón lo resuelve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Formato"
-      },
-      {
-        "letter": "B",
-        "text": "Sin formato"
-      },
-      {
-        "letter": "C",
         "text": "Especial"
       },
       {
+        "letter": "B",
+        "text": "Formato"
+      },
+      {
+        "letter": "C",
+        "text": "Sin formato"
+      },
+      {
         "letter": "D",
-        "text": "Más >>"
+        "text": "Usar caracteres comodín"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El botón Especial despliega un menú con caracteres y elementos especiales que no pueden escribirse directamente en el campo de búsqueda, como marcas de párrafo (^p), tabuladores (^t), saltos de página manuales (^m) u otros caracteres de formato."
+    "respuesta": "A",
+    "explicacion": "«Especial» despliega la lista de elementos que no son texto normal y los escribe en el campo con su código: la marca de párrafo como ^p, el tabulador como ^t, el salto de página manual como ^m, el guion opcional, el espacio de no separación y demás. Sabiéndolos, se pueden teclear a mano. Con ese menú se hace la limpieza más útil de Word: buscar ^p^p y reemplazar por ^p para quitar los párrafos vacíos de un texto pegado. · «Formato» busca por aspecto, no por caracteres invisibles: es la confusión de este par. · «Sin formato» retira condiciones. · Y los comodines son una casilla, no un botón, y sirven para patrones de texto."
   },
   {
     "id": "inicio-129",
@@ -16629,28 +16629,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0383",
-    "enunciado": "¿Cuál es la diferencia entre los botones 'Reemplazar' y 'Reemplazar todos' del cuadro de diálogo Buscar y reemplazar?",
+    "enunciado": "En la ficha Reemplazar hay dos botones parecidos, «Reemplazar» y «Reemplazar todos». ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Reemplazar sustituye todas las coincidencias de golpe; Reemplazar todos solo sustituye la actualmente seleccionada"
+        "text": "El primero sustituye la coincidencia actual y salta a la siguiente; el segundo, todas de una vez"
       },
       {
         "letter": "B",
-        "text": "Reemplazar sustituye solo la coincidencia actual y avanza a la siguiente; Reemplazar todos sustituye todas las coincidencias del documento de una sola vez"
+        "text": "El primero sustituye todas de una vez; el segundo, la actual y salta a la siguiente"
       },
       {
         "letter": "C",
-        "text": "No hay diferencia; ambos sustituyen todas las coincidencias"
+        "text": "Hacen lo mismo; el segundo además pide confirmación antes de cada cambio"
       },
       {
         "letter": "D",
-        "text": "Reemplazar pide confirmación antes de cada sustitución; Reemplazar todos no pide confirmación y borra el historial de deshacer"
+        "text": "El primero actúa sobre lo seleccionado; el segundo, sobre el documento entero"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Reemplazar sustituye la coincidencia que está actualmente resaltada y avanza automáticamente a la siguiente, permitiendo revisar y decidir una a una. Reemplazar todos sustituye todas las coincidencias del documento de una sola vez sin revisión individual."
+    "respuesta": "A",
+    "explicacion": "El primero permite revisar caso por caso, que es lo prudente cuando la palabra buscada puede aparecer en contextos distintos; el segundo lo hace todo de golpe y avisa al terminar de cuántas sustituciones ha hecho. · La versión con los papeles cambiados es el reflejo exacto. · Ninguno pide confirmación por cada cambio: el control lo da precisamente ir pulsando «Reemplazar». · Y sí hay una diferencia de alcance que la pregunta no recoge y conviene saber: si hay texto seleccionado, «Reemplazar todos» actúa solo dentro de esa selección y luego ofrece seguir por el resto del documento. Los dos son deshacibles de una sola vez con Ctrl+Z."
   },
   {
     "id": "inicio-131",
@@ -16665,28 +16665,28 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0385",
-    "enunciado": "En la pestaña Ir a del cuadro de diálogo Buscar y reemplazar, ¿qué ocurre si se escribe +4 en el campo numérico con el elemento Página seleccionado?",
+    "enunciado": "En la ficha «Ir a», con «Página» elegido, escribes «+4» y pulsas Ir a. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Va directamente a la página número 4 del documento"
+        "text": "Avanza cuatro páginas desde donde está el cursor"
       },
       {
         "letter": "B",
-        "text": "Avanza 4 páginas hacia adelante desde la posición actual del cursor"
+        "text": "Salta a la página 4 del documento"
       },
       {
         "letter": "C",
-        "text": "Retrocede 4 páginas desde la posición actual"
+        "text": "Retrocede cuatro páginas desde donde está el cursor"
       },
       {
         "letter": "D",
-        "text": "Selecciona las 4 páginas siguientes"
+        "text": "Selecciona las cuatro páginas siguientes"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "En la pestaña Ir a, los valores con signo + o - son relativos a la posición actual. Escribir +4 con Página seleccionado avanza 4 páginas hacia adelante desde donde está el cursor. Para ir a la página 4 directamente se escribiría simplemente 4 sin signo."
+    "respuesta": "A",
+    "explicacion": "El signo convierte la cifra en un salto relativo: «+4» avanza cuatro y «-4» retrocede cuatro, siempre desde la posición actual. Sin signo, el número es absoluto y lleva a esa página del documento. · Saltar a la página 4 es lo que haría escribir «4» a secas: ese descarte no es un error de concepto, es leer el campo sin el signo, y por eso es el que más cae. · Retroceder es lo del signo menos. · Y esta ficha nunca selecciona nada: solo mueve el cursor. Para seleccionar cuatro páginas habría que ir al principio, saltar y usar Mayús. · El mismo truco del signo funciona con líneas, secciones y notas."
   },
   {
     "id": "inicio-133",
@@ -16701,28 +16701,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0387",
-    "enunciado": "El desplegable Seleccionar del grupo Edición ofrece varias opciones. ¿Cuál de las siguientes permite seleccionar de golpe todo el contenido del documento?",
+    "enunciado": "Despliegas «Seleccionar» en el grupo Edición. ¿Qué entradas ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Seleccionar objetos"
+        "text": "Seleccionar todo · Seleccionar objetos · Seleccionar todo el texto con formato similar · Panel de selección"
       },
       {
         "letter": "B",
-        "text": "Seleccionar todo el texto con formato similar"
+        "text": "Seleccionar todo · Seleccionar objetos · Seleccionar por estilo · Panel de selección"
       },
       {
         "letter": "C",
-        "text": "Seleccionar todo"
+        "text": "Seleccionar todo · Seleccionar párrafo · Seleccionar todo el texto con formato similar"
       },
       {
         "letter": "D",
-        "text": "Panel de selección"
+        "text": "Seleccionar todo · Seleccionar objetos · Panel de selección"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Seleccionar todo selecciona todo el contenido del documento de una vez. Es equivalente al atajo Ctrl+E. Seleccionar objetos permite seleccionar solo los objetos flotantes. Seleccionar todo el texto con formato similar selecciona los fragmentos con el mismo formato que el texto actualmente seleccionado."
+    "respuesta": "A",
+    "explicacion": "Cuatro entradas y cada una hace algo distinto: la primera marca el documento entero, equivalente a Ctrl+E; la segunda cambia el puntero para poder marcar objetos flotantes sin tocar el texto; la tercera busca todo lo que comparta formato con lo seleccionado; y la cuarta abre el panel lateral que lista los objetos de la página para mostrarlos, ocultarlos y reordenarlos. · «Seleccionar por estilo» no existe con ese nombre, aunque su idea sí: la tercera entrada hace algo parecido, pero por formato, no por estilo. Es el descarte más fino. · «Seleccionar párrafo» tampoco es una entrada: eso se hace con triple clic."
   },
   {
     "id": "inicio-134",
@@ -16737,28 +16737,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0388",
-    "enunciado": "¿Qué atajo selecciona todo el contenido del documento en Word 365?",
+    "enunciado": "Quieres seleccionar todo el documento con el teclado. ¿Qué combinación lo hace en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + A"
+        "text": "Ctrl+E"
       },
       {
         "letter": "B",
-        "text": "Ctrl + T"
+        "text": "Ctrl+A"
       },
       {
         "letter": "C",
-        "text": "Ctrl + E"
+        "text": "Ctrl+T"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Mayús + Fin"
+        "text": "Ctrl+Mayús+Fin"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "En la versión española de Word 365, Ctrl+E selecciona todo el documento. Ctrl+T es el atajo para centrar texto. Ctrl+A en la versión española abre un documento existente. Ctrl+Mayús+Fin extiende la selección hasta el final del documento pero desde la posición actual del cursor. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Ctrl+E selecciona el documento completo, y hay una segunda vía curiosa: el 5 del teclado numérico con Ctrl, que funciona con el bloqueo numérico encendido o apagado. Prueba en vivo del usuario. · ⚠️ Ctrl+A es la trampa del esquema internacional, donde es «all»: aquí abre la pestaña Abrir de Backstage, así que se sale del documento sin querer. Es el descarte más caro. · Ctrl+T centra el párrafo. · Y Ctrl+Mayús+Fin es el descarte más fino porque casi acierta: extiende la selección hasta el final del documento, pero desde donde esté el cursor, así que solo coincide si el cursor está al principio del todo."
   },
   {
     "id": "inicio-135",
@@ -16773,28 +16773,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0389",
-    "enunciado": "¿Qué opción del desplegable Seleccionar permite seleccionar simultáneamente todos los fragmentos del documento que tienen el mismo formato que el texto actualmente seleccionado?",
+    "enunciado": "Todos los subtítulos de un informe están en negrita azul puestos a mano y quieres cambiarlos de golpe sin ir uno por uno. ¿Qué entrada de «Seleccionar» lo consigue?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Seleccionar todo"
+        "text": "Seleccionar todo el texto con formato similar"
       },
       {
         "letter": "B",
-        "text": "Panel de selección"
+        "text": "Seleccionar todo, y luego filtrar a mano"
       },
       {
         "letter": "C",
-        "text": "Seleccionar objetos"
+        "text": "Seleccionar objetos, y luego el texto de cada uno"
       },
       {
         "letter": "D",
-        "text": "Seleccionar todo el texto con formato similar"
+        "text": "Panel de selección, marcando ahí los subtítulos"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Seleccionar todo el texto con formato similar analiza el formato del texto actualmente seleccionado y selecciona simultáneamente todos los fragmentos del documento que tienen ese mismo formato aplicado. Es útil para cambiar de una vez el formato de todos los elementos con el mismo estilo manual."
+    "respuesta": "A",
+    "explicacion": "Con el cursor en uno de esos subtítulos, esa entrada marca todos los fragmentos del documento que compartan su formato, y a partir de ahí se cambian los cuarenta de una vez, o se les aplica por fin un estilo. Es la forma de rescatar un documento maquetado a mano. · «Seleccionar todo» marcaría también el resto del texto, que es lo que se quiere evitar. · «Seleccionar objetos» solo alcanza a los objetos flotantes, no al texto. · Y el «Panel de selección» lista imágenes, formas y cuadros de texto para mostrarlos u ocultarlos: es de objetos también, y es el descarte que más cuela por compartir la palabra «selección»."
   },
   {
     "id": "inicio-137",
@@ -16809,28 +16809,28 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0391",
-    "enunciado": "En el cuadro de diálogo Buscar y reemplazar, las secciones inferiores con los botones Formato, Especial y Sin formato aparecen tanto en la pestaña Buscar como en la pestaña Reemplazar. ¿Por qué existen en ambas?",
+    "enunciado": "Quieres buscar todo lo que esté en negrita y dejarlo en cursiva. En la ficha Reemplazar hay dos bloques de botones Formato/Especial/Sin formato, uno por campo. ¿Por qué dos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Son duplicadas por error de diseño; solo funcionan en la pestaña Buscar"
+        "text": "Porque el formato se fija por separado para lo que se busca y para lo que se pone"
       },
       {
         "letter": "B",
-        "text": "En la pestaña Buscar afectan al texto que se busca; en la pestaña Reemplazar afectan al texto de reemplazo, permitiendo especificar formato de forma independiente para cada campo"
+        "text": "Porque el segundo bloque solo repite el primero, por comodidad al estar el cuadro alto"
       },
       {
         "letter": "C",
-        "text": "Ambas secciones controlan siempre el campo Buscar independientemente de en qué pestaña estén"
+        "text": "Porque el primero fija el formato y el segundo, los caracteres especiales"
       },
       {
         "letter": "D",
-        "text": "La sección de la pestaña Buscar controla el formato; la de Reemplazar controla los caracteres especiales"
+        "text": "Porque el primero actúa sobre el documento y el segundo, solo sobre la selección"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "En el cuadro Buscar y reemplazar, cada pestaña tiene su propia sección de Formato/Especial/Sin formato porque actúan de forma independiente: la sección de la pestaña Buscar especifica el formato del texto que se quiere encontrar, y la sección de la pestaña Reemplazar especifica el formato que tendrá el texto de sustitución. Esto permite por ejemplo buscar texto en negrita y reemplazarlo por texto en cursiva."
+    "respuesta": "A",
+    "explicacion": "Cada bloque pertenece al campo que tiene encima: el de arriba describe qué formato debe tener lo que se busca y el de abajo, qué formato tendrá lo que se escriba en su lugar. Justo eso es lo que permite el ejemplo del enunciado, cambiar negrita por cursiva sin tocar el texto. Bajo cada campo aparecen escritas las condiciones puestas, para no perderse. · Que uno repita al otro no tendría sentido, porque entonces sería imposible cambiar de formato. · «Especial» está en los dos, con listas distintas: en el campo de reemplazo aparecen además códigos como ^& , que reutiliza el texto encontrado. · Y ninguno decide el alcance: eso lo hace tener o no algo seleccionado."
   },
   {
     "id": "inicio-138",
@@ -16845,28 +16845,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0392",
-    "enunciado": "¿Qué atajo activa o desactiva la visualización de las marcas de formato no imprimibles (¶, ·, →) en Word 365 (versión española)?",
+    "enunciado": "Un texto no cuadra y quieres ver los espacios, tabuladores y marcas de párrafo. ¿Qué combinación los enciende y los apaga?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Mayús + 8"
+        "text": "Ctrl+Mayús+8"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Mayús + F"
+        "text": "Ctrl+8"
       },
       {
         "letter": "C",
-        "text": "Ctrl + 8"
+        "text": "Ctrl+Mayús+F"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Mayús + M"
+        "text": "Ctrl+Mayús+M"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+8 muestra u oculta el botón «Mostrar todo» (¶) del grupo Párrafo. En el teclado español «(» es Mayús+8, así que este atajo también se escribe «Ctrl+(» — es la misma pulsación (no dos atajos distintos). Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Mayús+8 es el interruptor del botón ¶ del grupo Párrafo. Prueba en vivo del usuario. · En el teclado español el paréntesis de apertura se obtiene con Mayús y el 8, así que «Ctrl+(» describe exactamente la misma pulsación: no son dos atajos, sino dos maneras de escribirlo, y los manuales alternan las dos. · Ctrl+8 a secas no tiene comando asignado. · Ctrl+Mayús+F y Ctrl+Mayús+M sí lo tienen, y llevan al mismo sitio por distinta puerta: abren el cuadro de diálogo Fuente, la primera con el foco en el nombre y la segunda en el Tamaño. Ninguna enseña marcas de nada."
   },
   {
     "id": "inicio-139",
@@ -16881,28 +16881,28 @@
     "tema": "Edición",
     "difficulty": "baja",
     "sourceQuestionId": "P-0393",
-    "enunciado": "¿Qué hace el atajo Ctrl+Z en Word 365?",
+    "enunciado": "Has borrado sin querer un párrafo y quieres recuperarlo. ¿Qué hace exactamente Ctrl+Z?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Repite la última acción realizada"
+        "text": "Deshace la última acción, y se puede repetir para ir hacia atrás"
       },
       {
         "letter": "B",
-        "text": "Deshace la última acción realizada"
+        "text": "Rehace la última acción que se hubiera deshecho"
       },
       {
         "letter": "C",
-        "text": "Rehace la última acción deshecha"
+        "text": "Repite la última acción sobre la selección actual"
       },
       {
         "letter": "D",
-        "text": "Abre el historial de operaciones"
+        "text": "Abre el historial de acciones para elegir hasta dónde volver"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+Z deshace la última acción realizada. Puede pulsarse repetidamente para deshacer varias en orden inverso. El historial de Deshacer está en la flecha desplegable del botón Deshacer de la barra de acceso rápido. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Ctrl+Z deshace, y pulsándolo varias veces se va retrocediendo por el historial en orden inverso; su pareja antigua es Alt+Retroceso. Prueba en vivo del usuario. · Rehacer en sentido estricto es Alt+Mayús+Retroceso: es el descarte más fino, porque el botón de la barra de acceso rápido mezcla rehacer y repetir según el momento. · Repetir es Ctrl+Y, F4 o Alt+Entrar, las tres bajo el mismo comando. · Y el historial no se abre con ninguna combinación: se despliega con la flecha del botón Deshacer, en la barra de acceso rápido."
   },
   {
     "id": "inicio-140",
@@ -16917,28 +16917,28 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0394",
-    "enunciado": "¿Cuántas acciones almacena el historial de Deshacer de la barra de herramientas de Acceso rápido en Word 365?",
+    "enunciado": "Cierras un documento y lo vuelves a abrir al día siguiente. ¿Qué queda del historial de Deshacer?",
     "opciones": [
       {
         "letter": "A",
-        "text": "10"
+        "text": "Nada: el historial vive en la sesión y se pierde al cerrar"
       },
       {
         "letter": "B",
-        "text": "20"
+        "text": "Las diez últimas acciones, que Word guarda dentro del archivo"
       },
       {
         "letter": "C",
-        "text": "Número ilimitado de acciones"
+        "text": "Todo: el historial viaja dentro del documento"
       },
       {
         "letter": "D",
-        "text": "Depende de la memoria disponible del equipo, sin límite fijo documentado"
+        "text": "Solo las acciones hechas después del último guardado"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El historial de Deshacer de Word 365 no tiene un límite fijo documentado de acciones: almacena las operaciones realizadas en la sesión actual dependiendo de la memoria disponible. Es distinto del Portapapeles, que sí tiene un límite fijo de 24 elementos."
+    "respuesta": "A",
+    "explicacion": "El historial se mantiene en memoria mientras el documento está abierto y desaparece entero al cerrarlo, se haya guardado o no. Por eso no se puede deshacer un cambio de ayer: para eso está el Historial de versiones, que sí guarda copias, pero solo si el archivo está en OneDrive o SharePoint. · Guardar, en cambio, no vacía el historial: se puede guardar y seguir deshaciendo, que es lo que hace tan creíble el descarte de las acciones posteriores al guardado. · Y el documento no lleva dentro ningún historial de acciones; lo que sí puede llevar son las marcas de revisión, que son otra cosa."
   },
   {
     "id": "inicio-141",
@@ -16953,28 +16953,28 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0395",
-    "enunciado": "Al desplegar la lista del historial de Deshacer y hacer clic en una acción de la lista, ¿qué ocurre exactamente?",
+    "enunciado": "Despliegas la flecha del botón Deshacer y pulsas la quinta acción de la lista. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se deshace únicamente esa acción concreta sin afectar a las anteriores"
+        "text": "Se deshacen las cinco, desde la más reciente hasta esa incluida"
       },
       {
         "letter": "B",
-        "text": "Se deshacen todas las acciones desde la más reciente hasta la seleccionada inclusive"
+        "text": "Se deshace solo esa, y las cuatro anteriores se quedan como estaban"
       },
       {
         "letter": "C",
-        "text": "Se deshacen todas las acciones excepto la seleccionada"
+        "text": "Se deshacen todas menos esa"
       },
       {
         "letter": "D",
-        "text": "Se abre un cuadro de confirmación antes de deshacer"
+        "text": "Word pide confirmación antes de deshacer nada"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Al hacer clic en una acción del historial desplegable de Deshacer, Word deshace todas las acciones desde la más reciente hasta la seleccionada inclusive, no solo esa acción de forma aislada. Las acciones que se van a deshacer aparecen resaltadas al pasar el cursor por la lista."
+    "respuesta": "A",
+    "explicacion": "El historial es una pila: solo se puede volver atrás en bloque, y elegir una acción de la lista significa deshacer todo lo hecho desde entonces. Al pasar el cursor, la lista resalta cuántas se van a deshacer y el pie indica el recuento, así que se ve antes de pulsar. · Deshacer una acción suelta del medio es lo que uno querría muchas veces y Word no lo permite: ese es el descarte que más cae, y entender por qué no se puede —porque cada acción se apoya en las anteriores— es el fondo de la pregunta. · Y no hay confirmación: se deshace al pulsar, aunque todo ello se puede volver a rehacer."
   },
   {
     "id": "inicio-176",
@@ -16989,28 +16989,28 @@
     "tema": "Edición",
     "difficulty": "baja",
     "sourceQuestionId": "P-0430",
-    "enunciado": "Necesitas localizar rápidamente todas las apariciones de un término concreto dentro de un informe largo, abriendo un panel lateral con un cuadro de búsqueda y navegando también por los títulos o por miniaturas de página. ¿Qué botón debes utilizar en el grupo Edición?",
+    "enunciado": "Pulsas el botón «Buscar» del grupo Edición. ¿Qué se abre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Buscar"
+        "text": "El panel de Navegación, con el cuadro de búsqueda activo"
       },
       {
         "letter": "B",
-        "text": "Buscar y reemplazar"
+        "text": "El cuadro Buscar y reemplazar, en su ficha Buscar"
       },
       {
         "letter": "C",
-        "text": "Navegación por títulos"
+        "text": "El cuadro Buscar y reemplazar, en su ficha Reemplazar"
       },
       {
         "letter": "D",
-        "text": "Ir a"
+        "text": "El cuadro Buscar de la barra de título, el de Microsoft Search"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Buscar del grupo Edición abre el panel de navegación lateral con el cuadro de búsqueda activo. Desde ese panel se puede navegar por los resultados de búsqueda, por los títulos del documento o por miniaturas de página. Su atajo es Ctrl+B."
+    "explicacion": "⚠️ Es la trampa más útil de este grupo: el botón «Buscar» a secas NO abre el cuadro de diálogo, abre el panel lateral de Navegación con sus tres fichas, el mismo de Ctrl+B. Para llegar al cuadro hay que desplegar su flecha y elegir «Búsqueda avanzada…». · El cuadro en su ficha Reemplazar se abre con el botón de al lado, o con Ctrl+L. · Y el cuadro de la barra de título es otro buscador distinto, el que busca comandos y ayuda en vez de texto del documento: se activa con Alt+Q. Tres cosas que se llaman «buscar» y hacen tres cosas diferentes."
   },
   {
     "id": "inicio-177",
@@ -17025,28 +17025,28 @@
     "tema": "Edición",
     "difficulty": "baja",
     "sourceQuestionId": "P-0431",
-    "enunciado": "Necesitas sustituir todas las apariciones de un nombre de departamento antiguo por el nuevo nombre en todo un documento, abriendo el cuadro que tiene un campo para el texto a buscar y otro para el texto de sustitución. ¿Qué botón debes utilizar en el grupo Edición?",
+    "enunciado": "Pulsas «Reemplazar» en el grupo Edición y luego cambias a la ficha «Ir a» del mismo cuadro. ¿Qué te encuentras?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Reemplazar"
+        "text": "La lista de elementos a los que saltar y el campo para su número"
       },
       {
         "letter": "B",
-        "text": "Buscar"
+        "text": "El cuadro se cierra: cada ficha se abre desde su propio botón"
       },
       {
         "letter": "C",
-        "text": "Seleccionar"
+        "text": "Los campos Buscar y Reemplazar con, en modo de solo lectura"
       },
       {
         "letter": "D",
-        "text": "Ir a"
+        "text": "Las siete casillas de opciones de búsqueda ya desplegadas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Reemplazar del grupo Edición abre el cuadro de diálogo Buscar y reemplazar en la pestaña Reemplazar, con los campos Buscar y Reemplazar con. Su atajo es Ctrl+L en la versión española de Word 365."
+    "explicacion": "Buscar, Reemplazar e Ir a son tres fichas de un mismo cuadro, así que desde cualquiera se pasa a las otras dos con un clic; lo que cambia según el botón o el atajo usado es solo en cuál se aterriza. En «Ir a» está la lista de elementos —página, sección, línea, marcador, comentario, nota, tabla, gráfico— y el campo del número, que admite valores relativos con signo. · Por eso el cuadro no se cierra al cambiar de ficha. · Los campos de texto pertenecen a las otras dos fichas y siguen siendo editables. · Y las siete casillas salen al pulsar «Más >>», que está en Buscar y en Reemplazar, no en Ir a."
   },
   {
     "id": "inicio-178",
@@ -17061,28 +17061,28 @@
     "tema": "Edición",
     "difficulty": "baja",
     "sourceQuestionId": "P-0432",
-    "enunciado": "Ya con el panel de navegación abierto, quieres ver la estructura jerárquica de títulos del documento para saltar directamente a una sección concreta con un clic. ¿Qué pestaña debes seleccionar dentro del panel?",
+    "enunciado": "En el panel de Navegación, la ficha Títulos enseña el esquema del documento. ¿Qué párrafos aparecen ahí?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Títulos"
+        "text": "Los que tienen un nivel de esquema, venga de un estilo o puesto a mano"
       },
       {
         "letter": "B",
-        "text": "Páginas"
+        "text": "Solo los que tienen aplicado un estilo Título 1 a Título 9"
       },
       {
         "letter": "C",
-        "text": "Resultados"
+        "text": "Solo los que están en negrita y con un tamaño mayor que el del cuerpo"
       },
       {
         "letter": "D",
-        "text": "Búsqueda"
+        "text": "Los que se hayan marcado antes como entradas de la tabla de contenido"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La pestaña Títulos del panel de navegación muestra el índice interactivo con los párrafos que tienen estilos de título aplicados, organizados jerárquicamente. Hacer clic en cualquier elemento del índice desplaza el documento directamente a ese punto."
+    "explicacion": "Lo que decide es el nivel de esquema, no el estilo. Los estilos Título lo traen puesto, y por eso son la vía normal, pero a cualquier párrafo se le puede dar un nivel del 1 al 9 desde el cuadro Párrafo y aparecerá también, sin verse como un título. Esa es la diferencia que la pregunta persigue. · Limitarlo a los estilos Título es el descarte que más cae porque describe el caso habitual. · El aspecto no cuenta: un párrafo en negrita y a 20 puntos no entra si no tiene nivel. · Y no hay que marcar nada previamente: el panel y la tabla de contenido leen lo mismo, el nivel de esquema."
   },
   {
     "id": "inicio-179",
@@ -17097,28 +17097,28 @@
     "tema": "Edición",
     "difficulty": "baja",
     "sourceQuestionId": "P-0433",
-    "enunciado": "Un informe tiene doscientas páginas y necesitas saltar directamente a la página 150 sin desplazarte manualmente con la rueda del ratón. ¿Qué opción debes elegir dentro de Ir a?",
+    "enunciado": "En la ficha «Ir a» despliegas la lista de elementos a los que se puede saltar. ¿Cuáles de estos están en ella?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Página"
+        "text": "Página, Sección, Línea, Marcador, Comentario, Nota al pie, Tabla y Gráfico"
       },
       {
         "letter": "B",
-        "text": "Sección"
+        "text": "Página, Sección, Línea, Marcador, Estilo, Fuente, Tabla y Gráfico"
       },
       {
         "letter": "C",
-        "text": "Línea"
+        "text": "Página, Sección, Párrafo, Palabra, Comentario, Tabla y Gráfico"
       },
       {
         "letter": "D",
-        "text": "Marcador"
+        "text": "Página, Sección y Línea, y nada más"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Seleccionando Página en la lista Ir a e introduciendo el número 150 en el campo, Word salta directamente a esa página. Si se introduce +150 en lugar de 150, avanza 150 páginas desde la posición actual del cursor."
+    "explicacion": "La lista recoge elementos que Word sabe contar o identificar por su cuenta: páginas, secciones, líneas, marcadores, comentarios, notas al pie y al final, campos, tablas, gráficos, ecuaciones y objetos. En todos ellos el campo del número admite un valor absoluto o uno relativo con signo, como +4 para avanzar cuatro. · Los estilos y las fuentes no están: para localizar por formato hay que ir al cuadro Buscar y su botón «Formato». Es el descarte con más fundamento porque suena a algo que Word debería saber hacer, y lo hace, pero por otra vía. · Y las palabras tampoco: no son elementos numerados."
   },
   {
     "id": "inicio-206",
@@ -17133,28 +17133,28 @@
     "tema": "Edición",
     "difficulty": "baja",
     "sourceQuestionId": "P-0460",
-    "enunciado": "Antes de decidir qué tipo de selección avanzada necesitas hacer en un documento (todo el texto, solo los objetos flotantes, o todo el texto con un formato parecido), quieres ver las opciones disponibles. ¿Dónde puedes desplegarlas en el grupo Edición?",
+    "enunciado": "En el grupo Edición hay tres botones. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Seleccionar"
+        "text": "Buscar, Reemplazar y Seleccionar"
       },
       {
         "letter": "B",
-        "text": "Panel de selección"
+        "text": "Buscar, Reemplazar e Ir a"
       },
       {
         "letter": "C",
-        "text": "Seleccionar todo el texto con formato similar"
+        "text": "Buscar, Seleccionar y Panel de selección"
       },
       {
         "letter": "D",
-        "text": "Ir a"
+        "text": "Buscar, Reemplazar y Editor"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Seleccionar del grupo Edición despliega un menú con las opciones de selección avanzada: Seleccionar todo, Seleccionar objetos, Seleccionar todo el texto con formato similar y Panel de selección. Cada opción tiene un comportamiento distinto según qué se quiera seleccionar."
+    "explicacion": "Tres botones en el extremo derecho de la cinta de Inicio, antes de los grupos de Voz, Editor y Complementos. «Buscar» tiene además una flecha con «Búsqueda avanzada…» e «Ir a…». · «Ir a» es por eso el descarte que más cae: existe, pero como entrada del desplegable de Buscar y como ficha del cuadro, no como botón propio del grupo. · «Panel de selección» está un nivel más adentro, en el desplegable de «Seleccionar», junto con «Seleccionar todo», «Seleccionar objetos» y «Seleccionar todo el texto con formato similar». · Y «Editor» tiene grupo propio, a la derecha de este."
   },
   {
     "id": "inicio-207",
@@ -17169,28 +17169,28 @@
     "tema": "Edición",
     "difficulty": "baja",
     "sourceQuestionId": "P-0461",
-    "enunciado": "Ya con el panel de navegación abierto, quieres ver una cuadrícula con miniaturas de cada página del documento para localizar visualmente en cuál está una tabla o una imagen concreta. ¿Qué pestaña debes seleccionar dentro del panel?",
+    "enunciado": "En el panel de Navegación abres la ficha Páginas. ¿Qué te ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Páginas"
+        "text": "Miniaturas de cada página, para saltar pulsando en una"
       },
       {
         "letter": "B",
-        "text": "Títulos"
+        "text": "La lista de páginas por número, sin vista previa"
       },
       {
         "letter": "C",
-        "text": "Resultados"
+        "text": "Las miniaturas, y además permite arrastrarlas para reordenar el documento"
       },
       {
         "letter": "D",
-        "text": "Búsqueda"
+        "text": "Las miniaturas solo de las páginas que contienen títulos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La pestaña Páginas del panel de navegación muestra una cuadrícula con miniaturas de vista previa de cada página del documento. Hacer clic en cualquier miniatura desplaza el documento directamente a esa página. Es útil para localizar visualmente elementos como tablas, imágenes o páginas con mucho espacio en blanco."
+    "explicacion": "Es una cuadrícula de miniaturas, útil para localizar de un vistazo una tabla, una imagen o una página medio vacía, y al pulsar en una el documento salta ahí. Al buscar algo, además, resalta las páginas donde hay coincidencias. · Reordenar arrastrando es el descarte con más fundamento, y no es un invento: se puede hacer, pero en la ficha TÍTULOS, arrastrando un apartado y llevándose con él todo su contenido. Con las páginas no funciona, porque una página no es una unidad del documento sino un resultado de cómo cae el texto. · Y aparecen todas las páginas, tengan títulos o no."
   },
   {
     "id": "inicio-208",
@@ -17205,28 +17205,28 @@
     "tema": "Edición",
     "difficulty": "baja",
     "sourceQuestionId": "P-0462",
-    "enunciado": "Ya con el panel de navegación abierto y un término escrito en el cuadro de búsqueda, quieres ver una lista de todos los fragmentos de texto donde aparece ese término, con la palabra resaltada en su contexto. ¿Qué pestaña debes seleccionar dentro del panel?",
+    "enunciado": "Escribes un término en el cuadro del panel de Navegación y abres la ficha Resultados. ¿Qué ves?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Resultados"
+        "text": "Los fragmentos donde aparece, con la palabra resaltada en su contexto"
       },
       {
         "letter": "B",
-        "text": "Títulos"
+        "text": "Solo el recuento de coincidencias, sin lista"
       },
       {
         "letter": "C",
-        "text": "Páginas"
+        "text": "Las cien primeras coincidencias, que es el tope de la ficha"
       },
       {
         "letter": "D",
-        "text": "Búsqueda"
+        "text": "Los títulos de los apartados donde hay alguna coincidencia"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La pestaña Resultados muestra una lista con los fragmentos de texto donde aparece el término buscado, con la palabra resaltada en su contexto. Hacer clic en cualquier resultado desplaza el documento a esa posición. Muestra un máximo de 100 resultados."
+    "explicacion": "Cada resultado es un trozo de frase con el término resaltado, de modo que se distingue el contexto sin ir saltando por el documento; al pulsar en uno, el cursor va allí. · ⚠️ El tope de cien es una cifra que circula por muchos manuales y no es cierta: el panel no tiene un límite fijo, y cuando las coincidencias son demasiadas avisa con un «Hay demasiados resultados» en vez de enseñar un trozo. Prueba en vivo del usuario. · El recuento sí aparece, pero encima de la lista, no en lugar de ella. · Y los títulos con coincidencias se resaltan en la ficha Títulos, que es otra de las tres."
   },
   {
     "id": "inicio-209",
@@ -17241,28 +17241,28 @@
     "tema": "Edición",
     "difficulty": "baja",
     "sourceQuestionId": "P-0463",
-    "enunciado": "Ya con el cuadro de Buscar y reemplazar abierto, necesitas escribir el término exacto que quieres localizar en el documento. ¿Qué campo debes rellenar?",
+    "enunciado": "En el cuadro Buscar y reemplazar dejas vacío el campo «Reemplazar con» y pulsas «Reemplazar todos». ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Buscar"
+        "text": "Se borran todas las coincidencias del documento"
       },
       {
         "letter": "B",
-        "text": "Reemplazar con"
+        "text": "Word avisa de que el campo está vacío y no hace nada"
       },
       {
         "letter": "C",
-        "text": "Más / Menos"
+        "text": "Se sustituyen por un espacio en blanco"
       },
       {
         "letter": "D",
-        "text": "Especial"
+        "text": "Word busca sin reemplazar, como si fuera «Buscar siguiente»"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El campo Buscar es el primero del cuadro de diálogo Buscar y reemplazar y es donde se escribe el texto que se quiere localizar. El campo Reemplazar con es donde se escribe el texto de sustitución. Ambos campos pueden tener condiciones de formato adicionales aplicadas mediante el botón Formato."
+    "explicacion": "Reemplazar por nada es borrar, y es una de las maneras más rápidas de limpiar un documento: quitar dobles espacios, retirar una coletilla repetida o eliminar los saltos de línea manuales sobrantes buscando su código. Word no pregunta nada; al terminar avisa de cuántas sustituciones ha hecho. · Que salga un aviso es lo que uno esperaría de una acción tan destructiva, y no llega: por eso conviene recordar que todo esto se deshace con un solo Ctrl+Z. · Tampoco se sustituye por un espacio: el campo vacío es vacío de verdad. · Y «Buscar siguiente» es otro botón, que solo avanza sin tocar nada."
   },
   {
     "id": "inicio-210",
@@ -17277,28 +17277,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0464",
-    "enunciado": "Quieres revisar una por una las apariciones de un término en el documento y decidir en cada caso si se sustituye o se deja como está, en vez de reemplazarlas todas de golpe sin mirar. ¿Qué botón debes utilizar dentro del cuadro de Buscar y reemplazar?",
+    "enunciado": "Quieres revisar una a una las apariciones de un término y decidir en cada caso. Estás en la ficha Reemplazar. ¿Qué botones usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Reemplazar"
+        "text": "«Reemplazar» para cambiarla, «Buscar siguiente» para saltarla"
       },
       {
         "letter": "B",
-        "text": "Reemplazar todos"
+        "text": "«Reemplazar» para cambiarla, «Reemplazar todos» para saltarla"
       },
       {
         "letter": "C",
-        "text": "Buscar siguiente"
+        "text": "«Buscar siguiente» para cambiarla, «Reemplazar» para saltarla"
       },
       {
         "letter": "D",
-        "text": "Más"
+        "text": "Solo «Reemplazar»: pulsándolo dos veces se salta la coincidencia"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Reemplazar sustituye únicamente la coincidencia actualmente resaltada y avanza automáticamente a la siguiente. Si no se quiere sustituir esa coincidencia se pulsa Buscar siguiente para saltar a la próxima sin modificar la actual. Este flujo permite revisar cada caso individualmente."
+    "explicacion": "Los dos botones se reparten el trabajo: «Reemplazar» sustituye la coincidencia resaltada y avanza sola a la siguiente; «Buscar siguiente» avanza sin tocarla. Alternándolos se recorre el documento decidiendo caso por caso, que es lo prudente cuando la palabra buscada puede aparecer en contextos distintos. · «Reemplazar todos» hace justo lo contrario, todas de golpe y sin mirar: es el descarte que decide la pregunta. · Y pulsar dos veces «Reemplazar» no salta nada: cambia esa y la siguiente. · Todo el proceso, por largo que sea, se deshace después con Ctrl+Z."
   },
   {
     "id": "inicio-211",
@@ -17313,28 +17313,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0465",
-    "enunciado": "Necesitas buscar todas las marcas de salto de página manual insertadas en el documento, un elemento que no se puede escribir directamente como texto normal en el campo de búsqueda. ¿Qué botón debes utilizar dentro del cuadro de Buscar y reemplazar?",
+    "enunciado": "Quieres quitar de un texto pegado todos los párrafos vacíos, es decir, sustituir las marcas de párrafo dobles por una sola. ¿Qué escribes en los campos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Especial"
+        "text": "Buscar «^p^p» y reemplazar por «^p»"
       },
       {
         "letter": "B",
-        "text": "Formato"
+        "text": "Buscar «^t^t» y reemplazar por «^t»"
       },
       {
         "letter": "C",
-        "text": "Sin formato"
+        "text": "Buscar «^m^m» y reemplazar por «^m»"
       },
       {
         "letter": "D",
-        "text": "Más"
+        "text": "Buscar «^n^n» y reemplazar por «^n»"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Especial despliega un menú con caracteres y elementos de formato no imprimibles que no pueden escribirse directamente en el campo de búsqueda, como marcas de párrafo (^p), tabuladores (^t), saltos de página manuales (^m) o cualquier carácter por su código."
+    "explicacion": "El código de la marca de párrafo es ^p, así que buscar dos y dejar una elimina de un golpe todas las líneas en blanco. Si quedan algunas, es que había tres seguidas: basta con repetir la operación hasta que Word diga que no ha hecho ninguna sustitución. Estos códigos se escriben a mano o se eligen en el botón «Especial», que los inserta por su nombre. · ^t es el tabulador, ^m el salto de página manual y ^n el salto de columna: los tres son reales y por eso son buenos descartes, pero ninguno crea líneas en blanco entre párrafos. · El salto de línea manual, el de Mayús+Intro, tiene su propio código, ^l."
   },
   {
     "id": "inicio-212",
@@ -17349,7 +17349,7 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0466",
-    "enunciado": "Necesitas que la búsqueda de la palabra 'Casa' no encuentre 'casa' escrito en minúscula, distinguiendo entre mayúsculas y minúsculas exactamente como las escribiste. ¿Qué casilla debes activar?",
+    "enunciado": "Buscas «Casa» y Word te devuelve también «casa» y «CASA». ¿Qué casilla lo evita?",
     "opciones": [
       {
         "letter": "A",
@@ -17365,12 +17365,12 @@
       },
       {
         "letter": "D",
-        "text": "Prefijo"
+        "text": "Omitir puntuación"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La casilla Coincidir mayúsculas y minúsculas hace que la búsqueda sea sensible a la capitalización. Con esta opción activa, buscar 'Casa' solo encontrará 'Casa' con C mayúscula, no 'casa', 'CASA' ni ninguna otra combinación."
+    "explicacion": "De fábrica la búsqueda ignora las mayúsculas, así que hay que marcar esa casilla para que «Casa» solo encuentre «Casa». Es imprescindible al reemplazar nombres propios o siglas, porque si no se acaba cambiando también la palabra común. · «Solo palabras completas» resuelve otro problema distinto, el de los fragmentos dentro de palabras más largas, y las dos suelen marcarse juntas. · Los comodines permiten patrones, y al activarlos la búsqueda pasa a distinguir mayúsculas por su cuenta. · Y «Omitir puntuación» hace que los acentos y signos intercalados no rompan la coincidencia; es de las siete casillas, pero de otro asunto."
   },
   {
     "id": "inicio-213",
@@ -17385,7 +17385,7 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0467",
-    "enunciado": "Buscas la palabra 'mal' en un documento, pero no quieres que te encuentre 'malestar' ni 'animal', solo la palabra exacta delimitada por espacios o signos de puntuación. ¿Qué casilla debes activar?",
+    "enunciado": "Buscas «mal» y Word te devuelve «malestar» y «animal». ¿Qué casilla lo evita?",
     "opciones": [
       {
         "letter": "A",
@@ -17393,20 +17393,20 @@
       },
       {
         "letter": "B",
-        "text": "Coincidir mayúsculas y minúsculas"
+        "text": "Prefijo"
       },
       {
         "letter": "C",
-        "text": "Usar caracteres comodín"
+        "text": "Sufijo"
       },
       {
         "letter": "D",
-        "text": "Prefijo"
+        "text": "Coincidir mayúsculas y minúsculas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Solo palabras completas restringe la búsqueda para que solo encuentre la palabra exacta delimitada por espacios, signos de puntuación u otros separadores. Con esta opción, buscar 'mal' no encontrará 'malestar', 'animal' ni 'maleta', solo las apariciones de 'mal' como palabra independiente."
+    "explicacion": "Esa casilla exige que el texto buscado esté delimitado por espacios o signos de puntuación a los dos lados, con lo que «mal» deja de aparecer dentro de otras palabras. · «Prefijo» y «Sufijo» son los dos descartes que decide la pregunta, porque cada uno arregla la mitad del problema: el primero descartaría «animal», donde el fragmento va al final, pero seguiría dando «malestar»; el segundo, al revés. Hay que ver qué hace cada casilla para elegir la que cubre los dos casos. · Y las mayúsculas no tienen nada que ver aquí: el problema no es cómo se escribe, es dónde está el fragmento."
   },
   {
     "id": "inicio-214",
@@ -17421,28 +17421,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0468",
-    "enunciado": "Buscas el fragmento 'pre' y solo quieres que te encuentre palabras que empiecen exactamente por ese fragmento, como 'presentación' o 'precaución', pero no 'comprender' donde aparece en mitad de la palabra. ¿Qué casilla debes activar?",
+    "enunciado": "Con la casilla «Prefijo» marcada buscas «pre». ¿Qué encuentra Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Prefijo"
+        "text": "«presentación» y «precaución», pero no «comprender»"
       },
       {
         "letter": "B",
-        "text": "Sufijo"
+        "text": "«comprender» y «expresión», pero no «presentación»"
       },
       {
         "letter": "C",
-        "text": "Coincidir mayúsculas y minúsculas"
+        "text": "Solo la palabra «pre» si aparece suelta"
       },
       {
         "letter": "D",
-        "text": "Solo palabras completas"
+        "text": "Todas: «presentación», «comprender» y «expresión»"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La casilla Prefijo restringe la búsqueda para que solo encuentre palabras que comiencen exactamente por el fragmento escrito en el campo Buscar. Con esta opción activa, buscar 'pre' encontrará 'presentación' y 'precaución' pero no 'comprender' ni 'expresión'."
+    "explicacion": "«Prefijo» limita la coincidencia al principio de palabra: el fragmento tiene que abrir la palabra, y da igual lo que venga detrás. Es lo que se usa para buscar familias léxicas o para localizar de golpe todas las palabras que empiezan por una raíz. · La versión invertida describe lo que hace «Sufijo», su casilla gemela, que exige que el fragmento cierre la palabra: ese es el par que hay que separar. · Encontrar solo «pre» suelto es lo que haría «Solo palabras completas». · Y encontrarlo en cualquier posición es la búsqueda normal, sin ninguna de estas casillas marcadas."
   },
   {
     "id": "inicio-215",
@@ -17457,28 +17457,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0469",
-    "enunciado": "Buscas el fragmento 'ción' y solo quieres que te encuentre palabras que terminen exactamente en ese fragmento, como 'comunicación', pero no 'accionista' donde aparece seguido de más letras. ¿Qué casilla debes activar?",
+    "enunciado": "Con la casilla «Sufijo» marcada buscas «ción». ¿Qué encuentra Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sufijo"
+        "text": "«comunicación» y «acción», pero no «accionista»"
       },
       {
         "letter": "B",
-        "text": "Prefijo"
+        "text": "«accionista» y «funcionario», pero no «comunicación»"
       },
       {
         "letter": "C",
-        "text": "Coincidir mayúsculas y minúsculas"
+        "text": "Solo la sílaba «ción» si apareciera suelta"
       },
       {
         "letter": "D",
-        "text": "Solo palabras completas"
+        "text": "Todas: «comunicación», «accionista» y «funcionario»"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La casilla Sufijo restringe la búsqueda para que solo encuentre palabras que terminen exactamente por el fragmento escrito en el campo Buscar. Buscar 'ción' con Sufijo activo encontrará 'comunicación', 'acción' y 'administración' pero no 'accionista' donde el fragmento va seguido de más letras."
+    "explicacion": "«Sufijo» exige que el fragmento cierre la palabra, así que «accionista» queda fuera porque ahí «ción» va seguido de más letras. Es la forma de localizar terminaciones, útil para revisar el estilo de un texto administrativo lleno de sustantivos en -ción. · La versión invertida describe lo que hace «Prefijo», la casilla de al lado. · Encontrar la sílaba suelta sería «Solo palabras completas», y no daría nada porque «ción» no es una palabra. · Y sin ninguna casilla marcada aparecerían las tres, que es la búsqueda de siempre y el motivo de que existan estas dos casillas."
   },
   {
     "id": "inicio-216",
@@ -17493,28 +17493,28 @@
     "tema": "Edición",
     "difficulty": "baja",
     "sourceQuestionId": "P-0470",
-    "enunciado": "En vez de buscar por texto, necesitas saltar directamente a un punto concreto del documento indicando el tipo de elemento (página, sección, línea, marcador) y su número o nombre. ¿Qué pestaña debes seleccionar dentro del cuadro de Buscar y reemplazar?",
+    "enunciado": "Comparas la ficha «Ir a» del cuadro con el panel de Navegación. ¿Qué hace la ficha que el panel no puede?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ir a"
+        "text": "Saltar a un elemento por su número: línea 320 o nota al pie 12"
       },
       {
         "letter": "B",
-        "text": "Buscar"
+        "text": "Saltar a un título del documento pulsando en su nombre"
       },
       {
         "letter": "C",
-        "text": "Reemplazar"
+        "text": "Saltar a una página pulsando en su miniatura de la lista"
       },
       {
         "letter": "D",
-        "text": "Seleccionar"
+        "text": "Buscar un término y listar sus coincidencias en contexto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La pestaña Ir a del cuadro de diálogo Buscar y reemplazar permite saltar directamente a un tipo de elemento específico del documento (página, sección, línea, marcador, comentario, nota al pie, etc.) introduciendo su número o nombre. Su atajo directo es Ctrl+I o F5."
+    "explicacion": "«Ir a» navega por NÚMERO de elemento, y su lista incluye cosas que el panel ni menciona: líneas, marcadores, comentarios, notas al pie y al final, campos, tablas, gráficos, ecuaciones y objetos. Además admite saltos relativos con signo, como +4. Se abre con Ctrl+I o F5. · Las otras tres son justamente lo que hace el panel, cada una en una de sus tres fichas: títulos, miniaturas de página y resultados de búsqueda. Por eso son buenos descartes, porque describen bien una forma de navegar, pero de la otra herramienta. · Los dos caminos se complementan: uno es visual y el otro, exacto."
   },
   {
     "id": "inicio-217",
@@ -17529,28 +17529,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0471",
-    "enunciado": "Un documento está dividido en varias secciones con configuraciones de página distintas y necesitas saltar directamente al inicio de la tercera sección. ¿Qué opción debes elegir dentro de Ir a?",
+    "enunciado": "Un documento tiene tres secciones con orientaciones distintas y quieres saltar al inicio de la tercera. En «Ir a», eliges «Sección» y escribes 3. ¿A dónde llega el cursor?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sección"
+        "text": "Al principio de la tercera sección, sea cual sea la página en que empiece"
       },
       {
         "letter": "B",
-        "text": "Página"
+        "text": "A la tercera página del documento"
       },
       {
         "letter": "C",
-        "text": "Línea"
+        "text": "Al salto de sección que cierra la tercera sección"
       },
       {
         "letter": "D",
-        "text": "Marcador"
+        "text": "Al principio de la tercera sección, solo si empieza en página nueva"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Seleccionando Sección en la lista Ir a e introduciendo el número 3, Word salta directamente al inicio de la tercera sección del documento. Las secciones en Word permiten tener configuraciones de página distintas (márgenes, orientación, encabezados) en partes diferentes del mismo documento."
+    "explicacion": "Las secciones se cuentan aparte de las páginas, así que la tercera puede empezar en la página doce o a media página, y el cursor va igualmente a su primer carácter. Es la forma rápida de moverse por un documento con varias configuraciones de página, donde márgenes, orientación, columnas y encabezados cambian de una sección a otra. · Contar páginas es otro elemento distinto de la misma lista. · El cursor va al principio, no al salto final. · Y no hace falta que la sección empiece en página nueva: eso depende del tipo de salto, que puede ser continuo, de página par o impar."
   },
   {
     "id": "inicio-218",
@@ -17565,28 +17565,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0472",
-    "enunciado": "Un compañero te ha dicho por teléfono que hay un error justo en la línea 320 del documento y necesitas saltar directamente a esa línea exacta, contando de forma continua desde el principio del documento. ¿Qué opción debes elegir dentro de Ir a?",
+    "enunciado": "Alguien te avisa de que hay una errata en la línea 320. En «Ir a» eliges «Línea» y escribes 320. ¿Desde dónde cuenta Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Línea"
+        "text": "Desde el principio del documento, de forma continua"
       },
       {
         "letter": "B",
-        "text": "Página"
+        "text": "Desde el principio de la página donde está el cursor"
       },
       {
         "letter": "C",
-        "text": "Sección"
+        "text": "Desde el principio de la sección donde está el cursor"
       },
       {
         "letter": "D",
-        "text": "Marcador"
+        "text": "Desde donde esté el cursor en ese momento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Seleccionando Línea en la lista Ir a e introduciendo el número 320, Word salta directamente a esa línea contando desde el inicio del documento. Es una forma precisa de localizar un error cuando se conoce el número de línea exacto."
+    "explicacion": "La cuenta es continua desde el primer renglón del documento, y por eso el número es fiable entre dos personas que tengan el mismo archivo. Ojo, eso sí, con que cambie el tamaño de la letra o los márgenes: las líneas se recolocan y la 320 deja de ser la misma. · Contar por página o por sección es lo que hacen los números de línea de la pestaña Disposición, que se pueden configurar para reiniciarse en cada página o en cada sección: es la confusión razonable entre las dos cosas. · Y contar desde el cursor es lo que se consigue con un valor relativo, escribiendo +320 en lugar de 320."
   },
   {
     "id": "inicio-219",
@@ -17601,28 +17601,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0473",
-    "enunciado": "Habías insertado un marcador con un nombre concreto en un punto importante del documento y necesitas volver directamente a esa posición exacta. ¿Qué opción debes elegir dentro de Ir a?",
+    "enunciado": "En «Ir a» eliges «Marcador» y el campo de la derecha cambia de aspecto. ¿Qué aparece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Marcador"
+        "text": "Un desplegable con los nombres de los marcadores del documento"
       },
       {
         "letter": "B",
-        "text": "Página"
+        "text": "Un campo de número, como con las páginas"
       },
       {
         "letter": "C",
-        "text": "Sección"
+        "text": "Un cuadro de texto para escribir el nombre a mano, sin lista"
       },
       {
         "letter": "D",
-        "text": "Línea"
+        "text": "Nada: los marcadores solo se recorren con «Siguiente» y «Anterior»"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Seleccionando Marcador en la lista Ir a aparece un desplegable con todos los marcadores definidos en el documento. Al seleccionar el marcador por su nombre, Word salta exactamente a la posición donde fue insertado. Los marcadores son elementos invisibles que marcan una posición o selección específica del documento."
+    "explicacion": "Los marcadores tienen nombre y no número, así que Word cambia el campo por un desplegable con los que haya definidos: se elige uno y el cursor salta ahí. Si el documento no tiene ninguno, la lista aparece vacía. · Un campo numérico es lo que sale con páginas, líneas, secciones o notas, y por eso es el descarte natural: la ficha adapta el control al elemento elegido, que es lo que la pregunta persigue. · El marcador es un elemento invisible que se inserta desde Insertar ▸ Vínculos ▸ Marcador, y sirve de ancla para referencias cruzadas y para volver a un punto concreto."
   },
   {
     "id": "inicio-220",
@@ -17637,28 +17637,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0474",
-    "enunciado": "Un documento tiene comentarios de varios revisores distintos y necesitas saltar directamente a los comentarios dejados por uno de ellos en concreto. ¿Qué opción debes elegir dentro de Ir a?",
+    "enunciado": "Un documento lleva comentarios de tres revisores y quieres recorrer solo los de uno. En «Ir a» eliges «Comentario». ¿Qué te ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Comentario"
+        "text": "Un desplegable con los revisores, para saltar solo a los suyos"
       },
       {
         "letter": "B",
-        "text": "Nota al pie"
+        "text": "Un campo numérico, para ir al comentario número tantos"
       },
       {
         "letter": "C",
-        "text": "Nota al final"
+        "text": "Un cuadro de texto donde escribir una palabra del comentario"
       },
       {
         "letter": "D",
-        "text": "Campo"
+        "text": "Nada: siempre recorre todos los comentarios en orden"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Seleccionando Comentario en la lista Ir a aparece un desplegable donde se puede elegir el revisor concreto cuyos comentarios se quieren localizar. Word salta al siguiente comentario de ese revisor en el documento. Es útil en documentos con revisiones de múltiples personas."
+    "explicacion": "Al elegir «Comentario», el campo de la derecha se convierte en un desplegable con los nombres de quienes han comentado, y los botones «Siguiente» y «Anterior» recorren solo los de la persona elegida. En documentos con varias revisiones es lo que permite atender primero a un revisor y luego a otro. · El campo numérico es lo que sale con páginas, líneas o notas al pie, así que es el descarte razonable: la ficha adapta el control a cada elemento. · Buscar por el contenido del comentario no se puede desde aquí; para eso está el panel de revisiones de la pestaña Revisar."
   },
   {
     "id": "inicio-221",
@@ -17673,28 +17673,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0475",
-    "enunciado": "Un documento tiene muchas notas al pie numeradas y necesitas saltar directamente a la nota número 12, ubicada en la parte inferior de la página donde está referenciada. ¿Qué opción debes elegir dentro de Ir a?",
+    "enunciado": "En «Ir a» eliges «Nota al pie» y escribes 12. ¿A dónde te lleva el cursor?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Nota al pie"
+        "text": "A la marca de referencia de esa nota, en el texto principal"
       },
       {
         "letter": "B",
-        "text": "Nota al final"
+        "text": "Al texto de la nota, en la parte inferior de su página"
       },
       {
         "letter": "C",
-        "text": "Comentario"
+        "text": "A la duodécima página del documento"
       },
       {
         "letter": "D",
-        "text": "Campo"
+        "text": "Al final del documento, donde se agrupan las notas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Seleccionando Nota al pie en la lista Ir a e introduciendo el número 12, Word salta directamente a la marca de referencia de esa nota al pie en el texto principal. Las notas al pie aparecen en la parte inferior de la página donde están referenciadas, a diferencia de las notas al final que aparecen al final del documento."
+    "explicacion": "El cursor va al numerito volado dentro del texto, no al pie de la página: desde ahí se ve el contexto en el que se cita la nota, que es normalmente lo que se busca. Para pasar al texto de la nota basta con hacer doble clic en esa marca, y otro doble clic devuelve al texto principal. · Ir directamente al pie de página es lo que uno espera al leer el nombre del elemento, y por eso es el descarte que más cae. · Agrupar las notas al final del documento es lo propio de las notas al FINAL, que son otro elemento distinto de la misma lista y se insertan con Alt+Ctrl+L, frente al Alt+Ctrl+O de las notas al pie."
   },
   {
     "id": "inicio-241",
@@ -17709,28 +17709,28 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0495",
-    "enunciado": "¿Cuál es la diferencia entre el atajo Ctrl+Y y la tecla F4 en Word 365?",
+    "enunciado": "Has escrito un texto sin deshacer nada. Pulsas Ctrl+Y y luego F4. ¿Qué diferencia hay entre las dos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Y siempre rehace; F4 siempre repite la última acción aunque no haya nada que rehacer"
+        "text": "Ninguna: comparten comando y las dos repiten la última acción"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Y siempre repite; F4 siempre rehace"
+        "text": "Ctrl+Y rehace y F4 repite, así que solo la segunda hace algo"
       },
       {
         "letter": "C",
-        "text": "No hay diferencia; ambos tienen exactamente el mismo comportamiento en todos los contextos"
+        "text": "Ctrl+Y repite y F4 rehace, así que solo la primera hace algo"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Y abre el historial de rehacer; F4 ejecuta directamente sin historial"
+        "text": "Ctrl+Y abre el historial y F4 ejecuta directamente"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Y tiene comportamiento dual: rehace si hay acciones deshechas pendientes o repite la última acción si no hay nada que rehacer. F4 siempre repite la última acción realizada independientemente del estado del historial de deshacer/rehacer. En la práctica cuando hay acciones para rehacer ambos se comportan igual, pero cuando no hay nada que rehacer solo F4 garantiza la repetición."
+    "explicacion": "En el cuadro Personalizar teclado, Ctrl+Y, F4 y Alt+Entrar aparecen las tres bajo el mismo comando, EdiciónRehacerORepetir, «repite la última acción». Son intercambiables. · La distinción entre rehacer y repetir es real, pero no separa a estas dos: quien rehace en sentido estricto es Alt+Mayús+Retroceso, que es la que suele faltar en los apuntes. Por eso los dos descartes que reparten los papeles suenan tan bien y fallan. · Y el historial no se abre con ninguna tecla: se despliega con la flecha del botón Deshacer de la barra de acceso rápido, y solo permite volver atrás en bloque."
   },
   {
     "id": "inicio-243",
@@ -17745,28 +17745,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0497",
-    "enunciado": "¿Qué hace la opción Seleccionar objetos del desplegable Seleccionar del grupo Edición?",
+    "enunciado": "Eliges «Seleccionar objetos» en el desplegable Seleccionar y el puntero cambia. ¿Qué puedes hacer entonces?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Selecciona todos los objetos flotantes del documento de una vez"
+        "text": "Marcar objetos flotantes con un clic o dibujando un rectángulo, sin tocar el texto"
       },
       {
         "letter": "B",
-        "text": "Activa un modo especial en el que el cursor permite seleccionar objetos flotantes haciendo clic o dibujando un rectángulo sobre ellos, sin afectar al texto"
+        "text": "Ver marcados de golpe todos los objetos flotantes del documento"
       },
       {
         "letter": "C",
-        "text": "Abre el panel de selección con la lista de objetos"
+        "text": "Abrir el panel lateral con la lista de objetos de la página"
       },
       {
         "letter": "D",
-        "text": "Selecciona únicamente las imágenes, excluyendo formas y cuadros de texto"
+        "text": "Marcar solo las imágenes, dejando fuera formas y cuadros de texto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Seleccionar objetos activa un modo especial del cursor que permite hacer clic sobre objetos flotantes (imágenes, formas, cuadros de texto) o dibujar un rectángulo de selección que englobe varios a la vez, sin seleccionar el texto del documento. Para desactivar el modo se vuelve a hacer clic en la opción o se pulsa Escape."
+    "respuesta": "A",
+    "explicacion": "No selecciona nada por sí solo: activa un modo en el que el puntero deja de escribir y pasa a marcar objetos, incluso varios de una vez si se dibuja un rectángulo que los englobe. Se sale con Esc o volviendo a elegir la opción. Es lo que salva cuando un objeto está detrás del texto y no hay forma de pincharlo. · Marcar todos de golpe suena a lo que promete el nombre, y es el descarte que más cae. · El panel con la lista es la cuarta entrada de ese mismo desplegable, «Panel de selección». · Y el modo alcanza a todos los objetos flotantes, no solo a las imágenes."
   },
   {
     "id": "inicio-244",
@@ -17781,28 +17781,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0498",
-    "enunciado": "¿Cuál es la diferencia entre usar Ctrl+B para buscar y usar la opción Búsqueda avanzada del desplegable Buscar del grupo Edición?",
+    "enunciado": "Comparas Ctrl+B con la entrada «Búsqueda avanzada…» de la flecha del botón Buscar. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+B abre el cuadro de diálogo modal; Búsqueda avanzada abre el panel lateral"
+        "text": "El primero abre el panel lateral; la segunda, el cuadro en su ficha Buscar"
       },
       {
         "letter": "B",
-        "text": "Ctrl+B abre el panel de navegación lateral; Búsqueda avanzada abre el cuadro de diálogo modal Buscar y reemplazar en la pestaña Buscar"
+        "text": "El primero abre el cuadro en su ficha Buscar; la segunda, el panel lateral"
       },
       {
         "letter": "C",
-        "text": "Ambos abren el mismo panel; la diferencia es solo el método de acceso"
+        "text": "Los dos abren el panel: solo cambia el camino para llegar"
       },
       {
         "letter": "D",
-        "text": "Ctrl+B busca hacia adelante; Búsqueda avanzada busca en todo el documento"
+        "text": "El primero busca hacia adelante y la segunda, en todo el documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+B abre el panel de navegación lateral con el cuadro de búsqueda simple. La opción Búsqueda avanzada del desplegable del botón Buscar abre el cuadro de diálogo modal Buscar y reemplazar en la pestaña Buscar, que incluye las opciones avanzadas de Formato, Especial y los 7 modificadores de búsqueda."
+    "respuesta": "A",
+    "explicacion": "El panel de Navegación es cómodo para ver de un vistazo dónde aparece algo, con sus tres fichas y su lista de resultados en contexto. El cuadro de diálogo es el que trae la artillería: el botón «Más >>» con las siete casillas de opciones y los botones Formato, Especial y Sin formato. · La versión con los papeles cambiados es el reflejo exacto y hay que leerla despacio. · No son dos caminos al mismo sitio: son dos herramientas distintas. · Y la dirección de la búsqueda sí se elige, pero dentro del cuadro, en el desplegable «Buscar» que ofrece Todo, Hacia adelante y Hacia atrás."
   },
   {
     "id": "inicio-245",
@@ -17817,28 +17817,28 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0499",
-    "enunciado": "En el cuadro de Buscar y reemplazar, ¿qué hace la casilla Omitir espacios en blanco?",
+    "enunciado": "Con la casilla «Omitir espacios en blanco» marcada, buscas «base de datos». ¿Qué encuentra Word además de eso?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Elimina los espacios del texto encontrado antes de mostrarlo"
+        "text": "También «basededatos» y «base  de  datos», con espacios de más o de menos"
       },
       {
         "letter": "B",
-        "text": "Hace que la búsqueda ignore las diferencias en el número o tipo de espacios entre palabras, encontrando la secuencia aunque tenga espacios dobles o esté escrita sin espacios"
+        "text": "También «base de datos» aunque lleve comas o guiones entre las palabras"
       },
       {
         "letter": "C",
-        "text": "Busca únicamente en las zonas del documento que tienen espacios en blanco"
+        "text": "Solo eso, pero quita los espacios del resultado al mostrarlo"
       },
       {
         "letter": "D",
-        "text": "Excluye de los resultados los párrafos que están completamente en blanco"
+        "text": "Solo eso, y además descarta los párrafos que estén en blanco"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Omitir espacios en blanco hace que la búsqueda ignore las diferencias de espaciado entre palabras. Por ejemplo, buscar 'base de datos' con esta opción activa encontrará también 'basededatos' escrito sin espacios o 'base  de  datos' con espacios dobles. Es útil para localizar términos que pueden haberse escrito de formas inconsistentes."
+    "respuesta": "A",
+    "explicacion": "La casilla hace que Word no tenga en cuenta cuántos espacios hay entre las palabras buscadas, ni si los hay: encuentra la secuencia igual. Sirve para localizar términos escritos de forma inconsistente en un documento con varias manos. · Ignorar comas y guiones es lo que hace «Omitir puntuación», la casilla de al lado, y es el descarte que decide la pregunta: las dos empiezan por «Omitir» y hacen cosas paralelas, una con los espacios y otra con los signos. · Ninguna de las dos modifica el texto encontrado: solo cambian el criterio para encontrarlo. · Las dos están entre las siete que despliega el botón «Más >>»."
   },
   {
     "id": "inicio-246",
@@ -17853,28 +17853,28 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0500",
-    "enunciado": "En el cuadro de Buscar y reemplazar, ¿qué hace la casilla Omitir puntuación?",
+    "enunciado": "Con la casilla «Omitir puntuación» marcada, buscas «buscar y reemplazar». ¿Qué encuentra Word además de eso?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Elimina los signos de puntuación del texto de reemplazo"
+        "text": "También «buscar, y reemplazar» y «buscar-y-reemplazar»"
       },
       {
         "letter": "B",
-        "text": "Hace que la búsqueda ignore los signos de puntuación intercalados entre las palabras buscadas, encontrando la secuencia aunque tenga comas, guiones u otros signos en medio"
+        "text": "También «buscaryreemplazar», escrito todo junto"
       },
       {
         "letter": "C",
-        "text": "Busca únicamente los signos de puntuación del documento"
+        "text": "Solo eso, pero quita los signos del texto encontrado"
       },
       {
         "letter": "D",
-        "text": "Excluye de los resultados el texto que está seguido de signos de puntuación"
+        "text": "Solo eso, y descarta los resultados seguidos de un punto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Omitir puntuación hace que la búsqueda ignore los signos de puntuación intercalados en la secuencia buscada. Por ejemplo, buscar 'buscar y reemplazar' con esta opción activa encontrará también 'buscar, y reemplazar' o 'buscar-y-reemplazar'. Es útil para localizar frases que pueden tener puntuación variable."
+    "respuesta": "A",
+    "explicacion": "La casilla hace que los signos intercalados no rompan la coincidencia, así que la frase se encuentra aunque lleve comas, guiones o paréntesis entre sus palabras. Es útil con nombres oficiales que unas veces se escriben con guion y otras sin él. · Encontrarla escrita toda junta es lo que hace «Omitir espacios en blanco», su casilla gemela: las dos van seguidas en la lista y hacen cosas paralelas, una con los signos y otra con los espacios. Es el descarte que decide la pregunta. · Ninguna de las dos toca el texto del documento: solo cambian cómo se compara lo buscado con lo escrito."
   },
   {
     "id": "inicio-269",
@@ -17889,28 +17889,28 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0523",
-    "enunciado": "Un usuario quiere sustituir en todo el documento todas las palabras 'Dirección General' escritas en negrita por 'D.G.' también en negrita, sin afectar a las apariciones de 'Dirección General' que no están en negrita. ¿Qué función de la pestaña Inicio debe combinar?",
+    "enunciado": "Quieres cambiar «Dirección General» por «D.G.» solo donde esté en negrita, dejando intactas las demás apariciones. ¿Cómo lo montas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Buscar + Seleccionar todo el texto con formato similar"
+        "text": "En Reemplazar, con «Formato ▸ Fuente ▸ Negrita» puesto en el campo Buscar"
       },
       {
         "letter": "B",
-        "text": "Reemplazar + botón Formato para especificar negrita en el campo Buscar"
+        "text": "En Reemplazar, con «Formato ▸ Fuente ▸ Negrita» puesto en el campo Reemplazar"
       },
       {
         "letter": "C",
-        "text": "Buscar avanzado + casilla Solo palabras completas"
+        "text": "En Reemplazar, marcando la casilla «Solo palabras completas»"
       },
       {
         "letter": "D",
-        "text": "Seleccionar objetos + Reemplazar todos"
+        "text": "Con «Seleccionar todo el texto con formato similar» y luego escribiendo encima"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Para buscar texto con un formato específico se usa el cuadro Buscar y reemplazar con el botón Formato activo en el campo Buscar. El procedimiento es: escribir 'Dirección General' en Buscar, hacer clic en Formato → Fuente y activar Negrita, escribir 'D.G.' en Reemplazar con, hacer clic en Formato → Fuente y activar también Negrita, y pulsar Reemplazar todos. Así solo se sustituyen las apariciones en negrita."
+    "respuesta": "A",
+    "explicacion": "La condición de formato tiene que ir en el campo de BUSCAR, porque es ahí donde se decide qué se encuentra: con la negrita puesta en ese campo, Word solo se para en las apariciones en negrita. Si además se quiere que el resultado siga en negrita, se pone también en el de reemplazo, pero eso es otra cosa. · Ponerla solo en el campo de reemplazo cambiaría TODAS las apariciones y las pondría en negrita: hace justo lo contrario de lo pedido, y es el descarte que decide la pregunta. · «Solo palabras completas» no distingue formato. · Y seleccionar por formato similar marcaría los textos, pero no permite sustituirlos por otros de golpe."
   },
   {
     "id": "inicio-274",
@@ -17925,28 +17925,28 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0528",
-    "enunciado": "Un opositor repasa para el examen y encuentra la siguiente afirmación: 'Ctrl+E en Word 365 español selecciona todo el documento'. ¿Es correcta esta afirmación?",
+    "enunciado": "Un opositor te enseña sus apuntes: «Ctrl+E selecciona todo el documento». ¿Es correcto en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sí, es correcta: Ctrl+E selecciona todo en la versión española"
+        "text": "Sí, y además el 5 del teclado numérico con Ctrl hace lo mismo"
       },
       {
         "letter": "B",
-        "text": "No, es incorrecta: Ctrl+E centra el párrafo en la versión española"
+        "text": "No: Ctrl+E centra el párrafo, como en el esquema inglés"
       },
       {
         "letter": "C",
-        "text": "No, es incorrecta: Ctrl+E abre el cuadro Buscar en la versión española"
+        "text": "No: Ctrl+E abre el cuadro Buscar"
       },
       {
         "letter": "D",
-        "text": "Depende de la versión de Word instalada: en unas centra y en otras selecciona todo"
+        "text": "Depende de la versión: en unas centra y en otras selecciona"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Correcto. En la versión española de Word 365, Ctrl+E selecciona todo el documento (equivale a Seleccionar todo del grupo Edición). Ctrl+T centra el texto. En la versión inglesa es al revés: Ctrl+E centra y Ctrl+A selecciona todo. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+E selecciona el documento entero, igual que la entrada «Seleccionar todo» del grupo Edición, y Ctrl con el 5 del teclado numérico hace exactamente lo mismo, con el bloqueo numérico encendido o apagado. Prueba en vivo del usuario. · En el esquema internacional los papeles están cruzados: allí Ctrl+E centra y Ctrl+A selecciona todo. Aquí centrar es Ctrl+T y Ctrl+A abre la pestaña Abrir de Backstage. Ese cruce es el origen de la mitad de las confusiones con los atajos españoles. · Y no depende de la versión: depende del idioma de la instalación."
   },
   {
     "id": "inicio-279",
@@ -17961,28 +17961,28 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0533",
-    "enunciado": "Un usuario quiere que en su documento todas las apariciones del término 'COVID-19' aparezcan en versalitas y en color azul corporativo (RGB 0,70,127). ¿Cuál es el procedimiento más eficiente usando herramientas de la pestaña Inicio?",
+    "enunciado": "Quieres que todas las apariciones de «COVID-19» queden en versalitas y en un azul concreto, sin ir una por una. ¿Cuál es la vía más eficiente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Seleccionar cada aparición manualmente y aplicar el formato desde la cinta"
+        "text": "Reemplazar el término por sí mismo, con el formato puesto en el campo de reemplazo"
       },
       {
         "letter": "B",
-        "text": "Usar Buscar y reemplazar: escribir COVID-19 en Buscar, en Reemplazar con escribir COVID-19 y usar el botón Formato para asignar versalitas y color RGB 0,70,127, luego Reemplazar todos"
+        "text": "Reemplazar el término por sí mismo, con el formato puesto en el campo de búsqueda"
       },
       {
         "letter": "C",
-        "text": "Crear un estilo de carácter con versalitas y color azul, luego aplicarlo manualmente a cada aparición"
+        "text": "Buscar el término y aplicarle el formato desde la cinta con todo encontrado"
       },
       {
         "letter": "D",
-        "text": "Usar Seleccionar todo el texto con formato similar y cambiar el formato de una vez"
+        "text": "Seleccionar todo el texto con formato similar y cambiarlo de una vez"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El procedimiento más eficiente es usar Buscar y reemplazar con el botón Formato en el campo Reemplazar con. Se escribe COVID-19 en Buscar, se escribe COVID-19 en Reemplazar con, y desde el botón Formato → Fuente se configura Versalitas y Color de fuente → Más colores → valores RGB 0,70,127. Al pulsar Reemplazar todos se aplica el formato a todas las apariciones de una vez."
+    "respuesta": "A",
+    "explicacion": "Se escribe el mismo texto en los dos campos y se le da formato solo al de reemplazo, con «Formato ▸ Fuente»: al pulsar «Reemplazar todos», el texto no cambia y el aspecto sí, en todas sus apariciones a la vez. Es el uso menos conocido del cuadro y el más útil. · Poner el formato en el campo de búsqueda haría lo contrario: buscaría solo las que YA estén así. Ese es el par que hay que tener claro, y el descarte que decide la pregunta. · Buscar no deja el texto seleccionado para formatearlo después. · Y seleccionar por formato similar parte del formato actual, que aquí es el corriente."
   },
   {
     "id": "inicio-287",
@@ -17996,28 +17996,28 @@
     "subtopic": "Buscar y reemplazar",
     "tema": "Edición",
     "sourceQuestionId": "1-48",
-    "enunciado": "¿En qué grupo de la pestaña Inicio se ubica la herramienta «Buscar y reemplazar» en Word 365?",
+    "enunciado": "Recorres la cinta de Inicio de izquierda a derecha. ¿En qué grupo está el botón Reemplazar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Portapapeles"
+        "text": "Edición, el último de los cinco de formato"
       },
       {
         "letter": "B",
-        "text": "Fuente"
+        "text": "Párrafo, junto a los botones de alineación"
       },
       {
         "letter": "C",
-        "text": "Párrafo"
+        "text": "Estilos, junto a la galería"
       },
       {
         "letter": "D",
-        "text": "Edición"
+        "text": "Portapapeles, junto al pincel Copiar formato"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "En Word 365, «Buscar y reemplazar» se encuentra en el grupo Edición de la pestaña Inicio. El atajo de teclado en la versión española es Ctrl+L."
+    "respuesta": "A",
+    "explicacion": "El orden de la cinta de Inicio es Portapapeles, Fuente, Párrafo, Estilos y Edición, y este último reúne los tres botones que no formatean nada: Buscar, Reemplazar y Seleccionar. Después vienen ya los grupos de Voz, Editor y Complementos. · Portapapeles es el descarte con más fundamento porque también trabaja con texto sin cambiar su aspecto, y porque el pincel confunde. · Fijar ese orden ayuda con muchas preguntas de ubicación: los cuatro primeros grupos van de menos a más alcance —caracteres, párrafo, conjuntos con nombre— y el quinto se sale de la lógica del formato."
   },
   {
     "id": "inicio-288",
@@ -18031,28 +18031,28 @@
     "subtopic": "Buscar y reemplazar",
     "tema": "Edición",
     "sourceQuestionId": "1-78",
-    "enunciado": "¿Qué herramienta permite reemplazar una palabra por otra en todo el documento?",
+    "enunciado": "Necesitas cambiar un nombre de departamento por otro en las ciento veinte veces que aparece en un informe. ¿Qué herramienta lo hace de una vez?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Revisión ortográfica"
+        "text": "Buscar y reemplazar, del grupo Edición"
       },
       {
         "letter": "B",
-        "text": "Búsqueda y sustitución"
+        "text": "El panel de Navegación, del grupo Edición"
       },
       {
         "letter": "C",
-        "text": "Buscar sinónimos"
+        "text": "El Editor, con su revisión de ortografía y estilo"
       },
       {
         "letter": "D",
-        "text": "Insertar tabla"
+        "text": "Los sinónimos, con Mayús+F7"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La búsqueda y sustitución permite reemplazar palabras. En Word 365 (versión española) se accede desde Inicio > grupo Edición o con el atajo Ctrl+L."
+    "respuesta": "A",
+    "explicacion": "El cuadro Buscar y reemplazar, en su ficha Reemplazar, lo hace de una pasada con «Reemplazar todos», y avisa al terminar de cuántas sustituciones ha hecho. Se abre con Ctrl+L o con el botón del grupo Edición. · El panel de Navegación es el descarte que decide la pregunta: encuentra las ciento veinte apariciones y las lista, pero no sustituye ninguna. Buscar y reemplazar no son lo mismo, y solo una de las dos herramientas hace las dos cosas. · El Editor corrige ortografía y estilo, y no sustituye términos a demanda. · Y los sinónimos proponen alternativas para una palabra, de una en una."
   },
   {
     "id": "inicio-293",
@@ -18066,7 +18066,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-111",
-    "enunciado": "¿Cuál de los siguientes atajos abre el cuadro Buscar y reemplazar en Word 365 versión española?",
+    "enunciado": "Cuatro combinaciones parecidas, y solo una abre el cuadro Buscar y reemplazar en esta instalación. ¿Cuál?",
     "opciones": [
       {
         "letter": "A",
@@ -18087,7 +18087,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+L abre Buscar y reemplazar. Ctrl+H aplica sangría (aumenta la sangría izquierda). Ctrl+F aplica la sangría francesa. Ctrl+B abre el panel de Navegación."
+    "explicacion": "Ctrl+L abre el cuadro en su ficha Reemplazar. Las otras tres hacen algo, y ninguna es lo que se busca: · Ctrl+H aumenta la sangría izquierda, y es la trampa del esquema inglés, donde es «replace». · Ctrl+F aplica sangría francesa, y es la trampa del mismo esquema, donde es «find». Las dos descolocan el párrafo sin avisar, que es lo que las hace peligrosas. · Ctrl+B abre el panel de Navegación, que busca de verdad, pero en un panel lateral y sin poder reemplazar. · Cuatro letras, tres esquemas cruzados y un solo cuadro: merece la pena fijarlas juntas."
   },
   {
     "id": "inicio-294",
@@ -18101,19 +18101,19 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-112",
-    "enunciado": "¿Qué atajo lleva el foco al cuadro Buscar de la barra de título (Microsoft Search) en Word 365 versión española?",
+    "enunciado": "Quieres localizar un comando de Word cuyo nombre recuerdas a medias, no un texto del documento. ¿Qué combinación te lleva a ese buscador?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt + Q"
+        "text": "Alt+Q"
       },
       {
         "letter": "B",
-        "text": "Ctrl + B"
+        "text": "Ctrl+B"
       },
       {
         "letter": "C",
-        "text": "Ctrl + F"
+        "text": "Ctrl+L"
       },
       {
         "letter": "D",
@@ -18122,7 +18122,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Q lleva el foco al cuadro Buscar de la barra de título (\"Qué desea hacer\" / Microsoft Search). Ctrl+B abre el panel de Navegación con el cuadro de búsqueda dentro del documento. F5 abre Ir a. Prueba en vivo del usuario."
+    "explicacion": "Alt+Q lleva el foco al cuadro Buscar de la barra de título, el de Microsoft Search: allí se escribe el nombre aproximado de un comando y Word lo ofrece para ejecutarlo directamente, además de buscar ayuda y contenido. Prueba en vivo del usuario. Es la forma más rápida de llegar a algo cuya pestaña no se recuerda. · Las otras tres buscan dentro del DOCUMENTO, cada una a su manera: Ctrl+B abre el panel de Navegación, Ctrl+L el cuadro en su ficha Reemplazar y F5 el mismo cuadro en Ir a. Distinguir el buscador de comandos del buscador de texto es todo el fondo de esta pregunta."
   },
   {
     "id": "inicio-295",
@@ -18136,11 +18136,11 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-113",
-    "enunciado": "¿Cuál de los siguientes atajos abre el cuadro Ir a en Word 365 versión española?",
+    "enunciado": "Quieres saltar a la página 47 y buscas el atajo. ¿Cuál abre el cuadro en la ficha «Ir a»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+B"
+        "text": "F5"
       },
       {
         "letter": "B",
@@ -18148,7 +18148,7 @@
       },
       {
         "letter": "C",
-        "text": "F5"
+        "text": "Ctrl+B"
       },
       {
         "letter": "D",
@@ -18156,8 +18156,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "F5 abre el cuadro Ir a (también lo hace Ctrl+I). Ctrl+B abre el panel de Navegación. Ctrl+G guarda el documento. Ctrl+F5 restaura el tamaño de la ventana."
+    "respuesta": "A",
+    "explicacion": "F5 abre el cuadro en esa ficha, y Ctrl+I hace exactamente lo mismo: las dos comparten el comando EdiciónIrA. · ⚠️ Ctrl+G es el descarte más peligroso y una trampa doble: en Word estándar es precisamente «Ir a», y en esta instalación está reasignado a Guardar. Quien lo pulse guardará el documento y se quedará esperando un cuadro que no llega. · Ctrl+B abre el panel de Navegación, que permite saltar por miniaturas o por títulos, pero no por número de elemento. · Y Ctrl+F5 no tiene comando asignado en Word; es una combinación de gestión de ventanas de Windows."
   },
   {
     "id": "inicio-313",
@@ -18171,7 +18171,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-197",
-    "enunciado": "¿Qué atajo elimina la palabra situada a la izquierda del cursor en Word 365?",
+    "enunciado": "Has escrito mal una palabra larga y quieres borrarla entera sin pulsar Retroceso una vez por letra. ¿Qué combinación la borra de golpe?",
     "opciones": [
       {
         "letter": "A",
@@ -18179,7 +18179,7 @@
       },
       {
         "letter": "B",
-        "text": "Retroceso"
+        "text": "Ctrl+Supr"
       },
       {
         "letter": "C",
@@ -18187,12 +18187,12 @@
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+Retroceso"
+        "text": "Alt+Retroceso"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Retroceso elimina la palabra completa a la izquierda del cursor. Retroceso elimina solo el carácter anterior. Mayús+Retroceso no elimina texto sino que en algunos contextos deshace. Ctrl+Mayús+Retroceso no tiene función asignada para eliminar palabras. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Retroceso elimina la palabra anterior, la que acaba de escribirse, y el cuadro Personalizar teclado añade un matiz importante: lo hace «sin colocarla en el Portapapeles», así que no se puede pegar después. Prueba en vivo del usuario. · Ctrl+Supr es su simétrica y borra la palabra SIGUIENTE, la que está a la derecha del cursor: es el descarte que decide la pregunta, porque hace lo mismo en la otra dirección. · Alt+Retroceso es el descarte más fino, porque sí existe y no borra nada: comparte comando con Ctrl+Z y deshace la última acción. · Mayús+Retroceso no tiene comando asignado."
   },
   {
     "id": "inicio-319",
@@ -18206,28 +18206,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-215",
-    "enunciado": "¿Qué atajo extiende la selección en Word 365 activando el modo de selección extendida?",
+    "enunciado": "Pulsas F8 y la barra de estado cambia. Vuelves a pulsarlo dos veces más. ¿Qué va seleccionando?",
     "opciones": [
       {
         "letter": "A",
-        "text": "F8"
+        "text": "Primero la palabra, luego la frase y luego el párrafo"
       },
       {
         "letter": "B",
-        "text": "Mayús+F8"
+        "text": "Primero la línea, luego el párrafo y luego la página"
       },
       {
         "letter": "C",
-        "text": "Ctrl+F8"
+        "text": "Siempre lo mismo: cada pulsación amplía un carácter"
       },
       {
         "letter": "D",
-        "text": "Alt+F8"
+        "text": "Nada más: F8 solo activa el modo y hay que usar las flechas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F8 activa el modo de selección extendida. Mayús+F8 reduce la selección en ese mismo modo. Ctrl+F8 activa el modo de cambio de tamaño de ventana. Alt+F8 abre el cuadro de diálogo Macro. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "F8 activa el modo extender selección y cada pulsación amplía por unidades cada vez mayores: palabra, frase, párrafo y documento entero. Es la forma de seleccionar sin ratón y sin arrastrar. Prueba en vivo del usuario. Se sale con Esc. · Mayús+F8 hace el camino inverso, reduciendo la selección un escalón. · Las flechas también funcionan una vez activado el modo, así que ese descarte describe algo cierto pero incompleto: lo que la pregunta persigue es que las pulsaciones sucesivas hacen algo por sí solas. · Ctrl+Mayús+F8 activa otro modo distinto, el de seleccionar un bloque rectangular de texto."
   },
   {
     "id": "inicio-320",
@@ -18241,7 +18241,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-216",
-    "enunciado": "¿Qué atajo reduce la selección activa en el modo de selección extendida en Word 365?",
+    "enunciado": "Has ampliado demasiado con F8 y quieres retroceder un escalón sin salir del modo. ¿Qué pulsas?",
     "opciones": [
       {
         "letter": "A",
@@ -18249,20 +18249,20 @@
       },
       {
         "letter": "B",
-        "text": "F8"
+        "text": "Ctrl+F8"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+F8"
+        "text": "Alt+F8"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+F8"
+        "text": "Esc"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+F8 reduce la selección cuando el modo de selección extendida está activo. F8 amplía la selección. Ctrl+Mayús+F8 selecciona una columna. Alt+Mayús+F8 no tiene función asignada para reducir selección."
+    "explicacion": "Mayús+F8 reduce la selección por las mismas unidades por las que F8 la amplía, así que las dos teclas se turnan hasta dejarla en el punto justo. · Esc es el descarte más fino: también «arregla» la situación, pero saliendo del modo por completo y perdiendo lo seleccionado, en vez de retroceder un paso. La pregunta pide seguir dentro. · Ctrl+F8 no tiene que ver con el texto: es una combinación de gestión de la ventana del documento. · Y Alt+F8 abre el cuadro de diálogo Macros, uno de esos atajos que sorprenden si se pulsan por error."
   },
   {
     "id": "inicio-321",
@@ -20566,28 +20566,28 @@
     "subtopic": null,
     "tema": "Voz",
     "sourceQuestionId": "8-329",
-    "enunciado": "¿Qué atajo inicia el Dictado de Office en Word 365?",
+    "enunciado": "Quieres empezar a dictar un texto en vez de escribirlo, usando solo el teclado para arrancar. ¿Qué combinación pone en marcha el Dictado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+corchete abierto ["
+        "text": "Alt y el corchete de apertura"
       },
       {
         "letter": "B",
-        "text": "Alt+corchete cerrado ]"
+        "text": "Alt y el corchete de cierre"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Alt+["
+        "text": "Alt+Mayús y el corchete de apertura"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+["
+        "text": "Ctrl+Alt y el corchete de apertura"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+[ (corchete abierto) inicia el Dictado de Office para transcribir voz a texto. Alt+] no tiene función asignada para dictado. Ctrl+Alt+[ no tiene función asignada. Alt+Mayús+[ no tiene función asignada para iniciar dictado."
+    "explicacion": "Alt y el corchete de apertura arranca el Dictado y hace aparecer la barra flotante con el micrófono. Prueba en vivo del usuario. · Las otras tres son variantes de la misma tecla y ninguna tiene comando asignado en esta instalación, que es lo que las hace buenos descartes: no fallan por absurdas, fallan porque hay que saber cuál de las cuatro es. · Ojo con el corchete de cierre: en el teclado español se obtiene con AltGr, no con Alt, así que ni siquiera se puede pulsar como se describe. · El Dictado necesita conexión a internet, porque la transcripción se hace en los servidores de Microsoft y no en el equipo."
   },
   {
     "id": "inicio-382",
@@ -20602,28 +20602,28 @@
     "tema": "Voz",
     "sourceQuestionId": "gen-atajo-9",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado inicia el Dictado de Office en Word 365?",
+    "enunciado": "Pulsas la combinación del Dictado y aparece algo en pantalla. ¿Qué es exactamente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+Izquierda"
+        "text": "Una barra flotante con un micrófono y un engranaje de ajustes"
       },
       {
         "letter": "B",
-        "text": "Mayús+F9"
+        "text": "Un panel lateral a la derecha, como el del Editor"
       },
       {
         "letter": "C",
-        "text": "Ctrl+S"
+        "text": "Un cuadro de diálogo donde se elige el idioma antes de empezar"
       },
       {
         "letter": "D",
-        "text": "Alt+["
+        "text": "Nada visible: Word empieza a transcribir directamente"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Activa la función de dictado por voz de Word, que transcribe lo que se dice en texto dentro del documento."
+    "respuesta": "A",
+    "explicacion": "El Dictado abre una barra pequeña y flotante, que se puede mover por la pantalla, con el botón del micrófono para pausar y reanudar y un engranaje para los ajustes, entre ellos el idioma y la puntuación automática. · Los paneles laterales son de otras herramientas de esta zona de la cinta, como el Editor o el Traductor, y por eso es el descarte más creíble. · El idioma no se pregunta al arrancar: se cambia sobre la marcha desde el desplegable del propio botón Dictar o desde los ajustes de la barra. · Y sí hay aviso visible: sin él no habría forma de saber si el micrófono está escuchando."
   },
   {
     "id": "inicio-429",
@@ -20643,24 +20643,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+["
+        "text": "Alt y el corchete de apertura"
       },
       {
         "letter": "B",
-        "text": "Ctrl+C"
+        "text": "F7, o bien Windows+F7"
       },
       {
         "letter": "C",
-        "text": "Alt+Ctrl+A"
+        "text": "Alt+Mayús+F7, del Traductor"
       },
       {
         "letter": "D",
-        "text": "Ctrl+N"
+        "text": "Alt+Ctrl+Espacio, de leer en voz alta"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Dictar.** Pestaña Inicio ▸ Voz. Atajo: Alt+[. Convierte tu voz en texto. Abre una barra flotante con el micrófono."
+    "explicacion": "**Dictar.** Pestaña Inicio ▸ grupo Voz. Atajo: Alt y el corchete de apertura. Convierte la voz en texto y abre una barra flotante con el micrófono; necesita conexión a internet. · Los otros tres son atajos reales de herramientas vecinas y por eso son buenos descartes: F7 abre el panel Editor, Alt+Mayús+F7 el Traductor y Alt+Ctrl+Espacio pone en marcha «Leer en voz alta», que hace justo lo contrario que el Dictado —convierte el texto en voz en lugar de la voz en texto—. · Ese último es el par conceptual que conviene tener claro, porque los dos van de voz y están a un paso el uno del otro."
   },
   {
     "id": "inicio-442",
@@ -20675,28 +20675,28 @@
     "tema": "Voz",
     "sourceQuestionId": "neg-inicio-11",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre Dictar es FALSA?",
+    "enunciado": "Repasas lo que sabes del botón Dictar. ¿Cuál de estas afirmaciones es FALSA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Está en el grupo Voz de Inicio"
+        "text": "Está en el grupo Voz de la pestaña Inicio"
       },
       {
         "letter": "B",
-        "text": "Su atajo es Alt+["
+        "text": "Se arranca con Alt y el corchete de apertura"
       },
       {
         "letter": "C",
-        "text": "Convierte la voz en texto"
+        "text": "Convierte la voz en texto dentro del documento"
       },
       {
         "letter": "D",
-        "text": "Su atajo es Ctrl+Mayús+V"
+        "text": "Funciona sin conexión, porque transcribe en el propio equipo"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "No existe ningún atajo Ctrl+Mayús+V para Dictar. El atajo real, confirmado en vivo, es Alt+[."
+    "explicacion": "El Dictado necesita internet: lo que se dice viaja a los servidores de Microsoft, que devuelven el texto. Sin conexión el botón no llega a funcionar. Es la limitación práctica que más importa y la que hay que tener presente. · Las otras tres son ciertas. El grupo Voz está a la derecha de la cinta de Inicio, junto a Editor y Complementos. El atajo es el corchete de apertura con Alt. Y su trabajo es exactamente ese, pasar la voz a texto. · No confundirlo con «Leer en voz alta», de la pestaña Revisar, que hace el camino inverso y sí puede funcionar sin conexión."
   },
   {
     "id": "inicio-542",
@@ -20711,11 +20711,11 @@
     "tema": "Voz",
     "sourceQuestionId": "rutas-inicio-72",
     "generado": true,
-    "enunciado": "El botón «Dictar» del grupo Voz tiene una flecha desplegable para elegir el idioma de dictado y ajustar sus opciones.",
+    "enunciado": "El botón «Dictar» del grupo Voz tiene flecha desplegable para elegir el idioma del dictado y ajustar sus opciones.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "El dictado por voz necesita conexión a internet; el idioma se elige en ese desplegable."
+    "explicacion": "Verdadero. La mitad de arriba del botón arranca el dictado y la flecha de abajo despliega la lista de idiomas y los ajustes, que también están en el engranaje de la barra flotante una vez arrancado. · Elegir bien el idioma es lo primero que hay que hacer: dictar en español con el idioma en inglés produce transcripciones incomprensibles, y es el fallo más común la primera vez. · Entre los ajustes está la puntuación automática, que decide si Word coloca comas y puntos por su cuenta o si hay que dictarlos diciendo «coma» y «punto». · Todo ello requiere conexión a internet."
   },
   {
     "id": "inicio-468",
@@ -20737,7 +20737,7 @@
       "Alt+[",
       "Editor"
     ],
-    "explicacion": "Alt+[ inicia el Dictado; F7/Windows+F7 abren el mismo panel Editor (revisión ortográfica y gramatical)."
+    "explicacion": "Alt y el corchete de apertura arranca el Dictado, que convierte la voz en texto y abre su barra flotante con el micrófono; necesita conexión a internet. Prueba en vivo del usuario. · F7 y Windows+F7 abren los dos el mismo panel, el Editor, que en Word 365 reúne la revisión de ortografía y de gramática con las sugerencias de estilo: lo que en versiones anteriores se llamaba «Ortografía y gramática» es hoy ese mismo panel. · Conviene no mezclarlos con Alt+F7, que salta al siguiente error ortográfico sin abrir nada, ni con Mayús+F7, que abre los Sinónimos."
   },
   {
     "id": "inicio-430",
@@ -20757,24 +20757,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Viñetas"
-      },
-      {
-        "letter": "B",
-        "text": "Copiar"
-      },
-      {
-        "letter": "C",
         "text": "Editor"
       },
       {
+        "letter": "B",
+        "text": "Dictar"
+      },
+      {
+        "letter": "C",
+        "text": "Complementos"
+      },
+      {
         "letter": "D",
-        "text": "Disminuir sangría"
+        "text": "Buscar"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Editor.** Pestaña Inicio ▸ Editor. Atajo: F7. Abre el panel Editor con la revisión de ortografía, gramática y estilo. También Windows+F7."
+    "respuesta": "A",
+    "explicacion": "**Editor.** Pestaña Inicio, en su propio grupo del extremo derecho de la cinta. Atajo: F7, y también Windows+F7. Abre el panel con la revisión de ortografía, gramática y estilo, y una puntuación de la redacción. · Dictar y Complementos son sus vecinos inmediatos en esa zona de la cinta, que es la que reúne las herramientas que no son de formato: por eso son los descartes que decide la pregunta. · «Buscar» no está en Inicio: es el cuadro de la barra de título, al que se llega con Alt+Q. · El mismo panel Editor está también en la pestaña Revisar, bajo el nombre de «Ortografía y gramática»: son la misma herramienta con dos puertas."
   },
   {
     "id": "inicio-443",
@@ -20789,28 +20789,28 @@
     "tema": "Complementos",
     "sourceQuestionId": "neg-inicio-12",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre el Editor es FALSA?",
+    "enunciado": "Repasas lo que sabes del panel Editor. ¿Cuál de estas afirmaciones es FALSA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se abre con F7"
+        "text": "Se abre con F7 y también con Windows+F7"
       },
       {
         "letter": "B",
-        "text": "También se abre con Windows+F7"
+        "text": "Revisa ortografía, gramática y estilo de redacción"
       },
       {
         "letter": "C",
-        "text": "Revisa ortografía, gramática y estilo"
+        "text": "Es el mismo panel que «Ortografía y gramática» de la pestaña Revisar"
       },
       {
         "letter": "D",
-        "text": "F7 abre el panel de Impresión"
+        "text": "Alt+F7 abre ese mismo panel desde cualquier punto del documento"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "F7 abre el panel Editor (ortografía y gramática), no el panel de Impresión. El de Impresión se abre con Ctrl+P."
+    "explicacion": "Alt+F7 no abre ningún panel: salta directamente al siguiente error ortográfico del documento y despliega sus sugerencias ahí mismo. Es más rápido para ir corrigiendo de uno en uno, y por eso conviene distinguirlo del panel. · Las otras tres son ciertas. F7 y Windows+F7 llevan las dos al Editor. El panel revisa las tres cosas y da una puntuación de la redacción. Y en Word 365 «Editor» y «Ortografía y gramática» son la misma herramienta vista desde dos pestañas. · La cuarta tecla de esta familia es Mayús+F7, que abre los Sinónimos."
   },
   {
     "id": "inicio-470",
@@ -20842,12 +20842,12 @@
       },
       {
         "letter": "D",
-        "text": "Traductor"
+        "text": "Elementos rápidos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Complementos.** Pestaña Inicio ▸ grupo Complementos. Abre la galería/tienda de complementos de Office para instalar y gestionar add-ins desde el propio documento. No tiene atajo de teclado directo."
+    "explicacion": "**Complementos.** Pestaña Inicio ▸ grupo Complementos, en el extremo derecho de la cinta. Abre la galería de complementos de Office, con su tienda y la sección «Mis complementos», para instalar herramientas de terceros que luego aparecen en la cinta o en un panel. No tiene atajo. · Editor y Dictar son sus vecinos en esa misma zona, la de las herramientas que no son de formato, y por eso son los descartes que decide la pregunta. · «Elementos rápidos» sí existe, pero en Insertar ▸ Texto, y sirve para guardar y reutilizar bloques de contenido: no tiene nada que ver con instalar nada."
   },
   {
     "id": "inicio-543",
@@ -20862,10 +20862,10 @@
     "tema": "Complementos",
     "sourceQuestionId": "rutas-inicio-73",
     "generado": true,
-    "enunciado": "El botón «Complementos» del grupo Complementos abre la galería/tienda de complementos de Office, con la sección «Mis complementos».",
+    "enunciado": "El botón «Complementos» abre la galería de complementos de Office, y una vez instalado uno hay que reiniciar Word para poder usarlo.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Desde ahí se instalan complementos (Wikipedia, diccionarios, etc.) que luego aparecen en la cinta o en un panel."
+    "respuesta": false,
+    "explicacion": "Falso en la segunda mitad: el complemento queda disponible en el momento, y aparece en la cinta o abre su propio panel sin cerrar nada. Lo primero sí es cierto: ese botón abre la galería, con su tienda y la sección «Mis complementos», desde la que se instalan y se gestionan. · Los complementos son piezas de terceros —diccionarios, buscadores bibliográficos, conversores— que amplían Word sin tocar el programa. · Ojo con no confundir esta galería con la ficha «Complementos» de la cinta, que solo aparece cuando hay alguno instalado que necesite sitio propio, ni con el panel Complementos de Archivo ▸ Opciones, que gestiona los de tipo COM."
   }
 ]
