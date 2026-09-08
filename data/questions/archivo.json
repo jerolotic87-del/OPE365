@@ -7882,28 +7882,28 @@
     "subtopic": "Guardar",
     "tema": "Opciones",
     "sourceQuestionId": "8-68",
-    "enunciado": "¿Desde qué ruta se define el formato de archivo predeterminado para guardar documentos nuevos en Word 365?",
+    "enunciado": "En tu oficina todo el mundo trabaja con .doc y quieres que Word te proponga ese formato al guardar cualquier documento nuevo. ¿Dónde se fija?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Guardar → Guardar archivos en formato"
+        "text": "Opciones → Guardar → Guardar archivos en formato"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → General → Formato de archivo predeterminado"
+        "text": "Opciones → Avanzadas → Guardar → Formato predeterminado"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Formato predeterminado al guardar"
+        "text": "Guardar como → Herramientas → Opciones para guardar"
       },
       {
         "letter": "D",
-        "text": "Archivo → Guardar como → Establecer como predeterminado"
+        "text": "Guardar como → Tipo → Establecer como predeterminado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El formato predeterminado de guardado se configura en Archivo → Opciones → Guardar en el campo Guardar archivos en formato. No existe ese ajuste en General ni en Avanzadas. Guardar como no tiene un botón para establecer el tipo como predeterminado."
+    "explicacion": "Es el primer desplegable del panel Guardar, y cambia lo que Word propone en el cuadro Guardar como a partir de ese momento; los documentos ya guardados no se tocan. · La opción C es la más difícil de descartar porque no es falsa del todo: «Opciones para guardar…» existe en el menú Herramientas del cuadro Guardar como, pero no es un sitio distinto, es un atajo que lleva a ESTE mismo panel. Dos puertas, un solo ajuste. · Avanzadas tiene una sección Guardar, pero con la copia de seguridad y el guardado en segundo plano, no el formato. · «Establecer como predeterminado» existe en varios cuadros de Word, aunque no en el desplegable Tipo."
   },
   {
     "id": "archivo-77",
@@ -7917,28 +7917,28 @@
     "subtopic": "Guardar",
     "tema": "Opciones",
     "sourceQuestionId": "8-69",
-    "enunciado": "¿Desde qué ruta se configura si los archivos de autoguardado se almacenan en la nube de forma predeterminada?",
+    "enunciado": "Quieres que las copias de autoguardado de Word vayan a la nube en lugar de al disco local. ¿En qué panel de Opciones está esa casilla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Guardar → Archivos de autoguardado almacenados en la nube"
+        "text": "Guardar"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → General → Autoguardado en la nube"
+        "text": "General"
       },
       {
         "letter": "C",
-        "text": "Archivo → Cuenta → Configurar autoguardado en OneDrive"
+        "text": "Avanzadas"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Avanzadas → Guardar automáticamente en la nube"
+        "text": "Centro de confianza"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción está en Archivo → Opciones → Guardar. No existe en General ni en la sección Cuenta ni en Avanzadas."
+    "explicacion": "Todo lo que tenga que ver con dónde y cuándo se escribe el archivo vive en el panel Guardar: el formato predeterminado, el intervalo de Autorrecuperación, sus carpetas y esta casilla. · General es el distractor natural porque también tiene una sección de coautoría y de privacidad, pero no toca el guardado. · Avanzadas tiene una sección llamada «Guardar», y por eso es una duda razonable; lo que hay ahí es la copia de seguridad automática y el guardado en segundo plano. · El Centro de confianza es seguridad: macros, editores y ubicaciones de confianza."
   },
   {
     "id": "archivo-78",
@@ -7952,28 +7952,28 @@
     "subtopic": "Guardar",
     "tema": "Opciones",
     "sourceQuestionId": "8-70",
-    "enunciado": "¿Desde qué ruta se configura la carpeta local predeterminada donde Word guarda los documentos?",
+    "enunciado": "Quieres que el cuadro Guardar como se abra siempre en una carpeta concreta de tu disco. ¿Qué ajuste del panel Guardar cambias?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Guardar → Ubicación predeterminada de archivos locales"
+        "text": "Ubicación predeterminada de archivos locales"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Guardar → Ubicación de archivos de Autorrecuperación"
+        "text": "Ubicación de archivo con Autorrecuperación"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Ubicaciones de archivos"
+        "text": "Ubicación predeterminada de plantillas personales"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → General → Carpeta de trabajo predeterminada"
+        "text": "Ubicación de borradores del servidor"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La ubicación predeterminada de archivos locales se configura en Archivo → Opciones → Guardar en ese campo específico. La ubicación de Autorrecuperación es un campo diferente en la misma sección. Las Ubicaciones de archivos en Avanzadas agrupan varias rutas pero el acceso principal es desde Guardar. No existe Carpeta de trabajo predeterminada en General."
+    "explicacion": "Las cuatro son campos de carpeta reales del mismo panel, así que la pregunta es qué guarda cada uno: aquí no hay nada que descartar por raro. · «Ubicación de archivo con Autorrecuperación» es donde Word deja los .asd, no donde guardas tú. · «Ubicación predeterminada de plantillas personales» es la carpeta que alimenta la pestaña Personal de la pantalla Nuevo. · «Ubicación de borradores del servidor» es donde se quedan los archivos extraídos de SharePoint mientras los editas sin conexión, y está en su propia sección, «Edición sin conexión»."
   },
   {
     "id": "archivo-79",
@@ -7987,28 +7987,28 @@
     "subtopic": "Guardar",
     "tema": "Opciones",
     "sourceQuestionId": "8-71",
-    "enunciado": "¿Desde qué ruta se activa la opción para que Word incruste las fuentes tipográficas en el documento al guardarlo?",
+    "enunciado": "Has usado una tipografía poco común y quieres que el documento se vea igual en un equipo que no la tenga instalada. ¿Qué sección del panel Guardar lo resuelve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Guardar → Mantener fidelidad al compartir este documento"
+        "text": "Mantener la fidelidad al compartir este documento"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Tamaño y calidad de imagen → Insertar fuentes"
+        "text": "Mantener la compatibilidad al compartir este documento"
       },
       {
         "letter": "C",
-        "text": "Archivo → Guardar como → Herramientas → Opciones generales → Insertar fuentes"
+        "text": "Edición sin conexión"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → General → Compatibilidad → Insertar fuentes en el archivo"
+        "text": "Configuración de caché"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción para incrustar fuentes está en Archivo → Opciones → Guardar dentro de la sección Mantener fidelidad al compartir este documento. No está en Avanzadas ni en Herramientas de Guardar como ni en General."
+    "explicacion": "Esa sección lleva el nombre del documento abierto entre corchetes y contiene la casilla «Incrustar fuentes en el archivo», más las dos que afinan cuánto se incrusta. Es de las pocas opciones del cuadro que se guardan DENTRO del archivo y no en la aplicación: por eso la sección lleva el nombre del documento. · «Mantener la compatibilidad al compartir este documento» no existe, y cambia una sola palabra del nombre real. Cuela porque la compatibilidad SÍ es un asunto de Word al compartir (el modo de compatibilidad, «Comprobar compatibilidad»), así que la frase entera suena verdadera. La palabra buena es fidelidad. · «Edición sin conexión» es la sección de los borradores de SharePoint. · «Configuración de caché» controla los archivos temporales de la nube."
   },
   {
     "id": "archivo-219",
@@ -8023,28 +8023,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-03",
     "generado": true,
-    "enunciado": "Has sufrido cierres inesperados y perdido trabajo porque el intervalo de autorrecuperación era muy largo. ¿Dónde lo reduces para que Word guarde una copia de recuperación con más frecuencia?",
+    "enunciado": "Has perdido trabajo en un par de cierres inesperados y quieres que Word guarde la copia de recuperación cada menos tiempo. ¿Qué ajuste del panel Guardar tocas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Mostrar sitios adicionales para guardar, incluso si fuera necesario iniciar sesión"
+        "text": "Guardar información de Autorrecuperación cada X minutos"
       },
       {
         "letter": "B",
-        "text": "Guardar documentos ▸ Ubicación predeterminada de plantillas personales"
+        "text": "Conservar la última versión recuperada al cerrar sin guardar"
       },
       {
         "letter": "C",
-        "text": "Guardar documentos ▸ Archivos de autoguardado almacenados en la nube de forma predeterminada en Word"
+        "text": "Ubicación de archivo con Autorrecuperación"
       },
       {
         "letter": "D",
-        "text": "Guardar documentos ▸ Guardar información de Autorrecuperación cada X minutos"
+        "text": "Archivos de autoguardado almacenados en la nube"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Guardar información de Autorrecuperación cada X minutos. Se recomienda 5 minutos o menos para minimizar la pérdida en caso de fallo."
+    "respuesta": "A",
+    "explicacion": "Es el campo de minutos, que viene en 10 de fábrica; bajarlo reduce lo que se pierde en un cierre brusco, a costa de escribir en disco más a menudo. · La opción B es su compañera inmediata y hace falta también, pero para otra cosa: garantiza que esa última copia no se borre al cerrar sin guardar. Una decide CADA CUÁNTO se guarda y la otra SI SE CONSERVA. Las dos van seguidas en pantalla y las dos hablan de recuperación. · La opción C es la carpeta donde se dejan esos archivos. · Nada de esto es lo mismo que el Autoguardado de la nube, que escribe sobre el documento de verdad."
   },
   {
     "id": "archivo-220",
@@ -8059,28 +8059,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-04",
     "generado": true,
-    "enunciado": "Cerraste un documento sin guardar y al reabrirlo Word no ofreció ninguna versión recuperada. ¿Dónde te aseguras de que Word conserva siempre la última versión de autorrecuperación aunque se cierre sin guardar?",
+    "enunciado": "Cerraste un documento diciendo que no querías guardar y al reabrir Word no te ofreció ninguna versión recuperada. ¿Qué casilla del panel Guardar lo habría evitado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Conservar la última versión recuperada automáticamente cuando cierro sin guardar"
+        "text": "Conservar la última versión recuperada al cerrar sin guardar"
       },
       {
         "letter": "B",
-        "text": "Guardar documentos ▸ Archivos de autoguardado almacenados en la nube de forma predeterminada en Word"
+        "text": "Guardar información de Autorrecuperación cada X minutos"
       },
       {
         "letter": "C",
-        "text": "Guardar documentos ▸ Ubicación predeterminada de archivos locales"
+        "text": "Archivos de autoguardado almacenados en la nube"
       },
       {
         "letter": "D",
-        "text": "Guardar documentos ▸ Guardar archivos en formato"
+        "text": "Guardar en PC de forma predeterminada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Conservar la última versión recuperada automáticamente cuando cierro sin guardar. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "explicacion": "Sin esta casilla, al responder que no quieres guardar Word borra también la copia de Autorrecuperación, y no queda nada que ofrecer al reabrir. · La opción B es la que muchos marcan y no resuelve el caso del enunciado: por muy corto que sea el intervalo, la copia se genera y luego se borra al cerrar. Generar la copia y conservarla son dos casillas distintas, y hacen falta las dos. · Es la casilla que alimenta «Recuperar documentos no guardados» de Información → Administrar documento. · Las opciones C y D deciden dónde se guarda, no si se conserva."
   },
   {
     "id": "archivo-221",
@@ -8095,28 +8095,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-05",
     "generado": true,
-    "enunciado": "Tras un fallo del sistema quieres localizar a mano los archivos temporales de autorrecuperación de Word. ¿Dónde consultas o cambias la carpeta donde los guarda?",
+    "enunciado": "Tras un fallo del sistema quieres ir tú mismo a la carpeta donde Word deja los archivos temporales de recuperación. ¿Qué campo del panel Guardar la indica?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Guardar en PC de forma predeterminada"
+        "text": "Ubicación de archivo con Autorrecuperación"
       },
       {
         "letter": "B",
-        "text": "Guardar documentos ▸ Guardar archivos en formato"
+        "text": "Ubicación predeterminada de archivos locales"
       },
       {
         "letter": "C",
-        "text": "Guardar documentos ▸ Ubicación predeterminada de archivos locales"
+        "text": "Ubicación predeterminada de plantillas personales"
       },
       {
         "letter": "D",
-        "text": "Guardar documentos ▸ Ubicación de archivo con Autorrecuperación"
+        "text": "Ubicación de borradores del servidor"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Ubicación de archivo con Autorrecuperación. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es el campo que hay justo debajo del intervalo de minutos, con su botón Examinar. Ahí es donde aparecen los .asd. · Las otras tres son los otros campos de carpeta del mismo panel, y ninguna se descarta por absurda: la de archivos locales es donde guardas tú, la de plantillas personales alimenta la pestaña Personal del panel Nuevo, y la de borradores del servidor es para SharePoint sin conexión. · Al mismo destino se llega sin copiar la ruta: por Información → Administrar documento → «Recuperar documentos no guardados», o por el botón del final del panel Abrir."
   },
   {
     "id": "archivo-222",
@@ -8131,28 +8131,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-06",
     "generado": true,
-    "enunciado": "Cada vez que usas el atajo de guardar, Word abre la pantalla completa del Backstage en lugar de guardar directamente. ¿Dónde activas que los atajos de guardar y abrir actúen sin pasar por esa pantalla?",
+    "enunciado": "Cada vez que pulsas el atajo de guardar, Word te planta la pantalla completa de Backstage en vez de guardar y seguir. ¿Qué casilla del panel Guardar lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Ubicación predeterminada de archivos locales"
+        "text": "No mostrar Backstage al abrir o guardar con los atajos de teclado"
       },
       {
         "letter": "B",
-        "text": "Guardar documentos ▸ Guardar en PC de forma predeterminada"
+        "text": "Guardar en PC de forma predeterminada"
       },
       {
         "letter": "C",
-        "text": "Guardar documentos ▸ Ubicación predeterminada de plantillas personales"
+        "text": "Mostrar sitios adicionales para guardar, aunque haya que iniciar sesión"
       },
       {
         "letter": "D",
-        "text": "Guardar documentos ▸ No mostrar el Backstage al abrir o guardar archivos con los métodos abreviados de teclado"
+        "text": "Archivos de autoguardado almacenados en la nube"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → No mostrar el Backstage al abrir o guardar archivos con los métodos abreviados de teclado. Atajo relacionado: Ctrl+G. Atajos de guardado de esta instalación: Ctrl+G / Mayús+F12 / Alt+Mayús+F2 (Guardar), F12 (Guardar como)."
+    "respuesta": "A",
+    "explicacion": "Con ella marcada, Ctrl+G y Ctrl+A van directos al cuadro de diálogo de Windows en lugar de al panel de Backstage. Es de las casillas que más agradece quien viene de versiones antiguas. · «Guardar en PC de forma predeterminada» es el distractor con más fundamento: también quita un paso molesto, porque evita aterrizar en OneDrive, pero el Backstage sigue apareciendo. Una cambia el DESTINO y la otra si se muestra la PANTALLA. · Las otras dos también son casillas reales del mismo bloque, sobre dónde se guarda."
   },
   {
     "id": "archivo-223",
@@ -8167,28 +8167,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-07",
     "generado": true,
-    "enunciado": "Al guardar un documento no aparecen en la lista de ubicaciones los sitios de SharePoint ni otras cuentas de nube de tu organización. ¿Dónde activas que esos sitios se muestren aunque requieran iniciar sesión?",
+    "enunciado": "Al guardar no te aparecen los sitios de SharePoint de tu organización entre las ubicaciones posibles. ¿Qué casilla del panel Guardar los saca?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Guardar archivos en formato"
+        "text": "Mostrar sitios adicionales para guardar, aunque haya que iniciar sesión"
       },
       {
         "letter": "B",
-        "text": "Guardar documentos ▸ Guardar información de Autorrecuperación cada X minutos"
+        "text": "Guardar en PC de forma predeterminada"
       },
       {
         "letter": "C",
-        "text": "Guardar documentos ▸ Mostrar sitios adicionales para guardar, incluso si fuera necesario iniciar sesión"
+        "text": "Archivos de autoguardado almacenados en la nube"
       },
       {
         "letter": "D",
-        "text": "Guardar documentos ▸ No mostrar el Backstage al abrir o guardar archivos con los métodos abreviados de teclado"
+        "text": "No mostrar Backstage al abrir o guardar con los atajos de teclado"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Mostrar sitios adicionales para guardar, incluso si fuera necesario iniciar sesión. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "La coletilla del nombre es la clave: esos sitios no salen precisamente porque requieren autenticarse, y la casilla autoriza a mostrarlos igualmente. · «Guardar en PC de forma predeterminada» es la que empuja en sentido contrario, hacia el disco local, y por eso es un distractor tentador para quien recuerde que el problema iba de ubicaciones. · Ojo con no confundir esto con «Agregar un sitio» del panel Guardar como, que sirve para enlazar un sitio concreto: la casilla decide si se muestran, el otro los añade. · Las cuatro son casillas reales del mismo bloque."
   },
   {
     "id": "archivo-224",
@@ -8203,28 +8203,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-08",
     "generado": true,
-    "enunciado": "Cada vez que guardas un documento nuevo, Word te lleva a OneDrive y tienes que navegar a mano hasta tu disco local. ¿Dónde configuras que la ubicación predeterminada sea siempre tu PC?",
+    "enunciado": "Cada vez que guardas algo nuevo Word te lleva a OneDrive y tienes que bajar a mano hasta tu disco. ¿Qué casilla del panel Guardar lo cambia?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Guardar en PC de forma predeterminada"
+        "text": "Guardar en PC de forma predeterminada"
       },
       {
         "letter": "B",
-        "text": "Guardar documentos ▸ Ubicación de archivo con Autorrecuperación"
+        "text": "Ubicación predeterminada de archivos locales"
       },
       {
         "letter": "C",
-        "text": "Guardar documentos ▸ Guardar archivos en formato"
+        "text": "Archivos de autoguardado almacenados en la nube"
       },
       {
         "letter": "D",
-        "text": "Guardar documentos ▸ Ubicación predeterminada de plantillas personales"
+        "text": "Mostrar sitios adicionales para guardar, aunque haya que iniciar sesión"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Guardar en PC de forma predeterminada. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "explicacion": "Esta casilla decide con qué origen se abre el panel Guardar: marcada, arranca en «Este PC» en vez de en OneDrive. · «Ubicación predeterminada de archivos locales» es el campo de justo debajo y es el distractor bueno: dice QUÉ CARPETA del PC se propone, pero no sirve de nada si Word sigue abriendo por la nube. Van juntas y suelen tocarse a la vez, pero responden a preguntas distintas. · «Archivos de autoguardado almacenados en la nube» es de las copias de recuperación, no del documento. · La cuarta añade orígenes a la lista, no cambia el de partida."
   },
   {
     "id": "archivo-225",
@@ -8239,28 +8239,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-10",
     "generado": true,
-    "enunciado": "Has creado varias plantillas propias pero no aparecen en la sección \"Personal\" de la pantalla de inicio. ¿Dónde le indicas a Word en qué carpeta están para que las muestre?",
+    "enunciado": "Has creado plantillas propias pero no aparecen en la pestaña «Personal» del panel Nuevo. ¿Qué campo del panel Guardar hay que rellenar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Guardar archivos en formato"
+        "text": "Ubicación predeterminada de plantillas personales"
       },
       {
         "letter": "B",
-        "text": "Guardar documentos ▸ Conservar la última versión recuperada automáticamente cuando cierro sin guardar"
+        "text": "Ubicación predeterminada de archivos locales"
       },
       {
         "letter": "C",
-        "text": "Guardar documentos ▸ Guardar información de Autorrecuperación cada X minutos"
+        "text": "Ubicación de archivo con Autorrecuperación"
       },
       {
         "letter": "D",
-        "text": "Guardar documentos ▸ Ubicación predeterminada de plantillas personales"
+        "text": "Ubicación de borradores del servidor"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Guardar documentos → Ubicación predeterminada de plantillas personales. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "La pestaña Personal no busca plantillas por todo el disco: mira solo en esa carpeta, y si el campo está vacío no muestra nada aunque tengas los .dotx guardados. Es la causa habitual de que «las plantillas no aparezcan». · Las otras tres son los demás campos de carpeta del panel, todos reales: donde guardas tú, donde van los .asd y dónde se quedan los borradores de SharePoint. · Guardar un documento como Plantilla de Word (.dotx) no basta: hay que dejarlo en la carpeta que indique este campo."
   },
   {
     "id": "archivo-226",
@@ -8275,28 +8275,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-11",
     "generado": true,
-    "enunciado": "Trabajas con archivos extraídos de una biblioteca de SharePoint y necesitas saber en qué carpeta local se guardan mientras los editas sin conexión. ¿Dónde consultas o cambias esa ubicación?",
+    "enunciado": "Editas sin conexión archivos extraídos de una biblioteca de SharePoint y quieres saber en qué carpeta local se quedan mientras tanto. ¿Qué campo lo indica?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Conservar la última versión recuperada automáticamente cuando cierro sin guardar"
+        "text": "Edición sin conexión: ubicación de borradores del servidor"
       },
       {
         "letter": "B",
-        "text": "Guardar documentos ▸ Mostrar sitios adicionales para guardar, incluso si fuera necesario iniciar sesión"
+        "text": "Guardar documentos: ubicación predeterminada de archivos locales"
       },
       {
         "letter": "C",
-        "text": "Edición sin conexión ▸ Ubicación de borradores del servidor"
+        "text": "Guardar documentos: ubicación de archivo con Autorrecuperación"
       },
       {
         "letter": "D",
-        "text": "Guardar documentos ▸ Ubicación predeterminada de plantillas personales"
+        "text": "Configuración de caché: días que se conservan los archivos"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Opciones de edición sin conexión para los archivos del servidor de administración de documentos → Ubicación de borradores del servidor. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "«Edición sin conexión» es una sección propia del panel Guardar, separada de «Guardar documentos», y existe solo para este caso: los archivos desprotegidos de un servidor. · «Configuración de caché» es la sección de al lado y es el distractor de más nivel, porque también guarda archivos de la nube en local: pero la caché es el almacén temporal de sincronización de Office, y los borradores del servidor son las copias de trabajo de los archivos que has extraído a propósito. Dos almacenes locales con propósitos distintos. · Las otras dos son campos de la sección grande de arriba."
   },
   {
     "id": "archivo-227",
@@ -8311,28 +8311,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-13",
     "generado": true,
-    "enunciado": "Has activado la incrustación de fuentes pero el archivo pesa demasiado. ¿Dónde activas incrustar solo los caracteres que realmente aparecen en el documento para reducir el tamaño?",
+    "enunciado": "Has incrustado las fuentes en el documento y el archivo se ha disparado de tamaño. ¿Qué casilla lo reduce sin renunciar a la incrustación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Guardar archivos en formato"
+        "text": "Incrustar solo los caracteres utilizados en el documento"
       },
       {
         "letter": "B",
-        "text": "Mantener la fidelidad al compartir este documento ▸ Incrustar solo los caracteres utilizados en el documento (recomendado para reducir el tamaño del archivo)"
+        "text": "No incrustar fuentes del sistema comunes"
       },
       {
         "letter": "C",
-        "text": "Guardar documentos ▸ No mostrar el Backstage al abrir o guardar archivos con los métodos abreviados de teclado"
+        "text": "Incrustar fuentes en el archivo"
       },
       {
         "letter": "D",
-        "text": "Mantener la fidelidad al compartir este documento ▸ No incrustar fuentes del sistema comunes"
+        "text": "Mantener la fidelidad al compartir este documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Mantener la fidelidad al compartir este documento → Incrustar solo los caracteres utilizados en el documento (recomendado para reducir el tamaño del archivo). Reduce el tamaño, pero limita que otros editen el documento con esa fuente."
+    "respuesta": "A",
+    "explicacion": "En vez de meter la fuente entera, guarda solo los caracteres que aparecen de verdad. Tiene una contrapartida que conviene saber: quien reciba el documento no podrá escribir texto nuevo con esa fuente, porque faltarán las letras que tú no usaste. · La opción B es la otra casilla de ahorro y es un distractor legítimo: también reduce el tamaño, pero por otra vía, saltándose las fuentes que cualquier Windows ya tiene. Las dos están juntas y las dos adelgazan el archivo. · La opción C es la casilla madre que enciende la incrustación, ya activada según el enunciado. · La D es el nombre de la sección."
   },
   {
     "id": "archivo-228",
@@ -8347,28 +8347,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-14",
     "generado": true,
-    "enunciado": "Has activado la incrustación de fuentes y el archivo ocupa más de lo esperado porque incrusta también fuentes estándar que todo equipo ya tiene. ¿Dónde activas excluir esas fuentes comunes?",
+    "enunciado": "Incrustas fuentes y ves que el archivo también carga las tipografías estándar que trae cualquier Windows. ¿Qué casilla las excluye?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Conservar la última versión recuperada automáticamente cuando cierro sin guardar"
+        "text": "No incrustar fuentes del sistema comunes"
       },
       {
         "letter": "B",
-        "text": "Mantener la fidelidad al compartir este documento ▸ No incrustar fuentes del sistema comunes"
+        "text": "Incrustar solo los caracteres utilizados en el documento"
       },
       {
         "letter": "C",
-        "text": "Configuración de caché ▸ Eliminar los archivos almacenados en caché"
+        "text": "Incrustar fuentes en el archivo"
       },
       {
         "letter": "D",
-        "text": "Guardar documentos ▸ Mostrar sitios adicionales para guardar, incluso si fuera necesario iniciar sesión"
+        "text": "Eliminar los archivos almacenados en caché"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Mantener la fidelidad al compartir este documento → No incrustar fuentes del sistema comunes. Activarla REDUCE el tamaño (no lo aumenta): al activarla Word deja de incrustar las fuentes del sistema."
+    "respuesta": "A",
+    "explicacion": "Da por hecho que Arial, Times New Roman o Calibri están en cualquier equipo y no las mete en el archivo. Solo viajan las tipografías raras, que son las que de verdad hacen falta para conservar el aspecto. · La opción B es la otra casilla de ahorro de la misma sección: recorta por caracteres en lugar de por fuentes. Se pueden marcar las dos, y distinguir qué recorta cada una es el ejercicio. · La opción C es la casilla que enciende todo el mecanismo. · «Eliminar los archivos almacenados en caché» es de otra sección del mismo panel y no tiene que ver con las fuentes."
   },
   {
     "id": "archivo-229",
@@ -8383,28 +8383,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-15",
     "generado": true,
-    "enunciado": "Los archivos de la caché de documentos de Office ocupan demasiado espacio en disco. ¿Dónde reduces el número de días que se conservan?",
+    "enunciado": "Los archivos de la caché de documentos de Office te están ocupando demasiado disco y quieres que se borren antes. ¿Qué ajuste del panel Guardar tocas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Ubicación predeterminada de archivos locales"
+        "text": "Configuración de caché: días que se conservan los archivos"
       },
       {
         "letter": "B",
-        "text": "Guardar documentos ▸ Guardar en PC de forma predeterminada"
+        "text": "Configuración de caché: eliminar los archivos al cerrarlos"
       },
       {
         "letter": "C",
-        "text": "Mantener la fidelidad al compartir este documento ▸ No incrustar fuentes del sistema comunes"
+        "text": "Configuración de caché: eliminar los archivos almacenados en caché"
       },
       {
         "letter": "D",
-        "text": "Configuración de caché ▸ Días durante los que se conservarán los archivos de Caché de documentos de Office"
+        "text": "Guardar documentos: ubicación predeterminada de archivos locales"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Configuración de caché → Días durante los que se conservarán los archivos de Caché de documentos de Office. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Las tres primeras opciones son los tres controles reales de esa sección y hacen tres cosas distintas, así que hay que leer con cuidado: el campo de días fija cuánto se conservan, la casilla los borra al cerrar cada documento, y el botón hace una limpieza inmediata de lo que ya hay. El enunciado pide cambiar la caducidad, no vaciar ahora. · La opción C es especialmente tentadora porque también libera espacio, pero de una sola vez, y mañana vuelve a llenarse. · La opción D es un campo de otra sección del mismo panel."
   },
   {
     "id": "archivo-230",
@@ -8419,28 +8419,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-16",
     "generado": true,
-    "enunciado": "Por privacidad quieres que Word borre los archivos de la caché cada vez que cierres un documento, sin esperar a que caduquen. ¿Dónde lo activas?",
+    "enunciado": "Compartes el equipo y quieres que la caché de documentos de Office se vacíe en cuanto cierras cada archivo, sin esperar a que caduque. ¿Qué marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guardar documentos ▸ Ubicación predeterminada de archivos locales"
+        "text": "Configuración de caché: eliminar los archivos al cerrarlos"
       },
       {
         "letter": "B",
-        "text": "Guardar documentos ▸ Guardar información de Autorrecuperación cada X minutos"
+        "text": "Configuración de caché: días que se conservan los archivos"
       },
       {
         "letter": "C",
-        "text": "Configuración de caché ▸ Eliminar los archivos de Caché de documentos de Office cuando se cierren"
+        "text": "Configuración de caché: eliminar los archivos almacenados en caché"
       },
       {
         "letter": "D",
-        "text": "Mantener la fidelidad al compartir este documento ▸ Incrustar solo los caracteres utilizados en el documento (recomendado para reducir el tamaño del archivo)"
+        "text": "Guardar documentos: archivos de autoguardado almacenados en la nube"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Configuración de caché → Eliminar los archivos de Caché de documentos de Office cuando se cierren. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es la casilla pensada para equipos compartidos: no deja rastro local de los documentos de la nube una vez cerrados. · La opción B es el mismo objetivo por otra vía, pero con retraso: por bajo que pongas los días, los archivos siguen ahí mientras tanto. · La opción C es el botón de limpiar lo que ya está guardado; resuelve el pasado, no el futuro. Las tres se parecen y las tres borran caché, así que la pregunta es cuándo actúa cada una. · Ojo con el efecto secundario: sin caché local, abrir un archivo de la nube exige conexión."
   },
   {
     "id": "archivo-231",
@@ -8455,28 +8455,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-guar-17",
     "generado": true,
-    "enunciado": "La caché de documentos de Office se ha corrompido y Word no sincroniza con la nube. Quieres limpiarla manualmente ya mismo. ¿Dónde ejecutas esa limpieza desde las opciones de Word?",
+    "enunciado": "La caché de documentos de Office se ha corrompido y Word ha dejado de sincronizar. Quieres vaciarla ahora mismo desde las opciones. ¿Qué usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Configuración de caché ▸ Eliminar los archivos almacenados en caché"
+        "text": "Configuración de caché: eliminar los archivos almacenados en caché"
       },
       {
         "letter": "B",
-        "text": "Guardar documentos ▸ No mostrar el Backstage al abrir o guardar archivos con los métodos abreviados de teclado"
+        "text": "Configuración de caché: eliminar los archivos al cerrarlos"
       },
       {
         "letter": "C",
-        "text": "Guardar documentos ▸ Archivos de autoguardado almacenados en la nube de forma predeterminada en Word"
+        "text": "Configuración de caché: días que se conservan los archivos"
       },
       {
         "letter": "D",
-        "text": "Guardar documentos ▸ Conservar la última versión recuperada automáticamente cuando cierro sin guardar"
+        "text": "Guardar documentos: guardar en PC de forma predeterminada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Guardar → Configuración de caché → Eliminar los archivos almacenados en caché. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "explicacion": "Es el único de los tres controles de la sección que es un BOTÓN y no un ajuste: actúa en el momento y pide confirmación, porque borra también lo que esté pendiente de subir. · La casilla de la opción B solo se aplicará a partir del próximo cierre, y el campo de días de la opción C, cuando caduquen: ninguna de las dos arregla algo que ya está corrupto. La diferencia entre configurar un comportamiento y ejecutar una acción es todo el ejercicio. · La opción D es de otra sección del panel."
   },
   {
     "id": "archivo-80",
@@ -8490,28 +8490,28 @@
     "subtopic": "Idioma",
     "tema": "Opciones",
     "sourceQuestionId": "8-72",
-    "enunciado": "¿Desde qué ruta se cambia el idioma de los menús y botones de la interfaz de Word 365?",
+    "enunciado": "Quieres que los menús y botones de Word aparezcan en otro idioma, sin tocar el idioma en que escribes. ¿Qué sección del panel Idioma manejas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Idioma → Idioma para mostrar de Office"
+        "text": "Idioma para mostrar de Office"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Revisión → Idioma de visualización de la interfaz"
+        "text": "Corrección e idiomas de creación de Office"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → General → Idioma de la interfaz de usuario"
+        "text": "Idioma de corrección del documento"
       },
       {
         "letter": "D",
-        "text": "Archivo → Cuenta → Idioma de visualización de Office"
+        "text": "Preferencias regionales de Office"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El idioma de los menús y botones se configura en Archivo → Opciones → Idioma dentro de Idioma para mostrar de Office. No está en Revisión ni en General. La sección Cuenta no gestiona el idioma de la interfaz."
+    "explicacion": "El panel Idioma está partido en dos listas y esa división es lo que se pregunta: «Idioma para mostrar» es la interfaz (menús, botones, ayuda) y «Corrección e idiomas de creación» es el idioma del texto que escribes y con el que se corrige. Cambiar una no cambia la otra. · La opción C no existe como sección; el idioma de un texto concreto se marca desde Revisar → Idioma. · «Preferencias regionales de Office» tampoco existe, y está puesta porque suena exactamente a lo que uno buscaría. · El cambio de interfaz exige reiniciar Word."
   },
   {
     "id": "archivo-81",
@@ -8525,28 +8525,28 @@
     "subtopic": "Idioma",
     "tema": "Opciones",
     "sourceQuestionId": "8-73",
-    "enunciado": "¿Desde qué ruta se añade un idioma para poder revisar la ortografía en ese idioma en Word 365?",
+    "enunciado": "Vas a escribir en un idioma nuevo y quieres que el corrector lo revise. ¿Qué sección del panel Idioma manejas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Idioma → Corrección e idiomas de creación"
+        "text": "Corrección e idiomas de creación de Office"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Revisión → Agregar idioma de corrección"
+        "text": "Idioma para mostrar de Office"
       },
       {
         "letter": "C",
-        "text": "Revisar → Idioma → Establecer idioma de corrección → Agregar idioma"
+        "text": "Diccionarios personalizados"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Accesibilidad → Idiomas de corrección"
+        "text": "Modos del español"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Los idiomas de creación y corrección se gestionan en Archivo → Opciones → Idioma dentro de Corrección e idiomas de creación. No existe Agregar idioma de corrección en la pestaña Revisión de Opciones. La pestaña Revisar de la cinta establece el idioma del texto seleccionado, no añade idiomas globalmente. No hay idiomas en Accesibilidad."
+    "explicacion": "Es la lista de abajo del panel Idioma, la de los idiomas en los que escribes; cada entrada indica además si tiene instaladas las herramientas de corrección o si hay que descargarlas. · «Idioma para mostrar» es la lista de arriba y cambia la interfaz, no la corrección. · Las opciones C y D existen, pero en el panel Revisión y para otra cosa: los diccionarios personalizados guardan palabras propias, y «Modos del español» elige la variante gramatical de un idioma que ya está añadido. · Añadir el idioma aquí y marcar el texto con Revisar → Idioma son dos pasos distintos y suelen hacer falta los dos."
   },
   {
     "id": "archivo-232",
@@ -8561,28 +8561,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-idi-02",
     "generado": true,
-    "enunciado": "Necesitas que la interfaz de Word se muestre en francés porque vas a ceder el equipo a un compañero francófono. ¿Dónde añades el francés como idioma de visualización de Office?",
+    "enunciado": "Quieres que la interfaz de Word esté también disponible en francés. ¿Qué usas en la sección «Idioma para mostrar»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Idioma para mostrar ▸ Subir / Bajar"
+        "text": "El botón Agregar un idioma"
       },
       {
         "letter": "B",
-        "text": "Idioma para mostrar ▸ Agregar un idioma"
+        "text": "Los botones Subir y Bajar"
       },
       {
         "letter": "C",
-        "text": "Corrección e idiomas de creación ▸ Almacenar mis idiomas de creación en la nube para mi cuenta"
+        "text": "El botón Establecer como Preferido"
       },
       {
         "letter": "D",
-        "text": "Idioma para mostrar ▸ Idioma para mostrar de Office"
+        "text": "El botón Quitar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Idioma para mostrar de Office → Agregar un idioma. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Los cuatro botones existen en esa sección y hacen cuatro cosas distintas, así que aquí no vale descartar nada: hay que saber para qué sirve cada uno. · «Agregar un idioma» es el único que trae uno nuevo, y suele llevar a descargar el paquete de idioma correspondiente. · Subir y Bajar reordenan la lista de los que ya están. · «Establecer como Preferido» lleva uno al primer puesto de golpe. · «Quitar» lo saca de la lista. · Cambiar la interfaz no cambia el corrector: eso está en la otra lista del mismo panel."
   },
   {
     "id": "archivo-233",
@@ -8597,28 +8597,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-idi-03",
     "generado": true,
-    "enunciado": "Tienes varios idiomas de visualización instalados y la interfaz aparece en inglés porque está el primero de la lista. Quieres que el español ocupe la primera posición. ¿Dónde cambias ese orden?",
+    "enunciado": "Tienes varios idiomas de interfaz instalados y Word arranca en inglés porque encabeza la lista. Quieres bajarlo un puesto sin quitarlo. ¿Qué usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Corrección e idiomas de creación ▸ Quitar"
+        "text": "Los botones Subir y Bajar"
       },
       {
         "letter": "B",
-        "text": "Corrección e idiomas de creación ▸ Instalar otros teclados desde la configuración de Windows"
+        "text": "El botón Establecer como Preferido"
       },
       {
         "letter": "C",
-        "text": "Idioma para mostrar ▸ Idioma para mostrar de Office"
+        "text": "El botón Quitar"
       },
       {
         "letter": "D",
-        "text": "Idioma para mostrar ▸ Subir / Bajar"
+        "text": "El botón Agregar un idioma"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Idioma para mostrar de Office → Subir / Bajar. La interfaz usa el primer idioma DISPONIBLE de la lista, así que reordenar con Subir/Bajar es lo que decide en qué idioma se ve."
+    "respuesta": "A",
+    "explicacion": "Word usa el primero de la lista que tenga el paquete instalado, así que el orden es lo que decide qué se ve. Subir y Bajar mueven un puesto cada vez. · «Establecer como Preferido» es el distractor de más nivel porque consigue algo parecido de una tacada: manda un idioma al primer puesto. La diferencia está en el enunciado, que pide mover el inglés hacia abajo, no ascender otro. · «Quitar» lo eliminaría, que es más de lo que se pide. · Los cuatro botones son reales y conviven en esa misma sección."
   },
   {
     "id": "archivo-234",
@@ -8633,28 +8633,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-idi-04",
     "generado": true,
-    "enunciado": "Tienes varios idiomas de visualización en la lista y quieres marcar uno directamente como preferido para que pase al primer puesto sin reordenar a mano. ¿Dónde lo haces?",
+    "enunciado": "Quieres marcar directamente un idioma de interfaz como el principal, sin ir moviéndolo puesto a puesto. ¿Qué usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Idioma para mostrar ▸ Establecer como Preferido"
+        "text": "El botón Establecer como Preferido"
       },
       {
         "letter": "B",
-        "text": "Idioma para mostrar ▸ Idioma para mostrar de Office"
+        "text": "Los botones Subir y Bajar"
       },
       {
         "letter": "C",
-        "text": "Corrección e idiomas de creación ▸ Almacenar mis idiomas de creación en la nube para mi cuenta"
+        "text": "El botón Agregar un idioma"
       },
       {
         "letter": "D",
-        "text": "Idioma para mostrar ▸ Agregar un idioma"
+        "text": "El botón Quitar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Idioma para mostrar de Office → Establecer como Preferido. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "explicacion": "Lleva el idioma seleccionado al primer puesto de una vez, que es lo que decide con qué idioma arranca Office. · Subir y Bajar consiguen lo mismo pero de uno en uno, y el enunciado pide expresamente evitar eso: son la respuesta a la pregunta contraria. · «Agregar un idioma» es para traer uno que no está. · Existe un botón con este mismo nombre en la otra sección del panel, la de corrección: ahí marca el idioma preferido para escribir y corregir, no para la interfaz. Mismo botón, dos listas, dos efectos."
   },
   {
     "id": "archivo-235",
@@ -8669,28 +8669,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-idi-05",
     "generado": true,
-    "enunciado": "Redactas un documento en catalán pero el corrector lo revisa en español y marca como errores palabras catalanas correctas. ¿Dónde añades el catalán como idioma de creación para que la revisión funcione?",
+    "enunciado": "Escribes en catalán y el corrector te marca como errores palabras correctas, porque revisa en español. ¿En qué sección del panel Idioma añades el catalán?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Idioma para mostrar ▸ Agregar un idioma"
+        "text": "Corrección e idiomas de creación de Office"
       },
       {
         "letter": "B",
-        "text": "Corrección e idiomas de creación ▸ Quitar"
+        "text": "Idioma para mostrar de Office"
       },
       {
         "letter": "C",
-        "text": "Idioma para mostrar ▸ Subir / Bajar"
+        "text": "Opciones de presentación de la aplicación"
       },
       {
         "letter": "D",
-        "text": "Corrección e idiomas de creación ▸ Corrección e idiomas de creación de Office"
+        "text": "Preferencias regionales de Office"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta: Archivo ▸ Opciones ▸ Idioma ▸ Corrección e idiomas de creación de Office. Ruta alternativa para el texto seleccionado: Revisar ▸ Idioma ▸ Establecer idioma de corrección, o el indicador de idioma de la barra de estado. Idioma para mostrar = interfaz (menús, cinta); idioma de creación = corrector, gramática y diccionario del documento. Son independientes."
+    "respuesta": "A",
+    "explicacion": "Los idiomas de creación son los que puedes escribir y con los que el corrector trabaja; añadir uno aquí es lo que descarga sus herramientas de corrección. · «Idioma para mostrar» es la lista de arriba y solo cambia menús y botones: añadir ahí el catalán te pondría Word en catalán y seguiría corrigiendo en español, que es exactamente el error del enunciado al revés. Esa confusión entre las dos listas es lo que se mide. · Las opciones C y D no son secciones de este panel. · Después hay que marcar el texto con Revisar → Idioma → Establecer idioma de corrección."
   },
   {
     "id": "archivo-236",
@@ -8705,28 +8705,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-idi-07",
     "generado": true,
-    "enunciado": "Tienes varios idiomas de creación instalados que ya no usas y quieres eliminar uno de la lista para mantenerla limpia. ¿Dónde lo haces?",
+    "enunciado": "Tienes idiomas de creación que ya no usas y quieres dejar la lista limpia. ¿Qué usas en esa sección?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Corrección e idiomas de creación ▸ Agregar un idioma..."
+        "text": "El botón Quitar"
       },
       {
         "letter": "B",
-        "text": "Corrección e idiomas de creación ▸ Establecer como Preferido"
+        "text": "El botón Establecer como Preferido"
       },
       {
         "letter": "C",
-        "text": "Corrección e idiomas de creación ▸ Quitar"
+        "text": "El botón Agregar un idioma…"
       },
       {
         "letter": "D",
-        "text": "Idioma para mostrar ▸ Idioma para mostrar de Office"
+        "text": "El enlace a los teclados de Windows"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Corrección e idiomas de creación de Office → Quitar. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Los cuatro elementos existen en esa misma sección, así que hay que ir por lo que hace cada uno. · «Quitar» saca el idioma de la lista de Word; conviene saber que eso no desinstala el paquete de idioma de Windows ni borra nada del sistema, solo deja de ofrecerlo aquí. · «Establecer como Preferido» lo asciende al primer puesto. · «Agregar un idioma…» hace lo contrario que se pide. · El enlace a los teclados lleva a la configuración de Windows y no toca la lista de Word."
   },
   {
     "id": "archivo-237",
@@ -8741,28 +8741,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-idi-08",
     "generado": true,
-    "enunciado": "Tienes varios idiomas de creación y el que aparece como preferido no es el español de España, así que el corrector usa otro diccionario. ¿Dónde estableces el español de España como idioma de creación preferido?",
+    "enunciado": "Tienes varios idiomas de creación y el preferido no es el español de España, así que el corrector usa otro diccionario. ¿Qué usas para arreglarlo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Corrección e idiomas de creación ▸ Establecer como Preferido"
+        "text": "Establecer como Preferido, en la lista de idiomas de creación"
       },
       {
         "letter": "B",
-        "text": "Corrección e idiomas de creación ▸ Instalar otros teclados desde la configuración de Windows"
+        "text": "Establecer como Preferido, en la lista de idiomas para mostrar"
       },
       {
         "letter": "C",
-        "text": "Corrección e idiomas de creación ▸ Agregar un idioma..."
+        "text": "Agregar un idioma, en la lista de idiomas de creación"
       },
       {
         "letter": "D",
-        "text": "Idioma para mostrar ▸ Establecer como Preferido"
+        "text": "Subir y Bajar, en la lista de idiomas para mostrar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Corrección e idiomas de creación de Office → Establecer como Preferido. El idioma de creación preferido aparece en negrita al inicio de la lista y es el que usan por defecto el corrector ortográfico y gramatical."
+    "explicacion": "El botón «Establecer como Preferido» existe en las DOS listas del panel con el mismo nombre, y ahí está toda la pregunta: en la de creación decide con qué idioma se escribe y se corrige, y en la de mostrar, en qué idioma sale la interfaz. Marcar el de la lista equivocada deja la interfaz en español y el corrector como estaba. · La opción C traería un idioma nuevo, y el enunciado dice que ya está en la lista. · La opción D reordena la interfaz."
   },
   {
     "id": "archivo-238",
@@ -8777,28 +8777,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-idi-09",
     "generado": true,
-    "enunciado": "Usas Word en varios equipos y cada vez que cambias de ordenador tienes que reconfigurar los idiomas de creación. ¿Dónde activas la sincronización de esa configuración con tu cuenta?",
+    "enunciado": "Trabajas en varios equipos y en cada uno tienes que volver a configurar los idiomas con los que escribes. ¿Qué casilla del panel Idioma lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Corrección e idiomas de creación ▸ Agregar un idioma..."
+        "text": "Almacenar mis idiomas de creación en la nube para mi cuenta"
       },
       {
         "letter": "B",
-        "text": "Idioma para mostrar ▸ Agregar un idioma"
+        "text": "Establecer como Preferido, en la lista de idiomas de creación"
       },
       {
         "letter": "C",
-        "text": "Corrección e idiomas de creación ▸ Establecer como Preferido"
+        "text": "Agregar un idioma, en la lista de idiomas de creación"
       },
       {
         "letter": "D",
-        "text": "Corrección e idiomas de creación ▸ Almacenar mis idiomas de creación en la nube para mi cuenta"
+        "text": "Instalar otros teclados desde la configuración de Windows"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Corrección e idiomas de creación de Office → Almacenar mis idiomas de creación en la nube para mi cuenta. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es la única casilla de la sección, debajo de la lista, y ata la configuración a la cuenta de Microsoft en lugar de al equipo: al iniciar sesión en otro ordenador, los idiomas de creación viajan contigo. · La opción B es lo que hay que hacer una vez, y precisamente lo que se quiere dejar de repetir. · La opción C tampoco evita repetirlo. · El enlace de los teclados lleva a Windows y no sincroniza nada. · No confundirlo con el idioma de la interfaz, que no se sincroniza por esta vía."
   },
   {
     "id": "archivo-239",
@@ -8813,28 +8813,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-idi-10",
     "generado": true,
-    "enunciado": "Has añadido el francés como idioma de creación en Word pero no tienes el teclado francés en Windows y necesitas escribir sus caracteres especiales. ¿Dónde, desde las opciones de idioma de Word, accedes a la configuración de teclados de Windows?",
+    "enunciado": "Has añadido el francés como idioma de creación pero no tienes su teclado en Windows y no sabes escribir sus caracteres. ¿Qué te ofrece el propio panel Idioma?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Corrección e idiomas de creación ▸ Agregar un idioma..."
+        "text": "Un enlace a la configuración de teclados de Windows"
       },
       {
         "letter": "B",
-        "text": "Corrección e idiomas de creación ▸ Establecer como Preferido"
+        "text": "El botón Agregar un idioma de la lista de creación"
       },
       {
         "letter": "C",
-        "text": "Corrección e idiomas de creación ▸ Quitar"
+        "text": "El botón Establecer como Preferido de la lista de creación"
       },
       {
         "letter": "D",
-        "text": "Corrección e idiomas de creación ▸ Instalar otros teclados desde la configuración de Windows"
+        "text": "La casilla de almacenar los idiomas de creación en la nube"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Idioma → Corrección e idiomas de creación de Office → Instalar otros teclados desde la configuración de Windows. No tiene atajo: se llega solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Word no instala teclados: son cosa del sistema operativo, y por eso el panel se limita a poner un enlace que abre la configuración de idioma de Windows. Saber que Word y Windows llevan listas separadas es lo que se está midiendo. · La opción B es el distractor natural, y es justo lo que el enunciado dice que ya se hizo: añadir el idioma a Word permite corregir en francés, pero no cambia lo que escupe el teclado. · Las otras dos también son elementos reales de la misma sección."
   },
   {
     "id": "archivo-82",
@@ -8848,28 +8848,28 @@
     "subtopic": "Accesibilidad",
     "tema": "Opciones",
     "sourceQuestionId": "8-74",
-    "enunciado": "¿Desde qué ruta se activa la opción que muestra el comprobador de accesibilidad de forma continua mientras se escribe?",
+    "enunciado": "Quieres que Word te avise de los problemas de accesibilidad según vas escribiendo, sin tener que lanzar el comprobador. ¿En qué panel de Opciones se activa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Accesibilidad → Mostrar la opción del comprobador"
+        "text": "Accesibilidad"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Revisión → Comprobador de accesibilidad mientras escribo"
+        "text": "Revisión"
       },
       {
         "letter": "C",
-        "text": "Revisar → Comprobar accesibilidad → Activar comprobación continua"
+        "text": "Presentación"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Avanzadas → Accesibilidad → Comprobador continuo"
+        "text": "General"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción de comprobación continua está en Archivo → Opciones → Accesibilidad. No está en Revisión ni en Avanzadas. Revisar → Comprobar accesibilidad ejecuta la comprobación puntual pero no activa la revisión continua automática."
+    "explicacion": "Accesibilidad es un panel propio del cuadro Opciones, de los más recientes, y reúne el comprobador continuo, el texto alternativo automático, las notificaciones y varias opciones de presentación. · Revisión es el distractor con más lógica porque también es de revisar el documento, y de hecho el comando «Comprobar accesibilidad» está en la pestaña Revisar de la cinta: pero su configuración vive en este panel, no en el de Revisión. · Presentación decide qué se ve del documento. · Los cuatro son paneles reales del cuadro."
   },
   {
     "id": "archivo-83",
@@ -8883,28 +8883,28 @@
     "subtopic": "Accesibilidad",
     "tema": "Opciones",
     "sourceQuestionId": "8-75",
-    "enunciado": "¿Desde qué ruta se activa la generación automática de texto alternativo para las imágenes insertadas en Word 365?",
+    "enunciado": "Quieres que Word proponga solo el texto alternativo de las imágenes que insertes. ¿Qué sección del panel Accesibilidad lo activa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Accesibilidad → Generar automáticamente texto alternativo"
+        "text": "Texto alternativo"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Texto alternativo automático para imágenes"
+        "text": "Que el documento sea accesible a otras personas"
       },
       {
         "letter": "C",
-        "text": "Insertar → Imágenes → Texto alternativo → Generar automáticamente"
+        "text": "Opciones de notificación"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Revisión → Texto alternativo automático"
+        "text": "Opciones de presentación del documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La generación automática de texto alternativo se activa en Archivo → Opciones → Accesibilidad. No está en Avanzadas ni en Revisión. El texto alternativo de una imagen concreta se edita al insertar la imagen, pero la generación automática global se configura en Accesibilidad."
+    "explicacion": "Es una sección con su propio nombre y una casilla para que Word genere descripciones automáticas, que después se pueden editar a mano desde el panel Texto alternativo de la imagen. · «Que el documento sea accesible a otras personas» es la sección del comprobador continuo y de dónde se muestra su estado; también va de accesibilidad, pero avisa de los problemas en vez de resolverlos. · «Opciones de notificación» decide si el aviso es sonoro o animado. · Las cuatro son secciones reales del mismo panel. · Una descripción generada sola no siempre es buena: conviene revisarla."
   },
   {
     "id": "archivo-84",
@@ -8918,28 +8918,28 @@
     "subtopic": "Accesibilidad",
     "tema": "Opciones",
     "sourceQuestionId": "8-76",
-    "enunciado": "Para que Word emita un sonido cuando detecte problemas de accesibilidad, ¿desde qué ruta se activa esa notificación?",
+    "enunciado": "Quieres que Word emita un sonido al completar ciertas acciones, como parte de las ayudas de accesibilidad. ¿Qué casilla lo activa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Accesibilidad → Notificar con un sonido"
+        "text": "Notificar con un sonido"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Notificaciones de accesibilidad → Sonido"
+        "text": "Combinación de sonidos"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → General → Alertas del sistema → Sonido de accesibilidad"
+        "text": "Notificar con una animación"
       },
       {
         "letter": "D",
-        "text": "Revisar → Comprobar accesibilidad → Configurar notificaciones → Sonido"
+        "text": "Mostrar el estado de accesibilidad en la barra de estado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La notificación sonora de problemas de accesibilidad se configura en Archivo → Opciones → Accesibilidad. No existe esa opción en Avanzadas, General ni en la pestaña Revisar."
+    "explicacion": "Es la casilla que enciende el sonido, en la sección «Opciones de notificación». · «Combinación de sonidos» es el desplegable de justo debajo y es el mejor distractor del bloque: elige QUÉ sonidos se usan, pero está deshabilitado mientras la casilla de arriba esté sin marcar. Interruptor y ajuste, uno encima del otro, como pasa en varios sitios del cuadro Opciones. · «Notificar con una animación» es la alternativa visual al sonido. · La cuarta opción es de la otra sección del panel, la del comprobador."
   },
   {
     "id": "archivo-240",
@@ -8954,28 +8954,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-acc-02",
     "generado": true,
-    "enunciado": "Mientras editas quieres que Word muestre en el margen izquierdo una notificación visual cuando detecte un problema de accesibilidad (p. ej. imagen sin texto alternativo), sin abrir ningún panel. ¿Dónde lo activas?",
+    "enunciado": "Quieres que Word te señale los problemas de accesibilidad junto al propio documento mientras editas, sin abrir el panel del comprobador. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de presentación de la aplicación ▸ Mostrar la pantalla Inicio cuando se inicie esta aplicación"
+        "text": "Mostrar el estado de accesibilidad alineado con el documento"
       },
       {
         "letter": "B",
-        "text": "Que el documento sea accesible a otras personas ▸ Mostrar el estado de accesibilidad alineado con el documento"
+        "text": "Mostrar el estado de accesibilidad en la barra de estado"
       },
       {
         "letter": "C",
-        "text": "Texto alternativo ▸ Habilitar la opción para generar texto alternativo mediante IA"
+        "text": "Notificar con una animación"
       },
       {
         "letter": "D",
-        "text": "Que el documento sea accesible a otras personas ▸ Mostrar el estado de accesibilidad del Asistente de accesibilidad en la barra de estado"
+        "text": "Habilitar la generación de texto alternativo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Que el documento sea accesible a otras personas → Mostrar el estado de accesibilidad alineado con el documento. No tiene atajo de teclado (ninguna de estas opciones tiene atajo de teclado)."
+    "respuesta": "A",
+    "explicacion": "Las dos primeras opciones son las dos casillas de la sección «Que el documento sea accesible a otras personas», y se diferencian solo en DÓNDE aparece el aviso: una junto al documento y otra abajo, en la barra de estado, con el resto de indicadores. El enunciado pide la primera. · Se pueden tener las dos marcadas a la vez. · «Notificar con una animación» es de la sección de notificaciones y avisa de acciones, no de problemas de accesibilidad. · La generación de texto alternativo es de la sección Texto alternativo."
   },
   {
     "id": "archivo-241",
@@ -8990,28 +8990,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-acc-04",
     "generado": true,
-    "enunciado": "Has activado las notificaciones sonoras y quieres cambiar el esquema de sonidos entre el clásico y el moderno. ¿Dónde lo configuras?",
+    "enunciado": "Ya tienes activadas las notificaciones sonoras y ahora quieres cambiar el juego de sonidos que usa Office. ¿Qué ajuste tocas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de notificación ▸ Combinación de sonidos"
+        "text": "Combinación de sonidos"
       },
       {
         "letter": "B",
-        "text": "Opciones de notificación ▸ Notificar con un sonido"
+        "text": "Notificar con un sonido"
       },
       {
         "letter": "C",
-        "text": "Opciones de notificación ▸ Notificar con una animación"
+        "text": "Notificar con una animación"
       },
       {
         "letter": "D",
-        "text": "Opciones de presentación de la aplicación ▸ Estilo de información en pantalla"
+        "text": "Estilo de información en pantalla"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de notificación → Combinación de sonidos. Este desplegable solo está disponible si \"Notificar con un sonido\" está activada."
+    "explicacion": "Es el desplegable que solo se habilita cuando la casilla de arriba está marcada, y ofrece los distintos juegos de sonidos de Office. · «Notificar con un sonido» es esa casilla de arriba, y es la que muchos marcan: pero el enunciado dice expresamente que ya está activada, así que la respuesta es el ajuste que hay debajo. Leer si el interruptor ya está puesto es lo que separa esta pregunta de la anterior. · «Notificar con una animación» es la alternativa visual. · «Estilo de información en pantalla» es de otra sección del mismo panel."
   },
   {
     "id": "archivo-242",
@@ -9026,28 +9026,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-acc-05",
     "generado": true,
-    "enunciado": "Usas Word con tecnología de asistencia y quieres que muestre indicaciones visuales animadas al completar una acción (p. ej. al pegar o eliminar contenido). ¿Dónde activas esa opción?",
+    "enunciado": "Trabajas con tecnología de asistencia y quieres que Word confirme con una indicación visual animada las acciones que completas. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de presentación de la aplicación ▸ Mostrar teclas de método abreviado en la información en pantalla"
+        "text": "Notificar con una animación"
       },
       {
         "letter": "B",
-        "text": "Opciones de notificación ▸ Notificar con un sonido"
+        "text": "Notificar con un sonido"
       },
       {
         "letter": "C",
-        "text": "Opciones de notificación ▸ Combinación de sonidos"
+        "text": "Combinación de sonidos"
       },
       {
         "letter": "D",
-        "text": "Opciones de notificación ▸ Notificar con una animación"
+        "text": "Mostrar el estado de accesibilidad alineado con el documento"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de notificación → Notificar con una animación. No tiene atajo de teclado (ninguna de estas opciones tiene atajo de teclado)."
+    "respuesta": "A",
+    "explicacion": "Es la alternativa visual al aviso sonoro, dentro de la misma sección «Opciones de notificación», y las dos se pueden tener a la vez. · «Notificar con un sonido» y «Combinación de sonidos» son la pareja sonora: la casilla y su desplegable. · La opción D también es visual y también va de accesibilidad, y por eso es un distractor con fundamento: pero señala PROBLEMAS del documento detectados por el comprobador, no confirma acciones tuyas. Avisar de un fallo y confirmar una acción son dos cosas distintas que aquí se pintan las dos en pantalla."
   },
   {
     "id": "archivo-243",
@@ -9062,28 +9062,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-acc-06",
     "generado": true,
-    "enunciado": "Al pasar el ratón por los botones de la cinta quieres que Word muestre una descripción detallada de cada función. ¿Dónde configuras si esas descripciones se ven con detalle, breves o no se ven (desde Accesibilidad)?",
+    "enunciado": "Desde el panel Accesibilidad quieres ajustar si los emergentes de la cinta describen cada comando con detalle, solo con el nombre, o nada. ¿Qué ajuste tocas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de presentación del documento ▸ Expandir todos los títulos al abrir un documento"
+        "text": "Estilo de información en pantalla"
       },
       {
         "letter": "B",
-        "text": "Opciones de presentación de la aplicación ▸ Mostrar teclas de método abreviado en la información en pantalla"
+        "text": "Mostrar teclas de método abreviado en la información en pantalla"
       },
       {
         "letter": "C",
-        "text": "Opciones de presentación de la aplicación ▸ Mostrar la pantalla Inicio cuando se inicie esta aplicación"
+        "text": "Mostrar la pantalla Inicio al iniciar la aplicación"
       },
       {
         "letter": "D",
-        "text": "Opciones de presentación de la aplicación ▸ Estilo de información en pantalla"
+        "text": "Expandir todos los títulos al abrir un documento"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de presentación de la aplicación → Estilo de información en pantalla. El mismo ajuste está también en Archivo ▸ Opciones ▸ General ▸ Opciones de interfaz de usuario ▸ Estilo de información en pantalla: las dos rutas controlan lo mismo."
+    "respuesta": "A",
+    "explicacion": "Este desplegable aparece en DOS paneles del cuadro Opciones, aquí y en General → Opciones de interfaz de usuario, y es el mismo ajuste: cambiarlo en uno lo cambia en el otro. Word repite en Accesibilidad varias opciones que ya están en General para tenerlas todas juntas. · La opción B es su vecina inmediata y es la más fácil de confundir: decide si además del texto sale el atajo de teclado, no cuánto texto sale. · «Mostrar la pantalla Inicio» también está repetida en los dos paneles. · «Expandir todos los títulos» es de la sección del documento."
   },
   {
     "id": "archivo-244",
@@ -9098,28 +9098,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-acc-07",
     "generado": true,
-    "enunciado": "Al pasar el ratón por los botones de la cinta quieres que en la ventana emergente aparezca también el atajo de teclado de cada función. ¿Dónde activas esa opción?",
+    "enunciado": "Quieres que el emergente de cada botón de la cinta incluya además su atajo de teclado, para irlos aprendiendo. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de presentación de la aplicación ▸ Estilo de información en pantalla"
+        "text": "Mostrar teclas de método abreviado en la información en pantalla"
       },
       {
         "letter": "B",
-        "text": "Opciones de presentación de la aplicación ▸ Mostrar la pantalla Inicio cuando se inicie esta aplicación"
+        "text": "Estilo de información en pantalla"
       },
       {
         "letter": "C",
-        "text": "Opciones de presentación de la aplicación ▸ Mostrar teclas de método abreviado en la información en pantalla"
+        "text": "Mostrar la pantalla Inicio al iniciar la aplicación"
       },
       {
         "letter": "D",
-        "text": "Opciones de navegación con el teclado ▸ Usar el orden de lectura para la navegación con tecla de dirección"
+        "text": "Usar el orden de lectura para navegar con las teclas de dirección"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de presentación de la aplicación → Mostrar teclas de método abreviado en la información en pantalla. No tiene atajo de teclado (ninguna de estas opciones tiene atajo de teclado)."
+    "respuesta": "A",
+    "explicacion": "Es la casilla que añade el atajo al final del emergente, y va justo debajo del desplegable de estilo. Depende de él: si el estilo está puesto en «No mostrar información en pantalla», no habrá emergente donde poner el atajo. · «Estilo de información en pantalla» es ese desplegable, y decide cuánto texto sale, no si aparece el atajo. Las dos están juntas y se leen casi igual. · «Mostrar la pantalla Inicio» está en la misma sección pero es del arranque. · La última es de la sección de navegación con teclado."
   },
   {
     "id": "archivo-245",
@@ -9134,28 +9134,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-acc-08",
     "generado": true,
-    "enunciado": "Cada vez que abres Word quieres que aparezca la pantalla de inicio con plantillas y recientes en lugar de un documento en blanco. ¿Dónde activas esa pantalla inicial (desde Accesibilidad)?",
+    "enunciado": "Desde el panel Accesibilidad quieres que Word muestre al arrancar la pantalla con plantillas y documentos recientes. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de presentación de la aplicación ▸ Mostrar la pantalla Inicio cuando se inicie esta aplicación"
+        "text": "Mostrar la pantalla Inicio al iniciar la aplicación"
       },
       {
         "letter": "B",
-        "text": "Que el documento sea accesible a otras personas ▸ Mostrar el estado de accesibilidad alineado con el documento"
+        "text": "Expandir todos los títulos al abrir un documento"
       },
       {
         "letter": "C",
-        "text": "Opciones de presentación de la aplicación ▸ Estilo de información en pantalla"
+        "text": "Estilo de información en pantalla"
       },
       {
         "letter": "D",
-        "text": "Opciones de presentación de la aplicación ▸ Mostrar teclas de método abreviado en la información en pantalla"
+        "text": "Mostrar el estado de accesibilidad en la barra de estado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de presentación de la aplicación → Mostrar la pantalla Inicio cuando se inicie esta aplicación. El mismo ajuste está también en Archivo ▸ Opciones ▸ General ▸ Opciones de inicio: las dos rutas controlan lo mismo."
+    "explicacion": "Esta casilla es la misma que está en Opciones → General → Opciones de inicio: Word la repite aquí, y marcarla o quitarla en un panel se refleja en el otro. Que una opción aparezca en dos paneles distintos es lo que hace tramposa la pregunta si se busca solo en General. · «Expandir todos los títulos al abrir un documento» también actúa al abrir, y por eso es el distractor de nivel: pero es del documento, no de la aplicación. · Las otras dos son de otras secciones del mismo panel."
   },
   {
     "id": "archivo-246",
@@ -9170,28 +9170,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-acc-10",
     "generado": true,
-    "enunciado": "Trabajas con documentos cuyos títulos suelen guardarse contraídos y cada vez que los abres tienes que expandirlos uno a uno. ¿Dónde activas que todos los títulos aparezcan siempre expandidos al abrir, sea cual sea el estado en que se guardaron?",
+    "enunciado": "Recibes documentos guardados con los títulos contraídos y tienes que ir desplegándolos uno a uno. ¿Qué casilla del panel Accesibilidad lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de presentación de la aplicación ▸ Estilo de información en pantalla"
+        "text": "Expandir todos los títulos al abrir un documento"
       },
       {
         "letter": "B",
-        "text": "Texto alternativo ▸ Habilitar la opción para generar texto alternativo mediante IA"
+        "text": "Mostrar la pantalla Inicio al iniciar la aplicación"
       },
       {
         "letter": "C",
-        "text": "Opciones de notificación ▸ Notificar con una animación"
+        "text": "Usar el orden de lectura para navegar con las teclas de dirección"
       },
       {
         "letter": "D",
-        "text": "Opciones de presentación del documento ▸ Expandir todos los títulos al abrir un documento"
+        "text": "Mostrar el estado de accesibilidad alineado con el documento"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de presentación del documento → Expandir todos los títulos al abrir un documento. Por defecto los títulos ya se expanden al abrir; esta opción fuerza que se expandan SIEMPRE, aunque el usuario los hubiera contraído antes de cerrar. Ruta alternativa de menú (no atajo): clic derecho en un título ▸ Expandir o contraer ▸ Expandir todos los títulos."
+    "respuesta": "A",
+    "explicacion": "El estado contraído de un título se guarda dentro del archivo; esta casilla hace que Word lo ignore y abra siempre con todo desplegado. Es una opción de accesibilidad porque un lector de pantalla no puede leer lo que está contraído. · «Mostrar la pantalla Inicio» también actúa al arrancar, pero es de la aplicación y no del documento: las dos casillas están en secciones distintas del mismo panel, «presentación del documento» y «presentación de la aplicación». · Las otras dos son de navegación y del comprobador."
   },
   {
     "id": "archivo-247",
@@ -9206,28 +9206,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-acc-11",
     "generado": true,
-    "enunciado": "Usas un lector de pantalla y al navegar con las teclas de dirección por un documento con objetos flotantes el cursor salta en un orden que no coincide con el orden visual de lectura. ¿Dónde activas que la navegación con teclado siga el orden de lectura del documento?",
+    "enunciado": "Con un lector de pantalla, al moverte con las flechas por un documento con objetos flotantes el cursor salta en un orden que no cuadra con lo que se ve. ¿Qué casilla lo arregla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de notificación ▸ Notificar con un sonido"
+        "text": "Usar el orden de lectura para navegar con las teclas de dirección"
       },
       {
         "letter": "B",
-        "text": "Que el documento sea accesible a otras personas ▸ Mostrar el estado de accesibilidad del Asistente de accesibilidad en la barra de estado"
+        "text": "Expandir todos los títulos al abrir un documento"
       },
       {
         "letter": "C",
-        "text": "Opciones de navegación con el teclado ▸ Usar el orden de lectura para la navegación con tecla de dirección"
+        "text": "Mostrar el estado de accesibilidad alineado con el documento"
       },
       {
         "letter": "D",
-        "text": "Opciones de notificación ▸ Combinación de sonidos"
+        "text": "Notificar con una animación"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Accesibilidad → Opciones de navegación con el teclado → Usar el orden de lectura para la navegación con tecla de dirección. No tiene atajo de teclado (ninguna de estas opciones tiene atajo de teclado)."
+    "respuesta": "A",
+    "explicacion": "Es la única casilla de la sección «Opciones de navegación con el teclado» y hace que las flechas sigan el orden de lectura del documento en lugar del orden interno en que están colocados los objetos, que es lo que provoca los saltos raros. · «Expandir todos los títulos» también ayuda con un lector de pantalla y también es del documento, así que es el distractor con más fundamento: pero resuelve el contenido oculto, no el orden del recorrido. · Las otras dos son avisos: una del comprobador y otra de acciones completadas."
   },
   {
     "id": "archivo-85",
