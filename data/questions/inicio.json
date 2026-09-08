@@ -5233,29 +5233,29 @@
     "tema": "Fuente",
     "sourceQuestionId": "img-inicio-38",
     "generado": true,
-    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "enunciado": "Observa el elemento de la imagen. ¿Qué es y dónde aparece?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAUAgMAAAAWzj7aAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxQTFRF////0dHRJCQkwMDAeu5cdwAAADNJREFUeJxjZAACB0YCpFZDGJBUeMAAJ5V7LxwAss9MAZHSriDyXRGQZFh17QBYFwN+EgC0Nw+Vm676zwAAAABJRU5ErkJggg==",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar ▸ Texto"
+        "text": "El iniciador de cuadro de diálogo, en la esquina inferior derecha de un grupo"
       },
       {
         "letter": "B",
-        "text": "esquina inferior derecha de un grupo de la cinta"
+        "text": "El botón de contraer la cinta, en la esquina inferior derecha de la cinta"
       },
       {
         "letter": "C",
-        "text": "Insertar ▸ Ilustraciones"
+        "text": "La flecha de un botón partido, en la mitad inferior del propio botón"
       },
       {
         "letter": "D",
-        "text": "Inicio ▸ Editor"
+        "text": "El indicador de grupo desbordado, cuando la ventana es demasiado estrecha"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "**Iniciador de cuadro de diálogo.** Pestaña esquina inferior derecha de un grupo de la cinta. Atajo: no tiene atajo de teclado en esta instalación. La flechita ↘ que abre el cuadro de diálogo completo de ese grupo (Fuente, Párrafo, Portapapeles…) con todas las opciones que no caben en la cinta."
+    "respuesta": "A",
+    "explicacion": "**Iniciador de cuadro de diálogo.** Es la flechita ↘ de la esquina inferior derecha de algunos grupos, y abre el cuadro completo de ese grupo con las opciones que no caben en la cinta: Fuente, Párrafo, Portapapeles… No tiene atajo propio, aunque muchos de esos cuadros sí lo tengan, como Ctrl+M para el de Fuente. · No todos los grupos lo tienen: Estilos y Edición son ejemplos de grupos sin él, y eso ya descarta la idea de que sea un adorno fijo de la cinta. · El botón de contraer la cinta es otra flecha, pero apunta hacia arriba y vive en el extremo derecho de la propia cinta; hace lo contrario, esconder en vez de desplegar. · La flecha de un botón partido, como la de Pegar, despliega un menú, no un cuadro de diálogo. · Y cuando la ventana se estrecha, el grupo entero se convierte en un botón con su nombre, no en una flecha suelta."
   },
   {
     "id": "inicio-432",
@@ -5270,19 +5270,19 @@
     "tema": "Fuente",
     "sourceQuestionId": "neg-inicio-01",
     "generado": true,
-    "enunciado": "¿Cuál de estos comandos NO está en el grupo Portapapeles de Inicio?",
+    "enunciado": "Repasas qué comandos viven en el grupo Portapapeles de la pestaña Inicio. ¿Cuál de estos NO está ahí?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Pegar"
+        "text": "Copiar formato"
       },
       {
         "letter": "B",
-        "text": "Copiar"
+        "text": "Pegado especial"
       },
       {
         "letter": "C",
-        "text": "Cortar"
+        "text": "El iniciador que abre el panel Portapapeles"
       },
       {
         "letter": "D",
@@ -5291,7 +5291,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "«Borrar todo el formato» está en el grupo Fuente, no en Portapapeles (que tiene Pegar, Copiar, Cortar, Copiar formato y su lanzador)."
+    "explicacion": "«Borrar todo el formato» pertenece al grupo Fuente, no a Portapapeles, y es fácil colocarlo mal porque también trabaja con el formato, igual que el pincel. · «Copiar formato» sí está en Portapapeles, y ese es justo el motivo de la confusión: el pincel que copia atributos convive con los comandos que copian contenido. · «Pegado especial» también, aunque no como botón suelto: es una de las dos entradas del desplegable del botón Pegar. · Y el iniciador de la esquina abre el panel Portapapeles con los hasta 24 elementos guardados. Los cinco elementos del grupo son, por tanto, Pegar con su desplegable, Cortar, Copiar, Copiar formato y ese iniciador."
   },
   {
     "id": "inicio-433",
@@ -5306,28 +5306,28 @@
     "tema": "Fuente",
     "sourceQuestionId": "neg-inicio-02",
     "generado": true,
-    "enunciado": "¿Cuál de estos atajos NO corresponde al formato de fuente en esta instalación?",
+    "enunciado": "Un compañero llega de un Word en inglés y te enseña sus atajos de formato. ¿Cuál de estos NO hace en esta instalación lo que él cree?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+N (negrita)"
+        "text": "Ctrl+N para la negrita"
       },
       {
         "letter": "B",
-        "text": "Ctrl+K (cursiva)"
+        "text": "Ctrl+K para la cursiva"
       },
       {
         "letter": "C",
-        "text": "Ctrl+S (subrayado)"
+        "text": "Ctrl+S para el subrayado"
       },
       {
         "letter": "D",
-        "text": "Ctrl+U (subrayado)"
+        "text": "Ctrl+U para el subrayado"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "En el esquema clásico español, negrita/cursiva/subrayado son Ctrl+N/Ctrl+K/Ctrl+S. Ctrl+U no tiene esa función (es el esquema internacional en inglés)."
+    "explicacion": "Ctrl+U no subraya nada aquí: crea un documento nuevo basado en la plantilla Normal, así que el compañero se encontrará otra ventana abierta en vez de una línea bajo el texto. · Las otras tres son las correctas del esquema clásico español, donde cada letra es la inicial del nombre en castellano: Negrita, cursiva —que se escribe con K por «Kursiv», la convención tipográfica de la que Word tomó la tecla— y Subrayado. · La trampa está en que en inglés esas mismas funciones son Ctrl+B, Ctrl+I y Ctrl+U, y las tres letras hacen aquí otra cosa: panel de Navegación, «Ir a» y documento nuevo. Ninguna avisa de nada, simplemente ocurre algo distinto."
   },
   {
     "id": "inicio-434",
@@ -5342,28 +5342,28 @@
     "tema": "Fuente",
     "sourceQuestionId": "neg-inicio-03",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre subíndice y superíndice es FALSA?",
+    "enunciado": "Repasas lo que sabes de subíndice y superíndice en esta instalación. ¿Cuál de estas afirmaciones es FALSA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Subíndice es Ctrl+Mayús+-"
+        "text": "El subíndice se aplica con Ctrl+Mayús y la tecla del guión"
       },
       {
         "letter": "B",
-        "text": "Ctrl+_ hace lo mismo que Ctrl+Mayús+-"
+        "text": "Ctrl+_ describe esa misma pulsación con otra notación"
       },
       {
         "letter": "C",
-        "text": "Superíndice es Ctrl+Mayús++"
+        "text": "El superíndice se aplica con Ctrl+Mayús y la tecla del más"
       },
       {
         "letter": "D",
-        "text": "Superíndice no tiene atajo de teclado en esta instalación"
+        "text": "Los dos son casillas de la sección Efectos del cuadro Fuente"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Superíndice NO tiene atajo en esta instalación (probado en vivo: ni Ctrl+Mayús+=, ni Ctrl+Mayús++, ni Ctrl+Alt++). Solo se activa desde el botón o la casilla del cuadro Fuente."
+    "explicacion": "El superíndice no tiene atajo en esta instalación: se probaron Ctrl+Mayús+=, Ctrl+Mayús++ y Ctrl+Alt++ y ninguna hace nada. Solo se aplica con el botón x² de la cinta o marcando su casilla en el cuadro Fuente. Prueba en vivo del usuario. · Las tres afirmaciones ciertas son fáciles de dar por buenas y conviene fijarlas: el subíndice sí tiene la suya; Ctrl+_ y Ctrl+Mayús+guión son la misma pulsación escrita de dos maneras, porque en el teclado español el guión bajo sale con Mayús; y las dos son casillas del cuadro, además incompatibles entre sí, de modo que marcar una desmarca la otra. · Lo llamativo del caso es precisamente la asimetría: dos efectos que son espejo uno del otro, y solo uno con combinación."
   },
   {
     "id": "inicio-451",
@@ -5378,28 +5378,28 @@
     "tema": "Fuente",
     "sourceQuestionId": "neg2-inicio-01",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Repasas las tres combinaciones que abren el cuadro de diálogo Fuente. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+M abre el cuadro Fuente con el foco en el campo Fuente (nombre)."
+        "text": "Ctrl+M lo abre con el foco en el nombre de la fuente"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+M abre el mismo cuadro con el foco en Tamaño."
+        "text": "Ctrl+Mayús+M lo abre con el foco en el campo Tamaño"
       },
       {
         "letter": "C",
-        "text": "Superíndice tiene un atajo de teclado directo, Ctrl+Mayús++."
+        "text": "Ctrl+Mayús+F lleva el foco a la caja de fuente de la cinta"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Barra espaciadora quita el formato de carácter aplicado manualmente."
+        "text": "El iniciador del grupo Fuente lo abre en la ficha que se usó la última vez"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Superíndice NO tiene atajo en esta instalación (prueba en vivo): solo desde la casilla del cuadro Fuente o el botón de la cinta."
+    "explicacion": "Ctrl+Mayús+F no toca la cinta: abre el cuadro de diálogo, exactamente igual que Ctrl+M y con el foco en el mismo sitio, el nombre de la fuente. De hecho no existe ninguna combinación que lleve el cursor a la caja de la cinta, y esa creencia es de las más extendidas. Prueba en vivo del usuario. · Las otras tres son ciertas: Ctrl+M abre en el nombre, Ctrl+Mayús+M abre en el Tamaño, y el iniciador de la esquina abre el cuadro tal como se dejó, en la ficha Fuente o en la Avanzado. · Fíjate en que las tres combinaciones llegan al mismo cuadro: lo único que las distingue es dónde dejan el cursor."
   },
   {
     "id": "inicio-452",
@@ -5414,28 +5414,28 @@
     "tema": "Fuente",
     "sourceQuestionId": "neg2-inicio-02",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Repasas lo que sabes del subrayado en Word. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El color de subrayado se puede fijar de forma independiente al color de fuente."
+        "text": "El color del subrayado se fija aparte del color de la fuente"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+S aplica subrayado."
+        "text": "Ctrl+Mayús+S subraya, igual que Ctrl+S"
       },
       {
         "letter": "C",
-        "text": "El subrayado solo admite el estilo de línea simple; no hay otros estilos disponibles."
+        "text": "El subrayado solo admite línea simple: no hay más estilos"
       },
       {
         "letter": "D",
-        "text": "El tamaño de fuente se puede agrandar de punto en punto con Ctrl+Alt+>."
+        "text": "Solo tres estilos de subrayado tienen combinación de teclas propia"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "El cuadro Fuente ofrece varios estilos de subrayado (doble, punteado, ondulado, grueso…), no solo el simple."
+    "explicacion": "El desplegable «Estilo de subrayado» del cuadro Fuente ofrece diecisiete estilos —doble, punteado, ondulado, grueso, de trazos…—, más la entrada «(ninguno)». Decir que solo hay línea simple es confundir el botón de la cinta, que aplica esa por defecto, con lo que el cuadro permite. · Las otras tres son ciertas. El color del subrayado tiene su propio desplegable, justo al lado del de estilo, y se activa en cuanto hay un estilo elegido: se puede subrayar texto negro con una línea roja. · Ctrl+S y Ctrl+Mayús+S comparten comando. · Y de los diecisiete estilos, solo tres tienen atajo: el sencillo con Ctrl+S, el doble con Ctrl+Mayús+D y el de solo palabras con Ctrl+Mayús+P."
   },
   {
     "id": "inicio-453",
@@ -5450,28 +5450,28 @@
     "tema": "Fuente",
     "sourceQuestionId": "neg2-inicio-03",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Un manual traducido enumera atajos de formato de carácter para Word en español. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Subíndice se activa con Ctrl+Mayús+- (la tecla del guión)."
+        "text": "El subíndice se activa con Ctrl+Mayús y la tecla del guión"
       },
       {
         "letter": "B",
-        "text": "Superíndice no tiene atajo de teclado en esta instalación."
+        "text": "El texto oculto se activa con Alt+Mayús+Q"
       },
       {
         "letter": "C",
-        "text": "Ctrl+= activa el subíndice en esta instalación."
+        "text": "El subíndice se activa con Ctrl+igual"
       },
       {
         "letter": "D",
-        "text": "Superíndice se activa desde la casilla del cuadro Fuente o el botón de la cinta."
+        "text": "La fuente Symbol se aplica con Ctrl+Mayús+Q"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Ctrl+= es el esquema internacional; en esta instalación no hace nada (prueba en vivo). El subíndice real es Ctrl+Mayús+-."
+    "explicacion": "Ctrl+igual pertenece al esquema internacional y en esta instalación no hace nada, por mucho que lo anuncie el mensaje emergente del propio botón Subíndice. El subíndice real es Ctrl+Mayús y la tecla del guión. Prueba en vivo del usuario. · Que la propia interfaz respalde el error es lo que lo hace tan resistente: no basta con desconfiar de los manuales, hay que probarlo. · Las otras tres son ciertas y merece la pena verlas juntas porque dos comparten la Q: Alt+Mayús+Q oculta el texto y Ctrl+Mayús+Q le aplica la fuente Symbol, que lo convierte en símbolos griegos. Dos maneras muy distintas de dejar un texto ilegible."
   },
   {
     "id": "inicio-481",
@@ -5486,7 +5486,7 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-11",
     "generado": true,
-    "enunciado": "Además de la ficha «Fuente», ¿qué otra ficha tiene el cuadro de diálogo Fuente?",
+    "enunciado": "El cuadro de diálogo Fuente tiene dos fichas. Además de «Fuente», ¿cuál es la otra?",
     "opciones": [
       {
         "letter": "A",
@@ -5494,20 +5494,20 @@
       },
       {
         "letter": "B",
-        "text": "Espaciado"
-      },
-      {
-        "letter": "C",
         "text": "Efectos"
       },
       {
+        "letter": "C",
+        "text": "Espaciado entre caracteres"
+      },
+      {
         "letter": "D",
-        "text": "Escala"
+        "text": "Tipografía"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La segunda ficha es «Avanzado»: ahí se ajusta la escala horizontal, el espaciado entre caracteres, la posición (subir/bajar), el interletraje y las características OpenType."
+    "explicacion": "La segunda ficha se llama «Avanzado», y dentro tiene dos bloques: «Espaciado entre caracteres», con la Escala, el Espaciado, la Posición y el Interletraje, y las características OpenType, con las ligaduras, el espaciado y los estilos de número y los conjuntos estilísticos. · «Espaciado entre caracteres» es el distractor difícil porque sí es un rótulo real: pero es el del primer bloque de dentro de esa ficha, no el nombre de la ficha. · «Efectos» también existe como rótulo, pero de la sección de las siete casillas de la primera ficha. · Y «Tipografía» no aparece en el cuadro; suena bien porque el botón de la cinta se llama «Efectos de texto y tipografía»."
   },
   {
     "id": "inicio-482",
@@ -5522,7 +5522,7 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-12",
     "generado": true,
-    "enunciado": "El desplegable «Cambiar mayúsculas y minúsculas» (Aa) del grupo Fuente ofrece varias opciones. Señale la que NO aparece:",
+    "enunciado": "Despliegas «Cambiar mayúsculas y minúsculas» (Aa) buscando una entrada concreta y no la encuentras. ¿Cuál de estas NO existe en ese menú?",
     "opciones": [
       {
         "letter": "A",
@@ -5530,11 +5530,11 @@
       },
       {
         "letter": "B",
-        "text": "minúscula"
+        "text": "Poner En Mayúsculas Cada Palabra"
       },
       {
         "letter": "C",
-        "text": "MAYÚSCULAS"
+        "text": "Alternar mayúsculas y minúsculas"
       },
       {
         "letter": "D",
@@ -5543,7 +5543,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Las cinco opciones reales son: «Tipo oración.», «minúscula», «MAYÚSCULAS», «Poner En Mayúsculas Cada Palabra» y «Alternar mayúsculas y minúsculas». «Solo iniciales de cada frase» no existe."
+    "explicacion": "Las cinco entradas reales son «Tipo oración.», «minúscula», «MAYÚSCULAS», «Poner En Mayúsculas Cada Palabra» y «Alternar mayúsculas y minúsculas». «Solo iniciales de cada frase» no existe, y cuela precisamente porque describe con otras palabras lo que sí hace la primera: poner en mayúscula la letra que abre cada oración. · Cada entrada del menú se escribe con su propio efecto aplicado, así que el propio menú es la chuleta: «minúscula» va en minúscula y «MAYÚSCULAS» en mayúsculas. · Y todas reescriben el texto de verdad, a diferencia de las casillas Versalitas y Mayúsculas del cuadro Fuente, que solo lo presentan así."
   },
   {
     "id": "inicio-484",
@@ -5558,28 +5558,28 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-14",
     "generado": true,
-    "enunciado": "En el menú Color de fuente ▸ «Degradado», la opción «Más degradados…» abre:",
+    "enunciado": "En el menú Color de fuente eliges «Degradado» y luego «Más degradados…». ¿Qué se abre y con qué preparado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El panel «Formato de texto», con el relleno de texto en modo degradado"
+        "text": "El panel «Formato de efectos de texto», con el relleno de texto en modo degradado"
       },
       {
         "letter": "B",
-        "text": "El cuadro Fuente en la ficha Avanzado"
+        "text": "El panel «Formato de efectos de texto», con el contorno de texto en modo degradado"
       },
       {
         "letter": "C",
-        "text": "El cuadro Efectos de texto de la cinta Diseño"
+        "text": "El cuadro «Efectos de relleno», en su ficha Degradado"
       },
       {
         "letter": "D",
-        "text": "El selector «Más colores»"
+        "text": "El cuadro de diálogo Fuente, en su ficha Avanzado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Más degradados…» abre el panel lateral «Formato de texto» con «Relleno de texto: Relleno con degradado» y sus paradas de degradado, dirección y ángulo."
+    "explicacion": "Se abre el panel lateral «Formato de efectos de texto», y lo hace con la sección «Relleno de texto» desplegada y la opción «Relleno degradado» marcada, lista para poner las paradas de color, la dirección y el ángulo. · La versión con el contorno es el descarte fino: esa sección existe en el mismo panel, justo debajo, con Sin línea, Línea sólida y Línea degradada, pero es la del borde de las letras, no la de su interior; y el camino usado partía del relleno. · «Efectos de relleno» es un cuadro real con ficha Degradado, pero se abre desde Diseño ▸ Color de página y trabaja sobre el fondo de la hoja. · Y este camino no lleva al cuadro Fuente."
   },
   {
     "id": "inicio-488",
@@ -5594,28 +5594,28 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-18",
     "generado": true,
-    "enunciado": "¿Qué botón del cuadro de diálogo Fuente hace que la fuente elegida pase a ser la de todos los documentos nuevos basados en la plantilla actual?",
+    "enunciado": "Has elegido en el cuadro Fuente la tipografía y el tamaño con los que quieres que nazcan tus documentos a partir de ahora. ¿Qué botón del cuadro lo consigue?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Establecer como predeterminado"
+        "text": "Establecer como predeterminado, abajo a la izquierda del cuadro"
       },
       {
         "letter": "B",
-        "text": "Efectos de texto:"
+        "text": "Efectos de texto:, el botón que hay justo a su derecha"
       },
       {
         "letter": "C",
-        "text": "Aceptar"
+        "text": "Aceptar, el botón que cierra y confirma el cuadro"
       },
       {
         "letter": "D",
-        "text": "Avanzado"
+        "text": "Avanzado, la segunda ficha del propio cuadro"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Establecer como predeterminado» pregunta si el cambio afecta solo a este documento o a todos los basados en la plantilla Normal.dotm."
+    "explicacion": "«Establecer como predeterminado», abajo a la izquierda del cuadro, saca un aviso preguntando si el cambio vale solo para este documento o para todos los basados en la plantilla Normal; la segunda opción es la que cambia el punto de partida de los documentos futuros. · «Aceptar» es el descarte que más cae: aplica lo elegido, sí, pero solo a lo que hubiera seleccionado, y no deja ninguna huella para mañana. Esa es la diferencia entre aplicar y establecer. · «Efectos de texto:» abre el panel de rellenos, contornos y sombras. · Y «Avanzado» no es un botón sino la segunda ficha del propio cuadro."
   },
   {
     "id": "inicio-546",
@@ -5630,7 +5630,7 @@
     "tema": "Fuente",
     "sourceQuestionId": "dlgcompart-inicio-01",
     "generado": true,
-    "enunciado": "Al pulsar «Más subrayados…» al final del desplegable del botón Subrayado, ¿qué se abre?",
+    "enunciado": "Al final del desplegable del botón Subrayado hay una entrada, «Más subrayados…». ¿Qué abre?",
     "opciones": [
       {
         "letter": "A",
@@ -5638,20 +5638,20 @@
       },
       {
         "letter": "B",
-        "text": "El panel «Formato de efectos de texto»"
+        "text": "Un cuadro propio con la galería completa de los diecisiete estilos"
       },
       {
         "letter": "C",
-        "text": "El cuadro Párrafo"
+        "text": "El panel «Formato de efectos de texto», en la sección Contorno de texto"
       },
       {
         "letter": "D",
-        "text": "El panel Estilos"
+        "text": "El cuadro de diálogo Fuente, en su ficha Avanzado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Más subrayados…» no es un cuadro propio: lleva al cuadro Fuente (el mismo que abre el lanzador del grupo o Ctrl+M) situando el foco en el desplegable «Estilo de subrayado»."
+    "explicacion": "No es un cuadro nuevo: lleva al de siempre, el cuadro Fuente, el mismo que abren el iniciador del grupo y Ctrl+M, y deja el cursor en el desplegable «Estilo de subrayado», que es donde están los diecisiete. Es un ejemplo claro de cómo Word usa varias puertas para un mismo sitio. · Pensar que hay un cuadro propio es el error natural, porque el nombre de la entrada promete más subrayados y uno espera una galería: los hay, pero dentro del cuadro general. · El panel de efectos de texto es el de rellenos y contornos de las letras, otra cosa. · Y la ficha Avanzado no guarda ningún estilo de subrayado: está una ficha más allá."
   },
   {
     "id": "inicio-561",
@@ -5666,7 +5666,7 @@
     "tema": "Fuente",
     "sourceQuestionId": "dlgcompart-inicio-16",
     "generado": true,
-    "enunciado": "¿Desde qué botón del cuadro «Símbolo» (Insertar ▸ Símbolos ▸ Símbolo ▸ Más símbolos…) se llega a «Personalizar teclado»?",
+    "enunciado": "Estás en el cuadro «Símbolo» (Insertar ▸ Símbolos ▸ Símbolo ▸ Más símbolos…) y quieres asignarle una combinación de teclas al símbolo que tienes seleccionado. ¿Por dónde se llega a «Personalizar teclado»?",
     "opciones": [
       {
         "letter": "A",
@@ -5687,7 +5687,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Teclas…» abre «Personalizar teclado» para asignar un atajo al símbolo seleccionado; «Autocorrección…» crea una entrada de autocorrección para ese símbolo."
+    "explicacion": "«Teclas…» abre el cuadro «Personalizar teclado» con el comando del símbolo ya cargado, listo para asignarle la combinación que se quiera. Es una de las cuatro puertas de ese cuadro, junto con Archivo ▸ Opciones ▸ Personalizar cinta ▸ «Personalizar…», el menú contextual de la cinta y el atajo Alt+Ctrl y el signo más del teclado numérico. · «Autocorrección…» está justo al lado y hace algo parecido en el espíritu, guardar un acceso rápido al símbolo, pero a través del texto que se escribe, no de una tecla: es el distractor con más fundamento. · «Insertar» coloca el símbolo y ya. · Y «de:» elige el subconjunto de caracteres que se muestra."
   },
   {
     "id": "inicio-563",
@@ -5702,19 +5702,19 @@
     "tema": "Fuente",
     "sourceQuestionId": "dlgcompart-inicio-18",
     "generado": true,
-    "enunciado": "El botón «Efectos de texto:» que aparece en la parte inferior del cuadro de diálogo Fuente, ¿qué abre?",
+    "enunciado": "En la parte de abajo del cuadro de diálogo Fuente hay un botón llamado «Efectos de texto:». ¿Qué abre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El panel lateral «Formato de efectos de texto» (relleno, contorno, sombra, reflejo, iluminado…)"
+        "text": "El panel «Formato de efectos de texto»"
       },
       {
         "letter": "B",
-        "text": "La galería de estilos rápidos WordArt"
+        "text": "La galería de estilos rápidos de WordArt"
       },
       {
         "letter": "C",
-        "text": "El cuadro «Bordes y sombreado»"
+        "text": "El cuadro «Bordes y sombreado», ficha Bordes"
       },
       {
         "letter": "D",
@@ -5723,7 +5723,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Es el mismo panel al que se llega desde «Color de fuente ▸ Degradado ▸ Más degradados…» o desde «Efectos de texto y tipografía ▸ Sombra/Reflejo/Iluminado ▸ Opciones de…»."
+    "explicacion": "Abre el panel lateral «Formato de efectos de texto», exactamente el mismo al que se llega desde «Color de fuente ▸ Degradado ▸ Más degradados…» y desde las entradas «Opciones de…» de los submenús de Efectos de texto y tipografía. Es otro cuadro con varias puertas, y ese es el tipo de coincidencia que suele preguntarse. · La galería de WordArt es el distractor con más fundamento, porque el panel se parece mucho a lo que se usa con WordArt: pero esa galería está en Insertar ▸ Texto y crea un objeto aparte, no formatea el texto del párrafo. · «Bordes y sombreado» trabaja sobre párrafos y páginas. · Y «Avanzado» es una ficha del propio cuadro, no algo que abra un botón."
   },
   {
     "id": "inicio-572",
@@ -5738,7 +5738,7 @@
     "tema": "Fuente",
     "sourceQuestionId": "dlgcompart-inicio-27",
     "generado": true,
-    "enunciado": "El botón «Establecer como predeterminado» del cuadro Fuente también aparece en otros cuadros de Word. ¿En cuáles?",
+    "enunciado": "El botón «Establecer como predeterminado» no es exclusivo del cuadro Fuente: aparece al pie de varios cuadros de Word. ¿En cuáles de estos también está?",
     "opciones": [
       {
         "letter": "A",
@@ -5746,20 +5746,20 @@
       },
       {
         "letter": "B",
-        "text": "Solo en el cuadro Fuente"
+        "text": "Configurar página, Tabulaciones y Opciones de Word"
       },
       {
         "letter": "C",
-        "text": "Opciones de Word y Centro de confianza"
+        "text": "Párrafo, Símbolo y Buscar y reemplazar"
       },
       {
         "letter": "D",
-        "text": "Tabulaciones y Símbolo"
+        "text": "Solo en el cuadro Fuente, y en ningún otro"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Establecer como predeterminado» está en Configurar página, Columnas, Párrafo, Bordes y sombreado, Fecha y hora, Letra capital y Administrar estilos, además del cuadro Fuente. En todos fija los valores actuales para el documento o para la plantilla."
+    "explicacion": "Ese botón aparece en Configurar página, Columnas, Párrafo, Bordes y sombreado, Fecha y hora, Letra capital y Administrar estilos, además del cuadro Fuente. En todos hace lo mismo: fijar los valores actuales como punto de partida, para este documento o para la plantilla. · Tabulaciones no lo tiene, y es el descarte más fino porque es un cuadro hermano del de Párrafo y se abre desde él: lo que tiene son «Eliminar» y «Eliminar todas». · Opciones de Word no lo necesita, porque todo lo que hay allí ya es un ajuste permanente del programa. · Y Símbolo y Buscar y reemplazar no fijan formato de nada."
   },
   {
     "id": "inicio-580",
@@ -5774,28 +5774,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "pdf-inicio-fuente-80",
-    "enunciado": "En el desplegable «Conjuntos estilisticos» (cuadro Fuente ▸ Avanzado ▸ Caracteristicas OpenType), ademas de «Predeterminado», ¿cuantos conjuntos numerados ofrece como maximo Word?",
+    "enunciado": "En la ficha Avanzado del cuadro Fuente despliegas «Conjuntos estilísticos». Además de «Predeterminado», ¿cuántos conjuntos numerados llega a ofrecer Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Hasta 20 (numerados del 1 al 20)"
+        "text": "Hasta 20, numerados del 1 al 20"
       },
       {
         "letter": "B",
-        "text": "Hasta 5"
+        "text": "Hasta 5, numerados del 1 al 5"
       },
       {
         "letter": "C",
-        "text": "Hasta 9"
+        "text": "Hasta 9, numerados del 1 al 9"
       },
       {
         "letter": "D",
-        "text": "Hasta 12"
+        "text": "Hasta 12, numerados del 1 al 12"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El desplegable muestra «Predeterminado» y hasta 20 conjuntos numerados. Cada tipografia OpenType define cuantos de esos conjuntos trae realmente disenados, por lo que en muchas fuentes solo unos pocos producen un cambio visible.",
+    "explicacion": "El desplegable enseña «Predeterminado» y hasta veinte conjuntos numerados. Que aparezcan no significa que hagan algo: cada tipografía OpenType decide cuántos trae realmente diseñados, así que en la mayoría de fuentes solo unos pocos producen un cambio visible y el resto deja el texto igual. · Las otras tres cifras son creíbles porque son números redondos de Word en otros sitios: 5 son las opciones de Ligaduras y las alineaciones de tabulación, 9 los niveles de una lista multinivel, y 12 los estilos de cita bibliográfica. Ninguna tiene que ver con esto. · Un conjunto estilístico cambia la forma de las letras, no su tamaño ni su color.",
     "generado": true
   },
   {
@@ -5812,27 +5812,27 @@
     "id": "inicio-588",
     "sourceQuestionId": "web-inicio-resalt-88",
     "tipo": "opcion_unica",
-    "enunciado": "¿Que diferencia hay entre «Color de resaltado del texto» y «Sombreado» a la hora de dar color de fondo a unas palabras?",
+    "enunciado": "Quieres poner fondo de color detrás de unas palabras y dudas entre «Color de resaltado del texto» y «Sombreado». ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "«Color de resaltado» esta en el grupo Fuente y colorea solo detras de los caracteres (como un rotulador); «Sombreado» esta en el grupo Parrafo y colorea el fondo de todo el parrafo o celda"
+        "text": "El resaltado es del grupo Fuente y pinta tras los caracteres; el sombreado, del grupo Párrafo y pinta el párrafo"
       },
       {
         "letter": "B",
-        "text": "Son exactamente lo mismo, solo cambia el nombre segun la version de Word"
+        "text": "El resaltado es del grupo Párrafo y pinta el párrafo; el sombreado, del grupo Fuente y pinta tras los caracteres"
       },
       {
         "letter": "C",
-        "text": "«Color de resaltado» colorea el parrafo entero y «Sombreado» solo las palabras seleccionadas"
+        "text": "Los dos son del grupo Fuente y pintan tras los caracteres; solo cambia la paleta de colores que ofrecen"
       },
       {
         "letter": "D",
-        "text": "«Sombreado» esta en el grupo Fuente y «Color de resaltado» en el grupo Estilos"
+        "text": "Los dos son del grupo Párrafo y pintan el párrafo; solo cambia que uno se imprime y el otro no"
       }
     ],
     "respuesta": "A",
-    "explicacion": "«Color de resaltado del texto» (grupo Fuente) actua como un rotulador: pinta el fondo unicamente de los caracteres seleccionados y no se quita con «Borrar todo el formato». «Sombreado» (grupo Parrafo) rellena el fondo del parrafo completo (o de la celda de tabla), llegando hasta los margenes."
+    "explicacion": "El resaltado actúa como un rotulador: pinta el fondo únicamente de los caracteres seleccionados, viaja con ellos si se mueve el texto y, además, es lo único que sobrevive a «Borrar todo el formato». El sombreado rellena el fondo del párrafo entero, o de la celda si se está en una tabla, y llega hasta los márgenes. · La versión con los papeles cambiados es el reflejo exacto y hay que leerla despacio. · Que los dos estén en el mismo grupo tampoco: viven en grupos distintos precisamente porque su alcance es distinto, caracteres frente a párrafo. · Y los dos se imprimen: ninguno es una marca de pantalla."
   },
   {
     "id": "inicio-29",
@@ -5847,27 +5847,27 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0280",
-    "enunciado": "¿Cuales de las siguientes afirmaciones sobre el campo Ligaduras de la pestana Avanzado del cuadro de dialogo Fuente son correctas?",
+    "enunciado": "Estás repasando el desplegable Ligaduras de la ficha Avanzado del cuadro Fuente. ¿Cuáles de estas afirmaciones son correctas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Una ligadura es la union visual de dos o mas caracteres"
+        "text": "Una ligadura es la unión visual de dos o más caracteres en un solo signo"
       },
       {
         "letter": "B",
-        "text": "Hay 5 opciones disponibles en el desplegable de Ligaduras"
+        "text": "El desplegable ofrece cinco opciones"
       },
       {
         "letter": "C",
-        "text": "La opcion Todas incluye tanto las historicas como las discrecionales"
+        "text": "La opción «Todas las ligaduras» incluye las históricas y las discrecionales"
       },
       {
         "letter": "D",
-        "text": "Las ligaduras solo estan disponibles para tipografias TrueType antiguas"
+        "text": "Las ligaduras funcionan en cualquier fuente instalada, sea OpenType o no"
       },
       {
         "letter": "E",
-        "text": "La opcion Solo estandar aplica unicamente las combinaciones de caracteres mas comunes"
+        "text": "«Solo estándar» aplica únicamente las combinaciones más corrientes"
       }
     ],
     "matching": null,
@@ -5877,7 +5877,7 @@
       "C",
       "E"
     ],
-    "explicacion": "Las ligaduras son uniones de dos o mas caracteres. El desplegable ofrece 5 opciones: Ninguna, Solo estandar, Estandar y contextuales, Historicas y discrecionales, y Todas. La opcion Todas incluye todos los tipos, incluidas historicas y discrecionales. La opcion incorrecta es D: las ligaduras son una caracteristica OpenType, no exclusiva de TrueType antiguo."
+    "explicacion": "Las cinco opciones son Ninguna, Solo estándar, Estándar y contextuales, Históricas y discrecionales, y Todas las ligaduras; la última las enciende todas, históricas incluidas, y «Solo estándar» se queda en las de siempre, fi, fl, ff, ffi y ffl. · La afirmación falsa es la que las da por universales: las ligaduras son una característica OpenType y solo hacen algo si la fuente las trae diseñadas. Con una fuente que no las incluya, la opción se puede marcar y el texto no se inmuta, y a veces ni siquiera se deja marcar. · Es el error más común con toda esta ficha: confundir que Word ofrezca el ajuste con que la fuente sepa cumplirlo."
   },
   {
     "id": "inicio-264",
@@ -5892,27 +5892,27 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0518",
-    "enunciado": "¿Cuáles de los siguientes atajos están verificados en fuentes españolas de oposiciones para Word 365 y aplican correctamente en la versión española del programa?",
+    "enunciado": "Un compañero que viene de un Word en inglés te enseña su lista de atajos. ¿Cuáles de estos hacen en esta instalación lo que él dice?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+N para negrita"
+        "text": "Ctrl+N pone negrita"
       },
       {
         "letter": "B",
-        "text": "Ctrl+K para cursiva"
+        "text": "Ctrl+K pone cursiva"
       },
       {
         "letter": "C",
-        "text": "Ctrl+S para subrayado sencillo"
+        "text": "Ctrl+S subraya"
       },
       {
         "letter": "D",
-        "text": "Ctrl+F para buscar (como en la versión inglesa)"
+        "text": "Ctrl+F abre el cuadro de búsqueda"
       },
       {
         "letter": "E",
-        "text": "Ctrl+B para abrir el panel de navegación"
+        "text": "Ctrl+B abre el panel de Navegación"
       }
     ],
     "matching": null,
@@ -5922,7 +5922,7 @@
       "C",
       "E"
     ],
-    "explicacion": "En la versión española de Word 365: Ctrl+N es negrita, Ctrl+K es cursiva, Ctrl+S es subrayado sencillo y Ctrl+B abre el panel de navegación. La opción «Ctrl+F para buscar (como en la versión…» es incorrecta porque Ctrl+F en español aplica la sangría francesa, no abre el buscador (eso es Ctrl+F en la versión inglesa)."
+    "explicacion": "Negrita, cursiva y subrayado siguen aquí la inicial del nombre en castellano, y Ctrl+B abre el panel de Navegación, con sus fichas Títulos, Páginas y Resultados. Prueba en vivo del usuario. · La afirmación falsa es la de Ctrl+F: en esta instalación aplica sangría francesa, que no tiene nada que ver con buscar. La confusión viene del inglés, donde la F es de «find», y es de los errores que más caro salen porque al pulsarla el párrafo se descoloca sin avisar. · Fíjate en que la letra que sí busca aquí es la B, de la que en inglés se esperaría negrita: casi todas las teclas están cruzadas respecto del otro esquema."
   },
   {
     "id": "inicio-271",
@@ -5937,27 +5937,27 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0525",
-    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre las diferencias entre los efectos Versalitas y MAYÚSCULAS del cuadro de diálogo Fuente son correctas?",
+    "enunciado": "Comparas el efecto Mayúsculas del cuadro Fuente con la entrada MAYÚSCULAS del desplegable Aa. ¿Cuáles de estas afirmaciones son correctas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Versalitas solo afecta visualmente a las letras que estaban en minúscula"
+        "text": "Versalitas solo cambia el aspecto de las letras que estaban en minúscula"
       },
       {
         "letter": "B",
-        "text": "MAYÚSCULAS es solo un efecto visual; el texto subyacente no cambia"
+        "text": "La casilla Mayúsculas del cuadro Fuente no toca los caracteres escritos"
       },
       {
         "letter": "C",
-        "text": "La opción MAYÚSCULAS del menú Cambiar mayúsculas edita realmente los caracteres del texto"
+        "text": "La entrada MAYÚSCULAS del desplegable Aa reescribe los caracteres"
       },
       {
         "letter": "D",
-        "text": "Versalitas y MAYÚSCULAS del cuadro Fuente son ambas efectos visuales que no modifican el texto subyacente"
+        "text": "Un texto con la casilla Mayúsculas, pegado sin formato, llega en minúsculas"
       },
       {
         "letter": "E",
-        "text": "Si se copia texto con MAYÚSCULAS del cuadro Fuente a otro documento sin formato, aparecerá en minúsculas si así fue escrito originalmente"
+        "text": "La casilla Mayúsculas y la casilla Versalitas se pueden marcar a la vez"
       }
     ],
     "matching": null,
@@ -5965,10 +5965,9 @@
       "A",
       "B",
       "C",
-      "D",
-      "E"
+      "D"
     ],
-    "explicacion": "Todas las afirmaciones son correctas. Versalitas solo cambia la apariencia de las minúsculas. MAYÚSCULAS del cuadro Fuente es solo visual y no modifica los caracteres reales. La opción MAYÚSCULAS del menú Cambiar mayúsculas sí edita los caracteres. Ambos efectos del cuadro Fuente son visuales. Al copiar texto con MAYÚSCULAS (efecto visual) a otro lugar sin formato, aparecerá tal como fue escrito originalmente."
+    "explicacion": "Las dos casillas del cuadro son formato: presentan el texto de otra manera y por debajo sigue escrito como se tecleó, lo que se comprueba pegándolo con «Conservar solo el texto» en otro sitio y viéndolo volver a minúsculas. El desplegable Aa, en cambio, reescribe de verdad y de ahí no se vuelve más que deshaciendo. · La afirmación falsa es la última: Versalitas y Mayúsculas son una de las tres parejas incompatibles de la sección Efectos, junto con Tachado y Doble tachado y con Superíndice y Subíndice. Marcar una desmarca la otra sin decir nada, y tiene su lógica, porque las dos deciden lo mismo y no pueden decidirlo a la vez."
   },
   {
     "id": "inicio-476",
@@ -5983,7 +5982,7 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-06",
     "generado": true,
-    "enunciado": "El desplegable «Efectos de texto y tipografía» (la A azul del grupo Fuente) tiene, además de la galería rápida de estilos, varios submenús. ¿Cuáles son submenús reales?",
+    "enunciado": "Despliegas «Efectos de texto y tipografía», la A azul del grupo Fuente, y por debajo de la galería rápida ves varios submenús. ¿Cuáles son reales?",
     "opciones": [
       {
         "letter": "A",
@@ -6022,7 +6021,7 @@
       "D",
       "E"
     ],
-    "explicacion": "Los submenús reales son Contorno, Sombra, Reflejo, Iluminado, Estilos de número, Ligaduras y Conjuntos de estilos. «Bisel 3D» y «Rotación» pertenecen al formato de forma/WordArt como objeto, no a este menú."
+    "explicacion": "Los submenús de ese botón son Contorno, Sombra, Reflejo, Iluminado, Estilos de número, Ligaduras y Conjuntos de estilos: los cuatro primeros son efectos visuales y los tres últimos, características tipográficas OpenType de la fuente. · «Bisel 3D» y «Rotación» son las dos falsas, y cuelan porque existen de verdad: pertenecen al formato de una forma o de un objeto de WordArt, donde el texto es un dibujo que se puede girar y biselar. Aquí se trabaja sobre caracteres dentro de un párrafo, y esas dos operaciones no tienen sentido. · Cada submenú de efecto termina en una entrada «Opciones de…» que abre el panel «Formato de efectos de texto»."
   },
   {
     "id": "inicio-480",
@@ -6037,7 +6036,7 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-10",
     "generado": true,
-    "enunciado": "En el bloque «Efectos» del cuadro de diálogo Fuente (Word 365), ¿qué casillas aparecen?",
+    "enunciado": "Abres el cuadro de diálogo Fuente y miras el bloque «Efectos», repartido en dos columnas de casillas. ¿Cuáles aparecen ahí?",
     "opciones": [
       {
         "letter": "A",
@@ -6086,7 +6085,7 @@
       "F",
       "G"
     ],
-    "explicacion": "Las siete casillas son Tachado, Doble tachado, Superíndice, Subíndice, Versalitas, Mayúsculas y Oculto. «Contorno» y «Relieve» existían en versiones antiguas pero ya NO están en este cuadro (los efectos de contorno/sombra están ahora en el botón «Efectos de texto:»)."
+    "explicacion": "Son siete casillas: en la columna izquierda Tachado, Doble tachado, Superíndice y Subíndice; en la derecha, Versalitas, Mayúsculas y Oculto. Tres pares se excluyen entre sí y la séptima, Oculto, se combina con cualquiera. · «Contorno» y «Relieve» son las dos falsas, y son el mejor distractor posible porque estuvieron ahí de verdad: eran casillas de este mismo bloque en versiones antiguas de Word y desaparecieron. Lo que hacían vive ahora en el botón «Efectos de texto:», al pie del cuadro, con más control. · Solo tres de las siete casillas tienen además botón en la cinta: el tachado sencillo, el superíndice y el subíndice."
   },
   {
     "id": "inicio-547",
@@ -6101,11 +6100,11 @@
     "tema": "Fuente",
     "sourceQuestionId": "dlgcompart-inicio-02",
     "generado": true,
-    "enunciado": "¿Desde cuáles de estas rutas se abre el cuadro de diálogo Fuente?",
+    "enunciado": "Repasas por cuántas puertas se llega al cuadro de diálogo Fuente. ¿Cuáles de estas rutas lo abren?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Inicio ▸ Fuente ▸ lanzador (flecha del grupo)"
+        "text": "Inicio ▸ Fuente ▸ el iniciador de la esquina del grupo"
       },
       {
         "letter": "B",
@@ -6121,7 +6120,7 @@
       },
       {
         "letter": "E",
-        "text": "Inicio ▸ Estilos ▸ flecha «Más» ▸ Aplicar estilos…"
+        "text": "Inicio ▸ Estilos ▸ flecha Más ▸ Aplicar estilos…"
       },
       {
         "letter": "F",
@@ -6135,7 +6134,7 @@
       "C",
       "D"
     ],
-    "explicacion": "Las cuatro primeras abren el cuadro Fuente. «Aplicar estilos…» abre un cuadro flotante para escribir el nombre de un estilo; Ctrl+Mayús+L aplica lista con viñetas."
+    "explicacion": "Las cuatro primeras llegan al mismo cuadro por caminos distintos, y eso es lo interesante: el iniciador del grupo, la combinación directa, la entrada «Más subrayados…» del desplegable de subrayado —que además deja el foco en «Estilo de subrayado»— y el menú «Formato ▾» del cuadro Modificar estilo, que funciona como concentrador de todos los cuadros de formato. · «Aplicar estilos…» abre otra cosa: una ventanita flotante para teclear el nombre de un estilo, que también se abre con Ctrl+Mayús+W. · Y Ctrl+Mayús+L figura en el cuadro Personalizar teclado bajo Versalitas y también bajo «Lista con viñetas», un conflicto interno del propio cuadro; en cualquier caso no abre ningún cuadro de diálogo."
   },
   {
     "id": "inicio-15",
@@ -6150,11 +6149,11 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0274",
-    "enunciado": "En el cuadro de dialogo Fuente, el campo Color de subrayado permite asignar al subrayado un color diferente al del propio texto subrayado.",
+    "enunciado": "En el cuadro de diálogo Fuente, el campo «Color de subrayado» permite dar a la línea un color distinto del que tiene el texto subrayado.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero. Los campos Color de fuente y Color de subrayado son independientes entre si y pueden tener valores distintos. El color del subrayado no hereda obligatoriamente el color del texto."
+    "explicacion": "Verdadero. «Color de fuente» y «Color de subrayado» son dos desplegables independientes, uno al lado del otro, así que se puede tener texto negro con una línea roja debajo. · El de subrayado aparece atenuado mientras «Estilo de subrayado» esté en «(ninguno)»: primero hay que elegir un estilo de línea y entonces se activa el color. · Ese color no se puede fijar desde la cinta con el botón Subrayado a secas; hay que entrar en el cuadro, o pasar por «Más subrayados…», que lleva justo ahí."
   },
   {
     "id": "inicio-35",
@@ -6169,11 +6168,11 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0338",
-    "enunciado": "En el cuadro de dialogo Fuente, el campo Interletraje para fuentes activa el ajuste automatico del espacio entre determinados pares de caracteres a partir de un tamano minimo de fuente expresado en puntos.",
+    "enunciado": "La casilla «Interletraje para fuentes» de la ficha Avanzado ajusta automáticamente el espacio de ciertos pares de caracteres, y solo a partir del tamaño en puntos que se indique al lado.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero. El Interletraje para fuentes aplica el ajuste automatico de espacio entre pares de caracteres unicamente cuando la fuente supera el tamano minimo indicado en el campo, que se expresa en puntos. Por debajo de ese tamano el interletraje no se aplica."
+    "explicacion": "Verdadero. El interletraje es el ajuste fino que la propia fuente lleva previsto para pares como AV, To o We, que sin él quedan visualmente demasiado separados. El campo de puntos marca el umbral: por debajo de ese tamaño Word no lo aplica, porque en cuerpos pequeños la diferencia no se aprecia y en titulares sí canta. · No hay que confundirlo con el campo Espaciado, unas líneas más arriba: aquel añade o resta la misma cantidad entre todos los caracteres, mientras que este solo retoca los pares que lo necesitan, y cuáles son lo decide la fuente, no Word."
   },
   {
     "id": "inicio-261",
@@ -6188,11 +6187,11 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0515",
-    "enunciado": "En la versión española de Word 365, el atajo Ctrl+Mayús+P posiciona el cursor en el campo Tamaño de fuente de la cinta.",
+    "enunciado": "En esta instalación, Ctrl+Mayús+P lleva el cursor al campo Tamaño de fuente de la cinta.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: Ctrl+Mayús+P activa o desactiva el subrayado de solo palabras (SubrayadoPalabras). No hay atajo que lleve el foco a la caja de tamaño de la cinta; el cuadro de diálogo Fuente con el foco en Tamaño se abre con Ctrl+Mayús+M."
+    "explicacion": "Falso. Ctrl+Mayús+P activa y desactiva el subrayado de solo palabras, el que deja los espacios sin línea. · Y no existe ninguna combinación que lleve el foco a las cajas de la cinta, ni a la del tamaño ni a la del nombre de la fuente: todas las combinaciones de esa familia abren el cuadro de diálogo. La que aterriza en Tamaño es Ctrl+Mayús+M; Ctrl+M y Ctrl+Mayús+F caen en el nombre. Prueba en vivo del usuario. · Esa creencia es de las más extendidas porque en otros programas sí hay atajos que llevan a un cuadro de la barra de herramientas."
   },
   {
     "id": "inicio-284",
@@ -6207,11 +6206,11 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0538",
-    "enunciado": "El color de resaltado del texto es la única excepción documentada en Word 365 que no se elimina al usar el botón Borrar todo el formato, ni con Ctrl+Barra espaciadora, ni con Ctrl+Q.",
+    "enunciado": "El color de resaltado es la única propiedad que sobrevive tanto al botón «Borrar todo el formato» como a Ctrl+Barra espaciadora y a Ctrl+W.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero. El color de resaltado es la única excepción documentada: no se elimina con ninguno de los tres métodos de borrado de formato (Borrar todo el formato, Ctrl+Barra espaciadora, Ctrl+Q). La única forma de quitarlo es acceder al desplegable Color de resaltado del texto en el grupo Fuente y seleccionar Sin color."
+    "explicacion": "Verdadero. Los tres se llevan lo suyo —el botón limpia carácter, párrafo y estilo; Ctrl+Barra espaciadora, el formato de carácter; Ctrl+W, el de párrafo— y ninguno toca el amarillo del rotulador. La única forma de quitarlo es desplegar «Color de resaltado del texto» y elegir «Sin color», o pasar el rotulador otra vez con esa opción activa. · Conviene tenerlo presente al reutilizar texto de otro documento: se puede dejar limpio de formato y seguir arrastrando marcas de revisión de colores. · No confundir Ctrl+W con cerrar la ventana: en esta instalación quita el formato de párrafo."
   },
   {
     "id": "inicio-445",
@@ -6226,11 +6225,11 @@
     "tema": "Fuente",
     "sourceQuestionId": "bal-inicio-02",
     "generado": true,
-    "enunciado": "En el cuadro de diálogo Fuente, el color de subrayado siempre coincide con el color de fuente y no se puede cambiar por separado.",
+    "enunciado": "En el cuadro de diálogo Fuente, el color del subrayado va siempre igualado al color de la fuente y no se puede cambiar por separado.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: Color de fuente y Color de subrayado son campos independientes; el subrayado puede tener un color distinto al del texto."
+    "explicacion": "Falso. «Color de fuente» y «Color de subrayado» son dos desplegables distintos y admiten valores distintos: texto en negro con línea roja es perfectamente posible. · Lo que sí ocurre es que el de subrayado aparece atenuado hasta que se elige un estilo de línea en «Estilo de subrayado»: sin línea no hay color que decidir, y esa dependencia es la que hace creer que uno hereda del otro. · Desde la cinta no se puede tocar ese color: hay que entrar en el cuadro, por el iniciador del grupo, por Ctrl+M o por «Más subrayados…»."
   },
   {
     "id": "inicio-477",
@@ -6245,11 +6244,11 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-07",
     "generado": true,
-    "enunciado": "El submenú «Efectos de texto y tipografía» incluye «Conjuntos de estilos», que aplica un conjunto estilístico (características OpenType) de la fuente al texto seleccionado.",
+    "enunciado": "El submenú «Conjuntos de estilos» de Efectos de texto y tipografía aplica al texto seleccionado un conjunto estilístico de la fuente, que es una característica OpenType.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "El submenú muestra un ejemplo «Predeterminado» y varias variantes «Individual» con la frase «El veloz murciélago hindú…»."
+    "explicacion": "Verdadero. Ese submenú es una de las tres entradas OpenType del botón, junto con «Estilos de número» y «Ligaduras»; las otras cuatro —Contorno, Sombra, Reflejo e Iluminado— son efectos que pinta Word, no variantes de la fuente. · El submenú enseña un ejemplo «Predeterminado» y varias variantes numeradas, todas con la misma frase de muestra, para poder compararlas de un vistazo. · Como toda característica OpenType, depende de la fuente: si la tipografía aplicada no trae conjuntos diseñados, se pueden elegir y el texto no cambia. La lista llega a veinte conjuntos, pero casi ninguna fuente los trae todos."
   },
   {
     "id": "inicio-478",
@@ -6264,11 +6263,11 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-08",
     "generado": true,
-    "enunciado": "El submenú «Contorno» de Efectos de texto ofrece, además de la paleta de color, las opciones «Grosor» y «Guiones» para el trazo del contorno.",
+    "enunciado": "El submenú «Contorno» de Efectos de texto ofrece, además de la paleta de color, las entradas «Grosor», «Guiones» y «Transparencia».",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "«Grosor» abre una lista de anchos de línea (+ «Más líneas…») y «Guiones» una lista de patrones de trazo discontinuo (+ «Más líneas…»)."
+    "respuesta": false,
+    "explicacion": "Falso: las entradas de ese submenú son la paleta de color, «Sin contorno», «Más colores del contorno…», «Grosor» y «Guiones». «Transparencia» no está ahí. · «Grosor» despliega una lista de anchos de línea y «Guiones» una de patrones de trazo discontinuo, y las dos terminan en «Más líneas…», que abre el panel «Formato de efectos de texto». · La transparencia existe, pero en ese panel, dentro de las secciones «Relleno de texto» y «Contorno de texto», con su control deslizante y su porcentaje. Ahí está la trampa: el ajuste es real, pero vive un nivel más adentro."
   },
   {
     "id": "inicio-479",
@@ -6283,11 +6282,11 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-09",
     "generado": true,
-    "enunciado": "El cuadro de diálogo Fuente tiene un botón «Efectos de texto:» en su parte inferior.",
+    "enunciado": "En la parte inferior del cuadro de diálogo Fuente hay tres botones: «Establecer como predeterminado», «Efectos de texto:» y «Restablecer».",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Junto a «Establecer como predeterminado», el cuadro Fuente tiene el botón «Efectos de texto:», que abre el panel de efectos (relleno, contorno, sombra, reflejo, iluminado…)."
+    "respuesta": false,
+    "explicacion": "Falso: al pie del cuadro hay dos botones a la izquierda, «Establecer como predeterminado» y «Efectos de texto:», y a la derecha los de siempre, «Aceptar» y «Cancelar». No existe ningún «Restablecer». · Cuela porque el cuadro tiene muchas opciones y uno esperaría poder devolverlas todas a su sitio de un golpe; lo más parecido es cerrar con «Cancelar», que descarta lo que se haya tocado sin aplicarlo. · Para dejar el texto limpio de verdad están el botón «Borrar todo el formato» de la cinta y Ctrl+Barra espaciadora, pero fuera de este cuadro."
   },
   {
     "id": "inicio-485",
@@ -6302,11 +6301,11 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-15",
     "generado": true,
-    "enunciado": "El menú del botón «Color de resaltado del texto» incluye «Sin color» y «Detener resaltado».",
+    "enunciado": "El desplegable del botón «Color de resaltado del texto» contiene, además de la paleta, las entradas «Sin color», «Detener resaltado» y «Más colores de resaltado…».",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "«Sin color» quita el resaltado de la selección; «Detener resaltado» desactiva el modo rotulador (el puntero deja de resaltar al arrastrar)."
+    "respuesta": false,
+    "explicacion": "Falso: hay «Sin color» y «Detener resaltado», pero no existe ninguna entrada para añadir colores. La paleta del rotulador es cerrada, quince colores fijos, y esa es una diferencia de fondo con el desplegable de Color de fuente, que sí lleva «Más colores» y hasta degradados. · Lo que sí tiene arriba es un interruptor, «Solo contraste alto», que reduce la paleta a los colores que se leen mejor. · «Sin color» quita el resaltado de lo seleccionado; «Detener resaltado» solo apaga el rotulador cuando el puntero se ha quedado convertido en uno, y aparece atenuado si no está activo."
   },
   {
     "id": "inicio-486",
@@ -6321,11 +6320,11 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-16",
     "generado": true,
-    "enunciado": "La información en pantalla del botón Subíndice muestra «Ctrl+=», pero en esta instalación de Word esa combinación no aplica subíndice.",
+    "enunciado": "La información en pantalla del botón Subíndice anuncia «Ctrl+=», pero en esta instalación esa combinación no aplica el subíndice.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "⚠️ Ojo: el tooltip de la cinta muestra «Subíndice (Ctrl+=)» porque trae el esquema internacional, pero en esta instalación Ctrl+= no hace nada; el subíndice real se aplica con Ctrl+Mayús+- (prueba en vivo del usuario). Superíndice, en cambio, no muestra atajo en su tooltip y tampoco tiene ninguno aquí."
+    "explicacion": "Verdadero, y es de las trampas más difíciles de detectar, porque quien engaña aquí es la propia interfaz: el mensaje emergente trae el esquema internacional y no se ha adaptado. Al pulsarlo no ocurre nada. El subíndice real se aplica con Ctrl+Mayús y la tecla del guión. Prueba en vivo del usuario. · El superíndice, en cambio, no anuncia ningún atajo en su mensaje, y efectivamente tampoco tiene ninguno: ahí la interfaz sí dice la verdad. · La lección práctica es que un atajo leído en un mensaje emergente hay que probarlo, igual que uno leído en un manual."
   },
   {
     "id": "inicio-487",
@@ -6340,11 +6339,11 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-17",
     "generado": true,
-    "enunciado": "«Más subrayados…», al final del desplegable del botón Subrayado, abre el cuadro Fuente con el foco en el desplegable «Estilo de subrayado».",
+    "enunciado": "«Más subrayados…», al final del desplegable del botón Subrayado, abre el cuadro Fuente con el foco puesto en el desplegable «Estilo de subrayado».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Desde ahí se eligen estilos de línea que no están en el desplegable rápido (solo palabras, ondulado doble, etc.) y el «Color de subrayado»."
+    "explicacion": "Verdadero. No es un cuadro propio: lleva al de siempre, el mismo que abren el iniciador del grupo y Ctrl+M, y deja el cursor donde interesa. · Desde ahí se llega a los diecisiete estilos de línea, muchos de los cuales no están en el desplegable rápido de la cinta —ondulado doble, de trazos largos, de puntos y trazos—, y también al «Color de subrayado», que no se puede tocar desde la cinta de ninguna otra forma. · Es un buen ejemplo de un patrón que se repite en Word: las entradas «Más…» de los desplegables no abren cuadros nuevos, sino que llevan al cuadro general colocando el foco en la parte que corresponde."
   },
   {
     "id": "inicio-564",
@@ -6359,11 +6358,11 @@
     "tema": "Fuente",
     "sourceQuestionId": "dlgcompart-inicio-19",
     "generado": true,
-    "enunciado": "«Más degradados…» (Color de fuente ▸ Degradado), el botón «Efectos de texto:» del cuadro Fuente y «Opciones de sombra…» del submenú de Efectos de texto abren todos el mismo panel lateral de formato de efectos de texto.",
+    "enunciado": "«Más degradados…» del menú Color de fuente, el botón «Efectos de texto:» del cuadro Fuente y «Opciones de sombra…» del submenú de Efectos de texto abren los tres el mismo panel lateral.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Cada ruta abre el panel en la sección que corresponde (relleno, sombra…), pero es el mismo panel."
+    "explicacion": "Verdadero: los tres caminos terminan en «Formato de efectos de texto», y lo único que cambia es qué sección aparece desplegada al llegar —el relleno, el conjunto, o la sombra—. Es el tipo de coincidencia que suele preguntarse, porque obliga a saber que el destino es uno solo aunque las puertas sean varias. · El mismo patrón se repite con el cuadro Fuente, al que se llega desde el iniciador del grupo, desde Ctrl+M, desde «Más subrayados…» y desde el menú «Formato ▾» de Modificar estilo. · Y también con «Bordes y sombreado», al que se llega desde Inicio y desde Diseño, aunque cada ruta lo abra en una ficha distinta."
   },
   {
     "id": "inicio-13",
@@ -6378,7 +6377,7 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0013",
-    "enunciado": "Relaciona cada formato de fuente con su atajo de teclado:",
+    "enunciado": "Relaciona cada formato de fuente con la combinación que lo aplica en esta instalación:",
     "opciones": [],
     "matching": {
       "left": [
@@ -6444,7 +6443,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Negrita: Ctrl+N. Cursiva: Ctrl+K. Subrayado sencillo: Ctrl+S. Subrayado doble: Ctrl+Mayus+D. Subrayado solo palabras: Ctrl+Mayus+P. El distractor F (Ctrl+Mayus+W) abre el panel Aplicar estilos, no es un formato de fuente."
+    "explicacion": "Negrita es Ctrl+N, cursiva Ctrl+K y subrayado sencillo Ctrl+S: las tres siguen la inicial del nombre en castellano, y las tres tienen además una segunda combinación con Mayús que hace exactamente lo mismo. · De los diecisiete estilos de subrayado que ofrece el cuadro Fuente, solo dos más tienen atajo propio: el doble con Ctrl+Mayús+D y el de solo palabras con Ctrl+Mayús+P. · El destino que se queda sin pareja, Ctrl+Mayús+W, no es un formato de fuente: abre «Aplicar estilos», la ventanita flotante para teclear el nombre de un estilo. Cuela porque comparte la forma Ctrl+Mayús+letra con los dos subrayados, y porque también «aplica» algo."
   },
   {
     "id": "inicio-227",
@@ -6459,7 +6458,7 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0481",
-    "enunciado": "Relaciona cada opción OpenType con su función:",
+    "enunciado": "Relaciona cada característica OpenType de la ficha Avanzado con lo que hace:",
     "opciones": [],
     "matching": {
       "left": [
@@ -6525,7 +6524,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Ligaduras: une caracteres. Estilos de número: altura uniforme vs. variable. Espaciado entre números: ancho fijo (tabular, útil en tablas) vs. variable (proporcional). Conjuntos estilísticos: variantes alternativas de diseño de toda la fuente. Alternativas contextuales: ajusta formas según el contexto. El distractor F no corresponde a ninguna opción OpenType real."
+    "explicacion": "Ligaduras une caracteres contiguos en un solo signo. Estilos de número decide la ALTURA de las cifras, uniforme o variable. Espaciado entre números decide su ANCHO, igual para todas o ajustado a cada forma; esa pareja altura-ancho es la que más se confunde, porque las dos hablan de números y están seguidas en el cuadro. Conjuntos estilísticos aplica un juego alternativo de formas de letra previsto por el tipógrafo. Y las alternativas contextuales ajustan la forma de cada carácter según los que tenga al lado. · El destino que sobra, cambiar el color según el tema, no es una característica OpenType ni tiene nada que ver con esta ficha: el color se decide en el desplegable Color de fuente. · Todas dependen de que la fuente las traiga diseñadas."
   },
   {
     "id": "inicio-259",
@@ -6540,7 +6539,7 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0513",
-    "enunciado": "Relaciona cada atajo con lo que hace sobre el tamaño y el formato de fuente en Word 365 (versión española):",
+    "enunciado": "Relaciona cada combinación con lo que hace sobre el tamaño y el formato de fuente en esta instalación:",
     "opciones": [],
     "matching": {
       "left": [
@@ -6606,7 +6605,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "La tecla «<>» con Ctrl controla el tamaño: con Mayús (>) agranda, sin Mayús (<) reduce; añadir Alt lo pasa de \"valor de la lista\" a \"de punto en punto\". Ctrl+Mayús+- aplica o quita el subíndice. El superíndice (distractor F) NO tiene atajo en esta instalación: solo desde el cuadro Fuente (Ctrl+M) o el botón de la cinta."
+    "explicacion": "La tecla que está a la izquierda de la Z manda en el tamaño: con Ctrl y Mayús da «>» y agranda, con Ctrl a secas da «<» y reduce. Añadir Alt cambia el modo, del salto al siguiente valor de la lista al incremento de punto en punto. De ahí salen las cuatro combinaciones, y la asimetría de que unas lleven Mayús y otras no es solo consecuencia de dónde están los signos en el teclado español. · Ctrl+Mayús y la tecla del guión aplica o quita el subíndice. · El destino que queda suelto, el superíndice, no tiene ninguna combinación en esta instalación: se aplica con el botón de la cinta o con su casilla del cuadro Fuente. Esa ausencia es precisamente lo que hay que saber."
   },
   {
     "id": "inicio-260",
@@ -6621,7 +6620,7 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0514",
-    "enunciado": "Relaciona cada atajo con la acción que ejecuta sobre la fuente en la versión española de Word 365:",
+    "enunciado": "Relaciona cada combinación con el formato que aplica sobre la fuente en esta instalación:",
     "opciones": [],
     "matching": {
       "left": [
@@ -6687,7 +6686,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Ctrl+N: negrita. Ctrl+K: cursiva. Ctrl+S: subrayado sencillo. Ctrl+Mayús+D: subrayado doble. Ctrl+Mayús+L: versalitas. El distractor F (subrayado solo palabras) corresponde a Ctrl+Mayús+P, no a ninguno de los atajos de la lista."
+    "explicacion": "Ctrl+N pone negrita, Ctrl+K cursiva y Ctrl+S subrayado sencillo: las tres iniciales del nombre en castellano. Ctrl+Mayús+D pone el subrayado doble. Y Ctrl+Mayús+L aplica versalitas. · ⚠️ Ojo con esta última: en el cuadro Personalizar teclado figura también bajo «Lista con viñetas», un conflicto interno del propio cuadro, así que puede ocurrir que al pulsarla aparezca una viñeta en lugar de versalitas. · El destino que se queda sin pareja, el subrayado de solo palabras, corresponde a Ctrl+Mayús+P, que no está entre las cinco de la izquierda: es el descarte más fino porque pertenece a la misma familia de subrayados que sí aparece."
   },
   {
     "id": "inicio-544",
@@ -6702,7 +6701,7 @@
     "tema": "Fuente",
     "sourceQuestionId": "rutas-inicio-74",
     "generado": true,
-    "enunciado": "Relaciona cada opción «Más…» de un desplegable del grupo Fuente/Párrafo con el cuadro o panel que abre:",
+    "enunciado": "Relaciona cada entrada «Más…» de un desplegable de los grupos Fuente y Párrafo con el cuadro o el panel que abre:",
     "opciones": [],
     "matching": {
       "left": [
@@ -6726,7 +6725,7 @@
       "right": [
         {
           "id": "A",
-          "label": "Cuadro Fuente, foco en «Estilo de subrayado»"
+          "label": "Cuadro Fuente, con el foco en «Estilo de subrayado»"
         },
         {
           "id": "B",
@@ -6738,7 +6737,7 @@
         },
         {
           "id": "D",
-          "label": "Panel «Formato de texto» (relleno con degradado)"
+          "label": "Panel «Formato de efectos de texto», en Relleno de texto"
         },
         {
           "id": "E",
@@ -6758,7 +6757,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Cada «Más…» lleva a un cuadro distinto; ninguno abre el cuadro Tabulaciones (ese está en el desplegable de interlineado y en el cuadro Párrafo)."
+    "explicacion": "Las entradas «Más…» de los desplegables casi nunca abren un cuadro propio: llevan al cuadro general que corresponde, colocando el foco en la parte que interesa. Por eso «Más subrayados…» aterriza en el cuadro Fuente y «Opciones de interlineado…» en el cuadro Párrafo. · «Bordes y sombreado…» es la excepción aparente: ese sí es un cuadro con nombre propio, al que además se llega desde Diseño ▸ Bordes de página, aunque entonces abre en otra ficha. · Y el degradado del color de fuente no lleva a ningún cuadro, sino a un panel lateral. · El destino que sobra, el cuadro Tabulaciones, no se abre desde ninguna de las cuatro: se llega a él desde el propio cuadro Párrafo, desde el desplegable de interlineado y haciendo doble clic en la regla."
   },
   {
     "id": "inicio-465",
@@ -6786,7 +6785,7 @@
         "Ctrl + Mayús + 8"
       ]
     ],
-    "explicacion": "Alt+Ctrl+H resalta (prueba en vivo); Ctrl+Mayús+8 muestra/oculta las marcas de formato (¶)."
+    "explicacion": "Alt+Ctrl+H aplica el resaltado con el color cargado en el botón. ⚠️ Ojo: no figura en el cuadro Personalizar teclado de esta instalación; está confirmada probándola en vivo. Cuidado con Ctrl+H, que aumenta la sangría izquierda, y con Ctrl+Mayús+H, que reduce la francesa: tres combinaciones con la misma letra y tres efectos distintos. · Ctrl+Mayús+8 muestra y oculta las marcas de formato, el mismo interruptor que el botón ¶ del grupo Párrafo. En el teclado español el paréntesis de apertura se obtiene con Mayús y el 8, así que «Ctrl+(» describe esa misma pulsación: son la misma tecla, no dos atajos."
   },
   {
     "id": "inicio-483",
@@ -6813,7 +6812,7 @@
         "Alternar mayúsculas y minúsculas"
       ]
     ],
-    "explicacion": "Son las cinco opciones exactas del menú Aa del grupo Fuente."
+    "explicacion": "Las cinco entradas del menú Aa son «Tipo oración.», «minúscula», «MAYÚSCULAS», «Poner En Mayúsculas Cada Palabra» y «Alternar mayúsculas y minúsculas», y cada una viene escrita con su propio efecto ya aplicado, de modo que el menú se explica solo. · Las dos que faltaban son las que más se olvidan: la de las iniciales por su nombre largo, y la de alternar porque casi nunca se usa. Esta última invierte el estado de cada letra, no alterna una sí y otra no, que es lo que sugiere el nombre. · Todas reescriben el texto de verdad, a diferencia de las casillas Mayúsculas y Versalitas del cuadro Fuente, que solo cambian cómo se presenta."
   },
   {
     "id": "inicio-36",
