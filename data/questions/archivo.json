@@ -5684,6 +5684,61 @@
     "explicacion": "Los datos vinculados son los que vienen de otro archivo: una tabla o un gráfico pegados con vínculo desde Excel. Esta casilla vuelve a leer el origen antes de imprimir. · La opción «Actualizar campos antes de imprimir» es la vecina de la que hay que distinguirla: actualiza los CAMPOS de Word, que son internos (número de página, fecha, referencias), y no sabe nada de archivos externos. La pregunta se reduce a si el dato viene de dentro o de fuera del documento. · Si el archivo de origen se ha movido o renombrado, el vínculo se rompe y esta casilla no puede arreglarlo: hay que repararlo desde el cuadro de vínculos."
   },
   {
+    "id": "archivo-415",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Presentación)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "opciones-presentacion",
+    "subtopic": null,
+    "tema": "Opciones — Presentación",
+    "sourceQuestionId": "framing-archivo-04",
+    "generado": true,
+    "enunciado": "El panel Opciones → Presentación decide qué se ve del documento en pantalla y en el papel. ¿Cuál de estos ajustes NO está en él?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Mostrar marcas de resaltado"
+      },
+      {
+        "letter": "B",
+        "text": "Imprimir texto oculto"
+      },
+      {
+        "letter": "C",
+        "text": "Mostrar límites de texto"
+      },
+      {
+        "letter": "D",
+        "text": "Mostrar espacio en blanco entre páginas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "«Mostrar límites de texto» está en Opciones → AVANZADAS, en la sección «Mostrar contenido de documento», junto a los marcadores y las marcas de recorte. · Es el distractor más difícil del panel porque encaja perfectamente con los otros tres: los cuatro empiezan por «Mostrar» y los cuatro deciden qué se ve. Word reparte esa competencia entre dos paneles, Presentación y Avanzadas, sin una frontera evidente. · Los otros tres sí están en Presentación: los resaltados y el espacio entre páginas en «Opciones de presentación de página», y el texto oculto en «Opciones de impresión». · Regla útil: si la casilla empieza por «Imprimir», es del panel Presentación."
+  },
+  {
+    "id": "archivo-414",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Presentación)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-presentacion",
+    "subtopic": null,
+    "tema": "Opciones — Presentación",
+    "sourceQuestionId": "framing-archivo-03",
+    "generado": true,
+    "enunciado": "Lo que se marca en «Mostrar siempre estas marcas de formato en la pantalla» solo se ve mientras el botón ¶ de la cinta esté pulsado.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso, y de ahí el «siempre» del nombre de la sección: lo que se marca ahí se ve con el botón ¶ apagado. · El botón ¶ de Inicio ▸ Párrafo (o Ctrl+Mayús+8) enciende TODAS las marcas mientras está pulsado y las apaga al volver a pulsarlo; estas casillas dejan puestas solo las que elijas, de forma permanente. · Por eso se puede tener el ¶ apagado y seguir viendo, por ejemplo, solo las tabulaciones. · La última casilla de la lista, «Mostrar todas las marcas de formato», sí deja activadas y bloqueadas todas las de arriba: equivale a dejar el botón ¶ pulsado para siempre."
+  },
+  {
     "id": "archivo-72",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Opciones",
@@ -8479,6 +8534,61 @@
     "explicacion": "Es el único de los tres controles de la sección que es un BOTÓN y no un ajuste: actúa en el momento y pide confirmación, porque borra también lo que esté pendiente de subir. · La casilla de borrar AL CERRAR solo se aplicará a partir del próximo cierre, y el campo de DÍAS, cuando caduquen: ninguna de las dos arregla algo que ya está corrupto. La diferencia entre configurar un comportamiento y ejecutar una acción es todo el ejercicio, y las tres opciones empiezan igual para que no se resuelva por la forma. · La cuarta es de otra sección del panel Guardar y ni siquiera toca la caché."
   },
   {
+    "id": "archivo-413",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Guardar)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "opciones-guardar",
+    "subtopic": null,
+    "tema": "Opciones — Guardar",
+    "sourceQuestionId": "framing-archivo-02",
+    "generado": true,
+    "enunciado": "Repasas el panel Opciones → Guardar. ¿Cuál de estos ajustes NO está ahí?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El intervalo de minutos de la Autorrecuperación"
+      },
+      {
+        "letter": "B",
+        "text": "El formato de archivo predeterminado al guardar"
+      },
+      {
+        "letter": "C",
+        "text": "La casilla de crear siempre una copia de seguridad"
+      },
+      {
+        "letter": "D",
+        "text": "La casilla de incrustar fuentes en el archivo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "«Crear siempre copia de seguridad» está en Opciones → AVANZADAS, en su sección Guardar, no en el panel Guardar. Es el distractor más duro posible porque los dos sitios se llaman igual y los dos van de guardar: Word reparte los ajustes de guardado entre dos paneles distintos. · El intervalo de Autorrecuperación y el formato predeterminado sí están en el panel Guardar, en su primera pantalla. · La incrustación de fuentes también, en la sección «Mantener la fidelidad al compartir este documento», que lleva el nombre del documento entre corchetes. · Regla práctica: lo que se guarda DENTRO del archivo y lo que decide CUÁNDO y DÓNDE se escribe están en el panel Guardar; el resto, en Avanzadas."
+  },
+  {
+    "id": "archivo-412",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Guardar)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-guardar",
+    "subtopic": null,
+    "tema": "Opciones — Guardar",
+    "sourceQuestionId": "framing-archivo-01",
+    "generado": true,
+    "enunciado": "El panel Opciones → Guardar tiene cuatro campos de carpeta distintos: la de archivos locales, la de archivos con Autorrecuperación, la de plantillas personales y la de borradores del servidor.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero, y confundirlos es el error más frecuente del panel. · La de archivos locales es donde se abre el cuadro Guardar como; la de Autorrecuperación es donde Word deja los .asd; la de plantillas personales es la que alimenta la pestaña «Personal» del panel Nuevo, y si está vacía las plantillas propias no aparecen aunque existan; la de borradores del servidor está en su propia sección, «Edición sin conexión», y guarda las copias de trabajo de archivos desprotegidos de SharePoint. · Hay un quinto sitio con carpetas, el botón «Ubicaciones de archivos…» de Avanzadas → General, que las lista todas de golpe."
+  },
+  {
     "id": "archivo-80",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Opciones",
@@ -8835,6 +8945,61 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Word no instala teclados: son cosa del sistema operativo, y por eso el panel se limita a poner un enlace que abre la configuración de idioma de Windows. Saber que Word y Windows llevan listas separadas es lo que se está midiendo. · La opción «El botón Agregar un idioma de la…» es el distractor natural, y es justo lo que el enunciado dice que ya se hizo: añadir el idioma a Word permite corregir en francés, pero no cambia lo que escupe el teclado. · Las otras dos también son elementos reales de la misma sección."
+  },
+  {
+    "id": "archivo-417",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Idioma)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "opciones-idioma",
+    "subtopic": null,
+    "tema": "Opciones — Idioma",
+    "sourceQuestionId": "framing-archivo-06",
+    "generado": true,
+    "enunciado": "Miras los botones de la sección «Corrección e idiomas de creación». ¿Cuál de estas cosas NO se puede hacer desde ahí?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Añadir un idioma nuevo para poder escribir y corregir en él"
+      },
+      {
+        "letter": "B",
+        "text": "Marcar uno de la lista como idioma preferido de creación"
+      },
+      {
+        "letter": "C",
+        "text": "Marcar en qué idioma está un párrafo concreto del documento"
+      },
+      {
+        "letter": "D",
+        "text": "Quitar de la lista un idioma que ya no se usa"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "Marcar el idioma de un fragmento se hace desde Revisar ▸ Idioma ▸ «Establecer idioma de corrección», con el texto seleccionado: es una propiedad del TEXTO, no de la aplicación, y viaja dentro del documento. · El panel Idioma solo dice qué idiomas tienes disponibles y cuál prefieres, no en cuál está escrito cada trozo. Esa distinción entre configurar la aplicación y marcar el texto es la que decide la pregunta, y es la causa habitual de que el corrector «no funcione» en un documento multilingüe. · Los otros tres botones sí están: Agregar un idioma, Establecer como Preferido y Quitar."
+  },
+  {
+    "id": "archivo-416",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Idioma)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-idioma",
+    "subtopic": null,
+    "tema": "Opciones — Idioma",
+    "sourceQuestionId": "framing-archivo-05",
+    "generado": true,
+    "enunciado": "En el panel Opciones → Idioma, cambiar el idioma para mostrar de Office cambia también el idioma con el que el corrector revisa el texto.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: son las dos listas del panel y son independientes. · «Idioma para mostrar» cambia los menús, los botones y la ayuda, y para que surta efecto hay que reiniciar Word. · «Corrección e idiomas de creación» es la que decide en qué idiomas puedes escribir y con qué diccionarios se revisa. · Se puede tener Word en inglés corrigiendo en español, o al revés, que es justo la confusión que se pregunta. · Y hay un tercer nivel: marcar el idioma de un fragmento concreto, que se hace desde Revisar ▸ Idioma ▸ Establecer idioma de corrección."
   },
   {
     "id": "archivo-82",
@@ -9228,6 +9393,61 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Es la única casilla de la sección «Opciones de navegación con el teclado» y hace que las flechas sigan el orden de lectura del documento en lugar del orden interno en que están colocados los objetos, que es lo que provoca los saltos raros. · «Expandir todos los títulos» también ayuda con un lector de pantalla y también es del documento, así que es el distractor con más fundamento: pero resuelve el contenido oculto, no el orden del recorrido. · Las otras dos son avisos: una del comprobador y otra de acciones completadas."
+  },
+  {
+    "id": "archivo-419",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Accesibilidad)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "opciones-accesibilidad",
+    "subtopic": null,
+    "tema": "Opciones — Accesibilidad",
+    "sourceQuestionId": "framing-archivo-08",
+    "generado": true,
+    "enunciado": "Recorres el panel Opciones → Accesibilidad. ¿Cuál de estos ajustes NO está ahí?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Generar automáticamente el texto alternativo de las imágenes"
+      },
+      {
+        "letter": "B",
+        "text": "Avisar con un sonido al completar ciertas acciones"
+      },
+      {
+        "letter": "C",
+        "text": "Comprobar la accesibilidad mientras se trabaja"
+      },
+      {
+        "letter": "D",
+        "text": "Elegir el contraste de color de la interfaz de Word"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El contraste de la interfaz no se elige en este panel: el aspecto general se cambia con el «Tema de Office» de General o del panel Cuenta, y los modos de alto contraste de verdad son de Windows, no de Word. · Es un distractor duro porque el contraste es una necesidad de accesibilidad de libro, y encaja con todo lo demás del panel. · Los otros tres sí están: la generación de texto alternativo en su propia sección, el aviso sonoro en «Opciones de notificación» junto al aviso animado, y el comprobador continuo en «Que el documento sea accesible a otras personas». · El comprobador sí revisa el contraste DEL DOCUMENTO, que es otra cosa."
+  },
+  {
+    "id": "archivo-418",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Accesibilidad)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-accesibilidad",
+    "subtopic": null,
+    "tema": "Opciones — Accesibilidad",
+    "sourceQuestionId": "framing-archivo-07",
+    "generado": true,
+    "enunciado": "Algunas opciones del panel Accesibilidad son las mismas que ya están en otros paneles del cuadro Opciones, y cambiarlas en uno las cambia en el otro.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. · «Estilo de información en pantalla» y «Mostrar la pantalla Inicio al iniciar la aplicación» están también en el panel General, y «Expandir todos los títulos al abrir un documento» y «Mostrar teclas de método abreviado» aparecen igualmente en Avanzadas. No son copias: es el mismo ajuste con dos accesos. · Word las repite en Accesibilidad para tener juntas todas las que afectan a la lectura y a la navegación, aunque estén repartidas por el cuadro. · La consecuencia práctica es que buscarlas solo en General lleva a fallar preguntas que las sitúan en Accesibilidad, y al revés: las dos respuestas son correctas."
   },
   {
     "id": "archivo-85",
@@ -9910,6 +10130,25 @@
     "explicacion": "Es una casilla muy concreta de «Opciones de edición», y solo actúa sobre el comando Captura de pantalla de la pestaña Insertar. · La opción «Rutas de red e Internet por hipervínculos» es el distractor de más nivel: también crea hipervínculos automáticos, pero al escribir una dirección, y además está en otro sitio, en la ficha «Autoformato mientras escribe» del cuadro Autocorrección. Dos automatismos de hipervínculo en dos paneles distintos. · La opción «Utilizar CTRL + clic del mouse para…» decide cómo se SIGUE un vínculo, no si se crea. · La opción «Abrir hipervínculos admitidos a archivos de Office» es de la apertura de vínculos a archivos de Office."
   },
   {
+    "id": "archivo-420",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-avz-edicion",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (Edición)",
+    "sourceQuestionId": "framing-archivo-09",
+    "generado": true,
+    "enunciado": "En Opciones → Avanzadas hay dos casillas distintas para la tecla Insert, y si se marcan las dos, la de pegar tiene prioridad sobre la de sobrescribir.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero. · «Usar la tecla Insert para controlar el modo Sobrescribir» está en «Opciones de edición» y «Usar la tecla Insert para pegar» en «Cortar, copiar y pegar»: dos secciones del mismo panel compitiendo por la misma tecla. · Con las dos marcadas, la tecla pega y deja de conmutar el modo. · Ojo con no confundir la casilla que da el control a la tecla con «Usar modo Sobrescribir», que enciende el modo directamente: se puede tener el modo activado sin que la tecla lo toque. · Mayús+Insert pega igualmente, sin necesidad de marcar nada."
+  },
+  {
     "id": "archivo-405",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Opciones — Avanzadas — Edición",
@@ -10288,6 +10527,61 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "El botón «Configuración…» está a la derecha de la casilla y abre un cuadro con la lista de ajustes uno a uno, cada uno con su casilla. Es el mando fino frente al grueso, y solo se habilita si la casilla está marcada. · La opción «A la casilla Usar cortar y pegar…» es esa casilla, que el enunciado dice que ya está activada: es la respuesta a la pregunta anterior. · El botón flotante de la opción «Al botón Opciones de pegado que aparece…» deja cambiar el formato de un pegado concreto, pero no configura nada de forma permanente. · Es el mismo patrón que «Estilo de escritura» y su botón «Configuración…» del panel Revisión."
+  },
+  {
+    "id": "archivo-422",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "opciones-avz-pegar",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (Pegar)",
+    "sourceQuestionId": "framing-archivo-11",
+    "generado": true,
+    "enunciado": "Repasas la sección «Cortar, copiar y pegar» de Avanzadas. ¿Cuál de estos ajustes NO está ahí?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El desplegable de cómo se insertan o pegan las imágenes"
+      },
+      {
+        "letter": "B",
+        "text": "La casilla de mostrar el botón de opciones de pegado"
+      },
+      {
+        "letter": "C",
+        "text": "La casilla de usar cortar y pegar inteligentemente"
+      },
+      {
+        "letter": "D",
+        "text": "El número de elementos que guarda el Portapapeles"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "El Portapapeles de Office guarda 24 elementos y ese límite no se configura en ningún sitio: no hay ajuste para cambiarlo, ni aquí ni en ningún otro panel. Es un distractor duro porque es justo lo que uno esperaría encontrar en una sección llamada «Cortar, copiar y pegar». · Los otros tres sí están: el desplegable del ajuste de texto con el que entran las imágenes, la casilla del botón flotante que aparece tras pegar, y la del pegado inteligente con su botón «Configuración…» al lado. · Lo que sí se puede es vaciar el panel del Portapapeles con su botón «Borrar todo»."
+  },
+  {
+    "id": "archivo-421",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-avz-pegar",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (Pegar)",
+    "sourceQuestionId": "framing-archivo-10",
+    "generado": true,
+    "enunciado": "La sección «Cortar, copiar y pegar» tiene tres desplegables de pegado: dentro del mismo documento, entre documentos y desde otras aplicaciones.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: son CUATRO. Falta «Pegar entre documentos cuando haya conflicto entre definiciones de estilos», que tiene desplegable propio para cuando los dos archivos definen distinto un estilo con el mismo nombre. · Que existan dos para «entre documentos», el caso normal y el del conflicto, es el matiz que más se pregunta de esta sección. · Los cuatro ofrecen las mismas opciones de formato (mantener el de origen, combinar, usar los estilos del destino o quedarse solo con el texto), así que la única forma de acertar es saber qué situación gobierna cada uno. · A esta sección se llega también por Inicio ▸ Pegar ▸ «Establecer Pegar predeterminado…»."
   },
   {
     "id": "archivo-92",
@@ -10752,6 +11046,61 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "El estado plegado de un título se guarda dentro del archivo; esta casilla hace que Word lo ignore al abrir. · Esta misma opción aparece también en el panel Accesibilidad, en «Opciones de presentación del documento», y es el mismo ajuste: marcarla en un sitio la marca en el otro. Word repite en Accesibilidad varias opciones que ya están en otros paneles. · «Mostrar el texto oculto» es el distractor de nivel porque también saca a la luz contenido que no se ve, pero por un motivo distinto: uno está plegado y el otro tiene el atributo de oculto."
+  },
+  {
+    "id": "archivo-424",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "opciones-avz-mostrar",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (Mostrar contenido)",
+    "sourceQuestionId": "framing-archivo-13",
+    "generado": true,
+    "enunciado": "En la sección «Mostrar contenido de documento» de Avanzadas, ¿cuál de estos elementos NO se puede hacer visible?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Los marcadores, con corchetes grises"
+      },
+      {
+        "letter": "B",
+        "text": "Los códigos de campo, en lugar de sus valores"
+      },
+      {
+        "letter": "C",
+        "text": "Los límites del área de texto y los márgenes"
+      },
+      {
+        "letter": "D",
+        "text": "Los saltos de sección, con su línea punteada"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Los saltos de sección no se encienden desde aquí: son una marca de formato y se ven con el botón ¶ de la cinta (Ctrl+Mayús+8), o dejando marcada «Mostrar todas las marcas de formato» en el panel Presentación. En la vista Borrador se ven siempre. · Es un distractor difícil porque su línea punteada se parece mucho a la de los límites de texto, que sí es una casilla de esta sección. · Los otros tres sí son casillas de esta sección. · La regla que ordena el panel: las MARCAS DE FORMATO están en Presentación, y los ELEMENTOS del documento, en Avanzadas."
+  },
+  {
+    "id": "archivo-423",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-avz-mostrar",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (Mostrar contenido)",
+    "sourceQuestionId": "framing-archivo-12",
+    "generado": true,
+    "enunciado": "Ver el texto oculto en pantalla e imprimirlo son dos ajustes independientes, en dos sitios distintos del cuadro Opciones.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero, y hasta tres sitios. · «Mostrar el texto oculto en pantalla» está en Avanzadas → Mostrar contenido de documento. · «Texto oculto» aparece además como marca de formato en Presentación → «Mostrar siempre estas marcas de formato». · Y para el papel hace falta «Imprimir texto oculto», en Presentación → Opciones de impresión. · Verlo no implica imprimirlo, y de ahí la sorpresa habitual: el texto sale en pantalla y no en el papel, o al revés. · El Inspector de documento también avisa del texto oculto como contenido a revisar antes de publicar."
   },
   {
     "id": "archivo-96",
@@ -11256,6 +11605,61 @@
     "explicacion": "Son los botones con un signo más que aparecen al pasar el puntero por el borde entre dos filas o dos columnas; esta casilla los enciende y los apaga. Aunque estén desactivados, siempre queda la cinta Disposición de tabla para insertar. · «Mostrar teclas de método abreviado» comparte la idea de algo que aparece al pasar el ratón, y es el distractor razonable, pero es de la cinta y no de las tablas. · «Mostrar límites de texto» dibuja el contorno del área de escritura, que en las tablas sin bordes se confunde con las cuadrículas."
   },
   {
+    "id": "archivo-426",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "opciones-avz-presentacion",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (Presentación)",
+    "sourceQuestionId": "framing-archivo-15",
+    "generado": true,
+    "enunciado": "Repasas la sección Presentación de Avanzadas. ¿Cuál de estos ajustes NO está ahí?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "La unidad de medida de la regla y de los cuadros de diálogo"
+      },
+      {
+        "letter": "B",
+        "text": "El ancho del panel de estilos de las vistas Borrador y Esquema"
+      },
+      {
+        "letter": "C",
+        "text": "La casilla de mostrar la barra de desplazamiento vertical"
+      },
+      {
+        "letter": "D",
+        "text": "La casilla de mostrar la regla horizontal y vertical"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "Aquí solo está la casilla de la regla VERTICAL en la vista Diseño de impresión. Encender o apagar las reglas se hace desde la pestaña Vista ▸ Mostrar ▸ Regla, y afecta a las dos a la vez. · Ese reparto explica un síntoma que desconcierta: con la regla apagada en Vista, marcar la casilla de Avanzadas no muestra nada, porque solo decide si, CUANDO están encendidas, aparece además la vertical. · Los otros tres sí están en esta sección: las unidades, el ancho del panel de estilos y las dos barras de desplazamiento, que se apagan por separado."
+  },
+  {
+    "id": "archivo-425",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-avz-presentacion",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (Presentación)",
+    "sourceQuestionId": "framing-archivo-14",
+    "generado": true,
+    "enunciado": "La sección Presentación de Avanzadas tiene un único campo numérico: el número de documentos recientes que se muestran.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: son TRES campos numéricos, y van seguidos en pantalla, que es lo que los hace confundibles. · «Mostrar este número de documentos recientes» controla la lista larga del panel Abrir. · «Acceder rápidamente a este número de documentos recientes» controla los accesos directos del final del panel de navegación de Backstage; con cero, desaparecen. · «Mostrar este número de carpetas recientes no favoritas» cuenta CARPETAS, y la coletilla importa: las ancladas se muestran siempre y no gastan ese cupo. · Los tres son un número y los tres hablan de recientes: la pregunta siempre es qué cuenta cada uno."
+  },
+  {
     "id": "archivo-98",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Opciones",
@@ -11648,6 +12052,61 @@
     "explicacion": "Imprime solo lo escrito en los campos de formulario, dejando fuera las etiquetas, las líneas y el resto del diseño, que es exactamente lo que ya viene impreso en el papel. · La opción «Guardar datos de formulario como archivo de…» es la pareja de la que hay que distinguirla: hace lo mismo pero para exportar en vez de para imprimir, guardando los datos en un archivo de texto delimitado, y vive en otra sección del mismo panel, «Mantener la fidelidad al compartir este documento». Imprimir los datos y exportarlos son dos casillas distintas con la misma idea. · Las otras dos revelan estructura interna."
   },
   {
+    "id": "archivo-428",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "opciones-avz-imprimir",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (Imprimir)",
+    "sourceQuestionId": "framing-archivo-17",
+    "generado": true,
+    "enunciado": "Repasas la sección Imprimir de Avanzadas. ¿Cuál de estos ajustes NO está ahí?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Utilizar la calidad de borrador de la impresora"
+      },
+      {
+        "letter": "B",
+        "text": "Imprimir las páginas en orden inverso"
+      },
+      {
+        "letter": "C",
+        "text": "Imprimir los dibujos creados en Word"
+      },
+      {
+        "letter": "D",
+        "text": "Imprimir en segundo plano"
+      }
+    ],
+    "matching": null,
+    "respuesta": "C",
+    "explicacion": "«Imprimir dibujos creados en Word» está en el panel PRESENTACIÓN, en su sección «Opciones de impresión», junto a imprimir fondos, texto oculto y propiedades del documento. · Es el distractor más duro del bloque porque las cuatro empiezan por «Imprimir» y las cuatro son de impresión: la frontera no está en el nombre sino en si el ajuste habla de la máquina o del contenido. · Los otros tres sí están en Avanzadas: calidad de borrador, orden inverso y segundo plano, que son cosas de cómo se manda el trabajo, no de qué lleva el documento."
+  },
+  {
+    "id": "archivo-427",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-avz-imprimir",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (Imprimir)",
+    "sourceQuestionId": "framing-archivo-16",
+    "generado": true,
+    "enunciado": "Los ajustes de impresión de Word están repartidos entre dos paneles distintos del cuadro Opciones: uno en Avanzadas y otro en Presentación.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": true,
+    "explicacion": "Verdadero, y es de lo que más despista del cuadro. · En Avanzadas ▸ Imprimir están los de la MÁQUINA y el trabajo de impresión: orden inverso, calidad de borrador, segundo plano, bandeja predeterminada, doble cara manual, ajuste de A4 a Carta. · En Presentación ▸ Opciones de impresión están los del CONTENIDO: imprimir dibujos, fondos, texto oculto, propiedades del documento y actualizar campos o vínculos antes de imprimir. · Hay además un tercer sitio, el panel Imprimir de Backstage, con lo que se decide para esa impresión concreta: copias, páginas, intercalado, orientación, tamaño, márgenes y páginas por hoja."
+  },
+  {
     "id": "archivo-308",
     "sourceFile": "archivo.json",
     "bloque": "Archivo — Opciones",
@@ -11790,6 +12249,61 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Con ella, Word escribe el archivo mientras te deja seguir trabajando; se nota un pequeño indicador en la barra de estado. · «Imprimir en segundo plano» es la casilla hermana, con la misma idea aplicada a la impresora, y está en la sección Imprimir del mismo panel Avanzadas. Saber cuál vive en cada sección es el ejercicio. · «Crear siempre copia de seguridad» va en dirección contraria: hace el guardado más lento, porque además del archivo escribe la copia .wbk."
+  },
+  {
+    "id": "archivo-430",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "opciones-avz-guardar",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (Guardar)",
+    "sourceQuestionId": "framing-archivo-19",
+    "generado": true,
+    "enunciado": "Miras la sección Guardar del panel Avanzadas. ¿Cuál de estos ajustes NO está ahí?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Preguntar antes de guardar la plantilla Normal"
+      },
+      {
+        "letter": "B",
+        "text": "Cada cuántos minutos se guarda la información de Autorrecuperación"
+      },
+      {
+        "letter": "C",
+        "text": "Permitir guardar en segundo plano"
+      },
+      {
+        "letter": "D",
+        "text": "Copiar en el equipo los archivos guardados de forma remota"
+      }
+    ],
+    "matching": null,
+    "respuesta": "B",
+    "explicacion": "El intervalo de Autorrecuperación está en el panel GUARDAR, no en Avanzadas: Word reparte los ajustes de guardado entre los dos, y esa frontera es lo que se pregunta. · En Avanzadas ▸ Guardar hay cuatro casillas y ninguna es de Autorrecuperación: el aviso de la plantilla Normal, la copia de seguridad .wbk, el guardado en segundo plano y la copia local de archivos remotos. · Regla práctica: el panel Guardar decide CUÁNDO y DÓNDE se escribe el archivo; Avanzadas ▸ Guardar, CÓMO se comporta Word mientras lo hace."
+  },
+  {
+    "id": "archivo-429",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-avz-guardar",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (Guardar)",
+    "sourceQuestionId": "framing-archivo-18",
+    "generado": true,
+    "enunciado": "La copia de seguridad automática de Word y la Autorrecuperación son la misma protección con dos nombres.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: protegen de cosas distintas, se configuran en paneles distintos y hasta usan extensiones distintas. · «Crear siempre copia de seguridad» está en Avanzadas ▸ Guardar y deja junto al original un archivo .wbk con la versión ANTERIOR cada vez que guardas: protege de haber guardado un cambio que no querías. Solo conserva una generación. · La Autorrecuperación está en el panel Guardar, escribe archivos .asd cada pocos minutos mientras trabajas y protege de un cierre inesperado. · Se pueden tener las dos a la vez, y de hecho conviene: cubren fallos que no se solapan."
   },
   {
     "id": "archivo-102",
@@ -12687,6 +13201,61 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "En chino, japonés y coreano no se corta en cualquier punto: hay caracteres que no pueden empezar ni terminar línea, y esta casilla aplica esas reglas. · «Permitir guiones entre páginas o columnas» es su vecina de sección y también decide dónde puede romperse el texto, pero con guiones y en un idioma occidental. Las dos van de dónde se corta la línea, que es lo que las hace confundibles. · Las opciones «Usar justificación inteligente» y «Usar tipografía avanzada» son de Tipografía avanzada: reparto del espacio y características OpenType."
+  },
+  {
+    "id": "archivo-432",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": true,
+    "section": "archivo",
+    "topic": "opciones-avz-otras",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (otras)",
+    "sourceQuestionId": "framing-archivo-21",
+    "generado": true,
+    "enunciado": "El final del panel Avanzadas agrupa varias secciones pequeñas. ¿Cuál de estas NO existe ahí?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Lápiz"
+      },
+      {
+        "letter": "B",
+        "text": "Tamaño y calidad de la imagen"
+      },
+      {
+        "letter": "C",
+        "text": "Gráfico"
+      },
+      {
+        "letter": "D",
+        "text": "Tabla"
+      }
+    ],
+    "matching": null,
+    "respuesta": "D",
+    "explicacion": "No hay ninguna sección «Tabla» en Avanzadas, y es el distractor natural porque las tablas son un objeto de Word tan de primera línea como las imágenes o los gráficos, que sí tienen la suya. Lo de las tablas está repartido: los botones emergentes para añadir filas están en Presentación, y el resto en las cintas contextuales de tabla. · Las otras tres sí existen: «Lápiz» con sus dos casillas para la tableta, «Tamaño y calidad de la imagen» con la resolución y la compresión, y «Gráfico» con una única casilla, la de que las propiedades sigan al punto de datos."
+  },
+  {
+    "id": "archivo-431",
+    "sourceFile": "archivo.json",
+    "bloque": "Archivo — Opciones (Avanzadas)",
+    "tipo": "verdadero_falso",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "archivo",
+    "topic": "opciones-avz-otras",
+    "subtopic": null,
+    "tema": "Opciones — Avanzadas (otras)",
+    "sourceQuestionId": "framing-archivo-20",
+    "generado": true,
+    "enunciado": "Las casillas de «Opciones de diseño para» del panel Avanzadas son ajustes de la aplicación: valen igual para todos los documentos que abras.",
+    "opciones": [],
+    "matching": null,
+    "respuesta": false,
+    "explicacion": "Falso: esa sección lleva el nombre del documento abierto entre corchetes, y lo que se marca en ella se guarda DENTRO de ese archivo. No es la única así: «Mantener la fidelidad al compartir este documento» funciona igual. · Son ajustes de compatibilidad tipográfica muy finos (no poner espacios extra al principio de página, suprimir el espaciado al final, dar aire a los caracteres subrayados, no expandir los espacios al cortar con Mayús+Entrar, permitir guiones entre páginas, reglas de salto de línea asiáticas) y viajan con el archivo. · Por eso un documento puede comportarse distinto en otro equipo aunque el Word sea el mismo, y por eso conviene mirarlos cuando algo «solo pasa con este documento»."
   },
   {
     "id": "archivo-105",

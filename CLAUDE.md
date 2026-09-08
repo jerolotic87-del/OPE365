@@ -208,7 +208,31 @@ Reescritura **a mano, ítem por ítem** — ningún script genera contenido.
 `scripts/aplicar_reescritura.py` solo vuelca al JSON el texto ya escrito y
 valida (4 opciones, respuesta viva, sin repetidas, longitudes, explicación).
 
-**Progreso de la reescritura**: `archivo` **410/410 — TERMINADO**. Auditoría
+**Equilibrio de tipos: qué medir y qué NO (sep-2026).** Al terminar `archivo`
+se auditó su reparto. Conclusiones que valen para el resto de secciones:
+
+- **El % de `opcion_unica` no se toca.** `archivo` está al 86 % frente al 68 %
+  del banco, pero el examen de oposición es de opción única: ese sesgo es
+  realismo, no descuido. Repartir tipos hasta cuadrar el promedio empeora la
+  sección.
+- **Lo que sí hay que medir son los FRAMINGS por concepto.** `deriveMastery`
+  exige ≥2 framings distintos para llegar a `asentado`, y `framingOf` los saca
+  de `tipo`/`categoria`/`negativa`. Un topic cuyas preguntas sean todas
+  `categoria:"ruta"` da un único framing y **solo se asienta si el usuario
+  además estudia sus flashcards**: quien practique solo con test (Práctica,
+  examen, Duelo, Contra Word) no lo consigue nunca y el priorizador se lo
+  sirve indefinidamente. `archivo` tenía **10 topics así** (141 preguntas).
+- **Arreglo dirigido, no reparto general**: 1 negativa + 1 V/F por topic
+  atascado (`archivo-412..432`, `sourceQuestionId` `framing-archivo-NN`).
+  `archivo` pasa a **0 topics con un solo framing**, y de paso la V/F sube al
+  12,3 % y las negativas al 7,4 % — como efecto, no como objetivo.
+- **Al añadir V/F, vigilar el balance verdadero/falso** de la sección: la
+  primera tanda dejó 30/23 y hubo que invertir cuatro enunciados para volver a
+  26/27. Herramienta: `scripts/anadir_framings.py` (solo vuelca ítems ya
+  redactados y valida esquema).
+
+**Progreso de la reescritura**: `archivo` **431 preguntas, TERMINADO** (410
+reescritas a mano + 21 nuevas de framing). Auditoría
 final del fichero entero: 0 preguntas donde la correcta se delate por
 longitud, 0 explicaciones de menos de 120 caracteres, 0 citas de fuentes
 externas, 0 opciones truncadas.
