@@ -7986,28 +7986,28 @@
     "tema": "Sangría",
     "difficulty": "media",
     "sourceQuestionId": "P-0043",
-    "enunciado": "¿Cuantos tipos de sangria ofrece el cuadro de dialogo Parrafo de Word 365?",
+    "enunciado": "Abres el bloque «Sangría» del cuadro Párrafo para repasar qué tipos de sangría puedes aplicar. ¿Cuántos hay y cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2 (izquierda y derecha)"
+        "text": "4: izquierda, derecha, de primera línea y francesa"
       },
       {
         "letter": "B",
-        "text": "3 (izquierda, derecha y primera linea)"
+        "text": "3: izquierda, derecha y de primera línea"
       },
       {
         "letter": "C",
-        "text": "4 (izquierda, derecha, primera linea y francesa)"
+        "text": "2: izquierda y derecha"
       },
       {
         "letter": "D",
-        "text": "5 (izquierda, derecha, primera linea, francesa y sangria especial)"
+        "text": "5: las cuatro anteriores más la sangría simétrica"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El cuadro de dialogo Parrafo ofrece 4 tipos de sangria: izquierda, derecha, de primera linea y francesa. Las sangrías izquierda y derecha admiten valores negativos, mientras que la de primera linea y la francesa solo admiten valores positivos."
+    "respuesta": "A",
+    "explicacion": "Son cuatro, repartidas en dos campos y un desplegable: «Izquierda» y «Derecha» tienen cuadro numérico propio, y las otras dos salen del desplegable «Especial», que ofrece «(ninguna)», «Primera línea» y «Sangría francesa». Es la pregunta oficial de oposición más repetida sobre este cuadro. · Quedarse en tres o en dos es olvidar una de las dos del desplegable, que es donde menos se mira. · Y la sangría simétrica no es un quinto tipo: es una casilla que cambia el NOMBRE de las dos primeras, que pasan a llamarse Interior y Exterior para documentos a doble cara. · Las de izquierda y derecha admiten valores negativos; las del desplegable, no."
   },
   {
     "id": "inicio-44",
@@ -8022,28 +8022,28 @@
     "tema": "Sangría",
     "difficulty": "alta",
     "sourceQuestionId": "P-0285",
-    "enunciado": "¿Cuantas sangrías pueden aplicarse simultaneamente a un mismo parrafo como maximo en Word 365?",
+    "enunciado": "Los cuatro tipos de sangría del cuadro Párrafo no se pueden combinar todos a la vez. ¿Cuántos puede tener como máximo un mismo párrafo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2"
-      },
-      {
-        "letter": "B",
         "text": "3"
       },
       {
+        "letter": "B",
+        "text": "2"
+      },
+      {
         "letter": "C",
-        "text": "4 (todas las disponibles)"
+        "text": "4, todos a la vez"
       },
       {
         "letter": "D",
-        "text": "1 de cada tipo: izquierda mas una especial"
+        "text": "1, porque cada una anula a la anterior"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Aunque el cuadro de dialogo Parrafo ofrece 4 tipos de sangria, el maximo que puede aplicarse simultaneamente a un mismo parrafo es 3. Las 4 sangrías disponibles no pueden usarse todas a la vez."
+    "respuesta": "A",
+    "explicacion": "Tres: la izquierda, la derecha y una de las dos del desplegable «Especial». La razón está a la vista en el propio cuadro: primera línea y francesa comparten un único desplegable, así que elegir una descarta la otra, y es lógico, porque una empuja la primera línea hacia dentro y la otra la deja fuera. · Por eso no pueden ser cuatro. · Y desde luego no se anulan entre sí ni se quedan en dos: la izquierda y la derecha conviven sin problema con la especial, y de hecho es la combinación normal en una cita larga sangrada por los dos lados con la primera línea marcada."
   },
   {
     "id": "inicio-45",
@@ -8058,28 +8058,28 @@
     "tema": "Sangría",
     "difficulty": "alta",
     "sourceQuestionId": "P-0045",
-    "enunciado": "¿Cual es el valor predeterminado de sangria en Word 365 y cual es su rango valido?",
+    "enunciado": "Escribes a mano un valor en el campo de sangría izquierda del cuadro Párrafo. ¿Cuál es el valor de partida y entre qué límites lo acepta Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Predeterminado 1,25 cm; rango de 0 a 55,87 cm"
+        "text": "Parte de 1,25 cm; admite de −55,87 a 55,87 cm"
       },
       {
         "letter": "B",
-        "text": "Predeterminado 1,25 cm; rango de -55,87 a 55,87 cm"
+        "text": "Parte de 1,25 cm; admite de 0 a 55,87 cm"
       },
       {
         "letter": "C",
-        "text": "Predeterminado 2,5 cm; rango de 0 a 55,87 cm"
+        "text": "Parte de 2,5 cm; admite de 0 a 55,87 cm"
       },
       {
         "letter": "D",
-        "text": "Predeterminado 1 cm; rango de -30 a 30 cm"
+        "text": "Parte de 1 cm; admite de −30 a 30 cm"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El valor predeterminado de sangria en Word 365 es 1,25 cm. El rango valido va de -55,87 a 55,87 cm: las sangrias izquierda y derecha (y el campo Posicion del cuadro Tabulaciones) pueden ser negativas. Prueba en vivo del usuario (sep-2026): Word rechaza los valores fuera de ese rango con el aviso «La medida debe estar entre -55,87 cm y 55,87 cm»."
+    "respuesta": "A",
+    "explicacion": "El paso de sangría de Word es 1,25 cm, y el campo admite de −55,87 a 55,87 cm. Al teclear un valor fuera de rango, Word contesta con el aviso «La medida debe estar entre -55,87 cm y 55,87 cm». Prueba en vivo del usuario. · Que admita negativos es lo que decide esta pregunta y lo que más sorprende: un valor negativo saca el párrafo FUERA del margen, hacia el borde del papel, que es como se colocan las notas al margen. · Los campos del desplegable «Especial», en cambio, no admiten negativos. · El mismo rango vale para el campo Posición del cuadro Tabulaciones."
   },
   {
     "id": "inicio-46",
@@ -8094,28 +8094,28 @@
     "tema": "Sangría",
     "difficulty": "alta",
     "sourceQuestionId": "P-0286",
-    "enunciado": "En un documento que se imprimira a doble cara, ¿como se denominan las sangrías izquierda y derecha cuando se activa la opcion Sangrías simetricas en el cuadro de dialogo Parrafo?",
+    "enunciado": "Preparas un documento para imprimir a doble cara y marcas «Sangrías simétricas» en el cuadro Párrafo. ¿Qué cambia en los dos campos de sangría?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Par e Impar"
+        "text": "Pasan a llamarse «Interior» y «Exterior»"
       },
       {
         "letter": "B",
-        "text": "Interior y Exterior"
+        "text": "Pasan a llamarse «Par» e «Impar»"
       },
       {
         "letter": "C",
-        "text": "Delantera y Trasera"
+        "text": "Pasan a llamarse «Encuadernación» y «Corte»"
       },
       {
         "letter": "D",
-        "text": "Principal y Secundaria"
+        "text": "Siguen igual, pero se igualan sus dos valores"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Al activar la opcion Sangrías simetricas en documentos a doble cara, las sangrías izquierda y derecha pasan a denominarse Interior y Exterior. Par e Impar es la denominacion de paginas en la impresion a doble cara, no de sangrías."
+    "respuesta": "A",
+    "explicacion": "Las etiquetas cambian a «Interior» y «Exterior» porque a doble cara la izquierda y la derecha se intercambian de una página a otra: lo que interesa no es un lado fijo, sino el lado de la encuadernación y el del canto. Así una cita sangrada queda igual de bien en la página par y en la impar. · «Par» e «Impar» sí se usan en Word, pero para encabezados, pies y márgenes, no para sangrías: es el descarte más creíble. · «Encuadernación» también existe, como campo del cuadro Configurar página, que reserva espacio extra para el cosido. · Y los valores no se igualan: siguen siendo dos, independientes."
   },
   {
     "id": "inicio-168",
@@ -8130,28 +8130,28 @@
     "tema": "Sangría",
     "difficulty": "baja",
     "sourceQuestionId": "P-0422",
-    "enunciado": "Necesitas desplazar un párrafo completo hacia dentro desde el margen izquierdo, una distancia exacta en centímetros. ¿Qué campo debes utilizar dentro del cuadro Párrafo?",
+    "enunciado": "Quieres meter una cita larga hacia dentro por los dos lados, tres centímetros por la izquierda y tres por la derecha, sin tocar la primera línea. ¿Qué campos del cuadro Párrafo usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Izquierda"
+        "text": "«Izquierda» y «Derecha», con «Especial» en «(ninguna)»"
       },
       {
         "letter": "B",
-        "text": "Sangría Francesa"
+        "text": "«Izquierda» y «Derecha», con «Especial» en «Primera línea»"
       },
       {
         "letter": "C",
-        "text": "Derecha"
+        "text": "«Especial: Sangría francesa» con valor 3 cm"
       },
       {
         "letter": "D",
-        "text": "Sangría Especial"
+        "text": "«Izquierda» con valor 3 cm y «Sangrías simétricas» marcada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El campo Izquierda de la sección Sangría del cuadro de diálogo Párrafo desplaza todo el párrafo hacia dentro desde el margen izquierdo la distancia especificada en centímetros. Admite valores negativos para desplazar el párrafo hacia fuera del margen."
+    "explicacion": "Los campos «Izquierda» y «Derecha» mueven el bloque entero hacia dentro desde cada margen, y dejando «Especial» en «(ninguna)» todas las líneas quedan alineadas, incluida la primera. Es exactamente el formato de cita larga. · Poner «Especial» en «Primera línea» añadiría una sangría más a la primera, que es lo que el enunciado descarta. · La sangría francesa hace lo contrario: deja fuera la primera línea y mete las demás. · Y «Sangrías simétricas» no sangra nada por sí sola: solo cambia el nombre de los dos campos para trabajar a doble cara."
   },
   {
     "id": "inicio-169",
@@ -8166,28 +8166,28 @@
     "tema": "Sangría",
     "difficulty": "media",
     "sourceQuestionId": "P-0423",
-    "enunciado": "Quieres que solo la primera línea de cada párrafo de un texto narrativo quede sangrada hacia dentro, dejando el resto de líneas pegadas al margen, como en un libro de relatos. ¿Qué desplegable debes utilizar dentro del cuadro Párrafo?",
+    "enunciado": "Quieres que solo la primera línea de cada párrafo entre hacia dentro, como en un libro de relatos, dejando el resto pegado al margen. ¿Qué eliges en el cuadro Párrafo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Especial"
+        "text": "«Especial: Primera línea», con su valor en centímetros"
       },
       {
         "letter": "B",
-        "text": "Sangría Izquierda"
+        "text": "«Especial: Sangría francesa», con su valor en centímetros"
       },
       {
         "letter": "C",
-        "text": "Sangría Derecha"
+        "text": "«Izquierda», con su valor en centímetros"
       },
       {
         "letter": "D",
-        "text": "Sangrías simétricas"
+        "text": "Un tabulador al principio de cada párrafo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El desplegable Especial de la sección Sangría permite elegir entre Primera línea (sangra solo la primera línea del párrafo hacia dentro) y Francesa (sangra todas las líneas excepto la primera). Para un texto narrativo al estilo libro se usa Primera línea, cuyo valor predeterminado es 1,25 cm."
+    "explicacion": "«Primera línea» es justo eso: mete hacia dentro la primera línea y deja las demás donde estaban. Su valor de partida es 1,25 cm. · «Sangría francesa» es su reverso exacto —primera línea fuera, resto dentro— y es el par que hay que distinguir; se usa en bibliografías y en listas de definiciones. · El campo «Izquierda» movería el párrafo entero, primera línea incluida, así que no se notaría ninguna sangría de entrada. · Poner un tabulador da un resultado parecido a la vista, pero es un carácter escrito: se pierde al reflujo del texto, no se hereda con el estilo y hay que repetirlo en cada párrafo. Es el distractor con más fundamento porque es lo que mucha gente hace."
   },
   {
     "id": "inicio-250",
@@ -8202,28 +8202,28 @@
     "tema": "Sangría",
     "difficulty": "alta",
     "sourceQuestionId": "P-0504",
-    "enunciado": "¿Qué atajo aplica o quita la sangría francesa en Word 365 (versión española)?",
+    "enunciado": "Quieres aplicar sangría francesa a un párrafo de la bibliografía sin abrir ningún cuadro. ¿Qué combinación lo hace en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + F"
+        "text": "Ctrl+F"
       },
       {
         "letter": "B",
-        "text": "Ctrl + M"
+        "text": "Ctrl+H"
       },
       {
         "letter": "C",
-        "text": "Ctrl + T"
+        "text": "Ctrl+T"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Mayús + F"
+        "text": "Ctrl+Mayús+F"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "En la versión española de Word 365, Ctrl+F aplica o quita la sangría francesa: la primera línea del párrafo se queda donde está y el resto de líneas se separan del margen izquierdo. Ctrl+M abre el cuadro de diálogo Fuente. Ctrl+T centra el párrafo. Ctrl+Mayús+F activa el campo de fuente en la cinta. (En la versión inglesa Ctrl+F abre el buscador.)"
+    "explicacion": "Ctrl+F figura como SangriaFrancesa, «aumenta la sangría francesa»: la primera línea se queda en su sitio y las demás se separan del margen. Cada pulsación la aumenta un paso más. · ⚠️ Ojo: en el esquema internacional Ctrl+F abre la búsqueda, y esa es la confusión que más caro sale, porque quien lo pulse buscando algo se encontrará el párrafo descolocado sin entender por qué. Aquí se busca con Ctrl+B, que abre el panel de Navegación. · Ctrl+H aumenta la sangría izquierda, que mueve el párrafo entero. · Ctrl+T centra. · Y Ctrl+Mayús+F abre el cuadro de diálogo Fuente, igual que Ctrl+M: no lleva el foco a ninguna caja de la cinta."
   },
   {
     "id": "inicio-251",
@@ -8238,28 +8238,28 @@
     "tema": "Sangría",
     "difficulty": "alta",
     "sourceQuestionId": "P-0505",
-    "enunciado": "¿Qué atajo reduce la sangría francesa de un párrafo en Word 365 (versión española)?",
+    "enunciado": "Te has pasado aplicando sangría francesa con Ctrl+F y quieres retroceder un paso. ¿Qué combinación la reduce?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Mayús + H"
+        "text": "Ctrl+Mayús+H"
       },
       {
         "letter": "B",
-        "text": "Ctrl + F"
+        "text": "Ctrl+Mayús+F"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Mayús + F"
+        "text": "Ctrl+Mayús+M"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Mayús + M"
+        "text": "Ctrl+Mayús+T"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+H reduce la sangría francesa ya aplicada. Ctrl+F la aplica o la quita del todo. Ni Ctrl+Mayús+F ni Ctrl+Mayús+M tocan la sangría: Ctrl+Mayús+M abre el cuadro Fuente con el foco en el campo Tamaño. Confirmado en el volcado v2608 y por prueba en vivo."
+    "explicacion": "Ctrl+Mayús+H figura como QuitarSangriaFrancesa, «disminuye la sangría francesa», y es el paso atrás de Ctrl+F. Prueba en vivo del usuario. · Fíjate en el patrón de toda la familia: la combinación sin Mayús aumenta y la que lleva Mayús reduce, tanto en la sangría izquierda —Ctrl+H frente a Ctrl+Mayús+R— como en la francesa. · Ctrl+Mayús+F y Ctrl+Mayús+M no tocan ninguna sangría: las dos abren el cuadro Fuente, la primera con el foco en el nombre y la segunda en el Tamaño. · Y Ctrl+Mayús+T no tiene comando asignado en esta instalación."
   },
   {
     "id": "inicio-349",
@@ -8273,7 +8273,7 @@
     "subtopic": null,
     "tema": "Sangría",
     "sourceQuestionId": "8-280",
-    "enunciado": "¿Qué atajo aplica una sangría al párrafo en Word 365?",
+    "enunciado": "Quieres meter un párrafo entero hacia dentro un paso, hasta la siguiente tabulación, sin abrir el cuadro Párrafo. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -8281,11 +8281,11 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+H"
+        "text": "Ctrl+F"
       },
       {
         "letter": "C",
-        "text": "Ctrl+M"
+        "text": "Ctrl+Mayús+H"
       },
       {
         "letter": "D",
@@ -8294,7 +8294,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+H aplica una sangría al párrafo. Ctrl+Mayús+H aplica reducción de sangría francesa. Ctrl+M abre el cuadro de diálogo Fuente. Alt+Ctrl+H aplica resaltado al texto."
+    "explicacion": "Ctrl+H figura como Sangria: «mueve la sangría izquierda a la tabulación siguiente», que es exactamente lo que hace el botón Aumentar sangría de la cinta. Mueve el bloque entero, todas sus líneas. · Ctrl+F mueve solo el resto de líneas y deja quieta la primera, porque es la sangría francesa: ese es el par que hay que distinguir, y ambos se pulsan con la misma mano. · Ctrl+Mayús+H reduce la francesa. · Y Alt+Ctrl+H no tiene nada que ver con las sangrías: aplica el resaltado del rotulador. · ⚠️ Ojo: en el esquema internacional Ctrl+H abre Reemplazar; aquí eso es Ctrl+L."
   },
   {
     "id": "inicio-350",
@@ -8308,28 +8308,28 @@
     "subtopic": null,
     "tema": "Sangría",
     "sourceQuestionId": "8-281",
-    "enunciado": "¿Qué atajo aplica una sangría francesa al párrafo en Word 365?",
+    "enunciado": "Comparas lo que hacen Ctrl+H y Ctrl+F sobre el mismo párrafo. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+F"
+        "text": "Ctrl+H mueve todas las líneas; Ctrl+F deja quieta la primera y mueve el resto"
       },
       {
         "letter": "B",
-        "text": "Ctrl+H"
+        "text": "Ctrl+H deja quieta la primera y mueve el resto; Ctrl+F mueve todas las líneas"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+F"
+        "text": "Ctrl+H mueve todas las líneas; Ctrl+F mueve solo la primera y deja el resto"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+H"
+        "text": "Los dos mueven todas las líneas; solo cambia cuánto se desplazan"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F aplica la sangría francesa al párrafo. Ctrl+H aplica sangría izquierda. Ctrl+Mayús+F abre el cuadro de diálogo Fuente (foco en el nombre). Ctrl+Mayús+H reduce la sangría francesa."
+    "explicacion": "Ctrl+H aumenta la sangría izquierda y arrastra el párrafo completo hasta la tabulación siguiente. Ctrl+F aumenta la sangría francesa, que por definición ancla la primera línea y separa las demás: es el formato de las entradas de una bibliografía o de un glosario. · La versión con los papeles cambiados es el reflejo exacto y hay que leerla despacio. · Mover solo la primera línea y dejar el resto es la sangría de primera línea, que no tiene atajo propio: se pone desde el desplegable «Especial» del cuadro Párrafo. · Y no es cuestión de distancia: los dos avanzan hasta la tabulación siguiente, lo que cambia es qué líneas se llevan."
   },
   {
     "id": "inicio-351",
@@ -8343,28 +8343,28 @@
     "subtopic": null,
     "tema": "Sangría",
     "sourceQuestionId": "8-282",
-    "enunciado": "¿Qué atajo reduce la sangría francesa del párrafo en Word 365?",
+    "enunciado": "En el cuadro Personalizar teclado ves cuatro comandos de sangría con nombres muy parecidos. ¿Cuál lleva la combinación Ctrl+Mayús+H?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+H"
+        "text": "QuitarSangriaFrancesa, «disminuye la sangría francesa»"
       },
       {
         "letter": "B",
-        "text": "Ctrl+F"
+        "text": "SangriaFrancesa, «aumenta la sangría francesa»"
       },
       {
         "letter": "C",
-        "text": "Ctrl+H"
+        "text": "Sangria, «mueve la sangría izquierda a la tabulación siguiente»"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+F"
+        "text": "UnIndent, «mueve la sangría izquierda a la tabulación anterior»"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+H reduce la sangría francesa ya aplicada. Ctrl+F la aplica o la quita. Ctrl+H aplica sangría izquierda. Alt+Ctrl+F no tiene función en este Word."
+    "explicacion": "Los cuatro comandos forman dos parejas y conviene verlos juntos: Ctrl+H aumenta la sangría izquierda y Ctrl+Mayús+R la disminuye; Ctrl+F aumenta la francesa y Ctrl+Mayús+H la disminuye. La combinación de la pregunta es la última de esa lista. · Que dos comandos distintos se llamen casi igual es lo que hace difícil esta pregunta: «QuitarSangriaFrancesa» y «UnIndent» suenan a lo mismo, pero uno trabaja sobre la francesa y el otro sobre la izquierda. · ⚠️ Ojo con UnIndent: el cuadro se lo asigna a Ctrl+Mayús+R, pero al probarlo en vivo esa combinación no responde. Para deshacer sangrías de verdad se usa Ctrl+W, que quita todo el formato de párrafo."
   },
   {
     "id": "inicio-352",
@@ -8378,7 +8378,7 @@
     "subtopic": null,
     "tema": "Sangría",
     "sourceQuestionId": "8-283",
-    "enunciado": "En esta instalación de Word 365, ¿qué atajo elimina las sangrías de un párrafo (junto con el resto de su formato de párrafo)?",
+    "enunciado": "Un párrafo ha acumulado sangrías por todos lados y quieres dejarlo como lo define su estilo, de una sola vez. ¿Qué combinación usas en esta instalación?",
     "opciones": [
       {
         "letter": "A",
@@ -8390,16 +8390,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+R"
+        "text": "Ctrl+Mayús+H"
       },
       {
         "letter": "D",
-        "text": "Ctrl+H"
+        "text": "Ctrl+Barra espaciadora"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+W quita todo el formato de párrafo, sangrías incluidas (prueba en vivo). Ctrl+Mayús+R y Ctrl+R no hacen nada en esta versión, aunque el volcado v2608 asigne a Ctrl+Mayús+R 'quitar sangría francesa'. Ctrl+H aplica sangría, no la quita. ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+W bajo dos comandos (cerrar documento y «quitar formato de párrafo»); en la práctica quita el formato de párrafo, no cierra nada."
+    "explicacion": "Ctrl+W aplica a la selección el formato de párrafo predeterminado de su estilo, así que se lleva de golpe todas las sangrías, la alineación y el espaciado puestos a mano. Prueba en vivo del usuario. ⚠️ Ojo: el cuadro Personalizar teclado lista esa combinación también como cerrar la ventana; aquí hace lo del párrafo y no cierra nada. · Ctrl+Mayús+R es el distractor con más fundamento, y es una trampa doble: el cuadro se lo asigna al comando UnIndent, «mueve la sangría izquierda a la tabulación anterior», pero al probarlo no responde. Aunque funcionara, retrocedería un paso, no lo dejaría todo a cero. · Ctrl+Mayús+H solo reduce la francesa, y también paso a paso. · Y Ctrl+Barra espaciadora es del otro eje: limpia el formato de carácter."
   },
   {
     "id": "inicio-381",
@@ -8414,28 +8414,28 @@
     "tema": "Sangría",
     "sourceQuestionId": "gen-atajo-7",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado quita el formato de párrafo (como sangrías) del párrafo activo en Word 365?",
+    "enunciado": "Comparas Ctrl+W con Ctrl+Barra espaciadora sobre un párrafo que tiene sangría, interlineado doble, negrita y color rojo. ¿Qué deja cada uno?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Z"
+        "text": "Ctrl+W se lleva la sangría y el interlineado; Ctrl+Barra espaciadora, la negrita y el rojo"
       },
       {
         "letter": "B",
-        "text": "Ctrl+W"
+        "text": "Ctrl+W se lleva la negrita y el rojo; Ctrl+Barra espaciadora, la sangría y el interlineado"
       },
       {
         "letter": "C",
-        "text": "Ctrl+O"
+        "text": "Los dos se llevan las cuatro cosas; solo cambia si conservan o no el estilo"
       },
       {
         "letter": "D",
-        "text": "Alt+Retroceso"
+        "text": "Ctrl+W se lleva las cuatro cosas; Ctrl+Barra espaciadora, solo la negrita"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+W elimina el formato manual del párrafo (sangrías, etc.), dejándolo con el del estilo base. ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+W también bajo «cerrar documento», pero en la práctica quita el formato de párrafo. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Son los dos ejes del formato y cada atajo trabaja en uno: Ctrl+W devuelve el formato de PÁRRAFO del estilo —sangrías, alineación, espaciado, interlineado— y Ctrl+Barra espaciadora devuelve el de CARÁCTER —negrita, cursiva, color, fuente, tamaño—. Ninguno de los dos toca el estilo aplicado ni el texto. Prueba en vivo del usuario. · Quien los quiera los dos a la vez tiene el botón «Borrar todo el formato», que además quita el estilo y deja el párrafo en Normal. · La versión con los ejes cambiados es el error más común. · Y ⚠️ ojo: el cuadro Personalizar teclado lista Ctrl+W también como cerrar la ventana; aquí no cierra nada."
   },
   {
     "id": "inicio-419",
@@ -8455,24 +8455,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Disposición ▸ Organizar"
-      },
-      {
-        "letter": "B",
-        "text": "Insertar ▸ eSignature"
-      },
-      {
-        "letter": "C",
         "text": "Inicio ▸ Párrafo"
       },
       {
+        "letter": "B",
+        "text": "Disposición ▸ Párrafo"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
         "letter": "D",
-        "text": "Insertar ▸ Vínculos"
+        "text": "Vista ▸ Mostrar"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Aumentar sangría.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+H. Desplaza el párrafo a la siguiente tabulación hacia la derecha. En el esquema clásico español el atajo es Ctrl+H (no «reemplazar»)."
+    "respuesta": "A",
+    "explicacion": "**Aumentar sangría.** Pestaña Inicio ▸ **Párrafo**, junto a su gemelo de disminuir. Atajo: Ctrl+H, que en el esquema clásico español es sangría y no «reemplazar». Mueve el párrafo entero hasta la tabulación siguiente. · Disposición ▸ Párrafo es el descarte más fino, y por buenas razones: ese grupo también maneja la sangría, pero con cuadros numéricos donde se escribe la medida exacta, no con botones de paso. Los dos comparten el mismo iniciador y el mismo cuadro Párrafo detrás. · Fuente trabaja sobre caracteres. · Y Vista ▸ Mostrar solo enciende y apaga la regla, la cuadrícula y el panel de navegación."
   },
   {
     "id": "inicio-420",
@@ -8492,24 +8492,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Viñetas"
-      },
-      {
-        "letter": "B",
-        "text": "Centrar"
-      },
-      {
-        "letter": "C",
         "text": "Disminuir sangría"
       },
       {
+        "letter": "B",
+        "text": "Aumentar sangría"
+      },
+      {
+        "letter": "C",
+        "text": "Alinear a la izquierda"
+      },
+      {
         "letter": "D",
-        "text": "Efectos de texto y tipografía"
+        "text": "Lista multinivel"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Disminuir sangría.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Desplaza el párrafo a la tabulación anterior hacia la izquierda."
+    "respuesta": "A",
+    "explicacion": "**Disminuir sangría.** Pestaña Inicio ▸ Párrafo. Devuelve el párrafo a la tabulación anterior, hacia el margen. · Su gemelo, aumentar sangría, es el descarte que decide la pregunta: los dos iconos son el mismo dibujo con la flecha apuntando al otro lado, así que hay que fijarse en el sentido y no en el conjunto. Aquel sí tiene atajo claro, Ctrl+H. · ⚠️ Este no responde a ninguna combinación en vivo: el cuadro Personalizar teclado asigna Ctrl+Mayús+R al comando UnIndent, que es justo esto, pero al probarlo no hace nada. · Alinear a la izquierda decide cómo se colocan las líneas dentro del bloque, no dónde empieza el bloque. · Y la lista multinivel numera apartados."
   },
   {
     "id": "inicio-436",
@@ -8524,19 +8524,19 @@
     "tema": "Sangría",
     "sourceQuestionId": "neg-inicio-05",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre sangría es FALSA?",
+    "enunciado": "Un compañero ha apuntado cuatro cosas sobre sangrías. ¿Cuál de ellas es FALSA en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+H aumenta la sangría (esquema clásico español)"
+        "text": "Ctrl+H aumenta la sangría izquierda del párrafo"
       },
       {
         "letter": "B",
-        "text": "Ctrl+F aplica sangría francesa"
+        "text": "Ctrl+F aumenta la sangría francesa"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+R quita toda la sangría en esta instalación"
+        "text": "Ctrl+Mayús+R deja el párrafo sin ninguna sangría"
       },
       {
         "letter": "D",
@@ -8545,7 +8545,7 @@
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Ctrl+Mayús+R NO quita la sangría en esta instalación, aunque el volcado se la asigne. Para quitar sangrías se usa Ctrl+W (prueba en vivo del usuario)."
+    "explicacion": "Es falsa por partida doble. Primero, porque en vivo esa combinación no responde: se prueba y el párrafo no se mueve. Y segundo, porque ni aunque funcionara haría lo que dice: el cuadro Personalizar teclado se la asigna al comando UnIndent, «mueve la sangría izquierda a la tabulación anterior», que retrocede un paso, no deja el párrafo a cero. Prueba en vivo del usuario. · Para quitar todas las sangrías de un golpe se usa Ctrl+W. · Las otras tres son ciertas y forman el juego completo que conviene memorizar, junto con Ctrl+Mayús+H, que reduce la francesa."
   },
   {
     "id": "inicio-464",
@@ -8560,28 +8560,28 @@
     "tema": "Sangría",
     "sourceQuestionId": "neg2-inicio-14",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Repasas la familia de atajos de sangría antes del examen. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+H aplica sangría."
+        "text": "Ctrl+H y Ctrl+F aumentan, cada uno su tipo de sangría"
       },
       {
         "letter": "B",
-        "text": "Ctrl+F aplica sangría francesa."
+        "text": "Ctrl+Mayús+H disminuye la sangría francesa"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+H reduce la sangría francesa."
+        "text": "Ctrl+F mueve el párrafo entero hacia dentro"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+R quita toda la sangría del párrafo."
+        "text": "Ctrl+W deja el párrafo con el formato de párrafo de su estilo"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Prueba en vivo: Ctrl+Mayús+R no quita la sangría en esta instalación; para eso se usa Ctrl+W."
+    "respuesta": "C",
+    "explicacion": "Ctrl+F no mueve el párrafo entero: aplica la sangría francesa, que deja la primera línea anclada en su sitio y separa del margen todas las demás. Quien mueve el bloque completo es Ctrl+H. Confundir estos dos es el error más frecuente de toda la familia, porque los dos «meten el texto hacia dentro» y la diferencia está solo en la primera línea. · Las otras tres son ciertas: Ctrl+H y Ctrl+F aumentan cada uno lo suyo, Ctrl+Mayús+H es el paso atrás de la francesa, y Ctrl+W devuelve al párrafo el formato que le corresponde por su estilo, sangrías incluidas."
   },
   {
     "id": "inicio-495",
@@ -8596,7 +8596,7 @@
     "tema": "Sangría",
     "sourceQuestionId": "rutas-inicio-25",
     "generado": true,
-    "enunciado": "El campo «Especial» del bloque Sangría del cuadro Párrafo tiene tres valores. Señale el que NO es uno de ellos:",
+    "enunciado": "El desplegable «Especial» del bloque Sangría del cuadro Párrafo tiene tres valores. ¿Cuál de estos NO es uno de ellos?",
     "opciones": [
       {
         "letter": "A",
@@ -8617,7 +8617,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Los tres valores de «Especial» son «(ninguna)», «Primera línea» y «Sangría francesa». «Sangrías simétricas» existe, pero es una casilla independiente, no un valor de este desplegable."
+    "explicacion": "Los tres valores son «(ninguna)», «Primera línea» y «Sangría francesa», y por eso primera línea y francesa nunca conviven: comparten un solo desplegable. · «Sangrías simétricas» sí existe en ese mismo cuadro, pero es una casilla independiente unas líneas más abajo, y hace otra cosa: renombrar «Izquierda» y «Derecha» como «Interior» y «Exterior» para trabajar a doble cara. Está lo bastante cerca como para colarse, y esa cercanía es lo que hace buena la pregunta. · Al elegir «Primera línea» o «Sangría francesa» se activa el campo «En:» de al lado, con 1,25 cm de partida."
   },
   {
     "id": "inicio-496",
@@ -8636,7 +8636,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Es para documentos que se imprimen a doble cara: la sangría «interior» queda del lado de la encuadernación."
+    "explicacion": "Verdadero. Es un cambio pensado para documentos que se imprimen por las dos caras, donde el lado de la encuadernación va alternando: en la página impar está a la izquierda y en la par a la derecha. Hablar de «interior» y «exterior» resuelve esa alternancia de un plumazo, y la sangría queda bien en las dos. · Los valores siguen siendo dos e independientes; lo único que cambia es cómo se llaman y a qué borde se refieren en cada página. · No confundirlo con el campo «Encuadernación» del cuadro Configurar página, que reserva un espacio extra para el cosido pero actúa sobre los márgenes de la página entera, no sobre un párrafo."
   },
   {
     "id": "inicio-252",
@@ -8651,7 +8651,7 @@
     "tema": "Sangría",
     "difficulty": "alta",
     "sourceQuestionId": "P-0506",
-    "enunciado": "Relaciona cada atajo de sangría con su acción en la versión española de Word 365:",
+    "enunciado": "Relaciona cada combinación con lo que hace sobre las sangrías en esta instalación:",
     "opciones": [],
     "matching": {
       "left": [
@@ -8707,7 +8707,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Ctrl+H aplica sangría izquierda. Ctrl+F aplica o quita la sangría francesa (primera línea fija, resto sangrado). Ctrl+Mayús+H reduce la sangría francesa. Ctrl+W quita todo el formato de párrafo, sangrías incluidas. Ojo: Ctrl+Mayús+R, al que el volcado asigna 'quitar sangría francesa', NO funciona en esta instalación. El distractor E (cuadro Fuente) es Ctrl+M."
+    "explicacion": "Ctrl+H aumenta la sangría izquierda y mueve el párrafo entero hasta la tabulación siguiente. Ctrl+F aumenta la francesa, dejando anclada la primera línea. Ctrl+Mayús+H es el paso atrás de esa francesa. Y Ctrl+W devuelve al párrafo todo el formato de párrafo de su estilo, sangrías incluidas. Prueba en vivo del usuario. · El destino que se queda sin pareja, abrir el cuadro Fuente, corresponde a Ctrl+M y a Ctrl+Mayús+F: cuela porque las cuatro combinaciones de la izquierda son también de formato. · ⚠️ Falta a propósito una quinta: Ctrl+Mayús+R, a la que el cuadro asigna «mueve la sangría izquierda a la tabulación anterior», no responde al probarla en vivo."
   },
   {
     "id": "inicio-47",
@@ -8722,28 +8722,28 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0287",
-    "enunciado": "Un parrafo A tiene configurado un espaciado posterior de 6 pto. El parrafo B que le sigue tiene configurado un espaciado anterior de 12 pto. ¿Cuanto espacio real se vera entre los dos parrafos?",
+    "enunciado": "Quieres cambiar de golpe el espacio entre párrafos de TODO el documento, no solo el del párrafo donde tienes el cursor. ¿Por dónde se hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "18 pto (se suman ambos espaciados)"
+        "text": "Diseño ▸ Formato del documento ▸ Espacio entre párrafos"
       },
       {
         "letter": "B",
-        "text": "6 pto (se aplica el menor de los dos)"
+        "text": "Inicio ▸ Párrafo ▸ Espaciado entre líneas y párrafos ▸ Agregar espacio antes"
       },
       {
         "letter": "C",
-        "text": "12 pto (se aplica el mayor de los dos)"
+        "text": "Inicio ▸ Párrafo ▸ el iniciador ▸ campos Anterior y Posterior"
       },
       {
         "letter": "D",
-        "text": "9 pto (se calcula la media aritmetica)"
+        "text": "Disposición ▸ Párrafo ▸ campos Antes y Después"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Word aplica la regla del mayor: cuando dos parrafos consecutivos tienen espaciados distintos entre si, el espacio visible entre ellos es el mayor de los dos valores, no la suma ni la media. En este caso 12 pto es mayor que 6 pto, por lo que el espacio real sera de 12 pto."
+    "respuesta": "A",
+    "explicacion": "Lo dice el propio mensaje emergente del comando de la cinta: «Las opciones de Espacio entre párrafos en la pestaña Diseño permiten aplicar el mismo espaciado a todo el documento». Ese comando trabaja sobre el conjunto de estilos, así que alcanza a todo lo escrito de una vez. · Las otras tres son rutas reales y hacen exactamente lo mismo entre ellas, pero solo sobre lo seleccionado: la entrada del desplegable de la cinta, los campos del cuadro Párrafo y los cuadros numéricos del grupo Párrafo de Disposición. Que las tres sean válidas para un párrafo es lo que hace difícil la pregunta: hay que fijarse en el alcance, no en si el camino existe."
   },
   {
     "id": "inicio-48",
@@ -8758,28 +8758,28 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0288",
-    "enunciado": "La opcion Agregar espacio antes del parrafo añade 12 pto antes del parrafo. ¿Cuantos puntos elimina la opcion Quitar espacio despues del parrafo?",
+    "enunciado": "Despliegas «Espaciado entre líneas y párrafos» en el grupo Párrafo de la cinta. ¿Qué valores numéricos ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "12 pto (el mismo valor que la opcion anterior)"
+        "text": "1,0 · 1,15 · 1,5 · 2,0 · 2,5 · 3,0"
       },
       {
         "letter": "B",
-        "text": "8 pto (el espaciado predeterminado despues del parrafo)"
+        "text": "1,0 · 1,5 · 2,0 · 2,5 · 3,0"
       },
       {
         "letter": "C",
-        "text": "6 pto (la mitad del espaciado predeterminado)"
+        "text": "1,0 · 1,15 · 1,5 · 2,0 · 3,0"
       },
       {
         "letter": "D",
-        "text": "Todo el espacio posterior sea cual sea el valor configurado"
+        "text": "1,0 · 1,15 · 1,5 · 1,75 · 2,0 · 3,0"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Las dos opciones usan valores distintos: Agregar espacio antes del parrafo añade 12 pto, mientras que Quitar espacio despues del parrafo elimina 8 pto, que es el espaciado posterior predeterminado en Word 365. No son valores simetricos."
+    "respuesta": "A",
+    "explicacion": "Son seis valores, y el que llama la atención es el 1,15, el único que no es redondo: es el interlineado que trae el estilo Normal de Word, y por eso está ahí. · Bajo esos seis hay tres entradas más: «Opciones de interlineado…», que abre el cuadro Párrafo en su primera ficha, y las dos de espacio antes y después del párrafo, cuyo nombre cambia entre «Agregar» y «Quitar» según lo que tenga el párrafo en ese momento. · Ojo con no confundir estos seis VALORES de la cinta con los seis TIPOS del desplegable Interlineado del cuadro Párrafo, que son otra cosa: sencillo, 1,5 líneas, doble, mínimo, exacto y múltiple."
   },
   {
     "id": "inicio-50",
@@ -8794,28 +8794,28 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "media",
     "sourceQuestionId": "P-0290",
-    "enunciado": "¿Cuantos niveles de esquema ofrece el desplegable Nivel de esquema del cuadro de dialogo Parrafo, incluyendo la opcion para texto normal?",
+    "enunciado": "Quieres que un párrafo aparezca en el panel de Navegación y en la tabla de contenido sin aplicarle ningún estilo de título. ¿Qué campo del cuadro Párrafo lo consigue?",
     "opciones": [
       {
         "letter": "A",
-        "text": "9 (Niveles 1 al 9 unicamente)"
+        "text": "Nivel de esquema, poniéndolo entre Nivel 1 y Nivel 9"
       },
       {
         "letter": "B",
-        "text": "7 (Texto independiente mas Niveles 1 al 6)"
+        "text": "Nivel de esquema, dejándolo en Texto independiente"
       },
       {
         "letter": "C",
-        "text": "10 (Texto independiente mas Niveles 1 al 9)"
+        "text": "La casilla «Contraído de forma predeterminada»"
       },
       {
         "letter": "D",
-        "text": "6 (coincidiendo con los estilos Titulo predefinidos)"
+        "text": "La casilla «Conservar con el siguiente»"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El desplegable Nivel de esquema ofrece 10 opciones en total: Texto independiente (para parrafos normales sin nivel de esquema) mas los Niveles 1 al 9. La opción «9 (Niveles 1 al 9 unicamente)» es incorrecta porque omite Texto independiente. La opción «6 (coincidiendo con los estilos Titulo predefinidos)» confunde los niveles de esquema con los estilos Titulo predefinidos de la galeria."
+    "respuesta": "A",
+    "explicacion": "El nivel de esquema es lo que decide si un párrafo cuenta como encabezado a efectos de navegación e índice, y es independiente del estilo: se puede dar Nivel 1 a un párrafo con estilo Normal y aparecerá en el panel y en la tabla de contenido sin verse como un título. · «Texto independiente» es el valor de partida y hace justo lo contrario: deja el párrafo fuera de todo eso. Es el descarte que decide la pregunta, porque acierta el campo y falla el valor. · «Contraído de forma predeterminada» solo se habilita cuando ya hay un nivel puesto, así que es consecuencia, no causa. · Y «Conservar con el siguiente» es de paginación: impide que un salto separe ese párrafo del siguiente."
   },
   {
     "id": "inicio-64",
@@ -8830,28 +8830,28 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "media",
     "sourceQuestionId": "P-0307",
-    "enunciado": "¿Cuantos tipos de interlineado ofrece en total el desplegable Interlineado del cuadro de dialogo Parrafo?",
+    "enunciado": "Abres el desplegable «Interlineado» del cuadro de diálogo Párrafo. ¿Cuántos tipos ofrece y cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "4"
+        "text": "6: sencillo, 1,5 líneas, doble, mínimo, exacto y múltiple"
       },
       {
         "letter": "B",
-        "text": "5"
+        "text": "5: sencillo, 1,5 líneas, doble, mínimo y exacto"
       },
       {
         "letter": "C",
-        "text": "6"
+        "text": "4: sencillo, 1,5 líneas, doble y múltiple"
       },
       {
         "letter": "D",
-        "text": "8"
+        "text": "6: sencillo, 1,15 líneas, 1,5, doble, 2,5 y triple"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El desplegable Interlineado ofrece 6 tipos en total: Sencillo, 1,5 lineas, Doble, Minimo, Exacto y Multiple. Los cuatro primeros (Sencillo, 1,5, Doble y Multiple) son proporcionales al tamano del caracter. Minimo y Exacto se miden en puntos y no son proporcionales."
+    "respuesta": "A",
+    "explicacion": "Son seis y se dividen en dos familias. Sencillo, 1,5 líneas, doble y múltiple son proporcionales: crecen solos si crece la letra. Mínimo y exacto se miden en puntos y no dependen del tamaño del texto. · Quitar «múltiple» o quitar «mínimo» y «exacto» son los dos descartes naturales, porque son los tres tipos que menos se usan. · El cuarto es la trampa buena: enumera los valores del desplegable de la CINTA, «Espaciado entre líneas y párrafos», que sí ofrece 1,0, 1,15, 1,5, 2,0, 2,5 y 3,0. También son seis, pero son valores concretos, no tipos: coinciden en el número y no en la naturaleza."
   },
   {
     "id": "inicio-65",
@@ -8866,28 +8866,28 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0306",
-    "enunciado": "¿Cual es la diferencia fundamental entre los tipos de interlineado Minimo y Exacto cuando el tamano de la fuente del texto aumenta?",
+    "enunciado": "Un párrafo tiene interlineado «Exacto» de 12 pto y le subes la letra a 20 pto. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Exacto se adapta al crecer la fuente; Minimo mantiene el valor fijo"
+        "text": "El interlineado sigue en 12 pto y las líneas se solapan o se cortan"
       },
       {
         "letter": "B",
-        "text": "Minimo se adapta y crece para que las lineas no se superpongan; Exacto mantiene el valor fijo y el texto puede no caber"
+        "text": "El interlineado crece solo hasta que las líneas dejan de estorbarse"
       },
       {
         "letter": "C",
-        "text": "Ambos se adaptan; la diferencia es solo que Exacto usa puntos y Minimo usa lineas"
+        "text": "El interlineado sigue en 12 pto y Word reduce la letra para que quepa"
       },
       {
         "letter": "D",
-        "text": "Ambos mantienen el valor fijo; Minimo solo permite valores mas pequeños"
+        "text": "El interlineado pasa a 20 pto, igualándose al tamaño de la letra"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Minimo garantiza un valor minimo de interlineado pero se adapta automaticamente si la fuente crece, evitando que las lineas se superpongan. Exacto mantiene siempre el valor fijo en puntos independientemente del tamano de la fuente, por lo que el texto puede quedar cortado si la fuente es mayor que el interlineado definido."
+    "respuesta": "A",
+    "explicacion": "«Exacto» significa exactamente eso: el interlineado se queda clavado en los puntos indicados pase lo que pase, así que con una letra más alta que el hueco las líneas se pisan y las mayúsculas o las tildes se ven cortadas. Sirve para cuadrar texto en una rejilla, y hay que usarlo sabiendo lo que se hace. · Crecer solo para que las líneas no se estorben es lo que hace «Mínimo», su vecino en el desplegable: ese sí garantiza un suelo y luego se adapta. Distinguir ese par es toda la pregunta. · Word nunca reduce el tamaño de la letra por su cuenta. · Y ningún tipo de interlineado se iguala al cuerpo de la fuente: el que se le parece, «Sencillo», deja además un pequeño margen."
   },
   {
     "id": "inicio-66",
@@ -8902,11 +8902,11 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0305",
-    "enunciado": "Con interlineado de 1,5 lineas aplicado a un texto escrito integramnte a 11 pto, ¿cual sera la medida exacta del interlineado?",
+    "enunciado": "Aplicas interlineado de 1,5 líneas a un texto escrito íntegramente a 11 puntos. ¿Cuánto mide el interlineado resultante?",
     "opciones": [
       {
         "letter": "A",
-        "text": "11 pto"
+        "text": "16,5 pto"
       },
       {
         "letter": "B",
@@ -8914,16 +8914,16 @@
       },
       {
         "letter": "C",
-        "text": "16,5 pto"
+        "text": "22 pto"
       },
       {
         "letter": "D",
-        "text": "22 pto"
+        "text": "11 pto"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El interlineado de 1,5 lineas equivale al 150% del tamano del caracter mayor de la linea. Con fuente de 11 pto el calculo es: 11 x 1,5 = 16,5 pto. El valor 22 pto corresponderia al interlineado Doble (11 x 2). El valor 11 pto seria el interlineado Sencillo."
+    "respuesta": "A",
+    "explicacion": "Los interlineados proporcionales se calculan sobre el carácter más alto de la línea: 11 × 1,5 da 16,5 puntos. Por eso una sola palabra en 20 puntos ensancha su línea y no las demás. · 22 pto es el resultado del interlineado Doble, 11 × 2, y es el descarte que más cae porque se llega a él con la misma operación cambiando el factor. · 11 pto sería el Sencillo. · Y 15 es un número redondo que no sale de ninguna cuenta: está para comprobar si se ha hecho la multiplicación o se ha ido a ojo. · Con los tipos Mínimo y Exacto la cuenta no vale: aquellos se fijan en puntos y no dependen del tamaño de la letra."
   },
   {
     "id": "inicio-67",
@@ -8938,28 +8938,28 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0308",
-    "enunciado": "El atajo Ctrl+5 tiene un comportamiento distinto segun que tecla 5 se pulse. ¿Cual es la diferencia documentada en la version española de Word 365?",
+    "enunciado": "Pulsas Ctrl+5 y el resultado no es el mismo según qué tecla 5 uses. ¿Qué hace cada una en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+5 alfanumerico aplica interlineado doble; Ctrl+5 del teclado numerico aplica interlineado de 1,5 lineas"
+        "text": "La de la fila superior aplica interlineado de 1,5; la del numérico selecciona todo"
       },
       {
         "letter": "B",
-        "text": "Ctrl+5 alfanumerico aplica interlineado de 1,5 lineas; Ctrl+5 del teclado numerico ejecuta Seleccionar todo"
+        "text": "La de la fila superior selecciona todo; la del numérico aplica interlineado de 1,5"
       },
       {
         "letter": "C",
-        "text": "Ambos aplican interlineado de 1,5 lineas; no hay diferencia funcional"
+        "text": "Las dos aplican interlineado de 1,5: no hay ninguna diferencia"
       },
       {
         "letter": "D",
-        "text": "Ctrl+5 alfanumerico ejecuta Seleccionar todo; Ctrl+5 del teclado numerico aplica interlineado de 1,5 lineas"
+        "text": "La de la fila superior aplica interlineado doble; la del numérico, de 1,5"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+5 de la fila superior aplica interlineado de 1,5 líneas. Ctrl+5 del teclado numérico ejecuta Seleccionar todo. Son dos funciones distintas según qué tecla 5 se pulse. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "La 5 de la fila superior forma parte del trío del interlineado, junto con Ctrl+1 para el sencillo y Ctrl+2 para el doble. La 5 del teclado numérico hace algo por completo distinto: selecciona el documento entero, igual que Ctrl+E, y funciona tanto con el bloqueo numérico encendido como apagado. Prueba en vivo del usuario. · La versión con los papeles cambiados es el reflejo exacto y hay que leerla despacio. · Que no haya diferencia es lo que uno supondría, y es lo que hace útil esta pregunta: en Word hay varias combinaciones con doble sentido según la zona del teclado, y esta es la más llamativa."
   },
   {
     "id": "inicio-170",
@@ -8974,28 +8974,28 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "baja",
     "sourceQuestionId": "P-0424",
-    "enunciado": "Necesitas que quede un espacio en blanco vertical fijo, medido en puntos, entre un título y el párrafo anterior a él. ¿Qué campo debes utilizar dentro del cuadro Párrafo?",
+    "enunciado": "Quieres dejar un hueco vertical fijo, medido en puntos, entre un título y el párrafo que lo precede. ¿Qué campo del cuadro Párrafo usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Anterior"
+        "text": "Espaciado: Anterior"
       },
       {
         "letter": "B",
-        "text": "Posterior"
+        "text": "Espaciado: Posterior"
       },
       {
         "letter": "C",
-        "text": "Interlineado"
+        "text": "Interlineado: Exacto, con su valor en puntos"
       },
       {
         "letter": "D",
-        "text": "No agregar espacio entre párrafos del mismo estilo"
+        "text": "Sangría: Especial ▸ Primera línea"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El campo Anterior de la sección Espaciado del cuadro de diálogo Párrafo añade espacio vertical antes del párrafo, es decir, entre ese párrafo y el que viene justo antes. Se mide en puntos y su valor predeterminado en el estilo Normal es 0 pto."
+    "explicacion": "«Anterior» añade espacio por encima del párrafo seleccionado, que es exactamente el hueco entre el título y lo que hay antes. Se mide en puntos y en el estilo Normal parte de 0. · «Posterior» pondría el hueco por debajo, entre el título y su texto, que es el lado contrario: es el par que hay que distinguir, y el error se ve enseguida al mirar el resultado. También se podría llegar al mismo hueco poniendo espacio posterior al párrafo de arriba, pero entonces se estaría formateando el párrafo equivocado. · El interlineado separa las líneas DENTRO del párrafo, no los párrafos entre sí. · Y la sangría mueve el texto en horizontal."
   },
   {
     "id": "inicio-171",
@@ -9010,7 +9010,7 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "media",
     "sourceQuestionId": "P-0425",
-    "enunciado": "Tienes una lista de párrafos consecutivos, todos con el mismo estilo, y no quieres que se vea ningún espacio adicional entre ellos aunque el estilo tenga configurado espaciado antes y después. ¿Qué casilla debes activar dentro del cuadro Párrafo?",
+    "enunciado": "Tienes una lista de párrafos seguidos, todos con el mismo estilo, y quieren aparecer pegados aunque el estilo tenga espaciado antes y después. ¿Qué casilla del cuadro Párrafo lo resuelve?",
     "opciones": [
       {
         "letter": "A",
@@ -9018,7 +9018,7 @@
       },
       {
         "letter": "B",
-        "text": "Control de líneas viudas y huérfanas"
+        "text": "Conservar líneas juntas"
       },
       {
         "letter": "C",
@@ -9026,12 +9026,12 @@
       },
       {
         "letter": "D",
-        "text": "Conservar líneas juntas"
+        "text": "Control de líneas viudas y huérfanas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La casilla No agregar espacio entre párrafos del mismo estilo suprime el espaciado anterior y posterior entre párrafos consecutivos que comparten el mismo estilo, aunque ese estilo tenga configurado espaciado. Es útil en listas y tablas donde se quiere compactar el espacio entre elementos del mismo tipo."
+    "explicacion": "Esa casilla suprime el espaciado anterior y posterior únicamente entre párrafos vecinos que comparten estilo, así que la lista se compacta y el hueco con el texto de antes y de después se conserva. Es lo que usan los estilos de lista de fábrica. · Las otras tres son las casillas de la SEGUNDA ficha del cuadro, «Líneas y saltos de página», y ninguna toca el espaciado: las tres deciden dónde puede caer un salto de página. Ese es el reparto que conviene tener claro, porque las cuatro suenan a «mantener las cosas juntas» y solo una habla de espacio en blanco. · «Conservar líneas juntas» evita que se parta un párrafo; «Conservar con el siguiente», que se separe del que viene después."
   },
   {
     "id": "inicio-172",
@@ -9046,7 +9046,7 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "media",
     "sourceQuestionId": "P-0426",
-    "enunciado": "Quieres evitar que, al pasar de página, un párrafo deje una única línea suelta al final de una página o al principio de la siguiente, garantizando que al menos dos líneas del mismo párrafo queden siempre juntas. ¿Qué casilla debes activar dentro del cuadro Párrafo?",
+    "enunciado": "Quieres impedir que un párrafo deje una sola línea suelta al final de una página o al principio de la siguiente. ¿Qué casilla activas?",
     "opciones": [
       {
         "letter": "A",
@@ -9054,11 +9054,11 @@
       },
       {
         "letter": "B",
-        "text": "Conservar con el siguiente"
+        "text": "Conservar líneas juntas"
       },
       {
         "letter": "C",
-        "text": "Conservar líneas juntas"
+        "text": "Conservar con el siguiente"
       },
       {
         "letter": "D",
@@ -9067,7 +9067,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Control de líneas viudas y huérfanas evita que quede una sola línea de un párrafo aislada al final de una página (línea huérfana) o al principio de la siguiente (línea viuda). Word garantiza que al menos dos líneas del párrafo estén juntas en la misma página."
+    "explicacion": "Esa casilla obliga a que al menos dos líneas del párrafo viajen juntas a cada lado del salto, que es la definición de evitar viudas y huérfanas. Viene marcada de fábrica en el estilo Normal. · «Conservar líneas juntas» es el descarte difícil, porque también evita cortes: la diferencia está en cuánto cede. Aquella impide CUALQUIER corte del párrafo y lo manda entero a la página siguiente; esta solo impide los cortes feos de una línea, y deja partir el párrafo si quedan dos o más a cada lado. · «Conservar con el siguiente» mira al párrafo de al lado, no a las líneas de dentro. · Y «Salto de página anterior» fuerza el corte en vez de evitarlo."
   },
   {
     "id": "inicio-173",
@@ -9082,7 +9082,7 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "media",
     "sourceQuestionId": "P-0427",
-    "enunciado": "Tienes un título seguido de su primer párrafo de texto y quieres impedir que, si hay un salto de página automático cerca, el título se quede solo al final de una página separado del texto que le sigue. ¿Qué casilla debes activar dentro del cuadro Párrafo?",
+    "enunciado": "Un título se queda solo al final de una página, con su texto empezando en la siguiente. ¿Qué casilla lo impide?",
     "opciones": [
       {
         "letter": "A",
@@ -9090,11 +9090,11 @@
       },
       {
         "letter": "B",
-        "text": "Control de líneas viudas y huérfanas"
+        "text": "Conservar líneas juntas"
       },
       {
         "letter": "C",
-        "text": "Conservar líneas juntas"
+        "text": "Control de líneas viudas y huérfanas"
       },
       {
         "letter": "D",
@@ -9103,7 +9103,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Conservar con el siguiente hace que el párrafo marcado (normalmente un título) no se separe nunca del párrafo que le sigue mediante un salto de página automático. Si no caben ambos en la página actual, ambos pasan juntos a la siguiente página."
+    "explicacion": "«Conservar con el siguiente» ata el párrafo marcado al que viene detrás: si no caben los dos en la página, pasan juntos a la siguiente. Es la casilla que traen activada los estilos Título de fábrica, precisamente por este problema. · «Conservar líneas juntas» es el descarte que decide la pregunta: mira hacia dentro del párrafo, impidiendo que se parta, y un título de una línea no se puede partir, así que no arreglaría nada. Una mira hacia dentro, la otra hacia el vecino. · El control de viudas y huérfanas también mira hacia dentro. · Y «Salto de página anterior» empujaría el título a una página nueva siempre, que es mucho más de lo que se pide."
   },
   {
     "id": "inicio-174",
@@ -9118,7 +9118,7 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "media",
     "sourceQuestionId": "P-0428",
-    "enunciado": "Tienes un párrafo largo con una cita legal completa y no quieres que un salto de página automático lo parta por la mitad; si no cabe entero en la página actual, prefieres que pase entero a la siguiente. ¿Qué casilla debes activar dentro del cuadro Párrafo?",
+    "enunciado": "Tienes una cita legal larga y no quieres que un salto de página la parta por la mitad: prefieres que pase entera a la página siguiente. ¿Qué casilla activas?",
     "opciones": [
       {
         "letter": "A",
@@ -9139,7 +9139,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Conservar líneas juntas impide que un párrafo sea partido por un salto de página automático. Si el párrafo no cabe entero en la página actual, Word lo desplaza íntegro a la siguiente página. Es diferente de Conservar con el siguiente, que une ese párrafo con el que le sigue."
+    "explicacion": "«Conservar líneas juntas» impide cualquier corte dentro del párrafo: si no cabe entero, Word lo desplaza completo. · El control de viudas y huérfanas es más blando y por eso es el descarte fino: solo evita que quede una línea aislada, así que con una cita de diez líneas dejaría partir tranquilamente ocho y dos. Cumple una parte de lo que se pide, no todo. · «Conservar con el siguiente» ataría la cita al párrafo posterior, que no es el problema. · Y «Salto de página anterior» la mandaría siempre a página nueva, incluso cuando cabe de sobra donde está."
   },
   {
     "id": "inicio-175",
@@ -9154,7 +9154,7 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "media",
     "sourceQuestionId": "P-0429",
-    "enunciado": "Quieres que un apartado concreto de un informe empiece siempre en una página completamente nueva, forzando el salto justo antes de ese párrafo, sin depender de dónde termine el texto anterior. ¿Qué casilla debes activar dentro del cuadro Párrafo?",
+    "enunciado": "Quieres que cada apartado de un informe empiece siempre en página nueva, sin tener que insertar saltos a mano cada vez que cambia el texto de antes. ¿Qué casilla activas en el párrafo del título?",
     "opciones": [
       {
         "letter": "A",
@@ -9175,7 +9175,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Salto de página anterior inserta un salto de página automático justo antes del párrafo marcado, forzando que ese párrafo empiece siempre en una página nueva. Es más limpio que insertar un salto de página manual porque se gestiona automáticamente si el texto anterior cambia."
+    "explicacion": "«Salto de página anterior» hace que Word coloque un salto justo antes de ese párrafo, y lo mantiene aunque el texto anterior crezca o mengüe. Es más limpio que un salto manual porque va guardado en el formato del párrafo y, si se pone en el estilo Título 1, vale para todo el documento de una vez. · Las otras tres son las casillas hermanas de la misma ficha y todas evitan cortes en vez de forzarlos: es el contraste que hay que ver. · Un salto manual con Ctrl+Intro daría el mismo resultado hoy, pero es un carácter escrito: al reordenar apartados hay que ir recolocándolo, y esa es la diferencia práctica entre las dos maneras."
   },
   {
     "id": "inicio-253",
@@ -9190,28 +9190,28 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0507",
-    "enunciado": "En esta instalación de Word 365 (versión española), ¿hay atajo de teclado para el espaciado anterior/posterior de un párrafo?",
+    "enunciado": "Buscas un atajo de teclado para el espaciado antes y después del párrafo, como los hay para el interlineado. ¿Existe en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sí: Ctrl+0 añade o quita 12 pto antes del párrafo"
+        "text": "No: solo se ajusta desde la cinta o desde el cuadro Párrafo"
       },
       {
         "letter": "B",
-        "text": "Sí: Ctrl+Mayús+Arriba / Abajo"
+        "text": "Sí: Ctrl+0 añade o quita el espacio anterior"
       },
       {
         "letter": "C",
-        "text": "No: el espaciado antes/después solo se ajusta desde la cinta o el diálogo Párrafo"
+        "text": "Sí: Ctrl+Mayús+Arriba y Ctrl+Mayús+Abajo"
       },
       {
         "letter": "D",
-        "text": "Sí: Ctrl+Arriba / Abajo"
+        "text": "Sí: Ctrl+Arriba y Ctrl+Abajo"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "No hay atajo para el espaciado entre párrafos: se ajusta desde el grupo Párrafo de la cinta o el diálogo Párrafo. En esta instalación Ctrl+0 restaura el zoom al 100 %, no toca el espaciado. Prueba en vivo del usuario (sep 2026). ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+0 bajo dos comandos (Zoom100 y «espacio antes del párrafo»); en la práctica hace zoom 100 %."
+    "respuesta": "A",
+    "explicacion": "El interlineado sí tiene atajos —Ctrl+1, Ctrl+5 y Ctrl+2 para sencillo, 1,5 y doble— pero el espacio entre párrafos no tiene ninguno: se pone desde el desplegable de la cinta o desde los campos Anterior y Posterior del cuadro. · ⚠️ Ctrl+0 es el distractor con más fundamento, y es una trampa doble: el cuadro Personalizar teclado lo lista bajo dos comandos a la vez, Zoom100 y abrir o cerrar el espacio antes del párrafo, pero al probarlo hace zoom al 100 %. Prueba en vivo del usuario. · Ctrl+Arriba y Ctrl+Abajo mueven el cursor un párrafo, y con Mayús extienden la selección: son de navegación, no de formato."
   },
   {
     "id": "inicio-266",
@@ -9226,15 +9226,15 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0520",
-    "enunciado": "Un usuario tiene un documento con varios párrafos en estilo Título 1. Quiere: (1) que todos empiecen en página nueva y (2) que ninguno quede separado del párrafo siguiente. ¿Qué casillas debe activar en el cuadro Párrafo para conseguir ambas cosas a la vez?",
+    "enunciado": "Quieres que cada párrafo con estilo Título 1 empiece en página nueva y que ninguno quede separado del párrafo que le sigue. ¿Qué dos casillas activas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Salto de página anterior + Conservar líneas juntas"
+        "text": "Salto de página anterior + Conservar con el siguiente"
       },
       {
         "letter": "B",
-        "text": "Salto de página anterior + Conservar con el siguiente"
+        "text": "Salto de página anterior + Conservar líneas juntas"
       },
       {
         "letter": "C",
@@ -9246,8 +9246,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Salto de página anterior garantiza que cada título empiece en una página nueva. Conservar con el siguiente impide que el título quede separado del párrafo que le sigue. La combinación de ambas casillas es la configuración estándar para estilos de título en documentos formales, y de hecho los estilos Título 1 a Título 9 predefinidos de Word 365 tienen ambas casillas activadas por defecto."
+    "respuesta": "A",
+    "explicacion": "La primera fuerza el salto antes del título y la segunda lo ata al párrafo siguiente: cada una resuelve una de las dos cosas que pide el enunciado, y hacen falta las dos. · «Conservar líneas juntas» y el control de viudas y huérfanas miran hacia dentro del párrafo, y un título de una línea no se puede partir: en él no cambian nada, y por eso las tres combinaciones que las incluyen dejan sin resolver alguna de las dos peticiones. · Lo práctico es ponerlas en el propio estilo Título 1, con «Modificar estilo», y no párrafo a párrafo: así valen para todo el documento y para lo que se escriba después."
   },
   {
     "id": "inicio-289",
@@ -9261,28 +9261,28 @@
     "subtopic": null,
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "3-34",
-    "enunciado": "En Word 365, un usuario quiere aplicar \"Interlineado\" a un párrafo, ¿cuál es la ruta que debe seguir para localizar este comando?",
+    "enunciado": "Quieres cambiar el interlineado de un párrafo desde la cinta. ¿Cuál es la ruta correcta hasta ese comando?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Comando Interlineado → Grupo Párrafo → Ficha Inicio"
+        "text": "Pestaña Inicio ▸ grupo Párrafo ▸ Espaciado entre líneas y párrafos"
       },
       {
         "letter": "B",
-        "text": "Ficha Inicio → Comando Interlineado → Grupo Párrafo"
+        "text": "Pestaña Inicio ▸ grupo Estilos ▸ Espaciado entre líneas y párrafos"
       },
       {
         "letter": "C",
-        "text": "Ficha Inicio → Grupo Párrafo → Comando Interlineado"
+        "text": "Pestaña Diseño ▸ grupo Formato del documento ▸ Espacio entre párrafos"
       },
       {
         "letter": "D",
-        "text": "Grupo Párrafo → Ficha Inicio → Comando Interlineado"
+        "text": "Pestaña Disposición ▸ grupo Párrafo ▸ Espaciado"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El orden jerárquico establecido en el material es: Fichas/Pestañas → Grupos/Paneles → Comandos."
+    "respuesta": "A",
+    "explicacion": "El comando vive en el grupo Párrafo de Inicio, con un icono de renglones y flechas verticales, y su desplegable ofrece 1,0, 1,15, 1,5, 2,0, 2,5 y 3,0 más «Opciones de interlineado…». · Diseño ▸ Espacio entre párrafos es el descarte con más fundamento porque hace algo muy parecido, pero para el documento entero y a través de los estilos, no para el párrafo donde está el cursor. · Disposición ▸ Párrafo sí existe y también toca el párrafo, pero sus campos son «Antes» y «Después», el espacio ENTRE párrafos, no el interlineado de dentro. · Y el grupo Estilos no contiene ningún control de espaciado suelto."
   },
   {
     "id": "inicio-304",
@@ -9296,28 +9296,28 @@
     "subtopic": null,
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "8-153",
-    "enunciado": "¿Qué hace el atajo Ctrl+0 (cero) en esta instalación de Word 365?",
+    "enunciado": "Pulsas Ctrl+0 esperando abrir o cerrar el espacio anterior del párrafo, como dice el cuadro Personalizar teclado. ¿Qué ocurre en realidad?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Restaura el zoom al 100 %"
+        "text": "El documento vuelve al zoom del 100 %"
       },
       {
         "letter": "B",
-        "text": "Aplica interlineado de 1,5 líneas"
+        "text": "Se añaden o se quitan 12 pto de espacio antes del párrafo"
       },
       {
         "letter": "C",
-        "text": "Añade o quita 12 pto de espacio antes del párrafo"
+        "text": "El párrafo pasa a interlineado sencillo"
       },
       {
         "letter": "D",
-        "text": "Aplica subíndice"
+        "text": "No ocurre nada: la combinación no está asignada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+0 restaura el zoom al 100 %. ⚠️ Ojo: el cuadro Personalizar teclado lo lista también bajo «abrir/cerrar el espacio antes del párrafo», pero al pulsarlo hace zoom. El espaciado entre párrafos no tiene atajo. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "⚠️ Este es uno de los conflictos internos del propio cuadro Personalizar teclado: Ctrl+0 aparece listado bajo dos comandos a la vez, Zoom100 y abrir o cerrar el espacio antes del párrafo. Al probarlo, gana el zoom. Prueba en vivo del usuario. · Por eso la opción del espaciado no es un invento: es lo que el cuadro promete y no cumple, y ese es exactamente el tipo de caso en el que hay que fiarse de la prueba y no de la tabla. · El interlineado sencillo es Ctrl+1, del mismo trío que Ctrl+5 y Ctrl+2. · Y decir que no está asignada tampoco vale: sí lo está, y por partida doble."
   },
   {
     "id": "inicio-314",
@@ -9331,7 +9331,7 @@
     "subtopic": null,
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "8-199",
-    "enunciado": "¿Qué atajo aplica un interlineado de espacio sencillo al párrafo en Word 365?",
+    "enunciado": "Quieres poner interlineado sencillo al párrafo donde está el cursor sin abrir ningún cuadro. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -9352,7 +9352,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+1 aplica interlineado sencillo, Ctrl+2 doble y Ctrl+5 (fila superior) de 1,5 líneas. Ctrl+0 restaura el zoom al 100 %. ⚠️ Ojo: en el cuadro Personalizar teclado, Ctrl+1 figura como «Aplicar Título 1», pero al pulsarlo aplica interlineado sencillo (prueba en vivo). Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "El trío del interlineado usa las teclas de la fila superior: Ctrl+1 sencillo, Ctrl+5 de 1,5 líneas y Ctrl+2 doble. La correspondencia es fácil de recordar salvo por el 5, que representa el «1,5» sin la coma. · ⚠️ Ojo con Ctrl+1: en el cuadro Personalizar teclado figura como «Aplicar Título 1», pero al pulsarlo aplica interlineado sencillo. Título 1 se aplica con Ctrl+Mayús+1. Prueba en vivo del usuario. · Ctrl+0 tiene su propio conflicto y acaba haciendo zoom al 100 %. · Y Ctrl+5 en el teclado numérico no aplica ningún interlineado: selecciona el documento entero."
   },
   {
     "id": "inicio-315",
@@ -9366,7 +9366,7 @@
     "subtopic": null,
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "8-200",
-    "enunciado": "¿Qué atajo aplica un interlineado doble al párrafo en Word 365?",
+    "enunciado": "Un modelo de instancia exige el texto a doble espacio. ¿Qué combinación aplica el interlineado doble al párrafo?",
     "opciones": [
       {
         "letter": "A",
@@ -9387,7 +9387,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+2 aplica interlineado doble; Ctrl+1 sencillo, Ctrl+5 de 1,5 líneas. Ctrl+Mayús+2 no tiene función. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+2 aplica el interlineado doble, y forma trío con Ctrl+1 para el sencillo y Ctrl+5 para el de 1,5 líneas, todos con las teclas de la fila superior. Prueba en vivo del usuario. · Ctrl+1 y Ctrl+5 son sus hermanos y no hay forma de descartarlos sin sabérselos: los tres números tienen una lógica directa con el interlineado que aplican. · Ctrl+Mayús+2 no toca el interlineado, y además es una trampa doble: no aplica el Título 2, como podría parecer por simetría con Ctrl+Mayús+1, que sí aplica el Título 1. El Título 2 se aplica con Alt+Ctrl+2."
   },
   {
     "id": "inicio-316",
@@ -9401,28 +9401,28 @@
     "subtopic": null,
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "8-201",
-    "enunciado": "¿Qué atajo aplica un interlineado de 1,5 líneas al párrafo en Word 365?",
+    "enunciado": "Quieres dejar un informe con interlineado de 1,5 líneas usando solo el teclado. ¿Qué combinación lo aplica?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+5"
+        "text": "Ctrl+5 de la fila superior"
       },
       {
         "letter": "B",
-        "text": "Ctrl+1"
+        "text": "Ctrl+5 del teclado numérico"
       },
       {
         "letter": "C",
-        "text": "Ctrl+2"
+        "text": "Ctrl+1 de la fila superior"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+5"
+        "text": "Ctrl+Mayús+5 de la fila superior"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+5 (fila superior) aplica interlineado de 1,5 líneas; Ctrl+1 sencillo, Ctrl+2 doble. ⚠️ Ojo: Ctrl+5 del teclado NUMÉRICO en cambio selecciona todo el documento. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "El 5 de la fila superior es el que da el interlineado de 1,5 líneas: el número recuerda al «1,5» sin la coma. · ⚠️ El 5 del teclado numérico hace algo distinto por completo: selecciona el documento entero, igual que Ctrl+E, y funciona con el bloqueo numérico encendido o apagado. Prueba en vivo del usuario. Es de los pocos casos de Word en los que la misma combinación cambia de significado según la zona del teclado, y por eso es el descarte que decide la pregunta. · Ctrl+1 es el sencillo. · Y Ctrl+Mayús+5 no tiene comando asignado en esta instalación."
   },
   {
     "id": "inicio-421",
@@ -9446,20 +9446,20 @@
       },
       {
         "letter": "B",
-        "text": "Insertar ▸ Símbolos"
+        "text": "Disposición ▸ Párrafo"
       },
       {
         "letter": "C",
-        "text": "Insertar ▸ Comentarios"
+        "text": "Diseño ▸ Formato del documento"
       },
       {
         "letter": "D",
-        "text": "Insertar ▸ Ilustraciones"
+        "text": "Inicio ▸ Estilos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Espaciado entre líneas y párrafos.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. El interlineado (1,0 / 1,15 / 1,5 / 2,0…) y «Agregar/Quitar espacio antes o después del párrafo»."
+    "explicacion": "**Espaciado entre líneas y párrafos.** Pestaña Inicio ▸ **Párrafo**. Su desplegable ofrece 1,0, 1,15, 1,5, 2,0, 2,5 y 3,0, más «Opciones de interlineado…» y las dos entradas de espacio antes y después del párrafo. No tiene atajo propio, aunque tres de sus valores sí lo tengan: Ctrl+1, Ctrl+5 y Ctrl+2. · Disposición ▸ Párrafo es el descarte más fino, porque también maneja el espacio del párrafo, pero solo el de antes y después, con cuadros numéricos, y no el interlineado. · Diseño ▸ Formato del documento tiene «Espacio entre párrafos», que hace lo mismo para el documento entero a través de los estilos. · Y el grupo Estilos no lleva ningún control de espaciado suelto."
   },
   {
     "id": "inicio-437",
@@ -9474,28 +9474,28 @@
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "neg-inicio-06",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre interlineado es INCORRECTA?",
+    "enunciado": "Repasas los atajos de interlineado antes del examen. ¿Cuál de estas afirmaciones es INCORRECTA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+1 = interlineado sencillo"
+        "text": "Ctrl+1 aplica el interlineado sencillo"
       },
       {
         "letter": "B",
-        "text": "Ctrl+5 (fila superior) = interlineado 1,5"
+        "text": "Ctrl+5 de la fila superior aplica el de 1,5 líneas"
       },
       {
         "letter": "C",
-        "text": "Ctrl+2 = interlineado doble"
+        "text": "Ctrl+2 aplica el interlineado doble"
       },
       {
         "letter": "D",
-        "text": "Ctrl+0 cambia el interlineado a triple"
+        "text": "Ctrl+0 aplica el interlineado triple"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Ctrl+0 no toca el interlineado: restaura el zoom al 100 %. Los atajos de interlineado son Ctrl+1/Ctrl+5/Ctrl+2 (sencillo/1,5/doble)."
+    "explicacion": "Ctrl+0 no toca el interlineado: devuelve el documento al zoom del 100 %. Y el triple no tiene atajo, ni siquiera existe como valor con nombre: se conseguiría con el tipo «Múltiple» y un 3 en el campo «En:». · La opción cuela porque completa la serie 1, 2, 5 con el número que faltaba, y porque el cuadro Personalizar teclado sí lista Ctrl+0 bajo un comando de párrafo —abrir o cerrar el espacio anterior— que en la práctica no se ejecuta. Prueba en vivo del usuario. · Las otras tres son ciertas y forman el trío completo de los interlineados con atajo."
   },
   {
     "id": "inicio-461",
@@ -9510,28 +9510,28 @@
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "neg2-inicio-11",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Repasas los tipos de interlineado del cuadro Párrafo. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+1 aplica interlineado sencillo."
+        "text": "«Mínimo» crece solo si la letra de la línea no cabe"
       },
       {
         "letter": "B",
-        "text": "Ctrl+5 (fila superior) aplica interlineado 1,5."
+        "text": "«Múltiple» admite cualquier factor que se escriba en «En:»"
       },
       {
         "letter": "C",
-        "text": "Ctrl+2 aplica interlineado doble."
+        "text": "«Sencillo», «1,5 líneas» y «Doble» se calculan sobre el tamaño de la letra"
       },
       {
         "letter": "D",
-        "text": "El interlineado «Exacto» ajusta el espacio automáticamente según el tamaño de fuente más grande de la línea."
+        "text": "«Exacto» crece solo si la letra de la línea no cabe"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "«Exacto» fija un valor de espacio constante sin importar el tamaño de fuente; el que se ajusta solo es «Mínimo»."
+    "explicacion": "«Exacto» es precisamente el que NO crece: clava la altura de la línea en los puntos indicados, y si la letra es más alta se solapa o se corta. El que se adapta es «Mínimo», que garantiza un suelo y por encima cede lo que haga falta. Distinguir ese par es lo único que se pregunta aquí, y es la confusión más habitual de todo el desplegable, porque los dos se miden en puntos. · Las otras tres son ciertas: «Múltiple» acepta 1,08, 2,5 o lo que se escriba, y los tres proporcionales se calculan sobre el carácter más alto de cada línea, de modo que crecen solos al subir el tamaño de la fuente."
   },
   {
     "id": "inicio-490",
@@ -9546,7 +9546,7 @@
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "rutas-inicio-20",
     "generado": true,
-    "enunciado": "¿Qué valor de Interlineado fija una altura de línea en puntos que NO crece aunque la fuente sea más grande (y puede recortar el texto)?",
+    "enunciado": "Necesitas que todas las líneas de una página midan exactamente lo mismo para que cuadren con una rejilla, aunque alguna letra grande acabe cortada. ¿Qué tipo de interlineado eliges?",
     "opciones": [
       {
         "letter": "A",
@@ -9562,12 +9562,12 @@
       },
       {
         "letter": "D",
-        "text": "Doble"
+        "text": "Sencillo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Exacto» impone una altura fija. «Mínimo» también se indica en puntos pero se agranda si el contenido de la línea lo necesita."
+    "explicacion": "«Exacto» impone una altura fija en puntos que no se mueve pase lo que pase: es el único que garantiza una rejilla perfecta, y también el único que puede llegar a recortar el texto. Ese riesgo es su contrapartida y lo que se acepta al elegirlo. · «Mínimo» es el descarte que decide la pregunta: también se escribe en puntos, y en la mayoría de párrafos da el mismo resultado, pero en cuanto aparece una letra más alta se agranda y rompe la rejilla. · «Múltiple» y «Sencillo» son proporcionales al tamaño de la letra, así que cambian de línea a línea en cuanto el texto no es homogéneo."
   },
   {
     "id": "inicio-491",
@@ -9582,7 +9582,7 @@
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "rutas-inicio-21",
     "generado": true,
-    "enunciado": "El botón desplegable «Espaciado entre líneas y párrafos» de la cinta ofrece, además de los valores 1,0 a 3,0 y «Opciones de interlineado…»:",
+    "enunciado": "Además de los seis valores numéricos y de «Opciones de interlineado…», el desplegable «Espaciado entre líneas y párrafos» de la cinta tiene dos entradas más. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
@@ -9590,20 +9590,20 @@
       },
       {
         "letter": "B",
-        "text": "«Sangría francesa» y «Primera línea»"
+        "text": "«Sangría de primera línea» y «Sangría francesa»"
       },
       {
         "letter": "C",
-        "text": "«Bordes y sombreado…»"
+        "text": "«Espacio entre párrafos…» y «Sin espaciado»"
       },
       {
         "letter": "D",
-        "text": "«Definir nuevo interlineado…»"
+        "text": "«Definir nuevo interlineado…» y «Bordes y sombreado…»"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Según el estado del párrafo, la última línea del menú alterna entre agregar/quitar el espacio anterior y posterior del párrafo."
+    "explicacion": "Son las dos últimas del menú, con su icono de renglones y flecha, y su nombre no es fijo: alterna entre «Agregar» y «Quitar» según lo que tenga puesto el párrafo en ese momento, de modo que siempre ofrecen la acción contraria a la actual. · Las sangrías no están en este menú, sino en los botones de aumentar y disminuir sangría y en el cuadro Párrafo. · «Espacio entre párrafos» sí existe, pero en Diseño ▸ Formato del documento, y actúa sobre el documento entero; y «Sin espaciado» es un estilo de la galería de Estilos. Ese es el descarte con más fundamento, porque las dos cosas son reales y las dos van de espaciado. · Y no hay ningún «Definir nuevo interlineado…»."
   },
   {
     "id": "inicio-494",
@@ -9618,28 +9618,28 @@
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "rutas-inicio-24",
     "generado": true,
-    "enunciado": "En el cuadro Párrafo, la casilla «No agregar espacio entre párrafos del mismo estilo» pertenece al bloque:",
+    "enunciado": "En el cuadro Párrafo, ¿en qué bloque está la casilla «No agregar espacio entre párrafos del mismo estilo»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Espaciado"
+        "text": "Espaciado, en la ficha «Sangría y espacio»"
       },
       {
         "letter": "B",
-        "text": "Sangría"
+        "text": "Sangría, en la ficha «Sangría y espacio»"
       },
       {
         "letter": "C",
-        "text": "General"
+        "text": "General, en la ficha «Sangría y espacio»"
       },
       {
         "letter": "D",
-        "text": "Líneas y saltos de página"
+        "text": "Paginación, en la ficha «Líneas y saltos de página»"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Está junto a los campos Anterior / Posterior / Interlineado del bloque «Espaciado»."
+    "explicacion": "Está justo debajo de los campos «Anterior», «Posterior» e «Interlineado», dentro del bloque Espaciado, y tiene todo el sentido: lo que hace es anular esos dos primeros campos cuando el párrafo de al lado comparte estilo. · La ficha «Líneas y saltos de página» es el descarte más creíble porque sus cuatro casillas también sirven para «mantener cosas juntas»: pero allí se decide dónde puede caer un salto de página, no cuánto espacio en blanco queda. · El bloque General guarda la alineación y el nivel de esquema. · Y el de Sangría, los tres campos que mueven el texto en horizontal."
   },
   {
     "id": "inicio-549",
@@ -9654,15 +9654,15 @@
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "dlgcompart-inicio-04",
     "generado": true,
-    "enunciado": "La opción «Opciones de interlineado…», al final del menú del botón «Espaciado entre líneas y párrafos» de la cinta, ¿qué abre?",
+    "enunciado": "Al final del desplegable de interlineado de la cinta pulsas «Opciones de interlineado…». ¿Qué se abre y en qué ficha?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El cuadro Párrafo, ficha «Sangría y espacio»"
+        "text": "El cuadro Párrafo, en la ficha «Sangría y espacio»"
       },
       {
         "letter": "B",
-        "text": "El cuadro Párrafo, ficha «Líneas y saltos de página»"
+        "text": "El cuadro Párrafo, en la ficha «Líneas y saltos de página»"
       },
       {
         "letter": "C",
@@ -9670,12 +9670,12 @@
       },
       {
         "letter": "D",
-        "text": "El cuadro «Bordes y sombreado»"
+        "text": "El panel Estilos, con el estilo del párrafo seleccionado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Es exactamente el mismo cuadro (y la misma ficha) que abre el lanzador del grupo Párrafo."
+    "explicacion": "Es exactamente el mismo cuadro, y en la misma ficha, que abre el iniciador de la esquina del grupo Párrafo: lleva ahí porque es donde está el desplegable Interlineado completo, con los seis tipos y el campo «En:». · Es otro caso del patrón que se repite en toda la cinta: las entradas «Más…» y «Opciones de…» no abren cuadros nuevos, llevan al cuadro general colocando el foco donde interesa. · La otra ficha existe, pero guarda las casillas de paginación. · Al cuadro Tabulaciones se llega desde un botón de ese mismo cuadro Párrafo, un paso más allá. · Y el panel Estilos es otra cosa: aplica estilos con nombre."
   },
   {
     "id": "inicio-489",
@@ -9690,7 +9690,7 @@
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "rutas-inicio-19",
     "generado": true,
-    "enunciado": "En el cuadro Párrafo, el desplegable «Interlineado» ofrece:",
+    "enunciado": "Repasas el desplegable «Interlineado» del cuadro Párrafo. ¿Cuáles de estos tipos ofrece de verdad?",
     "opciones": [
       {
         "letter": "A",
@@ -9730,7 +9730,7 @@
       "E",
       "F"
     ],
-    "explicacion": "Los seis valores son Sencillo, 1,5 líneas, Doble, Mínimo, Exacto y Múltiple. «Ajustado» no existe."
+    "explicacion": "Son seis, y se reparten en dos familias. Sencillo, 1,5 líneas, Doble y Múltiple son proporcionales al carácter más alto de cada línea, así que crecen solos con la letra. Mínimo y Exacto se escriben en puntos: el primero garantiza un suelo y cede si hace falta, el segundo se queda clavado aunque el texto se corte. · «Ajustado» es el único falso, y cuela porque suena a lo que hace «Mínimo»: adaptarse. Word no usa esa palabra en ningún desplegable de interlineado. · Los tres primeros tienen atajo —Ctrl+1, Ctrl+5 y Ctrl+2—; los otros tres solo se ponen desde este cuadro."
   },
   {
     "id": "inicio-49",
@@ -9745,11 +9745,11 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0289",
-    "enunciado": "El nivel de esquema en el cuadro de dialogo Parrafo es un tipo de formato que cambia la apariencia visual del texto, de forma similar a como lo hace la alineacion o el interlineado.",
+    "enunciado": "El nivel de esquema del cuadro Párrafo es un formato visual, del mismo tipo que la alineación o el interlineado.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso. El nivel de esquema no es formato: es una estructura jerarquica que determina la posicion del parrafo en la Vista Esquema y en la Tabla de contenido. No cambia la apariencia visual del texto en la vista de impresion. Ofrece 10 opciones: Texto independiente mas los Niveles 1 al 9."
+    "explicacion": "Falso. El nivel de esquema no cambia nada de cómo se ve el párrafo en la vista Diseño de impresión: lo que hace es decir a Word qué lugar ocupa en la jerarquía del documento. De ahí salen tres cosas: que aparezca en el panel de Navegación, que se pueda contraer y expandir, y que entre en la tabla de contenido. · Ofrece diez valores: «Texto independiente», que es el de partida, y los niveles del 1 al 9, tantos como estilos Título hay. · Su utilidad práctica es meter en el índice un párrafo que no debe verse como un título, algo que con estilos no se puede hacer sin tocar su apariencia."
   },
   {
     "id": "inicio-446",
@@ -9764,11 +9764,11 @@
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "bal-inicio-03",
     "generado": true,
-    "enunciado": "El interlineado «Múltiple» del cuadro Párrafo solo admite el valor 1,5 y no otros números.",
+    "enunciado": "El interlineado «Múltiple» del cuadro Párrafo solo admite el valor 1,5 y ningún otro.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: «Múltiple» acepta cualquier valor que se escriba en el campo «En» (1,08, 1,16, 2,5…), no solo 1,5."
+    "explicacion": "Falso: «Múltiple» acepta el factor que se escriba en el campo «En:» de al lado —1,08, 1,15, 2,5, 3—, y ahí está su utilidad, porque es el único tipo que permite valores que no están en la lista. De hecho el interlineado 1,15 del estilo Normal es un «Múltiple» con 1,15. · Los valores 1,5 y 2 tienen además tipo propio, «1,5 líneas» y «Doble», que hacen exactamente lo mismo que poner esos factores en Múltiple: existen por comodidad. · Lo que no admite Múltiple son medidas en puntos: para eso están «Mínimo» y «Exacto»."
   },
   {
     "id": "inicio-492",
@@ -9783,11 +9783,11 @@
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "rutas-inicio-22",
     "generado": true,
-    "enunciado": "«Opciones de interlineado…», dentro del desplegable de interlineado de la cinta, abre el cuadro Párrafo en la ficha «Sangría y espacio».",
+    "enunciado": "«Opciones de interlineado…», en el desplegable de interlineado de la cinta, abre el cuadro Párrafo en la ficha «Sangría y espacio».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Es la misma ficha que abre el iniciador del grupo Párrafo."
+    "explicacion": "Verdadero, y es el mismo cuadro y la misma ficha que abre el iniciador de la esquina del grupo Párrafo, el iniciador equivalente del grupo Párrafo de Disposición, y el «Párrafo…» del menú contextual. Cuatro puertas, un solo destino. · Tiene lógica que lleve a esa ficha y no a la otra: allí está el desplegable Interlineado completo, con los seis tipos y el campo «En:», que es lo que el usuario buscaba al pulsar. · La ficha «Líneas y saltos de página» guarda las cuatro casillas de paginación, que no tienen nada que ver con el interlineado."
   },
   {
     "id": "inicio-550",
@@ -9802,11 +9802,11 @@
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "dlgcompart-inicio-05",
     "generado": true,
-    "enunciado": "Los interlineados «Mínimo», «Exacto» y «Múltiple» no aparecen en el botón «Espaciado entre líneas y párrafos» de la cinta; solo se pueden fijar desde el desplegable «Interlineado» del cuadro Párrafo.",
+    "enunciado": "Los interlineados «Mínimo», «Exacto» y «Múltiple» no están en el desplegable de la cinta: solo se ponen desde el cuadro Párrafo.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "El botón de la cinta solo ofrece valores fijos (1,0 · 1,15 · 1,5 · 2,0 · 2,5 · 3,0) y el enlace «Opciones de interlineado…», que abre el cuadro Párrafo."
+    "explicacion": "Verdadero. El botón de la cinta ofrece seis valores fijos —1,0, 1,15, 1,5, 2,0, 2,5 y 3,0— y ninguno de los tres tipos que necesitan una medida escrita a mano. Para esos hay que entrar en el cuadro, y el propio menú deja la puerta: «Opciones de interlineado…». · La razón es de diseño: los tres que faltan piden un número en el campo «En:», y un menú de la cinta no es sitio para eso. · Es un buen ejemplo de la diferencia entre los seis VALORES de la cinta y los seis TIPOS del cuadro: coinciden en el número y no son lo mismo. Los valores de la cinta se corresponden con el tipo «Múltiple» y su factor."
   },
   {
     "id": "inicio-552",
@@ -9821,11 +9821,11 @@
     "tema": "Espaciado e interlineado",
     "sourceQuestionId": "dlgcompart-inicio-07",
     "generado": true,
-    "enunciado": "El cuadro Párrafo que se abre con «Opciones de interlineado…» es idéntico al que abre el lanzador del grupo Párrafo.",
+    "enunciado": "El cuadro Párrafo que se abre desde «Opciones de interlineado…» es idéntico al que abre el iniciador del grupo Párrafo.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Es literalmente el mismo cuadro; la ruta de entrada no cambia su contenido."
+    "explicacion": "Verdadero: es literalmente el mismo cuadro, con sus dos fichas y todos sus campos, y la puerta por la que se entre no cambia ni un control. Lo mismo vale para el iniciador del grupo Párrafo de la pestaña Disposición y para «Párrafo…» del menú contextual. · Es un patrón general de Word que conviene tener presente para el examen: varias rutas llevan al mismo cuadro, y lo que a veces cambia es la ficha en la que se abre, no el contenido. El caso claro de eso es «Bordes y sombreado», que desde Inicio abre en la ficha Bordes y desde Diseño en la de Borde de página."
   },
   {
     "id": "inicio-254",
@@ -9840,7 +9840,7 @@
     "tema": "Espaciado e interlineado",
     "difficulty": "media",
     "sourceQuestionId": "P-0508",
-    "enunciado": "Relaciona cada atajo de interlineado con el tipo que aplica en la versión española de Word 365:",
+    "enunciado": "Relaciona cada combinación con el interlineado que aplica en esta instalación:",
     "opciones": [],
     "matching": {
       "left": [
@@ -9890,7 +9890,7 @@
       "2": "B",
       "3": "C"
     },
-    "explicacion": "Ctrl+1 = interlineado sencillo, Ctrl+2 = doble, Ctrl+5 (fila superior) = 1,5 líneas. ⚠️ Ojo: Ctrl+5 del teclado numérico selecciona todo; y en el cuadro Personalizar teclado Ctrl+1 figura bajo «Aplicar Título 1», aunque en la práctica hace interlineado. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+1 da el sencillo, Ctrl+2 el doble y Ctrl+5 de la fila superior el de 1,5 líneas: el número recuerda al valor, con el 5 haciendo de «1,5» sin la coma. Prueba en vivo del usuario. · ⚠️ Dos avisos sobre estas mismas teclas. El 5 del teclado numérico no aplica interlineado: selecciona el documento entero. Y Ctrl+1 figura en el cuadro Personalizar teclado bajo «Aplicar Título 1», aunque al pulsarlo haga el interlineado; el Título 1 se aplica con Ctrl+Mayús+1. · Los dos destinos que se quedan sin pareja, «múltiple» y «exacto de 12 pto», son tipos reales del desplegable del cuadro Párrafo, pero ninguno de los seis tipos que hay allí tiene atajo salvo los tres de esta pregunta."
   },
   {
     "id": "inicio-493",
@@ -9922,7 +9922,7 @@
         "3.0"
       ]
     ],
-    "explicacion": "Son los seis valores rápidos del botón «Espaciado entre líneas y párrafos»."
+    "explicacion": "Los seis valores del botón «Espaciado entre líneas y párrafos» son 1,0, 1,15, 1,5, 2,0, 2,5 y 3,0. El 1,15 es el único que no es redondo, y está ahí porque es el interlineado que trae el estilo Normal de Word. · Por debajo de esos seis, el menú ofrece «Opciones de interlineado…», que abre el cuadro Párrafo, y las dos entradas de espacio antes y después del párrafo. · Ojo con no confundir estos seis valores con los seis TIPOS del desplegable Interlineado del cuadro Párrafo —sencillo, 1,5 líneas, doble, mínimo, exacto y múltiple—: coinciden en el número y no son lo mismo."
   },
   {
     "id": "inicio-51",
