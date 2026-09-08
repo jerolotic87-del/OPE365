@@ -256,6 +256,119 @@ final del fichero entero: 0 preguntas donde la correcta se delate por
 longitud, 0 explicaciones de menos de 120 caracteres, 0 citas de fuentes
 externas, 0 opciones truncadas.
 
+**`inicio` TERMINADO (sep-2026): 578/578 reescritas a mano.** Segunda sección
+completa. Trece grupos cerrados uno a uno: portapapeles (52), fuente (134),
+parrafo-marcas (11), -alineacion (22), -sangria (20), -espaciado (35),
+-bordes (32), -listas (40), -tabulaciones (26), estilos (79), edicion (117),
+voz (6), complementos (4). Estado final auditado: 449 opción única · 70 V/F
+(39V/31F) · 28 selección múltiple · 24 emparejamiento · 7 relleno · 32
+negativas; concepto 255 · ruta 163 · atajo 160; **0 explicaciones de menos de
+120 caracteres, 0 que citen letras, 0 incoherencias `tipo`↔`respuesta` y 0
+topics con menos de 2 framings** (el mínimo son 3, en complementos; ocho de
+los trece llegan a 6 o más, así que ninguno se atasca en «consolidando»).
+
+**Errores de HECHO destapados al reescribir `inicio`** (todos contrastados
+contra el volcado v2608, las capturas del usuario o pruebas en vivo; ya
+corregidos, no reabrir):
+- **La fuente predeterminada es Aptos 12**, no Calibri 11. `inicio-11` daba
+  Calibri «porque es la referencia documentada para el examen». El volcado de
+  rutas y la captura del cuadro Fuente («+Cuerpo», vista previa «Aptos») lo
+  desmienten.
+- **`Ctrl+Q` NO quita el formato de párrafo**: es PárrafoIzquierda. Quien lo
+  quita es `Ctrl+W` (DefinirPárrafo). Estaba mal en `inicio-262/263/265/278`
+  y en varias explicaciones sueltas.
+- **El panel de Navegación NO tiene tope de 100 resultados.** Lo repetían
+  `inicio-118/119/120/208`. Con 64.350 coincidencias Word dice «Hay demasiados
+  resultados»: no hay límite fijo. Las cifras 100 y 200 son ahora distractores.
+- **El desplegable «Alineación» del cuadro Párrafo tiene CUATRO entradas**
+  (izquierda, centrada, derecha, justificada), no cinco: «Distribuida» existe
+  y se aplica con Ctrl+Mayús+J, pero NO está en ese desplegable ni tiene botón
+  en la cinta. Confirmado con la captura del propio desplegable.
+- **El desplegable «Ancho» de Bordes y sombreado tiene NUEVE grosores y
+  empieza en ¼ pto**, no ocho desde ½. Estaba mal en `inicio-51/52/235`.
+- `inicio-346` daba `Alt+Ctrl+P` como vista Diseño de impresión: es
+  `Alt+Ctrl+D`. `inicio-354` daba `Alt+Ctrl+M` como insertar comentario: no
+  figura en el volcado (es `Alt+Ctrl+A`). `inicio-377` daba `Alt+Ctrl+U` como
+  autoformato del texto: es **TablaActualizarAutoformato**, solo de tablas; el
+  del documento es `Ctrl+O`. `inicio-300` decía que `Ctrl+F1` «no tiene
+  función»: contrae la cinta. `inicio-311` afirmaba `Ctrl+F2` = vista previa,
+  que no está en el volcado, mientras `inicio-317` decía lo contrario.
+- `inicio-86/280` daban el pincel Copiar formato como `Ctrl+Mayús+C/V`: aquí
+  es `Alt+Ctrl+C/V`. `inicio-96/240` llamaban Normal.dot**x** a la plantilla:
+  es Normal.dot**m**. `inicio-338/339` llamaban «página» a lo que el volcado
+  llama «pantalla de texto» (Mayús+Av Pág depende del zoom, no de los saltos).
+- `inicio-241/285` separaban `Ctrl+Y` de `F4` como si hicieran cosas
+  distintas: el volcado las pone juntas con `Alt+Entrar` bajo
+  EdiciónRehacerORepetir. Rehacer en sentido estricto es
+  `Alt+Mayús+Retroceso`.
+- Preguntas con DOS respuestas defendibles o con TODAS correctas:
+  `inicio-17` (dos opciones describían bien las versalitas), `inicio-235` y
+  `inicio-271` (selección múltiple sin ninguna falsa). `inicio-267` tenía una
+  opción «Tanto B como C son válidas», que no significa nada al barajarse.
+- **Afirmaciones sin fuente propia, retiradas** (sustituidas por hechos que sí
+  constan, no por otras inventadas): que la opción «Sombra» de Bordes dibuja
+  siempre el sombreado en negro; que el efecto «3D» solo funciona con bordes
+  asimétricos; que una trama sin relleno se ve como color sólido; que las
+  viñetas personalizadas se acumulan en su biblioteca y las multinivel no; que
+  «Agregar espacio antes del párrafo» añade 12 pto y «Quitar espacio después»
+  elimina 8; que «Vinculado» es el valor por defecto de «Tipo de estilo»; el
+  tope del historial de Deshacer.
+- **`Alt+Mayús+←/→` retirado del banco**: `inicio-63` lo emparejaba con subir
+  y bajar de nivel en una lista, y esa combinación NO está en el volcado ni en
+  la lista cerrada de extras confirmados en vivo. El emparejamiento se rehízo
+  con Tab, Mayús+Tab y «Cambiar nivel de lista», que son comportamiento y
+  menú, no asignación de teclas.
+
+**PENDIENTE de verificar por el usuario (único hueco abierto de `inicio`)**:
+`inicio-47` afirmaba la «regla del mayor» —que entre dos párrafos con
+espaciado posterior y anterior distintos se ve el mayor de los dos, no la
+suma—. No está en ninguna fuente propia y Word podría sumarlos. La pregunta se
+reformuló hacia un hecho que sí consta (Diseño ▸ Espacio entre párrafos actúa
+sobre el documento entero, según su propio mensaje emergente), así que el
+banco ya no afirma nada sin respaldo, pero el dato sigue sin resolver.
+
+**Hechos nuevos incorporados desde las capturas del usuario al reescribir
+`inicio`** (verificados, usables como fuente): sección «Cortar, copiar y
+pegar» de Opciones ▸ Avanzadas con sus cuatro desplegables y sus valores de
+fábrica —dentro del mismo documento y entre documentos, **Mantener formato de
+origen**; con conflicto de estilos, **Usar estilos de destino**; **desde otras
+aplicaciones, Combinar formato**— y la casilla «Conservar viñetas y números al
+pegar texto con la opción Conservar solo texto», marcada de fábrica · el
+desplegable del botón Pegar tiene solo tres cosas (iconos de Opciones de
+pegado, «Pegado especial…» y «Establecer Pegar predeterminado…») y **qué
+iconos aparecen depende de lo que haya en el portapapeles** · panel
+Portapapeles con «Pegar todo», «Borrar todo» y botón «Opciones» · cuadro
+Pegado especial con Origen, radios Pegar / Pegar vínculo (atenuado si el
+origen es desconocido), lista «Como:», casilla «Mostrar como icono» y recuadro
+«Resultado» · cuadro Fuente: fichas **Fuente y Avanzado**, Estilo de fuente
+con 4 entradas, **7 casillas de Efectos** (Contorno y Relieve YA NO están),
+botones «Establecer como predeterminado» y «Efectos de texto:» (no hay
+«Restablecer») · ficha Avanzado con Escala / Espaciado / Posición /
+**Interletraje** (no «Kerning») / OpenType · paleta del rotulador **cerrada**,
+con interruptor «Solo contraste alto» y sin «Más colores» · desplegable de
+fuentes partido en Fuentes del tema / usadas recientemente / Todas · cuadro
+Bordes y sombreado: fichas **Bordes · Borde de página · Sombreado**, Valor con
+5 botones (Ninguno, Cuadro, Sombra, 3D, Personalizado), **Ancho con 9 grosores
+de ¼ a 6 pto** · desplegable de interlineado de la cinta con **6 valores (1,0 ·
+1,15 · 1,5 · 2,0 · 2,5 · 3,0)**, que NO son los 6 tipos del cuadro Párrafo ·
+cuadro Tabulaciones con «Tabulaciones predeterminadas: 1,25 cm», 5
+alineaciones, 4 rellenos numerados y botones Establecer / Eliminar / Eliminar
+todas · menú de Viñetas con 3 secciones (usadas recientemente / Biblioteca de
+7 / de documento) y menú de Lista multinivel con «Lista actual» + «Biblioteca
+de listas» (Ninguna + 7) + «Cambiar nivel de lista» + las dos entradas de
+definir.
+
+**Herramienta**: `scripts/aplicar_reescritura.py` se endureció durante esta
+sección. Ahora admite `matching` (sin eso no se podía reescribir a mano ningún
+emparejamiento), el detector de opciones repetidas **distingue mayúsculas**
+—tumbaba las preguntas donde lo que se pregunta ES el uso de mayúsculas—, el
+chivato de longitud solo se aplica cuando hay UNA respuesta correcta, y
+comprueba la **coherencia entre `tipo` y `respuesta`** para los cuatro tipos.
+Ese último control nació de un bug propio: al convertir `inicio-86` y
+`inicio-280` de V/F a opción única les di cuatro opciones y olvidé cambiar el
+`tipo`, con lo que la interfaz pintaba dos botones Verdadero/Falso sobre una
+pregunta de cuatro opciones y ningún test lo detectaba.
+
 **Regla nueva y trampa que costó cara: NUNCA citar la LETRA de una opción en
 la explicación.** Las opciones se barajan al construir la sesión
 (`shuffleOptions:true` es el valor por defecto en TODAS: smart, repaso,
@@ -615,9 +728,10 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 "Archivo — Imprimir", `sourceQuestionId` conserva el origen).
 
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
-interfaz 525, insertar 458, inicio 561, archivo 408, vista 144, disposicion 132,
-diseno 91, referencias 161, revisar 82, correspondencia 46.
-Total 2608.
+inicio 578, insertar 552, interfaz 530, archivo 431, referencias 166, vista 154,
+disposicion 143, revisar 128, diseno 100, correspondencia 61.
+Total 2843. De ellas, **1.009 reescritas a mano** bajo la guía de estilo:
+`archivo` (431) e `inicio` (578), las dos secciones TERMINADAS.
 **Volcado de rutas de la pestaña Inicio + minado (sep-2026)**: el usuario
 aportó 156 capturas de la cinta Inicio (`data/imagenes_rutas/inicio/`, rama
 a rama + todos los cuadros de diálogo/desplegables). Se creó
