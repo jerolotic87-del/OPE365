@@ -68,6 +68,25 @@ views.js               toda la interfaz (router simple basado en funciones).
                        — se deduce del propio config, sin estado aparte.
                        Los modos multijugador también juegan iconos: ver
                        "Imágenes en multijugador".
+                       **Modo tarjeta** (sep-2026): practicar atajos NO es un
+                       test — un atajo es memoria de pares tecla·acción, y
+                       elegir entre cuatro combinaciones parecidas es
+                       reconocer, no recordar. Cuando la sesión es de práctica
+                       y su filtro es `categoria:"atajo"`, `renderQuestionBody`
+                       desvía a `renderCardBody`: enunciado tapado → "Ver la
+                       respuesta" → dorso (la opción correcta, en monoespaciada
+                       si es una combinación) + explicación + los 3 grados de
+                       flashcard; `submitCardGrade` es el espejo de
+                       `submitAnswer` (`answer:null`, `card:true`, `grade`;
+                       "Me costó" cuenta como acierto). NO es una vista nueva
+                       ni un campo nuevo de sesión: es otra presentación DENTRO
+                       de `running`, así que hereda barra de sesión, marcar,
+                       ✎ editar, salir con confirmación, instantánea, historial
+                       y resumen, y los códigos de compartir no cambian. Las
+                       preguntas de atajo que no se pueden dar la vuelta (V/F,
+                       `negativa`) caen solas al test de siempre en la misma
+                       sesión. En EXAMEN nunca se tapa. Test:
+                       `tests/test_modo_tarjeta.js`.
                        Toda llamada a LEB va guardada con `if(O.LEB)`.
 peerjs.min.js          librería de terceros, no tocar
 data/atajos_word365_v2608.md  VOLCADO COMPLETO de "Personalizar teclado" de la

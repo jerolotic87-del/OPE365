@@ -1334,6 +1334,28 @@ let pendingMultiSelection = [];
 let pendingMatchSelection = { leftId:null, pairs:{} };
 let pendingBlankValues = [];
 
+/* Indice de la pregunta cuya respuesta ya se ha destapado. Guardar el INDICE
+   (y no un booleano) hace que pasar de pregunta la vuelva a tapar sola. */
+let cardRevealedFor = -1;
+
+/* Practicar atajos = tarjetas. En examen no: un examen es un test. */
+function cardSession(s, isExam){
+  return !isExam && !!s && !!s.config && s.config.categoria === "atajo";
+}
+/* Solo se puede dar la vuelta a lo que tiene un dorso que recordar: una V/F o
+   un "senale la incorrecta" no lo tienen, y siguen jugandose como test. */
+function cardableQuestion(q){
+  return !!q && q.tipo === "opcion_unica" && !q.negativa && Array.isArray(q.opciones) && q.opciones.length > 0;
+}
+function cardModeFor(q, s, isExam){ return cardSession(s, isExam) && cardableQuestion(q); }
+function cardBackText(q){
+  const o = (q.opciones || []).find(x => x.letter === q.respuesta);
+  return o ? o.text : "";
+}
+/* El dorso se pinta como tecla cuando lo es; si lo que se pregunta es al reves
+   ("que hace Alt+Q?") el dorso es una accion y va como texto normal. */
+const CARD_COMBO_RE = /(Ctrl|Alt|May[uú]s|Supr|Retroceso|Entrar|Esc|Tab|Windows|F\d{1,2})\s*\+|^\s*(F\d{1,2}|Esc|Tab|Inicio|Fin|Supr)\s*$/i;
+
 function renderRunner(){
   const s = O.getSession();
   if(!s){ go("home"); return; }
@@ -1418,7 +1440,7 @@ function renderQuestionCard(q, s, isExam){
   card.innerHTML = `
     <div class="qcard-top">
       <div class="qcard-meta">
-        <span class="tag tag-type">${tipoLabel(q.tipo)}</span>
+        <span class="tag tag-type">${cardModeFor(q,s,isExam) ? "Tarjeta" : tipoLabel(q.tipo)}</span>
         ${q.categoria && q.categoria!=="general" ? `<span class="tag">${categoriaLabel(q.categoria)}</span>` : ''}
         ${q.negativa ? '<span class="tag tag-neg">⚠ Negativa</span>' : ''}
         ${O.ContentEdit && O.ContentEdit.has("q", q.id) ? '<span class="tag tag-edit">✎ corregida</span>' : ''}
@@ -1479,6 +1501,8 @@ function renderQuestionBody(q, s, isExam, answeredAlready, resp){
   const feedback = document.getElementById("q-feedback");
   feedback.innerHTML = "";
 
+  if(cardModeFor(q, s, isExam)){ renderCardBody(body, q, s, answeredAlready, resp); return; }
+
   if(q.tipo==="opcion_unica"){
     body.innerHTML = `<div class="options">${q.opciones.map(o=>
       `<button class="option ${answeredAlready ? optionResultClass(o.letter,q,resp) : ''}" data-letter="${o.letter}" ${answeredAlready?"disabled":""}>
@@ -1526,6 +1550,58 @@ function renderQuestionBody(q, s, isExam, answeredAlready, resp){
     renderBlankFillBody(body, q, s, isExam, answeredAlready, resp);
     if(answeredAlready && !isExam) showFeedback(feedback, q, resp);
   }
+}
+
+function renderCardBody(body, q, s, answeredAlready, resp){
+  const back = cardBackText(q);
+  const revealed = answeredAlready || cardRevealedFor === s.current;
+
+  if(!revealed){
+    body.innerHTML = `<div class="card-ask">
+      ${s.current === 0 ? `<p class="card-hint">Intenta recordarlo tú antes de mirar: recordar es lo que lo fija; reconocerlo entre cuatro opciones, no.</p>` : ``}
+      <button class="btn btn-solid btn-block btn-lg" id="card-reveal">Ver la respuesta</button>
+    </div>`;
+    $("#card-reveal", body).addEventListener("click", ()=>{
+      cardRevealedFor = s.current;
+      renderQuestionCard(q, s, false);
+    });
+    return;
+  }
+
+  const grade = answeredAlready ? (resp.grade || (resp.correct ? "si" : "no")) : null;
+  body.innerHTML = `
+    <div class="card-back ${CARD_COMBO_RE.test(back) ? "is-combo" : ""}">${O.escapeHtml(back)}</div>
+    ${q.explicacion ? `<div class="card-expl">${explHtml(q.explicacion)}</div>` : ``}
+    ${answeredAlready ? `
+      <p class="card-verdict ${grade==="no"?"is-no":grade==="dificil"?"is-hard":"is-si"}">
+        ${grade==="no" ? "Dijiste que no te salía." : grade==="dificil" ? "Dijiste que te costó." : "Dijiste que la sabías."}
+      </p>` : `
+      <p class="card-hint" style="margin-top:var(--sp-5);">¿Te ha salido?</p>
+      <div class="fc-verdict fc-verdict-3">
+        <button class="btn btn-outline btn-lg btn-block fc-grade fc-grade-no"   data-g="no">No me salía</button>
+        <button class="btn btn-outline btn-lg btn-block fc-grade fc-grade-hard" data-g="dificil">Me costó</button>
+        <button class="btn btn-solid   btn-lg btn-block fc-grade fc-grade-yes"  data-g="si">La sabía</button>
+      </div>`}
+  `;
+  if(!answeredAlready){
+    $$(".fc-grade", body).forEach(b=> b.addEventListener("click", ()=> submitCardGrade(q, s, b.getAttribute("data-g"))));
+  }
+}
+
+/* Espejo de `submitAnswer` para la calificacion manual: escribe la misma forma
+   en `s.responses` (con `answer:null`, que ni el resumen ni el historial usan)
+   y alimenta a los dos sistemas igual que una respuesta normal. "Me costo"
+   cuenta como acierto, como en las flashcards. */
+function submitCardGrade(q, s, grade){
+  const correct = grade !== "no";
+  s.responses[s.current] = { answer:null, correct, submitted:true, card:true, grade };
+  O.recordAnswer(q, null, correct);
+  if(O.LEB) O.LEB.recordQuestion(q, correct, false);
+  O.saveSessionSnapshot();
+  if(s.current === s.questions.length - 1){ finishPracticeSession(s); return; }
+  s.current += 1;
+  O.saveSessionSnapshot();
+  renderQuestionCard(s.questions[s.current], s, false);
 }
 
 function optionResultClass(letter, q, resp){ if(letter===q.respuesta) return "correct"; if(resp && resp.answer===letter) return "incorrect"; return ""; }
