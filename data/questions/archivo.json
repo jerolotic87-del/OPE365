@@ -9241,28 +9241,28 @@
     "subtopic": "Avanzadas — Edición",
     "tema": "Opciones",
     "sourceQuestionId": "8-77",
-    "enunciado": "¿Desde qué ruta se activa el modo Sobrescribir para que el texto nuevo reemplace al existente al escribir?",
+    "enunciado": "Quieres que al escribir en medio de una frase el texto nuevo vaya borrando el que ya había, en vez de empujarlo. ¿Qué casilla de Opciones → Avanzadas lo activa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de edición → Usar modo Sobrescribir"
+        "text": "Usar modo Sobrescribir"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → General → Modo de escritura → Usar modo Sobrescribir"
+        "text": "Usar cursor inteligente"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de pantalla → Usar modo Sobrescribir"
+        "text": "La escritura reemplaza el texto seleccionado"
       },
       {
         "letter": "D",
-        "text": "Inicio → Edición → Modo Sobrescribir"
+        "text": "Usar la tecla Insert para controlar el modo Sobrescribir"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El modo Sobrescribir se activa en Archivo → Opciones → Avanzadas dentro de Opciones de edición. No está en General ni en Opciones de pantalla que es otra sección diferente de Avanzadas. La pestaña Inicio no contiene opciones de modo de escritura."
+    "explicacion": "«Usar modo Sobrescribir» es la casilla que enciende el modo: a partir de ahí, escribir en medio de una frase va comiéndose lo que hay a la derecha del cursor. · «Usar la tecla Insert para controlar el modo Sobrescribir» va justo al lado y NO enciende nada: solo permite que la tecla Insert lo conmute. Se puede tener el modo activado sin dar ese poder a la tecla, y al revés. · «La escritura reemplaza el texto seleccionado» parece lo mismo y es otra cosa: actúa solo cuando hay algo SELECCIONADO. Sobrescribir sin selección, reemplazar con selección. · «Usar cursor inteligente» es otra casilla de la misma sección, sobre dónde queda el cursor al desplazarte."
   },
   {
     "id": "archivo-86",
@@ -9276,28 +9276,28 @@
     "subtopic": "Avanzadas — Edición",
     "tema": "Opciones",
     "sourceQuestionId": "8-78",
-    "enunciado": "Para que los hipervínculos de un documento se abran con un solo clic sin necesidad de mantener pulsado Ctrl, ¿qué opción se debe desactivar en Word 365?",
+    "enunciado": "Quieres que los hipervínculos del documento se abran con un solo clic, sin tener que mantener Ctrl. ¿Qué haces?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Utilizar CTRL + clic para seguir hipervínculo"
+        "text": "Desmarcar «Utilizar CTRL + clic del mouse para seguir hipervínculo»"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → General → Abrir hipervínculos con un clic"
+        "text": "Marcar «Utilizar CTRL + clic del mouse para seguir hipervínculo»"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Abrir hipervínculos admitidos a archivos de Office"
+        "text": "Desmarcar «Abrir hipervínculos admitidos a archivos de Office»"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Revisión → Comportamiento de hipervínculos"
+        "text": "Marcar «No crear hipervínculo automático en la captura de pantalla»"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Desactivar «Utilizar CTRL + clic para seguir hipervínculo» en Archivo ▸ Opciones ▸ Avanzadas hace que baste un clic simple. No existe esa opción en General ni en Revisión. «Abrir hipervínculos admitidos a archivos de Office» es otra opción distinta dentro de Avanzadas. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "La casilla está en Opciones → Avanzadas → Opciones de edición, y viene marcada de fábrica: quitarla es lo que devuelve el clic simple. Hay que leer si la pregunta pide marcar o desmarcar, porque las opciones A y B son la misma casilla en los dos sentidos y solo una responde al enunciado. Prueba en vivo del usuario. · La exigencia de Ctrl existe para poder hacer clic en un vínculo y editar su texto sin abrirlo; con el clic simple, editarlo se vuelve incómodo. · Las otras dos son casillas reales pero de otros comportamientos de vínculos e imágenes."
   },
   {
     "id": "archivo-87",
@@ -9311,28 +9311,28 @@
     "subtopic": "Avanzadas — Edición",
     "tema": "Opciones",
     "sourceQuestionId": "8-79",
-    "enunciado": "Para poder mover texto arrastrándolo con el ratón en Word 365, ¿desde qué ruta se activa esa función?",
+    "enunciado": "Seleccionas un párrafo, lo arrastras con el ratón para moverlo… y no pasa nada. ¿Qué casilla de Opciones → Avanzadas lo habilita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de edición → Permitir arrastrar"
+        "text": "Permitir arrastrar y colocar el texto"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → General → Permitir arrastrar y soltar texto"
+        "text": "Actualizar el contenido del documento al arrastrar"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Cortar copiar y pegar → Permitir arrastrar"
+        "text": "Seleccionar automáticamente la palabra completa"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Presentación → Permitir arrastrar y soltar el texto"
+        "text": "Usar cursor inteligente"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción Permitir arrastrar y soltar el texto está en Archivo → Opciones → Avanzadas dentro de Opciones de edición. No está en General ni en la sección Cortar copiar y pegar ni en Presentación."
+    "explicacion": "Está en «Opciones de edición» y es la que permite mover o copiar texto arrastrándolo; sin ella, el arrastre simplemente no hace nada. · La opción B es el distractor de más nivel y ni siquiera está en este panel: vive en General → Opciones de interfaz de usuario, y decide si el texto se recoloca MIENTRAS arrastras. Una permite el gesto, la otra solo lo hace más vistoso. · «Seleccionar automáticamente la palabra completa» cambia cómo se selecciona, no cómo se mueve. · Con la casilla activa, arrastrar mueve y arrastrar con Ctrl copia."
   },
   {
     "id": "archivo-88",
@@ -9346,28 +9346,28 @@
     "subtopic": "Avanzadas — Edición",
     "tema": "Opciones",
     "sourceQuestionId": "8-80",
-    "enunciado": "¿Desde qué ruta se activa la opción que permite usar la tecla Insertar para activar o desactivar el modo Sobrescribir?",
+    "enunciado": "Quieres poder activar y desactivar el modo sobrescribir pulsando la tecla Insert. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Usar la tecla Insertar para controlar"
+        "text": "Usar la tecla Insert para controlar el modo Sobrescribir"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Usar la tecla Insertar para pegar"
+        "text": "Usar la tecla Insert para pegar"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → General → Tecla Insertar → Modo Sobrescribir"
+        "text": "Usar modo Sobrescribir"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de pantalla → Tecla Insertar"
+        "text": "La escritura reemplaza el texto seleccionado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La asignación de la tecla Insertar al modo Sobrescribir se configura en Archivo → Opciones → Avanzadas. Usar la tecla Insertar para pegar es una opción diferente dentro de la misma sección. No existe esa configuración en General ni en Opciones de pantalla."
+    "explicacion": "La tecla Insert está peleada consigo misma en Word: puede servir para dos cosas y hay una casilla para cada una. Esta le da el control del modo sobrescribir. · «Usar la tecla Insert para pegar» es la otra, y está en la sección de pegado: si se marcan las dos, la de pegar tiene prioridad y la tecla deja de conmutar el modo. Ese conflicto es exactamente lo que se pregunta. · «Usar modo Sobrescribir» enciende el modo directamente, sin intervención de la tecla. · La última actúa solo con texto seleccionado."
   },
   {
     "id": "archivo-248",
@@ -9382,28 +9382,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-001",
     "generado": true,
-    "enunciado": "Seleccionas texto y al empezar a escribir el nuevo texto no lo reemplaza, se inserta delante. ¿Dónde activas que la escritura sustituya el texto seleccionado?",
+    "enunciado": "Seleccionas un trozo de texto, empiezas a escribir y en vez de sustituirlo, lo nuevo se inserta delante. ¿Qué casilla lo arregla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "La escritura reemplaza el texto seleccionado"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Usar modo Sobrescribir"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Seleccionar automáticamente la palabra completa"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Utilizar CTRL + clic del mouse para seguir hipervínculo"
+        "text": "Permitir arrastrar y colocar el texto"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → La escritura reemplaza el texto seleccionado. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es el comportamiento que casi todo el mundo da por hecho y que viene activado de fábrica: escribir con algo seleccionado lo sustituye. · «Usar modo Sobrescribir» es el distractor bueno porque también «reemplaza texto», pero sin selección de por medio: va comiéndose lo que hay a la derecha del cursor letra a letra. Una necesita selección y la otra no, y ese es el matiz. · Las otras dos son casillas vecinas de «Opciones de edición», sobre la selección y el arrastre. · Con esta casilla apagada, borrar y escribir pasa a ser cosa de dos pasos."
   },
   {
     "id": "archivo-249",
@@ -9418,28 +9418,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-002",
     "generado": true,
-    "enunciado": "Al arrastrar para seleccionar parte de una palabra y parte de la siguiente, Word extiende la selección a las palabras completas y quieres seleccionar solo los caracteres marcados. ¿Dónde lo desactivas?",
+    "enunciado": "Arrastras para seleccionar media palabra y Word te selecciona la palabra entera. ¿Qué casilla desmarcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Utilizar CTRL + clic del mouse para seguir hipervínculo"
+        "text": "Seleccionar automáticamente la palabra completa"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Utilizar selección de párrafo inteligente"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "La escritura reemplaza el texto seleccionado"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Usar cursor inteligente"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Seleccionar automáticamente la palabra completa. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Con ella activada, al pasar el ratón por encima de una palabra la selección se completa sola; quitarla permite seleccionar carácter a carácter. · «Utilizar selección de párrafo inteligente» es la hermana mayor y el mejor distractor de la ficha: hace lo mismo pero un nivel más arriba, incluyendo la marca de párrafo al seleccionar un párrafo entero. Palabra y párrafo, dos casillas distintas. · «Usar cursor inteligente» no tiene que ver con seleccionar, sino con dónde queda el cursor al desplazarte. · Sin desmarcar nada, mantener Alt mientras arrastras también permite una selección libre."
   },
   {
     "id": "archivo-250",
@@ -9454,28 +9454,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-005",
     "generado": true,
-    "enunciado": "Cada vez que insertas una autoforma, Word crea un lienzo de dibujo contenedor alrededor. Prefieres insertar las formas sin ese contenedor. ¿Dónde lo desactivas?",
+    "enunciado": "Cada vez que insertas una autoforma, Word te monta alrededor un marco contenedor que no querías. ¿Qué casilla desmarcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Crear automáticamente lienzo de dibujo al insertar autoformas"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Permitir arrastrar y colocar el texto"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Habilitar Hacer clic y escribir"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Crear automáticamente lienzo de dibujo al insertar autoformas"
+        "text": "Utilizar selección de párrafo inteligente"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Crear automáticamente lienzo de dibujo al insertar autoformas. El lienzo permite agrupar objetos y moverlos como una unidad, pero en documentos de texto habitual puede estorbar."
+    "respuesta": "A",
+    "explicacion": "El lienzo de dibujo es un contenedor que agrupa varias formas y las mueve juntas; viene desactivado de fábrica en las versiones modernas, así que si aparece es porque alguien lo marcó. · Tiene su utilidad: sin lienzo, cada forma se ancla por su cuenta al texto y un diagrama de diez piezas se descoloca en cuanto añades un párrafo. · Las otras tres son casillas reales de «Opciones de edición», sobre el arrastre, la escritura en zonas vacías y la selección. · La casilla no afecta a las imágenes ni a los SmartArt, solo a las formas."
   },
   {
     "id": "archivo-251",
@@ -9490,28 +9490,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-006",
     "generado": true,
-    "enunciado": "Al seleccionar un párrafo con triple clic y pegarlo, Word deja un párrafo en blanco en el origen y el formato no se conserva. ¿Dónde activas la selección de párrafo inteligente?",
+    "enunciado": "Seleccionas un párrafo con triple clic, lo cortas, y en el origen queda un párrafo vacío mientras el pegado pierde el formato. ¿Qué casilla lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Utilizar selección de párrafo inteligente"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Seleccionar automáticamente la palabra completa"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Usar cortar y pegar inteligentemente"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Utilizar selección de párrafo inteligente"
+        "text": "La escritura reemplaza el texto seleccionado"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Utilizar selección de párrafo inteligente. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "La clave está en la marca de párrafo, el ¶ invisible que guarda todo el formato: con esta casilla, al seleccionar un párrafo se incluye esa marca, así que al cortarlo no queda un párrafo huérfano y al pegarlo el formato viaja con él. · «Seleccionar automáticamente la palabra completa» hace lo mismo un nivel más abajo, con palabras. · «Usar cortar y pegar inteligentemente» es el distractor de nivel: también arregla estropicios de cortar y pegar, pero ajustando espacios y listas, y vive en otra sección del mismo panel, la de pegado."
   },
   {
     "id": "archivo-252",
@@ -9526,28 +9526,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-007",
     "generado": true,
-    "enunciado": "Al desplazarte con la rueda o Re Pág/Av Pág y luego pulsar una flecha, el cursor vuelve a su posición anterior en vez de continuar desde la página visible. ¿Dónde activas el cursor inteligente?",
+    "enunciado": "Bajas con la rueda hasta la página 40, pulsas una flecha y el cursor te devuelve de golpe a la página 3, donde lo dejaste. ¿Qué casilla lo cambia?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Usar cursor inteligente"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Utilizar selección de párrafo inteligente"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ Usar cursor inteligente"
+        "text": "Habilitar Hacer clic y escribir"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Usar cortar y pegar inteligentemente"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Usar cursor inteligente. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Con esta casilla, al pulsar una flecha después de desplazarte el cursor se coloca en la página que estás VIENDO, en lugar de arrastrarte de vuelta a donde estaba. Es de esas opciones que casi nadie sabe que existe y que explica un comportamiento que desconcierta a diario. · Las opciones B y D son las otras dos casillas «inteligentes» del panel, que es lo que las hace buenos distractores: una es de selección y la otra de pegado, y las tres comparten el adjetivo. · «Habilitar Hacer clic y escribir» va de empezar a escribir en una zona en blanco."
   },
   {
     "id": "archivo-253",
@@ -9562,28 +9562,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-010",
     "generado": true,
-    "enunciado": "Modificas el formato de un párrafo con un estilo aplicado y quieres que Word te pregunte si actualizar ese estilo para el resto de párrafos iguales. ¿Dónde activas esa pregunta?",
+    "enunciado": "Cambias a mano el formato de un párrafo que tiene un estilo aplicado, y quieres que Word te ofrezca actualizar el estilo para todos los demás. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Preguntar si se actualiza el estilo"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Realizar un seguimiento de formato"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Marcar incoherencias de formato"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Preguntar si se actualiza el estilo"
+        "text": "Actualización de estilo para que coincida con la selección"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Preguntar si se actualiza el estilo. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Las cuatro son casillas reales de «Opciones de edición» y las cuatro giran alrededor de los estilos y el formato: aquí no hay nada descartable. · Esta es la que saca el aviso preguntando si quieres propagar el cambio al estilo. · «Realizar un seguimiento de formato» solo registra los formatos que usas, para poder consultarlos y seleccionar texto parecido. · «Marcar incoherencias de formato» los subraya en azul ondulado, y depende de la anterior. · La última decide, al actualizar un estilo de lista desde la selección, si se respetan las viñetas anteriores."
   },
   {
     "id": "archivo-254",
@@ -9598,28 +9598,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-011",
     "generado": true,
-    "enunciado": "Quieres que las listas con viñetas y numeradas usen el estilo Normal como base en lugar de los estilos de lista que Word aplica por defecto. ¿Dónde lo activas?",
+    "enunciado": "Quieres que las listas con viñetas y numeradas se basen en el estilo Normal en lugar de en los estilos de lista de Word. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Utilizar el estilo Normal para listas con viñetas o numeradas"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Actualización de estilo para que coincida con la selección"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ Utilizar el estilo Normal para listas con viñetas o numeradas"
+        "text": "Preguntar si se actualiza el estilo"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Realizar un seguimiento de formato"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Utilizar el estilo Normal para listas con viñetas o numeradas. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Sirve para que las listas hereden del estilo Normal y no de Párrafo de lista, que es lo que hace Word por defecto y lo que complica luego cambiar el interlineado o el espaciado de todas las listas a la vez. · Las otras tres son casillas vecinas de la misma sección y también van de estilos, así que la pregunta se juega en el detalle: una propaga cambios al estilo, otra registra formatos y otra ajusta la actualización de estilos de lista. Ninguna se descarta por sonar rara."
   },
   {
     "id": "archivo-255",
@@ -9634,28 +9634,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-012",
     "generado": true,
-    "enunciado": "Quieres que Word registre los cambios de formato que aplicas para poder consultar qué formatos usas y seleccionar texto con formato similar desde el menú contextual. ¿Dónde lo activas?",
+    "enunciado": "Quieres poder hacer clic derecho sobre un texto y elegir «Seleccionar todo el texto con formato similar». ¿Qué casilla lo habilita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Realizar un seguimiento de formato"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Realizar un seguimiento de formato"
+        "text": "Marcar incoherencias de formato"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Preguntar si se actualiza el estilo"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Utilizar selección de párrafo inteligente"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Realizar un seguimiento de formato. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Word tiene que ir apuntando qué formatos aplicas para poder buscarlos después; esta casilla es la que enciende ese registro, y de ella salen tanto el comando del menú contextual como el panel de formato. · «Marcar incoherencias de formato» es su dependiente directa y el mejor distractor de la ficha: subraya en azul ondulado los formatos casi iguales, pero está deshabilitada mientras el seguimiento esté apagado. Interruptor y consecuencia, otra vez. · Las otras dos son casillas vecinas sobre estilos y selección."
   },
   {
     "id": "archivo-256",
@@ -9670,28 +9670,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-013",
     "generado": true,
-    "enunciado": "Quieres que Word marque con subrayado azul ondulado los fragmentos con formato similar pero no idéntico al de otros párrafos. ¿Dónde activas esa detección?",
+    "enunciado": "Quieres que Word subraye en azul ondulado los fragmentos con un formato casi igual al de otros, para unificarlos. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Marcar incoherencias de formato"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Marcar incoherencias de formato"
+        "text": "Realizar un seguimiento de formato"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Preguntar si se actualiza el estilo"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Marcar errores gramaticales mientras escribe"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Marcar incoherencias de formato. Para que funcione, también debe estar activada \"Realizar un seguimiento de formato\"."
+    "respuesta": "A",
+    "explicacion": "Es la casilla que produce el subrayado azul ondulado, y depende de «Realizar un seguimiento de formato»: sin el registro no hay nada con lo que comparar, y la casilla ni siquiera se deja marcar. · Por eso la opción B es el distractor serio: hace falta, pero no basta. · La opción D es un buen engaño porque también produce un subrayado azul, pero el suyo es de gramática y vive en el panel Revisión. Dos subrayados azules por motivos completamente distintos: uno avisa de formato desigual y otro de una falta. · «Preguntar si se actualiza el estilo» saca un aviso, no un subrayado."
   },
   {
     "id": "archivo-257",
@@ -9706,28 +9706,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-014",
     "generado": true,
-    "enunciado": "Al actualizar un estilo de lista desde la selección, quieres controlar si Word mantiene la numeración y viñetas anteriores o las aplica a todos los párrafos con ese estilo. ¿Dónde lo configuras?",
+    "enunciado": "Al actualizar un estilo de lista desde la selección, quieres decidir si Word respeta las viñetas anteriores o las impone a todos los párrafos con ese estilo. ¿Qué ajuste tocas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Actualización de estilo para que coincida con la selección"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Actualización de estilo para que coincida con la selección"
+        "text": "Utilizar el estilo Normal para listas con viñetas o numeradas"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Preguntar si se actualiza el estilo"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Realizar un seguimiento de formato"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Actualización de estilo para que coincida con la selección. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es un desplegable, no una casilla, y decide qué hace Word con la numeración y las viñetas previas al reaplicar un estilo de lista desde lo seleccionado. · «Preguntar si se actualiza el estilo» es el distractor de más nivel porque también va de actualizar estilos, pero lo que hace es sacar el aviso cuando cambias el formato a mano: una pregunta si actualizar y la otra decide CÓMO se actualiza. Las dos están en la misma sección. · Las otras dos también son de estilos y formato, pero de la base de las listas y del registro de formatos."
   },
   {
     "id": "archivo-258",
@@ -9742,28 +9742,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-015",
     "generado": true,
-    "enunciado": "Quieres poder hacer doble clic en cualquier zona en blanco del documento y empezar a escribir ahí, con el alineado que corresponda a esa posición. ¿Dónde activas esa función?",
+    "enunciado": "Quieres poder hacer doble clic en cualquier zona vacía de la página y empezar a escribir ahí directamente. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Habilitar Hacer clic y escribir"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Fuente de párrafo predeterminada"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Usar cursor inteligente"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Habilitar Hacer clic y escribir"
+        "text": "Permitir arrastrar y colocar el texto"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Habilitar Hacer clic y escribir. Solo disponible en las vistas Diseño de impresión y Diseño web."
+    "respuesta": "A",
+    "explicacion": "Al hacer doble clic en una zona en blanco, Word mete por debajo los saltos, tabulaciones y la alineación que hagan falta para dejar el cursor ahí. Es cómodo para una portada y desastroso para un documento que luego haya que reformatear, porque deja formato invisible por todas partes. · «Fuente de párrafo predeterminada» es el desplegable de justo debajo, que solo tiene sentido con esta casilla marcada: elige qué estilo se aplica al escribir así. Interruptor y ajuste, uno encima del otro. · «Usar cursor inteligente» va de dónde queda el cursor al desplazarte."
   },
   {
     "id": "archivo-259",
@@ -9778,28 +9778,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-016",
     "generado": true,
-    "enunciado": "Tienes activada la función Hacer clic y escribir y quieres controlar qué estilo de párrafo aplica Word al hacer doble clic en una zona en blanco. ¿Dónde lo configuras?",
+    "enunciado": "Ya tienes activado «Hacer clic y escribir» y quieres decidir qué estilo aplica Word al escribir en una zona vacía. ¿Qué ajuste tocas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Fuente de párrafo predeterminada"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Habilitar Hacer clic y escribir"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ Fuente de párrafo predeterminada"
+        "text": "Utilizar el estilo Normal para listas con viñetas o numeradas"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Preguntar si se actualiza el estilo"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Fuente de párrafo predeterminada. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es el desplegable que acompaña a la casilla y solo se habilita cuando esta está marcada: ahí se elige el estilo de párrafo con el que arranca el texto escrito en una zona vacía. · La opción B es esa casilla, y el enunciado dice expresamente que ya está activada: es la respuesta a la pregunta contraria. Leer si el interruptor ya está puesto vuelve a ser lo que decide. · La opción C también habla de qué estilo se usa como base, pero para listas, y está en otra parte de la misma sección. · «Preguntar si se actualiza el estilo» saca un aviso."
   },
   {
     "id": "archivo-260",
@@ -9814,28 +9814,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-017",
     "generado": true,
-    "enunciado": "Al escribir, Word muestra sugerencias en gris para completar fechas o bloques de creación y prefieres que no aparezcan. ¿Dónde las desactivas?",
+    "enunciado": "Al empezar a escribir una fecha o el nombre de un bloque guardado, Word te propone el resto en gris y quieres quitar esas propuestas. ¿Qué casilla desmarcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Mostrar sugerencias de Autocompletar"
+        "text": "Mostrar sugerencias de Autocompletar"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Mostrar predicciones de texto al escribir"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Reemplazar texto mientras escribe"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Usar automáticamente las sugerencias del corrector ortográfico"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Mostrar sugerencias de Autocompletar. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "explicacion": "Autocompletar propone el contenido de bloques ya guardados: fechas, autotexto, elementos rápidos. Se acepta con Entrar o con F3, y se ignora simplemente siguiendo a lo tuyo. · La opción B es el distractor de máximo nivel porque el síntoma es idéntico, texto gris que se adelanta a lo que escribes: pero las predicciones de texto adivinan la continuación de la frase, no completan un bloque guardado. Dos funciones distintas con la misma pinta, y las dos casillas están en este mismo panel. · Las otras dos son del cuadro Autocorrección, no de Avanzadas."
   },
   {
     "id": "archivo-261",
@@ -9850,28 +9850,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-018",
     "generado": true,
-    "enunciado": "Al escribir, Word sugiere cómo completar la frase con texto en gris y quieres desactivar esas predicciones. ¿Dónde lo haces?",
+    "enunciado": "Mientras escribes, Word te va adivinando en gris cómo sigue la frase y quieres que deje de hacerlo. ¿Qué casilla desmarcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Mostrar predicciones de texto al escribir"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "Mostrar sugerencias de Autocompletar"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Reemplazar texto mientras escribe"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ Mostrar predicciones de texto al escribir"
+        "text": "Realizar un seguimiento de formato"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → Mostrar predicciones de texto al escribir. Alternativa de menú: clic derecho en el indicador \"Predicciones de texto\" de la barra de estado para desactivarlo."
+    "respuesta": "A",
+    "explicacion": "Las predicciones de texto son la función moderna, la que completa la frase entera a partir de lo escrito; se aceptan con el tabulador o la flecha derecha. Necesitan conexión, porque el modelo no está en el equipo. · «Mostrar sugerencias de Autocompletar» es la clásica y produce el mismo texto gris, pero solo propone bloques que YA existen (fechas, autotexto): nunca inventa una continuación. Es la pareja que hay que saber distinguir, porque las dos están en el mismo panel y se apagan por separado. · «Reemplazar texto mientras escribe» es del cuadro Autocorrección."
   },
   {
     "id": "archivo-262",
@@ -9886,28 +9886,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-019",
     "generado": true,
-    "enunciado": "Al insertar una captura de pantalla, Word crea automáticamente un hipervínculo a la URL de la ventana capturada y quieres que se inserten sin hipervínculo. ¿Dónde lo desactivas?",
+    "enunciado": "Insertas una captura de pantalla y Word le pega debajo un hipervínculo a la página capturada. ¿Qué casilla lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Opciones de edición ▸ Permitir arrastrar y colocar el texto"
+        "text": "No crear hipervínculo automático en la captura de pantalla"
       },
       {
         "letter": "B",
-        "text": "Opciones de edición ▸ Seleccionar automáticamente la palabra completa"
+        "text": "Utilizar CTRL + clic del mouse para seguir hipervínculo"
       },
       {
         "letter": "C",
-        "text": "Opciones de edición ▸ No crear automáticamente ningún hipervínculo de la captura de pantalla"
+        "text": "Abrir hipervínculos admitidos a archivos de Office"
       },
       {
         "letter": "D",
-        "text": "Opciones de edición ▸ La escritura reemplaza el texto seleccionado"
+        "text": "Rutas de red e Internet por hipervínculos"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Opciones de edición → No crear automáticamente ningún hipervínculo de la captura de pantalla. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es una casilla muy concreta de «Opciones de edición», y solo actúa sobre el comando Captura de pantalla de la pestaña Insertar. · La opción D es el distractor de más nivel: también crea hipervínculos automáticos, pero al escribir una dirección, y además está en otro sitio, en la ficha «Autoformato mientras escribe» del cuadro Autocorrección. Dos automatismos de hipervínculo en dos paneles distintos. · La opción B decide cómo se SIGUE un vínculo, no si se crea. · La opción C es de la apertura de vínculos a archivos de Office."
   },
   {
     "id": "archivo-405",
@@ -9930,7 +9930,7 @@
       "Opciones",
       "Avanzadas"
     ],
-    "explicacion": "La casilla vive en Archivo ▸ Opciones ▸ Avanzadas ▸ Opciones de edición."
+    "explicacion": "La casilla se llama «Utilizar CTRL + clic del mouse para seguir hipervínculo» y está en Opciones → Avanzadas, dentro de la sección «Opciones de edición». · Viene marcada de fábrica: por eso, de serie, hace falta Ctrl para abrir un vínculo. Quitarla devuelve el clic simple. · Word exige ese Ctrl para que se pueda hacer clic dentro de un vínculo y editar su texto sin abrirlo. Prueba en vivo del usuario. · Ojo: quien la busque en el cuadro Autocorrección se equivoca de sitio; ahí está la casilla que CREA los vínculos al escribir, no la que decide cómo se siguen."
   },
   {
     "id": "archivo-89",
@@ -9944,28 +9944,28 @@
     "subtopic": "Avanzadas — Edición",
     "tema": "Opciones",
     "sourceQuestionId": "8-81",
-    "enunciado": "¿Desde qué ruta se configura el comportamiento predeterminado al pegar texto entre documentos Word cuando hay conflictos de estilos?",
+    "enunciado": "Pegas texto de otro documento de Word y quieres decidir de antemano qué formato se aplica en ese caso concreto. ¿Qué desplegable de Opciones → Avanzadas configuras?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Cortar copiar y pegar → Pegar entre"
+        "text": "Pegar entre documentos"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Cortar copiar y pegar → Pegar entre documentos"
+        "text": "Pegar dentro del mismo documento"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → General → Comportamiento de pegado entre documentos"
+        "text": "Pegar desde otras aplicaciones"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Revisión → Conflictos de estilos al pegar"
+        "text": "Pegar entre documentos cuando haya conflicto de estilos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El comportamiento al pegar con conflictos de estilos tiene su propia opción Pegar entre documentos cuando haya conflictos de estilos, que es diferente a la opción general Pegar entre documentos. Ambas están en Avanzadas pero son opciones separadas. No está en General ni en Revisión."
+    "explicacion": "La sección «Cortar, copiar y pegar» tiene CUATRO desplegables, uno por situación, y todos ofrecen las mismas opciones de formato: mantener el del origen, combinar, usar los estilos del destino o quedarse solo con el texto. Saber cuál gobierna cada caso es todo el ejercicio, y por eso ninguna de las cuatro es descartable. · Este cubre el pegado entre dos documentos de Word sin conflicto de estilos. · La opción D es el mismo caso pero cuando los dos documentos definen distinto un estilo con el mismo nombre, que tiene desplegable propio. · La C es para material de fuera de Word."
   },
   {
     "id": "archivo-90",
@@ -9979,28 +9979,28 @@
     "subtopic": "Avanzadas — Edición",
     "tema": "Opciones",
     "sourceQuestionId": "8-82",
-    "enunciado": "¿Desde qué ruta se define cómo se insertan las imágenes por defecto en el documento al pegarlas o insertarlas?",
+    "enunciado": "Quieres que las imágenes que insertes o pegues entren siempre con un ajuste de texto concreto, por ejemplo «Cuadrado», en vez de en línea con el texto. ¿Qué ajuste configuras?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Cortar copiar y pegar → Insertar o pegar"
+        "text": "Insertar o pegar imágenes como"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Insertar imágenes"
+        "text": "Pegar desde otras aplicaciones"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Presentación → Insertar imágenes como"
+        "text": "Pegar entre documentos"
       },
       {
         "letter": "D",
-        "text": "Insertar → Imágenes → Opciones de inserción predeterminada"
+        "text": "Usar cortar y pegar inteligentemente"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El comportamiento predeterminado al insertar imágenes se configura en Archivo → Opciones → Avanzadas dentro de la sección Cortar copiar y pegar. No está en Mostrar contenido de documento ni en Presentación ni en la pestaña Insertar."
+    "explicacion": "Es un desplegable de la sección «Cortar, copiar y pegar» y ofrece los estilos de ajuste de texto: En línea con el texto (que es el de fábrica), Cuadrado, Estrecho, Detrás del texto, Delante del texto y los demás. Cambiarlo ahorra tener que ajustar cada imagen a mano. · «Pegar desde otras aplicaciones» es el distractor con más fundamento porque una imagen copiada de un navegador entra por ahí, pero ese desplegable decide el formato del TEXTO pegado, no la colocación de las imágenes. · «Usar cortar y pegar inteligentemente» ajusta espacios y listas."
   },
   {
     "id": "archivo-91",
@@ -10014,28 +10014,28 @@
     "subtopic": "Avanzadas — Edición",
     "tema": "Opciones",
     "sourceQuestionId": "8-83",
-    "enunciado": "¿Desde qué ruta se activa la opción que muestra el botón de Opciones de pegado cada vez que se pega contenido?",
+    "enunciado": "Al pegar, quieres que aparezca el pequeño botón flotante que permite cambiar el formato del pegado recién hecho. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Mostrar el botón Opciones de pegado"
+        "text": "Mostrar el botón Opciones de pegado al pegar contenido"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → General → Mostrar botón de pegado inteligente"
+        "text": "Usar cortar y pegar inteligentemente"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Usar cortar y pegar inteligentemente"
+        "text": "Usar la tecla Insert para pegar"
       },
       {
         "letter": "D",
-        "text": "Inicio → Portapapeles → Configurar botón de pegado"
+        "text": "Mostrar los botones de las opciones de Autocorrección"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción para mostrar el botón de Opciones de pegado está en Archivo → Opciones → Avanzadas. No existe en General. Usar cortar y pegar inteligentemente es una opción diferente dentro de la misma sección. La pestaña Inicio no permite configurar ese comportamiento."
+    "explicacion": "Es el botón que sale junto al texto recién pegado y permite cambiar de opinión sobre el formato sin deshacer nada; también se despliega con Ctrl justo después de pegar. · La opción D es un espejo casi perfecto y por eso es el mejor distractor del cuadro: también decide si se muestra un botón flotante para revisar una acción automática, pero es el de la Autocorrección, y además vive en otro cuadro. Dos botones flotantes con la misma filosofía en dos sitios distintos. · Las otras dos son casillas reales de esta misma sección, sobre el ajuste al pegar y sobre la tecla Insert."
   },
   {
     "id": "archivo-263",
@@ -10050,28 +10050,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-020",
     "generado": true,
-    "enunciado": "Al copiar y pegar dentro del mismo documento, el texto pegado adopta un formato distinto al del párrafo de destino. ¿Dónde cambias el comportamiento predeterminado de pegado en ese caso?",
+    "enunciado": "Copias y pegas dentro del MISMO documento y el texto pegado te cambia de formato. ¿Qué desplegable ajustas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cortar, copiar y pegar ▸ Pegar dentro del mismo documento"
+        "text": "Pegar dentro del mismo documento"
       },
       {
         "letter": "B",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos cuando haya conflicto entre definiciones de estilos"
+        "text": "Pegar entre documentos"
       },
       {
         "letter": "C",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos"
+        "text": "Pegar desde otras aplicaciones"
       },
       {
         "letter": "D",
-        "text": "Cortar, copiar y pegar ▸ Pegar desde otras aplicaciones"
+        "text": "Pegar entre documentos cuando haya conflicto de estilos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Cortar, copiar y pegar → Pegar dentro del mismo documento. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "explicacion": "Es el primero de los cuatro desplegables de la sección, y viene de fábrica en «Mantener formato de origen», que dentro de un mismo documento suele ser lo deseable. · Los otros tres cubren las otras tres situaciones, y ninguno actúa aquí: entre dos documentos de Word, entre documentos con estilos en conflicto, y desde fuera de Word. Los cuatro tienen las mismas opciones de formato, así que la única forma de acertar es saber qué situación gobierna cada uno. · A este mismo sitio se llega desde Inicio ▸ Pegar ▸ «Establecer Pegar predeterminado…»."
   },
   {
     "id": "archivo-264",
@@ -10086,28 +10086,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-022",
     "generado": true,
-    "enunciado": "Pegas texto entre dos documentos Word y ambos tienen un estilo \"Título 1\" con fuentes distintas; quieres que prevalezca el del documento destino. ¿Dónde configuras ese comportamiento?",
+    "enunciado": "Pegas entre dos documentos de Word que tienen un «Título 1» definido con fuentes distintas, y quieres que mande el del documento de destino. ¿Qué desplegable ajustas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cortar, copiar y pegar ▸ Pegar desde otras aplicaciones"
+        "text": "El desplegable de cuando dos documentos definen distinto un mismo estilo"
       },
       {
         "letter": "B",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos cuando haya conflicto entre definiciones de estilos"
+        "text": "El desplegable de pegar entre dos documentos de Word"
       },
       {
         "letter": "C",
-        "text": "Cortar, copiar y pegar ▸ Pegar dentro del mismo documento"
+        "text": "El desplegable de pegar dentro del mismo documento"
       },
       {
         "letter": "D",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos"
+        "text": "El desplegable de pegar desde fuera de Word"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Cortar, copiar y pegar → Pegar entre documentos cuando haya conflicto entre definiciones de estilos. \"Usar estilos de destino\" conserva el nombre del estilo pero aplica la definición del documento donde se pega."
+    "respuesta": "A",
+    "explicacion": "El conflicto de estilos tiene desplegable propio precisamente porque es un caso especial: los dos documentos usan el mismo NOMBRE de estilo con definiciones distintas, y hay que decidir cuál gana. · «Pegar entre documentos» es el distractor y cubre el resto de pegados entre archivos de Word, cuando no hay ese choque de nombres. Que existan dos desplegables para «entre documentos» es justo lo que se está preguntando: uno para el caso normal y otro para el conflicto. · Poner «Usar estilos de destino» hace que el texto adopte el Título 1 del documento en el que pegas."
   },
   {
     "id": "archivo-265",
@@ -10122,28 +10122,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-023",
     "generado": true,
-    "enunciado": "Copias texto de una web o un PDF y al pegarlo trae el formato y los colores del origen; quieres que por defecto se combine con el formato del documento destino. ¿Dónde lo configuras?",
+    "enunciado": "Copias de una web o de un PDF y el texto llega con sus colores y su tipografía. Quieres que por defecto se adapte al documento. ¿Qué desplegable ajustas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos cuando haya conflicto entre definiciones de estilos"
+        "text": "Pegar desde otras aplicaciones"
       },
       {
         "letter": "B",
-        "text": "Cortar, copiar y pegar ▸ Pegar desde otras aplicaciones"
+        "text": "Pegar entre documentos"
       },
       {
         "letter": "C",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos"
+        "text": "Pegar dentro del mismo documento"
       },
       {
         "letter": "D",
-        "text": "Cortar, copiar y pegar ▸ Pegar dentro del mismo documento"
+        "text": "Pegar entre documentos cuando haya conflicto de estilos"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Cortar, copiar y pegar → Pegar desde otras aplicaciones. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Todo lo que no venga de otro documento de Word entra por este desplegable: navegador, PDF, correo, bloc de notas. Ponerlo en «Combinar formato» o en «Mantener solo texto» ahorra la mayoría de los estropicios de formato del día a día. · Los otros tres cubren pegados de Word a Word, en sus tres variantes, y por eso ninguno actúa aquí. · «Mantener solo texto» es la opción más drástica: deja el texto pelado, sin negritas ni vínculos, adoptando el formato del punto donde pegas."
   },
   {
     "id": "archivo-266",
@@ -10158,28 +10158,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-025",
     "generado": true,
-    "enunciado": "Al pegar con la opción \"Conservar solo texto\", las viñetas y numeración desaparecen; quieres que se conviertan en símbolos de texto para conservar la estructura visual. ¿Dónde lo activas?",
+    "enunciado": "Pegas una lista con «Mantener solo texto» y se van las viñetas, perdiendo la estructura. Quieres que al menos queden como símbolos escritos. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cortar, copiar y pegar ▸ Pegar dentro del mismo documento"
+        "text": "Conservar viñetas y números al pegar con Mantener solo texto"
       },
       {
         "letter": "B",
-        "text": "Cortar, copiar y pegar ▸ Conservar viñetas y números al pegar texto con la opción Conservar solo texto"
+        "text": "Usar cortar y pegar inteligentemente"
       },
       {
         "letter": "C",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos"
+        "text": "Pegar desde otras aplicaciones"
       },
       {
         "letter": "D",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos cuando haya conflicto entre definiciones de estilos"
+        "text": "Mostrar el botón Opciones de pegado al pegar contenido"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Cortar, copiar y pegar → Conservar viñetas y números al pegar texto con la opción Conservar solo texto. Las convierte en símbolos de texto, no las mantiene como listas con formato real."
+    "respuesta": "A",
+    "explicacion": "Es una casilla, no un desplegable, y matiza qué hace exactamente «Mantener solo texto»: en vez de perder la lista, convierte las viñetas y los números en caracteres normales. La estructura se ve, pero deja de ser una lista de verdad. · «Usar cortar y pegar inteligentemente» es el distractor bueno porque también arregla desperfectos del pegado, incluida la fusión de listas contiguas, pero no interviene cuando se pega solo texto. · «Pegar desde otras aplicaciones» decide el modo de pegado, no este matiz."
   },
   {
     "id": "archivo-267",
@@ -10194,28 +10194,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-026",
     "generado": true,
-    "enunciado": "Quieres poder pegar el contenido del portapapeles pulsando la tecla Insert en lugar de Ctrl+V. ¿Dónde activas esa función?",
+    "enunciado": "Quieres pegar con la tecla Insert, como se hacía antiguamente, en lugar de con Ctrl+V. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos"
+        "text": "Usar la tecla Insert para pegar"
       },
       {
         "letter": "B",
-        "text": "Cortar, copiar y pegar ▸ Usar la tecla Insert para pegar"
+        "text": "Usar la tecla Insert para controlar el modo Sobrescribir"
       },
       {
         "letter": "C",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos cuando haya conflicto entre definiciones de estilos"
+        "text": "Usar cortar y pegar inteligentemente"
       },
       {
         "letter": "D",
-        "text": "Cortar, copiar y pegar ▸ Pegar dentro del mismo documento"
+        "text": "Mostrar el botón Opciones de pegado al pegar contenido"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Cortar, copiar y pegar → Usar la tecla Insert para pegar. Si se activa, la tecla Insert ya no puede usarse para el modo Sobrescribir: ambas opciones son incompatibles."
+    "respuesta": "A",
+    "explicacion": "La tecla Insert solo puede hacer una de las dos cosas, y hay una casilla en cada sección del panel: esta, en «Cortar, copiar y pegar», y la de la opción B, en «Opciones de edición». Si se marcan las dos, pegar gana y la tecla deja de conmutar el modo sobrescribir. · Esa competencia entre las dos casillas es lo que se pregunta, y es el motivo de que estén separadas. · Mayús+Insert pega igualmente, sin necesidad de marcar nada: es el método antiguo del portapapeles, junto a Ctrl+Insert para copiar y Mayús+Supr para cortar."
   },
   {
     "id": "archivo-268",
@@ -10230,28 +10230,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-028",
     "generado": true,
-    "enunciado": "Al pegar texto de otro documento, Word no ajusta los espacios entre palabras ni el espaciado entre párrafos y quedan espacios dobles o incoherentes. ¿Dónde activas el pegado inteligente?",
+    "enunciado": "Al pegar entre documentos te quedan espacios dobles entre palabras y párrafos pegados unos a otros. ¿Qué casilla lo arregla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos cuando haya conflicto entre definiciones de estilos"
+        "text": "Usar cortar y pegar inteligentemente"
       },
       {
         "letter": "B",
-        "text": "Cortar, copiar y pegar ▸ Pegar dentro del mismo documento"
+        "text": "Conservar viñetas y números al pegar con Mantener solo texto"
       },
       {
         "letter": "C",
-        "text": "Cortar, copiar y pegar ▸ Usar cortar y pegar inteligentemente"
+        "text": "Pegar entre documentos"
       },
       {
         "letter": "D",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos"
+        "text": "Mostrar el botón Opciones de pegado al pegar contenido"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Cortar, copiar y pegar → Usar cortar y pegar inteligentemente. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es la casilla que hace los ajustes finos al pegar: quitar o añadir el espacio que falta entre palabras, respetar el espaciado entre párrafos, fusionar listas contiguas y arreglar tablas. Sin ella, el pegado es literal y suele hacer falta repasarlo a mano. · «Pegar entre documentos» es el distractor con más fundamento porque cubre la misma situación del enunciado, pero decide el FORMATO del pegado, no la limpieza de espacios. Formato y ajuste fino son dos cosas distintas que se deciden en dos controles distintos. · A su derecha tiene un botón «Configuración…» para elegir qué ajustes hace."
   },
   {
     "id": "archivo-269",
@@ -10266,28 +10266,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-029",
     "generado": true,
-    "enunciado": "Tienes activado el cortar y pegar inteligente y quieres ajustar qué comportamientos concretos están activos (espacio entre párrafos, fusión de listas adyacentes…). ¿Dónde accedes a esa configuración detallada?",
+    "enunciado": "Tienes activado el pegado inteligente y quieres decidir qué ajustes concretos hace (espaciado, fusión de listas, tablas). ¿Adónde vas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos cuando haya conflicto entre definiciones de estilos"
+        "text": "Al botón Configuración… de la sección Cortar, copiar y pegar"
       },
       {
         "letter": "B",
-        "text": "Cortar, copiar y pegar ▸ Pegar dentro del mismo documento"
+        "text": "A la casilla Usar cortar y pegar inteligentemente"
       },
       {
         "letter": "C",
-        "text": "Cortar, copiar y pegar ▸ Configuración..."
+        "text": "Al desplegable Pegar entre documentos"
       },
       {
         "letter": "D",
-        "text": "Cortar, copiar y pegar ▸ Pegar entre documentos"
+        "text": "Al botón Opciones de pegado que aparece al pegar"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Cortar, copiar y pegar → Usar cortar y pegar inteligentemente → Configuración.... Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "El botón «Configuración…» está a la derecha de la casilla y abre un cuadro con la lista de ajustes uno a uno, cada uno con su casilla. Es el mando fino frente al grueso, y solo se habilita si la casilla está marcada. · La opción B es esa casilla, que el enunciado dice que ya está activada: es la respuesta a la pregunta anterior. · El botón flotante de la opción D deja cambiar el formato de un pegado concreto, pero no configura nada de forma permanente. · Es el mismo patrón que «Estilo de escritura» y su botón «Configuración…» del panel Revisión."
   },
   {
     "id": "archivo-92",
