@@ -1024,6 +1024,8 @@ function renderTestWizard(params){
   // concreto antes de continuar (nunca se salta esa elección).
   if(params.step==="tema") wizardState.scope="tema";
   if(params.step==="tipo") wizardState.scope="tipo";
+  if(params.step==="atajos") wizardState.scope="atajos";
+  if(params.step==="iconos") wizardState.scope="iconos";
   renderWizardStep();
 }
 
@@ -1069,30 +1071,65 @@ function renderWizardStep(){
   else renderWizardPreview();
 }
 
+/* Los cuatro modos del asistente son HABILIDADES, no filtros: un atajo es
+   memoria de pares tecla-acción, una ruta es saber dónde está un comando, un
+   icono es reconocimiento visual y un concepto es entender qué hace algo. Se
+   estudian de forma distinta, y por eso cortan en el primer nivel. */
+const SKILL_MODES = [
+  {id:"atajos",    cat:"atajo",    t:"Atajos",    d:"Combinaciones de teclas"},
+  {id:"rutas",     cat:"ruta",     t:"Rutas",     d:"Dónde está cada comando"},
+  {id:"iconos",    cat:null,       t:"Iconos",    d:"Reconocer el botón de la cinta"},
+  {id:"conceptos", cat:"concepto", t:"Conceptos", d:"Qué hace y qué pasa si…"},
+];
+function skillFilter(id){
+  const m = SKILL_MODES.find(x=>x.id===id);
+  if(!m) return null;
+  return m.id==="iconos" ? { conImagen:true } : { categoria:m.cat };
+}
+/* Pestañas con material suficiente para un modo. Sin esto, «solo atajos» en
+   Diseño ofrece una combinación que devuelve cero preguntas. */
+function sectionsForSkill(id, min){
+  const base = skillFilter(id); if(!base) return [];
+  return O.TAXONOMY_SECTIONS
+    .map(sec=>({ id:sec.id, name:sec.name,
+                 n:O.filterQuestions(Object.assign({section:sec.id}, base)).length }))
+    .filter(x=> x.n >= (min||1));
+}
+
 function renderWizardWhat(){
   const body = $("#wizard-body");
-  const scopes = [
-    {id:"todo", t:"Todo", d:"Todas las preguntas del banco"},
-    {id:"tema", t:"Tema", d:"Elige un bloque concreto"},
-    {id:"tipo", t:"Tipo de ejercicio", d:"Opción única, V/F, multi, emparejar"},
-    {id:"categoria", t:"Rutas / atajos", d:"Solo atajos o solo rutas de menú"},
-    {id:"imagen", t:"Iconos (con imagen)", d:"Identificar el icono de un comando"},
-    {id:"marcadas", t:"Preguntas marcadas", d:"Tus preguntas guardadas"},
-    {id:"errores", t:"Preguntas falladas", d:"Repasar tus errores"},
+  const otros = [
+    {id:"todo", t:"Todo el temario", d:"Mezcla de las cuatro"},
+    {id:"tema", t:"Por pestaña y grupo", d:"Un bloque concreto"},
+    {id:"tipo", t:"Por tipo de ejercicio", d:"Opción única, V/F, emparejar…"},
+    {id:"marcadas", t:"Marcadas", d:"Las que guardaste"},
+    {id:"errores", t:"Falladas", d:"Repasar tus errores"},
   ];
+  const card = m => {
+    const n = O.filterQuestions(skillFilter(m.id)).length;
+    return `<button class="choice-card skill ${wizardState.scope===m.id?'selected':''}" data-scope="${m.id}">
+      <div class="t">${m.t}<span class="sk-n">${n}</span></div><div class="d">${m.d}</div></button>`;
+  };
   body.innerHTML = `
     <h3 class="wz-q">¿Qué quieres practicar?</h3>
     <div class="choice-grid" id="wiz-scope">
-      ${scopes.map(s=>`<button class="choice-card ${wizardState.scope===s.id?'selected':''}" data-scope="${s.id}"><div class="t">${s.t}</div><div class="d">${s.d}</div></button>`).join("")}
+      ${SKILL_MODES.map(card).join("")}
     </div>
+    <p class="wz-skill-hint">Los atajos se memorizan como pares tecla-acción y las rutas recorriendo la cinta: por eso van por separado.</p>
+    <details class="advanced" style="margin-top:var(--sp-4);" ${otros.some(o=>o.id===wizardState.scope)?"open":""}>
+      <summary>Otras formas de entrar</summary>
+      <div class="choice-grid compact" id="wiz-scope-2" style="margin-top:var(--sp-3);">
+        ${otros.map(o=>`<button class="choice-card ${wizardState.scope===o.id?'selected':''}" data-scope="${o.id}"><div class="t">${o.t}</div><div class="d">${o.d}</div></button>`).join("")}
+      </div>
+    </details>
     <div id="wiz-scope-detail"></div>
     <div style="margin-top:var(--sp-6);"><button class="btn btn-solid btn-block btn-lg" id="wiz-next">Continuar ${icon('chevronR')}</button></div>
   `;
   renderScopeDetail();
-  $$("#wiz-scope .choice-card").forEach(c=>{
+  $$("#wiz-scope .choice-card, #wiz-scope-2 .choice-card").forEach(c=>{
     c.addEventListener("click", ()=>{
       wizardState.scope = c.getAttribute("data-scope");
-      $$("#wiz-scope .choice-card").forEach(x=>x.classList.remove("selected"));
+      $$("#wiz-scope .choice-card, #wiz-scope-2 .choice-card").forEach(x=>x.classList.remove("selected"));
       c.classList.add("selected");
       renderScopeDetail();
     });
@@ -1134,17 +1171,26 @@ function renderWizardWhat(){
         if(p.getAttribute("data-v")===wizardState.tipo) p.classList.add("active");
         p.addEventListener("click", ()=>{ wizardState.tipo=p.getAttribute("data-v"); $$("#wiz-tipo-pills .pill").forEach(x=>x.classList.remove("active")); p.classList.add("active"); });
       });
-    } else if(wizardState.scope==="imagen"){
-      const secsI = [{id:"all",name:"Todas las pestañas"}].concat(O.TAXONOMY_SECTIONS.map(s=>({id:s.id,name:s.name})));
-      const nImg = O.filterQuestions({ conImagen:true }).length;
+    } else if(SKILL_MODES.some(m=>m.id===wizardState.scope)){
+      // Solo se ofrecen las pestañas que tienen material de ESE modo, con su
+      // recuento: nada de combinaciones que devuelven cero.
+      const modo = SKILL_MODES.find(m=>m.id===wizardState.scope);
+      const disp = sectionsForSkill(wizardState.scope, 5);
+      const total = O.filterQuestions(skillFilter(wizardState.scope)).length;
+      const validas = ["all"].concat(disp.map(x=>x.id));
+      if(!validas.includes(wizardState.section)) wizardState.section = "all";
       el.className = "config-panel";
       el.innerHTML = `
         <div class="field" style="margin-bottom:0;"><label>Pestaña</label>
-          <select id="wiz-img-section">${secsI.map(s=>`<option value="${s.id}">${O.escapeHtml(s.name)}</option>`).join("")}</select></div>
-        <p class="cp-hint" style="margin:var(--sp-2) 0 0;">${nImg} preguntas con imagen de icono en el banco.</p>`;
-      if(!["all"].concat(O.TAXONOMY_SECTIONS.map(s=>s.id)).includes(wizardState.section)) wizardState.section = "all";
-      $("#wiz-img-section").value = wizardState.section;
-      $("#wiz-img-section").addEventListener("change", ()=> wizardState.section = $("#wiz-img-section").value);
+          <select id="wiz-skill-section">
+            <option value="all">Todas las pestañas (${total})</option>
+            ${disp.map(x=>`<option value="${x.id}">${O.escapeHtml(x.name)} (${x.n})</option>`).join("")}
+          </select></div>
+        ${disp.length < O.TAXONOMY_SECTIONS.length
+          ? `<p class="cp-hint" style="margin:var(--sp-2) 0 0;">Solo se listan las pestañas con al menos 5 preguntas de ${modo.t.toLowerCase()}.</p>`
+          : ``}`;
+      $("#wiz-skill-section").value = wizardState.section;
+      $("#wiz-skill-section").addEventListener("change", ()=>{ wizardState.section = $("#wiz-skill-section").value; });
     } else if(wizardState.scope==="categoria"){
       el.className = "config-panel";
       el.innerHTML = `<label class="cp-label">Dimensión</label><div class="pill-row" id="wiz-cat-pills">
@@ -1237,11 +1283,12 @@ function wizardToConfig(){
     mode: wizardState.mode,
     scope: scope === "errores" ? "errores" : scope === "marcadas" ? "marcadas" : null,
     source: "all",
-    section: (wizardState.scope==="tema" || wizardState.scope==="imagen") ? wizardState.section : "all",
+    section: (wizardState.scope==="tema" || SKILL_MODES.some(m=>m.id===wizardState.scope)) ? wizardState.section : "all",
     topic: wizardState.scope==="tema" ? wizardState.topic : "all",
     tipo: wizardState.scope==="tipo" ? wizardState.tipo : "all",
-    categoria: wizardState.scope==="categoria" ? wizardState.categoria : "all",
-    conImagen: wizardState.scope==="imagen",
+    categoria: (skillFilter(wizardState.scope) || {}).categoria
+               || (wizardState.scope==="categoria" ? wizardState.categoria : "all"),
+    conImagen: wizardState.scope==="iconos" || wizardState.scope==="imagen",
     count: wizardState.count,
     qOrder: wizardState.qOrder,
     shuffleOptions: wizardState.shuffleOptions,
@@ -2784,7 +2831,7 @@ function openUserQuestionModal(editId, onDone){
         <span class="edit-hint">El grupo de la cinta de Word. "Párrafo" viene desglosado por temas (Alineación, Sangría…).</span></div>
     </div>
     <div class="field"><label>Categoría</label><select id="uq-cat" class="edit-field">
-      ${["general","atajo","ruta","concepto"].map(c=>`<option value="${c}" ${ex&&ex.categoria===c?'selected':''}>${c==="ruta"?"Ruta / menú":c[0].toUpperCase()+c.slice(1)}</option>`).join("")}</select></div>
+      ${["ruta","atajo","concepto"].map(c=>`<option value="${c}" ${ex&&ex.categoria===c?'selected':''}>${c==="ruta"?"Ruta / menú":c[0].toUpperCase()+c.slice(1)}</option>`).join("")}</select></div>
     <p class="edit-warn">Se guarda solo en este dispositivo. Exporta desde Ajustes → Mi contenido para incorporarla al banco.</p>
     <div class="ed-actions">
       ${ex?`<button class="ed-btn is-danger" id="uq-delete">Eliminar</button>`:''}
