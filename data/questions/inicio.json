@@ -12975,6 +12975,42 @@
     "explicacion": "El selector rota entre siete: las cinco tabulaciones —izquierda, centro, derecha, decimal y barra— y dos marcadores que no son tabulaciones, el de sangría de primera línea y el de sangría francesa. Elegido uno, se pulsa en la regla para colocarlo. · Quedarse en cinco es el descarte que más cae, porque el selector se asocia solo con tabulaciones y de hecho se llama así. · Seis es la mitad del añadido, olvidando la francesa. · Y nueve mezcla los cuatro tipos de sangría del cuadro Párrafo: pero las de izquierda y derecha no están en el selector, se manejan con los triángulos y el cuadradito que ya vienen dibujados en la regla."
   },
   {
+    "id": "inicio-86",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": "Naturaleza de las tabulaciones",
+    "tema": "Tabulaciones",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0327",
+    "enunciado": "Copias con el pincel el formato de un párrafo que tenía tres tabulaciones definidas y lo aplicas sobre otro párrafo. ¿Se llevan las tabulaciones?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Sí: son formato de párrafo y viajan con él"
+      },
+      {
+        "letter": "B",
+        "text": "No: son caracteres escritos y el pincel no copia texto"
+      },
+      {
+        "letter": "C",
+        "text": "Sí, pero solo su posición; el relleno y la alineación no se copian"
+      },
+      {
+        "letter": "D",
+        "text": "No: hay que definirlas de nuevo o guardarlas en un estilo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Las tabulaciones son formato de párrafo, igual que la alineación, la sangría o el interlineado: viven en la marca ¶ y se copian enteras, con su posición, su tipo y su relleno. El pincel es Alt+Ctrl+C para copiar el formato y Alt+Ctrl+V para pegarlo. ⚠️ Ojo: en la mayoría de manuales ese pincel es Ctrl+Mayús+C y Ctrl+Mayús+V, que en esta instalación no hacen eso. Prueba en vivo del usuario. · Confundirlas con caracteres es el error de fondo: lo que sí es un carácter es el tabulador que se escribe con Tab, que se ve con Mostrar todo como una flecha. Uno es la parada, el otro el salto hasta ella."
+  },
+  {
     "id": "inicio-277",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Tabulaciones",
@@ -13009,6 +13045,42 @@
     "matching": null,
     "respuesta": "A",
     "explicacion": "Hacen falta tres cosas a la vez: que la parada esté al final del área de texto, que sea de tipo derecha para que los números de página queden cuadrados por su última cifra —el 3 y el 128 acaban en la misma vertical— y que lleve relleno de puntos. · Con tabulación izquierda los números empezarían todos en el mismo sitio y acabarían desalineados, que es el fallo más frecuente al montar un sumario a mano. · Desde la regla se coloca la parada y se elige el tipo, pero no hay forma de poner el relleno: ese es el motivo de pasar por el cuadro. · Y escribir los puntos a mano se descoloca en cuanto cambie una palabra del título."
+  },
+  {
+    "id": "inicio-280",
+    "sourceFile": "inicio.json",
+    "bloque": "Inicio — Tabulaciones",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "inicio",
+    "topic": "parrafo-tabulaciones",
+    "subtopic": "Naturaleza de las tabulaciones",
+    "tema": "Tabulaciones",
+    "difficulty": "media",
+    "sourceQuestionId": "P-0534",
+    "enunciado": "Un párrafo tiene tabulaciones definidas. Borras su marca de párrafo final, de modo que se une con el párrafo siguiente. ¿Qué pasa con esas tabulaciones?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se pierden: el párrafo resultante se queda con el formato del de abajo"
+      },
+      {
+        "letter": "B",
+        "text": "Se conservan: el párrafo resultante mantiene las del de arriba"
+      },
+      {
+        "letter": "C",
+        "text": "Se suman: el párrafo resultante tiene las paradas de los dos"
+      },
+      {
+        "letter": "D",
+        "text": "Se pierden las dos: el párrafo resultante vuelve a las predeterminadas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Todo el formato de un párrafo —tabulaciones, sangrías, alineación, interlineado— viaja dentro de su marca ¶, al final. Al borrarla, el texto de arriba pasa a formar parte del párrafo de abajo y adopta su formato, no al revés. Es la razón de que al unir párrafos «se descoloque» lo de arriba. · Pensar que se conservan es lo intuitivo, porque uno cree que el formato pertenece al texto que se ve, y ahí está la trampa. · No se suman: un párrafo tiene un solo juego de tabulaciones. · Y no vuelven a las predeterminadas: quedan las del párrafo que sobrevive, que puede tener las suyas."
   },
   {
     "id": "inicio-462",
@@ -13229,78 +13301,6 @@
     "matching": null,
     "respuesta": false,
     "explicacion": "Falso. Dentro de una tabla, Tab avanza a la celda siguiente, y en la última celda de la última fila hace algo más: crea una fila nueva, que es la forma más rápida de alargar una tabla. Para escribir un tabulador de verdad dentro de una celda hay que pulsar Ctrl+Tab. Prueba en vivo del usuario. · Mayús+Tab retrocede a la celda anterior. · Hay otro contexto donde Tab cambia de significado: al principio de un elemento de lista, donde baja el elemento un nivel en la jerarquía en vez de tabular. En cualquier otro punto del elemento sí tabula normalmente."
-  },
-  {
-    "id": "inicio-86",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Tabulaciones",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-tabulaciones",
-    "subtopic": "Naturaleza de las tabulaciones",
-    "tema": "Tabulaciones",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0327",
-    "enunciado": "Copias con el pincel el formato de un párrafo que tenía tres tabulaciones definidas y lo aplicas sobre otro párrafo. ¿Se llevan las tabulaciones?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Sí: son formato de párrafo y viajan con él"
-      },
-      {
-        "letter": "B",
-        "text": "No: son caracteres escritos y el pincel no copia texto"
-      },
-      {
-        "letter": "C",
-        "text": "Sí, pero solo su posición; el relleno y la alineación no se copian"
-      },
-      {
-        "letter": "D",
-        "text": "No: hay que definirlas de nuevo o guardarlas en un estilo"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Las tabulaciones son formato de párrafo, igual que la alineación, la sangría o el interlineado: viven en la marca ¶ y se copian enteras, con su posición, su tipo y su relleno. El pincel es Alt+Ctrl+C para copiar el formato y Alt+Ctrl+V para pegarlo. ⚠️ Ojo: en la mayoría de manuales ese pincel es Ctrl+Mayús+C y Ctrl+Mayús+V, que en esta instalación no hacen eso. Prueba en vivo del usuario. · Confundirlas con caracteres es el error de fondo: lo que sí es un carácter es el tabulador que se escribe con Tab, que se ve con Mostrar todo como una flecha. Uno es la parada, el otro el salto hasta ella."
-  },
-  {
-    "id": "inicio-280",
-    "sourceFile": "inicio.json",
-    "bloque": "Inicio — Tabulaciones",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "inicio",
-    "topic": "parrafo-tabulaciones",
-    "subtopic": "Naturaleza de las tabulaciones",
-    "tema": "Tabulaciones",
-    "difficulty": "media",
-    "sourceQuestionId": "P-0534",
-    "enunciado": "Un párrafo tiene tabulaciones definidas. Borras su marca de párrafo final, de modo que se une con el párrafo siguiente. ¿Qué pasa con esas tabulaciones?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Se pierden: el párrafo resultante se queda con el formato del de abajo"
-      },
-      {
-        "letter": "B",
-        "text": "Se conservan: el párrafo resultante mantiene las del de arriba"
-      },
-      {
-        "letter": "C",
-        "text": "Se suman: el párrafo resultante tiene las paradas de los dos"
-      },
-      {
-        "letter": "D",
-        "text": "Se pierden las dos: el párrafo resultante vuelve a las predeterminadas"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Todo el formato de un párrafo —tabulaciones, sangrías, alineación, interlineado— viaja dentro de su marca ¶, al final. Al borrarla, el texto de arriba pasa a formar parte del párrafo de abajo y adopta su formato, no al revés. Es la razón de que al unir párrafos «se descoloque» lo de arriba. · Pensar que se conservan es lo intuitivo, porque uno cree que el formato pertenece al texto que se ve, y ahí está la trampa. · No se suman: un párrafo tiene un solo juego de tabulaciones. · Y no vuelven a las predeterminadas: quedan las del párrafo que sobrevive, que puede tener las suyas."
   },
   {
     "id": "inicio-448",
@@ -18276,28 +18276,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-217",
-    "enunciado": "¿Qué atajo activa el modo de selección de columna (seleccionar un bloque vertical de texto) en Word 365?",
+    "enunciado": "Quieres seleccionar un bloque rectangular de texto, solo la primera columna de una lista escrita con tabuladores. ¿Qué combinación activa ese modo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Mayús + F8"
+        "text": "Ctrl+Mayús+F8"
       },
       {
         "letter": "B",
-        "text": "Ctrl + F8"
+        "text": "Ctrl+F8"
       },
       {
         "letter": "C",
-        "text": "Alt + Mayús + F8"
+        "text": "F8"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Mayús + Abajo"
+        "text": "Alt+F8"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+F8 activa el modo \"Seleccionar columna\": deja la selección enganchada y, moviendo el cursor o haciendo clic, se va extendiendo un bloque rectangular de texto. Se sale con Esc. Ctrl+F8 cambia el tamaño de la ventana. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Mayús+F8 activa el modo «Seleccionar columna»: la selección queda enganchada y, al mover el cursor o hacer clic, se va extendiendo un bloque vertical que atraviesa las líneas. Se sale con Esc. Prueba en vivo del usuario. Con el ratón se consigue lo mismo arrastrando con Alt pulsado. · F8 es el descarte que decide la pregunta: activa el modo extender selección, que crece por palabras, frases y párrafos, siempre en el orden del texto, nunca en bloque rectangular. · Ctrl+F8 es de gestión de la ventana del documento. · Y Alt+F8 abre el cuadro de diálogo Macros."
   },
   {
     "id": "inicio-324",
@@ -18311,7 +18311,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-248",
-    "enunciado": "¿Qué atajo extiende la selección hasta el inicio del documento en Word 365?",
+    "enunciado": "El cursor está a mitad del documento y quieres seleccionar desde ahí hasta el principio del todo. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -18323,16 +18323,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+Re Pág"
+        "text": "Ctrl+Inicio"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+Mayús+Inicio"
+        "text": "Alt+Ctrl+Mayús+Re Pág"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+Inicio extiende la selección desde el cursor hasta el inicio del documento. Mayús+Inicio extiende la selección hasta el inicio de la línea actual. Ctrl+Mayús+Re Pág extiende la selección hasta el inicio de la página anterior. Alt+Ctrl+Mayús+Inicio no tiene función asignada para extender la selección hasta el inicio del documento."
+    "explicacion": "Ctrl+Mayús+Inicio es ExtenderPrincipioDeDoc: selecciona hasta la primera línea del documento. La lógica de toda esta familia es constante y conviene tenerla clara: Mayús añade «extendiendo la selección» y Ctrl amplía el alcance de la línea al documento. · Mayús+Inicio, sin Ctrl, se queda en el principio de la LÍNEA: es el descarte que decide la pregunta y solo cambia en esa tecla. · Ctrl+Inicio va al principio del documento, pero sin seleccionar, porque le falta el Mayús. · Y Alt+Ctrl+Mayús+Re Pág selecciona hasta el principio de la primera línea VISIBLE en pantalla, que no es lo mismo que el principio del documento."
   },
   {
     "id": "inicio-325",
@@ -18346,7 +18346,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-249",
-    "enunciado": "¿Qué atajo extiende la selección hasta el final del documento en Word 365?",
+    "enunciado": "Quieres seleccionar desde donde está el cursor hasta el final del documento, para borrar todo lo que sobra. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -18358,16 +18358,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+Av Pág"
+        "text": "Ctrl+Fin"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+Mayús+Fin"
+        "text": "Mayús+Av Pág"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+Fin extiende la selección desde el cursor hasta el final del documento. Mayús+Fin extiende la selección hasta el final de la línea actual. Ctrl+Mayús+Av Pág no tiene función asignada para extender hasta el final. Alt+Ctrl+Mayús+Fin no tiene función asignada para extender la selección hasta el final del documento. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Mayús+Fin extiende la selección hasta el final del documento. Prueba en vivo del usuario. Es la simétrica exacta de Ctrl+Mayús+Inicio, y las dos juntas permiten partir un documento en dos sin usar el ratón. · Mayús+Fin se queda al final de la línea. · Ctrl+Fin va al final del documento pero sin seleccionar nada: es el descarte más engañoso, porque el cursor acaba en el mismo sitio y parece que ha funcionado, hasta que se pulsa Suprimir y no pasa nada. · Y Mayús+Av Pág extiende la selección solo una pantalla de texto, no hasta el final."
   },
   {
     "id": "inicio-326",
@@ -18381,7 +18381,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-250",
-    "enunciado": "¿Qué atajo extiende la selección hasta el final de la línea actual en Word 365?",
+    "enunciado": "El cursor está en mitad de una frase y quieres seleccionar de ahí al final de esa línea. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -18393,7 +18393,7 @@
       },
       {
         "letter": "C",
-        "text": "Mayús+Ctrl+Derecha"
+        "text": "Ctrl+Mayús+Derecha"
       },
       {
         "letter": "D",
@@ -18402,7 +18402,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+Fin extiende la selección hasta el final de la línea actual. Ctrl+Mayús+Fin extiende hasta el final del documento completo. Mayús+Ctrl+Derecha extiende la selección una palabra a la derecha. Alt+Mayús+Fin va al final de la fila en una tabla. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Mayús+Fin extiende hasta el final de la línea activa, y su simétrica es Mayús+Inicio. Ojo con la palabra «línea»: es el renglón tal como cae en pantalla, no la frase ni el párrafo. · Añadir Ctrl lleva la selección hasta el final del DOCUMENTO, que es un salto muy distinto: ese es el par que hay que separar. · Ctrl+Mayús+Derecha avanza palabra a palabra, así que llegaría al final de la línea pulsándolo varias veces. · Y Alt+Mayús+Fin es de tablas: extiende la selección hasta la última celda de la fila, y si ya se está en ella, selecciona solo esa."
   },
   {
     "id": "inicio-327",
@@ -18416,28 +18416,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-251",
-    "enunciado": "¿Qué atajo extiende la selección hasta el inicio de la línea actual en Word 365?",
+    "enunciado": "Comparas Mayús+Inicio con Ctrl+Mayús+Inicio. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+Inicio"
+        "text": "La primera selecciona hasta el principio de la línea; la segunda, del documento"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+Inicio"
+        "text": "La primera selecciona hasta el principio del documento; la segunda, de la línea"
       },
       {
         "letter": "C",
-        "text": "Mayús+Ctrl+Izquierda"
+        "text": "La primera selecciona hasta el principio del párrafo; la segunda, de la página"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+Inicio"
+        "text": "Hacen lo mismo: Ctrl no cambia nada cuando ya hay Mayús"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+Inicio extiende la selección hasta el inicio de la línea actual. Ctrl+Mayús+Inicio extiende la selección hasta el inicio del documento completo. Mayús+Ctrl+Izquierda extiende la selección una palabra a la izquierda. Alt+Mayús+Inicio va al inicio de la fila en una tabla."
+    "explicacion": "En toda esta familia de atajos, Mayús es lo que convierte un movimiento en una selección y Ctrl es lo que amplía la unidad: de carácter a palabra con las flechas laterales, de línea a párrafo con las verticales, y de línea a documento con Inicio y Fin. Sabiendo esas dos reglas no hace falta memorizar la lista entera. · La versión con los papeles cambiados es el reflejo exacto. · Ni el párrafo ni la página entran aquí: el párrafo es Ctrl+Mayús+Arriba y la pantalla, Mayús+Re Pág. · Y desde luego Ctrl cambia algo: si no, no existirían las dos."
   },
   {
     "id": "inicio-328",
@@ -18451,7 +18451,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-252",
-    "enunciado": "¿Qué atajo extiende la selección hasta el final de la ventana visible en Word 365?",
+    "enunciado": "Quieres seleccionar desde el cursor hasta la última línea que se ve en pantalla, sin pasar de ahí. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -18463,16 +18463,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+Av Pág"
+        "text": "Mayús+Av Pág"
       },
       {
         "letter": "D",
-        "text": "Mayús+Av Pág"
+        "text": "Ctrl+Av Pág"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Mayús+Av Pág extiende la selección hasta el final de la ventana visible. Alt+Ctrl+Av Pág va al final de la ventana sin extender selección. Ctrl+Mayús+Av Pág no tiene esa función asignada. Mayús+Av Pág extiende la selección una página hacia abajo."
+    "explicacion": "Alt+Ctrl+Mayús+Av Pág es ExtenderFinDeVentana: llega hasta la última línea VISIBLE, sin desplazar el documento. Es de los pocos atajos de cuatro teclas de Word. · Alt+Ctrl+Av Pág, la misma sin Mayús, mueve el cursor hasta ahí pero sin seleccionar: otra vez la regla de que Mayús es lo que selecciona. Es el descarte que decide la pregunta. · Mayús+Av Pág sí selecciona, pero avanzando una pantalla entera, con lo que se pasa de largo. · Y Ctrl+Av Pág no tiene nada que ver: pasa al siguiente objeto de búsqueda, con el explorador de objetos."
   },
   {
     "id": "inicio-329",
@@ -18486,28 +18486,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-253",
-    "enunciado": "¿Qué atajo extiende la selección hasta el inicio de la ventana visible en Word 365?",
+    "enunciado": "Comparas Alt+Ctrl+Re Pág con Alt+Ctrl+Mayús+Re Pág. ¿Qué añade la tecla Mayús?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Ctrl+Mayús+Re Pág"
+        "text": "Que además de llevar el cursor arriba, seleccione el texto por el camino"
       },
       {
         "letter": "B",
-        "text": "Alt+Ctrl+Re Pág"
+        "text": "Que en vez de la primera línea visible, vaya al principio del documento"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+Re Pág"
+        "text": "Que en vez de la primera línea visible, vaya al principio de la página"
       },
       {
         "letter": "D",
-        "text": "Mayús+Re Pág"
+        "text": "Nada: las dos hacen lo mismo, es una asignación duplicada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Mayús+Re Pág extiende la selección hasta el inicio de la ventana visible. Alt+Ctrl+Re Pág va al inicio de la ventana sin extender selección. Ctrl+Mayús+Re Pág no tiene esa función asignada. Mayús+Re Pág extiende la selección una página hacia arriba."
+    "explicacion": "Las dos van al mismo destino, la primera línea visible en pantalla; la diferencia es que la que lleva Mayús selecciona todo lo que queda entre el punto de partida y ese destino. Es la misma regla que separa Ctrl+Inicio de Ctrl+Mayús+Inicio, o Fin de Mayús+Fin. · Ir al principio del documento es Ctrl+Inicio, y al de la página no hay atajo directo. Los dos descartes cambian el destino en vez del efecto, que es justo lo que Mayús no hace. · Y no son duplicadas: Word no asigna dos combinaciones al mismo comando salvo por herencia histórica, como Ctrl+C y Ctrl+Insertar."
   },
   {
     "id": "inicio-330",
@@ -18521,28 +18521,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-254",
-    "enunciado": "¿Qué atajo extiende la selección un carácter a la derecha en Word 365?",
+    "enunciado": "Comparas Mayús+Derecha con Ctrl+Mayús+Derecha. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+Derecha"
+        "text": "La primera amplía la selección un carácter; la segunda, una palabra"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+Derecha"
+        "text": "La primera amplía un carácter; la segunda, hasta el final de la línea"
       },
       {
         "letter": "C",
-        "text": "Mayús+Abajo"
+        "text": "La primera amplía una palabra; la segunda, un carácter"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+Derecha"
+        "text": "La primera amplía un carácter y la segunda mueve el cursor sin seleccionar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+Derecha extiende la selección un carácter a la derecha. Ctrl+Mayús+Derecha extiende la selección una palabra completa a la derecha. Mayús+Abajo extiende la selección una línea hacia abajo. Alt+Mayús+Derecha degrada el nivel del título en el esquema."
+    "explicacion": "Con las flechas laterales, Ctrl cambia la unidad de carácter a palabra, exactamente igual que hace al mover el cursor sin seleccionar. Las verticales siguen la misma lógica: sueltas van de línea en línea y con Ctrl, de párrafo en párrafo. · Llegar al final de la línea es Mayús+Fin. · La versión invertida es el reflejo exacto y hay que leerla despacio. · Y la última confunde los dos papeles: quien decide si se selecciona o solo se mueve es Mayús, y las dos combinaciones lo llevan. Con esas dos reglas —Mayús selecciona, Ctrl amplía la unidad— se deducen casi todos los atajos de esta familia."
   },
   {
     "id": "inicio-331",
@@ -18556,7 +18556,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-255",
-    "enunciado": "¿Qué atajo extiende la selección un carácter a la izquierda en Word 365?",
+    "enunciado": "Estás corrigiendo y quieres seleccionar letra a letra hacia la izquierda, sin ratón. ¿Qué combinación usas?",
     "opciones": [
       {
         "letter": "A",
@@ -18568,7 +18568,7 @@
       },
       {
         "letter": "C",
-        "text": "Mayús+Arriba"
+        "text": "Ctrl+Izquierda"
       },
       {
         "letter": "D",
@@ -18577,7 +18577,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+Izquierda extiende la selección un carácter a la izquierda. Ctrl+Mayús+Izquierda extiende la selección una palabra completa a la izquierda. Mayús+Arriba extiende la selección una línea hacia arriba. Alt+Mayús+Izquierda promueve el título un nivel en el esquema."
+    "explicacion": "Mayús con la flecha izquierda amplía la selección un carácter por pulsación; con la derecha, lo mismo hacia el otro lado. Es la unidad más fina de todas y la que se usa para ajustar una selección al milímetro. · Ctrl+Mayús+Izquierda salta de palabra en palabra: hace lo mismo pero a trancos, y es el descarte que decide la pregunta. · Ctrl+Izquierda mueve el cursor una palabra sin seleccionar nada, porque le falta Mayús. · Y Alt+Mayús+Izquierda no figura en el cuadro Personalizar teclado de esta instalación, así que el banco no puede afirmar qué hace."
   },
   {
     "id": "inicio-332",
@@ -18591,7 +18591,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-256",
-    "enunciado": "¿Qué atajo extiende la selección una palabra completa a la derecha en Word 365?",
+    "enunciado": "Quieres seleccionar tres palabras seguidas sin usar el ratón ni ir letra a letra. ¿Qué combinación pulsas tres veces?",
     "opciones": [
       {
         "letter": "A",
@@ -18607,12 +18607,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+Mayús+Derecha"
+        "text": "Mayús+Fin"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+Derecha extiende la selección una palabra completa a la derecha. Mayús+Derecha extiende solo un carácter. Ctrl+Derecha mueve el cursor una palabra a la derecha sin extender selección. Alt+Ctrl+Mayús+Derecha no tiene función asignada para extender selección por palabras."
+    "explicacion": "Cada pulsación de Ctrl+Mayús+Derecha añade una palabra a la selección, con su espacio, así que tres pulsaciones dan tres palabras exactas. · Mayús+Derecha iría letra a letra: acabaría funcionando, pero con muchas más pulsaciones, y es el descarte que decide la pregunta. · Ctrl+Derecha recorre palabras pero sin seleccionar, porque le falta el Mayús: el cursor acaba tres palabras más allá y no hay nada marcado. · Y Mayús+Fin se llevaría el resto de la línea entera. · La alternativa con ratón es doble clic sobre la primera palabra y arrastrar: Word va completando palabras enteras."
   },
   {
     "id": "inicio-333",
@@ -18626,7 +18626,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-257",
-    "enunciado": "¿Qué atajo extiende la selección una palabra completa a la izquierda en Word 365?",
+    "enunciado": "Has escrito de más y quieres seleccionar las dos últimas palabras para borrarlas. ¿Qué combinación pulsas dos veces?",
     "opciones": [
       {
         "letter": "A",
@@ -18634,20 +18634,20 @@
       },
       {
         "letter": "B",
-        "text": "Mayús+Izquierda"
+        "text": "Ctrl+Retroceso"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Izquierda"
+        "text": "Mayús+Izquierda"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+Mayús+Izquierda"
+        "text": "Ctrl+Izquierda"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+Izquierda extiende la selección una palabra completa a la izquierda. Mayús+Izquierda extiende solo un carácter. Ctrl+Izquierda mueve el cursor una palabra a la izquierda sin extender selección. Alt+Ctrl+Mayús+Izquierda no tiene función asignada para extender selección por palabras."
+    "explicacion": "Dos pulsaciones de Ctrl+Mayús+Izquierda dejan seleccionadas las dos palabras anteriores, listas para borrarlas, sustituirlas o darles formato. · Ctrl+Retroceso es el descarte más difícil, porque resuelve el caso concreto del enunciado si lo único que se quiere es borrar: elimina la palabra anterior de un golpe, y pulsándolo dos veces se van las dos. Lo que no hace es SELECCIONAR, y además lo borrado no pasa por el portapapeles. Si solo se quiere borrar, es más rápido; si se quiere hacer otra cosa con ellas, no sirve. · Mayús+Izquierda va letra a letra. · Y Ctrl+Izquierda mueve sin seleccionar."
   },
   {
     "id": "inicio-334",
@@ -18661,28 +18661,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-258",
-    "enunciado": "¿Qué atajo extiende la selección una línea hacia abajo en Word 365?",
+    "enunciado": "Comparas Mayús+Abajo con Ctrl+Mayús+Abajo. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+Abajo"
+        "text": "La primera amplía la selección una línea; la segunda, un párrafo"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+Abajo"
+        "text": "La primera amplía una línea; la segunda, una pantalla de texto"
       },
       {
         "letter": "C",
-        "text": "Mayús+Av Pág"
+        "text": "La primera amplía un párrafo; la segunda, una línea"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+Abajo"
+        "text": "La primera amplía una línea y la segunda no tiene comando asignado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+Abajo extiende la selección una línea hacia abajo. Ctrl+Mayús+Abajo extiende la selección un párrafo completo hacia abajo. Mayús+Av Pág extiende la selección una página hacia abajo. Alt+Mayús+Abajo baja un elemento en la vista Esquema."
+    "explicacion": "Es la misma regla de siempre aplicada a las flechas verticales: sueltas van de renglón en renglón y con Ctrl saltan al principio del párrafo siguiente. En un párrafo largo la diferencia es enorme, y en uno de una línea las dos hacen lo mismo, que es lo que despista al probarlo. · Ampliar una pantalla entera es Mayús+Av Pág, otro escalón de la misma escalera. · La versión invertida es el reflejo exacto. · Y Ctrl+Mayús+Abajo sí existe: figura en el cuadro Personalizar teclado como ExtenderPárrafoAbajo, con su simétrica hacia arriba."
   },
   {
     "id": "inicio-335",
@@ -18696,15 +18696,15 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-259",
-    "enunciado": "¿Qué atajo extiende la selección una línea hacia arriba en Word 365?",
+    "enunciado": "Quieres seleccionar el párrafo anterior completo desde donde está el cursor. ¿Qué combinación lo hace de una pulsación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+Arriba"
+        "text": "Ctrl+Mayús+Arriba"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+Arriba"
+        "text": "Mayús+Arriba"
       },
       {
         "letter": "C",
@@ -18712,12 +18712,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+Arriba"
+        "text": "Ctrl+Arriba"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+Arriba extiende la selección una línea hacia arriba. Ctrl+Mayús+Arriba extiende la selección un párrafo completo haciaarriba. Mayús+Re Pág extiende la selección una página hacia arriba. Alt+Mayús+Arriba sube un elemento en la vista Esquema."
+    "explicacion": "Ctrl+Mayús+Arriba extiende la selección hasta el principio del párrafo anterior, y repitiéndolo se van sumando párrafos hacia arriba. · Mayús+Arriba sube renglón a renglón: llegaría al mismo sitio con varias pulsaciones y es el descarte que decide la pregunta, porque en un párrafo de una sola línea las dos coinciden. · Mayús+Re Pág sube una pantalla de texto entera, que no coincide con ningún párrafo. · Y Ctrl+Arriba mueve el cursor al párrafo anterior sin seleccionar: le falta el Mayús, que en toda esta familia es lo que convierte el movimiento en selección."
   },
   {
     "id": "inicio-336",
@@ -18731,28 +18731,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-260",
-    "enunciado": "¿Qué atajo extiende la selección un párrafo completo hacia abajo en Word 365?",
+    "enunciado": "Comparas Ctrl+Mayús+Abajo con Mayús+Av Pág. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+Abajo"
+        "text": "La primera amplía por párrafos; la segunda, por pantallas de texto"
       },
       {
         "letter": "B",
-        "text": "Mayús+Abajo"
+        "text": "La primera amplía por párrafos; la segunda, por páginas del documento"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+Av Pág"
+        "text": "La primera amplía por líneas; la segunda, por párrafos"
       },
       {
         "letter": "D",
-        "text": "Mayús+Av Pág"
+        "text": "Hacen lo mismo cuando el párrafo ocupa más de una pantalla"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+Abajo extiende la selección un párrafo completo hacia abajo. Mayús+Abajo extiende solo una línea. Ctrl+Mayús+Av Pág no tiene función asignada para extender por párrafos. Mayús+Av Pág extiende la selección una página entera."
+    "explicacion": "El detalle está en la segunda: el cuadro Personalizar teclado la describe como «extiende la selección y desplaza el documento a la siguiente pantalla de texto», no a la siguiente PÁGINA. Es una unidad de pantalla, así que depende del zoom y del tamaño de la ventana, no de dónde caigan los saltos de página. Por eso ese descarte es tan bueno: la tecla se llama Av Pág y uno da por hecho que va por páginas. · La primera sí es una unidad del documento, el párrafo. · Y no coinciden nunca de forma fiable, precisamente porque una depende del contenido y la otra de cómo se esté viendo."
   },
   {
     "id": "inicio-337",
@@ -18766,28 +18766,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-261",
-    "enunciado": "¿Qué atajo extiende la selección un párrafo completo hacia arriba en Word 365?",
+    "enunciado": "Estás en la última línea de un párrafo largo. Pulsas Ctrl+Mayús+Arriba una vez. ¿Hasta dónde llega la selección?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+Arriba"
+        "text": "Hasta el principio de ese mismo párrafo"
       },
       {
         "letter": "B",
-        "text": "Mayús+Arriba"
+        "text": "Hasta el principio del párrafo anterior"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+Re Pág"
+        "text": "Hasta el principio de la línea anterior"
       },
       {
         "letter": "D",
-        "text": "Mayús+Re Pág"
+        "text": "Hasta el principio de la pantalla visible"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+Arriba extiende la selección un párrafo completo hacia arriba. Mayús+Arriba extiende solo una línea. Ctrl+Mayús+Re Pág no tiene función asignada para extender por párrafos. Mayús+Re Pág extiende la selección una página entera hacia arriba."
+    "explicacion": "El comando extiende la selección hasta el principio del párrafo, y como el cursor está a mitad de él, la primera pulsación se queda ahí: solo la segunda alcanza el párrafo anterior. Eso explica que a veces parezca que «no hace nada nuevo» al pulsarlo dos veces seguidas desde el principio de un párrafo. · Saltar directamente al anterior es lo que uno espera y por eso es el descarte que más cae. · Ir línea a línea es Mayús+Arriba, sin Ctrl. · Y llegar al principio de lo visible en pantalla es Alt+Ctrl+Mayús+Re Pág, con sus cuatro teclas."
   },
   {
     "id": "inicio-338",
@@ -18801,28 +18801,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-262",
-    "enunciado": "¿Qué atajo extiende la selección una página hacia abajo en Word 365?",
+    "enunciado": "Pulsas Mayús+Av Pág. ¿Qué unidad amplía exactamente la selección?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+Av Pág"
+        "text": "Una pantalla de texto, la que se ve en ese momento"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+Abajo"
+        "text": "Una página del documento, hasta el salto siguiente"
       },
       {
         "letter": "C",
-        "text": "Mayús+Abajo"
+        "text": "Un párrafo completo hacia abajo"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Av Pág"
+        "text": "Una línea hacia abajo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+Av Pág extiende la selección una página completa hacia abajo. Ctrl+Mayús+Abajo extiende la selección un párrafo hacia abajo. Mayús+Abajo extiende solo una línea. Ctrl+Av Pág examina el objeto siguiente con el explorador de objetos."
+    "explicacion": "El cuadro Personalizar teclado lo dice con precisión: «extiende la selección y desplaza el documento a la siguiente pantalla de texto». Es una unidad de VISUALIZACIÓN, así que depende del zoom y del tamaño de la ventana; con el zoom al 200 % avanza mucho menos que al 50 %. · Que sea una página del documento es lo que sugiere el nombre de la tecla, y por eso es el descarte que más cae: las páginas del documento se recorren con Ctrl+Av Pág en el explorador de objetos, o por número desde la ficha «Ir a». · El párrafo es Ctrl+Mayús+Abajo y la línea, Mayús+Abajo. Cuatro unidades distintas para la misma dirección."
   },
   {
     "id": "inicio-339",
@@ -18836,28 +18836,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-263",
-    "enunciado": "¿Qué atajo extiende la selección una página hacia arriba en Word 365?",
+    "enunciado": "Estás con el zoom al 200 % y pulsas Mayús+Re Pág. Luego bajas el zoom al 50 % y lo pulsas otra vez. ¿Selecciona lo mismo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+Re Pág"
+        "text": "No: avanza por pantallas, así que con menos zoom abarca más texto"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+Arriba"
+        "text": "Sí: avanza por páginas del documento, y el zoom no las cambia"
       },
       {
         "letter": "C",
-        "text": "Mayús+Arriba"
+        "text": "Sí: avanza siempre veinticinco líneas, sea cual sea el zoom"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Re Pág"
+        "text": "No: con el zoom alto no funciona y hay que usar Ctrl+Re Pág"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+Re Pág extiende la selección una página completa hacia arriba. Ctrl+Mayús+Arriba extiende la selección un párrafo hacia arriba. Mayús+Arriba extiende solo una línea. Ctrl+Re Pág examina el objeto anterior con el explorador."
+    "explicacion": "La unidad de esta tecla es la pantalla de texto, no la página: el cuadro Personalizar teclado la describe como «extiende la selección y desplaza el documento a la pantalla de texto anterior». Al reducir el zoom cabe más texto en pantalla, así que la misma pulsación abarca más. · Creer que va por páginas es lo natural por el nombre de la tecla, y es el error de fondo que la pregunta persigue. · No hay ningún número fijo de líneas. · Y Ctrl+Re Pág no es una alternativa: pasa al objeto de búsqueda anterior, con el explorador de objetos, y no selecciona nada."
   },
   {
     "id": "inicio-367",
@@ -18871,7 +18871,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-319",
-    "enunciado": "¿Qué atajo repite la última búsqueda realizada en Word 365?",
+    "enunciado": "Has buscado un término, has cerrado el cuadro y quieres saltar a la siguiente aparición sin volver a abrirlo. ¿Qué combinación repite la búsqueda?",
     "opciones": [
       {
         "letter": "A",
@@ -18892,7 +18892,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+F4 repite la última búsqueda en el documento. F4 repite la última acción o comando. Ctrl+F4 cierra el documento activo, sin cerrar Word. Alt+F4 acaba cerrando Word: cierra los documentos abiertos uno a uno."
+    "explicacion": "Mayús+F4 es RepetirBuscar: salta a la siguiente aparición de lo último que se buscó, sin abrir nada. Alt+Ctrl+Y hace exactamente lo mismo, porque comparten comando. · F4 repite la última ACCIÓN, que es otra cosa: si lo último fue poner negrita, la pone otra vez. Es el descarte que decide la pregunta, y la diferencia entre repetir una acción y repetir una búsqueda es lo que se examina. · Ctrl+F4 cierra el documento activo sin cerrar Word, y Alt+F4 los va cerrando uno a uno hasta cerrar el programa. Los dos son destructivos si se pulsan por error buscando otra cosa."
   },
   {
     "id": "inicio-368",
@@ -18906,7 +18906,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-320",
-    "enunciado": "¿Qué atajo alternativo también repite la última búsqueda además de Mayús+F4 en Word 365?",
+    "enunciado": "Un compañero repite búsquedas con una combinación que no es Mayús+F4. ¿Cuál puede ser?",
     "opciones": [
       {
         "letter": "A",
@@ -18918,16 +18918,16 @@
       },
       {
         "letter": "C",
-        "text": "Alt+Y"
+        "text": "Ctrl+Mayús+Y"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+Y"
+        "text": "Alt+Y"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Y es el atajo alternativo para repetir la última búsqueda. Ctrl+Y rehace o repite la última acción general. Alt+Y no tiene función asignada para búsqueda. Ctrl+Mayús+Y inserta el campo ListNum."
+    "explicacion": "Mayús+F4 y Alt+Ctrl+Y comparten el comando RepetirBuscar, así que son intercambiables. · Ctrl+Y es el descarte que más cae porque comparte la letra: repite la última acción, junto con F4 y Alt+Entrar, pero no la última búsqueda. Otra vez la distinción entre repetir una acción y repetir una búsqueda. · Ctrl+Mayús+Y sí existe y hace algo bastante inesperado: inserta un campo listNum, de numeración automática dentro de un párrafo. · Y Alt+Y no tiene comando asignado. Cuatro combinaciones con la Y y solo una que sirva para lo que se pide."
   },
   {
     "id": "inicio-369",
@@ -18941,7 +18941,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-321",
-    "enunciado": "¿Qué atajo vuelve a la ubicación anterior en el documento en Word 365?",
+    "enunciado": "Has saltado a otro punto del documento para consultar algo y quieres volver a donde estabas escribiendo. ¿Qué combinación te devuelve?",
     "opciones": [
       {
         "letter": "A",
@@ -18957,12 +18957,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+F5"
+        "text": "Ctrl+Mayús+F5"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+F5 vuelve a la ubicación anterior donde estaba el cursor. F5 abre el cuadro Ir a. Ctrl+F5 restaura el tamaño del documento. Alt+F5 restaura la ventana de la aplicación."
+    "explicacion": "Mayús+F5 es el comando Volver: lleva el cursor al punto de inserción anterior, y Word recuerda los tres últimos, así que pulsándolo repetidamente se va rotando entre ellos. Funciona incluso al abrir un documento, para volver a donde se dejó de escribir la última vez. Alt+Ctrl+Z hace lo mismo. · F5 abre el cuadro en la ficha Ir a, que es cómo se llegó al otro punto: es el descarte que decide la pregunta, porque es la tecla vecina y del mismo asunto. · Ctrl+F5 restaura el tamaño de la ventana. · Y Ctrl+Mayús+F5 abre el cuadro Marcador, para dar nombre a una posición."
   },
   {
     "id": "inicio-370",
@@ -18976,7 +18976,7 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-322",
-    "enunciado": "¿Qué atajo alternativo también vuelve a la ubicación anterior además de Mayús+F5 en Word 365?",
+    "enunciado": "Buscas la segunda combinación que devuelve el cursor al punto anterior, además de Mayús+F5. ¿Cuál es?",
     "opciones": [
       {
         "letter": "A",
@@ -18988,16 +18988,16 @@
       },
       {
         "letter": "C",
-        "text": "Alt+Z"
+        "text": "Ctrl+Mayús+Z"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+Z"
+        "text": "Alt+Z"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Z es el atajo alternativo para volver a la ubicación anterior. Ctrl+Z deshace la última acción. Alt+Z no tiene función asignada para volver a ubicación anterior. Ctrl+Mayús+Z restablece el formato de carácter."
+    "explicacion": "Alt+Ctrl+Z comparte con Mayús+F5 el comando Volver. · Ctrl+Z es el descarte que más cae por la letra, y hace algo muy distinto: deshace la última acción, es decir, cambia el documento. Volver solo mueve el cursor, sin tocar nada. Confundirlas al pulsar puede deshacer un cambio que se quería conservar. · Ctrl+Mayús+Z tampoco mueve: restablece el formato de carácter de la selección, igual que Ctrl+Barra espaciadora. · Y Alt+Z no tiene comando asignado. Cuatro combinaciones con la Z y tres efectos reales, todos distintos."
   },
   {
     "id": "inicio-371",
@@ -19011,28 +19011,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-325",
-    "enunciado": "¿Qué atajo del teclado numérico selecciona todo el contenido del documento en Word 365?",
+    "enunciado": "Además de Ctrl+E hay otra forma de seleccionar todo el documento con el teclado numérico. ¿Cuál?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + 5 (teclado numérico)"
+        "text": "Ctrl y el 5 del teclado numérico"
       },
       {
         "letter": "B",
-        "text": "Alt + 5 (teclado numérico)"
+        "text": "Alt y el 5 del teclado numérico"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Mayús + 5 (teclado numérico)"
+        "text": "Ctrl+Mayús y el 5 del teclado numérico"
       },
       {
         "letter": "D",
-        "text": "Alt + Ctrl + 5 (teclado numérico)"
+        "text": "Alt+Ctrl y el 5 del teclado numérico"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+5 del teclado numérico selecciona todo el documento (con NumLock activado o no). ⚠️ Ojo: Alt+5 del numérico NO selecciona — con NumLock ON inserta ♣ (código Alt); con NumLock OFF sí selecciona toda la tabla. Ctrl+5 num no figura en el volcado v2608; confirmado solo en vivo. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl con el 5 del teclado numérico selecciona el documento entero, y funciona con el bloqueo numérico encendido o apagado. ⚠️ Ojo: no figura en el cuadro Personalizar teclado de esta instalación; está confirmada probándola en vivo. · ⚠️ Alt con ese mismo 5 es el descarte más instructivo, porque sí hace algo y depende del bloqueo numérico: con él encendido inserta el símbolo ♣, porque Alt más un número es el código de un carácter; con él apagado selecciona la tabla entera si el cursor está dentro de una. · Las otras dos variantes no tienen comando asignado."
   },
   {
     "id": "inicio-372",
@@ -19046,28 +19046,28 @@
     "subtopic": null,
     "tema": "Edición",
     "sourceQuestionId": "8-326",
-    "enunciado": "¿Qué atajo alternativo también selecciona todo el documento además de Ctrl+E en Word 365?",
+    "enunciado": "Pulsas Alt con el 5 del teclado numérico esperando seleccionar todo, y en su lugar aparece un ♣ en el texto. ¿Por qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Número 5"
+        "text": "Porque con el bloqueo numérico activado, Alt y un número insertan un carácter por su código"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Borrar (Número 5)"
+        "text": "Porque Alt+5 está reservado para insertar símbolos de baraja en Word"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+E"
+        "text": "Porque el bloqueo numérico está desactivado y Word no reconoce la tecla"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+E"
+        "text": "Porque se ha pulsado en una tabla y Word inserta ahí una marca de celda"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+5 del teclado numérico selecciona todo el documento, igual que Ctrl+E. Ctrl+Mayús+E activa el control de cambios. Alt+Ctrl+E no tiene función. ⚠️ Ctrl+5 num no figura en el volcado v2608; confirmado en vivo."
+    "explicacion": "Alt más un número del teclado numérico es el método de Windows para insertar un carácter por su código, y el 5 devuelve el trébol. Prueba en vivo del usuario. Con el bloqueo numérico APAGADO, en cambio, esa misma pulsación sí selecciona la tabla entera si el cursor está dentro de una. La misma combinación, dos comportamientos, según una tecla que ni se mira. · La que selecciona el documento completo es Ctrl con ese 5, no Alt. · Word no reserva nada para símbolos de baraja: el trébol sale por su código, igual que saldría cualquier otro carácter con otro número."
   },
   {
     "id": "inicio-379",
@@ -19082,28 +19082,28 @@
     "tema": "Edición",
     "sourceQuestionId": "gen-atajo-4",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado elimina la palabra situada a la derecha del cursor en Word 365?",
+    "enunciado": "El cursor está justo delante de una palabra que sobra y quieres borrarla entera hacia la derecha. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Z"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Número 5"
-      },
-      {
-        "letter": "C",
         "text": "Ctrl+Supr"
       },
       {
+        "letter": "B",
+        "text": "Ctrl+Retroceso"
+      },
+      {
+        "letter": "C",
+        "text": "Mayús+Supr"
+      },
+      {
         "letter": "D",
-        "text": "Mayús+F4"
+        "text": "Ctrl+X"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Borra la siguiente palabra completa a la derecha del punto de inserción, sin necesidad de seleccionarla antes."
+    "respuesta": "A",
+    "explicacion": "Ctrl+Supr elimina la palabra siguiente, y el cuadro Personalizar teclado añade el matiz que importa: lo hace «sin colocarla en el Portapapeles», así que no se puede pegar después. · Ctrl+Retroceso es su simétrica y borra hacia la izquierda: es el descarte que decide la pregunta, porque hace lo mismo en la otra dirección. · Mayús+Supr y Ctrl+X sí quitan texto y lo dejan en el portapapeles, pero necesitan una selección previa: comparten comando, EdiciónCortar, y sin nada seleccionado no cortan nada. Ahí está la diferencia entre borrar y cortar, y es lo que decide si lo quitado se puede recuperar."
   },
   {
     "id": "inicio-426",
@@ -19123,24 +19123,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Ctrl+H"
-      },
-      {
-        "letter": "B",
         "text": "Ctrl+B"
       },
       {
+        "letter": "B",
+        "text": "Ctrl+L"
+      },
+      {
         "letter": "C",
-        "text": "Ctrl+Mayús+>"
+        "text": "Ctrl+I"
       },
       {
         "letter": "D",
-        "text": "Ctrl+J"
+        "text": "Alt+Q"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "**Buscar.** Pestaña Inicio ▸ Edición. Atajo: Ctrl+B. Abre el panel de Navegación con el cuadro de búsqueda dentro del documento (pestañas Títulos / Páginas / Resultados)."
+    "respuesta": "A",
+    "explicacion": "**Buscar.** Pestaña Inicio ▸ Edición. Atajo: Ctrl+B, que abre el panel de Navegación con sus fichas Títulos, Páginas y Resultados. ⚠️ Y no el cuadro de diálogo: para eso hay que desplegar su flecha y elegir «Búsqueda avanzada…». · Ctrl+L abre ese cuadro en la ficha Reemplazar, que es el botón de al lado en el mismo grupo. · Ctrl+I lo abre en la ficha Ir a, junto con F5. · Y Alt+Q es el descarte más fino: también lleva a un buscador, pero al de la barra de título, que busca comandos y ayuda en lugar de texto del documento."
   },
   {
     "id": "inicio-427",
@@ -19160,24 +19160,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Subíndice"
+        "text": "Reemplazar"
       },
       {
         "letter": "B",
-        "text": "Agrandar fuente"
+        "text": "Buscar"
       },
       {
         "letter": "C",
-        "text": "Alinear a la izquierda"
+        "text": "Seleccionar"
       },
       {
         "letter": "D",
-        "text": "Reemplazar"
+        "text": "Copiar formato"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "**Reemplazar.** Pestaña Inicio ▸ Edición. Atajo: Ctrl+L. Abre el cuadro «Buscar y reemplazar» en la ficha Reemplazar. En esta instalación el atajo es Ctrl+L."
+    "respuesta": "A",
+    "explicacion": "**Reemplazar.** Pestaña Inicio ▸ Edición, el segundo de los tres botones del grupo. Atajo: Ctrl+L, que abre el cuadro «Buscar y reemplazar» directamente en su ficha Reemplazar. · Buscar y Seleccionar son sus dos vecinos en ese mismo grupo, y son los descartes que decide la pregunta: los tres tienen que ver con localizar y manejar texto, y hay que distinguirlos por el icono. · Copiar formato está en el grupo Portapapeles, al otro extremo de la cinta, y su icono es un pincel. · ⚠️ Ojo con el atajo: en el esquema internacional reemplazar es Ctrl+H, que aquí aumenta la sangría izquierda."
   },
   {
     "id": "inicio-428",
@@ -19197,24 +19197,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Bordes"
-      },
-      {
-        "letter": "B",
         "text": "Seleccionar"
       },
       {
+        "letter": "B",
+        "text": "Buscar"
+      },
+      {
         "letter": "C",
-        "text": "Ordenar"
+        "text": "Reemplazar"
       },
       {
         "letter": "D",
-        "text": "Aumentar sangría"
+        "text": "Ordenar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "**Seleccionar.** Pestaña Inicio ▸ Edición. Atajo: no tiene atajo de teclado en esta instalación. Menú: Seleccionar todo (Ctrl+E), Seleccionar objetos, Seleccionar texto con formato similar y Panel de selección."
+    "respuesta": "A",
+    "explicacion": "**Seleccionar.** Pestaña Inicio ▸ Edición, el tercero del grupo. No tiene atajo propio, pero su menú lleva a cuatro entradas: «Seleccionar todo», que equivale a Ctrl+E; «Seleccionar objetos», que cambia el puntero para marcar objetos flotantes; «Seleccionar todo el texto con formato similar», que localiza lo que comparta formato con lo marcado; y «Panel de selección», que lista los objetos de la página. · Buscar y Reemplazar son sus dos vecinos en el mismo grupo. · Y Ordenar es el descarte más fino: está en el grupo Párrafo, y también trabaja sobre lo seleccionado, pero clasificando en vez de marcando."
   },
   {
     "id": "inicio-441",
@@ -19229,28 +19229,28 @@
     "tema": "Edición",
     "sourceQuestionId": "neg-inicio-10",
     "generado": true,
-    "enunciado": "¿Cuál de estos comandos NO está en el grupo Edición de Inicio?",
+    "enunciado": "El grupo Edición tiene tres botones. ¿Cuál de estos NO es uno de ellos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Buscar"
+        "text": "Ir a"
       },
       {
         "letter": "B",
-        "text": "Reemplazar"
+        "text": "Buscar"
       },
       {
         "letter": "C",
-        "text": "Seleccionar"
+        "text": "Reemplazar"
       },
       {
         "letter": "D",
-        "text": "Ir a"
+        "text": "Seleccionar"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El grupo Edición tiene tres comandos: Buscar, Reemplazar y Seleccionar. «Ir a» no es un botón de ese grupo (es un atajo de teclado, Ctrl+I, sin botón propio en la cinta)."
+    "respuesta": "A",
+    "explicacion": "Los tres botones son Buscar, Reemplazar y Seleccionar. «Ir a» existe, y de dos formas: como tercera entrada del desplegable del botón Buscar —junto a «Buscar» y «Búsqueda avanzada…»— y como ficha del cuadro Buscar y reemplazar, a la que se llega con Ctrl+I o F5. Lo que no tiene es botón propio en el grupo, y esa es la distinción que la pregunta persigue. · Los tres botones reales cubren tres necesidades distintas: encontrar, sustituir y marcar. Después de Edición ya solo quedan en la cinta los grupos de Voz, Editor y Complementos, que no son de formato ni de texto."
   },
   {
     "id": "inicio-454",
@@ -19265,28 +19265,28 @@
     "tema": "Edición",
     "sourceQuestionId": "neg2-inicio-04",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Repasas los atajos de edición y selección. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Z deshace la última acción."
+        "text": "Ctrl+Z deshace la última acción, igual que Alt+Retroceso"
       },
       {
         "letter": "B",
-        "text": "Ctrl+E selecciona todo el documento."
+        "text": "Ctrl+E selecciona el documento entero"
       },
       {
         "letter": "C",
-        "text": "F8 activa el modo de extender selección."
+        "text": "F8 activa el modo de extender selección"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Retroceso borra la palabra completa a la DERECHA del cursor."
+        "text": "Ctrl+Retroceso borra la palabra que hay a la DERECHA del cursor"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Ctrl+Retroceso borra la palabra hacia la IZQUIERDA del cursor, no a la derecha."
+    "explicacion": "Ctrl+Retroceso borra hacia la IZQUIERDA, la palabra anterior; la de la derecha se borra con Ctrl+Supr. La regla es la misma que con las dos teclas por separado: Retroceso mira hacia atrás y Suprimir hacia adelante, y añadir Ctrl solo cambia la unidad, de carácter a palabra. Las dos borran sin pasar por el portapapeles. · Las otras tres son ciertas: Ctrl+Z y Alt+Retroceso comparten el comando de deshacer, Ctrl+E selecciona todo —y también Ctrl con el 5 del numérico— y F8 arranca el modo extender, que amplía por palabra, frase y párrafo, y se reduce con Mayús+F8."
   },
   {
     "id": "inicio-455",
@@ -19301,28 +19301,28 @@
     "tema": "Edición",
     "sourceQuestionId": "neg2-inicio-05",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Repasas las herramientas de búsqueda de Word. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+B abre el panel de Navegación."
+        "text": "Ctrl+B abre el panel de Navegación, con sus tres fichas"
       },
       {
         "letter": "B",
-        "text": "Alt+Q lleva el foco al cuadro Buscar de la barra de título."
+        "text": "Alt+Q lleva el foco al buscador de la barra de título"
       },
       {
         "letter": "C",
-        "text": "Ctrl+I abre el cuadro de diálogo Ir a."
+        "text": "Ctrl+I abre el cuadro Buscar y reemplazar en su ficha Ir a"
       },
       {
         "letter": "D",
-        "text": "El panel de Navegación (Ctrl+B) solo permite buscar texto; no lista los títulos del documento."
+        "text": "El botón «Buscar» del grupo Edición abre el cuadro de diálogo"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "El panel de Navegación tiene pestañas Títulos / Páginas / Resultados; la de Títulos lista la estructura de encabezados del documento."
+    "explicacion": "Ese botón abre el PANEL de Navegación, no el cuadro. Para llegar al cuadro hay que desplegar su flecha y elegir «Búsqueda avanzada…». Es la trampa más útil de todo el grupo, porque el nombre del botón no distingue entre las dos herramientas. · Las otras tres son ciertas y conviene verlas juntas, porque Word tiene tres buscadores distintos: el panel lateral, que busca texto y lo lista en contexto; el cuadro de diálogo, que además reemplaza y filtra por formato; y el de la barra de título, que busca comandos y ayuda en vez de contenido."
   },
   {
     "id": "inicio-532",
@@ -19337,28 +19337,28 @@
     "tema": "Edición",
     "sourceQuestionId": "rutas-inicio-62",
     "generado": true,
-    "enunciado": "La flecha del botón «Buscar» del grupo Edición despliega tres opciones: «Buscar», «Búsqueda avanzada…» e:",
+    "enunciado": "Despliegas la flecha del botón «Buscar» del grupo Edición. ¿Qué tres entradas ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ir a…"
+        "text": "Buscar · Búsqueda avanzada… · Ir a…"
       },
       {
         "letter": "B",
-        "text": "Reemplazar…"
+        "text": "Buscar · Búsqueda avanzada… · Reemplazar…"
       },
       {
         "letter": "C",
-        "text": "Resaltado de lectura"
+        "text": "Buscar · Resaltado de lectura · Ir a…"
       },
       {
         "letter": "D",
-        "text": "Buscar en"
+        "text": "Buscar · Búsqueda avanzada… · Buscar en"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Buscar» abre el panel Navegación; «Búsqueda avanzada…» e «Ir a…» abren el cuadro clásico «Buscar y reemplazar» en la ficha correspondiente."
+    "explicacion": "La primera abre el panel de Navegación, que es lo mismo que hace pulsar la mitad de arriba del botón; las otras dos abren el cuadro clásico, cada una en su ficha. Así, desde un solo botón se llega a las tres herramientas de búsqueda del documento. · «Reemplazar…» no está en este menú porque tiene su propio botón al lado. · «Resaltado de lectura» y «Buscar en» sí existen, pero un nivel más adentro: son dos desplegables del propio cuadro Buscar y reemplazar, el primero para dejar marcadas todas las coincidencias en amarillo y el segundo para limitar la búsqueda al documento principal o a la selección."
   },
   {
     "id": "inicio-533",
@@ -19373,28 +19373,28 @@
     "tema": "Edición",
     "sourceQuestionId": "rutas-inicio-63",
     "generado": true,
-    "enunciado": "En la ficha «Buscar» del cuadro «Buscar y reemplazar», ¿para qué sirve el botón «Resaltado de lectura ▾»?",
+    "enunciado": "En la ficha Buscar pulsas «Resaltado de lectura ▾» y eliges «Resaltar todo». ¿Qué pasa con ese amarillo al guardar y cerrar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Resaltar en pantalla todas las coincidencias a la vez (y poder quitarlas)"
+        "text": "Desaparece: es un resaltado de pantalla, no formato del documento"
       },
       {
         "letter": "B",
-        "text": "Imprimir solo los párrafos con coincidencias"
+        "text": "Se queda: es el mismo resaltado del rotulador del grupo Fuente"
       },
       {
         "letter": "C",
-        "text": "Marcar las coincidencias con un comentario"
+        "text": "Se queda, pero solo se ve en pantalla y no se imprime"
       },
       {
         "letter": "D",
-        "text": "Aplicar color de resaltado permanente al texto encontrado"
+        "text": "Se convierte en comentarios, uno por cada coincidencia"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El resaltado de lectura es temporal (en pantalla); «Borrar resaltado» lo quita. No modifica el formato guardado del documento."
+    "explicacion": "El resaltado de lectura marca todas las coincidencias a la vez para localizarlas de un vistazo, pero es temporal: se quita con «Borrar resaltado» del mismo menú, al cerrar el cuadro o al cerrar el documento, y no toca el formato guardado. · El rotulador del grupo Fuente sí es formato de verdad, se guarda, se imprime y ni siquiera lo quita «Borrar todo el formato»: ese es el par que hay que distinguir, porque el color en pantalla es idéntico. · Marcar con comentarios es otra cosa y se hace desde la pestaña Revisar, uno a uno."
   },
   {
     "id": "inicio-536",
@@ -19409,28 +19409,28 @@
     "tema": "Edición",
     "sourceQuestionId": "rutas-inicio-66",
     "generado": true,
-    "enunciado": "¿Cuántas fichas tiene el cuadro de diálogo «Buscar y reemplazar»?",
+    "enunciado": "Estás en la ficha Buscar del cuadro y quieres pasar a la ficha «Ir a». ¿Qué haces?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tres: Buscar, Reemplazar e Ir a"
+        "text": "Pulsar en su pestaña: es el mismo cuadro, con tres fichas"
       },
       {
         "letter": "B",
-        "text": "Dos: Buscar y Reemplazar"
+        "text": "Cerrar y pulsar Ctrl+I: son dos cuadros distintos"
       },
       {
         "letter": "C",
-        "text": "Cuatro: Buscar, Reemplazar, Ir a y Opciones"
+        "text": "Pulsar «Más >>»: la ficha está oculta hasta desplegar el cuadro"
       },
       {
         "letter": "D",
-        "text": "Una sola"
+        "text": "Cerrar y usar el panel de Navegación: «Ir a» no está en este cuadro"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Ir a» comparte cuadro con Buscar y Reemplazar; se llega a ella con Ctrl+I (Ir a) en esta instalación o desde la flecha del botón Buscar."
+    "explicacion": "Buscar, Reemplazar e Ir a son tres fichas de un mismo cuadro, así que se cambia de una a otra con un clic sin cerrar nada. Lo que hacen los atajos y los botones es solo decidir por cuál se entra: Ctrl+L cae en Reemplazar, y Ctrl+I y F5 en Ir a. · Que sean cuadros distintos es lo que uno supone al ver que cada uno tiene su atajo, y es el descarte que más cae. · «Más >>» no oculta ninguna ficha: despliega las siete casillas de opciones de búsqueda y los botones Formato, Especial y Sin formato. · Y el panel de Navegación no tiene ninguna ficha «Ir a»."
   },
   {
     "id": "inicio-539",
@@ -19445,7 +19445,7 @@
     "tema": "Edición",
     "sourceQuestionId": "rutas-inicio-69",
     "generado": true,
-    "enunciado": "El desplegable «Seleccionar» del grupo Edición ofrece «Seleccionar todo», «Seleccionar objetos», «Seleccionar texto con formato similar» y:",
+    "enunciado": "El desplegable «Seleccionar» del grupo Edición tiene cuatro entradas. Tres son «Seleccionar todo», «Seleccionar objetos» y «Seleccionar todo el texto con formato similar». ¿Cuál es la cuarta?",
     "opciones": [
       {
         "letter": "A",
@@ -19457,16 +19457,16 @@
       },
       {
         "letter": "C",
-        "text": "Modo extendido"
+        "text": "Modo de selección extendida"
       },
       {
         "letter": "D",
-        "text": "Seleccionar hasta el final"
+        "text": "Seleccionar hasta el final del documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Panel de selección…» abre el panel que lista los objetos de la página y permite mostrarlos, ocultarlos o reordenarlos."
+    "explicacion": "«Panel de selección…» abre un panel lateral que lista los objetos de la página —imágenes, formas, cuadros de texto— y permite mostrarlos, ocultarlos con el icono del ojo y cambiar su orden de apilamiento arrastrándolos. Es la herramienta que salva cuando un objeto queda debajo de otro y no hay forma de pincharlo. · El modo de selección extendida existe, pero se activa con F8 y no tiene entrada en este menú: es el descarte con más fundamento. · Seleccionar hasta el final se hace con Ctrl+Mayús+Fin. · Y no hay ninguna entrada para seleccionar una sección."
   },
   {
     "id": "inicio-540",
@@ -19481,28 +19481,28 @@
     "tema": "Edición",
     "sourceQuestionId": "rutas-inicio-70",
     "generado": true,
-    "enunciado": "«Seleccionar texto con formato similar» (menú Seleccionar) sirve para:",
+    "enunciado": "Pones el cursor en un subtítulo que quedó en Arial 14 negrita y eliges «Seleccionar todo el texto con formato similar». ¿Qué queda marcado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Seleccionar de una vez todo el texto del documento que tiene el mismo formato que el texto actual"
+        "text": "Todos los fragmentos del documento con ese mismo formato"
       },
       {
         "letter": "B",
-        "text": "Buscar texto parecido en significado"
+        "text": "Todos los párrafos que tengan el mismo estilo aplicado"
       },
       {
         "letter": "C",
-        "text": "Aplicar el formato del texto actual al resto del documento"
+        "text": "El párrafo actual y el siguiente, por si comparten formato"
       },
       {
         "letter": "D",
-        "text": "Seleccionar el párrafo actual y el siguiente"
+        "text": "Los fragmentos que digan algo parecido, por significado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Útil para cambiar a la vez, por ejemplo, todos los fragmentos que quedaron en un tamaño o color concreto."
+    "explicacion": "La entrada compara el FORMATO, no el estilo ni el contenido: marca de una vez todo lo que se vea igual, esté donde esté, y a partir de ahí se puede cambiar el aspecto de los cuarenta subtítulos de golpe, o aplicarles por fin un estilo. Es la herramienta para rescatar un documento maquetado a mano. · Buscar por estilo es otra cosa, y se hace con el cuadro Buscar y su botón «Formato ▸ Estilo»: es el descarte con más fundamento, porque el resultado se parece. · Buscar por significado no lo hace Word. · Y no tiene nada que ver con la proximidad de los párrafos."
   },
   {
     "id": "inicio-565",
@@ -19517,11 +19517,11 @@
     "tema": "Edición",
     "sourceQuestionId": "dlgcompart-inicio-20",
     "generado": true,
-    "enunciado": "Las opciones «Búsqueda avanzada…» e «Ir a…» de la flecha del botón Buscar (grupo Edición) abren:",
+    "enunciado": "Comparas «Búsqueda avanzada…» con «Ir a…», las dos entradas de la flecha del botón Buscar. ¿Qué abre cada una?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El mismo cuadro «Buscar y reemplazar», cada una en su ficha"
+        "text": "El mismo cuadro, cada una en su ficha"
       },
       {
         "letter": "B",
@@ -19529,16 +19529,16 @@
       },
       {
         "letter": "C",
-        "text": "El panel Navegación en dos pestañas distintas"
+        "text": "El panel de Navegación, cada una en una de sus fichas"
       },
       {
         "letter": "D",
-        "text": "El mismo cuadro, siempre en la ficha Buscar"
+        "text": "El mismo cuadro, las dos en la ficha Buscar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Buscar y reemplazar» es un único cuadro con tres fichas (Buscar, Reemplazar, Ir a); cada ruta lo abre por la suya y dentro se cambia de ficha con un clic."
+    "explicacion": "«Buscar y reemplazar» es un solo cuadro con tres fichas, y cada ruta lo abre por la suya: «Búsqueda avanzada…» por Buscar e «Ir a…» por Ir a. Dentro se cambia de ficha con un clic. · Que sean dos cuadros es lo que uno supone al ver dos entradas distintas en el mismo menú, y es el descarte que más cae. · El panel de Navegación es lo que abre la primera entrada del menú, «Buscar» a secas, y sus fichas son otras: Títulos, Páginas y Resultados. · Y no abren las dos por la misma ficha: si así fuera, la segunda no tendría sentido."
   },
   {
     "id": "inicio-567",
@@ -19553,19 +19553,19 @@
     "tema": "Edición",
     "sourceQuestionId": "dlgcompart-inicio-22",
     "generado": true,
-    "enunciado": "Sobre el botón «Buscar» del grupo Edición (pulsándolo directamente, sin la flecha). Señale la afirmación FALSA:",
+    "enunciado": "Sobre el botón «Buscar» del grupo Edición, pulsado directamente y sin desplegar su flecha. Señala la afirmación FALSA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Abre el cuadro de diálogo «Buscar y reemplazar» en la ficha Buscar"
+        "text": "Abre el cuadro «Buscar y reemplazar» en su ficha Buscar"
       },
       {
         "letter": "B",
-        "text": "Abre el panel Navegación con el cuadro de búsqueda"
+        "text": "Abre el panel de Navegación con el cuadro de búsqueda"
       },
       {
         "letter": "C",
-        "text": "El panel Navegación tiene las pestañas Títulos, Páginas y Resultados"
+        "text": "El panel que abre tiene las fichas Títulos, Páginas y Resultados"
       },
       {
         "letter": "D",
@@ -19574,7 +19574,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón «Buscar» a secas abre el PANEL Navegación, no el cuadro clásico. Para el cuadro hay que usar la flecha ▸ «Búsqueda avanzada…»."
+    "explicacion": "El botón a secas abre el PANEL de Navegación, no el cuadro clásico; para el cuadro hay que desplegar su flecha y elegir «Búsqueda avanzada…». Es la trampa más útil de este grupo, porque el nombre del botón no distingue entre las dos herramientas y mucha gente cree que sí. · Las otras tres son ciertas: el panel es el mismo de Ctrl+B y trae sus tres fichas. · La diferencia práctica importa: el panel encuentra y lista, pero no reemplaza ni filtra por formato; para eso hace falta el cuadro, con sus siete casillas y sus botones Formato y Especial."
   },
   {
     "sourceFile": "inicio.json",
@@ -19588,27 +19588,27 @@
     "generado": true,
     "categoria": "concepto",
     "tipo": "opcion_unica",
-    "enunciado": "En Word, ¿qué se selecciona al hacer triple clic sobre cualquier punto de un párrafo?",
+    "enunciado": "Haces tres clics rápidos en mitad de un párrafo, dentro del cuerpo del texto. ¿Qué queda seleccionado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El párrafo completo"
+        "text": "El párrafo entero donde se ha pulsado"
       },
       {
         "letter": "B",
-        "text": "Solo la palabra sobre la que se hace clic"
+        "text": "Solo la palabra sobre la que se pulsa"
       },
       {
         "letter": "C",
-        "text": "La frase (hasta el siguiente punto)"
+        "text": "La frase, hasta el punto siguiente"
       },
       {
         "letter": "D",
-        "text": "Toda la página"
+        "text": "La línea sobre la que se pulsa"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Dentro del cuerpo del texto: un clic coloca el punto de inserción, el doble clic selecciona la palabra y el triple clic selecciona todo el párrafo.",
+    "explicacion": "Dentro del cuerpo del texto la escala es esta: un clic coloca el cursor, el doble clic marca la palabra y el triple, el párrafo entero. Es una pregunta oficial de oposición y de las más rentables, porque se responde en un segundo si se ha practicado. · La frase sí se puede seleccionar con el ratón, pero con Ctrl+clic: es el descarte que decide la pregunta, porque completa la escala con un gesto distinto. · Y la línea suelta se marca desde el margen izquierdo, en la franja del área de selección, donde un clic da la línea, dos el párrafo y tres el documento entero. Dos escalas paralelas según dónde se pulse.",
     "id": "inicio-581",
     "sourceQuestionId": "web-inicio-selraton-581"
   },
@@ -19624,19 +19624,19 @@
     "generado": true,
     "categoria": "concepto",
     "tipo": "opcion_unica",
-    "enunciado": "El «área de selección» es la franja del margen izquierdo donde el puntero se convierte en una flecha blanca que apunta a la derecha. ¿Qué se selecciona con UN solo clic en ella?",
+    "enunciado": "Llevas el puntero al margen izquierdo, donde se convierte en una flecha blanca inclinada hacia la derecha, y haces un clic. ¿Qué se selecciona?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La línea completa situada a su derecha"
+        "text": "La línea que queda a su derecha"
       },
       {
         "letter": "B",
-        "text": "La palabra más cercana"
+        "text": "El párrafo entero"
       },
       {
         "letter": "C",
-        "text": "El párrafo completo"
+        "text": "La palabra más próxima"
       },
       {
         "letter": "D",
@@ -19644,7 +19644,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "Desde el área de selección: un clic selecciona la línea, un doble clic el párrafo y un triple clic (o Ctrl+clic) todo el documento.",
+    "explicacion": "Esa franja se llama área de selección, y su escala es distinta de la del cuerpo del texto: un clic marca la línea, dos el párrafo y tres el documento entero. Se reconoce porque el puntero cambia de forma al entrar en ella. · El párrafo y el documento son los dos escalones siguientes de esa misma escala, así que los descartes no fallan por absurdos sino por contar mal los clics. · La palabra no se selecciona nunca desde el margen: eso es cosa del doble clic dentro del texto. · Merece la pena tener las dos escalas juntas, porque el mismo número de clics da cosas distintas según dónde se pulse.",
     "id": "inicio-582",
     "sourceQuestionId": "web-inicio-selraton-582"
   },
@@ -19660,27 +19660,27 @@
     "generado": true,
     "categoria": "concepto",
     "tipo": "opcion_unica",
-    "enunciado": "Desde el área de selección del margen izquierdo, ¿cómo se selecciona TODO el documento con el ratón?",
+    "enunciado": "Quieres seleccionar todo el documento con el ratón, desde el margen izquierdo. ¿Cómo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Haciendo triple clic, o Ctrl+clic, en el área de selección"
+        "text": "Con triple clic en el área de selección, o con Ctrl+clic en ella"
       },
       {
         "letter": "B",
-        "text": "Haciendo doble clic en el área de selección"
+        "text": "Con doble clic en el área de selección"
       },
       {
         "letter": "C",
-        "text": "Haciendo un solo clic en el área de selección"
+        "text": "Con un clic en el área de selección"
       },
       {
         "letter": "D",
-        "text": "Arrastrando de arriba abajo por el área de selección con Alt pulsado"
+        "text": "Arrastrando de arriba abajo por el área con Alt pulsado"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Triple clic en el área de selección selecciona todo el documento; Ctrl+clic en esa misma franja hace lo mismo y equivale a Ctrl+E.",
+    "explicacion": "Los dos gestos llevan al mismo sitio y equivalen a Ctrl+E. El triple clic cierra la escala del margen —uno la línea, dos el párrafo, tres el documento— y el Ctrl+clic es el atajo para no contar clics. · Los descartes de uno y dos clics son los escalones anteriores de esa escala, así que hay que tenerla entera. · Y arrastrar con Alt pulsado hace otra cosa muy distinta, y en el cuerpo del texto, no en el margen: selecciona un bloque rectangular, útil para quedarse con una columna de cifras escrita con tabuladores. Su equivalente de teclado es Ctrl+Mayús+F8.",
     "id": "inicio-583",
     "sourceQuestionId": "web-inicio-selraton-583"
   },
@@ -19696,27 +19696,27 @@
     "generado": true,
     "categoria": "concepto",
     "tipo": "opcion_unica",
-    "enunciado": "Manteniendo pulsada la tecla Ctrl y haciendo clic sobre una palabra del texto (no en el margen), ¿qué selecciona Word?",
+    "enunciado": "Mantienes Ctrl pulsado y haces clic sobre una palabra, dentro del cuerpo del texto. ¿Qué se selecciona?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La frase completa (hasta el punto)"
+        "text": "La oración entera, de punto a punto"
       },
       {
         "letter": "B",
-        "text": "La palabra sobre la que se hace clic"
+        "text": "Solo esa palabra, como el doble clic"
       },
       {
         "letter": "C",
-        "text": "El párrafo completo"
+        "text": "El párrafo entero donde está"
       },
       {
         "letter": "D",
-        "text": "Todo el documento"
+        "text": "Todo el documento, de principio a fin"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Ctrl+clic dentro del cuerpo del texto selecciona la oración completa donde está el cursor. (Ctrl+clic en el área de selección del margen, en cambio, selecciona todo el documento.)",
+    "explicacion": "Ctrl+clic en el cuerpo del texto marca la oración completa, de punto a punto. Es el gesto que falta en la escala de clics —palabra con dos, párrafo con tres— y el único que da la unidad intermedia. · Ojo con el detalle: ese mismo Ctrl+clic en el ÁREA DE SELECCIÓN del margen izquierdo selecciona todo el documento, así que la misma combinación hace dos cosas distintas según dónde se pulse. Ese contraste es lo que se examina. · La palabra suelta es el doble clic y el párrafo el triple. · ⚠️ Y con la opción «Utilizar CTRL + clic para seguir hipervínculo» activada, sobre un enlace ese mismo gesto lo abre.",
     "id": "inicio-584",
     "sourceQuestionId": "web-inicio-selraton-584"
   },
@@ -19732,27 +19732,27 @@
     "generado": true,
     "categoria": "concepto",
     "tipo": "opcion_unica",
-    "enunciado": "¿Qué gesto del ratón permite seleccionar un bloque rectangular (vertical) de texto, por ejemplo una columna de cifras?",
+    "enunciado": "Una lista está escrita con tabuladores y quieres quedarte solo con la columna de cifras de la derecha. ¿Qué gesto de ratón lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Arrastrar con la tecla Alt pulsada"
+        "text": "Arrastrar con Alt pulsado"
       },
       {
         "letter": "B",
-        "text": "Arrastrar con la tecla Ctrl pulsada"
+        "text": "Arrastrar con Ctrl pulsado"
       },
       {
         "letter": "C",
-        "text": "Hacer doble clic y arrastrar"
+        "text": "Arrastrar con Mayús pulsado"
       },
       {
         "letter": "D",
-        "text": "Arrastrar desde el área de selección"
+        "text": "Arrastrar desde el área de selección del margen"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Alt+arrastrar selecciona un bloque rectangular de texto, independiente de las líneas. Con teclado, el modo equivalente es Ctrl+Mayús+F8. Ctrl+arrastrar mueve o (con el texto ya seleccionado) copia.",
+    "explicacion": "Alt y arrastrar dibuja un rectángulo de selección que atraviesa las líneas sin arrastrar el texto que queda a los lados, que es justo lo que hace falta para una columna. Su equivalente de teclado es Ctrl+Mayús+F8, el modo «Seleccionar columna». · Ctrl y arrastrar hace algo distinto y bastante peligroso si se confunde: mueve el texto seleccionado, o lo copia si ya estaba marcado. Es el descarte que más cae. · Mayús y arrastrar extiende la selección normal, línea a línea. · Y arrastrar por el margen selecciona líneas enteras seguidas, nunca un bloque vertical.",
     "id": "inicio-585",
     "sourceQuestionId": "web-inicio-selraton-585"
   },
@@ -19769,7 +19769,7 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0386",
-    "enunciado": "¿Cuáles de los siguientes elementos pueden seleccionarse en la lista 'Ir a' del cuadro de diálogo Buscar y reemplazar para saltar directamente a ellos?",
+    "enunciado": "Repasas la lista «Ir a:» del cuadro Buscar y reemplazar. ¿Cuáles de estos destinos existen de verdad?",
     "opciones": [
       {
         "letter": "A",
@@ -19804,7 +19804,7 @@
       "D",
       "E"
     ],
-    "explicacion": "La lista Ir a incluye entre otros: Página, Sección, Línea, Marcador, Comentario y Nota al pie. Columna no es un elemento disponible en la lista Ir a. Los elementos exactos visibles en la captura de la fuente son: Página, Sección, Línea, Marcador, Comentario y Nota al pie."
+    "explicacion": "La lista recoge elementos que Word puede contar o identificar: páginas, secciones, líneas, marcadores, comentarios, notas al pie y al final, campos, tablas, gráficos, ecuaciones, objetos y títulos. · «Columna» es la falsa, y cuela por dos motivos: las columnas periodísticas existen en Word, y en una tabla también hay columnas. Pero ninguna de las dos está numerada de forma que se pueda saltar a ella, que es la condición para entrar en esta lista. · Fíjate en que el campo de la derecha cambia según el destino: numérico para las páginas o las líneas, y desplegable con nombres para los marcadores y los comentarios."
   },
   {
     "id": "inicio-275",
@@ -19819,27 +19819,27 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0529",
-    "enunciado": "¿Cuáles de los siguientes atajos tienen un comportamiento DIFERENTE entre la versión española y la versión inglesa de Word 365?",
+    "enunciado": "Un compañero llega de un Word en inglés. ¿Cuáles de estas combinaciones hacen aquí algo DISTINTO de lo que él espera?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+E (español: seleccionar todo / inglés: centrar)"
+        "text": "Ctrl+E: aquí selecciona todo; allí centra"
       },
       {
         "letter": "B",
-        "text": "Ctrl+B (español: panel navegación / inglés: negrita)"
+        "text": "Ctrl+B: aquí abre el panel de Navegación; allí pone negrita"
       },
       {
         "letter": "C",
-        "text": "Ctrl+F (español: sangría francesa / inglés: buscar)"
+        "text": "Ctrl+F: aquí aplica sangría francesa; allí abre la búsqueda"
       },
       {
         "letter": "D",
-        "text": "Ctrl+L (español: reemplazar / inglés: alinear izquierda)"
+        "text": "Ctrl+L: aquí abre Reemplazar; allí alinea a la izquierda"
       },
       {
         "letter": "E",
-        "text": "Ctrl+Z (español y inglés: deshacer)"
+        "text": "Ctrl+Z: aquí y allí deshace"
       }
     ],
     "matching": null,
@@ -19849,7 +19849,7 @@
       "C",
       "D"
     ],
-    "explicacion": "Los atajos A, B, C y D tienen comportamiento diferente entre versiones. Ctrl+E: español selecciona todo, inglés centra. Ctrl+B: español abre el panel de navegación, inglés aplica negrita. Ctrl+F: español aplica la sangría francesa, inglés abre el buscador. Ctrl+L: español abre Reemplazar, inglés alinea a la izquierda. Ctrl+Z es universal: deshace en ambas versiones. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Las cuatro primeras están cruzadas, y de una forma que no sigue ninguna regla: cada letra es la inicial del nombre en castellano, así que Ctrl+B es «buscar» y no «bold», y Ctrl+F es «francesa» y no «find». Prueba en vivo del usuario. Por eso quien viene del inglés no puede deducir nada y tiene que aprenderlas de nuevo. · Ctrl+Z es de las pocas que coinciden, junto con Ctrl+C, Ctrl+X y Ctrl+V, que son universales. · Las dos más caras de las cuatro son Ctrl+F y Ctrl+L, porque descolocan el párrafo o abren un cuadro sin que quede claro por qué."
   },
   {
     "id": "inicio-285",
@@ -19864,27 +19864,27 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0539",
-    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre diferencias entre opciones aparentemente similares de Word 365 son correctas?",
+    "enunciado": "Repasas parejas de opciones de Word que se confunden entre sí. ¿Cuáles de estas afirmaciones son correctas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Justificada deja la última línea alineada a la izquierda; Distribuida extiende también la última línea hasta el margen derecho"
+        "text": "Justificada deja la última línea a la izquierda; Distribuida también la estira"
       },
       {
         "letter": "B",
-        "text": "Conservar líneas juntas impide partir el párrafo; Conservar con el siguiente impide separar ese párrafo del siguiente"
+        "text": "«Conservar líneas juntas» no parte el párrafo; «Conservar con el siguiente» no lo separa del posterior"
       },
       {
         "letter": "C",
-        "text": "Las viñetas personalizadas se acumulan en la biblioteca; las listas multinivel personalizadas no se acumulan"
+        "text": "«Reiniciar en 1» reinicia sin más; «Establecer valor de numeración» deja elegir el número"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Y y F4 son siempre idénticos en todos los contextos de Word 365"
+        "text": "Ctrl+Y y F4 hacen cosas distintas: uno rehace y el otro repite"
       },
       {
         "letter": "E",
-        "text": "Reiniciar en 1 reinicia la numeración directamente; Establecer valor de numeración abre un cuadro para elegir el número de inicio"
+        "text": "Ctrl+Mayús+Inicio selecciona hasta el principio del documento; Mayús+Inicio, hasta el de la línea"
       }
     ],
     "matching": null,
@@ -19894,7 +19894,7 @@
       "C",
       "E"
     ],
-    "explicacion": "A, B, C y E son correctas. D es incorrecta: Ctrl+Y y F4 no son siempre idénticos. Ctrl+Y rehace si hay acciones deshechas, o repite si no las hay. F4 siempre repite la última acción independientemente del historial. Son equivalentes solo cuando no hay nada que rehacer y existe una acción repetible."
+    "explicacion": "Las cuatro ciertas son parejas que se distinguen por un matiz pequeño y decisivo: la última línea, el sentido en que se protege el párrafo, si se puede elegir la cifra y hasta dónde llega la selección. · La falsa es la de Ctrl+Y y F4: en el cuadro Personalizar teclado aparecen juntas, con Alt+Entrar, bajo el mismo comando EdiciónRehacerORepetir. Son intercambiables. Quien rehace en sentido estricto es Alt+Mayús+Retroceso, y es la que suele faltar en los apuntes, de donde viene la idea de que esas dos se reparten los papeles."
   },
   {
     "id": "inicio-535",
@@ -19909,7 +19909,7 @@
     "tema": "Edición",
     "sourceQuestionId": "rutas-inicio-65",
     "generado": true,
-    "enunciado": "Al pulsar «Más >>» en el cuadro «Buscar y reemplazar» se muestran opciones de búsqueda. ¿Cuáles son reales?",
+    "enunciado": "Repasas las casillas que despliega «Más >>» en el cuadro Buscar y reemplazar. ¿Cuáles existen en esta instalación?",
     "opciones": [
       {
         "letter": "A",
@@ -19929,11 +19929,15 @@
       },
       {
         "letter": "E",
-        "text": "Suena como (inglés)"
+        "text": "Omitir puntuación"
       },
       {
         "letter": "F",
-        "text": "Buscar sinónimos automáticamente"
+        "text": "Suena como"
+      },
+      {
+        "letter": "G",
+        "text": "Todas las formas de la palabra"
       }
     ],
     "matching": null,
@@ -19941,9 +19945,10 @@
       "A",
       "B",
       "C",
-      "D"
+      "D",
+      "E"
     ],
-    "explicacion": "Las siete casillas de «Opciones de búsqueda» (Más >>) en esta instalación (español de España) son: Coincidir mayúsculas y minúsculas, Solo palabras completas, Usar caracteres comodín, Prefijo, Sufijo, Omitir puntuación y Omitir espacios en blanco. «Suena como» y «Todas las formas de la palabra» son del esquema inglés y NO aparecen aquí (prueba en vivo del usuario, sep 2026). «Buscar sinónimos automáticamente» tampoco existe en ese panel."
+    "explicacion": "Las siete casillas son las cinco de aquí más «Sufijo» y «Omitir espacios en blanco». · ⚠️ «Suena como» y «Todas las formas de la palabra» son las dos falsas, y es una trampa de las buenas: existen de verdad, pero en el esquema en inglés, y en esta instalación española NO aparecen. Prueba en vivo del usuario. Muchos manuales traducidos las incluyen, así que contarlas lleva a nueve casillas en vez de a siete. · Las que sí están y menos se conocen son «Prefijo» y «Sufijo», que limitan la coincidencia al principio o al final de palabra."
   },
   {
     "id": "inicio-537",
@@ -19958,27 +19963,27 @@
     "tema": "Edición",
     "sourceQuestionId": "rutas-inicio-67",
     "generado": true,
-    "enunciado": "En la ficha «Ir a» del cuadro «Buscar y reemplazar», ¿qué destinos de la lista «Ir a:» son reales?",
+    "enunciado": "En la lista «Ir a:» buscas un destino para saltar a todos los párrafos con un estilo concreto, y no lo encuentras. ¿Cuáles de estos destinos SÍ están?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Página"
+        "text": "Nota al pie"
       },
       {
         "letter": "B",
-        "text": "Sección"
+        "text": "Nota al final"
       },
       {
         "letter": "C",
-        "text": "Línea"
+        "text": "Campo"
       },
       {
         "letter": "D",
-        "text": "Marcador"
+        "text": "Tabla"
       },
       {
         "letter": "E",
-        "text": "Nota al pie"
+        "text": "Ecuación"
       },
       {
         "letter": "F",
@@ -19997,7 +20002,7 @@
       "D",
       "E"
     ],
-    "explicacion": "La lista incluye Página, Sección, Línea, Marcador, Comentario, Nota al pie, Nota al final, Campo, Tabla, Gráfico, Ecuación, Objeto y Título. No se puede «Ir a» un estilo o una palabra concreta desde aquí."
+    "explicacion": "La lista completa incluye página, sección, línea, marcador, comentario, nota al pie, nota al final, campo, tabla, gráfico, ecuación, objeto y título: elementos que Word numera o identifica uno a uno. · «Estilo» y «Palabra» son los dos falsos, y su ausencia tiene explicación: para saltar por estilo está el cuadro Buscar con su botón «Formato ▸ Estilo», dejando vacío el campo de texto; y para saltar a una palabra concreta está la propia búsqueda. Cada cosa tiene su herramienta, y esta ficha es la de los elementos numerados."
   },
   {
     "id": "inicio-121",
@@ -20012,11 +20017,11 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0375",
-    "enunciado": "Para que la pestaña Títulos del panel de navegación muestre el índice interactivo del documento, es necesario haber aplicado previamente estilos de título a los párrafos correspondientes desde la pestaña Inicio.",
+    "enunciado": "Para que la ficha Títulos del panel de Navegación liste un párrafo, hace falta necesariamente haberle aplicado un estilo Título.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. La pestaña Títulos solo muestra los párrafos que tienen aplicados estilos de título (Título 1, Título 2, etc.). Si el documento usa formato manual en lugar de estilos de título, la pestaña aparecerá vacía o con el mensaje de que no hay títulos detectados."
+    "respuesta": false,
+    "explicacion": "Falso, aunque sea el caso normal. Lo que decide es el NIVEL DE ESQUEMA del párrafo, y los estilos Título lo traen puesto de fábrica: por eso funcionan. Pero a cualquier párrafo se le puede dar un nivel del 1 al 9 desde el campo «Nivel de esquema» del cuadro Párrafo, y aparecerá en el panel sin verse como un título. · Es la forma de meter algo en el esquema y en la tabla de contenido sin cambiarle el aspecto. · Lo que sí es cierto es lo contrario: un documento maquetado con negritas a mano, sin estilos ni niveles, deja la ficha vacía, y esa es la mejor razón para usar estilos."
   },
   {
     "id": "inicio-130",
@@ -20031,11 +20036,11 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0384",
-    "enunciado": "Si se usa Reemplazar todos con el campo 'Reemplazar con' vacío, Word elimina todas las coincidencias del término buscado del documento.",
+    "enunciado": "Con el campo «Reemplazar con» vacío y pulsando «Reemplazar todos», Word borra del documento todas las coincidencias.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero. Cuando el campo Reemplazar con está vacío y se pulsa Reemplazar todos, Word sustituye cada coincidencia encontrada por nada, es decir, las elimina. Es una forma de borrar masivamente un término o carácter de todo el documento."
+    "explicacion": "Verdadero: reemplazar por nada es borrar. Es una de las limpiezas más rápidas que permite Word, y se combina bien con los códigos del botón «Especial»: buscar ^p^p y dejar ^p quita los párrafos vacíos, y buscar dos espacios y poner uno arregla el espaciado doble. · No sale ningún aviso previo, solo el recuento final de sustituciones, así que conviene saber que todo ello se deshace después con un único Ctrl+Z. · Y hay un matiz de alcance: si hay texto seleccionado, «Reemplazar todos» actúa primero dentro de esa selección y luego pregunta si sigue por el resto del documento."
   },
   {
     "id": "inicio-136",
@@ -20050,11 +20055,11 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0390",
-    "enunciado": "La opción Búsqueda avanzada del grupo Edición abre el mismo panel de navegación lateral que el atajo Ctrl+B pero con opciones adicionales desplegadas.",
+    "enunciado": "«Búsqueda avanzada…», en la flecha del botón Buscar, abre el mismo panel de Navegación que Ctrl+B, con más opciones desplegadas.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso. La Búsqueda avanzada abre el cuadro de diálogo modal Buscar y reemplazar en la pestaña Buscar, que es distinto del panel de navegación lateral que abre Ctrl+B. El cuadro de diálogo ofrece opciones avanzadas como Formato, Especial y caracteres comodín que no están disponibles directamente en el panel de navegación."
+    "explicacion": "Falso: abre el cuadro de diálogo «Buscar y reemplazar» en su ficha Buscar, que es otra herramienta distinta del panel. · La diferencia importa porque el cuadro trae lo que el panel no tiene: el botón «Más >>» con las siete casillas de opciones, los comodines, y los botones Formato, Especial y Sin formato, que permiten buscar por aspecto o por caracteres invisibles. · El panel, a cambio, deja ver todas las coincidencias en contexto y saltar entre ellas sin cerrar nada. · Y ese mismo menú tiene una tercera entrada, «Ir a…», que abre el mismo cuadro por su otra ficha."
   },
   {
     "id": "inicio-242",
@@ -20069,11 +20074,11 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0496",
-    "enunciado": "En Word 365, el Panel de selección del grupo Edición permite controlar la visibilidad y el orden de apilamiento de los objetos flotantes del documento.",
+    "enunciado": "El Panel de selección permite mostrar y ocultar los objetos de la página, pero no cambiar su orden de apilamiento.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. El Panel de selección muestra una lista de todos los objetos flotantes del documento (imágenes, formas, cuadros de texto, etc.) y permite hacer clic en el icono de ojo junto a cada objeto para mostrarlo u ocultarlo. También permite cambiar el orden de apilamiento arrastrando los objetos en la lista."
+    "respuesta": false,
+    "explicacion": "Falso: hace las dos cosas. Cada objeto tiene su icono de ojo para mostrarlo u ocultarlo, y la lista se puede reordenar arrastrando, con lo que se decide cuál queda encima de cuál. Su propio mensaje emergente lo describe como una lista de todos los objetos que facilita seleccionarlos, cambiarlos de orden y cambiar su visibilidad. · Es la herramienta que salva cuando un objeto queda debajo de otro y no hay forma de pincharlo: se oculta el de arriba, se trabaja con el de abajo y se vuelve a mostrar. · Se abre desde la cuarta entrada del menú «Seleccionar», en el grupo Edición."
   },
   {
     "id": "inicio-450",
@@ -20088,11 +20093,11 @@
     "tema": "Edición",
     "sourceQuestionId": "bal-inicio-07",
     "generado": true,
-    "enunciado": "El comando Reemplazar solo puede buscar y sustituir texto, nunca formato.",
+    "enunciado": "El comando Reemplazar solo busca y sustituye texto: nunca formato.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: el cuadro Buscar y reemplazar permite buscar y reemplazar también por formato (negrita, color, estilo…) con el botón «Más» ▸ «Formato»."
+    "explicacion": "Falso. Con «Más >>» aparece el botón «Formato», y desde él se puede exigir un formato al texto que se busca, dárselo al que lo sustituye, o las dos cosas. Eso permite tres jugadas distintas: cambiar solo lo que esté en negrita, poner un formato a todas las apariciones de un término dejando el texto igual, o pasar de un formato a otro. · Se pueden encadenar varias condiciones, y las que haya puestas aparecen escritas bajo cada campo. · Ojo con «Sin formato»: hay que pulsarlo antes de la siguiente búsqueda, o Word seguirá filtrando por las condiciones anteriores sin que se note."
   },
   {
     "id": "inicio-534",
@@ -20107,11 +20112,11 @@
     "tema": "Edición",
     "sourceQuestionId": "rutas-inicio-64",
     "generado": true,
-    "enunciado": "El cuadro «Buscar y reemplazar» tiene un botón «Buscar en ▾» que limita la búsqueda a una parte del documento (p. ej. el documento principal, o los encabezados y pies).",
+    "enunciado": "El cuadro «Buscar y reemplazar» tiene un desplegable «Buscar en» que limita la búsqueda a una parte del documento, como la selección actual o los encabezados y pies.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Suele usarse tras seleccionar un fragmento: «Buscar en ▸ Selección actual»."
+    "explicacion": "Verdadero. Aparece al desplegar «Más >>», y sus valores dependen del contexto: con algo seleccionado ofrece «Selección actual», y en general permite quedarse en el documento principal o pasar a los encabezados y pies, que son un cuerpo de texto aparte y no se recorren en la búsqueda normal. · Es lo que hay que usar cuando una palabra aparece también en el pie de página y no se quiere tocar, o al revés. · No confundirlo con el desplegable «Buscar», que decide la DIRECCIÓN —Todo, Hacia adelante, Hacia atrás—, ni con «Resaltado de lectura», que solo marca las coincidencias en pantalla."
   },
   {
     "id": "inicio-538",
@@ -20126,11 +20131,11 @@
     "tema": "Edición",
     "sourceQuestionId": "rutas-inicio-68",
     "generado": true,
-    "enunciado": "En la ficha «Ir a», si en el número se escribe «+4» el cursor avanza 4 elementos (páginas, líneas…) desde la posición actual.",
+    "enunciado": "En la ficha «Ir a», escribir «+4» en el campo del número avanza cuatro elementos desde la posición actual.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "El propio cuadro lo explica: «escribiendo +4 se desplazará cuatro elementos hacia adelante»; «-2» retrocedería dos."
+    "explicacion": "Verdadero, y el propio cuadro lo explica debajo del campo: con un signo delante, la cifra se interpreta como un salto relativo. «+4» avanza cuatro y «-2» retrocede dos, y funciona con cualquier elemento numerado de la lista, no solo con páginas: cuatro líneas, cuatro secciones o cuatro notas al pie. · Sin signo, la cifra es absoluta y lleva al elemento que ocupe ese número. · Es la diferencia entre navegar por posición y navegar por desplazamiento, y resulta útil cuando se sabe cuánto hay que avanzar pero no en qué página se está."
   },
   {
     "id": "inicio-541",
@@ -20145,11 +20150,11 @@
     "tema": "Edición",
     "sourceQuestionId": "rutas-inicio-71",
     "generado": true,
-    "enunciado": "«Panel de selección…» abre un panel que enumera todos los objetos de la página y permite ocultarlos o cambiar su orden de apilamiento.",
+    "enunciado": "«Panel de selección…», del menú Seleccionar, abre un panel que enumera los objetos de la página y permite ocultarlos o reordenarlos.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Su información en pantalla lo describe como «Consulte una lista de todos los objetos… más fácil seleccionarlos, cambiarlos de orden o cambiar su visibilidad»."
+    "explicacion": "Verdadero. Su mensaje emergente lo describe como una lista de todos los objetos que facilita seleccionarlos, cambiarlos de orden y cambiar su visibilidad. Cada uno tiene su icono de ojo, y arrastrando en la lista se decide el orden de apilamiento. · Es la cuarta entrada del menú «Seleccionar», junto con «Seleccionar todo», «Seleccionar objetos» y «Seleccionar todo el texto con formato similar». · No hay que confundirlo con «Seleccionar objetos», que está dos líneas más arriba y no abre nada: cambia el puntero para poder marcar objetos con el ratón sin tocar el texto."
   },
   {
     "id": "inicio-566",
@@ -20164,11 +20169,11 @@
     "tema": "Edición",
     "sourceQuestionId": "dlgcompart-inicio-21",
     "generado": true,
-    "enunciado": "El botón «Reemplazar» del grupo Edición y la opción «Ir a…» del menú del botón Buscar abren el mismo cuadro de diálogo (en fichas distintas).",
+    "enunciado": "El botón «Reemplazar» del grupo Edición y la entrada «Ir a…» del menú del botón Buscar abren dos cuadros de diálogo distintos.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "En esta instalación «Reemplazar» equivale a Ctrl+L e «Ir a» a Ctrl+I."
+    "respuesta": false,
+    "explicacion": "Falso: los dos abren el mismo cuadro, «Buscar y reemplazar», cada uno por su ficha. Es un solo cuadro con tres fichas, y desde cualquiera se pasa a las otras dos con un clic. · Lo mismo ocurre con los atajos: Ctrl+L entra por Reemplazar, y Ctrl+I y F5 por Ir a. Lo único que decide el camino es dónde se aterriza. · Es el mismo patrón de «varias puertas, un cuadro» que se repite en «Bordes y sombreado», al que se llega desde Inicio y desde Diseño, o en el cuadro Párrafo, con sus iniciadores en dos pestañas. Reconocerlo ahorra media docena de preguntas."
   },
   {
     "sourceFile": "inicio.json",
@@ -20182,10 +20187,10 @@
     "generado": true,
     "categoria": "concepto",
     "tipo": "verdadero_falso",
-    "enunciado": "Hacer Ctrl+clic en el área de selección del margen izquierdo equivale a pulsar Ctrl+E: selecciona todo el documento.",
+    "enunciado": "Ctrl+clic en el área de selección del margen izquierdo equivale a Ctrl+E: selecciona todo el documento.",
     "opciones": [],
     "respuesta": true,
-    "explicacion": "Verdadero. Ctrl+clic en la franja del margen izquierdo es el equivalente con ratón de Ctrl+E (seleccionar todo).",
+    "explicacion": "Verdadero, y es el atajo de ratón para no tener que dar tres clics seguidos en esa franja, que es la otra forma de conseguirlo. · Ojo con el contraste, que es lo preguntable: ese mismo Ctrl+clic hecho DENTRO del cuerpo del texto selecciona solo la oración. La misma combinación, dos resultados, según a qué lado del margen se pulse. · Y hay un tercer caso: sobre un hipervínculo, con la opción «Utilizar CTRL + clic para seguir hipervínculo» activada, ese gesto abre el enlace. Esa opción se desactiva en Archivo ▸ Opciones ▸ Avanzadas, y entonces basta un clic para seguirlo.",
     "id": "inicio-586",
     "sourceQuestionId": "web-inicio-selraton-586"
   },
@@ -20202,39 +20207,39 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0373",
-    "enunciado": "Relaciona cada pestaña del panel de navegación con su función:",
+    "enunciado": "Relaciona cada ficha del panel de Navegación con lo que muestra:",
     "opciones": [],
     "matching": {
       "left": [
         {
           "id": "1",
-          "label": "Pestaña Títulos"
+          "label": "Títulos"
         },
         {
           "id": "2",
-          "label": "Pestaña Páginas"
+          "label": "Páginas"
         },
         {
           "id": "3",
-          "label": "Pestaña Resultados"
+          "label": "Resultados"
         }
       ],
       "right": [
         {
           "id": "A",
-          "label": "Muestra un índice interactivo con los párrafos que tienen estilos de título aplicados"
+          "label": "El esquema del documento, con los párrafos que tienen nivel de esquema"
         },
         {
           "id": "B",
-          "label": "Muestra miniaturas de vista previa de cada página del documento"
+          "label": "Miniaturas de vista previa de cada página"
         },
         {
           "id": "C",
-          "label": "Muestra vínculos directos a los fragmentos de texto que coinciden con la búsqueda, hasta 100 resultados"
+          "label": "Los fragmentos que coinciden con lo buscado, en su contexto"
         },
         {
           "id": "D",
-          "label": "Muestra el historial de búsquedas recientes"
+          "label": "Los comentarios y las revisiones pendientes de resolver"
         }
       ],
       "correct": {
@@ -20248,7 +20253,7 @@
       "2": "B",
       "3": "C"
     },
-    "explicacion": "Títulos: índice interactivo basado en estilos de título. Páginas: miniaturas de cada página. Resultados: vínculos a las coincidencias de búsqueda con un límite de 100 resultados. El distractor D no corresponde a ninguna pestaña real del panel."
+    "explicacion": "La ficha Títulos es la más potente: además de listar, permite contraer apartados y arrastrarlos para reordenar el documento entero con su contenido. Lista los párrafos con nivel de esquema, que normalmente vienen de los estilos Título pero pueden ponerse a mano desde el cuadro Párrafo. · Páginas enseña miniaturas y resalta aquellas donde hay coincidencias al buscar. · Resultados da los fragmentos en contexto, sin ningún tope fijo: cuando son demasiados, avisa en vez de listar. · El destino que se queda sin pareja, los comentarios y las revisiones, tiene su propio panel en la pestaña Revisar."
   },
   {
     "id": "inicio-126",
@@ -20263,7 +20268,7 @@
     "tema": "Edición",
     "difficulty": "media",
     "sourceQuestionId": "P-0380",
-    "enunciado": "Relaciona cada opción de búsqueda avanzada con su función:",
+    "enunciado": "Relaciona cada casilla de las opciones de búsqueda con lo que hace:",
     "opciones": [],
     "matching": {
       "left": [
@@ -20329,7 +20334,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Coincidir may/min: distingue entre Casa y casa. Solo palabras completas: busca 'mal' pero no 'malestar'. Comodín: permite patrones con * y ?. Prefijo: busca palabras que empiezan por el fragmento. Sufijo: busca palabras que terminan por el fragmento. El distractor F corresponde a Omitir puntuación."
+    "explicacion": "«Coincidir mayúsculas y minúsculas» distingue Casa de casa. «Solo palabras completas» encuentra «mal» pero no «malestar» ni «animal». «Usar caracteres comodín» permite patrones con asterisco e interrogante. «Prefijo» limita la coincidencia al principio de palabra y «Sufijo» al final: son la pareja que más se confunde, porque cada una arregla la mitad del problema que «Solo palabras completas» resuelve entero. · El destino que se queda sin pareja describe lo que hace «Omitir puntuación», otra de las siete casillas del mismo panel: ignora comas, guiones y paréntesis intercalados. Cuela porque es real y está a dos líneas."
   },
   {
     "id": "inicio-276",
@@ -20344,7 +20349,7 @@
     "tema": "Edición",
     "difficulty": "alta",
     "sourceQuestionId": "P-0530",
-    "enunciado": "Relaciona cada atajo con su función en la versión ESPAÑOLA de Word 365. Todos estos atajos difieren del inglés:",
+    "enunciado": "Relaciona cada combinación con lo que hace en esta instalación. Todas ellas significan otra cosa en el esquema inglés:",
     "opciones": [],
     "matching": {
       "left": [
@@ -20410,7 +20415,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Versión española de Word 365: Ctrl+E selecciona todo (inglés: centra). Ctrl+B abre navegación (inglés: negrita). Ctrl+F aplica la sangría francesa (inglés: buscar). Ctrl+L abre Reemplazar (inglés: alinear a la izquierda). Ctrl+T centra (inglés: tabulación). El distractor F (negrita) corresponde a Ctrl+N en español."
+    "explicacion": "Ctrl+E selecciona todo, Ctrl+B abre el panel de Navegación, Ctrl+F aplica la sangría francesa, Ctrl+L abre el cuadro en la ficha Reemplazar y Ctrl+T centra el párrafo. Prueba en vivo del usuario. · Las cinco están cruzadas respecto del inglés, y sin ninguna regla que ayude: cada letra es la inicial del nombre en castellano, así que la B es de buscar y no de «bold», y la F de francesa y no de «find». · El destino que se queda sin pareja, la negrita, corresponde a Ctrl+N, y también a Ctrl+Mayús+N: cuela porque es el atajo más usado de todos y porque en inglés lo lleva una de las cinco letras de la izquierda."
   },
   {
     "id": "inicio-568",
@@ -20425,7 +20430,7 @@
     "tema": "Edición",
     "sourceQuestionId": "dlgcompart-inicio-23",
     "generado": true,
-    "enunciado": "Relaciona cada ruta con la ficha por la que abre su cuadro de diálogo compartido:",
+    "enunciado": "Relaciona cada ruta con la ficha por la que abre su cuadro compartido:",
     "opciones": [],
     "matching": {
       "left": [
@@ -20481,7 +20486,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Bordes y sombreado y Buscar y reemplazar son cada uno un solo cuadro con varias fichas; la ruta de entrada solo decide cuál aparece activa."
+    "explicacion": "Los dos cuadros de esta pregunta tienen varias puertas y, a diferencia de otros, la puerta decide la ficha. «Bordes y sombreado» abre en Borde de página si se entra desde Diseño y en Bordes si se entra desde el botón del grupo Párrafo. «Buscar y reemplazar» abre en Ir a o en Buscar según qué entrada del menú del botón Buscar se elija, y en Reemplazar si se usa su propio botón o Ctrl+L. · Compáralo con el cuadro Párrafo, al que se llega desde Inicio, desde Disposición y desde el menú contextual, y que siempre abre igual: no todos los cuadros con varias puertas se comportan de la misma manera."
   },
   {
     "sourceFile": "inicio.json",
@@ -20543,14 +20548,14 @@
     "categoria": "concepto",
     "tipo": "emparejamiento",
     "opciones": [],
-    "enunciado": "Relaciona cada gesto del ratón con lo que selecciona en Word:",
+    "enunciado": "Relaciona cada gesto del ratón con lo que selecciona:",
     "respuesta": {
       "1": "A",
       "2": "B",
       "3": "C",
       "4": "D"
     },
-    "explicacion": "En el cuerpo del texto: doble clic = palabra, triple clic = párrafo. En el área de selección del margen izquierdo: 1 clic = línea, 2 clics = párrafo, 3 clics = todo el documento. El distractor «la frase» corresponde a Ctrl+clic en el cuerpo.",
+    "explicacion": "Hay dos escalas paralelas y lo que decide cuál se aplica es DÓNDE se pulsa. En el cuerpo del texto: un clic coloca el cursor, dos marcan la palabra y tres el párrafo. En el área de selección del margen izquierdo, donde el puntero se vuelve una flecha inclinada: uno marca la línea, dos el párrafo y tres el documento entero. El párrafo es el único resultado que coinciden las dos escalas, con distinto número de clics. · El destino que se queda sin pareja, la frase, corresponde a Ctrl+clic dentro del texto; y ese mismo Ctrl+clic, hecho en el margen, selecciona todo el documento. · Alt y arrastrar, por su parte, da un bloque rectangular.",
     "id": "inicio-587",
     "sourceQuestionId": "web-inicio-selraton-587"
   },
