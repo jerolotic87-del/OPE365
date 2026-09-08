@@ -10786,28 +10786,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "1-81",
-    "enunciado": "¿Qué acción permite personalizar la información que se muestra en la Barra de estado de Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres que la barra de estado muestre también el número de línea, que ahora no aparece. ¿Cómo se consigue?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ir a Archivo > Opciones > Avanzadas"
+        "text": "Con un clic derecho sobre la propia barra de estado"
       },
       {
         "letter": "B",
-        "text": "Hacer clic derecho sobre la Barra de estado"
+        "text": "En Archivo ▸ Opciones ▸ Avanzadas ▸ Mostrar"
       },
       {
         "letter": "C",
-        "text": "Acceder a la pestaña Vista y activar \"Barra de estado\""
+        "text": "En la pestaña Vista, en el grupo Mostrar"
       },
       {
         "letter": "D",
-        "text": "Hacer clic en el botón \"Personalizar\" de la cinta de opciones"
+        "text": "Con el botón «Personalizar» de la cinta"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La Barra de estado se personaliza mediante el menú contextual que aparece al hacer clic derecho sobre ella."
+    "respuesta": "A",
+    "explicacion": "Aparece una lista larga con una casilla por cada dato posible —página, sección, número de línea, columna, palabras, idioma, estado del control de cambios, mayúsculas, sobrescritura— y al lado de cada una su valor actual, así que la lista informa aunque no se toque nada. · **Vista ▸ Mostrar** es el descarte que decide la pregunta: allí solo hay tres casillas, y son la regla, las líneas de la cuadrícula y el panel de navegación. · Es de las personalizaciones más útiles y menos conocidas."
   },
   {
     "id": "interfaz-80",
@@ -10821,28 +10822,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "1-82",
-    "enunciado": "El usuario hace clic sobre el indicador \"Página 4 de 4\" en la Barra de estado. ¿Qué elemento se abre?",
+    "revisada": true,
+    "enunciado": "Haces clic sobre el indicador «Página 4 de 12» de la barra de estado. ¿Qué se abre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El cuadro de diálogo \"Contar palabras\""
+        "text": "El panel de navegación"
       },
       {
         "letter": "B",
-        "text": "El Panel de navegación"
+        "text": "El cuadro «Contar palabras»"
       },
       {
         "letter": "C",
-        "text": "El cuadro de diálogo \"Zoom\""
+        "text": "El cuadro «Ir a»"
       },
       {
         "letter": "D",
-        "text": "El menú contextual de la Barra de estado"
+        "text": "El cuadro Zoom"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Al hacer clic sobre el indicador de página se abre el Panel de navegación."
+    "respuesta": "A",
+    "explicacion": "Se abre a la izquierda, con sus tres fichas: Títulos, Páginas y Resultados. Es la manera más rápida de saltar a otra parte del documento. · **El cuadro «Ir a»** es el descarte que decide la pregunta, y es el que uno esperaría al pulsar un número de página: existe, sirve exactamente para eso y se abre con **F5** o con Ctrl+I. · Al mismo panel se llega con Ctrl+B o desde Vista ▸ Mostrar. · Casi todos los indicadores de esta barra son además botones."
   },
   {
     "id": "interfaz-81",
@@ -10856,28 +10858,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "1-83",
-    "enunciado": "¿Qué información muestra el cuadro de diálogo que aparece al hacer clic sobre el contador de palabras de la Barra de estado?",
+    "revisada": true,
+    "enunciado": "¿Qué datos da el cuadro «Contar palabras»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Número de páginas, palabras, caracteres (con y sin espacios),"
+        "text": "Páginas, palabras, caracteres con y sin espacios, párrafos y líneas"
       },
       {
         "letter": "B",
-        "text": "Número de páginas, secciones y columnas"
+        "text": "Páginas, secciones y columnas del documento"
       },
       {
         "letter": "C",
-        "text": "Número de palabras y caracteres únicamente"
+        "text": "Solo el número de palabras y de caracteres"
       },
       {
         "letter": "D",
-        "text": "Número de caracteres, líneas y párrafos, pero no palabras"
+        "text": "Caracteres, líneas y párrafos, pero no palabras"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El cuadro de diálogo muestra: páginas, palabras, caracteres con espacios, caracteres sin espacios, párrafos y líneas."
+    "explicacion": "Son seis cifras, y las dos de caracteres se dan por separado precisamente porque muchos escritos con límite de extensión se miden de una manera o de la otra. · Tiene además una casilla para incluir o no los cuadros de texto, las notas al pie y las notas al final, que puede cambiar bastante el resultado. · Si hay texto seleccionado, cuenta solo la selección, cosa que se agradece para comprobar la extensión de un apartado. · Se abre pulsando el recuento en la barra de estado, o desde Revisar ▸ Revisión."
   },
   {
     "id": "interfaz-82",
@@ -10891,28 +10894,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "1-84",
-    "enunciado": "Para activar el modo Sobreescribir mediante la tecla Insert, ¿qué configuración previa es necesaria?",
+    "revisada": true,
+    "enunciado": "Pulsas la tecla Insert esperando cambiar al modo sobrescribir y no pasa nada. ¿Por qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ir a Archivo > Opciones > Avanzadas y marcar \"Usar la tecla Insert"
+        "text": "Porque hay que habilitarlo antes en Archivo ▸ Opciones ▸ Avanzadas"
       },
       {
         "letter": "B",
-        "text": "Ir a Archivo > Opciones > General y marcar \"Habilitar teclas de función\""
+        "text": "Porque hay que habilitarlo en Archivo ▸ Opciones ▸ General"
       },
       {
         "letter": "C",
-        "text": "Ir a la pestaña Vista y activar \"Modo de escritura\""
+        "text": "Porque el modo sobrescribir ya no existe en Word 365"
       },
       {
         "letter": "D",
-        "text": "Hacer clic derecho sobre el indicador \"Insertar\" de la Barra de estado"
+        "text": "Porque solo funciona con la barra de estado personalizada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Para usar la tecla Insert como alternancia del modo Sobreescribir, hay que activarlo en Archivo > Opciones > Avanzadas."
+    "explicacion": "La casilla «Usar la tecla Insert para controlar el modo Sobrescribir» viene desmarcada, para que nadie active el modo sin querer y empiece a comerse el texto que tenía delante. Está en la sección de opciones de edición. · **Que ya no exista** es el descarte que decide la pregunta: el modo sigue ahí, y se puede alternar haciendo clic en su indicador de la barra de estado, si antes se ha añadido con el clic derecho sobre ella."
   },
   {
     "id": "interfaz-83",
@@ -10926,28 +10930,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "1-85",
-    "enunciado": "¿Qué ocurre al hacer clic sobre el botón \"Insertar\" de la Barra de estado?",
+    "revisada": true,
+    "enunciado": "En la barra de estado ves la palabra «Insertar» y haces clic sobre ella. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se inicia la revisión ortográfica del documento"
+        "text": "Cambia al modo Sobrescribir"
       },
       {
         "letter": "B",
-        "text": "Se intercambia el modo de escritura entre Insertar y Sobreescribir"
+        "text": "Abre la pestaña Insertar de la cinta"
       },
       {
         "letter": "C",
-        "text": "Se inicia la grabación de una macro"
+        "text": "Empieza a grabar una macro"
       },
       {
         "letter": "D",
-        "text": "Se abre el cuadro de diálogo \"Contar palabras\""
+        "text": "Abre el cuadro «Contar palabras»"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Un clic sobre el indicador \"Insertar\" de la Barra de estado intercambia el modo entre Insertar y Sobreescribir."
+    "respuesta": "A",
+    "explicacion": "El indicador es un interruptor: al pulsarlo cambia a «Sobrescribir» y al volver a pulsarlo regresa. · Ese indicador no aparece de fábrica: hay que añadirlo con el clic derecho sobre la barra de estado. Y la tecla Insert solo hace lo mismo si se habilita en Opciones ▸ Avanzadas. · **La pestaña Insertar** es el descarte que decide la pregunta: se llama igual y no tiene nada que ver, porque esto es el modo de escritura, no insertar objetos."
   },
   {
     "id": "interfaz-84",
@@ -10961,28 +10966,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "1-86",
-    "enunciado": "¿Qué efecto tiene hacer clic sobre el icono de \"Macro\" en la Barra de estado?",
+    "revisada": true,
+    "enunciado": "En la barra de estado hay un icono de macro. ¿Qué hace al pulsarlo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se ejecuta la última macro grabada en el documento"
+        "text": "Empieza a grabar una macro"
       },
       {
         "letter": "B",
-        "text": "Se inicia el acceso a la grabación de macros"
+        "text": "Ejecuta la última macro grabada"
       },
       {
         "letter": "C",
-        "text": "Se abre el editor de Visual Basic (VBA)"
+        "text": "Abre el editor de Visual Basic"
       },
       {
         "letter": "D",
-        "text": "Se eliminan todas las macros del documento"
+        "text": "Borra las macros del documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Hacer clic sobre el icono de Macro en la Barra de estado inicia el acceso a la grabación de macros."
+    "respuesta": "A",
+    "explicacion": "Es un atajo a lo mismo que hace la pestaña Programador, que no está visible de fábrica: mientras graba, el icono cambia a un cuadrado de parada. Como todos los indicadores de esta barra, se añade con el clic derecho sobre ella. · **El editor de Visual Basic** es el descarte que decide la pregunta: es donde acaba el código de la macro y se abre con Alt+F11, pero desde este icono no se llega. · Grabar una macro obliga después a guardar en .docm."
   },
   {
     "id": "interfaz-85",
@@ -10996,28 +11002,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "1-89",
-    "enunciado": "¿Cuántas vistas ofrece el área de vistas de la Barra de estado en Word 365?",
+    "revisada": true,
+    "enunciado": "¿Cuántos botones de vista hay en la barra de estado y cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Dos"
+        "text": "Cuatro: Concentración, Modo de lectura, Diseño de impresión y Diseño web"
       },
       {
         "letter": "B",
-        "text": "Tres"
+        "text": "Tres: Modo de lectura, Diseño de impresión y Diseño web"
       },
       {
         "letter": "C",
-        "text": "Cuatro"
+        "text": "Cinco: los cuatro anteriores y Esquema"
       },
       {
         "letter": "D",
-        "text": "Cinco"
+        "text": "Seis: los cinco anteriores y Borrador"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La Barra de estado ofrece cuatro botones de vista: Concentración, Modo lectura, Diseño de impresión y Diseño web. Para acceder a Esquema y Borrador hay que ir a la pestaña Vista."
+    "respuesta": "A",
+    "explicacion": "**Esquema y Borrador NO tienen botón aquí**: son vistas reales, pero solo se eligen desde el grupo Vistas de la pestaña Vista. Ese es el detalle que se pregunta, porque uno tiende a suponer que las seis vistas están en los dos sitios. · La pestaña Vista tiene además Concentración y el Lector inmersivo en su grupo Inmersivo. · A la derecha de estos botones está el control de zoom, con su deslizador y su porcentaje."
   },
   {
     "id": "interfaz-88",
@@ -11031,19 +11038,20 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "1-92",
-    "enunciado": "El usuario hace clic sobre el valor porcentual del Zoom (ej. 121%) en la Barra de estado. ¿Qué ocurre?",
+    "revisada": true,
+    "enunciado": "Pulsas el porcentaje de zoom en la barra de estado, por ejemplo «121 %». ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se abre el cuadro de diálogo de Zoom"
+        "text": "Se abre el cuadro Zoom"
       },
       {
         "letter": "B",
-        "text": "El zoom se reinicia automáticamente al 100%"
+        "text": "El zoom vuelve al 100 %"
       },
       {
         "letter": "C",
-        "text": "Se activa el modo de pantalla completa"
+        "text": "Se entra en pantalla completa"
       },
       {
         "letter": "D",
@@ -11052,7 +11060,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Un clic sobre el porcentaje de zoom en la Barra de estado abre el cuadro de diálogo de Zoom."
+    "explicacion": "El cuadro ofrece porcentajes fijos, un campo para escribir el que se quiera y ajustes automáticos: ancho de página, ancho del texto o página completa, además de ver varias páginas a la vez. · **Volver al 100 %** es el descarte que decide la pregunta, y es lo que hace **Ctrl+0** en esta instalación, según prueba en vivo. También hay un botón «100 %» en la pestaña Vista. · El deslizador de al lado cambia el zoom sin abrir nada."
   },
   {
     "id": "interfaz-90",
@@ -11066,28 +11074,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "1-94",
-    "enunciado": "Además de la Barra de estado, ¿desde qué pestaña se puede acceder al cuadro de diálogo de Zoom?",
+    "revisada": true,
+    "enunciado": "Además de desde la barra de estado, ¿desde qué pestaña se abre el cuadro Zoom?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar"
+        "text": "Vista, en el grupo Zoom"
       },
       {
         "letter": "B",
-        "text": "Vista"
+        "text": "Inicio, en el grupo Edición"
       },
       {
         "letter": "C",
-        "text": "Diseño"
+        "text": "Diseño, en el grupo Formato del documento"
       },
       {
         "letter": "D",
-        "text": "Inicio"
+        "text": "Insertar, en el grupo Texto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El cuadro de diálogo de Zoom también es accesible desde la pestaña Vista."
+    "respuesta": "A",
+    "explicacion": "Ese grupo tiene el botón «Zoom», que abre el cuadro, y otros cuatro que aplican un ajuste directo: 100 %, Una página, Varias páginas y Ancho de página. · Es un caso más de un mismo cuadro con dos puertas, como Bordes y sombreado, Fuente o Párrafo. · Con el ratón hay una tercera vía sin cuadro: **Ctrl y la rueda**, que cambia el zoom de diez en diez, confirmado en vivo por el usuario."
   },
   {
     "id": "interfaz-143",
@@ -11095,34 +11104,35 @@
     "bloque": "Interfaz — Barra de estado",
     "tipo": "opcion_unica",
     "categoria": "ruta",
-    "negativa": false,
+    "negativa": true,
     "section": "interfaz",
     "topic": "barra-estado",
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "2-31",
-    "enunciado": "En Word 365, ¿qué elemento permite al usuario ver la información del documento, como el número de página o el idioma?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estos datos NO se puede mostrar en la barra de estado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La barra de herramientas de acceso rápido"
+        "text": "El nombre del archivo abierto"
       },
       {
         "letter": "B",
-        "text": "La barra de estado"
+        "text": "El número de página y de sección"
       },
       {
         "letter": "C",
-        "text": "La cinta de opciones"
+        "text": "El idioma del texto donde está el cursor"
       },
       {
         "letter": "D",
-        "text": "El área de trabajo"
+        "text": "El número de línea y de columna"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La barra de estado muestra información contextual."
+    "respuesta": "A",
+    "explicacion": "El nombre del archivo va en la barra de TÍTULO, arriba. La de estado informa de dónde se está y de cómo está el documento, no de qué documento es. · Los otros tres sí están en la lista del clic derecho, aunque la línea y la columna no vengan marcados de fábrica: son muy útiles para localizar un punto exacto en un escrito con numeración de líneas. · Casi todos esos indicadores son además botones: el de página abre el panel de navegación y el de idioma, el cuadro Idioma."
   },
   {
     "id": "interfaz-398",
@@ -11136,28 +11146,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-3",
-    "enunciado": "En Word 365, la Barra de estado:",
+    "revisada": true,
+    "enunciado": "¿Qué caracteriza a la barra de estado frente a las demás partes de la ventana?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Nos muestra información referente al documento y es configurable desde el menú contextual"
+        "text": "Que informa, y se configura desde su menú contextual"
       },
       {
         "letter": "B",
-        "text": "Solo muestra el nombre del archivo"
+        "text": "Que solo muestra el nombre del archivo abierto"
       },
       {
         "letter": "C",
-        "text": "Permite insertar imágenes"
+        "text": "Que reúne los comandos de uso más frecuente"
       },
       {
         "letter": "D",
-        "text": "Sirve para deshacer acciones"
+        "text": "Que permite deshacer y rehacer las acciones"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La barra de estado es configurable desde el menú contextual."
+    "explicacion": "Es la única parte de la ventana que informa en lugar de mandar, aunque casi todos sus indicadores sean también botones: el de página abre el panel de navegación, el del recuento abre «Contar palabras» y el del zoom, el cuadro Zoom. · **Reunir los comandos frecuentes** es el descarte que decide la pregunta, y describe a la barra de acceso rápido, que además es la otra parte configurable de la ventana. Una se configura con el clic derecho y la otra con su flechita."
   },
   {
     "id": "interfaz-399",
@@ -11171,28 +11182,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-4",
-    "enunciado": "En Word 365, \"Contar palabras\" es una función que muestra:",
+    "revisada": true,
+    "enunciado": "En el cuadro «Contar palabras», ¿por qué se dan los caracteres en dos cifras?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Únicamente el número de palabras del documento"
+        "text": "Porque una incluye los espacios y la otra no, y hay escritos que se miden de cada manera"
       },
       {
         "letter": "B",
-        "text": "Número de páginas, palabras, caracteres con y sin espacios, párrafos y líneas"
+        "text": "Porque una cuenta los del documento y otra los de la selección"
       },
       {
         "letter": "C",
-        "text": "El número de macros grabadas"
+        "text": "Porque una cuenta las letras y otra los signos de puntuación"
       },
       {
         "letter": "D",
-        "text": "El número de revisiones ortográficas realizadas"
+        "text": "Porque una cuenta el cuerpo y otra las notas al pie"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Muestra páginas, palabras, caracteres, párrafos y líneas."
+    "respuesta": "A",
+    "explicacion": "Un límite de extensión puede venir dado de las dos formas, y la diferencia entre ambas cifras es notable en un texto largo. · **Documento frente a selección** es el descarte que decide la pregunta, y también existe: si hay algo seleccionado, el cuadro cuenta solo eso, pero cambian TODAS las cifras, no una de las dos. · El cuadro da seis datos —páginas, palabras, los dos de caracteres, párrafos y líneas— y una casilla para incluir o no las notas y los cuadros de texto."
   },
   {
     "id": "interfaz-400",
@@ -11206,28 +11218,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-5",
-    "enunciado": "En Word 365, el \"Modo de escritura\" (Insertar/Sobrescribir):",
+    "revisada": true,
+    "enunciado": "¿Qué hace el modo Sobrescribir?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Permite grabar macros"
+        "text": "Que lo que se teclea vaya sustituyendo al texto que hay delante del cursor"
       },
       {
         "letter": "B",
-        "text": "Intercambia entre insertar el texto nuevo o sobrescribir el existente"
+        "text": "Que lo tecleado se inserte empujando el texto que hay delante"
       },
       {
         "letter": "C",
-        "text": "Activa la revisión ortográfica"
+        "text": "Que no se pueda escribir hasta desactivarlo"
       },
       {
         "letter": "D",
-        "text": "Cambia el idioma del documento"
+        "text": "Que el documento se guarde encima del original al cerrar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo de escritura intercambia entre Insertar y Sobrescribir."
+    "respuesta": "A",
+    "explicacion": "Es lo contrario del modo Insertar, que es el normal y el que describe el segundo descarte. Sobrescribir es una herencia de las máquinas de escribir y hoy casi siempre se activa sin querer, de ahí que la tecla Insert venga desactivada de fábrica. · Se cambia de modo pulsando su indicador en la barra de estado, si se ha añadido con el clic derecho, o con Insert después de habilitarla en Opciones ▸ Avanzadas."
   },
   {
     "id": "interfaz-401",
@@ -11241,28 +11254,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-6",
-    "enunciado": "En Word 365, hacer clic en el icono de \"Macro\" en la barra de estado:",
+    "revisada": true,
+    "enunciado": "El icono de macro de la barra de estado hace lo mismo que un comando de una pestaña que no está visible. ¿Cuál?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Abre el contador de palabras"
+        "text": "«Grabar macro», de la pestaña Programador"
       },
       {
         "letter": "B",
-        "text": "Inicia el acceso a la grabación de macros"
+        "text": "«Macros», de la pestaña Vista"
       },
       {
         "letter": "C",
-        "text": "Cambia el modo de escritura"
+        "text": "«Grabar macro», de la pestaña Revisar"
       },
       {
         "letter": "D",
-        "text": "Abre el panel de navegación"
+        "text": "«Editor de Visual Basic», de la pestaña Insertar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El icono de Macro inicia el acceso a la grabación."
+    "respuesta": "A",
+    "explicacion": "Programador no aparece de fábrica: hay que encenderla en Opciones ▸ Personalizar cinta. El icono de la barra de estado es un atajo que evita ese rodeo, y también hay que añadirlo con el clic derecho. · **«Macros» de la pestaña Vista** es el descarte que decide la pregunta, porque existe de verdad y se ve en la captura de esa cinta: sirve para VER y ejecutar las macros que ya hay, no para grabar una nueva."
   },
   {
     "id": "interfaz-402",
@@ -11276,28 +11290,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-7",
-    "enunciado": "En Word 365, \"Páginas, Palabras, Caracteres (sin espacios), Caracteres (con espacios), Párrafos, Líneas\" son los datos que aparecen en:",
+    "revisada": true,
+    "enunciado": "El cuadro «Contar palabras» se abre desde la barra de estado. ¿Desde qué otro sitio?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El panel de navegación"
+        "text": "Revisar ▸ Revisión ▸ Contar palabras"
       },
       {
         "letter": "B",
-        "text": "El cuadro \"Contar palabras\""
+        "text": "Vista ▸ Mostrar ▸ Contar palabras"
       },
       {
         "letter": "C",
-        "text": "La barra de título"
+        "text": "Archivo ▸ Información ▸ Propiedades"
       },
       {
         "letter": "D",
-        "text": "El menú contextual"
+        "text": "Inicio ▸ Edición ▸ Contar palabras"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Son los datos del cuadro \"Contar palabras\"."
+    "respuesta": "A",
+    "explicacion": "Es otro caso de un mismo cuadro con dos puertas, como el Zoom o el panel de navegación. · **Archivo ▸ Información** es el descarte que decide la pregunta, y da datos parecidos: el panel de propiedades muestra el número de páginas y de palabras entre las propiedades del archivo. Pero es una ficha del documento, no un cuadro de recuento, y no distingue caracteres con y sin espacios ni cuenta solo lo seleccionado."
   },
   {
     "id": "interfaz-403",
@@ -11311,28 +11326,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-8",
-    "enunciado": "En Word 365, el icono con forma de libro y una X (revisión ortográfica) pertenece a:",
+    "revisada": true,
+    "enunciado": "En la barra de estado hay un icono de libro con una marca. ¿De qué informa y qué hace al pulsarlo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La Regla"
+        "text": "Del estado de la revisión ortográfica, y al pulsarlo abre el Editor"
       },
       {
         "letter": "B",
-        "text": "La Barra de estado"
+        "text": "Del estado del control de cambios, y al pulsarlo lo activa o lo desactiva"
       },
       {
         "letter": "C",
-        "text": "La Barra de título"
+        "text": "Del estado de guardado del documento"
       },
       {
         "letter": "D",
-        "text": "El Área de vistas"
+        "text": "Del idioma del texto donde está el cursor"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El icono de revisión ortográfica está en la barra de estado."
+    "respuesta": "A",
+    "explicacion": "El icono avisa de si hay errores pendientes, y al pulsarlo lleva al mismo panel que **F7** o que Revisar ▸ Editor: en Word 365 el corrector y el panel Editor son la misma cosa. · Los otros tres descartes también pueden aparecer en esa barra, cada uno con su indicador, si se marcan en el menú del clic derecho: el idioma abre el cuadro Idioma, y el del control de cambios lo alterna, igual que Ctrl+Mayús+E."
   },
   {
     "id": "interfaz-404",
@@ -11346,28 +11362,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-9",
-    "enunciado": "En Word 365, \"Insertar/Sobrescribir\" es el nombre técnico de:",
+    "revisada": true,
+    "enunciado": "Aparte del modo de escritura, ¿qué otro «modo» tiene Word que no debe confundirse con él?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El modo de escritura"
+        "text": "El modo mouse/táctil, que cambia el aspecto de la cinta"
       },
       {
         "letter": "B",
-        "text": "El modo de acceso por teclado"
+        "text": "El modo de compatibilidad, que cambia el modo de escritura"
       },
       {
         "letter": "C",
-        "text": "El modo mouse/táctil"
+        "text": "El modo de lectura, que activa el sobrescribir"
       },
       {
         "letter": "D",
-        "text": "El modo de pantalla completa"
+        "text": "El modo de acceso por teclado, que alterna insertar y sobrescribir"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Es el modo de escritura."
+    "explicacion": "Word usa la palabra «modo» para cosas muy distintas, y conviene separarlas: el de ESCRITURA decide si lo tecleado empuja o sustituye al texto; el mouse/táctil cambia el tamaño de los botones de la cinta; el de ACCESO POR TECLADO saca las letras de acceso con Alt; el de COMPATIBILIDAD aparece al abrir un formato antiguo; y el de LECTURA es una vista. · Ninguno de los otros toca el de escritura, y ahí están los tres descartes."
   },
   {
     "id": "interfaz-405",
@@ -11381,28 +11398,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-10",
-    "enunciado": "En Word 365, señale el elemento que NO aparece en la Barra de estado del temario:",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO puede aparecer en la barra de estado:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Página X de X"
+        "text": "El botón de contraer la cinta de opciones"
       },
       {
         "letter": "B",
-        "text": "Número de palabras"
+        "text": "El indicador «Página 4 de 12»"
       },
       {
         "letter": "C",
-        "text": "Zoom"
+        "text": "El recuento de palabras"
       },
       {
         "letter": "D",
-        "text": "Contraer la cinta de opciones"
+        "text": "El control de zoom"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "\"Contraer la cinta\" no es un elemento de la barra de estado."
+    "respuesta": "A",
+    "explicacion": "Contraer la cinta se hace desde arriba: con Ctrl+F1, con un doble clic en la pestaña activa, desde el menú contextual de la cinta o con la flechita de su extremo derecho. Nada de eso está abajo. · Los otros tres sí, y los tres son además botones: el de página abre el panel de navegación, el del recuento abre «Contar palabras» y el porcentaje del zoom abre el cuadro Zoom. · La lista completa de lo que puede mostrarse sale con el clic derecho sobre la barra."
   },
   {
     "id": "interfaz-406",
@@ -11416,28 +11434,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-11",
-    "enunciado": "En Word 365, señale el dato que NO aparece en el cuadro \"Contar palabras\":",
+    "revisada": true,
+    "enunciado": "De estos cuatro datos, señale el que NO da el cuadro «Contar palabras»:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Páginas"
+        "text": "El idioma del documento"
       },
       {
         "letter": "B",
-        "text": "Párrafos"
+        "text": "El número de páginas"
       },
       {
         "letter": "C",
-        "text": "Idioma del documento"
+        "text": "El número de párrafos"
       },
       {
         "letter": "D",
-        "text": "Líneas"
+        "text": "El número de líneas"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El cuadro no muestra el idioma."
+    "respuesta": "A",
+    "explicacion": "El cuadro da seis cifras: páginas, palabras, caracteres sin espacios, caracteres con espacios, párrafos y líneas. Nada de idiomas. · El idioma sí sale en la barra de estado, con su propio indicador, y al pulsarlo abre el cuadro Idioma, donde se elige el del texto seleccionado para que el corrector sepa con qué diccionario trabajar. Son dos indicadores vecinos de la misma barra, y ahí está la confusión."
   },
   {
     "id": "interfaz-407",
@@ -11451,28 +11470,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-12",
-    "enunciado": "En Word 365, señale la ruta que NO es correcta para activar la tecla Insert y controlar el modo Sobrescribir:",
+    "revisada": true,
+    "enunciado": "¿En qué sección de las Opciones de Word está la casilla que habilita la tecla Insert?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas"
+        "text": "En Avanzadas, entre las opciones de edición"
       },
       {
         "letter": "B",
-        "text": "Ninguna de las anteriores, la ruta indicada es correcta"
+        "text": "En General, entre las opciones de interfaz"
       },
       {
         "letter": "C",
-        "text": "Insertar → Opciones → Avanzadas"
+        "text": "En Personalizar cinta de opciones"
       },
       {
         "letter": "D",
-        "text": "Vista → Opciones → Avanzadas"
+        "text": "En Revisión, junto a las opciones de autocorrección"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La ruta correcta es Archivo → Opciones → Avanzadas. Las opciones «Insertar → Opciones → Avanzadas» y «Vista → Opciones → Avanzadas» son falsas."
+    "respuesta": "A",
+    "explicacion": "La sección Avanzadas es la más larga del cuadro y empieza precisamente por las opciones de edición, donde está «Usar la tecla Insert para controlar el modo Sobrescribir», desmarcada de fábrica. · **Revisión** es el descarte que decide la pregunta: allí están la ortografía, la gramática y la autocorrección, cosas que también ocurren mientras se escribe, pero no el comportamiento de una tecla. · Es una casilla del programa, no del documento: vale para todos."
   },
   {
     "id": "interfaz-418",
@@ -11486,28 +11506,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-23",
-    "enunciado": "En Word 365, \"La Barra de estado nos muestra información referente al documento, es configurable desde el ______ (botón derecho del ratón).\"",
+    "revisada": true,
+    "enunciado": "La barra de estado se configura desde su menú contextual. ¿Qué otra parte de la ventana también se configura, y desde dónde?",
     "opciones": [
       {
         "letter": "A",
-        "text": "panel de navegación"
+        "text": "La barra de acceso rápido, desde su flechita de personalización"
       },
       {
         "letter": "B",
-        "text": "menú contextual"
+        "text": "La barra de título, desde su menú de control"
       },
       {
         "letter": "C",
-        "text": "iniciador de cuadro de diálogo"
+        "text": "La regla, desde su selector de tabulación"
       },
       {
         "letter": "D",
-        "text": "modo de acceso por teclado"
+        "text": "El área de trabajo, desde el menú contextual del documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Se configura desde el menú contextual."
+    "respuesta": "A",
+    "explicacion": "Son las dos partes de la ventana que el usuario compone a su gusto, y cada una con su mando: la de estado con el clic derecho sobre ella, y la de acceso rápido con la flechita de su extremo. · La cinta también se personaliza, pero desde Opciones, no desde la propia cinta. · **El selector de la regla** es el descarte que decide la pregunta: existe y sí se pulsa, pero para elegir el tipo de tabulación, no para configurar la regla."
   },
   {
     "id": "interfaz-419",
@@ -11521,28 +11542,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-24",
-    "enunciado": "En Word 365, \"Si pulsamos sobre 'Página X de X' nos abrirá el panel de ______.\"",
+    "revisada": true,
+    "enunciado": "El indicador de página abre el panel de navegación. ¿Qué fichas tiene ese panel?",
     "opciones": [
       {
         "letter": "A",
-        "text": "formato"
+        "text": "Títulos, Páginas y Resultados"
       },
       {
         "letter": "B",
-        "text": "navegación"
+        "text": "Títulos, Secciones y Marcadores"
       },
       {
         "letter": "C",
-        "text": "revisión"
+        "text": "Páginas, Comentarios y Resultados"
       },
       {
         "letter": "D",
-        "text": "macros"
+        "text": "Títulos, Páginas y Estilos"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Abre el panel de navegación."
+    "respuesta": "A",
+    "explicacion": "La primera muestra el esquema del documento a partir de los estilos de título y permite reordenarlo arrastrando; la segunda, miniaturas de las páginas; y la tercera, las coincidencias de una búsqueda. · Se abre también con **Ctrl+B**, confirmado en vivo por el usuario, o desde Vista ▸ Mostrar. · Ojo con un dato extendido y falso: el panel **no tiene tope de resultados**; con muchísimas coincidencias avisa de que hay demasiadas, sin dar una cifra."
   },
   {
     "id": "interfaz-420",
@@ -11556,28 +11578,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-25",
-    "enunciado": "En Word 365, \"Para activar el modo de escritura con la tecla Insert, antes debemos ir a Archivo → ______ → Avanzadas.\"",
+    "revisada": true,
+    "enunciado": "La casilla de la tecla Insert está en Archivo ▸ Opciones ▸ Avanzadas. ¿Qué más se configura en esa misma sección?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cuenta"
+        "text": "Las opciones de cortar, copiar y pegar, y las de mostrar contenido"
       },
       {
         "letter": "B",
-        "text": "Opciones"
+        "text": "Las pestañas visibles de la cinta de opciones"
       },
       {
         "letter": "C",
-        "text": "Ayuda"
+        "text": "El idioma de la interfaz y de la corrección"
       },
       {
         "letter": "D",
-        "text": "Personalizar"
+        "text": "El formato en que se guardan los documentos de fábrica"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La ruta es Archivo → Opciones → Avanzadas."
+    "respuesta": "A",
+    "explicacion": "Avanzadas es la sección más larga del cuadro y agrupa por bloques: edición, cortar y pegar, tamaño y calidad de imagen, mostrar contenido, presentación, imprimir, guardar, y varias más. Ahí está, por ejemplo, la casilla que decide si hace falta Ctrl+clic para seguir un hipervínculo. · Los tres descartes son secciones distintas del mismo cuadro: Personalizar cinta, Idioma y Guardar. Todas conviven en Archivo ▸ Opciones, y la pregunta es en cuál cae cada cosa."
   },
   {
     "id": "interfaz-426",
@@ -11591,28 +11614,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-31",
-    "enunciado": "En Word 365, ¿cuántos datos estadísticos distintos muestra el cuadro \"Contar palabras\"?",
+    "revisada": true,
+    "enunciado": "¿Cuántas cifras distintas da el cuadro «Contar palabras»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "4"
+        "text": "Seis"
       },
       {
         "letter": "B",
-        "text": "5"
+        "text": "Cuatro"
       },
       {
         "letter": "C",
-        "text": "6"
+        "text": "Cinco"
       },
       {
         "letter": "D",
-        "text": "7"
+        "text": "Siete"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Páginas, palabras, caracteres sin/con espacios, párrafos y líneas."
+    "respuesta": "A",
+    "explicacion": "Páginas, palabras, caracteres sin espacios, caracteres con espacios, párrafos y líneas. Los caracteres cuentan dos veces porque un límite de extensión puede venir dado de cualquiera de las dos formas. · La cuenta se falla al olvidar esa duplicidad y quedarse en cinco. · El cuadro tiene además una casilla para incluir o no los cuadros de texto, las notas al pie y las notas al final, que no es una cifra pero puede cambiarlas todas."
   },
   {
     "id": "interfaz-427",
@@ -11626,28 +11650,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-32",
-    "enunciado": "En Word 365, según el cuadro \"Contar palabras\" mostrado, ¿cuántos párrafos tiene el documento?",
+    "revisada": true,
+    "enunciado": "Seleccionas dos párrafos y miras el recuento de la barra de estado. ¿Qué muestra?",
     "opciones": [
       {
         "letter": "A",
-        "text": "64"
+        "text": "Las palabras de la selección y, detrás, las del documento entero"
       },
       {
         "letter": "B",
-        "text": "66"
+        "text": "Solo las palabras del documento entero, como siempre"
       },
       {
         "letter": "C",
-        "text": "120"
+        "text": "Solo las palabras de la selección, ocultando el total"
       },
       {
         "letter": "D",
-        "text": "983"
+        "text": "Nada: el recuento se apaga mientras hay algo seleccionado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El cuadro muestra 66 párrafos."
+    "respuesta": "A",
+    "explicacion": "Aparece con la forma «X de Y palabras», así que se ve a la vez cuánto ocupa el fragmento y cuánto el conjunto. Es la manera más rápida de comprobar si un apartado se pasa de extensión. · Lo mismo ocurre en el cuadro «Contar palabras»: con algo seleccionado, sus seis cifras se refieren solo a la selección. · Con la selección deshecha, el indicador vuelve al total sin más."
   },
   {
     "id": "interfaz-428",
@@ -11661,28 +11686,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-33",
-    "enunciado": "En Word 365, según el cuadro \"Contar palabras\" mostrado, ¿cuántas líneas tiene el documento?",
+    "revisada": true,
+    "enunciado": "¿Qué cuenta Word como «líneas» en el cuadro «Contar palabras»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "66"
+        "text": "Los renglones tal como quedan al maquetarse, no los párrafos"
       },
       {
         "letter": "B",
-        "text": "120"
+        "text": "Los párrafos, contando cada uno como una línea"
       },
       {
         "letter": "C",
-        "text": "983"
+        "text": "Las líneas numeradas si se ha activado la numeración de líneas"
       },
       {
         "letter": "D",
-        "text": "4"
+        "text": "Las filas de las tablas del documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El cuadro muestra 120 líneas."
+    "respuesta": "A",
+    "explicacion": "Por eso la cifra de líneas cambia si se estrechan los márgenes, se agranda la letra o se cambia el tamaño del papel, mientras que la de párrafos no se mueve: son dos conceptos distintos y el cuadro da los dos. · **La numeración de líneas** es el descarte que decide la pregunta: existe, en Disposición ▸ Configurar página ▸ Números de línea, y es otra cosa; el recuento no depende de que esté activada."
   },
   {
     "id": "interfaz-429",
@@ -11696,28 +11722,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-34",
-    "enunciado": "En Word 365, según el cuadro \"Contar palabras\" mostrado, ¿cuántos caracteres sin espacios tiene el documento?",
+    "revisada": true,
+    "enunciado": "¿Qué diferencia hay entre las dos cifras de caracteres del cuadro «Contar palabras»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "6.001"
+        "text": "Una cuenta los espacios entre palabras y la otra no"
       },
       {
         "letter": "B",
-        "text": "5.063"
+        "text": "Una cuenta las letras y la otra los signos de puntuación"
       },
       {
         "letter": "C",
-        "text": "983"
+        "text": "Una cuenta el cuerpo y la otra incluye las notas al pie"
       },
       {
         "letter": "D",
-        "text": "120"
+        "text": "Una cuenta el documento y la otra solo la selección"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El cuadro muestra 5.063 caracteres sin espacios."
+    "respuesta": "A",
+    "explicacion": "La cifra con espacios es siempre mayor, y la diferencia entre ambas ronda el número de palabras, porque hay un espacio por cada separación. · **Las notas al pie** son el descarte que decide la pregunta, porque también cambian el resultado: pero eso lo decide una CASILLA del cuadro, «Incluir cuadros de texto, notas al pie y notas al final», y afecta a las seis cifras a la vez, no solo a una de las dos de caracteres."
   },
   {
     "id": "interfaz-430",
@@ -11731,28 +11758,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-35",
-    "enunciado": "En Word 365, según el cuadro \"Contar palabras\" mostrado, ¿cuántos caracteres con espacios tiene el documento?",
+    "revisada": true,
+    "enunciado": "Un escrito tiene un límite de 6.000 caracteres. ¿Qué cifra del cuadro «Contar palabras» conviene mirar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "5.063"
+        "text": "Depende: hay que mirar qué dice la convocatoria"
       },
       {
         "letter": "B",
-        "text": "6.001"
+        "text": "Siempre la de caracteres sin espacios, que es la oficial"
       },
       {
         "letter": "C",
-        "text": "983"
+        "text": "Siempre la de caracteres con espacios, que es la oficial"
       },
       {
         "letter": "D",
-        "text": "66"
+        "text": "La de palabras: los caracteres no se miden nunca"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El cuadro muestra 6.001 caracteres con espacios."
+    "respuesta": "A",
+    "explicacion": "Word da las dos precisamente porque no hay una manera única de medir, y la diferencia entre ellas es grande: en un texto de mil palabras, los espacios suman alrededor de mil caracteres. · Los dos descartes que declaran una «oficial» son la trampa: ninguna lo es. · Conviene además mirar la casilla de incluir o no los cuadros de texto y las notas, que puede cambiar el resultado sin que uno se dé cuenta."
   },
   {
     "id": "interfaz-431",
@@ -11766,28 +11794,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-36",
-    "enunciado": "En Word 365, ¿cuántos pasos de menú son necesarios para llegar a \"Usar la tecla Insert para controlar el modo Sobrescribir\"?",
+    "revisada": true,
+    "enunciado": "¿Qué otras dos secciones, además de Avanzadas, se usan a menudo en Archivo ▸ Opciones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "1 paso"
+        "text": "Personalizar cinta y Barra de acceso rápido"
       },
       {
         "letter": "B",
-        "text": "2 pasos"
+        "text": "Vista y Diseño del documento"
       },
       {
         "letter": "C",
-        "text": "3 pasos"
+        "text": "Estilos y Formato del documento"
       },
       {
         "letter": "D",
-        "text": "4 pasos"
+        "text": "Zoom y Vistas del documento"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Archivo → Opciones → Avanzadas (3 pasos)."
+    "respuesta": "A",
+    "explicacion": "Son las dos que componen la interfaz a medida: una decide qué pestañas y grupos se ven —y es donde se enciende Programador— y la otra qué botones tiene la barra de acceso rápido. A ellas se llega también con el clic derecho sobre la cinta. · Los tres descartes nombran cosas de la CINTA, no del cuadro Opciones: Vista y Diseño son pestañas, y los estilos, el zoom y las vistas son grupos dentro de ellas. · La lista de Opciones tiene además General, Revisión, Guardar, Idioma, Accesibilidad y Complementos."
   },
   {
     "id": "interfaz-432",
@@ -11801,28 +11830,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-37",
-    "enunciado": "En Word 365, la diferencia entre el modo \"Insertar\" y el modo \"Sobrescribir\" es que:",
+    "revisada": true,
+    "enunciado": "Estás en modo Sobrescribir sin saberlo y escribes en mitad de una frase. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ambos hacen exactamente lo mismo"
+        "text": "Cada letra nueva borra la que había delante del cursor"
       },
       {
         "letter": "B",
-        "text": "Insertar añade el texto nuevo sin borrar el existente; Sobrescribir reemplaza el texto existente al escribir"
+        "text": "El texto nuevo empuja al de delante, como siempre"
       },
       {
         "letter": "C",
-        "text": "Sobrescribir solo funciona con macros activadas"
+        "text": "Word avisa antes de dejar escribir"
       },
       {
         "letter": "D",
-        "text": "Insertar solo está disponible en modo táctil"
+        "text": "No deja escribir hasta volver al modo Insertar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Insertar añade, Sobrescribir reemplaza."
+    "respuesta": "A",
+    "explicacion": "Es lo que hace que uno note algo raro sin entender qué: la frase no crece, se va comiendo. La pista está en la barra de estado, si se ha añadido ese indicador con el clic derecho, donde pone «Sobrescribir» en vez de «Insertar». · Precisamente por eso la tecla Insert viene desactivada de fábrica, y hay que habilitarla en Opciones ▸ Avanzadas para poder alternar con ella. · Se vuelve atrás pulsando el indicador."
   },
   {
     "id": "interfaz-433",
@@ -11836,28 +11866,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-38",
-    "enunciado": "En Word 365, la diferencia entre pulsar sobre \"Página X de X\" y pulsar sobre \"número de palabras\" en la barra de estado es que:",
+    "revisada": true,
+    "enunciado": "Comparas pulsar el indicador de página con pulsar el recuento de palabras. ¿Qué abre cada uno?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ambos abren la misma ventana"
+        "text": "El primero, el panel de navegación; el segundo, el cuadro «Contar palabras»"
       },
       {
         "letter": "B",
-        "text": "El primero abre el panel de navegación; el segundo abre el cuadro \"Contar palabras\""
+        "text": "El primero, «Contar palabras»; el segundo, el panel de navegación"
       },
       {
         "letter": "C",
-        "text": "El primero abre \"Contar palabras\"; el segundo abre el panel de navegación"
+        "text": "Los dos abren el panel de navegación"
       },
       {
         "letter": "D",
-        "text": "Ninguno de los dos realiza ninguna acción"
+        "text": "Ninguno de los dos hace nada: son solo indicadores"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Cada elemento tiene una función distinta."
+    "respuesta": "A",
+    "explicacion": "Casi todos los indicadores de esta barra son además botones, y cada uno lleva a la herramienta relacionada con lo que informa: el de página a navegar por el documento y el de palabras a contarlo con detalle. · La versión invertida es el descarte que decide la pregunta. · El del zoom sigue la misma lógica y abre el cuadro Zoom, y el del idioma abre el cuadro Idioma."
   },
   {
     "id": "interfaz-434",
@@ -11871,28 +11902,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-39",
-    "enunciado": "En Word 365, un usuario quiere saber cuántos caracteres tiene su documento incluyendo los espacios en blanco. ¿Dónde debe consultarlo?",
+    "revisada": true,
+    "enunciado": "Necesitas saber cuántos caracteres tiene el documento contando los espacios. ¿Dónde se consulta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "En la Regla"
+        "text": "En el cuadro «Contar palabras»"
       },
       {
         "letter": "B",
-        "text": "En el cuadro \"Contar palabras\", accesible desde la barra de estado"
-      },
-      {
-        "letter": "C",
         "text": "En el panel de navegación"
       },
       {
+        "letter": "C",
+        "text": "En la regla"
+      },
+      {
         "letter": "D",
-        "text": "En el menú Archivo"
+        "text": "En Archivo ▸ Nuevo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El cuadro \"Contar palabras\" muestra caracteres con espacios."
+    "respuesta": "A",
+    "explicacion": "Da las dos cifras, con espacios y sin ellos, porque un límite de extensión puede venir dado de cualquiera de las dos formas. Se abre pulsando el recuento en la barra de estado o desde Revisar ▸ Revisión. · Hay un segundo camino que también informa: **Archivo ▸ Información**, cuyo panel de propiedades muestra páginas y palabras; pero no separa los caracteres con y sin espacios ni cuenta solo lo seleccionado, así que se queda corto para esto."
   },
   {
     "id": "interfaz-435",
@@ -11906,28 +11938,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-40",
-    "enunciado": "En Word 365, un usuario quiere moverse rápidamente a una página concreta del documento haciendo clic en la barra de estado. ¿Sobre qué elemento debe pulsar?",
+    "revisada": true,
+    "enunciado": "Quieres saltar a una página concreta de un documento largo desde la barra de estado. ¿Qué pulsas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sobre el número de palabras"
+        "text": "El indicador de página"
       },
       {
         "letter": "B",
-        "text": "Sobre \"Página X de X\""
+        "text": "El recuento de palabras"
       },
       {
         "letter": "C",
-        "text": "Sobre el icono de revisión ortográfica"
+        "text": "El icono de revisión ortográfica"
       },
       {
         "letter": "D",
-        "text": "Sobre el icono de Macro"
+        "text": "El icono de macro"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "\"Página X de X\" abre el panel de navegación."
+    "respuesta": "A",
+    "explicacion": "Abre el panel de navegación, cuya ficha «Páginas» muestra las miniaturas para ir a la que se quiera con un clic. · Hay otras dos vías para lo mismo: **Ctrl+B** abre ese mismo panel, y **F5** abre el cuadro «Ir a», donde se escribe el número de página directamente; ese cuadro permite además saltar a secciones, líneas, marcadores o comentarios. · Los otros tres indicadores llevan cada uno a su herramienta y ninguna navega."
   },
   {
     "id": "interfaz-436",
@@ -11941,28 +11974,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-41",
-    "enunciado": "En Word 365, un usuario escribe en medio de un párrafo y observa que el texto existente se va borrando a medida que escribe, en lugar de desplazarse. ¿Qué modo tiene activado?",
+    "revisada": true,
+    "enunciado": "Escribes en medio de un párrafo y el texto que había delante se va borrando. ¿Qué está pasando?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modo Insertar"
+        "text": "Está activado el modo Sobrescribir"
       },
       {
         "letter": "B",
-        "text": "Modo Sobrescribir"
+        "text": "Está activado el modo Insertar"
       },
       {
         "letter": "C",
-        "text": "Modo táctil"
+        "text": "Está activado el modo táctil"
       },
       {
         "letter": "D",
-        "text": "Modo de acceso por teclado"
+        "text": "Está activado el modo de acceso por teclado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo Sobrescribir borra el texto existente."
+    "respuesta": "A",
+    "explicacion": "Suele activarse sin querer con la tecla Insert, y por eso esa tecla viene desactivada de fábrica: hay que habilitarla en Opciones ▸ Avanzadas para que funcione. · **El modo Insertar** es el descarte que decide la pregunta: es el normal, el que empuja el texto en lugar de comérselo. · Se comprueba y se cambia en el indicador de la barra de estado, si se ha añadido con el clic derecho sobre ella."
   },
   {
     "id": "interfaz-437",
@@ -11976,28 +12010,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-42",
-    "enunciado": "En Word 365, un usuario quiere que la tecla Insert de su teclado controle el cambio entre Insertar y Sobrescribir. ¿Qué ruta de menús debe seguir?",
+    "revisada": true,
+    "enunciado": "¿Qué ruta lleva a la casilla que habilita la tecla Insert?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar → Opciones → Avanzadas"
+        "text": "Archivo ▸ Opciones ▸ Avanzadas"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Avanzadas"
+        "text": "Insertar ▸ Opciones ▸ Avanzadas"
       },
       {
         "letter": "C",
-        "text": "Vista → Opciones → Avanzadas"
+        "text": "Revisar ▸ Opciones ▸ Avanzadas"
       },
       {
         "letter": "D",
-        "text": "Revisar → Opciones → Avanzadas"
+        "text": "Vista ▸ Opciones ▸ Avanzadas"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La ruta correcta es Archivo → Opciones → Avanzadas."
+    "respuesta": "A",
+    "explicacion": "El cuadro Opciones de Word solo se abre desde la pestaña Archivo, al final de su lista, o con el clic derecho sobre la cinta si se elige personalizarla. Ninguna otra pestaña tiene una entrada «Opciones». · Los tres descartes se apoyan en que la pestaña suene relacionada con la tarea —insertar texto, revisar, ver—, y ese razonamiento es el que falla: los ajustes del PROGRAMA están todos en el mismo sitio, no repartidos por temas."
   },
   {
     "id": "interfaz-438",
@@ -12011,28 +12046,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-43",
-    "enunciado": "En Word 365, un usuario quiere empezar a grabar una macro haciendo clic directamente en la barra de estado. ¿Qué icono debe pulsar?",
+    "revisada": true,
+    "enunciado": "Quieres grabar una macro desde la barra de estado, sin encender la pestaña Programador. ¿Qué icono pulsas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El icono de revisión ortográfica"
+        "text": "El icono de macro"
       },
       {
         "letter": "B",
-        "text": "El icono de \"Insertar\""
+        "text": "El icono de revisión ortográfica"
       },
       {
         "letter": "C",
-        "text": "El icono de Macro"
+        "text": "El indicador del modo de escritura"
       },
       {
         "letter": "D",
-        "text": "El número de palabras"
+        "text": "El recuento de palabras"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El icono de Macro inicia la grabación."
+    "respuesta": "A",
+    "explicacion": "Es un atajo que evita tener que encender esa pestaña en Opciones ▸ Personalizar cinta. Mientras graba, el icono cambia a un cuadrado de parada. · Como todos los indicadores de esta barra, hay que añadirlo antes con el clic derecho sobre ella. · Al grabar una macro el documento pasa a llevar código, así que habrá que guardarlo como .docm: el .docx no lo admite y Word avisa."
   },
   {
     "id": "interfaz-443",
@@ -12046,28 +12082,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-48",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta sobre la barra de estado:",
     "opciones": [
       {
         "letter": "A",
-        "text": "La barra de estado es configurable desde el menú contextual"
+        "text": "El icono de macro abre el cuadro «Contar palabras»"
       },
       {
         "letter": "B",
-        "text": "Pulsar sobre \"Página X de X\" abre el panel de navegación"
+        "text": "Se configura con el clic derecho sobre ella"
       },
       {
         "letter": "C",
-        "text": "El icono de Macro abre el cuadro \"Contar palabras\""
+        "text": "El indicador de página abre el panel de navegación"
       },
       {
         "letter": "D",
-        "text": "Un clic en el icono de revisión ortográfica inicia la revisión ortográfica"
+        "text": "El icono de revisión ortográfica lleva al panel Editor"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El icono de Macro inicia la grabación, no abre \"Contar palabras\"."
+    "respuesta": "A",
+    "explicacion": "El icono de macro empieza a grabar una macro. «Contar palabras» se abre pulsando el RECUENTO de palabras, que es otro indicador de la misma barra. · Las otras tres son ciertas. · La lógica general ayuda a descartar: cada indicador lleva a la herramienta de aquello de lo que informa, y un icono de macro no informa de cuántas palabras hay."
   },
   {
     "id": "interfaz-444",
@@ -12081,28 +12118,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-49",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta sobre el cuadro «Contar palabras»:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El cuadro \"Contar palabras\" muestra el número de párrafos"
+        "text": "Muestra el idioma del documento"
       },
       {
         "letter": "B",
-        "text": "El cuadro \"Contar palabras\" muestra el idioma del documento"
+        "text": "Muestra el número de párrafos"
       },
       {
         "letter": "C",
-        "text": "El cuadro \"Contar palabras\" muestra el número de líneas"
+        "text": "Muestra el número de líneas"
       },
       {
         "letter": "D",
-        "text": "El cuadro \"Contar palabras\" muestra los caracteres con y sin espacios"
+        "text": "Muestra los caracteres con y sin espacios"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El idioma no aparece."
+    "respuesta": "A",
+    "explicacion": "Da seis cifras y ninguna es el idioma: páginas, palabras, los dos recuentos de caracteres, párrafos y líneas. · El idioma sí aparece en la barra de estado, con su propio indicador, y al pulsarlo abre el cuadro Idioma, donde se marca el del texto seleccionado para que el corrector use el diccionario correcto. Son dos indicadores vecinos y de ahí la confusión. · El cuadro tiene además una casilla para incluir o no las notas y los cuadros de texto."
   },
   {
     "id": "interfaz-445",
@@ -12116,28 +12154,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-50",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Para activar la tecla Insert como control del modo Sobrescribir hay que ir a Archivo → Opciones → Avanzadas"
+        "text": "El puntero del ratón mantiene siempre la misma forma en Word"
       },
       {
         "letter": "B",
-        "text": "El modo de escritura se puede cambiar con un clic en la barra de estado"
+        "text": "El modo de escritura se cambia con un clic en la barra de estado"
       },
       {
         "letter": "C",
-        "text": "El puntero del ratón mantiene siempre la misma forma"
+        "text": "La tecla Insert hay que habilitarla en Archivo ▸ Opciones ▸ Avanzadas"
       },
       {
         "letter": "D",
-        "text": "Las barras de desplazamiento pueden desaparecer si no son necesarias"
+        "text": "Las barras de desplazamiento desaparecen cuando no hacen falta"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El puntero cambia de forma."
+    "respuesta": "A",
+    "explicacion": "El puntero cambia constantemente y esa forma informa: es una barra vertical sobre el texto, una flecha en el margen izquierdo cuando se puede seleccionar una línea, una cruz al dibujar una forma, una mano al pasar por un hipervínculo con Ctrl pulsado, y una doble flecha sobre el borde de una tabla. · Las otras tres son ciertas. · Fijarse en el puntero es la manera más rápida de saber qué va a hacer un clic."
   },
   {
     "id": "interfaz-446",
@@ -12151,28 +12190,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-1",
-    "enunciado": "En Word 365, ¿qué opción del menú \"Personalizar barra de estado\" muestra el dato \"Página 6 de 22\"?",
+    "revisada": true,
+    "enunciado": "En el menú «Personalizar barra de estado» hay dos entradas parecidas para la página. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Número de página con formato"
+        "text": "«Número de página» da la página y el total; «Número de página con formato» da solo la actual"
       },
       {
         "letter": "B",
-        "text": "Número de página"
+        "text": "«Número de página» da solo la actual; «Número de página con formato» da la página y el total"
       },
       {
         "letter": "C",
-        "text": "Posición de página vertical"
+        "text": "Son la misma opción con dos nombres"
       },
       {
         "letter": "D",
-        "text": "Sección"
+        "text": "«Número de página con formato» solo aparece si hay numeración en el pie"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El valor \"Página 6 de 22\" aparece junto a \"Número de página\". \"Número de página con formato\" muestra solo \"6\". La opción «Sección» (Sección) muestra \"2\"."
+    "respuesta": "A",
+    "explicacion": "La primera es la que muestra «Página 4 de 12», y la segunda respeta el formato de numeración de la sección, así que en unas páginas preliminares numeradas en romanos daría «iv». Por eso se llama «con formato». · La versión invertida es el descarte que decide la pregunta. · Las dos son solo dos de la larga lista de ese menú, que incluye también la sección, el número de línea, la columna y la posición vertical."
   },
   {
     "id": "interfaz-447",
@@ -12180,34 +12220,35 @@
     "bloque": "Interfaz — Barra de estado",
     "tipo": "opcion_unica",
     "categoria": "ruta",
-    "negativa": false,
+    "negativa": true,
     "section": "interfaz",
     "topic": "barra-estado",
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-2",
-    "enunciado": "En Word 365, ¿qué elemento aparece desactivado en el menú \"Personalizar barra de estado\"?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas entradas del menú «Personalizar barra de estado» NO existe?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Firmas"
+        "text": "Número de imágenes"
       },
       {
         "letter": "B",
-        "text": "Control de cambios"
-      },
-      {
-        "letter": "C",
         "text": "Bloq Mayús"
       },
       {
-        "letter": "D",
+        "letter": "C",
         "text": "Sobrescritura"
+      },
+      {
+        "letter": "D",
+        "text": "Control de cambios"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "\"Control de cambios\" aparece con el estado \"Desactivado\". \"Firmas\" y \"Bloq Mayús\" también aparecen desactivados, pero \"Control de cambios\" es el más representativo de la captura (trampa: los otros son distractores reales)."
+    "respuesta": "A",
+    "explicacion": "El menú informa de dónde está el cursor y de en qué estado se encuentra el programa, no de cuánto contenido hay de cada tipo. Lo más parecido es el recuento de palabras y caracteres, que se consulta aparte en «Contar palabras». · Las otras tres son entradas reales: la de mayúsculas avisa de si está pulsado el bloqueo, la de sobrescritura del modo de escritura y la del control de cambios de si está activo, y esa última funciona además como interruptor."
   },
   {
     "id": "interfaz-448",
@@ -12221,28 +12262,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-3",
-    "enunciado": "En Word 365, ¿cuántas palabras tiene el documento según el menú \"Personalizar barra de estado\"?",
+    "revisada": true,
+    "enunciado": "Las entradas del menú «Personalizar barra de estado» muestran algo al lado de su nombre. ¿Qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": "940"
+        "text": "Su valor actual, aunque el dato no se esté mostrando en la barra"
       },
       {
         "letter": "B",
-        "text": "983"
+        "text": "El atajo de teclado que activa cada indicador"
       },
       {
         "letter": "C",
-        "text": "2351"
+        "text": "La pestaña de la cinta donde está el comando equivalente"
       },
       {
         "letter": "D",
-        "text": "14340"
+        "text": "Nada: solo el nombre y su casilla de verificación"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El indicador \"Contar palabras\" muestra exactamente \"2351 palabras\". (Las opciones 940 y 983 corresponden a otras capturas del temario, lo que provoca confusión numérica)."
+    "respuesta": "A",
+    "explicacion": "Es un detalle muy práctico: el menú funciona además como un panel de información, porque enseña el número de línea, la columna, la sección o el estado del control de cambios aunque nunca se hayan marcado para que aparezcan abajo. · Así se puede consultar un dato puntual sin llenar la barra de indicadores. · Al marcar una casilla, ese dato pasa a verse de forma permanente en la barra."
   },
   {
     "id": "interfaz-449",
@@ -12256,28 +12298,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-4",
-    "enunciado": "En Word 365, ¿cuántos caracteres con espacios tiene el documento?",
+    "revisada": true,
+    "enunciado": "¿Qué informa el indicador «Posición vertical de la página» del menú de la barra de estado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2351"
+        "text": "A qué distancia del borde superior de la hoja está el cursor"
       },
       {
         "letter": "B",
-        "text": "14340"
+        "text": "En qué página del documento está el cursor"
       },
       {
         "letter": "C",
-        "text": "6.001"
+        "text": "En qué renglón de la página está el cursor"
       },
       {
         "letter": "D",
-        "text": "5.063"
+        "text": "Cuánto se ha desplazado la barra de desplazamiento vertical"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El indicador \"Número de caracteres (con espacios)\" muestra \"14340 caracteres\". (Las opciones 6.001 y 5.063 pertenecen al cuadro \"Contar palabras\" de la página 6)."
+    "respuesta": "A",
+    "explicacion": "Da una medida, en centímetros, no un número de orden, y por eso es útil al maquetar: dice exactamente dónde cae un elemento en la hoja. · **El renglón** es el descarte que decide la pregunta, y también existe en el mismo menú, como «Número de línea», pero es una cuenta, no una distancia. Dos maneras distintas de decir «a qué altura estoy». · En el mismo menú están también la sección y la columna."
   },
   {
     "id": "interfaz-450",
@@ -12291,28 +12334,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-5",
-    "enunciado": "En Word 365, ¿en qué sección se encuentra el cursor según la barra de estado?",
+    "revisada": true,
+    "enunciado": "¿Para qué sirve el indicador «Sección» de la barra de estado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sección 1"
+        "text": "Para saber en qué sección del documento está el cursor"
       },
       {
         "letter": "B",
-        "text": "Sección 2"
+        "text": "Para saber en qué apartado del índice está el cursor"
       },
       {
         "letter": "C",
-        "text": "Sección 6"
+        "text": "Para saber cuántas secciones tiene el documento"
       },
       {
         "letter": "D",
-        "text": "Sección 22"
+        "text": "Para dividir el documento en secciones"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El indicador \"Sección\" muestra el valor \"2\". Los números 6 y 22 son distractores por su aparición en \"Página 6 de 22\"."
+    "respuesta": "A",
+    "explicacion": "Es imprescindible en un documento con márgenes, orientaciones, encabezados o numeraciones distintas, porque todo eso se define por sección y sin este indicador hay que ir adivinando dónde empieza cada una. · **El apartado del índice** es el descarte que decide la pregunta: son cosas distintas, porque un apartado se marca con un estilo de título y una sección con un salto de sección. · Los saltos se insertan desde Disposición ▸ Configurar página ▸ Saltos."
   },
   {
     "id": "interfaz-452",
@@ -12326,28 +12370,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-7",
-    "enunciado": "En Word 365, ¿qué dato numérico corresponde a \"Número de línea\"?",
+    "revisada": true,
+    "enunciado": "¿Qué diferencia hay entre los indicadores «Número de línea» y «Columna» de la barra de estado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "1"
+        "text": "Uno dice en qué renglón está el cursor y el otro en qué carácter de ese renglón"
       },
       {
         "letter": "B",
-        "text": "25"
+        "text": "Uno dice el renglón y el otro en cuál de las columnas de texto está"
       },
       {
         "letter": "C",
-        "text": "29"
+        "text": "Uno cuenta las líneas del documento y el otro sus columnas"
       },
       {
         "letter": "D",
-        "text": "22"
+        "text": "Uno es del documento y el otro solo de las tablas"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El indicador \"Número de línea\" muestra \"29\". (El 1 es la columna, el 25 es la posición vertical y el 22 es el total de páginas)."
+    "respuesta": "A",
+    "explicacion": "Son las dos coordenadas del cursor dentro de la página: la línea cuenta renglones desde arriba y la columna cuenta caracteres desde el margen izquierdo, empezando por el 1. Juntos localizan un punto exacto, cosa muy útil al corregir un texto con numeración de líneas. · **Las columnas de TEXTO** son el descarte que decide la pregunta: son las de Disposición ▸ Columnas, y este indicador no habla de ellas. · Ninguno de los dos viene marcado de fábrica."
   },
   {
     "id": "interfaz-454",
@@ -12361,28 +12406,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-9",
-    "enunciado": "En Word 365, ¿qué porcentaje de zoom aparece en el control deslizante de la barra de estado (menú de personalización)?",
+    "revisada": true,
+    "enunciado": "En la barra de estado, el zoom aparece de dos formas. ¿Cuáles y qué hace cada una?",
     "opciones": [
       {
         "letter": "A",
-        "text": "100%"
+        "text": "Un porcentaje, que abre el cuadro Zoom, y un deslizador, que lo cambia directamente"
       },
       {
         "letter": "B",
-        "text": "121%"
+        "text": "Un porcentaje, que lo cambia directamente, y un deslizador, que abre el cuadro Zoom"
       },
       {
         "letter": "C",
-        "text": "132%"
+        "text": "Dos deslizadores, uno para el ancho y otro para el alto"
       },
       {
         "letter": "D",
-        "text": "500%"
+        "text": "Solo un deslizador: el porcentaje no es pulsable"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El indicador \"Zoom\" dentro del menú muestra \"121%\". El 132% pertenece al ejemplo del control deslizante del apartado \"Zoom\" de la misma página."
+    "respuesta": "A",
+    "explicacion": "Son dos entradas distintas del menú de personalización, «Zoom» y «Control deslizante del zoom», y se pueden mostrar por separado. El deslizador tiene además un menos y un más en los extremos para ir de diez en diez. · La versión invertida es el descarte que decide la pregunta. · Hay una tercera vía sin tocar la barra: **Ctrl y la rueda del ratón**, también de diez en diez, confirmado en vivo por el usuario."
   },
   {
     "id": "interfaz-459",
@@ -12396,28 +12442,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-15",
-    "enunciado": "En Word 365, ¿qué ocurre al hacer clic con el ratón sobre el valor porcentual del Zoom en la barra de estado?",
+    "revisada": true,
+    "enunciado": "En la barra de estado, ¿qué diferencia hay entre pulsar el porcentaje del zoom y arrastrar su deslizador?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se abre el cuadro de diálogo de Zoom"
+        "text": "El porcentaje abre el cuadro Zoom; el deslizador cambia el aumento directamente"
       },
       {
         "letter": "B",
-        "text": "Se reinicia el zoom al 100%"
+        "text": "El porcentaje devuelve el zoom al 100 %; el deslizador abre el cuadro Zoom"
       },
       {
         "letter": "C",
-        "text": "Se activa el modo de pantalla completa"
+        "text": "Los dos abren el cuadro Zoom"
       },
       {
         "letter": "D",
-        "text": "Se oculta la barra de estado"
+        "text": "Los dos cambian el aumento sin abrir nada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "\"Un clic con el ratón sobre el valor porcentual nos abre el cuadro de diálogo de Zoom\"."
+    "explicacion": "El cuadro permite escribir un valor exacto o elegir un ajuste automático —ancho de página, ancho del texto, página completa, varias páginas—; el deslizador es para tantear con el ratón, y tiene un menos y un más en los extremos que van de diez en diez. · Volver al 100 % es lo que hace **Ctrl+0** según prueba en vivo, y también el botón «100 %» de la pestaña Vista. · Los dos son entradas separadas del menú de personalización de la barra."
   },
   {
     "id": "interfaz-460",
@@ -12431,28 +12478,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-16",
-    "enunciado": "En Word 365, ¿qué opción aparece marcada (✓) en el menú \"Personalizar barra de estado\"?",
+    "revisada": true,
+    "enunciado": "¿Qué datos muestra la barra de estado de fábrica, sin que el usuario toque nada?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Número de página con formato"
+        "text": "La página, el recuento de palabras, el idioma y el estado de la revisión"
       },
       {
         "letter": "B",
-        "text": "Posición de página vertical"
+        "text": "El número de línea y la columna, además de la página"
       },
       {
         "letter": "C",
-        "text": "Número de línea"
+        "text": "El modo de escritura y el estado del bloqueo de mayúsculas"
       },
       {
         "letter": "D",
-        "text": "Columna"
+        "text": "Solo el zoom y los botones de vista"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La captura muestra \"Posición de página vertical\" marcada con check. \"Número de línea\" y \"Columna\" aparecen sin marcar."
+    "respuesta": "A",
+    "explicacion": "Son los datos de uso diario, más los botones de vista y el zoom a la derecha. · **La línea y la columna** son el descarte que decide la pregunta: están en la lista del menú de personalización pero vienen desmarcados, y hay que añadirlos con el clic derecho. Lo mismo pasa con el modo de escritura y con el bloqueo de mayúsculas. · Ese menú muestra el valor de cada dato aunque no esté marcado, así que sirve para consultar sin llenar la barra."
   },
   {
     "id": "interfaz-461",
@@ -12466,28 +12514,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-17",
-    "enunciado": "En Word 365, ¿qué opción aparece SIN marcar en el menú \"Personalizar barra de estado\"?",
+    "revisada": true,
+    "enunciado": "En el menú de la barra de estado hay una entrada «Modo Selección». ¿A qué se refiere?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sección"
+        "text": "Al modo de extender la selección, que se activa con F8"
       },
       {
         "letter": "B",
-        "text": "Idioma"
+        "text": "Al modo de escritura, que alterna insertar y sobrescribir"
       },
       {
         "letter": "C",
-        "text": "Revisión ortográfica y gramatical"
+        "text": "Al modo mouse o táctil de la cinta"
       },
       {
         "letter": "D",
-        "text": "Modo Selección"
+        "text": "A la selección de varios fragmentos con Ctrl pulsado"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "\"Modo Selección\" no tiene check. Las otras tres opciones están marcadas en la imagen."
+    "respuesta": "A",
+    "explicacion": "**F8** activa un modo en el que el cursor extiende la selección al moverse, sin necesidad de arrastrar ni de mantener Mayús; pulsándolo varias veces amplía por palabra, frase, párrafo y documento, y se sale con Esc. El indicador avisa de que está activo, cosa muy de agradecer, porque si no uno no entiende por qué se selecciona todo lo que toca. · **El modo de escritura** es el descarte que decide la pregunta y tiene su propia entrada aparte, «Sobrescritura»."
   },
   {
     "id": "interfaz-462",
@@ -12501,28 +12550,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-18",
-    "enunciado": "En Word 365, ¿qué elemento del menú \"Personalizar barra de estado\" muestra el estado \"Insertar\"?",
+    "revisada": true,
+    "enunciado": "La entrada «Sobrescritura» del menú de la barra de estado muestra un valor. ¿Cuál puede ser?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Firmas"
+        "text": "«Insertar» o «Sobrescribir», según el modo activo"
       },
       {
         "letter": "B",
-        "text": "Sobrescritura"
+        "text": "«Activado» o «Desactivado», según el modo activo"
       },
       {
         "letter": "C",
-        "text": "Bloq Mayús"
+        "text": "El número de caracteres sobrescritos"
       },
       {
         "letter": "D",
-        "text": "Control de cambios"
+        "text": "«Sí» o «No», según se haya habilitado la tecla Insert"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "\"Sobrescritura\" aparece con el valor \"Insertar\". \"Firmas\", \"Bloq Mayús\" y \"Control de cambios\" muestran \"Desactivado\"."
+    "respuesta": "A",
+    "explicacion": "La entrada se llama «Sobrescritura» pero su valor nombra el modo en el que se está, así que lo normal es verla marcada con el texto «Insertar», que es el modo de siempre. Ese desajuste entre el nombre y el valor es lo que despista. · **«Activado» y «Desactivado»** son el descarte que decide la pregunta, y son los valores de otras entradas de la misma lista, como el control de cambios, el bloqueo de mayúsculas o las firmas."
   },
   {
     "id": "interfaz-463",
@@ -12536,28 +12586,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-19",
-    "enunciado": "En Word 365, ¿qué elemento muestra el estado \"Sin grabación\"?",
+    "revisada": true,
+    "enunciado": "La entrada «Grabación de macros» del menú de la barra de estado, ¿de qué informa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Comprobador de accesibilidad"
+        "text": "De si hay una grabación en curso, y su icono sirve para empezarla o detenerla"
       },
       {
         "letter": "B",
-        "text": "Grabación de macros"
+        "text": "De cuántas macros tiene el documento"
       },
       {
         "letter": "C",
-        "text": "Estado de la carga"
+        "text": "De si el documento admite macros por su formato"
       },
       {
         "letter": "D",
-        "text": "Actualizaciones de documento disponibles"
+        "text": "De si las macros están permitidas por el Centro de confianza"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "\"Grabación de macros\" aparece con \"Sin grabación\". Los otros son distractores reales de la lista."
+    "respuesta": "A",
+    "explicacion": "Muestra si se está grabando o no, y el icono cambia a un cuadrado de parada mientras dura la grabación. Es la manera de grabar una macro sin encender la pestaña Programador. · Los tres descartes hablan de cosas reales pero de otros sitios: cuántas macros hay se ve en el cuadro Macros; si el formato las admite lo dice la extensión, .docm o .dotm; y los permisos están en el Centro de confianza, dentro de Opciones."
   },
   {
     "id": "interfaz-464",
@@ -12571,28 +12622,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-20",
-    "enunciado": "En Word 365, ¿qué elemento muestra el estado \"Errores\"?",
+    "revisada": true,
+    "enunciado": "El indicador de revisión ortográfica de la barra de estado cambia de aspecto. ¿Qué está diciendo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Idioma"
+        "text": "Si hay errores pendientes o si el documento está revisado"
       },
       {
         "letter": "B",
-        "text": "Etiqueta"
+        "text": "Si la revisión ortográfica está activada o desactivada"
       },
       {
         "letter": "C",
-        "text": "Revisión ortográfica y gramatical"
+        "text": "Cuántos errores quedan en el documento"
       },
       {
         "letter": "D",
-        "text": "Firmas"
+        "text": "En qué idioma se está revisando"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "\"Revisión ortográfica y gramatical\" aparece con \"Errores\". \"Idioma\" y \"Etiqueta\" no muestran estado, y \"Firmas\" muestra \"Desactivado\"."
+    "respuesta": "A",
+    "explicacion": "El icono del libro lleva una marca distinta según haya errores o esté todo correcto, y al pulsarlo abre el panel Editor, lo mismo que **F7**. · **El idioma** es el descarte que decide la pregunta: también se muestra en esta barra, pero en su propio indicador, y al pulsarlo abre el cuadro Idioma para elegir con qué diccionario se revisa. Son dos indicadores vecinos y muy relacionados, porque el corrector depende del idioma marcado."
   },
   {
     "id": "interfaz-467",
@@ -12606,28 +12658,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-25",
-    "enunciado": "En Word 365, un usuario quiere que la barra de estado muestre la sección actual. ¿Dónde debe activarlo?",
+    "revisada": true,
+    "enunciado": "Quieres que la barra de estado muestre en qué sección está el cursor. ¿Dónde se activa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "En el Área de vistas"
+        "text": "En el menú que sale con el clic derecho sobre la propia barra"
       },
       {
         "letter": "B",
-        "text": "En el menú \"Personalizar barra de estado\" (clic derecho sobre la barra)"
+        "text": "En Archivo ▸ Opciones ▸ Avanzadas ▸ Mostrar"
       },
       {
         "letter": "C",
-        "text": "En el cuadro de diálogo de Zoom"
+        "text": "En la pestaña Vista, en el grupo Mostrar"
       },
       {
         "letter": "D",
-        "text": "En la ficha Vista"
+        "text": "En Disposición ▸ Configurar página ▸ Saltos"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La sección se activa desde el menú contextual de la barra de estado."
+    "respuesta": "A",
+    "explicacion": "El menú muestra una lista larga con una casilla por dato y, al lado, su valor actual: así se puede consultar la sección aunque no se marque nada. · **Disposición ▸ Saltos** es el descarte que decide la pregunta: es donde se CREAN las secciones, insertando un salto de sección, pero no donde se muestra en cuál se está. Las dos cosas van muy juntas al trabajar con márgenes o numeraciones distintas por partes del documento."
   },
   {
     "id": "interfaz-470",
@@ -12641,28 +12694,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-29",
-    "enunciado": "En Word 365, ¿qué elemento del menú \"Personalizar barra de estado\" muestra \"Accesibilidad: es necesario investigar\"?",
+    "revisada": true,
+    "enunciado": "En la barra de estado puede aparecer un aviso de accesibilidad. ¿Qué significa y adónde lleva?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Estado de la carga"
+        "text": "Que el documento tiene problemas de accesibilidad"
       },
       {
         "letter": "B",
-        "text": "Comprobador de accesibilidad"
+        "text": "Que el documento está protegido contra edición"
       },
       {
         "letter": "C",
-        "text": "Directiva de administración de información"
+        "text": "Que el documento tiene cambios sin guardar"
       },
       {
         "letter": "D",
-        "text": "Actualizaciones de documento disponibles"
+        "text": "Que el documento contiene macros sin firmar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El comprobador de accesibilidad muestra ese estado en la captura."
+    "respuesta": "A",
+    "explicacion": "El aviso indica que conviene investigar, y al pulsarlo abre el mismo panel que Revisar ▸ Accesibilidad ▸ Comprobar accesibilidad: enumera los problemas encontrados, típicamente imágenes sin texto alternativo o tablas sin fila de encabezado. · Importa especialmente en el ámbito público, donde los documentos deben ser accesibles. · Los tres descartes son estados reales del documento, pero se ven en otros sitios, sobre todo en Archivo ▸ Información."
   },
   {
     "id": "interfaz-473",
@@ -12676,28 +12730,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-32",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta sobre el zoom:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El zoom puede ir del 10% al 500%"
+        "text": "Con Ctrl y la rueda del ratón el zoom cambia de 5 en 5"
       },
       {
         "letter": "B",
-        "text": "El zoom aumenta o disminuye de 5 en 5"
+        "text": "El deslizador de la barra de estado lo cambia sin abrir ningún cuadro"
       },
       {
         "letter": "C",
-        "text": "La vista predeterminada es Diseño de Impresión"
+        "text": "Pulsar el porcentaje abre el cuadro Zoom"
       },
       {
         "letter": "D",
-        "text": "El atajo de Diseño de Impresión es Ctrl + Alt + D"
+        "text": "El cuadro Zoom ofrece también ajustes automáticos de ancho o de página completa"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El zoom aumenta de 10 en 10, no de 5 en 5."
+    "respuesta": "A",
+    "explicacion": "Va de **diez en diez**, según prueba en vivo del usuario, igual que los botones de menos y más de los extremos del deslizador. · Las otras tres son ciertas. · Para volver al 100 % de un golpe está **Ctrl+0**, también confirmado en vivo, y el botón «100 %» de la pestaña Vista. · Conviene recordar que el zoom solo cambia cómo se ve el documento en pantalla: no afecta a la impresión."
   },
   {
     "id": "interfaz-474",
@@ -12711,28 +12766,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-33",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta sobre la captura:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta sobre la barra de estado:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El documento tiene 2351 palabras"
+        "text": "Muestra siempre todos los datos disponibles, sin poder quitarlos"
       },
       {
         "letter": "B",
-        "text": "El documento está en la página 6 de 22"
+        "text": "Muestra el recuento de palabras, que al pulsarlo abre «Contar palabras»"
       },
       {
         "letter": "C",
-        "text": "El documento tiene 14340 caracteres con espacios"
+        "text": "Muestra la página actual, que al pulsarla abre el panel de navegación"
       },
       {
         "letter": "D",
-        "text": "El documento tiene un zoom del 132%"
+        "text": "Contiene los botones de vista y el control de zoom"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El zoom del menú es 121%, no 132% (el 132% es del control deslizante del apartado siguiente)."
+    "respuesta": "A",
+    "explicacion": "Es una de las dos partes configurables de la ventana, junto a la barra de acceso rápido: con el clic derecho aparece la lista completa de datos posibles y se marcan o desmarcan a voluntad. De fábrica solo se muestran unos cuantos. · Las otras tres son ciertas. · Un caso claro: el número de línea y la columna no vienen marcados, y son de lo más útil para localizar un punto exacto en un escrito largo."
   },
   {
     "id": "interfaz-475",
@@ -12746,28 +12802,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-34",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta sobre los indicadores de la barra de estado:",
     "opciones": [
       {
         "letter": "A",
-        "text": "\"Número de línea\" muestra 29"
+        "text": "«Columna» indica en cuál de las columnas de texto está el cursor"
       },
       {
         "letter": "B",
-        "text": "\"Columna\" muestra 1"
+        "text": "«Número de línea» indica en qué renglón de la página está el cursor"
       },
       {
         "letter": "C",
-        "text": "\"Posición de página vertical\" muestra 25 cm"
+        "text": "«Sección» indica en qué sección del documento está el cursor"
       },
       {
         "letter": "D",
-        "text": "\"Sección\" muestra 22"
+        "text": "«Posición vertical» indica a qué distancia del borde superior está el cursor"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "La sección muestra 2, no 22."
+    "respuesta": "A",
+    "explicacion": "«Columna» cuenta CARACTERES desde el margen izquierdo, empezando por el 1: es la coordenada horizontal del cursor dentro del renglón, no tiene nada que ver con las columnas de texto de Disposición. · Junto con «Número de línea» localiza un punto exacto, cosa muy útil al corregir un texto con líneas numeradas. · Las otras tres son ciertas, y las tres se activan con el clic derecho sobre la barra."
   },
   {
     "id": "interfaz-476",
@@ -12781,28 +12838,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-35",
-    "enunciado": "En Word 365, el menú \"Personalizar barra de estado\" se abre mediante:",
+    "revisada": true,
+    "enunciado": "El menú «Personalizar barra de estado» se abre con el clic derecho. ¿Sobre qué exactamente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Clic derecho sobre la barra de título"
+        "text": "Sobre la propia barra de estado"
       },
       {
         "letter": "B",
-        "text": "Clic derecho sobre la barra de estado"
+        "text": "Sobre la barra de título"
       },
       {
         "letter": "C",
-        "text": "Clic en el icono de Word"
+        "text": "Sobre la cinta de opciones"
       },
       {
         "letter": "D",
-        "text": "Clic en la pestaña Vista"
+        "text": "Sobre el área de trabajo del documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Es configurable desde el menú contextual (botón derecho del ratón) de la barra de estado."
+    "respuesta": "A",
+    "explicacion": "Cada zona de la ventana tiene su propio menú contextual y cada uno sirve para lo suyo: el de la CINTA ofrece personalizarla, personalizar la barra de acceso rápido y contraerla; el de la barra de TÍTULO es el menú de control de la ventana, con Mover, Tamaño y Cerrar; y el del documento trae cortar, copiar, pegar, sinónimos y comentario. · Saber sobre qué hay que pulsar es la mitad del truco de todos estos menús."
   },
   {
     "id": "interfaz-485",
@@ -12816,28 +12874,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-44",
-    "enunciado": "En Word 365, ¿qué ocurre si el usuario hace clic sobre el indicador \"Página 6 de 22\" en la barra de estado?",
+    "revisada": true,
+    "enunciado": "El indicador de página abre el panel de navegación, pero hay otro camino que lleva a un cuadro donde se escribe el número. ¿Cuál?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se abre el panel de navegación"
+        "text": "F5, que abre el cuadro «Ir a»"
       },
       {
         "letter": "B",
-        "text": "Se abre el cuadro de diálogo de Zoom"
+        "text": "Ctrl+B, que abre el panel de navegación"
       },
       {
         "letter": "C",
-        "text": "Se abre el cuadro \"Contar palabras\""
+        "text": "F7, que abre el panel Editor"
       },
       {
         "letter": "D",
-        "text": "No ocurre nada"
+        "text": "Ctrl+F1, que contrae la cinta"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El material indica que al pulsar sobre \"Página X de X\" se abre el panel de navegación."
+    "explicacion": "El cuadro «Ir a» es una de las tres fichas de «Buscar y reemplazar», y permite saltar por página, sección, línea, marcador, comentario o nota, escribiendo el destino. Admite además desplazamientos relativos, como +4 para avanzar cuatro páginas. También responde a Ctrl+I. · **Ctrl+B** es el descarte que decide la pregunta: lleva al mismo panel de navegación que el indicador, así que no aporta un camino distinto, solo otro atajo al mismo sitio."
   },
   {
     "id": "interfaz-486",
@@ -12851,28 +12910,29 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-45",
-    "enunciado": "En Word 365, ¿qué ocurre si el usuario hace clic sobre el indicador \"2351 palabras\" en la barra de estado?",
+    "revisada": true,
+    "enunciado": "Además de pulsar el recuento en la barra de estado, ¿desde dónde se abre «Contar palabras»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se abre el cuadro \"Contar palabras\""
+        "text": "Revisar ▸ Revisión ▸ Contar palabras"
       },
       {
         "letter": "B",
-        "text": "Se abre el panel de navegación"
+        "text": "Inicio ▸ Edición ▸ Contar palabras"
       },
       {
         "letter": "C",
-        "text": "Se abre el cuadro de diálogo de Zoom"
+        "text": "Vista ▸ Mostrar ▸ Contar palabras"
       },
       {
         "letter": "D",
-        "text": "Se inicia la revisión ortográfica"
+        "text": "Archivo ▸ Información ▸ Contar palabras"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El material indica que al pulsar sobre el número de palabras se abre \"Contar palabras\"."
+    "explicacion": "Comparte grupo con el Editor, los sinónimos y la lectura en voz alta: todo lo que analiza el texto ya escrito. · **Archivo ▸ Información** es el descarte que decide la pregunta, y tiene su parte de verdad: su panel de propiedades muestra el número de páginas y de palabras. Pero es una ficha del archivo, no un cuadro de recuento: no separa los caracteres con y sin espacios ni cuenta solo lo seleccionado."
   },
   {
     "id": "interfaz-511",
@@ -12887,7 +12947,8 @@
     "tema": "Barra de estado",
     "sourceQuestionId": "gen-atajo-10",
     "generado": true,
-    "enunciado": "¿Qué atajo actualiza las estadísticas de recuento de palabras del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "¿Qué combinación recalcula las estadísticas de recuento de palabras del documento?",
     "opciones": [
       {
         "letter": "A",
@@ -12895,11 +12956,11 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+G"
+        "text": "Ctrl+Mayús+Q"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+0"
+        "text": "Ctrl+Mayús+G"
       },
       {
         "letter": "D",
@@ -12908,7 +12969,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+O recalcula y actualiza el número total de palabras del documento (comando HerramientaVolverAContarPalabras). El contador vive en la barra de estado. Confirmado en el volcado de Personalizar teclado de tu Word 365 (v2608)."
+    "explicacion": "Figura en el cuadro Personalizar teclado como HerramientaVolverAContarPalabras: actualiza el número total de palabras del documento, que es lo que muestra el indicador de la barra de estado. · **Ctrl+Mayús+Q** es el descarte que decide la pregunta y sí existe: aplica la fuente Symbol a la selección, convirtiendo el texto en símbolos griegos y matemáticos, cosa bastante sorprendente si se pulsa por error. · Ctrl+Mayús+G no figura en el volcado."
   },
   {
     "id": "interfaz-514",
@@ -12923,28 +12984,29 @@
     "tema": "Barra de estado",
     "sourceQuestionId": "gen-atajo-18",
     "generado": true,
-    "enunciado": "¿Qué atajo actualiza el recuento de palabras del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "Comparas Ctrl+Mayús+O con Alt+Ctrl+F2. ¿Qué hace cada una?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Ctrl+F2"
+        "text": "La primera recalcula el recuento de palabras; la segunda abre un documento"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+O"
+        "text": "La primera abre un documento; la segunda recalcula el recuento de palabras"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+Q"
+        "text": "Las dos abren el cuadro «Contar palabras»"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+G"
+        "text": "Las dos abren un documento, por dos caminos"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+Mayús+O recalcula las estadísticas de palabras del documento. Alt+Ctrl+F2 abre el cuadro Abrir. Ctrl+Mayús+Q aplica la fuente Symbol. Ctrl+Mayús+G no tiene función en este Word."
+    "respuesta": "A",
+    "explicacion": "Las dos están en el cuadro Personalizar teclado de esta instalación. **Alt+Ctrl+F2** comparte comando con **Ctrl+F12**: las dos abren un documento o una plantilla existente. · La versión invertida es el descarte que decide la pregunta. · Conviene fijar la familia de abrir y guardar, que tiene varias combinaciones cada una: abrir con Ctrl+A, Ctrl+F12 o Alt+Ctrl+F2; guardar con Ctrl+G; y guardar como con F12."
   },
   {
     "id": "interfaz-162",
@@ -12958,32 +13020,37 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "2-50",
-    "enunciado": "En Word 365, señale los elementos que se sitúan en la parte inferior de la ventana (puede haber más de una):",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estos elementos están en la parte inferior de la ventana?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Barra de estado"
+        "text": "La barra de estado"
       },
       {
         "letter": "B",
-        "text": "Área de vistas"
+        "text": "Los botones de vista del documento"
       },
       {
         "letter": "C",
-        "text": "Barra de título"
+        "text": "El control de zoom"
       },
       {
         "letter": "D",
-        "text": "Zoom"
+        "text": "La barra de título"
+      },
+      {
+        "letter": "E",
+        "text": "La barra de herramientas de acceso rápido"
       }
     ],
     "matching": null,
     "respuesta": [
       "A",
       "B",
-      "D"
+      "C"
     ],
-    "explicacion": "La barra de título está arriba."
+    "explicacion": "Los tres primeros son en realidad uno dentro de otro: los botones de vista y el zoom ocupan el extremo derecho de la barra de estado. · Los dos descartes están arriba, y además comparten franja entre sí: la barra de acceso rápido va en la misma línea que la de título, a la izquierda, aunque también se puede colocar debajo de la cinta. · Un reparto útil de recordar: arriba se manda y abajo se informa."
   },
   {
     "id": "interfaz-440",
@@ -12997,7 +13064,8 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-45",
-    "enunciado": "En Word 365, señale los datos que muestra el cuadro \"Contar palabras\" (puede haber más de una):",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estos datos da el cuadro «Contar palabras»?",
     "opciones": [
       {
         "letter": "A",
@@ -13009,20 +13077,29 @@
       },
       {
         "letter": "C",
-        "text": "Idioma"
+        "text": "Líneas"
       },
       {
         "letter": "D",
-        "text": "Líneas"
+        "text": "Caracteres, en dos cifras"
+      },
+      {
+        "letter": "E",
+        "text": "Idioma del documento"
+      },
+      {
+        "letter": "F",
+        "text": "Secciones del documento"
       }
     ],
     "matching": null,
     "respuesta": [
       "A",
       "B",
+      "C",
       "D"
     ],
-    "explicacion": "El idioma no aparece."
+    "explicacion": "Son seis cifras, contando por separado los caracteres con y sin espacios, porque un límite de extensión puede venir dado de cualquiera de las dos formas. · Los dos descartes SÍ existen, pero en la barra de estado, cada uno con su indicador: el idioma abre el cuadro Idioma al pulsarlo, y la sección dice en cuál está el cursor. Están a un palmo del recuento y no salen en este cuadro. · Con texto seleccionado, las seis cifras se refieren solo a la selección."
   },
   {
     "id": "interfaz-441",
@@ -13036,32 +13113,42 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-46",
-    "enunciado": "En Word 365, señale las acciones que se pueden realizar directamente desde la Barra de estado (puede haber más de una):",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estas cosas se pueden hacer pulsando directamente en la barra de estado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Iniciar la revisión ortográfica"
+        "text": "Abrir el panel Editor para revisar la ortografía"
       },
       {
         "letter": "B",
-        "text": "Cambiar el modo de escritura"
+        "text": "Cambiar entre insertar y sobrescribir"
       },
       {
         "letter": "C",
-        "text": "Iniciar la grabación de una macro"
+        "text": "Empezar a grabar una macro"
       },
       {
         "letter": "D",
-        "text": "Cambiar el idioma de la interfaz"
+        "text": "Abrir el cuadro Idioma"
+      },
+      {
+        "letter": "E",
+        "text": "Cambiar el idioma de la interfaz de Word"
+      },
+      {
+        "letter": "F",
+        "text": "Contraer la cinta de opciones"
       }
     ],
     "matching": null,
     "respuesta": [
       "A",
       "B",
-      "C"
+      "C",
+      "D"
     ],
-    "explicacion": "La barra de estado no cambia idioma."
+    "explicacion": "Casi todos los indicadores de esta barra son también botones, y cada uno lleva a la herramienta de aquello de lo que informa. · Los dos descartes se hacen en otros sitios: el idioma de la INTERFAZ se cambia en Archivo ▸ Opciones ▸ Idioma, que no es lo mismo que el idioma del TEXTO que se elige aquí para el corrector; y contraer la cinta es cosa de arriba, con Ctrl+F1, el doble clic, el menú contextual o la flechita de su extremo."
   },
   {
     "id": "interfaz-471",
@@ -13075,22 +13162,31 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-30",
-    "enunciado": "En Word 365, señale los elementos que aparecen marcados (✓) en el menú \"Personalizar barra de estado\" (puede haber más de una):",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estas entradas del menú de la barra de estado vienen marcadas de fábrica?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sección"
+        "text": "Número de página"
       },
       {
         "letter": "B",
-        "text": "Idioma"
+        "text": "Contar palabras"
       },
       {
         "letter": "C",
-        "text": "Posición de página vertical"
+        "text": "Idioma"
       },
       {
         "letter": "D",
+        "text": "Número de línea"
+      },
+      {
+        "letter": "E",
+        "text": "Columna"
+      },
+      {
+        "letter": "F",
         "text": "Bloq Mayús"
       }
     ],
@@ -13100,7 +13196,7 @@
       "B",
       "C"
     ],
-    "explicacion": "\"Bloq Mayús\" aparece desactivado (sin check)."
+    "explicacion": "Word muestra de partida lo que interesa a diario y deja apagado lo demás, para no llenar la barra. · Los tres descartes están en la lista pero desmarcados, y son de los más útiles de añadir: la línea y la columna localizan un punto exacto del texto, y el aviso de bloqueo de mayúsculas evita ese momento de escribir un párrafo entero en mayúsculas sin darse cuenta. · El menú muestra el valor de cada dato aunque esté desmarcado."
   },
   {
     "id": "interfaz-472",
@@ -13114,7 +13210,8 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-31",
-    "enunciado": "En Word 365, señale los elementos que aparecen SIN marcar en el menú \"Personalizar barra de estado\" (puede haber más de una):",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estas entradas del menú de la barra de estado NO vienen marcadas de fábrica?",
     "opciones": [
       {
         "letter": "A",
@@ -13131,15 +13228,24 @@
       {
         "letter": "D",
         "text": "Sobrescritura"
+      },
+      {
+        "letter": "E",
+        "text": "Contar palabras"
+      },
+      {
+        "letter": "F",
+        "text": "Número de página"
       }
     ],
     "matching": null,
     "respuesta": [
       "A",
       "B",
-      "C"
+      "C",
+      "D"
     ],
-    "explicacion": "\"Sobrescritura\" aparece marcada y con estado \"Insertar\"."
+    "explicacion": "Los cuatro son avisos de precisión o de estado que no hacen falta a diario, así que Word los deja apagados. · Los dos descartes sí vienen marcados, junto al idioma y al estado de la revisión ortográfica: son los datos de uso corriente. · Merece la pena activar al menos la sobrescritura, que es la que explica ese desconcierto de ver cómo el texto se va borrando al escribir, y el modo de selección, que avisa de que está activo el modo de F8."
   },
   {
     "id": "interfaz-157",
@@ -13153,11 +13259,12 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "2-45",
-    "enunciado": "En Word 365, la Barra de estado se sitúa en la parte inferior de la ventana. (Verdadero/Falso)",
+    "revisada": true,
+    "enunciado": "La barra de estado ocupa la franja inferior de la ventana.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Es su ubicación correcta."
+    "explicacion": "A la izquierda lleva la información del documento —página, palabras, idioma, estado de la revisión— y a la derecha los botones de vista y el control de zoom. · No hay que confundirla con la barra de TÍTULO, que está arriba y muestra el nombre del archivo: ese cruce de nombres es el error más frecuente con estas dos. · Es, junto a la barra de acceso rápido, la única parte de la ventana que el usuario configura, y se hace con el clic derecho sobre ella."
   },
   {
     "id": "interfaz-409",
@@ -13171,11 +13278,12 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-14",
-    "enunciado": "En Word 365, la Barra de estado es configurable desde el menú contextual (botón derecho del ratón).",
+    "revisada": true,
+    "enunciado": "La barra de estado se configura con el clic derecho sobre ella misma.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "El material lo indica explícitamente."
+    "explicacion": "Aparece la lista completa de datos que puede mostrar, cada uno con su casilla y, al lado, su valor actual: así el propio menú informa aunque no se marque nada. De fábrica solo se ven unos cuantos. · Es una de las dos partes configurables de la ventana; la otra es la barra de acceso rápido, que se compone desde la flechita de su extremo. · La cinta también se personaliza, pero desde Archivo ▸ Opciones, no desde la propia cinta."
   },
   {
     "id": "interfaz-410",
@@ -13189,11 +13297,12 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-15",
-    "enunciado": "En Word 365, si pulsamos sobre \"Página X de X\" en la barra de estado se abre el panel de navegación.",
+    "revisada": true,
+    "enunciado": "Pulsar el indicador de página de la barra de estado abre el panel de navegación.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Esa es la función de ese indicador."
+    "explicacion": "El panel se abre a la izquierda con sus tres fichas: Títulos, Páginas y Resultados. La segunda muestra miniaturas para saltar a la página que se quiera. · Al mismo panel llevan **Ctrl+B** y la casilla «Panel de navegación» de Vista ▸ Mostrar. · Si lo que se busca es escribir un número de página concreto, la herramienta es otra: el cuadro «Ir a», con **F5** o Ctrl+I, que además salta por secciones, líneas, marcadores o comentarios."
   },
   {
     "id": "interfaz-411",
@@ -13207,11 +13316,12 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-16",
-    "enunciado": "En Word 365, si pulsamos sobre el número de palabras se abre el cuadro \"Contar palabras\".",
+    "revisada": true,
+    "enunciado": "Pulsar el recuento de palabras de la barra de estado abre el cuadro «Contar palabras».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "El número de palabras abre el cuadro de conteo."
+    "explicacion": "El cuadro da seis cifras: páginas, palabras, caracteres sin espacios, caracteres con espacios, párrafos y líneas, más una casilla para incluir o no los cuadros de texto y las notas. · Con algo seleccionado, todas se refieren solo a la selección, cosa muy práctica para comprobar la extensión de un apartado. · Al mismo cuadro se llega desde Revisar ▸ Revisión ▸ Contar palabras, y el total del documento se recalcula con **Ctrl+Mayús+O**."
   },
   {
     "id": "interfaz-412",
@@ -13225,11 +13335,12 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-17",
-    "enunciado": "En Word 365, un clic en el icono de revisión ortográfica de la barra de estado inicia la revisión ortográfica del documento.",
+    "revisada": true,
+    "enunciado": "Pulsar el icono de revisión ortográfica de la barra de estado lleva al panel Editor.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Es la función de ese icono."
+    "explicacion": "En Word 365 el corrector y el panel Editor son la misma cosa, así que este icono hace lo mismo que **F7** o que Revisar ▸ Editor. Prueba en vivo del usuario para F7. · El propio icono informa antes de pulsarlo: su marca cambia según haya errores pendientes o esté todo revisado. · El idioma con el que corrige no se elige aquí, sino en el indicador de al lado, que abre el cuadro Idioma."
   },
   {
     "id": "interfaz-413",
@@ -13243,11 +13354,12 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-18",
-    "enunciado": "En Word 365, un clic en el icono de \"Insertar\" de la barra de estado intercambia el modo de escritura entre Insertar/Sobrescribir.",
+    "revisada": true,
+    "enunciado": "Pulsar el indicador del modo de escritura alterna entre insertar y sobrescribir.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "El icono alterna el modo."
+    "explicacion": "Es un interruptor: el texto del indicador cambia entre «Insertar» y «Sobrescribir» a cada clic. · Ese indicador no viene marcado de fábrica y hay que añadirlo con el clic derecho sobre la barra, lo que explica que mucha gente entre en modo sobrescribir sin enterarse y no encuentre cómo salir. · La tecla Insert hace lo mismo, pero solo después de habilitarla en Archivo ▸ Opciones ▸ Avanzadas, donde viene desmarcada."
   },
   {
     "id": "interfaz-414",
@@ -13261,11 +13373,12 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-19",
-    "enunciado": "En Word 365, para activar la tecla Insert como control del modo Sobrescribir no es necesario configurar nada previamente.",
+    "revisada": true,
+    "enunciado": "La tecla Insert alterna el modo de sobrescritura sin necesidad de configurar nada.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Hay que ir a Archivo → Opciones → Avanzadas y activar la casilla."
+    "explicacion": "Hay que marcar antes «Usar la tecla Insert para controlar el modo Sobrescribir», en Archivo ▸ Opciones ▸ Avanzadas, entre las opciones de edición. Viene desmarcada precisamente para que nadie active el modo por accidente. · Lo que sí funciona sin configurar nada es pulsar el indicador de la barra de estado... siempre que se haya añadido antes con el clic derecho, porque tampoco se muestra de fábrica. · Ninguno de los dos caminos está disponible al abrir Word por primera vez."
   },
   {
     "id": "interfaz-415",
@@ -13279,11 +13392,12 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-20",
-    "enunciado": "En Word 365, el icono de Macro en la barra de estado inicia el acceso a la grabación de macros.",
+    "revisada": true,
+    "enunciado": "El icono de macro de la barra de estado empieza y detiene la grabación de una macro.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Esa es su función."
+    "explicacion": "Mientras graba, el icono cambia a un cuadrado de parada, y al pulsarlo otra vez se detiene. Es un atajo a lo que ofrece la pestaña Programador, que no está visible de fábrica. · Como el resto de indicadores, hay que añadirlo con el clic derecho sobre la barra. · Grabar una macro tiene una consecuencia en el archivo: el documento pasa a llevar código, así que habrá que guardarlo como .docm; el .docx no lo admite y Word avisa."
   },
   {
     "id": "interfaz-520",
@@ -13298,11 +13412,12 @@
     "tema": "Barra de estado",
     "sourceQuestionId": "bal-interfaz-04",
     "generado": true,
-    "enunciado": "El contador de palabras de la Barra de estado no se actualiza mientras seleccionas texto, solo al soltar el ratón.",
+    "revisada": true,
+    "enunciado": "El recuento de palabras de la barra de estado no cambia mientras se selecciona: solo al soltar el ratón.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: se actualiza en tiempo real y muestra «X de Y palabras» mientras la selección va cambiando."
+    "explicacion": "Se actualiza en tiempo real y muestra «X de Y palabras» según crece la selección, así que se puede ir arrastrando hasta llegar a la extensión que interese. · Al deshacer la selección vuelve a mostrar el total del documento. · Lo mismo ocurre en el cuadro «Contar palabras»: con algo seleccionado, sus seis cifras se refieren solo a la selección. · Lo que sí puede necesitar un empujón es el total en documentos muy largos, con Ctrl+Mayús+O."
   },
   {
     "id": "interfaz-423",
@@ -13316,6 +13431,7 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-28",
+    "revisada": true,
     "enunciado": "En Word 365, relacione cada icono/elemento de la Barra de estado con su función:",
     "opciones": [],
     "matching": {
@@ -13368,7 +13484,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Correspondencia directa."
+    "explicacion": "Cada indicador lleva a la herramienta de aquello de lo que informa, y esa lógica basta para resolver el emparejamiento sin memorizarlo. · El del zoom, que no aparece aquí, sigue la misma regla y abre el cuadro Zoom; y el del idioma abre el cuadro Idioma. · El del modo de escritura es el único que no abre nada: actúa como interruptor y cambia de valor en el sitio. · Ninguno de estos cuatro se puede quitar por separado si no se sabe que la barra se configura con el clic derecho."
   },
   {
     "id": "interfaz-424",
@@ -13382,35 +13498,36 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "6-29",
-    "enunciado": "En Word 365, relacione cada dato con el cuadro donde aparece (\"Contar palabras\"):",
+    "revisada": true,
+    "enunciado": "Relacione cada dato con el sitio donde se consulta:",
     "opciones": [],
     "matching": {
       "left": [
         {
           "id": "1",
-          "label": "Párrafos"
+          "label": "Número de párrafos"
         },
         {
           "id": "2",
-          "label": "Líneas"
+          "label": "Idioma del texto"
         },
         {
           "id": "3",
-          "label": "Idioma"
+          "label": "Sección donde está el cursor"
         }
       ],
       "right": [
         {
           "id": "A",
-          "label": "Sí"
+          "label": "Cuadro «Contar palabras»"
         },
         {
           "id": "B",
-          "label": "Sí"
+          "label": "Indicador de idioma de la barra de estado"
         },
         {
           "id": "C",
-          "label": "No"
+          "label": "Indicador de sección de la barra de estado"
         }
       ],
       "correct": {
@@ -13424,7 +13541,7 @@
       "2": "B",
       "3": "C"
     },
-    "explicacion": "El idioma no aparece."
+    "explicacion": "El cuadro «Contar palabras» solo da cifras de extensión: páginas, palabras, los dos recuentos de caracteres, párrafos y líneas. Ni el idioma ni la sección salen ahí, aunque los tres datos se consulten a un palmo de distancia en la misma barra. · Los dos indicadores son además botones: el de idioma abre el cuadro Idioma para elegir con qué diccionario corregir, y el de sección solo informa. · Ninguno de los dos viene marcado de fábrica salvo el idioma."
   },
   {
     "id": "interfaz-469",
@@ -13438,7 +13555,8 @@
     "subtopic": null,
     "tema": "Barra de estado",
     "sourceQuestionId": "7-28",
-    "enunciado": "En Word 365, relacione cada elemento del menú con su valor:",
+    "revisada": true,
+    "enunciado": "Relacione cada indicador de la barra de estado con lo que ocurre al pulsarlo:",
     "opciones": [],
     "matching": {
       "left": [
@@ -13448,33 +13566,33 @@
         },
         {
           "id": "2",
-          "label": "Contar palabras"
+          "label": "Recuento de palabras"
         },
         {
           "id": "3",
-          "label": "Número de caracteres (con espacios)"
+          "label": "Porcentaje de zoom"
         },
         {
           "id": "4",
-          "label": "Zoom"
+          "label": "Indicador de idioma"
         }
       ],
       "right": [
         {
           "id": "A",
-          "label": "2351 palabras"
+          "label": "Abre el cuadro «Contar palabras»"
         },
         {
           "id": "B",
-          "label": "14340 caracteres"
+          "label": "Abre el cuadro Zoom"
         },
         {
           "id": "C",
-          "label": "Página 6 de 22"
+          "label": "Abre el panel de navegación"
         },
         {
           "id": "D",
-          "label": "121 %"
+          "label": "Abre el cuadro Idioma"
         }
       ],
       "correct": {
@@ -13490,7 +13608,7 @@
       "3": "B",
       "4": "D"
     },
-    "explicacion": "Asociación directa de los valores mostrados en la captura."
+    "explicacion": "La regla es siempre la misma: cada indicador lleva a la herramienta de aquello de lo que informa. Con eso se resuelven los cuatro sin memorizar ninguno. · Los que no abren nada son los de estado que funcionan como interruptor: el del modo de escritura, que alterna insertar y sobrescribir, y el del control de cambios, que lo activa y lo desactiva. · Todos ellos se muestran u ocultan con el clic derecho sobre la barra."
   },
   {
     "id": "interfaz-86",
