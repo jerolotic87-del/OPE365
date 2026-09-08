@@ -13492,28 +13492,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0334",
-    "enunciado": "¿Qué es un estilo en Word 365?",
+    "enunciado": "Tienes que dar el mismo aspecto a los cuarenta títulos de un informe y poder cambiarlos todos después de una sola vez. ¿Qué te lo garantiza?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un conjunto de formatos guardados con un nombre que se puede aplicar con un solo clic"
+        "text": "Aplicarles un estilo, que guarda ese formato bajo un nombre"
       },
       {
         "letter": "B",
-        "text": "Un tipo de fuente decorativa disponible en la galería"
+        "text": "Formatear el primero y copiar su formato con el pincel a los demás"
       },
       {
         "letter": "C",
-        "text": "Una plantilla de documento completo con márgenes y encabezados predefinidos"
+        "text": "Guardar el formato del primero como elemento de Autotexto y pegarlo"
       },
       {
         "letter": "D",
-        "text": "Un efecto visual aplicable únicamente a títulos y encabezados"
+        "text": "Poner el mismo tema del documento en Diseño ▸ Formato del documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Un estilo es un conjunto de instrucciones de formato (fuente, tamaño, alineación, sangría, interlineado, etc.) guardadas bajo un nombre. Al aplicarlo, todos esos formatos se aplican a la vez con un solo clic, garantizando coherencia en todo el documento."
+    "explicacion": "Un estilo es un juego de instrucciones de formato —fuente, tamaño, alineación, sangría, interlineado, espaciado— guardado con un nombre. Lo que resuelve el enunciado no es que aplique todo de golpe, sino que los cuarenta párrafos quedan ATADOS a esa definición: al modificarla, cambian todos solos. · El pincel es el descarte con más fundamento porque consigue el mismo aspecto en un momento, pero copia el formato una vez y ahí se acaba: cambiar de idea después significa repetir las cuarenta. Esa es la diferencia de fondo entre formato directo y estilo. · El Autotexto guarda bloques de contenido, no formato suelto. · Y el tema cambia fuentes y colores del documento entero, sin distinguir títulos de nada."
   },
   {
     "id": "inicio-88",
@@ -13528,28 +13528,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0335",
-    "enunciado": "En el cuadro «Crear nuevo estilo a partir del formato», ¿cuántos valores ofrece el desplegable «Tipo de estilo» en Word 365?",
+    "enunciado": "Abres «Crear nuevo estilo a partir del formato» y despliegas «Tipo de estilo». ¿Cuántos valores ofrece y cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "3 (párrafo, carácter y tabla)"
+        "text": "5: párrafo, carácter, vinculado, tabla y lista"
       },
       {
         "letter": "B",
-        "text": "4 (párrafo, carácter, tabla y lista)"
+        "text": "4: párrafo, carácter, tabla y lista"
       },
       {
         "letter": "C",
-        "text": "5 (párrafo, carácter, vinculado, tabla y lista)"
+        "text": "3: párrafo, carácter y tabla"
       },
       {
         "letter": "D",
-        "text": "6 (los 5 anteriores más «sección»)"
+        "text": "6: los cinco anteriores más sección"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El desplegable «Tipo de estilo» ofrece 5 valores: Párrafo, Carácter, **Vinculado (párrafo y carácter)**, Tabla y Lista. «Vinculado» aplica formato de párrafo si no hay selección y solo de carácter si hay texto seleccionado dentro del párrafo. No existe un tipo «Sección». Verificado en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Son cinco, y el que se olvida es «Vinculado (párrafo y carácter)», que se comporta de las dos maneras según el caso: si no hay nada seleccionado formatea el párrafo entero, y si hay texto seleccionado dentro de él aplica solo el formato de carácter. Los estilos Título de fábrica son de este tipo. Prueba en vivo del usuario. · Quedarse en cuatro, olvidándolo, es el descarte que más cae. · Y «Sección» no existe como tipo de estilo, aunque las secciones sí existan en Word: lo que se guarda en una sección es la configuración de página, no un estilo."
   },
   {
     "id": "inicio-90",
@@ -13564,28 +13564,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0337",
-    "enunciado": "¿Cómo se abre el panel lateral de Estilos que muestra todos los estilos disponibles y permanece visible mientras se trabaja?",
+    "enunciado": "Quieres abrir el panel lateral de Estilos, el que se queda a la derecha mientras trabajas y lista todos los estilos con su vista previa. ¿Por dónde?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Haciendo clic en cualquier estilo de la galería"
+        "text": "Por el iniciador de la esquina del grupo Estilos"
       },
       {
         "letter": "B",
-        "text": "Usando el lanzador del grupo Estilos (esquina inferior derecha del grupo)"
+        "text": "Por la flecha «Más» de la galería de estilos de la cinta"
       },
       {
         "letter": "C",
-        "text": "Con el atajo Ctrl + Mayús + S"
+        "text": "Con Ctrl+Mayús+W"
       },
       {
         "letter": "D",
-        "text": "Desde el menú Ver → Panel de estilos"
+        "text": "Con Ctrl+Mayús+S"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El panel lateral de Estilos se abre usando el lanzador de cuadro de diálogo del grupo Estilos, situado en la esquina inferior derecha del grupo en la cinta. Ctrl+Mayús+S aplica subrayado; el cuadro flotante Aplicar estilo se abre con Ctrl+Mayús+W, y ambos son distintos del panel lateral completo."
+    "respuesta": "A",
+    "explicacion": "El iniciador de la esquina abre el panel completo, con la lista, sus botones —Nuevo estilo, Inspector de estilo y Administrar estilos—, la casilla «Mostrar vista previa» y el enlace «Opciones…». También se abre con Alt+Ctrl+Mayús+S. · La flecha «Más» de la galería es el descarte con más fundamento: despliega la galería entera y sus entradas «Crear un estilo», «Borrar formato» y «Aplicar estilos…», pero eso es la galería, no el panel. · Ctrl+Mayús+W abre «Aplicar estilos», una ventanita flotante para teclear el nombre de un estilo. · Y Ctrl+Mayús+S subraya, igual que Ctrl+S."
   },
   {
     "id": "inicio-91",
@@ -13600,28 +13600,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0342",
-    "enunciado": "¿Qué atajo abre el cuadro flotante Aplicar estilo en Word 365?",
+    "enunciado": "Quieres una ventanita donde teclear directamente el nombre del estilo que buscas, sin ir a la galería ni al panel. ¿Qué combinación la abre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Mayús + A"
+        "text": "Ctrl+Mayús+W"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Mayús + W"
+        "text": "Ctrl+Mayús+A"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Mayús + S"
+        "text": "Alt+Ctrl+Mayús+S"
       },
       {
         "letter": "D",
-        "text": "Ctrl + M"
+        "text": "Ctrl+Mayús+S"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+Mayús+W abre el cuadro Aplicar estilo, que permite escribir o seleccionar el nombre de un estilo para aplicarlo rápidamente (confirmado en el volcado v2608). Ctrl+Mayús+S aplica subrayado. Ctrl+Mayús+A aplica el estilo Normal. Ctrl+M abre el cuadro de diálogo Fuente."
+    "respuesta": "A",
+    "explicacion": "Ctrl+Mayús+W abre «Aplicar estilos», que en el cuadro Personalizar teclado figura como PanelAplicarEstilo: se escriben las primeras letras del nombre, se completa solo y se aplica con Intro. Es lo más rápido cuando se conocen los nombres. · Alt+Ctrl+Mayús+S es el descarte que decide la pregunta, porque también abre algo de estilos: el panel lateral completo, que es otra cosa y ocupa toda la derecha de la ventana. · Ctrl+Mayús+A aplica el estilo Normal directamente, sin preguntar nada. · Y Ctrl+Mayús+S no tiene que ver con estilos: subraya, igual que Ctrl+S."
   },
   {
     "id": "inicio-92",
@@ -13636,28 +13636,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0343",
-    "enunciado": "¿Qué atajo aplica directamente el estilo Normal al párrafo seleccionado?",
+    "enunciado": "Quieres devolver un párrafo al estilo Normal con el teclado, sin buscarlo en la galería. ¿Qué combinación lo aplica?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Mayús + S"
+        "text": "Ctrl+Mayús+A"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Mayús + N"
+        "text": "Ctrl+Mayús+N"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Mayús + A"
+        "text": "Ctrl+W"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Q"
+        "text": "Ctrl+Barra espaciadora"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ctrl+Mayús+A aplica el estilo Normal al párrafo o texto seleccionado. Ctrl+Mayús+N aplica el formato negrita. Ctrl+Q elimina el formato de párrafo. Ctrl+Mayús+S aplica subrayado."
+    "respuesta": "A",
+    "explicacion": "Ctrl+Mayús+A figura en el cuadro Personalizar teclado como EstiloNormal, «aplica el estilo Normal», y de paso quita la negrita o la cursiva que fueran formato directo. · ⚠️ Ctrl+Mayús+N es la trampa del esquema internacional, donde esa combinación es la del estilo Normal: aquí pone negrita, igual que Ctrl+N. Es el descarte que más cae con diferencia. · Ctrl+W y Ctrl+Barra espaciadora limpian formato, pero no cambian de estilo: el primero devuelve el formato de párrafo del estilo que ya tuviera, y el segundo el de carácter. Aplicar Normal y limpiar el formato son dos cosas distintas, y esa distinción es la que se pregunta."
   },
   {
     "id": "inicio-94",
@@ -13672,28 +13672,28 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0345",
-    "enunciado": "En el cuadro para crear un estilo nuevo, el campo 'Estilo basado en' determina que el nuevo estilo herede el formato de uno ya existente. ¿Qué consecuencia tiene esto si el estilo base se modifica en el futuro?",
+    "enunciado": "Creas un estilo «Cita» con «Estilo basado en: Normal». Meses después cambias la fuente del estilo Normal. ¿Qué le pasa a «Cita»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El estilo nuevo no se ve afectado por los cambios del estilo base"
+        "text": "Cambia también de fuente: hereda lo que no tenga definido aparte"
       },
       {
         "letter": "B",
-        "text": "El estilo nuevo se actualiza automáticamente heredando los cambios del estilo base"
+        "text": "No cambia: quedó fijado con el formato que tenía al crearse"
       },
       {
         "letter": "C",
-        "text": "El estilo nuevo se elimina si el estilo base cambia de nombre"
+        "text": "Cambia solo si además se marcó «Actualizar automáticamente»"
       },
       {
         "letter": "D",
-        "text": "Solo se actualizan los cambios de fuente, no los de párrafo"
+        "text": "Se rompe y hay que volver a definirlo desde cero"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Si un estilo está basado en otro mediante el campo Estilo basado en, cualquier cambio que se haga al estilo base se propaga automáticamente al estilo derivado. Esto permite mantener coherencia en todo el documento modificando solo el estilo raíz."
+    "respuesta": "A",
+    "explicacion": "«Estilo basado en» crea una herencia viva: el estilo derivado guarda solo sus diferencias, y todo lo demás lo toma del padre en cada momento. Por eso tocar Normal recorre en cascada casi todos los estilos del documento, que es lo que lo hace tan potente y tan peligroso. · Si «Cita» tuviera su propia fuente definida, esa se mantendría: solo se hereda lo no especificado. · «Actualizar automáticamente» existe, pero es otra cosa y bastante arriesgada: hace que el estilo se redefina solo cuando se cambia a mano el formato de un párrafo que lo lleve. · Y un estilo no se rompe por cambiar su base."
   },
   {
     "id": "inicio-95",
@@ -13708,28 +13708,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0346",
-    "enunciado": "Al crear un estilo nuevo, el campo 'Estilo del párrafo siguiente' determina qué estilo se aplica automáticamente al pulsar Intro después de un párrafo con ese estilo. ¿Para qué tipo de estilo es especialmente útil esta opción?",
+    "enunciado": "Escribes un título con estilo «Título 1» y pulsas Intro. El párrafo nuevo aparece ya en «Normal». ¿Qué campo del estilo lo decide?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Para estilos de carácter, ya que controlan el texto letra a letra"
+        "text": "Estilo del párrafo siguiente"
       },
       {
         "letter": "B",
-        "text": "Para estilos de título, de modo que al pulsar Intro tras el título el siguiente párrafo adopte automáticamente el estilo Normal o Cuerpo de texto"
+        "text": "Estilo basado en"
       },
       {
         "letter": "C",
-        "text": "Para estilos de tabla, controlando el formato de la siguiente fila"
+        "text": "Agregar a la galería de estilos"
       },
       {
         "letter": "D",
-        "text": "Para estilos de lista, reiniciando la numeración en el siguiente elemento"
+        "text": "Actualizar automáticamente"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El campo Estilo del párrafo siguiente es especialmente útil en estilos de título. Al configurarlo como Normal o Cuerpo de texto, al pulsar Intro después de escribir un título el cursor salta al siguiente párrafo ya con el estilo de texto normal aplicado, sin tener que cambiarlo manualmente."
+    "respuesta": "A",
+    "explicacion": "Ese campo dice con qué estilo nace el párrafo que se crea al pulsar Intro, y es lo que evita tener que quitar el «Título 1» cada vez. Los estilos de título de fábrica lo traen puesto en Normal; en un estilo de cuerpo, en cambio, lo normal es que apunte a sí mismo, para poder escribir varios párrafos seguidos. · «Estilo basado en» es el descarte que decide la pregunta y va justo encima en el cuadro: define de quién hereda el formato, no qué viene después. Uno mira hacia arriba, el otro hacia adelante. · «Agregar a la galería» solo decide si sale en la cinta. · Y «Actualizar automáticamente» redefine el estilo al cambiar un párrafo a mano."
   },
   {
     "id": "inicio-96",
@@ -13744,28 +13744,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0348",
-    "enunciado": "¿Qué diferencia hay entre las opciones 'Solo en este documento' y 'Documentos nuevos basados en esta plantilla' al crear un estilo nuevo?",
+    "enunciado": "Al pie del cuadro de crear estilo hay dos opciones de alcance: «Solo en este documento» y «Documentos nuevos basados en esta plantilla». ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Solo en este documento guarda el estilo en la plantilla global; Documentos nuevos lo guarda solo en el archivo actual"
+        "text": "La primera guarda el estilo en el archivo; la segunda, en la plantilla"
       },
       {
         "letter": "B",
-        "text": "Solo en este documento restringe el estilo al archivo actual; Documentos nuevos lo añade a la plantilla para que esté disponible en futuros documentos"
+        "text": "La primera guarda el estilo en la plantilla; la segunda, en el archivo"
       },
       {
         "letter": "C",
-        "text": "Ambas opciones tienen el mismo efecto pero Solo en este documento no aparece en el panel de estilos"
+        "text": "Hacen lo mismo; solo cambia que la primera no sale en la galería"
       },
       {
         "letter": "D",
-        "text": "Documentos nuevos elimina el estilo del documento actual tras guardarlo en la plantilla"
+        "text": "La segunda guarda en la plantilla y además lo borra del archivo actual"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Solo en este documento guarda el estilo únicamente en el archivo actual y no estará disponible en otros documentos. Documentos nuevos basados en esta plantilla añade el estilo a la plantilla base (Normal.dotx) para que esté disponible automáticamente en todos los documentos nuevos que se creen a partir de ese momento."
+    "respuesta": "A",
+    "explicacion": "«Solo en este documento» deja el estilo dentro del archivo: viaja con él si se envía, pero no aparece en ningún otro. «Documentos nuevos basados en esta plantilla» lo escribe además en la plantilla, normalmente Normal.dotm, y a partir de ahí todo documento nuevo nace con él. · La versión con los papeles cambiados es el reflejo exacto y hay que leerla despacio. · No hacen lo mismo, y la diferencia se nota al abrir Word al día siguiente. · Y guardar en la plantilla no quita nada del documento actual: el estilo queda en los dos sitios."
   },
   {
     "id": "inicio-98",
@@ -13780,28 +13780,28 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0350",
-    "enunciado": "Desde el menú Formato del cuadro de creación de estilos, ¿cuántas categorías de formato se pueden configurar directamente?",
+    "enunciado": "En el cuadro de crear o modificar un estilo, abajo a la izquierda, está el menú «Formato ▾». ¿Cuántas entradas tiene?",
     "opciones": [
       {
         "letter": "A",
-        "text": "4 (Fuente, Párrafo, Tabulaciones y Borde)"
+        "text": "9"
       },
       {
         "letter": "B",
-        "text": "6 (Fuente, Párrafo, Tabulaciones, Borde, Idioma y Marco)"
+        "text": "4"
       },
       {
         "letter": "C",
-        "text": "8 (Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración y Método abreviado)"
+        "text": "6"
       },
       {
         "letter": "D",
-        "text": "9 (las 8 anteriores más Efectos de texto)"
+        "text": "12"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El menú Formato del cuadro de creación de estilos ofrece 9 categorías: Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. Cada una abre su propio cuadro de configuración."
+    "respuesta": "A",
+    "explicacion": "Nueve: Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. Cada una abre su propio cuadro, así que ese menú funciona como concentrador: desde ahí se llega al cuadro Fuente, al cuadro Párrafo, al de Tabulaciones y al de Bordes y sombreado sin salir del estilo. · Las cifras más bajas son las que salen al recordar solo las categorías obvias y olvidar Idioma, Marco o Método abreviado, que son las tres que casi nadie usa. · La entrada «Método abreviado» merece atención aparte: es la que permite asignar una combinación de teclas propia a un estilo, y lleva al cuadro Personalizar teclado."
   },
   {
     "id": "inicio-100",
@@ -13816,28 +13816,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0354",
-    "enunciado": "¿Qué opción del menú contextual sobre un estilo actualiza su definición para que coincida con el formato manual aplicado al texto seleccionado?",
+    "enunciado": "Has retocado a mano un párrafo con estilo «Cita» y quieres que esa apariencia pase a ser la definición del estilo, para que los demás párrafos se pongan igual. ¿Qué eliges en el menú contextual del estilo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modificar"
+        "text": "Actualizar «Cita» para que coincida con la selección"
       },
       {
         "letter": "B",
-        "text": "Actualizar [Nombre estilo] para que coincida con la selección"
+        "text": "Modificar…, que abre el cuadro completo del estilo"
       },
       {
         "letter": "C",
-        "text": "Seleccionar todo"
+        "text": "Seleccionar todo, que marca los párrafos que lo usan"
       },
       {
         "letter": "D",
-        "text": "Agregar a la galería de estilos"
+        "text": "Agregar a la galería de estilos de la cinta"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La opción Actualizar [Nombre estilo] para que coincida con la selección toma el formato manual aplicado al texto actualmente seleccionado y lo convierte en la nueva definición del estilo, propagando el cambio a todos los párrafos que usan ese estilo. Es distinto de Modificar, que abre el cuadro de diálogo completo."
+    "respuesta": "A",
+    "explicacion": "Esa entrada toma el formato que tenga el texto seleccionado, lo convierte en la nueva definición del estilo y arrastra con ella todos los párrafos que lo lleven, sin abrir ningún cuadro. Es la vía rápida cuando ya se ha conseguido el aspecto deseado a mano. · «Modificar…» llega al mismo sitio por el camino largo, abriendo el cuadro para tocar los campos uno a uno: es el descarte con más fundamento, porque también cambia la definición. La diferencia está en de dónde sale el formato nuevo, del texto o de lo que se teclee en el cuadro. · «Seleccionar todo» marca los párrafos que usan el estilo, sin cambiar nada. · Y «Agregar a la galería» solo lo saca a la cinta."
   },
   {
     "id": "inicio-101",
@@ -13852,28 +13852,28 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0355",
-    "enunciado": "¿Qué diferencia hay entre las opciones 'Quitar todo' y 'Eliminar [Nombre estilo]' del menú contextual sobre un estilo?",
+    "enunciado": "En el menú contextual de un estilo hay dos entradas que suenan parecido: «Quitar todo» y «Eliminar». ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Quitar todo elimina el estilo de la lista; Eliminar lo quita solo del texto que lo tenía aplicado"
+        "text": "La primera lo desaplica del texto; la segunda lo borra de la lista"
       },
       {
         "letter": "B",
-        "text": "Quitar todo desaplica el estilo de todos los párrafos que lo usan dejándolos en Normal, sin borrar el estilo de la lista; Eliminar borra el estilo completamente de la lista de estilos disponibles"
+        "text": "La primera lo borra de la lista; la segunda lo desaplica del texto"
       },
       {
         "letter": "C",
-        "text": "Ambas opciones tienen el mismo efecto pero Eliminar pide confirmación y Quitar todo no"
+        "text": "Hacen lo mismo; solo cambia que la segunda pide confirmación"
       },
       {
         "letter": "D",
-        "text": "Quitar todo actúa solo en la selección actual; Eliminar actúa en todo el documento"
+        "text": "La primera actúa sobre la selección; la segunda, sobre el documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Quitar todo desaplica el estilo de todos los párrafos que lo tienen, dejándolos con el estilo Normal, pero el estilo sigue disponible en la lista. Eliminar borra el estilo completamente de la lista de estilos del documento y no puede aplicarse más."
+    "respuesta": "A",
+    "explicacion": "«Quitar todo» recorre el documento y deja en Normal cuantos párrafos llevaran ese estilo, pero el estilo sigue en la lista y se puede volver a aplicar. «Eliminar» hace lo contrario: borra el estilo de la lista del documento, y los párrafos que lo usaban pasan a Normal por fuerza. Uno vacía, el otro suprime. · La versión con los papeles cambiados es el reflejo exacto. · No hacen lo mismo, y ninguna se distingue por pedir confirmación. · Y las dos actúan sobre el documento entero, no sobre la selección: por eso empieza por «Quitar TODO». · Los estilos de fábrica, como Normal o Título 1, no se pueden eliminar."
   },
   {
     "id": "inicio-102",
@@ -13888,11 +13888,11 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0356",
-    "enunciado": "¿Qué opción del menú contextual sobre un estilo permite localizar de golpe todos los párrafos del documento que tienen ese estilo aplicado?",
+    "enunciado": "Quieres marcar de golpe todos los párrafos del documento que llevan el estilo «Cita», para revisarlos juntos. ¿Qué eliges en su menú contextual?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modificar"
+        "text": "Seleccionar todo"
       },
       {
         "letter": "B",
@@ -13900,16 +13900,16 @@
       },
       {
         "letter": "C",
-        "text": "Seleccionar todo"
+        "text": "Modificar…"
       },
       {
         "letter": "D",
-        "text": "Actualizar para que coincida con la selección"
+        "text": "Actualizar «Cita» para que coincida con la selección"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La opción Seleccionar todo del menú contextual sobre un estilo selecciona simultáneamente todos los párrafos del documento que tienen ese estilo aplicado. Es útil para revisar o modificar de una vez todos los elementos con ese formato."
+    "respuesta": "A",
+    "explicacion": "«Seleccionar todo» marca a la vez todos los párrafos con ese estilo, aunque estén repartidos por el documento, y a partir de ahí se pueden revisar o formatear en bloque. Es también la forma de contarlos de un vistazo, porque la barra de estado dice cuántas palabras hay seleccionadas. · «Quitar todo» es el descarte más peligroso: su nombre se parece muchísimo y también recorre el documento entero, pero en vez de marcarlos los deja a todos en Normal, deshaciendo el trabajo. · «Modificar…» abre el cuadro del estilo. · Y «Actualizar… para que coincida con la selección» redefine el estilo tomando el formato del texto marcado."
   },
   {
     "id": "inicio-103",
@@ -13924,28 +13924,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0357",
-    "enunciado": "¿Qué hace la opción 'Quitar de galería de estilos' del menú contextual sobre un estilo?",
+    "enunciado": "La galería de estilos de la cinta se te ha llenado de miniaturas y quieres quitar de ahí un estilo sin perderlo. ¿Qué eliges en su menú contextual?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Elimina el estilo permanentemente del documento"
+        "text": "Quitar de galería de estilos"
       },
       {
         "letter": "B",
-        "text": "Desaplica el estilo de todos los párrafos que lo usan"
+        "text": "Eliminar «Cita»"
       },
       {
         "letter": "C",
-        "text": "Oculta el estilo de las miniaturas visibles en la cinta sin eliminarlo del panel de estilos"
+        "text": "Quitar todo"
       },
       {
         "letter": "D",
-        "text": "Mueve el estilo al final de la lista en el panel de estilos"
+        "text": "Modificar… y desmarcar «Agregar a la galería de estilos»"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Quitar de galería de estilos oculta el estilo de las miniaturas visibles en la cinta (galería rápida) pero no lo elimina. El estilo sigue disponible en el panel lateral de estilos y puede seguir aplicándose. Es útil para simplificar la galería sin perder estilos."
+    "respuesta": "A",
+    "explicacion": "Esa entrada lo saca de las miniaturas de la cinta y lo deja intacto en el panel lateral, desde donde se sigue pudiendo aplicar. Sirve para dejar en la galería solo los cuatro o cinco estilos que se usan de verdad. · Modificar y desmarcar la casilla es el descarte más difícil, porque consigue exactamente lo mismo: es el camino largo hacia el mismo ajuste, y las dos vías tocan la misma propiedad del estilo. · «Eliminar» sí lo borraría, y de la lista entera, no solo de la galería. · Y «Quitar todo» no toca la galería: desaplica el estilo de todos los párrafos que lo llevan."
   },
   {
     "id": "inicio-104",
@@ -13960,19 +13960,19 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0358",
-    "enunciado": "¿Qué botón del panel de Estilos permite ver, separados en dos secciones, qué formato corresponde al estilo aplicado y qué formato adicional se ha añadido manualmente encima?",
+    "enunciado": "Un párrafo no se ve como debería y quieres saber qué parte de su aspecto viene del estilo y qué parte se le ha puesto a mano encima. ¿Qué botón del panel Estilos te lo enseña?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Nuevo estilo"
-      },
-      {
-        "letter": "B",
         "text": "Inspector de estilo"
       },
       {
-        "letter": "C",
+        "letter": "B",
         "text": "Administrar estilos"
+      },
+      {
+        "letter": "C",
+        "text": "Nuevo estilo"
       },
       {
         "letter": "D",
@@ -13980,8 +13980,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El Inspector de estilo muestra dos secciones diferenciadas: la primera indica el estilo de párrafo aplicado y la segunda muestra el formato de carácter manual añadido encima del estilo. Es útil para identificar y limpiar formato manual solapado sobre un estilo."
+    "respuesta": "A",
+    "explicacion": "El Inspector de estilo parte la información en dos bloques: el formato que viene del estilo de párrafo y el que se ha añadido a mano encima, separando además lo de párrafo de lo de carácter. Cada bloque tiene su botón de goma para limpiar solo esa mitad, que es lo que lo hace útil para arreglar un documento heredado. · «Administrar estilos» es el descarte con más fundamento, porque también sirve para poner orden: pero trabaja sobre la lista de estilos del documento, ordenándolos, restringiéndolos o importándolos, no sobre un párrafo concreto. · «Nuevo estilo» crea uno. · Y «Mostrar vista previa» solo cambia cómo se ve la lista del panel."
   },
   {
     "id": "inicio-105",
@@ -13996,28 +13996,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0359",
-    "enunciado": "¿Qué botón del panel de Estilos permite reorganizar el orden de los estilos, ocultarlos y decidir cuáles se muestran en la galería rápida de la cinta?",
+    "enunciado": "Abres «Administrar estilos» desde el panel de Estilos y ves que el cuadro tiene varias fichas. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Inspector de estilo"
+        "text": "Editar · Recomendar · Restringir · Establecer valores predeterminados"
       },
       {
         "letter": "B",
-        "text": "Nuevo estilo"
+        "text": "Editar · Recomendar · Importar · Establecer valores predeterminados"
       },
       {
         "letter": "C",
-        "text": "Administrar estilos"
+        "text": "Editar · Ordenar · Restringir · Establecer valores predeterminados"
       },
       {
         "letter": "D",
-        "text": "Opciones del panel"
+        "text": "Editar · Recomendar · Restringir · Exportar a plantilla"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El botón Administrar estilos abre un cuadro centralizado desde el que se puede reorganizar el orden de los estilos, ocultarlos del panel y decidir cuáles aparecen en la galería rápida de la cinta. Es distinto del Inspector de estilo, que solo analiza el formato del texto seleccionado."
+    "respuesta": "A",
+    "explicacion": "Cuatro fichas: «Editar» para modificar la definición de cualquier estilo, «Recomendar» para decidir el orden en que aparecen y cuáles se ocultan de la galería, «Restringir» para bloquear estilos y que nadie los cambie, y «Establecer valores predeterminados» para fijar la fuente y el párrafo de partida del documento o de la plantilla. · «Importar» y «Exportar» son los descartes con más fundamento porque esa función existe: está en el botón «Importar o exportar…» del pie del cuadro, no como ficha. · Y «Ordenar» tampoco es ficha: ordenar la lista es una de las cosas que se hacen dentro de «Recomendar»."
   },
   {
     "id": "inicio-107",
@@ -14032,11 +14032,11 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0361",
-    "enunciado": "Al crear un estilo de tabla, el desplegable «Aplicar formato a» determina a que parte de la tabla se aplica el formato. ¿Cuantas opciones ofrece?",
+    "enunciado": "Creas un estilo de tabla y despliegas «Aplicar formato a», para dar formato a una parte concreta. ¿Cuántas opciones ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "8"
+        "text": "13"
       },
       {
         "letter": "B",
@@ -14044,16 +14044,16 @@
       },
       {
         "letter": "C",
-        "text": "13"
+        "text": "5"
       },
       {
         "letter": "D",
-        "text": "5"
+        "text": "8"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Son 13: Toda la tabla, Con encabezado, Fila Total, Primera columna, Ultima columna, Bandas en filas impares, Bandas en filas pares, Bandas en columnas impares, Bandas en columnas pares, Celda superior izquierda, Celda superior derecha, Celda inferior izquierda y Celda inferior derecha. (Las 4 ultimas —las 4 esquinas de celda— suelen pasarse por alto.) Nombres exactos de esta instalacion: «Con encabezado» (no «Fila de encabezado») y «Fila Total» (no «Fila de totales»). Confirmado con captura del usuario."
+    "respuesta": "A",
+    "explicacion": "Son trece: Toda la tabla, Con encabezado, Fila Total, Primera columna, Última columna, las cuatro de bandas —filas impares, filas pares, columnas impares, columnas pares— y las cuatro esquinas de celda, superior izquierda, superior derecha, inferior izquierda e inferior derecha. Confirmado con la captura del usuario. · Las cuatro esquinas son las que se pasan por alto y las que explican la diferencia con el nueve, que es el descarte que más cae. · Ojo con los nombres exactos de esta instalación: «Con encabezado» y «Fila Total», no «Fila de encabezado» ni «Fila de totales». · Las seis primeras se corresponden con las seis casillas de «Opciones de estilo de tabla» de la cinta contextual."
   },
   {
     "id": "inicio-108",
@@ -14068,11 +14068,11 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0362",
-    "enunciado": "¿Qué opción de 'Aplicar formato a' en un estilo de tabla hace que las filas pares tengan un color de fondo distinto al resto, facilitando la lectura por franjas horizontales?",
+    "enunciado": "Quieres que una tabla larga se lea mejor con franjas de color alternas, empezando por la segunda fila. ¿Qué eliges en «Aplicar formato a»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Fila de encabezado"
+        "text": "Bandas en filas pares"
       },
       {
         "letter": "B",
@@ -14080,16 +14080,16 @@
       },
       {
         "letter": "C",
-        "text": "Bandas en filas pares"
+        "text": "Bandas en columnas pares"
       },
       {
         "letter": "D",
-        "text": "Toda la tabla"
+        "text": "Con encabezado"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Bandas en filas pares aplica el formato configurado únicamente a las filas pares de la tabla (segunda, cuarta, sexta...), creando un efecto de franjas alternas. Bandas en filas impares haría lo mismo pero con las filas impares (primera, tercera, quinta...)."
+    "respuesta": "A",
+    "explicacion": "«Bandas en filas pares» pinta la segunda, la cuarta, la sexta, que es exactamente lo que pide el enunciado. Su pareja hace lo mismo con la primera, la tercera y la quinta, y usar una u otra decide si la franja empieza justo debajo del encabezado o una fila más abajo. · Las de columnas hacen lo mismo en vertical, y son el descarte que más cae por leer «bandas» y no fijarse en la dirección. · «Con encabezado» da formato solo a la primera fila. · Para que las bandas se vean, además hay que tener marcada la casilla «Filas con bandas» en «Opciones de estilo de tabla», en la cinta contextual de la tabla: el estilo las define, la casilla las enciende."
   },
   {
     "id": "inicio-110",
@@ -14104,11 +14104,11 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0364",
-    "enunciado": "¿Qué opción del menú Formato del cuadro de creación de estilos permite asociar al estilo una combinación de teclas propia para aplicarlo directamente desde el teclado?",
+    "enunciado": "Quieres que tu estilo «Cita» se aplique con una combinación de teclas propia. En el cuadro del estilo, ¿qué entrada del menú «Formato ▾» lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Idioma"
+        "text": "Método abreviado"
       },
       {
         "letter": "B",
@@ -14116,7 +14116,7 @@
       },
       {
         "letter": "C",
-        "text": "Método abreviado"
+        "text": "Idioma"
       },
       {
         "letter": "D",
@@ -14124,8 +14124,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La opción Método abreviado del menú Formato abre el cuadro de personalización de teclado donde se puede asignar una combinación de teclas específica al estilo. Una vez asignada, ese atajo aplica el estilo directamente sin necesidad de usar la galería ni el panel."
+    "respuesta": "A",
+    "explicacion": "«Método abreviado» abre el cuadro Personalizar teclado con el estilo ya cargado como comando: se pulsa la combinación deseada, Word avisa si está ocupada y se guarda. Es una de las cuatro puertas de ese cuadro. · «Marco» es la entrada menos usada de las nueve y por eso resulta un descarte creíble: convierte el párrafo en un marco flotante, una herencia de versiones antiguas. · «Idioma» fija el idioma de corrección del estilo. · «Numeración» le engancha una lista, que es como se numera un articulado a través de los estilos de título. · Ninguna de las tres tiene que ver con el teclado."
   },
   {
     "id": "inicio-111",
@@ -14140,19 +14140,19 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0365",
-    "enunciado": "¿Qué opción del menú Formato del cuadro de creación de estilos es útil cuando el estilo se aplicará a un texto en un idioma distinto al del documento, para que el corrector ortográfico lo trate correctamente?",
+    "enunciado": "Un informe en español lleva citas en inglés y el corrector las subraya todas. Quieres que un estilo «Cita en inglés» se encargue. En el menú «Formato ▾», ¿qué entrada usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Marco"
-      },
-      {
-        "letter": "B",
         "text": "Idioma"
       },
       {
+        "letter": "B",
+        "text": "Fuente"
+      },
+      {
         "letter": "C",
-        "text": "Numeración"
+        "text": "Marco"
       },
       {
         "letter": "D",
@@ -14160,8 +14160,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La opción Idioma del menú Formato permite asignar al estilo un idioma de corrección específico. Es útil por ejemplo para estilos de citas en inglés dentro de un documento en español, evitando que el corrector marque esas palabras como errores."
+    "respuesta": "A",
+    "explicacion": "«Idioma» guarda dentro del estilo el idioma de corrección, e incluso la opción de no revisar la ortografía ni la gramática de ese texto. Así basta aplicar el estilo para que el subrayado rojo desaparezca, sin ir marcando párrafos a mano. · «Fuente» es el descarte con más fundamento porque el idioma también se puede fijar desde ahí en algunas versiones y porque es la entrada donde uno mira primero: pero el idioma tiene la suya propia en este menú. · «Marco» convierte el párrafo en un marco flotante. · Y «Efectos de texto» lleva a rellenos, contornos y sombras del carácter."
   },
   {
     "id": "inicio-112",
@@ -14176,19 +14176,19 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0366",
-    "enunciado": "¿Cuál es el estilo predeterminado que Word 365 aplica al texto normal de un documento nuevo?",
+    "enunciado": "Abres un documento en blanco y escribes un párrafo sin tocar nada. ¿Qué estilo lleva ese párrafo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cuerpo de texto"
+        "text": "Normal"
       },
       {
         "letter": "B",
-        "text": "Sin espaciado"
+        "text": "Cuerpo de texto"
       },
       {
         "letter": "C",
-        "text": "Normal"
+        "text": "Sin espaciado"
       },
       {
         "letter": "D",
@@ -14196,8 +14196,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El estilo Normal es el estilo predeterminado que Word 365 aplica al texto en cualquier documento nuevo. Todos los demás estilos están basados directa o indirectamente en él. Sin espaciado es otro estilo predefinido pero no es el predeterminado."
+    "respuesta": "A",
+    "explicacion": "«Normal» es el estilo de partida y, además, la raíz de casi todos los demás: como la mayoría están basados en él, cambiar su fuente o su interlineado recorre el documento entero. Por eso es el sitio por el que se empieza a maquetar. · «Cuerpo de texto» y «Sin espaciado» existen los dos y salen en la galería, así que son descartes con fundamento: el segundo es Normal sin el espacio posterior ni el interlineado de 1,15, pensado para direcciones y tablas. · «Predeterminado» no es el nombre de ningún estilo, aunque sí aparezca la palabra en el botón «Establecer como predeterminado» de varios cuadros."
   },
   {
     "id": "inicio-113",
@@ -14212,28 +14212,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0367",
-    "enunciado": "¿Qué ocurre con los estilos Título 1 a Título 9 en relación con el panel de navegación y la tabla de contenido automática?",
+    "enunciado": "Marcas los apartados de un informe con los estilos Título 1 a Título 3 en vez de ponerlos en negrita a mano. ¿Qué ganas además del aspecto?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Solo aparecen en la tabla de contenido si se han aplicado manualmente a cada párrafo"
+        "text": "Aparecen en el panel de Navegación y alimentan la tabla de contenido"
       },
       {
         "letter": "B",
-        "text": "Los párrafos con estilos Título 1 a Título 9 aparecen automáticamente en el panel de navegación pestaña Títulos y pueden usarse para generar la tabla de contenido automática"
+        "text": "Aparecen en el panel de Navegación, pero la tabla de contenido sigue siendo manual"
       },
       {
         "letter": "C",
-        "text": "Solo los estilos Título 1, 2 y 3 aparecen en el panel de navegación"
+        "text": "Alimentan la tabla de contenido, pero solo los tres primeros niveles"
       },
       {
         "letter": "D",
-        "text": "Los estilos Título no tienen relación con el panel de navegación ni con la tabla de contenido"
+        "text": "Nada más: los estilos de título son formato como cualquier otro"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Los estilos Título 1 a Título 9 tienen una función estructural: los párrafos que los usan aparecen automáticamente en la pestaña Títulos del panel de navegación y pueden utilizarse para generar una tabla de contenido automática. Esta es una de las razones principales para usar estilos de título en lugar de formato manual."
+    "respuesta": "A",
+    "explicacion": "Los nueve estilos Título llevan dentro un nivel de esquema, y eso es lo que los convierte en estructura: los párrafos salen en la ficha Títulos del panel de Navegación, se pueden contraer y arrastrar para reordenar el documento, y Referencias ▸ Tabla de contenido los recoge sola. · Los nueve valen para las dos cosas; lo que ocurre es que la tabla de contenido muestra por defecto solo tres niveles, y eso se cambia en sus opciones. Ahí está la media verdad del descarte de los tres niveles. · Y ese nivel de esquema se puede dar a mano a cualquier párrafo desde el cuadro Párrafo, sin aplicar el estilo."
   },
   {
     "id": "inicio-114",
@@ -14248,28 +14248,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0368",
-    "enunciado": "En el cuadro de creación de estilos, ¿qué ocurre si se activa la casilla 'Agregar a la galería de estilos'?",
+    "enunciado": "Al crear un estilo dejas marcada la casilla «Agregar a la galería de estilos». ¿Qué consigues?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El estilo se guarda en la plantilla global y está disponible en todos los documentos"
+        "text": "Que salga entre las miniaturas de la cinta, sin abrir el panel"
       },
       {
         "letter": "B",
-        "text": "El estilo aparece entre las miniaturas visibles en la cinta sin necesidad de abrir el panel lateral"
+        "text": "Que quede guardado en la plantilla y esté en todos los documentos"
       },
       {
         "letter": "C",
-        "text": "El estilo se aplica automáticamente a todos los párrafos del documento"
+        "text": "Que se aplique a todos los párrafos que compartan formato"
       },
       {
         "letter": "D",
-        "text": "El estilo se exporta como archivo independiente"
+        "text": "Que se exporte a un archivo aparte para poder compartirlo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Al activar Agregar a la galería de estilos, el nuevo estilo aparece directamente entre las miniaturas visibles en la cinta (galería rápida del grupo Estilos), permitiendo aplicarlo con un clic sin tener que abrir el panel lateral. No afecta a la disponibilidad en otros documentos, que depende de la opción Solo en este documento / Documentos nuevos."
+    "respuesta": "A",
+    "explicacion": "Esa casilla decide únicamente la visibilidad en la cinta. El estilo existe igual sin ella, y se puede aplicar desde el panel lateral o escribiendo su nombre en «Aplicar estilos». Se desmarca para no llenar la galería de estilos que se usan poco. · Que esté disponible en otros documentos lo decide otra cosa, las dos opciones de alcance del pie del cuadro: «Solo en este documento» o «Documentos nuevos basados en esta plantilla». Es el descarte que más cae, porque las dos parecen hablar de dónde vive el estilo. · Ningún estilo se aplica solo a nada. · Y exportar se hace desde «Administrar estilos ▸ Importar o exportar…»."
   },
   {
     "id": "inicio-116",
@@ -14284,28 +14284,28 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0370",
-    "enunciado": "¿Cuál es la diferencia entre aplicar el estilo Normal a un párrafo y usar el botón Borrar todo el formato del grupo Fuente?",
+    "enunciado": "Un párrafo con estilo «Título 2» tiene además color y sangría puestos a mano. Comparas aplicarle el estilo Normal con pulsar «Borrar todo el formato». ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "No hay diferencia; ambos producen exactamente el mismo resultado"
+        "text": "Lo primero cambia el estilo y puede dejar el formato manual; lo segundo se lleva las dos cosas"
       },
       {
         "letter": "B",
-        "text": "Aplicar el estilo Normal cambia el estilo del párrafo a Normal; Borrar todo el formato elimina el formato manual pero puede dejar el estilo original intacto"
+        "text": "Lo primero se lleva las dos cosas; lo segundo solo cambia el estilo"
       },
       {
         "letter": "C",
-        "text": "Borrar todo el formato aplica el estilo Normal; aplicar Normal solo borra el formato de fuente"
+        "text": "Hacen lo mismo: los dos dejan el párrafo en Normal y sin formato manual"
       },
       {
         "letter": "D",
-        "text": "Aplicar Normal borra solo el formato de párrafo; Borrar todo el formato borra solo el formato de carácter"
+        "text": "Lo primero borra el formato de párrafo; lo segundo, el de carácter"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Aplicar el estilo Normal asigna explícitamente ese estilo al párrafo, sustituyendo cualquier otro estilo que tuviera. Borrar todo el formato elimina el formato manual aplicado encima del estilo pero no necesariamente cambia el estilo base del párrafo. Son operaciones distintas con efectos distintos."
+    "respuesta": "A",
+    "explicacion": "Aplicar un estilo sustituye la BASE del párrafo, pero el formato directo puesto encima sobrevive: es la causa de que un párrafo pase a Normal y siga viéndose en rojo. El botón «Borrar todo el formato», en cambio, hace las dos cosas a la vez, deja el estilo en Normal y quita lo puesto a mano; lo único que no toca es el color de resaltado. · Creer que son equivalentes es lo normal, porque en un párrafo sin formato manual el resultado sí coincide: la diferencia solo aparece cuando hay algo encima, que es justo el caso del enunciado. · Y ninguno de los dos se limita a un eje del formato."
   },
   {
     "id": "inicio-197",
@@ -14320,28 +14320,28 @@
     "tema": "Estilos",
     "difficulty": "baja",
     "sourceQuestionId": "P-0451",
-    "enunciado": "Quieres aplicar con un solo clic el estilo Título 1 a un párrafo, eligiéndolo directamente de las miniaturas visibles en la cinta, sin abrir ningún panel lateral. ¿Dónde puedes verlas?",
+    "enunciado": "Despliegas la galería de estilos de la cinta con su flecha «Más». Además de las miniaturas, ¿qué entradas aparecen al pie?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Galería de estilos"
+        "text": "Crear un estilo · Borrar formato · Aplicar estilos…"
       },
       {
         "letter": "B",
-        "text": "Panel de estilos"
+        "text": "Crear un estilo · Borrar formato · Administrar estilos…"
       },
       {
         "letter": "C",
-        "text": "Nuevo estilo"
+        "text": "Nuevo estilo · Inspector de estilo · Administrar estilos"
       },
       {
         "letter": "D",
-        "text": "Inspector de estilo"
+        "text": "Crear un estilo · Modificar estilo · Aplicar estilos…"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La galería de estilos es el área visible directamente en la cinta, dentro del grupo Estilos de la pestaña Inicio. Muestra miniaturas de los estilos más usados y permite aplicarlos con un solo clic. Para ver la galería completa se usa la flecha desplegable que expande todos los estilos disponibles."
+    "explicacion": "La galería desplegada termina con esas tres: «Crear un estilo», que abre el cuadro para guardar como estilo el formato del párrafo actual; «Borrar formato», que hace lo mismo que el botón del grupo Fuente; y «Aplicar estilos…», que abre la ventanita flotante de Ctrl+Mayús+W. · Los nombres del descarte más difícil —«Nuevo estilo», «Inspector de estilo» y «Administrar estilos»— son los tres botones del PANEL lateral, no de la galería: es la confusión clásica entre los dos sitios, que hacen cosas parecidas con nombres parecidos. · Y «Modificar estilo» no está en el pie: se llega a él por el menú contextual de cada miniatura."
   },
   {
     "id": "inicio-198",
@@ -14356,28 +14356,28 @@
     "tema": "Estilos",
     "difficulty": "baja",
     "sourceQuestionId": "P-0452",
-    "enunciado": "Necesitas ver de un vistazo la lista completa de todos los estilos disponibles en el documento, tanto los predefinidos de Word como los que has creado tú, en un panel que se quede abierto mientras trabajas. ¿Dónde puedes abrirlo?",
+    "enunciado": "Comparas el panel lateral de Estilos con la galería de la cinta. ¿Qué hay en el panel que la galería no tenga?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Iniciador de cuadro de diálogo del grupo Estilos"
+        "text": "Todos los estilos del documento, incluidos los ocultos de la galería"
       },
       {
         "letter": "B",
-        "text": "Galería de estilos"
+        "text": "La vista previa del aspecto de cada estilo"
       },
       {
         "letter": "C",
-        "text": "Nuevo estilo"
+        "text": "El menú contextual con «Modificar…» y «Seleccionar todo»"
       },
       {
         "letter": "D",
-        "text": "Inspector de estilo"
+        "text": "La posibilidad de aplicar un estilo con un solo clic"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El iniciador de cuadro de diálogo del grupo Estilos (la flecha pequeña en la esquina inferior derecha del grupo) abre el panel lateral de Estilos. Este panel permanece visible mientras se trabaja y muestra todos los estilos disponibles con sus nombres y una vista previa de su apariencia."
+    "explicacion": "La galería es una selección: enseña los estilos marcados para aparecer en ella, y cualquiera se puede quitar de ahí sin borrarlo. El panel los lista todos, y con su enlace «Opciones…» se decide incluso si se muestran los estilos recomendados, los usados o todos los existentes. · La vista previa la tienen los dos: la galería siempre, y el panel al marcar su casilla «Mostrar vista previa». Es el descarte más fino. · El menú contextual con «Modificar…» y «Seleccionar todo» también sale en las dos. · Y las dos aplican con un clic. Lo que de verdad las separa es cuántos estilos alcanzan."
   },
   {
     "id": "inicio-199",
@@ -14392,28 +14392,28 @@
     "tema": "Estilos",
     "difficulty": "baja",
     "sourceQuestionId": "P-0453",
-    "enunciado": "Ya con el panel de estilos abierto, quieres crear un estilo completamente nuevo desde cero, definiendo su nombre y su formato. ¿Qué botón debes utilizar dentro del panel?",
+    "enunciado": "Al pie del panel de Estilos hay tres botones pequeños. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Nuevo estilo"
+        "text": "Nuevo estilo · Inspector de estilo · Administrar estilos"
       },
       {
         "letter": "B",
-        "text": "Inspector de estilo"
+        "text": "Nuevo estilo · Modificar estilo · Administrar estilos"
       },
       {
         "letter": "C",
-        "text": "Administrar estilos"
+        "text": "Nuevo estilo · Inspector de estilo · Importar o exportar"
       },
       {
         "letter": "D",
-        "text": "Galería de estilos"
+        "text": "Crear un estilo · Borrar formato · Aplicar estilos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Nuevo estilo situado en la parte inferior del panel de Estilos abre el cuadro de diálogo completo para crear un estilo nuevo, con todos los campos: nombre, tipo, estilo base, estilo del párrafo siguiente y el menú Formato con las 9 categorías de formato configurables."
+    "explicacion": "Son esos tres, en ese orden, bajo la lista y junto a la casilla «Mostrar vista previa» y el enlace «Opciones…». El primero crea, el segundo analiza qué formato lleva el párrafo donde está el cursor y el tercero abre el cuadro de gestión con sus cuatro fichas. · «Modificar estilo» no es un botón del panel: se llega por el menú contextual de cada estilo de la lista. · «Importar o exportar» existe, pero un nivel más adentro, en el pie del cuadro Administrar estilos. · Y los tres nombres del último descarte son los del pie de la GALERÍA de la cinta, no los del panel: la confusión entre los dos sitios es la trampa recurrente de este grupo."
   },
   {
     "id": "inicio-200",
@@ -14428,28 +14428,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0454",
-    "enunciado": "Tienes un párrafo con formato manual aplicado encima de un estilo, y quieres ver, separados en dos secciones, qué formato corresponde al estilo de párrafo y cuál se ha añadido a mano encima. ¿Qué botón debes utilizar dentro del panel de estilos?",
+    "enunciado": "Con el Inspector de estilo abierto sobre un párrafo, ves dos bloques y cada uno tiene un botoncito con una goma. ¿Qué hace esa goma?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Inspector de estilo"
+        "text": "Limpia el formato manual de ese bloque, sin tocar el otro ni el estilo"
       },
       {
         "letter": "B",
-        "text": "Nuevo estilo"
+        "text": "Devuelve el párrafo al estilo Normal, quitando el que tuviera"
       },
       {
         "letter": "C",
-        "text": "Administrar estilos"
+        "text": "Borra el estilo de la lista del documento"
       },
       {
         "letter": "D",
-        "text": "Galería de estilos"
+        "text": "Deshace el último cambio de formato hecho en el párrafo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El Inspector de estilo muestra dos secciones diferenciadas en su panel: la primera indica el estilo de párrafo aplicado y la segunda muestra el formato de carácter manual añadido encima del estilo. Desde el inspector también se puede limpiar el formato manual sin afectar al estilo base."
+    "explicacion": "El Inspector separa lo que viene del estilo de lo que se ha puesto encima, y lo hace en dos ejes, párrafo y carácter. Cada goma limpia solo su parte, así que se puede quitar el color y la negrita puestos a mano dejando intacta la sangría, o al revés. Es la herramienta fina para arreglar un documento heredado sin destrozarlo. · Devolver el párrafo a Normal es lo que hace aplicar ese estilo, o el botón «Borrar todo el formato», que va a por todo de una vez: ese es el descarte con más fundamento, porque el resultado se parece. · Borrar el estilo de la lista es «Eliminar», del menú contextual. · Y deshacer es Ctrl+Z."
   },
   {
     "id": "inicio-201",
@@ -14464,28 +14464,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0455",
-    "enunciado": "Necesitas reorganizar el orden en que aparecen los estilos en el panel, ocultar los que no usas y decidir cuáles se muestran en la galería rápida, todo desde un cuadro centralizado. ¿Qué botón debes utilizar dentro del panel de estilos?",
+    "enunciado": "Quieres que en la galería de la cinta solo salgan cinco estilos, en el orden que tú decidas. ¿Qué ficha de «Administrar estilos» lo controla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Administrar estilos"
+        "text": "Recomendar"
       },
       {
         "letter": "B",
-        "text": "Nuevo estilo"
+        "text": "Editar"
       },
       {
         "letter": "C",
-        "text": "Inspector de estilo"
+        "text": "Restringir"
       },
       {
         "letter": "D",
-        "text": "Galería de estilos"
+        "text": "Establecer valores predeterminados"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Administrar estilos abre el cuadro centralizado de gestión de estilos con varias pestañas: Editar (para modificar estilos), Recomendar (para ordenarlos y ocultarlos), Restringir y Establecer valores predeterminados. Desde Recomendar se controla qué estilos aparecen en la galería rápida de la cinta y en qué orden."
+    "explicacion": "En «Recomendar» se marca cada estilo como Mostrar, Ocultar hasta que se use u Ocultar siempre, y se les asigna una prioridad que decide el orden. Eso es lo que gobierna qué llega a la galería y en qué posición. · «Restringir» es el descarte con más fundamento porque también limita lo que se ve: pero lo suyo es bloquear estilos para que nadie los modifique, un asunto de protección, no de presentación, y se usa junto con Restringir edición de la pestaña Revisar. · «Editar» cambia la definición de cada estilo. · Y «Establecer valores predeterminados» fija la fuente y el párrafo de partida del documento o de la plantilla."
   },
   {
     "id": "inicio-202",
@@ -14500,28 +14500,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0456",
-    "enunciado": "Sin abrir el panel lateral de estilos, quieres crear un estilo nuevo directamente desde la galería visible en la cinta, desplegándola del todo primero. ¿Qué opción debes elegir dentro de la galería de estilos?",
+    "enunciado": "Usas «Crear un estilo» del pie de la galería y luego el botón «Nuevo estilo» del panel. Los cuadros que se abren no son iguales. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Crear un estilo"
+        "text": "El de la galería es reducido; el del panel trae todos los campos y el menú Formato"
       },
       {
         "letter": "B",
-        "text": "Borrar formato"
+        "text": "El del panel es reducido; el de la galería trae todos los campos y el menú Formato"
       },
       {
         "letter": "C",
-        "text": "Aplicar estilos"
+        "text": "Son el mismo cuadro: solo cambia la pestaña en la que se abre"
       },
       {
         "letter": "D",
-        "text": "Administrar estilos"
+        "text": "El de la galería crea estilos de carácter y el del panel, de párrafo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Al desplegar completamente la galería de estilos desde la cinta, aparece la opción Crear un estilo en la parte inferior. Abre un cuadro simplificado con solo los campos básicos (nombre y tipo), a diferencia del botón Nuevo estilo del panel lateral que abre el cuadro completo con el menú Formato."
+    "explicacion": "«Crear un estilo» abre una ventanita pequeña que solo pide el nombre y toma el formato del párrafo donde está el cursor; tiene un botón «Modificar…» para saltar al cuadro grande si hace falta. El «Nuevo estilo» del panel abre directamente el cuadro completo, con tipo, estilo base, estilo del párrafo siguiente, alcance y el menú «Formato ▾» de nueve entradas. · La versión con los papeles cambiados es el reflejo exacto. · No son el mismo cuadro, aunque los dos acaben creando un estilo. · Y ninguno está limitado a un tipo: el tipo se elige en el cuadro grande."
   },
   {
     "id": "inicio-203",
@@ -14536,28 +14536,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0457",
-    "enunciado": "Has cambiado a mano el color y el tamaño de un título concreto y quieres que esa nueva apariencia se convierta en la definición oficial del estilo, actualizando automáticamente todos los demás títulos del documento que usan ese mismo estilo. ¿Qué opción debes elegir con el clic derecho sobre el estilo en la galería?",
+    "enunciado": "Has retocado a mano un título y quieres que el estilo se ponga al día con él. ¿Qué pasa con los demás títulos que usan ese estilo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Actualizar [Nombre estilo] para que coincida con la selección"
+        "text": "Cambian todos solos, en el momento, porque lo que cambia es la definición"
       },
       {
         "letter": "B",
-        "text": "Modificar"
+        "text": "No cambian: solo se actualiza el título que se ha retocado"
       },
       {
         "letter": "C",
-        "text": "Seleccionar todo"
+        "text": "Cambian, pero solo los que estén después del retocado en el documento"
       },
       {
         "letter": "D",
-        "text": "Quitar de galería de estilos"
+        "text": "Cambian al cerrar y volver a abrir el documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Actualizar [Nombre estilo] para que coincida con la selección toma el formato del texto actualmente seleccionado y lo convierte en la nueva definición del estilo, propagando el cambio inmediatamente a todos los párrafos del documento que tengan ese estilo aplicado. Es la forma más rápida de actualizar un estilo sin abrir el cuadro de modificación."
+    "explicacion": "«Actualizar … para que coincida con la selección» no toca un párrafo: reescribe la definición del estilo, y todo lo que lo lleve se pone al día al instante, esté antes o después. Ese es el sentido de trabajar con estilos y también su riesgo, porque un retoque hecho para un caso concreto se propaga a los cuarenta. · Pensar que solo cambia el retocado es confundir esta entrada con el formato directo. · No hay ninguna regla de orden en el documento. · Y nada de esto espera a guardar o cerrar: es inmediato, y se deshace con Ctrl+Z como cualquier otra acción."
   },
   {
     "id": "inicio-204",
@@ -14572,11 +14572,11 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0458",
-    "enunciado": "Quieres editar la definición completa de un estilo ya existente, cambiando su tipo de letra o su espaciado, sin tener que crear un estilo nuevo desde cero. ¿Qué opción debes elegir con el clic derecho sobre el estilo?",
+    "enunciado": "Quieres cambiar la fuente y el espaciado de un estilo abriendo su cuadro, en vez de retocar un párrafo y actualizar. ¿Qué eliges en su menú contextual?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modificar"
+        "text": "Modificar…, que abre el cuadro del estilo"
       },
       {
         "letter": "B",
@@ -14584,16 +14584,16 @@
       },
       {
         "letter": "C",
-        "text": "Seleccionar todo"
+        "text": "Quitar de la galería de estilos de la cinta"
       },
       {
         "letter": "D",
-        "text": "Quitar de galería de estilos"
+        "text": "Agregar a la galería de estilos de la cinta"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Modificar abre el cuadro de diálogo completo del estilo con todos sus campos editables: nombre, tipo, estilo base, estilo siguiente y el menú Formato con las 9 categorías. Es el método adecuado para cambiar cualquier aspecto de la definición de un estilo ya existente."
+    "explicacion": "«Modificar…» abre el cuadro con todos los campos —nombre, tipo, estilo base, estilo del párrafo siguiente— y el menú «Formato ▾», desde el que se llega a los cuadros de Fuente, Párrafo, Tabulaciones, Bordes y los demás. Es el camino cuando se sabe qué se quiere cambiar. · «Actualizar para que coincida con la selección» llega al mismo resultado por el otro lado: se retoca un párrafo a ojo y el estilo copia de él. Es el descarte que decide la pregunta, y elegir uno u otro depende de si se prefiere teclear valores o ver el resultado. · Las dos entradas de galería solo deciden si el estilo sale en la cinta."
   },
   {
     "id": "inicio-205",
@@ -14608,28 +14608,28 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0459",
-    "enunciado": "Quieres localizar de golpe, en todo el documento, todos los párrafos y fragmentos que tienen aplicado un estilo concreto, para poder revisarlos o cambiarles algo a todos a la vez. ¿Qué opción debes elegir con el clic derecho sobre el estilo?",
+    "enunciado": "Has usado «Seleccionar todo» sobre el estilo «Cita» y ya tienes marcados los diecisiete párrafos que lo llevan. ¿Qué NO puedes hacer con esa selección?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Seleccionar todo"
+        "text": "Cambiar la definición del estilo «Cita» sin tocar los párrafos"
       },
       {
         "letter": "B",
-        "text": "Modificar"
+        "text": "Aplicarles otro estilo distinto de una vez"
       },
       {
         "letter": "C",
-        "text": "Actualizar para que coincida con la selección"
+        "text": "Ponerles a todos una sangría a mano"
       },
       {
         "letter": "D",
-        "text": "Quitar todo"
+        "text": "Ver en la barra de estado cuántas palabras suman"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Seleccionar todo selecciona simultáneamente todos los párrafos y fragmentos del documento que tienen ese estilo aplicado. Una vez seleccionados se puede aplicar un nuevo estilo, cambiar el formato o realizar cualquier otra operación que afecte a todos ellos a la vez."
+    "explicacion": "La selección actúa sobre el texto, no sobre la definición: para cambiar el estilo hay que ir a «Modificar…» o a «Actualizar para que coincida con la selección», y esas entradas no necesitan tener nada marcado. Es la distinción de fondo entre el estilo y los párrafos que lo llevan. · Las otras tres sí se pueden: aplicarles otro estilo de golpe es el uso más habitual de esta entrada, ponerles formato a mano funciona igual que sobre cualquier selección, y el recuento aparece en la barra de estado en cuanto hay algo seleccionado. · Ojo con no confundir esta entrada con «Quitar todo», que está a su lado y deja los diecisiete en Normal."
   },
   {
     "id": "inicio-236",
@@ -14644,7 +14644,7 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0490",
-    "enunciado": "Al crear un estilo de tabla desde el cuadro de nuevo estilo, ¿qué opción de 'Aplicar formato a' permite que el formato configurado se aplique únicamente a la última fila de la tabla, donde habitualmente van los totales?",
+    "enunciado": "Estás definiendo un estilo de tabla y quieres destacar la última fila, la de los totales. ¿Qué eliges en «Aplicar formato a»?",
     "opciones": [
       {
         "letter": "A",
@@ -14652,20 +14652,20 @@
       },
       {
         "letter": "B",
-        "text": "Última columna"
+        "text": "Con encabezado"
       },
       {
         "letter": "C",
-        "text": "Bandas en filas pares"
+        "text": "Última columna"
       },
       {
         "letter": "D",
-        "text": "Toda la tabla"
+        "text": "Celda inferior derecha"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opcion «Fila Total» del desplegable «Aplicar formato a» aplica el formato configurado unicamente a la ultima fila de la tabla. Es la adecuada para destacar la fila de totales o resumen."
+    "explicacion": "«Fila Total» da formato a la última fila entera, que es donde suelen ir las sumas. Ojo con el nombre exacto en esta instalación: es «Fila Total», no «Fila de totales». · «Con encabezado» es su simétrica y da formato a la primera fila; las dos van juntas en las casillas de «Opciones de estilo de tabla» de la cinta contextual, y ahí se encienden y apagan. · «Última columna» destaca la columna del extremo derecho, no la fila de abajo: es la confusión entre los dos ejes. · «Celda inferior derecha» es una de las cuatro esquinas, y afecta a una sola celda, no a la fila."
   },
   {
     "id": "inicio-239",
@@ -14680,28 +14680,28 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0493",
-    "enunciado": "¿Qué ocurre cuando se elimina un estilo personalizado que tiene párrafos aplicados en el documento?",
+    "enunciado": "Eliminas un estilo personalizado que llevaban doce párrafos del documento. ¿Qué les pasa a esos párrafos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Los párrafos con ese estilo también se eliminan del documento"
+        "text": "Pasan a Normal, con el texto intacto"
       },
       {
         "letter": "B",
-        "text": "Los párrafos con ese estilo pasan automáticamente al estilo Normal"
+        "text": "Conservan el aspecto que tenían, pero sin ningún estilo asignado"
       },
       {
         "letter": "C",
-        "text": "Los párrafos conservan el formato visual pero quedan sin estilo asignado"
+        "text": "Se eliminan del documento junto con el estilo"
       },
       {
         "letter": "D",
-        "text": "Word impide eliminar el estilo si hay párrafos que lo usan"
+        "text": "Word no deja borrar el estilo mientras haya párrafos usándolo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Al eliminar un estilo personalizado, Word asigna automáticamente el estilo Normal a todos los párrafos que tenían ese estilo aplicado. El texto no se elimina ni queda huérfano; simplemente hereda el formato del estilo Normal del documento."
+    "respuesta": "A",
+    "explicacion": "Word reasigna Normal a todos y el texto se queda donde estaba: lo que se pierde es el formato que aportaba el estilo. Se deshace con Ctrl+Z como cualquier otra acción. · Quedarse sin ningún estilo es imposible: todo párrafo tiene uno, aunque sea Normal, y por eso ese descarte, que suena razonable, no puede ocurrir. · Ningún texto se borra por eliminar un estilo. · Y Word no lo impide ni avisa, así que conviene tenerlo presente antes de hacer limpieza. · Los estilos de fábrica, como Normal o Título 1, sí están protegidos y no se pueden eliminar."
   },
   {
     "id": "inicio-240",
@@ -14716,28 +14716,28 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0494",
-    "enunciado": "¿Qué nombre recibe el archivo de plantilla base de Word 365 donde se guardan los estilos predeterminados y las personalizaciones globales?",
+    "enunciado": "Al crear un estilo eliges «Documentos nuevos basados en esta plantilla». ¿En qué archivo se guarda?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Normal.dot"
-      },
-      {
-        "letter": "B",
-        "text": "Default.dotx"
-      },
-      {
-        "letter": "C",
         "text": "Normal.dotm"
       },
       {
+        "letter": "B",
+        "text": "Normal.dotx"
+      },
+      {
+        "letter": "C",
+        "text": "Normal.dot"
+      },
+      {
         "letter": "D",
-        "text": "Plantilla.dotx"
+        "text": "Default.dotx"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La plantilla base de Word 365 se llama Normal.dotm. La extensión .dotm indica que es una plantilla con macros habilitadas. Cuando se elige la opción Documentos nuevos basados en esta plantilla al crear o modificar un estilo, los cambios se guardan en Normal.dotm y se aplican a todos los documentos nuevos."
+    "respuesta": "A",
+    "explicacion": "La plantilla base se llama Normal.dotm, y la eme final indica que admite macros: por eso también es donde acaban las macros grabadas y las personalizaciones de teclado que se guardan «en todos los documentos». · «Normal.dotx» es el descarte que más cae, y la letra que cambia importa: la equis es la extensión de una plantilla SIN macros, que es lo que se genera al guardar cualquier documento como plantilla. · «Normal.dot» era el nombre en las versiones anteriores a 2007, con el formato binario antiguo. · Y «Default.dotx» no existe: ese nombre no lo usa Word en ningún sitio."
   },
   {
     "id": "inicio-268",
@@ -14752,28 +14752,28 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0522",
-    "enunciado": "Un usuario tiene un documento en español con citas textuales en inglés. Quiere que el corrector ortográfico no marque esas citas como errores. ¿Cuál es la solución más eficiente usando los estilos de la pestaña Inicio?",
+    "enunciado": "Un informe en español lleva decenas de citas en inglés y el corrector las subraya todas. ¿Cuál es la forma más eficiente de resolverlo de una vez y para siempre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Seleccionar cada cita manualmente y cambiar el idioma desde la barra de estado"
+        "text": "Un estilo de carácter para las citas, con el idioma inglés puesto en Formato ▾ ▸ Idioma"
       },
       {
         "letter": "B",
-        "text": "Crear un estilo de carácter para citas en inglés y asignarle el idioma inglés desde Formato → Idioma dentro del cuadro de creación de estilos"
+        "text": "Seleccionar cada cita y cambiarle el idioma desde la barra de estado"
       },
       {
         "letter": "C",
-        "text": "Desactivar el corrector ortográfico para todo el documento"
+        "text": "Desactivar la revisión ortográfica de todo el documento en Opciones ▸ Revisión"
       },
       {
         "letter": "D",
-        "text": "Usar el campo Oculto del cuadro Fuente para que el corrector ignore esas palabras"
+        "text": "Marcar las citas como texto oculto para que el corrector no las lea"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La solución más eficiente es crear un estilo de carácter específico para las citas en inglés y asignarle el idioma inglés mediante Formato → Idioma en el cuadro de creación de estilos. Así, cada vez que se aplique ese estilo a una cita, el corrector usará automáticamente el diccionario inglés para esa selección, sin afectar al resto del documento."
+    "respuesta": "A",
+    "explicacion": "El estilo lleva el idioma dentro, así que aplicarlo resuelve la cita entera de un clic, vale para las que se escriban después y se puede cambiar de idea tocando el estilo una sola vez. Además puede llevar cursiva o comillas, con lo que hace dos trabajos. · Ir cita a cita por la barra de estado funciona y es el descarte con más fundamento, porque es lo que hace casi todo el mundo: pero hay que repetirlo por cada cita y no se hereda. · Apagar el corrector entero deja sin revisar también el español, que es lo que de verdad hay que revisar. · Y el texto oculto desaparece de la pantalla y de la impresión: no es una forma de silenciar al corrector."
   },
   {
     "id": "inicio-341",
@@ -14787,7 +14787,7 @@
     "subtopic": null,
     "tema": "Estilos",
     "sourceQuestionId": "8-272",
-    "enunciado": "¿Qué atajo aplica el estilo de encabezado Título 1 en Word 365?",
+    "enunciado": "Quieres aplicar el estilo Título 1 desde el teclado en esta instalación. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -14795,11 +14795,11 @@
       },
       {
         "letter": "B",
-        "text": "Alt+Ctrl+1"
+        "text": "Ctrl+1"
       },
       {
         "letter": "C",
-        "text": "Ctrl+1"
+        "text": "Alt+Ctrl+1"
       },
       {
         "letter": "D",
@@ -14808,7 +14808,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+1 aplica el estilo Título 1. Ctrl+1 aplica interlineado sencillo. Alt+Mayús+1 no está en el volcado v2608 (los niveles de esquema se muestran con Alt+Mayús+T). ⚠️ Ojo: en el cuadro Personalizar teclado, Ctrl+1 figura como «Aplicar Título 1», pero al pulsarlo aplica interlineado sencillo (prueba en vivo). Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Mayús+1 aplica el Título 1. Prueba en vivo del usuario. · ⚠️ Ctrl+1 es el descarte difícil y una trampa doble: el cuadro Personalizar teclado lo lista como AplicarTitulo1, pero al pulsarlo lo que sale es interlineado sencillo. Es de los pocos casos en que la propia tabla del programa no coincide con lo que ocurre. · Alt+Ctrl+1 no tiene comando asignado, aunque sí lo tenga Alt+Ctrl+2, que es el Título 2: la familia de los tres no sigue un patrón regular, y esa irregularidad es lo que hay que memorizar. · Y Alt+Mayús+1 tampoco; la que sí existe con Alt+Mayús es la T, que muestra todos los niveles de título."
   },
   {
     "id": "inicio-342",
@@ -14822,7 +14822,7 @@
     "subtopic": null,
     "tema": "Estilos",
     "sourceQuestionId": "8-273",
-    "enunciado": "¿Qué atajo aplica el estilo de encabezado Título 2 en Word 365?",
+    "enunciado": "Aplicas Ctrl+Mayús+1 y Ctrl+Mayús+3 sin problema, pero Ctrl+Mayús+2 no hace nada. ¿Cuál es la combinación del Título 2?",
     "opciones": [
       {
         "letter": "A",
@@ -14830,20 +14830,20 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+2"
-      },
-      {
-        "letter": "C",
         "text": "Ctrl+2"
       },
       {
-        "letter": "D",
+        "letter": "C",
         "text": "Alt+Mayús+2"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Alt+Mayús+2"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+2 aplica el estilo Título 2 (coincide con el volcado v2608). Ctrl+Mayús+2 no hace nada. Ctrl+2 aplica interlineado doble. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "El Título 2 es la excepción de la familia: en el cuadro Personalizar teclado figura como AplicarTitulo2 con Alt+Ctrl+2, mientras que sus hermanos usan Ctrl+Mayús. Prueba en vivo del usuario. Esa irregularidad es justo lo que se pregunta, porque invita a completar la serie por simetría y a fallar. · Ctrl+2 es el descarte que más cae y hace algo bien distinto: interlineado doble, del mismo trío que Ctrl+1 y Ctrl+5. · Alt+Mayús+2 y Ctrl+Alt+Mayús+2 no tienen comando asignado en esta instalación."
   },
   {
     "id": "inicio-343",
@@ -14857,7 +14857,7 @@
     "subtopic": null,
     "tema": "Estilos",
     "sourceQuestionId": "8-274",
-    "enunciado": "¿Qué atajo aplica el estilo de encabezado Título 3 en Word 365?",
+    "enunciado": "Quieres aplicar el estilo Título 3 desde el teclado. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -14878,7 +14878,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+3 aplica el estilo Título 3 (coincide con el volcado v2608). Ctrl+3 bloquea los campos del documento (BloquearCampos). Alt+Ctrl+3 no está en el volcado. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Mayús+3 figura como AplicarTitulo3, igual que Ctrl+Mayús+1 hace el Título 1; el raro de los tres es el Título 2, que va con Alt+Ctrl+2. Prueba en vivo del usuario. · Ctrl+3 es el descarte más instructivo porque sí hace algo, y nada evidente: bloquea los campos seleccionados para que no se actualicen, y su pareja Ctrl+4 los desbloquea. Quien lo pulse por error no verá ningún cambio en pantalla y luego se preguntará por qué un campo no se actualiza. · Alt+Ctrl+3 y Alt+Mayús+3 no tienen comando asignado. · Del cuarto título en adelante ya no hay atajos: hay que ir a la galería o al panel."
   },
   {
     "id": "inicio-366",
@@ -14892,28 +14892,28 @@
     "subtopic": null,
     "tema": "Estilos",
     "sourceQuestionId": "8-316",
-    "enunciado": "¿Qué atajo abre el panel Aplicar estilos en Word 365?",
+    "enunciado": "Comparas «Aplicar estilos», que se abre con Ctrl+Mayús+W, con el panel lateral de Estilos. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+W"
+        "text": "El primero es una ventanita para teclear el nombre; el segundo, un panel con toda la lista"
       },
       {
         "letter": "B",
-        "text": "Ctrl+W"
+        "text": "El primero es un panel con toda la lista; el segundo, una ventanita para teclear el nombre"
       },
       {
         "letter": "C",
-        "text": "Alt+Mayús+W"
+        "text": "Son el mismo panel: solo cambia si se abre acoplado o flotante"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+W"
+        "text": "El primero solo aplica estilos de carácter; el segundo, de cualquier tipo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+W abre el panel Aplicar estilos. Ctrl+W quita el formato de párrafo. Alt+Mayús+W y Alt+Ctrl+W no tienen función en este Word."
+    "explicacion": "«Aplicar estilos» es una ventanita minúscula con un cuadro de texto que autocompleta y tres botones: Volver a aplicar, Modificar y Nuevo. Está pensada para quien se sabe los nombres y no quiere soltar el teclado. El panel lateral, que se abre con el iniciador del grupo o con Alt+Ctrl+Mayús+S, ocupa el lateral y lista todos los estilos con su vista previa y sus tres botones. · La versión con los papeles cambiados es el reflejo exacto. · No son la misma cosa acoplada de dos maneras. · Y ninguno de los dos está limitado a un tipo de estilo."
   },
   {
     "id": "inicio-375",
@@ -14927,28 +14927,28 @@
     "subtopic": null,
     "tema": "Estilos",
     "sourceQuestionId": "8-332",
-    "enunciado": "¿Qué atajo aplica el estilo normal al párrafo activo en Word 365?",
+    "enunciado": "Un párrafo tiene el estilo «Cita» y además negrita puesta a mano. Pulsas Ctrl+Mayús+A. ¿Con qué te quedas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+A"
+        "text": "Estilo Normal, y sin la negrita"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+S"
+        "text": "Estilo Normal, pero con la negrita todavía puesta"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+N"
+        "text": "Estilo «Cita», y sin la negrita"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+N"
+        "text": "Estilo «Cita», con la negrita todavía puesta"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+A aplica el estilo Normal al párrafo. Ctrl+Mayús+S aplica subrayado, Ctrl+Mayús+N aplica negrita y Alt+Ctrl+N activa la vista Normal del documento (no el estilo)."
+    "explicacion": "El comando EstiloNormal hace las dos cosas: asigna el estilo Normal y, de paso, retira la negrita y la cursiva que fueran formato directo. Así lo describe el propio cuadro Personalizar teclado. · Quedarse con la negrita es lo que ocurriría al aplicar Normal desde la galería o el panel, donde el formato manual sobrevive al cambio de estilo. Ese es el descarte con más fundamento, porque describe con exactitud el comportamiento general de aplicar un estilo. · ⚠️ Y cuidado con Ctrl+Mayús+N, que en el esquema internacional es el estilo Normal: aquí pone negrita, justo lo contrario de lo que se busca."
   },
   {
     "id": "inicio-440",
@@ -14963,28 +14963,28 @@
     "tema": "Estilos",
     "sourceQuestionId": "neg-inicio-09",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre los atajos de título es FALSA?",
+    "enunciado": "Repasas los atajos de los estilos de título antes del examen. ¿Cuál de estas afirmaciones es FALSA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+1 aplica Título 1"
+        "text": "Ctrl+Mayús+1 aplica el Título 1"
       },
       {
         "letter": "B",
-        "text": "Alt+Ctrl+2 aplica Título 2"
+        "text": "Alt+Ctrl+2 aplica el Título 2"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+2 también aplica Título 2"
+        "text": "Ctrl+Mayús+2 también aplica el Título 2"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+3 aplica Título 3"
+        "text": "Ctrl+Mayús+3 aplica el Título 3"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Ctrl+Mayús+2 no hace nada en esta instalación (probado en vivo). El atajo real de Título 2 es Alt+Ctrl+2."
+    "explicacion": "Ctrl+Mayús+2 no hace nada en esta instalación. Prueba en vivo del usuario. Cuela porque completa la serie con los otros dos, y precisamente esa simetría que uno espera es lo que Word rompe aquí: el Título 2 va con Alt+Ctrl+2 mientras que el 1 y el 3 van con Ctrl+Mayús. · Las otras tres son ciertas. · Del Título 4 en adelante no hay atajos de fábrica, aunque se pueden asignar desde «Modificar estilo ▸ Formato ▾ ▸ Método abreviado». · Y ojo con Ctrl+1, que el cuadro lista como Título 1 y al pulsarlo da interlineado sencillo."
   },
   {
     "id": "inicio-456",
@@ -14999,28 +14999,28 @@
     "tema": "Estilos",
     "sourceQuestionId": "neg2-inicio-06",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Repasas lo que sabes de los estilos. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "«Actualizar automáticamente» en un estilo aplica los cambios de un párrafo a todo el texto con ese estilo."
+        "text": "Un estilo de párrafo puede llevar a la vez formato de fuente y de párrafo"
       },
       {
         "letter": "B",
-        "text": "Un estilo de párrafo puede incluir a la vez formato de fuente y de párrafo."
+        "text": "«Actualizar automáticamente» redefine el estilo al retocar a mano un párrafo"
       },
       {
         "letter": "C",
-        "text": "Un estilo de carácter se puede quitar sin borrar el texto, aplicando «Predeterminado»."
+        "text": "Un estilo de carácter se quita aplicando «Borrar todo el formato»"
       },
       {
         "letter": "D",
-        "text": "Los estilos solo se pueden aplicar desde el panel Estilos; no hay galería en la cinta."
+        "text": "Los estilos solo se aplican desde el panel: no hay galería en la cinta"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "La pestaña Inicio tiene una galería de «Estilos rápidos» visible directamente en la cinta, sin necesidad de abrir el panel."
+    "explicacion": "La galería de estilos ocupa buena parte del grupo Estilos de la pestaña Inicio, con sus miniaturas y su flecha «Más» para desplegarla entera: es de hecho la forma más habitual de aplicarlos, sin abrir nada. · Las otras tres son ciertas. Un estilo de párrafo guarda las dos capas de formato, y por eso aplicarlo cambia a la vez la letra y la sangría. · «Actualizar automáticamente» es una casilla real del cuadro Modificar estilo, cómoda y peligrosa a partes iguales. · Y «Borrar todo el formato» se lleva por delante también los estilos de carácter, que es la forma más rápida de quitarlos de un tramo de texto."
   },
   {
     "id": "inicio-457",
@@ -15035,28 +15035,28 @@
     "tema": "Estilos",
     "sourceQuestionId": "neg2-inicio-07",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Repasas los atajos relacionados con estilos. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+W abre el panel Aplicar estilos."
+        "text": "Ctrl+Mayús+W abre la ventanita «Aplicar estilos»"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+1 aplica el estilo Título 1."
+        "text": "Ctrl+Mayús+A aplica el estilo Normal"
       },
       {
         "letter": "C",
-        "text": "Alt+Ctrl+2 aplica el estilo Título 2."
+        "text": "Alt+Ctrl+Mayús+S abre el panel lateral de Estilos"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+2 aplica el estilo Título 2."
+        "text": "Ctrl+Mayús+N aplica el estilo Normal"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Prueba en vivo: Ctrl+Mayús+2 no hace nada en esta instalación; Título 2 se aplica con Alt+Ctrl+2."
+    "explicacion": "⚠️ Ctrl+Mayús+N es la trampa del esquema internacional, donde sí aplica el estilo Normal: en esta instalación comparte comando con Ctrl+N y pone negrita. El estilo Normal se aplica con Ctrl+Mayús+A. · Las otras tres son ciertas y conviene verlas juntas, porque son las tres puertas de teclado a los estilos: la ventanita para teclear el nombre, el atajo directo a Normal y el panel lateral completo. · Los tres estilos de título con atajo propio completan el juego: Ctrl+Mayús+1, Alt+Ctrl+2 y Ctrl+Mayús+3."
   },
   {
     "id": "inicio-520",
@@ -15071,7 +15071,7 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-50",
     "generado": true,
-    "enunciado": "El menú que aparece bajo la galería de Estilos (flecha «Más») ofrece «Crear un estilo», «Borrar formato» y:",
+    "enunciado": "Despliegas la galería de Estilos con su flecha «Más» y al pie ves tres entradas: «Crear un estilo», «Borrar formato» y una tercera. ¿Cuál?",
     "opciones": [
       {
         "letter": "A",
@@ -15087,12 +15087,12 @@
       },
       {
         "letter": "D",
-        "text": "Nuevo estilo rápido"
+        "text": "Nuevo estilo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Aplicar estilos…» abre un cuadro flotante pequeño para escribir el nombre del estilo y aplicarlo (equivale a Ctrl+Mayús+W)."
+    "explicacion": "«Aplicar estilos…» abre la ventanita flotante con la caja de texto autocompletable, la misma de Ctrl+Mayús+W. Con ella, las tres entradas del pie cubren tres necesidades: crear, limpiar y aplicar por nombre. · Los otros tres nombres son reales pero pertenecen al PANEL lateral, no a la galería: «Nuevo estilo», «Inspector de estilo» y «Administrar estilos» son sus tres botones inferiores. Confundir los dos sitios es la trampa recurrente de todo este grupo, porque hacen cosas parecidas con nombres parecidos. · «Borrar formato», por cierto, hace exactamente lo mismo que el botón de la goma del grupo Fuente."
   },
   {
     "id": "inicio-521",
@@ -15107,28 +15107,28 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-51",
     "generado": true,
-    "enunciado": "Al crear un estilo nuevo y pulsar «Modificar…», el campo «Tipo de estilo» aparece por defecto como:",
+    "enunciado": "Creas un estilo con «Tipo de estilo: Vinculado (párrafo y carácter)». ¿Cómo se comporta al aplicarlo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Vinculado (párrafo y carácter)"
+        "text": "Formatea el párrafo entero si no hay nada seleccionado, y solo lo seleccionado si lo hay"
       },
       {
         "letter": "B",
-        "text": "Párrafo"
+        "text": "Formatea siempre el párrafo entero, haya o no algo seleccionado"
       },
       {
         "letter": "C",
-        "text": "Carácter"
+        "text": "Formatea siempre solo lo seleccionado, y no hace nada sin selección"
       },
       {
         "letter": "D",
-        "text": "Lista"
+        "text": "Formatea el párrafo y además crea un estilo de carácter gemelo en la lista"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Vinculado (párrafo y carácter)» aplica formato de párrafo si no hay selección y solo formato de carácter si hay texto seleccionado dentro del párrafo."
+    "explicacion": "«Vinculado» es el tipo camaleónico: se comporta como estilo de párrafo o como estilo de carácter según lo que haya marcado en ese momento. Los estilos Título de fábrica son de este tipo, y por eso se puede poner «Título 1» a un párrafo entero o solo a tres palabras dentro de otro. · Formatear siempre el párrafo es lo que hace un estilo de tipo «Párrafo» a secas, y formatear siempre la selección, uno de tipo «Carácter»: los dos descartes describen con exactitud los otros dos tipos, y esa es la gracia. · Y no se crea ningún estilo gemelo: en la lista sigue habiendo uno solo."
   },
   {
     "id": "inicio-524",
@@ -15143,28 +15143,28 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-54",
     "generado": true,
-    "enunciado": "En el cuadro Modificar estilo, ¿qué casilla hace que, al cambiar a mano el formato de cualquier párrafo con ese estilo, se redefina automáticamente el estilo entero?",
+    "enunciado": "Un compañero se queja de que cada vez que retoca a mano un párrafo, se le cambian de golpe todos los del documento con ese estilo. ¿Qué tiene marcado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Actualizar automáticamente"
+        "text": "«Actualizar automáticamente», en el cuadro del estilo"
       },
       {
         "letter": "B",
-        "text": "Agregar a la galería de estilos"
+        "text": "«Agregar a la galería de estilos», en el cuadro del estilo"
       },
       {
         "letter": "C",
-        "text": "Solo en este documento"
+        "text": "«Documentos nuevos basados en esta plantilla», en el cuadro del estilo"
       },
       {
         "letter": "D",
-        "text": "Vinculado"
+        "text": "«Realizar un seguimiento de formato», en Opciones ▸ Avanzadas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Actualizar automáticamente» es cómodo pero peligroso: un retoque local reformatea todos los párrafos del documento con ese estilo."
+    "explicacion": "Esa casilla hace que cualquier retoque local se convierta en la nueva definición del estilo, sin preguntar: es como si se ejecutara «Actualizar para que coincida con la selección» cada vez. Cómoda para quien maqueta a ojo, y un desastre para quien no sabe que la tiene puesta. Se desmarca en «Modificar estilo». · «Agregar a la galería» solo decide si el estilo sale en la cinta y «Documentos nuevos…» dónde se guarda: ninguna de las dos cambia nada al escribir. · «Realizar un seguimiento de formato» sí existe en Opciones ▸ Avanzadas, pero solo sirve para que Word marque incoherencias de formato; no reformatea nada."
   },
   {
     "id": "inicio-525",
@@ -15179,7 +15179,7 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-55",
     "generado": true,
-    "enunciado": "Las dos opciones de alcance al pie del cuadro de creación de estilo son «Solo en este documento» y:",
+    "enunciado": "Al pie del cuadro de crear estilo hay dos botones de opción. Uno es «Solo en este documento». ¿Cuál es el otro?",
     "opciones": [
       {
         "letter": "A",
@@ -15187,20 +15187,20 @@
       },
       {
         "letter": "B",
-        "text": "Todos los documentos abiertos"
+        "text": "Todos los documentos abiertos ahora mismo"
       },
       {
         "letter": "C",
-        "text": "Esta sección"
+        "text": "La plantilla y los documentos ya existentes"
       },
       {
         "letter": "D",
-        "text": "La plantilla y los documentos existentes"
+        "text": "Esta sección del documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La segunda guarda el estilo en la plantilla (p. ej. Normal.dotm), de modo que los documentos nuevos lo tendrán."
+    "explicacion": "El segundo escribe el estilo en la plantilla, normalmente Normal.dotm, así que estará en todo documento que nazca de ella a partir de ese momento. Fíjate en la palabra «nuevos»: los documentos que ya existen no se enteran, porque cada uno lleva su propia copia de los estilos dentro. · Ese matiz es el que hace bueno el descarte de «la plantilla y los documentos existentes»: suena a lo mismo y promete algo que Word no hace. Para llevar un estilo a un documento ya escrito hay que importarlo desde «Administrar estilos ▸ Importar o exportar…». · Y las secciones no guardan estilos: guardan configuración de página."
   },
   {
     "id": "inicio-527",
@@ -15215,7 +15215,7 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-57",
     "generado": true,
-    "enunciado": "El panel Estilos (iniciador del grupo) tiene tres botones en su parte inferior: «Nuevo estilo», «Inspector de estilo» y:",
+    "enunciado": "Comparas los tres botones del pie del panel Estilos con los tres del pie de la galería. ¿Cuál de estos está en el PANEL?",
     "opciones": [
       {
         "letter": "A",
@@ -15223,20 +15223,20 @@
       },
       {
         "letter": "B",
-        "text": "Borrar todo"
+        "text": "Crear un estilo"
       },
       {
         "letter": "C",
-        "text": "Opciones"
+        "text": "Borrar formato"
       },
       {
         "letter": "D",
-        "text": "Aplicar estilos"
+        "text": "Aplicar estilos…"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Administrar estilos» abre el cuadro completo (Modificar / Recomendar / Restringir / Establecer valores predeterminados)."
+    "explicacion": "Los del panel son «Nuevo estilo», «Inspector de estilo» y «Administrar estilos», tres iconos pequeños bajo la lista. Los de la galería desplegada son «Crear un estilo», «Borrar formato» y «Aplicar estilos…». Seis entradas, dos sitios, y casi todas suenan igual: por eso conviene aprenderlas por bloques y no una a una. · «Crear un estilo» y «Nuevo estilo» son el par más engañoso, porque hacen lo mismo con cuadros distintos: el de la galería es reducido y el del panel completo. · Y «Administrar estilos» es el único de los seis que abre un cuadro con fichas: Editar, Recomendar, Restringir y Establecer valores predeterminados."
   },
   {
     "id": "inicio-529",
@@ -15251,7 +15251,7 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-59",
     "generado": true,
-    "enunciado": "En el cuadro «Opciones del panel Estilos», el desplegable «Seleccionar cómo se ordena la lista» NO ofrece:",
+    "enunciado": "En «Opciones del panel Estilos» despliegas «Seleccionar cómo se ordena la lista». ¿Cuál de estos criterios NO ofrece?",
     "opciones": [
       {
         "letter": "A",
@@ -15263,16 +15263,16 @@
       },
       {
         "letter": "C",
-        "text": "Por recomendación"
+        "text": "Fuente"
       },
       {
         "letter": "D",
-        "text": "Fuente"
+        "text": "Basado en"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ofrece «Como en la recomendación», «Alfabético», «Fuente», «Basado en» y «Por tipo». No hay orden «Por color»."
+    "explicacion": "Los criterios son «Como en la recomendación», «Alfabético», «Fuente», «Basado en» y «Por tipo». No hay ninguno por color, y tiene sentido: un estilo no tiene un color propio que sirva para ordenar, porque puede llevar varios o ninguno. · «Basado en» es el más interesante de los cuatro verdaderos: agrupa los estilos según de cuál heredan, así que enseña de un vistazo el árbol del documento y de quién cuelga cada cosa. · «Fuente» los ordena por la tipografía que aplican, útil para detectar mezclas. · Y desde ese mismo cuadro se decide además qué estilos se muestran: los recomendados, los usados en el documento o todos."
   },
   {
     "id": "inicio-531",
@@ -15287,28 +15287,28 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-61",
     "generado": true,
-    "enunciado": "El «Inspector de estilo» (botón del panel Estilos) muestra:",
+    "enunciado": "Abres el Inspector de estilo con el cursor en un párrafo. ¿Qué información te da exactamente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Por separado el formato de párrafo y el formato de texto (carácter) de la selección, con botones para restablecer cada uno"
+        "text": "El formato de párrafo y el de carácter por separado, con una goma para cada uno"
       },
       {
         "letter": "B",
-        "text": "La lista de todos los estilos del documento ordenada por uso"
+        "text": "La lista de todos los estilos del documento, ordenada por uso"
       },
       {
         "letter": "C",
-        "text": "Un historial de los cambios de formato del documento"
+        "text": "El historial de cambios de formato hechos en el documento"
       },
       {
         "letter": "D",
-        "text": "Las diferencias entre dos estilos"
+        "text": "Las diferencias entre dos estilos elegidos de la lista"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ayuda a distinguir qué parte del aspecto viene del estilo y qué parte es formato directo (manual), y a quitar solo una de las dos capas."
+    "explicacion": "Separa las dos capas del aspecto: lo que aporta el estilo y lo que se ha puesto a mano encima, y lo hace en los dos ejes, párrafo y carácter. Cada bloque tiene su goma para limpiar solo esa parte, que es lo que permite arreglar un documento heredado sin llevarse por delante lo que estaba bien. · La lista de estilos ordenada por uso está en el propio panel, con sus «Opciones…». · Word no guarda ningún historial de formato consultable; lo más parecido es el control de cambios de la pestaña Revisar, y es otra cosa. · Y no existe ninguna herramienta que compare dos estilos entre sí."
   },
   {
     "id": "inicio-559",
@@ -15323,7 +15323,7 @@
     "tema": "Estilos",
     "sourceQuestionId": "dlgcompart-inicio-14",
     "generado": true,
-    "enunciado": "Dentro del cuadro Modificar estilo, ¿qué opción del menú «Formato ▾» abre el cuadro «Personalizar teclado»?",
+    "enunciado": "Del menú «Formato ▾» del cuadro Modificar estilo se llega a varios cuadros de Word. ¿Cuál de estas entradas abre «Personalizar teclado»?",
     "opciones": [
       {
         "letter": "A",
@@ -15339,12 +15339,12 @@
       },
       {
         "letter": "D",
-        "text": "Idioma…"
+        "text": "Numeración…"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Método abreviado…» abre «Personalizar teclado» con el comando del estilo ya seleccionado, para asignarle una combinación de teclas."
+    "explicacion": "«Método abreviado…» abre «Personalizar teclado» con el comando del estilo ya cargado, listo para asignarle una combinación. Es una de las cuatro puertas de ese cuadro, junto con Archivo ▸ Opciones ▸ Personalizar cinta, el menú contextual de la cinta y el botón «Teclas…» del cuadro Símbolo. · «Numeración…» es el descarte con más fundamento, porque también engancha algo al estilo: una lista, que es como se numera un articulado a través de los estilos de título. · «Efectos de texto…» abre el panel de rellenos y contornos. · Y «Marco…» convierte el párrafo en un marco flotante, la entrada menos usada de las nueve."
   },
   {
     "id": "inicio-570",
@@ -15359,28 +15359,28 @@
     "tema": "Estilos",
     "sourceQuestionId": "dlgcompart-inicio-25",
     "generado": true,
-    "enunciado": "«Crear un estilo» (flecha «Más» de la galería de Estilos) abre una versión reducida del cuadro. ¿Qué hay que pulsar para ver todas las propiedades del estilo?",
+    "enunciado": "Usas «Crear un estilo» desde la galería y el cuadro que sale solo pide el nombre. ¿Cómo llegas al resto de propiedades sin cerrarlo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El botón «Modificar…»"
+        "text": "Con su botón «Modificar…»"
       },
       {
         "letter": "B",
-        "text": "El botón «Aceptar»"
+        "text": "Con su botón «Formato»"
       },
       {
         "letter": "C",
-        "text": "El botón «Formato»"
+        "text": "Con su flecha «Más»"
       },
       {
         "letter": "D",
-        "text": "La flecha «Más»"
+        "text": "Aceptando y volviendo a abrirlo desde el panel"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón «Nuevo estilo» del panel Estilos, en cambio, abre directamente la versión ampliada."
+    "explicacion": "Ese cuadro reducido tiene un botón «Modificar…» que lo despliega al completo, con el tipo, el estilo base, el estilo del párrafo siguiente, el alcance y el menú «Formato ▾». Por eso no hace falta empezar de otra manera: se puede entrar por la vía rápida y ampliar si hace falta. · El menú «Formato ▾» solo existe una vez desplegado, así que no puede ser la puerta. · La flecha «Más» pertenece a la galería de la cinta, no a este cuadro. · Y aceptar y reabrir funciona, pero es dar un rodeo: el atajo directo, si se sabe de antemano que hará falta todo, es el botón «Nuevo estilo» del panel."
   },
   {
     "id": "inicio-574",
@@ -15395,28 +15395,28 @@
     "tema": "Estilos",
     "sourceQuestionId": "dlgcompart-inicio-29",
     "generado": true,
-    "enunciado": "«Aplicar estilos…», al final del menú de la flecha «Más» de la galería de Estilos, abre:",
+    "enunciado": "Pulsas «Aplicar estilos…» al final de la galería desplegada. ¿Qué aparece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un cuadro flotante pequeño para escribir el nombre del estilo y aplicarlo (equivale a Ctrl+Mayús+W)"
+        "text": "Una ventanita con una caja de texto autocompletable y tres botones"
       },
       {
         "letter": "B",
-        "text": "El panel Estilos completo"
+        "text": "El panel lateral de Estilos, con la lista completa"
       },
       {
         "letter": "C",
-        "text": "El cuadro «Administrar estilos»"
+        "text": "El cuadro «Administrar estilos», con sus cuatro fichas"
       },
       {
         "letter": "D",
-        "text": "El Inspector de estilo"
+        "text": "El Inspector de estilo, con las dos capas de formato"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Es el cuadrito «Aplicar estilos» con una caja de texto autocompletable y los botones «Volver a aplicar» y «Modificar»."
+    "explicacion": "Es la misma ventanita de Ctrl+Mayús+W: se teclean las primeras letras del nombre, se completa sola y se aplica con Intro; sus botones son «Volver a aplicar», «Modificar» y «Nuevo». Está pensada para trabajar sin soltar el teclado. · El panel lateral es el descarte que decide la pregunta, porque también sirve para aplicar estilos y también se abre con una combinación, Alt+Ctrl+Mayús+S: lo que cambia es el tamaño y la forma de buscar, una lista frente a un cuadro de texto. · «Administrar estilos» y el Inspector se abren desde los botones del pie de ese panel, no desde la galería."
   },
   {
     "id": "inicio-99",
@@ -15431,7 +15431,7 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0351",
-    "enunciado": "¿Cuáles de las siguientes categorías están disponibles en el menú Formato del cuadro de creación de estilos?",
+    "enunciado": "Repasas el menú «Formato ▾» del cuadro de estilo. ¿Cuáles de estas categorías están de verdad en él?",
     "opciones": [
       {
         "letter": "A",
@@ -15466,7 +15466,7 @@
       "D",
       "E"
     ],
-    "explicacion": "Las categorías disponibles en el menú Formato del cuadro de estilos son: Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. Hipervínculo no es una opción del menú Formato de estilos."
+    "explicacion": "Las nueve entradas son Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto: aquí aparecen cinco de ellas. Es un concentrador, porque desde ahí se abren varios de los cuadros grandes de Word sin salir del estilo. · «Hipervínculo» es la falsa, y cuela porque Word tiene un estilo llamado precisamente «Hipervínculo», el que pinta los enlaces en azul subrayado. Pero eso es un estilo, no una categoría de formato: los hipervínculos se insertan desde Insertar ▸ Vínculos o con Alt+Ctrl+K. · Las tres entradas que menos se usan son Marco, Idioma y Método abreviado, y son las que más se olvidan al enumerar."
   },
   {
     "id": "inicio-519",
@@ -15481,7 +15481,7 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-49",
     "generado": true,
-    "enunciado": "¿Cuáles son estilos reales de la galería de Estilos de la pestaña Inicio?",
+    "enunciado": "Repasas los nombres de la galería de Estilos para no confundirlos en el examen. ¿Cuáles existen de verdad?",
     "opciones": [
       {
         "letter": "A",
@@ -15519,7 +15519,7 @@
       "C",
       "D"
     ],
-    "explicacion": "La galería incluye Normal, Sin espaciado, Título 1, Título 2, Título, Subtítulo, Énfasis sutil, Énfasis, Énfasis intenso, Fuerte, Cita, Cita destacada, Referencia sutil, Referencia intensa, Título del libro y Párrafo de lista. «Encabezado 1» se llama aquí «Título 1»; «Nota al margen» y «Resaltado fuerte» no existen."
+    "explicacion": "La galería trae Normal, Sin espaciado, Título 1, Título 2, Título, Subtítulo, Énfasis sutil, Énfasis, Énfasis intenso, Fuerte, Cita, Cita destacada, Referencia sutil, Referencia intensa, Título del libro y Párrafo de lista. Muchos van en parejas de intensidad —sutil e intenso— y eso ayuda a reconocerlos. · «Encabezado 1» es el falso con más fundamento: es la traducción literal del inglés «Heading 1», y aquí ese estilo se llama «Título 1». Cuidado también con «Título» a secas, que existe y no es lo mismo que «Título 1»: aquel es para la portada. · «Nota al margen» y «Resaltado fuerte» no existen con esos nombres."
   },
   {
     "id": "inicio-522",
@@ -15534,7 +15534,7 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-52",
     "generado": true,
-    "enunciado": "El campo «Tipo de estilo» del cuadro de creación/modificación de estilo ofrece:",
+    "enunciado": "Repasas los valores del desplegable «Tipo de estilo» para no confundirlos. ¿Cuáles existen de verdad?",
     "opciones": [
       {
         "letter": "A",
@@ -15573,7 +15573,7 @@
       "D",
       "E"
     ],
-    "explicacion": "Los cinco tipos son Párrafo, Carácter, Vinculado (párrafo y carácter), Tabla y Lista. No hay tipos «Sección» ni «Página»."
+    "explicacion": "Son cinco, y el que más se olvida es «Vinculado (párrafo y carácter)», el que se comporta de una manera u otra según haya o no algo seleccionado; los estilos Título de fábrica son de ese tipo. · «Sección» y «Página» son los dos falsos, y cuelan porque las secciones y las páginas sí existen en Word: lo que ocurre es que lo suyo no se guarda en estilos sino en la configuración de página, que viaja en el salto de sección. · Los tipos de tabla y de lista son los menos usados desde este cuadro, porque normalmente se crean desde las galerías correspondientes."
   },
   {
     "id": "inicio-523",
@@ -15588,7 +15588,7 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-53",
     "generado": true,
-    "enunciado": "El menú «Formato ▾» del cuadro Modificar/Crear estilo da acceso a cuadros de:",
+    "enunciado": "Del menú «Formato ▾» del cuadro de estilo se abren nueve cuadros distintos. ¿Cuáles de estos están en él?",
     "opciones": [
       {
         "letter": "A",
@@ -15604,22 +15604,18 @@
       },
       {
         "letter": "D",
-        "text": "Borde"
+        "text": "Idioma"
       },
       {
         "letter": "E",
-        "text": "Numeración"
+        "text": "Marco"
       },
       {
         "letter": "F",
-        "text": "Método abreviado"
+        "text": "Numeración"
       },
       {
         "letter": "G",
-        "text": "Efectos de texto"
-      },
-      {
-        "letter": "H",
         "text": "Columnas"
       }
     ],
@@ -15630,10 +15626,9 @@
       "C",
       "D",
       "E",
-      "F",
-      "G"
+      "F"
     ],
-    "explicacion": "El menú «Formato ▾» tiene: Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. «Columnas» no está (no es formato de estilo de párrafo)."
+    "explicacion": "Las nueve entradas son Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto: aquí hay seis. · «Columnas» es la falsa, y el motivo por el que no está explica bien qué puede guardar un estilo y qué no: las columnas son formato de SECCIÓN, no de párrafo, y viven en Disposición ▸ Configurar página. Un estilo no puede llevar dentro nada que afecte a la página. · Por la misma razón tampoco hay márgenes, ni tamaño de papel, ni encabezados. · Las tres entradas menos conocidas son Marco, Idioma y Método abreviado."
   },
   {
     "id": "inicio-558",
@@ -15648,39 +15643,31 @@
     "tema": "Estilos",
     "sourceQuestionId": "dlgcompart-inicio-13",
     "generado": true,
-    "enunciado": "El botón «Formato ▾» del cuadro Modificar/Crear estilo abre, cada una, un cuadro o panel que también existe por su cuenta. ¿Cuáles de estos ofrece?",
+    "enunciado": "Varias entradas del menú «Formato ▾» del cuadro de estilo abren cuadros que también existen por su cuenta en la cinta. ¿A cuáles de estos se llega desde ahí?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Fuente"
+        "text": "Fuente, el mismo del iniciador del grupo Fuente"
       },
       {
         "letter": "B",
-        "text": "Párrafo"
+        "text": "Párrafo, el mismo del iniciador del grupo Párrafo"
       },
       {
         "letter": "C",
-        "text": "Tabulaciones"
+        "text": "Tabulaciones, el mismo del botón del cuadro Párrafo"
       },
       {
         "letter": "D",
-        "text": "Borde (Bordes y sombreado)"
+        "text": "Bordes y sombreado, el mismo de Inicio y de Diseño"
       },
       {
         "letter": "E",
-        "text": "Numeración"
+        "text": "Personalizar teclado, el mismo de Opciones ▸ Personalizar cinta"
       },
       {
         "letter": "F",
-        "text": "Método abreviado (Personalizar teclado)"
-      },
-      {
-        "letter": "G",
-        "text": "Efectos de texto"
-      },
-      {
-        "letter": "H",
-        "text": "Columnas"
+        "text": "Columnas, el mismo de Disposición ▸ Configurar página"
       }
     ],
     "matching": null,
@@ -15689,11 +15676,9 @@
       "B",
       "C",
       "D",
-      "E",
-      "F",
-      "G"
+      "E"
     ],
-    "explicacion": "El menú «Formato ▾» tiene Fuente, Párrafo, Tabulaciones, Borde, Idioma, Marco, Numeración, Método abreviado y Efectos de texto. «Columnas» pertenece a la pestaña Disposición y no es formato de estilo de párrafo."
+    "explicacion": "Ese menú funciona como concentrador: cinco de sus entradas llevan a cuadros que uno ya conoce de la cinta, y la diferencia está en el alcance, porque allí lo configurado se guarda DENTRO del estilo en vez de aplicarse al párrafo suelto. La entrada «Método abreviado» es la más llamativa, porque abre Personalizar teclado, uno de los cuadros más escondidos de Word. · «Columnas» es la falsa: es formato de sección, no de párrafo, y ningún estilo puede llevarlo dentro. · Las entradas que faltan por nombrar son Idioma, Marco, Numeración y Efectos de texto."
   },
   {
     "id": "inicio-562",
@@ -15708,27 +15693,31 @@
     "tema": "Estilos",
     "sourceQuestionId": "dlgcompart-inicio-17",
     "generado": true,
-    "enunciado": "¿Desde cuáles de estas rutas se llega al cuadro «Personalizar teclado»?",
+    "enunciado": "Repasas por dónde se llega al cuadro «Personalizar teclado». ¿Cuáles de estas rutas lo abren?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo ▸ Opciones ▸ Personalizar cinta de opciones ▸ botón «Personalizar…»"
+        "text": "Archivo ▸ Opciones ▸ Personalizar cinta de opciones ▸ «Personalizar…»"
       },
       {
         "letter": "B",
-        "text": "Insertar ▸ Símbolo ▸ Más símbolos… ▸ botón «Teclas…»"
+        "text": "Insertar ▸ Símbolos ▸ Más símbolos… ▸ botón «Teclas…»"
       },
       {
         "letter": "C",
-        "text": "Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▸ Método abreviado…"
+        "text": "Modificar estilo ▸ Formato ▾ ▸ Método abreviado…"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl++ del teclado numérico"
+        "text": "Alt+Ctrl y el signo más del teclado numérico"
       },
       {
         "letter": "E",
         "text": "Archivo ▸ Opciones ▸ Avanzadas"
+      },
+      {
+        "letter": "F",
+        "text": "Clic derecho en la cinta ▸ «Personalizar la cinta de opciones…»"
       }
     ],
     "matching": null,
@@ -15736,9 +15725,10 @@
       "A",
       "B",
       "C",
-      "D"
+      "D",
+      "F"
     ],
-    "explicacion": "«Personalizar teclado» está en «Personalizar cinta de opciones» (botón junto a «Métodos abreviados de teclado»), no en «Avanzadas»."
+    "explicacion": "Cinco puertas para el mismo cuadro, y cada una llega con un contexto distinto: desde Opciones, en blanco; desde el cuadro Símbolo, con el símbolo seleccionado listo para asignarle teclas; desde el estilo, con el estilo cargado; con la combinación, directamente; y por el menú contextual de la cinta, que lleva al mismo panel de Opciones. · «Avanzadas» es la falsa, y es el descarte que más cae porque suena al sitio donde estaría algo así: allí están las opciones de edición, de pegado, de mostrar y de imprimir, pero ninguna de teclado. El botón «Personalizar…» está abajo del todo del panel «Personalizar cinta de opciones», junto al rótulo «Métodos abreviados de teclado»."
   },
   {
     "sourceFile": "inicio.json",
@@ -15754,7 +15744,7 @@
     "id": "inicio-589",
     "sourceQuestionId": "capt-inicio-589",
     "tipo": "seleccion_multiple",
-    "enunciado": "Ademas de «Toda la tabla», filas/columnas de encabezado, total, primera/ultima y las bandas, el desplegable «Aplicar formato a» de un estilo de tabla incluye cuatro opciones para las esquinas. ¿Cuales?",
+    "enunciado": "El desplegable «Aplicar formato a» de un estilo de tabla incluye cuatro opciones para las esquinas. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
@@ -15783,7 +15773,7 @@
       "C",
       "D"
     ],
-    "explicacion": "Las 4 celdas de esquina permiten dar un formato distinto a cada vertice de la tabla (util p. ej. para el cruce encabezado/primera columna). «Celda central» no existe."
+    "explicacion": "Las cuatro esquinas permiten dar un formato propio a cada vértice, que es donde se cruzan dos formatos: la celda superior izquierda es a la vez encabezado y primera columna, y sin esa opción heredaría uno de los dos sin poder decidir cuál. Son las cuatro que se olvidan al enumerar las trece del desplegable. · «Celda central» no existe, y no podría existir: una tabla no tiene un centro definido salvo que tenga un número impar de filas y de columnas. · Las otras nueve del desplegable son Toda la tabla, Con encabezado, Fila Total, Primera columna, Última columna y las cuatro de bandas."
   },
   {
     "id": "inicio-97",
@@ -15798,11 +15788,11 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0349",
-    "enunciado": "La casilla 'Actualizar automáticamente' en el cuadro de creación de estilos hace que, cada vez que se aplique formato manual a un párrafo con ese estilo, la definición del estilo se actualice sola y el cambio se propague a todos los párrafos que lo usan.",
+    "enunciado": "Con la casilla «Actualizar automáticamente» marcada en un estilo, retocar a mano el formato de un párrafo cambia la definición del estilo y arrastra a todos los demás párrafos que lo usan.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero. Al activar Actualizar automáticamente, cualquier formato manual que se aplique a un párrafo con ese estilo modifica la definición del estilo y el cambio se propaga automáticamente a todos los demás párrafos del documento que tengan ese mismo estilo aplicado."
+    "explicacion": "Verdadero, y es la casilla más peligrosa del cuadro Modificar estilo: convierte cada retoque local en una decisión global, sin avisar ni preguntar. Equivale a ejecutar «Actualizar para que coincida con la selección» de forma automática cada vez que se toca algo. · Viene desmarcada de fábrica en los estilos de Word, y conviene dejarla así en documentos largos: es la explicación habitual de esos archivos en los que «se cambia solo el formato» sin que nadie sepa por qué. · Cuando se quiere el comportamiento contrario, retocar un párrafo sin tocar el estilo, basta con tenerla desmarcada: el formato queda como formato directo encima del estilo."
   },
   {
     "id": "inicio-106",
@@ -15817,11 +15807,11 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0360",
-    "enunciado": "Los estilos predefinidos de Word 365 como Normal, Título 1 o Título 2 pueden eliminarse permanentemente de la lista de estilos del documento.",
+    "enunciado": "Los estilos que trae Word de fábrica, como Normal o Título 1, se pueden eliminar de la lista de estilos del documento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso. Los estilos integrados de Word 365 (Normal, Título 1, Título 2, etc.) no pueden eliminarse permanentemente del documento. La opción Eliminar solo está disponible para estilos personalizados creados por el usuario. Los estilos integrados solo pueden ocultarse de la galería o del panel."
+    "explicacion": "Falso. En el menú contextual de un estilo integrado no aparece «Eliminar»: solo se puede hacer con los creados por el usuario. Tiene su lógica, porque Word depende de algunos de ellos para funcionar —Normal es la raíz de casi todos los demás, y los Título alimentan el panel de Navegación y la tabla de contenido—. · Lo que sí se puede hacer es esconderlos: «Quitar de galería de estilos» los saca de la cinta, y desde «Administrar estilos ▸ Recomendar» se pueden marcar como ocultos también en el panel. · Y modificarlos, claro: cambiar Normal es de hecho la primera decisión de maquetación de cualquier documento."
   },
   {
     "id": "inicio-109",
@@ -15836,11 +15826,11 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0363",
-    "enunciado": "En Word 365, los estilos de párrafo pueden incluir formato de fuente, de párrafo, tabulaciones, bordes, idioma y numeración, todo definido en un único estilo.",
+    "enunciado": "Un solo estilo de párrafo puede llevar dentro, a la vez, formato de fuente, de párrafo, tabulaciones, bordes, idioma y numeración.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero. Un estilo de párrafo puede incorporar simultáneamente todos los tipos de formato disponibles en el menú Formato del cuadro de creación de estilos: fuente, párrafo, tabulaciones, borde, idioma, marco, numeración, método abreviado y efectos de texto."
+    "explicacion": "Verdadero, y ahí está su potencia: el menú «Formato ▾» del cuadro del estilo tiene nueve entradas, y todo lo que se configure en cualquiera de ellas queda guardado en la misma definición. Un estilo «Artículo» puede llevar su fuente, su sangría, su tabulación con relleno, su borde inferior, su idioma de corrección y su numeración automática, y aplicarse con un clic. · Lo único que un estilo NO puede guardar es formato de página o de sección: márgenes, columnas, tamaño de papel u orientación. Eso viaja en el salto de sección, no en la marca de párrafo. · Un estilo de carácter, en cambio, se limita al formato de fuente."
   },
   {
     "id": "inicio-115",
@@ -15855,11 +15845,11 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0369",
-    "enunciado": "La opción 'Crear un estilo' disponible en la galería desplegable de la cinta abre el mismo cuadro de diálogo completo que el botón Nuevo estilo del panel lateral de Estilos.",
+    "enunciado": "«Crear un estilo», en la galería de la cinta, abre el mismo cuadro completo que el botón «Nuevo estilo» del panel lateral.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso. La opción Crear un estilo de la galería desplegable de la cinta abre un cuadro simplificado con solo los campos básicos (nombre y tipo). El botón Nuevo estilo del panel lateral abre el cuadro completo con todas las opciones incluyendo el menú Formato con las 9 categorías."
+    "explicacion": "Falso: el de la galería es una ventanita reducida que solo pide el nombre y toma el formato del párrafo donde está el cursor. El del panel abre el cuadro completo, con el tipo, el estilo base, el estilo del párrafo siguiente, el alcance y el menú «Formato ▾» de nueve entradas. · No son caminos alternativos al mismo sitio, sino dos niveles de detalle, y se puede pasar del primero al segundo con el botón «Modificar…» de la propia ventanita. · Esa pareja resume bien la relación entre la galería y el panel: la galería es la vía rápida y el panel la completa, con nombres muy parecidos que conviene no mezclar."
   },
   {
     "id": "inicio-238",
@@ -15874,11 +15864,11 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0492",
-    "enunciado": "En Word 365, un estilo de carácter puede incluir formato de párrafo como alineación o interlineado, además del formato de fuente.",
+    "enunciado": "Un estilo de carácter puede incluir alineación o interlineado, además del formato de fuente.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso. Un estilo de carácter solo puede contener formato de carácter (fuente, tamaño, color, negrita, cursiva, etc.). No puede incluir formato de párrafo como alineación, sangría o interlineado. Para eso existe el estilo de párrafo, que sí puede contener tanto formato de párrafo como de carácter."
+    "explicacion": "Falso: un estilo de carácter solo guarda formato de fuente —tipografía, tamaño, color, negrita, cursiva, subrayado, efectos— y por eso se puede aplicar a tres palabras sueltas dentro de un párrafo sin descolocarlo. La alineación y el interlineado son propiedades del párrafo entero: no tendría sentido que media frase estuviera centrada. · Al elegir «Carácter» en el desplegable «Tipo de estilo», el menú «Formato ▾» reduce sus entradas y deja fuera Párrafo, Tabulaciones y Numeración, con lo que el propio cuadro impide el error. · Si se quieren las dos cosas está el tipo «Vinculado», que actúa como uno u otro según lo que haya seleccionado."
   },
   {
     "id": "inicio-273",
@@ -15893,11 +15883,11 @@
     "tema": "Estilos",
     "difficulty": "alta",
     "sourceQuestionId": "P-0527",
-    "enunciado": "En Word 365, si se modifica el estilo Normal cambiando su fuente de Calibri 11 pt a Arial 12 pt, ese cambio afecta automáticamente a todos los estilos del documento que están basados en Normal, como Cuerpo de texto o Texto de globo.",
+    "enunciado": "Si se cambia la fuente del estilo Normal, ese cambio alcanza también a los estilos que están basados en él.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero. El estilo Normal es el estilo raíz del que derivan la mayoría de estilos predefinidos de Word mediante el campo Estilo basado en. Al modificar Normal, todos los estilos que heredan de él se actualizan automáticamente. Esta es la razón por la que modificar Normal sin cuidado puede afectar al formato de todo el documento."
+    "explicacion": "Verdadero, y es la razón de que modificar Normal sea la forma más rápida de cambiar el aspecto de un documento entero: casi todos los estilos de Word cuelgan de él por el campo «Estilo basado en», así que la fuente baja en cascada a todos los que no tengan la suya propia definida. · El que sí la tenga definida no cambia: solo se hereda lo no especificado. · Por eso conviene mirar antes el árbol de herencia, que se puede ver ordenando la lista del panel por «Basado en», en sus «Opciones…». · En un documento recién creado la fuente de partida es la del tema, que aparece como «+Cuerpo» y se resuelve en Aptos."
   },
   {
     "id": "inicio-449",
@@ -15916,7 +15906,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: el estilo de carácter se puede quitar aplicando «Predeterminado» o «Borrar formato» sin tocar el texto."
+    "explicacion": "Falso. Hay al menos tres formas de quitarlo sin tocar el texto: aplicar el estilo de carácter «Fuente de párrafo predeterminada», que es el equivalente a «ninguno»; pulsar el botón «Borrar todo el formato» del grupo Fuente, que se lo lleva junto con el resto del formato; o usar el Inspector de estilo, que en su bloque de formato de carácter tiene una goma para limpiar solo esa capa. · La tercera es la más fina, porque respeta el formato de párrafo. · Un estilo aplicado nunca es irreversible: lo único irreversible en Word, salvo deshacer, es reescribir el texto, y eso es lo que hacen las entradas del desplegable Aa."
   },
   {
     "id": "inicio-526",
@@ -15931,11 +15921,11 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-56",
     "generado": true,
-    "enunciado": "El campo «Estilo del párrafo siguiente» define qué estilo se aplica al párrafo que se crea al pulsar Enter tras un párrafo con este estilo.",
+    "enunciado": "El campo «Estilo del párrafo siguiente» decide con qué estilo nace el párrafo que se crea al pulsar Intro tras uno con ese estilo.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Por eso «Título 1» suele tener como párrafo siguiente «Normal»: tras el título se sigue escribiendo texto normal."
+    "explicacion": "Verdadero. Por eso los estilos Título de fábrica lo traen puesto en «Normal»: se escribe el título, se pulsa Intro y ya se está escribiendo texto normal, sin tener que quitar nada. · En un estilo de cuerpo lo habitual es lo contrario, que apunte a sí mismo, para poder encadenar párrafos seguidos sin cambiar de estilo. · No hay que confundirlo con «Estilo basado en», que está justo encima en el cuadro y decide de quién hereda el formato: uno mira hacia arriba, en la jerarquía, y el otro hacia adelante, en el documento. Los dos campos vecinos y las dos preguntas más frecuentes de este cuadro."
   },
   {
     "id": "inicio-528",
@@ -15950,11 +15940,11 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-58",
     "generado": true,
-    "enunciado": "El panel Estilos ofrece las casillas «Mostrar vista previa» y «Deshabilitar estilos vinculados».",
+    "enunciado": "El panel Estilos tiene dos casillas al pie: «Mostrar vista previa» y «Ocultar estilos no usados».",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "«Mostrar vista previa» pinta cada nombre con su formato; «Deshabilitar estilos vinculados» fuerza a que los estilos vinculados actúen siempre como estilo de párrafo."
+    "respuesta": false,
+    "explicacion": "Falso: las dos casillas son «Mostrar vista previa» y «Deshabilitar estilos vinculados». La primera pinta cada nombre de la lista con su propio formato; la segunda obliga a que los estilos de tipo vinculado se comporten siempre como estilos de párrafo, aunque haya texto seleccionado. · Ocultar estilos sí se puede, pero no con una casilla del panel: se decide en «Administrar estilos ▸ Recomendar», marcando cada uno como mostrar, ocultar hasta que se use u ocultar siempre. · Y qué estilos aparecen en la lista —recomendados, en uso, del documento o todos— se elige en el enlace «Opciones…», al lado de las casillas."
   },
   {
     "id": "inicio-530",
@@ -15969,11 +15959,11 @@
     "tema": "Estilos",
     "sourceQuestionId": "rutas-inicio-60",
     "generado": true,
-    "enunciado": "El cuadro «Opciones del panel Estilos» permite elegir qué estilos mostrar (Recomendado / En uso / En el documento actual / Todos los estilos).",
+    "enunciado": "El cuadro «Opciones del panel Estilos» permite elegir qué estilos se muestran: recomendados, en uso, los del documento actual o todos.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "También decide si se muestran como estilos independientes el formato de párrafo, de fuente y de numeración/viñetas aplicados manualmente."
+    "explicacion": "Verdadero, y es lo primero que conviene tocar al abrir un documento ajeno: pasar la lista a «Todos los estilos» enseña el catálogo completo, y ponerla «En uso» revela de un vistazo con cuántos estilos distintos se ha maquetado de verdad, que suele ser un buen diagnóstico. · El mismo cuadro decide cómo se ordena la lista —como en la recomendación, alfabético, por fuente, por «basado en» o por tipo— y si se muestran como si fueran estilos los formatos de párrafo, de fuente y de numeración puestos a mano. · Esa última opción es la que permite ver el formato directo mezclado con los estilos, y ayuda a localizarlo para limpiarlo."
   },
   {
     "id": "inicio-560",
@@ -15988,11 +15978,11 @@
     "tema": "Estilos",
     "sourceQuestionId": "dlgcompart-inicio-15",
     "generado": true,
-    "enunciado": "El cuadro Fuente que se abre desde «Formato ▸ Fuente…» del cuadro Modificar estilo es el mismo que abre el lanzador del grupo Fuente, pero el formato queda ligado al estilo, no al párrafo suelto.",
+    "enunciado": "El cuadro Fuente que se abre desde «Formato ▾ ▸ Fuente…» del cuadro Modificar estilo es el mismo que abre el iniciador del grupo Fuente, pero lo que se configure queda guardado en el estilo.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Toda la potencia del cuadro Modificar estilo es esa: reunir Fuente, Párrafo, Bordes, Tabulaciones, Numeración… y aplicarlo al estilo."
+    "explicacion": "Verdadero, y en eso consiste la potencia del cuadro Modificar estilo: reúne los cuadros de siempre —Fuente, Párrafo, Tabulaciones, Bordes y sombreado, Numeración— y en vez de aplicar lo elegido al párrafo donde está el cursor, lo mete en la definición del estilo. Los mismos controles, otro destino. · Es el mismo patrón de varias puertas que se repite en toda la interfaz, con una vuelta de tuerca: aquí no cambia solo por dónde se entra, cambia a qué se aplica lo que se hace. · Por eso conviene aprender bien esos cuadros: sirven dos veces, para el párrafo suelto y para el estilo."
   },
   {
     "id": "inicio-569",
@@ -16007,11 +15997,11 @@
     "tema": "Estilos",
     "sourceQuestionId": "dlgcompart-inicio-24",
     "generado": true,
-    "enunciado": "El cuadro «Administrar estilos» también se abre desde «Diseño ▸ Espaciado entre párrafos ▸ Espaciado personalizado entre párrafos…» (aparece en su ficha «Establecer valores predeterminados»).",
+    "enunciado": "Al cuadro «Administrar estilos» también se llega desde Diseño ▸ Espacio entre párrafos ▸ «Espaciado personalizado entre párrafos…».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Desde Inicio se llega con el 3.er botón del panel Estilos («Administrar estilos»)."
+    "explicacion": "Verdadero, y abre directamente en su ficha «Establecer valores predeterminados», que es donde están la fuente y el espaciado de partida. Tiene sentido: lo que hace ese comando de Diseño es exactamente cambiar esos valores para el documento entero. · Desde Inicio se llega por el tercer botón del panel Estilos, y allí el cuadro abre en su ficha «Editar». · Otro caso más de un cuadro con dos puertas donde la ruta decide la ficha, como ocurre con «Bordes y sombreado» entre Inicio y Diseño. · Las otras dos fichas del cuadro son «Recomendar», que ordena y oculta estilos, y «Restringir», que los bloquea."
   },
   {
     "id": "inicio-571",
@@ -16026,11 +16016,11 @@
     "tema": "Estilos",
     "sourceQuestionId": "dlgcompart-inicio-26",
     "generado": true,
-    "enunciado": "Los tres botones de la parte inferior del panel Estilos son «Nuevo estilo», «Inspector de estilo» y «Administrar estilos».",
+    "enunciado": "Los tres botones del pie del panel Estilos son «Nuevo estilo», «Inspector de estilo» y «Aplicar estilos».",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "El «Nuevo estilo» abre la versión completa del cuadro de creación de estilo; «Administrar estilos» abre el cuadro de 4 fichas."
+    "respuesta": false,
+    "explicacion": "Falso: el tercero es «Administrar estilos», el que abre el cuadro de cuatro fichas —Editar, Recomendar, Restringir y Establecer valores predeterminados—. · «Aplicar estilos» existe, pero es la ventanita flotante de Ctrl+Mayús+W, y se llega a ella desde el pie de la GALERÍA de la cinta, no desde el panel. Ahí está la confusión de siempre entre los dos sitios: el pie de la galería tiene «Crear un estilo», «Borrar formato» y «Aplicar estilos…», y el del panel, esos otros tres. · Seis entradas repartidas en dos sitios, con nombres muy parecidos: conviene aprenderlas por bloques."
   },
   {
     "sourceFile": "inicio.json",
@@ -16046,10 +16036,10 @@
     "id": "inicio-590",
     "sourceQuestionId": "capt-inicio-590",
     "tipo": "verdadero_falso",
-    "enunciado": "En el desplegable «Aplicar formato a» de un estilo de tabla, esta instalacion de Word nombra las opciones como «Fila de encabezado» y «Fila de totales».",
+    "enunciado": "En el desplegable «Aplicar formato a» de un estilo de tabla, esta instalación llama a esas dos opciones «Fila de encabezado» y «Fila de totales».",
     "opciones": [],
     "respuesta": false,
-    "explicacion": "Falso: en esta instalacion se llaman «Con encabezado» y «Fila Total». El concepto es el mismo (primera fila / ultima fila)."
+    "explicacion": "Falso: aquí se llaman «Con encabezado» y «Fila Total». El concepto es el mismo —la primera fila y la última— pero los rótulos exactos son esos, confirmados con la captura del usuario, y en una pregunta de examen la literalidad importa. · Las dos tienen su casilla correspondiente en «Opciones de estilo de tabla», en la cinta contextual de la tabla: el estilo define cómo se ven, y la casilla decide si se aplican. · El desplegable completo tiene trece entradas, y las cuatro que más se olvidan son las de las esquinas de celda."
   },
   {
     "id": "inicio-89",
@@ -16064,7 +16054,7 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0336",
-    "enunciado": "Relaciona cada tipo de estilo con lo que controla:",
+    "enunciado": "Relaciona cada tipo de estilo con lo que puede llevar dentro:",
     "opciones": [],
     "matching": {
       "left": [
@@ -16120,7 +16110,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Párrafo: controla todo el formato del párrafo. Carácter: solo afecta a los caracteres seleccionados. Tabla: formato completo de la tabla incluyendo bordes y sombreado. Lista: formato de viñetas o numeración. El distractor E (secciones y márgenes) no corresponde a ningún tipo de estilo."
+    "explicacion": "El de párrafo abarca todo lo que afecta al párrafo entero —alineación, sangría, interlineado— y además el formato de fuente. El de carácter se limita al formato de fuente, para poder aplicarse a unas palabras sueltas sin descolocar nada. El de tabla trabaja con celdas, bordes y sombreados, y por eso su cuadro trae el desplegable «Aplicar formato a» con sus trece partes. Y el de lista define las viñetas o la numeración y sus sangrías por nivel. · El destino que se queda sin pareja, secciones y márgenes de página, no corresponde a ningún tipo de estilo, y ahí está el detalle de fondo: un estilo nunca puede guardar formato de página, porque eso viaja en el salto de sección. · Falta el quinto tipo, «Vinculado», que actúa como párrafo o como carácter según lo seleccionado."
   },
   {
     "id": "inicio-93",
@@ -16135,7 +16125,7 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0344",
-    "enunciado": "Relaciona cada atajo con el estilo de título que aplica:",
+    "enunciado": "Relaciona cada combinación con el estilo que aplica en esta instalación:",
     "opciones": [],
     "matching": {
       "left": [
@@ -16191,7 +16181,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "En esta instalación: Ctrl+Mayús+1 → Título 1, Alt+Ctrl+2 → Título 2 (Ctrl+Mayús+2 NO hace nada), Ctrl+Mayús+3 → Título 3. Ctrl+Mayús+A aplica el estilo Normal. ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+1 como «Aplicar Título 1», pero Ctrl+1 aplica interlineado sencillo. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Mayús+1 da el Título 1 y Ctrl+Mayús+3 el Título 3, pero el Título 2 rompe el patrón y va con Alt+Ctrl+2: Ctrl+Mayús+2 no hace nada. Esa irregularidad es lo que hay que memorizar, porque invita a completar la serie por simetría. Ctrl+Mayús+A aplica el estilo Normal y de paso quita la negrita o la cursiva que fueran formato directo. Prueba en vivo del usuario. · El destino que sobra, el Título 4, no tiene atajo de fábrica, como tampoco lo tienen del quinto al noveno: se aplican desde la galería, desde el panel o asignándoles uno propio en «Modificar estilo ▸ Formato ▾ ▸ Método abreviado». · ⚠️ Y ojo con Ctrl+1, que el cuadro Personalizar teclado lista como «Aplicar Título 1» y en la práctica da interlineado sencillo."
   },
   {
     "id": "inicio-237",
@@ -16206,7 +16196,7 @@
     "tema": "Estilos",
     "difficulty": "media",
     "sourceQuestionId": "P-0491",
-    "enunciado": "Relaciona cada opción de 'Aplicar formato a' con la parte de la tabla a la que afecta:",
+    "enunciado": "Relaciona cada opción de «Aplicar formato a» de un estilo de tabla con la parte a la que afecta:",
     "opciones": [],
     "matching": {
       "left": [
@@ -16272,7 +16262,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Toda la tabla: todas las celdas. Con encabezado: primera fila. Fila Total: última fila. Primera columna: columna izquierda. Última columna: columna derecha. El distractor F corresponde a las opciones de Bandas en filas, que también existen en el desplegable pero no aparecen en esta pregunta."
+    "explicacion": "«Toda la tabla» es la base sobre la que se aplican todas las demás; «Con encabezado» y «Fila Total» dan formato a la primera y a la última fila; «Primera columna» y «Última columna» hacen lo propio en vertical. Ojo con los nombres exactos de esta instalación, que son «Con encabezado» y «Fila Total». · El destino que se queda sin pareja, las filas alternas, sí existe en el desplegable, pero con otro nombre y por partida doble: «Bandas en filas impares» y «Bandas en filas pares», más sus dos equivalentes de columnas. Cuela porque describe algo real del mismo sitio. · Con las cuatro esquinas de celda, el desplegable suma trece entradas."
   },
   {
     "id": "inicio-467",
@@ -16300,7 +16290,7 @@
         "Ctrl + B"
       ]
     ],
-    "explicacion": "Ctrl+Mayús+W abre Aplicar estilos; Ctrl+B abre el panel de Navegación."
+    "explicacion": "Ctrl+Mayús+W abre «Aplicar estilos», la ventanita flotante con la caja de texto autocompletable: se escriben las primeras letras del nombre y se aplica con Intro, sin soltar el teclado. No hay que confundirla con el panel lateral completo, que se abre con Alt+Ctrl+Mayús+S o con el iniciador del grupo Estilos. · Ctrl+B abre el panel de Navegación con su cuadro de búsqueda y sus tres fichas: Títulos, Páginas y Resultados. Prueba en vivo del usuario. ⚠️ Ojo: la B viene de «buscar», no de «bold» como en el esquema internacional, donde esa misma combinación pone negrita. Aquí la negrita es Ctrl+N."
   },
   {
     "id": "inicio-117",
