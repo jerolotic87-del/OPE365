@@ -1,0 +1,2210 @@
+# OPE365 — Word 365 para oposición ayuntamiento
+
+Contexto para Codex. Léelo entero antes de tocar nada — este proyecto
+tiene reglas de fuente estrictas que no son negociables.
+
+## Qué es esto
+
+App de estudio offline (un solo HTML, sin backend) para preparar el temario
+de Word 365 de una oposición de ayuntamiento. **2504 preguntas** y **971
+flashcards** (archivo 263, disposicion 100, inicio 148, insertar 147,
+referencias 74, revisar 73, vista 79, diseno 24, interfaz 48,
+correspondencia 15 — un buen tramo de las de archivo/disposicion son
+tarjetas de RUTA: frente = la acción, dorso = "Pestaña ▸ Grupo ▸ Comando"),
+todo el banco normalizado y agrupado por pestaña de la cinta
+(`data/questions/<section>.json`). Práctica/examen con corrección
+inmediata, compartir por código, desafíos asíncronos con resultado
+sellado, un mazo de flashcards (frente/dorso, sin repetición espaciada
+todavía), y tres modos multijugador en tiempo real (Duelo 1v1, Farol 1v1,
+y Contra Word — cooperativo: los dos contra la app) sobre WebRTC vía PeerJS.
+
+## Estructura de archivos (desarrollo local)
+
+```
+index.html          shell HTML — usa <script src> a los ficheros de abajo
+styles.css           todo el sistema de diseño (oscuro, tokens en :root)
+app.js                base: modelo canónico, sesiones, PRNG con semilla,
+                       códigos de compartir, desafíos, estadísticas crudas
+                       (computeStats), flashcards legado (§10). NO cambiar
+                       contratos.
+engine.js             MOTOR DE APRENDIZAJE (window.OPE.LE). Repetición
+                       espaciada propia (no FSRS), priorizador, generador de
+                       sesión, capa de examen. Dos ejes de estado INDEPENDIENTES:
+                       masteryStatus (nuevo·aprendiendo·consolidando·asentado)
+                       y reviewState (futuro·debido·atrasado). 'asentado' NO se
+                       pierde por vencer el intervalo. Todo el tiempo entra por
+                       un `now` param. Parámetros en el objeto `P` (tabla de
+                       honestidad: PRINCIPIO/PRODUCTO/HEURÍSTICA/CALIBRABLE),
+                       nunca en la UI. Validado con tests/sim.js + 20 escenarios.
+engine-bridge.js      PUENTE motor↔UI (window.OPE.LEB). ÚNICO punto por el que
+                       views.js habla con el motor. La UI no calcula
+                       prioridades/intervalos/estados: todo sale de LEB, y LEB
+                       de LE. boot()=siembra+recalc; recordQuestion/
+                       recordFlashcard/recordExamSession alimentan el motor;
+                       startSmartSession/startReviewSession/startConceptSession;
+                       homeModel/progressModel/sectionConceptsModel = view-models.
+github-sync.js        window.OPE.GHS. Publica tu contenido propio a
+                       data/ del repo vía la API de GitHub (commit atómico).
+                       Token en localStorage 'ope365_gh', fuera de PROGRESS.
+multiplayer.js        Duelo · Farol · Contra Word: transporte PeerJS + máquinas de estado
+views.js               toda la interfaz (router simple basado en funciones).
+                       6 áreas (Inicio · Temario · Práctica · Flashcards ·
+                       Iconos · Progreso). El router `go(view,params)` + la
+                       delegación global `[data-goto]` NO se tocan (tests y
+                       multiplayer dependen de ellos). Inicio = "¿qué estudio
+                       ahora?" con LEB.homeModel; Práctica = elección de
+                       intención antes del asistente; el feedback de pregunta
+                       muestra una línea + explicación plegada (categoría
+                       real, no campos inventados); flashcards = 3 grados →
+                       LEB.recordFlashcard. **Iconos** (`renderIconos`, root
+                       view, sep-2026) = practicar SOLO las ~190 preguntas
+                       con imagen (`conImagen:true`), filtrables por pestaña,
+                       con selector de longitud y "repasar solo los que
+                       fallé"; reutiliza el runner normal vía
+                       `O.buildSession({..., conImagen:true})`. QA:
+                       `tests/manual_iconos_qa.mjs`. `groupForView` marca
+                       "Iconos" en la nav durante `running`/`results`/
+                       `review-hub` si la sesión en curso es `conImagen`
+                       — se deduce del propio config, sin estado aparte.
+                       Los modos multijugador también juegan iconos: ver
+                       "Imágenes en multijugador".
+                       **Modo tarjeta** (sep-2026): practicar atajos NO es un
+                       test — un atajo es memoria de pares tecla·acción, y
+                       elegir entre cuatro combinaciones parecidas es
+                       reconocer, no recordar. Cuando la sesión es de práctica
+                       y su filtro es `categoria:"atajo"`, `renderQuestionBody`
+                       desvía a `renderCardBody`: enunciado tapado → "Ver la
+                       respuesta" → dorso (la opción correcta, en monoespaciada
+                       si es una combinación) + explicación + los 3 grados de
+                       flashcard; `submitCardGrade` es el espejo de
+                       `submitAnswer` (`answer:null`, `card:true`, `grade`;
+                       "Me costó" cuenta como acierto). NO es una vista nueva
+                       ni un campo nuevo de sesión: es otra presentación DENTRO
+                       de `running`, así que hereda barra de sesión, marcar,
+                       ✎ editar, salir con confirmación, instantánea, historial
+                       y resumen, y los códigos de compartir no cambian. Las
+                       preguntas de atajo que no se pueden dar la vuelta (V/F,
+                       `negativa`) caen solas al test de siempre en la misma
+                       sesión. En EXAMEN nunca se tapa. Test:
+                       `tests/test_modo_tarjeta.js`.
+                       Toda llamada a LEB va guardada con `if(O.LEB)`.
+peerjs.min.js          librería de terceros, no tocar
+data/atajos_word365_v2608.md  VOLCADO COMPLETO de "Personalizar teclado" de la
+                       instalación real del usuario (Word 365 v2608). ÚNICA
+                       fuente de atajos — ver "jerarquía de fuentes". Nada en el
+                       banco puede contradecirlo.
+data/rutas/            UN .txt POR PESTAÑA con el volcado de rutas de cinta
+                       del usuario (`<pestaña>.txt`, `<pestaña>-4opciones.txt`,
+                       `<pestaña>_integration_report.md`). Fuente de los bancos
+                       de RUTA/concepto. NO se editan a mano. Ver
+                       `data/rutas/README.md`. `_dialogos_compartidos.md` =
+                       cruce verificado (qué rutas abren el mismo cuadro y en
+                       qué ficha) hecho contra las capturas.
+data/imagenes_rutas/<pestaña>/  capturas de pantalla del usuario (cada menú,
+                       desplegable y cuadro que abrió para transcribir las
+                       rutas). FUENTE DE VERIFICACIÓN — cruzar cualquier duda
+                       de una ruta/cuadro de Disposición, Diseño o Insertar
+                       contra estas imágenes antes que contra nada externo.
+data/imagenes_iconos/<pestaña>/  recortes de iconos de comandos de la cinta
+                       (`<grupo>_<comando>.png`), del usuario. Fuente de las
+                       93 preguntas con imagen (campo `imagen` = data URI).
+
+--- artefactos generados (NO editar a mano, ver "Regenerar datos") ---
+questions_all.json     banco de preguntas concatenado — fuente de verdad
+                       en tiempo de ejecución, pero se genera desde
+                       data/questions/*.json
+questions_data.js      questions_all.json envuelto en window.__OPE365_DATA__
+taxonomy_data.js       data/taxonomy.json envuelto en window.__OPE365_TAXONOMY__
+flashcards_data.js     data/flashcards/*.json envuelto en
+                       window.__OPE365_FLASHCARDS__
+
+--- fuente editable de datos ---
+data/questions/*.json  el banco partido en UN ARCHIVO POR PESTAÑA/section
+                       (las 10: interfaz, archivo, inicio, insertar, diseno,
+                       disposicion, referencias, revisar, vista,
+                       correspondencia), con manifest.json fijando el orden
+                       de carga. Cada pregunta lleva id="<section>-<n>" y
+                       sourceFile="<section>.json"; la procedencia fina está
+                       en `bloque` y `sourceQuestionId`. ORDEN DENTRO DEL
+                       ARCHIVO: agrupadas por `topic` (orden de taxonomía),
+                       y dentro de cada grupo por id numérico. Los ids son
+                       ESTABLES (hay huecos por borrados; no se renumera —
+                       AGENTS.md y el motor referencian ids concretos).
+data/flashcards/*.json  flashcards por sección (las 10), con su propio
+                        manifest.json. `cardId` = `F-NNN` (contenido) o
+                        `E-NNN` (tarjeta de error), 3 dígitos, relativo a su
+                        fichero; `canonicalId` runtime = `<section>:<cardId>`.
+                        `priority` ∈ alta|normal; `questionRefs` = ids
+                        `<section>-N` (enlace blando, opcional). Mismo orden
+                        que las preguntas: agrupadas por `topic`. Las tarjetas
+                        de ruta llevan `sourceRefs` = ["rutasyatajos.txt §6 …"]
+data/questions_regroup_report.md  reagrupación ago-2026: qué se movió de
+                       1.json..8.json/atajos.json al esquema por pestaña
+                       (mapa id viejo→nuevo en scripts/regroup_id_map.json)
+data/taxonomy.json     taxonomía pedagógica (section > topic > subtopic),
+                       configurable, independiente de sourceFile/bloque
+data/vista_integration_report.md  comparación pregunta-por-pregunta del
+                       banco de Vista contra el banco existente (Etapa 3
+                       de la migración de arquitectura, ago 2026)
+
+--- herramientas ---
+build_data.py          regenera questions_all.json/questions_data.js/
+                       taxonomy_data.js/flashcards_data.js desde data/ —
+                       ejecutar SIEMPRE tras tocar algo bajo data/
+build.py               empaqueta todo (incl. engine.js + engine-bridge.js, en
+                       ese orden tras app.js) en OPE365_Word365_Estudio.html
+tests/                 jsdom (node tests/test_*.js) + tests/test_engine.js
+                       (20 escenarios del motor) + tests/test_ui_integration.js
+                       (flujos motor↔UI). `npm install` una vez.
+                       tests/manual_walkthrough_fase2.mjs = QA en Chromium real.
+```
+
+**Para desarrollar:** sirve la carpeta con un servidor local, no abras
+`index.html` con doble clic (fetch/scripts locales fallan por CORS en
+`file://`). Por ejemplo: `python3 -m http.server 8000` y abre
+`localhost:8000`.
+
+**Para producir el HTML único de siempre** (todo inlineado en un archivo,
+para compartir sin depender de una carpeta): ver `build.py` en esta misma
+carpeta — genera `OPE365_Word365_Estudio.html`.
+
+**Limpieza y organización (sep-2026):** auditoría completa de archivos y
+código muertos, con cuidado de no tocar nada con función real (verificado
+con `grep`/análisis estático + suite completa + Chromium real antes y
+después de cada borrado):
+- Borrado `ATAJOS_CONSOLIDADO.md` (raíz): predecesor de
+  `data/ATAJOS_WORD365.md`, citaba el ya eliminado `atajos_oficial.json`.
+- Movidos a `data/` por consistencia: `VISTA_PROCESADA_PARA_OPE365.md` →
+  `data/vista_procesada_fuente.md` (era el briefing de origen de Vista,
+  vivía suelto en la raíz); `data/referencias/*.png` (26 iconos sin
+  procesar) → `data/imagenes_iconos/referencias/` (mismo patrón que
+  diseno/disposicion/inicio/insertar).
+- `docs/` documentado con `docs/README.md` (no se tocó nada: los 3
+  ficheros — `UI_REDISENO.md`, `memory-engine.html`, `plan-inteligente.html`
+  — son registro de decisiones ya tomadas, no basura).
+- `views.js`: eliminada `wizardTotalSteps()` + sus dos constantes — única
+  función top-level de toda la app (7 ficheros JS) con 0 llamadas en
+  ningún sitio; el wizard cuenta pasos con `wizardState.step` a pelo desde
+  hace tiempo.
+- `styles.css`: 12 reglas sin ningún uso en JS/HTML confirmadas por
+  búsqueda literal (`.hero-continue`/`.hc-go` = versión anterior del CTA
+  de Inicio, hoy `.cta-hero`; `.lp-axis`/`.lp-head`/`.lp-sub` = versión
+  anterior del panel de progreso, hoy `.lp-row`/`.lp-legend`;
+  `.duel-round-label`, `.conn-dot`, `.fb-label`, `.stat-row`,
+  `.issue-warn`, `.mini-state`, `.view-wide`). Dejadas a propósito
+  `.sr-only`, `.pad-4`/`.pad-6` (utilidades del sistema de diseño, sin uso
+  actual pero no son "basura heredada") y `.soon`/`.soon-badge` (estado
+  "próximamente" ya con CSS listo para el día que se use).
+- `data/questions/*.json` y `data/flashcards/*.json`: además de por
+  `topic`, ahora se agrupan por **tipo de ejercicio** dentro de cada topic
+  (ver `data/README.md` regla 2) — `scripts/normalize_order.py` ampliado.
+
+## Guía de estilo de ítems — `docs/GUIA_ESTILO_ITEMS.md`
+
+**Norma del proyecto (sep-2026), se aplica a TODAS las preguntas.** Léela
+entera antes de escribir o reformular un ítem. Lo esencial:
+
+- El enunciado sitúa en una **situación concreta**, nunca «¿qué es…?».
+- **Distractor = opción que responde creíblemente a ESA pregunta.** Que sea
+  del mismo grupo de la cinta NO basta: si el enunciado dice «pegar» y las
+  opciones son Pegar/Copiar/Cortar, cualquiera que sepa leer acierta. El
+  listón es *que el propio creador de Word dude*.
+- **Se pueden INVENTAR distractores.** Un nombre de comando o de opción que
+  no existe pero suena igual de real que el verdadero es mejor distractor
+  que uno real y descartable de un vistazo; la explicación aclara que no
+  existe. (Esto sustituye a la regla anterior de «nunca inventar nada»,
+  que producía opciones de risa.)
+- **Lo que NUNCA se inventa es un hecho afirmado como cierto**: respuesta
+  correcta, atajos, cifras, rutas y todo lo que diga la explicación.
+- Las 4 opciones, de longitud similar; la palabra clave del enunciado en
+  todas; la explicación desmonta cada distractor y señala el par confuso.
+- Fuentes: atajos SOLO del volcado + pruebas en vivo; rutas SOLO de
+  `data/rutas` + capturas; **`support.microsoft.com` sí vale para
+  funciones/definiciones oficiales, nunca para atajos**; academias y tests
+  para redactar claro. **El banco no cita fuentes.**
+
+Reescritura **a mano, ítem por ítem** — ningún script genera contenido.
+`scripts/aplicar_reescritura.py` solo vuelca al JSON el texto ya escrito y
+valida (4 opciones, respuesta viva, sin repetidas, longitudes, explicación).
+
+**Equilibrio de tipos: qué medir y qué NO (sep-2026).** Al terminar `archivo`
+se auditó su reparto. Conclusiones que valen para el resto de secciones:
+
+- **El % de `opcion_unica` no se toca.** `archivo` está al 86 % frente al 68 %
+  del banco, pero el examen de oposición es de opción única: ese sesgo es
+  realismo, no descuido. Repartir tipos hasta cuadrar el promedio empeora la
+  sección.
+- **Lo que sí hay que medir son los FRAMINGS por concepto.** `deriveMastery`
+  exige ≥2 framings distintos para llegar a `asentado`, y `framingOf` los saca
+  de `tipo`/`categoria`/`negativa`. Un topic cuyas preguntas sean todas
+  `categoria:"ruta"` da un único framing y **solo se asienta si el usuario
+  además estudia sus flashcards**: quien practique solo con test (Práctica,
+  examen, Duelo, Contra Word) no lo consigue nunca y el priorizador se lo
+  sirve indefinidamente. `archivo` tenía **10 topics así** (141 preguntas).
+- **Arreglo dirigido, no reparto general**: 1 negativa + 1 V/F por topic
+  atascado (`archivo-412..432`, `sourceQuestionId` `framing-archivo-NN`).
+  `archivo` pasa a **0 topics con un solo framing**, y de paso la V/F sube al
+  12,3 % y las negativas al 7,4 % — como efecto, no como objetivo.
+- **Al añadir V/F, vigilar el balance verdadero/falso** de la sección: la
+  primera tanda dejó 30/23 y hubo que invertir cuatro enunciados para volver a
+  26/27. Herramienta: `scripts/anadir_framings.py` (solo vuelca ítems ya
+  redactados y valida esquema).
+
+**Marca `revisada` (sep-2026)** — el banco tiene 2.843 preguntas y solo 1.009
+han pasado por la reescritura a mano, así que hace falta distinguirlas al
+estudiar. Campo `"revisada": true` en la pregunta, con la misma convención que
+`generado`: **solo aparece cuando es true**, para no ensuciar las 1.834 que
+faltan. No entra en `contentHash` (que solo mira tipo/enunciado/respuesta/
+explicación y las opciones), así que marcarlas NO invalida el progreso previo.
+Se pone con `scripts/marcar_revisadas.py <seccion>`, y `--estado` imprime el
+avance por pestaña. Se ve en tres sitios: etiqueta `✓ revisada` en el runner,
+insignia `✓` en la lista del Editor del banco y dos estados nuevos en su filtro,
+«Revisadas (✓)» y «Sin revisar», que con el contador de al lado dan el avance
+por pestaña sin salir de la app. Tests: `tests/test_revisada.js` (14
+comprobaciones) + `tests/manual_revisada_qa.mjs` (Chromium).
+
+⚠️ **Al añadir una variante de `.tag` en styles.css hay que ponerla DETRÁS de
+la regla base `.tag`** (hoy sobre la línea 854), no antes: misma especificidad,
+gana la última. `.tag-edit` llevaba tiempo colocada antes y por eso la etiqueta
+«✎ corregida» se pintaba gris como cualquier otra en vez de con el color de
+acento; se descubrió al añadir `.tag-rev` y se arregló moviendo las dos junto a
+`.tag-neg` y `.tag-type`.
+
+**Progreso de la reescritura**: `archivo` **431 preguntas, TERMINADO** (410
+reescritas a mano + 21 nuevas de framing). Auditoría
+final del fichero entero: 0 preguntas donde la correcta se delate por
+longitud, 0 explicaciones de menos de 120 caracteres, 0 citas de fuentes
+externas, 0 opciones truncadas.
+
+**`inicio` TERMINADO (sep-2026): 578/578 reescritas a mano.** Segunda sección
+completa. Trece grupos cerrados uno a uno: portapapeles (52), fuente (134),
+parrafo-marcas (11), -alineacion (22), -sangria (20), -espaciado (35),
+-bordes (32), -listas (40), -tabulaciones (26), estilos (79), edicion (117),
+voz (6), complementos (4). Estado final auditado: 449 opción única · 70 V/F
+(39V/31F) · 28 selección múltiple · 24 emparejamiento · 7 relleno · 32
+negativas; concepto 255 · ruta 163 · atajo 160; **0 explicaciones de menos de
+120 caracteres, 0 que citen letras, 0 incoherencias `tipo`↔`respuesta` y 0
+topics con menos de 2 framings** (el mínimo son 3, en complementos; ocho de
+los trece llegan a 6 o más, así que ninguno se atasca en «consolidando»).
+
+**`insertar` TERMINADO (sep-2026): 552/552 reescritas a mano.** Tercera sección
+completa, y la más plagada de repeticiones mecánicas: once grupos cerrados uno a
+uno — paginas (21), tablas (86), ilustraciones (130), formato-forma (37),
+vinculos (51), comentarios (8), encabezado-pie (63), texto (82), simbolos (58),
+multimedia (9), esignature (7). Estado final auditado: 349 opción única · 192
+V/F (100V/92F) · 6 selección múltiple · 4 relleno · 1 emparejamiento · 34
+negativas; concepto 302 · ruta 204 · atajo 46; **0 citas de letra de opción, 0
+explicaciones de menos de 120 caracteres, 0 citas de fuente externa, 0 opciones
+repetidas y ningún topic por debajo de 3 framings** (mínimo 3 en formato-forma y
+multimedia; cuatro grupos llegan a 6 o 7).
+
+**Errores de HECHO destapados al reescribir `insertar`** (contrastados contra el
+volcado v2608, `data/rutas/*.txt` y las capturas del usuario; ya corregidos):
+- **`insertar-319` decía que la galería «Integrado» del botón Ecuación tiene 5
+  ecuaciones y que el teorema de Pitágoras NO está.** Son **9** y sí está —
+  restos de la tanda de minado P- que ya se había corregido en `insertar-98`,
+  `-318` y las flashcards F-135/136, pero que había sobrevivido aquí. Las dos
+  preguntas se contradecían entre sí dentro del mismo banco.
+- **`insertar-466` afirmaba que `Ctrl+Mayús+P` «no es un atajo real».** Sí lo
+  es: el volcado lo registra como **SubrayadoPalabras** (subraya las palabras
+  sin subrayar los espacios). Lo que no es es un atajo de la pestaña Insertar,
+  que era lo que preguntaba.
+- **`insertar-159` daba «Conservar formato al actualizar» como la casilla que
+  impide que cambie el VALOR de un campo.** Conserva el FORMATO; el valor se
+  actualiza igual. Congelarlo es bloquear (`Ctrl+3`) o desvincular (`Ctrl+6`), y
+  ninguna de las dos cosas está en ese cuadro. `insertar-381` ya lo decía bien.
+- **`insertar-30` decía que `Ctrl+F1` «no tiene función en este Word»**: contrae
+  la cinta, ya documentado desde `inicio-300`.
+- **`insertar-457` situaba el editar texto de una forma en `F2`**: `F2` está
+  verificada en vivo como «mover texto». Se escribe seleccionando la forma o con
+  «Modificar texto» del menú contextual.
+- **`insertar-234` decía que «Conoce al equipo» es un subtipo dentro de la
+  categoría Jerarquía de SmartArt**, mientras `insertar-237` decía —bien— que es
+  una categoría propia del panel. Manda el volcado: categoría propia.
+- **`insertar-458` e `insertar-468` situaban el comando «Fórmula» en
+  «Herramientas de tabla ▸ Presentación»**, que es el nombre de la cinta en
+  versiones anteriores. Aquí es **Disposición de tabla ▸ Datos**.
+- **`insertar-216` daba la coma como separador con botón propio de «Convertir
+  texto en tabla»**: los cuatro son párrafos, tabulaciones, punto y coma y
+  «Otro»; la coma hay que escribirla a mano.
+- **`insertar-411`** enumeraba los apartados del menú Formas sin «Formas de
+  ecuación»; **`insertar-347`** decía que el Panel de selección lista los objetos
+  del DOCUMENTO (son los de la página, y solo los flotantes).
+- **`insertar-133` e `insertar-135` parecían la misma pregunta** con dos nombres
+  para lo mismo. No lo son, y el volcado tiene los dos controles: la opción «Más
+  adelante o más atrás» del desplegable «Referencia a» (inserta SOLO esa palabra)
+  y la casilla «Incluir más adelante o más atrás» (la añade junto al número).
+
+**Afirmaciones sin fuente propia retiradas en `insertar`**: que «Formas básicas»
+sea la subcategoría MÁS amplia del menú Formas (`insertar-249` dice ahora lo que
+sí se ve: que es el cajón de sastre); la lista exacta de puntas de estrella de
+«Cintas y estrellas» (`insertar-243`); que la cinta contextual de un icono se
+llame «Formato de imagen» (`insertar-247`); que las cuadrículas de tabla se vean
+como «líneas de puntos AZULES» (`insertar-484`, ahora «discontinua»); y
+«Resumen del documento» como categoría del cuadro Campo (`insertar-477`).
+
+**Lo que más trabajo dio: los bloques de clones del minado P-.** Esta sección
+traía tandas enteras de preguntas idénticas en forma («¿cuál de estos nombres
+existe realmente?») sobre listas de galería: 14 sobre categorías de SmartArt,
+gráficos y modelos 3D, 13 sobre a qué grupo de «Formato de forma» pertenece cada
+comando, 8 sobre propiedades del documento, 6 sobre diseños de número de página,
+7 sobre estructuras del editor de ecuaciones. Regla que se siguió: **no se
+borran** (el usuario ya rechazó podar preguntas correctas por parecerse), sino
+que cada una se reapunta a un hecho DISTINTO y comprobable — qué representa cada
+tipo de gráfico, para qué sirve cada categoría de SmartArt, qué distingue
+«Relleno de forma» de «Relleno de texto», por qué todos los diseños de número al
+margen van en pareja izquierda/derecha. Los nombres inventados se conservan como
+distractores, que era lo único bueno que tenían. De paso se cubrieron huecos que
+no tenía ninguna pregunta: «Permitir dividir las filas entre páginas», el cuadro
+Ordenar con sus tres criterios, el cuadro «Insertar celdas», y los dos requisitos
+que hacen fallar la numeración por capítulos (lista multinivel enlazada a los
+estilos, y salto de SECCIÓN para que «Iniciar en» no afecte a todo).
+
+**`insertar-44` queda deliberadamente sin afirmar** qué hacen las variantes con
+Mayús de la navegación por columna de tabla (`Alt+Mayús+Re Pág` / `Av Pág`): el
+volcado las da como equivalentes a las de sin Mayús, pero con las de FILA la
+prueba en vivo demostró que no lo son (extienden la selección). La pregunta dice
+exactamente eso y señala que está pendiente de comprobar. Sigue siendo el único
+hueco abierto de la sección.
+
+**Herramienta nueva: `scripts/auditar_grupo.py`.** Reúne en un solo sitio las
+lentes que se venían pasando a mano al cerrar cada grupo: citas de letra de
+opción (solo en los tipos con opciones rotuladas — en un V/F, «la B» puede ser la
+tecla de un atajo), explicaciones de menos de 120 caracteres, citas de fuente
+externa, opciones repetidas, coherencia `tipo`↔`respuesta`, balance V/F, reparto
+de tipo y categoría, y **framings por topic**. Se usa como
+`py -3.11 scripts/auditar_grupo.py <seccion> [topic]`. Dos falsos positivos ya
+afinados: «SlideShare» es una de las cuatro plataformas reales del cuadro
+«Insertar vídeo en línea», no una cita de fuente (solo cuenta el dominio), y
+«según la fuente» no es cita cuando habla de la fuente TIPOGRÁFICA.
+
+**`tests/test_revisada.js` actualizado**: su paso A exigía que ninguna sección
+quedara a medias, cierto mientras se marcaba sección entera. Ahora se sube GRUPO
+a grupo para que el usuario pueda estudiar lo terminado sin esperar a la pestaña
+completa, así que lo que se comprueba es que ningún **topic** quede a medias.
+
+**Errores de HECHO destapados al reescribir `inicio`** (todos contrastados
+contra el volcado v2608, las capturas del usuario o pruebas en vivo; ya
+corregidos, no reabrir):
+- **La fuente predeterminada es Aptos 12**, no Calibri 11. `inicio-11` daba
+  Calibri «porque es la referencia documentada para el examen». El volcado de
+  rutas y la captura del cuadro Fuente («+Cuerpo», vista previa «Aptos») lo
+  desmienten.
+- **`Ctrl+Q` NO quita el formato de párrafo**: es PárrafoIzquierda. Quien lo
+  quita es `Ctrl+W` (DefinirPárrafo). Estaba mal en `inicio-262/263/265/278`
+  y en varias explicaciones sueltas.
+- **El panel de Navegación NO tiene tope de 100 resultados.** Lo repetían
+  `inicio-118/119/120/208`. Con 64.350 coincidencias Word dice «Hay demasiados
+  resultados»: no hay límite fijo. Las cifras 100 y 200 son ahora distractores.
+- **El desplegable «Alineación» del cuadro Párrafo tiene CUATRO entradas**
+  (izquierda, centrada, derecha, justificada), no cinco: «Distribuida» existe
+  y se aplica con Ctrl+Mayús+J, pero NO está en ese desplegable ni tiene botón
+  en la cinta. Confirmado con la captura del propio desplegable.
+- **El desplegable «Ancho» de Bordes y sombreado tiene NUEVE grosores y
+  empieza en ¼ pto**, no ocho desde ½. Estaba mal en `inicio-51/52/235`.
+- `inicio-346` daba `Alt+Ctrl+P` como vista Diseño de impresión: es
+  `Alt+Ctrl+D`. `inicio-354` daba `Alt+Ctrl+M` como insertar comentario: no
+  figura en el volcado (es `Alt+Ctrl+A`). `inicio-377` daba `Alt+Ctrl+U` como
+  autoformato del texto: es **TablaActualizarAutoformato**, solo de tablas; el
+  del documento es `Ctrl+O`. `inicio-300` decía que `Ctrl+F1` «no tiene
+  función»: contrae la cinta. `inicio-311` afirmaba `Ctrl+F2` = vista previa,
+  que no está en el volcado, mientras `inicio-317` decía lo contrario.
+- `inicio-86/280` daban el pincel Copiar formato como `Ctrl+Mayús+C/V`: aquí
+  es `Alt+Ctrl+C/V`. `inicio-96/240` llamaban Normal.dot**x** a la plantilla:
+  es Normal.dot**m**. `inicio-338/339` llamaban «página» a lo que el volcado
+  llama «pantalla de texto» (Mayús+Av Pág depende del zoom, no de los saltos).
+- `inicio-241/285` separaban `Ctrl+Y` de `F4` como si hicieran cosas
+  distintas: el volcado las pone juntas con `Alt+Entrar` bajo
+  EdiciónRehacerORepetir. Rehacer en sentido estricto es
+  `Alt+Mayús+Retroceso`.
+- Preguntas con DOS respuestas defendibles o con TODAS correctas:
+  `inicio-17` (dos opciones describían bien las versalitas), `inicio-235` y
+  `inicio-271` (selección múltiple sin ninguna falsa). `inicio-267` tenía una
+  opción «Tanto B como C son válidas», que no significa nada al barajarse.
+- **Afirmaciones sin fuente propia, retiradas** (sustituidas por hechos que sí
+  constan, no por otras inventadas): que la opción «Sombra» de Bordes dibuja
+  siempre el sombreado en negro; que el efecto «3D» solo funciona con bordes
+  asimétricos; que una trama sin relleno se ve como color sólido; que las
+  viñetas personalizadas se acumulan en su biblioteca y las multinivel no; que
+  «Agregar espacio antes del párrafo» añade 12 pto y «Quitar espacio después»
+  elimina 8; que «Vinculado» es el valor por defecto de «Tipo de estilo»; el
+  tope del historial de Deshacer.
+- **`Alt+Mayús+←/→` retirado del banco**: `inicio-63` lo emparejaba con subir
+  y bajar de nivel en una lista, y esa combinación NO está en el volcado ni en
+  la lista cerrada de extras confirmados en vivo. El emparejamiento se rehízo
+  con Tab, Mayús+Tab y «Cambiar nivel de lista», que son comportamiento y
+  menú, no asignación de teclas.
+
+**PENDIENTE de verificar por el usuario (único hueco abierto de `inicio`)**:
+`inicio-47` afirmaba la «regla del mayor» —que entre dos párrafos con
+espaciado posterior y anterior distintos se ve el mayor de los dos, no la
+suma—. No está en ninguna fuente propia y Word podría sumarlos. La pregunta se
+reformuló hacia un hecho que sí consta (Diseño ▸ Espacio entre párrafos actúa
+sobre el documento entero, según su propio mensaje emergente), así que el
+banco ya no afirma nada sin respaldo, pero el dato sigue sin resolver.
+
+**Hechos nuevos incorporados desde las capturas del usuario al reescribir
+`inicio`** (verificados, usables como fuente): sección «Cortar, copiar y
+pegar» de Opciones ▸ Avanzadas con sus cuatro desplegables y sus valores de
+fábrica —dentro del mismo documento y entre documentos, **Mantener formato de
+origen**; con conflicto de estilos, **Usar estilos de destino**; **desde otras
+aplicaciones, Combinar formato**— y la casilla «Conservar viñetas y números al
+pegar texto con la opción Conservar solo texto», marcada de fábrica · el
+desplegable del botón Pegar tiene solo tres cosas (iconos de Opciones de
+pegado, «Pegado especial…» y «Establecer Pegar predeterminado…») y **qué
+iconos aparecen depende de lo que haya en el portapapeles** · panel
+Portapapeles con «Pegar todo», «Borrar todo» y botón «Opciones» · cuadro
+Pegado especial con Origen, radios Pegar / Pegar vínculo (atenuado si el
+origen es desconocido), lista «Como:», casilla «Mostrar como icono» y recuadro
+«Resultado» · cuadro Fuente: fichas **Fuente y Avanzado**, Estilo de fuente
+con 4 entradas, **7 casillas de Efectos** (Contorno y Relieve YA NO están),
+botones «Establecer como predeterminado» y «Efectos de texto:» (no hay
+«Restablecer») · ficha Avanzado con Escala / Espaciado / Posición /
+**Interletraje** (no «Kerning») / OpenType · paleta del rotulador **cerrada**,
+con interruptor «Solo contraste alto» y sin «Más colores» · desplegable de
+fuentes partido en Fuentes del tema / usadas recientemente / Todas · cuadro
+Bordes y sombreado: fichas **Bordes · Borde de página · Sombreado**, Valor con
+5 botones (Ninguno, Cuadro, Sombra, 3D, Personalizado), **Ancho con 9 grosores
+de ¼ a 6 pto** · desplegable de interlineado de la cinta con **6 valores (1,0 ·
+1,15 · 1,5 · 2,0 · 2,5 · 3,0)**, que NO son los 6 tipos del cuadro Párrafo ·
+cuadro Tabulaciones con «Tabulaciones predeterminadas: 1,25 cm», 5
+alineaciones, 4 rellenos numerados y botones Establecer / Eliminar / Eliminar
+todas · menú de Viñetas con 3 secciones (usadas recientemente / Biblioteca de
+7 / de documento) y menú de Lista multinivel con «Lista actual» + «Biblioteca
+de listas» (Ninguna + 7) + «Cambiar nivel de lista» + las dos entradas de
+definir.
+
+**Herramienta**: `scripts/aplicar_reescritura.py` se endureció durante esta
+sección. Ahora admite `matching` (sin eso no se podía reescribir a mano ningún
+emparejamiento), el detector de opciones repetidas **distingue mayúsculas**
+—tumbaba las preguntas donde lo que se pregunta ES el uso de mayúsculas—, el
+chivato de longitud solo se aplica cuando hay UNA respuesta correcta, y
+comprueba la **coherencia entre `tipo` y `respuesta`** para los cuatro tipos.
+Ese último control nació de un bug propio: al convertir `inicio-86` y
+`inicio-280` de V/F a opción única les di cuatro opciones y olvidé cambiar el
+`tipo`, con lo que la interfaz pintaba dos botones Verdadero/Falso sobre una
+pregunta de cuatro opciones y ningún test lo detectaba.
+
+**Regla nueva y trampa que costó cara: NUNCA citar la LETRA de una opción en
+la explicación.** Las opciones se barajan al construir la sesión
+(`shuffleOptions:true` es el valor por defecto en TODAS: smart, repaso,
+concepto, práctica, sección, errores, duelo y coop), así que un «la opción B»
+apunta a una opción distinta cada vez que se sirve la pregunta. Había 121
+preguntas así (98 escritas en esta reescritura, 23 heredadas de `interfaz` e
+`inicio`). Se sustituyó la letra por el texto de la propia opción con
+`scripts/quitar_letras_explicacion.py`. **Cuidado al hacerlo en bloque**: si
+dos opciones empiezan igual, un recorte por el principio no distingue nada, y
+recortar por la cola puede acabar citando la respuesta correcta. Nueve
+explicaciones quedaron mal por eso y hubo que rehacerlas a mano. Al escribir,
+lo correcto es referirse al distractor por lo que lo distingue («la opción que
+además cierra la aplicación», «la casilla que añade *al imprimir*»), no por su
+letra ni copiando la frase entera.
+
+**Chivato de longitud**: `scripts/aplicar_reescritura.py` avisa cuando la
+opción correcta es la más larga o la más corta **con hueco** (ratio >1,5 y
+más de 12 caracteres de diferencia con su vecina). No basta con que las
+cuatro midan parecido — los nombres reales de la interfaz miden lo que
+miden —; lo que delata es que la buena sea la única que destaca. Al pasarlo
+sobre `archivo.json` entero salieron 22 casos, 18 de ellos en los bloques
+`opciones-*` todavía sin reescribir: sirve como lista de trabajo.
+
+**Efecto secundario en el motor (sep-2026), ya resuelto**: `framingOf()` de
+`engine.js` deducía un framing `"caso"` de la REDACCIÓN del enunciado
+(`/necesit|quieres|un usuario|estás trabajando/`…). Como la guía exige situar
+TODOS los enunciados, ese patrón acaba casando con casi todo el banco y deja
+de discriminar; peor, infla los framings de un concepto solo porque dos de sus
+preguntas dicen «quieres», que no es evidencia de transferencia. **Retirado**:
+los seis framings restantes son estructurales (`tipo`, `categoria`,
+`negativa`). Medido antes de tocar nada: cambiaban de framing 56 preguntas de
+2822 y **ningún** concepto bajaba de los 2 framings que exige `deriveMastery`.
+Lo destapó el escenario 6 de `tests/test_engine.js` (falsos positivos 2→5 con
+solo 8 preguntas reescritas). Diagnóstico reutilizable en
+`tests/diag_engine_falsepos.js`.
+
+## Regla de oro: jerarquía de fuentes
+
+Para **atajos de teclado** hay una única fuente y NADA puede contradecirla:
+
+**`data/atajos_word365_v2608.md`** — volcado COMPLETO del cuadro
+"Personalizar teclado" de la instalación real del usuario (Word para
+Microsoft 365 MSO v2608, compilación 16.0.20326.20072, 64 bits), sacado
+pantalla a pantalla por el usuario, tecla a tecla (sep-2026). **Es LA
+verdad.** Si el banco dice algo que ese archivo no dice, el banco está
+mal: se corrige o se borra la pregunta. Un atajo que no aparezca en ese
+archivo NO existe en este Word — no se pregunta por él.
+
+**Regla del usuario (sep-2026):** el banco = lo que dice el volcado + lo
+que él verificó en vivo, MEZCLADO. Donde discrepen, **gana la prueba en
+vivo** y la explicación **lleva SIEMPRE una advertencia** `⚠️ Ojo: …`
+explicando qué dice el cuadro Personalizar teclado y qué pasa de verdad.
+
+- **Conflictos internos del propio volcado** (misma combinación bajo dos
+  comandos): `Alt+Ctrl+V` = DocDividir *y* PegarFormato → en vivo **pega
+  formato**; `Ctrl+0` = Zoom100 *y* AbrirCerrarPárrafo → **zoom 100 %**;
+  `Ctrl+W` = DocCerrar *y* DefinirPárrafo → **quita formato de párrafo**;
+  `Ctrl+1` = AplicarTitulo1 en el volcado pero **en vivo aplica
+  interlineado sencillo** (y Título 1 es `Ctrl+Mayús+1`); `Ctrl+Mayús+L` =
+  Versalitas *y* ListaConViñetas (sin dirimir). Todos con advertencia en
+  las preguntas.
+- **Extras confirmados EN VIVO por el usuario que no salen en el volcado**
+  (lista cerrada, no ampliar sin prueba): `Alt+Ctrl+H` = resaltar ·
+  `Alt+Mayús+F7` = Traductor · `Ctrl+B` = panel Navegación · `Alt+Q` =
+  Buscar de la barra de título · `Ctrl+Tab` = tabulación en celda ·
+  `Windows+F7` = panel Editor · `Ctrl+5` numérico = seleccionar todo.
+  Cada uno con advertencia "no figura en el volcado; confirmado en vivo".
+
+Para lo que NO es un atajo (rutas de menú, conceptos): PDFs de la academia
+(Beatriz R., Adams, MAD…) en el Project Knowledge de Codex.ai — pídeselos
+al usuario si los necesitas.
+
+**`support.microsoft.com` (y su versión ES): 0% fiable — NO usar.** El
+usuario lo ha descartado explícitamente: traducción automática, mezcla
+esquemas de teclado y da atajos que en su instalación no funcionan (p. ej.
+documenta subíndice `Ctrl+=` y superíndice `Ctrl+Mayús++`, ambos falsos
+aquí). No citarlo ni como "último recurso". Las webs generalistas de atajos
+(xataka, profesionalreview…) copian ese mismo esquema internacional y
+valen igual de poco para esta instalación.
+
+**Nunca inventes un atajo o distractor que no exista en una fuente real.**
+Si dos fuentes fiables se contradicen, dilo en el chat — no lo resuelvas en
+silencio ni elijas arbitrariamente.
+
+### Contexto importante ya resuelto (no lo reabras sin motivo)
+
+- Esta instalación de Word 365 español usa el **esquema clásico de
+  localización**: Ctrl+Q/T/D/J para alineación izq/centro/der/justificar,
+  Ctrl+N/S/K para negrita/subrayado/cursiva, Ctrl+L=Reemplazar,
+  Ctrl+H=Sangría, Ctrl+F=Sangría francesa, Ctrl+I=Ir a — **distinto del
+  esquema internacional en inglés**. Confirmado por `ATAJOS.docx` +
+  PDF de la academia + prueba en vivo del usuario. **Ctrl+F NO es
+  "sangría de primera línea"** (el banco `inicio.json` venía de aulaclic
+  con ese error; corregido en `inicio-250/251/252/264/275/276`). Otros de
+  sangría: `Ctrl+Mayús+H` = reducir sangría francesa, `Ctrl+Mayús+R` =
+  quitar toda la sangría (`atajos_oficial.json`).
+- **`Ctrl+M`** y **`Ctrl+Mayús+F`** abren el cuadro de diálogo Fuente con
+  el foco en el campo **Fuente (nombre)**; **`Ctrl+Mayús+M`** abre el mismo
+  cuadro con el foco en **Tamaño**. Los tres abren el DIÁLOGO — NO existe
+  atajo que active la caja de fuente de la cinta, y ninguno es atajo de
+  sangría. Prueba en vivo del usuario (sep-2026, confirmado contra el
+  volcado v2608). Afectó a `inicio-25` (tenía doble respuesta: B era
+  `Ctrl+Mayús+F` → cambiado a `Ctrl+Mayús+P`), `inicio-283`, `inicio-354`,
+  `inicio-355` (reformulada: la premisa "caja de la cinta" era falsa).
+- **`Ctrl+Mayús+R` NO quita la sangría** en esta instalación, aunque
+  `atajos_oficial.json` le asigne "Quitar sangría". Para quitar sangrías
+  se usa `Ctrl+W` (quita todo el formato de párrafo). Prueba en vivo.
+  Afectó a `inicio-252/352`.
+- **Estilos de título** (prueba en vivo): `Ctrl+Mayús+1` → Título 1,
+  **`Alt+Ctrl+2` → Título 2** (`Ctrl+Mayús+2` NO hace nada),
+  `Ctrl+Mayús+3` → Título 3. El banco `inicio.json` nuevo tenía
+  `Ctrl+Mayús+2` → Título 2 (mal); corregido en `inicio-93/341`. El banco
+  heredado (`inicio-342/343`) ya lo tenía bien.
+- **Ctrl+R no hace absolutamente nada** en esta instalación (Word 365
+  español de España). No aparece en `ATAJOS.docx`. No es Ctrl+R quien
+  alinea a la derecha — es Ctrl+D. Prueba en vivo del usuario.
+- **Ctrl+W quita el formato de párrafo** (sangrías, etc.), NO cierra el
+  documento — prueba en vivo del usuario, aunque `ATAJOS.docx` lo lista de
+  forma contradictoria bajo ambas cosas.
+- **Cerrar documentos y Word** (prueba en vivo del usuario):
+  - **Ctrl+F4** cierra el documento activo y NO cierra Word.
+  - **Alt+F4** va cerrando los documentos abiertos uno a uno; cuando solo
+    queda uno, al volver a pulsarlo cierra el programa.
+  - Ctrl+W NO cierra nada (ver arriba).
+- 38 preguntas nuevas (`gen-atajo-1` a `gen-atajo-38`, campo
+  `"generado": true`) cubren atajos de `ATAJOS.docx` que no tenían ninguna
+  pregunta, incluyendo variantes alternativas de un mismo comando
+  (ej. Guardar tiene 3 atajos válidos, ahora las 3 tienen pregunta propia).
+- **`Alt+Mayús+F7` abre el Traductor** en un panel a la derecha —
+  confirmado por prueba en vivo del usuario (no aparece en `ATAJOS.docx`).
+  Lo usan `revision-2` y `revision-51`.
+- **`Ctrl+Mayús+E` activa/desactiva el control de cambios** ("Activar o
+  desactivar marcas de revisión" en `ATAJOS.docx`) — ya lo usaban
+  el banco heredado (hoy `revisar-*`) y el bloque Revisar.
+- **`Ctrl+Mayús+S` = Subrayado** (prueba en vivo del usuario + coincide
+  con `atajos_oficial.json`) y **`Ctrl+Mayús+W` = Panel Aplicar estilos**.
+  El banco `inicio.json` nuevo venía de aulaclic diciendo que Ctrl+Mayús+S
+  "abre Aplicar estilo" — corregido. Afectó a `inicio-13`, `inicio-90`,
+  `inicio-91` (respuesta C→B) y `inicio-92`.
+- **Subíndice = `Ctrl+Mayús+-`** (Ctrl + Mayús + la tecla del guión).
+  **`Ctrl+=` NO funciona** (era el esquema internacional que traía el banco
+  de aulaclic). **Superíndice NO tiene atajo** en esta instalación (probado:
+  ni `Ctrl+Mayús+=`, ni `Ctrl+Mayús++`, ni `Ctrl+Alt++`) — solo desde la
+  casilla Superíndice del cuadro Fuente (`Ctrl+M`) o el botón de la cinta.
+  Prueba en vivo del usuario. Borradas `inicio-258/360`; corrigió
+  `inicio-257/361/362` (subíndice), `inicio-157/158` y `inicio-259`
+  (emparejamiento reconstruido solo con atajos confirmados) y el distractor
+  fósil de `vista-124`. Notación: `atajos_oficial.json` escribe el subíndice
+  como `Ctrl+Mayús+` + `-` — se nombra la **tecla** (signo menos), no el
+  carácter que saldría con Mayús (`_`); es correcta tal cual. La mayoría de
+  webs (y Microsoft Support ES, poco fiable) repiten el esquema
+  internacional `Ctrl+=` para subíndice y `Ctrl+Mayús++` para superíndice —
+  ninguno funciona aquí. `atajos_oficial.json` también lista `Ctrl+Mayús+0`
+  para subíndice: en vivo no hace nada (entrada fósil de ATAJOS.docx).
+- **Tamaño de fuente — la tecla `<>`** (izquierda de la Z). En el teclado
+  ES esa tecla da `<` sin Mayús y `>` con Mayús, así que **`Ctrl+Mayús+<` y
+  `Ctrl+>` NO existen** — son notaciones contradictorias y no deben
+  aparecer como opción. Las 4 combinaciones reales: `Ctrl+Mayús+>` agranda
+  al siguiente valor de la lista · `Ctrl+Alt+Mayús+>` agranda de punto en
+  punto · `Ctrl+<` (sin Mayús) reduce al valor anterior de la lista ·
+  `Ctrl+Alt+<` reduce de punto en punto. Prueba en vivo. Quedan 4 preguntas
+  limpias: `inicio-255` (agrandar lista) · `inicio-256` (reducir lista) ·
+  `inicio-356` (agrandar 1pt) · `inicio-357` (reducir 1pt); `inicio-358/359`
+  eran duplicados y se borraron; distractor arreglado en `inicio-384`.
+- **`Ctrl+Barra espaciadora` = quitar el formato de carácter manual** —
+  funciona (prueba en vivo, confirma `inicio-262`). El de PÁRRAFO es
+  `Ctrl+W` (ya resuelto arriba). `Ctrl+Q` = alinear a la izquierda —
+  `inicio-263` decía mal que quitaba el formato de párrafo, corregido a
+  `Ctrl+W`.
+- **`Ctrl+B` = abre el panel de Navegación** con el cuadro de búsqueda
+  dentro del documento (pestañas Títulos/Páginas/Resultados) — prueba en
+  vivo con captura. NO es "Búsqueda inteligente": `inicio-294` decía eso y
+  se reformuló para preguntar por **`Alt+Q`** = lleva el foco al cuadro
+  Buscar de la barra de título (Microsoft Search). `inicio-117` (Ctrl+B =
+  panel de Navegación) ya estaba bien.
+- **`Ctrl+Mayús+8` = mostrar/ocultar marcas de formato** (¶). En el
+  teclado ES `(` es Mayús+8, así que "Ctrl+(" y "Ctrl+Mayús+8" son la
+  misma pulsación — no dos atajos. `inicio-138` tenía las dos como
+  opciones distintas (bug tipo `<>`); corregido a `Ctrl+Mayús+8`.
+- **Atajos verificados en vivo uno a uno (sep-2026), llevan "Prueba en
+  vivo del usuario" en la explicación — no reabrir:** `Ctrl+F12` Abrir ·
+  `Ctrl+A` Abrir (Backstage) · `Ctrl+G` Guardar · `F12` Guardar como ·
+  `Ctrl+F4` cerrar documento (no Word) · `F1` Ayuda · `Ctrl+Fin` final del
+  documento · `Fin` final de línea · `Mayús+Fin` / `Ctrl+Mayús+Fin`
+  extender selección a fin de línea / de documento · `Ctrl+E` seleccionar
+  todo · `F8` modo extender selección · `Ctrl+Retroceso` borrar palabra a
+  la izquierda · `Ctrl+Barra espaciadora` quitar formato de carácter ·
+  `Ctrl+Mayús+8` mostrar/ocultar marcas de formato (= `Ctrl+(` en teclado
+  ES) · `Ctrl+M` diálogo Fuente · `Mayús+F3` rotar mayús/minús/tipo
+  oración · `Ctrl+Mayús+-` subíndice. Borrada `inicio-392` (`Ctrl+Mayús+0`
+  subíndice: la tabla lo lista pero en vivo no hace nada). **`Ctrl+Mayús+Z`
+  = "Restablecer carácter" CONFIRMADO en vivo (sep-2026)**: sobre texto con
+  negrita+cursiva+subrayado+color+fuente+tamaño, lo devuelve todo al formato
+  de carácter del párrafo — igual que `Ctrl+Barra espaciadora`
+  (`inicio-363/364`).
+- **Tanda 3 (sep-2026):** `Ctrl+Tab` = tabulación real dentro de una celda
+  de tabla (`inicio-82`) · `Alt,F,T` = abre el diálogo Tabulaciones
+  (`inicio-77`) · `Alt+Fin` = va al final de la fila de la tabla
+  (`insertar-32`) · `Ctrl+-` = alejar zoom de 10 en 10 (`vista-123`) ·
+  `Ctrl+0` = **restaura el zoom al 100 %** (`inicio-253` reformulada — NO
+  toca el espaciado del párrafo, que no tiene atajo). Correcciones:
+  `Alt+Mayús+Fin` en tabla **extiende la selección** hasta el final de la
+  fila, no "va al final" (`insertar-43`) · `Alt+5` (numérico) inserta el
+  símbolo del código Alt (♣), **no** selecciona la tabla (`insertar-38`).
+  Borrada `inicio-376` (`Alt+Mayús+5` numérico = no hace nada). `Ctrl+5`
+  (numérico) = **seleccionar todo** — funciona con NumLock on u off
+  (`inicio-371` corregida y verificada).
+- **Tanda 4 (sep-2026):** `Ctrl+1` / `Ctrl+5` / `Ctrl+2` (fila superior) =
+  interlineado sencillo / 1,5 / doble (`inicio-314/315/316/254`) — `Ctrl+5`
+  en el numérico en cambio selecciona todo, ese es el doble sentido de
+  `inicio-67` · `Ctrl+Q` = alinear a la izquierda **y, si el párrafo YA
+  está a la izquierda, una segunda pulsación lo justifica** (`inicio-378`).
+  Verificadas `inicio-296` (Ctrl+J justifica), `inicio-297` (Ctrl+D
+  derecha; Ctrl+R nada), `inicio-42` (emparejamiento Q/T/D/J) y
+  `inicio-275` (Ctrl+E/B/F/L cambian entre ES e inglés).
+- **Tanda 5 (sep-2026):** `Ctrl+Mayús+F8` = **modo "Seleccionar columna"**
+  (ATAJOS.docx) — deja la selección enganchada y, al mover el cursor o
+  hacer clic, se extiende un bloque vertical de texto; se sale con `Esc`
+  (`inicio-321` reformulada) · `Alt+Inicio` = va a la primera celda de la
+  fila de la tabla (`insertar-31`). Corrección: `Alt+Mayús+Inicio` en tabla
+  **extiende la selección** hasta el inicio de la fila, no "va al inicio"
+  (`insertar-45`, mismo patrón que `Alt+Mayús+Fin`). **Pendiente**: la
+  navegación por columna de tabla `Alt+Re Pág` / `Alt+Av Pág` y sus
+  variantes con Mayús (`insertar-33/34/44`).
+- **Tanda 6 (sep-2026) — escenarios D y E cerrados enteros, prueba en vivo:**
+  `Ctrl+Mayús+H` = reducir sangría francesa (`inicio-251`) · `Ctrl+Ins` =
+  copiar, `Mayús+Ins` = pegar, `Mayús+Supr` = cortar (método antiguo del
+  portapapeles, `inicio-308/309/310`) · `F2` = mover texto (marca "¿A
+  dónde?" en la barra de estado; `Enter` en el destino) (`inicio-7·312`) ·
+  `Ctrl+F3` = Spike (acumula recortes), `Ctrl+Mayús+F3` = pega todo el
+  Spike (`inicio-8`) · `Mayús+F2` = "Copiar a" (copia sin tocar el
+  portapapeles) (`inicio-311`). Todos hacen lo que dice el banco, sin
+  cambios.
+- **Tanda 7 (sep-2026):** `Alt+[` = iniciar el Dictado (`inicio-373`) ·
+  `Alt+Ctrl++` (num.) = abrir *Personalizar teclado* (`archivo-129`) ·
+  **`F7` y `Windows+F7`** abren los dos el panel **Editor** (`revisar-1`
+  ya lo decía; `revisar-74` también vale — en 365 "Editor" y "Ortografía y
+  gramática" son el mismo panel). **`Alt+Ctrl+V` NO hace nada** en esta
+  instalación — ni divide la ventana ni pegado especial. **Dividir no
+  tiene atajo**: se hace por Vista ▸ Ventana ▸ Dividir. `ATAJOS.docx`
+  asigna `Alt+Ctrl+V` a "Dividir ventana" *y* a "Pegar formato" (conflicto
+  → no funciona ninguno). Corregidas `vista-27/87/109/88` (quitado el
+  atajo inventado; `vista-109` pasa a `categoria:"ruta"`). **Pegado
+  especial** según `atajos_oficial.json` = **`Alt+Ctrl+G`** (`inicio-383`
+  ya lo dice) — pendiente de prueba en vivo.
+- **Tanda 7·bis (sep-2026, prueba en vivo):** `Alt+Ctrl+V` **sí hace algo**
+  — es el **pincel Copiar/Pegar formato**: `Alt+Ctrl+C` copia el formato
+  del texto seleccionado, `Alt+Ctrl+V` lo pega (coincide con
+  `atajos_oficial.json`: "Copiar formato" Alt+Ctrl+C, "Pegar formato"
+  Alt+Ctrl+V). El banco traía el esquema internacional `Ctrl+Mayús+C/V`
+  (que aquí NO va). Corregidas `inicio-3` (dorso del emparejamiento),
+  `inicio-145`, `inicio-301`, `inicio-302`. **Matiz confirmado**: si el
+  origen mezcla formato de carácter (negrita/cursiva) y de párrafo
+  (sangría, interlineado), al pegar sobre otro párrafo **solo se aplica el
+  formato de párrafo**. Las notas de `vista-27/87/109/88` ya no dicen que
+  `Alt+Ctrl+V` "no hace nada" (dicen que hace pegar formato).
+- **Tanda 8 (sep-2026) — escenario E cerrado + limpieza del banco.** Prueba
+  en vivo: `Alt+Ctrl+H` resalta la selección (`inicio-21/303/159`) ·
+  `Ctrl+rueda` zoom de 10 en 10 (`vista-22`) · `Alt+Ctrl+Espacio` Leer en
+  voz alta (`revisar-6`) · `Inicio`/`Fin` inicio/fin de línea
+  (`interfaz-503/504`) · hipervínculos con un clic = desactivar "Utilizar
+  CTRL+clic…" en Opciones ▸ Avanzadas (`archivo-86`) · `Ctrl+M` Fuente (NO
+  sangría; esa es `Ctrl+H`) (`inicio-283`) · `Ctrl+E` seleccionar todo
+  (`inicio-274`) · `Ctrl+Z` deshacer (`inicio-139`) · `F2` mover texto, la
+  barra de estado muestra «¿Dónde quieres moverlo?» (`inicio-7/312`) ·
+  `Ctrl+F3` Spike, `Ctrl+Mayús+F3` lo suelta (`inicio-8`, notación
+  normalizada). **Limpieza global del banco**: eliminados los banners de
+  basura (`====… FIN DEL BANCO / TABLA OFICIAL / BLOQUE N …`) y TODAS las
+  citas de fuente en enunciados/explicaciones (aulaClic, Scribd, SlideShare,
+  LinkedIn Learning, IONOS, "según la fuente", "documentado en el corpus").
+  Las ~40 preguntas de Vista afectadas se reescribieron a mano conservando
+  el hecho; `vista-38` y `vista-44` estaban vacías y se rellenaron. **Regla
+  nueva**: el banco NO cita fuentes externas — dato verificado en vivo →
+  "Prueba en vivo del usuario"; si no, se enuncia sin coletillas.
+- **Tanda 9 (sep-2026) — cruce contra el volcado v2608, prueba en vivo.**
+  Los 3 conflictos internos del volcado se resuelven así en vivo:
+  `Alt+Ctrl+V` = **pegar formato**, `Ctrl+0` = **zoom 100 %**, `Ctrl+W` =
+  **quitar formato de párrafo** (no cierra la ventana). `Ctrl+Mayús+M` =
+  diálogo Fuente con foco en Tamaño; `Ctrl+Mayús+F` = diálogo Fuente con
+  foco en el nombre (igual que `Ctrl+M`) — ver punto de `Ctrl+M` arriba.
+  `Alt+5` numérico: **NumLock ON = ♣; NumLock OFF = selecciona toda la
+  tabla** (`insertar-38` reformulada). `Alt+Mayús+Inicio`/`Fin` en tabla =
+  extienden la selección hasta la celda extrema de la fila; si ya estás en
+  ella, seleccionan solo esa (`insertar-43/45`). Subíndice = `Ctrl+Mayús+-`
+  (= `Ctrl+_`); `Ctrl+=` no va (`inicio-257/361`).
+- **Sobre borrar preguntas "duplicadas":** el usuario NO quiere que se
+  poden preguntas correctas solo por parecerse a otra — se conservan
+  aunque otra pregunte por el mismo atajo (están en topics/framings que
+  pueden ser útiles). Solo se borra lo que está MAL o testea un atajo
+  inexistente (así se fue `insertar-39`: "página en blanco" no tiene
+  atajo). La poda de 16 de `dc50ece` se revirtió en la siguiente sesión.
+  **Pendiente de que el usuario verifique**: `Alt+Ctrl+D` = ¿qué hace?
+  ATAJOS.docx pone "Página" (ambiguo); `disposicion-1` dice "formato de
+  página" y en Word suele ser "nota al final" · `Alt+Ctrl+H` = resaltado:
+  no está en ATAJOS.docx (`inicio-21/303`) · `Alt+Ctrl+V` = "Dividir
+  ventana" (`vista-27/87/109`) sin confirmar (suele ser Pegado especial).
+
+## Modelo de datos (questions_all.json)
+
+Cada pregunta tiene: `id`, `sourceFile`, `bloque`, `tipo`
+(`opcion_unica`/`seleccion_multiple`/`verdadero_falso`/`emparejamiento`/
+`relleno`), `categoria` (`atajo`/`ruta`/`concepto`/`general`), `negativa`
+(bool), `enunciado`, `opciones` (`[{letter,text}]`), `respuesta` (letra o
+array de letras, bool para V/F, mapa para emparejamiento, o array de
+strings para relleno — uno por hueco `[1]`,`[2]`... en el enunciado, cada
+entrada puede ser un string o un array de variantes aceptadas),
+`explicacion`, `contentHash`, `questionVersion`. Las de farol/atajo
+generadas llevan `"generado": true`. `contentHash` se calcula en runtime
+(`app.js`) y **no** depende de `id` ni de `sourceFile` — renumerar no lo
+altera.
+
+`section`/`topic`/`subtopic`: taxonomía pedagógica; **ya no hay nulos**,
+todo el banco está clasificado y físicamente agrupado por `section`
+(ago-2026). `sourceFile` = `"<section>.json"` e `id` = `"<section>-<n>"`.
+`sourceQuestionId` guarda el id original del documento de procedencia
+(`"Q-021"`, `"P-0001"`, o el id heredado `"8-121"` para las reagrupadas);
+`bloque` conserva el agrupador de procedencia legible. `difficulty`
+(`"media"`/`"alta"`) es opcional. `categoria` sigue siendo exactamente
+`atajo`/`ruta`/`concepto`/`general` (las ~80 de "¿qué botón/opción usar?"
+del banco nuevo de Inicio se mapearon a `ruta`).
+
+**Añadir un tipo de ejercicio nuevo:** si alguna vez se añade un sexto
+tipo, buscar TODOS los sitios que enumeran los tipos existentes — no
+solo `EXERCISE_TYPES`/`TYPE_LABELS`/`evaluateAnswer`/`validateDataset`
+en `app.js`, sino también cualquier `<select>` o fila de pills en
+`views.js` que liste los tipos para filtrar (el asistente de práctica y
+"Repasar preguntas" ya derivan la lista de `O.TYPE_LABELS`
+dinámicamente por esto mismo — un array hardcodeado ahí se detectó como
+bug real la primera vez, probando la app en el navegador, no en jsdom).
+El `<select>` de tipo del asistente de multijugador es la única
+excepción deliberada: sigue limitado a los 4 tipos originales porque
+`relleno` no encaja en Duelo/Farol sin rediseñar esa mecánica.
+
+**`app.js` calcula content hash y registro de migración en cada carga** —
+si añades preguntas a mano, no hace falta tocar nada más, los contadores
+son dinámicos.
+
+## Taxonomía y flashcards
+
+El banco de preguntas está partido físicamente en `data/questions/*.json`
+con **un archivo por pestaña** (= `section`; ver tabla de arriba), pero la
+app siempre ve un único banco lógico (`QUESTIONS`) — `build_data.py` los
+concatena según `data/questions/manifest.json` (ordenado por
+`taxonomy.order`) antes de generar `questions_all.json`.
+
+`data/taxonomy.json` define la jerarquía `section` → `topic` → `subtopic`.
+**El banco está totalmente normalizado** (`scripts/normalize_bank.py`,
+one-shot, ago-2026): todas las preguntas tienen exactamente el mismo
+juego de campos y `sourceFile` = `<section>.json`, `id` = `<section>-<n>`,
+`bloque` = `"<Sección> — <Grupo>"` (derivado de la taxonomía),
+`tema` = `"<Grupo>"`. Campos muertos eliminados (`qnumInSource`,
+`sourcePage`, `blockRange`, `sourceIssue`, `esCompletarBlank`,
+`versionIssue`, `topicId`). `generado` solo aparece cuando es `true`.
+`difficulty` es opcional (solo en los bloques que lo traían). Excepción:
+una pregunta vive en el archivo de su `section` aunque su procedencia
+fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
+"Archivo — Imprimir", `sourceQuestionId` conserva el origen).
+
+**Recuento actual** (`data/questions/<section>.json`, sep-2026):
+inicio 578, insertar 552, interfaz 530, archivo 431, referencias 166, vista 154,
+disposicion 143, revisar 128, diseno 100, correspondencia 61.
+Total 2843. De ellas, **1.561 reescritas a mano** bajo la guía de estilo:
+`archivo` (431), `inicio` (578) e `insertar` (552), las tres secciones
+TERMINADAS. Quedan 1.282: interfaz (530), referencias (166), vista (154),
+disposicion (143), revisar (128), diseno (100), correspondencia (61).
+**Volcado de rutas de la pestaña Inicio + minado (sep-2026)**: el usuario
+aportó 156 capturas de la cinta Inicio (`data/imagenes_rutas/inicio/`, rama
+a rama + todos los cuadros de diálogo/desplegables). Se creó
+`data/rutas/inicio.txt` (mismo patrón que las demás pestañas) y se minaron
+**+75 preguntas** (`sourceQuestionId` `rutas-inicio-NN`, `generado:true`)
+contra `inicio.json` — SOLO detalles de cuadros de diálogo sin cobertura
+previa o muy baja, todo verificado en las capturas: Pegado especial
+(Pegar vínculo, Mostrar como icono, Establecer Pegar predeterminado→
+Opciones Avanzadas), submenús de Efectos de texto (Contorno/Sombra/Reflejo/
+Iluminado/Estilos de número/Ligaduras/Conjuntos de estilos), casillas del
+cuadro Fuente, desplegable Aa (5 opciones), cuadro Párrafo (Interlineado
+Sencillo/1,5/Doble/Mínimo/Exacto/Múltiple, Nivel de esquema, Especial,
+botón Tabulaciones), Bordes y sombreado (3 fichas, Valor, Arte solo en
+Borde de página, Tramas en Sombreado, botón Opciones), Biblioteca de
+numeración, Definir nuevo formato de número / nueva viñeta / nueva lista
+multinivel, galería de Estilos (Cita destacada/Referencia intensa/Título
+del libro), cuadro Crear/Modificar estilo (Tipo de estilo, menú Formato▾
+de 9 entradas, Actualizar automáticamente, alcance), panel Estilos
+(Inspector, Administrar, Opciones), cuadro Buscar y reemplazar (3 fichas,
+Resaltado de lectura, Buscar en, Más>>, ficha Ir a con destinos y sintaxis
++4), menú Seleccionar. Conflicto de atajo registrado (ya resuelto en
+AGENTS.md): el tooltip muestra "Subíndice (Ctrl+=)" pero en vivo Ctrl+= no
+va (real = Ctrl+Mayús+-); Superíndice sin atajo en el tooltip = coincide
+con la prueba en vivo. Generador: `scripts/gen_rutas_inicio.py`.
+**Cuadros de diálogo compartidos — Inicio (sep-2026)**: a petición del
+usuario («en los exámenes preguntan desde qué lugares se llega a un
+cuadro»), se ampliaron `data/rutas/_dialogos_compartidos.md` (nuevas §§9-13:
+el menú «Formato ▾» de Modificar estilo como concentrador, «Personalizar
+teclado» y sus 4 entradas, panel «Formato de efectos de texto», interlineado
+cinta↔cuadro Párrafo, cuadro de creación de estilo) y se añadieron **+29
+preguntas de interconexión** (`sourceQuestionId` `dlgcompart-inicio-NN`,
+`generado:true`): «¿desde qué opción/ruta se abre el cuadro X?», «¿en qué
+ficha abre?», emparejamiento ruta→ficha. Cuadros: Fuente (lanzador / Ctrl+M
+/ Más subrayados / Formato▾ / botón Fuente de los cuadros Definir…), Párrafo
+(lanzador Inicio y Disposición / Opciones de interlineado / Formato▾),
+Tabulaciones (3 vías + regla; NO hay botón suelto en la cinta), Bordes y
+sombreado (Inicio→ficha Bordes, Diseño→ficha Borde de página, Formato▾),
+Personalizar teclado, panel Formato de efectos de texto, Buscar y reemplazar
+(Reemplazar / Búsqueda avanzada / Ir a = 1 cuadro 3 fichas; el botón Buscar
+a secas abre el PANEL, no el cuadro), Administrar estilos (Inicio y Diseño),
+«Establecer como predeterminado» (en 7+ cuadros), «Establecer Pegar
+predeterminado» = Opciones ▸ Avanzadas. Generador:
+`scripts/gen_dialogos_compartidos_inicio.py`.
+**Límites numéricos de Word verificados en vivo por el usuario (sep-2026,
+vídeos + capturas)** — usar SOLO estos como distractores/hechos numéricos,
+nada de "16 documentos abiertos" o "32 temas" (inventados y rechazados):
+Portapapeles de Office = **24** elementos · Tamaño de fuente = **1–1638** pt ·
+Lista multinivel = **9** niveles · Desplegable «Estilo de subrayado» del
+**cuadro Fuente** = **17** estilos (18 con «(ninguno)»); el desplegable
+Subrayado de la **cinta** solo tiene ~9 · Estilos de línea de borde en
+*Bordes y sombreado* = **24** · Diseños de **Arte** (Borde de página) =
+**164** · Alineaciones de tabulación = **5** (izq/centro/der/decimal/barra) ·
+Tipos de interlineado = **6** (sencillo/1,5/doble/mínimo/exacto/múltiple) ·
+Especial del cuadro Párrafo = **3** (ninguna/primera línea/francesa) ·
+Ligaduras (Efectos de texto ▸ Ligaduras) = **5** (Ninguna / Solo estándar /
+Estándar y contextuales / Históricas y discrecionales / Todas las
+ligaduras) · **Buscar y reemplazar ▸ «Más >>» ▸ Opciones de búsqueda = 7
+casillas** (Coincidir mayúsculas y minúsculas · Solo palabras completas ·
+Usar caracteres comodín · Prefijo · Sufijo · Omitir puntuación · Omitir
+espacios en blanco) — ⚠️ en esta instalación ES-España **NO existen «Suena
+como» ni «Todas las formas de la palabra»** (esquema inglés); corregido
+`inicio-535` que las daba por reales. **El panel de Navegación NO tiene
+tope de resultados** (con 64.350 coincidencias muestra "Hay demasiados
+resultados"): "muestra hasta 100/200" es falso, no usar. · **Biblioteca
+de numeración** = «Ninguna» + **7** formatos · «Definir nuevo formato de
+número» ▸ **Estilo de número** = «(ninguno)» + **12** estilos · **Biblioteca
+de viñetas** = «Ninguna» + **7** viñetas · Arte (Borde de página) =
+«(ninguno)» + **164** diseños · cuadro **Tabulaciones**: Alineación **5**
+(Izquierda/Centro/Derecha/Decimal/Barra), Relleno **4** (Ninguno/`......`/
+`-------`/`___`); selector de la regla = ciclo de **7** (5 tabs + sangría
+1.ª línea + francesa) · **«Tipo de estilo»** (cuadro Crear nuevo estilo) =
+**5** (Párrafo / Carácter / Vinculado (párrafo y carácter) / Tabla / Lista)
+— NO existe tipo «Sección»; `inicio-88` corregido de 4 a 5.
+**Endurecimiento de distractores — Portapapeles (sep-2026)**: 29 de las 52
+preguntas del topic `portapapeles` reescritas con `scripts/harden_portapapeles.py`.
+Regla fijada con el usuario: distractor = elemento real, o *mecanismo*
+plausible pero falso (FIFO↔LRU, "muestra un aviso"), o entidad real con
+atributo equivocado (F2↔Mayús+F2); NUNCA un número/hecho/entidad inventado;
+la respuesta correcta y todo lo afirmado como hecho debe ser verdad; 4
+opciones en `opcion_unica` (realismo de oposición), más solo en
+`seleccion_multiple`/`emparejamiento`. Cambios clave: `inicio-1` de
+"12/24/32/48" a 3 límites reales; `inicio-247/248/249` reformuladas por
+impugnables (Portapapeles de Office se borra al cerrar TODAS las apps Office
+per Microsoft; Windows guarda 1 salvo historial Win+V; "Ctrl+C dos veces"
+depende de una opción desactivada por defecto); `inicio-281/282`
+reconstruidas con los límites verificados de arriba (sin "navegación
+100/200"); atajos `inicio-308..390` con combinaciones no verificadas
+(`Ctrl+Mayús+C`, `Alt+Insertar`, `Mayús+X`, `Alt+F2`, `Ctrl+Mayús+F2`)
+sustituidas por reales; iconos `inicio-394..397` con distractores del propio
+grupo. **Pendiente**: mismo tratamiento a los otros 12 topics de inicio.json.
+**Corrección de técnica de recorte de icono (sep-2026)**: el usuario
+señaló que los 2 recortes de muestra de la respuesta anterior estaban
+mal centrados (letras cortadas a la derecha, hueco desigual a la
+izquierda). Medí en píxeles los márgenes de varios recortes YA HECHOS
+POR EL USUARIO (`numpy`, bbox de contenido vs. tamaño del PNG): margen
+casi igual en los 4 lados, normalmente 4-10 px, nunca tocando letra ni
+contorno. Los míos medían 0 px de margen en al menos un lado. Repetidos
+con iteración visual (recortar ancho → ver → ajustar en píxeles 2-3
+veces) hasta igualar el patrón. **Al revisar con calma el resto de la
+lista de iconos "descartados" se encontró un error real**:
+`inicio/complementos_complementos.png` se había excluido por parecerse
+al patrón `_nombre_grupo` de etiqueta de grupo, pero es un comando real
+(abre la tienda/galería de complementos) que el usuario sí había
+recortado — nunca hacía falta que Codex cortara nada ahí. +1 pregunta
+con imagen (`scripts/gen_icono_complementos.py`). Confirmado con
+`numpy`/patrón de nombre que diseno/disposicion/insertar/referencias no
+tienen más candidatos genuinos sin usar.
+**PDF «Portapapeles y Fuente» de Beatriz R.T → inicio.json (sep-2026)**:
+segundo PDF de la academia (grupo Fuente de la ficha Inicio). El banco ya
+lo cubría entero y mejor (con las correcciones de prueba en vivo): pincel
+doble clic, las 4 zonas de Color de fuente, resaltado que no borra «Borrar
+formato», OpenType solo en fuentes OpenType, Escala = % de ancho, Espaciado
+Normal/Expandido/Comprimido, Posición Elevado/Bajado, ciclo condicional de
+Mayús+F3, Versalitas solo sobre minúsculas, Alt,F,Y = cuadro Fuente,
+subrayado 17 / 3 con atajo, Conjuntos estilísticos, etc. **1 corrección
+real**: `inicio-16` afirmaba que TODOS los efectos del cuadro Fuente son
+«mutuamente excluyentes entre sí» — es falso. Solo se excluyen 3 parejas
+(Tachado/Doble tachado, Superíndice/Subíndice, Versalitas/Mayúsculas);
+Oculto y el resto se combinan. Reformulada (el PDF pág. 6 lo confirma: el
+título literal es «Efectos: No se pueden aplicar a la vez:» seguido de las
+3 parejas). **Revisión visual de las 14 páginas de los 2 PDF (sep-2026)**:
+la extracción de texto se saltó la tabla de la ficha «Caracteres
+especiales» del cuadro Símbolo (EDIC pág. 1) con los atajos © `Alt+Ctrl+C`,
+® `Alt+Ctrl+R`, ™ `Alt+Ctrl+T`, … `Alt+Ctrl+.`, guión largo `Alt+Ctrl+-`
+(numérico), guión corto `Ctrl+-` (numérico), guión de no separación
+`Ctrl+Mayús+_`, espacio de no separación `Ctrl+Mayús+Espacio`. El banco
+cubre los NOMBRES de esos caracteres (`insertar-185..192`) pero no sus
+atajos → hueco real, pero de la pestaña **Insertar**. Único hueco de
+Inicio: **Conjuntos estilísticos = hasta 20** → **+1** (`inicio-580`).
+Total del PDF Fuente: **1 pregunta nueva.** Conflictos del PDF ya conocidos, no integrados: Copiar
+formato `Ctrl+Mayús+C/V`, Subíndice `Ctrl+=`, Superíndice `Ctrl++`,
+`Ctrl+>`/`Ctrl+<` sin Mayús para el tamaño, Versalitas `Ctrl+Mayús+L` (todos
+esquema internacional / conflicto interno). El PDF corrobora `Ctrl+Mayús+Z`
+= borrar formato de fuente → **confirmado en vivo (sep-2026)**, ver punto de
+`Ctrl+Mayús+Z` arriba (`inicio-363/364`).
+
+**Confirmaciones en vivo del usuario (sep-2026)**: `insertar-84/285/295`
+(6 formatos de nº de página, `I,II,III` incluido) ✅ · galería de Ecuación =
+9 integradas con Teorema de Pitágoras (`insertar-98/318`) ✅ ·
+`Ctrl+Mayús+Z` = «Restablecer carácter», igual que `Ctrl+Barra espaciadora`
+(`inicio-363/364`) ✅ · **`archivo-63` BORRADA**: preguntaba por la sección
+«Comentarios» de Backstage (Enviar una sonrisa / desaprobación / sugerencia)
+— en este Word 365 **esa sección no existe** (era de Office 2013-2016; el
+usuario lo confirmó). separador de páginas al imprimir = **coma** (`archivo-50/51/381`,
+confirmado con el tooltip del campo Páginas) ✅ · `archivo-63` borrada (la
+sección «Comentarios» de Backstage no existe en este Word) ✅ · **campo
+Posición del cuadro Tabulaciones = -55,87 a 55,87 cm, negativos incluidos**
+(`inicio-45/75`) ✅ CONFIRMADO en vivo: al teclear fuera de rango Word avisa
+«La medida debe estar entre -55,87 cm y 55,87 cm»; `-2 cm` se fija sin
+problema. **desplegable «Aplicar formato a» del cuadro de estilo de tabla**
+(`inicio-107`) ✅ CONFIRMADO con captura: son **13**, no 9 — Toda la tabla ·
+**Con encabezado** · **Fila Total** · Primera columna · Última columna ·
+Bandas en filas impares/pares · Bandas en columnas impares/pares · **Celda
+superior/inferior izquierda/derecha** (las 4 esquinas). Los nombres en esta
+instalación son «Con encabezado» y «Fila Total» (no «Fila de encabezado» /
+«Fila de totales»). `inicio-107` reformulada (9→13), `inicio-236/237`
+renombradas, +`inicio-589/590`. **Todos los pendientes de confirmación en
+vivo cerrados.** De paso, «Tipo de estilo» = 5 y la galería de estilos de
+tabla = 3 categorías (Tablas sin formato · con cuadrícula · de lista) también
+quedan confirmados con captura.
+
+**Mapa de cuadros de diálogo compartidos — cross-pestaña (sep-2026)**: a
+partir de los 9 volcados completos se añadió la **§14** a
+`data/rutas/_dialogos_compartidos.md` (mapa de qué cuadros se abren desde
+varias pestañas: Configurar página, Bordes y sombreado, Fuente, Párrafo,
+Tabulaciones, Referencia cruzada, Símbolo, Modificar estilo, Panel de
+navegación, Zoom, Contar palabras, Comprobar accesibilidad, Opciones de
+Word, Buscar y reemplazar, Traductor — con la regla de en qué ficha abren
+según la ruta). El banco tenía 81 preguntas de este tipo pero 45 en archivo
++ 30 en inicio; el resto de pestañas casi a 0. **+19 preguntas** +**8
+flashcards** repartidas por la sección que "posee" cada cuadro
+(`sourceQuestionId` `dlgcross-<sec>-NN`): disposición +5 (Configurar
+página/Párrafo/Tabulaciones), diseño +2 (Bordes y sombreado y su ficha),
+insertar +2 (Referencia cruzada 2 pestañas, botones del cuadro Símbolo),
+referencias +1 (cuadro Modificar estilo desde TDC/Índice), vista +3
+(Zoom/Contar palabras vía barra de estado, Panel de navegación 3 vías),
+revisar +2 (Comprobar accesibilidad 3 puertas, Traductor), archivo +2
+(Opciones de Word desde varios «Opciones…»/«Preferencias…», ruta de la
+ficha Programador). Generador: `scripts/gen_dialogos_compartidos_cross.py`.
+
+**Interfaz — cruce web (sep-2026)**: la única sección sin volcado de rutas
+(es transversal). El banco (525 preguntas — el mayor) ya cubría casi todo:
+Alt/F10 = modo de acceso por teclado (KeyTips), barra de estado (nº página/
+idioma/palabras), contraer la cinta (Ctrl+F1, doble clic, menú contextual),
+personalizar cinta, fichas contextuales, barra de título, reglas, modo
+Insertar/sobrescribir. **2 huecos** → **+5** (`interfaz-529..533`) + **+3
+flashcards**: la ficha **«Programador» NO está visible por defecto** (se
+activa en Opciones ▸ Personalizar cinta — pregunta oficial AGE 2024) y su
+ruta; el **iniciador/lanzador de cuadro de diálogo** (la flechita ↘ de la
+esquina de algunos grupos; no todos lo tienen); la ficha «Complementos»
+solo aparece con complementos. interfaz.json 525→530.
+
+**Vista — captura de la cinta + web (sep-2026)**: el usuario aportó
+`data/imagenes_rutas/vista/cinta.PNG` (solo la cinta; esta pestaña casi no
+tiene desplegables ni cuadros). Se creó `data/rutas/vista.txt` con la
+estructura de grupos. El banco (144 preguntas, de la integración de
+`vista_procesada_fuente.md`) ya estaba muy completo. **+7 preguntas**
+(`vista-159..165`) + **+5 flashcards**: Modo de lectura = maximiza espacio y
+se sale con Esc (pregunta oficial AGE 2018), los 3 botones de Zoom (Una
+página / Varias páginas / Ancho de página) y qué hace cada uno, «Movimiento
+de página ▸ En paralelo» (pasar páginas como un libro, ≠ «Ver en paralelo»
+del grupo Ventana), Esquema y Borrador NO están en la barra de estado (solo
+Modo lectura/Diseño impresión/Diseño web + Concentración), «Nueva ventana»
+= misma copia del documento, grupo SharePoint. Generado inline (sin
+script guardado). vista.json 144→151.
+
+**Revisar — 44 capturas del usuario (sep-2026)**: el usuario aportó
+`data/imagenes_rutas/revisar/` (44 pantallazos) → **primer volcado propio de
+esta pestaña**, `data/rutas/revisar.txt` (antes NO existía; era el hueco
+marcado en este documento). Los topics `comentarios`, `revision-marcado` y
+`entrada-lapiz` estaban a 0. **+18 preguntas** (`revisar-83..100`) + **+7
+flashcards** (`F-070..076`): globo de comentario (Ctrl+Entrar publica),
+menú Eliminar comentarios (4), Mostrar comentarios (Contextual/Lista),
+`Alt+Ctrl+A`; desplegable de visualización del marcado (Revisiones simples/
+Todas/Sin revisión/Original), Mostrar revisiones + submenú Globos (3),
+Filtrar todo el marcado; menús Aceptar/Rechazar (5 c/u), Bloquear
+seguimiento («no es una característica de seguridad»), `Ctrl+Mayús+E`;
+Comparar vs Combinar + cuadro Comparar documentos; Restringir edición (4
+tipos: Sin cambios/Marcas de revisión/Comentarios/Rellenar formularios),
+Bloquear autores (necesita ubicación compartida); Ocultar entrada de lápiz
+(2); `Alt+F7` = siguiente error ortográfico; desplegable Ortografía /
+Ortografía y gramática. Generador: `scripts/gen_revisar_capturas.py`.
+`Mayús+F7` = Sinónimos y `Alt+Ctrl+A` = comentario confirmados en el
+volcado v2608. revisar.json 82→100.
+
+**Correspondencia — 59 capturas del usuario (sep-2026)**: el usuario aportó
+`data/imagenes_rutas/correspondencia/` (59 pantallazos, rama a rama + todos
+los cuadros de diálogo). Se **reescribió `data/rutas/correspondencia.txt`**
+desde cero (antes era una reconstrucción del PDF de la academia, mucho más
+pobre). **1 error corregido**: `correspondencia-38` decía que la lista trae
+una columna «Dirección» — son **«Campo de dirección 1» y «Campo de dirección
+2»** (13 campos en total). **Atajos**: los 4 canónicos del volcado v2608
+(Alt+Mayús+D/M/K/E) son correctos en el banco; `Alt+Mayús+J` (insertar
+campo) es solo del PDF; **`Alt+Mayús+N` NO combina** (es vincular
+encabezado/pie). **+15 preguntas** (`correspondencia-48..62`) + **+6
+flashcards** (`F-016..021`): cuadro Insertar línea de saludo (Querido/
+Queridísimo/Estimado/(ninguno) + saludos para nombres no válidos), Insertar
+campo de combinación (Campos de dirección vs Campos de base de datos),
+Insertar bloque de direcciones (opciones de país), los 13 campos, cuadro
+«Revisar e informar de errores» (3 modos), Sobre 10 por defecto, ficha
+Opciones de impresión, ficha Etiquetas (página entera vs una sola),
+«Detalles...» de etiqueta (Número horizontal/vertical), casillas de
+inclusión en «Destinatarios de combinar correspondencia», «Directorio»,
+Resaltar campos ≠ Vista previa, ficha Sobres. Generador:
+`scripts/gen_correspondencia_capturas.py`.
+
+**Cruce flashcards ↔ volcados de rutas (sep-2026)**: a petición del
+usuario, se comprobó si los matices preguntables de los volcados (nombres
+exactos de listas, cardinalidades, valores por defecto) tenían flashcard
+además de pregunta. Resultado: `archivo` (263 fc), `disposicion` (100),
+`referencias` (74), `inicio` (148) e `insertar` (147) ya cubrían casi todo;
+`diseno` (24 fc) no cubría **ninguno** de los 7 matices clave (sus
+flashcards eran todas ruta/concepto de alto nivel). **2 errores heredados
+del minado P- también estaban en las flashcards de `insertar`** (F-095/096
+= «5 formatos de nº de página, sin I,II,III»; F-135/136 = «Pitágoras no es
+ecuación integrada») → corregidas igual que las preguntas. **+25 flashcards
+`priority:alta`** (`diseno` +10, `inicio` +6, `insertar` +5, `disposicion`
++2, `referencias` +2): espaciado entre párrafos (6), tema Office/Aptos,
+pares de fuentes del tema, 2 categorías de marca de agua, Valor (5) / Ancho
+(9) / Arte (164) del borde de página, subrayado 17, interlineado Ctrl+1/5/2,
+alineación Ctrl+Q/T/D/J, 3 parejas de efectos excluyentes, Tipo de estilo
+(5), Buscar (7 casillas), Convertir texto en tabla, notas al pie = pestaña
+Referencias, fuentes del cuadro Símbolo, eliminar salto de sección, Índice
+Con sangría/Continuo. Generador: `scripts/gen_flashcards_matices_rutas.py`.
+Total flashcards 971→996.
+
+**Revisión completa de Archivo/Backstage (sep-2026)**: el banco (408
+preguntas — el más grande y completo, cubre todo el volcado y el árbol
+entero de Opciones 1-10 veces) no tiene huecos. AGE 2017 (inspeccionar
+info personal antes de compartir) y AGE 2021 («Comprobar si hay problemas»
+NO ofrece «Restringir edición») ya están cubiertas. daypo/aulaclic no
+tienen contenido de Backstage. **`archivo-50/51/381` — resuelto con captura
+del tooltip (sep-2026)**: el tooltip del campo «Páginas» del panel Imprimir
+dice literalmente *«Escriba números de página e rangos separados por COMAS…
+Por ejemplo, escriba 1, 3, 5–12 o p1s1, p1s2, p1s3–p8s3»*. El separador
+canónico es la **coma** (y el rango con guion; sección con formato `pNsN`).
+Las 3 preguntas quedan con base coma. (El `;` aparece en el ejemplo del
+desplegable de *intercalación* — `1;2;3` — porque es el separador de listas
+de Windows ES, pero el tooltip del campo Páginas manda: coma.) `archivo-411`
+= emparejar `1;2;3`/`1;1;1` con Intercaladas/Sin intercalar. **0 preguntas
+nuevas de la revisión inicial.**
+
+**Barrido web de huecos de Referencias (sep-2026)**: cruce del banco (161
+preguntas, ya con dos pasadas profundas + PDF academia + iconos + trampas)
+con josenrique.es (AGE) y aulaclic. La pregunta oficial AGE 2022 (nota al
+pie = `Alt+Ctrl+O`) y AGE 2024 (índice para términos) **confirman el
+banco**. **Sin errores.** Solo 2 huecos → **+4** (`referencias-162..165`):
+el desplegable «Referencia a» del cuadro Referencia cruzada (6 opciones
+para Tipo=Elemento numerado) y qué hace «Más adelante o más atrás»; el
+desplegable «Columnas» del diseño de nota al pie (Coincidencia de diseño de
+sección / 1-4) y las 3 opciones de «Numeración» (Continua / Reiniciar
+sección / Reiniciar página).
+
+**Barrido web de huecos de Disposición (sep-2026)**: cruce del banco (132
+preguntas, ya muy completo — casi cada valor del volcado tiene 1-9
+preguntas) con josenrique.es (AGE: 0 preguntas oficiales exclusivas de esta
+pestaña), aulaclic, customguide. **Sin errores en el banco.** Huecos reales
+→ **+6** (`disposicion-133..138`): al eliminar un salto de sección la
+sección anterior adopta el formato de la posterior (trampa clásica, 0
+preguntas), cómo localizar el salto (Mostrar todo), el cuadro «Números de
+línea ▸ Opciones» (campos Iniciar en / Del texto / Intervalo y Numeración
+Continua/Reiniciar página/Reiniciar sección), qué hace «Intervalo», la
+casilla «Suprimir notas al final» de la ficha Disposición del cuadro
+Configurar página, y Guiones ▸ «Manuales» (Word pregunta palabra por
+palabra). Generador: `scripts/gen_disposicion_web_volcado.py`.
+
+**Barrido web de huecos de Diseño (sep-2026)**: cruce del banco de Diseño
+(91 preguntas) con josenrique.es (AGE — **0 preguntas oficiales de esta
+pestaña**, es de bajo rendimiento en oposición), daypo, aulaclic. El banco
+ya estaba muy completo. Los huecos reales salieron de volver a cruzar
+`data/rutas/diseno.txt` (volcado del usuario, autoridad) — no de la web →
+**+7** (`diseno-92..98`): submenú «Color de página» (Solo contraste alto /
+Sin color / Más colores / Efectos de relleno), «Sin color» = quitar el
+fondo, las 4 casillas de «Bordes de página ▸ Opciones...» (Alinear bordes /
+Mostrar en primer plano / Rodear encabezado / Rodear pie), «Ancho» del
+borde = 9 valores (1/4 pto a 6 pto), «Guardar selección en galería de
+marcas de agua...» vs «Más marcas de agua de Office.com», casilla
+«Decolorar» de la marca de agua de imagen, «Semitransparente» + disposición
+Diagonal/Horizontal de la de texto. Generador:
+`scripts/gen_diseno_web_volcado.py`. `diseno-74` (color de página no se
+imprime por defecto) ya estaba bien.
+
+**Barrido web de huecos de Insertar + auditoría (sep-2026)**: cruce del
+banco de Insertar (458 preguntas, ya muy explotado) con daypo, josenrique.es
+(oficiales AGE), vence.es, aulaclic, opocademy. Casi todo cubierto. **2
+errores sistemáticos encontrados en la tanda de minado P-** (preguntas
+«¿cuál existe realmente en la extracción?» sobre cuadros que probablemente
+NO estaban en las capturas del usuario):
+ - **Formato de número de página**: el banco decía que solo hay 5 formatos
+   y que «I, II, III» (romano mayúscula) NO está — **falso**. Son **6**:
+   `1,2,3` · `-1,-2,-3` · `a,b,c` · `A,B,C` · `i,ii,iii` · `I,II,III`.
+   Corregidas `insertar-84`, `insertar-285`, `insertar-295`. ✅ **CONFIRMADO
+   con captura del usuario** (desplegable «Formato de número» abierto, se ven
+   los 6, `I, II, III` incluido). Las capturas revelaron además que
+   `insertar-145` estaba mal (decía que «guión largo» NO es un separador de
+   «Incluir número de capítulo» — sí lo es; los 5 son guión/punto/dos
+   puntos/guión largo/guión corto) → reformulada. +`insertar-469/470`
+   («Empezar con el estilo» = Título 1-9; «Numeración de páginas» =
+   Continuar / Iniciar en).
+ - **Galería del botón Ecuación**: el banco decía que «Teorema de Pitágoras»
+   NO es una ecuación integrada — **falso**. Corregidas `insertar-98`,
+   `insertar-318` + flashcards `F-135/136`. ✅ **CONFIRMADO con captura**: la
+   galería «Integrado» tiene **9**: Área del círculo, Expansión de una suma,
+   Expansión Taylor, Fórmula cuadrática, Identidad trigonométrica 1,
+   Identidad trigonométrica 2, Serie de Fourier, Teorema binomial y Teorema
+   de Pitágoras.
+ - **Capturas del usuario (sep-2026) validan más trozos del minado P-**:
+   cuadro SmartArt = 12 categorías (`insertar-235/236/237` correctas) ·
+   cuadro «Objeto ▸ Crear nuevo» = 23 tipos, `insertar-168/169` correctas
+   pero **`insertar-170` tenía 2 respuestas válidas** («Microsoft PowerPoint
+   Slide» SÍ está) → reformulada a negativa + `insertar-473/474`. También
+   confirmado: cuadro «Formato de número de página» completo (§ arriba),
+   «Aplicar formato a» = 13, cuadro **«Insertar gráfico»** (Columnas … Mapa,
+   Proyección solar, Rectángulos, Histograma, Cajas y bigotes, Cascada,
+   Embudo, Combinado + secciones Reciente/Plantillas) y menú **«Formas»**
+   (Líneas · Rectángulos · Formas básicas · Flechas de bloque · Formas de
+   ecuación · Diagrama de flujo · Cintas y estrellas · Llamadas) → todas las
+   preguntas de gráfico (`insertar-68/126..131/250..262/388/389`) y de
+   Formas (`insertar-62/118/240..249/437`) verificadas, sin cambios.
+ - Cuadro **«Campo»** y menú **«Elementos rápidos»** verificados con 31
+   capturas (sep-2026): `insertar-88/151/152/153` (Extracto, Fax de la
+   compañía, Fecha de publicación, Dirección de la compañía = propiedades del
+   documento reales) y `insertar-157/158` (CreateDate en «Fecha y hora»,
+   AutoNum en «Numeración» = nombres de campo reales) → todas correctas.
+   Categorías del cuadro Campo: [Todos] · Automatización · Combinar
+   correspondencia · Ecuaciones y fórmulas · Fecha y hora · Índice y tablas ·
+   Info. documento · Info. usuario · Numeración · Vínculos y referencias.
+   +`insertar-475/477`. **El minado P- de Insertar queda validado casi por
+   completo.**
+ - **Cintas contextuales de tabla** — el usuario aportó 59 capturas rama a
+   rama (`data/imagenes_rutas/diseño_de_tabla/` 20 + `disposicion_de_tabla/`
+   39, sep-2026) → **`data/rutas/tablas_contextual.txt`** (volcado propio).
+   «Diseño de tabla» = 3 grupos (Opciones de estilo de tabla [6 casillas] ·
+   Estilos de tabla · Bordes [Estilos de borde, grosor 9, Color de la pluma,
+   Bordes, Copiar borde, lanzador→Bordes y sombreado]). «Disposición de
+   tabla» = 7 grupos (Tabla · Dibujar · Filas y columnas · Combinar · Tamaño
+   de celda · Alineación · Datos). **+7 (`insertar-478..484`) + +14
+   (`insertar-485..498`) + 6 flashcards**: cuadro Propiedades de tabla (5
+   fichas; Alto de fila Mínimo/Exacto; alineación vertical celda
+   Arriba/Centro/Abajo), menú Eliminar (4), cuadro Insertar celdas (4),
+   Dividir tabla vs Dividir celdas, Autoajustar (3), Distribuir filas/
+   columnas, Repetir filas de título, Convertir en texto, Fórmula
+   (=SUM(ABOVE)), Ver cuadrículas, y el campo «Valor» de Bordes y sombreado
+   = Ninguno/Cuadro/**Todos/Cuadrícula**/Personalizado (la ficha Borde de
+   página cambia Todos/Cuadrícula por **Sombra/3D**). Generador:
+   `scripts/gen_tablas_contextual.py`.
+ - **Cinta contextual «Formato de imagen»** — 52 capturas del usuario
+   (`data/imagenes_rutas/formato_imagen/`, sep-2026) →
+   `data/rutas/formato_imagen.txt`. 5 grupos: Ajustar (Quitar fondo →
+   pestaña Eliminación del fondo · Correcciones [nitidez + brillo/contraste]
+   · Color [saturación/tono/volver a colorear/definir color transparente] ·
+   Efectos artísticos · Transparencia · Comprimir · Cambiar imagen [5
+   orígenes] · Restablecer imagen [imagen / imagen y tamaño]) · Estilos de
+   imagen (galería · Borde de imagen · Efectos de la imagen [7 submenús] ·
+   Diseño de imagen → SmartArt) · Accesibilidad (Texto alternativo) ·
+   Organizar · Tamaño (Recortar [+ a la forma / relación de aspecto /
+   Rellenar / Ajustar] · Alto · Ancho · lanzador → cuadro Disposición,
+   estilo de ajuste = 7). El banco casi no lo cubría → **+14**
+   (`insertar-499..512`) + 6 flashcards. Generador:
+   `scripts/gen_formato_imagen.py`. **+21 preguntas CON IMAGEN**
+   (`sourceQuestionId` `img-fimg-NN`) de los 21 recortes de icono sin rótulo
+   que el usuario dejó en `data/imagenes_rutas/formato_imagen/icono_*.PNG`
+   (Quitar fondo, Correcciones, Color, Efectos artísticos, Transparencia,
+   Comprimir, Cambiar/Restablecer imagen, Borde de imagen, Efectos de la
+   imagen, Diseño de imagen, Texto alternativo, Posición, Ajustar texto,
+   Panel de selección, Alinear, Agrupar, Girar, Recortar, Alto, Ancho).
+   Generador: `scripts/gen_iconos_formato_imagen.py`. **+23 preguntas CON
+   IMAGEN** (`img-distab-NN`) de los iconos de **«Disposición de tabla»**
+   (`data/imagenes_rutas/disposicion_de_tabla/icono_*.PNG` +
+   `margenes_celda.PNG`): Seleccionar, Ver cuadrículas, Propiedades, Dibujar
+   tabla, Borrador, Eliminar, Insertar fila arriba/inferior, Insertar
+   columna izq/der, Combinar/Dividir celdas, Dividir tabla, Alto, Ancho,
+   Distribuir filas/columnas, Dirección del texto, Márgenes de celda,
+   Ordenar, Repetir filas de título, Convertir en texto, Fórmula. Generador:
+   `scripts/gen_iconos_disposicion_tabla.py`. **+26 preguntas CON IMAGEN**
+   (`img-revisar-NN`) de los iconos de la pestaña **Revisar**
+   (`data/imagenes_rutas/revisar/icono_*.PNG`) — primera tanda con imagen
+   fuera de insertar/diseño/disposición/referencias: Editor, Ortografía y
+   gramática, Sinónimos, Contar palabras, Leer en voz alta, Comprobar
+   accesibilidad, Traducir, Idioma, Nuevo/Eliminar comentario, Comentario
+   ant/sig, Mostrar comentarios, Control de cambios, Aceptar/Rechazar,
+   Cambio ant/sig, «Todas las revisiones», Mostrar revisiones, Panel de
+   revisiones, Filtrar todo el marcado, Comparar, Bloquear autores,
+   Restringir edición, Ocultar entrada de lápiz. Generador:
+   `scripts/gen_iconos_revisar.py`. Total preguntas con imagen: ~186.
+ - Las otras preguntas
+   que citan «la extracción» sí se apoyan en capturas reales
+   (nombres de posiciones de nº en el margen, Letra capital = 3 líneas / 0 cm,
+   formatos de fecha…) y se dejaron.
+**+2** (`insertar-467/468`): las 4 opciones exactas de «Separar texto en»
+del cuadro Convertir texto en tabla (Párrafos/Tabulaciones/Punto y coma/
+Otro) y el comando «Fórmula» de la cinta de tabla.
+
+**Barrido web de huecos de Inicio (sep-2026)**: cruce del banco con tests
+de oposición (daypo, josenrique.es = preguntas oficiales AGE, opocademy) y
+sitios de referencia (wordexperto, aulaclic) — SOLO para conceptos/rutas,
+nunca atajos (esas webs usan el esquema internacional, inservible aquí).
+Hueco real encontrado: **técnicas de selección de texto con el ratón**, 0
+preguntas pese a ser pregunta oficial AGE 2016 («triple clic = párrafo»)
+→ **+7** (`inicio-581..587`, topic `edicion` / subtopic «Seleccionar
+texto»): doble clic = palabra · triple clic = párrafo · Ctrl+clic (cuerpo)
+= la frase · Alt+arrastrar = bloque rectangular · área de selección del
+margen izquierdo: 1 clic = línea, 2 = párrafo, 3 (o Ctrl+clic) = todo el
+documento (= Ctrl+E). Comportamiento estándar de Word, sin riesgo de
+esquema. Generador: `scripts/gen_seleccion_raton_inicio.py`. **+1**
+(`inicio-588`): «Color de resaltado» (grupo Fuente, rotulador sobre los
+caracteres, no lo quita «Borrar formato») vs «Sombreado» (grupo Párrafo,
+fondo del párrafo/celda entero). **`inicio-43` («4 tipos de sangría:
+izquierda, derecha, primera línea, francesa») queda VALIDADA** — es
+literalmente la pregunta oficial AGE 2015 nº 3; no tocar. El resto de
+preguntas de esas webs ya estaban cubiertas o eran de otras pestañas.
+
+**PDF «Pestaña Edición» de Beatriz R.T → inicio.json (sep-2026)**: el
+usuario aportó el PDF de la academia de los grupos Portapapeles/Edición de
+la ficha Inicio. Casi todo ya estaba cubierto (deshacer/rehacer/F4,
+opciones de pegado ×4, Ctrl+Supr/Ctrl+Retroceso, saltos, F2/Mayús+F2,
+Spike, selección no contigua con Ctrl, arrastrar para mover/copiar). Único
+hueco real: **espacio / guión de no separación** (0 preguntas) → **+5**
+(`inicio-575..579`, `sourceQuestionId` `pdf-inicio-edic-NN`, `generado:true`,
+topic `parrafo-marcas`): atajo `Ctrl+Mayús+Espacio` (está en el volcado
+v2608), qué hace (bloquea la ruptura de línea entre las dos palabras), ruta
+con ratón (Insertar ▸ Símbolos ▸ Más símbolos ▸ «Caracteres especiales»),
+símbolo distinto con Mostrar todo, y el guión de no separación. Generador:
+`scripts/gen_edicion_pdf_inicio.py`. **Conflictos del PDF NO integrados**
+(usa el esquema internacional / choca con prueba en vivo): «Copiar formato =
+`Ctrl+Mayús+C/V`» (aquí es `Alt+Ctrl+C/V`, ya resuelto); «el panel de
+Navegación busca hasta 100 resultados» (en vivo NO hay tope, ya resuelto);
+«guión de no separación = `Ctrl+Mayús+_`» (el volcado v2608 lo asigna a
+`Alt+Mayús+-` — no se afirma el atajo en las preguntas, solo el concepto).
+
+**Auditoría de cobertura + demo de recorte de icono (sep-2026)**: a
+petición del usuario, se auditó qué quedaba realmente por cubrir en todo
+el banco (no solo referencias/correspondencia): iconos sin convertir,
+tipos de ejercicio ausentes por sección, topics con <3 preguntas,
+ratios de flashcards. Se instaló Pillow (`py -3.11 -m pip install --user
+pillow`) para demostrar recorte preciso de un icono desde una captura de
+cinta completa (2 recortes de muestra sobre `Cinta_Diseño.PNG`,
+iterando 2-3 veces hasta eliminar texto de comandos vecinos) — pero
+resultó innecesario para el hueco real encontrado: los 3 iconos de
+`disposicion` sin usar (Aplicar sangría, Espaciado, Tamaño) YA estaban
+recortados por el usuario, solo sin convertir a pregunta → **+3
+preguntas con imagen** (`scripts/gen_iconos_disposicion2.py`, aparte del
+generador de disposicion original para no duplicar las 16 ya existentes).
+`seleccion_multiple` seguía ausente del todo en `archivo`, `diseno`,
+`disposicion` e `insertar` → **+4** (una por sección, reformateando
+hechos ya verificados) con `scripts/gen_sm2.py`. Hallazgo de la
+auditoría **sin resolver, pendiente del usuario**: `revisar` tiene tres
+topics casi vacíos — `comentarios` (0), `revision-marcado` (0),
+`entrada-lapiz` (0) — y no hay `data/rutas/revisar.txt` ni
+`data/imagenes_rutas/revisar/`; no se inventó contenido ahí. `interfaz`
+sigue con la flashcard-ratio más baja del banco (48/525 = 0.09) pese a
+haber salido de 0 esta sesión.
+**Cuarta pasada: `seleccion_multiple` + lectura de los ejemplos del PDF
+(sep-2026)**: ni `correspondencia` ni `referencias` tenían NINGUNA
+pregunta de tipo `seleccion_multiple` (varias respuestas correctas a la
+vez) pese a ser uno de los 5 tipos del banco. Se añadieron 16 (+8/+8)
+reformateando listas cerradas ya verificadas a "cuáles SÍ son reales"
+(con distractores inventados marcados como tal en la explicación —
+Vancouver/Oxford no son estilos de este Word, Comentario/Sección no son
+tipos de Referencia cruzada, etc.) y usando los DATOS CONCRETOS de los
+ejemplos de las capturas del PDF como enfoque de lectura (la lista de
+destinatarios de muestra Rosa/Andrés/Carlota, el remite del sobre
+«Comida Natural», la fuente bibliográfica de ejemplo Autor:Beatriz
+Año:2023). De paso se reclasificaron las últimas 7 preguntas
+`categoria:"general"` que quedaban en `archivo` (todas sobre
+OneDrive/uso compartido y la barra de acceso rápido → `concepto`):
+`archivo` queda a 0 `general`, solo `vista` conserva 31 sin reclasificar.
+Generador: `scripts/gen_seleccion_multiple.py`. (+14: segundo barrido de `data/rutas/referencias.txt` con un
+detector de líneas no reflejadas en el banco — de 133 líneas, 40
+candidatas, 13 realmente nuevas tras descartar falsos positivos ya
+cubiertos con otra redacción; +2 en correspondencia del cuadro Nueva
+lista de direcciones. Generador: `scripts/gen_rutas_profundo2.py`.)
+**Barrido del mismo detector sobre el resto de `data/rutas/*.txt`
+(sep-2026)**: `archivo.txt` (23/46 candidatas) e `insertar.txt`
+(105/375) resultaron casi todo ruido del detector — su formato usa
+listas largas de nombres de galería (portadas, temas, colores) que ya
+estaban cubiertas conceptualmente aunque no una por una; comprobado a
+mano con una muestra, ambos bancos ya están bien explotados y NO se
+tocaron. `diseno.txt` (23/127) es sobre todo nombres decorativos de tema/
+color (Azul cálido, Violeta II…), de valor de examen bajo — tampoco se
+tocó. `disposicion.txt` (26/151) sí tenía contenido genuino sin usar
+(ficha Disposición y Papel del cuadro Configurar página, cuadro Columnas,
+cuadro Diseño de objetos flotantes) → **+8 preguntas** (128 en total).
+Generador: `scripts/gen_rutas_profundo3.py`. Método del detector: ancla
+los últimos ~20 caracteres de cada rama del volcado contra
+enunciado+explicación de todo el banco de la sección; sirve para
+localizar candidatos pero SIEMPRE hay que revisar a mano antes de generar
+(alto ratio de falsos positivos en volcados con prosa o listas
+temáticas largas).
+**Segunda pasada en profundidad sobre Correspondencia y Referencias
+(sep-2026)**: el usuario señaló, con razón, que las tandas anteriores se
+habían quedado cortas para lo que dan de sí esos cuadros de diálogo.
+Causa real: `data/rutas/referencias.txt` **ya existía** con el volcado
+completo rama a rama de los cuadros de diálogo (capturas del usuario,
+`data/imagenes_rutas/referencias/`, 45 imágenes) y no se había explotado
+del todo al escribir las tandas anteriores. Para Correspondencia no había
+volcado — se creó `data/rutas/correspondencia.txt` renderizando las 8
+páginas del PDF de la academia como imagen con PyMuPDF (el texto plano
+del PDF no capturaba los desplegables ni los cuadros de diálogo, solo el
+texto corrido) y transcribiéndolas rama a rama, igual que los volcados de
+las demás pestañas. Con ese material se añadieron 38 preguntas más
+(referencias +24, correspondencia +14) sobre listas cerradas reales:
+los 12 estilos de cita con su edición/año exactos, el desplegable Reglas
+completo (9 opciones), Restringir lista de destinatarios (5), Referencia
+cruzada (8 tipos), Convertir notas (3), Cambiar SP de proveedor (10
+complementos), diferencias exactas entre los formatos de Tabla de
+contenido y Tabla de ilustraciones (comparten 5, cada una tiene 2
+propios), Agregar texto (4), galería de Bibliografía (3+1), Opciones de
+sobre/etiquetas, y el hecho de que Word inserta «Próximo registro»
+automáticamente en las etiquetas combinadas. Todo verificado contra la
+fuente antes de escribir la pregunta — nada inventado. Instalar
+`pymupdf` (`py -3.11 -m pip install --user pymupdf`, Python 3.11 porque
+el `python3` del launcher no traía pip utilizable) para releer un PDF
+como imágenes es la vía a repetir si aparece otro documento con cuadros
+de diálogo que el texto plano no capture. Generador:
+`scripts/gen_rutas_profundo.py`.
+**19 preguntas CON IMAGEN nuevas en Referencias (sep-2026)**: los 26
+recortes de icono de `data/imagenes_iconos/referencias/` (movidos ahí en
+la limpieza de organización, sin procesar hasta ahora) se convirtieron en
+preguntas con el mismo patrón que Inicio/Insertar/Disposición/Diseño.
+Descartados de la conversión: 5 `_rotulo.png` (son la etiqueta del GRUPO,
+no un comando), `ocultar_mostrar_cinta_referencias.png` (una flecha
+genérica sin comando propio) y `titulos_actualizar_tabla.png` (icono
+IDÉNTICO al de `tabla_de_contenido_actualizar_tabla.png` — mismo recorte
+para dos comandos distintos de dos grupos distintos; usar los dos habría
+sido ambiguo, así que se dejó solo uno). Cubre citas-bibliografia (5),
+indice (3), notas (5), tabla-contenido (3), titulos (3). Confirmado que
+el filtro de exclusión de imágenes de Duelo/Farol/Contra Word
+(`multiplayer.js`) también las excluye a estas (0 en el pool).
+Generador: `scripts/gen_iconos_referencias.py` (aparte de
+`gen_iconos_img.py` para no reprocesar ni duplicar las 93 ya existentes).
+**Correspondencia y `referencias:investigacion` desde los PDF de la
+academia (sep-2026)**: el usuario aportó dos PDF de Beatriz R.T.
+("Combinación de correspondencia" y "Pestaña Referencias") como fuente de
+confianza. `correspondencia` tenía sus 6 preguntas apelotonadas en 1 solo
+topic de 5 (`campos-combinacion`) — los otros 4 (`crear-sobres-etiquetas`,
+`iniciar-combinacion`, `finalizar`, `vista-previa-resultados`) estaban a
+0. `referencias:investigacion` (grupo Buscar/Investigador) no tenía NINGUNA
+pregunta ni flashcard. Se añadieron 15 preguntas nuevas a correspondencia
+(21 en total, las 5 topics cubiertas) + 9 a referencias (investigacion
+×4, más 5 sueltas: secuencia Alt,K,C del cuadro de notas, «Nivel de
+esquema» en TDC, «Estilo: Descripción» en tabla de ilustraciones,
+tabla-autoridades ×2) + 3 flashcards de investigacion.
+También se corrigió un atajo que faltaba: `Alt+Mayús+J` inserta un campo
+de combinación de correspondencia (el PDF lo documenta junto a los otros
+4 ya confirmados D/M/K/E). Contrastado además con tests genéricos de
+daypo.com (sin atajos de teclado, sin riesgo de esquema distinto) que
+confirman el mismo enfoque conceptual. `sourceQuestionId` `pdf-<sec>-NN`,
+`generado:true`. Generador: `scripts/gen_pdf_academia.py`. 352 preguntas `categoria:"atajo"`, 1048 `"ruta"`, 935
+`"concepto"`, 41 `"general"` (sep-2026: `interfaz` reclasificada por
+completo — ver más abajo — y las últimas 7 de `archivo` reclasificadas
+también; solo quedan sin reclasificar 31 en `vista`). Por tipo:
+opcion_unica 1706, verdadero_falso 607, emparejamiento 69,
+seleccion_multiple 60, relleno 54.
+**Emparejamiento en 5 pestañas más (sep-2026)**: 6 de 10 estaban a 0 %.
+Se añadieron 12 (`sourceQuestionId` `emp-<sec>-NN`, `generado:true`) SOLO
+donde había una lista cerrada real ya verificada en el banco (tamaños de
+papel, presets de márgenes, saltos de sección, fichas del cuadro Diseño,
+extensiones de archivo, opciones de Autoformato, comandos de Formato del
+documento/Fondo de página, rótulos de Título, comandos de Citas y
+bibliografía, botones del cuadro TdC, atajos de vínculos/comentarios) —
+nunca sobre conceptos sin pareja natural corta (por eso no se tocaron
+cosas tipo "modelos 3D"). Reparto deliberadamente desigual: `disposicion`
+(+4) y `referencias` (+3) tenían mucho material pareable relativo a su
+tamaño y llegan a ~3 %; `archivo` (+2) e `insertar` (+1) son secciones
+enormes (400+) sin suficiente material así de limpio para forzar un 10 %
+sin inventar parejas, así que se quedan por debajo a propósito.
+`correspondencia` (6 preguntas) se dejó sin tocar por ser demasiado
+pequeña. Total emparejamiento: 54→66. Generador: `scripts/gen_emparejamiento.py`.
+**Relleno en todas las pestañas (sep-2026)**: hasta ahora solo `revisar`
+(9) y `vista` (11) tenían preguntas de tipo `relleno`; las otras 8 estaban
+a 0. Se añadieron 24 más (`sourceQuestionId` `rell-<sec>-NN`,
+`generado:true`), 1 a 5 por sección según su tamaño, REFORMATEANDO hechos
+que ya tenían su propia pregunta `opcion_unica`/`atajo` en la misma
+sección (mismo atajo o ruta, solo cambia el formato a huecos) — cero
+contenido nuevo sin fuente. `diseno` no tiene atajos (confirmado en este
+documento), así que sus 2 relleno son de ruta (Formato del documento /
+Fondo de página). Total relleno: 20→44. Generador: `scripts/gen_relleno.py`.
+**Densidad de `negativa` nivelada (sep-2026)**: `inicio` e `insertar`
+estaban al 2.7 % (12/437 y 12/438) frente al 6-11 % del resto del banco.
+Se añadieron 14 `opcion_unica` "señale la INCORRECTA" por sección (28
+total, `sourceQuestionId` `neg2-<sec>-NN`, `generado:true`, `categoria:
+"concepto"`), repartidas por topic, cada una con 3 opciones verdaderas +
+1 falsa (hechos ya establecidos en este documento o conocimiento estándar
+seguro de Word — nunca inventado). Ambas quedan al 5.8 %.
+Generador: `scripts/gen_negativas_2.py` (no confundir con
+`scripts/gen_negativas.py`, la tanda anterior de las otras 9 pestañas).
+**Flashcards de `interfaz` y `diseno` (sep-2026)**: `interfaz` no tenía
+NINGUNA flashcard (0/520) pese a ser la pestaña con más preguntas del
+banco, y `diseno` estaba muy flaca (9/86, ratio 0.10). Se creó
+`data/flashcards/interfaz.json` (nuevo, 48 tarjetas `contenido`, 4 por
+cada uno de sus 12 topics, añadido a `data/flashcards/manifest.json` en
+primera posición por ser la sección primera en `taxonomy.order`) y se
+amplió `diseno.json` con 15 más (5 por topic, incl. el topic `estructura`
+que no tenía ninguna). Total flashcards: 905→968. Contenido basado en
+hechos ya establecidos en este documento (atajos/comportamiento
+verificado en vivo) o comportamiento estándar y seguro de la interfaz de
+Word — sin inventar nada. Generador: `scripts/gen_flashcards_eje7.py`.
+**Bug de test expuesto por este cambio** (no del motor): `tests/
+test_ui_integration.js` paso T elegía "el primer concepto con ≥2
+framings" (`O.LE.CONCEPTS.find(...)`) para forzarlo a asentado+atrasado,
+pero un paso anterior (P, flashcard "Con dificultad") ahora cae en ese
+mismo concepto porque `interfaz:conceptos-generales` pasó a tener
+flashcards y es taxonómicamente el primero — contaminando su estado antes
+de que T lo fuerce. Corregido excluyendo conceptos ya tocados:
+`c.framings.length>=2 && !O.PROGRESS.concepts[c.id]`. Mismo patrón de
+fragilidad que la tolerancia de `test_engine.js` escenario 6 (elegir "el
+primero que cumple X" es frágil a reordenaciones del banco) — si vuelve a
+pasar, aplicar el mismo principio: robustecer la selección, no perseguir
+ids concretos.
+**Balance V/F en bancos heredados (sep-2026)**: `inicio`, `interfaz` y
+`vista` traían V/F desequilibrados de origen (15V/8F, 15V/8F, 8V/15F) sin
+capturas de pantalla frescas que respaldaran tocar el contenido ya
+correcto. En vez de invertir preguntas existentes (arriesgado sin fuente),
+se AÑADIERON 21 V/F nuevas (7 por sección, `sourceQuestionId` `bal-<sec>-NN`,
+`generado:true`) sobre hechos ya establecidos/verificados en esta misma
+sesión o de conocimiento estándar de Word, sin tocar ni una sola pregunta
+previa. Las tres secciones quedan en 15V/15F exactas.
+Generador: `scripts/gen_balance_legacy.py`.
+**Reclasificación de `interfaz` (sep-2026)**: tenía 490 de sus 513
+preguntas en `categoria:"general"` (95 %) — el cajón de sastre que ni es
+atajo, ni ruta, ni concepto. Reclasificadas por topic con solape de
+patrón (una pregunta de atajo dentro de un topic no-atajo sigue siendo
+atajo si pregunta por una combinación de teclas): `conceptos-generales` y
+`documentos-archivos` → `concepto` (definiciones, extensiones, XML);
+`ventana-cinta`/`barra-estado`/`cursor-navegacion`/`regla`/
+`acceso-rapido`/`zoom`/`area-vistas`/`acceso-teclado-ayuda`/`buscador` →
+`ruta` por defecto (identifican dónde está o qué hace un elemento de la
+ventana); `deshacer-rehacer` → `atajo`; y dentro de cualquier topic, toda
+pregunta que pida explícitamente una combinación de teclas → `atajo`
+(activa incluso en `ventana-cinta`, p. ej. Alt+F4). Resultado: 46 atajo /
+374 ruta / 93 concepto / 0 general. Generador: `scripts/reclasificar_interfaz.py`.
+**141 preguntas `negativa:true`** (11 % interfaz, 6-7 % en la mayoría de
+pestañas, 2,7-2,8 % en insertar/inicio por ser los bancos más grandes —
+todas sus pestañas y grupos tienen al menos una). Antes de sep-2026, 7 de
+las 10 pestañas tenían 0. `sourceQuestionId` `neg-<sec>-NN`,
+`generado:true`, `tipo:"opcion_unica"`. Generador: `scripts/gen_negativas.py`.
+**93 preguntas CON IMAGEN** (`sourceQuestionId` `img-<sec>-NN`, `generado:true`,
+campo `imagen` = data URI base64 del PNG): muestran el icono recortado de un
+comando de la cinta y preguntan qué representa / en qué pestaña y grupo está /
+cuál es su atajo; la explicación cubre las tres cosas. Iconos de Inicio (38),
+Insertar (29), Disposición (16) y Diseño (10). Fuente:
+`data/imagenes_iconos/<pestaña>/<grupo>_<comando>.png` (recortes del usuario).
+Generador: `scripts/gen_iconos_img.py`. El runner las pinta con
+`qImageHtml(q.imagen)`; `composeSessionQuestion` conserva el campo. Añaden
+~230 KB a questions_all.json. **Filtro `conImagen`** (sep-2026):
+`filterQuestions`/`resolveQuestionIds` (app.js) aceptan `conImagen:true` →
+solo preguntas con imagen; se propaga a `shareCodeForSession`. En la UI:
+asistente de práctica → scope **"Iconos (con imagen)"** (con selector de
+pestaña opcional) y "Repasar preguntas" → desplegable "Con y sin imagen /
+Solo con imagen"; Editor del banco → estado "Con imagen (iconos)". Fuera de
+esos filtros explícitos, las preguntas con imagen siguen mezcladas con las
+demás de su `topic` (deseable: el motor las trata como cualquier framing
+del concepto). **Bug real encontrado en la auditoría de sep-2026**:
+`multiplayer.js` (Duelo/Farol/Contra Word) nunca pintaba `q.imagen` en la
+ronda en vivo — una pregunta de icono que caía en una partida quedaba con
+el enunciado ("Observa el icono...") sin la imagen, irrespondible. Como
+parche inmediato, `buildBoard()` (Duelo y Coop) excluyó `q.imagen` del
+pool. **RESUELTO DE VERDAD en sep-2026 — ver "Imágenes en multijugador"
+más abajo**: ahora los tres modos pintan el icono y la exclusión se ha
+retirado. Además, `qEditFormHtml`/`fcEditFormHtml` (editor
+✎ y Editor del banco) no mostraban la imagen al corregir texto — se añadió
+una vista previa de solo lectura (`qImageHtml`) al principio del
+formulario; `readQPatch` nunca tocaba el campo `imagen`, así que no había
+pérdida de datos, solo falta de contexto visual al editar.
+`archivo-*` (`sourceQuestionId` `vf-archivo-bkNN`, `generado:true`, 42 V/F
+21/21) = **Vista Backstage** (pestaña Archivo): panel de navegación, Inicio/
+Nuevo/Abrir, Información (Proteger documento 6 opciones, Comprobar problemas 3,
+Historial de versiones = requiere nube, cuadro Propiedades 5 fichas), Guardar
+como (Herramientas, tipos de archivo), Imprimir (Intercaladas/Sin intercalar,
+N por hoja, Impresión personalizada, Márgenes = misma galería que Disposición,
+enlace Configurar página), Exportar, Compartir, Cuenta. Fuente:
+`data/rutas/archivo.txt` (reconstruido de `data/imagenes_rutas/backstage/`).
+Generador: `scripts/gen_backstage_vf.py`. +33 flashcards
+(`data/flashcards/archivo.json`, primeras que no son de Opciones).
+`disposicion-2..90` (`sourceQuestionId` `vf-disposicion-*`, `generado:true`,
+`tipo:"verdadero_falso"`, 45/44 V/F, incl. 19 con `difficulty:"alta"` = trampa) = banco de la pestaña **Disposición**
+(antes solo tenía `disposicion-1`, el atajo `Alt+Ctrl+D`). Cubre Configurar
+página (márgenes con sus valores reales de esta instalación, tamaños de
+papel, columnas, saltos de sección vs página, números de línea, guiones),
+Párrafo (sangría/espaciado, cuadro Párrafo) y Organizar (posición, ajuste
+de texto, alinear/distribuir/girar, cuadro Diseño). 100 flashcards
+(12 trampa, `priority:"alta"`). Fuente: `data/rutas/disposicion.txt` +
+capturas. Generadores: `scripts/gen_disposicion_vf.py`,
+`gen_disposicion_extra.py`, `gen_trampas_disp_ref.py`.
+`referencias-8..78` (`vf-referencias-*`, `generado:true`,
+`tipo:"verdadero_falso"`, 35/36 V/F, incl. 19 con `difficulty:"alta"` = trampa) = banco de la pestaña **Referencias**
+(antes solo 7 opcion_unica de atajos). Tabla de contenido (cuadro de 3
+fichas TdC/Índice/Tabla de ilustraciones), Notas al pie (`Alt+Ctrl+O` pie /
+`Alt+Ctrl+L` final), Citas y bibliografía (12 estilos, APA por defecto,
+Administrador de fuentes con Lista general/actual, «Cambiar SP de proveedor»
+= complementos no estilo), Títulos (Referencia cruzada = mismo cuadro que
+Insertar; tipo «Título» solo si hay estilos de título) e Índice (entradas
+XE marcadas a mano, Automarcar). 71 flashcards (13 trampa). Fuente:
+`data/rutas/referencias.txt` + capturas. Generadores:
+`scripts/gen_referencias_vf.py`, `gen_trampas_disp_ref.py`. Las de trampa
+llevan `sourceQuestionId` `vf-<sec>-TNN` y explotan confusiones reales
+(nombres parecidos, valores que parecen los ingleses, «Alinear
+verticalmente» = centrar en horizontal, TDC 1-9 vs Título 1-9, etc.).
+Historial: `data/questions_regroup_report.md`.
+`diseno-1..70` (`sourceQuestionId` `vf-diseno-NN`, `generado:true`,
+`categoria:"concepto"`, `tipo:"verdadero_falso"`, 35 V / 35 F) = banco
+propio de la pestaña **Diseño**, que hasta sep-2026 no tenía archivo.
+Cubre Temas/Colores/Fuentes/Espaciado/Efectos/Conjunto de estilos/
+Administrar estilos + Marca de agua/Color de página/Bordes de página, y
+un bloque de reconocimiento (nombres reales vs inventados: Vintage,
+Sector industrial, Galería de Office, efecto «3D»; pares de fuentes
+Franklin Gothic Med/Book; Color de página vive en Diseño, no en Insertar).
+Fuente: `data/rutas/diseno.txt`. **Es el único banco cuyos ids sí se
+renumeraron** (1..70 en orden de taxonomía, sep-2026) — era nuevo y nada
+externo los referenciaba.
+Cubren Temas/Colores/Fuentes/Espaciado entre párrafos/Efectos/Conjunto de
+estilos/Administrar estilos (grupo Formato del documento) y Marca de
+agua/Color de página/Bordes de página (grupo Fondo de página), a partir
+del volcado de la cinta de Diseño del usuario (rutas completas). No hay
+atajos en esta pestaña. Taxonomía: subtopics de `formato-documento`
+ampliados + topic nuevo `diseno:estructura`.
+`insertar-206..393` (`sourceQuestionId` `vf-insertar-NN`, `generado:true`,
+`categoria:"concepto"`, `tipo:"verdadero_falso"`) = **188 V/F de toda la
+pestaña Insertar** (páginas, tablas, ilustraciones/SmartArt/formas/gráficos,
+multimedia, vínculos, comentarios, encabezado-pie, texto, símbolos/ecuación,
+eSignature, formato-forma) sobre comportamiento y opciones de los cuadros de
+diálogo. Del bloque original de ~215 se descartaron ~27 que preguntaban por
+atajos ausentes del volcado v2608 (`Alt+Mayús+P/F/H`, `Alt+C`, `Alt+I`,
+`Alt+Ctrl+D`=PAGE, `Ctrl+Mayús+Entrar`…) o eran de la pestaña Revisar. Sesgo
+conocido: ~74% de las 188 son VERDADERO (así venían del origen).
+`insertar-46..205` (`sourceQuestionId` `P-01..P-172` con huecos, `generado:true`)
+son **preguntas de RUTA** (4 opciones, 1 correcta + 3 distractores del mismo
+nivel) de toda la pestaña Insertar — la pestaña solo tenía atajos hasta ahora.
+Añaden 2 topics: `insertar:esignature` (grupo propio, confirmado por captura del
+usuario) y `insertar:formato-forma` (cinta contextual de Formas, con
+`ribbonGroup`). Detalle: `data/rutas/insertar_integration_report.md`.
+Generador: `scripts/gen_insertar_rutas.py`. `insertar-394..405` (`P-16/21/28/
+80..88`) = las 12 de galerías online (Imágenes de archivo / Modelos 3D /
+plataformas de vídeo) que se descartaron en la 1ª pasada y el usuario pidió
+integrar después; llevan advertencia ⚠️ "las galerías en línea de Microsoft
+cambian con el tiempo".
+`data/rutas/insertar.txt` y `data/rutas/insertar-4opciones.txt`
+= volcados de rutas de Insertar del usuario (ver `data/rutas/README.md`;
+NO se integran enteros, solo "por si acaso").
+Las de `archivo`
+`archivo-134..` (`sourceQuestionId` `opc-<panel>-NN`) cubren toggles de
+`Archivo > Opciones` — opción = "sub-panel del diálogo ▸ ajuste",
+distractores = ajustes-hermanos reales, nada inventado; las que ya tenían
+pregunta previa (`archivo-64..79`) no se duplicaron. `archivo-324..336`
+(`opc-bar-01..13`, `subtopic` "Barra de herramientas de acceso rápido",
+topic `opciones-personalizar`) cubren el panel Barra de acceso rápido de
+Opciones (filtro "Comandos disponibles en", Agregar/Quitar/Modificar,
+separador, macros, para todos/este documento, mostrar/posición/etiquetas,
+Restablecer, Importar-exportar) — verificadas con aulaClic + vence.es +
+Microsoft Support ES; complementan `archivo-105..107` sin duplicarlas.
+`archivo-337` (`opc-bar-14`) = concepto (personalización total pero solo
+comandos). `archivo-338..350` (`opc-tc-02..14`, `subtopic` "Centro de
+confianza", topic `opciones-complementos`) cubren las secciones del diálogo
+Configuración del Centro de confianza (Editores/Ubicaciones/Documentos
+confiables, Catálogos, Complementos-seguridad, ActiveX, Macros, Vista
+protegida, Bloqueo de archivos, Barra de mensajes, Acceso mediante
+programación, Opciones de privacidad, Configuración de formularios) —
+verificadas con aulaClic + educa.jcyl.es + Microsoft Support ES; se omitió
+el "acceder al Centro de confianza" del usuario por duplicar `archivo-112`.
+Sin atajos en el bloque. **Taxonomía v6→v7**: el
+topic único `archivo:opciones` (concepto gigante que degradaba el motor) se
+partió por panel — `opciones-general/-presentacion/-revision/-guardar/
+-idioma/-accesibilidad/-personalizar/-complementos` y, para el panel
+Avanzadas (94 opciones en 14 sub-paneles), `opciones-avz-edicion/-pegar/
+-mostrar/-presentacion/-imprimir/-guardar/-otras`. Migración por `subtopic`;
+`id` intacto → `PROGRESS.answers`/`contentHash` no se tocan.
+**Limitación conocida**: los conceptos de "ruta de menú" pura (¿dónde está
+X?) sólo tienen un framing ("ruta") y por diseño de `deriveMastery` (exige
+≥2) se quedan en `consolidando` para siempre — y el priorizador los sigue
+sirviendo mucho. El escenario 5 de `tests/test_engine.js` bajó su umbral de
+'asentado' de 0.40 a 0.35 por esto. Mejora pendiente posible: que
+`bestItem` sirva una flashcard (framing "conceptual") cuando un concepto
+tiene reps altas pero <2 framings.
+
+Taxonomía: `inicio > parrafo` se abrió en 7 grupos
+(`parrafo-marcas`/`-alineacion`/`-sangria`/`-espaciado`/`-bordes`/
+`-listas`/`-tabulaciones`), que llevan `ribbonGroup:"Párrafo"` para que la
+UI de creación los agrupe bajo el grupo real de la cinta; `vista` y
+`revisar` tienen un grupo `estructura` (preguntas sobre grupos/ubicación de
+la pestaña). Taxonomía v4 (sep-2026): completados los grupos de cinta que
+faltaban (Inicio→Complementos, Insertar→Multimedia, Revisar→Voz/
+Comentarios/Entrada de lápiz, Correspondencia→Crear/Vista previa de
+resultados, Referencias→Tabla de autoridades) y `referencias > titulos-indice`
+partido en `titulos` + `indice` — todo aditivo, ninguna pregunta cambió de
+`topic` (esos grupos estaban a 0 preguntas). El campo `ribbonGroup` en un
+topic es opcional; `populateTopicSelect`/`topicName` en views.js lo usan.
+Taxonomía v5: la pestaña Revisar tiene **dos** grupos de cinta llamados
+literalmente "Revisión" — el de corrección (`revision-ortografica`) y el de
+visualización del marcado (`revision-marcado`: Filtrar todo el marcado /
+Todas las revisiones / Mostrar revisiones / Panel de revisiones); ambos
+llevan `ribbonGroup:"Revisión"`. Las 4 flashcards de ese grupo se movieron
+de `seguimiento` a `revision-marcado`.
+
+El campo `tema` ya no se usa para navegar (el asistente "Por pestaña y
+grupo" y "Repasar preguntas" usan `section`/`topic` vía
+`O.TAXONOMY_SECTIONS`); se conserva porque `computeStats().byTema`
+todavía desglosa el rendimiento por grupo en `renderProgress`. El
+selector del asistente de **multijugador** sigue igual (fuera de alcance).
+
+Las flashcards son un recurso independiente de las preguntas, en
+`data/flashcards/*.json` → `flashcards_data.js` →
+`window.__OPE365_FLASHCARDS__` → `OPE.FLASHCARDS`. Cada una tiene
+`cardId` (`"F-NNN"` contenido / `"E-NNN"` error, 3 dígitos, relativo a su
+fuente) y `canonicalId` calculado en runtime como `"<section>:<cardId>"` —
+usar siempre `canonicalId` para identificarlas (progreso, DOM, etc.),
+nunca `cardId` a secas, porque `cardId` se repite entre secciones.
+(sep-2026: `vista`/`revisar` pasaron de `F-01` a `F-001`; el resto ya
+estaba a 3 dígitos.) `questionRefs` es un
+enlace blando opcional hacia preguntas relacionadas — nunca uses
+flashcards como fuente de verdad de una pregunta ni al revés.
+
+Cuando se integre un documento de una pestaña nueva (Correspondencia,
+etc.), seguir el mismo patrón que Vista: comparar contra el banco
+existente antes de dar nada por "pregunta nueva" (ver
+`data/vista_integration_report.md` como plantilla de ese proceso —
+clasificación NUEVA/SOLAPAMIENTO/MEJORA/COMPLEMENTARIA/CONFLICTO),
+declarar cualquier hueco o contradicción de la fuente en vez de
+resolverla en silencio. El ID es `<section>-<índice>` y `sourceFile` =
+`<section>.json`, así que una pestaña nueva no colisiona por
+construcción; si integras un documento de una pestaña que ya tiene
+archivo, añádele preguntas a ese archivo renumerando la cola.
+
+## Motor de aprendizaje (engine.js + engine-bridge.js)
+
+- **`engine.js` (`OPE.LE`)** es un motor de repetición espaciada + priorización
+  propio (inspirado en FSRS, NO una copia). Un **concepto** = `section:topic`
+  con contenido (~61). Modelo escalar: `R(t)=2^(-kR·t/interval)`, `kR` fija
+  `R=targetRetention` (0.90, PRODUCTO, solo en `P`) en `t=interval`.
+- **Dos ejes de estado INDEPENDIENTES** (no los mezcles nunca en la UI):
+  `masteryStatus` (nuevo/aprendiendo/consolidando/asentado) y `reviewState`
+  (futuro/debido/atrasado). Un concepto puede ser `asentado + atrasado`:
+  que toque repasarlo NO significa que se haya olvidado. `asentado` solo se
+  abandona con evidencia ACTUAL de pérdida (fallo reciente o acierto < 0.6).
+  `status` = valor compuesto legado, solo para compat de lectura.
+- `P` es la tabla de honestidad en código. Cada parámetro etiquetado
+  PRINCIPIO / PRODUCTO / HEURÍSTICA / CALIBRABLE. **Nada de esto se expone ni
+  se configura desde la interfaz** salvo lo que pasa por `setPlan` (fecha de
+  examen, minutos/día, días de la semana).
+- Sin `Math.random` en el motor. Todo el tiempo entra por un `now` param.
+- **Capa de examen**: `recalc()` garantiza que ninguna recuperación NECESARIA
+  quede programada tras `fechaExamen − 2 días`; si no cabe, marca `examDeficit`
+  y `examReadiness().deficits` lo expone. `coverageProjection` es todavía poco
+  discriminante → la UI NO lo presenta como % de probabilidad (dice "sin
+  déficit detectado" / lista los bloques en déficit).
+- Se valida con `tests/sim.js` (usuario sintético + verdad de terreno) y
+  `tests/test_engine.js` (20 escenarios). **Cualquier cambio en el motor:
+  reejecuta esos 20 antes de dar nada por bueno.**
+
+- **`engine-bridge.js` (`OPE.LEB`)** es el ÚNICO sitio donde `views.js` toca el
+  motor. La interfaz jamás inventa prioridades/intervalos/estados/déficits:
+  todo sale de `LEB` (y `LEB` de `LE`). `LEB.boot()` siembra desde el progreso
+  previo (`seedFromLegacy`, idempotente) + recalc, en `init()`. Cada respuesta
+  de práctica/examen/flashcard llama a `LEB.recordQuestion/recordExamSession/
+  recordFlashcard`. `tests/test_ui_integration.js` cubre los flujos A–X;
+  `tests/manual_walkthrough_fase2.mjs` es la QA en navegador real.
+- El sistema legado de `computeStats` / `getFlashcardState` ("dominada"
+  booleana) **coexiste** con el motor: se usa para "precisión al responder"
+  (una lente distinta) y para el badge/filtro de flashcards. No lo confundas
+  con el dominio real, que sale del motor.
+
+- **`content-overrides.js` (`OPE.ContentEdit`)** — permite corregir una
+  pregunta/flashcard desde la app (botón ✎ en el runner, en el repaso y en
+  el estudio de flashcards). Guarda un patch por id en
+  `PROGRESS.contentOverrides` (solo campos cambiados: enunciado, opciones,
+  respuesta, explicación, negativa / front, back, priority — nada
+  estructural) y lo aplica EN SITIO a `Q_BY_ID`/`F_BY_ID` **antes de
+  engine.js**, en cada carga. Reversible (`revert` restaura el original
+  snapshotado en memoria). Exportable a JSON desde Ajustes → "Correcciones de
+  contenido" para volcarlo a `data/`. `id`/`section`/`topic` no se editan, así
+  que `PROGRESS.answers`, los conceptos del motor y `contentHash` (runtime)
+  no se ven afectados. Se carga entre app.js y engine.js. Test:
+  `tests/test_content_edit.js`.
+  - **Saltos de línea al editar (sep-2026)**: los saltos escritos con Intro o
+    Mayús+Intro en el enunciado o la explicación se guardaban pero NO se veían,
+    por dos motivos distintos. `renderBlank()` escapaba el texto y lo metía en
+    HTML, donde los saltos colapsan a un espacio; y `cleanExplic()` hacía
+    `\s{2,} → " "`, y `\n` es whitespace, así que la explicación los perdía
+    antes siquiera de llegar al HTML. Ahora: `renderBlank` convierte los saltos
+    en `<br>` **después** de escapar (no abre vía de inyección, ya no queda
+    marcado del usuario); `truncate()` los aplana a espacio, porque las seis
+    vistas que previsualizan un enunciado en una fila de lista pasan por ahí y
+    una fila no puede crecer a dos renglones; `cleanExplic` colapsa espacios y
+    tabuladores pero conserva los saltos; y `splitExpl` los trata como
+    separador igual que el « · » que ya usaba, de modo que una explicación en
+    varias líneas sale como una viñeta por línea. Las opciones son `<input>`,
+    así que ahí Intro no inserta nada y no hay nada que arreglar. Ninguna
+    pregunta del banco tenía saltos (0 de 2.843), así que el cambio no altera
+    cómo se ve nada de lo existente. Tests: `tests/test_saltos_linea.js` (17
+    comprobaciones; 6 fallan con el código anterior) y
+    `tests/manual_saltos_qa.mjs` (Chromium: teclea de verdad Intro y
+    Mayús+Intro en el ✎, guarda y comprueba el resultado).
+  - **Marcador de respuesta correcta (sep-2026)**: el formulario de edición
+    (`qEditFormHtml`, modal ✎ y panel del Editor del banco) ya NO usa un
+    `<select>`/lista aparte para la respuesta correcta — ese control se
+    quedaba con la letra/opción antigua aunque el usuario reescribiera las
+    4 casillas (bug real reportado). Ahora cada fila de opción lleva su
+    propio **radio** (opción única) o **checkbox** (selección múltiple)
+    junto al texto (misma UI que `openUserQuestionModal`); la respuesta
+    queda SIEMPRE atada a una fila viva, solo maneja letras A-D…, y
+    `readQPatch` la lee de `input.uq-correct[name="<pfx>-correct"]:checked`.
+    `respuestaControl` quedó reducido a solo verdadero/falso. El orden de
+    opciones ya se baraja al estudiar (`shuffleOptions:true` es el
+    predeterminado en todas las sesiones — smart/repaso/concepto/práctica/
+    sección/errores/duelo/coop), así que da igual en qué letra se guarde la
+    correcta. Test: `tests/test_edit_answer_marker.js`.
+  - **Visor / recorte de imagen (sep-2026)**: `imagen` ya era un campo
+    corregible (`Q_FIELDS`/`FC_FIELDS`) pero no había UI. Ahora `qImageHtml(src, ref)`
+    marca toda imagen de ejercicio como `img.zoomable` con `data-imgref`
+    (`"q|<id>"` / `"fc|<canonicalId>"`); un handler global de click abre
+    `openImageLightbox()` — visor a pantalla completa estilo estado de
+    WhatsApp: pinch/arrastre/rueda para encuadrar dentro de un marco fijo
+    (aspecto = el de la imagen). «Guardar recorte» renderiza SOLO lo que
+    queda dentro del marco a un `<canvas>` (cap 640 px, PNG→JPEG si pesa),
+    lo guarda como corrección local vía `ContentEdit.apply(kind, id, {imagen})`
+    y re-renderiza la vista. Sirve para recortar iconos mal encuadrados
+    (letras de comandos vecinos visibles) desde el móvil. Solo recorta hacia
+    dentro (los datos fuera del recorte original no se recuperan). Sin ref
+    editable = visor de solo lectura. Tests: `tests/test_image_lightbox.js`
+    (jsdom) + `tests/manual_lightbox_qa.mjs` (Chromium real: zoom, pan,
+    canvas, override).
+
+- **`github-sync.js` (`OPE.GHS`)** — publica tu contenido propio (el de
+  "Mi contenido") directamente al repo vía la API de GitHub, en UN commit
+  atómico (Git Data API: blob→tree→commit→update-ref). Escribe la fuente
+  con sangría (`data/questions|flashcards/<section>.json`, renumerando el id
+  a `<section>-N` / `F-0NN`), el artefacto que sirve la web
+  (`questions_data.js`/`flashcards_data.js`/`questions_all.json`, regenerado
+  desde el banco pristino en memoria — `window.__OPE365_*` — + lo nuevo;
+  un `python build_data.py` local lo normaliza igual) y el manifest si
+  aparece una pestaña sin fichero. GitHub Pages redespliega solo (~1-2 min).
+  El token (PAT fine-grained, *Contents: Read and write* sobre el repo) vive
+  SOLO en `localStorage` bajo la clave `ope365_gh` — **fuera de PROGRESS**,
+  así que no viaja en códigos de compartir, export ni HTML empaquetado. Se
+  carga entre content-overrides.js y engine.js. UI: Ajustes → "Publicar en
+  GitHub" (config/test) y "Mi contenido" → "Publicar al banco (N)"; los
+  elementos publicados quedan marcados (`item.published = {sha,at,newId}`)
+  y se pueden quitar como copia local. NO borra la copia local
+  automáticamente (evita el hueco hasta que Pages redespliega). El HTML
+  empaquetado (`OPE365_Word365_Estudio.html`) NO se actualiza por esta vía;
+  se regenera con `build.py` en el siguiente build real. Test:
+  `tests/test_github_sync.js` (fetch mockeado, sin red).
+  - **`GHS.deleteFromBank(kind, id)`** — borrado REAL de una pregunta/flashcard
+    del banco: la quita de `data/<tipo>/<section>.json` (sin renumerar el resto
+    — deja el hueco, igual que `publish` nunca renumera al añadir) y regenera
+    el artefacto. Un commit. La sección se deduce del `id` (`<section>-N` /
+    `<section>:F-0NN`), así que funciona aunque el item no esté aún en el
+    runtime (recién publicado, sin redesplegar). Rechaza contenido propio sin
+    publicar (→ "Mi contenido"). Tras el commit la UI llama a
+    `ContentEdit.purgeFromRuntime(kind, id)` (quita el item del banco vivo, los
+    índices, el grafo de conceptos y el progreso asociado, sin recargar) +
+    `revert` de cualquier corrección + `LEB.recalcNow()`. UI: botón rojo
+    "Borrar del banco" en los modales de edición de pregunta/flashcard (`✎`) y
+    en "Mi contenido" para elementos ya publicados. Irreversible desde la app.
+  - **`GHS.applyEditToBank(kind, id)`** — escribe los campos ya corregidos
+    (en memoria vía `ContentEdit`) del item en `data/<tipo>/<section>.json` +
+    regenera el artefacto, un commit. La UI llama después a
+    `ContentEdit.bake(kind, id)` (borra el registro de override SIN restaurar:
+    los valores corregidos se quedan, desaparece el badge "corregida").
+  - **`GHS.applyEditsToBank(items)` — publicar TODAS las correcciones en UN
+    commit (sep-2026).** Antes solo existía el publicado suelto
+    (`applyEditToBank`): corregir 8 preguntas en una tanda eran 8 commits y 8
+    confirmaciones, y no había ningún botón que las mandara juntas. Ahora se
+    agrupa por fichero, se baja cada `data/<tipo>/<section>.json` UNA vez, se
+    meten todas sus correcciones y los artefactos se regeneran una sola vez —
+    un único commit. Un item que no se pueda escribir (sección indeducible,
+    fichero que no existe, id que no está en el repo) **no tumba el lote**:
+    se publica el resto y se devuelve en `fallidos`, y su corrección local se
+    conserva. La UI solo hace `bake()` de los que están en `ok`. Los helpers
+    `applyQuestionInto`/`applyCardInto` los comparten el publicado suelto y el
+    de lote, para que los dos escriban exactamente lo mismo.
+    UI: **barra fija arriba del Editor del banco** (`.publish-bar`, siempre
+    visible) con el número de correcciones sin publicar, «Ver cuáles» (lista
+    modal, con salto a cada una) y «Publicar las N 🚀». El contador se repinta
+    en cada autoguardado del editor vía `bancoRefreshPubBar()`, sin
+    re-renderizar la vista. Tests: bloque nuevo en
+    `tests/test_github_sync.js` (verifica **un solo** POST /git/commits y un
+    solo PATCH de la rama para 4 correcciones en 3 ficheros) y
+    `tests/manual_publish_lote_qa.mjs` (Chromium real, API de GitHub
+    mockeada — nunca toca el repo).
+  - **Vista `banco` ("Editor del banco", `renderBancoAdmin` en views.js)** —
+    consola tipo Anki-Browse SOLO visible con token de GitHub (`bancoIsAdmin()`
+    = `GHS.hasToken()`; de facto solo el dueño). Toggle Preguntas/Flashcards,
+    búsqueda de texto (id + enunciado + opciones + explicación / front+back),
+    filtros pestaña/grupo/tipo/estado (corregida·creada·sin explicación·
+    fallada·marcada), contador "N / total". **Layout partido tipo Anki-Browse**
+    (`.bk-split`): lista a la izquierda (máx 400 filas), **panel de edición
+    inline** a la derecha con `qEditFormHtml`/`fcEditFormHtml` (los mismos
+    formularios que el modal ✎; ids con prefijo `bk-ed`). **Autoguardado**:
+    cada `change` de campo → `bancoSaveEditor` calcula el patch por diff vs
+    `ContentEdit.original`, hace `revert` + `apply` (para poder quitar campos),
+    `recalcSoon`; si el campo vuelve al original, la corrección se retira sola.
+    Navegación ‹ › entre resultados (salva lo escrito antes de moverse). El
+    contenido propio abre su formulario completo (`openUserQuestionModal`).
+    Botones del panel: **Guardar** (explícito), **Publicar al banco (GitHub)**
+    (`bancoPublishEdit` → `GHS.applyEditToBank` + `ContentEdit.bake`), Descartar,
+    Ver en repaso, Borrar del banco (`deleteFromBankFlow`). "Publicar"/"Descartar"
+    se habilitan solo con corrección pendiente. Acceso visible: **Progreso →
+    "Administración"** (solo con token) además de Ajustes y "Mi contenido". Helpers compartidos
+    con el modal: `qEditFormHtml`/`readQPatch`/`wireTfSegments`,
+    `fcEditFormHtml`/`readFcPatch`. Filtrado en views.js
+    (`bancoFilterQuestions`/`bancoFilterFlashcards`, no toca `filterQuestions`).
+    Entradas: Ajustes y "Mi contenido" (solo con token). `groupForView` →
+    `progress`. Test: `tests/test_banco_admin.js`.
+
+## Arquitectura de sesiones y compartir (app.js)
+
+- Semillas deterministas (`mulberry32`, versionado como
+  `randomizationAlgorithmVersion`) para que dos dispositivos reconstruyan
+  exactamente el mismo test a partir de config+semilla — nunca
+  `Math.random()` para nada que deba reproducirse.
+- Sesión de estudio separada del contenido canónico: solo se persiste
+  `questionIds[]` + `presentation{}` (permutación), nunca el texto
+  duplicado — verificado que una sesión de 10 preguntas con 1 respuesta
+  pesa ~1KB en localStorage.
+- Códigos de compartir `Q-`/`S-`/`T-`/`R-` (pregunta/selección/test/reto).
+  Sin backend: los códigos largos son el precio de no tener servidor —
+  no se puede acortar sin uno.
+- Desafíos con resultado sellado: ofuscación reversible ligera, **no es
+  cifrado de verdad** — se dice así en la propia interfaz, no se debe
+  presentar como anti-trampa real.
+
+## Multijugador (multiplayer.js)
+
+Transporte real: PeerJS (necesita internet en ambos dispositivos — único
+punto de la app que no funciona offline). Existe también un transporte
+simulado (`createMockPair`) para probar la lógica sin red real — úsalo
+para cualquier cambio en la máquina de estados antes de asumir que
+funciona.
+
+- **Duelo**: respuesta simultánea con reloj compartido (deadline decidido
+  por el host). Dos formatos: "cada uno responde" (espera a ambos o al
+  tiempo) y "el primero que pulse" (resuelve al instante con quien
+  responda antes — el host desempata por marca de tiempo).
+- **Farol**: por turnos, atacante elige carta+respuesta (puede mentir),
+  defensor decide CONFÍO/DUDO. Fichas de farol limitadas (3 por jugador),
+  asaltos de mayor valor a mitad de partida, remontada automática si vas
+  8+ puntos por detrás, comodín 50/50 (1 uso, solo para el defensor,
+  reduce puntos a la mitad si acierta).
+- **Contra Word** (`createCoopGame`, `mpGameMode:"coop"`): cooperativo, los
+  dos humanos son EQUIPO y el rival es "Word". Cada ronda Word presenta
+  una **afirmación** y los dos votan **Verdadero** (celda verde) /
+  **Falso** (celda roja) desde su móvil. `buildWordPlan` convierte
+  CUALQUIER tipo menos `relleno` (no tiene distractores) en esa afirmación:
+  `vf` = la frase tal cual · `opt` = Word enuncia una opción · `multi` =
+  Word da un conjunto (a veces con una cambiada/omitida) · `match` = Word
+  da un emparejamiento completo (a veces con dos cruzados). `plan.truth`
+  dice si lo mostrado es correcto; la casilla correcta es `"V"`/`"F"`.
+  Cuando Word se equivoca, el panel de fin de ronda enseña "Lo correcto"
+  (`mpCoopCorrectText`). Puntúa el equipo (los dos aciertan = +200·racha;
+  uno = +90; ninguno = Word +140). Sin `raceMode`. El plan lo fija el host
+  y viaja en `config.wordPlan` — igual que `questionIds` — para que ambos
+  lados vean lo mismo sin servidor. **Cuánto miente Word NO se configura**
+  (sep-2026): cada partida sortea su tasa (`0.25 + rng()*0.50`, semilla
+  compartida) y la reparte como presupuesto FIJO barajado — la cantidad es
+  sorpresa pero sin rachas ni dado por ronda. El asistente sí deja elegir
+  ritmo (preset o "a tu medida": rondas 3-40, seg 5-90) y tipo de ejercicio.
+  Reusa el tablero determinista, el
+  reloj y la máquina de ronda del Duelo (la vista guarda el engine en
+  `mpDuel` y `mpGameMode` desambigua el render: `renderMpCoopGame`/
+  `mpCoopClaimHtml`/`mpCoopRenderBody`/`renderMpCoopResults`). Resultado
+  final: marcador equipo–Word + "Word os pilló en" con enlace a repasar
+  esos `section:topic`.
+
+**Bugs reales ya encontrados y corregidos en este historial** (por si
+reaparecen en un refactor): reenvío de `round_start` tras reconexión
+borraba la respuesta ya dada del host; avance de turno en Farol no
+avisaba al invitado; `myReal`/`rivalReal` como `null` en vez de `false`
+rompía el desempate de carrera. Los tres tenían pruebas automatizadas que
+los detectaron — si tocas esta zona, reutiliza ese patrón de test antes
+de dar nada por bueno.
+
+**Tablero por valor, no por referencia (sep-2026):** el host compone el
+tablero ENTERO (`buildSessionFromIds` → preguntas ya con opciones
+barajadas, `respuesta` remapeada, `matching`, `explicacion`) y lo mete en
+`config.qPayload`; el invitado lo usa VERBATIM. Antes solo viajaban los
+`questionIds` y el invitado recomponía desde su banco — si le faltaba
+alguna (Pages sin redesplegar entre los dos móviles, contenido propio,
+una borrada) el tablero divergía: la partida no arrancaba, o salían
+rondas con la pregunta de un lado y el `wordPlan`/opciones del otro
+("no se podían marcar las opciones"). Vale para Duelo y Contra Word.
+`requestRematch` borra `qPayload` (+ `wordPlan` en coop) para re-resolver.
+Conexión: **un solo broker PeerJS** para ambos (probar varios sin canal
+previo los separa) + ICE con TURN (OpenRelay); con datos móviles/CGNAT
+sin TURN propio la conexión directa falla y hay que jugar en Wi-Fi
+(la pantalla de error lo dice + despliega `OPE_MP.getNetLog()`).
+
+**Imágenes en multijugador (sep-2026):** los tres modos ya juegan preguntas
+CON IMAGEN. Antes `buildBoard()` las excluía (`&& !q.imagen`) porque ningún
+render de multijugador pintaba el icono; **la exclusión se ha retirado** y
+en su lugar:
+- **`mpQuestionImage(q)`** (views.js) es el único punto que resuelve la
+  imagen de una pregunta en partida: usa `q.imagen` del payload y cae a
+  `Q_BY_ID[q.id].imagen` si faltara (payloads de versiones anteriores y el
+  mazo de Farol, que viaja solo por ids). Se llama **sin `ref`** a
+  propósito: en partida el visor es de SOLO LECTURA — no se puede recortar
+  ni guardar una corrección local del banco a mitad de una ronda.
+- Sitios que lo pintan: ronda de **Duelo** (`renderMpGame`), panel de fin de
+  ronda (`renderMpRoundEnd`, las dos ramas), ronda de **Contra Word**
+  (`renderMpCoopGame`, encima de la afirmación) y su fin de ronda
+  (`mpCoopRoundEnd`), las **3 fases de Farol** (elegir respuesta / esperar
+  claim / defender), y los **3 repasos finales** (`mpDuelReviewHtml`,
+  `mpCoopReviewHtml`, `mpPokerReviewHtml`).
+- **Listas de cartas de Farol** (mazo del lobby y "elige tu carta"): llevan
+  una miniatura `.mp-card-thumb` NO zoomable — sin ella las cartas de icono
+  son indistinguibles (comparten enunciado literal), y usar `.zoomable` ahí
+  abriría el visor en vez de jugar la carta.
+- **Contra Word** convierte una pregunta de icono por la rama `opt` de
+  `buildWordPlan`: contexto = enunciado, claim = el texto de una opción
+  ("Word responde: Insertar ▸ Texto"). Funciona sin tocar el generador.
+- **Bug preexistente arreglado de paso:** `pokerCardPool()` filtra por
+  `categoria==="atajo"` pero NUNCA excluyó imágenes, al contrario que
+  Duelo/Coop — las **7** preguntas de icono con `categoria:"atajo"` ya
+  salían como cartas de Farol sin icono, irrespondibles. Ahora se pintan.
+- **Asistente**: el `<select id="mp-scope">` (Duelo y Contra Word) tiene la
+  opción **«Solo iconos (con imagen)»** → `config.conImagen`, que
+  `buildBoard` pasa a `filterQuestions`. Con esa opción el selector de tipo
+  se fuerza a "Todos" y se deshabilita (todas las preguntas con imagen son
+  `opcion_unica`; cruzarlo con V/F daría 0 preguntas).
+- **Peso del payload**: la imagen viaja POR VALOR dentro de `config.qPayload`
+  (coherente con "tablero por valor"): ~850 B de media por pregunta, así que
+  un tablero de 40 rondas de iconos suma ~35 KB. Se mantiene por valor a
+  propósito — quitarla reintroduciría el fallo de "al invitado le falta la
+  pregunta". (Aparte: `diseno-7` pesa 50 KB, es el único recorte sin versión
+  sin rótulo; si algún día molesta, recortarlo.) Los **códigos de compartir
+  NO llevan imágenes** (solo ids + config): siguen en ~400 caracteres.
+- Tests: `tests/test_multiplayer_iconos.js` (motor + UI del host en jsdom con
+  transporte mock) y `tests/manual_iconos_mp_qa.mjs` (Chromium real: Contra
+  Word y el mazo de Farol).
+
+**Sin pistas en las preguntas de icono (sep-2026):** 74 enunciados (48
+`insertar` + 26 `revisar`) decían de qué pestaña/cinta era el icono («de la
+pestaña Revisar», «de la cinta “Disposición de tabla”», «“Formato de
+imagen”», «“Diseño de tabla”») — media respuesta regalada, porque una de
+las tres cosas que se preguntan ES la pestaña. Normalizados todos al
+enunciado neutro «Observa el icono de la imagen. ¿Qué comando de Word
+representa?». Comprobado que los 5 pares que quedan con enunciado+opciones
+idénticos son iconos distintos con respuesta distinta (no son duplicados).
+
+**Cinco fallos reales de partida arreglados (sep-2026)** — reportados por el
+usuario tras jugar en dos móviles («salió selección múltiple y no dejaba
+marcar, se agotó el tiempo»; «mi novia no votó nada y le salía que sí»; «no
+empieza a la vez»). Todos con test de regresión que FALLA con el código
+anterior (`tests/test_multiplayer_tipos.js`, 59 comprobaciones; QA en
+Chromium real en `tests/manual_mp_tipos_qa.mjs`):
+1. **El borrador de respuesta se perdía en cualquier repintado.** `sel`
+   (selección múltiple) y `pairs` (emparejamiento) vivían en variables
+   locales de `mpRenderAnswerBody`, que se reconstruyen desde
+   `st.myAnswerValue` — vacío hasta CONFIRMAR. La vista se repinta entera
+   ante cada evento de conexión (`onConnState` → `mpRerenderCurrentMpView`),
+   habitual con datos móviles, así que una reconexión a mitad de ronda
+   borraba en silencio lo marcado y la ronda acababa en TIMEOUT. **Es la
+   causa del bug reportado.** Ahora hay un borrador de módulo
+   `mpDraft {round, sel, pairs}` (`mpDraftFor(round)`), que se descarta al
+   cambiar de ronda o de partida.
+2. **El `<div class="options">` de selección múltiple no se cerraba** — el
+   botón «Confirmar respuesta» quedaba DENTRO de la rejilla de opciones.
+3. **Cronómetros apilados.** `mpStartTimerTick` nunca hacía `clearInterval`
+   del anterior: cada repintado creaba otro, y el primero en llegar a 0
+   hacía `clearInterval(mpTimerInterval)` — que ya era el handle del
+   cronómetro NUEVO → el reloj se congelaba a mitad de ronda. Además
+   `_round !== st.roundIndex` no detectaba la ronda 0 de una partida nueva
+   (revancha), y el reloj salía a 0 de entrada.
+4. **El reloj y la cuenta atrás eran LOCALES.** Ambos descontaban desde el
+   `Date.now()` del momento de pintar, así que cada móvil arrancaba su
+   3·2·1 cuando le llegaba el mensaje y cualquier repintado lo reiniciaba a
+   3. Ahora los dos van contra el instante que fija el host y que el motor
+   ya traduce al reloj local (`extra.startAtLocal` de la fase `countdown` y
+   `extra.deadlineLocal` de la fase `round`, vía `hostToLocalTime`) —
+   guardados en `mpCountdownAt` / `mpRoundDeadlineLocal`. Helper compartido
+   `mpRenderCountdown()` para Duelo y Contra Word.
+5. **Mensajes de estado ambiguos en Contra Word.** «Tu compañero ya ha
+   votado — te toca» y «Pensando…» se leían como "ya has votado". Ahora el
+   sujeto va explícito: «Aún no has votado» / «Tu compañero ya ha votado —
+   TE FALTA VOTAR A TI» / «✓ TU voto está registrado…».
+
+**Farol — 4 fallos reales (sep-2026).** Es el modo por turnos y **sin
+reloj**: aquí un fallo no "se agota", deja la partida **colgada**, que es
+peor. Test de regresión `tests/test_multiplayer_farol.js` (25
+comprobaciones, partida completa de 10 turnos conducida desde la UI del
+host) + `tests/manual_farol_qa.mjs` (Chromium real). 7 de las 25 fallan
+con el código anterior:
+1. **La carta viajaba SOLO por id.** Si al defensor le faltaba esa pregunta
+   (Pages sin redesplegar entre los dos móviles, contenido propio, una
+   borrada), `resolveTurn` no encontraba `Q_BY_ID[qid]`, emitía `error` con
+   `round.resolved` ya en `true` y **la partida se quedaba colgada para él**
+   mientras el otro avanzaba. Ahora la carta viaja **POR VALOR** en el
+   mensaje `poker_card` (`msg.q`), igual que el tablero de Duelo/Contra
+   Word; el banco local queda como respaldo (`roundQuestion()` en el motor,
+   `round.q || Q_BY_ID[...]` en la UI). Una carta por turno, no las 10 de
+   golpe.
+2. **El comodín 50/50 se perdía en cualquier repintado.** Se aplicaba
+   tocando el DOM *después* de renderizar (`btn.disabled = true`), así que
+   un re-render devolvía las 4 opciones — y ya estaba pagado (vale la mitad
+   de puntos). Ahora las 2 letras vivas se guardan en `mpPokerWildcardKeep
+   {turn, letters}` y se pintan **desde el estado**; la pantalla avisa
+   «🃏 50/50 usado».
+3. **Los reenvíos de `resume_request` echaban al defensor atrás.** Tras una
+   reconexión el atacante reenvía carta y afirmación; al reprocesarse,
+   un defensor que ya había pulsado DUDO volvía a «¿Te fías?» **perdiendo
+   el comodín recién gastado**. `poker_card` / `poker_claim` /
+   `poker_decision` son ahora idempotentes (se ignoran si el campo ya está
+   puesto) y llevan guarda de `round` nulo.
+4. **Crash con carta no disponible.** `wirePokerGameHandlers` hacía
+   `$("#poker-confio").addEventListener` sin comprobar null; cuando se
+   pintaba `pokerQNotAvailable()` esos botones no existen → `TypeError` que
+   abortaba el resto del cableado de la vista (tira de historial, texto de
+   presión). Guardado.
+
+Nota: `useWildcard()` usa `Math.random()` — es la única excepción
+consciente a la regla de "nada de `Math.random`", porque el 50/50 es
+LOCAL del defensor (elige qué distractor conserva) y no debe reproducirse
+en el otro dispositivo ni entre partidas.
+
+Además, endurecido `mpRenderAnswerBody`: sale si no existe `#mp-q-body`
+(llegaba a llamarse en el hueco de `round_end`), exige `q.matching` bien
+formado, y tiene una rama final para cualquier tipo no jugable — antes
+dejaba el cuerpo VACÍO (sin controles, TIMEOUT seguro y sin explicación);
+ahora avisa y ofrece «Pasar de esta ronda».
+
+**Farol · modo APUESTAS (sep-2026).** Modo de puntuación nuevo, y el
+predeterminado; el «Clásico» (tabla de puntos fija) sigue disponible en el
+lobby. Se elige antes de confirmar el mazo y viaja al invitado en
+`poker_start` (`msg.mode`) — el invitado no elige nada.
+
+**La idea:** no se apuesta a la respuesta, se apuesta a la LECTURA. El
+atacante fija una apuesta **visible** (1-5 🪙) y gana si su rival le
+malinterpreta — le creen mintiendo, o dudan de él diciendo la verdad. Por
+eso apostar fuerte es bueno con verdad Y con mentira según a quién tengas
+enfrente, y por eso la apuesta tiene que verse: si fuera secreta, la
+estrategia óptima sería trivial (máximo cuando sabes, mínimo cuando no) y
+no induciría ningún farol.
+
+- **20 monedas cada uno, suma cero** — las dos pilas suman siempre 40, así
+  que el marcador se lee de un vistazo. La partida acaba a los 10 turnos o
+  **cuando alguien se queda sin monedas** (`bustBy`).
+- **Pagos** (`payCoins()` en multiplayer.js): lectura acertada → el defensor
+  cobra la apuesta · lectura fallada → la cobra el atacante · dudó bien pero
+  falla su propia respuesta → solo **1** (olerse el farol sin saber la verdad
+  no paga) · **subir ×2** (defensor, al dudar) dobla lo que gana y lo que
+  pierde · **50/50** reduce a la mitad lo que cobra, no lo que pierde ·
+  **farol sin ficha pillado → el atacante paga el doble**.
+- **Tope de apuesta**: `maxBet()` = mín(5, mi pila, su pila), y sube a **8**
+  si vas 8+ monedas por detrás. Sustituye a la «remontada» automática del
+  modo clásico: en vez de regalarte puntos, te deja arriesgar más — es una
+  decisión, no un regalo.
+- **Las 3 fichas de farol son públicas** y se pintan en la fila de monedas de
+  los dos jugadores. Sin fichas **se puede seguir mintiendo**, pero sale el
+  doble de caro si te pillan: así «le quedan 0 faroles» insinúa honestidad
+  sin garantizarla y la duda sobrevive hasta el último turno.
+- **UI**: el atacante gana un paso (carta → respuesta → **apuesta**), con la
+  respuesta y la cifra guardadas en `mpPokerBet {turn, claim, bet}` — fuera
+  del render, por la misma razón que el 50/50 y el borrador de Duelo: un
+  repintado no puede borrarlas. La subida vive en `mpPokerRaise` y se
+  descarta al cambiar de turno. `pokerCoins()` es el único sitio que decide
+  si estamos en apuestas, y lo lee del MOTOR (nunca de `mpSetupState`: el
+  invitado no eligió modo).
+- Tests: `tests/test_multiplayer_farol.js` sube a **53 comprobaciones** —
+  los 5 casos de la tabla de pagos verificados con dos motores headless
+  enfrentados (incluida la suma cero y que los dos dispositivos ven el mismo
+  marcador), subida ×2, 50/50, farol sin ficha, y una partida entera en
+  apuestas desde la UI. `tests/manual_farol_qa.mjs` la juega en Chromium
+  real y comprueba además lo visual (fichas redondas, la apuesta a 40px en
+  la pantalla del defensor, las pilas cuadrando a 40 en todo momento).
+
+**Repaso al final (sep-2026):** los tres modos emiten `review` en el
+evento `finished` (pregunta + respuesta de cada uno + correcta +
+`explicacion`). Lo pintan `mpDuelReviewHtml`/`mpCoopReviewHtml`/
+`mpPokerReviewHtml` (helpers compartidos `mpAnswerToText`/`mpReviewShell`/
+`mpReviewItemHtml`, CSS `.mp-review`/`.mp-rev-item`).
+
+## Disciplina de pruebas
+
+`tests/test_*.js` son pruebas jsdom que sí persisten en el repo (antes de
+la migración de arquitectura de ago-2026 se construían con este mismo
+patrón pero de forma ad hoc, sin guardarlas). Requieren
+`npm install` una vez (`package.json` solo trae `jsdom` como
+devDependency — nada de esto es una dependencia en runtime de la app).
+Patrón: `tests/fixture.html` como HTML mínimo, cargarlo con `JSDOM`,
+`window.eval()` de cada script en el orden real (`questions_data.js` →
+`taxonomy_data.js` → `flashcards_data.js` → `app.js` → `content-overrides.js`
+→ `github-sync.js` → `engine.js` → `engine-bridge.js` → `multiplayer.js` →
+`views.js`), simular
+clics/eventos reales (incluida la navegación vía
+`[data-goto]`, que es el único enganche público de `views.js` — `go()`/
+`render()` están cerradas dentro de su IIFE), leer `OPE.getState()`/
+`OPE_MP...`. Para multijugador, usar `MP.createMockPair()` en vez de
+PeerJS real (jsdom no implementa WebRTC). Ejecutar todos con
+`node tests/test_<nombre>.js` (sin runner, cada uno es un script
+autocontenido que sale con código 0/1).
+
+**No se puede verificar conectividad WebRTC real desde jsdom** — eso solo
+se prueba con dos navegadores reales.
+
+**Probar la app en un navegador real (no solo jsdom):** servir la carpeta
+(`python -m http.server <puerto> --directory <ruta>` — usar `--directory`
+explícito y un puerto propio para evitar arrancar sobre el directorio o
+puerto equivocado si hay otro servidor suelto por ahí) y dirigirla con
+Playwright headed (`npm install playwright` + `npx playwright install
+chromium`, no está en `package.json` a propósito por ser pesado — instalar
+aparte cuando haga falta). Ver `tests/manual_walkthrough*.mjs` y
+`tests/manual_driver.mjs` como referencia de ese patrón — no son parte
+del proyecto ni se ejecutan en CI, son herramientas puntuales de QA
+manual. **Esto encontró un bug real que jsdom no detectó**: dos
+selectores de tipo de ejercicio en `views.js` tenían la lista de tipos
+escrita a mano y no incluían "relleno" cuando se añadió — un test jsdom
+centrado en el tipo nuevo no lo habría visto porque nunca pasaba por esa
+UI de filtrado. Antes de dar una función de UI por probada, recorrerla de
+verdad en el navegador al menos una vez.
+
+## Cómo pedir cosas en este proyecto (estilo del usuario)
+
+Directo, mensajes cortos, espera que se ejecute sin pedir permiso de más.
+Prefiere que se corrija con pruebas reales antes que se declare "hecho".
+Si algo es dudoso en cuanto a datos del examen, decirlo claramente en vez
+de inventar — el usuario ha rechazado activamente contenido no verificado
+más de una vez en esta conversación, así que la barra de exigencia en
+precisión de datos es alta.

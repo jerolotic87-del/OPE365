@@ -94,8 +94,10 @@ def main(patch_path):
                 fuera = [v for v in cor.values() if v not in der]
                 if fuera:
                     print("  !!", qid, "correct apunta fuera de la derecha:", fuera); return 1
-                if len(set(cor.values())) != len(cor):
+                if len(der) >= len(izq) and len(set(cor.values())) != len(cor):
                     print("  !!", qid, "dos elementos emparejados con el mismo destino"); return 1
+                if len(der) < len(izq) and not set(cor.values()) == set(der):
+                    print("  aviso:", qid, "clasificacion con alguna categoria vacia")
                 if q.get("respuesta") != cor:
                     print("  !!", qid, "respuesta y matching.correct no coinciden"); return 1
                 for col in ("left", "right"):

@@ -11,28 +11,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-1",
-    "enunciado": "¿Cuál es la definición correcta de un procesador de texto?",
+    "revisada": true,
+    "enunciado": "¿Qué distingue a un procesador de texto de los demás programas de ofimática?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un programa de aplicación para crear, editar y dar formato a documentos de texto"
+        "text": "Que está pensado para crear, editar y dar formato a documentos de texto"
       },
       {
         "letter": "B",
-        "text": "Un programa de aplicación para crear y gestionar hojas de cálculo"
+        "text": "Que está pensado para organizar datos en filas y columnas y calcular con ellos"
       },
       {
         "letter": "C",
-        "text": "Un componente del sistema operativo para gestionar archivos en disco"
+        "text": "Que forma parte del sistema operativo y gestiona los archivos del disco"
       },
       {
         "letter": "D",
-        "text": "Una herramienta de maquetación profesional orientada al diseño gráfico"
+        "text": "Que está pensado para maquetar publicaciones con control tipográfico fino"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Un procesador de texto es un programa de aplicación que permite crear, editar y dar formato a documentos de texto."
+    "explicacion": "Lo suyo es el texto corrido: escribirlo, corregirlo y darle aspecto. Todo lo demás que sabe hacer —tablas, imágenes, gráficos— está al servicio de eso. · El segundo descarte es la hoja de cálculo, y el cuarto un programa de autoedición como InDesign o Publisher, que llega más lejos en el control de la página pero es incomodísimo para escribir. Word se ha ido acercando a los dos con los años, y de ahí que se confundan. · Lo que no es en ningún caso es parte del sistema operativo: es una aplicación que se instala."
   },
   {
     "id": "interfaz-2",
@@ -46,15 +47,16 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-2",
-    "enunciado": "¿Cuál de las siguientes NO es una función básica de un procesador de texto?",
+    "revisada": true,
+    "enunciado": "La clasificación al uso agrupa lo que hace un procesador de texto en cuatro bloques de funciones. Señale el que NO es uno de ellos:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Funciones de diseño de página"
+        "text": "Funciones de cálculo"
       },
       {
         "letter": "B",
-        "text": "Funciones de cálculo y hojas de datos"
+        "text": "Funciones de diseño de página"
       },
       {
         "letter": "C",
@@ -66,8 +68,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Las funciones de cálculo son propias de hojas de cálculo como Excel, no de un procesador de texto."
+    "respuesta": "A",
+    "explicacion": "Los cuatro bloques son edición de texto, diseño de página, gráficas y avanzadas. El cálculo es lo propio de una hoja como Excel. · Merece la pena matizarlo, porque Word sí calcula un poco: la cinta de tabla tiene un botón «Fórmula» con =SUM(ABOVE) y compañía. Pero es una función menor, sin recálculo automático, y no define al programa. · Cuando de verdad hacen falta cuentas, lo que se hace es incrustar una hoja de Excel desde el menú Tabla o desde Insertar ▸ Objeto."
   },
   {
     "id": "interfaz-3",
@@ -81,28 +83,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-3",
-    "enunciado": "¿Qué elementos se incluyen dentro de las funciones de diseño de página?",
+    "revisada": true,
+    "enunciado": "En la clasificación al uso, ¿qué tienen en común los márgenes, las tabulaciones y el espaciado entre líneas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Espaciado entre líneas, tabulaciones y márgenes"
+        "text": "Que son funciones de diseño de página: afectan a cómo se distribuye el texto en la hoja"
       },
       {
         "letter": "B",
-        "text": "Tipos de resaltado como negrita, subrayado y cursiva"
+        "text": "Que son funciones de edición de texto: afectan al aspecto de los caracteres"
       },
       {
         "letter": "C",
-        "text": "Búsqueda y sustitución de texto"
+        "text": "Que son funciones avanzadas: requieren herramientas de revisión"
       },
       {
         "letter": "D",
-        "text": "Buscar sinónimos"
+        "text": "Que son funciones gráficas: colocan objetos sobre la página"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El espaciado entre líneas, las tabulaciones y los márgenes son funciones de diseño de página."
+    "explicacion": "Los tres deciden dónde cae el texto y cuánto aire lo rodea, no cómo se ven las letras. Con ellos van también los encabezados, los pies y la numeración de páginas. · El descarte que decide la pregunta es el de edición de texto, que es el bloque de la fuente, el tamaño, el color, la negrita y la justificación: lo que cambia el aspecto del contenido, no su reparto en la hoja. · La línea que los separa es esa, y es la que se pregunta una y otra vez."
   },
   {
     "id": "interfaz-4",
@@ -116,28 +119,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-4",
-    "enunciado": "La justificación del texto, el tipo de letra y el color pertenecen a:",
+    "revisada": true,
+    "enunciado": "En la clasificación al uso, ¿a qué bloque pertenecen el tipo de letra, el tamaño, el color y la justificación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Funciones de edición de texto"
+        "text": "A las funciones de edición de texto"
       },
       {
         "letter": "B",
-        "text": "Funciones de diseño de página"
+        "text": "A las funciones de diseño de página"
       },
       {
         "letter": "C",
-        "text": "Funciones gráficas"
+        "text": "A las funciones gráficas"
       },
       {
         "letter": "D",
-        "text": "Funciones avanzadas"
+        "text": "A las funciones avanzadas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La justificación, el tipo de letra, el tamaño y el color se clasifican dentro de las funciones de edición de texto."
+    "explicacion": "Todas actúan sobre el propio texto: cómo se ve y cómo se alinea dentro de su bloque. · La justificación es la que más se discute, porque suena a maquetación; pero alinea el párrafo dentro del ancho que ya tiene, sin cambiar el ancho, y eso la deja de este lado. Quien decide ese ancho son los márgenes, que sí son diseño de página. · En la cinta de Word el reparto se ve bien: fuente y párrafo están en Inicio, y los márgenes en Disposición."
   },
   {
     "id": "interfaz-5",
@@ -151,28 +155,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-5",
-    "enunciado": "La inclusión de gráficos, formas geométricas y tablas corresponde a:",
+    "revisada": true,
+    "enunciado": "En la clasificación al uso, ¿a qué bloque pertenece insertar una tabla, una forma o un gráfico?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Funciones gráficas"
+        "text": "A las funciones gráficas"
       },
       {
         "letter": "B",
-        "text": "Funciones avanzadas"
+        "text": "A las funciones de diseño de página"
       },
       {
         "letter": "C",
-        "text": "Funciones de edición de texto"
+        "text": "A las funciones de edición de texto"
       },
       {
         "letter": "D",
-        "text": "Funciones de diseño de página"
+        "text": "A las funciones avanzadas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Los gráficos, las formas geométricas y las tablas pertenecen a las funciones gráficas."
+    "explicacion": "Es el bloque de todo lo que no es texto y ocupa sitio en la página: imágenes, formas, gráficos, diagramas y también las tablas. · Que la tabla entre aquí sorprende, porque lo que se mete dentro es texto; lo que la clasifica es que es una estructura visual que se coloca, no una manera de escribir. · En Word todo esto vive junto en la pestaña Insertar, en los grupos Tablas e Ilustraciones, lo que ayuda a recordarlo."
   },
   {
     "id": "interfaz-6",
@@ -186,28 +191,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-6",
-    "enunciado": "La revisión ortográfica y la búsqueda de sinónimos se clasifican dentro de:",
+    "revisada": true,
+    "enunciado": "En la clasificación al uso, ¿a qué bloque pertenecen la revisión ortográfica y la búsqueda de sinónimos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Funciones avanzadas"
+        "text": "A las funciones avanzadas"
       },
       {
         "letter": "B",
-        "text": "Funciones gráficas"
+        "text": "A las funciones de edición de texto"
       },
       {
         "letter": "C",
-        "text": "Funciones de edición de texto"
+        "text": "A las funciones de diseño de página"
       },
       {
         "letter": "D",
-        "text": "Funciones de diseño de página"
+        "text": "A las funciones gráficas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La revisión ortográfica y la búsqueda de sinónimos son funciones avanzadas del procesador de texto."
+    "explicacion": "El bloque de las avanzadas recoge lo que el programa hace POR el usuario, en vez de limitarse a obedecer: corregir, proponer palabras, traducir, contar, combinar correspondencia o montar un índice. · El descarte que decide la pregunta es el de edición de texto: corregir una falta también es editar, pero ahí la clasificación mira quién detecta el problema, y aquí lo detecta el programa. · En Word casi todo esto está en la pestaña Revisar."
   },
   {
     "id": "interfaz-21",
@@ -221,28 +227,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-21",
-    "enunciado": "¿Cuál de las siguientes opciones recoge exclusivamente funciones de diseño de página?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estos grupos de tres reúne SOLO funciones de diseño de página?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Justificación del texto, tipo de letra y color"
-      },
-      {
-        "letter": "B",
         "text": "Espaciado entre líneas, tabulaciones y márgenes"
       },
       {
+        "letter": "B",
+        "text": "Justificación, tipo de letra y color"
+      },
+      {
         "letter": "C",
-        "text": "Revisión ortográfica, búsqueda de sinónimos y sustitución"
+        "text": "Revisión ortográfica, sinónimos y sustitución de texto"
       },
       {
         "letter": "D",
-        "text": "Inclusión de gráficos, formas geométricas y tablas"
+        "text": "Gráficos, formas geométricas y tablas"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El espaciado entre líneas, las tabulaciones y los márgenes son funciones de diseño de página."
+    "respuesta": "A",
+    "explicacion": "Los tres deciden cómo se reparte el texto sobre la hoja. Con ellos irían los encabezados, los pies y la numeración de páginas. · Los otros tres grupos son, por este orden, edición de texto, avanzadas y gráficas: la pregunta es en realidad un repaso de los cuatro bloques a la vez. · El más discutible es el primero del segundo grupo, la justificación, porque suena a maquetación; se clasifica como edición porque alinea el párrafo dentro del ancho que ya tiene, sin decidir ese ancho."
   },
   {
     "id": "interfaz-22",
@@ -256,28 +263,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-22",
-    "enunciado": "Un usuario necesita cambiar el tipo de letra y el color del texto seleccionado. ¿A qué grupo de funciones pertenece esta acción?",
+    "revisada": true,
+    "enunciado": "Cambias el tipo de letra y el color de un párrafo seleccionado. ¿A qué bloque de funciones corresponde?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Diseño de página"
-      },
-      {
-        "letter": "B",
         "text": "Edición de texto"
       },
       {
+        "letter": "B",
+        "text": "Diseño de página"
+      },
+      {
         "letter": "C",
-        "text": "Avanzadas"
+        "text": "Funciones avanzadas"
       },
       {
         "letter": "D",
-        "text": "Gráficas"
+        "text": "Funciones gráficas"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El tipo de letra y el color del texto son funciones de edición de texto."
+    "respuesta": "A",
+    "explicacion": "Se está cambiando el aspecto de los caracteres, que es exactamente lo que define ese bloque, junto al tamaño, la negrita, la cursiva y la alineación. · Diseño de página es el descarte que decide la pregunta, y la frontera está en si lo que se toca afecta a la HOJA —márgenes, tabulaciones, espaciado, encabezados— o al TEXTO. · En Word la separación se ve en la cinta: fuente y párrafo en Inicio, márgenes y orientación en Disposición."
   },
   {
     "id": "interfaz-35",
@@ -291,28 +299,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-35",
-    "enunciado": "Un usuario termina su documento y quiere encontrar una palabra más precisa para \"importante\". ¿Qué herramienta usaría y en qué grupo de funciones se clasifica?",
+    "revisada": true,
+    "enunciado": "Quieres sustituir la palabra «importante» por otra más precisa. ¿Qué herramienta lo hace y a qué bloque pertenece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Revisión ortográfica — función de edición de texto"
+        "text": "Sinónimos, una función avanzada"
       },
       {
         "letter": "B",
-        "text": "Buscar y reemplazar — función avanzada"
+        "text": "Buscar y reemplazar, una función avanzada"
       },
       {
         "letter": "C",
-        "text": "Buscar sinónimos — función avanzada"
+        "text": "Sinónimos, una función de edición de texto"
       },
       {
         "letter": "D",
-        "text": "Formato de fuente — función de edición de texto"
+        "text": "Revisión ortográfica, una función de edición de texto"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La búsqueda de sinónimos es una función avanzada del procesador de texto. En Word 365 (versión española) el atajo es Mayús+F7."
+    "respuesta": "A",
+    "explicacion": "El diccionario de sinónimos se abre con **Mayús+F7** o desde Revisar ▸ Revisión ▸ Sinónimos, y también aparece en el menú contextual de la palabra. Es avanzada porque el programa aporta conocimiento propio, no se limita a obedecer. · **Buscar y reemplazar** es el descarte que decide la pregunta: cambia una palabra por otra, sí, pero por la que uno le diga; no propone ninguna. · La revisión ortográfica también es avanzada, no de edición: comparte bloque con los sinónimos."
   },
   {
     "id": "interfaz-36",
@@ -326,19 +335,20 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-36",
-    "enunciado": "Un usuario necesita insertar un organigrama con formas geométricas y una tabla de datos. ¿En qué grupo de funciones se clasifican estas operaciones?",
+    "revisada": true,
+    "enunciado": "Insertas un organigrama con formas y una tabla de datos. ¿A qué bloque de funciones corresponde?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Funciones de diseño de página"
+        "text": "Funciones gráficas"
       },
       {
         "letter": "B",
-        "text": "Funciones de edición de texto"
+        "text": "Funciones de diseño de página"
       },
       {
         "letter": "C",
-        "text": "Funciones gráficas"
+        "text": "Funciones de edición de texto"
       },
       {
         "letter": "D",
@@ -346,8 +356,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Las formas geométricas y las tablas pertenecen a las funciones gráficas."
+    "respuesta": "A",
+    "explicacion": "Las dos cosas son objetos que se colocan sobre la página, y ese es el bloque de las gráficas: imágenes, formas, diagramas, gráficos y tablas. · Diseño de página es el descarte que decide la pregunta, porque colocar cosas en la hoja suena a eso; la diferencia es que aquel bloque decide el ESPACIO —márgenes, columnas, tabulaciones—, no el contenido que se pone dentro. · En Word un organigrama se monta con SmartArt, categoría Jerarquía, en la pestaña Insertar."
   },
   {
     "id": "interfaz-37",
@@ -361,28 +371,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-37",
-    "enunciado": "¿Cuál de las siguientes describe correctamente para qué sirve un procesador de texto?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas describe lo que hace un procesador de texto?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Para modificar márgenes, dar formato a párrafos y editar texto"
+        "text": "Escribir y corregir texto, darle formato y decidir cómo se reparte en la página"
       },
       {
         "letter": "B",
-        "text": "Para crear y editar hojas de cálculo con fórmulas"
+        "text": "Organizar datos en celdas y calcular con ellos mediante fórmulas"
       },
       {
         "letter": "C",
-        "text": "Para diseñar páginas web mediante código HTML"
+        "text": "Diseñar páginas para la web escribiendo su código"
       },
       {
         "letter": "D",
-        "text": "Para gestionar bases de datos relacionales"
+        "text": "Guardar y consultar información en tablas relacionadas entre sí"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Un procesador de texto sirve para crear y editar texto, modificar márgenes y dar formato a párrafos, entre otras funciones."
+    "explicacion": "Reúne los cuatro bloques de la clasificación al uso: edición de texto, diseño de página, gráficas y avanzadas. · Los tres descartes son otros programas de un paquete ofimático: la hoja de cálculo, el editor web y la base de datos. Word roza los tres —calcula un poco en las tablas, guarda como página web y combina correspondencia leyendo una lista de datos—, y por eso resultan creíbles; pero ninguna de esas es su función. · El límite lo marca para qué está pensado, no lo que puede llegar a hacer."
   },
   {
     "id": "interfaz-41",
@@ -396,19 +407,20 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-41",
-    "enunciado": "¿Cuál de las siguientes opciones NO es una función de edición de texto?",
+    "revisada": true,
+    "enunciado": "Señale la que NO es una función de edición de texto:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Justificación del texto"
+        "text": "Encabezados y pies de página"
       },
       {
         "letter": "B",
-        "text": "Tamaño de letra"
+        "text": "Justificación del texto"
       },
       {
         "letter": "C",
-        "text": "Encabezados y pies de página"
+        "text": "Tamaño de letra"
       },
       {
         "letter": "D",
@@ -416,8 +428,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Los encabezados y pies de página son funciones de diseño de página, no de edición de texto."
+    "respuesta": "A",
+    "explicacion": "Los encabezados y pies son diseño de página: no tocan el texto del cuerpo, sino que ocupan una franja propia de la hoja y se repiten en todas. Con ellos van los márgenes, las tabulaciones, el espaciado y la numeración de páginas. · Las otras tres actúan sobre los caracteres o sobre la alineación del párrafo dentro de su ancho. · La justificación es la más discutible de las tres y por eso está aquí: alinea dentro del ancho, pero no decide ese ancho."
   },
   {
     "id": "interfaz-45",
@@ -431,28 +443,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-45",
-    "enunciado": "Un usuario configura la numeración de páginas de su documento. ¿A qué grupo de funciones pertenece esta acción?",
+    "revisada": true,
+    "enunciado": "Configuras la numeración de páginas del documento. ¿A qué bloque de funciones corresponde?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Funciones de edición de texto"
+        "text": "Diseño de página"
       },
       {
         "letter": "B",
-        "text": "Funciones avanzadas"
+        "text": "Edición de texto"
       },
       {
         "letter": "C",
-        "text": "Funciones gráficas"
+        "text": "Funciones avanzadas"
       },
       {
         "letter": "D",
-        "text": "Funciones de diseño de página"
+        "text": "Funciones gráficas"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "La numeración de páginas es una función de diseño de página."
+    "respuesta": "A",
+    "explicacion": "El número de página vive en el encabezado o en el pie, que son franjas de la hoja, y su reparto depende de la maquetación: por eso comparte bloque con los márgenes, las tabulaciones y el espaciado. · Funciones avanzadas es el descarte que decide la pregunta, y es tentador porque la numeración es automática, se actualiza sola; pero automatismo no es el criterio del bloque avanzado, que es el de las herramientas que aportan conocimiento propio, como corregir o proponer sinónimos."
   },
   {
     "id": "interfaz-49",
@@ -466,11 +479,12 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-50",
-    "enunciado": "Un usuario quiere revisar la ortografía de todo el documento antes de enviarlo. ¿A qué grupo de funciones pertenece esta acción?",
+    "revisada": true,
+    "enunciado": "Revisas la ortografía de todo el documento antes de enviarlo. ¿A qué bloque de funciones corresponde?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Funciones de diseño de página"
+        "text": "Funciones avanzadas"
       },
       {
         "letter": "B",
@@ -478,7 +492,7 @@
       },
       {
         "letter": "C",
-        "text": "Funciones avanzadas"
+        "text": "Funciones de diseño de página"
       },
       {
         "letter": "D",
@@ -486,8 +500,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La revisión ortográfica es una función avanzada del procesador de texto. En Word 365 (versión española) el atajo es F7."
+    "respuesta": "A",
+    "explicacion": "El corrector se abre con **F7** —y también con Windows+F7— y comparte bloque con los sinónimos, la traducción, el contador de palabras y la combinación de correspondencia: todo lo que el programa aporta por su cuenta. · Edición de texto es el descarte que decide la pregunta, porque corregir una falta acaba siendo editar; la diferencia está en quién detecta el problema. · En Word 365 el corrector y el panel Editor son lo mismo, y viven en la pestaña Revisar."
   },
   {
     "id": "interfaz-50",
@@ -501,28 +515,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-51",
-    "enunciado": "¿Cuál de las siguientes es una función de diseño de página?",
+    "revisada": true,
+    "enunciado": "De estas cuatro acciones, ¿cuál es una función de diseño de página?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Espaciado entre líneas"
+        "text": "Cambiar el espaciado entre líneas"
       },
       {
         "letter": "B",
-        "text": "Justificación del texto"
+        "text": "Justificar el texto del párrafo"
       },
       {
         "letter": "C",
-        "text": "Aplicar negrita"
+        "text": "Aplicar negrita a una palabra"
       },
       {
         "letter": "D",
-        "text": "Insertar tabla"
+        "text": "Insertar una tabla de datos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El espaciado entre líneas pertenece a las funciones de diseño de página."
+    "explicacion": "El espaciado decide cuánto aire hay entre renglones, es decir, cómo se reparte el texto sobre la hoja: eso es diseño de página, igual que los márgenes, las tabulaciones y los encabezados. · **La justificación** es el descarte que decide la pregunta, y es el caso más discutido de los cuatro bloques: parece maquetación, pero alinea el párrafo dentro del ancho que ya tiene, sin decidir ese ancho, así que cuenta como edición de texto. · La negrita también es edición, y la tabla es una función gráfica."
   },
   {
     "id": "interfaz-51",
@@ -536,28 +551,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-52",
-    "enunciado": "¿Qué elemento pertenece a las funciones de diseño de página pero NO a las de edición de texto?",
+    "revisada": true,
+    "enunciado": "Tres de estas acciones son de edición de texto y una es de diseño de página. ¿Cuál?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tamaño de letra"
+        "text": "Poner tabulaciones"
       },
       {
         "letter": "B",
-        "text": "Tabulaciones"
+        "text": "Cambiar el tamaño de letra"
       },
       {
         "letter": "C",
-        "text": "Tipo de resaltado"
+        "text": "Resaltar una palabra"
       },
       {
         "letter": "D",
-        "text": "Color del texto"
+        "text": "Cambiar el color del texto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Las tabulaciones son funciones de diseño de página. El tamaño, el resaltado y el color son funciones de edición de texto."
+    "respuesta": "A",
+    "explicacion": "Las tabulaciones deciden en qué puntos del ancho de la hoja se detiene el cursor, así que trabajan sobre la página, no sobre los caracteres. Comparten bloque con los márgenes, el espaciado y los encabezados. · Las otras tres cambian el aspecto de lo escrito: tamaño, resaltado y color. · Una pista útil para separarlos: si la acción tiene sentido con el documento vacío —poner márgenes, tabulaciones o un encabezado—, es diseño de página; si necesita texto seleccionado, es edición."
   },
   {
     "id": "interfaz-52",
@@ -571,28 +587,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-53",
-    "enunciado": "Un usuario modifica los márgenes de su documento. ¿A qué grupo de funciones pertenece esta acción?",
+    "revisada": true,
+    "enunciado": "Cambias los márgenes del documento. ¿A qué bloque de funciones corresponde?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Edición de texto"
-      },
-      {
-        "letter": "B",
         "text": "Diseño de página"
       },
       {
+        "letter": "B",
+        "text": "Edición de texto"
+      },
+      {
         "letter": "C",
-        "text": "Avanzadas"
+        "text": "Funciones avanzadas"
       },
       {
         "letter": "D",
-        "text": "Gráficas"
+        "text": "Funciones gráficas"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Los márgenes son una función de diseño de página."
+    "respuesta": "A",
+    "explicacion": "Los márgenes son el ejemplo de manual de ese bloque: definen el rectángulo dentro del cual cabe el texto, y todo lo demás se acomoda a él. Con ellos van el tamaño y la orientación del papel, las columnas, las tabulaciones, el espaciado y los encabezados. · En Word están en Disposición ▸ Configurar página, con seis valores preestablecidos y «Márgenes personalizados…». · Cambiarlos recoloca el texto entero, y ese efecto en cadena es lo que distingue a este bloque de la edición."
   },
   {
     "id": "interfaz-53",
@@ -606,28 +623,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-54",
-    "enunciado": "¿Cuál de las siguientes opciones NO es una función de edición de texto?",
+    "revisada": true,
+    "enunciado": "Señale la que NO es una función de diseño de página:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Justificación"
+        "text": "Insertar una tabla"
       },
       {
         "letter": "B",
-        "text": "Tamaño de letra"
+        "text": "Poner encabezados y pies de página"
       },
       {
         "letter": "C",
-        "text": "Encabezados y pies de página"
+        "text": "Cambiar los márgenes"
       },
       {
         "letter": "D",
-        "text": "Aplicar cursiva"
+        "text": "Ajustar el espaciado entre líneas"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Los encabezados y pies de página son funciones de diseño de página."
+    "respuesta": "A",
+    "explicacion": "La tabla es una función gráfica: un objeto que se coloca sobre la página, como una imagen, una forma o un gráfico. Que dentro se escriba texto no la cambia de bloque. · Las otras tres deciden cómo se reparte el contenido sobre la hoja. · Es la clasificación que más sorprende de las cuatro, porque una tabla parece más «de texto» que «gráfica»; el criterio es que es una estructura visual que se inserta, no una forma de escribir."
   },
   {
     "id": "interfaz-54",
@@ -641,28 +659,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-55",
-    "enunciado": "¿Cuál de las siguientes describe una función gráfica de un procesador de texto?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas es una función gráfica?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cambiar el tipo de letra del documento"
+        "text": "Insertar formas geométricas"
       },
       {
         "letter": "B",
-        "text": "Insertar formas geométricas en el documento"
+        "text": "Cambiar el tipo de letra"
       },
       {
         "letter": "C",
-        "text": "Revisar la ortografía del texto"
+        "text": "Revisar la ortografía"
       },
       {
         "letter": "D",
-        "text": "Establecer tabulaciones en el párrafo"
+        "text": "Poner tabulaciones"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La inserción de formas geométricas es una función gráfica."
+    "respuesta": "A",
+    "explicacion": "Las formas son objetos que se dibujan sobre la página, y comparten bloque con las imágenes, los gráficos, los diagramas y las tablas. · Los otros tres descartes cubren los otros tres bloques de la clasificación: la fuente es edición de texto, el corrector es una función avanzada y las tabulaciones son diseño de página. La pregunta es en realidad un repaso de los cuatro. · En Word todo lo gráfico se inserta desde la pestaña Insertar, grupos Tablas e Ilustraciones."
   },
   {
     "id": "interfaz-55",
@@ -676,28 +695,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-56",
-    "enunciado": "Un usuario necesita insertar una tabla de datos en su documento. ¿En qué grupo de funciones se clasifica esta operación?",
+    "revisada": true,
+    "enunciado": "Insertas una tabla de datos. ¿A qué bloque de funciones corresponde?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Diseño de página"
+        "text": "Funciones gráficas"
       },
       {
         "letter": "B",
-        "text": "Edición de texto"
+        "text": "Diseño de página"
       },
       {
         "letter": "C",
-        "text": "Avanzadas"
+        "text": "Edición de texto"
       },
       {
         "letter": "D",
-        "text": "Gráficas"
+        "text": "Funciones avanzadas"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "La inserción de tablas es una función gráfica del procesador de texto."
+    "respuesta": "A",
+    "explicacion": "Es la clasificación menos intuitiva de las cuatro y por eso se pregunta tanto: la tabla va con las imágenes, las formas y los gráficos, porque es una estructura visual que se coloca sobre la página. Que se escriba dentro no la convierte en edición de texto. · **Diseño de página** es el descarte que decide la pregunta, porque una tabla organiza el espacio; la diferencia es que aquel bloque define el espacio DISPONIBLE —márgenes, columnas, tabulaciones— y este pone contenido dentro."
   },
   {
     "id": "interfaz-56",
@@ -711,28 +731,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-57",
-    "enunciado": "¿Cuál de las siguientes opciones NO pertenece a las funciones avanzadas?",
+    "revisada": true,
+    "enunciado": "Señale la que NO es una función avanzada:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Búsqueda de sinónimos"
+        "text": "Insertar un gráfico"
       },
       {
         "letter": "B",
-        "text": "Búsqueda y sustitución de texto"
+        "text": "Buscar sinónimos"
       },
       {
         "letter": "C",
-        "text": "Revisión ortográfica"
+        "text": "Revisar la ortografía"
       },
       {
         "letter": "D",
-        "text": "Insertar gráficos"
+        "text": "Buscar y sustituir texto"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Insertar gráficos es una función gráfica, no avanzada."
+    "respuesta": "A",
+    "explicacion": "Insertar un gráfico es una función gráfica: coloca un objeto sobre la página. · Las otras tres son avanzadas porque el programa hace algo por su cuenta: detecta faltas, propone palabras o recorre el documento entero cambiando lo que se le indique. · La tercera es la que más se discute, porque buscar y sustituir suena a edición pura; se clasifica como avanzada por trabajar sobre todo el documento a la vez y admitir comodines y formato. En Word está en Inicio ▸ Edición, con **Ctrl+L** para reemplazar."
   },
   {
     "id": "interfaz-57",
@@ -746,28 +767,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-58",
-    "enunciado": "¿Cuál de las siguientes define correctamente un procesador de texto?",
+    "revisada": true,
+    "enunciado": "¿Qué diferencia a un procesador de texto de un editor de texto plano como el Bloc de notas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un programa para crear y gestionar hojas de cálculo con fórmulas"
+        "text": "Que guarda el formato junto al texto: fuentes, párrafos, imágenes y diseño de página"
       },
       {
         "letter": "B",
-        "text": "Un programa para crear y editar texto, con opciones de formato"
+        "text": "Que permite escribir textos más largos, sin límite de tamaño"
       },
       {
         "letter": "C",
-        "text": "Un programa para diseñar páginas web mediante código HTML"
+        "text": "Que corrige la ortografía mientras se escribe"
       },
       {
         "letter": "D",
-        "text": "Un programa para gestionar bases de datos relacionales"
+        "text": "Que puede abrir archivos de otros programas del paquete ofimático"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Un procesador de texto permite crear y editar texto, aplicar formato y gestionar el diseño de página."
+    "respuesta": "A",
+    "explicacion": "Un editor plano guarda solo caracteres: al cerrarlo no queda rastro de negritas, márgenes ni imágenes, porque el archivo no tiene dónde apuntarlo. Un procesador guarda el texto y todo lo que lo envuelve. · La corrección ortográfica es el descarte que decide la pregunta: es una función muy visible, pero es una consecuencia, no la diferencia de fondo; hay editores planos que también corrigen. · El tamaño tampoco los separa. · Word, de hecho, puede guardar en texto plano: al hacerlo se pierde todo el formato, que es la prueba del asunto."
   },
   {
     "id": "interfaz-65",
@@ -781,11 +803,12 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-66",
-    "enunciado": "¿Cuántos grupos de funciones básicas distingue el temario en un procesador de texto?",
+    "revisada": true,
+    "enunciado": "La clasificación al uso reparte lo que hace un procesador de texto en varios bloques de funciones. ¿Cuántos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Dos"
+        "text": "Cuatro"
       },
       {
         "letter": "B",
@@ -793,16 +816,16 @@
       },
       {
         "letter": "C",
-        "text": "Cuatro"
+        "text": "Cinco"
       },
       {
         "letter": "D",
-        "text": "Cinco"
+        "text": "Dos"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Los cuatro grupos son: diseño de página, edición de texto, gráficas y avanzadas."
+    "respuesta": "A",
+    "explicacion": "Son cuatro: edición de texto, diseño de página, gráficas y avanzadas. · El error más frecuente es contar tres, juntando edición de texto y diseño de página, que es justamente la frontera más discutida: el tamaño de letra y los márgenes parecen lo mismo y no lo son. La regla rápida es si la acción afecta a los caracteres o a la hoja. · El cuarto bloque, el de las avanzadas, es el que recoge lo que el programa aporta por su cuenta: corregir, proponer sinónimos, traducir, combinar correspondencia."
   },
   {
     "id": "interfaz-67",
@@ -816,28 +839,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-68",
-    "enunciado": "¿Cuál de las siguientes es un ejemplo de función de edición de texto?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas es un ejemplo de función de edición de texto?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modificar los márgenes del documento"
-      },
-      {
-        "letter": "B",
-        "text": "Insertar una tabla en el documento"
-      },
-      {
-        "letter": "C",
         "text": "Aplicar subrayado al texto seleccionado"
       },
       {
+        "letter": "B",
+        "text": "Cambiar los márgenes del documento"
+      },
+      {
+        "letter": "C",
+        "text": "Insertar una tabla"
+      },
+      {
         "letter": "D",
-        "text": "Revisar la ortografía del documento"
+        "text": "Revisar la ortografía"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El subrayado es una función de edición de texto. En Word 365 (versión española) el atajo es Ctrl+S."
+    "respuesta": "A",
+    "explicacion": "El subrayado cambia el aspecto de los caracteres, como la negrita, la cursiva, el tamaño, el color o la alineación. Su atajo en esta instalación es **Ctrl+S**, que a quien venga del esquema internacional le sorprende, porque allí esa combinación guarda. Aquí guardar es Ctrl+G. · Los otros tres descartes cubren los otros tres bloques: márgenes es diseño de página, tabla es gráfica y el corrector es avanzada."
   },
   {
     "id": "interfaz-69",
@@ -851,19 +875,20 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-70",
-    "enunciado": "¿Cuál de las siguientes es una función avanzada del procesador de texto?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas es un ejemplo de función avanzada?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Configurar la numeración de páginas"
+        "text": "Buscar sinónimos de una palabra"
       },
       {
         "letter": "B",
-        "text": "Insertar formas geométricas"
+        "text": "Configurar la numeración de páginas"
       },
       {
         "letter": "C",
-        "text": "Buscar sinónimos de una palabra"
+        "text": "Insertar formas geométricas"
       },
       {
         "letter": "D",
@@ -871,8 +896,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La búsqueda de sinónimos es una función avanzada. En Word 365 (versión española) el atajo es Mayús+F7."
+    "respuesta": "A",
+    "explicacion": "El diccionario de sinónimos aporta conocimiento que el usuario no ha metido en el documento, y eso es lo que define al bloque avanzado, junto al corrector, la traducción y la combinación de correspondencia. Se abre con **Mayús+F7**. · **La numeración de páginas** es el descarte que decide la pregunta, porque también es automática; pero automatismo no es el criterio: la numeración solo reparte un dato que Word ya sabe, y por eso es diseño de página."
   },
   {
     "id": "interfaz-72",
@@ -886,28 +911,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-73",
-    "enunciado": "Cuando el temario afirma que un procesador de texto permite \"introducir nueva información\", ¿a qué se refiere?",
+    "revisada": true,
+    "enunciado": "Se dice que un procesador de texto permite «introducir nueva información» en un documento ya existente. ¿A qué se refiere principalmente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar texto en el documento"
+        "text": "A escribir texto nuevo en cualquier punto del documento"
       },
       {
         "letter": "B",
-        "text": "Insertar imágenes en el documento"
+        "text": "A insertar imágenes en el documento"
       },
       {
         "letter": "C",
-        "text": "Insertar tablas en el documento"
+        "text": "A insertar tablas en el documento"
       },
       {
         "letter": "D",
-        "text": "Insertar encabezados en el documento"
+        "text": "A añadir encabezados y pies de página"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Introducir nueva información se refiere a añadir texto al documento."
+    "explicacion": "Es la capacidad básica que distingue a un procesador de una simple máquina de escribir: el texto ya escrito se puede abrir y ampliar por donde se quiera, y lo demás se recoloca solo. · Los tres descartes son cosas que también se añaden a un documento, y ahí está la dificultad; pero pertenecen a otros bloques de la clasificación —gráficas las dos primeras, diseño de página la tercera— mientras que introducir información es lo propio de la edición de texto, junto con modificarla, moverla y borrarla."
   },
   {
     "id": "interfaz-74",
@@ -921,28 +947,29 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-75",
-    "enunciado": "¿Cuál de las siguientes es una función gráfica del procesador de texto?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas es un ejemplo de función gráfica?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modificar el espaciado entre líneas"
+        "text": "Insertar un gráfico de columnas"
       },
       {
         "letter": "B",
-        "text": "Usar la búsqueda y sustitución de texto"
+        "text": "Cambiar el espaciado entre líneas"
       },
       {
         "letter": "C",
-        "text": "Insertar gráficos en el documento"
+        "text": "Buscar y sustituir una palabra"
       },
       {
         "letter": "D",
-        "text": "Justificar el texto del párrafo"
+        "text": "Justificar un párrafo"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La inserción de gráficos es una función gráfica."
+    "respuesta": "A",
+    "explicacion": "El gráfico es un objeto que se coloca sobre la página, como una imagen, una forma, un diagrama o una tabla. · Los otros tres descartes cubren los otros tres bloques: el espaciado es diseño de página, buscar y sustituir es avanzada y justificar es edición de texto. · Merece la pena fijarse en que un gráfico se apoya en datos numéricos y aun así se clasifica aquí: lo que decide el bloque es que es un objeto visual, no de dónde salga su contenido."
   },
   {
     "id": "interfaz-109",
@@ -956,6 +983,7 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-113",
+    "revisada": true,
     "enunciado": "Señale las funciones que pertenecen al grupo de funciones avanzadas (puede haber más de una):",
     "opciones": [
       {
@@ -981,7 +1009,7 @@
       "C",
       "D"
     ],
-    "explicacion": "Son funciones avanzadas: la revisión ortográfica (F7), la búsqueda de sinónimos (Mayús+F7) y la búsqueda y sustitución (Ctrl+L, accesible desde Inicio > grupo Edición). La numeración de páginas es una función de diseño de página."
+    "explicacion": "Las tres verdaderas comparten que el programa aporta algo por su cuenta: el corrector detecta faltas (**F7**), el diccionario propone palabras (**Mayús+F7**) y buscar y sustituir recorre el documento entero cambiando lo que se le indique, con comodines y formato si hace falta (**Ctrl+L**, o Inicio ▸ Edición). · La numeración de páginas es el descarte que decide la pregunta: también es automática, pero solo reparte un dato que Word ya sabe, y eso la deja en el bloque de diseño de página, con los márgenes y los encabezados."
   },
   {
     "id": "interfaz-104",
@@ -995,6 +1023,7 @@
     "subtopic": null,
     "tema": "Conceptos generales",
     "sourceQuestionId": "1-108",
+    "revisada": true,
     "enunciado": "Relacione cada grupo de funciones con un ejemplo característico:",
     "opciones": [],
     "matching": {
@@ -1047,7 +1076,7 @@
       "3": "B",
       "4": "A"
     },
-    "explicacion": "Emparejamiento correcto: Diseño de página → Configurar numeración de páginas · Edición de texto → Aplicar cursiva · Gráficas → Insertar una tabla · Avanzadas → Buscar sinónimos."
+    "explicacion": "Los cuatro bloques con su ejemplo más claro. · Los dos que suelen cruzarse son la tabla y la numeración de páginas: la tabla parece de texto y es gráfica, porque es un objeto que se coloca; y la numeración parece avanzada por ser automática, pero solo reparte un dato conocido sobre la hoja, así que es diseño de página. · La frontera entre edición de texto y diseño de página se resuelve preguntándose si la acción afecta a los caracteres o al reparto sobre la hoja."
   },
   {
     "id": "interfaz-7",
@@ -1061,28 +1090,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-7",
-    "enunciado": "¿Qué extensión corresponde a un documento de Word habilitado para macros?",
+    "revisada": true,
+    "enunciado": "Has grabado una macro en un documento y al guardarlo Word te obliga a cambiar de formato. ¿Con qué extensión hay que guardarlo?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".DOCM"
+        "text": ".docm"
       },
       {
         "letter": "B",
-        "text": ".DOTM"
+        "text": ".dotm"
       },
       {
         "letter": "C",
-        "text": ".DOCX"
+        "text": ".docx"
       },
       {
         "letter": "D",
-        "text": ".DOTX"
+        "text": ".dotx"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": ".DOCM es la extensión del documento de Word con macros habilitadas."
+    "explicacion": "Las cuatro extensiones se leen por partes: **DOC** es documento y **DOT** plantilla; la **X** final significa sin macros y la **M**, con macros. Un documento con macros es, por tanto, DOC+M. · **.dotm** es el descarte que decide la pregunta: también admite macros, pero es una plantilla, no un documento. · Word obliga a cambiar de formato porque el .docx no tiene dónde guardar el código, y de ahí el aviso al intentar guardar. Es también una medida de seguridad: al ver la extensión se sabe si un archivo puede traer código."
   },
   {
     "id": "interfaz-8",
@@ -1096,28 +1126,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-8",
-    "enunciado": "¿Qué extensión corresponde a una plantilla de Word SIN macros habilitadas?",
+    "revisada": true,
+    "enunciado": "¿Qué extensión corresponde a una plantilla de Word sin macros?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".DOTX"
+        "text": ".dotx"
       },
       {
         "letter": "B",
-        "text": ".DOTM"
+        "text": ".dotm"
       },
       {
         "letter": "C",
-        "text": ".DOCX"
+        "text": ".docx"
       },
       {
         "letter": "D",
-        "text": ".DOCM"
+        "text": ".docm"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": ".DOTX es la extensión de la plantilla de Word sin macros."
+    "explicacion": "DOT identifica la plantilla y la X final la ausencia de macros. · **.dotm** es el descarte que decide la pregunta: misma plantilla, pero con macros; solo cambia la última letra. · Una plantilla no se abre para editarla sino para crear a partir de ella: al hacer doble clic, Word abre un documento nuevo con su contenido y formato, y la plantilla se queda intacta. · La plantilla global de Word, la que guarda los estilos y autotextos de todos los documentos, es **Normal.dotm**, con M porque puede llevar macros."
   },
   {
     "id": "interfaz-9",
@@ -1131,28 +1162,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-9",
-    "enunciado": "La extensión.DOTM corresponde a:",
+    "revisada": true,
+    "enunciado": "¿A qué corresponde la extensión .dotm?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Plantilla de Word habilitada para macros"
+        "text": "A una plantilla con macros"
       },
       {
         "letter": "B",
-        "text": "Documento de Word habilitado para macros"
+        "text": "A un documento con macros"
       },
       {
         "letter": "C",
-        "text": "Documento de Word estándar"
+        "text": "A una plantilla sin macros"
       },
       {
         "letter": "D",
-        "text": "Plantilla de Word estándar"
+        "text": "A un documento sin macros"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": ".DOTM es la plantilla de Word con macros habilitadas."
+    "explicacion": "DOT de plantilla y M de macros. Es la extensión de **Normal.dotm**, la plantilla global que Word carga siempre y en la que se guardan los estilos, los autotextos y las macros que se quieran tener disponibles en todos los documentos. · **.docm** es el descarte que decide la pregunta: también lleva macros, pero es un documento. · Se lee en dos pasos, y con eso se resuelven las cuatro: DOC o DOT dice qué es, y X o M dice si puede traer código."
   },
   {
     "id": "interfaz-10",
@@ -1166,28 +1198,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-10",
-    "enunciado": "¿Cuál de los siguientes caracteres SÍ está permitido en el nombre de un archivo?",
+    "revisada": true,
+    "enunciado": "Al guardar un documento, Windows no admite ciertos caracteres en el nombre del archivo. ¿Cuál de estos SÍ está permitido?",
     "opciones": [
       {
         "letter": "A",
-        "text": "- (guion medio)"
+        "text": "El guion"
       },
       {
         "letter": "B",
-        "text": "* (asterisco)"
+        "text": "El asterisco"
       },
       {
         "letter": "C",
-        "text": ": (dos puntos)"
+        "text": "Los dos puntos"
       },
       {
         "letter": "D",
-        "text": "| (barra vertical)"
+        "text": "La barra vertical"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El guion medio es válido. El asterisco, los dos puntos y la barra vertical están en la lista de caracteres prohibidos de Windows: \\ / : * ? \" < > |"
+    "explicacion": "Los prohibidos son nueve: barra inversa, barra, dos puntos, asterisco, interrogación de cierre, comillas dobles, menor que, mayor que y barra vertical. Todos los demás valen, incluidos el guion, el guion bajo, los paréntesis, la coma, el punto y las tildes. · Cada uno está prohibido por un motivo: las barras separan carpetas, los dos puntos identifican la unidad, y el asterisco y la interrogación son comodines de búsqueda. · La interrogación de APERTURA sí se admite, porque solo existe en español y no es comodín."
   },
   {
     "id": "interfaz-11",
@@ -1201,28 +1234,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-11",
-    "enunciado": "¿Cuántos caracteres distintos están prohibidos para nombrar un archivo según las reglas de Windows?",
+    "revisada": true,
+    "enunciado": "¿Cuántos caracteres prohíbe Windows en el nombre de un archivo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "6"
+        "text": "9"
       },
       {
         "letter": "B",
-        "text": "7"
+        "text": "6"
       },
       {
         "letter": "C",
-        "text": "8"
+        "text": "7"
       },
       {
         "letter": "D",
-        "text": "9"
+        "text": "8"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Windows prohíbe exactamente 9 caracteres: \\ / : * ? \" < > | El signo ¿ NO está entre ellos y sí está permitido."
+    "respuesta": "A",
+    "explicacion": "Son barra inversa, barra, dos puntos, asterisco, interrogación de cierre, comillas dobles, menor que, mayor que y barra vertical. · Se recuerdan mejor por su motivo que de memoria: las dos barras separan carpetas, los dos puntos identifican la unidad, el asterisco y la interrogación son comodines de búsqueda, los signos de menor y mayor redirigen la salida en la consola, y las comillas agrupan rutas con espacios. · La interrogación de apertura no está prohibida: no es comodín."
   },
   {
     "id": "interfaz-12",
@@ -1236,28 +1270,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-12",
-    "enunciado": "Un archivo.docx se comporta internamente como:",
+    "revisada": true,
+    "enunciado": "¿Cómo está construido por dentro un archivo .docx?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un paquete ZIP que almacena el contenido en archivos XML"
+        "text": "Es un paquete comprimido en ZIP con varios archivos XML dentro"
       },
       {
         "letter": "B",
-        "text": "Un archivo binario que almacena el contenido en texto plano"
+        "text": "Es un archivo binario que guarda el texto en claro"
       },
       {
         "letter": "C",
-        "text": "Un archivo RAR que almacena el contenido sin comprimir"
+        "text": "Es un archivo comprimido en RAR con el documento sin comprimir"
       },
       {
         "letter": "D",
-        "text": "Un archivo ISO que almacena una imagen del documento"
+        "text": "Es una imagen de disco que reproduce el documento tal cual"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El .docx es un paquete ZIP (estándar OOXML) cuyo contenido principal son archivos XML (WordprocessingML)."
+    "explicacion": "Dentro conviven varias piezas: el texto en un XML, los estilos en otro, y las imágenes como archivos aparte, todo empaquetado y comprimido. Es el estándar OOXML, que Microsoft adoptó a partir de Word 2007. · **El archivo binario** es el descarte que decide la pregunta, y es justo lo que era el antiguo .doc: un bloque cerrado y propietario, difícil de leer con otro programa y más frágil ante una corrupción. · El cambio explica de golpe el menor tamaño, la interoperabilidad y la X de la extensión."
   },
   {
     "id": "interfaz-13",
@@ -1271,28 +1306,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-13",
-    "enunciado": "El contenido de un archivo.docx se almacena en:",
+    "revisada": true,
+    "enunciado": "Si cambias la extensión de un .docx por .zip y lo abres con el explorador, ¿qué encuentras?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivos XML dentro de un paquete ZIP"
+        "text": "Carpetas con archivos XML y las imágenes del documento como archivos sueltos"
       },
       {
         "letter": "B",
-        "text": "Archivos HTML y hojas de estilo"
+        "text": "Un único archivo de texto con todo el contenido del documento"
       },
       {
         "letter": "C",
-        "text": "Archivos JSON y XML"
+        "text": "Nada: el archivo no se puede abrir como comprimido"
       },
       {
         "letter": "D",
-        "text": "Un único archivo XML sin comprimir"
+        "text": "Un archivo HTML con hojas de estilo, como una página web"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El estándar OOXML almacena el texto en document.xml y los recursos como partes del paquete ZIP."
+    "explicacion": "Es literalmente un ZIP con otro nombre, así que se abre sin más: dentro está el texto en document.xml, los estilos en styles.xml y las imágenes en su propia carpeta, cada una como archivo independiente. · De ahí sale un truco útil: sacar todas las imágenes de un documento sin ir una por una. · Y también explica por qué a veces un .docx dañado se puede recuperar en parte, cosa casi imposible con el antiguo .doc, que era un bloque binario cerrado."
   },
   {
     "id": "interfaz-14",
@@ -1306,28 +1342,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-14",
-    "enunciado": "La \"x\" de la extensión.docx proviene de:",
+    "revisada": true,
+    "enunciado": "¿De dónde viene la «x» final de la extensión .docx?",
     "opciones": [
       {
         "letter": "A",
-        "text": "XML"
+        "text": "De XML, el lenguaje en que se guarda el contenido"
       },
       {
         "letter": "B",
-        "text": "Excel"
+        "text": "De «eXtended», por ser una versión ampliada del .doc"
       },
       {
         "letter": "C",
-        "text": "eXtended"
+        "text": "De «eXecutable», porque puede ejecutar código"
       },
       {
         "letter": "D",
-        "text": "eXecutable"
+        "text": "De Excel, el programa con el que comparte formato de paquete"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La x viene de XML (Extensible Markup Language)."
+    "explicacion": "Desde Word 2007 el contenido se guarda en archivos XML metidos en un paquete comprimido, y la letra lo indica. Lo mismo pasa con .xlsx y .pptx. · **«eXtended»** es el descarte que decide la pregunta: suena razonabilísimo porque el formato sí amplía al .doc, pero no es de donde viene. · Lo de ejecutable es justo lo contrario: la X significa que NO lleva macros; para eso está la M. · Y Excel comparte la idea de paquete, pero la letra no viene de ahí."
   },
   {
     "id": "interfaz-15",
@@ -1341,28 +1378,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-15",
-    "enunciado": "Respecto al formato.doc, ¿cuál es la ventaja técnica fundamental del formato.docx?",
+    "revisada": true,
+    "enunciado": "¿Cuál es la ventaja técnica de fondo del .docx frente al antiguo .doc?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ocupa menos espacio en disco gracias a la compresión ZIP del contenido"
+        "text": "Que guarda el contenido en XML dentro de un paquete comprimido, en vez de en un bloque binario"
       },
       {
         "letter": "B",
-        "text": "Permite ejecutar macros sin necesidad de cambiar la extensión"
+        "text": "Que permite ejecutar macros sin tener que cambiar la extensión"
       },
       {
         "letter": "C",
-        "text": "Es compatible con todas las versiones anteriores de Word sin excepción"
+        "text": "Que lo abren sin problemas todas las versiones anteriores de Word"
       },
       {
         "letter": "D",
-        "text": "No requiere extensión de archivo para ser abierto"
+        "text": "Que se puede abrir aunque el archivo no tenga extensión"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El .docx comprime su contenido en un paquete ZIP, lo que reduce el espacio ocupado y mejora la interoperabilidad al basarse en XML abierto."
+    "explicacion": "De ahí salen todas las demás ventajas: ocupa menos porque va comprimido, otros programas pueden leerlo porque el XML es legible, y un archivo dañado se puede recuperar en parte porque las piezas están separadas. · **Lo de las macros** es el descarte que decide la pregunta y dice lo contrario de la verdad: el .docx precisamente NO las admite, y hay que guardar como .docm. · Y la compatibilidad hacia atrás es al revés: Word 2003 necesita un convertidor para abrirlo."
   },
   {
     "id": "interfaz-16",
@@ -1376,7 +1414,8 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-16",
-    "enunciado": "XML es el acrónimo de:",
+    "revisada": true,
+    "enunciado": "¿Qué significan las siglas XML?",
     "opciones": [
       {
         "letter": "A",
@@ -1397,7 +1436,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "XML significa Extensible Markup Language, es decir, Lenguaje de Marcas Extensible."
+    "explicacion": "En español, lenguaje de marcas extensible. «De marcas» porque el contenido va rodeado de etiquetas que dicen qué es cada cosa, y «extensible» porque cada quien define sus propias etiquetas: las de Word describen párrafos, estilos y tablas. · Es lo que hay dentro de un .docx, y de ahí la X de la extensión. · Los tres descartes cambian una palabra cada uno y suenan igual de técnicos, que es exactamente el tipo de pregunta que se falla por ir deprisa."
   },
   {
     "id": "interfaz-17",
@@ -1411,28 +1450,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-17",
-    "enunciado": "¿Cuál es la función principal del lenguaje XML?",
+    "revisada": true,
+    "enunciado": "¿Para qué sirve un lenguaje de marcas como XML?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Organizar y etiquetar documentos mediante marcas"
+        "text": "Para etiquetar el contenido de modo que se sepa qué es cada parte"
       },
       {
         "letter": "B",
-        "text": "Comprimir archivos en paquetes ZIP"
+        "text": "Para comprimir archivos en paquetes más pequeños"
       },
       {
         "letter": "C",
-        "text": "Ejecutar macros automáticamente en documentos"
+        "text": "Para ejecutar instrucciones automáticas dentro de un documento"
       },
       {
         "letter": "D",
-        "text": "Corregir la ortografía y la gramática del texto"
+        "text": "Para corregir la ortografía y la gramática de un texto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "XML es un lenguaje de marcas extensible cuya función principal es organizar y etiquetar documentos."
+    "explicacion": "Rodea cada trozo de contenido con etiquetas que lo describen, así que un programa distinto de Word puede leer un .docx y saber qué es un título, qué un párrafo y qué una tabla, sin adivinar nada. · **La compresión** es el descarte que decide la pregunta, porque las dos cosas conviven en un .docx: el XML describe y el ZIP empaqueta. Son dos capas distintas. · Ejecutar instrucciones es cosa de las macros, y corregir, del corrector: ninguna de las dos tiene que ver con el formato del archivo."
   },
   {
     "id": "interfaz-18",
@@ -1446,7 +1486,8 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-18",
-    "enunciado": "El término inglés \"Template\" equivale en español a:",
+    "revisada": true,
+    "enunciado": "¿Cómo se traduce al español el término inglés «template», que da nombre a las extensiones .dotx y .dotm?",
     "opciones": [
       {
         "letter": "A",
@@ -1467,7 +1508,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Template se traduce al español como plantilla."
+    "explicacion": "De ahí vienen las tres primeras letras: DOT es la abreviatura de «document template». · Una plantilla no se edita, se usa: al abrirla, Word crea un documento nuevo con su contenido y su formato y la deja intacta. · **«Esquema»** es el descarte que decide la pregunta porque en Word existe algo con ese nombre —la vista Esquema, para reorganizar un documento por niveles de título—, y no tiene nada que ver. · La plantilla global de Word es Normal.dotm."
   },
   {
     "id": "interfaz-19",
@@ -1481,28 +1522,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-19",
-    "enunciado": "¿Por qué el formato.docx es más adecuado que.doc para enviar documentos por correo electrónico?",
+    "revisada": true,
+    "enunciado": "¿Por qué pesa menos un .docx que el mismo documento guardado en .doc?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Porque ocupa menos espacio al estar comprimido en un paquete ZIP"
+        "text": "Porque su contenido va comprimido dentro de un paquete ZIP"
       },
       {
         "letter": "B",
-        "text": "Porque mejora la ortografía automáticamente antes del envío"
+        "text": "Porque guarda menos información sobre el formato del documento"
       },
       {
         "letter": "C",
-        "text": "Porque permite añadir firmas digitales al adjunto"
+        "text": "Porque reduce la resolución de las imágenes al guardar"
       },
       {
         "letter": "D",
-        "text": "Porque bloquea la ejecución de macros maliciosas"
+        "text": "Porque no guarda el historial de cambios ni los comentarios"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El .docx está comprimido en ZIP, lo que reduce el peso del archivo adjunto."
+    "explicacion": "El texto y el formato son XML, es decir, texto plano lleno de etiquetas, que se comprime muchísimo; el paquete se descomprime al abrirlo. Con un documento largo la diferencia es notable, y por eso es mejor para enviar por correo. · Los tres descartes dan explicaciones que implicarían pérdida de información, y ahí está la clave: no se pierde nada, solo se guarda de otra forma. Las imágenes sí se pueden reducir, pero eso lo hace «Comprimir imágenes», a mano, no el formato."
   },
   {
     "id": "interfaz-20",
@@ -1516,28 +1558,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-20",
-    "enunciado": "¿Cuál es la diferencia fundamental entre un archivo.DOCX y uno.DOTX?",
+    "revisada": true,
+    "enunciado": "¿Qué diferencia hay entre un .docx y un .dotx?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".DOCX es un documento y .DOTX es una plantilla"
+        "text": "Que uno es un documento y otro una plantilla; ninguno admite macros"
       },
       {
         "letter": "B",
-        "text": ".DOCX es una plantilla y .DOTX es un documento"
+        "text": "Que uno es una plantilla y otro un documento; ninguno admite macros"
       },
       {
         "letter": "C",
-        "text": "Ambos son plantillas, pero .DOTX admite macros"
+        "text": "Que los dos son plantillas, y solo el segundo admite macros"
       },
       {
         "letter": "D",
-        "text": ".DOTX contiene macros y .DOCX no"
+        "text": "Que el segundo admite macros y el primero no"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ninguna de las dos extensiones admite macros (no llevan la M), pero .DOCX es un documento y .DOTX es una plantilla."
+    "explicacion": "Las dos acaban en X, así que ninguna guarda código: eso lo dice la última letra. Lo que las separa son las tres primeras, DOC frente a DOT. · La versión con los papeles cambiados es el descarte que decide la pregunta y hay que leerla despacio. · La diferencia práctica está en qué pasa al abrirlas: el documento se abre para editarlo; la plantilla abre un documento NUEVO con su contenido, y ella misma no se toca, que es lo que permite reutilizarla mil veces."
   },
   {
     "id": "interfaz-23",
@@ -1551,28 +1594,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-23",
-    "enunciado": "¿Qué extensión corresponde a un documento de Word estándar sin macros?",
+    "revisada": true,
+    "enunciado": "Las cuatro extensiones modernas de Word se leen en dos partes. ¿Cuál es la regla?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".docm"
+        "text": "DOC o DOT dice si es documento o plantilla; X o M, si lleva macros"
       },
       {
         "letter": "B",
-        "text": ".docx"
+        "text": "DOC o DOT dice si lleva macros; X o M, si es documento o plantilla"
       },
       {
         "letter": "C",
-        "text": ".dotx"
+        "text": "DOC o DOT dice la versión de Word; X o M, si está comprimido"
       },
       {
         "letter": "D",
-        "text": ".dotm"
+        "text": "DOC o DOT dice si está comprimido; X o M, la versión de Word"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": ".docx es la extensión del documento estándar de Word sin macros."
+    "respuesta": "A",
+    "explicacion": "Con esa regla salen las cuatro sin memorizarlas: .docx documento sin macros, .docm documento con macros, .dotx plantilla sin macros, .dotm plantilla con macros. · La X viene de XML, que es el formato en que se guarda el contenido desde Word 2007, y la M de macro. · La versión con los papeles cambiados es el descarte que decide la pregunta. · La compresión no la indica ninguna letra: los cuatro formatos son paquetes comprimidos por igual."
   },
   {
     "id": "interfaz-24",
@@ -1586,28 +1630,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-24",
-    "enunciado": "Un usuario necesita guardar un documento que contiene macros escritas en VBA. ¿Qué extensión debe utilizar?",
+    "revisada": true,
+    "enunciado": "Las macros de Word se escriben en VBA. ¿Qué significan esas siglas y qué extensión hace falta para guardarlas?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".docx"
+        "text": "Visual Basic para Aplicaciones; hay que guardar en .docm"
       },
       {
         "letter": "B",
-        "text": ".dotx"
+        "text": "Visual Basic para Aplicaciones; hay que guardar en .docx"
       },
       {
         "letter": "C",
-        "text": ".docm"
+        "text": "Visual Basic Avanzado; hay que guardar en .docm"
       },
       {
         "letter": "D",
-        "text": ".dot"
+        "text": "Visual Basic para Automatización; hay que guardar en .dotm"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": ".docm es la extensión del documento de Word habilitado para macros VBA."
+    "respuesta": "A",
+    "explicacion": "VBA es el lenguaje de programación que comparten todos los programas de Office, y su editor se abre con **Alt+F11**. · El .docx no tiene dónde guardar ese código: al intentarlo, Word avisa y ofrece guardar sin las macros o cambiar de formato. Ese aviso es el descarte que decide la pregunta. · El .dotm también admite macros, pero es una plantilla; para un documento suelto la extensión es .docm. · La lista de «Guardar como» las nombra literalmente «habilitado con macros»."
   },
   {
     "id": "interfaz-25",
@@ -1621,28 +1666,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-25",
-    "enunciado": "¿Cuál de las siguientes extensiones corresponde a una plantilla de Word que NO admite macros?",
+    "revisada": true,
+    "enunciado": "De estas cuatro extensiones, señale la que NO admite macros:",
     "opciones": [
       {
         "letter": "A",
-        "text": ".dotm"
+        "text": ".dotx"
       },
       {
         "letter": "B",
-        "text": ".docm"
+        "text": ".dotm"
       },
       {
         "letter": "C",
-        "text": ".docx"
+        "text": ".docm"
       },
       {
         "letter": "D",
-        "text": ".dotx"
+        "text": ".dot"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": ".dotx es la plantilla de Word sin macros habilitadas."
+    "respuesta": "A",
+    "explicacion": "La letra final lo dice todo: X significa sin macros y M, con macros. Solo la primera acaba en X. · **.dot** es el descarte que decide la pregunta, y es el más difícil: es la plantilla del formato antiguo, anterior a 2007, y como entonces no había distinción de sufijos, admitía macros sin más. Sigue apareciendo en la lista de «Guardar como» como «Plantilla de Word 97-2003». · Precisamente esa ambigüedad del formato antiguo fue lo que llevó a separar X y M."
   },
   {
     "id": "interfaz-26",
@@ -1656,28 +1702,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-26",
-    "enunciado": "Según las reglas de Windows, ¿cuál de los siguientes caracteres NO está permitido en el nombre de un archivo?",
+    "revisada": true,
+    "enunciado": "Señale el carácter que NO se puede usar en el nombre de un archivo de Windows:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El guion medio (-)"
+        "text": "El signo de interrogación de cierre"
       },
       {
         "letter": "B",
-        "text": "El guion bajo (_)"
+        "text": "El guion que separa palabras"
       },
       {
         "letter": "C",
-        "text": "El signo de interrogación de cierre (?)"
+        "text": "El guion bajo de las siglas"
       },
       {
         "letter": "D",
-        "text": "El punto (.)"
+        "text": "El punto entre dos palabras"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Windows prohíbe los siguientes 9 caracteres: \\ / : * ? \" < > | El guion medio, el guion bajo y el punto sí están permitidos."
+    "respuesta": "A",
+    "explicacion": "La interrogación de cierre es un comodín de búsqueda —sustituye a un carácter cualquiera— y por eso está entre los nueve prohibidos, junto al asterisco, que sustituye a varios. · **El punto** es el descarte que decide la pregunta: se puede usar cuantas veces se quiera dentro del nombre, y lo que Word toma como extensión es lo que va detrás del ÚLTIMO punto. · La interrogación de apertura sí se admite: solo existe en español y no es comodín de nada."
   },
   {
     "id": "interfaz-27",
@@ -1691,28 +1738,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-27",
-    "enunciado": "Un usuario intenta guardar un archivo con el nombre \"Informe*Final\". ¿Qué ocurrirá?",
+    "revisada": true,
+    "enunciado": "Intentas guardar un documento con el nombre «Informe*Final». ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El archivo se guardará correctamente, ya que el asterisco es válido"
+        "text": "Word avisa de que el nombre no es válido y no guarda hasta corregirlo"
       },
       {
         "letter": "B",
-        "text": "Word mostrará un error porque el asterisco es un carácter prohibido"
+        "text": "Se guarda sin más: el asterisco es válido en un nombre de archivo"
       },
       {
         "letter": "C",
-        "text": "Word sustituirá automáticamente el asterisco por un guion bajo"
+        "text": "Se guarda, pero Word cambia el asterisco por un guion bajo"
       },
       {
         "letter": "D",
-        "text": "El archivo se guardará pero perderá la extensión .docx"
+        "text": "Se guarda, pero el archivo pierde la extensión .docx"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El asterisco (*) está en la lista de caracteres prohibidos de Windows: \\ / : * ? \" < > |"
+    "respuesta": "A",
+    "explicacion": "El asterisco es uno de los nueve caracteres prohibidos, porque en Windows es un comodín de búsqueda: un nombre con asterisco haría imposible distinguir el archivo de un patrón. · **Que Word lo sustituya solo** es el descarte que decide la pregunta, y es creíble porque el programa corrige otras cosas por su cuenta; aquí no lo hace: la restricción es del sistema de archivos, no de Word, y se limita a avisar. · Los otros ocho son barra inversa, barra, dos puntos, interrogación de cierre, comillas dobles, menor, mayor y barra vertical."
   },
   {
     "id": "interfaz-28",
@@ -1726,28 +1774,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-28",
-    "enunciado": "¿Cuál de los siguientes caracteres SÍ está permitido en el nombre de un archivo en Windows?",
+    "revisada": true,
+    "enunciado": "De estos cuatro signos, ¿cuál SÍ se admite en el nombre de un archivo de Windows?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El signo de apertura de interrogación (¿)"
+        "text": "El signo de apertura de interrogación"
       },
       {
         "letter": "B",
-        "text": "La barra vertical (|)"
+        "text": "La barra vertical de la consola"
       },
       {
         "letter": "C",
-        "text": "Los dos puntos (:)"
+        "text": "Los dos puntos de la unidad"
       },
       {
         "letter": "D",
-        "text": "El asterisco (*)"
+        "text": "El asterisco de los comodines"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El signo ¿ no forma parte de los caracteres prohibidos por Windows (\\ / : * ? \" < > |), por lo que es válido. La barra vertical, los dos puntos y el asterisco sí están prohibidos."
+    "explicacion": "Es el caso más curioso de los nueve prohibidos: la interrogación de CIERRE está vetada por ser comodín de búsqueda, y la de APERTURA, que solo existe en español, no lo está y se puede usar sin problema. · Los otros tres están prohibidos cada uno por su motivo: la barra vertical encadena órdenes en la consola, los dos puntos identifican la unidad de disco y el asterisco es el otro comodín. · Con las tildes y la eñe no hay problema ninguno."
   },
   {
     "id": "interfaz-29",
@@ -1761,28 +1810,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-29",
-    "enunciado": "Un archivo con extensión.docx se comporta internamente como:",
+    "revisada": true,
+    "enunciado": "¿Qué pasa cuando Word abre un archivo .docx?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un archivo binario que almacena el contenido codificado"
+        "text": "Descomprime el paquete y lee los archivos XML que lleva dentro"
       },
       {
         "letter": "B",
-        "text": "Un paquete ZIP comprimido que contiene archivos XML"
+        "text": "Comprime el contenido para poder mostrarlo en pantalla"
       },
       {
         "letter": "C",
-        "text": "Una base de datos relacional que almacena el contenido en tablas"
+        "text": "Lee un único archivo binario codificado de principio a fin"
       },
       {
         "letter": "D",
-        "text": "Un archivo XML sin comprimir que se abre directamente"
+        "text": "Consulta una base de datos interna organizada en tablas"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El .docx es un paquete ZIP (OOXML) que contiene el contenido en archivos XML (WordprocessingML)."
+    "respuesta": "A",
+    "explicacion": "El .docx es un paquete comprimido, así que abrirlo es descomprimirlo y leer sus piezas: el texto en un XML, los estilos en otro, las imágenes como archivos sueltos. La compresión ocurre al GUARDAR, no al abrir. · Ese error de sentido es el descarte que decide la pregunta y aparece con frecuencia enunciado al revés. · El archivo binario es lo que era el antiguo .doc, un bloque cerrado que solo Word sabía interpretar."
   },
   {
     "id": "interfaz-30",
@@ -1796,28 +1846,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-30",
-    "enunciado": "¿Cuál de las siguientes afirmaciones sobre el formato.docx es FALSA?",
+    "revisada": true,
+    "enunciado": "Abres en Word 365 un documento guardado en el antiguo formato .doc. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Es más rápido de abrir que el formato .doc"
+        "text": "Se abre en modo de compatibilidad, con algunas funciones nuevas desactivadas"
       },
       {
         "letter": "B",
-        "text": "Ocupa menos espacio que el formato .doc"
+        "text": "Word lo convierte solo a .docx y avisa al terminar"
       },
       {
         "letter": "C",
-        "text": "Es ventajoso para el envío de documentos por correo electrónico"
+        "text": "Word no puede abrirlo: hace falta un convertidor aparte"
       },
       {
         "letter": "D",
-        "text": "Al abrirlo, el contenido se comprime nuevamente para mostrarse"
+        "text": "Se abre con normalidad, sin ninguna diferencia respecto a un .docx"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Al abrir un .docx el contenido se descomprime, no se comprime. La compresión ocurre al guardar, no al abrir."
+    "respuesta": "A",
+    "explicacion": "La barra de título lo indica con «[Modo de compatibilidad]», y Word desactiva lo que el formato antiguo no sabría guardar. Se sale con Archivo ▸ Información ▸ **Convertir**, o guardando como .docx. · **Que lo convierta solo** es el descarte que decide la pregunta: no lo hace, porque cambiaría el formato de un archivo que quizá haya que devolver a alguien con Word antiguo. · La incompatibilidad es al revés: es Word 2003 el que necesita un convertidor para leer un .docx."
   },
   {
     "id": "interfaz-31",
@@ -1831,28 +1882,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-31",
-    "enunciado": "La \"x\" en la extensión.docx proviene de:",
+    "revisada": true,
+    "enunciado": "Las extensiones .docx, .xlsx y .pptx comparten la misma letra final. ¿Qué indica?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La palabra \"executable\""
+        "text": "Que el contenido se guarda en XML dentro de un paquete comprimido"
       },
       {
         "letter": "B",
-        "text": "La palabra \"XML\""
+        "text": "Que el archivo puede ejecutar código"
       },
       {
         "letter": "C",
-        "text": "La palabra \"extended\""
+        "text": "Que son versiones ampliadas de los formatos anteriores"
       },
       {
         "letter": "D",
-        "text": "La palabra \"exchange\""
+        "text": "Que se pueden intercambiar entre los distintos programas de Office"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La x viene de XML (Extensible Markup Language)."
+    "respuesta": "A",
+    "explicacion": "Es el estándar OOXML, común a Word, Excel y PowerPoint desde la versión 2007: cada uno guarda lo suyo en archivos XML metidos en un ZIP. · **Ejecutar código** es justo lo contrario: la X significa que NO hay macros, y para eso están .docm, .xlsm y .pptm. Ese es el descarte que decide la pregunta, porque «x de ejecutable» suena razonable en informática. · Que el formato sea común no significa que los archivos se intercambien: cada programa lee el suyo."
   },
   {
     "id": "interfaz-32",
@@ -1866,15 +1918,16 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-32",
-    "enunciado": "¿Cuál de las siguientes describe correctamente el lenguaje XML?",
+    "revisada": true,
+    "enunciado": "¿Qué es XML?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un lenguaje de programación orientado a objetos similar a Java"
+        "text": "Un lenguaje de marcas que etiqueta el contenido para describir qué es cada parte"
       },
       {
         "letter": "B",
-        "text": "Un lenguaje de marcas extensible para organizar y etiquetar documentos"
+        "text": "Un lenguaje de programación orientado a objetos, parecido a Java"
       },
       {
         "letter": "C",
@@ -1882,12 +1935,12 @@
       },
       {
         "letter": "D",
-        "text": "Un estándar de compresión de datos equivalente a ZIP"
+        "text": "Un método de compresión de datos equivalente al ZIP"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "XML (Extensible Markup Language) es un lenguaje de marcas extensible cuya función es organizar y etiquetar documentos."
+    "respuesta": "A",
+    "explicacion": "No ejecuta nada ni comprime nada: solo describe. Cada trozo de contenido va rodeado de etiquetas que dicen si es un párrafo, un título o una celda, y por eso otro programa puede leer un .docx sin adivinar. · **La compresión** es el descarte que decide la pregunta, porque las dos cosas conviven dentro de un .docx: el XML describe y el ZIP empaqueta, y se confunden con facilidad. · «Extensible» significa que cada aplicación define sus propias etiquetas: las de Word son WordprocessingML."
   },
   {
     "id": "interfaz-33",
@@ -1901,28 +1954,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-33",
-    "enunciado": "¿Cuál es la principal diferencia técnica entre un archivo.doc y uno.docx?",
+    "revisada": true,
+    "enunciado": "¿Cuál es la diferencia técnica de fondo entre .doc y .docx?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El .docx solo puede abrirse en Word 365; el .doc en todas las versiones"
+        "text": "Que el .doc es un formato binario cerrado y el .docx guarda XML en un paquete comprimido"
       },
       {
         "letter": "B",
-        "text": "El .docx está basado en el estándar XML (OOXML); el .doc es un formato binario"
+        "text": "Que el .docx solo lo abre Word 365 y el .doc lo abre cualquier versión"
       },
       {
         "letter": "C",
-        "text": "El .doc es más rápido y ocupa menos espacio que el .docx"
+        "text": "Que el .doc ocupa menos y se abre más rápido que el .docx"
       },
       {
         "letter": "D",
-        "text": "El .docx no puede contener imágenes, pero el .doc sí"
+        "text": "Que el .doc admite imágenes y el .docx no"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La diferencia fundamental es el formato de almacenamiento: .docx usa XML (OOXML) y .doc usa formato binario propietario."
+    "respuesta": "A",
+    "explicacion": "De ahí salen todas las demás diferencias: el .docx ocupa menos porque va comprimido, lo pueden leer otros programas porque el XML es abierto y legible, y un archivo dañado se recupera en parte porque las piezas están separadas. · **Lo de la compatibilidad** es el descarte que decide la pregunta y está al revés: el .docx lo abre cualquier Word desde 2007, y es Word 2003 el que necesita un convertidor. · Los dos siguen en la lista de «Guardar como», el antiguo como «Documento de Word 97-2003»."
   },
   {
     "id": "interfaz-34",
@@ -1936,15 +1990,16 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-34",
-    "enunciado": "Un usuario quiere crear una plantilla reutilizable que incluya automatizaciones mediante macros. ¿Qué extensión debe usar?",
+    "revisada": true,
+    "enunciado": "Quieres crear un modelo reutilizable de escrito que además lleve macros. ¿Qué extensión hay que usar?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".dotx"
+        "text": ".dotm"
       },
       {
         "letter": "B",
-        "text": ".dotm"
+        "text": ".dotx"
       },
       {
         "letter": "C",
@@ -1956,8 +2011,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": ".dotm es la extensión de la plantilla de Word con macros habilitadas."
+    "respuesta": "A",
+    "explicacion": "Hacen falta las dos condiciones: DOT porque es una plantilla y M porque lleva código. · Los dos primeros descartes fallan cada uno en una letra, que es lo que hace la pregunta: **.dotx** es plantilla pero sin macros, y **.docm** admite macros pero es un documento suelto, así que habría que duplicarlo a mano cada vez. · Es la extensión de **Normal.dotm**, la plantilla global que Word carga siempre y donde se guardan los estilos, autotextos y macros disponibles en todos los documentos."
   },
   {
     "id": "interfaz-38",
@@ -1971,28 +2026,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-38",
-    "enunciado": "¿Cuál de las siguientes afirmaciones es VERDADERA respecto a las extensiones DOCX y DOCM?",
+    "revisada": true,
+    "enunciado": "¿Qué separa a un .docx de un .docm?",
     "opciones": [
       {
         "letter": "A",
-        "text": "DOCX está habilitado para macros; DOCM no lo está"
+        "text": "Que el .docm puede contener macros y el .docx no"
       },
       {
         "letter": "B",
-        "text": "DOCX no puede contener macros; DOCM sí puede"
+        "text": "Que el .docx puede contener macros y el .docm no"
       },
       {
         "letter": "C",
-        "text": "Ambas extensiones son idénticas en funcionalidad"
+        "text": "Que el .docm es una plantilla y el .docx un documento"
       },
       {
         "letter": "D",
-        "text": "DOCM es una plantilla, no un documento"
+        "text": "Que son idénticos: solo cambia el nombre de la extensión"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "DOCX es un documento sin macros y DOCM es un documento con macros habilitadas."
+    "respuesta": "A",
+    "explicacion": "Las dos empiezan por DOC, así que las dos son documentos; lo que cambia es la última letra, X sin macros y M con macros. · La versión invertida es el descarte que decide la pregunta y hay que leerla despacio. · La distinción existe por seguridad: al ver la extensión se sabe si un archivo puede traer código, y por eso Word no deja guardar macros en un .docx sin avisar. La plantilla equivalente sería .dotm."
   },
   {
     "id": "interfaz-39",
@@ -2006,28 +2062,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-39",
-    "enunciado": "¿Qué es una plantilla en Word 365?",
+    "revisada": true,
+    "enunciado": "¿Qué es una plantilla de Word y en qué se nota al abrirla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un archivo que contiene macros para automatizar tareas repetitivas"
+        "text": "Un modelo: al abrirla, Word crea un documento nuevo con su contenido y ella queda intacta"
       },
       {
         "letter": "B",
-        "text": "Un archivo que sirve como modelo para crear nuevos documentos"
+        "text": "Un archivo con macros para automatizar tareas repetitivas"
       },
       {
         "letter": "C",
-        "text": "Un formato de imagen vectorial insertable en documentos"
+        "text": "Un documento protegido contra escritura que solo se puede leer"
       },
       {
         "letter": "D",
-        "text": "Una herramienta de revisión ortográfica automática"
+        "text": "Un formato de imagen vectorial que se inserta en los documentos"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Una plantilla es un archivo que sirve como modelo para crear nuevos documentos con formato y estructura predefinidos."
+    "respuesta": "A",
+    "explicacion": "Guarda el formato, los estilos, el texto fijo y lo que haga falta, y sirve de punto de partida cuantas veces se quiera sin gastarse. Sus extensiones son .dotx y .dotm. · **Lo de las macros** es el descarte que decide la pregunta, porque una plantilla PUEDE llevarlas, pero eso no es lo que la define: lo que la define es que se usa como modelo. · Tampoco es un documento protegido: la plantilla se puede editar, abriéndola a propósito desde Archivo ▸ Abrir."
   },
   {
     "id": "interfaz-40",
@@ -2041,28 +2098,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-40",
-    "enunciado": "Un usuario va a enviar un documento por correo electrónico. ¿Qué ventaja técnica ofrece el formato.docx frente al.doc?",
+    "revisada": true,
+    "enunciado": "Vas a enviar un documento largo por correo. ¿Qué ventaja tiene mandarlo en .docx en vez de en .doc?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ya está comprimido en un paquete ZIP, por lo que ocupa menos espacio"
+        "text": "Que ya va comprimido, así que el archivo adjunto pesa menos"
       },
       {
         "letter": "B",
-        "text": "Es un archivo de texto plano, por lo que es más ligero"
+        "text": "Que es texto plano, y por eso resulta más ligero"
       },
       {
         "letter": "C",
-        "text": "Permite incluir imágenes sin aumentar el peso del archivo"
+        "text": "Que permite meter imágenes sin que el archivo engorde"
       },
       {
         "letter": "D",
-        "text": "Es un formato binario que se transmite más rápido por correo"
+        "text": "Que al ser binario viaja más rápido por la red"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El .docx está comprimido en un paquete ZIP (OOXML), lo que reduce el tamaño del archivo adjunto."
+    "explicacion": "El contenido son archivos XML, es decir, texto lleno de etiquetas, que se comprime muchísimo dentro del paquete. · **Lo del texto plano** es el descarte que decide la pregunta y mezcla dos cosas: por dentro es texto, sí, pero el archivo NO es texto plano, es un ZIP; un .txt de verdad pesaría aún menos y perdería todo el formato. · Las imágenes siguen pesando lo que pesan: para reducirlas hay que usar «Comprimir imágenes», a mano."
   },
   {
     "id": "interfaz-42",
@@ -2076,28 +2134,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-42",
-    "enunciado": "Un usuario intenta guardar un archivo con el nombre \"Documento:2026\". ¿Es válido este nombre?",
+    "revisada": true,
+    "enunciado": "Intentas guardar un archivo llamado «Documento:2026». ¿Es válido?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sí, porque los dos puntos son un carácter válido en Windows"
+        "text": "No: los dos puntos están entre los caracteres prohibidos"
       },
       {
         "letter": "B",
-        "text": "No, porque los dos puntos están en la lista de caracteres prohibidos"
+        "text": "Sí: los dos puntos se admiten en un nombre de archivo"
       },
       {
         "letter": "C",
-        "text": "Sí, pero Word lo guardará automáticamente como \"Documento_2026\""
+        "text": "Sí, pero Word los sustituye solo por un guion bajo"
       },
       {
         "letter": "D",
-        "text": "No, porque los números no pueden aparecer en el nombre de un archivo"
+        "text": "No, porque un nombre de archivo no puede llevar cifras"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Los dos puntos (:) forman parte de los 9 caracteres prohibidos por Windows: \\ / : * ? \" < > |"
+    "respuesta": "A",
+    "explicacion": "Los dos puntos identifican la unidad de disco —C:, D:— y por eso Windows los reserva; son uno de los nueve prohibidos. · **Que Word los sustituya** es el descarte que decide la pregunta: la restricción es del sistema de archivos, no del programa, así que Word solo puede avisar. · Las cifras se admiten sin problema, igual que las tildes, la eñe, los espacios, el guion, el guion bajo, los paréntesis y el punto."
   },
   {
     "id": "interfaz-43",
@@ -2111,28 +2170,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-43",
-    "enunciado": "¿Cuál es la función principal del lenguaje XML?",
+    "revisada": true,
+    "enunciado": "En «Guardar como» aparecen «Formato RTF» y «Texto sin formato». ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ejecutar macros dentro de documentos de Word"
+        "text": "El RTF conserva el formato básico del texto; el de texto sin formato lo pierde todo"
       },
       {
         "letter": "B",
-        "text": "Organizar y etiquetar documentos mediante marcas"
+        "text": "El RTF pierde el formato; el de texto sin formato lo conserva"
       },
       {
         "letter": "C",
-        "text": "Comprimir archivos en paquetes ZIP"
+        "text": "Los dos conservan el formato, pero el RTF además guarda las imágenes"
       },
       {
         "letter": "D",
-        "text": "Convertir documentos a formato PDF"
+        "text": "Los dos pierden el formato, pero el RTF conserva los saltos de página"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "XML es un lenguaje de marcas extensible cuya función es organizar y etiquetar documentos."
+    "respuesta": "A",
+    "explicacion": "El RTF nació precisamente para intercambiar documentos entre programas distintos sin perder negritas, fuentes ni tamaños. El .txt guarda solo caracteres: al abrirlo no queda rastro de nada, ni siquiera de la fuente. · La versión invertida es el descarte que decide la pregunta. · Los dos están en la lista de tipos de «Guardar como», junto a PDF, XPS, página web, ODT y los formatos XML. Guardar en .txt es la prueba más clara de qué separa un procesador de un editor de texto plano."
   },
   {
     "id": "interfaz-44",
@@ -2146,28 +2206,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-44",
-    "enunciado": "¿Cuál es la extensión correcta para un documento de Word habilitado para macros?",
+    "revisada": true,
+    "enunciado": "La lista de tipos de «Guardar como» incluye también los formatos anteriores a 2007. ¿Con qué nombre aparecen?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".dotx"
+        "text": "«Documento de Word 97-2003 (*.doc)» y «Plantilla de Word 97-2003 (*.dot)»"
       },
       {
         "letter": "B",
-        "text": ".dotm"
+        "text": "«Documento de Word clásico (*.doc)» y «Plantilla clásica (*.dot)»"
       },
       {
         "letter": "C",
-        "text": ".docm"
+        "text": "«Documento de Word antiguo (*.doc)» y «Plantilla antigua (*.dot)»"
       },
       {
         "letter": "D",
-        "text": ".docx"
+        "text": "No aparecen: Word 365 ya no puede guardar en esos formatos"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": ".docm es la extensión del documento de Word con macros habilitadas."
+    "respuesta": "A",
+    "explicacion": "Word nombra los formatos viejos por el rango de versiones que los usaba, no por adjetivos: 97-2003. Y sí se puede guardar en ellos, que es lo que hace falta cuando el destinatario tiene un Word antiguo. · **Que ya no estén** es el descarte que decide la pregunta y es lo que uno supondría después de casi veinte años. · Al guardar así, Word ofrece comprobar la compatibilidad y avisa de lo que se perderá. · La lista tiene además PDF, XPS, página web, RTF, texto sin formato, XML y OpenDocument."
   },
   {
     "id": "interfaz-46",
@@ -2181,28 +2242,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-46",
-    "enunciado": "Windows prohíbe ciertos caracteres al nombrar archivos. ¿Cuál de los siguientes SÍ está prohibido?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estos signos está prohibido en el nombre de un archivo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El guion medio (-)"
+        "text": "Las comillas dobles"
       },
       {
         "letter": "B",
-        "text": "El guion bajo (_)"
+        "text": "El guion"
       },
       {
         "letter": "C",
-        "text": "Las comillas dobles (\")"
+        "text": "El guion bajo"
       },
       {
         "letter": "D",
-        "text": "El punto (.)"
+        "text": "El punto"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Los caracteres prohibidos en Windows son: \\ / : * ? \" < > | Las comillas dobles están en esa lista. El guion, el guion bajo y el punto sí están permitidos."
+    "respuesta": "A",
+    "explicacion": "Las comillas dobles sirven en la consola para agrupar una ruta que lleva espacios, y por eso están entre los nueve reservados. · Las comillas TIPOGRÁFICAS, las curvas, no lo están: es otro carácter distinto, aunque a la vista se parezcan. · Los tres descartes son los signos más usados para separar palabras en un nombre de archivo, precisamente porque se admiten. · Los nueve prohibidos son barra inversa, barra, dos puntos, asterisco, interrogación de cierre, comillas dobles, menor, mayor y barra vertical."
   },
   {
     "id": "interfaz-47",
@@ -2216,28 +2278,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-47",
-    "enunciado": "Al abrir un archivo.docx, el contenido almacenado en su interior se somete a un proceso de:",
+    "revisada": true,
+    "enunciado": "En la lista de «Guardar como» aparece «Texto de OpenDocument (*.odt)». ¿Qué es ese formato?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Compresión"
+        "text": "Un formato abierto de documento, el que usan por defecto suites como LibreOffice"
       },
       {
         "letter": "B",
-        "text": "Descompresión"
+        "text": "Un formato de solo lectura, pensado para publicar sin que se pueda editar"
       },
       {
         "letter": "C",
-        "text": "Cifrado"
+        "text": "Un formato de texto plano, sin ninguna información de formato"
       },
       {
         "letter": "D",
-        "text": "Conversión a PDF"
+        "text": "El formato interno que Word usa para las plantillas de OpenType"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Al abrir el archivo, el paquete ZIP se descomprime para mostrar el contenido al usuario."
+    "respuesta": "A",
+    "explicacion": "Es el equivalente del .docx en el mundo del software libre, y como él guarda XML dentro de un paquete comprimido. Word puede abrirlo y guardarlo, aunque en el viaje se pueda perder algún detalle de formato. · **El formato de solo lectura** es el descarte que decide la pregunta y describe al PDF y al XPS, que también están en la lista. · Su presencia importa en el ámbito público, donde la normativa suele recomendar formatos abiertos para los documentos oficiales."
   },
   {
     "id": "interfaz-48",
@@ -2251,28 +2314,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-49",
-    "enunciado": "¿Cuál de las siguientes afirmaciones sobre.dotx y.dotm es INCORRECTA?",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre .dotx y .dotm:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ambas son plantillas de Word"
+        "text": "El .dotx es un documento normal, no una plantilla"
       },
       {
         "letter": "B",
-        "text": ".dotm admite macros; .dotx no"
+        "text": "Las dos son plantillas de Word"
       },
       {
         "letter": "C",
-        "text": ".dotx es un documento normal, no una plantilla"
+        "text": "El .dotm admite macros y el .dotx no"
       },
       {
         "letter": "D",
-        "text": "La \"m\" en .dotm hace referencia a que está habilitada para macros"
+        "text": "La «m» final indica que está habilitada para macros"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": ".dotx es una plantilla de Word, no un documento. Los documentos llevan la raíz DOC, las plantillas llevan DOT."
+    "respuesta": "A",
+    "explicacion": "Las dos empiezan por DOT, que es la abreviatura de «document template»: las dos son plantillas. Los documentos empiezan por DOC. · Lo único que las separa es la última letra, X sin macros y M con macros. · Se distinguen al usarlas: al abrir una plantilla, Word crea un documento nuevo con su contenido y la plantilla queda intacta, mientras que un documento se abre para editarlo. · La plantilla global de Word es Normal.dotm."
   },
   {
     "id": "interfaz-58",
@@ -2286,28 +2350,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-59",
-    "enunciado": "Un archivo.docx se comporta como un paquete ZIP que contiene:",
+    "revisada": true,
+    "enunciado": "En «Guardar como» hay dos tipos que producen un documento fijo, no editable con facilidad. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Únicamente texto en formato binario"
+        "text": "PDF y XPS"
       },
       {
         "letter": "B",
-        "text": "Archivos XML comprimidos (estándar OOXML)"
+        "text": "PDF y ODT"
       },
       {
         "letter": "C",
-        "text": "Imágenes y texto sin ningún tipo de compresión"
+        "text": "RTF y XPS"
       },
       {
         "letter": "D",
-        "text": "Código VBA en texto plano"
+        "text": "Página web y PDF"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El .docx contiene archivos XML (WordprocessingML) comprimidos en un paquete ZIP según el estándar OOXML."
+    "respuesta": "A",
+    "explicacion": "Los dos conservan el diseño, las fuentes y las imágenes exactamente como se ven, y no están pensados para seguir editándolos; hay visores gratuitos para los dos. El XPS es la alternativa que propuso Microsoft al PDF, mucho menos extendida. · **El ODT** es el descarte que decide la pregunta: también es un formato ajeno a Word, pero es plenamente editable, el de las suites libres. · Los dos aparecen juntos también en Archivo ▸ Exportar, como «Crear documento PDF/XPS»."
   },
   {
     "id": "interfaz-59",
@@ -2321,28 +2386,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-60",
-    "enunciado": "¿Qué ventaja ofrece el formato.docx frente a.doc en el envío de documentos por correo electrónico?",
+    "revisada": true,
+    "enunciado": "La lista de «Guardar como» ofrece tres variantes de página web. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
-        "text": "No necesita compresión previa, por lo que se envía más rápido"
+        "text": "Página web de un solo archivo, página web, y página web filtrada"
       },
       {
         "letter": "B",
-        "text": "Ocupa menos espacio gracias a la compresión ZIP del paquete OOXML"
+        "text": "Página web, página web comprimida, y página web con imágenes"
       },
       {
         "letter": "C",
-        "text": "Permite incluir macros sin aumentar el peso del archivo"
+        "text": "Página web, página web para móvil, y página web filtrada"
       },
       {
         "letter": "D",
-        "text": "Es un formato de texto plano que se transmite sin pérdida de datos"
+        "text": "Solo una: página web (*.htm)"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El .docx ocupa menos espacio que el .doc gracias a la compresión ZIP del paquete OOXML."
+    "respuesta": "A",
+    "explicacion": "La de un solo archivo lo mete todo, imágenes incluidas, en un único .mht; la normal deja el .htm y una carpeta aparte con los recursos; y la filtrada quita el marcado propio de Office, con lo que el archivo queda más limpio y ligero pero se pierde información que Word usaría para recuperarlo. · La existencia de tres variantes es lo que se pregunta, porque uno espera una sola. · Guardar como página web es la manera más rápida de sacar el contenido de un documento a un formato leíble en cualquier navegador."
   },
   {
     "id": "interfaz-60",
@@ -2356,28 +2422,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-61",
-    "enunciado": "¿Cuál de los siguientes caracteres SÍ está permitido en el nombre de un archivo de Word en Windows?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas cosas SÍ se admite en el nombre de un archivo de Windows?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El signo menor que (<)"
+        "text": "Los espacios y las tildes"
       },
       {
         "letter": "B",
-        "text": "El guion medio (-)"
+        "text": "El signo menor que"
       },
       {
         "letter": "C",
-        "text": "La barra vertical (|)"
+        "text": "La barra vertical"
       },
       {
         "letter": "D",
-        "text": "El asterisco (*)"
+        "text": "El asterisco"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El guion medio no está en la lista de caracteres prohibidos de Windows: \\ / : * ? \" < > |"
+    "respuesta": "A",
+    "explicacion": "Los espacios, las tildes, la eñe y los signos de puntuación corrientes se admiten sin problema; la prohibición se limita a nueve caracteres concretos, todos con una función reservada en el sistema. · Los espacios dan guerra en la consola, donde obligan a escribir la ruta entre comillas, y de ahí la costumbre de sustituirlos por guiones bajos; pero permitidos están. · Los tres descartes sí figuran entre los nueve: menor que y mayor que redirigen la salida, la barra vertical encadena órdenes y el asterisco es comodín."
   },
   {
     "id": "interfaz-61",
@@ -2391,28 +2458,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-62",
-    "enunciado": "Respecto a los signos de interrogación en el nombre de un archivo, ¿cuál de las siguientes afirmaciones es correcta?",
+    "revisada": true,
+    "enunciado": "¿Qué ocurre con los dos signos de interrogación en el nombre de un archivo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tanto ¿ como ? están prohibidos en Windows"
+        "text": "El de cierre está prohibido; el de apertura se admite"
       },
       {
         "letter": "B",
-        "text": "El signo ? está prohibido; el signo ¿ está permitido"
+        "text": "El de apertura está prohibido; el de cierre se admite"
       },
       {
         "letter": "C",
-        "text": "El signo ¿ está prohibido; el signo ? está permitido"
+        "text": "Los dos están prohibidos"
       },
       {
         "letter": "D",
-        "text": "Ninguno de los dos está prohibido en Windows"
+        "text": "Ninguno de los dos está prohibido"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Windows prohíbe el signo de cierre ? (incluido en la lista \\ / : * ? \" < > |), pero no el de apertura ¿, que sí es válido."
+    "respuesta": "A",
+    "explicacion": "El de cierre es un comodín de búsqueda que sustituye a un carácter cualquiera, y por eso está entre los nueve reservados, junto al asterisco, que sustituye a varios. El de apertura solo existe en español, nunca ha sido comodín de nada y se admite sin problema. · Es el detalle más curioso de la lista y el que más se falla, porque a simple vista los dos parecen el mismo signo. · Con las tildes y la eñe ocurre lo mismo: no se prohíben."
   },
   {
     "id": "interfaz-62",
@@ -2426,28 +2494,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-63",
-    "enunciado": "Un usuario quiere guardar un documento con macros sin convertirlo en plantilla. ¿Qué extensión debe usar?",
+    "revisada": true,
+    "enunciado": "Abres un .docm con macros y lo guardas como .docx. ¿Qué pasa con las macros?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".docx"
+        "text": "Word avisa de que se van a perder y, si se acepta, el .docx sale sin ellas"
       },
       {
         "letter": "B",
-        "text": ".dotx"
+        "text": "Se conservan: el .docx también las admite"
       },
       {
         "letter": "C",
-        "text": ".docm"
+        "text": "Se guardan en un archivo aparte, junto al documento"
       },
       {
         "letter": "D",
-        "text": ".dotm"
+        "text": "Word impide guardar y obliga a mantener la extensión .docm"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": ".docm es la extensión del documento de Word con macros habilitadas."
+    "respuesta": "A",
+    "explicacion": "El .docx no tiene dónde guardarlas, así que Word pregunta antes de tirarlas. La distinción es de seguridad: al ver la extensión se sabe si un archivo puede traer código, y por eso el formato sin macros tiene que quedarse limpio de verdad. · **Que lo impida** es el descarte que decide la pregunta: no lo impide, avisa y deja decidir, que es lo razonable si lo que se quiere es mandar el documento sin el código. · Lo mismo pasa con .xlsm y .pptm en Excel y PowerPoint."
   },
   {
     "id": "interfaz-63",
@@ -2461,28 +2530,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-64",
-    "enunciado": "¿Cuál es la diferencia técnica fundamental entre un archivo.dotx y uno.dotm?",
+    "revisada": true,
+    "enunciado": "¿Qué diferencia hay entre un .dotx y un .dotm?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".dotx es un documento; .dotm es una plantilla"
+        "text": "Que las dos son plantillas, pero solo la segunda admite macros"
       },
       {
         "letter": "B",
-        "text": ".dotx no admite macros; .dotm sí"
+        "text": "Que la primera es un documento y la segunda una plantilla"
       },
       {
         "letter": "C",
-        "text": ".dotx es más reciente que .dotm"
+        "text": "Que la primera es más reciente que la segunda"
       },
       {
         "letter": "D",
-        "text": ".dotm siempre ocupa menos espacio que .dotx"
+        "text": "Que la segunda siempre ocupa menos espacio"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ambas son plantillas de Word, pero .dotx no admite macros y .dotm sí las admite."
+    "respuesta": "A",
+    "explicacion": "Comparten las tres primeras letras, DOT de plantilla, y se separan en la última: X sin macros, M con macros. · Las dos aparecen en la lista de «Guardar como» como «Plantilla de Word» y «Plantilla habilitada con macros de Word». · Las dos son igual de recientes: nacieron a la vez, en 2007, cuando se separó por primera vez lo que lleva código de lo que no. · Y ninguna ocupa sistemáticamente menos: eso depende del contenido."
   },
   {
     "id": "interfaz-64",
@@ -2496,28 +2566,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-65",
-    "enunciado": "¿Cómo se define el lenguaje XML?",
+    "revisada": true,
+    "enunciado": "En «Guardar como» hay un tipo llamado «Documento XML de Word (*.xml)», distinto del .docx. ¿Qué lo diferencia?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un lenguaje de marcas extensible para organizar y etiquetar documentos"
+        "text": "Que guarda todo en un único archivo XML sin comprimir, en vez de en un paquete"
       },
       {
         "letter": "B",
-        "text": "Un lenguaje cerrado de uso exclusivo en Microsoft Word"
+        "text": "Que guarda el documento sin ningún formato, como texto plano"
       },
       {
         "letter": "C",
-        "text": "Un formato binario de compresión de datos"
+        "text": "Que solo guarda la estructura del documento, sin el texto"
       },
       {
         "letter": "D",
-        "text": "Un lenguaje de programación para ejecutar macros"
+        "text": "Que es el formato interno de las plantillas, no de los documentos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "XML (Extensible Markup Language) es un lenguaje de marcas extensible para organizar y etiquetar documentos."
+    "explicacion": "Los dos usan XML, y ahí está la confusión: el .docx lo reparte en varias piezas metidas en un ZIP, y este lo vuelca todo en un solo archivo legible, sin comprimir, lo que lo hace mucho más pesado pero también inspeccionable con cualquier editor de texto. · La lista incluye además «Documento XML de Word 2003», la versión antigua del mismo invento. · Es la prueba de que la X del .docx no significa «un archivo XML», sino «contenido guardado en XML»."
   },
   {
     "id": "interfaz-66",
@@ -2531,28 +2602,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-67",
-    "enunciado": "Un usuario intenta guardar un archivo con el nombre \"Informe:2026\". ¿Qué ocurrirá?",
+    "revisada": true,
+    "enunciado": "¿Por qué están prohibidas la barra y la barra inversa en el nombre de un archivo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se guardará correctamente, los dos puntos son válidos"
+        "text": "Porque son los separadores de carpetas en una ruta"
       },
       {
         "letter": "B",
-        "text": "Word mostrará un error porque los dos puntos están prohibidos"
+        "text": "Porque son comodines de búsqueda"
       },
       {
         "letter": "C",
-        "text": "Word reemplazará automáticamente los dos puntos por un guion"
+        "text": "Porque redirigen la salida en la consola"
       },
       {
         "letter": "D",
-        "text": "Se guardará pero sin la extensión .docx"
+        "text": "Porque identifican la unidad de disco"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Los dos puntos (:) están en la lista de caracteres prohibidos de Windows: \\ / : * ? \" < > |"
+    "respuesta": "A",
+    "explicacion": "Un nombre con barra sería indistinguible de una ruta con carpetas dentro: el sistema no sabría dónde acaba la carpeta y dónde empieza el archivo. · Cada uno de los nueve prohibidos lo está por un motivo parecido, y los tres descartes son los de los otros: el asterisco y la interrogación son comodines, el menor y el mayor redirigen la salida, y los dos puntos identifican la unidad. Los nueve se completan con las comillas dobles y la barra vertical."
   },
   {
     "id": "interfaz-68",
@@ -2566,28 +2638,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-69",
-    "enunciado": "Al abrir un archivo.docx, el contenido almacenado se:",
+    "revisada": true,
+    "enunciado": "Vas a guardar un documento en el formato antiguo .doc y quieres saber qué se perderá. ¿Qué herramienta lo dice?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Comprime para optimizar su visualización"
+        "text": "«Comprobar compatibilidad», en Archivo ▸ Información"
       },
       {
         "letter": "B",
-        "text": "Descomprime para mostrarse al usuario"
+        "text": "«Inspeccionar documento», en Archivo ▸ Información"
       },
       {
         "letter": "C",
-        "text": "Cifra para proteger la privacidad"
+        "text": "«Comprobar accesibilidad», en la pestaña Revisar"
       },
       {
         "letter": "D",
-        "text": "Convierte a PDF automáticamente"
+        "text": "«Convertir», en Archivo ▸ Información"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Al abrir el archivo, el paquete ZIP se descomprime para mostrar el contenido."
+    "respuesta": "A",
+    "explicacion": "Enumera lo que las versiones anteriores no sabrían representar y qué pasaría con cada cosa. · Comparte menú con «Inspeccionar documento», que es el descarte que decide la pregunta: aquel busca información personal y datos ocultos antes de compartir, no problemas de formato. · «Comprobar accesibilidad» mira si el documento se puede leer con un lector de pantalla. · Y «Convertir» hace el camino contrario: saca del modo de compatibilidad un documento antiguo pasándolo al formato actual."
   },
   {
     "id": "interfaz-70",
@@ -2601,28 +2674,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-71",
-    "enunciado": "Un usuario quiere crear una plantilla reutilizable con automatizaciones mediante macros. ¿Qué extensión debe elegir?",
+    "revisada": true,
+    "enunciado": "En la lista de tipos de «Guardar como», ¿cómo se llaman las dos entradas de plantilla?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".docx"
+        "text": "«Plantilla de Word» y «Plantilla habilitada con macros de Word»"
       },
       {
         "letter": "B",
-        "text": ".dotx"
+        "text": "«Plantilla de Word» y «Plantilla de Word con VBA»"
       },
       {
         "letter": "C",
-        "text": ".docm"
+        "text": "«Modelo de Word» y «Modelo habilitado con macros»"
       },
       {
         "letter": "D",
-        "text": ".dotm"
+        "text": "Solo hay una: «Plantilla de Word»"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": ".dotm es la extensión de la plantilla de Word con macros habilitadas."
+    "respuesta": "A",
+    "explicacion": "Corresponden a .dotx y .dotm, y siguen el mismo patrón que los documentos, que aparecen como «Documento de Word» y «Documento habilitado con macros de Word». Word nunca usa la palabra «modelo» ni las siglas VBA en esos rótulos. · Hay además una tercera entrada de plantilla, «Plantilla de Word 97-2003», para el antiguo .dot. · Al elegir una de ellas, Word propone guardar en la carpeta de plantillas personalizadas, para que aparezcan luego en Archivo ▸ Nuevo."
   },
   {
     "id": "interfaz-71",
@@ -2636,28 +2710,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-72",
-    "enunciado": "¿Cuál de los siguientes caracteres SÍ está permitido en el nombre de un archivo en Windows?",
+    "revisada": true,
+    "enunciado": "¿Por qué están prohibidos los signos «menor que» y «mayor que» en el nombre de un archivo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El signo mayor que (>)"
+        "text": "Porque en la consola sirven para redirigir la entrada y la salida"
       },
       {
         "letter": "B",
-        "text": "La barra invertida (\\)"
+        "text": "Porque son comodines de búsqueda"
       },
       {
         "letter": "C",
-        "text": "El signo de apertura de interrogación (¿)"
+        "text": "Porque separan las carpetas de una ruta"
       },
       {
         "letter": "D",
-        "text": "El asterisco (*)"
+        "text": "Porque delimitan las etiquetas de un archivo XML"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El signo ¿ no forma parte de los caracteres prohibidos (\\ / : * ? \" < > |), por lo que es válido. Los otros tres sí están prohibidos."
+    "respuesta": "A",
+    "explicacion": "En la línea de órdenes, el menor toma la entrada de un archivo y el mayor manda la salida a otro, así que un nombre con esos signos haría ambigua cualquier orden. · **Lo de las etiquetas XML** es el descarte que decide la pregunta, y es tentador porque los signos son exactamente los que abren y cierran una etiqueta; pero la prohibición viene del sistema de archivos, que es muy anterior al XML, no del formato de los documentos. · Son dos de los nueve reservados."
   },
   {
     "id": "interfaz-73",
@@ -2671,28 +2746,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-74",
-    "enunciado": "¿Por qué el formato.docx es más adecuado para adjuntar en correos?",
+    "revisada": true,
+    "enunciado": "Un .txt pesa aún menos que un .docx. ¿Por qué no se usa ese formato para enviar documentos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Porque no contiene imágenes, lo que reduce su tamaño"
+        "text": "Porque solo guarda caracteres: se pierde el formato, las imágenes y el diseño de página"
       },
       {
         "letter": "B",
-        "text": "Porque es un paquete ZIP comprimido que ocupa menos espacio"
+        "text": "Porque no lo pueden abrir todos los programas"
       },
       {
         "letter": "C",
-        "text": "Porque no necesita descompresión para abrirse"
+        "text": "Porque tiene un límite de tamaño que un documento largo supera"
       },
       {
         "letter": "D",
-        "text": "Porque es un formato de texto plano más ligero que .doc"
+        "text": "Porque no se puede adjuntar a un correo electrónico"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El .docx es un paquete ZIP que reduce el tamaño del adjunto."
+    "respuesta": "A",
+    "explicacion": "El texto sin formato es lo más ligero posible precisamente porque no guarda nada más que las letras: al abrirlo no queda rastro de negritas, fuentes, márgenes ni fotos. · El .docx es la solución de compromiso: guarda todo eso y aun así pesa poco, porque el XML se comprime muy bien dentro del paquete. · Los tres descartes son falsos: el .txt lo abre cualquier cosa, no tiene tope práctico y se adjunta igual que cualquier archivo. El problema no es técnico, es que pierde el documento."
   },
   {
     "id": "interfaz-75",
@@ -2706,28 +2782,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-76",
-    "enunciado": "¿Cuál de las siguientes afirmaciones sobre.docm y.dotm es verdadera?",
+    "revisada": true,
+    "enunciado": "¿Qué diferencia hay entre un .docm y un .dotm?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".docm y .dotm son ambos documentos, pero .dotm admite macros"
+        "text": "Que el primero es un documento con macros y el segundo una plantilla con macros"
       },
       {
         "letter": "B",
-        "text": ".docm es un documento con macros; .dotm es una plantilla con macros"
+        "text": "Que los dos son documentos, y solo el segundo admite macros"
       },
       {
         "letter": "C",
-        "text": ".docm es una plantilla; .dotm es un documento"
+        "text": "Que el primero es una plantilla y el segundo un documento"
       },
       {
         "letter": "D",
-        "text": "Ambos son plantillas sin macros habilitadas"
+        "text": "Que los dos son plantillas y ninguno admite macros"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": ".docm es el documento con macros habilitadas y .dotm es la plantilla con macros habilitadas."
+    "respuesta": "A",
+    "explicacion": "Los dos acaban en M, así que los dos llevan código; lo que cambia son las tres primeras letras, DOC frente a DOT. · La diferencia práctica está en el uso: un .docm se abre y se edita, y un .dotm genera un documento nuevo cada vez y se queda intacto, que es lo que interesa para un modelo de escrito que hay que rellenar muchas veces. · La plantilla global de Word, Normal.dotm, es de este segundo tipo."
   },
   {
     "id": "interfaz-76",
@@ -2741,28 +2818,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-77",
-    "enunciado": "¿Cuál de los siguientes nombres de archivo es válido en Windows?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estos nombres de archivo se puede guardar en Windows?",
     "opciones": [
       {
         "letter": "A",
-        "text": "\"Informe<2026\""
+        "text": "Informe-2026"
       },
       {
         "letter": "B",
-        "text": "\"Informe|2026\""
+        "text": "Informe<2026"
       },
       {
         "letter": "C",
-        "text": "\"Informe-2026\""
+        "text": "Informe|2026"
       },
       {
         "letter": "D",
-        "text": "\"Informe*2026\""
+        "text": "Informe*2026"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El guion medio no está en la lista de caracteres prohibidos de Windows: \\ / : * ? \" < > |"
+    "respuesta": "A",
+    "explicacion": "El guion es de los signos más usados para separar palabras en un nombre, junto al guion bajo, y está permitido. · Los otros tres están entre los nueve reservados, cada uno por su motivo: el menor que redirige la entrada en la consola, la barra vertical encadena órdenes y el asterisco es comodín de búsqueda. · Los nueve completos son barra inversa, barra, dos puntos, asterisco, interrogación de cierre, comillas dobles, menor, mayor y barra vertical."
   },
   {
     "id": "interfaz-77",
@@ -2776,28 +2854,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-79",
-    "enunciado": "La \"x\" de.docx proviene de:",
+    "revisada": true,
+    "enunciado": "En las extensiones .docm y .dotm, ¿qué indica la «m» final?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La palabra \"XML\" (Extensible Markup Language)"
+        "text": "Que el archivo puede contener macros"
       },
       {
         "letter": "B",
-        "text": "La palabra \"executable\""
+        "text": "Que el archivo está en formato de Microsoft"
       },
       {
         "letter": "C",
-        "text": "La palabra \"exchange\""
+        "text": "Que el archivo tiene modo de compatibilidad activado"
       },
       {
         "letter": "D",
-        "text": "La palabra \"extended\""
+        "text": "Que el archivo se ha guardado como modelo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La x viene de XML, el lenguaje en el que se basa el estándar OOXML del formato .docx."
+    "explicacion": "Es la pareja de la X, que indica lo contrario: sin macros. Las tres primeras letras dicen qué es el archivo, documento o plantilla, y la última si puede traer código. · **«Modelo»** es el descarte que decide la pregunta, porque plantilla y modelo son sinónimos y uno espera que alguna letra lo señale; pero eso ya lo dice el DOT del principio. · La distinción existe por seguridad: al ver la extensión se sabe si un archivo puede ejecutar algo al abrirlo."
   },
   {
     "id": "interfaz-78",
@@ -2811,19 +2890,20 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-80",
-    "enunciado": "¿Cuál de las siguientes extensiones NO corresponde a una plantilla?",
+    "revisada": true,
+    "enunciado": "De estas cuatro extensiones, señale la que NO es una plantilla:",
     "opciones": [
       {
         "letter": "A",
-        "text": ".dotx"
+        "text": ".docm"
       },
       {
         "letter": "B",
-        "text": ".dotm"
+        "text": ".dotx"
       },
       {
         "letter": "C",
-        "text": ".docm"
+        "text": ".dotm"
       },
       {
         "letter": "D",
@@ -2831,8 +2911,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": ".docm es un documento con macros habilitadas, no una plantilla. Las plantillas llevan la raíz DOT en la extensión."
+    "respuesta": "A",
+    "explicacion": "Las plantillas empiezan por DOT y los documentos por DOC: solo la primera de las cuatro empieza por DOC. · **.dot** es el descarte que decide la pregunta, porque es la que menos se reconoce: es la plantilla del formato antiguo, anterior a 2007, y sigue en la lista de «Guardar como» como «Plantilla de Word 97-2003». · La última letra dice otra cosa distinta: X sin macros, M con macros. La .dot antigua no lleva ninguna de las dos porque entonces esa separación no existía."
   },
   {
     "id": "interfaz-112",
@@ -2846,28 +2926,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-116",
-    "enunciado": "Señale la afirmación que NO es correcta respecto a XML:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta sobre XML:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Es un lenguaje de marcas extensible"
+        "text": "Es el programa que comprime el contenido de un .docx"
       },
       {
         "letter": "B",
-        "text": "Sirve para organizar y etiquetar documentos"
+        "text": "Es un lenguaje de marcas extensible"
       },
       {
         "letter": "C",
-        "text": "Es la base del formato de almacenamiento del .docx (estándar OOXML)"
+        "text": "Sirve para etiquetar el contenido y describir qué es cada parte"
       },
       {
         "letter": "D",
-        "text": "Es un programa independiente de Word usado para comprimir archivos"
+        "text": "Es la base del formato en que un .docx guarda el documento"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "XML es un lenguaje de marcas, no un programa compresor. La compresión del .docx la realiza el empaquetado ZIP (Open Packaging Conventions), no el propio XML."
+    "respuesta": "A",
+    "explicacion": "XML no es un programa ni comprime nada: es una manera de escribir el contenido. Dentro de un .docx conviven dos capas —el XML, que describe, y el empaquetado ZIP, que comprime— y confundirlas es el error más común. · La compresión la hace el paquete, que sigue las llamadas convenciones de empaquetado abierto; el conjunto de las dos cosas es lo que se conoce como OOXML. · Las otras tres afirmaciones son ciertas."
   },
   {
     "id": "interfaz-494",
@@ -2881,28 +2962,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "8-134",
-    "enunciado": "Un usuario crea una plantilla de Word que debe incluir macros. ¿Con qué extensión debe guardarla?",
+    "revisada": true,
+    "enunciado": "Vas a guardar una plantilla con macros y en la lista aparecen .dotm y .dot. ¿Cuál conviene y por qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": ".dotm"
+        "text": ".dotm, porque es la plantilla del formato actual y guarda las macros sin perder nada"
       },
       {
         "letter": "B",
-        "text": ".dotx"
+        "text": ".dot, porque es la única plantilla que admite macros"
       },
       {
         "letter": "C",
-        "text": ".docm"
+        "text": ".dotx, porque las macros se guardan siempre en un archivo aparte"
       },
       {
         "letter": "D",
-        "text": ".dot"
+        "text": "Cualquiera de las dos: son la misma plantilla con distinto nombre"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Las plantillas con macros se guardan con extensión .dotm. Las plantillas sin macros usan .dotx. Los documentos con macros usan .docm. El formato .dot es la plantilla de Word 97-2003, sin soporte completo para macros de versiones modernas."
+    "explicacion": "El .dot es la plantilla anterior a 2007 y sigue disponible como «Plantilla de Word 97-2003», pero es un formato binario antiguo: al guardar en él, Word avisa de lo que las versiones viejas no sabrían representar. · **Que el .dot sea la única con macros** es el descarte que decide la pregunta: admitirlas, las admite, porque entonces no había separación entre X y M; lo que no es es la opción recomendable hoy. · El .dotx no vale: la X significa precisamente que no lleva código."
   },
   {
     "id": "interfaz-496",
@@ -2916,28 +2998,29 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "8-155",
-    "enunciado": "¿Qué atajo activa o desactiva la vista de etiquetas XML en Word 365?",
+    "revisada": true,
+    "enunciado": "¿Qué hace Ctrl+Mayús+X en Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+X"
+        "text": "Activa o desactiva la vista de etiquetas XML"
       },
       {
         "letter": "B",
-        "text": "Ctrl+X"
+        "text": "Convierte el código escrito antes del cursor en su carácter"
       },
       {
         "letter": "C",
-        "text": "Alt+Ctrl+X"
+        "text": "Corta la selección al portapapeles"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+Alt+X"
+        "text": "Abre el editor de Visual Basic"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+X activa o desactiva la vista de etiquetas XML. Ctrl+X corta el contenido seleccionado. Alt+Ctrl+X no tiene esa función. Ctrl+Mayús+Alt+X no tiene función asignada para etiquetas XML."
+    "explicacion": "Figura en el cuadro Personalizar teclado como AlternarVistaEtiquetasXML, y solo tiene efecto en documentos con un esquema XML asociado, que es un uso poco frecuente. · **Alt+X** es el descarte que decide la pregunta: es el atajo que convierte un código Unicode en su carácter y al revés, se parece en la letra y se usa muchísimo más. · Ctrl+X corta, y el editor de Visual Basic se abre con Alt+F11."
   },
   {
     "id": "interfaz-106",
@@ -2951,31 +3034,37 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-110",
+    "revisada": true,
     "enunciado": "Señale las extensiones que corresponden a plantillas de Word (puede haber más de una):",
     "opciones": [
       {
         "letter": "A",
-        "text": "DOCX"
-      },
-      {
-        "letter": "B",
         "text": "DOTX"
       },
       {
+        "letter": "B",
+        "text": "DOTM"
+      },
+      {
         "letter": "C",
-        "text": "DOCM"
+        "text": "DOT"
       },
       {
         "letter": "D",
-        "text": "DOTM"
+        "text": "DOCX"
+      },
+      {
+        "letter": "E",
+        "text": "DOCM"
       }
     ],
     "matching": null,
     "respuesta": [
+      "A",
       "B",
-      "D"
+      "C"
     ],
-    "explicacion": "Las plantillas llevan la raíz DOT: DOTX (sin macros) y DOTM (con macros). DOCX y DOCM son documentos."
+    "explicacion": "Las plantillas empiezan por DOT, abreviatura de «document template», y los documentos por DOC. · La tercera es la que más se olvida: es la plantilla del formato anterior a 2007, y sigue en la lista de «Guardar como» como «Plantilla de Word 97-2003». · La última letra dice otra cosa: X sin macros, M con macros, y la antigua no lleva ninguna porque entonces esa separación no existía. Leer la extensión en dos partes resuelve todas estas preguntas."
   },
   {
     "id": "interfaz-107",
@@ -2989,31 +3078,36 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-111",
+    "revisada": true,
     "enunciado": "Señale las extensiones habilitadas para macros (puede haber más de una):",
     "opciones": [
       {
         "letter": "A",
-        "text": "DOCX"
-      },
-      {
-        "letter": "B",
         "text": "DOCM"
       },
       {
+        "letter": "B",
+        "text": "DOTM"
+      },
+      {
         "letter": "C",
-        "text": "DOTX"
+        "text": "DOCX"
       },
       {
         "letter": "D",
-        "text": "DOTM"
+        "text": "DOTX"
+      },
+      {
+        "letter": "E",
+        "text": "ODT"
       }
     ],
     "matching": null,
     "respuesta": [
-      "B",
-      "D"
+      "A",
+      "B"
     ],
-    "explicacion": "Las extensiones habilitadas para macros llevan la M al final: DOCM (documento) y DOTM (plantilla). DOCX y DOTX no admiten macros."
+    "explicacion": "La M final es la que indica que el archivo puede traer macros, y la X que no. Las tres primeras letras dicen otra cosa: documento o plantilla. · **ODT** es el descarte que decide la pregunta: empieza por O y no por D, y es el formato de texto de OpenDocument, el de las suites libres, que también aparece en la lista de «Guardar como». Se cuela con facilidad porque las tres letras se parecen a DOT. · La distinción X/M nació en 2007, por seguridad: la extensión avisa de si hay código."
   },
   {
     "id": "interfaz-108",
@@ -3027,36 +3121,41 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-112",
-    "enunciado": "Señale los caracteres prohibidos para nombrar un archivo en Windows (puede haber más de una):",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estos caracteres están prohibidos en el nombre de un archivo de Windows?",
     "opciones": [
       {
         "letter": "A",
-        "text": "\\"
+        "text": "\\ (barra inversa)"
       },
       {
         "letter": "B",
-        "text": "-"
+        "text": "* (asterisco)"
       },
       {
         "letter": "C",
-        "text": "*"
+        "text": "| (barra vertical)"
       },
       {
         "letter": "D",
-        "text": "_"
+        "text": "- (guion)"
       },
       {
         "letter": "E",
-        "text": "|"
+        "text": "_ (guion bajo)"
+      },
+      {
+        "letter": "F",
+        "text": "¿ (interrogación de apertura)"
       }
     ],
     "matching": null,
     "respuesta": [
       "A",
-      "C",
-      "E"
+      "B",
+      "C"
     ],
-    "explicacion": "La barra invertida (\\), el asterisco (*) y la barra vertical (|) forman parte de los 9 caracteres prohibidos: \\ / : * ? \" < > | El guion medio (-) y el guion bajo (_) están permitidos."
+    "explicacion": "Los nueve prohibidos son barra inversa, barra, dos puntos, asterisco, interrogación de cierre, comillas dobles, menor, mayor y barra vertical, cada uno con una función reservada: separar carpetas, identificar la unidad, hacer de comodín, redirigir la salida o agrupar rutas con espacios. · **La interrogación de apertura** es el descarte que decide la pregunta: solo existe en español, nunca fue comodín, y se admite sin problema. La de CIERRE sí está prohibida. · El guion y el guion bajo son de los signos más usados justamente porque se admiten."
   },
   {
     "id": "interfaz-97",
@@ -3070,11 +3169,12 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-101",
-    "enunciado": "El formato.docx ocupa más espacio y es más lento que el.doc.",
+    "revisada": true,
+    "enunciado": "El .docx ocupa más espacio y se abre más despacio que el .doc.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Es al contrario. El .docx ocupa menos espacio gracias a la compresión ZIP y es más eficiente que el formato binario .doc."
+    "explicacion": "Ocupa menos, porque su contenido va comprimido dentro de un paquete: lo que guarda son archivos XML, es decir, texto lleno de etiquetas, que se comprime muchísimo. · La velocidad depende sobre todo del contenido, no del formato; lo que sí hay es un paso extra de descompresión al abrir, pero es inapreciable frente a lo que se gana en tamaño. · El .doc era un bloque binario cerrado que solo Word sabía interpretar, y de ahí que perderlo entero fuera más fácil ante una corrupción."
   },
   {
     "id": "interfaz-98",
@@ -3088,11 +3188,12 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-102",
-    "enunciado": "Un archivo.docx almacena su contenido en archivos XML dentro de un paquete ZIP comprimido.",
+    "revisada": true,
+    "enunciado": "Un .docx guarda su contenido en archivos XML metidos dentro de un paquete comprimido.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "El .docx es un paquete ZIP (estándar OOXML) cuyo contenido principal son archivos XML (WordprocessingML)."
+    "explicacion": "Son dos capas: el XML describe qué es cada trozo —un párrafo, un estilo, una tabla— y el empaquetado comprime el conjunto. La suma de las dos cosas es lo que se conoce como OOXML, común a Word, Excel y PowerPoint desde 2007. · Se comprueba sin más que cambiar la extensión por .zip y abrirlo: dentro aparecen las carpetas con los XML y las imágenes sueltas. · De ahí salen sus tres ventajas: menos peso, otros programas pueden leerlo y un archivo dañado se recupera en parte."
   },
   {
     "id": "interfaz-99",
@@ -3106,11 +3207,12 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-103",
-    "enunciado": "DOCM es la extensión de una plantilla de Word habilitada para macros.",
+    "revisada": true,
+    "enunciado": "DOCM es la extensión de una plantilla de Word con macros.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "DOCM es un documento con macros habilitadas. La plantilla con macros habilitadas es DOTM."
+    "explicacion": "Es un DOCUMENTO con macros. La plantilla con macros es DOTM. · Las tres primeras letras son las que lo dicen: DOC documento, DOT plantilla, de «document template». La última letra dice otra cosa distinta: X sin macros, M con macros. · Leer la extensión en esas dos partes resuelve las cuatro sin memorizar ninguna, y también explica por qué la plantilla global de Word se llama Normal.dotm: es una plantilla y puede llevar código."
   },
   {
     "id": "interfaz-100",
@@ -3124,11 +3226,12 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-104",
-    "enunciado": "Las extensiones DOTX y DOTM corresponden a plantillas, mientras que DOCX y DOCM corresponden a documentos.",
+    "revisada": true,
+    "enunciado": "DOTX y DOTM son plantillas; DOCX y DOCM son documentos.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Las extensiones con raíz DOT son plantillas y las que tienen raíz DOC son documentos."
+    "explicacion": "El reparto lo marcan las tres primeras letras, y la cuarta dice si admiten macros: X no, M sí. · La diferencia práctica se nota al abrirlos: un documento se abre para editarlo, y una plantilla crea un documento nuevo con su contenido y se queda intacta, que es lo que permite reutilizarla indefinidamente. · Falta en el reparto la .dot antigua, la plantilla anterior a 2007, que sigue disponible en «Guardar como» como «Plantilla de Word 97-2003»."
   },
   {
     "id": "interfaz-101",
@@ -3142,11 +3245,12 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-105",
-    "enunciado": "El guion bajo (_) está prohibido en el nombre de un archivo de Word.",
+    "revisada": true,
+    "enunciado": "El guion bajo está prohibido en el nombre de un archivo.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "El guion bajo está permitido. Los 9 caracteres prohibidos por Windows son: \\ / : * ? \" < > |"
+    "explicacion": "Está permitido, y es de los signos más usados para sustituir espacios precisamente por eso. · Los nueve prohibidos son barra inversa, barra, dos puntos, asterisco, interrogación de cierre, comillas dobles, menor, mayor y barra vertical: todos tienen una función reservada en el sistema, cosa que el guion bajo no tiene. · Los espacios también se admiten, aunque den guerra en la línea de órdenes, donde obligan a escribir la ruta entre comillas; de ahí viene la costumbre de evitarlos."
   },
   {
     "id": "interfaz-102",
@@ -3160,11 +3264,12 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-106",
-    "enunciado": "La \"x\" de la extensión.docx procede de la palabra XML.",
+    "revisada": true,
+    "enunciado": "El estándar en que se basa el formato .docx se llama OOXML.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "La x viene de XML (Extensible Markup Language), el lenguaje en que se basa el estándar OOXML."
+    "explicacion": "Son las siglas de Office Open XML, y describe las dos capas: el contenido escrito en XML y el empaquetado que lo comprime. Es común a Word, Excel y PowerPoint desde 2007, y de ahí que las tres extensiones acaben en X. · No hay que confundirlo con **OpenDocument**, que es otro estándar distinto, el de las suites libres, cuyo archivo de texto es el .odt y que también aparece en la lista de «Guardar como» de Word. Los nombres se parecen mucho y son cosas separadas."
   },
   {
     "id": "interfaz-517",
@@ -3179,11 +3284,12 @@
     "tema": "Documentos y archivos",
     "sourceQuestionId": "bal-interfaz-01",
     "generado": true,
-    "enunciado": "El formato .docm no permite guardar macros de VBA junto con el documento.",
+    "revisada": true,
+    "enunciado": "El formato .docm no permite guardar macros de VBA junto al documento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: .docm es justo el formato «Documento habilitado para macros»; el que NO admite macros es .docx."
+    "explicacion": "Es justo el formato que sí las guarda: en la lista de «Guardar como» aparece como «Documento habilitado con macros de Word». El que no las admite es el .docx, y al intentar guardar macros en él Word avisa y ofrece tirarlas o cambiar de formato. · La M final es la marca, y la X su contraria. · La separación se hizo por seguridad: al ver la extensión se sabe si un archivo puede ejecutar código al abrirse, sin necesidad de inspeccionarlo."
   },
   {
     "id": "interfaz-103",
@@ -3197,6 +3303,7 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-107",
+    "revisada": true,
     "enunciado": "Relacione cada extensión con su descripción correcta:",
     "opciones": [],
     "matching": {
@@ -3249,7 +3356,7 @@
       "3": "A",
       "4": "D"
     },
-    "explicacion": "Emparejamiento correcto: DOCX → Documento de Word estándar sin macros · DOCM → Documento de Word habilitado para macros · DOTX → Plantilla de Word estándar sin macros · DOTM → Plantilla de Word habilitada para macros."
+    "explicacion": "Las cuatro se leen en dos partes: DOC o DOT dice si es documento o plantilla, y X o M si puede traer macros. Con esa regla salen las cuatro sin memorizar ninguna. · La pareja que más se cruza es DOCM con DOTM, porque las dos llevan código y solo se diferencian en una letra del principio. · La quinta extensión de la familia, que no aparece aquí, es la .dot antigua: plantilla anterior a 2007, que admitía macros sin necesidad de marcarlo, porque entonces esa distinción no existía."
   },
   {
     "id": "interfaz-105",
@@ -3263,6 +3370,7 @@
     "subtopic": null,
     "tema": "Documentos y archivos",
     "sourceQuestionId": "1-109",
+    "revisada": true,
     "enunciado": "Indique si cada carácter está Prohibido (P) o Permitido (Pe) en el nombre de un archivo según las reglas de Windows:",
     "opciones": [],
     "matching": {
@@ -3319,7 +3427,7 @@
       "5": "P",
       "6": "Pe"
     },
-    "explicacion": "Los 9 caracteres prohibidos son: \\ / : * ? \" < > | La barra invertida (1) y el asterisco (5) están prohibidos. El guion bajo (2), el guion medio (3), el signo ¿ (4) y el punto (6) están permitidos."
+    "explicacion": "Solo son nueve los prohibidos —barra inversa, barra, dos puntos, asterisco, interrogación de cierre, comillas dobles, menor, mayor y barra vertical— y todos tienen una función reservada: separar carpetas, identificar la unidad, hacer de comodín, redirigir la salida o agrupar rutas con espacios. · Los dos que más despistan de esta lista son la interrogación de APERTURA, que se admite porque solo existe en español y nunca fue comodín, y el punto, que se puede usar cuantas veces se quiera: la extensión es lo que va detrás del último."
   },
   {
     "id": "interfaz-93",
