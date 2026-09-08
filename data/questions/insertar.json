@@ -10236,7 +10236,8 @@
     "subtopic": null,
     "tema": "Comentarios",
     "sourceQuestionId": "8-225",
-    "enunciado": "¿Qué atajo inserta un comentario en el documento en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres dejar una anotación sobre un párrafo sin escribir en el texto. ¿Qué combinación inserta el comentario?",
     "opciones": [
       {
         "letter": "A",
@@ -10257,7 +10258,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+A inserta un comentario en el documento. Alt+Ctrl+C copia el formato del texto seleccionado. Ctrl+Mayús+A aplica el estilo normal al párrafo. Alt+Mayús+A no tiene función asignada para insertar comentarios."
+    "explicacion": "Figura en el cuadro Personalizar teclado como InsertarComentario, y abre el globo en el margen con el texto seleccionado ya resaltado. · Alt+Ctrl+C es el descarte que decide la pregunta: en esta instalación es el pincel, copiar el formato de la selección, y su pareja Alt+Ctrl+V lo pega. Solo cambia una letra. · Ctrl+Mayús+A aplica el estilo Normal al párrafo. · Muchos manuales dan otras combinaciones para el comentario, del esquema internacional; en esta instalación es esta."
   },
   {
     "id": "insertar-80",
@@ -10272,28 +10273,29 @@
     "tema": "Comentarios",
     "sourceQuestionId": "P-38",
     "generado": true,
-    "enunciado": "¿Qué ruta permite insertar un comentario moderno anclado al punto de inserción en Word 365?",
+    "revisada": true,
+    "enunciado": "El comentario se puede insertar desde dos pestañas distintas. ¿Cuáles son las dos rutas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Revisar > Comentarios > Nuevo comentario"
+        "text": "Insertar ▸ Comentarios ▸ Comentario y Revisar ▸ Comentarios ▸ Comentario nuevo"
       },
       {
         "letter": "B",
-        "text": "Insertar > Comentarios > Comentario > Iniciar una conversación"
+        "text": "Insertar ▸ Texto ▸ Comentario y Revisar ▸ Comentarios ▸ Comentario nuevo"
       },
       {
         "letter": "C",
-        "text": "Insertar > Texto > Comentario > Nuevo"
+        "text": "Insertar ▸ Comentarios ▸ Comentario y Vista ▸ Comentarios ▸ Comentario nuevo"
       },
       {
         "letter": "D",
-        "text": "Vista > Comentarios > Insertar comentario"
+        "text": "Solo desde Revisar ▸ Comentarios ▸ Comentario nuevo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A es una ruta real y también funciona (Revisar tiene el mismo comando), pero la ruta de la pestaña Insertar es la que se solicita. C sitúa el comentario en Texto. D no existe."
+    "respuesta": "A",
+    "explicacion": "Insertar tiene un grupo llamado «Comentarios» con ese único botón, y Revisar tiene el suyo, mucho más completo, con eliminar, navegar entre comentarios y mostrarlos. El comentario que producen es el mismo. · «Vista» es el descarte que decide la pregunta: esa pestaña permite ver el documento de distintas maneras pero no inserta nada. · Al comentario se llega además con Alt+Ctrl+A y desde el menú contextual del texto seleccionado."
   },
   {
     "id": "insertar-421",
@@ -10308,29 +10310,30 @@
     "tema": "Comentarios",
     "sourceQuestionId": "img-insertar-16",
     "generado": true,
+    "revisada": true,
     "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAtCAIAAACGQ2rEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGjSURBVGhD7ZgxS8NAFMcvdXVxUhyEGifBycHagBS0m9WxSD+CqxQEKRQHd4urbnbV0U5FCH6GumSQTvkGjWn8Y16l0ApNmpfchfstufcOAr/cy71LjCAIRH4p0DWnaD2V0Xoqo/XiUno6f/3sUZARevVUhvHUguK8ti6/eoNu95lS0bHtDxrFgl3v1Dwej8eUikilcrSkHntxGoZRmAFJmmaGXQ8yKzMgSdPMJFOcqEMaLQAqtrZz4vs+xf+zfHEmoze3v93ZD/Xd2vbaFsUT9jf2NlfX09ET0EuKTuf+ewLCg8ezl8EbNCg1hed5owUol0vhnWOT5DuABoBNMoRSv4+PUlMgSdPM5Lytaz2V0XpxQX9DD6AgI7j0sD2id6O/pbZJzoVLD+0uJJ96kqD1VCbJz1nLOqSREP3+O42EcF232bxyHIfiKEh0pP4DR2E6FI9Gw+Gw0bhotW5oLl14izNcN9M02+1bSqULo17mboBLTwY3wPKnDHtMsVjM3A1wrZ4MboBFr1qtyuAGWIpTHngbQ+ZoPZXReiqj9VQm13pC/AB7vEx438m5XAAAAABJRU5ErkJggg==",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar ▸ Páginas"
-      },
-      {
-        "letter": "B",
-        "text": "Disposición ▸ Configurar página"
-      },
-      {
-        "letter": "C",
         "text": "Insertar ▸ Comentarios"
       },
       {
+        "letter": "B",
+        "text": "Insertar ▸ Texto"
+      },
+      {
+        "letter": "C",
+        "text": "Revisar ▸ Seguimiento"
+      },
+      {
         "letter": "D",
-        "text": "Insertar ▸ eSignature"
+        "text": "Insertar ▸ Vínculos"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Comentario nuevo.** Pestaña Insertar ▸ Comentarios. Atajo: Alt+Ctrl+A. Añade un comentario anclado a la selección, en el margen o en el panel de comentarios."
+    "respuesta": "A",
+    "explicacion": "Es **Comentario**, único botón del grupo Comentarios en la pestaña Insertar, y su atajo es **Alt+Ctrl+A**. Ancla la anotación a lo que esté seleccionado y abre el globo en el margen. · «Revisar ▸ Seguimiento» es el descarte que decide la pregunta, porque es de la misma pestaña que los comentarios y va de lo mismo, revisar un texto ajeno; pero ese grupo es el del control de cambios, que marca lo que se edita, no lo que se comenta. Los comentarios de Revisar están en su propio grupo «Comentarios»."
   },
   {
     "id": "insertar-441",
@@ -10345,28 +10348,29 @@
     "tema": "Comentarios",
     "sourceQuestionId": "neg-insertar-07",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre comentarios es INCORRECTA?",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre los comentarios:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El atajo para insertar un comentario es Alt+Ctrl+A"
-      },
-      {
-        "letter": "B",
-        "text": "Un comentario se puede resolver"
-      },
-      {
-        "letter": "C",
         "text": "Alt+Ctrl+C también inserta un comentario"
       },
       {
+        "letter": "B",
+        "text": "El atajo para insertar un comentario es Alt+Ctrl+A"
+      },
+      {
+        "letter": "C",
+        "text": "Un comentario se puede marcar como resuelto"
+      },
+      {
         "letter": "D",
-        "text": "Los comentarios se anclan a una selección de texto"
+        "text": "El comentario queda anclado a la selección de texto"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Alt+Ctrl+C copia el formato de la selección (el pincel); no tiene nada que ver con los comentarios. El comentario se inserta con Alt+Ctrl+A."
+    "respuesta": "A",
+    "explicacion": "Alt+Ctrl+C es el pincel: copia el formato de la selección para pegarlo luego con Alt+Ctrl+V. No tiene nada que ver con los comentarios, y solo se diferencia del bueno en una letra. · Las otras tres son ciertas: resolver un comentario lo deja atenuado en su hilo, sin borrarlo, para que quede constancia de la conversación. · Que esté anclado a la selección es lo que hace que, al borrar ese texto, el comentario se vaya con él."
   },
   {
     "id": "insertar-466",
@@ -10381,27 +10385,32 @@
     "tema": "Comentarios",
     "sourceQuestionId": "sm2-insertar-01",
     "generado": true,
-    "enunciado": "¿Cuáles de estos atajos SÍ existen en la pestaña Insertar de esta instalación?",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estos atajos corresponden a comandos de la pestaña Insertar en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Entrar (salto de página)"
+        "text": "Ctrl+Entrar"
       },
       {
         "letter": "B",
-        "text": "Alt+Ctrl+A (comentario nuevo)"
+        "text": "Alt+Ctrl+A"
       },
       {
         "letter": "C",
-        "text": "Alt+F3 (crear Autotexto)"
+        "text": "Alt+F3"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+P (no existe)"
+        "text": "Alt+X"
       },
       {
         "letter": "E",
-        "text": "Alt+X (código Unicode del carácter)"
+        "text": "Ctrl+Mayús+P"
+      },
+      {
+        "letter": "F",
+        "text": "Alt+Ctrl+C"
       }
     ],
     "matching": null,
@@ -10409,9 +10418,9 @@
       "A",
       "B",
       "C",
-      "E"
+      "D"
     ],
-    "explicacion": "Ctrl+Entrar, Alt+Ctrl+A, Alt+F3 y Alt+X son atajos confirmados de esta pestaña. Ctrl+Mayús+P no es un atajo real de Insertar."
+    "explicacion": "Los cuatro verdaderos: Ctrl+Entrar inserta un salto de página, Alt+Ctrl+A un comentario, Alt+F3 crea un autotexto y Alt+X convierte un código en su carácter, y al revés. · Los dos descartes existen, y ahí está la trampa: no son inventados, sino de otras pestañas. **Ctrl+Mayús+P** es SubrayadoPalabras, que subraya las palabras sin subrayar los espacios entre ellas, y es cosa del grupo Fuente de la pestaña Inicio. **Alt+Ctrl+C** es el pincel de copiar formato, también de Inicio. · Todo sale del cuadro Personalizar teclado de esta instalación."
   },
   {
     "id": "insertar-279",
@@ -10426,11 +10435,12 @@
     "tema": "Comentarios",
     "sourceQuestionId": "vf-insertar-76",
     "generado": true,
-    "enunciado": "El atajo Alt+Ctrl+C inserta un comentario en el documento.",
+    "revisada": true,
+    "enunciado": "Alt+Ctrl+C inserta un comentario en el documento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: el comentario se inserta con Alt+Ctrl+A. Alt+Ctrl+C copia el formato de la selección."
+    "explicacion": "Alt+Ctrl+C es el pincel, copiar el formato de la selección; el que lo pega es Alt+Ctrl+V. El comentario se inserta con **Alt+Ctrl+A**. · Una sola letra separa los dos comandos y no se parecen en nada. Además, el pincel es uno de los sitios donde esta instalación en español se aparta del esquema internacional, que usa Ctrl+Mayús+C y Ctrl+Mayús+V: quien copie el atajo de un manual traducido se encuentra con que aquí no funciona."
   },
   {
     "id": "insertar-280",
@@ -10445,11 +10455,12 @@
     "tema": "Comentarios",
     "sourceQuestionId": "vf-insertar-77",
     "generado": true,
-    "enunciado": "El comando Comentario de la pestaña Insertar y el comando Nuevo comentario de la pestaña Revisar producen resultados distintos.",
+    "revisada": true,
+    "enunciado": "El comando Comentario de la pestaña Insertar y el de la pestaña Revisar dan resultados distintos.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Pruebas los dos: primero Insertar > Comentarios > Comentario y después Revisar > Comentarios > Nuevo comentario. En ambos casos aparece exactamente el mismo tipo de globo de comentario moderno anclado al texto seleccionado. Son dos accesos al mismo comando desde pestañas distintas."
+    "explicacion": "Producen exactamente el mismo comentario anclado a la selección: son dos accesos al mismo comando, igual que ocurre con «Referencia cruzada», que está a la vez en Insertar y en Referencias. · Lo que sí cambia es el entorno: en Insertar hay un grupo con ese único botón, mientras que en Revisar está rodeado de todo lo demás —eliminar, ir al anterior y al siguiente, mostrar comentarios—, que es donde se gestiona la conversación una vez creada."
   },
   {
     "id": "insertar-281",
@@ -10464,11 +10475,12 @@
     "tema": "Comentarios",
     "sourceQuestionId": "vf-insertar-78",
     "generado": true,
-    "enunciado": "Dentro del cuadro de un comentario moderno, pulsar Ctrl+Entrar publica el comentario en lugar de insertar un salto de línea.",
+    "revisada": true,
+    "enunciado": "Dentro del globo de un comentario, Ctrl+Entrar publica el comentario en lugar de saltar de línea.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Estás escribiendo un comentario largo y pulsas Ctrl+Entrar pensando que vas a pasar a la línea siguiente dentro del globo. En cambio el comentario se publica directamente, igual que si hubieras hecho clic en el botón Publicar. Este comportamiento está verificado en vivo en esta instalación con comentarios modernos activados."
+    "explicacion": "Es lo mismo que pulsar el botón de publicar, y sorprende porque en el cuerpo del documento esa combinación hace algo muy distinto: insertar un salto de página. El contexto cambia por completo lo que hace la tecla. · Para pasar de línea dentro del globo basta con Intro. · Prueba en vivo del usuario. · Ese comportamiento es el de los comentarios modernos, los que se publican y se pueden responder y resolver formando un hilo."
   },
   {
     "id": "insertar-2",
@@ -10482,7 +10494,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-143",
-    "enunciado": "¿Cuál de los siguientes atajos actualiza los campos del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "Has añadido una tabla nueva y las referencias cruzadas siguen mostrando el número antiguo. ¿Qué tecla las pone al día?",
     "opciones": [
       {
         "letter": "A",
@@ -10494,7 +10507,7 @@
       },
       {
         "letter": "C",
-        "text": "Alt+Mayús+U"
+        "text": "F11"
       },
       {
         "letter": "D",
@@ -10503,7 +10516,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F9 actualiza los campos seleccionados o todos si no hay selección. F8 extiende la selección. Alt+Mayús+U también actualiza campos. Ctrl+F9 inserta un campo vacío."
+    "explicacion": "F9 es ActualizarCampos: refresca lo seleccionado, así que con Ctrl+E antes se pone al día el documento entero. Tiene una combinación alternativa, Alt+Mayús+U. · Ctrl+F9 es el descarte que decide la pregunta y hace justo lo contrario de lo que se necesita: INSERTA un campo vacío con sus llaves especiales, que no se pueden teclear a mano. · F11 salta al campo siguiente, sin actualizarlo. · Y F8 activa el modo de extender la selección, que no es de campos."
   },
   {
     "id": "insertar-5",
@@ -10517,28 +10530,29 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-156",
-    "enunciado": "¿Qué atajo actualiza los campos del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres que los campos del documento dejen de serlo y su resultado se quede fijo como texto normal. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "F9"
+        "text": "Ctrl+6"
       },
       {
         "letter": "B",
-        "text": "F8"
+        "text": "Ctrl+3"
       },
       {
         "letter": "C",
-        "text": "F10"
+        "text": "Ctrl+F11"
       },
       {
         "letter": "D",
-        "text": "Ctrl+F9"
+        "text": "F9"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F9 actualiza los campos. F8 extiende la selección. F10 activa las teclas de la cinta. Ctrl+F9 inserta un campo vacío, no actualiza los existentes."
+    "explicacion": "Es DesvincularCampos, y también responde a Ctrl+Mayús+F9. Sustituye el código por su resultado de forma permanente: lo que era una referencia cruzada pasa a ser un número escrito, y ya no se actualiza nunca más. Es lo que se hace antes de mandar un documento a quien no debe tocarlo. · Ctrl+3 y Ctrl+F11 son los descartes que deciden la pregunta: BLOQUEAN el campo, que es reversible con Ctrl+4, mientras que desvincular no tiene vuelta atrás. · Y F9 actualiza."
   },
   {
     "id": "insertar-6",
@@ -10552,7 +10566,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-157",
-    "enunciado": "¿Qué atajo alternativo también actualiza campos además de F9?",
+    "revisada": true,
+    "enunciado": "Además de F9, ¿qué otra combinación actualiza los campos?",
     "opciones": [
       {
         "letter": "A",
@@ -10560,20 +10575,20 @@
       },
       {
         "letter": "B",
-        "text": "Alt+U"
-      },
-      {
-        "letter": "C",
         "text": "Ctrl+Mayús+U"
       },
       {
-        "letter": "D",
+        "letter": "C",
         "text": "Alt+Ctrl+U"
+      },
+      {
+        "letter": "D",
+        "text": "Alt+U"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Mayús+U es el atajo alternativo para actualizar campos. Alt+U no tiene esa función. Ctrl+Mayús+U aplica mayúsculas. Alt+Ctrl+U actualiza el formato automático, no los campos."
+    "explicacion": "El cuadro Personalizar teclado registra F9 y Alt+Mayús+U bajo el mismo comando, ActualizarCampos. Es habitual en esta instalación que un comando tenga dos combinaciones, una con tecla de función y otra con letra. · Ctrl+Mayús+U es el descarte que decide la pregunta: existe, pero pone el texto en mayúsculas, que no tiene nada que ver. · Otros campos de la misma familia: F11 y Mayús+F11 saltan al siguiente y al anterior, Ctrl+3 y Ctrl+4 bloquean y desbloquean."
   },
   {
     "id": "insertar-10",
@@ -10587,7 +10602,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-161",
-    "enunciado": "¿Qué atajo bloquea los campos del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres impedir que un campo se actualice y siga mostrando el valor que tiene ahora. ¿Qué combinación lo bloquea?",
     "opciones": [
       {
         "letter": "A",
@@ -10599,16 +10615,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+F11"
+        "text": "Ctrl+6"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+F11"
+        "text": "Mayús+F11"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+3 bloquea los campos. Ctrl+4 desbloquea los campos. Ctrl+F11 también bloquea campos y es el atajo alternativo. Ctrl+Mayús+F11 desbloquea campos."
+    "explicacion": "BloquearCampos responde a Ctrl+3 y también a Ctrl+F11. El campo sigue siendo un campo, pero F9 deja de tener efecto sobre él hasta que se desbloquee con Ctrl+4. · Ctrl+6 es el descarte que decide la pregunta, porque parece la misma familia de números y hace algo mucho más drástico: desvincular, es decir, convertir el campo en texto fijo para siempre. Bloquear se puede deshacer; desvincular no. · Mayús+F11 solo salta al campo anterior."
   },
   {
     "id": "insertar-11",
@@ -10622,7 +10638,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-162",
-    "enunciado": "¿Cuál de los siguientes atajos desbloquea los campos en Word 365?",
+    "revisada": true,
+    "enunciado": "Un campo está bloqueado y quieres volver a poder actualizarlo. ¿Qué combinación lo desbloquea?",
     "opciones": [
       {
         "letter": "A",
@@ -10643,7 +10660,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+4 desbloquea los campos. Ctrl+3 los bloquea. Ctrl+F11 bloquea campos. Ctrl+Mayús+F3 inserta el contenido del elemento de texto automático."
+    "explicacion": "DesbloquearCampos responde a Ctrl+4 y a Ctrl+Mayús+F11. Los números van en pareja: el 3 bloquea y el 4 desbloquea, y son consecutivos, así que basta recordar cuál va primero. · Ctrl+F11 es el descarte que decide la pregunta, y es de los peores porque pertenece al comando contrario: es la combinación alternativa de BLOQUEAR. La que desbloquea lleva además Mayús. · Ctrl+Mayús+F3 es del Spike: suelta todo lo que se ha ido acumulando con Ctrl+F3."
   },
   {
     "id": "insertar-12",
@@ -10657,7 +10674,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-163",
-    "enunciado": "¿Qué atajo alternativo desbloquea campos además de Ctrl+4?",
+    "revisada": true,
+    "enunciado": "Además de Ctrl+4, ¿qué otra combinación desbloquea los campos?",
     "opciones": [
       {
         "letter": "A",
@@ -10669,7 +10687,7 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+F3"
+        "text": "Ctrl+Mayús+F9"
       },
       {
         "letter": "D",
@@ -10678,7 +10696,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+F11 es el atajo alternativo para desbloquear campos. Ctrl+F11 bloquea campos. Ctrl+Mayús+F3 inserta texto automático del portapapeles especial. Ctrl+Mayús+4 no tiene esa función asignada."
+    "explicacion": "La simetría es exacta: Ctrl+F11 bloquea y Ctrl+Mayús+F11 desbloquea, igual que Ctrl+3 bloquea y Ctrl+4 desbloquea. La tecla Mayús es lo único que separa las dos primeras, y por eso Ctrl+F11 es el descarte que decide la pregunta. · Ctrl+Mayús+F9 pertenece a otro comando de la misma tecla: desvincular, que convierte el campo en texto fijo. Tres cosas distintas sobre F11 y F9 con combinaciones que se parecen mucho."
   },
   {
     "id": "insertar-13",
@@ -10692,7 +10710,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-167",
-    "enunciado": "¿Qué atajo permite ir al campo anterior en Word 365?",
+    "revisada": true,
+    "enunciado": "Recorres un documento lleno de campos y quieres retroceder al campo anterior. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -10713,7 +10732,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+F11 va al campo anterior. F11 va al campo siguiente. Alt+F11 abre el editor de VBA. Ctrl+F11 bloquea campos."
+    "explicacion": "CampoAnterior responde a Mayús+F11 y también a Alt+Mayús+F1; su simétrica es F11 (o Alt+F1), que va al siguiente. Mayús invirtiendo el sentido de un desplazamiento es un patrón constante en Word. · Alt+F11 es el descarte que decide la pregunta y no navega a ninguna parte: abre el editor de Visual Basic, que es una ventana aparte y suele asustar cuando sale por error. · Ctrl+F11, por su parte, bloquea los campos seleccionados."
   },
   {
     "id": "insertar-14",
@@ -10727,7 +10746,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-168",
-    "enunciado": "¿Qué atajo alternativo también va al campo anterior además de Mayús+F11?",
+    "revisada": true,
+    "enunciado": "Además de Mayús+F11, ¿qué otra combinación va al campo anterior?",
     "opciones": [
       {
         "letter": "A",
@@ -10748,7 +10768,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Mayús+F1 es el atajo alternativo para ir al campo anterior. Alt+F1 va al campo siguiente. Ctrl+Mayús+F1 no tiene función asignada para navegación de campos. Alt+Ctrl+F1 muestra información del sistema de Microsoft."
+    "explicacion": "El cuadro Personalizar teclado registra Mayús+F11 y Alt+Mayús+F1 bajo el mismo comando, CampoAnterior. La simetría se mantiene en la otra dirección: F11 y Alt+F1 van al siguiente. · **Alt+F1** es el descarte que decide la pregunta precisamente por eso: es la pareja de la buena pero en sentido contrario, y solo se diferencia en la tecla Mayús. · Alt+Ctrl+F1 no navega a ninguna parte: arranca la aplicación de Información del sistema de Microsoft, una ventana ajena a Word."
   },
   {
     "id": "insertar-18",
@@ -10762,7 +10782,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-173",
-    "enunciado": "¿Qué atajo inserta el campo ListNum en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres insertar un campo de numeración automática dentro de un párrafo, sin usar una lista numerada. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -10774,16 +10795,16 @@
       },
       {
         "letter": "C",
-        "text": "Alt+Mayús+Y"
+        "text": "Alt+Ctrl+Y"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Alt+Y"
+        "text": "Alt+Mayús+Y"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+Y inserta el campo ListNum para numeración automática. Ctrl+Y rehace o repite la última acción. Alt+Mayús+Y no tiene función asignada para ListNum. Ctrl+Alt+Y repite una búsqueda."
+    "explicacion": "Es InsertarCampoListaNum, y coloca un campo ListNum que se numera solo respecto a los demás del documento; sirve para numerar párrafos sueltos o incisos dentro de una frase, donde una lista numerada no encaja. · Ctrl+Y es el descarte que decide la pregunta: repite la última acción, lo mismo que F4 y que Alt+Entrar. · Alt+Ctrl+Y repite la última búsqueda, igual que Mayús+F4. Tres combinaciones sobre la misma letra y solo una tiene que ver con campos."
   },
   {
     "id": "insertar-20",
@@ -10797,28 +10818,29 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-187",
-    "enunciado": "¿Qué atajo desvincula los campos del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "¿Qué diferencia hay entre bloquear un campo (Ctrl+3) y desvincularlo (Ctrl+6)?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+6"
+        "text": "Bloquear impide que se actualice y se puede deshacer; desvincular lo convierte en texto para siempre"
       },
       {
         "letter": "B",
-        "text": "Ctrl+3"
+        "text": "Bloquear lo convierte en texto para siempre; desvincular solo impide que se actualice"
       },
       {
         "letter": "C",
-        "text": "Ctrl+4"
+        "text": "Los dos hacen lo mismo: son dos combinaciones del mismo comando"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+F9"
+        "text": "Bloquear afecta a todo el documento y desvincular solo al campo seleccionado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+6 desvincula los campos. Ctrl+3 bloquea los campos. Ctrl+4 desbloquea los campos. Ctrl+Mayús+F9 es el atajo alternativo para desvincular campos."
+    "explicacion": "Un campo bloqueado sigue siendo un campo: F9 deja de tener efecto sobre él, pero con Ctrl+4 vuelve a estar disponible y se actualiza como si nada. Uno desvinculado deja de existir como tal: en su sitio queda el número o el texto que mostraba, y no hay manera de recuperarlo salvo deshacer en el momento. · La versión con los papeles cambiados es el descarte que decide la pregunta. · Los dos actúan sobre lo seleccionado, no sobre el documento entero, y los dos tienen combinación alternativa: Ctrl+F11 y Ctrl+Mayús+F9."
   },
   {
     "id": "insertar-21",
@@ -10832,7 +10854,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-188",
-    "enunciado": "¿Qué atajo alternativo desvincula campos además de Ctrl+6?",
+    "revisada": true,
+    "enunciado": "Además de Ctrl+6, ¿qué otra combinación desvincula los campos?",
     "opciones": [
       {
         "letter": "A",
@@ -10848,12 +10871,12 @@
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+F3"
+        "text": "Alt+Mayús+F9"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+F9 es el atajo alternativo para desvincular campos. Ctrl+F9 inserta un campo vacío. Ctrl+Mayús+F11 desbloquea campos. Ctrl+Mayús+F3 inserta el contenido del portapapeles especial."
+    "explicacion": "Está registrada junto a Ctrl+6 bajo DesvincularCampos: «reemplaza permanentemente los códigos de campo con los resultados». · **Ctrl+F9** es el descarte que decide la pregunta porque hace exactamente lo contrario: crea un campo vacío en lugar de deshacerlo. · Ctrl+Mayús+F11 desbloquea, que es reversible y muy distinto de desvincular. · Y Alt+Mayús+F9 ejecuta la acción asociada al campo, como si se pinchara en él. Cinco comandos distintos repartidos entre F9 y F11 con combinaciones casi iguales."
   },
   {
     "id": "insertar-24",
@@ -10867,7 +10890,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-222",
-    "enunciado": "¿Qué atajo inserta un campo vacío en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres escribir a mano el código de un campo y necesitas sus llaves especiales, que no salen tecleando. ¿Qué combinación las inserta?",
     "opciones": [
       {
         "letter": "A",
@@ -10888,7 +10912,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F9 inserta un campo vacío en el documento. F9 actualiza los campos existentes. Alt+F9 muestra u oculta los códigos de campo de todos los campos. Ctrl+Mayús+F9 desvincula los campos del documento."
+    "explicacion": "Es InsertarCampoCarácter, y es imprescindible: las llaves de un campo no son las del teclado, así que escribirlas a mano no crea ningún campo, solo dos símbolos. Con el atajo aparecen en gris y el cursor dentro, listo para teclear el código. · **Alt+F9** es el descarte que decide la pregunta: enseña las llaves de los campos que ya existen, pero no crea ninguno. · F9 actualiza y Ctrl+Mayús+F9 desvincula. Cuatro comandos sobre F9: crear, ver, actualizar y deshacer."
   },
   {
     "id": "insertar-25",
@@ -10902,7 +10926,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-223",
-    "enunciado": "¿Qué atajo muestra u oculta los códigos de todos los campos del documento simultáneamente en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres ver los códigos de todos los campos del documento en lugar de sus resultados. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -10910,11 +10935,11 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+F9"
+        "text": "Mayús+F9"
       },
       {
         "letter": "C",
-        "text": "Mayús+F9"
+        "text": "Ctrl+F9"
       },
       {
         "letter": "D",
@@ -10923,7 +10948,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+F9 alterna la visualización de códigos de todos los campos. Ctrl+F9 inserta un campo vacío. Mayús+F9 muestra u oculta el código de un campo concreto seleccionado. Ctrl+Mayús+F9 desvincula los campos."
+    "explicacion": "Es VerCódigosDeCampo, y actúa sobre el documento entero: donde había una fecha aparece su código entre llaves, y al volver a pulsarla se deshace. Es la forma de averiguar por qué un campo no muestra lo que debería. · **Mayús+F9** es el descarte que decide la pregunta: hace lo mismo pero solo con lo seleccionado, y su comando se llama AlternarMostrarCampo. La diferencia entre las dos es únicamente el alcance. · Ctrl+F9 crea un campo y Ctrl+Mayús+F9 lo convierte en texto fijo."
   },
   {
     "id": "insertar-26",
@@ -10937,7 +10962,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-224",
-    "enunciado": "¿Qué atajo muestra u oculta el código de un campo concreto seleccionado en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres ver el código de un solo campo, sin llenar de llaves todo el documento. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -10949,16 +10975,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+F9"
+        "text": "F9"
       },
       {
         "letter": "D",
-        "text": "F9"
+        "text": "Alt+Mayús+F9"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+F9 alterna el código del campo seleccionado. Alt+F9 alterna todos los campos del documento. Ctrl+F9 inserta un campo vacío. F9 actualiza los campos del documento."
+    "explicacion": "Es AlternarMostrarCampo, y trabaja sobre la selección: basta con poner el cursor dentro del campo. · **Alt+F9** es el descarte que decide la pregunta y hace lo mismo con TODOS los campos a la vez, que en un documento largo lo vuelve ilegible. Alt para todo, Mayús para uno. · Alt+Mayús+F9 no muestra nada: ejecuta la acción del campo, como si se hiciera clic en él. · Y F9 actualiza el resultado sin enseñar el código."
   },
   {
     "id": "insertar-28",
@@ -10972,7 +10998,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-228",
-    "enunciado": "¿Qué atajo hace clic en un campo para ejecutarlo en Word 365?",
+    "revisada": true,
+    "enunciado": "¿Qué combinación ejecuta la acción asociada a un campo, como si se hiciera clic sobre él?",
     "opciones": [
       {
         "letter": "A",
@@ -10984,16 +11011,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+F9"
+        "text": "Mayús+F9"
       },
       {
         "letter": "D",
-        "text": "Mayús+F9"
+        "text": "Ctrl+Mayús+F9"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Mayús+F9 ejecuta la acción del campo como si se hiciera clic sobre él. Alt+F9 muestra u oculta todos los códigos de campo. Ctrl+Mayús+F9 desvincula los campos. Mayús+F9 muestra u oculta el código del campo seleccionado."
+    "explicacion": "Su comando se llama HacerClicCampo, y sirve para los campos que llevan una acción detrás, como los botones de una macro. Es el menos conocido de toda la familia de F9. · Los dos descartes de en medio muestran el código en vez de ejecutarlo, uno en todo el documento y otro solo en la selección: son los que más se confunden porque las tres combinaciones se parecen. · Ctrl+Mayús+F9 desvincula, que es lo más drástico de las cuatro."
   },
   {
     "id": "insertar-29",
@@ -11007,7 +11034,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-229",
-    "enunciado": "¿Qué atajo va al siguiente campo del documento en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres saltar de un campo al siguiente para revisarlos todos. ¿Qué tecla lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -11028,7 +11056,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F11 va al siguiente campo del documento. Mayús+F11 va al campo anterior. Alt+F11 abre el editor de VBA. Ctrl+F11 bloquea los campos."
+    "explicacion": "Es CampoSiguiente, que responde también a Alt+F1; con Mayús se recorre en sentido contrario, con Mayús+F11 o Alt+Mayús+F1. · **Alt+F11** es el descarte que decide la pregunta: no navega a ningún campo, abre el editor de Visual Basic, una ventana aparte que suele asustar cuando sale sin querer. Se cierra con Alt+Q. · Ctrl+F11 bloquea el campo seleccionado. Tres cosas distintas sobre la misma tecla de función según la que la acompañe."
   },
   {
     "id": "insertar-30",
@@ -11042,7 +11070,8 @@
     "subtopic": null,
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "8-230",
-    "enunciado": "¿Qué atajo alternativo también va al siguiente campo además de F11?",
+    "revisada": true,
+    "enunciado": "Además de F11, ¿qué otra combinación va al campo siguiente?",
     "opciones": [
       {
         "letter": "A",
@@ -11050,20 +11079,20 @@
       },
       {
         "letter": "B",
-        "text": "Mayús+F1"
+        "text": "Alt+Mayús+F1"
       },
       {
         "letter": "C",
-        "text": "Ctrl+F1"
+        "text": "Mayús+F1"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+F1"
+        "text": "Ctrl+F1"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+F1 va al campo siguiente, igual que F11. Mayús+F1 muestra las Propiedades de formato. Ctrl+F1 no tiene función en este Word. Alt+Mayús+F1 va al campo anterior."
+    "explicacion": "F11 y Alt+F1 comparten el comando CampoSiguiente; añadiendo Mayús a cualquiera de las dos se va al anterior. · **Alt+Mayús+F1** es el descarte que decide la pregunta: es la buena más Mayús, o sea el sentido contrario. · Mayús+F1 abre el panel «Mostrar formato», que enseña qué formato tiene el texto donde esté el cursor. · Y Ctrl+F1 contrae o despliega la cinta, cosa que sorprende a quien la pulsa sin querer y ve desaparecer todos los botones."
   },
   {
     "id": "insertar-41",
@@ -11078,28 +11107,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "gen-atajo-19",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también bloquea un campo en Word 365, además de Ctrl+3?",
+    "revisada": true,
+    "enunciado": "Además de Ctrl+3, ¿qué otra combinación bloquea un campo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+6"
+        "text": "Ctrl+F11"
       },
       {
         "letter": "B",
-        "text": "Alt+Borrar (Núm 5)"
+        "text": "Ctrl+6"
       },
       {
         "letter": "C",
-        "text": "Alt+Entrar"
+        "text": "Ctrl+Mayús+F11"
       },
       {
         "letter": "D",
-        "text": "Ctrl+F11"
+        "text": "Alt+Entrar"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Impide que el campo seleccionado se actualice; es una segunda combinación asignada a la misma función que Ctrl+3."
+    "respuesta": "A",
+    "explicacion": "Ctrl+3 y Ctrl+F11 están registradas bajo el mismo comando, BloquearCampos: impiden que el campo seleccionado se actualice, y se deshace con Ctrl+4 o Ctrl+Mayús+F11. · **Ctrl+6** es el descarte que decide la pregunta porque parece de la misma familia numérica y hace algo mucho más grave: desvincular, que convierte el campo en texto fijo y no tiene vuelta atrás. · Ctrl+Mayús+F11 es justo la contraria, la que desbloquea. · Y Alt+Entrar repite la última acción, igual que Ctrl+Y y F4."
   },
   {
     "id": "insertar-81",
@@ -11114,28 +11144,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-39",
     "generado": true,
-    "enunciado": "¿Qué ruta permite seleccionar un encabezado con diseño predefinido de la galería integrada de Word?",
+    "revisada": true,
+    "enunciado": "Quieres poner un encabezado eligiendo uno de los diseños que trae Word. ¿Qué ruta lleva a esa galería?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Encabezado y pie de página > Encabezado > Editar encabezado"
+        "text": "Insertar ▸ Encabezado y pie de página ▸ Encabezado ▸ Integrado"
       },
       {
         "letter": "B",
-        "text": "Insertar > Páginas > Encabezado > Integrado"
+        "text": "Insertar ▸ Encabezado y pie de página ▸ Encabezado ▸ Editar encabezado"
       },
       {
         "letter": "C",
-        "text": "Insertar > Encabezado y pie de página > Encabezado > Integrado > En blanco"
+        "text": "Insertar ▸ Páginas ▸ Encabezado ▸ Integrado"
       },
       {
         "letter": "D",
-        "text": "Diseño > Encabezado y pie de página > Plantillas > Integrado"
+        "text": "Diseño ▸ Encabezado y pie de página ▸ Plantillas"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A abre el área de edición directamente sin elegir plantilla. B sitúa el encabezado en el grupo Páginas. D cambia la pestaña."
+    "respuesta": "A",
+    "explicacion": "El botón despliega la galería «Integrado», con «En blanco» y varias maquetas ya montadas, y debajo están «Editar encabezado», «Quitar encabezado» y «Guardar selección en galería de encabezados». · **«Editar encabezado»** es el descarte que decide la pregunta: entra en la zona del encabezado para escribir a mano, sin aplicar ningún diseño, y es lo mismo que hacer doble clic en el margen superior. · El grupo se llama «Encabezado y pie de página», no «Páginas», y no hay nada de esto en la pestaña Diseño."
   },
   {
     "id": "insertar-82",
@@ -11150,19 +11181,20 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-40",
     "generado": true,
-    "enunciado": "¿Qué opción existe realmente dentro del menú Encabezado de la pestaña Insertar?",
+    "revisada": true,
+    "enunciado": "Has montado un encabezado a tu gusto y quieres reutilizarlo en otros documentos. ¿Qué entrada del menú Encabezado lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Establecer como encabezado predeterminado"
+        "text": "Guardar selección en galería de encabezados…"
       },
       {
         "letter": "B",
-        "text": "Guardar selección en galería de encabezados..."
+        "text": "Establecer como encabezado predeterminado"
       },
       {
         "letter": "C",
-        "text": "Sincronizar con pie de página"
+        "text": "Sincronizar con el pie de página"
       },
       {
         "letter": "D",
@@ -11170,8 +11202,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe. C no existe (vincular al anterior sí, pero con otro nombre y desde la cinta contextual). D no existe."
+    "respuesta": "A",
+    "explicacion": "Es la última entrada del menú, y guarda el encabezado como bloque de creación, de modo que a partir de ahí aparece en la galería junto a los que trae Word. Es el mismo mecanismo de las portadas, las tablas rápidas y los elementos rápidos, y siempre con ese mismo nombre. · «Establecer como predeterminado» es el descarte que decide la pregunta, porque ese rótulo existe de verdad en los cuadros Fuente y Párrafo, y aquí no. · Vincular el encabezado al de la sección anterior sí existe, pero se llama «Vincular al anterior» y está en la cinta contextual."
   },
   {
     "id": "insertar-83",
@@ -11186,28 +11218,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-41",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes posiciones de numeración está disponible en Número de página de la pestaña Insertar?",
+    "revisada": true,
+    "enunciado": "Quieres el número de página en el lateral de la hoja, no arriba ni abajo. ¿Qué posición hay que elegir?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Centro de página"
-      },
-      {
-        "letter": "B",
         "text": "Márgenes de página"
       },
       {
+        "letter": "B",
+        "text": "Centro de página"
+      },
+      {
         "letter": "C",
-        "text": "Encima del texto"
+        "text": "Posición actual"
       },
       {
         "letter": "D",
-        "text": "Sobre la imagen"
+        "text": "Encima del texto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe como posición (los márgenes son laterales, no centro). C no existe. D no existe. Las posiciones reales son: Principio de página, Final de página, Márgenes de página, Posición actual."
+    "respuesta": "A",
+    "explicacion": "El botón «Número de página» ofrece cuatro posiciones: principio de página, final de página, márgenes de página y posición actual. La de márgenes coloca el número en el lateral, y sus diseños incluyen números en recuadros o flechas verticales. · **«Posición actual»** es el descarte que decide la pregunta: inserta el número justo donde esté el cursor, que puede ser el lateral si uno se ha colocado allí a mano, pero no es una posición lateral por sí misma; sirve para meter el número dentro de una frase del encabezado. · Debajo están «Formato del número de página» y «Quitar números de página»."
   },
   {
     "id": "insertar-84",
@@ -11222,28 +11255,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-42",
     "generado": true,
-    "enunciado": "¿Cual de los siguientes formatos NO aparece en el cuadro «Formato de los numeros de pagina» de Word 365?",
+    "revisada": true,
+    "enunciado": "De estos formatos, señale el que NO aparece en el cuadro «Formato de los números de página»:",
     "opciones": [
       {
         "letter": "A",
-        "text": "01, 02, 03... (con cero a la izquierda)"
+        "text": "01, 02, 03…"
       },
       {
         "letter": "B",
-        "text": "a, b, c..."
+        "text": "-1-, -2-, -3-…"
       },
       {
         "letter": "C",
-        "text": "i, ii, iii..."
+        "text": "i, ii, iii…"
       },
       {
         "letter": "D",
-        "text": "I, II, III..."
+        "text": "I, II, III…"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El cuadro «Formato de los numeros de pagina» ofrece 6 formatos: 1,2,3 / -1,-2,-3 / a,b,c / A,B,C / i,ii,iii / I,II,III. Los numeros con cero a la izquierda (01, 02...) no estan."
+    "explicacion": "Los seis formatos del desplegable son: 1,2,3 · -1,-2,-3 · a,b,c · A,B,C · i,ii,iii · I,II,III. Están las dos versiones de los romanos y las dos de las letras. · Los números con cero delante no figuran: para conseguirlos habría que editar a mano el código del campo PAGE. · Ese detalle es el que más se falla, porque el formato con cero es habitualísimo fuera de Word. El cuadro tiene además «Incluir número de capítulo» y el bloque «Numeración de páginas», con «Continuar desde la sección anterior» o «Iniciar en»."
   },
   {
     "id": "insertar-85",
@@ -11258,28 +11292,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-43",
     "generado": true,
-    "enunciado": "¿Qué ruta permite configurar que la primera página del documento tenga un encabezado diferente al del resto?",
+    "revisada": true,
+    "enunciado": "La portada de un informe no debe llevar el encabezado del resto del documento. ¿Dónde se configura eso?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Encabezado y pie de página > Encabezado > Primera página diferente"
+        "text": "En el grupo Opciones de la cinta contextual Encabezado y pie de página"
       },
       {
         "letter": "B",
-        "text": "Insertar > Encabezado y pie de página > Encabezado y pie de página > Opciones > Primera página diferente"
+        "text": "En el menú del botón Encabezado, en la pestaña Insertar"
       },
       {
         "letter": "C",
-        "text": "Diseño > Configurar página > Primera página diferente"
+        "text": "En el cuadro «Formato de los números de página»"
       },
       {
         "letter": "D",
-        "text": "Insertar > Encabezado y pie de página > Número de página > Formato > Primera página"
+        "text": "En el grupo Navegación de la cinta contextual Encabezado y pie de página"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A el submenú de Encabezado no contiene esa opción directamente. C la opción también existe en Disposición (no Diseño), pero la ruta de Insertar con la cinta contextual es la que se pide aquí. D es una ruta incorrecta."
+    "respuesta": "A",
+    "explicacion": "La casilla se llama «Primera página diferente» y comparte grupo con «Páginas pares e impares diferentes» y «Mostrar texto del documento». Al marcarla, el encabezado de la primera página se queda en blanco y se puede escribir uno propio o dejarlo vacío. · **Navegación** es el descarte que decide la pregunta: es el grupo de al lado y también trabaja con lo que distingue unas páginas de otras, pero por secciones —«Vincular a la anterior», Anterior, Siguiente—, no por la primera página. · La misma casilla está en la ficha Diseño del cuadro Configurar página, en la pestaña Disposición."
   },
   {
     "id": "insertar-86",
@@ -11294,28 +11329,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-44",
     "generado": true,
-    "enunciado": "¿Qué ruta dentro de la cinta contextual de encabezado y pie de página permite insertar una tabulación que alinea el contenido automáticamente en el centro o en el margen derecho del encabezado?",
+    "revisada": true,
+    "enunciado": "En un encabezado quieres el título a la izquierda y la fecha pegada al margen derecho, sin contar tabulaciones a ojo. ¿Qué comando lo resuelve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Encabezado y pie de página > Posición > Insertar tabulación de alineación"
+        "text": "«Insertar tabulación de alineación», en el grupo Posición"
       },
       {
         "letter": "B",
-        "text": "Encabezado y pie de página > Texto > Tabulación centrada"
+        "text": "«Insertar tabulación de alineación», en el grupo Navegación"
       },
       {
         "letter": "C",
-        "text": "Inicio > Párrafo > Tabulaciones > Alineación de encabezado"
+        "text": "Inicio ▸ Párrafo ▸ el lanzador ▸ Tabulaciones"
       },
       {
         "letter": "D",
-        "text": "Encabezado y pie de página > Navegación > Insertar tabulación"
+        "text": "«Alinear texto» de la cinta Formato de forma"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B no existe como comando. C es la ruta genérica de tabulaciones pero no la específica del encabezado. D sitúa el comando en Navegación, que solo contiene Ir al encabezado/pie, Vincular a la anterior, Anterior y Siguiente."
+    "explicacion": "Está en el grupo Posición, junto a los campos «Encabezado desde arriba» y «Pie de página desde abajo», que vienen a 1,25 cm. Abre un cuadrito donde se elige izquierda, centro o derecha y si se alinea respecto al margen o a la sangría, y coloca la tabulación sola, sin que uno tenga que calcular centímetros. · El cuadro Tabulaciones de siempre es el descarte que decide la pregunta: funciona, pero hay que escribir la posición a mano y rehacerla si cambian los márgenes. · El grupo Navegación solo salta entre encabezado, pie y secciones."
   },
   {
     "id": "insertar-137",
@@ -11330,28 +11366,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-104",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes posiciones existe realmente dentro de Número de página > Principio de página en Word 365?",
+    "revisada": true,
+    "enunciado": "Despliegas «Número de página ▸ Principio de página» y ves un apartado «Simple». ¿Qué contiene?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Simple > Número centrado"
+        "text": "Tres entradas, «Número sin formato 1, 2 y 3», alineadas a izquierda, centro y derecha"
       },
       {
         "letter": "B",
-        "text": "Simple > Número sin formato 2"
+        "text": "Tres entradas, «Número a la izquierda», «Número centrado» y «Número a la derecha»"
       },
       {
         "letter": "C",
-        "text": "Con formas > Círculo relleno"
+        "text": "Una sola entrada, «Número sin formato»"
       },
       {
         "letter": "D",
-        "text": "Con estilos > Número en banda"
+        "text": "Dos entradas, «Número sin formato» y «Número con guiones»"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A \"Número centrado\" no existe con ese nombre; los tres números simples son: Número sin formato 1, 2 y 3 (alineados a izquierda, centro y derecha). C \"Círculo relleno\" no existe; la opción real es solo \"Círculo\". D no existe."
+    "respuesta": "A",
+    "explicacion": "Los nombres son escuetos y numerados, y la alineación hay que deducirla de la vista previa, no del rótulo. Debajo de «Simple» está «Con formas», con diseños como Círculo o Rectángulo redondeado. · Los nombres descriptivos del segundo descarte son lo que uno esperaría y no es lo que pone. · Una sola entrada es lo que tiene «Posición actual», que al insertar el número donde está el cursor no necesita alinear nada: ese es el descarte que decide la pregunta, porque el reparto cambia de una posición a otra."
   },
   {
     "id": "insertar-138",
@@ -11366,28 +11403,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-105",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes posiciones existe realmente dentro de Número de página > Final de página en Word 365?",
+    "revisada": true,
+    "enunciado": "El apartado «Con formas» de «Final de página» incluye diseños con el número dentro de una figura. ¿Cuál de estos existe?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Con formas > Cinta"
+        "text": "Cinta"
       },
       {
         "letter": "B",
-        "text": "Con formas > Banda horizontal"
+        "text": "Banda horizontal"
       },
       {
         "letter": "C",
-        "text": "Simple > Número con guión"
+        "text": "Número con guión"
       },
       {
         "letter": "D",
-        "text": "Con estilos > Número subrayado"
+        "text": "Número subrayado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B, C y D no existen. \"Cinta\" sí figura como opción real dentro de Final de página > Con formas."
+    "explicacion": "«Cinta» y «Círculo» son de los que trae ese apartado, con el número metido en una figura de color. · Los tres descartes describen adornos verosímiles y ninguno es un rótulo de la galería; los dos últimos ni siquiera son formas, que es la pista para descartarlos, porque este apartado va precisamente de eso. · El otro apartado de esta posición es «Simple», con los tres «Número sin formato». · Todos estos diseños son bloques de creación: se pueden ampliar guardando uno propio en la galería."
   },
   {
     "id": "insertar-139",
@@ -11402,28 +11440,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-106",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes posiciones existe realmente dentro de Número de página > Márgenes de página?",
+    "revisada": true,
+    "enunciado": "¿Qué tienen en común todos los diseños de «Número de página ▸ Márgenes de página»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Con formas > Flecha, derecha"
+        "text": "Van por parejas: cada uno tiene su versión derecha y su versión izquierda"
       },
       {
         "letter": "B",
-        "text": "Con formas > Triángulo, izquierda"
+        "text": "Todos colocan el número en el margen derecho, que es el habitual"
       },
       {
         "letter": "C",
-        "text": "Número sin formato > Número en banda"
+        "text": "Todos son de la categoría «Con formas»: no hay números sin adorno"
       },
       {
         "letter": "D",
-        "text": "Con formas > Rombo, derecha"
+        "text": "Todos numeran en romanos, por ser una numeración secundaria"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B, C y D no existen con esos nombres. \"Flecha, derecha\" sí figura en la extracción real."
+    "explicacion": "El nombre de cada uno acaba en «, derecha» o «, izquierda»: Círculo, Flecha, Órbita, Borde, Grande, Barra de énfasis, Vertical. Tiene sentido, porque un número lateral tiene que poder ir al lado que corresponda, sobre todo en un documento impreso a doble cara. · Que solo haya formas es el descarte que decide la pregunta: hay tres apartados, «Con formas», «Número sin formato» y «Página X», este último con la palabra «Página» delante del número. · El formato de numeración se elige aparte, en «Formato del número de página»."
   },
   {
     "id": "insertar-140",
@@ -11438,28 +11477,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-107",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes posiciones existe realmente dentro de Número de página > Márgenes de página?",
+    "revisada": true,
+    "enunciado": "El apartado «Página X» de «Márgenes de página» agrupa los diseños que escriben la palabra «Página» delante del número. ¿Cuál de estos es uno de ellos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Página X > Barra lateral izquierda"
+        "text": "Barra de énfasis, derecha"
       },
       {
         "letter": "B",
-        "text": "Página X > Barra de énfasis, derecha"
+        "text": "Barra lateral izquierda"
       },
       {
         "letter": "C",
-        "text": "Página X > Número en columna"
+        "text": "Número en columna"
       },
       {
         "letter": "D",
-        "text": "Página X > Encuadre lateral"
+        "text": "Encuadre lateral"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no existen. El nombre real es \"Barra de énfasis, derec...\" (abreviado en la extracción por longitud)."
+    "respuesta": "A",
+    "explicacion": "Ese apartado tiene dos diseños en sus dos versiones: «Barra de énfasis» y «Vertical», cada uno a derecha e izquierda. · «Barra lateral» es el descarte que decide la pregunta, y es peligroso porque sí existe en Word... pero en otra galería: las barras laterales son cuadros de texto del menú Cuadro de texto, y hay una buena colección con nombres de tema. · Los otros dos apartados de esta posición son «Con formas» y «Número sin formato»."
   },
   {
     "id": "insertar-141",
@@ -11474,28 +11514,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-108",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes posiciones existe realmente dentro de Número de página > Posición actual?",
+    "revisada": true,
+    "enunciado": "«Posición actual» inserta el número donde esté el cursor. ¿Cuál de estos diseños ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Con formas > Mosaico"
+        "text": "Mosaico"
       },
       {
         "letter": "B",
-        "text": "Con formas > Cuadrado"
+        "text": "Cuadrado"
       },
       {
         "letter": "C",
-        "text": "Simple > Número entre corchetes"
+        "text": "Número entre paréntesis"
       },
       {
         "letter": "D",
-        "text": "Número sin formato > Número circular"
+        "text": "Número circular"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B, C y D no existen. \"Mosaico\" sí figura en Posición actual > Con formas."
+    "explicacion": "«Mosaico» y «Rectángulo redondeado» son sus diseños «Con formas». Esta posición es la que se usa para meter el número dentro de una frase del encabezado, como «Página 3 de 12», y por eso su apartado «Simple» tiene una sola entrada: no hay nada que alinear, el número va donde esté el cursor. · Los tres descartes son adornos plausibles y ninguno figura; el círculo sí existe, pero en «Principio de página» y en «Final de página», que es lo que hace creíble el último."
   },
   {
     "id": "insertar-142",
@@ -11510,28 +11551,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-109",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes posiciones existe realmente dentro de Número de página > Posición actual?",
+    "revisada": true,
+    "enunciado": "En «Posición actual», el apartado «Número sin formato» trae un diseño que encierra el número entre signos. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Número sin formato > Paréntesis"
+        "text": "Corchetes"
       },
       {
         "letter": "B",
-        "text": "Número sin formato > Corchetes"
+        "text": "Paréntesis"
       },
       {
         "letter": "C",
-        "text": "Número sin formato > Guiones"
+        "text": "Guiones"
       },
       {
         "letter": "D",
-        "text": "Número sin formato > Comillas"
+        "text": "Comillas"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son variantes plausibles pero incorrectas. El nombre real es \"Corchetes\"."
+    "respuesta": "A",
+    "explicacion": "El diseño se llama así, «Corchetes», y escribe el número entre ellos. · Los tres descartes son signos igual de razonables para lo mismo y ninguno tiene diseño propio; el de guiones despista especialmente porque el formato «-1-, -2-, -3-» sí existe... pero en otro sitio, en el desplegable «Formato de número» del cuadro «Formato de los números de página», que es donde se elige cómo se escribe la cifra, no cómo se adorna. · Los otros apartados de esta posición son «Simple» y «Con formas»."
   },
   {
     "id": "insertar-143",
@@ -11546,15 +11588,16 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-110",
     "generado": true,
-    "enunciado": "¿Qué opción del cuadro Formato de los números de página permite que la numeración comience en un número específico en lugar de continuar desde la sección anterior?",
+    "revisada": true,
+    "enunciado": "Quieres que la numeración de una sección empiece en 1 aunque haya páginas antes. ¿Qué campo del cuadro «Formato de los números de página» lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Reiniciar numeración en"
+        "text": "Iniciar en"
       },
       {
         "letter": "B",
-        "text": "Iniciar en"
+        "text": "Reiniciar numeración en"
       },
       {
         "letter": "C",
@@ -11566,8 +11609,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D usan denominaciones plausibles pero incorrectas. El nombre real del campo es \"Iniciar en\"."
+    "respuesta": "A",
+    "explicacion": "Es la segunda opción del bloque «Numeración de páginas», y la primera es «Continuar desde la sección anterior», que viene marcada. Al elegir «Iniciar en» se escribe el número de partida en la casilla de al lado. · Es el mecanismo con el que se consigue que la portada y el índice no cuenten, o que cada capítulo empiece por 1. · Para que funcione tiene que haber un salto de SECCIÓN antes, no solo de página: sin él, el cambio afecta a todo el documento, y ese es el fallo clásico."
   },
   {
     "id": "insertar-144",
@@ -11582,15 +11625,16 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-111",
     "generado": true,
-    "enunciado": "¿Qué opción del cuadro Formato de los números de página permite añadir el número del capítulo junto al número de página (por ejemplo, 2-1, 2-2...)?",
+    "revisada": true,
+    "enunciado": "Quieres que el número de página salga como «2-1, 2-2…», con el número de capítulo delante. ¿Qué opción del cuadro lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Añadir prefijo de capítulo"
+        "text": "Incluir número de capítulo"
       },
       {
         "letter": "B",
-        "text": "Incluir número de capítulo"
+        "text": "Añadir prefijo de capítulo"
       },
       {
         "letter": "C",
@@ -11602,8 +11646,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no existen con esos nombres. La opción real se llama \"Incluir número de capítulo\"."
+    "respuesta": "A",
+    "explicacion": "Es la casilla de la parte de arriba del cuadro, y al marcarla se activan dos desplegables: «Empezar con el estilo», donde se elige Título 1 a Título 9, y «Usar separador». · La condición que suele olvidarse es que los títulos de ese estilo tienen que estar numerados con una lista multinivel; si no, Word avisa de que no encuentra el número de capítulo y no escribe nada. · Los tres descartes describen la idea con palabras razonables y ninguno es el rótulo del cuadro."
   },
   {
     "id": "insertar-145",
@@ -11618,15 +11662,16 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-112",
     "generado": true,
-    "enunciado": "El desplegable «Usar separador» de la opcion «Incluir numero de capitulo» (cuadro Formato de los numeros de pagina), ¿que separadores ofrece?",
+    "revisada": true,
+    "enunciado": "Con «Incluir número de capítulo» marcada, el desplegable «Usar separador» ofrece varios signos para separar el capítulo del número de página. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guion, punto, dos puntos, guion largo y guion corto (5)"
+        "text": "Guion, punto, dos puntos, guion largo y guion corto"
       },
       {
         "letter": "B",
-        "text": "Solo el guion"
+        "text": "Guion, punto y dos puntos, solamente"
       },
       {
         "letter": "C",
@@ -11639,7 +11684,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Son 5 separadores entre el numero de capitulo y el de pagina: - (guion) por defecto, . (punto), : (dos puntos), guion largo y guion corto."
+    "explicacion": "Son cinco, y el guion viene elegido de partida, que es el que da el clásico «2-1». Los dos últimos, guion largo y guion corto, son rayas tipográficas de distinta longitud y se olvidan con facilidad al enumerar la lista. · La coma y el punto y coma no están, aunque sean los separadores habituales en otros sitios de Word: ese es el descarte que decide la pregunta. · El otro desplegable de esa misma casilla es «Empezar con el estilo», con los nueve niveles de título."
   },
   {
     "id": "insertar-146",
@@ -11654,15 +11699,16 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-113",
     "generado": true,
-    "enunciado": "¿Qué comando de la cinta contextual Encabezado y pie de página permite insertar en el encabezado o pie información del documento como el autor, el título o la ruta del archivo?",
+    "revisada": true,
+    "enunciado": "Quieres poner en el pie de página el nombre del archivo y su ruta, y que se actualice solo si el documento cambia de sitio. ¿Qué comando lo inserta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Elementos rápidos > Autotexto"
+        "text": "Información del documento"
       },
       {
         "letter": "B",
-        "text": "Información del documento"
+        "text": "Elementos rápidos"
       },
       {
         "letter": "C",
@@ -11674,8 +11720,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A Elementos rápidos también existe en esa cinta pero no es el comando específico para información del documento. C y D no existen con esos nombres."
+    "respuesta": "A",
+    "explicacion": "Es un botón propio de la cinta contextual Encabezado y pie de página, y ofrece de un clic el autor, el nombre del archivo, la ruta y el título, insertados como campos que se ponen al día solos. · **Elementos rápidos** es el descarte que decide la pregunta: está justo al lado y llega a lo mismo por un camino más largo, con «Campo…» o con «Propiedad del documento», además del autotexto. Uno es el atajo a lo habitual y el otro la vía general. · Los otros dos nombres no existen en la cinta."
   },
   {
     "id": "insertar-147",
@@ -11690,28 +11736,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-114",
     "generado": true,
-    "enunciado": "¿Qué opción del grupo Navegación de la cinta contextual de encabezado y pie de página permite que el encabezado o pie de la sección actual sea independiente del de la sección anterior?",
+    "revisada": true,
+    "enunciado": "Cada sección de un informe debe llevar su propio encabezado, pero al escribir en una se cambian todas. ¿Qué comando hay que desactivar?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Desconectar sección anterior"
+        "text": "Vincular a la anterior, en el grupo Navegación"
       },
       {
         "letter": "B",
-        "text": "Vincular a la anterior"
+        "text": "Primera página diferente, en el grupo Opciones"
       },
       {
         "letter": "C",
-        "text": "Separar del encabezado previo"
+        "text": "Páginas pares e impares diferentes, en el grupo Opciones"
       },
       {
         "letter": "D",
-        "text": "Romper vínculo de sección"
+        "text": "Mostrar texto del documento, en el grupo Opciones"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no existen. \"Vincular a la anterior\" es el comando real; cuando está activo enlaza con la sección anterior, y desactivándolo los independiza."
+    "respuesta": "A",
+    "explicacion": "Viene activado de fábrica, así que cada sección nueva hereda el encabezado de la anterior y editar una cambia las dos. Al desactivarlo desaparece el rótulo «Igual que el anterior» del borde del encabezado y esa sección queda por su cuenta. · Hay que hacerlo en la sección donde se quiere el cambio, no en la primera, y por separado para el encabezado y para el pie. · Las opciones del otro grupo distinguen páginas dentro de una misma sección, no secciones entre sí: ese es el descarte que decide la pregunta."
   },
   {
     "id": "insertar-148",
@@ -11726,15 +11773,16 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-115",
     "generado": true,
-    "enunciado": "¿Qué opción del grupo Opciones de la cinta contextual de encabezado y pie de página hace que las páginas pares tengan un encabezado diferente al de las páginas impares?",
+    "revisada": true,
+    "enunciado": "En un documento a doble cara quieres que el título vaya al exterior de cada hoja, y por tanto cambie de lado en pares e impares. ¿Qué opción lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alternar encabezados por página"
+        "text": "Páginas pares e impares diferentes"
       },
       {
         "letter": "B",
-        "text": "Páginas pares e impares diferentes"
+        "text": "Alternar encabezados por página"
       },
       {
         "letter": "C",
@@ -11746,8 +11794,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son denominaciones plausibles pero incorrectas. El nombre real es \"Páginas pares e impares diferentes\"."
+    "respuesta": "A",
+    "explicacion": "Al marcarla, Word pasa a mantener dos encabezados, uno para las páginas pares y otro para las impares, y el rótulo del borde lo indica. Es lo que hacen los libros para que el número quede siempre en el canto exterior. · Comparte grupo con «Primera página diferente» y «Mostrar texto del documento». · Los tres descartes dicen lo mismo con otras palabras. · Se combina bien con «Márgenes simétricos», del cuadro Configurar página, que es la otra pieza de la impresión a doble cara."
   },
   {
     "id": "insertar-149",
@@ -11762,28 +11810,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-116",
     "generado": true,
-    "enunciado": "¿Qué opción del grupo Opciones de la cinta contextual de encabezado y pie de página permite ver el texto del documento mientras se edita el encabezado, mostrándolo en segundo plano?",
+    "revisada": true,
+    "enunciado": "Al editar el encabezado, el texto del documento se ve atenuado detrás. ¿Qué opción lo apaga o lo enciende?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar cuerpo del documento"
-      },
-      {
-        "letter": "B",
-        "text": "Vista de encabezado transparente"
-      },
-      {
-        "letter": "C",
         "text": "Mostrar texto del documento"
       },
       {
-        "letter": "D",
+        "letter": "B",
         "text": "Ver texto principal"
+      },
+      {
+        "letter": "C",
+        "text": "Vista de encabezado transparente"
+      },
+      {
+        "letter": "D",
+        "text": "Mostrar cuerpo del documento"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A, B y D no existen con esos nombres. El nombre real es \"Mostrar texto del documento\"."
+    "respuesta": "A",
+    "explicacion": "Viene marcada, y el texto del cuerpo se ve en gris claro mientras se trabaja arriba, lo que ayuda a colocar el encabezado respecto a lo que hay debajo. Al desmarcarla, la página queda en blanco salvo el encabezado, que es cómodo cuando hay una marca de agua o una imagen de fondo que estorba. · Comparte grupo con «Primera página diferente» y «Páginas pares e impares diferentes». · Los tres descartes son formas razonables de decir lo mismo y ninguno es el rótulo real."
   },
   {
     "id": "insertar-150",
@@ -11798,19 +11847,20 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "P-117",
     "generado": true,
-    "enunciado": "¿Qué comando del grupo Posición de la cinta contextual de encabezado y pie de página permite cambiar la distancia entre el borde superior del papel y el encabezado?",
+    "revisada": true,
+    "enunciado": "El encabezado te queda demasiado pegado al borde de la hoja. ¿Qué campo de la cinta contextual lo separa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alto del encabezado"
+        "text": "Encabezado desde arriba"
       },
       {
         "letter": "B",
-        "text": "Márgenes del encabezado"
+        "text": "Alto del encabezado"
       },
       {
         "letter": "C",
-        "text": "Encabezado desde arriba"
+        "text": "Márgenes del encabezado"
       },
       {
         "letter": "D",
@@ -11818,8 +11868,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A, B y D son denominaciones plausibles pero incorrectas. El nombre real del campo es \"Encabezado desde arriba\" (valor predeterminado: 1,25 cm)."
+    "respuesta": "A",
+    "explicacion": "Está en el grupo Posición y viene a 1,25 cm; su pareja es «Pie de página desde abajo», con el mismo valor. Mide desde el borde del papel, no desde el margen del texto. · Que no sea un «alto» tiene su razón: el encabezado crece solo con lo que se escriba dentro, así que no hay una altura que fijar; lo que se fija es dónde empieza. Ese es el descarte que decide la pregunta. · Los mismos dos campos están en la ficha Diseño del cuadro Configurar página, bajo «Desde el borde»."
   },
   {
     "id": "insertar-422",
@@ -11834,29 +11884,30 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "img-insertar-17",
     "generado": true,
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAtCAIAAACcf4pKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADySURBVGhD7ddBCoJAFMZxa9HGG3SM2pRCSOAtgo4QtM6QbN85uoUE2ipP0T0s8BFR2KLmNX7D99v4Btz8YXS0V9e155a+XB3CJARMQsAkBA4mmTxqw3Aq00dxHKfpThYKDCfl+UkWLaJo5vt+EAR6VRY2Xpbty7JM062sTbOQNBqNVau0Nt51PWiGF4tq0txTVZck2WjsQMWk4erQzM/my+PjHqUqmy9xpR1o+VzSqLLwLMn0pijOMv3m3+dSm/t5ZSrJwQ8iJiFgEgImIWASAiYhYBICJiFgEgLDf7UyfaWLP+odwWcJAZMQMAmBc0medwNcnGlkohHdsQAAAABJRU5ErkJggg==",
     "opciones": [
       {
         "letter": "A",
-        "text": "Símbolo"
+        "text": "Encabezado"
       },
       {
         "letter": "B",
-        "text": "Cuadro de texto"
+        "text": "Pie de página"
       },
       {
         "letter": "C",
-        "text": "Tabla"
+        "text": "Número de página"
       },
       {
         "letter": "D",
-        "text": "Encabezado"
+        "text": "Cuadro de texto"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "**Encabezado.** Pestaña Insertar ▸ Encabezado y pie de página. Atajo: no tiene atajo de teclado en esta instalación. Inserta o edita el área superior que se repite en todas las páginas. Abre la cinta contextual «Encabezado y pie de página»."
+    "respuesta": "A",
+    "explicacion": "Es **Encabezado**, primero del grupo Encabezado y pie de página en la pestaña Insertar. Despliega la galería «Integrado», con «En blanco» y varias maquetas, y debajo «Editar encabezado», «Quitar encabezado» y «Guardar selección en galería de encabezados». Al entrar se abre la cinta contextual del mismo nombre. No tiene atajo de teclado en esta instalación. · Sus dos compañeros de grupo son los descartes que deciden la pregunta: el pie hace lo mismo en la banda de abajo y el número de página se ocupa solo de la numeración. · Se entra también haciendo doble clic en el margen superior."
   },
   {
     "id": "insertar-423",
@@ -11871,29 +11922,30 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "img-insertar-18",
     "generado": true,
+    "revisada": true,
     "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAsCAYAAAAq/ZsdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVGhD7ddBCoJAFMbxV4s23iA6ha1SCDeeJ+oAIdm66EYSaBeRDtGmFN5SGKs3zId8v40z7f4wb9LZuyMTMtfnZDAIHYPQMQjd5IJM/ljTdKOr8fI8l6I46c6OWVBV3XXnlmVbiaJIkiQxjwp25MryLE3TdEFH/cVGsKA4XnuJCnop+IgKfstZR0Fc25ZREEE9q6hg17ZLXT909Z0gQS598K9BMEfOCoPQMQgdg9AxCJ2XN4X2sNDVeKvLS1f/vSl4C1rurrpze972ZkGcIXScoSH8fPCIMzSkP3LWgs4QEs4QOgahYxA2kQ/9yIsxOxhZCAAAAABJRU5ErkJggg==",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar ▸ Ilustraciones"
-      },
-      {
-        "letter": "B",
         "text": "Insertar ▸ Encabezado y pie de página"
       },
       {
+        "letter": "B",
+        "text": "Insertar ▸ Texto"
+      },
+      {
         "letter": "C",
-        "text": "Inicio ▸ Edición"
+        "text": "Disposición ▸ Configurar página"
       },
       {
         "letter": "D",
-        "text": "Inicio ▸ Fuente"
+        "text": "Insertar ▸ Páginas"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "**Pie de página.** Pestaña Insertar ▸ Encabezado y pie de página. Atajo: no tiene atajo de teclado en esta instalación. Inserta o edita el área inferior que se repite en todas las páginas."
+    "respuesta": "A",
+    "explicacion": "Es **Pie de página**, del grupo Encabezado y pie de página en la pestaña Insertar, y funciona igual que Encabezado pero en la banda inferior: galería integrada, editar, quitar y guardar en la galería. No tiene atajo de teclado en esta instalación. · «Disposición ▸ Configurar página» es el descarte que decide la pregunta, porque el cuadro que abre sí toca los pies de página: en su ficha Diseño están «Pie de página desde abajo» y las casillas de primera página y de pares e impares. Lo que no permite es escribir su contenido."
   },
   {
     "id": "insertar-424",
@@ -11908,29 +11960,30 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "img-insertar-19",
     "generado": true,
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAArCAYAAAAOnxr+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVFhHY/wPBAxDADBB6UEPRh1KbTDqUGqDUYdSGwwZhxJd4FtbW0JZxANXV1eGhoYmKI8yQJJDDxw4BOURBg4Odgzc3NwMVlZWVHEsTaO+ubmF4dixY0CH1kFFyAc0daiRkTHVHEvzzEQtx9Il11PDsXQrnih1LN0cCgKUOJamxRMhcPTocSiLMKCZQwkBkEdIcShdo54SMOpQaoOR6dCSnY/BGJ1NDUBVh7759pdBjIcVg00NQGWH/maQgjsUwaYGoIpDl1x8y6Ay8TLDjTc/GBoOPENhUyv6qeLQGH1hhjv5umA2iEZm97jLgtmUAqpFPShUNUQ4MNjUAlSpQkFRjQs0OEiBQxwdDEgVCoriAA0BMEZnY3MkOYBqUY9cHD38+ItBUZAdzKYWoKJDEcXR99//GPjZmcFsagGqOXRLtCo8mpHZ1AJUcyitwZBxKE2HdAgBmnRFBhqMplFqg1GHUhsMEYcyMAAAoPGtgM10PzQAAAAASUVORK5CYII=",
     "opciones": [
       {
         "letter": "A",
-        "text": "Pie de página"
-      },
-      {
-        "letter": "B",
-        "text": "SmartArt"
-      },
-      {
-        "letter": "C",
         "text": "Número de página"
       },
       {
+        "letter": "B",
+        "text": "Encabezado"
+      },
+      {
+        "letter": "C",
+        "text": "Pie de página"
+      },
+      {
         "letter": "D",
-        "text": "Gráfico"
+        "text": "Salto de página"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Número de página.** Pestaña Insertar ▸ Encabezado y pie de página. Atajo: no tiene atajo de teclado en esta instalación. Inserta la numeración automática (Principio de página, Final de página, Márgenes, Posición actual) y «Formato del número de página…»."
+    "respuesta": "A",
+    "explicacion": "Es **Número de página**, tercero del grupo Encabezado y pie de página en la pestaña Insertar. Ofrece cuatro posiciones —principio de página, final de página, márgenes y posición actual—, cada una con sus galerías, más «Formato del número de página…» y «Quitar números de página». No tiene atajo de teclado en esta instalación. · «Salto de página» es el descarte que decide la pregunta: los dos iconos dibujan una hoja con una marca, y aquel está en el grupo Páginas, el primero de la cinta, con Ctrl+Entrar como atajo."
   },
   {
     "id": "insertar-442",
@@ -11945,28 +11998,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "neg-insertar-08",
     "generado": true,
-    "enunciado": "¿Cuál de estos comandos NO está en el grupo Encabezado y pie de página de Insertar?",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO está en el grupo «Encabezado y pie de página» de la pestaña Insertar:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Encabezado"
+        "text": "Fecha y hora"
       },
       {
         "letter": "B",
-        "text": "Pie de página"
+        "text": "Encabezado"
       },
       {
         "letter": "C",
-        "text": "Número de página"
+        "text": "Pie de página"
       },
       {
         "letter": "D",
-        "text": "Fecha y hora"
+        "text": "Número de página"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El grupo Encabezado y pie de página de la pestaña Insertar tiene solo tres comandos: Encabezado, Pie de página y Número de página. Fecha y hora está en el grupo Texto."
+    "respuesta": "A",
+    "explicacion": "El grupo de la pestaña Insertar tiene exactamente esos tres botones. «Fecha y hora» está en el grupo Texto, junto a Cuadro de texto, Elementos rápidos, WordArt, Letra capital, Línea de firma y Objeto. · Lo que hace creíble el error es que «Fecha y hora» SÍ aparece en la CINTA CONTEXTUAL que se abre al editar un encabezado, que se llama igual que el grupo. Son dos sitios distintos con el mismo nombre: uno es un grupo de la pestaña Insertar y otro una pestaña entera que solo existe mientras se edita el encabezado."
   },
   {
     "id": "insertar-452",
@@ -11981,28 +12035,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "neg2-insertar-06",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre encabezados y pies:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se puede tener un encabezado distinto en la primera página."
+        "text": "Un encabezado solo admite texto: no se le pueden meter imágenes"
       },
       {
         "letter": "B",
-        "text": "«Vincular al anterior» permite que una sección use el mismo encabezado que la anterior."
+        "text": "La primera página puede llevar un encabezado distinto al del resto"
       },
       {
         "letter": "C",
-        "text": "Los encabezados y pies de página no pueden contener imágenes; solo texto."
+        "text": "«Vincular a la anterior» hace que una sección use el encabezado de la anterior"
       },
       {
         "letter": "D",
-        "text": "Se puede configurar un encabezado diferente para páginas pares e impares."
+        "text": "Se puede tener un encabezado para las páginas pares y otro para las impares"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Un encabezado o pie de página admite imágenes (por ejemplo un logo) igual que cualquier otra zona del documento."
+    "respuesta": "A",
+    "explicacion": "Un encabezado admite lo mismo que el cuerpo del documento: imágenes, formas, tablas y campos. De hecho, la cinta contextual tiene sus propios botones de «Imágenes» e «Imágenes en línea» precisamente para eso, que es como se pone el logotipo de una organización en todas las páginas. · Las otras tres son ciertas y describen las tres opciones que distinguen unas páginas de otras: por ser la primera, por sección o por paridad."
   },
   {
     "id": "insertar-453",
@@ -12017,28 +12072,29 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "neg2-insertar-07",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre la numeración de páginas:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El número de página se puede insertar en el encabezado, el pie o los márgenes."
+        "text": "La numeración empieza siempre en 1 y no se puede cambiar"
       },
       {
         "letter": "B",
-        "text": "Se puede reiniciar la numeración de página en un valor concreto."
+        "text": "El número se puede poner en el encabezado, en el pie o en los márgenes"
       },
       {
         "letter": "C",
-        "text": "Al insertar un número de página, siempre se numeran las páginas desde el número 1 sin poder cambiarlo."
+        "text": "La numeración de una sección puede arrancar en el valor que se quiera"
       },
       {
         "letter": "D",
-        "text": "Para editar el encabezado se puede hacer doble clic sobre la zona superior de la página."
+        "text": "Al encabezado se entra haciendo doble clic en la zona superior de la página"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "«Formato del número de página» permite iniciar la numeración en cualquier valor, no solo en 1."
+    "respuesta": "A",
+    "explicacion": "El cuadro «Formato del número de página» tiene el campo «Iniciar en», donde se escribe el número de partida, y también permite continuar la numeración desde la sección anterior. Es lo que hace posible que la portada no cuente o que un capítulo empiece por la página 45. · Las otras tres son ciertas. · Para que el cambio afecte solo a una parte del documento tiene que haber un salto de SECCIÓN, no solo de página: sin él, la numeración cambia entera."
   },
   {
     "sourceFile": "insertar.json",
@@ -12054,27 +12110,28 @@
     "id": "insertar-469",
     "sourceQuestionId": "capt-ins-469",
     "tipo": "opcion_unica",
-    "enunciado": "En «Incluir numero de capitulo» del cuadro Formato de los numeros de pagina, el desplegable «Empezar con el estilo», ¿que valores ofrece?",
+    "revisada": true,
+    "enunciado": "Con «Incluir número de capítulo» marcada, ¿qué ofrece el desplegable «Empezar con el estilo»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Titulo 1 a Titulo 9"
+        "text": "Título 1 a Título 9"
       },
       {
         "letter": "B",
-        "text": "Solo Titulo 1"
+        "text": "Título 1, Título 2 y Título 3"
       },
       {
         "letter": "C",
-        "text": "Titulo 1, Titulo 2 y Titulo 3"
+        "text": "Cualquier estilo del documento, no solo los de título"
       },
       {
         "letter": "D",
-        "text": "Cualquier estilo del documento, no solo titulos"
+        "text": "Solo Título 1"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Los 9 niveles de estilo de titulo (Titulo 1..Titulo 9); el valor por defecto es Titulo 1. Word usa ese estilo para saber donde empieza cada capitulo."
+    "explicacion": "Son los nueve niveles de título, y viene elegido Título 1, que es lo habitual porque un capítulo suele ser un título de primer nivel; se baja de nivel cuando lo que hace de capítulo es un apartado. · Word necesita ese estilo para saber dónde empieza cada capítulo y qué número le toca. · La condición imprescindible es que esos títulos estén numerados con una lista multinivel; si no, avisa de que no encuentra el número de capítulo. · El otro desplegable de la casilla es «Usar separador», con cinco signos."
   },
   {
     "id": "insertar-282",
@@ -12089,11 +12146,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-79",
     "generado": true,
-    "enunciado": "El contenido del encabezado aparece solo en la primera página del documento salvo que se active la opción de repetirlo.",
+    "revisada": true,
+    "enunciado": "El encabezado sale solo en la primera página, salvo que se active la opción de repetirlo en las demás.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: el encabezado se repite en todas las páginas por defecto; lo que se activa es Primera página diferente para lo contrario."
+    "explicacion": "Es al revés: lo que se escribe en un encabezado aparece en todas las páginas de la sección, y esa es precisamente su razón de ser. No hay ninguna opción de «repetir», porque no hace falta. · Lo que sí existe es lo contrario, «Primera página diferente», que separa la primera de las demás y suele usarse para dejar la portada limpia. · Y si se quiere que cambie a lo largo del documento hay que partirlo en secciones y desactivar «Vincular a la anterior» en cada una."
   },
   {
     "id": "insertar-283",
@@ -12108,11 +12166,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-80",
     "generado": true,
-    "enunciado": "El comando Número de página permite colocar la numeración en los márgenes laterales del documento.",
+    "revisada": true,
+    "enunciado": "El botón «Número de página» permite colocar la numeración en los márgenes laterales.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "En un libro con páginas a doble cara puedes poner el número en el margen exterior de cada página: margen derecho en las páginas impares y margen izquierdo en las pares. Esto se consigue con Insertar > Encabezado y pie de página > Número de página > Márgenes de página."
+    "explicacion": "Es una de sus cuatro posiciones, junto a principio de página, final de página y posición actual. Todos sus diseños vienen en pareja, con su versión derecha y su versión izquierda —Círculo, Flecha, Órbita, Borde, Grande, Barra de énfasis, Vertical—, precisamente para poder ponerlo en el canto exterior de cada hoja en un documento a doble cara. · Para que alterne de lado hay que activar además «Páginas pares e impares diferentes», o el número saldría siempre en el mismo margen."
   },
   {
     "id": "insertar-284",
@@ -12127,11 +12186,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-81",
     "generado": true,
-    "enunciado": "El formato de número de página i, ii, iii está disponible en el cuadro Formato de los números de página de Word 365.",
+    "revisada": true,
+    "enunciado": "El formato «i, ii, iii» está entre los que ofrece el cuadro «Formato de los números de página».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Para una tesis doctoral donde las páginas preliminares deben numerarse en romano minúscula, seleccionas el formato i, ii, iii en el cuadro Formato de los números de página. Las páginas del cuerpo principal llevarán el formato 1, 2, 3 en una sección diferente."
+    "explicacion": "Son seis formatos en total: 1,2,3 · -1,-2,-3 · a,b,c · A,B,C · i,ii,iii · I,II,III. Están las dos versiones de los romanos y las dos de las letras. · El romano minúsculo es el que se usa en las páginas preliminares de un trabajo largo —portada, índice, agradecimientos— para que el cuerpo pueda empezar en la página 1 con números árabes. Eso exige un salto de sección entre las dos partes y usar «Iniciar en». · El formato que NO está es el de cero delante, «01, 02, 03»."
   },
   {
     "id": "insertar-285",
@@ -12146,11 +12206,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-82",
     "generado": true,
-    "enunciado": "El formato de número de página en romano mayúscula I, II, III está disponible en el cuadro Formato de los números de página de Word 365.",
+    "revisada": true,
+    "enunciado": "El formato en romano mayúsculo «I, II, III» NO está entre los del cuadro «Formato de los números de página».",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. La lista del cuadro «Formato de los numeros de pagina» incluye 6 formatos: 1,2,3 · -1,-2,-3 · a,b,c · A,B,C · i,ii,iii · I,II,III. El romano en mayusculas se usa, por ejemplo, para numerar las paginas preliminares de una tesis."
+    "respuesta": false,
+    "explicacion": "Sí está: es el sexto y último de la lista. Los seis son 1,2,3 · -1,-2,-3 · a,b,c · A,B,C · i,ii,iii · I,II,III, con las dos versiones de los romanos y las dos de las letras. Confirmado con la captura del propio desplegable. · Lo que de verdad falta en esa lista es el formato con cero delante, «01, 02, 03», que habría que montar editando a mano el código del campo PAGE. · El formato elegido afecta a la sección, no al documento entero."
   },
   {
     "id": "insertar-286",
@@ -12165,11 +12226,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-83",
     "generado": true,
-    "enunciado": "La opción Primera página diferente permite que la portada no muestre el encabezado ni el pie que aparecen en el resto del documento.",
+    "revisada": true,
+    "enunciado": "«Primera página diferente» permite que la portada no lleve el encabezado ni el pie del resto del documento.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Tienes un informe con el nombre del autor en el encabezado y el número de página en el pie. Con Primera página diferente activado, la portada no lleva ni encabezado ni pie, dando una apariencia más limpia y profesional."
+    "explicacion": "Al marcarla, Word reserva un encabezado y un pie propios para la primera página de la sección, y basta con dejarlos vacíos para que la portada quede limpia. También se pueden usar para poner algo distinto solo ahí. · Está en el grupo Opciones de la cinta contextual, y la misma casilla aparece en la ficha Diseño del cuadro Configurar página. · Ojo con el alcance: es por SECCIÓN, así que en un documento con varias secciones cada una tiene su primera página."
   },
   {
     "id": "insertar-287",
@@ -12184,11 +12246,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-84",
     "generado": true,
-    "enunciado": "Vincular a la anterior, cuando está activa, hace que el encabezado de la sección actual sea independiente del de la sección anterior.",
+    "revisada": true,
+    "enunciado": "«Vincular a la anterior», cuando está activo, hace que el encabezado de esa sección sea independiente del de la anterior.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Tu documento tiene dos secciones. La sección 2 tiene Vincular a la anterior activado. Cambias el encabezado de la sección 1 y el de la sección 2 cambia también automáticamente: están vinculados. Para que sean independientes tienes que desactivar esa opción en la sección 2."
+    "explicacion": "Hace justo lo contrario: activo significa vinculado, es decir, que las dos secciones comparten encabezado y cambiar uno cambia el otro. Para independizarlas hay que DESACTIVARLO, y en la sección donde se quiere el cambio, no en la primera. · Viene activado de fábrica, y mientras lo esté aparece el rótulo «Igual que el anterior» en el borde del encabezado, que es la señal que hay que buscar. · El encabezado y el pie se vinculan por separado: desactivarlo en uno no lo desactiva en el otro."
   },
   {
     "id": "insertar-288",
@@ -12203,11 +12266,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-85",
     "generado": true,
-    "enunciado": "La cinta contextual de encabezado y pie incluye un comando para insertar la fecha y la hora directamente en el encabezado sin salir del modo de edición.",
+    "revisada": true,
+    "enunciado": "Desde la propia cinta de edición del encabezado se puede insertar la fecha y la hora sin salir de ahí.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Estás editando el encabezado y quieres que aparezca la fecha actual. Sin cerrar el modo de encabezado, vas al grupo Encabezado y pie de página de la cinta contextual y haces clic en Fecha y hora. Se abre el cuadro de formatos de fecha y la insertas directamente donde está el cursor."
+    "explicacion": "La cinta contextual «Encabezado y pie de página» tiene su propio grupo con Fecha y hora, Información del documento, Elementos rápidos, Imágenes e Imágenes en línea: lo justo para montar un encabezado sin volver a la pestaña Insertar. · El cuadro de fecha y hora ofrece varios formatos y una casilla para «Actualizar automáticamente», que la convierte en un campo y hace que muestre siempre el día en que se abre el documento, no el día en que se escribió. · «Información del documento» inserta autor, nombre de archivo o ruta."
   },
   {
     "id": "insertar-289",
@@ -12222,11 +12286,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-86",
     "generado": true,
-    "enunciado": "El valor predeterminado de la distancia entre el encabezado y el borde superior del papel en Word 365 es de 2 cm.",
+    "revisada": true,
+    "enunciado": "La distancia de fábrica entre el encabezado y el borde superior del papel es de 2 cm.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: el valor predeterminado es 1,25 cm."
+    "explicacion": "Es de **1,25 cm**, y el pie de página tiene el mismo valor desde abajo. Los dos campos están en el grupo Posición de la cinta contextual y también en la ficha Diseño del cuadro Configurar página, bajo «Desde el borde». · No hay que confundir esa medida con el margen superior del texto, que es otra cosa y bastante mayor: el encabezado vive en la franja que queda entre el borde del papel y ese margen, y si crece demasiado empuja el texto hacia abajo."
   },
   {
     "id": "insertar-290",
@@ -12241,11 +12306,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-87",
     "generado": true,
-    "enunciado": "La opción Páginas pares e impares diferentes permite que los documentos a doble cara tengan encabezados distintos en las páginas de la izquierda y de la derecha.",
+    "revisada": true,
+    "enunciado": "«Páginas pares e impares diferentes» permite que un documento a doble cara lleve un encabezado en las hojas de la izquierda y otro en las de la derecha.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "En un libro impreso a doble cara, las páginas impares (derecha) suelen llevar el título del capítulo en el encabezado y las pares (izquierda) el título del libro. Con Páginas pares e impares diferentes puedes configurar cada encabezado por separado."
+    "explicacion": "Word pasa a mantener dos encabezados por sección, y el rótulo del borde indica en cuál se está escribiendo. Es lo que hacen los libros: el título de la obra en las pares y el del capítulo en las impares, con el número siempre en el canto exterior. · Se combina con «Márgenes simétricos», del cuadro Configurar página, que hace que el margen interior sea el de la encuadernación en las dos caras. · Está en el grupo Opciones, junto a «Primera página diferente» y «Mostrar texto del documento»."
   },
   {
     "id": "insertar-291",
@@ -12260,11 +12326,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-88",
     "generado": true,
-    "enunciado": "Mostrar texto del documento en la cinta contextual de encabezado hace que el texto principal del documento desaparezca mientras editas el encabezado.",
+    "revisada": true,
+    "enunciado": "«Mostrar texto del documento» hace que el texto principal desaparezca mientras se edita el encabezado.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Cuando editas el encabezado, el texto del cuerpo aparece en gris claro en segundo plano. La opción Mostrar texto del documento controla si ese texto de fondo se muestra o se oculta. Por defecto está activada, es decir, sí se muestra. Desactivarla oculta el texto principal para que no distraiga."
+    "explicacion": "Es al revés: la opción viene marcada y su efecto es que el cuerpo se vea en gris claro detrás, para poder colocar el encabezado respecto a lo que hay debajo. Desmarcarla es lo que lo oculta. · El nombre dice lo que hace cuando está activa, no lo que pasa al pulsarla, y ahí está la trampa: es una casilla, no un botón de acción. · Desmarcarla resulta útil cuando hay una marca de agua o una imagen de fondo que estorba a la vista."
   },
   {
     "id": "insertar-292",
@@ -12279,11 +12346,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-89",
     "generado": true,
-    "enunciado": "La opción Incluir número de capítulo del cuadro Formato de los números de página solo funciona si los títulos de capítulo tienen aplicado un estilo de título como Título 1.",
+    "revisada": true,
+    "enunciado": "«Incluir número de capítulo» solo funciona si los títulos de capítulo llevan aplicado un estilo de título.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Quieres que las páginas del capítulo 2 se numeren como 2-1, 2-2, 2-3. Para eso Word necesita identificar dónde empieza cada capítulo, y lo hace buscando párrafos con el estilo Título 1 aplicado. Si los títulos tienen formato manual de fuente y tamaño pero no el estilo Título 1, Word no puede detectarlos y la opción no funciona."
+    "explicacion": "Word necesita esa marca para saber dónde empieza cada capítulo: busca los párrafos con el estilo elegido en «Empezar con el estilo», que de partida es Título 1. Si los títulos están puestos a mano, con una fuente grande y en negrita pero sin estilo, no los reconoce y la numeración no sale. · Es el mismo requisito que pide la tabla de contenido automática, y una razón más para usar estilos en lugar de formato directo. · Hace falta además que esos títulos estén numerados."
   },
   {
     "id": "insertar-293",
@@ -12298,11 +12366,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-90",
     "generado": true,
-    "enunciado": "El comando Quitar números de página obliga a eliminarlos sección por sección.",
+    "revisada": true,
+    "enunciado": "«Quitar números de página» hay que aplicarlo sección por sección.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: con un solo clic quita todos los números de página del documento, estén donde estén."
+    "explicacion": "Con un solo clic se lleva todos los números del documento, estén en el encabezado, en el pie o en los márgenes. · Es lo contrario de lo que ocurre con casi todo lo demás de esta zona, que trabaja por secciones: el encabezado, el vínculo con la sección anterior y el formato de numeración sí son por sección, y de ahí que uno espere lo mismo aquí. · Si algún número se resiste, suele ser porque está escrito a mano en el encabezado en vez de insertado como campo."
   },
   {
     "id": "insertar-294",
@@ -12317,11 +12386,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-91",
     "generado": true,
-    "enunciado": "Número de página > Posición actual inserta el número de página exactamente donde está el cursor, sin limitarse al encabezado o al pie.",
+    "revisada": true,
+    "enunciado": "«Posición actual» inserta el número de página justo donde esté el cursor, aunque no sea el encabezado ni el pie.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Estás en el cuerpo del documento y quieres que en un punto concreto del texto aparezca el número de página dentro de una nota aclaratoria. Con el cursor en ese punto usas Posición actual y el campo de número de página se inserta ahí mismo, no en el encabezado ni en el pie."
+    "explicacion": "Es lo que permite escribir dentro de una frase «como se indica en la página 7», con el número puesto como campo que se actualiza solo. · Por eso su apartado «Simple» tiene una sola entrada, «Número sin formato»: no hay nada que alinear, el número va donde está el cursor. Las otras tres posiciones sí traen tres alineaciones. · Cuidado con una cosa: usada dentro de un encabezado, sustituye lo que hubiera seleccionado, así que conviene colocar el cursor antes."
   },
   {
     "id": "insertar-295",
@@ -12336,11 +12406,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-92",
     "generado": true,
-    "enunciado": "En Word 365, el cuadro «Formato de los numeros de pagina» ofrece seis formatos: 1,2,3 / -1,-2,-3 / a,b,c / A,B,C / i,ii,iii / I,II,III.",
+    "revisada": true,
+    "enunciado": "Entre los formatos del cuadro «Formato de los números de página» está el de cero a la izquierda: 01, 02, 03.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Son seis: arabigo, arabigo entre guiones, letra minuscula, letra mayuscula, romano minuscula y romano mayuscula."
+    "respuesta": false,
+    "explicacion": "Los seis que hay son 1,2,3 · -1,-2,-3 · a,b,c · A,B,C · i,ii,iii · I,II,III: árabigo, árabigo entre guiones, letra minúscula, letra mayúscula, romano minúsculo y romano mayúsculo. · El de cero delante no está, aunque sea habitualísimo fuera de Word y parezca la opción más natural del mundo; para conseguirlo habría que editar a mano el código del campo PAGE. · El formato elegido se aplica a la sección, no al documento entero."
   },
   {
     "id": "insertar-364",
@@ -12355,11 +12426,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-186",
     "generado": true,
-    "enunciado": "En el cuadro Formato de los números de página, la opción Incluir número de capítulo solo permite elegir el estilo Título 3 como punto de partida.",
+    "revisada": true,
+    "enunciado": "Para que «Incluir número de capítulo» funcione basta con que los títulos lleven el estilo Título 1; no hace falta que estén numerados.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: permite cualquier estilo de título; el valor por defecto es Título 1."
+    "explicacion": "Hacen falta las dos cosas. El estilo le dice a Word DÓNDE empieza cada capítulo, pero el número que escribe delante de la página tiene que venir de algún sitio, y ese sitio es una lista multinivel enlazada a los estilos de título. Sin ella, Word avisa de que no encuentra el número de capítulo y no escribe nada. · Es el fallo más común con esta opción, porque el estilo se aplica solo y la numeración multinivel hay que montarla a propósito, desde Inicio ▸ Párrafo ▸ Lista multinivel."
   },
   {
     "id": "insertar-365",
@@ -12374,11 +12446,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-187",
     "generado": true,
-    "enunciado": "En el cuadro Formato de los números de página, el separador predeterminado para el número de capítulo es el punto (.).",
+    "revisada": true,
+    "enunciado": "El separador que trae de partida «Incluir número de capítulo» es el punto.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "El separador que aparece por defecto es el guión (-), no el punto. Si quieres usar otro separador tienes que cambiarlo manualmente en el desplegable."
+    "explicacion": "Es el **guion**, que da el clásico «2-1». El desplegable «Usar separador» ofrece cinco: guion, punto, dos puntos, guion largo y guion corto, y hay que cambiarlo a mano si se quiere otro. · Los dos últimos son rayas tipográficas de distinta longitud y se olvidan al enumerar la lista. · Lo que no está es la coma, aunque sea el separador de listas habitual en la configuración española. · El otro desplegable de la casilla es «Empezar con el estilo», con los nueve niveles de título."
   },
   {
     "id": "insertar-366",
@@ -12393,11 +12466,12 @@
     "tema": "Encabezado y pie de página",
     "sourceQuestionId": "vf-insertar-188",
     "generado": true,
-    "enunciado": "En el cuadro Formato de los números de página, la numeración puede configurarse para \"Continuar desde la sección anterior\" o para \"Iniciar en\" un número concreto.",
+    "revisada": true,
+    "enunciado": "El bloque «Numeración de páginas» del cuadro ofrece «Continuar desde la sección anterior» o «Iniciar en» un número concreto.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "En la sección Numeración de páginas del cuadro, tienes dos opciones: un botón de opción para continuar la numeración de la sección anterior, y otro para iniciar en un número que tú escribes. Son las dos opciones disponibles."
+    "explicacion": "Son dos botones de opción al pie del cuadro, y el primero viene elegido, que es lo que hace que la numeración corra seguida por todo el documento. Al marcar el segundo se escribe el número de partida en la casilla de al lado. · Es con lo que se consigue que la portada y el índice no cuenten, o que un capítulo arranque en la página 45. · Arriba del mismo cuadro están el desplegable «Formato de número», con seis formatos, y la casilla «Incluir número de capítulo»."
   },
   {
     "sourceFile": "insertar.json",
@@ -12413,10 +12487,11 @@
     "id": "insertar-470",
     "sourceQuestionId": "capt-ins-470",
     "tipo": "verdadero_falso",
-    "enunciado": "En el cuadro Formato de los numeros de pagina, la seccion «Numeracion de paginas» permite «Continuar desde la seccion anterior» o «Iniciar en» un numero concreto.",
+    "revisada": true,
+    "enunciado": "Para que «Iniciar en» afecte solo a una parte del documento hace falta que esa parte sea una sección aparte.",
     "opciones": [],
     "respuesta": true,
-    "explicacion": "Son las dos opciones al pie del cuadro: por defecto la numeracion continua desde la seccion previa; «Iniciar en» reinicia la cuenta (util para empezar en 1 tras las paginas preliminares)."
+    "explicacion": "El formato de numeración es una propiedad de la sección, así que sin un salto de sección antes, el cambio se aplica a todo. Ese es el error clásico: se inserta un salto de PÁGINA, que no separa nada a estos efectos, y luego no se entiende por qué la portada también se renumera. · El salto de sección se pone desde Disposición ▸ Configurar página ▸ Saltos, y conviene comprobar después que «Vincular a la anterior» está desactivado en la sección nueva, o el encabezado seguirá siendo el mismo."
   },
   {
     "id": "insertar-19",
