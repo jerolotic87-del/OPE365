@@ -208,9 +208,9 @@ Reescritura **a mano, ítem por ítem** — ningún script genera contenido.
 `scripts/aplicar_reescritura.py` solo vuelca al JSON el texto ya escrito y
 valida (4 opciones, respuesta viva, sin repetidas, longitudes, explicación).
 
-**Progreso de la reescritura**: `archivo` 180/410 — cerrados enteros todos
-los topics salvo `opciones-*`, del que van hechos `opciones-general` y
-`opciones-presentacion`. Quedan 230 preguntas de `opciones-*`.
+**Progreso de la reescritura**: `archivo` 240/410 — cerrados enteros todos
+los topics salvo `opciones-*`, del que van hechos `opciones-general`,
+`opciones-presentacion` y `opciones-revision`. Quedan 170 de `opciones-*`.
 
 **Chivato de longitud**: `scripts/aplicar_reescritura.py` avisa cuando la
 opción correcta es la más larga o la más corta **con hueco** (ratio >1,5 y
