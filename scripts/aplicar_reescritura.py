@@ -50,6 +50,18 @@ def main(patch_path):
 
             # comprobaciones
             tipo = q.get("tipo")
+            # coherencia tipo <-> respuesta: lo que mas facil se rompe al
+            # reescribir a mano es convertir una V/F en opcion unica y olvidar
+            # cambiar el tipo.
+            resp = q.get("respuesta")
+            if tipo == "verdadero_falso" and (not isinstance(resp, bool) or q.get("opciones")):
+                print("  !!", qid, "es verdadero_falso pero tiene opciones o respuesta no booleana"); return 1
+            if tipo == "opcion_unica" and not isinstance(resp, str):
+                print("  !!", qid, "es opcion_unica pero su respuesta no es una letra"); return 1
+            if tipo == "seleccion_multiple" and not isinstance(resp, list):
+                print("  !!", qid, "es seleccion_multiple pero su respuesta no es una lista"); return 1
+            if tipo == "emparejamiento" and not isinstance(resp, dict):
+                print("  !!", qid, "es emparejamiento pero su respuesta no es un mapa"); return 1
             ops = q.get("opciones") or []
             letras = [o["letter"] for o in ops]
             textos = [o["text"].strip() for o in ops]

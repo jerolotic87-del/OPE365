@@ -12483,28 +12483,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0309",
-    "enunciado": "¿Cuál es la distancia predeterminada entre tabulaciones en Word 365?",
+    "enunciado": "En un párrafo sin ninguna tabulación puesta a mano, pulsas Tab y el cursor salta un trecho. ¿De cuánto es ese salto, y dónde se cambia?",
     "opciones": [
       {
         "letter": "A",
-        "text": "1 cm"
+        "text": "1,25 cm, en el campo «Tabulaciones predeterminadas» del cuadro Tabulaciones"
       },
       {
         "letter": "B",
-        "text": "1,25 cm"
+        "text": "1,25 cm, en el campo «Posición» del cuadro Tabulaciones"
       },
       {
         "letter": "C",
-        "text": "2,5 cm"
+        "text": "2,5 cm, en el campo «Tabulaciones predeterminadas» del cuadro Tabulaciones"
       },
       {
         "letter": "D",
-        "text": "0,5 cm"
+        "text": "0,5 cm, en Opciones ▸ Avanzadas ▸ Mostrar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La distancia predeterminada entre tabulaciones en Word 365 es 1,25 cm. Este valor puede modificarse desde el campo Tabulaciones predeterminadas del cuadro de diálogo Tabulaciones. Es el mismo valor que el predeterminado de sangría."
+    "respuesta": "A",
+    "explicacion": "Mientras no haya tabulaciones propias, Word usa las predeterminadas, que están cada 1,25 cm, la misma medida que el paso de sangría. El campo que las controla está arriba a la derecha del cuadro Tabulaciones. · «Posición» es el descarte que decide la pregunta: acierta el cuadro y falla el campo, porque ahí se escribe dónde va UNA tabulación concreta, no cada cuánto se repiten las automáticas. Los dos campos conviven en el mismo cuadro y hacen cosas distintas. · Las otras dos cifras no corresponden a este ajuste, y Opciones ▸ Avanzadas no guarda ninguna medida de tabulación."
   },
   {
     "id": "inicio-69",
@@ -12519,28 +12519,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0310",
-    "enunciado": "¿Cuántos tipos de tabulación ofrece Word 365?",
+    "enunciado": "Abres el cuadro Tabulaciones y miras el bloque «Alineación». ¿Cuántos tipos hay y cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "3"
+        "text": "5: Izquierda, Centro, Derecha, Decimal y Barra"
       },
       {
         "letter": "B",
-        "text": "4"
+        "text": "4: Izquierda, Centro, Derecha y Decimal"
       },
       {
         "letter": "C",
-        "text": "5"
+        "text": "5: Izquierda, Centro, Derecha, Decimal y Justificada"
       },
       {
         "letter": "D",
-        "text": "7"
+        "text": "7: los cinco anteriores más sangría de primera línea y francesa"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Word 365 ofrece 5 tipos de tabulación: Izquierda, Centrada, Derecha, Decimal y Barra. Los primeros cuatro alinean texto de distinta forma. La Barra no alinea texto sino que inserta una línea vertical en la posición indicada."
+    "respuesta": "A",
+    "explicacion": "Son cinco botones de opción, y el quinto, Barra, es el raro: no alinea nada, dibuja una raya vertical en esa posición. · Dejarlo fuera y quedarse en cuatro es el error más común, precisamente porque no encaja con los otros. · «Justificada» no existe como tabulación: es una alineación de párrafo, y por eso cuela. · El siete es el descarte con más fundamento y no es casual: es lo que ofrece el SELECTOR de la regla, arriba a la izquierda, que al pulsarlo va rotando entre las cinco tabulaciones más los dos marcadores de sangría, primera línea y francesa. Cinco en el cuadro, siete en el selector."
   },
   {
     "id": "inicio-71",
@@ -12555,28 +12555,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0312",
-    "enunciado": "¿Qué función tiene la Tabulación Barra en Word 365?",
+    "enunciado": "Aplicas una tabulación de tipo «Barra» a 8 cm y escribes texto en el párrafo sin pulsar Tab. ¿Qué ves?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alinea el texto por la derecha desde la posición de la marca"
+        "text": "Una línea vertical a 8 cm, atravesando el párrafo"
       },
       {
         "letter": "B",
-        "text": "Dibuja una línea vertical en la posición indicada y no alinea texto"
+        "text": "Nada, hasta que se pulse Tab y el cursor salte a los 8 cm"
       },
       {
         "letter": "C",
-        "text": "Inserta una barra horizontal separadora entre párrafos"
+        "text": "Una línea horizontal bajo el párrafo, de 8 cm de largo"
       },
       {
         "letter": "D",
-        "text": "Alinea números por el separador de miles"
+        "text": "El texto alineado por su barra vertical más a la izquierda"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La Tabulación Barra es un tipo especial que no alinea texto. Su función es dibujar una línea vertical en la posición de la marca, actuando como separador visual entre columnas. Es la única tabulación que no determina cómo se alinea el texto."
+    "respuesta": "A",
+    "explicacion": "La tabulación Barra es la excepción del grupo: no marca una parada del cursor ni alinea texto, dibuja una raya vertical en esa posición y la mantiene en todas las líneas del párrafo, se pulse Tab o no. Se usa para separar columnas visualmente sin recurrir a una tabla. · Esperar a que se pulse Tab es lo que hacen las otras cuatro, y por eso ese descarte es el que más cae: es el comportamiento normal de una tabulación, pero no el de esta. · Una línea horizontal bajo el párrafo sería un borde inferior. · Y alinear por un carácter es lo que hace la Decimal, pero con la coma o el punto decimal."
   },
   {
     "id": "inicio-72",
@@ -12591,28 +12591,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0313",
-    "enunciado": "¿Cuál es la diferencia entre insertar tabulaciones desde la regla y hacerlo desde el cuadro de diálogo Tabulaciones?",
+    "enunciado": "Colocas las tabulaciones pulsando en la regla y luego intentas añadir una línea de puntos entre el texto y la cifra, como en un índice. No lo consigues. ¿Por qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Desde la regla se pueden aplicar todos los tipos incluido el relleno; desde el cuadro solo los tipos básicos"
+        "text": "Porque el relleno solo se puede poner desde el cuadro Tabulaciones"
       },
       {
         "letter": "B",
-        "text": "Desde la regla no se puede aplicar relleno; desde el cuadro de diálogo sí, además de mayor precisión en la posición"
+        "text": "Porque la regla solo admite tabulaciones de tipo izquierda"
       },
       {
         "letter": "C",
-        "text": "No hay diferencia funcional, solo de comodidad"
+        "text": "Porque el relleno exige que la tabulación sea de tipo Decimal"
       },
       {
         "letter": "D",
-        "text": "Desde la regla solo se puede aplicar tabulación izquierda"
+        "text": "Porque el relleno se pone después, desde Bordes y sombreado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Desde la regla se pueden insertar los 5 tipos de tabulación pero no es posible aplicar relleno. El cuadro de diálogo Tabulaciones permite mayor precisión en la posición y es el único método que permite aplicar relleno (puntos, rayas o guion bajo) entre el texto y la posición de la tabulación."
+    "respuesta": "A",
+    "explicacion": "La regla sirve para colocar y mover tabulaciones de los cinco tipos, y es lo más rápido, pero no ofrece en ningún sitio el relleno: para eso hay que abrir el cuadro, donde están las cuatro opciones —ninguno, puntos, rayas y guion bajo—. Es la diferencia práctica entre los dos métodos, junto con la precisión de la posición. · Que la regla solo admita el tipo izquierda es falso: el selector de su esquina permite elegir cualquiera de los cinco antes de pulsar. · El relleno funciona con cualquier tipo de tabulación, no solo con la decimal. · Y Bordes y sombreado no tiene nada que ver: allí se dibujan líneas alrededor del párrafo, no entre dos textos."
   },
   {
     "id": "inicio-73",
@@ -12627,28 +12627,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0314",
-    "enunciado": "¿Cuántas opciones de relleno ofrece el cuadro de diálogo Tabulaciones?",
+    "enunciado": "En el cuadro Tabulaciones, el bloque «Relleno» ofrece varias opciones numeradas. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2"
+        "text": "4: Ninguno, puntos, rayas y guion bajo"
       },
       {
         "letter": "B",
-        "text": "3"
+        "text": "3: Ninguno, puntos y rayas"
       },
       {
         "letter": "C",
-        "text": "4"
+        "text": "5: Ninguno, puntos, rayas, guion bajo y línea doble"
       },
       {
         "letter": "D",
-        "text": "5"
+        "text": "4: Ninguno, puntos, guion bajo y línea vertical"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El cuadro de diálogo Tabulaciones ofrece 4 opciones de relleno: 1) Ninguno, 2) puntos (......), 3) rayas (------), 4) guion bajo (______). El relleno ocupa el espacio entre el texto y la posición de la tabulación y solo puede configurarse desde este cuadro, no desde la regla."
+    "respuesta": "A",
+    "explicacion": "Son cuatro, numeradas del 1 al 4 en el propio cuadro: «1 Ninguno», «2 …….», «3 -------» y «4 ____». El relleno ocupa el hueco entre el texto y la posición de la tabulación, que es lo que da el aspecto de índice o de sumario. · Olvidar el guion bajo y quedarse en tres es el descarte que más cae, porque es el menos usado de los tres rellenos con dibujo. · La línea doble no existe entre los rellenos; sí como estilo de línea en Bordes y sombreado. · Y la línea vertical tampoco es un relleno: eso lo hace la tabulación de tipo Barra, que es otra cosa dentro del mismo cuadro."
   },
   {
     "id": "inicio-75",
@@ -12663,28 +12663,28 @@
     "tema": "Tabulaciones",
     "difficulty": "alta",
     "sourceQuestionId": "P-0316",
-    "enunciado": "Dentro del cuadro de diálogo Tabulaciones, ¿qué rango de valores admite el campo Posición?",
+    "enunciado": "En el campo «Posición» del cuadro Tabulaciones escribes −2 cm y esperas que Word lo rechace. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "De 0 a 55,87 cm"
+        "text": "Lo acepta: el campo admite de −55,87 a 55,87 cm"
       },
       {
         "letter": "B",
-        "text": "De -55,87 a 55,87 cm"
+        "text": "Lo rechaza: el campo solo admite de 0 a 55,87 cm"
       },
       {
         "letter": "C",
-        "text": "De 0 a 30 cm"
+        "text": "Lo rechaza: el campo solo admite de 0 a 30 cm"
       },
       {
         "letter": "D",
-        "text": "De 0,5 a 20 cm"
+        "text": "Lo acepta pero lo convierte a 0, el mínimo posible"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El campo Posicion del cuadro Tabulaciones admite valores entre -55,87 y 55,87 cm (incluidos los negativos). Prueba en vivo del usuario (sep-2026): al teclear un valor fuera de rango Word avisa «La medida debe estar entre -55,87 cm y 55,87 cm». Es el mismo rango del campo de Sangria del cuadro Parrafo."
+    "respuesta": "A",
+    "explicacion": "El campo admite negativos, y al teclear un valor fuera de rango Word contesta con el aviso «La medida debe estar entre -55,87 cm y 55,87 cm». Prueba en vivo del usuario. · Una posición negativa coloca la parada FUERA del margen izquierdo, hacia el borde del papel, que es como se sacan al margen las notas o las numeraciones de artículo. Por eso tiene sentido que se permita. · Es exactamente el mismo rango que admiten las sangrías izquierda y derecha del cuadro Párrafo, y conviene recordarlos juntos. · Y Word no redondea ni corrige valores en silencio: o los acepta, o avisa."
   },
   {
     "id": "inicio-76",
@@ -12699,28 +12699,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0317",
-    "enunciado": "Al crear varias tabulaciones en el cuadro de diálogo Tabulaciones, ¿qué botón debes pulsar después de configurar cada una para que quede registrada antes de crear la siguiente?",
+    "enunciado": "En el cuadro Tabulaciones escribes la posición, eliges alineación y relleno, y pulsas directamente Aceptar. La tabulación no aparece. ¿Qué faltó?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Aceptar"
+        "text": "Pulsar «Establecer» antes de Aceptar"
       },
       {
         "letter": "B",
-        "text": "Aplicar"
+        "text": "Pulsar «Eliminar todas» antes para limpiar las anteriores"
       },
       {
         "letter": "C",
-        "text": "Establecer"
+        "text": "Seleccionar el párrafo entero, no basta con el cursor dentro"
       },
       {
         "letter": "D",
-        "text": "Guardar"
+        "text": "Escribir la posición en centímetros y no en puntos"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "En el cuadro de diálogo Tabulaciones, después de configurar la posición, alineación y relleno de cada tabulación hay que pulsar Establecer para confirmarla y añadirla a la lista antes de definir la siguiente. Pulsar directamente Aceptar sin Establecer primero no registra la tabulación."
+    "respuesta": "A",
+    "explicacion": "«Establecer» es lo que da de alta la tabulación y la mete en la lista de la izquierda; hasta entonces lo escrito es solo una propuesta. Y hay que pulsarlo una vez por cada tabulación, antes de definir la siguiente. Los otros dos botones del cuadro, «Eliminar» y «Eliminar todas», hacen lo contrario. · Limpiar las anteriores no hace falta: se pueden acumular varias en el mismo párrafo, que es justo para lo que sirve. · Con el cursor dentro del párrafo basta, no hay que seleccionarlo entero. · Y la posición va en centímetros, la unidad de todo el cuadro."
   },
   {
     "id": "inicio-77",
@@ -12735,28 +12735,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0318",
-    "enunciado": "¿Cómo se abre el cuadro de diálogo Tabulaciones mediante secuencia de teclado?",
+    "enunciado": "Quieres abrir el cuadro Tabulaciones sin ratón, usando las teclas de acceso de la cinta. ¿Qué secuencia lo abre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt, F, P"
-      },
-      {
-        "letter": "B",
         "text": "Alt, F, T"
       },
       {
+        "letter": "B",
+        "text": "Alt, F, P"
+      },
+      {
         "letter": "C",
-        "text": "Ctrl + T"
+        "text": "Alt, F, Y"
       },
       {
         "letter": "D",
-        "text": "Alt, F, Y"
+        "text": "Ctrl+T"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La secuencia de KeyTips Alt, F, T abre el cuadro de diálogo Tabulaciones. Siguiendo el mismo patrón: Alt, F, Y abre el cuadro Fuente, Alt, F, P abre el cuadro Párrafo. Ctrl+T es el atajo para centrar texto, no para abrir Tabulaciones. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Al pulsar Alt aparecen las letras de acceso sobre la cinta; la F lleva a la ficha Inicio y la T, desde ahí, al cuadro Tabulaciones. Prueba en vivo del usuario. · Las otras dos secuencias siguen el mismo patrón y llevan a cuadros vecinos: Alt, F, P abre el cuadro Párrafo y Alt, F, Y el cuadro Fuente. Son los tres cuadros grandes del formato, y sus tres letras se aprenden juntas. · Ctrl+T es el descarte que más cae, porque parece la abreviatura evidente: en esta instalación centra el párrafo. · Ojo con no confundir estas secuencias, que se pulsan una tecla detrás de otra, con las combinaciones, que se pulsan a la vez."
   },
   {
     "id": "inicio-78",
@@ -12771,28 +12771,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0319",
-    "enunciado": "¿Cuál es la forma más rápida de abrir el cuadro de diálogo Tabulaciones cuando ya hay tabulaciones aplicadas visibles en la regla?",
+    "enunciado": "El párrafo ya tiene tabulaciones y sus marcas se ven en la regla. ¿Cuál es la forma más rápida de abrir el cuadro Tabulaciones desde ahí?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Clic simple sobre la marca de tabulación en la regla"
+        "text": "Doble clic sobre una de las marcas de la regla"
       },
       {
         "letter": "B",
-        "text": "Doble clic sobre la marca de tabulación en la regla"
+        "text": "Clic sencillo sobre una de las marcas de la regla"
       },
       {
         "letter": "C",
-        "text": "Clic derecho sobre la regla y seleccionar Tabulaciones"
+        "text": "Clic derecho sobre la regla y elegir «Tabulaciones…»"
       },
       {
         "letter": "D",
-        "text": "Arrastrar la marca de tabulación fuera de la regla"
+        "text": "Arrastrar una marca fuera de la regla"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Cuando ya existen tabulaciones aplicadas en un párrafo, hacer doble clic directamente sobre una marca de tabulación en la regla abre el cuadro de diálogo Tabulaciones. Arrastrar la marca fuera de la regla la elimina en lugar de abrir el cuadro."
+    "respuesta": "A",
+    "explicacion": "El doble clic sobre una marca ya puesta abre el cuadro directamente, sin pasar por el cuadro Párrafo ni por la secuencia de teclado. · El clic sencillo sobre la regla, en un sitio donde no haya marca, coloca una nueva del tipo que tenga cargado el selector: eso es lo que hay que hacer para crearlas, no para configurarlas. · Arrastrar una marca fuera de la regla es el descarte más peligroso, porque también hace algo y ese algo es destructivo: la elimina. · El clic derecho sobre la regla no ofrece ese menú; el menú contextual con «Párrafo…», desde el que se llega al botón Tabulaciones, sale al pulsar sobre el texto."
   },
   {
     "id": "inicio-79",
@@ -12807,28 +12807,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0320",
-    "enunciado": "¿Cómo se elimina una tabulación directamente desde la regla sin abrir el cuadro de diálogo?",
+    "enunciado": "Quieres quitar una tabulación concreta sin abrir ningún cuadro. ¿Cómo se hace desde la regla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Clic derecho sobre la marca y seleccionar Eliminar"
+        "text": "Arrastrando su marca fuera de la regla"
       },
       {
         "letter": "B",
-        "text": "Seleccionar la marca y pulsar la tecla Supr"
+        "text": "Marcando su marca y pulsando Supr"
       },
       {
         "letter": "C",
-        "text": "Arrastrar la marca de tabulación fuera de la regla"
+        "text": "Con clic derecho sobre la marca y «Eliminar»"
       },
       {
         "letter": "D",
-        "text": "Doble clic sobre la marca y pulsar Eliminar en el cuadro"
+        "text": "Con doble clic sobre la marca y luego «Eliminar»"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Para eliminar una tabulación desde la regla basta con seleccionar su icono y arrastrarlo fuera de la regla. La marca desaparece y la tabulación queda eliminada. Para eliminarla con más control (o varias a la vez) se usa el cuadro de diálogo Tabulaciones con los botones Eliminar o Eliminar todas."
+    "respuesta": "A",
+    "explicacion": "Basta con agarrar la marca y soltarla fuera de la regla, hacia el documento: desaparece y la tabulación queda eliminada. Es el gesto más rápido, y también el que se hace sin querer al intentar moverla. · El doble clic con «Eliminar» es el descarte más difícil, porque también funciona y es lo que hay que usar para quitar varias a la vez o con más control: pero abre el cuadro, y el enunciado pide no abrirlo. Ahí está la diferencia. · Las marcas de la regla no se seleccionan como un objeto, así que Supr no actúa sobre ellas. · Y la regla no tiene menú contextual con «Eliminar»."
   },
   {
     "id": "inicio-80",
@@ -12843,28 +12843,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0321",
-    "enunciado": "¿A qué ámbito del documento afectan las tabulaciones definidas en el cuadro de diálogo Tabulaciones?",
+    "enunciado": "Configuras tres tabulaciones con el cursor dentro de un párrafo y luego bajas a otro párrafo del mismo documento. ¿Las tiene también?",
     "opciones": [
       {
         "letter": "A",
-        "text": "A todo el documento"
+        "text": "No: valen solo para el párrafo en el que estaba el cursor"
       },
       {
         "letter": "B",
-        "text": "Solo al párrafo o párrafos seleccionados en el momento de aplicarlas"
+        "text": "Sí: valen para todo el documento"
       },
       {
         "letter": "C",
-        "text": "A la sección activa del documento"
+        "text": "Sí: valen para todos los párrafos con el mismo estilo"
       },
       {
         "letter": "D",
-        "text": "A todos los párrafos con el mismo estilo"
+        "text": "Sí: valen para la sección en la que se definieron"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Las tabulaciones se aplican únicamente al párrafo o párrafos que estén seleccionados en el momento de configurarlas. No afectan a todo el documento ni a la sección. Para aplicarlas a varios párrafos hay que seleccionarlos todos antes de abrir el cuadro."
+    "respuesta": "A",
+    "explicacion": "Las tabulaciones son formato de párrafo, así que viajan en su marca ¶ y no salen de él. Para darlas a varios hay que seleccionarlos todos antes de abrir el cuadro. También se heredan al pulsar Intro, porque el párrafo nuevo nace con el formato del anterior. · La opción del estilo es el descarte con más fundamento y es la vía correcta para que valgan en muchos sitios: si en vez de ponerlas a mano se meten en la definición del estilo, con Modificar estilo ▸ Formato ▾ ▸ Tabulaciones, entonces sí las hereda cada párrafo que lo lleve. Pero eso hay que hacerlo aparte. · Ni el documento ni la sección son ámbitos del formato de párrafo."
   },
   {
     "id": "inicio-82",
@@ -12879,28 +12879,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0323",
-    "enunciado": "Dentro de una celda de tabla, ¿qué atajo inserta un carácter de tabulación real en lugar de mover el cursor a la celda siguiente?",
+    "enunciado": "Estás dentro de una celda de tabla y quieres escribir un tabulador de verdad, pero al pulsar Tab el cursor salta a la celda siguiente. ¿Qué combinación lo inserta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tab"
+        "text": "Ctrl+Tab"
       },
       {
         "letter": "B",
-        "text": "Mayús + Tab"
+        "text": "Mayús+Tab"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Tab"
+        "text": "Alt+Tab"
       },
       {
         "letter": "D",
-        "text": "Alt + Tab"
+        "text": "Ctrl+Mayús+Tab"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Dentro de una celda de tabla Tab avanza a la siguiente celda. Para insertar un carácter de tabulación real dentro de la celda hay que usar Ctrl+Tab. Mayús+Tab retrocede a la celda anterior. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Dentro de una tabla, Tab cambia de significado: en vez de tabular, avanza a la celda siguiente, y en la última celda de la última fila crea una fila nueva. Para escribir un tabulador real hay que añadir Ctrl. Prueba en vivo del usuario. · Mayús+Tab es el movimiento contrario, a la celda anterior: sigue siendo navegación, no escritura, y es el descarte que más cae. · Alt+Tab ni siquiera llega a Word: lo intercepta Windows para cambiar de ventana. · Y Ctrl+Mayús+Tab no tiene comando asignado en esta instalación. · El tabulador escrito así respeta las tabulaciones definidas en el párrafo de la celda."
   },
   {
     "id": "inicio-83",
@@ -12915,28 +12915,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0324",
-    "enunciado": "¿Qué símbolo representa la marca de un tabulador cuando está activada la opción Mostrar todo en Word 365?",
+    "enunciado": "Con Mostrar todo activado, un tabulador aparece en el texto con un símbolo propio. ¿Cuál?",
     "opciones": [
       {
         "letter": "A",
-        "text": "¶"
+        "text": "Una flecha hacia la derecha, →"
       },
       {
         "letter": "B",
-        "text": "·"
+        "text": "Un punto a media altura, ·"
       },
       {
         "letter": "C",
-        "text": "→"
+        "text": "La marca de párrafo, ¶"
       },
       {
         "letter": "D",
-        "text": "□"
+        "text": "Un pequeño círculo elevado, °"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Cuando Mostrar todo está activo, el tabulador se representa con el símbolo → (flecha hacia la derecha). El símbolo ¶ representa la marca de párrafo, · representa un espacio en blanco y □ representa una celda de tabla."
+    "respuesta": "A",
+    "explicacion": "La flecha ocupa todo el salto, de modo que se ve de un vistazo cuánto avanza y si hay dos tabuladores seguidos donde debería haber uno: ese es el uso práctico de las marcas de formato al depurar un documento mal alineado. · El punto a media altura es un espacio normal, y confundirlos es el origen del error más típico, alinear con espacios en vez de con tabuladores, que se descoloca en cuanto cambia la fuente. · El ¶ cierra el párrafo. · Y el círculo elevado marca un espacio de no separación, el que se pone con Ctrl+Mayús+Espacio para que dos palabras no se separen al final de línea."
   },
   {
     "id": "inicio-84",
@@ -12951,28 +12951,28 @@
     "tema": "Tabulaciones",
     "difficulty": "alta",
     "sourceQuestionId": "P-0325",
-    "enunciado": "El selector de tabulaciones situado a la izquierda de la regla muestra los tipos de tabulación de forma rotatoria al hacer clic. ¿Cuántas opciones en total contiene ese ciclo rotatorio?",
+    "enunciado": "Pulsas repetidamente el pequeño selector que hay a la izquierda de la regla y va cambiando de icono. ¿Cuántas opciones tiene ese ciclo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "5 (los 5 tipos de tabulación)"
+        "text": "7: las cinco tabulaciones más las dos marcas de sangría"
       },
       {
         "letter": "B",
-        "text": "6 (5 tipos más sangría de primera línea)"
+        "text": "5: solo las cinco tabulaciones"
       },
       {
         "letter": "C",
-        "text": "7 (5 tipos más sangría de primera línea y sangría francesa)"
+        "text": "6: las cinco tabulaciones más la sangría de primera línea"
       },
       {
         "letter": "D",
-        "text": "9 (5 tipos más 4 tipos de sangría)"
+        "text": "9: las cinco tabulaciones más los cuatro tipos de sangría"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El selector de tabulaciones de la regla tiene 7 opciones en total que rotan con cada clic: los 5 tipos de tabulación (Izquierda, Centrada, Derecha, Decimal y Barra) más Sangría de primera línea y Sangría francesa."
+    "respuesta": "A",
+    "explicacion": "El selector rota entre siete: las cinco tabulaciones —izquierda, centro, derecha, decimal y barra— y dos marcadores que no son tabulaciones, el de sangría de primera línea y el de sangría francesa. Elegido uno, se pulsa en la regla para colocarlo. · Quedarse en cinco es el descarte que más cae, porque el selector se asocia solo con tabulaciones y de hecho se llama así. · Seis es la mitad del añadido, olvidando la francesa. · Y nueve mezcla los cuatro tipos de sangría del cuadro Párrafo: pero las de izquierda y derecha no están en el selector, se manejan con los triángulos y el cuadradito que ya vienen dibujados en la regla."
   },
   {
     "id": "inicio-277",
@@ -12987,28 +12987,28 @@
     "tema": "Tabulaciones",
     "difficulty": "alta",
     "sourceQuestionId": "P-0531",
-    "enunciado": "Un opositor necesita preparar un índice de contenidos con relleno de puntos entre el título y el número de página, como: 'Introducción .......... 3'. ¿Qué combinación de funciones de la pestaña Inicio debe usar?",
+    "enunciado": "Necesitas maquetar un sumario con la línea de puntos entre el título y el número de página, del tipo «Introducción ………… 3». ¿Cómo se hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tabulación derecha con relleno de puntos desde el cuadro de diálogo Tabulaciones"
+        "text": "Tabulación derecha en el margen derecho, con relleno de puntos, desde el cuadro"
       },
       {
         "letter": "B",
-        "text": "Tabulación izquierda con relleno de puntos desde la regla"
+        "text": "Tabulación izquierda en el margen derecho, con relleno de puntos, desde el cuadro"
       },
       {
         "letter": "C",
-        "text": "Tabulación decimal con relleno de rayas desde el cuadro de diálogo Tabulaciones"
+        "text": "Tabulación derecha en el margen derecho, con relleno de puntos, desde la regla"
       },
       {
         "letter": "D",
-        "text": "Subrayado continuo aplicado desde el grupo Fuente"
+        "text": "Escribiendo los puntos a mano y subrayando el hueco desde el grupo Fuente"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Para un índice con puntos entre título y número de página se usa una tabulación de tipo Derecha (para que el número quede alineado por la derecha) con relleno de puntos. Debe configurarse desde el cuadro de diálogo Tabulaciones porque el relleno no está disponible desde la regla. La posición de la tabulación se sitúa en el margen derecho del área de texto."
+    "explicacion": "Hacen falta tres cosas a la vez: que la parada esté al final del área de texto, que sea de tipo derecha para que los números de página queden cuadrados por su última cifra —el 3 y el 128 acaban en la misma vertical— y que lleve relleno de puntos. · Con tabulación izquierda los números empezarían todos en el mismo sitio y acabarían desalineados, que es el fallo más frecuente al montar un sumario a mano. · Desde la regla se coloca la parada y se elige el tipo, pero no hay forma de poner el relleno: ese es el motivo de pasar por el cuadro. · Y escribir los puntos a mano se descoloca en cuanto cambie una palabra del título."
   },
   {
     "id": "inicio-462",
@@ -13023,28 +13023,28 @@
     "tema": "Tabulaciones",
     "sourceQuestionId": "neg2-inicio-12",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Repasas cómo se manejan las tabulaciones. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El diálogo Tabulaciones se abre con Alt,F,T."
+        "text": "La secuencia Alt, F, T abre el cuadro Tabulaciones"
       },
       {
         "letter": "B",
-        "text": "Se pueden fijar tabulaciones izquierda, derecha, centrada, decimal y de barra."
+        "text": "Hay cinco tipos: izquierda, centro, derecha, decimal y barra"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Tab inserta una tabulación real dentro de una celda de tabla."
+        "text": "Ctrl+Tab escribe un tabulador real dentro de una celda de tabla"
       },
       {
         "letter": "D",
-        "text": "Las tabulaciones solo se pueden colocar haciendo doble clic en la regla; nunca desde un cuadro de diálogo."
+        "text": "Solo se colocan desde la regla, nunca desde un cuadro de diálogo"
       }
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "Las tabulaciones se pueden fijar tanto desde la regla como desde el cuadro de diálogo Tabulaciones (Alt,F,T)."
+    "explicacion": "Hay dos caminos, y cada uno tiene lo suyo: la regla es rápida para colocar y mover paradas a ojo, y el cuadro permite la posición exacta al milímetro y es el único sitio donde se pone el relleno. Decir que solo existe uno de los dos deja fuera precisamente lo que hace falta para un sumario. · Las otras tres son ciertas. La secuencia Alt, F, T comparte patrón con Alt, F, P para el cuadro Párrafo y Alt, F, Y para el de Fuente. · Los cinco tipos incluyen la barra, que no alinea nada y solo dibuja una raya vertical. · Y dentro de una tabla hace falta Ctrl+Tab, porque Tab a secas cambia de celda."
   },
   {
     "id": "inicio-500",
@@ -13059,28 +13059,28 @@
     "tema": "Tabulaciones",
     "sourceQuestionId": "rutas-inicio-30",
     "generado": true,
-    "enunciado": "¿Qué botón hay en la esquina inferior izquierda del cuadro de diálogo Párrafo?",
+    "enunciado": "Estás en el cuadro de diálogo Párrafo y quieres pasar a definir tabulaciones sin cerrarlo. ¿Qué botón te lleva?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tabulaciones…"
+        "text": "«Tabulaciones…», abajo a la izquierda"
       },
       {
         "letter": "B",
-        "text": "Bordes…"
+        "text": "«Establecer como predeterminado», abajo a la izquierda"
       },
       {
         "letter": "C",
-        "text": "Sangría…"
+        "text": "«Bordes…», abajo a la izquierda"
       },
       {
         "letter": "D",
-        "text": "Fuente…"
+        "text": "«Fuente…», abajo a la izquierda"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón «Tabulaciones…» abre el cuadro donde se definen las paradas de tabulación (posición, alineación, relleno)."
+    "explicacion": "El cuadro Párrafo tiene dos botones a la izquierda de Aceptar y Cancelar: «Tabulaciones…», que abre el cuadro de las paradas, y «Establecer como predeterminado», que fija lo configurado como punto de partida de los documentos nuevos. Esos dos y no más. · «Establecer como predeterminado» es el descarte con más fundamento porque sí está ahí, en ese mismo rincón, y es fácil pulsarlo por error: pero no abre nada, guarda. · «Bordes…» y «Fuente…» no son botones de este cuadro; son entradas del menú «Formato ▾» del cuadro Modificar estilo, que es el concentrador desde el que se llega a todos los cuadros de formato."
   },
   {
     "id": "inicio-554",
@@ -13095,28 +13095,28 @@
     "tema": "Tabulaciones",
     "sourceQuestionId": "dlgcompart-inicio-09",
     "generado": true,
-    "enunciado": "El cuadro «Tabulaciones» se puede abrir de varias formas. Señale la que NO es correcta:",
+    "enunciado": "El cuadro «Tabulaciones» se abre por varios caminos. ¿Cuál de estos NO existe?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Con un botón «Tabulaciones» del grupo Párrafo de la cinta"
+        "text": "Un botón «Tabulaciones» propio en el grupo Párrafo de la cinta"
       },
       {
         "letter": "B",
-        "text": "Desde el cuadro Párrafo (botón «Tabulaciones…»)"
+        "text": "El botón «Tabulaciones…» del cuadro Párrafo"
       },
       {
         "letter": "C",
-        "text": "Desde «Opciones de interlineado…» del menú de interlineado (botón «Tabulaciones…»)"
+        "text": "El botón «Tabulaciones…» de «Opciones de interlineado…»"
       },
       {
         "letter": "D",
-        "text": "Con doble clic en un marcador de tabulación de la regla"
+        "text": "Doble clic sobre una marca de tabulación de la regla"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "No hay ningún botón «Tabulaciones» directo en la cinta: siempre se llega a través del cuadro Párrafo o de la regla."
+    "explicacion": "No hay ningún botón suelto en la cinta: es de los pocos cuadros importantes de Word al que solo se llega de rebote, a través del cuadro Párrafo, de la regla o de una secuencia de teclado. Por eso mucha gente ni sabe que existe y acaba alineando con espacios. · Las otras tres son reales, y la del interlineado sorprende pero se explica sola: «Opciones de interlineado…» abre el cuadro Párrafo, y de ahí sale el botón. · El doble clic en la regla es el atajo más rápido cuando ya hay marcas puestas. · Hay una cuarta vía: Modificar estilo ▸ Formato ▾ ▸ Tabulaciones…, que además las guarda en el estilo."
   },
   {
     "id": "inicio-74",
@@ -13131,27 +13131,27 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0315",
-    "enunciado": "¿Cuáles de las siguientes afirmaciones sobre el relleno de tabulaciones son correctas?",
+    "enunciado": "Repasas lo que sabes del relleno de las tabulaciones. ¿Cuáles de estas afirmaciones son correctas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Solo puede aplicarse desde el cuadro de diálogo Tabulaciones, no desde la regla"
+        "text": "Solo se puede poner desde el cuadro Tabulaciones, no desde la regla"
       },
       {
         "letter": "B",
-        "text": "Hay 4 opciones: Ninguno, puntos, rayas y guion bajo"
+        "text": "Hay cuatro opciones: ninguno, puntos, rayas y guion bajo"
       },
       {
         "letter": "C",
-        "text": "También puede aplicarse haciendo clic directamente en la regla"
+        "text": "También se pone haciendo clic con el botón derecho en la regla"
       },
       {
         "letter": "D",
-        "text": "Es especialmente útil para maquetar índices, guiando la vista entre título y número de página"
+        "text": "Sirve sobre todo para sumarios, guiando la vista hasta el número de página"
       },
       {
         "letter": "E",
-        "text": "El relleno solo está disponible para la tabulación de tipo Derecha"
+        "text": "Solo está disponible para las tabulaciones de tipo derecha"
       }
     ],
     "matching": null,
@@ -13160,7 +13160,7 @@
       "B",
       "D"
     ],
-    "explicacion": "El relleno solo es accesible desde el cuadro de diálogo Tabulaciones, no desde la regla. Ofrece 4 opciones. Su uso más habitual es en índices para guiar la vista entre el título y la página. La opción «También puede aplicarse haciendo clic directamente en…» es falsa (la regla no permite relleno) y la opción «El relleno solo está disponible para la…» es falsa (el relleno está disponible para todos los tipos de tabulación)."
+    "explicacion": "El relleno vive únicamente en el cuadro, en un bloque con sus cuatro opciones numeradas, y ocupa el hueco entre el texto y la parada. De ahí que la regla, tan cómoda para todo lo demás, no valga para esto. · La afirmación sobre la regla es falsa: ni con clic derecho ni de ninguna otra forma; lo único que la regla ofrece es colocar, mover y quitar paradas. · Y la que lo limita al tipo derecha también es falsa: funciona con los cinco tipos, aunque el caso del sumario, que sí usa una tabulación derecha, sea tan habitual que haga pensar lo contrario. Es el distractor con más fundamento de los dos."
   },
   {
     "id": "inicio-553",
@@ -13175,23 +13175,23 @@
     "tema": "Tabulaciones",
     "sourceQuestionId": "dlgcompart-inicio-08",
     "generado": true,
-    "enunciado": "¿Desde cuáles de estas rutas se abre el cuadro «Tabulaciones»?",
+    "enunciado": "Repasas por dónde se llega al cuadro «Tabulaciones». ¿Cuáles de estas rutas lo abren?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Inicio/Disposición ▸ Párrafo ▸ lanzador ▸ botón «Tabulaciones…»"
+        "text": "Párrafo ▸ iniciador ▸ botón «Tabulaciones…», desde Inicio o desde Disposición"
       },
       {
         "letter": "B",
-        "text": "Inicio ▸ Párrafo ▸ Espaciado (flecha) ▸ Opciones de interlineado… ▸ botón «Tabulaciones…»"
+        "text": "Espaciado entre líneas ▸ «Opciones de interlineado…» ▸ «Tabulaciones…»"
       },
       {
         "letter": "C",
-        "text": "Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▸ Tabulaciones…"
+        "text": "Estilos ▸ Modificar estilo ▸ Formato ▾ ▸ Tabulaciones…"
       },
       {
         "letter": "D",
-        "text": "Doble clic en un marcador de tabulación de la regla"
+        "text": "Doble clic en una marca de tabulación de la regla"
       },
       {
         "letter": "E",
@@ -13199,7 +13199,7 @@
       },
       {
         "letter": "F",
-        "text": "Botón «Tabulaciones» del grupo Párrafo de la cinta"
+        "text": "Un botón «Tabulaciones» del grupo Párrafo de la cinta"
       }
     ],
     "matching": null,
@@ -13209,7 +13209,7 @@
       "C",
       "D"
     ],
-    "explicacion": "«Vista ▸ Regla» solo muestra la regla; no existe un botón «Tabulaciones» suelto en la cinta (siempre se pasa por el cuadro Párrafo o la regla)."
+    "explicacion": "Las cuatro primeras funcionan, y tres de ellas pasan por el cuadro Párrafo, que es la puerta natural: desde su iniciador en cualquiera de las dos pestañas, desde «Opciones de interlineado…» —que abre ese mismo cuadro— y desde el menú «Formato ▾» de Modificar estilo, con la ventaja de que así las tabulaciones quedan guardadas en el estilo. La cuarta es el atajo de la regla. · «Vista ▸ Regla» solo enciende y apaga la regla: sin ella no se ven las marcas, pero no abre ningún cuadro. · Y no existe ningún botón «Tabulaciones» suelto en la cinta, que es lo que obliga a conocer las otras vías."
   },
   {
     "id": "inicio-81",
@@ -13224,17 +13224,17 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0322",
-    "enunciado": "La tecla Tab siempre inserta una tabulación en cualquier contexto de Word 365, incluidas las celdas de tablas.",
+    "enunciado": "La tecla Tab inserta un tabulador en cualquier sitio de Word, incluidas las celdas de una tabla.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso. Dentro de las celdas de una tabla, la tecla Tab no inserta una tabulación sino que mueve el cursor a la siguiente celda. Para insertar un carácter de tabulación dentro de una celda de tabla hay que usar Ctrl+Tab."
+    "explicacion": "Falso. Dentro de una tabla, Tab avanza a la celda siguiente, y en la última celda de la última fila hace algo más: crea una fila nueva, que es la forma más rápida de alargar una tabla. Para escribir un tabulador de verdad dentro de una celda hay que pulsar Ctrl+Tab. Prueba en vivo del usuario. · Mayús+Tab retrocede a la celda anterior. · Hay otro contexto donde Tab cambia de significado: al principio de un elemento de lista, donde baja el elemento un nivel en la jerarquía en vez de tabular. En cualquier otro punto del elemento sí tabula normalmente."
   },
   {
     "id": "inicio-86",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Tabulaciones",
-    "tipo": "verdadero_falso",
+    "tipo": "opcion_unica",
     "categoria": "concepto",
     "negativa": false,
     "section": "inicio",
@@ -13243,17 +13243,34 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0327",
-    "enunciado": "Una tabulación es un elemento de formato del párrafo, no un carácter de texto, por lo que puede copiarse a otro párrafo usando Copiar formato.",
-    "opciones": [],
+    "enunciado": "Copias con el pincel el formato de un párrafo que tenía tres tabulaciones definidas y lo aplicas sobre otro párrafo. ¿Se llevan las tabulaciones?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Sí: son formato de párrafo y viajan con él"
+      },
+      {
+        "letter": "B",
+        "text": "No: son caracteres escritos y el pincel no copia texto"
+      },
+      {
+        "letter": "C",
+        "text": "Sí, pero solo su posición; el relleno y la alineación no se copian"
+      },
+      {
+        "letter": "D",
+        "text": "No: hay que definirlas de nuevo o guardarlas en un estilo"
+      }
+    ],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Las tabulaciones son formato de párrafo, no texto. Esto significa que pueden copiarse a otros párrafos usando Copiar formato (Ctrl+Mayús+C / Ctrl+Mayús+V) igual que cualquier otro formato de párrafo como la alineación o el interlineado."
+    "respuesta": "A",
+    "explicacion": "Las tabulaciones son formato de párrafo, igual que la alineación, la sangría o el interlineado: viven en la marca ¶ y se copian enteras, con su posición, su tipo y su relleno. El pincel es Alt+Ctrl+C para copiar el formato y Alt+Ctrl+V para pegarlo. ⚠️ Ojo: en la mayoría de manuales ese pincel es Ctrl+Mayús+C y Ctrl+Mayús+V, que en esta instalación no hacen eso. Prueba en vivo del usuario. · Confundirlas con caracteres es el error de fondo: lo que sí es un carácter es el tabulador que se escribe con Tab, que se ve con Mostrar todo como una flecha. Uno es la parada, el otro el salto hasta ella."
   },
   {
     "id": "inicio-280",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Tabulaciones",
-    "tipo": "verdadero_falso",
+    "tipo": "opcion_unica",
     "categoria": "concepto",
     "negativa": false,
     "section": "inicio",
@@ -13262,11 +13279,28 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0534",
-    "enunciado": "En Word 365, las tabulaciones definidas en el cuadro de diálogo Tabulaciones son formato de párrafo y por tanto pueden copiarse a otros párrafos usando Copiar formato (Ctrl+Mayús+C / Ctrl+Mayús+V), igual que la alineación o el interlineado.",
-    "opciones": [],
+    "enunciado": "Un párrafo tiene tabulaciones definidas. Borras su marca de párrafo final, de modo que se une con el párrafo siguiente. ¿Qué pasa con esas tabulaciones?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Se pierden: el párrafo resultante se queda con el formato del de abajo"
+      },
+      {
+        "letter": "B",
+        "text": "Se conservan: el párrafo resultante mantiene las del de arriba"
+      },
+      {
+        "letter": "C",
+        "text": "Se suman: el párrafo resultante tiene las paradas de los dos"
+      },
+      {
+        "letter": "D",
+        "text": "Se pierden las dos: el párrafo resultante vuelve a las predeterminadas"
+      }
+    ],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. Las tabulaciones son un atributo de formato de párrafo, no caracteres de texto. Esto significa que se almacenan en la marca de párrafo (¶) y se pueden copiar junto con el resto del formato de párrafo usando Copiar formato. Al usar Copiar formato sobre un párrafo con tabulaciones definidas y aplicarlo a otro párrafo, las tabulaciones se transfieren al párrafo destino."
+    "respuesta": "A",
+    "explicacion": "Todo el formato de un párrafo —tabulaciones, sangrías, alineación, interlineado— viaja dentro de su marca ¶, al final. Al borrarla, el texto de arriba pasa a formar parte del párrafo de abajo y adopta su formato, no al revés. Es la razón de que al unir párrafos «se descoloque» lo de arriba. · Pensar que se conservan es lo intuitivo, porque uno cree que el formato pertenece al texto que se ve, y ahí está la trampa. · No se suman: un párrafo tiene un solo juego de tabulaciones. · Y no vuelven a las predeterminadas: quedan las del párrafo que sobrevive, que puede tener las suyas."
   },
   {
     "id": "inicio-448",
@@ -13281,11 +13315,11 @@
     "tema": "Tabulaciones",
     "sourceQuestionId": "bal-inicio-05",
     "generado": true,
-    "enunciado": "Al pulsar Tab dentro de una celda de tabla, Word siempre inserta un carácter de tabulación, igual que en texto normal.",
+    "enunciado": "Al pulsar Tab en la última celda de la última fila de una tabla, Word crea una fila nueva.",
     "opciones": [],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: dentro de una tabla, Tab avanza a la celda siguiente. Para insertar una tabulación real dentro de la celda hay que usar Ctrl+Tab."
+    "respuesta": true,
+    "explicacion": "Verdadero, y es la forma más rápida de alargar una tabla: se escribe, se tabula y la tabla crece sola sin tocar la cinta. En cualquier otra celda, Tab se limita a avanzar a la siguiente, recorriendo la fila y saltando a la de abajo al terminarla. · Mayús+Tab hace el camino inverso, y en la primera celda no borra nada: simplemente no avanza. · Por eso, para escribir un tabulador de verdad dentro de una celda hay que usar Ctrl+Tab. · Ese cambio de significado de la tecla Tab dentro de una tabla es una de las cosas que más despistan al maquetar con tablas."
   },
   {
     "id": "inicio-70",
@@ -13300,7 +13334,7 @@
     "tema": "Tabulaciones",
     "difficulty": "media",
     "sourceQuestionId": "P-0311",
-    "enunciado": "Relaciona cada tipo de tabulación con su comportamiento:",
+    "enunciado": "Relaciona cada tipo de tabulación con lo que hace al llegar el texto a su marca:",
     "opciones": [],
     "matching": {
       "left": [
@@ -13362,7 +13396,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Izquierda: el texto fluye hacia la derecha. Centrada: el texto se reparte a ambos lados de la marca. Derecha: el texto fluye hacia la izquierda. Decimal: fija el separador decimal en la marca independientemente del número de dígitos. Barra: dibuja una línea vertical, no alinea texto."
+    "explicacion": "Con la izquierda el texto crece hacia la derecha desde la marca; con la derecha crece hacia la izquierda, de modo que lo que queda cuadrado es el final; y con la centrada se reparte a los dos lados. · La decimal es la que resuelve las columnas de importes: fija la coma decimal en la marca, así que 3,50 y 1.240,75 quedan alineados por la coma aunque tengan distinto número de cifras. Con una tabulación derecha se alinearían por el último dígito, que no es lo mismo en cuanto aparecen decimales distintos. · Y la barra es la excepción del grupo: no marca ninguna parada del cursor, solo dibuja una raya vertical en esa posición, en todas las líneas del párrafo."
   },
   {
     "id": "inicio-85",
@@ -13377,7 +13411,7 @@
     "tema": "Tabulaciones",
     "difficulty": "alta",
     "sourceQuestionId": "P-0326",
-    "enunciado": "Relaciona cada icono del selector de tabulaciones con el tipo que representa:",
+    "enunciado": "Relaciona cada icono del selector de la regla con el tipo de tabulación que representa:",
     "opciones": [],
     "matching": {
       "left": [
@@ -13443,7 +13477,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "L → Izquierda. T invertida (⊥) → Centrada. L invertida (┘) → Derecha. T invertida con punto → Decimal. Línea vertical → Barra. El distractor F (Sangría francesa) también aparece en el selector pero con un icono distinto no incluido en esta lista."
+    "explicacion": "La L es la izquierda: el ángulo indica desde dónde crece el texto. La L invertida es la derecha, su espejo. La T invertida es la centrada, con el texto repartido a los dos lados del palo. La misma T con un punto al lado es la decimal, y ese punto es precisamente la coma por la que alinea. Y la línea vertical suelta es la barra, que dibuja exactamente eso. · El destino que se queda sin pareja, la sangría francesa, también aparece en ese selector —el ciclo tiene siete posiciones, cinco tabulaciones y dos marcas de sangría—, pero su icono es un triángulo apuntando hacia arriba, no ninguno de los cinco de la lista. Cuela porque comparte selector."
   },
   {
     "id": "inicio-87",
