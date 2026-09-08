@@ -48,6 +48,18 @@ def main(patch_path):
                     print("  !! campo no admitido:", k, "en", qid); return 1
                 q[k] = v
 
+            # Todo lo que pasa por aqui viene reescrito a mano bajo la guia de
+            # estilo, asi que se marca solo. Se coloca junto a la procedencia,
+            # antes del contenido, igual que hace scripts/marcar_revisadas.py.
+            if not q.get("revisada"):
+                reordenado = {}
+                for kk, vv in q.items():
+                    if kk == "enunciado":
+                        reordenado["revisada"] = True
+                    reordenado[kk] = vv
+                reordenado.setdefault("revisada", True)
+                q.clear(); q.update(reordenado)
+
             # comprobaciones
             tipo = q.get("tipo")
             # coherencia tipo <-> respuesta: lo que mas facil se rompe al
@@ -127,6 +139,10 @@ def main(patch_path):
     for a in avisos:
         print("  aviso:", a)
     print("Reescritos %d ítems." % total)
+    for sec in porSeccion:
+        arr = json.load(io.open(os.path.join(ROOT, "data", "questions", sec + ".json"), encoding="utf-8"))
+        hechas = sum(1 for q in arr if q.get("revisada"))
+        print("  %s: %d/%d revisadas, faltan %d" % (sec, hechas, len(arr), len(arr) - hechas))
     return 0
 
 if __name__ == "__main__":

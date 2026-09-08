@@ -11,7 +11,8 @@
     "subtopic": null,
     "tema": "Páginas",
     "sourceQuestionId": "8-120",
-    "enunciado": "¿Cuál de los siguientes atajos inserta un salto de página manual en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres que el siguiente apartado empiece en una página nueva sin dar Intro hasta llenar la actual. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -19,20 +20,20 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+Entrar"
+        "text": "Alt+Ctrl+Entrar"
       },
       {
         "letter": "C",
-        "text": "Alt+Entrar"
+        "text": "Ctrl+Mayús+Entrar"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Alt+Entrar"
+        "text": "Alt+Entrar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Entrar inserta un salto de página manual. Ctrl+Mayús+Entrar no tiene función en este Word. Alt+Entrar repite la última acción. Alt+Ctrl+Entrar inserta un separador de estilos."
+    "explicacion": "Ctrl+Entrar inserta un salto de página manual, el mismo que el botón «Salto de página» del grupo Páginas. Con Mostrar todo se ve como una línea de puntos rotulada. · Alt+Ctrl+Entrar sí existe y hace algo poco conocido: inserta un separador de estilos, que une dos párrafos para poder darles formato distinto en la misma línea. Es el descarte con más fundamento porque comparte la tecla y sí está asignado. · Alt+Entrar repite la última acción, junto con F4 y Ctrl+Y. · Y Ctrl+Mayús+Entrar no figura con ningún comando en el cuadro Personalizar teclado de esta instalación, aunque en otros manuales aparezca como salto de columna."
   },
   {
     "id": "insertar-46",
@@ -47,28 +48,29 @@
     "tema": "Páginas",
     "sourceQuestionId": "P-01",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes rutas permite insertar una portada con diseño profesional predefinido en un documento Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres poner una portada con diseño ya hecho a un informe. ¿Por dónde se llega a la galería?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Diseño > Portada > Integrado"
+        "text": "Insertar ▸ Páginas ▸ Portada"
       },
       {
         "letter": "B",
-        "text": "Insertar > Páginas > Portada > Integrado"
+        "text": "Insertar ▸ Texto ▸ Portada"
       },
       {
         "letter": "C",
-        "text": "Insertar > Texto > Portada > Galería"
+        "text": "Diseño ▸ Formato del documento ▸ Portada"
       },
       {
         "letter": "D",
-        "text": "Diseño > Páginas > Portada > Integrado"
+        "text": "Disposición ▸ Configurar página ▸ Portada"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A sitúa la portada en un grupo \"Diseño\" que no existe en Insertar. D cambia la pestaña a Diseño, donde hay temas y fondos pero no portadas. C sitúa la portada en el grupo Texto, que sí existe en Insertar pero no contiene portadas."
+    "respuesta": "A",
+    "explicacion": "La galería está en el grupo Páginas, que es el primero de la pestaña Insertar y tiene solo tres comandos: Portada, Página en blanco y Salto de página. La galería trae los diseños integrados —Austin, Con bandas, Cuadrícula, Faceta, Filigrana, Integral, Ion…— más «Más portadas de Office.com», «Quitar portada actual» y «Guardar selección en una galería de portadas…». · El grupo Texto sí existe en Insertar, y ahí es donde más se busca por error: pero guarda WordArt, Letra capital, Elementos rápidos y Objeto. · Diseño trabaja con temas y fondo de página, y Disposición con márgenes y orientación: ninguno inserta contenido."
   },
   {
     "id": "insertar-47",
@@ -83,28 +85,29 @@
     "tema": "Páginas",
     "sourceQuestionId": "P-02",
     "generado": true,
-    "enunciado": "Un opositor quiere guardar una portada personalizada para reutilizarla en futuros documentos. ¿Qué ruta debe seguir?",
+    "revisada": true,
+    "enunciado": "Has diseñado a mano una portada con el escudo del ayuntamiento y quieres reutilizarla en los próximos informes. ¿Qué entrada del menú Portada la guarda?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Páginas > Portada > Guardar selección en una galería de encabezados..."
+        "text": "Guardar selección en una galería de portadas…"
       },
       {
         "letter": "B",
-        "text": "Insertar > Páginas > Portada > Guardar como plantilla..."
+        "text": "Guardar selección en una galería de encabezados…"
       },
       {
         "letter": "C",
-        "text": "Insertar > Páginas > Portada > Guardar selección en una galería de portadas..."
+        "text": "Guardar como plantilla…"
       },
       {
         "letter": "D",
-        "text": "Insertar > Texto > Elementos rápidos > Guardar selección en una galería de elementos rápidos..."
+        "text": "Más portadas de Office.com"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A usa el nombre real de la opción equivalente para encabezados, no para portadas. B \"Guardar como plantilla\" no existe en esa ruta. D es una ruta real de Word (Elementos rápidos) pero no es la específica de portadas."
+    "respuesta": "A",
+    "explicacion": "Se selecciona toda la página y se elige esa entrada, al final del menú Portada; a partir de ahí el diseño aparece en la galería junto a Austin, Cuadrícula o Integral, en su propia categoría «General». · La de encabezados existe con ese mismo nombre, pero en el menú del botón Encabezado: es el descarte que decide la pregunta, porque Word repite el patrón «Guardar selección en una galería de…» en varios botones y hay que fijarse en cuál. · «Guardar como plantilla» no está en este menú; eso se hace desde Archivo ▸ Guardar como. · Y «Más portadas de Office.com» trae diseños ajenos, no guarda el tuyo."
   },
   {
     "id": "insertar-48",
@@ -119,28 +122,29 @@
     "tema": "Páginas",
     "sourceQuestionId": "P-03",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes opciones pertenece al menú desplegable de Portada en la pestaña Insertar?",
+    "revisada": true,
+    "enunciado": "Despliegas el botón Portada y, bajo la galería de diseños, hay tres entradas. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Editar portada"
+        "text": "Más portadas de Office.com · Quitar portada actual · Guardar selección en una galería de portadas…"
       },
       {
         "letter": "B",
-        "text": "Más portadas de Office.com"
+        "text": "Más portadas de Office.com · Editar portada · Guardar selección en una galería de portadas…"
       },
       {
         "letter": "C",
-        "text": "Restablecer portada predeterminada"
+        "text": "Más portadas de Office.com · Quitar portada actual · Restablecer portada predeterminada"
       },
       {
         "letter": "D",
-        "text": "Importar portada desde archivo"
+        "text": "Importar portada desde archivo · Quitar portada actual · Guardar selección en una galería de portadas…"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A suena natural (\"Editar encabezado\" sí existe en Encabezado) pero no existe para portadas. C no existe en ninguna galería de Word. D no existe; los archivos externos se gestionan de otra forma."
+    "respuesta": "A",
+    "explicacion": "Esas tres cierran el menú: buscar más diseños en línea, quitar la que haya puesta y guardar la propia. · «Editar portada» es el descarte con más fundamento, porque suena natural y porque «Editar encabezado» sí existe en el menú del botón Encabezado: la diferencia es que una portada ya insertada se edita escribiendo encima, sin ningún comando de por medio, mientras que el encabezado necesita entrar en su capa. · «Restablecer portada predeterminada» no existe en ninguna galería de Word. · Y no hay importación desde archivo: lo más parecido es guardar la selección en la galería."
   },
   {
     "id": "insertar-49",
@@ -155,28 +159,29 @@
     "tema": "Páginas",
     "sourceQuestionId": "P-04",
     "generado": true,
-    "enunciado": "¿Qué ruta permite eliminar la portada que se ha insertado previamente en un documento?",
+    "revisada": true,
+    "enunciado": "El informe lleva una portada de la galería y ya no la quieres. ¿Cómo se quita limpiamente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Páginas > Portada > Eliminar portada actual"
+        "text": "Con «Quitar portada actual», del menú del botón Portada"
       },
       {
         "letter": "B",
-        "text": "Inicio > Edición > Eliminar > Portada"
+        "text": "Seleccionándola entera y pulsando Suprimir"
       },
       {
         "letter": "C",
-        "text": "Insertar > Páginas > Portada > Quitar portada actual"
+        "text": "Con «Eliminar portada», del menú del botón Portada"
       },
       {
         "letter": "D",
-        "text": "Diseño > Páginas > Portada > Quitar portada"
+        "text": "Insertando encima otra portada de la galería"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A usa \"Eliminar\" en lugar del término real \"Quitar\". B no existe como ruta. D cambia la pestaña incorrectamente."
+    "respuesta": "A",
+    "explicacion": "Word la retira entera, con su salto y sus campos, sin dejar rastro. Ojo al verbo: la entrada dice «Quitar», no «Eliminar», y en un examen la literalidad cuenta. · Borrarla a mano con Suprimir suele funcionar a medias y dejar un salto de página o un párrafo vacío por delante del texto: es lo que hace casi todo el mundo y el motivo de que exista el comando. · Insertar otra encima sí sustituye a la anterior, porque la galería reemplaza siempre la portada existente, pero deja una portada puesta, que es justo lo que aquí se quería quitar."
   },
   {
     "id": "insertar-50",
@@ -191,28 +196,29 @@
     "tema": "Páginas",
     "sourceQuestionId": "P-05",
     "generado": true,
-    "enunciado": "¿Cuál es la ruta correcta para insertar una página completamente en blanco en la posición del cursor?",
+    "revisada": true,
+    "enunciado": "Necesitas dejar una hoja entera en blanco entre dos apartados, para pegar después un anexo escaneado. ¿Qué comando la crea?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Páginas > Salto de página"
+        "text": "Página en blanco, del grupo Páginas"
       },
       {
         "letter": "B",
-        "text": "Insertar > Páginas > Nueva página"
+        "text": "Salto de página, del grupo Páginas"
       },
       {
         "letter": "C",
-        "text": "Insertar > Páginas > Página en blanco"
+        "text": "Portada, del grupo Páginas"
       },
       {
         "letter": "D",
-        "text": "Diseño > Configurar página > Insertar página en blanco"
+        "text": "Saltos ▸ Página, del grupo Configurar página de Disposición"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A inserta un salto de página, no una página en blanco completa. B \"Nueva página\" no existe como comando en esa ruta. D es una ruta inexistente en esa pestaña."
+    "respuesta": "A",
+    "explicacion": "«Página en blanco» inserta de golpe una hoja vacía en el punto del cursor y empuja el resto hacia abajo. Por dentro son DOS saltos de página seguidos, y de ahí la diferencia con su vecino. · «Salto de página» pone uno solo: el texto siguiente empieza en la página nueva, pero no queda ninguna hoja vacía. Es el par que decide esta pregunta y el que más se confunde. · La misma diferencia vale para «Saltos ▸ Página» de Disposición, que hace exactamente lo mismo que el salto de Insertar. · Y la portada siempre va a la página 1, esté donde esté el cursor."
   },
   {
     "id": "insertar-51",
@@ -227,28 +233,29 @@
     "tema": "Páginas",
     "sourceQuestionId": "P-06",
     "generado": true,
-    "enunciado": "¿Qué ruta obliga a Word a iniciar el contenido siguiente en una nueva página desde la posición actual del cursor?",
+    "revisada": true,
+    "enunciado": "Comparas «Salto de página» de Insertar con «Saltos ▸ Página» de Disposición. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Páginas > Página en blanco"
+        "text": "En nada: son el mismo salto, y los dos equivalen a Ctrl+Entrar"
       },
       {
         "letter": "B",
-        "text": "Insertar > Páginas > Salto de sección"
+        "text": "El de Insertar deja una hoja vacía; el de Disposición, no"
       },
       {
         "letter": "C",
-        "text": "Insertar > Páginas > Salto de página"
+        "text": "El de Insertar crea además una sección nueva; el de Disposición, no"
       },
       {
         "letter": "D",
-        "text": "Disposición > Configurar página > Saltos > Página"
+        "text": "El de Disposición solo funciona si el documento tiene columnas"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A inserta una página vacía completa, no un salto. B \"Salto de sección\" no está en ese grupo (los saltos de sección están en Disposición). D es una ruta real de Word (Disposición > Saltos) pero no es la del grupo Páginas de Insertar."
+    "respuesta": "A",
+    "explicacion": "Es el mismo comando por dos puertas, como tantos en Word: el botón de Insertar y la primera entrada del menú «Saltos» de Disposición insertan un salto de página idéntico, el de Ctrl+Entrar. · Dejar una hoja vacía es lo que hace «Página en blanco», que son dos saltos seguidos. · Crear una sección es lo de los SALTOS DE SECCIÓN, que están más abajo en ese mismo menú de Disposición y son otra cosa: permiten cambiar márgenes, orientación o encabezados a partir de ahí. Es la confusión más rentable de este grupo. · Y el salto de columna, que sí necesita columnas, es otra entrada distinta del mismo menú."
   },
   {
     "id": "insertar-406",
@@ -263,118 +270,9 @@
     "tema": "Páginas",
     "sourceQuestionId": "img-insertar-01",
     "generado": true,
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAsCAYAAAAn4+taAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADhSURBVGhD7dbBCoJAEMbxqeu+jZ1SCC/7UkFpGT2XBG6PVSpz6FCs5IczLvO7rHb7w+zk5tWjBGz5XD0L0cZCtLEQbZIJmf2HWBR7fprOe091feU3DEhI2z74La4sD+ScozzPoTEio9U0Nwoh9CFn/mU+kZAs28FjxC47OkZ0ayFjxNcvKkY8ZICIga7f6nQcz28uzX08h/Ub03VPfppu8ZCYIVQ8BOHfEBV3BGGx0Yr5vEM2WikQG61fW8xGi8/VsxBtLEQbC9HGQrRJJgTyiYIm8q2lhd0RbSxEGwvRhegNTmmVLE+JyWQAAAAASUVORK5CYII=",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Línea de firma"
-      },
-      {
-        "letter": "B",
-        "text": "Campos de eSignature"
-      },
-      {
-        "letter": "C",
-        "text": "Portada"
-      },
-      {
-        "letter": "D",
-        "text": "Formas"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Portada.** Pestaña Insertar ▸ Páginas. Atajo: no tiene atajo de teclado en esta instalación. Inserta una portada con diseño. Siempre va a la página 1, esté donde esté el cursor, y reemplaza la anterior si ya había una."
-  },
-  {
-    "id": "insertar-407",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Páginas (icono)",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "paginas",
-    "subtopic": null,
-    "tema": "Páginas",
-    "sourceQuestionId": "img-insertar-02",
-    "generado": true,
-    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
-    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAtCAYAAAAQqhM1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADISURBVGhD7dlLCoMwFIXh206zGztqhOIk2ypSuzApmC6rVbjzFJrH5eR8E42zX2IievrspBNnPXaBsagYi4qxqLqKzfpSMY5XPftdCEHm+aGjsrLHrutLR2nTdBPnnHjvqwQ3n8bL8pQY4x571yvlNI8dhku1YBMLVK1gM6txjWBTW0/pYFOxh5LBzbeelG1769n/msamHDcjZ6y5aVwSY1ExFhVjUTEWFWNRMRYVY1ExFlXz3x8pZj/LWMdnFhVjUTEWVUexIl+8YFdHjfTJugAAAABJRU5ErkJggg==",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Inicio ▸ Voz"
-      },
-      {
-        "letter": "B",
-        "text": "Insertar ▸ Ilustraciones"
-      },
-      {
-        "letter": "C",
-        "text": "Disposición ▸ Organizar"
-      },
-      {
-        "letter": "D",
-        "text": "Insertar ▸ Páginas"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "**Página en blanco.** Pestaña Insertar ▸ Páginas. Atajo: no tiene atajo de teclado en esta instalación. Inserta una página vacía en la posición del cursor (dos saltos de página)."
-  },
-  {
-    "id": "insertar-408",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Páginas (icono)",
-    "tipo": "opcion_unica",
-    "categoria": "concepto",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "paginas",
-    "subtopic": null,
-    "tema": "Páginas",
-    "sourceQuestionId": "img-insertar-03",
-    "generado": true,
-    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
-    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAsCAYAAADIIYBkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACeSURBVGhD7dfBCYMwAEDR2EW6gzcRxKE6RocSQXpzB+fIwTY0p95qpHzS/0CMHoRPCDHN/hIqccn3KhhDZQyVMVTGJH3fhRjjaVf6XilnhsoYKmOojKE6fNI8Y5P7tCyPPDrGYzPVf66Z633No7ft1v7k3TdcM1TuM0lV+0yKmaY5P5Ubx6E4xjVDZQyVMVTGUPmjSWUMlTFUxjCF8ASBRndyI94R8AAAAABJRU5ErkJggg==",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Campos de eSignature"
-      },
-      {
-        "letter": "B",
-        "text": "Modelos 3D"
-      },
-      {
-        "letter": "C",
-        "text": "Salto de página"
-      },
-      {
-        "letter": "D",
-        "text": "Símbolo"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Salto de página.** Pestaña Insertar ▸ Páginas. Atajo: Ctrl+Entrar. Fuerza que el texto siguiente empiece en la página siguiente, sin crear una sección nueva."
-  },
-  {
-    "id": "insertar-435",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Páginas (negativa)",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": true,
-    "section": "insertar",
-    "topic": "paginas",
-    "subtopic": null,
-    "tema": "Páginas",
-    "sourceQuestionId": "neg-insertar-01",
-    "generado": true,
-    "enunciado": "¿Cuál de estos comandos NO está en el grupo Páginas de Insertar?",
     "opciones": [
       {
         "letter": "A",
@@ -390,12 +288,125 @@
       },
       {
         "letter": "D",
+        "text": "Tabla"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Portada.** Pestaña Insertar ▸ Páginas, el primer botón de la cinta. No tiene atajo. Abre la galería de diseños integrados y siempre coloca la portada en la página 1, esté donde esté el cursor, reemplazando la que hubiera. · Página en blanco y Salto de página son sus dos vecinos del mismo grupo y los descartes que deciden la pregunta: los tres iconos dibujan hojas, y hay que fijarse en si la hoja lleva contenido, si está vacía o si aparece partida. · Tabla es el primer botón del grupo siguiente, con su cuadrícula."
+  },
+  {
+    "id": "insertar-407",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Páginas (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "paginas",
+    "subtopic": null,
+    "tema": "Páginas",
+    "sourceQuestionId": "img-insertar-02",
+    "generado": true,
+    "revisada": true,
+    "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAtCAYAAAAQqhM1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADISURBVGhD7dlLCoMwFIXh206zGztqhOIk2ypSuzApmC6rVbjzFJrH5eR8E42zX2IievrspBNnPXaBsagYi4qxqLqKzfpSMY5XPftdCEHm+aGjsrLHrutLR2nTdBPnnHjvqwQ3n8bL8pQY4x571yvlNI8dhku1YBMLVK1gM6txjWBTW0/pYFOxh5LBzbeelG1769n/msamHDcjZ6y5aVwSY1ExFhVjUTEWFWNRMRYVY1ExFlXz3x8pZj/LWMdnFhVjUTEWVUexIl+8YFdHjfTJugAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Insertar ▸ Páginas"
+      },
+      {
+        "letter": "B",
+        "text": "Insertar ▸ Texto"
+      },
+      {
+        "letter": "C",
+        "text": "Disposición ▸ Configurar página"
+      },
+      {
+        "letter": "D",
+        "text": "Diseño ▸ Fondo de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "**Página en blanco.** Pestaña Insertar ▸ **Páginas**, entre Portada y Salto de página. No tiene atajo. Inserta una hoja vacía en el punto del cursor, que por dentro son dos saltos de página seguidos. · Disposición ▸ Configurar página es el descarte con más fundamento, porque su menú «Saltos» sí incluye un salto de página idéntico al de este grupo: lo que no tiene es la página en blanco. · Insertar ▸ Texto guarda WordArt, Letra capital y Elementos rápidos. · Y Diseño ▸ Fondo de página pinta marcas de agua, color y bordes de página, sin insertar hojas."
+  },
+  {
+    "id": "insertar-408",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Páginas (icono)",
+    "tipo": "opcion_unica",
+    "categoria": "concepto",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "paginas",
+    "subtopic": null,
+    "tema": "Páginas",
+    "sourceQuestionId": "img-insertar-03",
+    "generado": true,
+    "revisada": true,
+    "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
+    "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAsCAYAAADIIYBkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACeSURBVGhD7dfBCYMwAEDR2EW6gzcRxKE6RocSQXpzB+fIwTY0p95qpHzS/0CMHoRPCDHN/hIqccn3KhhDZQyVMVTGJH3fhRjjaVf6XilnhsoYKmOojKE6fNI8Y5P7tCyPPDrGYzPVf66Z633No7ft1v7k3TdcM1TuM0lV+0yKmaY5P5Ubx6E4xjVDZQyVMVTGUPmjSWUMlTFUxjCF8ASBRndyI94R8AAAAABJRU5ErkJggg==",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Salto de página"
+      },
+      {
+        "letter": "B",
+        "text": "Página en blanco"
+      },
+      {
+        "letter": "C",
+        "text": "Portada"
+      },
+      {
+        "letter": "D",
         "text": "Salto de sección"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El grupo Páginas de Insertar tiene solo tres comandos: Portada, Página en blanco y Salto de página. «Salto de sección» está en Disposición ▸ Configurar página ▸ Saltos."
+    "respuesta": "A",
+    "explicacion": "**Salto de página.** Pestaña Insertar ▸ Páginas. Atajo: Ctrl+Entrar. Fuerza que el texto siguiente empiece en la página de al lado, sin crear ninguna sección nueva. · «Salto de sección» es el descarte que decide la pregunta y no tiene icono aquí: no está en este grupo, sino en el menú «Saltos» de Disposición ▸ Configurar página, y sí crea una sección independiente, con sus propios márgenes, orientación y encabezados. · Página en blanco pone dos saltos seguidos y deja una hoja vacía. · Y la portada siempre se coloca en la página 1."
+  },
+  {
+    "id": "insertar-435",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Páginas (negativa)",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": true,
+    "section": "insertar",
+    "topic": "paginas",
+    "subtopic": null,
+    "tema": "Páginas",
+    "sourceQuestionId": "neg-insertar-01",
+    "generado": true,
+    "revisada": true,
+    "enunciado": "El grupo Páginas de la pestaña Insertar tiene tres comandos. ¿Cuál de estos NO está ahí?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Salto de sección"
+      },
+      {
+        "letter": "B",
+        "text": "Portada"
+      },
+      {
+        "letter": "C",
+        "text": "Página en blanco"
+      },
+      {
+        "letter": "D",
+        "text": "Salto de página"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Los tres son Portada, Página en blanco y Salto de página, y con eso se agota el grupo: es de los más pequeños de la cinta. · El salto de sección vive en Disposición ▸ Configurar página ▸ Saltos, junto al de página y al de columna, y hace algo que ninguno de los tres de aquí puede: partir el documento en secciones con márgenes, orientación, encabezados y numeración propios. · Esa vecindad es lo que hace bueno el descarte: el mismo menú de Disposición ofrece a la vez un salto de página idéntico al de Insertar y los de sección, que no tienen equivalente aquí."
   },
   {
     "id": "insertar-459",
@@ -410,28 +421,29 @@
     "tema": "Páginas",
     "sourceQuestionId": "neg2-insertar-13",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "revisada": true,
+    "enunciado": "Repasas lo que hacen los tres comandos del grupo Páginas. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar ▸ Portada añade una galería de diseños de portada prediseñados."
+        "text": "Una portada de la galería no se puede editar: su texto viene fijado"
       },
       {
         "letter": "B",
-        "text": "Insertar ▸ Página en blanco añade una página vacía en el punto del cursor."
+        "text": "Portada abre una galería de diseños ya hechos"
       },
       {
         "letter": "C",
-        "text": "Insertar ▸ Salto de página fuerza al contenido siguiente a empezar en una página nueva."
+        "text": "Página en blanco añade una hoja vacía en el punto del cursor"
       },
       {
         "letter": "D",
-        "text": "Una portada insertada desde la galería no se puede editar ni personalizar su texto."
+        "text": "Salto de página obliga al texto siguiente a empezar en otra página"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Los campos de una portada prediseñada (título, autor, fecha…) son editables como cualquier texto del documento."
+    "respuesta": "A",
+    "explicacion": "Una portada insertada es contenido normal del documento: el título, el subtítulo, el autor y la fecha son campos que se escriben encima, y también se le puede cambiar el color, mover elementos o borrar los que no interesen. Muchos de esos campos, además, se rellenan solos con las propiedades del documento y se actualizan si estas cambian. · Las otras tres son ciertas y describen los tres comandos del grupo. · Lo que sí es fijo es dónde se coloca: siempre en la página 1, esté donde esté el cursor, y sustituyendo a la portada anterior."
   },
   {
     "id": "insertar-206",
@@ -446,11 +458,12 @@
     "tema": "Páginas",
     "sourceQuestionId": "vf-insertar-01",
     "generado": true,
-    "enunciado": "Cuando insertas una portada desde la galería de Word, el programa la coloca siempre al principio del documento, independientemente de dónde esté el cursor.",
+    "revisada": true,
+    "enunciado": "Con el cursor en la página 5, insertas una portada de la galería. ¿Dónde aparece?",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Tienes el cursor en la página 5 y seleccionas la portada Austin. Word la coloca en la página 1 automáticamente, no en la página 5. Si ya había una portada insertada antes, la reemplaza."
+    "explicacion": "Verdadero: Word la coloca siempre en la página 1, sin preguntar, y empuja el resto del documento. Es de los pocos comandos de Insertar que ignoran por completo dónde está el cursor, y sorprende la primera vez. · Si ya había una portada puesta, la nueva la reemplaza en lugar de sumarse: no se pueden acumular dos. · Para quitarla está «Quitar portada actual», en el mismo menú. · Ojo con el enunciado de una pregunta de examen: lo que cambia según el cursor es la página en blanco y el salto de página, no la portada."
   },
   {
     "id": "insertar-207",
@@ -465,11 +478,12 @@
     "tema": "Páginas",
     "sourceQuestionId": "vf-insertar-02",
     "generado": true,
-    "enunciado": "Si insertas una Página en blanco con el cursor en la página 3, Word añade la página vacía al final del documento.",
+    "revisada": true,
+    "enunciado": "Con el cursor a mitad de la página 3, insertas una Página en blanco: la hoja vacía aparece justo ahí y el resto del contenido baja.",
     "opciones": [],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "Con el cursor al final del tercer párrafo de la página 3, Página en blanco inserta una hoja vacía justo en ese punto, empujando el resto del contenido hacia la página siguiente. No va al final."
+    "respuesta": true,
+    "explicacion": "Verdadero. A diferencia de la portada, que va siempre a la página 1, la página en blanco se inserta donde esté el cursor, y lo que quedaba por debajo pasa a la hoja siguiente. Si el cursor está a mitad de un párrafo, ese párrafo se parte. · Por dentro son dos saltos de página seguidos, y de ahí que quede una hoja entera vacía. · Con Mostrar todo se ven los dos saltos, lo que resulta útil para borrarla después: basta con quitar esas dos marcas."
   },
   {
     "id": "insertar-208",
@@ -484,18 +498,19 @@
     "tema": "Páginas",
     "sourceQuestionId": "vf-insertar-03",
     "generado": true,
-    "enunciado": "El Salto de página y la Página en blanco producen exactamente el mismo resultado en el documento.",
+    "revisada": true,
+    "enunciado": "El Salto de página y la Página en blanco dan el mismo resultado en el documento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Si insertas un Salto de página al final de la página 2, el texto siguiente simplemente empieza en la página 3. Si insertas una Página en blanco, aparece una página 3 completamente vacía y el texto anterior pasa a la página 4. Son dos saltos de página consecutivos, no uno."
+    "explicacion": "Falso, y la diferencia es de un salto. Con un salto de página al final de la página 2, el texto siguiente arranca en la 3 y no queda ninguna hoja vacía. Con una página en blanco, aparece una página 3 completamente vacía y el texto que venía detrás pasa a la 4. · El motivo es que la página en blanco inserta DOS saltos de página seguidos, no uno. · Elegir mal tiene consecuencias prácticas: en un documento que luego se imprime a doble cara, una hoja vacía de más descoloca todo el emparejamiento de páginas pares e impares."
   },
   {
     "id": "insertar-209",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Páginas",
-    "tipo": "verdadero_falso",
-    "categoria": "concepto",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
     "negativa": false,
     "section": "insertar",
     "topic": "paginas",
@@ -503,11 +518,29 @@
     "tema": "Páginas",
     "sourceQuestionId": "vf-insertar-04",
     "generado": true,
-    "enunciado": "El atajo Ctrl+Mayús+Entrar produce el mismo efecto que el comando Salto de página de la pestaña Insertar.",
-    "opciones": [],
+    "revisada": true,
+    "enunciado": "Un manual asegura que Ctrl+Mayús+Entrar hace lo mismo que el botón Salto de página. Lo pruebas en esta instalación. ¿Qué ocurre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Nada: esa combinación no tiene comando asignado aquí"
+      },
+      {
+        "letter": "B",
+        "text": "Inserta el salto de página, igual que el botón"
+      },
+      {
+        "letter": "C",
+        "text": "Inserta un separador de estilos entre los dos párrafos"
+      },
+      {
+        "letter": "D",
+        "text": "Repite la última acción hecha en el documento"
+      }
+    ],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: el atajo del salto de página es Ctrl+Entrar. Ctrl+Mayús+Entrar inserta un salto de columna."
+    "respuesta": "A",
+    "explicacion": "Ctrl+Mayús+Entrar no figura con ningún comando en el cuadro Personalizar teclado de esta instalación, por mucho que varios manuales la den como salto de columna. El salto de página es Ctrl+Entrar, sin Mayús. · El separador de estilos sí existe y es Alt+Ctrl+Entrar: une dos párrafos para poder darles formato distinto en la misma línea, y es el descarte con más fundamento porque comparte la tecla y sí está asignado. · Repetir la última acción es Alt+Entrar, junto con F4 y Ctrl+Y. Tres combinaciones con Entrar que sí hacen algo, y una cuarta que no."
   },
   {
     "id": "insertar-210",
@@ -522,11 +555,12 @@
     "tema": "Páginas",
     "sourceQuestionId": "vf-insertar-05",
     "generado": true,
-    "enunciado": "Desde el menú de Portada es posible guardar un diseño propio para reutilizarlo en otros documentos.",
+    "revisada": true,
+    "enunciado": "Desde el menú Portada se puede guardar un diseño propio para reutilizarlo en otros documentos.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Diseñas una portada con el logo de tu organización. Seleccionas toda la página, vas a Insertar > Páginas > Portada y eliges Guardar selección en una galería de portadas. A partir de ese momento aparece disponible en tu galería junto a Austin, Cuadrícula o Integral."
+    "explicacion": "Verdadero. Se selecciona la página entera y se elige «Guardar selección en una galería de portadas…», la última entrada del menú. A partir de ahí el diseño aparece en la galería junto a los integrados y se puede aplicar con un clic en cualquier documento. · Queda guardado en los bloques de creación del equipo, no dentro del archivo, así que viaja con Word y no con el documento: al abrirlo en otro ordenador la galería no lo tendrá. · El mismo patrón «Guardar selección en una galería de…» se repite en los botones Encabezado, Pie de página y Número de página."
   },
   {
     "id": "insertar-211",
@@ -541,11 +575,12 @@
     "tema": "Páginas",
     "sourceQuestionId": "vf-insertar-06",
     "generado": true,
-    "enunciado": "Para eliminar una portada insertada en Word hay que seleccionarla manualmente y pulsar Suprimir.",
+    "revisada": true,
+    "enunciado": "Para quitar una portada insertada hay que seleccionarla a mano y pulsar Suprimir.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "No hace falta seleccionar nada. Basta con ir a Insertar > Páginas > Portada y elegir Quitar portada actual. Word la elimina de forma limpia sin afectar al resto del documento. Hacerlo manualmente con Suprimir puede dejar saltos o espacios residuales."
+    "explicacion": "Falso: el menú del botón Portada tiene «Quitar portada actual», que la retira entera y sin dejar rastro, con el cursor donde esté. · Hacerlo a mano suele salir mal: la portada lleva su propio salto de página y campos, así que borrar la selección deja casi siempre una hoja vacía o un párrafo suelto por delante del texto. Ese residuo es la queja más habitual de quien lo intenta a lo bruto. · Insertar otra portada de la galería también sustituye a la anterior, pero deja una puesta, que no es lo mismo que quitarla."
   },
   {
     "id": "insertar-212",
@@ -560,11 +595,12 @@
     "tema": "Páginas",
     "sourceQuestionId": "vf-insertar-08",
     "generado": true,
-    "enunciado": "El Salto de página se encuentra en el grupo Texto de la pestaña Insertar.",
+    "revisada": true,
+    "enunciado": "El Salto de página está en el grupo Páginas de Insertar, junto a Portada y Página en blanco.",
     "opciones": [],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: está en el grupo Páginas, junto a Portada y Página en blanco."
+    "respuesta": true,
+    "explicacion": "Verdadero: esos tres agotan el grupo, que es el primero de la pestaña y de los más pequeños de toda la cinta. · Al mismo salto se llega también por Disposición ▸ Configurar página ▸ Saltos ▸ Página, y con Ctrl+Entrar: tres puertas para el mismo comando. · Lo que NO está en este grupo son los saltos de sección, que solo aparecen en ese menú de Disposición. · Cuidado con el grupo Texto, que sí está en Insertar y es donde muchos buscan estos comandos por error: allí viven WordArt, Letra capital, Elementos rápidos y Objeto."
   },
   {
     "id": "insertar-213",
@@ -579,11 +615,12 @@
     "tema": "Páginas",
     "sourceQuestionId": "vf-insertar-09",
     "generado": true,
+    "revisada": true,
     "enunciado": "El Salto de página y el Salto de sección producen el mismo efecto en el documento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Un Salto de página simplemente fuerza que el texto siguiente empiece en una nueva página, pero no crea ninguna sección nueva. Un Salto de sección (que está en Disposición, no en Insertar) divide el documento en secciones independientes, lo que permite tener orientaciones, márgenes, encabezados o numeraciones diferentes en cada parte."
+    "explicacion": "Falso. El salto de página solo decide dónde corta el texto: manda lo siguiente a la hoja de al lado y nada más. El salto de sección parte el documento en tramos independientes, y a partir de ahí se pueden cambiar márgenes, orientación, columnas, encabezados, pies y numeración sin que afecte a lo anterior. · Ni siquiera están en el mismo sitio: el de página, en Insertar ▸ Páginas y en Disposición ▸ Saltos; los de sección, solo en ese menú de Disposición, y en cuatro variantes —página siguiente, continuo, página par y página impar—. · La confusión sale cara: cambiar la orientación sin un salto de sección la cambia en todo el documento."
   },
   {
     "id": "insertar-461",
@@ -598,6 +635,7 @@
     "tema": "Páginas",
     "sourceQuestionId": "rell-insertar-01",
     "generado": true,
+    "revisada": true,
     "enunciado": "Escribe el atajo de cada acción: insertar un salto de página manual → [1]. actualizar los campos del documento → [2].",
     "opciones": [],
     "matching": null,
@@ -610,7 +648,7 @@
         "F9"
       ]
     ],
-    "explicacion": "Ctrl+Entrar inserta un salto de página; F9 actualiza los campos seleccionados (o todo el documento con Ctrl+E antes)."
+    "explicacion": "Ctrl+Entrar inserta un salto de página manual, el mismo del botón «Salto de página» del grupo Páginas y de «Saltos ▸ Página» en Disposición. Con Mostrar todo se ve como una línea de puntos rotulada, y se borra como cualquier carácter. · F9 actualiza los campos que estén seleccionados; para poner al día el documento entero se selecciona todo antes, con Ctrl+E. Es lo que hace falta cuando una tabla de contenido, un número de página o una referencia cruzada se han quedado con un valor viejo. · Ojo con no confundirlo con Alt+F9, que no actualiza nada: alterna entre ver el resultado de los campos y ver su código entre llaves."
   },
   {
     "id": "insertar-31",
