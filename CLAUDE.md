@@ -208,10 +208,11 @@ Reescritura **a mano, ítem por ítem** — ningún script genera contenido.
 `scripts/aplicar_reescritura.py` solo vuelca al JSON el texto ya escrito y
 valida (4 opciones, respuesta viva, sin repetidas, longitudes, explicación).
 
-**Progreso de la reescritura**: `archivo` 308/410 — hechos
-`opciones-avz-edicion` y `opciones-avz-pegar`. Quedan 102: los cinco bloques
-`opciones-avz-*` restantes, `opciones-personalizar` y
-`opciones-complementos`.
+**Progreso de la reescritura**: `archivo` 335/410 — hechos también
+`opciones-avz-mostrar` y `opciones-avz-presentacion`. Quedan 75:
+`opciones-avz-imprimir` (11), `opciones-avz-guardar` (4),
+`opciones-avz-otras` (25), `opciones-personalizar` (18) y
+`opciones-complementos` (18) menos los ya hechos.
 
 **Chivato de longitud**: `scripts/aplicar_reescritura.py` avisa cuando la
 opción correcta es la más larga o la más corta **con hueco** (ratio >1,5 y

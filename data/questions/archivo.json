@@ -10301,28 +10301,28 @@
     "subtopic": "Avanzadas — Mostrar contenido",
     "tema": "Opciones",
     "sourceQuestionId": "8-84",
-    "enunciado": "¿Desde qué ruta se activa la visualización de los códigos de campo en lugar de sus resultados en el documento?",
+    "enunciado": "Quieres ver en el documento los códigos de campo, como { PAGE }, en vez del número que producen. ¿Qué casilla de Avanzadas → Mostrar contenido de documento marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Mostrar"
+        "text": "Mostrar códigos de campo en lugar de sus valores"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Presentación → Mostrar códigos de campo"
+        "text": "Sombreado de campo"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de pantalla → Mostrar códigos de campo"
+        "text": "Mostrar dibujos y cuadros de texto en pantalla"
       },
       {
         "letter": "D",
-        "text": "Insertar → Campo → Mostrar todos los códigos"
+        "text": "Mostrar texto ajustado dentro de la ventana del documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La visualización de códigos de campo se configura en Archivo → Opciones → Avanzadas dentro de Mostrar contenido de documento. No está en Presentación ni en Opciones de pantalla que es otra sección de Avanzadas. La pestaña Insertar no tiene esa configuración global."
+    "explicacion": "Con ella marcada, todos los campos del documento se muestran como código y así se puede ver y editar su sintaxis. El equivalente rápido y temporal es Alt+F9, que conmuta la vista de todos los campos, o Mayús+F9 para el campo seleccionado. · «Sombreado de campo» es el distractor bueno: también sirve para localizar campos, pero pintándoles un fondo gris sin dejar de mostrar su valor. Uno enseña el código y el otro solo señala dónde están; localizar y descifrar son dos necesidades distintas. · Las otras dos son casillas reales de la misma sección, para los objetos dibujados y para el plegado del texto al ancho de la ventana en las vistas Borrador y Esquema."
   },
   {
     "id": "archivo-93",
@@ -10336,28 +10336,28 @@
     "subtopic": "Avanzadas — Mostrar contenido",
     "tema": "Opciones",
     "sourceQuestionId": "8-85",
-    "enunciado": "¿Desde qué ruta se activa la visualización del texto con formato oculto en el documento?",
+    "enunciado": "El documento lleva texto marcado como oculto y quieres verlo en pantalla desde el panel Avanzadas. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Mostrar"
+        "text": "Mostrar el texto oculto en pantalla"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Presentación → Mostrar siempre estas marcas → Texto oculto"
+        "text": "Mostrar marcadores"
       },
       {
         "letter": "C",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de pantalla → Texto oculto"
+        "text": "Sombreado de campo"
       },
       {
         "letter": "D",
-        "text": "Inicio → Fuente → Oculto → Mostrar en pantalla"
+        "text": "Mostrar límites de texto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción para mostrar texto oculto en todo el documento está en Avanzadas → Mostrar contenido de documento. En Presentación también existe una opción de texto oculto dentro de Mostrar siempre estas marcas pero afecta a las marcas de formato, no al texto con formato de carácter oculto. No existe esa opción en Opciones de pantalla ni en Inicio."
+    "explicacion": "El texto oculto es un atributo del cuadro Fuente: el texto sigue ahí pero no se ve ni se imprime, y esta casilla lo saca a la vista con su subrayado de puntos. · Ojo con una duplicidad que se pregunta mucho: el panel Presentación tiene otra casilla «Texto oculto» en «Mostrar siempre estas marcas de formato», y una tercera, «Imprimir texto oculto», para el papel. Ver, mostrar como marca de formato e imprimir son tres permisos separados. · Las otras tres opciones son casillas reales de esta misma sección, para marcadores, campos y límites del área de texto."
   },
   {
     "id": "archivo-94",
@@ -10371,28 +10371,28 @@
     "subtopic": "Avanzadas — Mostrar contenido",
     "tema": "Opciones",
     "sourceQuestionId": "8-86",
-    "enunciado": "¿Para qué sirve la opción Mostrar marcadores de imagen disponible en Archivo → Opciones → Avanzadas?",
+    "enunciado": "Activas «Mostrar marcadores de imagen» en Avanzadas. ¿Qué pasa a partir de entonces?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Para mostrar un recuadro vacío en lugar de la imagen cuando las imágenes"
+        "text": "Las imágenes se sustituyen por un recuadro vacío para agilizar el desplazamiento"
       },
       {
         "letter": "B",
-        "text": "Para comprimir automáticamente las imágenes al guardar el documento"
+        "text": "Aparece un marcador de posición donde después irá cada imagen que insertes"
       },
       {
         "letter": "C",
-        "text": "Para insertar marcadores de posición donde irán las imágenes"
+        "text": "Sobre cada imagen se muestra el nombre del archivo del que procede"
       },
       {
         "letter": "D",
-        "text": "Para mostrar el nombre del archivo de cada imagen sobre ella"
+        "text": "Las imágenes se comprimen automáticamente al guardar el documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mostrar marcadores de imagen hace que aparezca un recuadro vacío en el lugar donde está la imagen cuando la visualización de imágenes está desactivada. No comprime imágenes, no inserta marcadores de posición ni muestra nombres de archivo."
+    "explicacion": "Es una opción de rendimiento heredada de cuando los equipos sufrían con documentos llenos de imágenes: en lugar de dibujarlas, Word deja un recuadro del mismo tamaño y el desplazamiento va mucho más suave. Las imágenes siguen ahí y se imprimen igual. · La opción B es la lectura literal del nombre y por eso es el mejor distractor: «marcador de posición» suena a hueco reservado para algo que aún no existe, cuando aquí es justo al revés, un hueco que sustituye a algo que ya está. · Comprimir imágenes existe, pero en Guardar como ▸ Herramientas y en la cinta de Formato de imagen."
   },
   {
     "id": "archivo-95",
@@ -10406,28 +10406,28 @@
     "subtopic": "Avanzadas — Mostrar contenido",
     "tema": "Opciones",
     "sourceQuestionId": "8-87",
-    "enunciado": "¿Qué efecto produce activar la opción Usar fuente de borrador en vistas Borrador y Esquema?",
+    "enunciado": "Activas «Usar fuente de borrador en vistas Borrador y Esquema». ¿Qué consigues?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Usa una fuente simplificada para acelerar el desplazamiento en esas vistas"
+        "text": "En esas dos vistas el texto se dibuja con una fuente simple, para ir más rápido"
       },
       {
         "letter": "B",
-        "text": "Aplica la fuente Calibri en sustitución de cualquier otra fuente del documento"
+        "text": "El documento se muestra sin ningún formato aplicado en todas las vistas"
       },
       {
         "letter": "C",
-        "text": "Oculta las imágenes en las vistas Borrador y Esquema"
+        "text": "Las imágenes dejan de mostrarse en las vistas Borrador y Esquema"
       },
       {
         "letter": "D",
-        "text": "Muestra el documento sin ningún formato aplicado"
+        "text": "Toda fuente del documento se sustituye por Calibri de forma permanente"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La fuente de borrador es una fuente simplificada que Word usa internamente para acelerar el desplazamiento en vistas rápidas. No sustituye la fuente real por Calibri ni oculta imágenes ni elimina el formato visible."
+    "explicacion": "Es otra opción de rendimiento: en Borrador y Esquema, que son vistas para trabajar con el texto y no con la maqueta, Word dibuja con una fuente y un tamaño únicos que se eligen en los dos desplegables de al lado. El documento no cambia, solo cómo se pinta en esas dos vistas. · La opción D es la trampa: nada se sustituye de forma permanente, y basta con volver a Diseño de impresión para ver el documento como es. · Las imágenes en la vista Borrador no se ven, pero eso es propio de la vista, no de esta casilla."
   },
   {
     "id": "archivo-277",
@@ -10442,28 +10442,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-037",
     "generado": true,
-    "enunciado": "Has aplicado un color de fondo al documento pero en la vista Diseño de impresión no se muestra, aunque sí al imprimir. ¿Dónde activas su visualización en pantalla?",
+    "enunciado": "Has puesto color de fondo al documento y en pantalla no se ve, aunque al imprimir sí sale. ¿Qué casilla de Avanzadas lo muestra?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar contenido de documento ▸ Mostrar colores e imágenes de fondo en vista Diseño de impresión"
+        "text": "Mostrar colores e imágenes de fondo en vista Diseño de impresión"
       },
       {
         "letter": "B",
-        "text": "Mostrar contenido de documento ▸ Mostrar dibujos y cuadros de texto en pantalla"
+        "text": "Mostrar dibujos y cuadros de texto en pantalla"
       },
       {
         "letter": "C",
-        "text": "Mostrar contenido de documento ▸ Mostrar texto ajustado dentro de la ventana del documento"
+        "text": "Mostrar límites de texto"
       },
       {
         "letter": "D",
-        "text": "Mostrar contenido de documento ▸ Mostrar marcadores"
+        "text": "Mostrar marcas de recorte"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Mostrar colores e imágenes de fondo en vista Diseño de impresión. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "explicacion": "Es la casilla que decide si el fondo se pinta en la vista Diseño de impresión. Conviene distinguirla de su pareja de impresión, «Imprimir imágenes y colores de fondo», que está en el panel Presentación: verlo en pantalla e imprimirlo son dos permisos separados, y el enunciado juega con eso. · «Mostrar dibujos y cuadros de texto en pantalla» es el distractor bueno porque produce el mismo síntoma con otros elementos: se ven en papel y no en pantalla. · «Mostrar marcas de recorte» dibuja las esquinas de corte. · «Mostrar límites de texto» dibuja el contorno del área de escritura."
   },
   {
     "id": "archivo-278",
@@ -10478,28 +10478,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-038",
     "generado": true,
-    "enunciado": "Trabajas con una ventana de Word estrecha y el texto se sale por los lados en vez de ajustarse al ancho visible. ¿Dónde activas que el texto se ajuste al ancho de la ventana?",
+    "enunciado": "Trabajas con la ventana de Word estrecha y el texto se sale por los lados en vez de plegarse al ancho visible. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar contenido de documento ▸ Mostrar colores e imágenes de fondo en vista Diseño de impresión"
+        "text": "Mostrar texto ajustado dentro de la ventana del documento"
       },
       {
         "letter": "B",
-        "text": "Mostrar contenido de documento ▸ Mostrar texto ajustado dentro de la ventana del documento"
+        "text": "Mostrar límites de texto"
       },
       {
         "letter": "C",
-        "text": "Mostrar contenido de documento ▸ Mostrar dibujos y cuadros de texto en pantalla"
+        "text": "Mostrar barra de desplazamiento horizontal"
       },
       {
         "letter": "D",
-        "text": "Mostrar contenido de documento ▸ Mostrar marcadores"
+        "text": "Mostrar colores e imágenes de fondo en vista Diseño de impresión"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Mostrar texto ajustado dentro de la ventana del documento. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Esta casilla solo actúa en las vistas Borrador y Esquema: pliega las líneas al ancho de la ventana en lugar de al ancho de la página, así que se lee sin desplazarse a los lados. En Diseño de impresión no tiene efecto, porque ahí manda la página. · «Mostrar barra de desplazamiento horizontal» es el distractor con más fundamento: resuelve el mismo problema por el camino contrario, dando la barra para moverse en vez de evitar tener que moverse. Y está en otra sección del panel, la de Presentación. · Las otras dos dibujan el contorno del texto y el fondo."
   },
   {
     "id": "archivo-279",
@@ -10514,28 +10514,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-039",
     "generado": true,
-    "enunciado": "Los dibujos y cuadros de texto no se ven en pantalla aunque están ahí y sí se imprimen. ¿Dónde los vuelves a mostrar?",
+    "enunciado": "Los dibujos y cuadros de texto no aparecen en pantalla, pero al imprimir sí salen. ¿Qué casilla los devuelve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar contenido de documento ▸ Mostrar colores e imágenes de fondo en vista Diseño de impresión"
+        "text": "Mostrar dibujos y cuadros de texto en pantalla"
       },
       {
         "letter": "B",
-        "text": "Mostrar contenido de documento ▸ Mostrar texto ajustado dentro de la ventana del documento"
+        "text": "Mostrar marcadores de imagen"
       },
       {
         "letter": "C",
-        "text": "Mostrar contenido de documento ▸ Mostrar dibujos y cuadros de texto en pantalla"
+        "text": "Mostrar colores e imágenes de fondo en vista Diseño de impresión"
       },
       {
         "letter": "D",
-        "text": "Mostrar contenido de documento ▸ Mostrar marcadores"
+        "text": "Mostrar límites de texto"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Mostrar dibujos y cuadros de texto en pantalla. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es la casilla que controla si las formas, los WordArt y los cuadros de texto se dibujan en pantalla; desactivada, el documento se mueve más rápido pero parece que faltan cosas. · «Mostrar marcadores de imagen» es el mejor distractor porque hace algo casi idéntico con las imágenes: las sustituye por un recuadro vacío, también para ir más deprisa. Dos casillas de rendimiento, una para las imágenes y otra para los objetos dibujados. · Su casilla gemela de impresión, «Imprimir dibujos creados en Word», está en el panel Presentación y actúa sobre el papel."
   },
   {
     "id": "archivo-280",
@@ -10550,28 +10550,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-040",
     "generado": true,
-    "enunciado": "Has insertado marcadores como referencias pero no sabes dónde están porque no se muestran. ¿Dónde activas su visualización como corchetes grises en el texto?",
+    "enunciado": "Has insertado marcadores en el documento y no sabes dónde están porque no se ven. ¿Qué casilla los muestra como corchetes grises?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar contenido de documento ▸ Mostrar colores e imágenes de fondo en vista Diseño de impresión"
+        "text": "Mostrar marcadores"
       },
       {
         "letter": "B",
-        "text": "Mostrar contenido de documento ▸ Mostrar dibujos y cuadros de texto en pantalla"
+        "text": "Sombreado de campo"
       },
       {
         "letter": "C",
-        "text": "Mostrar contenido de documento ▸ Mostrar texto ajustado dentro de la ventana del documento"
+        "text": "Mostrar códigos de campo en lugar de sus valores"
       },
       {
         "letter": "D",
-        "text": "Mostrar contenido de documento ▸ Mostrar marcadores"
+        "text": "Mostrar marcadores de imagen"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Mostrar marcadores. Los corchetes de marcador se ven solo en pantalla, no se imprimen."
+    "respuesta": "A",
+    "explicacion": "Los corchetes grises no se imprimen nunca: son solo una ayuda en pantalla para ver dónde empieza y acaba cada marcador. Si el marcador no abarca texto, se ve como una I. · «Mostrar marcadores de imagen» es el distractor de más nivel porque comparte la palabra «marcadores» y no tiene nada que ver: sustituye las imágenes por recuadros vacíos. La coincidencia de nombre es real y está en la misma sección. · Las opciones B y C son las dos formas de localizar campos, que es un problema parecido pero de otro elemento."
   },
   {
     "id": "archivo-281",
@@ -10586,28 +10586,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-041",
     "generado": true,
-    "enunciado": "Quieres ver en pantalla las líneas punteadas que delimitan el área de texto, los márgenes y los límites de los marcos. ¿Dónde activas esa visualización?",
+    "enunciado": "Quieres ver en pantalla las líneas punteadas que marcan el área de escritura y los márgenes. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar contenido de documento ▸ Mostrar límites de texto"
+        "text": "Mostrar límites de texto"
       },
       {
         "letter": "B",
-        "text": "Mostrar contenido de documento ▸ Mostrar colores e imágenes de fondo en vista Diseño de impresión"
+        "text": "Mostrar marcas de recorte"
       },
       {
         "letter": "C",
-        "text": "Mostrar contenido de documento ▸ Mostrar dibujos y cuadros de texto en pantalla"
+        "text": "Mostrar texto ajustado dentro de la ventana del documento"
       },
       {
         "letter": "D",
-        "text": "Mostrar contenido de documento ▸ Mostrar texto ajustado dentro de la ventana del documento"
+        "text": "Mostrar la regla vertical en la vista Diseño de impresión"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Mostrar límites de texto. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "explicacion": "Dibuja el rectángulo punteado del área de texto, y también el contorno de los marcos y de las tablas sin bordes. Es solo visual: no se imprime. · «Mostrar marcas de recorte» es el distractor bueno porque también dibuja referencias de página en pantalla, pero son las esquinas de corte y no el contorno completo. Las dos casillas están seguidas y las dos «marcan los bordes» de algo. · Ojo con no confundir esto con «Ver cuadrículas» de la cinta de tabla, que muestra los límites de las celdas sin borde: parecido, pero de las tablas y desde otro sitio."
   },
   {
     "id": "archivo-282",
@@ -10622,28 +10622,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-042",
     "generado": true,
-    "enunciado": "Vas a imprimir un documento con elementos hasta el borde y necesitas ver las marcas de recorte en las esquinas para saber dónde cortar. ¿Dónde las activas?",
+    "enunciado": "Vas a imprimir un documento con elementos hasta el borde y necesitas ver en las esquinas por dónde hay que cortar. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar contenido de documento ▸ Mostrar texto ajustado dentro de la ventana del documento"
+        "text": "Mostrar marcas de recorte"
       },
       {
         "letter": "B",
-        "text": "Mostrar contenido de documento ▸ Mostrar dibujos y cuadros de texto en pantalla"
+        "text": "Mostrar límites de texto"
       },
       {
         "letter": "C",
-        "text": "Mostrar contenido de documento ▸ Mostrar colores e imágenes de fondo en vista Diseño de impresión"
+        "text": "Mostrar colores e imágenes de fondo en vista Diseño de impresión"
       },
       {
         "letter": "D",
-        "text": "Mostrar contenido de documento ▸ Mostrar marcas de recorte"
+        "text": "Mostrar dibujos y cuadros de texto en pantalla"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Mostrar marcas de recorte. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Dibuja las marcas de corte en las cuatro esquinas de la página, que es la referencia habitual en trabajos que se recortan después. · «Mostrar límites de texto» es la casilla vecina y la que más se confunde: también pinta líneas de referencia, pero el rectángulo del área de escritura entera, no las esquinas. Las dos son ayudas visuales que no se imprimen y están una al lado de la otra. · Las otras dos deciden si se ven fondos y objetos dibujados, que es otro problema."
   },
   {
     "id": "archivo-283",
@@ -10658,28 +10658,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-044",
     "generado": true,
-    "enunciado": "Quieres que los campos (números de página, fechas…) muestren fondo gris al hacer clic sobre ellos para distinguirlos del texto normal. ¿Dónde configuras ese sombreado?",
+    "enunciado": "Quieres distinguir de un vistazo qué partes del texto son campos automáticos y cuáles texto escrito. ¿Qué ajuste de Avanzadas usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar contenido de documento ▸ Sombreado de campo"
+        "text": "Sombreado de campo"
       },
       {
         "letter": "B",
-        "text": "Mostrar contenido de documento ▸ Mostrar texto ajustado dentro de la ventana del documento"
+        "text": "Mostrar códigos de campo en lugar de sus valores"
       },
       {
         "letter": "C",
-        "text": "Mostrar contenido de documento ▸ Mostrar dibujos y cuadros de texto en pantalla"
+        "text": "Mostrar marcadores"
       },
       {
         "letter": "D",
-        "text": "Mostrar contenido de documento ▸ Mostrar colores e imágenes de fondo en vista Diseño de impresión"
+        "text": "Mostrar límites de texto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Sombreado de campo. Con \"Si está seleccionado\", el campo muestra fondo gris al hacer clic dentro, no al resaltarlo por arrastre."
+    "explicacion": "Es un desplegable, no una casilla, con tres valores: nunca, siempre, y al seleccionar (que es el de fábrica: el gris aparece al hacer clic dentro del campo). El sombreado no se imprime. · «Mostrar códigos de campo» resuelve el mismo problema de forma mucho más brusca: en vez de señalar los campos, los muestra como código y el documento deja de leerse. Localizar y descifrar son dos necesidades distintas, y ese es el ejercicio. · «Mostrar marcadores» hace lo análogo con los marcadores, con corchetes grises."
   },
   {
     "id": "archivo-284",
@@ -10694,28 +10694,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-046",
     "generado": true,
-    "enunciado": "Abres un documento con una tipografía que no tienes instalada y quieres ver qué fuente usa Word como sustitución y poder cambiarla. ¿Dónde accedes a ese cuadro de diálogo?",
+    "enunciado": "Abres un documento con una tipografía que no tienes instalada y quieres ver por cuál la está sustituyendo Word, y cambiarla. ¿Qué botón usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar contenido de documento ▸ Mostrar dibujos y cuadros de texto en pantalla"
+        "text": "Sustitución de fuentes…"
       },
       {
         "letter": "B",
-        "text": "Mostrar contenido de documento ▸ Sustitución de fuentes..."
+        "text": "Usar fuente de borrador en vistas Borrador y Esquema"
       },
       {
         "letter": "C",
-        "text": "Mostrar contenido de documento ▸ Mostrar texto ajustado dentro de la ventana del documento"
+        "text": "Mostrar marcadores de imagen"
       },
       {
         "letter": "D",
-        "text": "Mostrar contenido de documento ▸ Mostrar colores e imágenes de fondo en vista Diseño de impresión"
+        "text": "Mostrar códigos de campo en lugar de sus valores"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Sustitución de fuentes.... Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es un BOTÓN, no una casilla, al final de la sección «Mostrar contenido de documento»: abre un cuadro con la lista de fuentes que faltan y la que Word usa en su lugar, y permite elegir otra o incrustarlas de forma permanente. Si no falta ninguna fuente, avisa de que no hay nada que sustituir. · «Usar fuente de borrador» es el distractor con más fundamento porque también cambia con qué fuente se ve el documento, pero por rendimiento y solo en dos vistas, no por una fuente ausente. · Las otras dos son casillas de la misma sección."
   },
   {
     "id": "archivo-285",
@@ -10730,28 +10730,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-047",
     "generado": true,
-    "enunciado": "Trabajas con documentos cuyos títulos suelen guardarse contraídos y quieres que siempre aparezcan expandidos al abrir. ¿Dónde lo activas desde la sección Avanzadas?",
+    "enunciado": "Recibes documentos guardados con los títulos plegados y quieres que Word los abra siempre desplegados. ¿Qué casilla de Avanzadas lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar contenido de documento ▸ Mostrar texto ajustado dentro de la ventana del documento"
+        "text": "Expandir todos los títulos al abrir un documento"
       },
       {
         "letter": "B",
-        "text": "Mostrar contenido de documento ▸ Expandir todos los títulos al abrir un documento"
+        "text": "Mostrar el texto oculto en pantalla"
       },
       {
         "letter": "C",
-        "text": "Mostrar contenido de documento ▸ Mostrar dibujos y cuadros de texto en pantalla"
+        "text": "Mostrar límites de texto"
       },
       {
         "letter": "D",
-        "text": "Mostrar contenido de documento ▸ Mostrar colores e imágenes de fondo en vista Diseño de impresión"
+        "text": "Mostrar texto ajustado dentro de la ventana del documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Expandir todos los títulos al abrir un documento. El mismo ajuste está también en Archivo ▸ Opciones ▸ Accesibilidad: las dos rutas controlan lo mismo."
+    "respuesta": "A",
+    "explicacion": "El estado plegado de un título se guarda dentro del archivo; esta casilla hace que Word lo ignore al abrir. · Esta misma opción aparece también en el panel Accesibilidad, en «Opciones de presentación del documento», y es el mismo ajuste: marcarla en un sitio la marca en el otro. Word repite en Accesibilidad varias opciones que ya están en otros paneles. · «Mostrar el texto oculto» es el distractor de nivel porque también saca a la luz contenido que no se ve, pero por un motivo distinto: uno está plegado y el otro tiene el atributo de oculto."
   },
   {
     "id": "archivo-96",
@@ -10765,28 +10765,28 @@
     "subtopic": "Avanzadas — Pantalla",
     "tema": "Opciones",
     "sourceQuestionId": "8-88",
-    "enunciado": "¿Desde qué ruta se activa la regla vertical en la vista Diseño de impresión de Word 365?",
+    "enunciado": "En la vista Diseño de impresión te falta la regla del lateral izquierdo, aunque la de arriba sí está. ¿Qué casilla de Avanzadas la devuelve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de pantalla → Mostrar la regla"
+        "text": "Mostrar la regla vertical en la vista Diseño de impresión"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Presentación → Mostrar regla vertical"
+        "text": "Mostrar barra de desplazamiento vertical"
       },
       {
         "letter": "C",
-        "text": "Vista → Mostrar → Regla vertical"
+        "text": "Mostrar límites de texto"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → Avanzadas → Mostrar contenido de documento → Regla vertical"
+        "text": "Ancho del panel del área de estilo en vistas Borrador y Esquema"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La configuración persistente de la regla vertical está en Archivo → Opciones → Avanzadas → Opciones de pantalla. La opción en Presentación no existe para la regla vertical. Vista → Mostrar → Regla activa la regla horizontal y es temporal por sesión. La sección Mostrar contenido de documento no contiene la regla."
+    "explicacion": "Hay dos controles distintos para las reglas y conviene no mezclarlos: la casilla «Regla» de la pestaña Vista enciende o apaga las dos a la vez, y esta de Avanzadas decide si, cuando están encendidas, aparece además la vertical. Si en Vista está apagada la regla, esta casilla no muestra nada. Eso explica el síntoma del enunciado. · «Mostrar barra de desplazamiento vertical» es el distractor bueno: también es un elemento del lateral y también se apaga desde aquí, pero es la barra, no la regla. · Las otras dos son de líneas de referencia y del panel de estilos."
   },
   {
     "id": "archivo-97",
@@ -10800,28 +10800,28 @@
     "subtopic": "Avanzadas — Pantalla",
     "tema": "Opciones",
     "sourceQuestionId": "8-89",
-    "enunciado": "¿Desde qué ruta se activa la barra de desplazamiento horizontal en Word 365?",
+    "enunciado": "Trabajas con una tabla muy ancha y no tienes barra de desplazamiento en la parte inferior para moverte a los lados. ¿Qué casilla la devuelve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo → Opciones → Avanzadas → Opciones de pantalla → Mostrar barra"
+        "text": "Mostrar barra de desplazamiento horizontal"
       },
       {
         "letter": "B",
-        "text": "Archivo → Opciones → Presentación → Mostrar barra de desplazamiento horizontal"
+        "text": "Mostrar barra de desplazamiento vertical"
       },
       {
         "letter": "C",
-        "text": "Vista → Mostrar → Barras de desplazamiento → Horizontal"
+        "text": "Mostrar texto ajustado dentro de la ventana del documento"
       },
       {
         "letter": "D",
-        "text": "Archivo → Opciones → General → Opciones de interfaz → Barra horizontal"
+        "text": "Mostrar la regla vertical en la vista Diseño de impresión"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Las barras de desplazamiento se configuran en Archivo → Opciones → Avanzadas → Opciones de pantalla. No están en Presentación ni en General. La pestaña Vista no tiene configuración de barras de desplazamiento."
+    "explicacion": "Las dos barras tienen casilla propia en la sección Presentación del panel Avanzadas, y se apagan por separado. · «Mostrar texto ajustado dentro de la ventana del documento» es el distractor con más fundamento porque ataca el mismo problema por el lado contrario: en vez de dar la barra para moverse a los lados, pliega el texto para que no haga falta. Pero solo funciona en Borrador y Esquema, y con una tabla ancha no resuelve nada. · La regla vertical es otro elemento del borde que se apaga desde la misma sección."
   },
   {
     "id": "archivo-286",
@@ -10836,28 +10836,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-048",
     "generado": true,
-    "enunciado": "Quieres que la lista de documentos recientes de Word muestre más documentos de los que aparecen. ¿Dónde cambias ese número?",
+    "enunciado": "Quieres que la lista de documentos recientes muestre más entradas de las que aparece. ¿Qué ajuste de Avanzadas → Presentación cambias?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Mostrar este número de documentos recientes"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Mostrar medidas en unidades de"
+        "text": "Acceder rápidamente a este número de documentos recientes"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Mostrar este número de carpetas recientes no favoritas"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Ancho del panel del área de estilo en vistas Borrador y Esquema"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Mostrar este número de documentos recientes. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Son tres campos numéricos consecutivos y muy fáciles de confundir, así que conviene fijar qué cuenta cada uno. Este fija cuántos documentos aparecen en la lista de recientes. · «Acceder rápidamente a este número» es distinto: fija cuántos se anclan abajo del todo del menú Archivo, como acceso directo; poniéndolo a cero desaparecen. · «Carpetas recientes no favoritas» cuenta carpetas, no documentos, y solo las que no has anclado. · La cuarta opción es de otra parte de la misma sección, el panel de estilos de la vista Borrador."
   },
   {
     "id": "archivo-287",
@@ -10872,28 +10872,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-049",
     "generado": true,
-    "enunciado": "Quieres que aparezcan varios documentos recientes anclados en la parte inferior del menú Archivo para acceder sin abrir la lista completa. ¿Dónde lo configuras?",
+    "enunciado": "Quieres tener varios documentos anclados abajo del todo del menú Archivo, para abrirlos sin entrar en la lista completa. ¿Qué ajuste cambias?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Acceder rápidamente a este número de documentos recientes"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Mostrar este número de documentos recientes"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Mostrar medidas en unidades de"
+        "text": "Mostrar este número de carpetas recientes no favoritas"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Mostrar medidas en unidades de"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Acceder rápidamente a este número de Documentos recientes. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Este campo controla los accesos directos que Word cuelga al final del panel de navegación de Backstage; con cero, no aparece ninguno. · «Mostrar este número de documentos recientes» es el vecino inmediato y controla la lista larga del panel Abrir, que es otra cosa: uno es el atajo y el otro la lista. Los dos empiezan por lo mismo y los dos cuentan documentos recientes, así que hay que leer el verbo. · El tercero cuenta carpetas. · «Mostrar medidas en unidades de» es el desplegable de centímetros o pulgadas."
   },
   {
     "id": "archivo-288",
@@ -10908,28 +10908,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-050",
     "generado": true,
-    "enunciado": "En la pantalla de guardado quieres ver más carpetas recientes en la lista para llegar antes a las ubicaciones que usas. ¿Dónde cambias ese número?",
+    "enunciado": "En la pantalla de guardado quieres ver más carpetas recientes para llegar antes a las que usas. ¿Qué ajuste cambias?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Mostrar este número de carpetas recientes no favoritas"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Mostrar este número de documentos recientes"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Acceder rápidamente a este número de documentos recientes"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Mostrar medidas en unidades de"
+        "text": "Mostrar píxeles para las características de HTML"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Mostrar este número de carpetas recientes no favoritas. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es el único de los tres campos numéricos que cuenta CARPETAS, y la coletilla «no favoritas» importa: las que hayas anclado se muestran siempre y no consumen ese cupo. · Los otros dos cuentan documentos: uno los de la lista de recientes y otro los anclados al final del menú Archivo. Los tres campos van seguidos en pantalla y los tres son un número, así que la única forma de acertar es leer qué cuenta cada uno. · «Mostrar píxeles para las características de HTML» es otro ajuste de la misma sección."
   },
   {
     "id": "archivo-289",
@@ -10944,28 +10944,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-051",
     "generado": true,
-    "enunciado": "La regla y los cuadros de márgenes y sangría te muestran las medidas en pulgadas y necesitas centímetros. ¿Dónde cambias la unidad de medida?",
+    "enunciado": "La regla y los cuadros de márgenes te dan las medidas en pulgadas y las quieres en centímetros. ¿Qué ajuste cambias?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Mostrar medidas en unidades de"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Mostrar medidas en unidades de"
+        "text": "Mostrar píxeles para las características de HTML"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Ancho del panel del área de estilo en vistas Borrador y Esquema"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Mostrar este número de documentos recientes"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Mostrar medidas en unidades de. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Es un desplegable con centímetros, pulgadas, milímetros, puntos y picas, y afecta a la regla y a todos los cuadros donde se escriben medidas. · «Mostrar píxeles para las características de HTML» es el distractor de más nivel porque también cambia la unidad en que se ven las medidas, pero solo en los cuadros relacionados con páginas web, y funciona como excepción a lo elegido en el desplegable anterior. Dos ajustes de unidades, uno general y otro para HTML. · Las otras dos son un ancho de panel y un contador de recientes."
   },
   {
     "id": "archivo-290",
@@ -10980,28 +10980,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-052",
     "generado": true,
-    "enunciado": "Quieres que en la vista Borrador aparezca a la izquierda un panel con el nombre del estilo aplicado a cada párrafo. ¿Dónde lo activas y configuras su ancho?",
+    "enunciado": "Quieres que en la vista Borrador aparezca a la izquierda una columna con el nombre del estilo de cada párrafo. ¿Qué ajuste usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Ancho del panel del área de estilo en vistas Borrador y Esquema"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Ancho del panel del área de estilo en vistas Borrador y Esquema"
+        "text": "Usar fuente de borrador en vistas Borrador y Esquema"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Mostrar texto ajustado dentro de la ventana del documento"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Mostrar medidas en unidades de"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Ancho del panel del área de estilo en vistas Borrador y Esquema. El valor 0 cm oculta el panel; un valor mayor que cero lo activa."
+    "respuesta": "A",
+    "explicacion": "No es una casilla sino un ancho: con cero el panel no se ve, y en cuanto se pone un valor aparece la columna de estilos a la izquierda. Es la forma más cómoda de auditar qué estilo lleva cada párrafo de un documento heredado. · «Usar fuente de borrador en vistas Borrador y Esquema» es el mejor distractor porque nombra exactamente las mismas dos vistas y está en el mismo panel, pero es de rendimiento: cambia con qué fuente se dibuja el texto. · El panel solo aparece en Borrador y Esquema; en Diseño de impresión no existe."
   },
   {
     "id": "archivo-291",
@@ -11016,28 +11016,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-053",
     "generado": true,
-    "enunciado": "Trabajas con documentos que se publicarán como páginas web y quieres que los cuadros relacionados con HTML muestren las medidas en píxeles en vez de centímetros. ¿Dónde lo activas?",
+    "enunciado": "Preparas documentos que se publicarán como páginas web y quieres que los cuadros de HTML den las medidas en píxeles. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Mostrar píxeles para las características de HTML"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Mostrar medidas en unidades de"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Usar el posicionamiento de subpíxeles para suavizar las fuentes"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Mostrar píxeles para las características de HTML"
+        "text": "Ancho del panel del área de estilo en vistas Borrador y Esquema"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Mostrar píxeles para las características de HTML. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Actúa como excepción del desplegable general de unidades: aunque tengas centímetros, los cuadros relacionados con HTML pasan a píxeles, que es la unidad con la que se trabaja en web. · «Mostrar medidas en unidades de» es ese desplegable general, y es el distractor natural: cambia las unidades de todo, pero no ofrece píxeles como opción. · «Usar el posicionamiento de subpíxeles» comparte la palabra «píxeles» y no tiene nada que ver: es el suavizado del dibujo de las fuentes en pantalla. La coincidencia de palabra es lo que la hace peligrosa."
   },
   {
     "id": "archivo-292",
@@ -11052,28 +11052,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-054",
     "generado": true,
-    "enunciado": "Al pasar el ratón por los botones de la cinta quieres que en la ventana emergente aparezca también el atajo de teclado. ¿Dónde lo activas desde la sección Avanzadas?",
+    "enunciado": "Quieres que el emergente de cada botón de la cinta muestre también su atajo de teclado. ¿Qué casilla de Avanzadas marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Mostrar teclas de método abreviado en la información en pantalla"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Estilo de información en pantalla"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Mostrar teclas de método abreviado en la información en pantalla"
+        "text": "Mostrar botones emergentes para agregar filas y columnas en tablas"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Mostrar medidas en unidades de"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Mostrar teclas de método abreviado en la información en pantalla. El mismo ajuste está también en Archivo ▸ Opciones ▸ Accesibilidad."
+    "respuesta": "A",
+    "explicacion": "Esta casilla está en Avanzadas → Presentación, y la misma opción aparece también en el panel Accesibilidad: es el mismo ajuste en dos sitios. · «Estilo de información en pantalla» es el desplegable del que depende, y ese vive en General y en Accesibilidad, pero no aquí. Si está puesto en «No mostrar información en pantalla», no habrá emergente donde enseñar el atajo, así que marcar esta casilla no serviría de nada. · «Mostrar botones emergentes…» comparte la palabra «emergentes» y es de tablas: coincidencia de vocabulario, funciones distintas."
   },
   {
     "id": "archivo-293",
@@ -11088,28 +11088,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-056",
     "generado": true,
-    "enunciado": "La barra de desplazamiento vertical no aparece y tienes que usar el teclado para moverte por el documento. ¿Dónde la vuelves a activar?",
+    "enunciado": "Ha desaparecido la barra de desplazamiento del lateral derecho y te mueves solo con el teclado. ¿Qué casilla la devuelve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Mostrar barra de desplazamiento vertical"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Mostrar barra de desplazamiento vertical"
+        "text": "Mostrar barra de desplazamiento horizontal"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Mostrar la regla vertical en la vista Diseño de impresión"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Deshabilitar la aceleración de gráficos de hardware"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Mostrar barra de desplazamiento vertical. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Las dos barras se apagan por separado desde la sección Presentación del panel Avanzadas. · «Mostrar la regla vertical» es el distractor bueno: también es un elemento del lateral, también se apaga desde aquí, y también deja el borde de la ventana raro. La diferencia es que una sirve para desplazarse y la otra para medir. · «Deshabilitar la aceleración de gráficos de hardware» está en la misma sección y sí puede provocar rarezas de dibujo en pantalla, pero no hace desaparecer barras."
   },
   {
     "id": "archivo-294",
@@ -11124,28 +11124,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-058",
     "generado": true,
-    "enunciado": "Necesitas que el texto en pantalla se muestre con el posicionamiento exacto que tendrá al imprimirse, aunque sea menos legible. ¿Dónde lo activas?",
+    "enunciado": "Necesitas que el texto en pantalla ocupe exactamente lo que va a ocupar impreso, aunque se lea algo peor. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Optimizar el posicionamiento de los caracteres para diseño en lugar de legibilidad"
+        "text": "Optimizar el posicionamiento de los caracteres para diseño en lugar de legibilidad"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Usar el posicionamiento de subpíxeles para suavizar las fuentes"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Deshabilitar la aceleración de gráficos de hardware"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Usar fuente de borrador en vistas Borrador y Esquema"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Optimizar el posicionamiento de los caracteres para diseño en lugar de legibilidad. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "explicacion": "Es un intercambio explícito, y el propio nombre lo dice: Word coloca cada carácter donde irá en el papel en vez de donde se lee mejor en pantalla. Importa cuando se maqueta y la diferencia de un cuarto de milímetro descuadra una línea. · «Usar el posicionamiento de subpíxeles» empuja justo en la dirección contraria, hacia que se lea mejor, y comparte la palabra «posicionamiento»: son las dos casillas del mismo compromiso, una por cada lado. Están seguidas en pantalla. · Las otras dos son de rendimiento gráfico."
   },
   {
     "id": "archivo-295",
@@ -11160,28 +11160,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-059",
     "generado": true,
-    "enunciado": "Al arrastrar un objeto dentro del documento, el contenido no se recoloca hasta que sueltas el ratón. ¿Dónde activas la actualización en tiempo real mientras arrastras?",
+    "enunciado": "Word se dibuja mal en pantalla, con parpadeos o restos de menús, y sospechas de la tarjeta gráfica. ¿Qué casilla de Avanzadas → Presentación pruebas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Deshabilitar la aceleración de gráficos de hardware"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Usar el posicionamiento de subpíxeles para suavizar las fuentes"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Actualizar el contenido del documento al arrastrar"
+        "text": "Optimizar el posicionamiento de los caracteres para diseño en lugar de legibilidad"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Mostrar botones emergentes para agregar filas y columnas en tablas"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Actualizar el contenido del documento al arrastrar. El mismo ajuste está también en Archivo ▸ Opciones ▸ General ▸ Opciones de interfaz de usuario."
+    "respuesta": "A",
+    "explicacion": "Es la casilla que hace que Office deje de apoyarse en la tarjeta gráfica y dibuje por software. Va más lento, pero resuelve la mayoría de los parpadeos y artefactos causados por controladores viejos, y es lo primero que conviene probar ante ese síntoma. · «Usar el posicionamiento de subpíxeles» también toca cómo se dibuja el texto, pero para suavizarlo, no para cambiar quién lo dibuja. · «Optimizar el posicionamiento de los caracteres» es su pareja del otro extremo. · Las tres primeras son de dibujo en pantalla y solo una afecta al hardware."
   },
   {
     "id": "archivo-296",
@@ -11196,28 +11196,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-060",
     "generado": true,
-    "enunciado": "El texto se ve irregular o con bordes dentados en pantalla. ¿Dónde activas el suavizado de fuentes mediante posicionamiento de subpíxeles?",
+    "enunciado": "El texto se ve con los bordes dentados en pantalla y quieres que Word lo suavice. ¿Qué casilla marcas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Usar el posicionamiento de subpíxeles para suavizar las fuentes"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Usar el posicionamiento de subpíxeles para suavizar las fuentes en pantalla"
+        "text": "Optimizar el posicionamiento de los caracteres para diseño en lugar de legibilidad"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Deshabilitar la aceleración de gráficos de hardware"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Mostrar píxeles para las características de HTML"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Usar el posicionamiento de subpíxeles para suavizar las fuentes en pantalla. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "El posicionamiento de subpíxeles aprovecha los tres puntos de color de cada píxel para dibujar el texto con más finura; se nota sobre todo en pantallas de resolución normal. · «Optimizar el posicionamiento de los caracteres para diseño en lugar de legibilidad» es la casilla contraria: sacrifica precisamente la legibilidad en favor de la fidelidad con el papel. Marcar las dos a la vez es pedirle a Word dos cosas incompatibles, y por eso están juntas. · «Mostrar píxeles para las características de HTML» solo comparte la palabra: va de unidades de medida."
   },
   {
     "id": "archivo-297",
@@ -11232,28 +11232,28 @@
     "tema": "Opciones",
     "sourceQuestionId": "opc-avz-061",
     "generado": true,
-    "enunciado": "Al acercar el cursor al borde de una tabla dejan de aparecer los botones para añadir filas o columnas rápidamente. ¿Dónde los vuelves a activar?",
+    "enunciado": "Al acercar el cursor al borde de una tabla ya no salen los botones circulares para insertar una fila o una columna. ¿Qué casilla los devuelve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Presentación ▸ Mostrar este número de documentos recientes"
+        "text": "Mostrar botones emergentes para agregar filas y columnas en tablas"
       },
       {
         "letter": "B",
-        "text": "Presentación ▸ Mostrar este número de carpetas recientes no favoritas"
+        "text": "Mostrar teclas de método abreviado en la información en pantalla"
       },
       {
         "letter": "C",
-        "text": "Presentación ▸ Mostrar botones emergentes para agregar filas y columnas en tablas"
+        "text": "Mostrar límites de texto"
       },
       {
         "letter": "D",
-        "text": "Presentación ▸ Acceder rápidamente a este número de Documentos recientes"
+        "text": "Mostrar dibujos y cuadros de texto en pantalla"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ruta completa: Archivo → Opciones → Avanzadas → Presentación → Mostrar botones emergentes para agregar filas y columnas en tablas. Sin atajo: solo por Archivo → Opciones con el ratón."
+    "respuesta": "A",
+    "explicacion": "Son los botones con un signo más que aparecen al pasar el puntero por el borde entre dos filas o dos columnas; esta casilla los enciende y los apaga. Aunque estén desactivados, siempre queda la cinta Disposición de tabla para insertar. · «Mostrar teclas de método abreviado» comparte la idea de algo que aparece al pasar el ratón, y es el distractor razonable, pero es de la cinta y no de las tablas. · «Mostrar límites de texto» dibuja el contorno del área de escritura, que en las tablas sin bordes se confunde con las cuadrículas."
   },
   {
     "id": "archivo-98",
