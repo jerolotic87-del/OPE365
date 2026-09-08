@@ -710,7 +710,6 @@ details.advanced summary:hover{ color:var(--text); }
 .qedit:hover{ color:var(--accent-ink); border-color:var(--border-2); background:var(--surface-2); }
 .qedit svg{ width:15px; height:15px; }
 .session-topbar .qedit{ margin-left:auto; }
-.tag-edit{ background:var(--accent-dim); color:var(--accent-ink); border-color:var(--accent-line); }
 
 .edit-field{ width:100%; padding:9px 11px; border:1px solid var(--border); border-radius:var(--radius-s);
   background:var(--surface); color:var(--text); font-family:inherit; font-size:13px; line-height:1.5; resize:vertical; }
@@ -855,6 +854,13 @@ details.advanced summary:hover{ color:var(--text); }
 .tag{ font-family:var(--font-mono); font-size:10px; padding:4px 8px; border-radius:5px; background:var(--surface-2); color:var(--text-2); border:1px solid var(--border); letter-spacing:.03em; }
 .tag-neg{ background:var(--bad-dim); color:var(--bad); border-color:var(--bad-line); }
 .tag-type{ background:var(--accent-dim); color:var(--accent-ink); border-color:var(--accent-line); }
+/* Las variantes de .tag TIENEN que ir detrás de la base: misma especificidad,
+   gana la última. Puestas antes, .tag les sobrescribía color y fondo. */
+.tag-edit{ background:var(--accent-dim); color:var(--accent-ink); border-color:var(--accent-line); }
+/* ✓ revisada: pregunta reescrita a mano bajo docs/GUIA_ESTILO_ITEMS.md.
+   Verde discreto: informa de que está contrastada, sin competir con el
+   enunciado ni confundirse con el rojo de ⚠ Negativa. */
+.tag-rev{ background:var(--good-dim); color:var(--good); border-color:var(--good-line); }
 
 .qcard h3{ font-size:19px; font-weight:600; line-height:1.5; margin:0 0 var(--sp-6); color:var(--text); letter-spacing:-.005em; }
 .qcard h3 .blank{ display:inline-block; border-bottom:2px solid var(--accent); min-width:60px; padding:0 4px; }

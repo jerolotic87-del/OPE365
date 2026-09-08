@@ -128,7 +128,15 @@ if(r) ck(r.r.correct === false && O.PROGRESS.answers[r.q.id].correcta === false,
 
 // ── H) el resumen final cuenta las tarjetas como respuestas ────────────
 {
-  const s5 = sesionAtajos(3, "opcion_unica");
+  // Sesión con ids FIJOS y convertibles: `buildSession` sortea con semilla
+  // aleatoria y puede colar una negativa, que por diseño se juega como test y
+  // no tiene botones de grado. Elegir a suerte hacía este paso inestable.
+  const ids = O.QUESTIONS.filter(q=> q.categoria==="atajo" && convertible(q)).slice(0,3).map(q=>q.id);
+  const s5 = O.buildSessionFromIds(ids, { mode:"practice", source:"all", section:"all", topic:"all",
+    tema:"all", tipo:"all", categoria:"atajo", count:3, qOrder:"aleatorio", shuffleOptions:true, minutes:null });
+  O.setSession(s5); O.saveSessionSnapshot(); goto(D,w,"running");
+  ck(s5.questions.length === 3 && s5.questions.every(convertible),
+     "H · sesión de 3 atajos, los tres convertibles en tarjeta");
   for(let n=0; n<3; n++){
     if(O.Nav.view !== "running") break;
     if(D.getElementById("card-reveal")) click(D,w,"#card-reveal");

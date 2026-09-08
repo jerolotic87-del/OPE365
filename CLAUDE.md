@@ -250,6 +250,26 @@ se auditó su reparto. Conclusiones que valen para el resto de secciones:
   26/27. Herramienta: `scripts/anadir_framings.py` (solo vuelca ítems ya
   redactados y valida esquema).
 
+**Marca `revisada` (sep-2026)** — el banco tiene 2.843 preguntas y solo 1.009
+han pasado por la reescritura a mano, así que hace falta distinguirlas al
+estudiar. Campo `"revisada": true` en la pregunta, con la misma convención que
+`generado`: **solo aparece cuando es true**, para no ensuciar las 1.834 que
+faltan. No entra en `contentHash` (que solo mira tipo/enunciado/respuesta/
+explicación y las opciones), así que marcarlas NO invalida el progreso previo.
+Se pone con `scripts/marcar_revisadas.py <seccion>`, y `--estado` imprime el
+avance por pestaña. Se ve en tres sitios: etiqueta `✓ revisada` en el runner,
+insignia `✓` en la lista del Editor del banco y dos estados nuevos en su filtro,
+«Revisadas (✓)» y «Sin revisar», que con el contador de al lado dan el avance
+por pestaña sin salir de la app. Tests: `tests/test_revisada.js` (14
+comprobaciones) + `tests/manual_revisada_qa.mjs` (Chromium).
+
+⚠️ **Al añadir una variante de `.tag` en styles.css hay que ponerla DETRÁS de
+la regla base `.tag`** (hoy sobre la línea 854), no antes: misma especificidad,
+gana la última. `.tag-edit` llevaba tiempo colocada antes y por eso la etiqueta
+«✎ corregida» se pintaba gris como cualquier otra en vez de con el color de
+acento; se descubrió al añadir `.tag-rev` y se arregló moviendo las dos junto a
+`.tag-neg` y `.tag-type`.
+
 **Progreso de la reescritura**: `archivo` **431 preguntas, TERMINADO** (410
 reescritas a mano + 21 nuevas de framing). Auditoría
 final del fichero entero: 0 preguntas donde la correcta se delate por

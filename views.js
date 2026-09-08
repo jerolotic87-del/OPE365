@@ -1444,6 +1444,7 @@ function renderQuestionCard(q, s, isExam){
         ${q.categoria && q.categoria!=="general" ? `<span class="tag">${categoriaLabel(q.categoria)}</span>` : ''}
         ${q.negativa ? '<span class="tag tag-neg">⚠ Negativa</span>' : ''}
         ${O.ContentEdit && O.ContentEdit.has("q", q.id) ? '<span class="tag tag-edit">✎ corregida</span>' : ''}
+        ${q.revisada ? '<span class="tag tag-rev" title="Reescrita a mano con la guía de estilo">✓ revisada</span>' : ''}
       </div>
       <div class="qcard-actions">
         <button class="qedit" id="q-edit" title="Editar o corregir esta pregunta" aria-label="Editar pregunta">${icon('pencil')}</button>
@@ -3302,6 +3303,8 @@ function bancoFilterQuestions(f){
     if(f.tipo!=="all" && q.tipo!==f.tipo) return false;
     if(f.estado==="corregida" && !(O.ContentEdit && O.ContentEdit.has("q", q.id))) return false;
     if(f.estado==="creada"    && !(O.ContentEdit && O.ContentEdit.isUser("q", q.id))) return false;
+    if(f.estado==="revisada"   && !q.revisada) return false;
+    if(f.estado==="sinrevisar" && q.revisada) return false;
     if(f.estado==="sinexpl"   && q.explicacion) return false;
     if(f.estado==="conimagen" && !q.imagen) return false;
     if(f.estado==="falladas"){ const a=O.PROGRESS.answers[q.id]; if(!a || a.correcta) return false; }
@@ -3534,7 +3537,9 @@ function renderBancoAdmin(){
         <option value="all">Cualquier estado</option>
         <option value="corregida" ${st.estado==="corregida"?'selected':''}>Corregidas (✎)</option>
         <option value="creada" ${st.estado==="creada"?'selected':''}>Creadas por mí</option>
-        ${isQ ? `<option value="sinexpl" ${st.estado==="sinexpl"?'selected':''}>Sin explicación</option>
+        ${isQ ? `<option value="revisada" ${st.estado==="revisada"?'selected':''}>Revisadas (✓)</option>
+        <option value="sinrevisar" ${st.estado==="sinrevisar"?'selected':''}>Sin revisar</option>
+        <option value="sinexpl" ${st.estado==="sinexpl"?'selected':''}>Sin explicación</option>
         <option value="conimagen" ${st.estado==="conimagen"?'selected':''}>Con imagen (iconos)</option>
         <option value="falladas" ${st.estado==="falladas"?'selected':''}>Falladas</option>
         <option value="marcadas" ${st.estado==="marcadas"?'selected':''}>Marcadas</option>` : ``}
@@ -3597,7 +3602,7 @@ function renderBancoAdmin(){
         ? `${O.escapeHtml(x.id)} · ${tipoLabel(x.tipo)} · ${O.escapeHtml(sectionName(x.section))}${x.topic?` ▸ ${O.escapeHtml(topicName(x.section,x.topic))}`:''}${x.explicacion?'':' · <span class="mini-warn">sin explic.</span>'}`
         : `${O.escapeHtml(x.canonicalId)} · ${O.escapeHtml(sectionName(x.section))}${x.topic?` ▸ ${O.escapeHtml(topicName(x.section,x.topic))}`:''}`;
       return `<div class="qlist-item bk-row${id===st.selId?' selected':''}${ov?' has-ov':''}" ${attr}="${O.escapeHtml(String(id))}" style="cursor:pointer;">
-        <span class="badge">${usr?'✚':ov?'✎':'·'}</span>
+        <span class="badge">${usr?'✚':ov?'✎':(isQ && x.revisada)?'✓':'·'}</span>
         <div style="flex:1; min-width:0;"><div class="qtext">${text}</div><div class="qmeta">${meta}</div></div>
       </div>`;
     }).join("")}</div>
