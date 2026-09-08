@@ -208,10 +208,25 @@ Reescritura **a mano, ítem por ítem** — ningún script genera contenido.
 `scripts/aplicar_reescritura.py` solo vuelca al JSON el texto ya escrito y
 valida (4 opciones, respuesta viva, sin repetidas, longitudes, explicación).
 
-**Progreso de la reescritura**: `archivo` 375/410 — los siete bloques
-`opciones-avz-*` cerrados. Quedan 35: `opciones-personalizar` (18) y
-`opciones-complementos` (18) menos los ya hechos, y con eso `archivo.json`
-queda terminado.
+**Progreso de la reescritura**: `archivo` **410/410 — TERMINADO**. Auditoría
+final del fichero entero: 0 preguntas donde la correcta se delate por
+longitud, 0 explicaciones de menos de 120 caracteres, 0 citas de fuentes
+externas, 0 opciones truncadas.
+
+**Regla nueva y trampa que costó cara: NUNCA citar la LETRA de una opción en
+la explicación.** Las opciones se barajan al construir la sesión
+(`shuffleOptions:true` es el valor por defecto en TODAS: smart, repaso,
+concepto, práctica, sección, errores, duelo y coop), así que un «la opción B»
+apunta a una opción distinta cada vez que se sirve la pregunta. Había 121
+preguntas así (98 escritas en esta reescritura, 23 heredadas de `interfaz` e
+`inicio`). Se sustituyó la letra por el texto de la propia opción con
+`scripts/quitar_letras_explicacion.py`. **Cuidado al hacerlo en bloque**: si
+dos opciones empiezan igual, un recorte por el principio no distingue nada, y
+recortar por la cola puede acabar citando la respuesta correcta. Nueve
+explicaciones quedaron mal por eso y hubo que rehacerlas a mano. Al escribir,
+lo correcto es referirse al distractor por lo que lo distingue («la opción que
+además cierra la aplicación», «la casilla que añade *al imprimir*»), no por su
+letra ni copiando la frase entera.
 
 **Chivato de longitud**: `scripts/aplicar_reescritura.py` avisa cuando la
 opción correcta es la más larga o la más corta **con hueco** (ratio >1,5 y
