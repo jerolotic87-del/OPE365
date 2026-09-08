@@ -9937,19 +9937,19 @@
     "tema": "Bordes y sombreado",
     "difficulty": "media",
     "sourceQuestionId": "P-0295",
-    "enunciado": "En el cuadro de dialogo Bordes y sombreado, ¿cuantos estilos de linea de borde diferentes estan disponibles?",
+    "enunciado": "Abres el cuadro Bordes y sombreado y despliegas la lista «Estilo» para elegir el tipo de línea. ¿Cuántos estilos ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "12"
+        "text": "24"
       },
       {
         "letter": "B",
-        "text": "18"
+        "text": "9"
       },
       {
         "letter": "C",
-        "text": "24"
+        "text": "17"
       },
       {
         "letter": "D",
@@ -9957,8 +9957,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El cuadro de dialogo Bordes y sombreado ofrece 24 estilos de linea de borde diferentes. Los anchos disponibles son: 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 puntos."
+    "respuesta": "A",
+    "explicacion": "Son 24 estilos de línea: continua, de puntos, de trazos, doble, triple, ondulada, de sombra… Es una de las listas largas de Word y conviene no mezclarla con las de al lado. · «9» son los anchos del desplegable «Ancho», justo debajo del de estilo: ¼, ½, ¾, 1, 1½, 2¼, 3, 4½ y 6 puntos, con ½ pto como valor de partida. Es el descarte que más cae, porque los dos desplegables están pegados. · «17» son los estilos de subrayado del cuadro Fuente, otra lista de rayas de aspecto casi idéntico. · «164» serían los diseños de Arte, que solo existen en la ficha Borde de página. Cuatro listas de líneas y cuatro cifras distintas."
   },
   {
     "id": "inicio-53",
@@ -9973,28 +9973,28 @@
     "tema": "Bordes y sombreado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0291",
-    "enunciado": "En el cuadro de dialogo Bordes y sombreado, la opcion Sombra aplica cuatro bordes al parrafo con un efecto de sombreado. ¿De que color es siempre ese sombreado?",
+    "enunciado": "En la columna «Valor» de la ficha Bordes hay cinco botones. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El mismo color que el borde aplicado"
+        "text": "Ninguno · Cuadro · Sombra · 3D · Personalizado"
       },
       {
         "letter": "B",
-        "text": "Gris 50% independientemente del color de borde elegido"
+        "text": "Ninguno · Cuadro · Todos · Cuadrícula · Personalizado"
       },
       {
         "letter": "C",
-        "text": "Negro independientemente del color de borde elegido"
+        "text": "Ninguno · Cuadro · Sombra · 3D · Arte"
       },
       {
         "letter": "D",
-        "text": "El color de enfasis del tema activo del documento"
+        "text": "Ninguno · Cuadro · Sombra · Relieve · Personalizado"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La opcion Sombra del cuadro Bordes y sombreado aplica siempre el sombreado en color negro, independientemente del color que se haya elegido para el borde. Es una restriccion fija del programa."
+    "respuesta": "A",
+    "explicacion": "Esos cinco botones son el atajo del cuadro: en vez de ir marcando lado por lado en la vista previa, aplican de golpe una combinación típica. «Personalizado» es el que se activa solo en cuanto se toca un lado suelto. · «Todos» y «Cuadrícula» son reales, pero aparecen en lugar de Sombra y 3D cuando lo seleccionado es una tabla: el cuadro cambia de opciones según sobre qué se trabaje, y ese es el descarte con más fundamento. · «Arte» existe, pero es un desplegable de la ficha Borde de página, no un valor. · Y «Relieve» no está en este cuadro: era una casilla del cuadro Fuente en versiones antiguas."
   },
   {
     "id": "inicio-54",
@@ -10009,28 +10009,28 @@
     "tema": "Bordes y sombreado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0292",
-    "enunciado": "La opcion 3D del cuadro de dialogo Bordes y sombreado da un efecto tridimensional al recuadro del parrafo. ¿En que condicion funciona correctamente?",
+    "enunciado": "Aplicas el valor «Cuadro» a un párrafo y después haces clic en el botón del lado izquierdo de la vista previa para quitarlo. ¿Qué le pasa a la columna «Valor»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Siempre que se aplique a un parrafo con texto; no funciona en parrafos vacios"
+        "text": "Se marca sola la opción «Personalizado»"
       },
       {
         "letter": "B",
-        "text": "Solo cuando se aplican bordes asimetricos, es decir, lados con distinto estilo o grosor"
+        "text": "Se marca sola la opción «Ninguno»"
       },
       {
         "letter": "C",
-        "text": "Solo cuando el color del borde es diferente al color del fondo"
+        "text": "Sigue marcado «Cuadro», porque ya se había aplicado"
       },
       {
         "letter": "D",
-        "text": "Siempre; el efecto 3D no tiene ninguna condicion especial de aplicacion"
+        "text": "Se desmarcan todas y hay que elegir una antes de aceptar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La opcion 3D requiere que se apliquen bordes asimetricos para funcionar correctamente, es decir, que los lados tengan distinto estilo o grosor entre si. Si todos los lados son iguales el efecto tridimensional no se aprecia correctamente."
+    "respuesta": "A",
+    "explicacion": "«Personalizado» es lo que Word marca en cuanto los cuatro lados dejan de ser iguales: es el valor que describe cualquier combinación que no encaje en las otras cuatro. Por eso no se elige, se llega a él. · «Ninguno» solo se marcaría al quitar los cuatro lados, no uno. · Que siga en «Cuadro» sería mentir sobre lo que hay puesto, y el cuadro está pensado para que la columna refleje siempre el estado real. · Y no puede quedarse sin ninguno marcado: siempre hay un valor vigente, aunque sea «Ninguno». · La vista previa, con sus botones de lado, es la forma de trabajar cuando se quiere un borde solo arriba o solo a la izquierda."
   },
   {
     "id": "inicio-55",
@@ -10045,28 +10045,28 @@
     "tema": "Bordes y sombreado",
     "difficulty": "media",
     "sourceQuestionId": "P-0297",
-    "enunciado": "¿Cual de las siguientes opciones de la pestana Borde de pagina del cuadro Bordes y sombreado NO existe en la pestana Bordes de parrafo?",
+    "enunciado": "Comparas la ficha «Bordes» con la ficha «Borde de página» del mismo cuadro. ¿Qué hay en la segunda que no esté en la primera?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Estilo de linea"
+        "text": "El desplegable «Arte», con bordes decorativos de dibujos repetidos"
       },
       {
         "letter": "B",
-        "text": "Color de borde"
+        "text": "El desplegable «Estilo», con los 24 tipos de línea"
       },
       {
         "letter": "C",
-        "text": "Arte (bordes decorativos formados por dibujos o iconos repetidos)"
+        "text": "El desplegable «Color», con la paleta del tema"
       },
       {
         "letter": "D",
-        "text": "Ancho de borde"
+        "text": "El desplegable «Ancho», con los nueve grosores"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La opcion Arte es exclusiva de la pestana Borde de pagina y permite aplicar bordes decorativos formados por dibujos o iconos repetidos. Las opciones Estilo, Color y Ancho existen en ambas pestanas. La pestana Borde de pagina tambien incluye opciones especificas como Aplicar a y Medir desde."
+    "respuesta": "A",
+    "explicacion": "«Arte» es lo único exclusivo de la ficha Borde de página: ofrece «(ninguno)» más 164 diseños decorativos —corazones, árboles, cenefas geométricas— que solo tienen sentido rodeando una hoja entera. · Estilo, Color y Ancho están en las dos fichas, y por eso son los tres descartes: al abrir la segunda ficha uno reconoce casi todo, y ese casi es lo que se pregunta. · La ficha de página añade además su propio «Aplicar a», con cuatro opciones de alcance, y un botón «Opciones…» distinto, con el desplegable «Medir desde» y cuatro casillas que no existen en la ficha de párrafo."
   },
   {
     "id": "inicio-56",
@@ -10081,28 +10081,28 @@
     "tema": "Bordes y sombreado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0293",
-    "enunciado": "En la pestana Sombreado del cuadro Bordes y sombreado, las tramas se expresan en porcentaje. ¿Que representa visualmente un porcentaje mayor en una trama?",
+    "enunciado": "En la ficha Sombreado aplicas un relleno azul y encima una trama al 25 %. ¿Qué significa ese porcentaje?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayor transparencia del color de relleno"
+        "text": "La densidad del estampado que se superpone al relleno"
       },
       {
         "letter": "B",
-        "text": "Mayor cantidad de puntos en el estampado superpuesto al relleno"
+        "text": "La transparencia del color de relleno"
       },
       {
         "letter": "C",
-        "text": "Mayor intensidad o saturacion del color de relleno"
+        "text": "La saturación del color de relleno"
       },
       {
         "letter": "D",
-        "text": "Mayor tamano de los elementos del patron"
+        "text": "El tamaño de los elementos del estampado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "En las tramas de Word 365 un porcentaje mayor representa una mayor cantidad de puntos en el estampado superpuesto al fondo. No afecta a la transparencia ni a la saturacion del color, sino a la densidad del patron de puntos."
+    "respuesta": "A",
+    "explicacion": "Los porcentajes de la lista de tramas miden cuánta superficie cubre el estampado: al 25 % se ven pocos puntos y al 75 % el fondo casi desaparece bajo ellos. El color del relleno no se toca, y la trama tiene además su propio color, elegible aparte. · Confundirlo con la transparencia o con la saturación es lo natural, porque el resultado a la vista se parece: un azul al 25 % de trama gris puede recordar a un azul aclarado. La diferencia se ve al ampliar el zoom, donde aparecen los puntos. · Y el tamaño del patrón no se puede cambiar: la lista ofrece porcentajes y estampados con nombre, como rayas o cuadrículas, pero no medidas."
   },
   {
     "id": "inicio-229",
@@ -10117,19 +10117,19 @@
     "tema": "Bordes y sombreado",
     "difficulty": "media",
     "sourceQuestionId": "P-0483",
-    "enunciado": "En el cuadro Bordes y sombreado, ficha Borde de pagina, el desplegable «Arte» aplica bordes decorativos formados por iconos o dibujos repetidos. Ademas de «(ninguno)», ¿cuantos diseños de arte ofrece este Word 365?",
+    "enunciado": "En la ficha Borde de página despliegas «Arte» para poner un marco decorativo. Además de «(ninguno)», ¿cuántos diseños ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "78"
+        "text": "164"
       },
       {
         "letter": "B",
-        "text": "160"
+        "text": "24"
       },
       {
         "letter": "C",
-        "text": "164"
+        "text": "78"
       },
       {
         "letter": "D",
@@ -10137,8 +10137,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El desplegable «Arte» de la ficha Borde de pagina ofrece «(ninguno)» mas 164 diseños decorativos (motivos florales, geometricos, festivos…). Solo estan en la ficha Borde de pagina, no en la de bordes de parrafo. Recuento verificado en la instalacion del usuario (sep 2026). El 24 son los estilos de LINEA de borde, no los de Arte."
+    "respuesta": "A",
+    "explicacion": "Son 164 diseños más la entrada «(ninguno)»: motivos florales, geométricos, festivos, cenefas de estrellas o de manzanas. Prueba en vivo del usuario. Solo están en esta ficha; la de bordes de párrafo no los tiene. · «24» son los estilos de LÍNEA del desplegable Estilo, que está justo encima en el mismo cuadro: es el descarte que más cae, porque las dos listas se abren a un palmo la una de la otra. · «78» y «200» no corresponden a ningún recuento de Word: están para comprobar si la cifra se sabe o se aproxima. · Al elegir un diseño de Arte, el desplegable Color suele quedar limitado, porque muchos diseños llevan sus propios colores."
   },
   {
     "id": "inicio-230",
@@ -10153,28 +10153,28 @@
     "tema": "Bordes y sombreado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0484",
-    "enunciado": "En la pestaña Borde de página del cuadro Bordes y sombreado, el desplegable Aplicar a permite limitar el borde a una parte del documento. ¿Cuántas opciones ofrece este desplegable?",
+    "enunciado": "Quieres poner un borde decorativo solo en la portada de un informe. En la ficha Borde de página, ¿qué eliges en «Aplicar a»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2 (Todo el documento y Esta sección)"
+        "text": "Esta sección: solo la primera página"
       },
       {
         "letter": "B",
-        "text": "3 (Todo el documento, Esta sección y Esta página)"
+        "text": "Esta sección: todas excepto la primera página"
       },
       {
         "letter": "C",
-        "text": "4 (Todo el documento, Esta sección, Solo primera página de esta sección y Todas excepto la primera de esta sección)"
+        "text": "Esta sección"
       },
       {
         "letter": "D",
-        "text": "5 (Todo el documento, Esta sección, Solo primera página, Todas excepto la primera y Solo páginas pares)"
+        "text": "Todo el documento"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El desplegable Aplicar a de la pestaña Borde de página ofrece 4 opciones: Todo el documento, Esta sección, Solo primera página de esta sección y Todas excepto la primera página de esta sección. Esto permite por ejemplo aplicar el borde decorativo solo a la portada o solo a las páginas interiores."
+    "respuesta": "A",
+    "explicacion": "Ese desplegable tiene cuatro entradas y las cuatro están aquí: «Todo el documento», «Esta sección», «Solo primera página de esta sección» y «Todas excepto la primera de esta sección». La tercera es exactamente la portada. · La segunda es su complemento y sirve para el caso contrario, marco en las interiores y portada limpia: es el descarte que decide la pregunta, porque las dos hablan de la primera página. · Las otras dos alcanzan a más páginas de las pedidas. · Fíjate en que tres de las cuatro dicen «de esta sección»: para que funcionen hace falta que la portada esté en una sección propia, separada con un salto de sección."
   },
   {
     "id": "inicio-231",
@@ -10189,28 +10189,28 @@
     "tema": "Bordes y sombreado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0485",
-    "enunciado": "En el cuadro de opciones del borde de página (botón Opciones), el desplegable Medir desde controla desde qué referencia se calcula la distancia del borde al papel. ¿Cuáles son las dos opciones disponibles?",
+    "enunciado": "Pulsas «Opciones…» en la ficha Borde de página y ves un desplegable «Medir desde». ¿Qué dos valores ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Desde el borde de la página y Desde el margen"
+        "text": "«Borde de página» y «Texto»"
       },
       {
         "letter": "B",
-        "text": "Desde el borde del papel y Desde el texto"
+        "text": "«Borde de página» y «Margen»"
       },
       {
         "letter": "C",
-        "text": "Desde el encabezado y Desde el pie de página"
+        "text": "«Encabezado» y «Pie de página»"
       },
       {
         "letter": "D",
-        "text": "Desde el borde interior y Desde el borde exterior"
+        "text": "«Borde interior» y «Borde exterior»"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El desplegable Medir desde ofrece dos opciones: Desde el borde del papel (la distancia se mide desde el borde físico del papel) y Desde el texto (la distancia se mide desde el área de texto del documento). La elección afecta a cómo se posiciona el marco decorativo respecto al contenido."
+    "respuesta": "A",
+    "explicacion": "«Borde de página» mide la distancia desde el canto físico del papel, y «Texto» la mide desde el área escrita. Es lo que decide si el marco queda pegado al borde de la hoja o abrazando el texto, y cambia por completo el aspecto de un documento con márgenes anchos. · «Margen» es el descarte con más fundamento, porque suena a lo que hace el segundo valor: pero el rótulo dice «Texto», y no es lo mismo, ya que el texto puede tener además sangrías propias. · Encabezado y pie son elementos reales, y de hecho al medir desde el texto aparecen las cuatro casillas de «Rodear encabezado» y «Rodear pie». · Y «interior» y «exterior» son términos de sangrías simétricas."
   },
   {
     "id": "inicio-233",
@@ -10225,28 +10225,28 @@
     "tema": "Bordes y sombreado",
     "difficulty": "media",
     "sourceQuestionId": "P-0487",
-    "enunciado": "En la pestaña Sombreado del cuadro Bordes y sombreado, ¿cuál es la diferencia entre aplicar un color de Relleno y aplicar una Trama con color?",
+    "enunciado": "En la ficha Sombreado, ¿qué diferencia hay entre el «Relleno» y la «Trama»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "No hay diferencia visual; ambos producen el mismo resultado"
+        "text": "El relleno es un color de fondo liso; la trama es un estampado con su propio color encima"
       },
       {
         "letter": "B",
-        "text": "El Relleno aplica un color sólido de fondo; la Trama superpone un patrón de puntos o rayas sobre ese fondo con un color independiente"
+        "text": "El relleno es un estampado con su propio color; la trama es un color de fondo liso"
       },
       {
         "letter": "C",
-        "text": "El Relleno es transparente por defecto; la Trama siempre es opaca"
+        "text": "El relleno es siempre transparente y la trama siempre opaca"
       },
       {
         "letter": "D",
-        "text": "La Trama solo puede aplicarse si primero se ha aplicado un Relleno"
+        "text": "Son lo mismo: la trama es solo el nombre del relleno cuando lleva color"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El Relleno aplica un color sólido uniforme como fondo del párrafo o texto. La Trama superpone un patrón de puntos, rayas o formas geométricas sobre ese fondo, con un color propio independiente al del relleno. El porcentaje de la trama controla la densidad del patrón: a mayor porcentaje, más puntos visibles."
+    "respuesta": "A",
+    "explicacion": "El relleno pinta el fondo de un color liso. La trama superpone un patrón —puntos con un porcentaje de densidad, rayas, cuadrículas— y tiene su propio color, elegible en un desplegable aparte, así que se pueden combinar un fondo azul con un estampado gris. · La versión con los papeles cambiados es el reflejo exacto y hay que leerla despacio. · Ninguno de los dos es transparente por definición: el relleno admite «Sin color», que es lo que deja ver el papel. · Y desde luego no son lo mismo: se pueden aplicar los dos a la vez o solo uno, y el cuadro los presenta en dos bloques separados."
   },
   {
     "id": "inicio-234",
@@ -10261,19 +10261,19 @@
     "tema": "Bordes y sombreado",
     "difficulty": "media",
     "sourceQuestionId": "P-0488",
-    "enunciado": "En la pestaña Bordes del cuadro Bordes y sombreado, el botón Opciones permite controlar la distancia entre el borde y el texto del párrafo. ¿En qué unidad se expresan esas distancias?",
+    "enunciado": "Pulsas «Opciones…» en la ficha Bordes para separar un poco el recuadro del texto. ¿En qué unidad se escriben esas distancias?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Centímetros"
+        "text": "Puntos"
       },
       {
         "letter": "B",
-        "text": "Milímetros"
+        "text": "Centímetros"
       },
       {
         "letter": "C",
-        "text": "Puntos"
+        "text": "Milímetros"
       },
       {
         "letter": "D",
@@ -10281,8 +10281,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Las distancias entre el borde y el texto del párrafo en el cuadro de opciones de bordes se expresan en puntos (pto). Se pueden configurar de forma independiente para cada uno de los cuatro lados: Superior, Inferior, Izquierdo y Derecho."
+    "respuesta": "A",
+    "explicacion": "Se escriben en puntos, y hay cuatro campos independientes, uno por lado: Superior, Inferior, Izquierdo y Derecho. Que sea en puntos encaja con la lógica del cuadro, donde el ancho de la línea también va en puntos. · Los centímetros son la unidad de casi todo lo demás de Word —sangrías, márgenes, tabulaciones—, y de ahí que sea el descarte que más cae: aquí precisamente no. · Milímetros y pulgadas no se usan en ningún campo de este cuadro. · Ojo: este botón «Opciones…» es el de la ficha Bordes y solo tiene esas cuatro medidas; el de la ficha Borde de página es otro cuadro distinto, con «Medir desde» y cuatro casillas más."
   },
   {
     "id": "inicio-422",
@@ -10302,24 +10302,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Lista multinivel"
+        "text": "Bordes"
       },
       {
         "letter": "B",
-        "text": "Ordenar"
+        "text": "Sombreado"
       },
       {
         "letter": "C",
-        "text": "Color de fuente"
+        "text": "Mostrar todo"
       },
       {
         "letter": "D",
-        "text": "Bordes"
+        "text": "Lista multinivel"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "**Bordes.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Añade bordes al párrafo o a la celda. La flecha lleva a «Bordes y sombreado…», el mismo cuadro que Diseño ▸ Bordes de página."
+    "respuesta": "A",
+    "explicacion": "**Bordes.** Pestaña Inicio ▸ Párrafo, el último botón del grupo. Su icono es un cuadrado partido en cuatro con líneas de puntos, y su flecha despliega los bordes lado a lado más «Línea horizontal», «Dibujar tabla», «Ver cuadrículas» y «Bordes y sombreado…», que abre el mismo cuadro al que se llega desde Diseño ▸ Bordes de página. No tiene atajo. · Sombreado es su vecino inmediato y el descarte que decide la pregunta: pinta el fondo del párrafo en vez de rodearlo, y su icono es un cubo de pintura. · Mostrar todo es el ¶. · Y la lista multinivel dibuja renglones numerados en escalera."
   },
   {
     "id": "inicio-423",
@@ -10339,24 +10339,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar ▸ Comentarios"
+        "text": "Inicio ▸ Párrafo"
       },
       {
         "letter": "B",
-        "text": "Diseño ▸ Fondo de página"
+        "text": "Inicio ▸ Fuente"
       },
       {
         "letter": "C",
-        "text": "Disposición ▸ Organizar"
+        "text": "Diseño ▸ Fondo de página"
       },
       {
         "letter": "D",
-        "text": "Inicio ▸ Párrafo"
+        "text": "Disposición ▸ Organizar"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "**Sombreado.** Pestaña Inicio ▸ Párrafo. Atajo: no tiene atajo de teclado en esta instalación. Aplica un color de fondo al párrafo o a la selección (no a toda la página)."
+    "respuesta": "A",
+    "explicacion": "**Sombreado.** Pestaña Inicio ▸ **Párrafo**, junto al botón Bordes. Pinta el fondo del párrafo entero, o de la celda si se está en una tabla, de margen a margen. No tiene atajo. · Inicio ▸ Fuente es el descarte que decide la pregunta, porque allí está «Color de resaltado del texto», que también pinta un fondo: la diferencia es el alcance, los caracteres seleccionados frente al párrafo completo, y que el resaltado sobrevive a «Borrar todo el formato». · Diseño ▸ Fondo de página tiene «Color de página», que pinta la hoja entera. · Y Disposición ▸ Organizar coloca objetos, no colorea nada."
   },
   {
     "id": "inicio-438",
@@ -10371,7 +10371,7 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "neg-inicio-07",
     "generado": true,
-    "enunciado": "¿Cuál de estos comandos NO está en el grupo Párrafo de Inicio?",
+    "enunciado": "Repasas qué comandos viven en el grupo Párrafo de la pestaña Inicio. ¿Cuál de estos NO está ahí?",
     "opciones": [
       {
         "letter": "A",
@@ -10383,7 +10383,7 @@
       },
       {
         "letter": "C",
-        "text": "Mostrar todo"
+        "text": "Ordenar"
       },
       {
         "letter": "D",
@@ -10392,7 +10392,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "«Estilos rápidos» (la galería de estilos) tiene su propio grupo, «Estilos», independiente del grupo Párrafo."
+    "explicacion": "La galería de estilos rápidos tiene grupo propio, «Estilos», que es el siguiente de la pestaña. · Los otros tres sí están en Párrafo, y «Ordenar» es el descarte con más fundamento: sorprende encontrar ahí un botón de ordenar alfabéticamente, porque suena a cosa de tablas, pero ordena también párrafos y listas y vive en ese grupo. · El grupo Párrafo es de los más cargados de la cinta: viñetas, numeración, lista multinivel, aumentar y disminuir sangría, Ordenar, Mostrar todo, las cuatro alineaciones, el espaciado entre líneas, Sombreado y Bordes."
   },
   {
     "id": "inicio-463",
@@ -10407,28 +10407,28 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "neg2-inicio-13",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "enunciado": "Repasas lo que puede hacerse con los bordes de párrafo. Señala la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El botón Bordes permite aplicar un borde solo a un lado del párrafo."
+        "text": "Se puede poner borde a un solo lado del párrafo"
       },
       {
         "letter": "B",
-        "text": "Se puede añadir sombreado de color de fondo a un párrafo desde el mismo grupo."
+        "text": "El sombreado del párrafo se pone desde el mismo grupo de la cinta"
       },
       {
         "letter": "C",
-        "text": "Los bordes de párrafo solo admiten líneas de un único grosor fijo, sin poder cambiarlo."
+        "text": "El borde de párrafo tiene un único grosor fijo, que no se puede cambiar"
       },
       {
         "letter": "D",
-        "text": "«Bordes y sombreado» permite elegir el estilo, color y ancho de la línea."
+        "text": "El cuadro permite elegir estilo, color y ancho de la línea"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "El cuadro «Bordes y sombreado» deja elegir el ancho de línea entre varios valores; no está fijado a uno solo."
+    "explicacion": "El desplegable «Ancho» ofrece nueve grosores, de ¼ a 6 puntos, con ½ pto como valor de partida. Que hubiera uno solo dejaría sin sentido a ese desplegable y al de estilo, que ofrece 24 tipos de línea. · Las otras tres son ciertas: los lados se activan uno a uno desde los botones de la vista previa o desde el desplegable del botón Bordes, el sombreado está en el botón de al lado dentro del mismo grupo Párrafo, y el cuadro reúne estilo, color y ancho en la misma columna. · Se puede incluso dar a cada lado un estilo y un grosor distintos: en cuanto se hace, la columna «Valor» pasa sola a «Personalizado»."
   },
   {
     "id": "inicio-502",
@@ -10443,7 +10443,7 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "rutas-inicio-32",
     "generado": true,
-    "enunciado": "En el desplegable del botón «Bordes» del grupo Párrafo, ¿cuál de estas opciones NO aparece?",
+    "enunciado": "Despliegas la flecha del botón «Bordes» del grupo Párrafo. Bajo la lista de bordes lado a lado hay cuatro entradas. ¿Cuál de estas NO aparece?",
     "opciones": [
       {
         "letter": "A",
@@ -10464,7 +10464,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "El desplegable de Bordes termina con «Línea horizontal», «Dibujar tabla», «Ver cuadrículas» y «Bordes y sombreado…». «Autoajustar bordes» no existe."
+    "explicacion": "El desplegable termina con «Línea horizontal», «Dibujar tabla», «Ver cuadrículas» y «Bordes y sombreado…». «Autoajustar bordes» no existe en Word; lo que sí existe es «Autoajustar» en la cinta contextual de tabla, para ajustar el ancho de las columnas, y de ahí que suene creíble. · Las tres verdaderas sorprenden por ser de tabla y no de párrafo, y esa es la gracia del menú: el mismo botón sirve para el borde de un párrafo y para el de una celda, así que reúne herramientas de los dos mundos. · «Línea horizontal» es la excepción: inserta una raya decorativa que ocupa el ancho del texto, heredada de las páginas web."
   },
   {
     "id": "inicio-504",
@@ -10479,7 +10479,7 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "rutas-inicio-34",
     "generado": true,
-    "enunciado": "El cuadro «Bordes y sombreado» tiene tres fichas: «Bordes», «Sombreado» y…",
+    "enunciado": "El cuadro «Bordes y sombreado» tiene tres fichas. Dos son «Bordes» y «Sombreado». ¿Cuál es la tercera?",
     "opciones": [
       {
         "letter": "A",
@@ -10487,11 +10487,11 @@
       },
       {
         "letter": "B",
-        "text": "Marca de agua"
+        "text": "Tramas"
       },
       {
         "letter": "C",
-        "text": "Tramas"
+        "text": "Marca de agua"
       },
       {
         "letter": "D",
@@ -10500,7 +10500,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La ficha «Borde de página» aplica un marco a toda la página y añade el campo «Arte» con bordes decorativos."
+    "explicacion": "«Borde de página» es la ficha del medio, y aplica el marco a la hoja entera en vez de a un párrafo. Repite la columna Valor y los desplegables Estilo, Color y Ancho de la primera, y añade lo suyo: el campo «Arte», con 164 diseños decorativos, y un «Aplicar a» con cuatro alcances de documento y sección. · «Tramas» es un rótulo real, pero de un bloque dentro de la ficha Sombreado, no de una ficha: es el descarte con más fundamento. · La marca de agua existe, pero en Diseño ▸ Fondo de página, con su propio cuadro. · Y «Bordes internos» no es nada: lo que sí hay son botones para los bordes interiores en la vista previa cuando se trabaja sobre una tabla."
   },
   {
     "id": "inicio-505",
@@ -10515,7 +10515,7 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "rutas-inicio-35",
     "generado": true,
-    "enunciado": "El campo «Arte» (marcos decorativos con dibujos: árboles, corazones, lápices…) del cuadro «Bordes y sombreado» aparece solo en la ficha:",
+    "enunciado": "Buscas el campo «Arte», el de los marcos decorativos con dibujos repetidos, y no lo encuentras. ¿En qué ficha del cuadro Bordes y sombreado está?",
     "opciones": [
       {
         "letter": "A",
@@ -10531,12 +10531,12 @@
       },
       {
         "letter": "D",
-        "text": "Opciones"
+        "text": "En las tres, pero solo se activa con una sección seleccionada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Arte» solo tiene sentido para el borde de toda la página; no existe para el borde de un párrafo."
+    "explicacion": "«Arte» solo existe en la ficha Borde de página, y tiene sentido: un marco de corazones o de árboles se pone alrededor de una hoja, no alrededor de un párrafo suelto. Ofrece «(ninguno)» más 164 diseños. · La ficha Bordes es el descarte que más cae, porque comparte con aquella el Valor, el Estilo, el Color y el Ancho: al abrirla uno reconoce casi todo y da por hecho que Arte también está. · La ficha Sombreado va de rellenos y tramas, no de líneas. · Y no es cuestión de tener algo seleccionado: el campo simplemente no está en las otras dos fichas."
   },
   {
     "id": "inicio-507",
@@ -10551,7 +10551,7 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "rutas-inicio-37",
     "generado": true,
-    "enunciado": "En la ficha «Bordes» de «Bordes y sombreado», el desplegable «Aplicar a» permite elegir entre:",
+    "enunciado": "En la ficha «Bordes», abajo a la derecha, hay un desplegable «Aplicar a». ¿Qué dos valores ofrece?",
     "opciones": [
       {
         "letter": "A",
@@ -10559,20 +10559,20 @@
       },
       {
         "letter": "B",
-        "text": "Página y Sección"
+        "text": "Párrafo y Sección"
       },
       {
         "letter": "C",
-        "text": "Documento y Plantilla"
+        "text": "Texto y Página"
       },
       {
         "letter": "D",
-        "text": "Tabla y Celda"
+        "text": "Documento y Plantilla"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El borde puede rodear todo el párrafo o solo el texto seleccionado dentro de él."
+    "explicacion": "Con «Párrafo» el borde rodea el párrafo entero, de margen a margen; con «Texto» se ciñe a las palabras seleccionadas, y si hay varias líneas rodea cada una por separado. Es la misma distinción de alcance que separa el sombreado del resaltado. · «Sección» y «Página» son alcances reales de Word, pero de la ficha Borde de página, cuyo «Aplicar a» es otro y ofrece cuatro entradas: es el descarte con más fundamento, porque las dos fichas tienen un desplegable con el mismo rótulo y contenidos distintos. · «Documento» y «Plantilla» no son valores de ningún «Aplicar a» de este cuadro."
   },
   {
     "id": "inicio-509",
@@ -10587,28 +10587,28 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "rutas-inicio-39",
     "generado": true,
-    "enunciado": "Además del bloque «Relleno», ¿qué otro bloque tiene la ficha «Sombreado» del cuadro «Bordes y sombreado»?",
+    "enunciado": "La ficha «Sombreado» tiene dos bloques. Además de «Relleno», ¿cuál es el otro?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tramas (Estilo y Color)"
+        "text": "Tramas, con sus desplegables Estilo y Color"
       },
       {
         "letter": "B",
-        "text": "Arte"
+        "text": "Valor, con los cinco botones de preajuste"
       },
       {
         "letter": "C",
-        "text": "Valor"
+        "text": "Arte, con los diseños decorativos"
       },
       {
         "letter": "D",
-        "text": "Ancho"
+        "text": "Ancho, con los nueve grosores de línea"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Tramas» aplica un patrón (Claro, 5%, 10%, rayas, cuadrículas…) con su propio color sobre el relleno."
+    "explicacion": "«Tramas» superpone un estampado sobre el relleno, y tiene dos desplegables propios: «Estilo», con los porcentajes de densidad y los patrones con nombre —rayas, cuadrículas—, y «Color», independiente del color del relleno. Abajo, como en las otras fichas, está su «Aplicar a». · «Valor» y «Ancho» pertenecen a las fichas de bordes: allí se decide cómo es la línea, y aquí no hay ninguna línea que decidir. · Y «Arte» solo está en Borde de página. · Los tres descartes son rótulos reales del mismo cuadro puestos en la ficha equivocada, que es la confusión que esta pregunta busca."
   },
   {
     "id": "inicio-555",
@@ -10623,7 +10623,7 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "dlgcompart-inicio-10",
     "generado": true,
-    "enunciado": "Al abrir «Bordes y sombreado» desde «Inicio ▸ Párrafo ▸ Bordes (flecha) ▸ Bordes y sombreado…», el cuadro aparece en la ficha:",
+    "enunciado": "Abres el cuadro Bordes y sombreado desde Inicio ▸ Párrafo ▸ Bordes ▸ «Bordes y sombreado…». ¿En qué ficha aparece?",
     "opciones": [
       {
         "letter": "A",
@@ -10639,12 +10639,12 @@
       },
       {
         "letter": "D",
-        "text": "Opciones"
+        "text": "En la última que se usara, sea cual sea"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Desde Inicio abre en «Bordes» (borde de párrafo/texto). Si se abre desde «Diseño ▸ Fondo de página ▸ Bordes de página» aparece en la ficha «Borde de página»."
+    "explicacion": "Desde Inicio abre en «Bordes», que es la del párrafo o el texto seleccionado, porque de ahí viene la orden. Desde Diseño ▸ Fondo de página ▸ «Bordes de página» abre el mismo cuadro pero en la ficha «Borde de página». · Es el ejemplo típico de un cuadro con varias puertas donde la ruta sí cambia algo: no el contenido, sino por dónde se entra. Compáralo con el cuadro Párrafo, al que se llega desde Inicio y desde Disposición y siempre abre igual. · Y no depende de la última ficha usada: cada ruta lleva siempre a la suya, y por eso conviene saber cuál corresponde a cada una."
   },
   {
     "id": "inicio-52",
@@ -10659,19 +10659,19 @@
     "tema": "Bordes y sombreado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0296",
-    "enunciado": "¿Cuales de los siguientes anchos de borde estan disponibles en el cuadro de dialogo Bordes y sombreado? Selecciona todos los correctos.",
+    "enunciado": "Despliegas «Ancho» en el cuadro Bordes y sombreado para elegir el grosor de la línea. ¿Cuáles de estos valores están de verdad en la lista?",
     "opciones": [
       {
         "letter": "A",
-        "text": "1/2 pto"
+        "text": "¼ pto"
       },
       {
         "letter": "B",
-        "text": "3/4 pto"
+        "text": "½ pto"
       },
       {
         "letter": "C",
-        "text": "1 pto"
+        "text": "1 ½ pto"
       },
       {
         "letter": "D",
@@ -10679,7 +10679,7 @@
       },
       {
         "letter": "E",
-        "text": "2 1/4 pto"
+        "text": "2 ¼ pto"
       },
       {
         "letter": "F",
@@ -10693,7 +10693,7 @@
       "C",
       "E"
     ],
-    "explicacion": "Los anchos disponibles son: 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 pto. El valor 2 pto no existe en la lista: los valores saltan de 1 1/2 a 2 1/4. El valor 5 pto tampoco existe."
+    "explicacion": "La lista tiene nueve grosores: ¼, ½, ¾, 1, 1½, 2¼, 3, 4½ y 6 puntos, con ½ pto como valor de partida. · Los dos falsos son precisamente los números redondos que uno esperaría encontrar: la serie salta de 1½ a 2¼ sin pasar por el 2, y de 4½ a 6 sin pasar por el 5. Esa progresión rara no es capricho: viene de los grosores tipográficos clásicos, que van doblándose desde el cuarto de punto. · Fíjate en que empieza en ¼ y no en ½, que es el error más repetido al recitar la lista de memoria, porque ½ es el valor que aparece de entrada en el desplegable."
   },
   {
     "id": "inicio-235",
@@ -10708,19 +10708,19 @@
     "tema": "Bordes y sombreado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0489",
-    "enunciado": "¿Cuáles de los siguientes anchos de borde están disponibles en el cuadro de diálogo Bordes y sombreado? Selecciona todos los correctos.",
+    "enunciado": "Repasas los grosores del desplegable «Ancho» del cuadro Bordes y sombreado. ¿Cuáles existen de verdad?",
     "opciones": [
       {
         "letter": "A",
-        "text": "1/2 pto"
+        "text": "¼ pto"
       },
       {
         "letter": "B",
-        "text": "1 1/2 pto"
+        "text": "¾ pto"
       },
       {
         "letter": "C",
-        "text": "2 1/4 pto"
+        "text": "1 pto"
       },
       {
         "letter": "D",
@@ -10728,11 +10728,15 @@
       },
       {
         "letter": "E",
-        "text": "4 1/2 pto"
+        "text": "4 ½ pto"
       },
       {
         "letter": "F",
         "text": "6 pto"
+      },
+      {
+        "letter": "G",
+        "text": "8 pto"
       }
     ],
     "matching": null,
@@ -10744,7 +10748,7 @@
       "E",
       "F"
     ],
-    "explicacion": "Los anchos de borde disponibles en el cuadro Bordes y sombreado son exactamente: 1/2, 3/4, 1, 1 1/2, 2 1/4, 3, 4 1/2 y 6 puntos. Todas las opciones de esta pregunta corresponden a anchos reales disponibles. Los valores 3/4 y 1 pto no aparecen en las opciones pero también existen."
+    "explicacion": "Los nueve valores son ¼, ½, ¾, 1, 1½, 2¼, 3, 4½ y 6 puntos: aquí están seis de ellos, y falta por nombrar ½, 1½ y 2¼. · El único falso es 8 pto: la lista termina en 6 y no hay nada por encima, así que un borde más grueso no se puede conseguir desde aquí. Cuela porque la serie va creciendo y 8 parece el paso siguiente natural después del 6. · Para líneas más gruesas hay que recurrir a otra cosa, por ejemplo a una forma o a un sombreado, porque este desplegable no admite escribir un valor a mano: solo se elige de la lista."
   },
   {
     "id": "inicio-506",
@@ -10759,7 +10763,7 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "rutas-inicio-36",
     "generado": true,
-    "enunciado": "En la ficha «Bordes» del cuadro «Bordes y sombreado», el panel «Valor» ofrece:",
+    "enunciado": "En la ficha «Bordes», la columna «Valor» de la izquierda ofrece varios preajustes. ¿Cuáles son reales?",
     "opciones": [
       {
         "letter": "A",
@@ -10798,7 +10802,7 @@
       "D",
       "E"
     ],
-    "explicacion": "Los cinco presets de «Valor» son Ninguno, Cuadro, Sombra, 3D y Personalizado. «Doble» es un estilo de línea, no un valor; «Relieve» no existe aquí."
+    "explicacion": "Son cinco, y funcionan como atajos: aplican de golpe una combinación de lados en vez de ir marcándolos uno a uno en la vista previa. «Personalizado» no se elige, se llega a él solo en cuanto los cuatro lados dejan de ser iguales. · «Doble» es el falso con más fundamento: existe, pero como estilo de línea en el desplegable «Estilo», que está justo al lado. Ahí está la confusión, en mezclar la columna de preajustes con la lista de tipos de raya. · «Relieve» tampoco es un valor: fue una casilla de efectos del cuadro Fuente en versiones antiguas de Word."
   },
   {
     "id": "inicio-557",
@@ -10813,11 +10817,11 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "dlgcompart-inicio-12",
     "generado": true,
-    "enunciado": "¿Desde cuáles de estas rutas se abre el cuadro «Bordes y sombreado»?",
+    "enunciado": "Repasas por cuántas puertas se llega al cuadro «Bordes y sombreado». ¿Cuáles de estas rutas lo abren?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Inicio ▸ Párrafo ▸ Bordes (flecha) ▸ Bordes y sombreado…"
+        "text": "Inicio ▸ Párrafo ▸ Bordes ▸ Bordes y sombreado…"
       },
       {
         "letter": "B",
@@ -10825,15 +10829,15 @@
       },
       {
         "letter": "C",
-        "text": "Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▸ Borde…"
+        "text": "Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▾ ▸ Borde…"
       },
       {
         "letter": "D",
-        "text": "Disposición ▸ Configurar página ▸ lanzador ▸ ficha Disposición ▸ Bordes…"
+        "text": "Disposición ▸ Configurar página ▸ iniciador ▸ ficha Diseño ▸ Bordes…"
       },
       {
         "letter": "E",
-        "text": "Inicio ▸ Párrafo ▸ Sombreado (flecha)"
+        "text": "Inicio ▸ Párrafo ▸ la flecha del botón Sombreado"
       },
       {
         "letter": "F",
@@ -10847,7 +10851,7 @@
       "C",
       "D"
     ],
-    "explicacion": "El botón «Sombreado» del grupo Párrafo aplica un color directamente (no abre cuadro); «Color de página» es otra cosa (afecta a toda la hoja)."
+    "explicacion": "Cuatro puertas para un mismo cuadro, cada una abriendo en la ficha que le corresponde: desde Inicio en «Bordes», desde Diseño en «Borde de página», y las otras dos según de dónde vengan. El menú «Formato ▾» del cuadro Modificar estilo es un concentrador de todos los cuadros de formato, y el del cuadro Configurar página aparece en su ficha Diseño. · La flecha del botón Sombreado no abre nada: despliega una paleta de colores y los aplica directamente, que es lo que la convierte en el descarte más creíble, porque su vecino Bordes sí lleva al cuadro. · Y «Color de página» pinta el fondo de la hoja entera, con su propio menú y su cuadro «Efectos de relleno»."
   },
   {
     "id": "inicio-57",
@@ -10862,11 +10866,11 @@
     "tema": "Bordes y sombreado",
     "difficulty": "alta",
     "sourceQuestionId": "P-0294",
-    "enunciado": "En Word 365, una trama aplicada sin relleno de fondo pero con un color de trama asignado aparece visualmente como si fuera un relleno solido de ese color.",
+    "enunciado": "En la ficha Sombreado, el bloque «Tramas» tiene dos desplegables propios: «Estilo», con los porcentajes y los estampados, y «Color», independiente del color del relleno.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero. Cuando se aplica una trama con color pero sin relleno de fondo, el resultado visual es similar al de un relleno solido de ese color. Para que la trama sea visible como patron de puntos sobre un fondo diferente es necesario aplicar tambien un color de relleno."
+    "explicacion": "Verdadero, y esa independencia es justo lo que permite combinaciones como un fondo azul claro con un estampado gris de rayas. · «Estilo» reúne dos clases de entrada: los porcentajes de densidad, que gradúan cuántos puntos cubren el fondo, y los patrones con nombre, como rayas horizontales, verticales, diagonales o cuadrículas. · Con el relleno en «Sin color» y una trama puesta, lo que se ve es el estampado sobre el papel; para que la trama luzca como patrón hay que darle un relleno debajo que contraste. · Ojo con no confundir este bloque con el desplegable «Estilo» de las fichas de bordes: aquel es de tipos de línea."
   },
   {
     "id": "inicio-232",
@@ -10881,11 +10885,11 @@
     "tema": "Bordes y sombreado",
     "difficulty": "media",
     "sourceQuestionId": "P-0486",
-    "enunciado": "En el cuadro de diálogo Bordes y sombreado, las pestañas Bordes y Borde de página comparten exactamente las mismas opciones de configuración, sin ninguna diferencia entre ellas.",
+    "enunciado": "Las fichas «Bordes» y «Borde de página» del cuadro Bordes y sombreado tienen exactamente las mismas opciones.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso. La pestaña Borde de página tiene opciones exclusivas que no existen en la pestaña Bordes: el desplegable Arte («(ninguno)» + 164 diseños decorativos), el desplegable Aplicar a (todo el documento, esta sección, etc.) y el botón Opciones con el desplegable Medir desde. La pestaña Bordes no tiene ninguna de estas tres opciones."
+    "explicacion": "Falso. Comparten la columna «Valor», el desplegable «Estilo» con sus 24 tipos de línea, el «Color» y el «Ancho» con sus nueve grosores, y por eso se parecen tanto al abrirlas. Pero la de página añade tres cosas: el desplegable «Arte», con «(ninguno)» más 164 diseños decorativos; un «Aplicar a» distinto, con cuatro alcances en vez de dos; y un botón «Opciones…» que abre otro cuadro, con «Medir desde» y cuatro casillas que no existen en la ficha de párrafo. · La de párrafo tiene su propio «Opciones…», pero con solo cuatro medidas, las de la distancia entre el borde y el texto."
   },
   {
     "id": "inicio-447",
@@ -10900,11 +10904,11 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "bal-inicio-04",
     "generado": true,
-    "enunciado": "El botón Bordes del grupo Párrafo solo puede aplicar un borde a los cuatro lados del párrafo a la vez, nunca a un lado suelto.",
+    "enunciado": "El botón Bordes del grupo Párrafo solo aplica el borde a los cuatro lados a la vez, nunca a un lado suelto.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: el desplegable de Bordes permite elegir borde superior, inferior, izquierdo o derecho por separado, además de «Bordes y sombreado…» para más opciones."
+    "explicacion": "Falso: su desplegable lista los lados uno a uno —superior, inferior, izquierdo, derecho— además de combinaciones como «Todos los bordes», «Bordes externos» o «Sin borde», y son interruptores, así que se pueden ir encendiendo y apagando por separado. · Lo mismo se hace desde el cuadro, pulsando en los botones que rodean la vista previa; en cuanto los cuatro lados dejan de ser iguales, la columna «Valor» pasa sola a «Personalizado». · Un uso típico de un solo lado es la línea superior de un pie de tabla o la raya que separa un titular, que con un borde inferior se consigue mejor que insertando una línea suelta."
   },
   {
     "id": "inicio-503",
@@ -10919,11 +10923,11 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "rutas-inicio-33",
     "generado": true,
-    "enunciado": "El desplegable del botón «Bordes» (grupo Párrafo) incluye «Dibujar tabla» y «Ver cuadrículas».",
+    "enunciado": "El desplegable del botón «Bordes» del grupo Párrafo incluye «Dibujar tabla» y «Ver cuadrículas».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Además de los bordes de párrafo, ese menú da acceso rápido a dibujar una tabla y a mostrar las líneas de cuadrícula no imprimibles."
+    "explicacion": "Verdadero, y sorprende porque son herramientas de tabla en un menú de párrafo. La razón es que ese mismo botón sirve para los bordes de una celda cuando el cursor está dentro de una tabla, así que reúne lo que hace falta en los dos casos. · «Dibujar tabla» convierte el puntero en un lápiz para trazar celdas a mano, y «Ver cuadrículas» enseña las líneas grises no imprimibles que marcan dónde están las celdas de una tabla sin bordes. · El menú se cierra con «Línea horizontal», que inserta una raya decorativa del ancho del texto, y con «Bordes y sombreado…», que abre el cuadro completo."
   },
   {
     "id": "inicio-508",
@@ -10938,11 +10942,11 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "rutas-inicio-38",
     "generado": true,
-    "enunciado": "En la ficha «Borde de página» de «Bordes y sombreado», el desplegable «Aplicar a» incluye la opción «Esta sección: solo la primera página».",
+    "enunciado": "En la ficha «Borde de página», el desplegable «Aplicar a» incluye la opción «Esta sección: solo la primera página».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "También «Todo el documento», «Esta sección» y «Esta sección: todas menos la primera página»."
+    "explicacion": "Verdadero. Son cuatro entradas: «Todo el documento», «Esta sección», «Esta sección: solo la primera página» y «Esta sección: todas excepto la primera página». Las dos últimas son las que permiten poner marco en la portada y no en el resto, o al revés. · Tres de las cuatro hablan de sección, así que para que sirvan de algo el documento tiene que estar dividido con saltos de sección: sin ellos, todo el documento es una sola sección y las tres primeras hacen lo mismo. · Es un desplegable distinto del «Aplicar a» de la ficha Bordes, que solo ofrece «Párrafo» y «Texto»."
   },
   {
     "id": "inicio-510",
@@ -10957,11 +10961,11 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "rutas-inicio-40",
     "generado": true,
-    "enunciado": "El botón «Opciones…» de la ficha «Bordes» de «Bordes y sombreado» fija la distancia (margen) entre el borde y el texto.",
+    "enunciado": "El botón «Opciones…» de la ficha «Bordes» fija en centímetros la distancia entre la línea del borde y el texto.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Permite ajustar por separado el margen superior, inferior, izquierdo y derecho entre la línea del borde y el contenido del párrafo."
+    "respuesta": false,
+    "explicacion": "Falso en la unidad: esas cuatro distancias —superior, inferior, izquierda y derecha— se escriben en PUNTOS, no en centímetros. Es la excepción dentro de un programa donde sangrías, márgenes y tabulaciones van en centímetros, y encaja con que el ancho de la línea también se mida en puntos. · Lo demás de la afirmación sí es cierto: ese botón sirve exactamente para separar el recuadro del texto, y cada lado se ajusta por su cuenta. · No confundirlo con el «Opciones…» de la ficha Borde de página, que abre otro cuadro distinto, con «Medir desde» y cuatro casillas sobre encabezado, pie y primer plano."
   },
   {
     "id": "inicio-556",
@@ -10976,11 +10980,11 @@
     "tema": "Bordes y sombreado",
     "sourceQuestionId": "dlgcompart-inicio-11",
     "generado": true,
-    "enunciado": "El cuadro «Bordes y sombreado» es el mismo tanto si se abre desde Inicio (grupo Párrafo) como desde Diseño (Bordes de página): lo único que cambia es la ficha que aparece activa.",
+    "enunciado": "El cuadro «Bordes y sombreado» es el mismo desde Inicio y desde Diseño: lo único que cambia es la ficha que aparece activa al abrirlo.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "También se llega desde «Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▸ Borde…» y desde las cintas contextuales de Tabla."
+    "explicacion": "Verdadero. Desde Inicio ▸ Párrafo ▸ Bordes abre en la ficha «Bordes» y desde Diseño ▸ Fondo de página ▸ Bordes de página abre en «Borde de página», pero las tres fichas están disponibles en los dos casos y basta pulsar en la pestaña para cambiar. · Se llega además desde «Inicio ▸ Estilos ▸ Modificar estilo ▸ Formato ▾ ▸ Borde…» y desde las cintas contextuales de tabla. · Es un patrón que conviene reconocer para el examen: un mismo cuadro con varias puertas. La diferencia con otros casos, como el cuadro Párrafo, es que aquí la ruta sí decide en qué ficha se entra."
   },
   {
     "id": "inicio-545",
@@ -11041,7 +11045,7 @@
       "2": "B",
       "3": "C"
     },
-    "explicacion": "«Arte» solo está en «Borde de página»; las tramas solo en «Sombreado»."
+    "explicacion": "La ficha «Bordes» trabaja sobre el párrafo o el texto seleccionado, con la columna Valor, los desplegables Estilo, Color y Ancho, y un «Aplicar a» de dos entradas. · «Borde de página» repite todo eso y añade lo suyo: el campo «Arte», con 164 diseños decorativos, y un «Aplicar a» de cuatro alcances de documento y sección. · «Sombreado» no lleva líneas: son rellenos y tramas, cada una con su propio color. · El destino que se queda sin pareja, «Origen del papel», es un rótulo real de Word, pero de la ficha Papel del cuadro Configurar página: cuela porque también habla de páginas y también vive en un cuadro de fichas."
   },
   {
     "id": "inicio-58",
