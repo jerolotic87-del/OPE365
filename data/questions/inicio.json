@@ -6827,28 +6827,28 @@
     "tema": "Marcas de formato",
     "difficulty": "media",
     "sourceQuestionId": "P-0284",
-    "enunciado": "¿Que representa el simbolo de parrafo (marca ¶) cuando la opcion Mostrar todo esta activada en Word 365?",
+    "enunciado": "Activas Mostrar todo y el documento se llena de símbolos. Uno de ellos, el ¶, aparece al final de cada párrafo. ¿Qué representa exactamente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un salto de pagina manual"
+        "text": "La marca que deja pulsar Intro, y que cierra el párrafo"
       },
       {
         "letter": "B",
-        "text": "Una marca de parrafo generada al pulsar Intro, tambien llamada RTM o Retorno de carro Manual"
+        "text": "El salto de línea que Word hace solo al llegar al margen"
       },
       {
         "letter": "C",
-        "text": "Un tabulador insertado en el texto"
+        "text": "El salto de línea manual que deja pulsar Mayús+Intro"
       },
       {
         "letter": "D",
-        "text": "Un espacio en blanco entre palabras"
+        "text": "El salto de página manual que deja pulsar Ctrl+Intro"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El simbolo ¶ representa la marca de parrafo que se genera cada vez que se pulsa Intro. Se denomina RTM (Retorno de carro Manual). No debe confundirse con el RTA (Retorno de carro Automatico), que es el salto de linea que Word inserta automaticamente al llegar al margen derecho y que no genera ningun simbolo visible."
+    "respuesta": "A",
+    "explicacion": "El ¶ es la marca de párrafo, el retorno de carro manual que se escribe cada vez que se pulsa Intro. No es un adorno: dentro de esa marca viaja todo el formato del párrafo, así que borrarla une el párrafo con el siguiente y le pasa el formato del de abajo. · El salto que Word hace solo al llegar al margen no deja ninguna marca, y por eso es el descarte más instructivo: no se ve porque no es un carácter, solo es dónde cabe el texto. · El salto de línea manual sí se ve, pero con una flecha ↵, y cambia de línea sin cerrar el párrafo. · Y el salto de página manual se dibuja como una línea de puntos con su rótulo."
   },
   {
     "id": "inicio-39",
@@ -6863,28 +6863,28 @@
     "tema": "Marcas de formato",
     "difficulty": "media",
     "sourceQuestionId": "P-0039",
-    "enunciado": "¿Cual es la diferencia entre pulsar Intro y pulsar Mayus+Intro en Word 365?",
+    "enunciado": "Estás escribiendo una dirección postal y quieres que la calle y la ciudad vayan en líneas distintas pero sigan formando un solo párrafo, para que el espaciado entre párrafos no las separe. ¿Qué pulsas al final de la primera línea?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Intro crea un nuevo parrafo; Mayus+Intro inserta un salto de linea manual dentro del mismo parrafo"
+        "text": "Mayús+Intro"
       },
       {
         "letter": "B",
-        "text": "Intro inserta un salto de linea; Mayus+Intro crea un nuevo parrafo"
+        "text": "Intro"
       },
       {
         "letter": "C",
-        "text": "Ambos crean un nuevo parrafo pero Mayus+Intro no aplica el estilo del parrafo siguiente"
+        "text": "Ctrl+Intro"
       },
       {
         "letter": "D",
-        "text": "Intro avanza al parrafo siguiente; Mayus+Intro vuelve al parrafo anterior"
+        "text": "Tab"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Intro genera un RTM (Retorno de carro Manual) creando un nuevo parrafo con su propia marca ¶. Mayus+Intro inserta un salto de linea manual que cambia de linea pero mantiene el mismo parrafo, representado con el simbolo ↵ cuando Mostrar todo esta activo."
+    "explicacion": "Mayús+Intro inserta un salto de línea manual: baja a la línea siguiente sin cerrar el párrafo, así que el espaciado entre párrafos no se aplica y las dos líneas comparten sangría, viñeta y numeración. Con Mostrar todo se ve como una flecha ↵. · Intro sí cierra el párrafo y abre otro, que es justo lo que aquí se quiere evitar: es el distractor que más cae porque es lo que se hace por costumbre. · Ctrl+Intro inserta un salto de página y se lleva la ciudad a la hoja siguiente. · Y Tab desplaza el texto hasta la tabulación siguiente, sin cambiar de línea."
   },
   {
     "id": "inicio-299",
@@ -6898,7 +6898,7 @@
     "subtopic": null,
     "tema": "Marcas de formato",
     "sourceQuestionId": "8-124",
-    "enunciado": "¿Qué atajo muestra u oculta todas las marcas de formato en Word 365?",
+    "enunciado": "Quieres ver los espacios, tabuladores y marcas de párrafo del documento para averiguar por qué un texto no cuadra. ¿Qué combinación los muestra?",
     "opciones": [
       {
         "letter": "A",
@@ -6910,16 +6910,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+P"
+        "text": "Ctrl+Alt+8"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Alt+8"
+        "text": "Ctrl+Mayús+P"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+8 muestra u oculta las marcas de formato (¶). En el teclado español «(» es Mayús+8, así que también se escribe «Ctrl+(». Ctrl+8 no tiene función. Ctrl+Mayús+P activa el subrayado de solo palabras. Ctrl+Alt+8 no tiene función."
+    "explicacion": "Ctrl+Mayús+8 enciende y apaga las marcas de formato, el mismo interruptor que el botón ¶ del grupo Párrafo. · En el teclado español el paréntesis de apertura se obtiene con Mayús y el 8, así que «Ctrl+(» describe esa misma pulsación: no son dos atajos distintos, es la misma tecla nombrada de dos maneras. Conviene saberlo porque los manuales alternan las dos formas. · Ctrl+8 y Ctrl+Alt+8 no tienen comando asignado, aunque parezcan variantes razonables. · Y Ctrl+Mayús+P es de formato de fuente: activa el subrayado de solo palabras."
   },
   {
     "id": "inicio-425",
@@ -6939,24 +6939,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Inicio ▸ Portapapeles"
-      },
-      {
-        "letter": "B",
-        "text": "Insertar ▸ Texto"
-      },
-      {
-        "letter": "C",
         "text": "Inicio ▸ Párrafo"
       },
       {
+        "letter": "B",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
+        "letter": "C",
+        "text": "Vista ▸ Mostrar"
+      },
+      {
         "letter": "D",
-        "text": "Diseño ▸ Fondo de página"
+        "text": "Revisar ▸ Seguimiento"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Mostrar todo.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+Mayús+8. Muestra u oculta las marcas de párrafo (¶), tabulaciones y espacios. En el teclado español la combinación es también Ctrl+( (Mayús+8 = «(»)."
+    "respuesta": "A",
+    "explicacion": "**Mostrar todo.** Pestaña Inicio ▸ **Párrafo**, en la esquina superior derecha del grupo. Atajo: Ctrl+Mayús+8, que en el teclado español también se escribe Ctrl+(. Enseña marcas de párrafo, espacios, tabuladores y saltos. · Vista ▸ Mostrar es el descarte más fino, porque es un grupo real dedicado a mostrar cosas: pero sus tres casillas son Regla, Líneas de la cuadrícula y Panel de navegación, elementos de la ventana, no marcas del texto. · Fuente trabaja con caracteres, no con la estructura del párrafo. · Y Revisar ▸ Seguimiento enseña las marcas de revisión, que son las de quién cambió qué: otro tipo de marca por completo."
   },
   {
     "sourceFile": "inicio.json",
@@ -6970,27 +6970,27 @@
     "generado": true,
     "tipo": "opcion_unica",
     "categoria": "atajo",
-    "enunciado": "Quieres que «Real Decreto» y su número no se separen nunca en dos líneas distintas. ¿Qué escribes entre las dos palabras?",
+    "enunciado": "Quieres que «Real Decreto» y su número no queden nunca partidos en dos líneas distintas. ¿Qué escribes entre las dos partes?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un espacio de no separación con Ctrl+Mayús+Espacio"
+        "text": "Un espacio de no separación, con Ctrl+Mayús+Espacio"
       },
       {
         "letter": "B",
-        "text": "Un espacio normal pulsando Ctrl+Espacio"
+        "text": "Un espacio normal, pulsando Ctrl+Espacio"
       },
       {
         "letter": "C",
-        "text": "Un tabulador con la tecla Tab"
+        "text": "Un guión opcional, con Ctrl+guión"
       },
       {
         "letter": "D",
-        "text": "Un salto de línea manual con Mayús+Intro"
+        "text": "Un salto de línea manual, con Mayús+Intro"
       }
     ],
     "respuesta": "A",
-    "explicacion": "El espacio de no separación (Ctrl+Mayús+Espacio, comando «Espacio de no separación» del cuadro Personalizar teclado) une las dos palabras: Word nunca romperá la línea entre ellas. Ctrl+Espacio no inserta un espacio: quita el formato de carácter manual de la selección.",
+    "explicacion": "El espacio de no separación es un carácter propio, distinto del espacio corriente, y Word no rompe la línea por él: las dos palabras se quedan siempre juntas. Su comando aparece en el cuadro Personalizar teclado con ese mismo nombre. · Ctrl+Espacio no inserta ningún espacio: quita el formato de carácter manual de la selección, así que quien lo pulse creyendo lo contrario se llevará por delante la negrita del párrafo. Es el distractor más peligroso de los tres. · El guión opcional hace lo contrario de lo que aquí se busca: marca un sitio POR DONDE Word puede partir la palabra si le hace falta. · Y el salto de línea manual las separa a la fuerza, que es exactamente el problema.",
     "id": "inicio-575",
     "sourceQuestionId": "pdf-inicio-edic-575"
   },
@@ -7006,27 +7006,27 @@
     "generado": true,
     "tipo": "opcion_unica",
     "categoria": "concepto",
-    "enunciado": "¿Qué efecto tiene insertar un espacio de no separación entre dos palabras?",
+    "enunciado": "Insertas un espacio de no separación entre dos palabras. ¿Qué cambia respecto de un espacio normal?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Impide que Word divida esas dos palabras en líneas distintas; siempre quedan juntas"
+        "text": "Word deja de poder romper la línea en ese punto"
       },
       {
         "letter": "B",
-        "text": "Duplica el ancho del espacio entre ambas palabras"
+        "text": "El hueco entre las dos palabras pasa a ser el doble de ancho"
       },
       {
         "letter": "C",
-        "text": "Convierte las dos palabras en una sola a efectos del corrector ortográfico"
+        "text": "El corrector trata las dos palabras como una sola"
       },
       {
         "letter": "D",
-        "text": "Impide que el espacio pueda borrarse con Retroceso o Suprimir"
+        "text": "El espacio queda protegido y no se puede borrar con Retroceso"
       }
     ],
     "respuesta": "A",
-    "explicacion": "El espacio (y el guión) de no separación bloquean la ruptura de línea en ese punto: las palabras a ambos lados se mantienen siempre en la misma línea. No cambia el ancho del espacio, ni la ortografía, ni impide borrarlo.",
+    "explicacion": "Lo único que cambia es dónde puede Word cortar la línea: ese punto queda descartado, así que las dos palabras viajan juntas al bajar de renglón. Lo mismo hace el guión de no separación con las palabras compuestas. · El ancho no cambia: es un espacio de tamaño normal, y de hecho al imprimir no se distingue. · El corrector sigue viendo dos palabras. · Y se borra como cualquier otro carácter, con Retroceso o con Suprimir: no está protegido de nada. · Con Mostrar todo activado sí se distingue del espacio corriente, porque cada uno lleva su propio símbolo.",
     "id": "inicio-576",
     "sourceQuestionId": "pdf-inicio-edic-576"
   },
@@ -7042,27 +7042,27 @@
     "generado": true,
     "tipo": "opcion_unica",
     "categoria": "ruta",
-    "enunciado": "Además del atajo de teclado, ¿desde dónde se inserta con el ratón un espacio o un guión de no separación?",
+    "enunciado": "No te acuerdas del atajo del espacio de no separación y quieres insertarlo con el ratón. ¿Por dónde?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar ▸ Símbolos ▸ Más símbolos… ▸ pestaña «Caracteres especiales»"
+        "text": "Insertar ▸ Símbolos ▸ Más símbolos… ▸ ficha «Caracteres especiales»"
       },
       {
         "letter": "B",
-        "text": "Inicio ▸ Párrafo ▸ Mostrar todo"
+        "text": "Insertar ▸ Símbolos ▸ Más símbolos… ▸ ficha «Símbolos»"
       },
       {
         "letter": "C",
-        "text": "Disposición ▸ Configurar página ▸ Guiones"
+        "text": "Disposición ▸ Configurar página ▸ Guiones ▸ Opciones de guiones…"
       },
       {
         "letter": "D",
-        "text": "Insertar ▸ Texto ▸ Elementos rápidos"
+        "text": "Inicio ▸ Párrafo ▸ Mostrar todo"
       }
     ],
     "respuesta": "A",
-    "explicacion": "La pestaña «Caracteres especiales» del cuadro Símbolo (Insertar ▸ Símbolos ▸ Más símbolos) lista el espacio de no separación, el guión de no separación y el guión opcional, con su método abreviado al lado. «Guiones» de Disposición controla la partición automática de palabras, no inserta caracteres.",
+    "explicacion": "La ficha «Caracteres especiales» del cuadro Símbolo lista el espacio de no separación, el guión de no separación, el guión opcional, la raya, el guión corto y varios más, cada uno con su método abreviado escrito al lado: es además la mejor chuleta de atajos que trae Word. · La otra ficha del mismo cuadro, «Símbolos», es el descarte fino: lleva letras griegas, flechas y demás, pero no estos caracteres de control. · «Guiones» de Disposición decide si Word parte palabras al final de línea; no inserta caracteres. · Y Mostrar todo solo enseña lo que ya hay escrito.",
     "id": "inicio-577",
     "sourceQuestionId": "pdf-inicio-edic-577"
   },
@@ -7079,11 +7079,11 @@
     "tema": "Marcas de formato",
     "difficulty": "media",
     "sourceQuestionId": "P-0284",
-    "enunciado": "Las siglas RTM corresponden a Retorno de carro Manual y representan la marca que genera la tecla Intro, mientras que RTA corresponde a Retorno de carro Automatico y representa el salto de linea que Word inserta automaticamente al llegar al margen.",
+    "enunciado": "La marca ¶ que deja Intro y el cambio de línea que Word hace solo al llegar al margen derecho son la misma cosa vista de dos maneras.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "Verdadero. RTM (Retorno de carro Manual) lo genera el usuario al pulsar Intro y crea un nuevo parrafo con su marca ¶ visible. RTA (Retorno de carro Automatico) lo inserta Word automaticamente al llegar al margen derecho sin crear parrafo ni marca visible."
+    "respuesta": false,
+    "explicacion": "Falso, y la diferencia es de fondo. La marca de Intro es un carácter de verdad, que se escribe, se ve con Mostrar todo, se puede borrar y lleva dentro todo el formato del párrafo. El cambio de línea automático no es ningún carácter: es solo el punto donde el texto ya no cabe, y se recalcula solo cada vez que cambia el ancho de la página, el tamaño de la letra o los márgenes. · Se comprueba fácil: al estrechar los márgenes, los cambios de línea automáticos se mueven todos y las marcas ¶ se quedan donde estaban. · El salto de línea manual de Mayús+Intro es un tercer caso: carácter propio, con símbolo ↵, pero sin cerrar el párrafo."
   },
   {
     "sourceFile": "inicio.json",
@@ -7097,10 +7097,10 @@
     "generado": true,
     "tipo": "verdadero_falso",
     "categoria": "concepto",
-    "enunciado": "Con Mostrar todo (¶) activado, el espacio de no separación se ve con un símbolo distinto al del espacio normal (que es un punto centrado).",
+    "enunciado": "Con Mostrar todo activado, el espacio de no separación se distingue del espacio normal porque cada uno lleva un símbolo distinto.",
     "opciones": [],
     "respuesta": true,
-    "explicacion": "Verdadero. Word marca el espacio normal con un punto centrado a media altura y el espacio de no separación con un pequeño círculo elevado (°), de modo que se distinguen de un vistazo cuando se muestran las marcas de formato.",
+    "explicacion": "Verdadero. El espacio corriente se marca con un punto a media altura y el de no separación con un pequeño círculo elevado, de modo que se localizan de un vistazo al repasar un documento. Impresos, en cambio, los dos ocupan lo mismo y no se distinguen. · Esa es la utilidad práctica de Mostrar todo: enseña lo que hay escrito y no se ve, que es justo donde suelen estar los problemas de maquetación. · El guión de no separación, en cambio, se ve igual que un guión normal también con las marcas activadas: ahí solo se nota que está por su efecto, que la palabra no se parte.",
     "id": "inicio-578",
     "sourceQuestionId": "pdf-inicio-edic-578"
   },
@@ -7116,10 +7116,10 @@
     "generado": true,
     "tipo": "verdadero_falso",
     "categoria": "concepto",
-    "enunciado": "El guión de no separación evita que una palabra escrita con guión (por ejemplo «artículo-1») se parta al final de la línea justo por ese guión.",
+    "enunciado": "El guión de no separación impide que una palabra compuesta como «artículo-1» se parta al final de la línea justo por ese guión.",
     "opciones": [],
     "respuesta": true,
-    "explicacion": "Verdadero. El guión de no separación se escribe y se ve como un guión normal, pero Word no lo usa como punto de corte de línea: la palabra compuesta queda entera. (En este Word el comando figura en el cuadro Personalizar teclado como «Guión de no separación».)",
+    "explicacion": "Verdadero. Se escribe y se lee como un guión normal, pero Word no lo considera un sitio válido para cortar, así que la palabra compuesta pasa entera a la línea siguiente. Su comando figura en el cuadro Personalizar teclado con ese mismo nombre, «Guión de no separación», y también se inserta desde la ficha «Caracteres especiales» del cuadro Símbolo. · Es el hermano del espacio de no separación y tiene el mismo propósito, evitar cortes desafortunados en referencias, fechas o cifras. · Su contrario es el guión opcional, que no se ve salvo que Word necesite partir la palabra, y que entonces aparece justo ahí.",
     "id": "inicio-579",
     "sourceQuestionId": "pdf-inicio-edic-579"
   },
@@ -7136,7 +7136,7 @@
     "tema": "Marcas de formato",
     "difficulty": "media",
     "sourceQuestionId": "P-0283",
-    "enunciado": "Relaciona cada marca de formato con el elemento que representa cuando Mostrar todo esta activado:",
+    "enunciado": "Relaciona cada símbolo de Mostrar todo con lo que representa:",
     "opciones": [],
     "matching": {
       "left": [
@@ -7192,7 +7192,7 @@
       "3": "B",
       "4": "D"
     },
-    "explicacion": "¶ representa la marca de parrafo (RTM). · representa un espacio en blanco. → representa un tabulador. □ representa una celda de tabla. El distractor E (salto de pagina) aparece como una linea discontinua con texto, no como uno de estos simbolos."
+    "explicacion": "El ¶ es la marca de párrafo, la que deja Intro y en la que viaja el formato del párrafo. El punto a media altura es un espacio. La flecha hacia la derecha es un tabulador. Y el cuadradito marca el final de una celda de tabla, junto al final de cada fila. · El destino que se queda sin pareja, el salto de página, sí se ve con Mostrar todo, pero no como uno de estos símbolos sueltos: aparece como una línea de puntos que cruza la página con su rótulo escrito en medio. Por eso cuela, porque es una marca real, pero de otra clase. · Estos cuatro son los que más se repiten en cualquier documento, y saber leerlos es lo que permite averiguar por qué algo no cuadra."
   },
   {
     "id": "inicio-40",
@@ -7207,15 +7207,15 @@
     "tema": "Alineación",
     "difficulty": "alta",
     "sourceQuestionId": "P-0282",
-    "enunciado": "¿Cual es la alineacion que distribuye el texto entre los margenes izquierdo y derecho en todas las lineas del parrafo, incluida la ultima?",
+    "enunciado": "Un párrafo termina con una línea suelta de tres palabras. Quieres que también esa última línea llegue de margen a margen, estirándose. ¿Qué alineación aplicas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Justificada"
+        "text": "Distribuida"
       },
       {
         "letter": "B",
-        "text": "Distribuida"
+        "text": "Justificada"
       },
       {
         "letter": "C",
@@ -7223,12 +7223,12 @@
       },
       {
         "letter": "D",
-        "text": "Derecha"
+        "text": "Alineación izquierda con sangría derecha negativa"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La alineacion Distribuida (Ctrl+Mayus+J) distribuye el texto entre los margenes izquierdo y derecho en todas las lineas del parrafo incluyendo la ultima. La alineacion Justificada (Ctrl+J) hace lo mismo pero deja la ultima linea alineada a la izquierda sin distribuir."
+    "respuesta": "A",
+    "explicacion": "La alineación Distribuida, Ctrl+Mayús+J, reparte el texto entre los dos márgenes en TODAS las líneas, la última incluida: por eso una última línea corta acaba con las letras muy separadas, y por eso se usa poco fuera de portadas y rótulos. · La justificada, Ctrl+J, hace lo mismo salvo en la última línea, que deja pegada a la izquierda: es la diferencia exacta entre las dos y lo único que se pregunta aquí. · Centrar no toca los márgenes, solo coloca la línea en medio. · Y una sangría derecha negativa saca el texto fuera del margen, pero no reparte nada."
   },
   {
     "id": "inicio-41",
@@ -7243,28 +7243,28 @@
     "tema": "Alineación",
     "difficulty": "alta",
     "sourceQuestionId": "P-0281",
-    "enunciado": "Un parrafo tiene alineacion Justificada aplicada. La ultima linea del parrafo contiene solo tres palabras cortas. ¿Cual es el comportamiento exacto de Word para esa ultima linea?",
+    "enunciado": "Tienes un párrafo justificado cuya última línea contiene solo tres palabras cortas. ¿Cómo la deja Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La ultima linea se alinea a la izquierda, sin distribuirse hasta el margen derecho"
+        "text": "Pegada a la izquierda, sin estirarla hasta el margen derecho"
       },
       {
         "letter": "B",
-        "text": "La ultima linea se distribuye uniformemente hasta el margen derecho igual que el resto del parrafo"
+        "text": "Estirada hasta el margen derecho, igual que el resto de líneas"
       },
       {
         "letter": "C",
-        "text": "La ultima linea se centra respecto a los margenes"
+        "text": "Centrada entre los dos márgenes"
       },
       {
         "letter": "D",
-        "text": "La ultima linea adopta la alineacion del parrafo siguiente"
+        "text": "Pegada a la izquierda, y con el párrafo entero convertido en distribuido"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Con alineacion Justificada la ultima linea del parrafo se alinea a la izquierda y no se distribuye hasta el margen derecho. Este es el comportamiento que la diferencia de la alineacion Distribuida, que si extiende la ultima linea hasta el margen derecho."
+    "explicacion": "La justificación estira las líneas para cuadrar los dos márgenes, pero deja fuera la última: si la estirase, tres palabras cortas quedarían separadas por huecos enormes. Por eso una última línea corta se ve pegada a la izquierda y no delata que el párrafo esté justificado. · Estirarla también es lo que hace la alineación Distribuida, Ctrl+Mayús+J, y ese es el par que hay que distinguir: la diferencia entre las dos está solo en la última línea. · Centrarla no lo hace ninguna alineación de forma automática. · Y Word no cambia solo el tipo de alineación del párrafo."
   },
   {
     "id": "inicio-167",
@@ -7279,28 +7279,28 @@
     "tema": "Alineación",
     "difficulty": "baja",
     "sourceQuestionId": "P-0421",
-    "enunciado": "Ya con el cuadro de diálogo Párrafo abierto, necesitas que un bloque de texto se reparta uniformemente entre los márgenes izquierdo y derecho, con los bordes rectos a ambos lados como en un periódico. ¿Qué desplegable debes utilizar?",
+    "enunciado": "Estás en el cuadro de diálogo Párrafo y quieres dejar el bloque de texto con los bordes rectos por los dos lados, como una columna de periódico. ¿Qué eliges en el desplegable Alineación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alineación"
+        "text": "Justificada"
       },
       {
         "letter": "B",
-        "text": "Nivel de esquema"
+        "text": "Distribuida"
       },
       {
         "letter": "C",
-        "text": "Sangría"
+        "text": "Izquierda"
       },
       {
         "letter": "D",
-        "text": "Espaciado"
+        "text": "Centrada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El desplegable Alineación del cuadro de diálogo Párrafo permite elegir entre Izquierda, Centrada, Derecha, Justificada y Distribuida. Para conseguir bordes rectos a ambos lados como en un periódico se usa Justificada (Ctrl+J), que alinea el texto entre ambos márgenes en todas las líneas excepto la última."
+    "explicacion": "El desplegable Alineación del cuadro Párrafo tiene cuatro entradas —Izquierda, Centrada, Derecha y Justificada— y la de periódico es Justificada: cuadra los dos márgenes en todas las líneas menos la última, que es exactamente como se compone la prensa. · Distribuida es el descarte difícil porque también cuadra los dos márgenes, estirando además la última línea; pero además tiene una particularidad que conviene saber: NO está en este desplegable, solo se aplica con Ctrl+Mayús+J. · Izquierda deja el borde derecho irregular, que es lo contrario de lo que se pide. · Y Centrada deja los dos bordes irregulares."
   },
   {
     "id": "inicio-263",
@@ -7315,28 +7315,28 @@
     "tema": "Alineación",
     "difficulty": "media",
     "sourceQuestionId": "P-0517",
-    "enunciado": "En esta instalación de Word 365 (versión española), ¿qué atajo elimina el formato de párrafo manual del texto seleccionado (sangrías, alineación, espaciado) restaurando los del estilo, sin tocar el formato de carácter?",
+    "enunciado": "Un párrafo con estilo Título 2 tiene además negrita puesta a mano y, también a mano, una sangría y un espaciado que no le corresponden. Quieres devolverle el formato de párrafo del estilo sin tocar la negrita. ¿Qué combinación usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + W"
+        "text": "Ctrl+W"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Q"
+        "text": "Ctrl+Q"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Mayús + N"
+        "text": "Ctrl+Barra espaciadora"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Barra espaciadora"
+        "text": "Ctrl+Mayús+N"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+W quita el formato de párrafo manual y restaura el del estilo (prueba en vivo del usuario). Ctrl+Q alinea el párrafo a la izquierda. Ctrl+Barra espaciadora quita el formato de CARÁCTER, no el de párrafo. ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+W bajo dos comandos (cerrar documento y «quitar formato de párrafo»); en la práctica quita el formato de párrafo, no cierra nada."
+    "explicacion": "Ctrl+W aplica a la selección el formato de párrafo predeterminado del estilo: se lleva la sangría y el espaciado puestos a mano y deja intacta la negrita. Prueba en vivo del usuario. ⚠️ Ojo: el cuadro Personalizar teclado lista esa misma combinación también como cerrar la ventana; en esta instalación hace lo del párrafo y no cierra nada. · Ctrl+Barra espaciadora es su reflejo exacto sobre el otro eje: limpia el formato de carácter, así que se llevaría la negrita y respetaría la sangría, justo al revés de lo que se pide. Es el par que hay que tener claro. · Ctrl+Q no limpia nada: alinea el párrafo a la izquierda. · Y Ctrl+Mayús+N pone negrita, igual que Ctrl+N, no aplica el estilo Normal como en el esquema internacional."
   },
   {
     "id": "inicio-296",
@@ -7350,7 +7350,7 @@
     "subtopic": null,
     "tema": "Alineación",
     "sourceQuestionId": "8-114",
-    "enunciado": "¿Cuál de los siguientes atajos justifica el párrafo activo en Word 365 versión española?",
+    "enunciado": "Quieres justificar el párrafo en el que está el cursor sin tocar la cinta. ¿Qué combinación lo hace en esta instalación?",
     "opciones": [
       {
         "letter": "A",
@@ -7358,7 +7358,7 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+D"
+        "text": "Ctrl+Q"
       },
       {
         "letter": "C",
@@ -7366,12 +7366,12 @@
       },
       {
         "letter": "D",
-        "text": "Ctrl+Q"
+        "text": "Ctrl+D"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+J justifica el párrafo. Ctrl+D alinea a la derecha. Ctrl+T centra el párrafo. Ctrl+Q alinea a la izquierda. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Las cuatro alineaciones tienen combinación propia y las cuatro siguen la inicial del nombre en castellano: Ctrl+Q a la izQuierda, Ctrl+T al cenTro, Ctrl+D a la Derecha y Ctrl+J Justificado. Prueba en vivo del usuario. · Como las cuatro son de la misma familia, aquí no hay ninguna que se descarte por absurda: hay que saberse el juego entero. · Un detalle útil de Ctrl+Q: si el párrafo YA está alineado a la izquierda, una segunda pulsación lo pasa a justificado, así que se puede llegar a lo mismo por dos caminos. · Y Ctrl+Mayús+J añade el quinto caso, el párrafo distribuido."
   },
   {
     "id": "inicio-297",
@@ -7385,7 +7385,7 @@
     "subtopic": null,
     "tema": "Alineación",
     "sourceQuestionId": "8-115",
-    "enunciado": "¿Cuál de los siguientes atajos alinea el párrafo a la derecha en Word 365 versión española?",
+    "enunciado": "Un manual traducido del inglés dice que el párrafo se alinea a la derecha con Ctrl+R. Lo pruebas y no ocurre nada. ¿Cuál es la combinación real aquí?",
     "opciones": [
       {
         "letter": "A",
@@ -7393,20 +7393,20 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+R"
-      },
-      {
-        "letter": "C",
         "text": "Ctrl+J"
       },
       {
-        "letter": "D",
+        "letter": "C",
         "text": "Ctrl+T"
+      },
+      {
+        "letter": "D",
+        "text": "Ctrl+Q"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+D alinea a la derecha en español. Ctrl+R no tiene ninguna acción asignada en esta instalación (no aparece en el volcado v2608). Ctrl+J justifica. Ctrl+T centra. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+D alinea a la derecha, por la D de «derecha»: en el esquema español las cuatro alineaciones siguen la inicial castellana, y ninguna coincide con la inglesa. Prueba en vivo del usuario. · Ctrl+R no tiene ningún comando asignado en esta instalación, así que efectivamente no pasa nada: no es que haga otra cosa, es que no hace nada, y eso desconcierta más que un error. · Las otras tres son las alineaciones hermanas: Ctrl+J justifica, Ctrl+T centra y Ctrl+Q alinea a la izquierda. Como las cuatro son de la misma familia, no hay ninguna descartable a ojo."
   },
   {
     "id": "inicio-298",
@@ -7420,7 +7420,7 @@
     "subtopic": null,
     "tema": "Alineación",
     "sourceQuestionId": "8-116",
-    "enunciado": "¿Cuál de los siguientes atajos centra el párrafo activo en Word 365 versión española?",
+    "enunciado": "Quieres centrar el título en el que está el cursor sin tocar la cinta. ¿Qué combinación lo hace en esta instalación?",
     "opciones": [
       {
         "letter": "A",
@@ -7428,20 +7428,20 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+C"
+        "text": "Ctrl+Q"
       },
       {
         "letter": "C",
-        "text": "Ctrl+E"
+        "text": "Ctrl+D"
       },
       {
         "letter": "D",
-        "text": "Ctrl+M"
+        "text": "Alt+Ctrl+T"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+T centra el párrafo en español. Ctrl+C copia el contenido seleccionado. Ctrl+E selecciona todo. Ctrl+M abre el cuadro de diálogo Fuente."
+    "explicacion": "Ctrl+T centra el párrafo entre las sangrías, por la T de «cenTro». · Ctrl+Q y Ctrl+D son sus hermanas de familia, izquierda y derecha, y sin sabérselas no hay forma de descartarlas. · Alt+Ctrl+T es el descarte fino, porque comparte la T y sí existe: inserta el carácter de marca registrada, ™. Quien la pulse por error se encontrará un símbolo en medio del título en vez de un párrafo centrado. · ⚠️ Ojo con el otro sentido de la T: en el esquema internacional Ctrl+T es la sangría francesa, no el centrado; aquí la sangría francesa es Ctrl+F."
   },
   {
     "id": "inicio-348",
@@ -7455,7 +7455,7 @@
     "subtopic": null,
     "tema": "Alineación",
     "sourceQuestionId": "8-279",
-    "enunciado": "¿Qué atajo aplica el formato de párrafo distribuido en Word 365?",
+    "enunciado": "Quieres que la última línea de un párrafo también se estire de margen a margen, como en una portada. ¿Qué combinación aplica el párrafo distribuido?",
     "opciones": [
       {
         "letter": "A",
@@ -7471,12 +7471,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+J"
+        "text": "Ctrl+Mayús+T"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+J aplica el formato de párrafo distribuido que distribuye el texto entre ambos márgenes con espaciado uniforme entre caracteres. Ctrl+J justifica el párrafo de forma estándar. Ctrl+Mayús+D aplica subrayado doble. Alt+Ctrl+J no tiene función asignada para párrafo distribuido."
+    "explicacion": "Ctrl+Mayús+J aplica el párrafo distribuido, que reparte el texto entre los dos márgenes en todas las líneas, la última incluida. · Ctrl+J es el descarte que decide la pregunta: justifica, que es lo mismo salvo en esa última línea, y por eso las dos se confunden constantemente. El añadido de Mayús es lo que las separa. · Ctrl+Mayús+D no toca el párrafo: aplica subrayado doble, y comparte con la buena la forma Ctrl+Mayús+letra. · Y Ctrl+Mayús+T no tiene comando asignado en esta instalación, aunque parezca la versión con Mayús del centrado."
   },
   {
     "id": "inicio-378",
@@ -7491,28 +7491,28 @@
     "tema": "Alineación",
     "sourceQuestionId": "gen-atajo-2",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado alinea el párrafo activo a la izquierda en Word 365 versión española?",
+    "enunciado": "Pulsas Ctrl+Q sobre un párrafo que YA estaba alineado a la izquierda. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Supr"
+        "text": "Pasa a justificado, cuadrando los dos márgenes"
       },
       {
         "letter": "B",
-        "text": "Mayús+Re Pág"
+        "text": "No cambia nada: ya tenía esa alineación"
       },
       {
         "letter": "C",
-        "text": "Ctrl+F4"
+        "text": "Vuelve a la alineación que tuviera antes"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Q"
+        "text": "Pasa a distribuido, estirando la última línea"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ctrl+Q alinea el párrafo a la izquierda. Detalle: si el párrafo YA está alineado a la izquierda, una segunda pulsación de Ctrl+Q lo pasa a JUSTIFICADO. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "La segunda pulsación de Ctrl+Q sobre un párrafo ya alineado a la izquierda lo justifica, de modo que ese atajo alterna entre las dos alineaciones más usadas sin necesidad de recordar Ctrl+J. Prueba en vivo del usuario. · Pensar que no pasa nada es lo razonable, y es lo que hace que este comportamiento sorprenda: la mayoría de botones de alineación son excluyentes y pulsarlos dos veces no hace nada. · Volver a la alineación anterior no lo hace ningún atajo de formato: eso es deshacer. · Y el distribuido tiene su propia combinación, Ctrl+Mayús+J; no se llega a él por acumulación de pulsaciones."
   },
   {
     "id": "inicio-412",
@@ -7536,20 +7536,20 @@
       },
       {
         "letter": "B",
-        "text": "Superíndice"
+        "text": "Justificar"
       },
       {
         "letter": "C",
-        "text": "Copiar"
+        "text": "Centrar"
       },
       {
         "letter": "D",
-        "text": "Cursiva"
+        "text": "Disminuir sangría"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Alinear a la izquierda.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+Q. Alinea el párrafo con el margen izquierdo. En el esquema clásico español es Ctrl+Q (no Ctrl+L)."
+    "explicacion": "**Alinear a la izquierda.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+Q, no Ctrl+L como en el esquema internacional. El icono dibuja renglones cuadrados por la izquierda y desiguales por la derecha, que es exactamente el resultado. · El de justificar es el descarte más difícil, porque su icono lleva los renglones cuadrados por los dos lados: la diferencia entre los dos iconos está solo en el borde derecho. · El de centrar deja los renglones desiguales por ambos lados y simétricos. · Y disminuir sangría es de otra familia dentro del mismo grupo: mueve el bloque entero, no decide cómo se colocan las líneas dentro de él."
   },
   {
     "id": "inicio-413",
@@ -7569,24 +7569,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar ▸ Comentarios"
+        "text": "Inicio ▸ Párrafo"
       },
       {
         "letter": "B",
-        "text": "Insertar ▸ Símbolos"
+        "text": "Inicio ▸ Fuente"
       },
       {
         "letter": "C",
-        "text": "Inicio ▸ Edición"
+        "text": "Disposición ▸ Párrafo"
       },
       {
         "letter": "D",
-        "text": "Inicio ▸ Párrafo"
+        "text": "Insertar ▸ Texto"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "**Centrar.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+T. Centra el párrafo entre los márgenes. En esta instalación Ctrl+T es Centrar (no «sangría francesa»)."
+    "respuesta": "A",
+    "explicacion": "**Centrar.** Pestaña Inicio ▸ **Párrafo**, entre alinear a la izquierda y alinear a la derecha. Atajo: Ctrl+T, que aquí es centrar y no sangría francesa. · Disposición ▸ Párrafo es el descarte más fino, y por un motivo real: ese grupo existe y también toca el párrafo, pero solo con las sangrías izquierda y derecha y el espaciado antes y después. Las alineaciones no están duplicadas allí. Los dos grupos comparten, eso sí, el mismo iniciador, que abre el mismo cuadro Párrafo. · Fuente trabaja con caracteres. · E Insertar ▸ Texto es el de WordArt y Letra capital."
   },
   {
     "id": "inicio-414",
@@ -7606,24 +7606,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+T"
-      },
-      {
-        "letter": "B",
-        "text": "Alt+Ctrl+K"
-      },
-      {
-        "letter": "C",
         "text": "Ctrl+D"
       },
       {
+        "letter": "B",
+        "text": "Ctrl+R"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+T"
+      },
+      {
         "letter": "D",
-        "text": "Ctrl+S"
+        "text": "Ctrl+J"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Alinear a la derecha.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+D. Alinea el párrafo con el margen derecho. Es Ctrl+D; Ctrl+R no hace nada en esta instalación."
+    "respuesta": "A",
+    "explicacion": "**Alinear a la derecha.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+D, por la D de «derecha». · Ctrl+R es el distractor que más cae, porque es lo que dan todos los manuales traducidos del inglés: en esta instalación no tiene ningún comando asignado, así que al pulsarlo no ocurre absolutamente nada. · Ctrl+T y Ctrl+J son las otras dos alineaciones con las que forma familia, centrar y justificar, y todas siguen la inicial castellana. · La cuarta del juego, Ctrl+Q, alinea a la izquierda y tiene además la particularidad de justificar si el párrafo ya estaba a la izquierda."
   },
   {
     "id": "inicio-415",
@@ -7647,20 +7647,20 @@
       },
       {
         "letter": "B",
-        "text": "Bordes"
+        "text": "Alinear a la izquierda"
       },
       {
         "letter": "C",
-        "text": "Cortar"
+        "text": "Centrar"
       },
       {
         "letter": "D",
-        "text": "Efectos de texto y tipografía"
+        "text": "Alinear a la derecha"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Justificar.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+J. Alinea el texto con los dos márgenes repartiendo el espacio entre palabras."
+    "explicacion": "**Justificar.** Pestaña Inicio ▸ Párrafo. Atajo: Ctrl+J. Reparte el espacio entre las palabras para que todas las líneas lleguen a los dos márgenes, salvo la última. · Su icono es el que tiene los renglones cuadrados por los dos lados, y ahí está toda la dificultad: los cuatro botones de alineación son cuatro dibujos de renglones y solo se distinguen por qué borde queda recto. El de alinear a la izquierda tiene recto el izquierdo, el de la derecha el derecho, y el de centrar ninguno de los dos, con los renglones simétricos. · La quinta alineación, la distribuida, no tiene botón: solo se llega a ella con Ctrl+Mayús+J."
   },
   {
     "id": "inicio-435",
@@ -7675,28 +7675,28 @@
     "tema": "Alineación",
     "sourceQuestionId": "neg-inicio-04",
     "generado": true,
-    "enunciado": "¿Cuál de estos atajos de alineación es INCORRECTO en esta instalación?",
+    "enunciado": "Repasas los atajos de alineación de esta instalación antes del examen. ¿Cuál de estas equivalencias es INCORRECTA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Q = izquierda"
+        "text": "Ctrl+Q alinea a la izquierda"
       },
       {
         "letter": "B",
-        "text": "Ctrl+T = centrar"
+        "text": "Ctrl+T centra"
       },
       {
         "letter": "C",
-        "text": "Ctrl+R = derecha"
+        "text": "Ctrl+R alinea a la derecha"
       },
       {
         "letter": "D",
-        "text": "Ctrl+J = justificar"
+        "text": "Ctrl+Mayús+J aplica el párrafo distribuido"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "Ctrl+R no hace absolutamente nada en esta instalación. Alinear a la derecha es Ctrl+D."
+    "explicacion": "Ctrl+R no tiene ningún comando asignado en esta instalación: al pulsarlo no ocurre nada, ni bueno ni malo. Alinear a la derecha es Ctrl+D. · Las otras tres son correctas, y las cuatro alineaciones básicas siguen la inicial del nombre en castellano: izQuierda, cenTro, Derecha y Justificar. Ctrl+Mayús+J añade la quinta, el párrafo distribuido, que estira también la última línea. · La trampa de esta pregunta es que Ctrl+R suena bien por venir del inglés «right», y que al no hacer nada tampoco delata el error: quien lo use pensará que el atajo «a veces falla»."
   },
   {
     "id": "inicio-499",
@@ -7711,7 +7711,7 @@
     "tema": "Alineación",
     "sourceQuestionId": "rutas-inicio-29",
     "generado": true,
-    "enunciado": "¿Cuáles son las dos fichas del cuadro de diálogo Párrafo?",
+    "enunciado": "Abres el cuadro de diálogo Párrafo y ves que tiene dos fichas. ¿Cómo se llaman?",
     "opciones": [
       {
         "letter": "A",
@@ -7719,20 +7719,20 @@
       },
       {
         "letter": "B",
-        "text": "«Sangría» y «Espaciado»"
+        "text": "«Sangría y espacio» y «Tabulaciones»"
       },
       {
         "letter": "C",
-        "text": "«Párrafo» y «Avanzado»"
+        "text": "«General» y «Líneas y saltos de página»"
       },
       {
         "letter": "D",
-        "text": "«General» y «Tabulaciones»"
+        "text": "«Párrafo» y «Avanzado»"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La primera reúne alineación, sangría y espaciado; la segunda, el control de líneas viudas/huérfanas, «Conservar con el siguiente», saltos, etc."
+    "explicacion": "La primera ficha, «Sangría y espacio», reúne la alineación, el nivel de esquema, las sangrías, el espaciado y el interlineado. La segunda, «Líneas y saltos de página», guarda el control de líneas viudas y huérfanas, «Conservar con el siguiente», «Conservar líneas juntas», «Salto de página anterior» y los números de línea. · «Tabulaciones» es el descarte más difícil, porque el cuadro Tabulaciones se abre precisamente desde un botón de este cuadro, abajo a la izquierda: pero es un cuadro aparte, no una ficha. · «General» sí es un rótulo real, pero del primer bloque de dentro de la primera ficha. · Y «Avanzado» es la segunda ficha del cuadro Fuente, no de este."
   },
   {
     "id": "inicio-501",
@@ -7747,28 +7747,28 @@
     "tema": "Alineación",
     "sourceQuestionId": "rutas-inicio-31",
     "generado": true,
-    "enunciado": "En el cuadro Párrafo, el desplegable «Alineación» del bloque General ofrece:",
+    "enunciado": "En el cuadro Párrafo, dentro del bloque General, despliegas «Alineación». ¿Qué entradas ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Izquierda, Centrada, Derecha, Justificada"
+        "text": "Izquierda, Centrada, Derecha y Justificada"
       },
       {
         "letter": "B",
-        "text": "Izquierda, Centrada, Derecha, Distribuida, Justificada"
+        "text": "Izquierda, Centrada, Derecha, Justificada y Distribuida"
       },
       {
         "letter": "C",
-        "text": "Superior, Centrada, Inferior"
+        "text": "Izquierda, Centrada, Derecha, Justificada y Automática"
       },
       {
         "letter": "D",
-        "text": "Izquierda y Derecha únicamente"
+        "text": "Superior, Centrada e Inferior"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Son las cuatro alineaciones horizontales de párrafo; se corresponden con Ctrl+Q, Ctrl+T, Ctrl+D y Ctrl+J en esta instalación."
+    "explicacion": "Son cuatro, y se corresponden con Ctrl+Q, Ctrl+T, Ctrl+D y Ctrl+J. · Distribuida es el distractor bueno de esta pregunta, porque existe de verdad como alineación —se aplica con Ctrl+Mayús+J y estira también la última línea— pero NO figura en este desplegable ni tiene botón en la cinta. Es un caso poco común en Word: una función real sin sitio en su propio cuadro de diálogo. · «Automática» no existe en ningún desplegable de alineación de párrafo. · Y arriba, centro y abajo es alineación vertical, la del cuadro Configurar página o la de una celda de tabla: aquí se decide el reparto horizontal."
   },
   {
     "id": "inicio-591",
@@ -7790,20 +7790,20 @@
       },
       {
         "letter": "B",
-        "text": "Aplica una lista con viñetas"
+        "text": "Justifica el texto entre los dos márgenes"
       },
       {
         "letter": "C",
-        "text": "Aumenta la sangría del párrafo"
+        "text": "Centra el texto entre los dos márgenes"
       },
       {
         "letter": "D",
-        "text": "Justifica el texto"
+        "text": "Disminuye la sangría del párrafo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Explicación: El icono de líneas horizontales alineadas a la izquierda corresponde al comando Alinear a la izquierda del grupo Párrafo.",
+    "explicacion": "El icono dibuja renglones cuadrados por la izquierda y desiguales por la derecha: es «Alinear a la izquierda», del grupo Párrafo de la pestaña Inicio, con atajo Ctrl+Q. · El de justificar es el descarte más difícil, porque su dibujo es casi el mismo y solo cambia que los renglones también quedan cuadrados por la derecha. · El de centrar deja los dos bordes irregulares y las líneas simétricas. · Y disminuir la sangría no decide cómo se colocan las líneas dentro del bloque, sino dónde empieza el bloque entero: su icono lleva una flecha hacia la izquierda junto a los renglones.",
     "imagen": "data:image/webp;base64,UklGRhADAABXRUJQVlA4WAoAAAAgAAAAGgAAGwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggIgEAAHAHAJ0BKhsAHAA+SR6NRCKhoZgGACgEhLSABnAno00ApmfKY+S/YD/h/8t/4nAADq3XmZMO4QDAtEtsqpSylBtV1oAAAP7+sopQR7yZfLMt/8ZYhPMHBqIJv+N/x2//C2eG4isRYimBjyajo1MmSPOg7lBw8kMyz+qSITe5xXSr3ZIQv+i22+ZRZBKhubmYH9WKYfzWH6rcX23nX7y/8cPmSxi+P3q5f2t19SCnpZFtYD2xT5f/V0wEmCXIRJwAQEhoY8Mbs+PO7Rv/HWMqHdgE/hfBF/X/QRe6sUf3mL3L/58/y2tPg12PfRYfURrP/5D/KPmG9hncw/5SVyEz37XC+0DJiRep0e2pZwo8PkEb10+aqtWKvwcGI3NjLphAAAAA",
     "creado": true
   },
@@ -7824,7 +7824,7 @@
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Asignar un nivel 1-9 a un párrafo lo hace aparecer en el panel de Navegación y en la Tabla de contenido aunque no tenga estilo de título."
+    "explicacion": "Verdadero. Son diez valores en total, y el de partida para un párrafo normal es «Texto independiente». · Lo interesante es lo que se consigue con ellos: asignar un nivel de 1 a 9 hace que ese párrafo aparezca en el panel de Navegación, en la vista Esquema y en la Tabla de contenido aunque no tenga aplicado ningún estilo de título. Es la forma de meter algo en el índice sin que se vea como un título. · Los nueve niveles no son casualidad: coinciden con los nueve estilos Título 1 a Título 9 y con los nueve niveles de una lista multinivel."
   },
   {
     "id": "inicio-498",
@@ -7839,11 +7839,11 @@
     "tema": "Alineación",
     "sourceQuestionId": "rutas-inicio-28",
     "generado": true,
-    "enunciado": "La casilla «Contraído de forma predeterminada» del cuadro Párrafo solo se habilita si el «Nivel de esquema» es de Nivel 1 a Nivel 9.",
+    "enunciado": "La casilla «Contraído de forma predeterminada» del cuadro Párrafo solo se puede marcar si el «Nivel de esquema» va de Nivel 1 a Nivel 9.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Con «Texto independiente» esa casilla está atenuada: solo tiene sentido contraer/expandir encabezados con nivel de esquema."
+    "explicacion": "Verdadero. Con «Texto independiente» esa casilla aparece atenuada, y tiene su lógica: contraer y expandir es algo que se hace con encabezados, y un párrafo sin nivel de esquema no encabeza nada. · Al marcarla, el documento se abre con ese apartado plegado, con su triangulito al lado del título para desplegarlo. Es útil en documentos largos que se consultan por partes. · Las dos opciones están juntas en el bloque General de la primera ficha, precisamente porque una depende de la otra: cambiar el nivel de esquema habilita o deshabilita la casilla al instante."
   },
   {
     "id": "inicio-551",
@@ -7858,11 +7858,11 @@
     "tema": "Alineación",
     "sourceQuestionId": "dlgcompart-inicio-06",
     "generado": true,
-    "enunciado": "El grupo «Párrafo» tiene lanzador de cuadro de diálogo en dos pestañas de la cinta —Inicio y Disposición—, y ambas abren el mismo cuadro Párrafo.",
+    "enunciado": "El grupo «Párrafo» tiene iniciador de cuadro de diálogo en dos pestañas, Inicio y Disposición, y cada uno abre un cuadro distinto.",
     "opciones": [],
     "matching": null,
-    "respuesta": true,
-    "explicacion": "También se llega con clic derecho en un párrafo ▸ «Párrafo…»."
+    "respuesta": false,
+    "explicacion": "Falso: los dos iniciadores abren exactamente el mismo cuadro Párrafo, con sus dos fichas. Lo que cambia es de dónde se sale, no a dónde se llega. · También se llega por una tercera puerta, el menú contextual: clic derecho sobre un párrafo y «Párrafo…». · Lo que sí es distinto son los grupos: el de Inicio trae alineaciones, viñetas, interlineado, bordes y sombreado, mientras que el de Disposición se queda con las sangrías izquierda y derecha y el espaciado antes y después, en cuadros numéricos. Dos selecciones de comandos, un solo cuadro detrás. · Es el mismo patrón que «Bordes y sombreado», al que se llega desde Inicio y desde Diseño, aunque ese sí abre en fichas distintas según la ruta."
   },
   {
     "id": "inicio-42",
@@ -7877,7 +7877,7 @@
     "tema": "Alineación",
     "difficulty": "media",
     "sourceQuestionId": "P-0042",
-    "enunciado": "Relaciona cada tipo de alineacion con su atajo de teclado:",
+    "enunciado": "Relaciona cada alineación de párrafo con la combinación que la aplica en esta instalación:",
     "opciones": [],
     "matching": {
       "left": [
@@ -7943,7 +7943,7 @@
       "4": "D",
       "5": "E"
     },
-    "explicacion": "Izquierda: Ctrl+Q. Centrar: Ctrl+T. Derecha: Ctrl+D. Justificar: Ctrl+J. Distribuir: Ctrl+Mayus+J. El distractor Ctrl+E es Seleccionar todo el documento, no una alineacion. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Las cuatro alineaciones básicas siguen la inicial del nombre en castellano: Ctrl+Q para la izQuierda, Ctrl+T para el cenTro, Ctrl+D para la Derecha y Ctrl+J para Justificar. Ninguna coincide con el esquema inglés, así que sabérselas de memoria es la única salida. Prueba en vivo del usuario. · La quinta, distribuir, es Ctrl+Mayús+J, y es la única de las cinco que no tiene botón en la cinta ni entrada en el desplegable Alineación del cuadro Párrafo. · El destino que se queda sin pareja, Ctrl+E, no alinea nada: selecciona el documento completo. Cuela porque en el esquema inglés esa combinación centra el párrafo."
   },
   {
     "id": "inicio-466",
@@ -7971,7 +7971,7 @@
         "Ctrl + F"
       ]
     ],
-    "explicacion": "Ctrl+W quita el formato de párrafo (prueba en vivo); Ctrl+F aplica/quita la sangría francesa (esquema clásico español)."
+    "explicacion": "Ctrl+W quita el formato de párrafo puesto a mano y devuelve el del estilo. Prueba en vivo del usuario. ⚠️ Ojo: el cuadro Personalizar teclado lista esa misma combinación también como cerrar la ventana; aquí hace lo del párrafo y no cierra nada. Su equivalente para el formato de carácter es Ctrl+Barra espaciadora. · Ctrl+F aplica y quita la sangría francesa, la que deja la primera línea fuera y sangra las demás. ⚠️ En el esquema internacional Ctrl+F abre la búsqueda, y esa confusión es de las que más caro salen: quien la pulse buscando algo se encontrará el párrafo descolocado. Aquí se busca con Ctrl+B, que abre el panel de Navegación."
   },
   {
     "id": "inicio-43",
