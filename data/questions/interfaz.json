@@ -7276,19 +7276,20 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-1",
-    "enunciado": "En Word 365, ¿qué combinación de teclas permite activar el \"modo de acceso por teclado\"?",
+    "revisada": true,
+    "enunciado": "Quieres manejar la cinta sin ratón. ¿Qué teclas activan el modo de acceso por teclado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + F1"
+        "text": "Alt o F10"
       },
       {
         "letter": "B",
-        "text": "Alt + Q"
+        "text": "Ctrl o F10"
       },
       {
         "letter": "C",
-        "text": "Alt o F10"
+        "text": "Alt+Q"
       },
       {
         "letter": "D",
@@ -7296,8 +7297,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El material indica que al pulsar ALT o F10 se activa el modo, mostrando recuadros con teclas."
+    "respuesta": "A",
+    "explicacion": "Cualquiera de las dos hace aparecer unos recuadritos con letras y números sobre las pestañas y los botones; al pulsar la letra que corresponda se entra en esa pestaña y salen las suyas. Se sale con Esc. · **Alt+Q** es el descarte que decide la pregunta y también sirve para trabajar sin ratón, pero de otra manera: lleva el foco al cuadro de búsqueda de la barra de título, donde se escribe lo que se quiere hacer. Confirmado en vivo por el usuario. · F1 abre la ayuda."
   },
   {
     "id": "interfaz-257",
@@ -7311,19 +7312,20 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-2",
-    "enunciado": "En Word 365, ¿qué aparece en la interfaz al activar el modo de acceso por teclado?",
+    "revisada": true,
+    "enunciado": "Pulsas Alt sobre el documento. ¿Qué aparece en la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La ventana de Ayuda"
+        "text": "Recuadritos con la letra o el número que hay que pulsar para cada pestaña y comando"
       },
       {
         "letter": "B",
-        "text": "Pequeños recuadros junto a pestañas y opciones con la tecla a pulsar"
+        "text": "La ventana de Ayuda de Word"
       },
       {
         "letter": "C",
-        "text": "Un cuadro de diálogo flotante"
+        "text": "Un cuadro de diálogo flotante con los comandos más usados"
       },
       {
         "letter": "D",
@@ -7331,8 +7333,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Aparecen recuadros con las teclas a pulsar para acceder a cada opción sin el ratón."
+    "respuesta": "A",
+    "explicacion": "Primero salen las de las pestañas y la barra de acceso rápido; al elegir una pestaña, se sustituyen por las de sus comandos, y así hasta llegar al que se busca. De ahí vienen las secuencias que se ven escritas en algunos manuales, como Alt,F,Y para el cuadro Fuente. · Se sale con Esc, que retrocede un nivel cada vez. · **El menú contextual** es el descarte que decide la pregunta: también aparece encima de la interfaz, pero con el clic derecho, no con Alt."
   },
   {
     "id": "interfaz-258",
@@ -7346,15 +7348,16 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-3",
-    "enunciado": "En Word 365, ¿dónde se encuentra el \"iniciador de cuadro de diálogo\"?",
+    "revisada": true,
+    "enunciado": "¿En qué parte de un grupo de la cinta está el iniciador de cuadro de diálogo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "En la esquina superior izquierda de la cinta"
+        "text": "En su esquina inferior derecha"
       },
       {
         "letter": "B",
-        "text": "En el ángulo inferior derecho de algunos grupos"
+        "text": "En su esquina superior izquierda"
       },
       {
         "letter": "C",
@@ -7366,8 +7369,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El iniciador aparece en el ángulo inferior derecho de algunos grupos de opciones."
+    "respuesta": "A",
+    "explicacion": "Es una flechita diagonal minúscula, justo al lado del nombre del grupo, que va escrito debajo de sus botones. Al posar el puntero sobre ella, Word muestra una vista previa del cuadro que va a abrir. · No todos los grupos la tienen: solo aquellos cuyo cuadro aporta opciones que no caben en la cinta. En la pestaña Inicio la llevan Portapapeles, Fuente, Párrafo y Estilos; en Vista, ni Zoom ni Ventana la tienen."
   },
   {
     "id": "interfaz-259",
@@ -7381,28 +7384,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-4",
-    "enunciado": "En Word 365, ¿qué indica la presencia del \"iniciador de cuadro de diálogo\"?",
+    "revisada": true,
+    "enunciado": "¿Qué significa que un grupo de la cinta tenga iniciador de cuadro de diálogo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Que el grupo está desactivado"
+        "text": "Que ese grupo tiene más opciones de las que caben en la cinta"
       },
       {
         "letter": "B",
-        "text": "Que existen más opciones de configuración ampliadas para ese grupo"
+        "text": "Que el grupo está desactivado en ese momento"
       },
       {
         "letter": "C",
-        "text": "Que se ha producido un error"
+        "text": "Que el grupo se puede quitar de la cinta"
       },
       {
         "letter": "D",
-        "text": "Que el grupo no se puede modificar"
+        "text": "Que el grupo se ha personalizado y no es de fábrica"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Indica que existen más posibilidades de trabajo y abre un cuadro de configuración más amplia."
+    "respuesta": "A",
+    "explicacion": "La cinta muestra lo más usado y el cuadro guarda el resto: el grupo Fuente enseña una docena de botones y su cuadro añade el interletraje, la posición, la escala y las opciones de OpenType. · **Que el grupo esté desactivado** es el descarte que decide la pregunta, y eso Word lo indica de otra forma: atenuando los botones que en ese momento no aplican, como «Ver en paralelo» con un solo documento abierto. · La flechita solo está en algunos grupos, precisamente en los que tienen algo más que ofrecer."
   },
   {
     "id": "interfaz-260",
@@ -7416,28 +7420,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-5",
-    "enunciado": "En Word 365, ¿qué ocurre al hacer clic en el iniciador de cuadro de diálogo?",
+    "revisada": true,
+    "enunciado": "Pulsas el iniciador del grupo Portapapeles, en la pestaña Inicio. ¿Qué se abre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se abre un cuadro de diálogo con configuración más amplia"
+        "text": "El panel del portapapeles, a la izquierda, con los últimos elementos copiados"
       },
       {
         "letter": "B",
-        "text": "Se minimiza la cinta"
+        "text": "El cuadro de diálogo «Pegado especial»"
       },
       {
         "letter": "C",
-        "text": "Se activa el modo táctil"
+        "text": "El cuadro «Opciones de Word», en la sección Avanzadas"
       },
       {
         "letter": "D",
-        "text": "Se cierra el documento"
+        "text": "Nada: ese grupo no tiene iniciador"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Se abre un cuadro de diálogo que permite una configuración más amplia del grupo."
+    "explicacion": "Es la excepción interesante: casi todos los iniciadores abren un cuadro de diálogo, y este abre un PANEL lateral, el del portapapeles de Office, que guarda hasta 24 elementos y permite pegarlos en cualquier orden o pegarlos todos. · **«Pegado especial»** es el descarte que decide la pregunta: está en el mismo grupo, pero en el desplegable del botón Pegar, y su atajo aquí es Alt+Ctrl+G. · «Establecer Pegar predeterminado…», del mismo desplegable, sí lleva a Opciones ▸ Avanzadas."
   },
   {
     "id": "interfaz-261",
@@ -7445,34 +7450,35 @@
     "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
     "tipo": "opcion_unica",
     "categoria": "ruta",
-    "negativa": false,
+    "negativa": true,
     "section": "interfaz",
     "topic": "acceso-teclado-ayuda",
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-6",
-    "enunciado": "En Word 365, ¿cuántas maneras diferentes existen para mostrar u ocultar la cinta de opciones?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas NO es una manera de contraer la cinta de opciones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Dos"
+        "text": "Pulsar Alt+Q"
       },
       {
         "letter": "B",
-        "text": "Tres"
+        "text": "Pulsar Ctrl+F1"
       },
       {
         "letter": "C",
-        "text": "Cuatro"
+        "text": "Hacer doble clic en la pestaña activa"
       },
       {
         "letter": "D",
-        "text": "Cinco"
+        "text": "Usar el menú contextual de la cinta"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El material enumera explícitamente 4 maneras: doble clic, menú contextual, Ctrl+F1 y opciones de visualización."
+    "respuesta": "A",
+    "explicacion": "Alt+Q lleva el foco al cuadro de búsqueda de la barra de título, para escribir qué se quiere hacer. Confirmado en vivo por el usuario. No toca la cinta. · Las otras tres sí la contraen, y todas se deshacen igual que se hicieron. · El menú contextual, el del clic derecho sobre la cinta, trae «Contraer la cinta de opciones» junto a «Personalizar la cinta de opciones» y a la personalización de la barra de acceso rápido."
   },
   {
     "id": "interfaz-262",
@@ -7486,28 +7492,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-7",
-    "enunciado": "En Word 365, ¿cuál de las siguientes NO es una manera de mostrar u ocultar la cinta?",
+    "revisada": true,
+    "enunciado": "Señale la que NO sirve para contraer o desplegar la cinta:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Doble clic en una pestaña"
+        "text": "Pulsar F1"
       },
       {
         "letter": "B",
-        "text": "Menú contextual de una pestaña"
+        "text": "Hacer doble clic en la pestaña activa"
       },
       {
         "letter": "C",
-        "text": "Pulsar Ctrl + F1"
+        "text": "Usar el menú contextual de la cinta"
       },
       {
         "letter": "D",
-        "text": "Pulsar Alt + Q"
+        "text": "Pulsar Ctrl+F1"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Alt+Q es la búsqueda, no una forma de ocultar la cinta."
+    "respuesta": "A",
+    "explicacion": "F1 abre la ayuda de Word, en un panel a la derecha. Prueba en vivo del usuario. Que se diferencie de Ctrl+F1 en una sola tecla y haga algo tan distinto es lo que hace la pregunta. · Las otras tres contraen la cinta dejando solo la fila de nombres; con ella contraída, un clic simple en una pestaña la despliega un momento y se recoge al volver al documento. · Alt+F1, para completar la familia, salta al campo siguiente del documento."
   },
   {
     "id": "interfaz-263",
@@ -7521,19 +7528,20 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-8",
-    "enunciado": "En Word 365, ¿qué atajo de teclado permite mostrar u ocultar la cinta de opciones?",
+    "revisada": true,
+    "enunciado": "¿Qué combinación contrae o despliega la cinta de opciones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + F1"
+        "text": "Ctrl+F1"
       },
       {
         "letter": "B",
-        "text": "Alt + F4"
+        "text": "Alt+F1"
       },
       {
         "letter": "C",
-        "text": "Alt + F10"
+        "text": "Alt+F10"
       },
       {
         "letter": "D",
@@ -7542,7 +7550,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl + F1 es la tercera manera de mostrar u ocultar la cinta."
+    "explicacion": "Deja solo la fila de nombres de pestaña y libera unas cuantas líneas de pantalla; se deshace con la misma combinación. · Toda la familia de F1 hace cosas distintas y conviene tenerla junta: **F1** abre la ayuda, **Alt+F1** salta al campo siguiente del documento y **Ctrl+F1** contrae la cinta. · A lo mismo se llega con un doble clic en la pestaña activa o desde el menú contextual de la cinta, con «Contraer la cinta de opciones»."
   },
   {
     "id": "interfaz-264",
@@ -7556,15 +7564,16 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-9",
-    "enunciado": "En Word 365, ¿qué opción aparece en el menú contextual de una pestaña y permite ocultarla?",
+    "revisada": true,
+    "enunciado": "Haces clic derecho sobre una pestaña de la cinta. ¿Qué entrada permite esconder los botones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar solo pestañas"
+        "text": "Contraer la cinta de opciones"
       },
       {
         "letter": "B",
-        "text": "Contraer la cinta de opciones"
+        "text": "Ocultar la cinta de opciones"
       },
       {
         "letter": "C",
@@ -7576,8 +7585,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "\"Contraer la cinta de opciones\" es una de las tres opciones del menú contextual."
+    "respuesta": "A",
+    "explicacion": "El verbo es «contraer», no «ocultar»: la cinta no desaparece del todo, se queda la fila de nombres de pestaña. Y una vez contraída, la misma entrada cambia para volver a desplegarla. · **«Personalizar la cinta de opciones»** es el descarte que decide la pregunta: está en ese mismo menú, pero lleva a Opciones, donde se añaden y se quitan pestañas y grupos, que es otra cosa. · Lo mismo se consigue con Ctrl+F1 o con un doble clic en la pestaña activa."
   },
   {
     "id": "interfaz-265",
@@ -7591,11 +7600,12 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-10",
-    "enunciado": "En Word 365, ¿cuál de las siguientes opciones NO pertenece al menú contextual de una pestaña?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas NO está en el menú contextual que se abre con el clic derecho sobre la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ocultar la barra de herramientas de acceso rápido"
+        "text": "Cerrar el programa Word"
       },
       {
         "letter": "B",
@@ -7607,12 +7617,12 @@
       },
       {
         "letter": "D",
-        "text": "Mostrar solo pestañas"
+        "text": "Personalizar la barra de acceso rápido"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "\"Mostrar solo pestañas\" pertenece al botón \"Opciones de visualización\", no al menú contextual."
+    "respuesta": "A",
+    "explicacion": "Ese menú se ocupa solo de las dos barras de arriba: personalizar la cinta, personalizar la barra de acceso rápido y contraer la cinta. Cerrar Word no es cosa suya: eso está en Archivo ▸ Cerrar, en el botón de la barra de título o con Alt+F4. · Las otras tres sí figuran, y las dos de personalizar llevan a sitios distintos: una a Opciones ▸ Personalizar cinta y la otra al panel de la barra de acceso rápido."
   },
   {
     "id": "interfaz-266",
@@ -7626,28 +7636,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-11",
-    "enunciado": "En Word 365, ¿cuáles son las tres opciones disponibles en el botón \"Opciones de visualización de la cinta\"?",
+    "revisada": true,
+    "enunciado": "¿De cuántas maneras se puede contraer la cinta de opciones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modo de pantalla completa, Mostrar solo pestañas, Mostrar siempre la barra de herramientas"
+        "text": "Tres: Ctrl+F1, doble clic y el menú contextual"
       },
       {
         "letter": "B",
-        "text": "Contraer, Personalizar, Ocultar"
+        "text": "Una sola: únicamente con Ctrl+F1"
       },
       {
         "letter": "C",
-        "text": "Doble clic, Menú contextual, Ctrl+F1"
+        "text": "Dos: con Ctrl+F1 y con Alt+F1"
       },
       {
         "letter": "D",
-        "text": "Modo lectura, Diseño web, Borrador"
+        "text": "Ninguna: siempre está desplegada"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El material lista exactamente esas tres opciones."
+    "explicacion": "Las tres llevan al mismo sitio y las tres se deshacen igual que se hicieron. Hay además un botón en el extremo derecho de la cinta que hace lo propio. · **Alt+F1** es el descarte que decide la pregunta: se parece muchísimo a Ctrl+F1 y hace algo completamente distinto, saltar al campo siguiente del documento. · Con la cinta contraída, un clic simple en cualquier pestaña la despliega un momento y se vuelve a recoger al hacer clic en el documento."
   },
   {
     "id": "interfaz-267",
@@ -7661,28 +7672,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-12",
-    "enunciado": "En Word 365, la opción \"Modo de pantalla completa\" tiene como objetivo:",
+    "revisada": true,
+    "enunciado": "¿Qué se gana al contraer la cinta de opciones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar únicamente las pestañas"
+        "text": "Espacio en pantalla para el documento, quedando solo la fila de pestañas"
       },
       {
         "letter": "B",
-        "text": "Ocultar la cinta y maximizar el área de trabajo"
+        "text": "Que los comandos se agranden, como en el modo táctil"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre la barra de herramientas"
+        "text": "Que el documento se vea con más zoom automáticamente"
       },
       {
         "letter": "D",
-        "text": "Aumentar el tamaño de los comandos"
+        "text": "Que se oculten también la regla y la barra de estado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo de pantalla completa oculta la cinta para maximizar el área de trabajo."
+    "respuesta": "A",
+    "explicacion": "Son unas cuantas líneas de alto que pasan al área de trabajo, cosa que se agradece en una pantalla pequeña. Los comandos siguen ahí: un clic en cualquier pestaña la despliega un momento. · **El zoom** es el descarte que decide la pregunta, y es el error de siempre: contraer la cinta enseña más documento, pero del mismo tamaño; el zoom lo agranda sin enseñar más. Son dos cosas distintas. · La regla y la barra de estado se ocultan aparte, cada una por su lado."
   },
   {
     "id": "interfaz-268",
@@ -7696,7 +7708,8 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-13",
-    "enunciado": "En Word 365, ¿qué tecla abre la función de Ayuda?",
+    "revisada": true,
+    "enunciado": "¿Qué tecla abre la ayuda de Word?",
     "opciones": [
       {
         "letter": "A",
@@ -7708,16 +7721,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl + F1"
+        "text": "Ctrl+F1"
       },
       {
         "letter": "D",
-        "text": "Alt + Q"
+        "text": "Alt+Q"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F1 abre la ventana de Ayuda."
+    "explicacion": "Abre el panel de ayuda a la derecha, con su buscador. Prueba en vivo del usuario. La ayuda tiene además pestaña propia al final de la cinta. · Los tres descartes hacen cosas relacionadas con manejar Word y ninguno abre la ayuda: **F10** activa las letras de acceso de la cinta, igual que Alt; **Ctrl+F1** contrae la cinta; y **Alt+Q** lleva el foco al cuadro de búsqueda de la barra de título, que busca comandos además de ayuda."
   },
   {
     "id": "interfaz-271",
@@ -7731,28 +7744,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-16",
-    "enunciado": "En Word 365, \"Si pulsamos ALT o ______ entraremos en el modo de acceso por teclado.\" (Completar)",
+    "revisada": true,
+    "enunciado": "Además de Alt, ¿qué otra tecla entra en el modo de acceso por teclado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "F1"
-      },
-      {
-        "letter": "B",
         "text": "F10"
       },
       {
+        "letter": "B",
+        "text": "F1"
+      },
+      {
         "letter": "C",
-        "text": "Ctrl"
+        "text": "Tab"
       },
       {
         "letter": "D",
-        "text": "Tab"
+        "text": "Ctrl"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo se activa con ALT o F10."
+    "respuesta": "A",
+    "explicacion": "Las dos hacen lo mismo: sacar los recuadritos con las letras de acceso sobre las pestañas y la barra de acceso rápido. Se sale con Esc. · **Tab** es el descarte que decide la pregunta y también sirve para moverse sin ratón, pero de otra manera: recorre los controles de un cuadro de diálogo, o inserta una tabulación en el documento. · Ctrl a secas no hace nada por sí sola, y F1 abre la ayuda."
   },
   {
     "id": "interfaz-272",
@@ -7766,28 +7780,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-17",
-    "enunciado": "En Word 365, \"El iniciador de cuadro de diálogo aparece en el ángulo inferior ______ de algunos grupos.\" (Completar)",
+    "revisada": true,
+    "enunciado": "Estás en el modo de acceso por teclado y quieres salir sin ejecutar nada. ¿Qué tecla lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "izquierdo"
+        "text": "Esc, que retrocede un nivel cada vez"
       },
       {
         "letter": "B",
-        "text": "derecho"
+        "text": "Intro, que confirma la opción y sale"
       },
       {
         "letter": "C",
-        "text": "superior"
+        "text": "Ctrl+F1, que contrae la cinta y sale"
       },
       {
         "letter": "D",
-        "text": "central"
+        "text": "F1, que abre la ayuda y sale"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Se encuentra en el ángulo inferior derecho."
+    "respuesta": "A",
+    "explicacion": "Si se ha entrado en una pestaña, la primera pulsación vuelve a la fila de pestañas y la segunda sale del modo; también se sale volviendo a pulsar Alt. · Esa vuelta atrás por niveles es lo que permite corregir sin ejecutar nada por error. · **Intro** es el descarte que decide la pregunta: ejecutaría lo que estuviera seleccionado, que es justo lo contrario de lo que se pide. · Esc figura en el cuadro Personalizar teclado como «Cancelar»."
   },
   {
     "id": "interfaz-273",
@@ -7801,28 +7816,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-18",
-    "enunciado": "En Word 365, \"F1\" activa la función de ______.",
+    "revisada": true,
+    "enunciado": "Comparas F1 con Alt+Q. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Búsqueda"
+        "text": "F1 abre el panel de ayuda; Alt+Q lleva el foco al cuadro de búsqueda de la barra de título"
       },
       {
         "letter": "B",
-        "text": "Ayuda"
+        "text": "F1 lleva el foco al cuadro de búsqueda; Alt+Q abre el panel de ayuda"
       },
       {
         "letter": "C",
-        "text": "Guardado"
+        "text": "Las dos abren el panel de ayuda, en sitios distintos"
       },
       {
         "letter": "D",
-        "text": "Impresión"
+        "text": "Las dos llevan el foco al cuadro de búsqueda"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "F1 es la tecla de Ayuda."
+    "respuesta": "A",
+    "explicacion": "Las dos ayudan a encontrar algo, y de ahí la confusión. La ayuda de F1 explica cómo se hacen las cosas; el cuadro de búsqueda de Alt+Q va más lejos, porque además de artículos de ayuda encuentra COMANDOS y los ejecuta desde ahí, sin tener que saber en qué pestaña estaban. · Las dos están confirmadas en vivo por el usuario. · La versión invertida es el descarte que decide la pregunta."
   },
   {
     "id": "interfaz-275",
@@ -7836,28 +7852,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-20",
-    "enunciado": "En Word 365, ¿cuántas opciones se citan dentro de \"Opciones de visualización de la cinta\"?",
+    "revisada": true,
+    "enunciado": "En algunos manuales se ve escrito «Alt, F, Y» para abrir el cuadro Fuente. ¿Qué significa esa notación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2"
+        "text": "Que las teclas se pulsan una tras otra, no a la vez"
       },
       {
         "letter": "B",
-        "text": "3"
+        "text": "Que hay que mantener Alt mientras se pulsan las otras dos"
       },
       {
         "letter": "C",
-        "text": "4"
+        "text": "Que sirve cualquiera de las tres teclas, indistintamente"
       },
       {
         "letter": "D",
-        "text": "5"
+        "text": "Que hay que pulsar Alt y luego F e Y a la vez"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Son tres: pantalla completa, solo pestañas y siempre barra."
+    "respuesta": "A",
+    "explicacion": "Las comas separan pulsaciones sucesivas: Alt entra en el modo de acceso por teclado, F selecciona la pestaña Inicio y la Y el comando que toque dentro de ella. Cada pulsación cambia los recuadritos que se ven. · Es distinto de un atajo con signos más, como Ctrl+M, donde las teclas se mantienen a la vez. · Esa secuencia es, de hecho, otra manera de llegar al cuadro Fuente, que también responde a Ctrl+M y a Ctrl+Mayús+F."
   },
   {
     "id": "interfaz-276",
@@ -7871,28 +7888,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-21",
-    "enunciado": "En Word 365, ¿cuántas opciones se muestran en el menú contextual de una pestaña?",
+    "revisada": true,
+    "enunciado": "¿Cuántas entradas tiene el menú contextual que se abre con el clic derecho sobre la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2"
+        "text": "Tres: las dos de personalizar y contraer la cinta"
       },
       {
         "letter": "B",
-        "text": "3"
+        "text": "Dos: personalizar la cinta y contraerla"
       },
       {
         "letter": "C",
-        "text": "4"
+        "text": "Cuatro: las tres anteriores y cerrar Word"
       },
       {
         "letter": "D",
-        "text": "5"
+        "text": "Cinco: las tres anteriores y los dos modos"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Son tres opciones: ocultar barra, personalizar y contraer."
+    "respuesta": "A",
+    "explicacion": "Las tres se ocupan solo de las dos barras de arriba, y las dos primeras llevan a sitios distintos: una al panel de la barra de acceso rápido y otra a Personalizar cinta de opciones, en Opciones de Word. · **Los modos mouse y táctil** son el descarte que decide la pregunta: se alternan desde la barra de acceso rápido, no desde este menú, y el botón hay que marcarlo antes en su desplegable. · Cerrar Word tampoco está: eso es Archivo ▸ Cerrar o Alt+F4."
   },
   {
     "id": "interfaz-279",
@@ -7906,28 +7924,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-24",
-    "enunciado": "En Word 365, ¿qué opción del menú contextual permite modificar los comandos de la cinta?",
+    "revisada": true,
+    "enunciado": "¿Qué entrada del menú contextual de la cinta lleva a añadir o quitar pestañas y grupos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Contraer la cinta"
-      },
-      {
-        "letter": "B",
         "text": "Personalizar la cinta de opciones"
       },
       {
+        "letter": "B",
+        "text": "Contraer la cinta de opciones"
+      },
+      {
         "letter": "C",
-        "text": "Ocultar la barra de acceso rápido"
+        "text": "Personalizar la barra de herramientas de acceso rápido"
       },
       {
         "letter": "D",
-        "text": "Mostrar siempre la barra"
+        "text": "Mostrar siempre la barra de herramientas"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "\"Personalizar la cinta\" abre el cuadro de opciones para modificar comandos."
+    "respuesta": "A",
+    "explicacion": "Abre directamente esa sección de Archivo ▸ Opciones, con las «Fichas principales» a la derecha y sus casillas: ahí se enciende **Programador**, que no está visible de fábrica, y se crean pestañas y grupos propios. · **Personalizar la barra de acceso rápido** es el descarte que decide la pregunta: está en el mismo menú, se llama casi igual y lleva a otro panel, el que decide qué botones tiene esa barra. · «Contraer» esconde los botones sin cambiar nada de lo que hay."
   },
   {
     "id": "interfaz-280",
@@ -7941,28 +7960,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-25",
-    "enunciado": "En Word 365, ¿qué opción de visualización permite que la cinta quede reducida únicamente a las pestañas?",
+    "revisada": true,
+    "enunciado": "Con la cinta contraída, ¿qué queda visible?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modo de pantalla completa"
+        "text": "La fila de nombres de pestaña, y al pulsar una se despliega un momento"
       },
       {
         "letter": "B",
-        "text": "Mostrar solo pestañas"
+        "text": "Nada de la cinta: desaparece del todo"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre la barra"
+        "text": "Los nombres de pestaña y los botones del grupo activo"
       },
       {
         "letter": "D",
-        "text": "Contraer la cinta"
+        "text": "Solo la pestaña Archivo y la barra de acceso rápido"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "\"Mostrar solo pestañas\" oculta los grupos y comandos, dejando solo las pestañas."
+    "respuesta": "A",
+    "explicacion": "Se recoge sola al hacer clic en el documento, de modo que se puede usar un comando suelto y seguir escribiendo sin desplegarla del todo. · **Que desaparezca entera** es el descarte que decide la pregunta, y sería un problema: sin la fila de nombres no habría manera de volver, salvo el atajo. · Se contrae y se despliega con Ctrl+F1, con un doble clic en la pestaña activa o desde el menú contextual de la cinta."
   },
   {
     "id": "interfaz-281",
@@ -7976,28 +7996,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-26",
-    "enunciado": "En Word 365, ¿qué opción de visualización equivale visualmente a pulsar Ctrl + F1?",
+    "revisada": true,
+    "enunciado": "¿Qué gesto de ratón equivale a pulsar Ctrl+F1?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modo de pantalla completa"
+        "text": "Hacer doble clic sobre la pestaña que ya está activa"
       },
       {
         "letter": "B",
-        "text": "Mostrar solo pestañas"
+        "text": "Hacer doble clic sobre la barra de título"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre la barra"
+        "text": "Hacer doble clic sobre la barra de estado"
       },
       {
         "letter": "D",
-        "text": "Contraer la cinta"
+        "text": "Hacer clic derecho sobre el área de trabajo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ctrl+F1 alterna entre mostrar y ocultar la cinta, lo que equivale a \"Mostrar solo pestañas\"."
+    "respuesta": "A",
+    "explicacion": "Los dos contraen la cinta dejando la fila de nombres, y los dos la devuelven igual. · **El doble clic en la barra de título** es el descarte que decide la pregunta y está a un centímetro del otro: maximiza o restaura la VENTANA, que es una cosa completamente distinta. Confundirlos es facilísimo y el resultado se ve enseguida. · La tercera manera de contraer la cinta es el menú contextual, con «Contraer la cinta de opciones»."
   },
   {
     "id": "interfaz-282",
@@ -8011,19 +8032,20 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-27",
-    "enunciado": "En Word 365, ¿qué elemento permite abrir un cuadro de diálogo con más opciones de configuración para un grupo?",
+    "revisada": true,
+    "enunciado": "¿Qué elemento abre el cuadro de diálogo completo de un grupo de la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El menú contextual de la pestaña"
-      },
-      {
-        "letter": "B",
         "text": "El iniciador de cuadro de diálogo"
       },
       {
+        "letter": "B",
+        "text": "El menú contextual de la pestaña"
+      },
+      {
         "letter": "C",
-        "text": "El botón de visualización de la cinta"
+        "text": "El botón de contraer la cinta"
       },
       {
         "letter": "D",
@@ -8031,8 +8053,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El iniciador es un icono en la esquina del grupo que abre el cuadro de diálogo."
+    "respuesta": "A",
+    "explicacion": "Es la flechita diagonal de la esquina inferior derecha del grupo, junto a su nombre, y solo la tienen los grupos cuyo cuadro aporta opciones que no caben en la cinta. · **El modo de acceso por teclado** es el descarte que decide la pregunta: también lleva a esos cuadros, pero por otro camino, pulsando la secuencia de letras que Word va mostrando; de hecho el iniciador tiene su propia letra en ese modo. Uno es un botón y el otro una manera de navegar."
   },
   {
     "id": "interfaz-283",
@@ -8046,28 +8068,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-28",
-    "enunciado": "En Word 365, ¿dónde se encuentra el botón \"Opciones de visualización de la cinta\"?",
+    "revisada": true,
+    "enunciado": "En el extremo derecho de la cinta, al final de la fila de grupos, hay una flechita pequeña. ¿Qué hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "En la esquina superior izquierda, junto al símbolo de Word"
+        "text": "Contrae la cinta, igual que Ctrl+F1"
       },
       {
         "letter": "B",
-        "text": "En la esquina superior derecha, junto a los botones de control de ventana"
+        "text": "Despliega los comandos que no han cabido en la cinta"
       },
       {
         "letter": "C",
-        "text": "En la pestaña Vista"
+        "text": "Abre el cuadro de personalización de la cinta"
       },
       {
         "letter": "D",
-        "text": "En la barra de estado"
+        "text": "Cambia entre el modo mouse y el modo táctil"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Se encuentra en la esquina superior derecha, al lado de minimizar/maximizar/cerrar."
+    "respuesta": "A",
+    "explicacion": "Es la cuarta manera de contraerla, junto a Ctrl+F1, el doble clic en la pestaña activa y el menú contextual. Apunta hacia arriba, indicando que la cinta se recoge. · **Desplegar lo que no cabe** es el descarte que decide la pregunta, y describe algo que sí ocurre: cuando la ventana se estrecha, un grupo entero se recoge en un botón con su nombre y una flecha, que al pulsarlo muestra sus comandos. Pero eso pasa dentro de la cinta, en cada grupo afectado."
   },
   {
     "id": "interfaz-284",
@@ -8081,28 +8104,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-29",
-    "enunciado": "En Word 365, un usuario quiere navegar por las pestañas y comandos usando el teclado. Debe pulsar:",
+    "revisada": true,
+    "enunciado": "Quieres recorrer las pestañas y los comandos de la cinta con el teclado. ¿Qué se pulsa primero?",
     "opciones": [
       {
         "letter": "A",
-        "text": "F1"
+        "text": "Alt o F10"
       },
       {
         "letter": "B",
-        "text": "ALT o F10"
+        "text": "F1"
       },
       {
         "letter": "C",
-        "text": "Alt + Q"
+        "text": "Alt+Q"
       },
       {
         "letter": "D",
-        "text": "Ctrl + F1"
+        "text": "Ctrl+F1"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "ALT o F10 activan el modo de acceso por teclado."
+    "respuesta": "A",
+    "explicacion": "Aparecen los recuadritos con las letras de acceso; a partir de ahí se va pulsando la letra de cada nivel, y con Esc se retrocede. · **Alt+Q** es el descarte que decide la pregunta y también sirve para trabajar sin ratón, pero de otra manera: en vez de recorrer la cinta, se escribe lo que se quiere hacer en el cuadro de búsqueda y Word ofrece el comando. Confirmado en vivo por el usuario. · Ctrl+F1 contrae la cinta, con lo que estorbaría más que ayudar."
   },
   {
     "id": "interfaz-285",
@@ -8116,28 +8140,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-30",
-    "enunciado": "En Word 365, un usuario ve un icono en la esquina del grupo \"Fuente\" y quiere más opciones. Debe:",
+    "revisada": true,
+    "enunciado": "Estás en el grupo Fuente de la pestaña Inicio y necesitas el interletraje, que no tiene botón. ¿Cómo se llega?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Pulsar F1"
+        "text": "Con el iniciador de cuadro de diálogo del grupo"
       },
       {
         "letter": "B",
-        "text": "Hacer clic en el iniciador de cuadro de diálogo"
+        "text": "Con el menú contextual de la pestaña Inicio"
       },
       {
         "letter": "C",
-        "text": "Pulsar Alt + Q"
+        "text": "Pulsando F1 y buscándolo en la ayuda"
       },
       {
         "letter": "D",
-        "text": "Hacer doble clic en la pestaña"
+        "text": "Con un doble clic sobre la pestaña Inicio"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El iniciador abre las opciones ampliadas del grupo."
+    "respuesta": "A",
+    "explicacion": "El cuadro Fuente tiene dos fichas, y en la de «Avanzado» están la escala, el espaciado, la posición, el interletraje y las opciones de OpenType: justo lo que no cabe en la cinta. Ese es el sentido de la flechita. · Al mismo cuadro se llega con Ctrl+M o Ctrl+Mayús+F. · **El doble clic en la pestaña** es el descarte que decide la pregunta y hace lo contrario de lo que hace falta: contrae la cinta y esconde el grupo entero."
   },
   {
     "id": "interfaz-286",
@@ -8151,28 +8176,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-31",
-    "enunciado": "En Word 365, un usuario quiere ocultar la cinta para ver solo el documento. Puede:",
+    "revisada": true,
+    "enunciado": "Quieres ver el máximo de documento posible sin cambiar el zoom. ¿Qué puedes hacer con la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Pulsar Ctrl + F1 o hacer doble clic en una pestaña"
+        "text": "Contraerla con Ctrl+F1 o con un doble clic en la pestaña activa"
       },
       {
         "letter": "B",
-        "text": "Pulsar F1"
+        "text": "Pulsar F1, que la esconde y abre el documento a pantalla completa"
       },
       {
         "letter": "C",
-        "text": "Pulsar Alt + Q"
+        "text": "Pulsar Alt+Q, que la sustituye por el cuadro de búsqueda"
       },
       {
         "letter": "D",
-        "text": "Abrir el menú contextual y elegir \"Mostrar solo pestañas\""
+        "text": "Activar el modo táctil, que ocupa menos alto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+F1 y doble clic son métodos válidos para ocultar la cinta."
+    "explicacion": "Quedan solo los nombres de pestaña y esas líneas pasan al área de trabajo; un clic en cualquier pestaña la despliega un momento cuando haga falta. · **El modo táctil** es el descarte que decide la pregunta y va justo en la otra dirección: agranda los botones y los separa, así que la cinta no ocupa menos. · Para ver aún más se pueden ocultar además la regla, desde Vista ▸ Mostrar, y usar el Modo de lectura o la vista Concentración."
   },
   {
     "id": "interfaz-290",
@@ -8186,28 +8212,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-35",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta:",
     "opciones": [
       {
         "letter": "A",
-        "text": "ALT o F10 activan el modo de acceso por teclado"
+        "text": "Todos los grupos de la cinta tienen iniciador de cuadro de diálogo"
       },
       {
         "letter": "B",
-        "text": "El iniciador de cuadro de diálogo aparece en todos los grupos"
+        "text": "Alt o F10 activan el modo de acceso por teclado"
       },
       {
         "letter": "C",
-        "text": "F1 abre la función de Ayuda"
+        "text": "F1 abre la ayuda de Word"
       },
       {
         "letter": "D",
-        "text": "Existen 4 maneras de mostrar u ocultar la cinta"
+        "text": "Ctrl+F1 contrae y despliega la cinta"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El iniciador solo aparece en \"algunos\" grupos, no en todos."
+    "respuesta": "A",
+    "explicacion": "Solo lo tienen los grupos cuyo cuadro aporta opciones que no caben en la cinta: en Inicio lo llevan Portapapeles, Fuente, Párrafo y Estilos, pero Edición y Voz no; y en Vista no lo tienen ni Zoom ni Ventana. · Las otras tres son ciertas y están confirmadas. · Es un error de generalización de los que más caen: la flechita es tan frecuente que uno la da por universal sin haber mirado."
   },
   {
     "id": "interfaz-291",
@@ -8221,28 +8248,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-36",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + F1 es una forma de mostrar u ocultar la cinta"
+        "text": "El menú contextual de la cinta incluye una entrada para cerrar Word"
       },
       {
         "letter": "B",
-        "text": "\"Contraer la cinta\" pertenece al menú contextual"
+        "text": "Ctrl+F1 contrae y despliega la cinta"
       },
       {
         "letter": "C",
-        "text": "\"Mostrar solo pestañas\" pertenece al menú contextual"
+        "text": "«Contraer la cinta de opciones» está en el menú contextual de la cinta"
       },
       {
         "letter": "D",
-        "text": "Alt + Q permite buscar información"
+        "text": "Alt+Q lleva el foco al cuadro de búsqueda de la barra de título"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "\"Mostrar solo pestañas\" pertenece a las opciones de visualización, no al menú contextual."
+    "respuesta": "A",
+    "explicacion": "Ese menú solo se ocupa de las dos barras de arriba: personalizar la de acceso rápido, personalizar la cinta y contraerla. Cerrar Word está en Archivo ▸ Cerrar, en el botón de la barra de título o con Alt+F4. · Las otras tres son ciertas, y las dos últimas están confirmadas en vivo por el usuario. · Es un descarte creíble porque muchos menús contextuales de Windows sí acaban en una entrada de cerrar."
   },
   {
     "id": "interfaz-292",
@@ -8256,28 +8284,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-37",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El modo de acceso por teclado se activa con ALT o F10"
+        "text": "El iniciador de cuadro de diálogo sirve para buscar información en la ayuda"
       },
       {
         "letter": "B",
-        "text": "\"Doble clic en una pestaña\" es una forma de ocultar la cinta"
+        "text": "El modo de acceso por teclado se activa con Alt o F10"
       },
       {
         "letter": "C",
-        "text": "El iniciador de cuadro de diálogo permite buscar información"
+        "text": "Un doble clic en la pestaña activa contrae la cinta"
       },
       {
         "letter": "D",
-        "text": "\"Ctrl + F1\" es una forma de ocultar la cinta"
+        "text": "Ctrl+F1 contrae y despliega la cinta"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El iniciador abre configuraciones, no busca información."
+    "respuesta": "A",
+    "explicacion": "El iniciador abre el cuadro de diálogo del grupo, con sus opciones ampliadas: nada que ver con buscar. Buscar es cosa de F1, que abre la ayuda, y de Alt+Q, que lleva al cuadro de búsqueda de la barra de título. · Las otras tres son ciertas. · La confusión tiene su razón de ser: los dos son sitios donde uno acude cuando no encuentra lo que busca, pero uno amplía un grupo concreto y el otro rastrea todo Word."
   },
   {
     "id": "interfaz-293",
@@ -8291,28 +8320,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-38",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El menú contextual tiene 3 opciones"
+        "text": "La cinta solo se puede contraer con Ctrl+F1"
       },
       {
         "letter": "B",
-        "text": "Las opciones de visualización tienen 3 opciones"
+        "text": "El menú contextual de la cinta tiene tres entradas"
       },
       {
         "letter": "C",
-        "text": "Existen 5 maneras de mostrar/ocultar la cinta"
+        "text": "F1 abre la ayuda de Word"
       },
       {
         "letter": "D",
-        "text": "F1 abre la Ayuda"
+        "text": "Esc sale del modo de acceso por teclado"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Son 4 maneras, no 5."
+    "respuesta": "A",
+    "explicacion": "Hay al menos cuatro caminos: el atajo, el doble clic en la pestaña activa, la entrada «Contraer la cinta de opciones» del menú contextual y la flechita del extremo derecho de la cinta. · Las otras tres son ciertas. · Que un mismo resultado tenga varias vías es una constante de Word, y por eso los enunciados absolutos con «solo» suelen ser falsos: conviene desconfiar de ellos antes que de nada."
   },
   {
     "id": "interfaz-294",
@@ -8326,28 +8356,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-39",
-    "enunciado": "En Word 365, el \"modo de acceso por teclado\" sirve para:",
+    "revisada": true,
+    "enunciado": "¿Para qué sirve el modo de acceso por teclado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ocultar la cinta"
+        "text": "Para llegar a cualquier pestaña y comando de la cinta sin usar el ratón"
       },
       {
         "letter": "B",
-        "text": "Acceder a pestañas y opciones mediante teclas"
+        "text": "Para contraer la cinta y ganar espacio en pantalla"
       },
       {
         "letter": "C",
-        "text": "Cambiar el idioma"
+        "text": "Para cambiar el idioma de la interfaz"
       },
       {
         "letter": "D",
-        "text": "Activar el modo táctil"
+        "text": "Para activar el modo táctil"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo muestra teclas para acceder a las opciones sin ratón."
+    "respuesta": "A",
+    "explicacion": "Al pulsar Alt o F10 aparecen recuadritos con la letra o el número de cada elemento, y se va bajando de nivel pulsándolos; con Esc se retrocede. Alcanza también a la barra de acceso rápido y a los iniciadores de cuadro de diálogo. · **Contraer la cinta** es el descarte que decide la pregunta, y también se hace sin ratón, pero con Ctrl+F1, que es otra cosa: aquello esconde los comandos y esto sirve para llegar a ellos."
   },
   {
     "id": "interfaz-295",
@@ -8361,28 +8392,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-40",
-    "enunciado": "En Word 365, ¿qué ventaja ofrece el modo de acceso por teclado?",
+    "revisada": true,
+    "enunciado": "¿Qué ventaja tiene el modo de acceso por teclado frente a memorizar atajos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Aumenta la velocidad del procesador"
+        "text": "Que no hay que saberse nada: Word va mostrando las teclas de cada nivel"
       },
       {
         "letter": "B",
-        "text": "Permite acceder a las opciones sin usar el ratón"
+        "text": "Que ejecuta los comandos más deprisa que un atajo"
       },
       {
         "letter": "C",
-        "text": "Reduce el consumo de memoria"
+        "text": "Que funciona también cuando la cinta está contraída"
       },
       {
         "letter": "D",
-        "text": "Mejora la calidad de impresión"
+        "text": "Que permite asignar teclas propias a cada comando"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Permite acceder a opciones sin necesidad del ratón."
+    "respuesta": "A",
+    "explicacion": "Es una navegación guiada: se pulsa Alt y se lee lo que Word propone, sin haber aprendido ninguna combinación de antemano. Por eso alcanza a comandos que no tienen atajo, que son la mayoría. · **Asignar teclas propias** es el descarte que decide la pregunta: eso se hace en el cuadro «Personalizar teclado», al que se llega desde Opciones ▸ Personalizar cinta o desde el botón «Teclas…» del cuadro Símbolo. · Un atajo memorizado sigue siendo más rápido: son dos herramientas distintas."
   },
   {
     "id": "interfaz-296",
@@ -8390,34 +8422,35 @@
     "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
     "tipo": "opcion_unica",
     "categoria": "ruta",
-    "negativa": false,
+    "negativa": true,
     "section": "interfaz",
     "topic": "acceso-teclado-ayuda",
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-41",
-    "enunciado": "En Word 365, ¿qué significa el \"iniciador de cuadro de diálogo\" en un grupo?",
+    "revisada": true,
+    "enunciado": "¿Qué NO indica el iniciador de cuadro de diálogo de un grupo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Que el grupo está vacío"
+        "text": "Que el grupo esté vacío o desactivado"
       },
       {
         "letter": "B",
-        "text": "Que hay más opciones disponibles para ese grupo"
+        "text": "Que hay más opciones que las que se ven en la cinta"
       },
       {
         "letter": "C",
-        "text": "Que el grupo no funciona"
+        "text": "Que existe un cuadro o un panel asociado a ese grupo"
       },
       {
         "letter": "D",
-        "text": "Que el grupo es nuevo"
+        "text": "Que al posar el puntero se puede ver una vista previa del cuadro"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Indica que existen más posibilidades de trabajo."
+    "respuesta": "A",
+    "explicacion": "Un grupo desactivado no se señala con la flechita, sino atenuando sus botones, como pasa con «Ver en paralelo» cuando hay un solo documento abierto. · Las otras tres son ciertas. · Y hay grupos sin flechita que funcionan perfectamente: Edición y Voz en la pestaña Inicio, o Zoom y Ventana en Vista. Que no la tengan solo significa que todo lo suyo cabe en la cinta."
   },
   {
     "id": "interfaz-297",
@@ -8431,28 +8464,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-42",
-    "enunciado": "En Word 365, ¿qué función tiene el botón con el símbolo de flecha en la esquina del grupo?",
+    "revisada": true,
+    "enunciado": "El iniciador del grupo Párrafo, en la pestaña Inicio, ¿qué abre exactamente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Abrir un cuadro de diálogo con más opciones"
+        "text": "El cuadro Párrafo, con sus dos fichas"
       },
       {
         "letter": "B",
-        "text": "Minimizar el grupo"
+        "text": "Un panel lateral con los estilos del documento"
       },
       {
         "letter": "C",
-        "text": "Ocultar el grupo"
+        "text": "El cuadro Tabulaciones"
       },
       {
         "letter": "D",
-        "text": "Cerrar el grupo"
+        "text": "El cuadro Bordes y sombreado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Es el iniciador de cuadro de diálogo."
+    "explicacion": "Ahí están la alineación, el nivel de esquema, las sangrías con su «Especial», el espaciado y el interlineado con sus seis tipos, además de las opciones de saltos de página. Al mismo cuadro se llega desde el lanzador del grupo Párrafo de la pestaña Disposición. · **El cuadro Tabulaciones** es el descarte que decide la pregunta: se abre desde un botón que está DENTRO de este cuadro, abajo a la izquierda, así que se llega por él pero no es lo que abre la flechita."
   },
   {
     "id": "interfaz-298",
@@ -8466,28 +8500,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-43",
-    "enunciado": "En Word 365, ¿dónde aparece el \"iniciador de cuadro de diálogo\"?",
+    "revisada": true,
+    "enunciado": "¿Qué grupos de la pestaña Inicio tienen iniciador de cuadro de diálogo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "En el centro de la cinta"
+        "text": "Portapapeles, Fuente, Párrafo y Estilos; Edición y Voz no lo tienen"
       },
       {
         "letter": "B",
-        "text": "En el ángulo inferior derecho de algunos grupos"
+        "text": "Todos, sin excepción"
       },
       {
         "letter": "C",
-        "text": "En la parte superior de la ventana"
+        "text": "Solo Fuente y Párrafo"
       },
       {
         "letter": "D",
-        "text": "En la barra de estado"
+        "text": "Ninguno: el iniciador solo existe en la pestaña Disposición"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Es su ubicación exacta."
+    "respuesta": "A",
+    "explicacion": "Los cuatro primeros tienen detrás un cuadro o un panel con opciones que no caben arriba; Edición y Voz no, porque todo lo suyo ya está a la vista. · El del Portapapeles es especial: en vez de un cuadro de diálogo abre un panel lateral, el que guarda hasta 24 elementos copiados. · **«Todos, sin excepción»** es el descarte que decide la pregunta y es el error de generalización más común con este detalle."
   },
   {
     "id": "interfaz-299",
@@ -8501,28 +8536,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-44",
-    "enunciado": "En Word 365, ¿cuál es la tecla que activa la Ayuda?",
+    "revisada": true,
+    "enunciado": "Comparas F1 con la pestaña Ayuda de la cinta. ¿Qué relación tienen?",
     "opciones": [
       {
         "letter": "A",
-        "text": "F10"
+        "text": "Las dos llevan a la ayuda: la tecla abre directamente su panel"
       },
       {
         "letter": "B",
-        "text": "F1"
+        "text": "F1 abre la ayuda y la pestaña Ayuda solo muestra la versión del programa"
       },
       {
         "letter": "C",
-        "text": "Ctrl + F1"
+        "text": "La pestaña Ayuda abre la ayuda y F1 abre el cuadro de búsqueda"
       },
       {
         "letter": "D",
-        "text": "Alt + F10"
+        "text": "No tienen relación: F1 activa las letras de acceso de la cinta"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "F1 abre la ventana de ayuda."
+    "respuesta": "A",
+    "explicacion": "La tecla es el camino corto y la pestaña reúne además otras cosas relacionadas, como el contacto con el soporte, los comentarios sobre el programa y la formación. Prueba en vivo del usuario para F1. · **Activar las letras de acceso** es el descarte que decide la pregunta y corresponde a **F10**, que se diferencia de F1 en un número y hace algo completamente distinto. · Y el cuadro de búsqueda de la barra de título responde a Alt+Q."
   },
   {
     "id": "interfaz-301",
@@ -8536,28 +8572,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-46",
-    "enunciado": "En Word 365, ¿cuál de las siguientes opciones pertenece al menú contextual de una pestaña?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas entradas está en el menú contextual que se abre con el clic derecho sobre la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar siempre la barra de herramientas"
-      },
-      {
-        "letter": "B",
-        "text": "Modo de pantalla completa"
-      },
-      {
-        "letter": "C",
         "text": "Personalizar la cinta de opciones"
       },
       {
+        "letter": "B",
+        "text": "Modo de lectura del documento"
+      },
+      {
+        "letter": "C",
+        "text": "Concentración, del grupo Inmersivo"
+      },
+      {
         "letter": "D",
-        "text": "Mostrar solo pestañas"
+        "text": "Ancho de página, del grupo Zoom"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Es la opción del menú contextual."
+    "respuesta": "A",
+    "explicacion": "El menú tiene tres entradas y todas van de las dos barras de arriba: personalizar la de acceso rápido, personalizar la cinta y contraerla. · Los tres descartes son comandos reales pero de la pestaña **Vista**: «Modo de lectura» está en el grupo Vistas, «Concentración» en el grupo Inmersivo —y es el que despeja la pantalla de verdad— y «Ancho de página» en el grupo Zoom. Todos cambian cómo se ve el documento, no cómo se ve la cinta."
   },
   {
     "id": "interfaz-302",
@@ -8571,28 +8608,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-47",
-    "enunciado": "En Word 365, ¿cuál de las siguientes opciones pertenece a \"Opciones de visualización de la cinta\"?",
+    "revisada": true,
+    "enunciado": "Quieres escribir sin ninguna distracción, con la cinta y todo lo demás fuera de la vista. ¿Qué comando lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Contraer la cinta de opciones"
+        "text": "Vista ▸ Inmersivo ▸ Concentración"
       },
       {
         "letter": "B",
-        "text": "Ocultar la barra de herramientas de acceso rápido"
+        "text": "Vista ▸ Vistas ▸ Diseño web"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre la barra de herramientas"
+        "text": "Vista ▸ Zoom ▸ Una página"
       },
       {
         "letter": "D",
-        "text": "Personalizar la cinta de opciones"
+        "text": "Contraer la cinta con Ctrl+F1"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Es una opción del botón de visualización."
+    "respuesta": "A",
+    "explicacion": "Deja el documento sobre un fondo liso, sin cinta, sin barras y sin nada alrededor; se sale con Esc. Comparte grupo con el Lector inmersivo. · **Contraer la cinta** es el descarte que decide la pregunta y va en la misma dirección, pero se queda a medias: recoge los botones y deja la fila de pestañas, la regla y la barra de estado. · «Una página» solo ajusta el zoom para que la hoja entre entera, sin quitar nada."
   },
   {
     "id": "interfaz-303",
@@ -8606,28 +8644,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-48",
-    "enunciado": "En Word 365, ¿qué diferencia hay entre el menú contextual y el botón de visualización?",
+    "revisada": true,
+    "enunciado": "¿Qué diferencia hay entre contraer la cinta y la vista Concentración?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Son iguales"
+        "text": "Contraer deja la fila de pestañas y el resto de la ventana; Concentración lo esconde todo"
       },
       {
         "letter": "B",
-        "text": "El menú contextual se abre con clic derecho y tiene opciones sobre la cinta; el botón de visualización es un desplegable específico con modos de visualización"
+        "text": "Contraer lo esconde todo; Concentración deja la fila de pestañas"
       },
       {
         "letter": "C",
-        "text": "El botón solo funciona en modo táctil"
+        "text": "Son lo mismo, con dos nombres distintos"
       },
       {
         "letter": "D",
-        "text": "El menú contextual no permite modificar la cinta"
+        "text": "Contraer cambia el zoom del documento y Concentración no"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Son menús distintos con opciones distintas."
+    "respuesta": "A",
+    "explicacion": "Contraer la cinta es un ajuste pequeño y reversible al instante, con la fila de nombres siempre a mano; Concentración es un modo aparte, sin barras ni reglas, del que se sale con Esc. · Se pueden combinar, pero no hace falta. · Ninguna de las dos toca el zoom: el documento se ve del mismo tamaño, solo que con más sitio alrededor. Confundir «ver más documento» con «verlo más grande» es el error de siempre en este terreno."
   },
   {
     "id": "interfaz-305",
@@ -8641,28 +8680,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-50",
-    "enunciado": "En Word 365, ¿qué opción del botón de visualización oculta todos los elementos de la interfaz excepto el documento?",
+    "revisada": true,
+    "enunciado": "De estas cuatro, señale la que NO deja ver más superficie de documento:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modo de pantalla completa"
+        "text": "Activar el modo táctil de la cinta"
       },
       {
         "letter": "B",
-        "text": "Mostrar solo pestañas"
+        "text": "Contraer la cinta con Ctrl+F1"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre la barra de herramientas"
+        "text": "Quitar la regla desde Vista ▸ Mostrar"
       },
       {
         "letter": "D",
-        "text": "Contraer la cinta"
+        "text": "Entrar en la vista Concentración"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El modo de pantalla completa maximiza el área de trabajo."
+    "explicacion": "El modo táctil hace justo lo contrario: agranda los botones y los separa, así que la cinta ocupa lo mismo o más y el documento no gana nada. Lo que cambia es cuántos comandos caben, no el sitio disponible abajo. · Las otras tres sí liberan superficie, cada una a su escala: contraer la cinta se lleva unas líneas, quitar la regla otras pocas, y Concentración lo despeja todo de golpe."
   },
   {
     "id": "interfaz-306",
@@ -8676,28 +8716,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-51",
-    "enunciado": "En Word 365, ¿cuál es el número total de opciones que hay entre el menú contextual y el botón de visualización?",
+    "revisada": true,
+    "enunciado": "En la pestaña Vista, el grupo Mostrar tiene tres casillas. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "4"
+        "text": "Regla, Líneas de la cuadrícula y Panel de navegación"
       },
       {
         "letter": "B",
-        "text": "5"
+        "text": "Regla, Barra de estado y Panel de navegación"
       },
       {
         "letter": "C",
-        "text": "6"
+        "text": "Regla, Líneas de la cuadrícula y Marcas de formato"
       },
       {
         "letter": "D",
-        "text": "7"
+        "text": "Regla, Cinta de opciones y Barra de estado"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "3 del menú contextual + 3 del botón de visualización = 6."
+    "respuesta": "A",
+    "explicacion": "Son tres interruptores de cosas que ayudan a trabajar pero no se imprimen. La casilla de la regla muestra u oculta las dos a la vez, la horizontal y la vertical. · **Las marcas de formato** son el descarte que decide la pregunta: también son ayudas invisibles al imprimir, pero se activan desde Inicio ▸ Párrafo ▸ Mostrar todo, o con Ctrl+Mayús+8. · La cinta y la barra de estado no se controlan desde aquí."
   },
   {
     "id": "interfaz-307",
@@ -8705,34 +8746,35 @@
     "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
     "tipo": "opcion_unica",
     "categoria": "ruta",
-    "negativa": false,
+    "negativa": true,
     "section": "interfaz",
     "topic": "acceso-teclado-ayuda",
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-52",
-    "enunciado": "En Word 365, ¿cuántas formas hay de mostrar/ocultar la cinta?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas NO es una manera de contraer o desplegar la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2"
+        "text": "Desmarcar una casilla en Vista ▸ Mostrar"
       },
       {
         "letter": "B",
-        "text": "3"
+        "text": "Pulsar Ctrl+F1"
       },
       {
         "letter": "C",
-        "text": "4"
+        "text": "Hacer doble clic en la pestaña activa"
       },
       {
         "letter": "D",
-        "text": "5"
+        "text": "Usar el menú contextual de la cinta"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Son 4 maneras."
+    "respuesta": "A",
+    "explicacion": "Ese grupo solo tiene tres casillas y ninguna es la cinta: son la regla, las líneas de la cuadrícula y el panel de navegación. · Las otras tres sí la contraen, y hay una cuarta: la flechita del extremo derecho de la propia cinta. · Que la cinta no se controle desde Vista sorprende, porque es donde uno lo buscaría; la razón es que ese grupo se ocupa de lo que se ve del DOCUMENTO, no de la interfaz del programa."
   },
   {
     "id": "interfaz-308",
@@ -8746,28 +8788,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-53",
-    "enunciado": "En Word 365, ¿cuántas opciones tiene el menú contextual de una pestaña?",
+    "revisada": true,
+    "enunciado": "Las dos entradas de «personalizar» del menú contextual de la cinta llevan a sitios distintos. ¿A cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2"
+        "text": "Una al panel de la barra de acceso rápido y otra al de la cinta"
       },
       {
         "letter": "B",
-        "text": "3"
+        "text": "Las dos al mismo panel de Opciones, por dos caminos"
       },
       {
         "letter": "C",
-        "text": "4"
+        "text": "Una a Opciones de Word y otra a la pestaña Vista"
       },
       {
         "letter": "D",
-        "text": "5"
+        "text": "Una a Opciones de Word y otra a Personalizar teclado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Son 3."
+    "respuesta": "A",
+    "explicacion": "Son dos secciones vecinas del cuadro Opciones de Word, cada una con su lista: en la de la barra se eligen los botones que estarán siempre a mano, y en la de la cinta se muestran u ocultan pestañas, se crean pestañas y grupos propios y se enciende **Programador**. · **El cuadro Personalizar teclado** es el descarte que decide la pregunta: está en la segunda de esas secciones, en el botón «Personalizar…» de abajo, así que se llega desde ahí pero no es a donde lleva el menú."
   },
   {
     "id": "interfaz-309",
@@ -8781,28 +8824,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-54",
-    "enunciado": "En Word 365, ¿cuántas opciones tiene el botón \"Opciones de visualización\"?",
+    "revisada": true,
+    "enunciado": "En Personalizar cinta de opciones, ¿qué se puede hacer con las pestañas de fábrica?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2"
+        "text": "Mostrarlas u ocultarlas con su casilla, y cambiarlas de orden"
       },
       {
         "letter": "B",
-        "text": "3"
+        "text": "Solo mostrarlas u ocultarlas: el orden es fijo"
       },
       {
         "letter": "C",
-        "text": "4"
+        "text": "Solo cambiarlas de orden: siempre están todas visibles"
       },
       {
         "letter": "D",
-        "text": "5"
+        "text": "Nada: solo se pueden tocar las pestañas creadas por el usuario"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Son 3."
+    "respuesta": "A",
+    "explicacion": "La lista de la derecha tiene una casilla por pestaña y unas flechas al lado para subirlas y bajarlas; ahí es donde se enciende **Programador**, que viene apagada. También se pueden crear pestañas y grupos propios, y el botón «Restablecer» devuelve todo a como estaba. · Lo que no se puede es quitar comandos de un grupo de fábrica: para eso hay que crear un grupo propio y llenarlo con lo que se quiera."
   },
   {
     "id": "interfaz-311",
@@ -8816,28 +8860,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-56",
-    "enunciado": "En Word 365, un usuario quiere ganar espacio en pantalla ocultando la cinta desde el menú contextual. ¿Qué opción debe elegir?",
+    "revisada": true,
+    "enunciado": "Quieres contraer la cinta desde el menú contextual. ¿Qué entrada eliges?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Personalizar la cinta"
-      },
-      {
-        "letter": "B",
         "text": "Contraer la cinta de opciones"
       },
       {
+        "letter": "B",
+        "text": "Personalizar la cinta de opciones"
+      },
+      {
         "letter": "C",
-        "text": "Modo de pantalla completa"
+        "text": "Personalizar la barra de herramientas de acceso rápido"
       },
       {
         "letter": "D",
-        "text": "Mostrar solo pestañas"
+        "text": "Concentración"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Es la opción del menú contextual que contrae la cinta."
+    "respuesta": "A",
+    "explicacion": "Es la tercera de las tres entradas, y una vez contraída cambia de texto para volver a desplegarla. · **«Concentración»** es el descarte que decide la pregunta: hace algo parecido pero mucho más radical y desde otro sitio, la pestaña Vista, grupo Inmersivo, dejando el documento solo sobre un fondo liso. · Las otras dos entradas del menú no esconden nada: llevan a Opciones para añadir o quitar comandos."
   },
   {
     "id": "interfaz-312",
@@ -8851,28 +8896,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-57",
-    "enunciado": "En Word 365, un usuario quiere ver el documento a pantalla completa. ¿Qué opción debe elegir?",
+    "revisada": true,
+    "enunciado": "Quieres leer un documento largo aprovechando toda la pantalla, sin editarlo. ¿Qué vista conviene?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar solo pestañas"
+        "text": "El Modo de lectura, del grupo Vistas"
       },
       {
         "letter": "B",
-        "text": "Mostrar siempre la barra de herramientas"
+        "text": "La vista Diseño web, del mismo grupo"
       },
       {
         "letter": "C",
-        "text": "Modo de pantalla completa"
+        "text": "La vista Borrador, del mismo grupo"
       },
       {
         "letter": "D",
-        "text": "Contraer la cinta"
+        "text": "Contraer la cinta con Ctrl+F1"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Es la opción que oculta todos los elementos."
+    "respuesta": "A",
+    "explicacion": "Reorganiza el texto en columnas que caben en la pantalla, esconde la cinta y ofrece herramientas de lectura; se sale con Esc. Tiene además botón propio en la barra de estado. · **La vista Borrador** es el descarte que decide la pregunta: también simplifica, pero para editar deprisa, y por eso quita los saltos de página, los encabezados y las imágenes flotantes. · Contraer la cinta gana unas líneas y poco más."
   },
   {
     "id": "interfaz-314",
@@ -8886,28 +8932,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-59",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación que NO es correcta:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El modo de acceso por teclado se activa con ALT o F10"
+        "text": "El iniciador de cuadro de diálogo sirve para buscar comandos por su nombre"
       },
       {
         "letter": "B",
-        "text": "\"Doble clic en una pestaña\" es una forma de mostrar/ocultar la cinta"
+        "text": "El modo de acceso por teclado se activa con Alt o F10"
       },
       {
         "letter": "C",
-        "text": "El iniciador de cuadro de diálogo permite buscar información"
+        "text": "Un doble clic en la pestaña activa contrae la cinta"
       },
       {
         "letter": "D",
-        "text": "\"Ctrl + F1\" es una forma de mostrar/ocultar la cinta"
+        "text": "Ctrl+F1 contrae y despliega la cinta"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El iniciador abre opciones, no busca."
+    "respuesta": "A",
+    "explicacion": "El iniciador abre el cuadro de diálogo de un grupo concreto, con sus opciones ampliadas. Buscar comandos por su nombre es lo que hace el cuadro de búsqueda de la barra de título, al que lleva **Alt+Q**, confirmado en vivo por el usuario: se escribe lo que se quiere hacer y Word ofrece el comando para ejecutarlo. · Las otras tres son ciertas. · Los dos sitios se parecen en que uno acude a ellos cuando no encuentra algo, pero uno amplía un grupo y el otro rastrea todo Word."
   },
   {
     "id": "interfaz-316",
@@ -8921,28 +8968,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-61",
-    "enunciado": "En Word 365, ¿qué elemento aparece en la esquina de algunos grupos y abre un cuadro de diálogo?",
+    "revisada": true,
+    "enunciado": "¿Qué elemento de la cinta se reconoce por ser una flecha diagonal minúscula en la esquina de un grupo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El menú contextual"
-      },
-      {
-        "letter": "B",
         "text": "El iniciador de cuadro de diálogo"
       },
       {
+        "letter": "B",
+        "text": "El botón de contraer la cinta"
+      },
+      {
         "letter": "C",
-        "text": "El botón de visualización"
+        "text": "El desplegable de un botón de dos partes"
       },
       {
         "letter": "D",
-        "text": "El modo de acceso por teclado"
+        "text": "La marca de que el grupo se ha personalizado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Es el iniciador."
+    "respuesta": "A",
+    "explicacion": "Va junto al nombre del grupo, abajo a la derecha, y apunta hacia fuera en diagonal. · **El desplegable de un botón** es el descarte que decide la pregunta: también es una flechita, pero pequeña y hacia abajo, pegada al propio botón, como la de Pegar o la de Color de fuente. Distinguir las dos flechas es lo que se pregunta. · Y la de contraer la cinta apunta hacia arriba y está al final de la fila de grupos, no dentro de ninguno."
   },
   {
     "id": "interfaz-317",
@@ -8956,28 +9004,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-62",
-    "enunciado": "En Word 365, ¿qué permite hacer el modo de acceso por teclado?",
+    "revisada": true,
+    "enunciado": "El modo de acceso por teclado alcanza a más sitios que las pestañas. ¿A cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Acceder a las opciones sin el ratón"
+        "text": "A la barra de acceso rápido y a los iniciadores de cuadro de diálogo"
       },
       {
         "letter": "B",
-        "text": "Cambiar el idioma"
+        "text": "Solo a las pestañas y sus comandos, a nada más"
       },
       {
         "letter": "C",
-        "text": "Activar el modo táctil"
+        "text": "A la barra de estado y al control de zoom"
       },
       {
         "letter": "D",
-        "text": "Ocultar la cinta"
+        "text": "Al texto del documento, para seleccionarlo por párrafos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Permite el acceso mediante teclas."
+    "explicacion": "Al pulsar Alt salen recuadritos también sobre los botones de la barra de acceso rápido, numerados del 1 en adelante, y una vez dentro de una pestaña, cada iniciador de cuadro de diálogo tiene su propia letra. Así se llega a cualquier sitio sin ratón. · **La barra de estado** es el descarte que decide la pregunta: no participa en este modo, y sus vistas y su zoom se manejan de otras maneras. · Se sale con Esc, que retrocede un nivel cada vez."
   },
   {
     "id": "interfaz-318",
@@ -8991,28 +9040,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-63",
-    "enunciado": "En Word 365, ¿qué tecla o combinación muestra recuadros con teclas sobre la interfaz?",
+    "revisada": true,
+    "enunciado": "¿Qué aparece exactamente sobre la interfaz al entrar en el modo de acceso por teclado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "F1"
+        "text": "Recuadritos con una letra o un número junto a cada elemento"
       },
       {
         "letter": "B",
-        "text": "ALT o F10"
+        "text": "Un panel lateral con la lista de todos los comandos"
       },
       {
         "letter": "C",
-        "text": "Alt + Q"
+        "text": "Un cuadro de búsqueda flotante en el centro de la pantalla"
       },
       {
         "letter": "D",
-        "text": "Ctrl + F1"
+        "text": "Los comandos ampliados, como en el modo táctil"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "ALT o F10 activan el modo que muestra los recuadros."
+    "respuesta": "A",
+    "explicacion": "Las letras van sobre las pestañas y los números sobre los botones de la barra de acceso rápido, según su posición. Al elegir una pestaña, los recuadros se renuevan con los de sus comandos. · **El cuadro de búsqueda** es el descarte que decide la pregunta: existe, pero está fijo en la barra de título y se alcanza con Alt+Q, que no es lo mismo que Alt a secas. Confirmado en vivo por el usuario. · Se sale con Esc o haciendo clic en el documento."
   },
   {
     "id": "interfaz-319",
@@ -9026,28 +9076,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-64",
-    "enunciado": "En Word 365, ¿qué función tiene F1?",
+    "revisada": true,
+    "enunciado": "¿Dónde se abre la ayuda al pulsar F1?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Búsqueda"
+        "text": "En un panel a la derecha, con su propio buscador"
       },
       {
         "letter": "B",
-        "text": "Ayuda"
+        "text": "En una ventana aparte, fuera de Word"
       },
       {
         "letter": "C",
-        "text": "Guardar"
+        "text": "En el cuadro de búsqueda de la barra de título"
       },
       {
         "letter": "D",
-        "text": "Imprimir"
+        "text": "En una pestaña nueva del documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "F1 abre la ayuda."
+    "respuesta": "A",
+    "explicacion": "El panel se abre a la derecha y se cierra con su aspa o con Alt+Mayús+C, sin salir del documento. Prueba en vivo del usuario. · **El cuadro de búsqueda de la barra de título** es el descarte que decide la pregunta: también da acceso a artículos de ayuda, pero es otro sitio y otra tecla, Alt+Q, y además ejecuta comandos, cosa que la ayuda no hace. · La cinta tiene también una pestaña Ayuda al final, con el soporte y la formación."
   },
   {
     "id": "interfaz-321",
@@ -9061,28 +9112,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-66",
-    "enunciado": "En Word 365, ¿qué opción del menú contextual permite modificar qué comandos aparecen en la cinta?",
+    "revisada": true,
+    "enunciado": "Quieres crear una pestaña propia con los comandos que más usas. ¿Por dónde se empieza?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ocultar la barra de acceso rápido"
+        "text": "Clic derecho en la cinta ▸ Personalizar la cinta de opciones"
       },
       {
         "letter": "B",
-        "text": "Personalizar la cinta de opciones"
+        "text": "Clic derecho en la cinta ▸ Contraer la cinta de opciones"
       },
       {
         "letter": "C",
-        "text": "Contraer la cinta"
+        "text": "Vista ▸ Mostrar"
       },
       {
         "letter": "D",
-        "text": "Mostrar siempre la barra"
+        "text": "Alt+Q y escribir «pestaña nueva»"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "\"Personalizar la cinta\" abre las opciones para modificarla."
+    "respuesta": "A",
+    "explicacion": "Lleva a esa sección de Opciones de Word, donde están los botones «Nueva pestaña» y «Nuevo grupo»: se crea la pestaña, dentro un grupo, y se arrastran a él los comandos de la lista de la izquierda. También se llega por Archivo ▸ Opciones. · Ahí mismo se enciende **Programador**, que viene apagada, y el botón «Restablecer» devuelve todo a como estaba. · Los comandos de un grupo de fábrica no se pueden quitar: por eso se crean grupos propios."
   },
   {
     "id": "interfaz-322",
@@ -9096,28 +9148,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-67",
-    "enunciado": "En Word 365, ¿qué opción del botón de visualización muestra siempre los comandos?",
+    "revisada": true,
+    "enunciado": "Tienes la cinta contraída y quieres dejarla desplegada de forma permanente. ¿Cómo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modo de pantalla completa"
+        "text": "Pulsando Ctrl+F1 otra vez, o haciendo doble clic en una pestaña"
       },
       {
         "letter": "B",
-        "text": "Mostrar solo pestañas"
+        "text": "Pulsando Esc con la cinta desplegada temporalmente"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre la barra de herramientas"
+        "text": "Cambiando al modo táctil desde la barra de acceso rápido"
       },
       {
         "letter": "D",
-        "text": "Contraer la cinta"
+        "text": "Cerrando y volviendo a abrir Word"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Es la opción que mantiene la cinta expandida."
+    "respuesta": "A",
+    "explicacion": "Todo lo que contrae la cinta la despliega igual: el atajo, el doble clic, la entrada del menú contextual y la flechita del extremo derecho. · **Esc** es el descarte que decide la pregunta: con la cinta contraída, un clic en una pestaña la despliega un momento, pero eso es temporal y se recoge sola al volver al documento; Esc solo cierra ese despliegue. · El estado se guarda al cerrar Word, así que reiniciar no cambia nada."
   },
   {
     "id": "interfaz-323",
@@ -9131,28 +9184,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-68",
-    "enunciado": "En Word 365, ¿cuál de los siguientes NO es un método para mostrar/ocultar la cinta?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas NO contrae ni despliega la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Doble clic en una pestaña"
+        "text": "Alt+F4"
       },
       {
         "letter": "B",
-        "text": "Menú contextual de una pestaña"
+        "text": "Un doble clic en la pestaña activa"
       },
       {
         "letter": "C",
-        "text": "Ctrl + F1"
+        "text": "El menú contextual de la cinta"
       },
       {
         "letter": "D",
-        "text": "Alt + F4"
+        "text": "Ctrl+F1"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Alt+F4 cierra la ventana, no muestra/oculta la cinta."
+    "respuesta": "A",
+    "explicacion": "Alt+F4 cierra: va cerrando los documentos abiertos uno a uno y, con el último, cierra Word. Prueba en vivo del usuario. · Las otras tres sí contraen la cinta, y hay una cuarta manera: la flechita del extremo derecho de la fila de grupos. · Conviene no confundir Alt+F4 con **Ctrl+F4**, que cierra el documento activo sin cerrar Word, ni con **Ctrl+F1**, que es la que aparece aquí y solo esconde los botones."
   },
   {
     "id": "interfaz-324",
@@ -9166,28 +9220,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-69",
-    "enunciado": "En Word 365, ¿cuál de los siguientes es un método para mostrar/ocultar la cinta?",
+    "revisada": true,
+    "enunciado": "De estas cuatro combinaciones, ¿cuál actúa sobre la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "F1"
+        "text": "Ctrl+F1"
       },
       {
         "letter": "B",
-        "text": "Alt + Q"
+        "text": "F1"
       },
       {
         "letter": "C",
-        "text": "Ctrl + F1"
+        "text": "Alt+F1"
       },
       {
         "letter": "D",
-        "text": "Alt + F4"
+        "text": "Alt+F4"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ctrl + F1 es uno de los 4 métodos."
+    "respuesta": "A",
+    "explicacion": "La contrae y la despliega, dejando solo la fila de nombres de pestaña. · Las otras tres son la familia entera de F1 más el cierre, y ninguna toca la cinta: **F1** abre el panel de ayuda, **Alt+F1** salta al campo siguiente del documento y **Alt+F4** va cerrando ventanas. Cuatro combinaciones sobre dos teclas de función y cuatro efectos que no se parecen en nada. · Alt a secas, sin F1, sí actúa sobre la cinta: activa el modo de acceso por teclado."
   },
   {
     "id": "interfaz-325",
@@ -9201,28 +9256,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-70",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana permite acceder a más opciones de un grupo?",
+    "revisada": true,
+    "enunciado": "Un grupo de la cinta muestra cinco botones pero su cuadro de diálogo tiene veinte opciones. ¿Cómo se llega a las quince restantes?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El menú contextual"
+        "text": "Con el iniciador de cuadro de diálogo de ese grupo"
       },
       {
         "letter": "B",
-        "text": "El iniciador de cuadro de diálogo"
+        "text": "Con el menú contextual de la pestaña"
       },
       {
         "letter": "C",
-        "text": "El botón de visualización"
+        "text": "Activando el modo táctil, que muestra más comandos"
       },
       {
         "letter": "D",
-        "text": "El modo de acceso por teclado"
+        "text": "Personalizando la cinta para añadirlos a ese grupo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Es el iniciador."
+    "respuesta": "A",
+    "explicacion": "Ese es exactamente su motivo de existir: la cinta enseña lo más usado y el cuadro guarda el resto. En el grupo Fuente, por ejemplo, la cinta no tiene interletraje, escala ni posición, y el cuadro sí. · **Personalizar la cinta** es el descarte que decide la pregunta: permite añadir comandos, sí, pero solo a grupos PROPIOS, no a los de fábrica, y aun así muchos ajustes de un cuadro no existen como comando suelto."
   },
   {
     "id": "interfaz-326",
@@ -9236,28 +9292,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-71",
-    "enunciado": "En Word 365, ¿cuál es la ubicación exacta del botón \"Opciones de visualización de la cinta\"?",
+    "revisada": true,
+    "enunciado": "¿Dónde está el botón que contrae la cinta con el ratón, sin usar menús ni atajos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "En la esquina superior izquierda"
+        "text": "Al final de la fila de grupos, en el extremo derecho de la cinta"
       },
       {
         "letter": "B",
-        "text": "En la esquina superior derecha"
+        "text": "En la esquina superior izquierda, junto a la barra de acceso rápido"
       },
       {
         "letter": "C",
-        "text": "En la barra de estado"
+        "text": "En la barra de estado, junto al zoom"
       },
       {
         "letter": "D",
-        "text": "En la pestaña Vista"
+        "text": "En la pestaña Vista, en el grupo Mostrar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Está en la esquina superior derecha, junto a los botones de control."
+    "respuesta": "A",
+    "explicacion": "Es una flechita pequeña que apunta hacia arriba, indicando que la cinta se recoge. Es la cuarta manera de contraerla, junto a Ctrl+F1, el doble clic en la pestaña activa y el menú contextual. · **La pestaña Vista** es el descarte que decide la pregunta, y es donde uno lo buscaría: su grupo Mostrar tiene tres casillas, pero son la regla, las líneas de la cuadrícula y el panel de navegación, todas del documento, no de la interfaz."
   },
   {
     "id": "interfaz-327",
@@ -9271,28 +9328,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-72",
-    "enunciado": "En Word 365, ¿cuántas opciones se encuentran en el menú contextual de una pestaña?",
+    "revisada": true,
+    "enunciado": "¿Cuántas maneras hay de contraer la cinta de opciones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2"
+        "text": "Cuatro: el atajo, el doble clic, el menú contextual y la flechita de la cinta"
       },
       {
         "letter": "B",
-        "text": "3"
+        "text": "Dos: el atajo y el doble clic"
       },
       {
         "letter": "C",
-        "text": "4"
+        "text": "Una: solo el atajo Ctrl+F1"
       },
       {
         "letter": "D",
-        "text": "5"
+        "text": "Tres: el atajo, el doble clic y una casilla en Vista ▸ Mostrar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Son 3."
+    "respuesta": "A",
+    "explicacion": "Las cuatro llevan al mismo estado y todas se deshacen igual que se hicieron. · **La casilla en Vista ▸ Mostrar** es el descarte que decide la pregunta: ese grupo tiene tres casillas y ninguna es la cinta, sino la regla, las líneas de la cuadrícula y el panel de navegación. · Que un mismo resultado tenga varias vías es la norma en Word, y por eso conviene desconfiar de los enunciados que dicen «solo se puede de una manera»."
   },
   {
     "id": "interfaz-328",
@@ -9306,28 +9364,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-73",
-    "enunciado": "En Word 365, ¿cuántas opciones se encuentran en el botón de visualización de la cinta?",
+    "revisada": true,
+    "enunciado": "¿Qué hace un clic simple en una pestaña cuando la cinta está contraída?",
     "opciones": [
       {
         "letter": "A",
-        "text": "2"
+        "text": "La despliega un momento, hasta el siguiente clic"
       },
       {
         "letter": "B",
-        "text": "3"
+        "text": "La despliega de forma permanente"
       },
       {
         "letter": "C",
-        "text": "4"
+        "text": "No hace nada: hay que usar Ctrl+F1"
       },
       {
         "letter": "D",
-        "text": "5"
+        "text": "Abre el menú contextual de esa pestaña"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Son 3."
+    "respuesta": "A",
+    "explicacion": "Así se puede usar un comando suelto y volver a escribir sin perder el espacio ganado, que es justamente para lo que se contrae. · **Desplegarla de forma permanente** es lo que hace el DOBLE clic, y ese es el descarte que decide la pregunta: el mismo gesto con una pulsación de diferencia da dos resultados distintos. · El menú contextual se abre con el clic derecho, y trae «Contraer la cinta de opciones» entre sus tres entradas."
   },
   {
     "id": "interfaz-329",
@@ -9341,28 +9400,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-74",
-    "enunciado": "En Word 365, ¿qué diferencia hay entre \"Mostrar solo pestañas\" y \"Modo de pantalla completa\"?",
+    "revisada": true,
+    "enunciado": "¿Qué diferencia hay entre contraer la cinta y ocultar la regla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ninguna"
+        "text": "Son dos ajustes independientes, cada uno con su mando"
       },
       {
         "letter": "B",
-        "text": "La primera deja visibles las pestañas; la segunda oculta todo para maximizar el área de trabajo"
+        "text": "Son lo mismo: quitar la regla contrae también la cinta"
       },
       {
         "letter": "C",
-        "text": "La segunda deja ver las pestañas"
+        "text": "Contraer la cinta quita también la regla automáticamente"
       },
       {
         "letter": "D",
-        "text": "Son opciones del menú contextual"
+        "text": "Ocultar la regla contrae también la cinta automáticamente"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ambas son opciones de visualización, pero con efectos diferentes."
+    "respuesta": "A",
+    "explicacion": "Cada uno se maneja por su lado: la cinta con Ctrl+F1, el doble clic, el menú contextual o su flechita; la regla con la casilla «Regla» de Vista ▸ Mostrar, que quita a la vez la horizontal y la vertical. · Los tres descartes suponen que uno arrastra al otro, y no es así: se pueden tener las dos, ninguna, o cualquier combinación. Quitar las dos es lo que más superficie libera sin cambiar de vista."
   },
   {
     "id": "interfaz-330",
@@ -9376,28 +9436,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-75",
-    "enunciado": "En Word 365, ¿qué opción de visualización es la más adecuada para trabajar sin distracciones?",
+    "revisada": true,
+    "enunciado": "Quieres redactar sin distracciones, sin cinta, sin barras y sin reglas. ¿Qué conviene?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mostrar solo pestañas"
+        "text": "Entrar en la vista Concentración, de Vista ▸ Inmersivo"
       },
       {
         "letter": "B",
-        "text": "Modo de pantalla completa"
+        "text": "Contraer la cinta de opciones con Ctrl+F1"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre la barra"
+        "text": "Activar el modo táctil de la cinta de opciones"
       },
       {
         "letter": "D",
-        "text": "Contraer la cinta"
+        "text": "Subir el zoom del documento hasta el 200 %"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo de pantalla completa maximiza el área de trabajo."
+    "respuesta": "A",
+    "explicacion": "Deja el documento solo sobre un fondo liso y se sale con Esc; la cinta reaparece al subir el puntero al borde superior. Comparte grupo con el Lector inmersivo. · **Contraer la cinta** es el descarte que decide la pregunta: va en la misma dirección pero se queda a medias, porque mantiene la fila de pestañas, la regla y la barra de estado. · Y el zoom es el error de siempre: agranda el texto, no despeja la pantalla."
   },
   {
     "id": "interfaz-331",
@@ -9411,28 +9472,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-76",
-    "enunciado": "En Word 365, ¿qué opción de visualización es útil si se quiere acceder a las pestañas pero no a los grupos?",
+    "revisada": true,
+    "enunciado": "Quieres tener las pestañas a mano pero sin que los botones ocupen sitio. ¿Qué haces?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modo de pantalla completa"
+        "text": "Contraer la cinta: queda la fila de nombres y los botones salen al pulsar una pestaña"
       },
       {
         "letter": "B",
-        "text": "Mostrar solo pestañas"
+        "text": "Entrar en la vista Concentración, que esconde todo menos las pestañas"
       },
       {
         "letter": "C",
-        "text": "Mostrar siempre la barra"
+        "text": "Activar el modo táctil, que compacta la cinta"
       },
       {
         "letter": "D",
-        "text": "Contraer la cinta"
+        "text": "Quitar la regla desde Vista ▸ Mostrar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "\"Mostrar solo pestañas\" oculta los grupos y comandos."
+    "respuesta": "A",
+    "explicacion": "Es exactamente para eso: los nombres siguen visibles, un clic despliega la pestaña un momento y se recoge sola al volver al documento. · **Concentración** es el descarte que decide la pregunta: también esconde la cinta, pero entera, nombres incluidos, y para volver hay que subir el puntero al borde o salir con Esc. Es más radical. · El modo táctil no compacta nada: agranda los botones y los separa."
   },
   {
     "id": "interfaz-332",
@@ -9446,15 +9508,16 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-77",
-    "enunciado": "En Word 365, ¿qué tecla de función abre la ayuda?",
+    "revisada": true,
+    "enunciado": "De estas cuatro teclas de función, ¿cuál abre la ayuda?",
     "opciones": [
       {
         "letter": "A",
-        "text": "F4"
+        "text": "F1"
       },
       {
         "letter": "B",
-        "text": "F1"
+        "text": "F4"
       },
       {
         "letter": "C",
@@ -9466,8 +9529,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "F1 es la tecla de ayuda."
+    "respuesta": "A",
+    "explicacion": "Abre el panel de ayuda a la derecha. Prueba en vivo del usuario. · Las otras tres hacen cosas muy usadas y muy distintas, y conviene tenerlas juntas: **F4** repite la última acción, igual que Ctrl+Y y Alt+Entrar; **F10** activa las letras de acceso de la cinta, igual que Alt; y **F12** abre «Guardar como», también confirmado en vivo. · Ninguna de las tres tiene que ver con la ayuda, pero las cuatro se usan a diario."
   },
   {
     "id": "interfaz-334",
@@ -9481,28 +9544,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-79",
-    "enunciado": "En Word 365, ¿cuál de los siguientes atajos NO corresponde a una función de la página 4?",
+    "revisada": true,
+    "enunciado": "De estas cuatro combinaciones, ¿cuál NO actúa sobre la interfaz de Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + F1"
+        "text": "Alt+Ctrl++ del teclado numérico"
       },
       {
         "letter": "B",
-        "text": "Alt + F10"
+        "text": "Alt+Q, de la barra de título"
       },
       {
         "letter": "C",
-        "text": "Alt + Q"
+        "text": "Ctrl+F1, sobre la cinta"
       },
       {
         "letter": "D",
-        "text": "Ctrl + F10"
+        "text": "F10, sobre la cinta"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Ctrl+F10 (maximizar) no se menciona en la página 4."
+    "respuesta": "A",
+    "explicacion": "Esa combinación abre el cuadro **Personalizar teclado**, donde se asignan, cambian o quitan atajos a los comandos: no cambia cómo se ve nada, cambia cómo responde el teclado. Es el mismo cuadro cuyo volcado sirve de referencia de atajos en este banco. · Las otras tres sí tocan la interfaz: Ctrl+F1 contrae la cinta, Alt+Q lleva el foco al cuadro de búsqueda de la barra de título y F10 saca las letras de acceso."
   },
   {
     "id": "interfaz-499",
@@ -9516,28 +9580,29 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "8-219",
-    "enunciado": "¿Qué atajo muestra la Ayuda de Word 365?",
+    "revisada": true,
+    "enunciado": "Comparas F1 con Ctrl+F1. ¿Qué hace cada una?",
     "opciones": [
       {
         "letter": "A",
-        "text": "F1"
+        "text": "F1 abre la ayuda; Ctrl+F1 contrae y despliega la cinta"
       },
       {
         "letter": "B",
-        "text": "F2"
+        "text": "F1 contrae la cinta; Ctrl+F1 abre la ayuda"
       },
       {
         "letter": "C",
-        "text": "Alt+F1"
+        "text": "F1 abre la ayuda; Ctrl+F1 no tiene función en este Word"
       },
       {
         "letter": "D",
-        "text": "Ctrl+F1"
+        "text": "Las dos abren la ayuda, en sitios distintos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "F1 abre la Ayuda de Word. F2 activa el modo mover texto. Alt+F1 pasa al campo siguiente. Ctrl+F1 no tiene función asignada en este Word. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Las dos están confirmadas: F1 abre el panel de ayuda a la derecha, y Ctrl+F1 recoge la cinta dejando solo la fila de nombres de pestaña, deshaciéndose con la misma combinación. · **Que Ctrl+F1 no haga nada** es el descarte que decide la pregunta, y es una creencia bastante extendida: la cinta desaparece, uno cree que se ha estropeado algo y no relaciona el efecto con la tecla. · Para completar la familia, **Alt+F1** salta al campo siguiente del documento."
   },
   {
     "id": "interfaz-512",
@@ -9552,15 +9617,16 @@
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "gen-atajo-15",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado abre el cuadro para personalizar métodos abreviados de teclado en Word 365?",
+    "revisada": true,
+    "enunciado": "¿Qué combinación abre el cuadro «Personalizar teclado», donde se asignan atajos a los comandos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Mayús++ (numérico)"
+        "text": "Alt+Ctrl++ del teclado numérico"
       },
       {
         "letter": "B",
-        "text": "Alt+Mayús++"
+        "text": "Alt+Mayús++ del teclado numérico"
       },
       {
         "letter": "C",
@@ -9568,12 +9634,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl++ (numérico)"
+        "text": "Ctrl+Mayús++"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Abre el cuadro de diálogo Personalizar teclado, donde se pueden asignar, cambiar o quitar combinaciones de teclas a los comandos de Word."
+    "respuesta": "A",
+    "explicacion": "El signo más tiene que ser el del teclado numérico. Al mismo cuadro se llega por Archivo ▸ Opciones ▸ Personalizar cinta de opciones ▸ botón «Personalizar…», y también desde el botón «Teclas…» del cuadro Símbolo, con el símbolo ya seleccionado. · Es un cuadro que conviene conocer por lo que muestra: la lista completa de comandos de Word con las teclas que tienen asignadas, que es la fuente de verdad sobre qué atajo existe en una instalación y cuál no."
   },
   {
     "id": "interfaz-287",
@@ -9587,11 +9653,12 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-32",
-    "enunciado": "En Word 365, señale las opciones que forman parte del menú contextual de una pestaña (varias correctas):",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estas entradas están en el menú contextual que se abre con el clic derecho sobre la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ocultar la barra de acceso rápido"
+        "text": "Personalizar la barra de herramientas de acceso rápido"
       },
       {
         "letter": "B",
@@ -9599,20 +9666,24 @@
       },
       {
         "letter": "C",
-        "text": "Modo de pantalla completa"
+        "text": "Contraer la cinta de opciones"
       },
       {
         "letter": "D",
-        "text": "Contraer la cinta de opciones"
+        "text": "Concentración"
+      },
+      {
+        "letter": "E",
+        "text": "Cerrar Word"
       }
     ],
     "matching": null,
     "respuesta": [
       "A",
       "B",
-      "D"
+      "C"
     ],
-    "explicacion": "Las tres pertenecen al menú contextual; \"Modo pantalla completa\" no."
+    "explicacion": "Son tres y las tres se ocupan de las dos barras de arriba: las dos primeras llevan a sendas secciones del cuadro Opciones de Word, y la tercera esconde los botones dejando la fila de nombres. · Los dos descartes son comandos reales de otros sitios: **Concentración** está en Vista ▸ Inmersivo y despeja la pantalla entera, y cerrar Word se hace desde Archivo, desde el botón de la barra de título o con Alt+F4."
   },
   {
     "id": "interfaz-288",
@@ -9626,32 +9697,42 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-33",
-    "enunciado": "En Word 365, señale las opciones que forman parte de \"Opciones de visualización de la cinta\" (varias correctas):",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estas maneras contraen la cinta de opciones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Modo de pantalla completa"
+        "text": "Pulsar Ctrl+F1"
       },
       {
         "letter": "B",
-        "text": "Mostrar solo pestañas"
+        "text": "Hacer doble clic en la pestaña activa"
       },
       {
         "letter": "C",
-        "text": "Personalizar la cinta"
+        "text": "Usar el menú contextual de la cinta"
       },
       {
         "letter": "D",
-        "text": "Mostrar siempre la barra de herramientas"
+        "text": "La flechita del extremo derecho de la cinta"
+      },
+      {
+        "letter": "E",
+        "text": "Desmarcar una casilla en Vista ▸ Mostrar"
+      },
+      {
+        "letter": "F",
+        "text": "Pulsar Alt+Q"
       }
     ],
     "matching": null,
     "respuesta": [
       "A",
       "B",
+      "C",
       "D"
     ],
-    "explicacion": "Son las tres opciones del botón de visualización."
+    "explicacion": "Las cuatro llevan al mismo estado y todas se deshacen igual que se hicieron. · Los dos descartes existen pero hacen otra cosa: en **Vista ▸ Mostrar** solo hay tres casillas —regla, líneas de la cuadrícula y panel de navegación—, y **Alt+Q** lleva el foco al cuadro de búsqueda de la barra de título, confirmado en vivo por el usuario. · Que un mismo resultado tenga cuatro vías es la norma en Word."
   },
   {
     "id": "interfaz-289",
@@ -9665,32 +9746,42 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-34",
-    "enunciado": "En Word 365, señale las formas válidas de mostrar u ocultar la cinta (varias correctas):",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estas afirmaciones sobre el modo de acceso por teclado son ciertas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Doble clic en una pestaña"
+        "text": "Se activa con Alt o con F10"
       },
       {
         "letter": "B",
-        "text": "Menú contextual de una pestaña"
+        "text": "Muestra recuadritos con la letra o el número de cada elemento"
       },
       {
         "letter": "C",
-        "text": "Ctrl + F1"
+        "text": "Alcanza también a la barra de acceso rápido"
       },
       {
         "letter": "D",
-        "text": "Alt + Q"
+        "text": "Se sale con Esc o haciendo clic en el documento"
+      },
+      {
+        "letter": "E",
+        "text": "Solo funciona con la cinta contraída"
+      },
+      {
+        "letter": "F",
+        "text": "Agranda los comandos para verlos mejor"
       }
     ],
     "matching": null,
     "respuesta": [
       "A",
       "B",
-      "C"
+      "C",
+      "D"
     ],
-    "explicacion": "Alt+Q no es una de las 4 formas."
+    "explicacion": "Es una navegación guiada: Word va mostrando qué tecla lleva a cada sitio, y con Esc se retrocede un nivel cada vez. Alcanza a las pestañas, a sus comandos, a los iniciadores de cuadro de diálogo y a la barra de acceso rápido. · Los dos descartes son falsos: funciona con la cinta desplegada o contraída, y **agrandar los comandos** es lo que hace el modo táctil, que es otra cosa distinta y se activa desde la barra de acceso rápido."
   },
   {
     "id": "interfaz-313",
@@ -9704,32 +9795,37 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-58",
-    "enunciado": "En Word 365, señale las opciones que permiten reducir la visibilidad de la cinta (varias correctas):",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estas cosas liberan superficie de pantalla para el documento?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Doble clic en una pestaña"
+        "text": "Contraer la cinta con Ctrl+F1"
       },
       {
         "letter": "B",
-        "text": "Ctrl + F1"
+        "text": "Quitar la regla desde Vista ▸ Mostrar"
       },
       {
         "letter": "C",
-        "text": "Alt + Q"
+        "text": "Entrar en la vista Concentración"
       },
       {
         "letter": "D",
-        "text": "Menú contextual de una pestaña"
+        "text": "Activar el modo táctil de la cinta"
+      },
+      {
+        "letter": "E",
+        "text": "Subir el zoom al 150 %"
       }
     ],
     "matching": null,
     "respuesta": [
       "A",
       "B",
-      "D"
+      "C"
     ],
-    "explicacion": "Todas excepto Alt+Q permiten ocultar la cinta."
+    "explicacion": "Las tres quitan elementos de en medio, cada una a su escala: unas líneas la cinta, unas pocas la regla, y todo de golpe la vista Concentración. · Los dos descartes son el error clásico: el **modo táctil** agranda los botones y los separa, así que la cinta no ocupa menos; y el **zoom** agranda el texto sin quitar nada, con lo que se ve MENOS documento, no más. Ver más grande y ver más son cosas opuestas."
   },
   {
     "id": "interfaz-523",
@@ -9744,11 +9840,12 @@
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "bal-interfaz-07",
     "generado": true,
-    "enunciado": "El modo de acceso por teclado (activado con Alt) permanece activo aunque se haga clic con el ratón en el documento.",
+    "revisada": true,
+    "enunciado": "El modo de acceso por teclado sigue activo aunque se haga clic con el ratón en el documento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: hacer clic con el ratón en el documento, o pulsar Esc, desactiva el modo de acceso por teclado y quita los recuadros de letras."
+    "explicacion": "Un clic en el documento lo desactiva y los recuadritos desaparecen: Word entiende que se ha vuelto al ratón. También se sale con Esc, que además retrocede un nivel cada vez si ya se había entrado en una pestaña, y volviendo a pulsar Alt. · Tiene su lógica, porque los recuadros taparían la interfaz mientras se trabaja con el ratón. · Se entra otra vez con Alt o F10 cuando haga falta."
   },
   {
     "id": "interfaz-277",
@@ -9762,6 +9859,7 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-22",
+    "revisada": true,
     "enunciado": "En Word 365, relacione cada atajo con su función:",
     "opciones": [],
     "matching": {
@@ -9814,7 +9912,7 @@
       "3": "A",
       "4": "B"
     },
-    "explicacion": "Correspondencia directa según el temario."
+    "explicacion": "Las cuatro se usan a diario y ninguna se parece a las otras en lo que hace, pese a compartir teclas. · Conviene fijar la familia entera de F1: **F1** abre la ayuda, **Ctrl+F1** contrae la cinta y **Alt+F1** salta al campo siguiente. Y la de Alt: **Alt** o **F10** activan las letras de acceso, y **Alt+Q** lleva al cuadro de búsqueda de la barra de título. · Las dos confirmadas en vivo por el usuario son F1 y Alt+Q. · La que más se falla es Ctrl+F1, porque mucha gente cree que no hace nada."
   },
   {
     "id": "interfaz-278",
@@ -9828,81 +9926,36 @@
     "subtopic": null,
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "4-23",
-    "enunciado": "En Word 365, relacione cada opción con el menú al que pertenece:",
+    "revisada": true,
+    "enunciado": "Relacione cada comando con el sitio desde el que se usa:",
     "opciones": [],
     "matching": {
       "left": [
         {
           "id": "1",
-          "label": "Personalizar la cinta"
+          "label": "Personalizar la cinta de opciones"
         },
         {
           "id": "2",
-          "label": "Mostrar solo pestañas"
-        }
-      ],
-      "right": [
-        {
-          "id": "A",
-          "label": "Opciones de visualización"
-        },
-        {
-          "id": "B",
-          "label": "Menú contextual"
-        }
-      ],
-      "correct": {
-        "1": "B",
-        "2": "A"
-      }
-    },
-    "respuesta": {
-      "1": "B",
-      "2": "A"
-    },
-    "explicacion": "La primera pertenece al menú contextual, la segunda a las opciones de visualización."
-  },
-  {
-    "id": "interfaz-310",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
-    "tipo": "emparejamiento",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "acceso-teclado-ayuda",
-    "subtopic": null,
-    "tema": "Modo de acceso por teclado y ayuda",
-    "sourceQuestionId": "4-55",
-    "enunciado": "En Word 365, relacione cada opción con su efecto:",
-    "opciones": [],
-    "matching": {
-      "left": [
-        {
-          "id": "1",
-          "label": "Mostrar solo pestañas"
-        },
-        {
-          "id": "2",
-          "label": "Modo de pantalla completa"
+          "label": "Concentración"
         },
         {
           "id": "3",
-          "label": "Mostrar siempre la barra"
+          "label": "Regla"
         }
       ],
       "right": [
         {
           "id": "A",
-          "label": "Maximiza el área de trabajo"
+          "label": "Vista ▸ Inmersivo"
         },
         {
           "id": "B",
-          "label": "Oculta los comandos, deja solo pestañas"
+          "label": "Menú contextual de la cinta"
         },
         {
           "id": "C",
-          "label": "Muestra todos los comandos"
+          "label": "Vista ▸ Mostrar"
         }
       ],
       "correct": {
@@ -9916,7 +9969,64 @@
       "2": "A",
       "3": "C"
     },
-    "explicacion": "Cada opción tiene un efecto visual distinto."
+    "explicacion": "Los tres despejan o reorganizan la pantalla y cada uno vive en un sitio distinto, que es lo que se confunde. · El menú contextual de la cinta solo tiene tres entradas y todas van de las dos barras de arriba. · El grupo Mostrar de la pestaña Vista tiene tres casillas: la regla, las líneas de la cuadrícula y el panel de navegación. · Y el grupo Inmersivo tiene Concentración y el Lector inmersivo, los dos para leer o escribir sin estorbos."
+  },
+  {
+    "id": "interfaz-310",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Modo de acceso por teclado y ayuda",
+    "tipo": "emparejamiento",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "acceso-teclado-ayuda",
+    "subtopic": null,
+    "tema": "Modo de acceso por teclado y ayuda",
+    "sourceQuestionId": "4-55",
+    "revisada": true,
+    "enunciado": "Relacione cada manera de ganar espacio con lo que esconde:",
+    "opciones": [],
+    "matching": {
+      "left": [
+        {
+          "id": "1",
+          "label": "Contraer la cinta"
+        },
+        {
+          "id": "2",
+          "label": "Vista Concentración"
+        },
+        {
+          "id": "3",
+          "label": "Quitar la regla"
+        }
+      ],
+      "right": [
+        {
+          "id": "A",
+          "label": "Esconde toda la interfaz salvo el documento"
+        },
+        {
+          "id": "B",
+          "label": "Esconde los botones y deja la fila de pestañas"
+        },
+        {
+          "id": "C",
+          "label": "Esconde las dos escalas del borde del área de trabajo"
+        }
+      ],
+      "correct": {
+        "1": "B",
+        "2": "A",
+        "3": "C"
+      }
+    },
+    "respuesta": {
+      "1": "B",
+      "2": "A",
+      "3": "C"
+    },
+    "explicacion": "Van de menos a más: la regla libera unas pocas líneas, la cinta contraída bastantes más y Concentración lo despeja todo. Se pueden combinar. · Ninguna cambia el TAMAÑO de lo que se ve: el texto sigue igual de grande y lo que aumenta es la superficie visible. Eso las separa del zoom, que hace justo lo contrario. · La casilla de la regla actúa sobre las dos a la vez, la horizontal y la vertical."
   },
   {
     "id": "interfaz-527",
@@ -9931,13 +10041,14 @@
     "tema": "Modo de acceso por teclado y ayuda",
     "sourceQuestionId": "rell-interfaz-04",
     "generado": true,
+    "revisada": true,
     "enunciado": "La tecla [1] (o F10) activa el modo de acceso por teclado en la cinta de opciones, mostrando recuadros con letras sobre cada comando.",
     "opciones": [],
     "matching": null,
     "respuesta": [
       "Alt"
     ],
-    "explicacion": "Alt (o F10) activa el modo de acceso por teclado; se sale con Esc o haciendo clic en el documento."
+    "explicacion": "Aparecen recuadritos con una letra sobre cada pestaña y con un número sobre cada botón de la barra de acceso rápido; al pulsar uno, los recuadros se renuevan con los del nivel siguiente. · Se sale con **Esc**, que retrocede un nivel cada vez, volviendo a pulsar Alt, o simplemente haciendo clic en el documento. · De ahí vienen las secuencias que se ven escritas con comas, como Alt,F,Y: las teclas se pulsan una tras otra, no a la vez."
   },
   {
     "id": "interfaz-115",
