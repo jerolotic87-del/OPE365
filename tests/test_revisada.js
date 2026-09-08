@@ -37,8 +37,20 @@ const terminadas = Object.keys(porSeccion).filter(s=> porSeccion[s].rev === porS
 const intactas   = Object.keys(porSeccion).filter(s=> porSeccion[s].rev === 0);
 ck(terminadas.includes("archivo") && terminadas.includes("inicio"),
    `A · archivo e inicio marcadas al completo (${terminadas.sort().join(", ")})`);
-ck(terminadas.length + intactas.length === Object.keys(porSeccion).length,
-   "A · ninguna sección queda a medias: o entera o sin tocar");
+const enCurso = Object.keys(porSeccion).filter(s=> porSeccion[s].rev > 0 && porSeccion[s].rev < porSeccion[s].n);
+// La reescritura se sube GRUPO a grupo, no seccion a seccion, para que se pueda
+// estudiar lo terminado sin esperar a la pestaña entera: una seccion a medias es
+// lo esperado. Lo que no vale es un TOPIC a medias, que dejaria media unidad
+// didactica con un estilo y media con otro.
+const porTopic = {};
+O.QUESTIONS.forEach(q=>{
+  const k = q.section + ":" + q.topic;
+  const t = porTopic[k] || (porTopic[k] = { n:0, rev:0 });
+  t.n++; if(q.revisada) t.rev++;
+});
+const topicsMedias = Object.keys(porTopic).filter(k=> porTopic[k].rev > 0 && porTopic[k].rev < porTopic[k].n);
+ck(topicsMedias.length === 0,
+   `A · ningun grupo queda a medias (secciones en curso: ${enCurso.join(", ") || "ninguna"})`);
 const totalRev = O.QUESTIONS.filter(q=>q.revisada).length;
 ck(totalRev > 0 && totalRev < O.QUESTIONS.length,
    `A · ${totalRev} de ${O.QUESTIONS.length} revisadas: la marca distingue de verdad`);

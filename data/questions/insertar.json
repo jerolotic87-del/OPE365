@@ -258,6 +258,43 @@
     "explicacion": "Es el mismo comando por dos puertas, como tantos en Word: el botón de Insertar y la primera entrada del menú «Saltos» de Disposición insertan un salto de página idéntico, el de Ctrl+Entrar. · Dejar una hoja vacía es lo que hace «Página en blanco», que son dos saltos seguidos. · Crear una sección es lo de los SALTOS DE SECCIÓN, que están más abajo en ese mismo menú de Disposición y son otra cosa: permiten cambiar márgenes, orientación o encabezados a partir de ahí. Es la confusión más rentable de este grupo. · Y el salto de columna, que sí necesita columnas, es otra entrada distinta del mismo menú."
   },
   {
+    "id": "insertar-209",
+    "sourceFile": "insertar.json",
+    "bloque": "Insertar — Páginas",
+    "tipo": "opcion_unica",
+    "categoria": "atajo",
+    "negativa": false,
+    "section": "insertar",
+    "topic": "paginas",
+    "subtopic": null,
+    "tema": "Páginas",
+    "sourceQuestionId": "vf-insertar-04",
+    "generado": true,
+    "revisada": true,
+    "enunciado": "Un manual asegura que Ctrl+Mayús+Entrar hace lo mismo que el botón Salto de página. Lo pruebas en esta instalación. ¿Qué ocurre?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Nada: esa combinación no tiene comando asignado aquí"
+      },
+      {
+        "letter": "B",
+        "text": "Inserta el salto de página, igual que el botón"
+      },
+      {
+        "letter": "C",
+        "text": "Inserta un separador de estilos entre los dos párrafos"
+      },
+      {
+        "letter": "D",
+        "text": "Repite la última acción hecha en el documento"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Ctrl+Mayús+Entrar no figura con ningún comando en el cuadro Personalizar teclado de esta instalación, por mucho que varios manuales la den como salto de columna. El salto de página es Ctrl+Entrar, sin Mayús. · El separador de estilos sí existe y es Alt+Ctrl+Entrar: une dos párrafos para poder darles formato distinto en la misma línea, y es el descarte con más fundamento porque comparte la tecla y sí está asignado. · Repetir la última acción es Alt+Entrar, junto con F4 y Ctrl+Y. Tres combinaciones con Entrar que sí hacen algo, y una cuarta que no."
+  },
+  {
     "id": "insertar-406",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Páginas (icono)",
@@ -506,43 +543,6 @@
     "explicacion": "Falso, y la diferencia es de un salto. Con un salto de página al final de la página 2, el texto siguiente arranca en la 3 y no queda ninguna hoja vacía. Con una página en blanco, aparece una página 3 completamente vacía y el texto que venía detrás pasa a la 4. · El motivo es que la página en blanco inserta DOS saltos de página seguidos, no uno. · Elegir mal tiene consecuencias prácticas: en un documento que luego se imprime a doble cara, una hoja vacía de más descoloca todo el emparejamiento de páginas pares e impares."
   },
   {
-    "id": "insertar-209",
-    "sourceFile": "insertar.json",
-    "bloque": "Insertar — Páginas",
-    "tipo": "opcion_unica",
-    "categoria": "atajo",
-    "negativa": false,
-    "section": "insertar",
-    "topic": "paginas",
-    "subtopic": null,
-    "tema": "Páginas",
-    "sourceQuestionId": "vf-insertar-04",
-    "generado": true,
-    "revisada": true,
-    "enunciado": "Un manual asegura que Ctrl+Mayús+Entrar hace lo mismo que el botón Salto de página. Lo pruebas en esta instalación. ¿Qué ocurre?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Nada: esa combinación no tiene comando asignado aquí"
-      },
-      {
-        "letter": "B",
-        "text": "Inserta el salto de página, igual que el botón"
-      },
-      {
-        "letter": "C",
-        "text": "Inserta un separador de estilos entre los dos párrafos"
-      },
-      {
-        "letter": "D",
-        "text": "Repite la última acción hecha en el documento"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+Entrar no figura con ningún comando en el cuadro Personalizar teclado de esta instalación, por mucho que varios manuales la den como salto de columna. El salto de página es Ctrl+Entrar, sin Mayús. · El separador de estilos sí existe y es Alt+Ctrl+Entrar: une dos párrafos para poder darles formato distinto en la misma línea, y es el descarte con más fundamento porque comparte la tecla y sí está asignado. · Repetir la última acción es Alt+Entrar, junto con F4 y Ctrl+Y. Tres combinaciones con Entrar que sí hacen algo, y una cuarta que no."
-  },
-  {
     "id": "insertar-210",
     "sourceFile": "insertar.json",
     "bloque": "Insertar — Páginas",
@@ -662,7 +662,8 @@
     "subtopic": null,
     "tema": "Tablas",
     "sourceQuestionId": "8-242",
-    "enunciado": "¿Qué atajo va al inicio de la fila en una tabla en Word 365?",
+    "revisada": true,
+    "enunciado": "Estás en la tercera celda de una fila de una tabla y quieres saltar a la primera de esa misma fila. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -674,16 +675,16 @@
       },
       {
         "letter": "C",
-        "text": "Alt+Mayús+Inicio"
+        "text": "Ctrl+Inicio"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Inicio"
+        "text": "Alt+Re Pág"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Inicio va a la primera celda de la fila activa en una tabla. Inicio va al inicio de la línea dentro de la celda. Ctrl+Inicio va al inicio del documento. ⚠️ Ojo: el volcado v2608 lista Alt+Mayús+Inicio/Fin como «ir a la primera/última celda de la fila» (igual que Alt+Inicio/Fin), pero al pulsarlas con Mayús la selección se extiende. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Alt+Inicio es PrincipioDeFila: lleva el cursor a la primera celda de la fila activa, sin salir de la tabla. Su simétrica es Alt+Fin, que va a la última. · Inicio a secas no sale de la celda: se queda al principio de la línea donde esté el cursor, que es el descarte que más cae porque parece la versión sin adornos de la buena. · Ctrl+Inicio se va al principio del documento, tabla incluida. · Y Alt+Re Pág trabaja en el otro eje: sube a la primera celda de la COLUMNA. Cuatro teclas de navegación y cuatro alcances distintos: línea, fila, columna y documento."
   },
   {
     "id": "insertar-32",
@@ -697,28 +698,29 @@
     "subtopic": null,
     "tema": "Tablas",
     "sourceQuestionId": "8-243",
-    "enunciado": "¿Qué atajo va al final de la fila en una tabla en Word 365?",
+    "revisada": true,
+    "enunciado": "Comparas Alt+Fin con Fin dentro de una celda de tabla. ¿Qué hace cada una?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Fin"
+        "text": "Alt+Fin va a la última celda de la fila; Fin, al final de la línea de la celda"
       },
       {
         "letter": "B",
-        "text": "Fin"
+        "text": "Alt+Fin va al final de la línea de la celda; Fin, a la última celda de la fila"
       },
       {
         "letter": "C",
-        "text": "Alt+Mayús+Fin"
+        "text": "Alt+Fin va a la última celda de la columna; Fin, a la última de la fila"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Fin"
+        "text": "Las dos hacen lo mismo: Alt no cambia nada dentro de una tabla"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Fin va a la última celda de la fila activa en una tabla. Fin va al final de la línea dentro de la celda. Ctrl+Fin va al final del documento. ⚠️ Ojo: el volcado v2608 lista Alt+Mayús+Inicio/Fin como «ir a la primera/última celda de la fila» (igual que Alt+Inicio/Fin), pero al pulsarlas con Mayús la selección se extiende. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "La tecla Alt es la que hace que la navegación pase del texto a la estructura de la tabla: sin ella, Inicio y Fin se mueven dentro de la celda como en cualquier párrafo; con ella, saltan de celda en celda por la fila. · La versión con los papeles cambiados es el reflejo exacto y hay que leerla despacio. · La columna tiene sus propias teclas, Alt+Re Pág y Alt+Av Pág, que suben y bajan en vertical. · Y desde luego Alt cambia algo: si no, no harían falta cuatro combinaciones para recorrer una tabla."
   },
   {
     "id": "insertar-33",
@@ -732,7 +734,8 @@
     "subtopic": null,
     "tema": "Tablas",
     "sourceQuestionId": "8-244",
-    "enunciado": "¿Qué atajo va al inicio de la columna en una tabla en Word 365?",
+    "revisada": true,
+    "enunciado": "Estás a mitad de una columna de una tabla larga y quieres subir a su primera celda sin usar el ratón. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -748,12 +751,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+Re Pág"
+        "text": "Alt+Inicio"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Re Pág va al inicio de la columna activa en una tabla. Alt+Av Pág va al final de la columna. Ctrl+Re Pág examina el objeto anterior con el explorador. Alt+Mayús+Re Pág también va al inicio de la columna como atajo alternativo. Confirmado en el volcado de Personalizar teclado de tu Word 365 (v2608)."
+    "explicacion": "Alt+Re Pág es PrincipioDeColumna: sube a la primera celda de la columna activa. Su simétrica, Alt+Av Pág, baja a la última. · Alt+Inicio es el descarte que decide la pregunta porque trabaja en el otro eje: va a la primera celda de la FILA, no de la columna. Merece la pena fijar los cuatro juntos, porque son los mismos dos ejes de siempre: Inicio y Fin recorren la fila, Re Pág y Av Pág recorren la columna, y Alt es lo que convierte el movimiento de texto en movimiento de tabla. · Y Ctrl+Re Pág ni siquiera es de tablas: pasa al objeto de búsqueda anterior con el explorador de objetos."
   },
   {
     "id": "insertar-34",
@@ -767,7 +770,8 @@
     "subtopic": null,
     "tema": "Tablas",
     "sourceQuestionId": "8-245",
-    "enunciado": "¿Qué atajo va al final de la columna en una tabla en Word 365?",
+    "revisada": true,
+    "enunciado": "Una tabla ocupa tres páginas y quieres bajar de un golpe a la última celda de la columna en la que estás. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -783,12 +787,12 @@
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+Av Pág"
+        "text": "Alt+Fin"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Av Pág va al final de la columna activa en una tabla. Alt+Re Pág va al inicio de la columna. Ctrl+Av Pág examina el objeto siguiente con el explorador. Alt+Mayús+Av Pág también va al final de la columna como atajo alternativo. Confirmado en el volcado de Personalizar teclado de tu Word 365 (v2608)."
+    "explicacion": "Alt+Av Pág es FinDeColumna y baja a la última celda de la columna activa, aunque la tabla siga en otra página. Su simétrica es Alt+Re Pág. · Alt+Fin es el descarte que decide la pregunta: recorre la FILA, no la columna, y lleva a la última celda de la línea en la que estás. · Ctrl+Av Pág no es de tablas: pasa al objeto de búsqueda siguiente. · El esquema completo de navegación por tabla son cuatro combinaciones y dos ejes: Alt+Inicio y Alt+Fin para la fila, Alt+Re Pág y Alt+Av Pág para la columna."
   },
   {
     "id": "insertar-38",
@@ -802,28 +806,29 @@
     "subtopic": null,
     "tema": "Tablas",
     "sourceQuestionId": "8-324",
-    "enunciado": "¿Qué hace Alt + 5 del teclado numérico dentro de una tabla en Word 365?",
+    "revisada": true,
+    "enunciado": "Pulsas Alt y el 5 del teclado numérico dentro de una tabla y unas veces sale un ♣ y otras se selecciona la tabla entera. ¿De qué depende?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Depende de NumLock: activado inserta ♣ (código Alt); desactivado selecciona toda la tabla"
+        "text": "Del bloqueo numérico: encendido inserta el símbolo, apagado selecciona la tabla"
       },
       {
         "letter": "B",
-        "text": "Siempre inserta el símbolo ♣"
+        "text": "Del bloqueo numérico: encendido selecciona la tabla, apagado inserta el símbolo"
       },
       {
         "letter": "C",
-        "text": "Siempre selecciona toda la tabla"
+        "text": "De si el cursor está en una celda o en el texto de fuera de la tabla"
       },
       {
         "letter": "D",
-        "text": "No hace nada"
+        "text": "De si la tabla tiene fila de encabezado definida o no"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Con NumLock ACTIVADO, Alt+5 del numérico introduce el carácter del código Alt de Windows (♣). Con NumLock DESACTIVADO, la tecla 5 actúa como «Borrar/Clear» y Alt+5 selecciona toda la tabla (comando TablaSeleccionarTabla). Las dos ramas verificadas: Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Con el bloqueo numérico encendido, Alt más un número del teclado numérico es el método de Windows para insertar un carácter por su código, y el 5 devuelve el trébol. Con el bloqueo apagado esa tecla actúa como «Borrar», y la combinación ejecuta el comando de seleccionar toda la tabla. Las dos ramas comprobadas. Prueba en vivo del usuario. · Es de los pocos casos en que la misma pulsación hace dos cosas según una tecla que casi nadie mira, y por eso desconcierta tanto. · Ni la posición del cursor ni el encabezado influyen: fuera de una tabla, el comando de seleccionarla simplemente no tiene nada sobre lo que actuar."
   },
   {
     "id": "insertar-40",
@@ -838,28 +843,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "gen-atajo-17",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado selecciona una tabla completa en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres seleccionar una tabla entera con el teclado, sin arrastrar el ratón por ella. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Inicio"
+        "text": "Alt y el 5 del teclado numérico, con el bloqueo numérico apagado"
       },
       {
         "letter": "B",
-        "text": "Alt+Borrar (Núm 5)"
+        "text": "Alt y el 5 del teclado numérico, con el bloqueo numérico encendido"
       },
       {
         "letter": "C",
-        "text": "Ctrl+F2"
+        "text": "Alt+Inicio, estando en la primera fila"
       },
       {
         "letter": "D",
-        "text": "Alt+F11"
+        "text": "Ctrl+E, con el cursor dentro de una celda"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Alt+5 del teclado numérico con NumLock DESACTIVADO (la tecla actúa como Borrar/Clear) selecciona toda la tabla. ⚠️ Con NumLock ACTIVADO en cambio inserta el símbolo ♣ (código Alt de Windows). Alt+Inicio va a la primera celda de la fila; Ctrl+F2 y Alt+F11 no seleccionan tablas. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Con el bloqueo apagado, esa tecla actúa como «Borrar» y la combinación ejecuta el comando de seleccionar toda la tabla. Prueba en vivo del usuario. ⚠️ Con el bloqueo ENCENDIDO la misma pulsación hace otra cosa por completo: inserta el símbolo ♣, porque Alt más un número es el código de un carácter de Windows. Ese es el descarte que decide la pregunta. · Alt+Inicio solo va a la primera celda de la fila. · Y Ctrl+E selecciona el DOCUMENTO entero, tabla incluida pero también todo lo demás: es lo que se pulsa por costumbre y no sirve para quedarse solo con la tabla."
   },
   {
     "id": "insertar-42",
@@ -874,28 +880,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "gen-atajo-24",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también va al final de la columna en una tabla en Word 365, además de Alt+Av Pág?",
+    "revisada": true,
+    "enunciado": "Comparas las cuatro combinaciones de navegación por tabla. ¿Cuál de estas parejas trabaja sobre la COLUMNA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Mayús+6"
+        "text": "Alt+Re Pág y Alt+Av Pág"
       },
       {
         "letter": "B",
-        "text": "Alt+Mayús+3"
+        "text": "Alt+Inicio y Alt+Fin"
       },
       {
         "letter": "C",
-        "text": "Alt+Mayús+Av Pág"
+        "text": "Inicio y Fin"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+F1"
+        "text": "Ctrl+Re Pág y Ctrl+Av Pág"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Mueve el cursor al final de la columna activa dentro de una tabla; es una segunda combinación asignada a la misma función que Alt+Av Pág."
+    "respuesta": "A",
+    "explicacion": "Las teclas de página se mueven en vertical, así que con Alt recorren la columna: arriba a la primera celda, abajo a la última. · Alt+Inicio y Alt+Fin son la pareja del otro eje, la fila, y es el descarte que decide la pregunta: la lógica es la misma que fuera de una tabla, donde Inicio y Fin van a los extremos de la línea y Re Pág y Av Pág suben y bajan pantallas. · Inicio y Fin sin Alt no salen de la celda. · Y Ctrl con las teclas de página no es de tablas: recorre los objetos de búsqueda con el explorador de objetos."
   },
   {
     "id": "insertar-43",
@@ -910,28 +917,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "gen-atajo-25",
     "generado": true,
-    "enunciado": "Dentro de una tabla en Word 365, ¿qué hace Alt+Mayús+Fin?",
+    "revisada": true,
+    "enunciado": "Dentro de una tabla pulsas Alt+Mayús+Fin. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Va al final de la fila sin seleccionar nada"
+        "text": "Se seleccionan las celdas desde donde estás hasta el final de la fila"
       },
       {
         "letter": "B",
-        "text": "Selecciona desde el cursor hasta el final de la fila (todas las celdas)"
+        "text": "El cursor va a la última celda de la fila, sin seleccionar nada"
       },
       {
         "letter": "C",
-        "text": "Selecciona la columna entera"
+        "text": "Se selecciona la columna entera"
       },
       {
         "letter": "D",
-        "text": "Inserta una tabulación"
+        "text": "Se inserta un tabulador dentro de la celda"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Alt+Mayús+Fin extiende la selección desde el cursor hasta el final de la fila, abarcando todas las celdas intermedias (si ya estás en la última, selecciona solo esa). Para ir al final SIN seleccionar se usa Alt+Fin. ⚠️ Ojo: el volcado v2608 lista Alt+Mayús+Inicio/Fin como «ir a la primera/última celda de la fila» (igual que Alt+Inicio/Fin), pero al pulsarlas con Mayús la selección se extiende. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "La tecla Mayús hace aquí lo mismo que en cualquier otro sitio de Word: convertir el movimiento en selección. Si ya estás en la última celda, selecciona solo esa. Prueba en vivo del usuario. · ⚠️ Ojo: el cuadro Personalizar teclado lista Alt+Mayús+Fin bajo el MISMO comando que Alt+Fin, como si fueran equivalentes, y al probarlo no lo son. Es uno de los desajustes entre la tabla y el comportamiento real. · Para ir al final sin seleccionar está Alt+Fin, a secas. · Y el tabulador real dentro de una celda se escribe con Ctrl+Tab, porque Tab a secas cambia de celda."
   },
   {
     "id": "insertar-44",
@@ -946,28 +954,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "gen-atajo-28",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también va al inicio de la columna en una tabla en Word 365, además de Alt+Re Pág?",
+    "revisada": true,
+    "enunciado": "El cuadro Personalizar teclado da Alt+Mayús+Re Pág como segunda combinación de «ir al principio de la columna», junto a Alt+Re Pág. ¿Qué conviene tener en cuenta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+Y"
+        "text": "Que con las de FILA el cuadro dice lo mismo y en vivo la de Mayús sí extiende la selección"
       },
       {
         "letter": "B",
-        "text": "Alt+Mayús+Re Pág"
+        "text": "Que Alt+Mayús+Re Pág no está asignada a ningún comando en esta instalación"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+F8"
+        "text": "Que Alt+Re Pág es la que extiende la selección, y la de Mayús solo mueve"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+D"
+        "text": "Que ninguna de las dos funciona dentro de una tabla"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Alt+Mayús+Re Pág mueve el cursor al inicio de la columna activa en una tabla; es la segunda combinación asignada a la misma función que Alt+Re Pág. Confirmado en el volcado de Personalizar teclado de tu Word 365 (v2608)."
+    "respuesta": "A",
+    "explicacion": "El cuadro empareja Alt+Inicio con Alt+Mayús+Inicio y Alt+Fin con Alt+Mayús+Fin como si cada par fuese el mismo comando, y al probarlas las de Mayús extienden la selección en lugar de solo mover. Con las de columna el cuadro dice exactamente lo mismo, así que lo prudente es esperar el mismo comportamiento y comprobarlo antes de darlo por bueno. ⚠️ Es el único punto de la navegación por tabla que sigue pendiente de prueba en vivo. · Lo que sí está confirmado son las cuatro sin Mayús: Alt+Inicio, Alt+Fin, Alt+Re Pág y Alt+Av Pág. · Y las combinaciones sí están asignadas: figuran en el cuadro."
   },
   {
     "id": "insertar-45",
@@ -982,28 +991,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "gen-atajo-29",
     "generado": true,
-    "enunciado": "Dentro de una tabla en Word 365, ¿qué hace Alt+Mayús+Inicio?",
+    "revisada": true,
+    "enunciado": "Comparas Alt+Inicio con Alt+Mayús+Inicio dentro de una tabla. ¿En qué se diferencian al probarlas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Va al inicio de la fila sin seleccionar nada"
+        "text": "La primera solo mueve el cursor; la segunda selecciona por el camino"
       },
       {
         "letter": "B",
-        "text": "Selecciona desde el cursor hasta el inicio de la fila (todas las celdas)"
+        "text": "La primera selecciona por el camino; la segunda solo mueve el cursor"
       },
       {
         "letter": "C",
-        "text": "Selecciona la fila entera"
+        "text": "La primera va a la fila y la segunda a la columna"
       },
       {
         "letter": "D",
-        "text": "Inserta una tabulación"
+        "text": "En nada: el cuadro las asigna al mismo comando y se comportan igual"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Alt+Mayús+Inicio extiende la selección desde el cursor hasta el inicio de la fila, abarcando las celdas intermedias (si ya estás en la primera, selecciona solo esa). Para ir al inicio SIN seleccionar se usa Alt+Inicio. ⚠️ Ojo: el volcado v2608 lista Alt+Mayús+Inicio/Fin como «ir a la primera/última celda de la fila» (igual que Alt+Inicio/Fin), pero al pulsarlas con Mayús la selección se extiende. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Mayús convierte el movimiento en selección, igual que en todas las teclas de navegación de Word: la segunda deja marcadas todas las celdas entre el punto de partida y la primera de la fila, y si ya estás en ella, solo esa. Prueba en vivo del usuario. · ⚠️ El descarte más interesante es el último, porque es lo que dice el cuadro Personalizar teclado: allí las dos figuran bajo el mismo comando, y la prueba en vivo demuestra que no se comportan igual. Es un caso claro de por qué no basta con leer la tabla del programa. · Y el eje no cambia: las dos recorren la fila; la columna es cosa de Re Pág y Av Pág."
   },
   {
     "id": "insertar-52",
@@ -1018,28 +1028,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "P-07",
     "generado": true,
-    "enunciado": "¿Qué ruta abre el cuadro de diálogo que permite especificar el número exacto de filas, columnas y el comportamiento de autoajuste antes de crear una tabla?",
+    "revisada": true,
+    "enunciado": "Quieres una tabla de 5 columnas por 12 filas y prefieres escribir las cifras en vez de arrastrar por la cuadrícula. ¿Qué entrada del menú Tabla lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Tablas > Tabla > Dibujar tabla"
+        "text": "Insertar tabla…"
       },
       {
         "letter": "B",
-        "text": "Insertar > Tablas > Tabla > Tabla rápida"
+        "text": "Dibujar tabla"
       },
       {
         "letter": "C",
-        "text": "Insertar > Tablas > Tabla > Insertar tabla..."
+        "text": "Tablas rápidas"
       },
       {
         "letter": "D",
-        "text": "Insertar > Tablas > Tabla > Nueva tabla..."
+        "text": "Convertir texto en tabla…"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A abre el modo dibujo libre. B debería ser \"Tablas rápidas\" (nombre diferente) y no tiene cuadro de dimensiones. D \"Nueva tabla\" no existe como opción."
+    "respuesta": "A",
+    "explicacion": "«Insertar tabla…» abre un cuadro con los campos «Número de columnas» y «Número de filas», el bloque de autoajuste con sus tres opciones y la casilla «Recordar dimensiones para tablas nuevas». Es la única vía para pasar de las diez columnas que ofrece la cuadrícula del menú. · «Dibujar tabla» convierte el puntero en un lápiz para trazar las celdas a mano, una a una. · «Tablas rápidas» es una galería de tablas ya montadas, con calendarios y listas tabulares. · Y «Convertir texto en tabla…» parte de un texto ya escrito, no crea una vacía."
   },
   {
     "id": "insertar-53",
@@ -1054,28 +1065,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "P-08",
     "generado": true,
-    "enunciado": "Dentro del cuadro de diálogo Insertar tabla, ¿cuál de las siguientes opciones de autoajuste existe realmente en Word 365?",
+    "revisada": true,
+    "enunciado": "En el cuadro «Insertar tabla», el bloque de autoajuste ofrece tres opciones. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Autoajustar al margen"
+        "text": "Ancho de columna fijo · Autoajustar al contenido · Autoajustar a la ventana"
       },
       {
         "letter": "B",
-        "text": "Autoajustar al contenido"
+        "text": "Ancho de columna fijo · Autoajustar al contenido · Autoajustar al margen"
       },
       {
         "letter": "C",
-        "text": "Autoajustar a la fuente"
+        "text": "Ancho de columna fijo · Autoajustar a la fuente · Autoajustar a la ventana"
       },
       {
         "letter": "D",
-        "text": "Autoajustar al párrafo"
+        "text": "Ancho automático · Autoajustar al contenido · Autoajustar a la ventana"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D suenan plausibles pero no existen. Las opciones reales son: Ancho de columna fijo, Autoajustar al contenido, Autoajustar a la ventana."
+    "respuesta": "A",
+    "explicacion": "«Ancho de columna fijo» deja el valor que se indique, o «Autom.» para repartir a partes iguales; «Autoajustar al contenido» encoge las columnas a lo que ocupe el texto; y «Autoajustar a la ventana» estira la tabla al ancho disponible, útil para documentos que se van a leer en pantalla. · «Al margen» y «A la fuente» suenan razonables y no existen; el margen ya es, de hecho, lo que marca el ancho de la ventana de texto. · Las mismas tres opciones aparecen luego en el botón «Autoajustar» de la cinta contextual Disposición de tabla, para cambiarlas con la tabla ya creada."
   },
   {
     "id": "insertar-54",
@@ -1090,28 +1102,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "P-09",
     "generado": true,
-    "enunciado": "¿Qué ruta permite crear una tabla trazando manualmente las líneas de filas y columnas con el cursor?",
+    "revisada": true,
+    "enunciado": "Necesitas una tabla irregular, con celdas de distinto tamaño que no encajan en una cuadrícula. ¿Qué entrada del menú Tabla te deja trazarla a mano?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Tablas > Tabla > Convertir texto en tabla..."
+        "text": "Dibujar tabla"
       },
       {
         "letter": "B",
-        "text": "Insertar > Tablas > Tabla > Dibujar tabla"
+        "text": "Insertar tabla…"
       },
       {
         "letter": "C",
-        "text": "Insertar > Tablas > Tabla > Tabla personalizada"
+        "text": "Tablas rápidas"
       },
       {
         "letter": "D",
-        "text": "Formato de tabla > Dibujar bordes > Dibujar tabla"
+        "text": "Hoja de cálculo de Excel"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A convierte texto existente, no dibuja. C no existe. D la pestaña contextual \"Formato de tabla\" sí existe pero el comando de dibujo está en Insertar, no allí."
+    "respuesta": "A",
+    "explicacion": "«Dibujar tabla» convierte el puntero en un lápiz: se traza primero el rectángulo exterior y luego las líneas interiores donde hagan falta, sin obligación de que coincidan de una fila a otra. Su compañero es el Borrador, en la cinta contextual, para quitar líneas ya trazadas. · «Insertar tabla…» solo crea rejillas regulares de tantas filas por tantas columnas. · «Tablas rápidas» inserta modelos ya hechos. · Y «Hoja de cálculo de Excel» incrusta un objeto de Excel con sus fórmulas dentro del documento, que es otra cosa: no es una tabla de Word. · El mismo lápiz está también en el desplegable del botón Bordes, en Inicio ▸ Párrafo."
   },
   {
     "id": "insertar-55",
@@ -1126,28 +1139,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "P-10",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes rutas permite transformar un texto ya escrito, separado por tabulaciones, en una tabla?",
+    "revisada": true,
+    "enunciado": "Tienes una lista ya escrita, con los campos separados por tabulaciones, y quieres pasarla a tabla sin volver a teclearla. ¿Qué entrada del menú Tabla lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Tablas > Tabla > Dibujar tabla"
+        "text": "Convertir texto en tabla…"
       },
       {
         "letter": "B",
-        "text": "Insertar > Tablas > Tabla > Hoja de cálculo de Excel"
+        "text": "Insertar tabla…"
       },
       {
         "letter": "C",
-        "text": "Insertar > Tablas > Tabla > Insertar tabla..."
+        "text": "Dibujar tabla"
       },
       {
         "letter": "D",
-        "text": "Insertar > Tablas > Tabla > Convertir texto en tabla..."
+        "text": "Hoja de cálculo de Excel"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "A y C crean tablas nuevas desde cero. B inserta un objeto de hoja de cálculo, no convierte texto."
+    "respuesta": "A",
+    "explicacion": "Hay que seleccionar antes el texto; entonces esa entrada se activa y abre un cuadro donde se elige por dónde separar las columnas: «Párrafos», «Tabulaciones», «Punto y coma» u «Otro», con un campo para escribir el carácter. Word propone solo el número de columnas según lo que encuentre. · Las otras tres crean tablas nuevas y vacías, así que habría que copiar el texto celda a celda. · La operación inversa también existe: «Convertir en texto», en la cinta contextual Disposición de tabla, que devuelve la tabla a texto separado por el carácter que se elija."
   },
   {
     "id": "insertar-56",
@@ -1162,28 +1176,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "P-11",
     "generado": true,
-    "enunciado": "¿Qué ruta inserta una hoja de cálculo interactiva con funcionalidad completa de Excel directamente dentro del documento Word?",
+    "revisada": true,
+    "enunciado": "Quieres una rejilla dentro del documento que recalcule sola al cambiar un dato, con fórmulas de Excel de verdad. Desde el menú Tabla, ¿qué entrada la inserta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Texto > Objeto > Objeto... > Microsoft Excel Worksheet"
+        "text": "Hoja de cálculo de Excel"
       },
       {
         "letter": "B",
-        "text": "Insertar > Tablas > Tabla > Hoja de cálculo de Excel"
+        "text": "Insertar tabla…, marcando «Recordar dimensiones»"
       },
       {
         "letter": "C",
-        "text": "Insertar > Ilustraciones > Gráfico > Excel"
+        "text": "Tablas rápidas ▸ Integrado"
       },
       {
         "letter": "D",
-        "text": "Insertar > Tablas > Tabla > Tabla de datos de Excel"
+        "text": "Convertir texto en tabla…"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A es una ruta real y también funcional (objeto OLE), pero no es la ruta del grupo Tablas. C inserta un gráfico, no una hoja. D no existe."
+    "respuesta": "A",
+    "explicacion": "Esa entrada incrusta un objeto de Excel: al hacer doble clic sobre él, la cinta de Word se sustituye por la de Excel y dentro funcionan las fórmulas, el arrastre de celdas y el formato numérico. Al hacer clic fuera vuelve a verse como una imagen dentro del texto. · Las otras tres crean tablas de Word, que sí admiten alguna fórmula suelta desde Disposición de tabla ▸ Datos ▸ Fórmula, pero no recalculan solas al editar una celda. · Se llega al mismo objeto por Insertar ▸ Texto ▸ Objeto ▸ Objeto…, eligiendo «Hoja de cálculo de Microsoft Excel» en la lista de tipos: es la misma incrustación por otra puerta."
   },
   {
     "id": "insertar-57",
@@ -1198,28 +1213,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "P-12",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes opciones existe realmente dentro de Tablas rápidas en Word 365?",
+    "revisada": true,
+    "enunciado": "Abres Tablas rápidas ▸ Integrado en este Word. ¿Qué encuentras dentro?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Portada de tabla"
+        "text": "Cuatro calendarios, numerados del 1 al 4"
       },
       {
         "letter": "B",
-        "text": "Tabla de estadísticas"
+        "text": "Cuatro modelos: calendario, lista tabular, matriz y tabla con subtítulos"
       },
       {
         "letter": "C",
-        "text": "Calendario 3"
+        "text": "Una tabla vacía de 5 columnas por 2 filas, lista para rellenar"
       },
       {
         "letter": "D",
-        "text": "Tabla de contenido simple"
+        "text": "La lista de las tablas usadas recientemente en el documento"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A no existe. B no existe. D existe como tabla de contenido (en Referencias) pero no es una tabla rápida del grupo Tablas."
+    "respuesta": "A",
+    "explicacion": "La galería integrada de esta instalación son cuatro maquetas de calendario, con su rejilla de días ya montada y su formato. Debajo de ellas está «Guardar selección en galería de tablas rápidas», que es como se añaden modelos propios. · Los nombres del segundo descarte son de otras versiones y traducciones de la galería, y suenan de lo más razonable porque encajan con la idea de «tablas hechas»: aquí no aparecen. · La rejilla de 5 por 2 es lo que propone por defecto el cuadro «Insertar tabla…», que es otra entrada del mismo menú. · Y la galería es fija: no lleva historial de lo insertado."
   },
   {
     "id": "insertar-58",
@@ -1234,28 +1250,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "P-13",
     "generado": true,
-    "enunciado": "¿Qué ruta permite guardar una tabla personalizada para incluirla en la galería de tablas rápidas?",
+    "revisada": true,
+    "enunciado": "Has montado una tabla con tus colores y encabezados y quieres poder insertarla igual en otros documentos. ¿Qué hay que hacer?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Tablas > Tabla > Tablas rápidas > Guardar tabla como plantilla"
+        "text": "Seleccionarla y usar Tabla ▸ Tablas rápidas ▸ Guardar selección en galería de tablas rápidas"
       },
       {
         "letter": "B",
-        "text": "Insertar > Tablas > Tabla > Tablas rápidas > Guardar selección en galería de tablas rápidas"
+        "text": "Seleccionarla y usar Tabla ▸ Tablas rápidas ▸ Guardar tabla como plantilla"
       },
       {
         "letter": "C",
-        "text": "Insertar > Texto > Elementos rápidos > Guardar tabla en galería"
+        "text": "Seleccionarla y usar Tabla ▸ Insertar tabla… ▸ Recordar dimensiones para tablas nuevas"
       },
       {
         "letter": "D",
-        "text": "Insertar > Tablas > Tabla > Tablas rápidas > Agregar a galería integrada"
+        "text": "Diseño de tabla ▸ Estilos de tabla ▸ Nuevo estilo de tabla"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A y D usan nombres parecidos pero incorrectos. C lleva a Elementos rápidos, que también tiene guardado de galerías pero no es la ruta de tablas rápidas."
+    "respuesta": "A",
+    "explicacion": "La entrada está al final del submenú, bajo los calendarios integrados, y pide un nombre y una galería; a partir de ahí el modelo aparece ahí mismo junto a ellos. Es el mismo mecanismo de bloques de creación que usan las portadas, los encabezados o Elementos rápidos. · La variante «Guardar tabla como plantilla» copia el nombre del patrón de otras galerías de Word y no existe aquí; es el descarte que más cuesta. · «Recordar dimensiones» solo fija cuántas filas y columnas propondrá el cuadro la próxima vez, no el contenido. · Y un estilo de tabla guarda el FORMATO, para aplicarlo a cualquier tabla, pero no guarda el texto ni la estructura."
   },
   {
     "id": "insertar-115",
@@ -1270,28 +1287,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "P-73",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes opciones de autoajuste existe realmente en el cuadro Insertar tabla de Word 365?",
+    "revisada": true,
+    "enunciado": "En el cuadro «Insertar tabla» eliges «Autoajustar al contenido». ¿Qué ancho tendrán las columnas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Autoajustar al margen de página"
+        "text": "El mínimo que necesite el texto de cada una, creciendo según se escribe"
       },
       {
         "letter": "B",
-        "text": "Ancho de columna fijo"
+        "text": "El mismo para todas, repartiendo el ancho de la página a partes iguales"
       },
       {
         "letter": "C",
-        "text": "Autoajustar al texto del documento"
+        "text": "El de la ventana, ocupando siempre todo el espacio entre márgenes"
       },
       {
         "letter": "D",
-        "text": "Ancho proporcional entre columnas"
+        "text": "El que se indique en el campo de ancho, fijo aunque no quepa el texto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe. C no existe. D no existe. Las tres opciones reales son: Ancho de columna fijo, Autoajustar al contenido, Autoajustar a la ventana."
+    "respuesta": "A",
+    "explicacion": "La tabla arranca estrecha y cada columna se va ensanchando sola a medida que se teclea, hasta ajustarse a su contenido más largo. Es lo que conviene cuando unas columnas llevan una palabra y otras una frase. · El reparto a partes iguales es lo que hace «Ancho de columna fijo» con el valor «Autom.», que es el descarte que decide la pregunta. · Ocupar siempre el espacio entre márgenes es «Autoajustar a la ventana». · Y un ancho fijo que no cede es «Ancho de columna fijo» con una medida escrita a mano, en cuyo caso el texto se parte en varias líneas en lugar de ensanchar la columna."
   },
   {
     "id": "insertar-116",
@@ -1306,28 +1324,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "P-74",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes opciones de autoajuste existe realmente en el cuadro Insertar tabla de Word 365?",
+    "revisada": true,
+    "enunciado": "En el cuadro «Insertar tabla», ¿qué hace la opción «Ancho de columna fijo» cuando se deja en «Autom.»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Autoajustar a la impresora"
+        "text": "Reparte el ancho disponible a partes iguales entre todas las columnas"
       },
       {
         "letter": "B",
-        "text": "Autoajustar a la ventana"
+        "text": "Deja que cada columna crezca según lo que se escriba dentro"
       },
       {
         "letter": "C",
-        "text": "Autoajustar al estilo de párrafo"
+        "text": "Copia el ancho de la última tabla insertada en el documento"
       },
       {
         "letter": "D",
-        "text": "Autoajustar al encabezado"
+        "text": "Ajusta el ancho al de la ventana solo cuando el documento se ve en Diseño web"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no existen. Las opciones reales son: Ancho de columna fijo, Autoajustar al contenido, Autoajustar a la ventana."
+    "respuesta": "A",
+    "explicacion": "«Autom.» significa que Word calcula la medida: coge el espacio entre márgenes y lo divide entre el número de columnas pedido, y ese ancho ya no se mueve al escribir. Si en lugar de «Autom.» se teclea una cifra, todas salen con esa medida exacta. · Crecer con el texto es «Autoajustar al contenido», que es el descarte más fácil de confundir porque las dos empiezan repartiendo. · «Recordar dimensiones para tablas nuevas», la casilla de debajo, es lo que reutiliza lo de la vez anterior, y son filas y columnas, no anchos. · Y ninguna de las tres depende del modo de vista."
   },
   {
     "id": "insertar-117",
@@ -1342,28 +1361,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "P-75",
     "generado": true,
-    "enunciado": "¿Qué casilla del cuadro Insertar tabla permite que las dimensiones introducidas (columnas, filas, autoajuste) se apliquen por defecto a todas las tablas nuevas que se creen en el futuro?",
+    "revisada": true,
+    "enunciado": "Insertas muchas tablas de 3 columnas y te cansa cambiar el 5 que propone Word cada vez. ¿Qué casilla del cuadro «Insertar tabla» lo arregla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Establecer como tabla predeterminada"
-      },
-      {
-        "letter": "B",
-        "text": "Guardar configuración de tabla"
-      },
-      {
-        "letter": "C",
         "text": "Recordar dimensiones para tablas nuevas"
       },
       {
+        "letter": "B",
+        "text": "Establecer como tabla predeterminada"
+      },
+      {
+        "letter": "C",
+        "text": "Aplicar a las tablas posteriores del documento"
+      },
+      {
         "letter": "D",
-        "text": "Aplicar a tablas posteriores"
+        "text": "Guardar configuración de tabla"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A, B y D usan denominaciones plausibles pero incorrectas. El nombre real de la casilla es \"Recordar dimensiones para tablas nuevas\"."
+    "respuesta": "A",
+    "explicacion": "Marcada esa casilla, el cuadro se abre la próxima vez con las columnas, las filas y el tipo de autoajuste que se acaban de usar, en lugar de con las 5 columnas por 2 filas de fábrica. · Los otros tres nombres siguen el patrón de «Establecer como predeterminado» que aparece de verdad en los cuadros Fuente y Párrafo, y por eso resultan tan creíbles aquí; en este cuadro no hay ninguno de ellos. · Lo que se recuerda son las MEDIDAS, no el formato: los colores y bordes de una tabla concreta se reutilizan guardándola en la galería de tablas rápidas o creando un estilo de tabla."
   },
   {
     "id": "insertar-409",
@@ -1378,6 +1398,7 @@
     "tema": "Tablas",
     "sourceQuestionId": "img-insertar-04",
     "generado": true,
+    "revisada": true,
     "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAsCAYAAAAq/ZsdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACsSURBVGhD7djRCoIwGIbh1VWlFt2TDKJ7kO4pSrqnnViD/8ADqTZQPn7eB4ZTBHkPtoG76SM4srerGwSpI0gdQercBVUdrF3X2Gwb4/iy2W/VQbdhsLt19TEWBbGG1LlbQyEHlWrbw5RS+jqul7j4fD7+eSd/qwRrSB1B6ghSV30OnU9Hu1vX/fHkHHKFIHUEqWPbzti2N0SQOoLUuQviV7A61pA6gtQRpC2ENzMAjSXhw6+CAAAAAElFTkSuQmCC",
     "opciones": [
@@ -1387,20 +1408,20 @@
       },
       {
         "letter": "B",
-        "text": "Insertar ▸ Multimedia"
+        "text": "Inicio ▸ Párrafo"
       },
       {
         "letter": "C",
-        "text": "Inicio ▸ Editor"
+        "text": "Insertar ▸ Ilustraciones"
       },
       {
         "letter": "D",
-        "text": "Insertar ▸ Símbolos"
+        "text": "Disposición ▸ Configurar página"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Tabla.** Pestaña Insertar ▸ Tablas. Atajo: no tiene atajo de teclado en esta instalación. Inserta una tabla (cuadrícula, «Insertar tabla…» con 5 columnas / 2 filas por defecto, Dibujar tabla, Hoja de cálculo de Excel, Tablas rápidas)."
+    "explicacion": "Es el botón **Tabla**, único del grupo Tablas de la pestaña Insertar. Su menú despliega la cuadrícula para arrastrar, «Insertar tabla…» (5 columnas por 2 filas de partida), «Dibujar tabla», «Convertir texto en tabla…», «Hoja de cálculo de Excel» y «Tablas rápidas». No tiene atajo de teclado en esta instalación. · El descarte que más se parece es el botón Bordes de Inicio ▸ Párrafo, cuyo icono también es una rejilla de celdas: la diferencia está en que aquel dibuja líneas sobre párrafos o celdas ya existentes, y este crea la tabla. · Las columnas de texto, que también se ven como rejilla, viven en Disposición ▸ Configurar página."
   },
   {
     "id": "insertar-436",
@@ -1415,28 +1436,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "neg-insertar-02",
     "generado": true,
-    "enunciado": "¿Cuál de estas opciones de autoajuste NO existe en el cuadro Insertar tabla?",
+    "revisada": true,
+    "enunciado": "De estas cuatro opciones de autoajuste del cuadro «Insertar tabla», señale la que NO existe:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ancho de columna fijo"
+        "text": "Autoajustar al margen"
       },
       {
         "letter": "B",
-        "text": "Autoajustar al contenido"
+        "text": "Ancho de columna fijo"
       },
       {
         "letter": "C",
-        "text": "Autoajustar a la ventana"
+        "text": "Autoajustar al contenido"
       },
       {
         "letter": "D",
-        "text": "Autoajustar al papel"
+        "text": "Autoajustar a la ventana"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Las tres opciones reales de Autoajuste son Ancho de columna fijo, Autoajustar al contenido y Autoajustar a la ventana. «Autoajustar al papel» no existe."
+    "respuesta": "A",
+    "explicacion": "El bloque Autoajuste tiene exactamente tres opciones y las tres verdaderas son las otras: un ancho fijo, uno que se adapta al texto y uno que se adapta al espacio disponible. · «Autoajustar al margen» es un nombre inventado y resulta especialmente creíble porque describe justo lo que hace «Autoajustar a la ventana»: llenar el hueco entre los márgenes. Es el tipo de opción que parece que debería existir. · La cuarta entrada del cuadro no es de autoajuste, sino la casilla «Recordar dimensiones para tablas nuevas»."
   },
   {
     "id": "insertar-458",
@@ -1451,28 +1473,29 @@
     "tema": "Tablas",
     "sourceQuestionId": "neg2-insertar-12",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre las tablas de Word:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Una tabla se puede insertar arrastrando en la cuadrícula o especificando filas y columnas en un diálogo."
+        "text": "Una tabla de Word no admite cálculos: para sumar una columna hay que incrustar Excel"
       },
       {
         "letter": "B",
-        "text": "Se puede convertir texto separado por tabulaciones en una tabla."
+        "text": "Se puede crear arrastrando por la cuadrícula o escribiendo las cifras en un cuadro"
       },
       {
         "letter": "C",
-        "text": "Una tabla de Word no admite fórmulas ni cálculos; solo Excel puede hacerlo."
+        "text": "Un texto separado por tabulaciones se puede convertir en tabla sin reescribirlo"
       },
       {
         "letter": "D",
-        "text": "Se puede dibujar una tabla a mano con «Insertar ▸ Tabla ▸ Dibujar tabla»."
+        "text": "Se puede trazar a mano, celda a celda, con «Dibujar tabla»"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Herramientas de tabla ▸ Diseño (Presentación) ▸ Fórmula permite sumas y otras fórmulas básicas dentro de una tabla de Word."
+    "respuesta": "A",
+    "explicacion": "La cinta contextual Disposición de tabla tiene, en su grupo Datos, un botón **Fórmula** que inserta expresiones como =SUM(ABOVE) o =AVERAGE(LEFT) y devuelve el resultado en la celda. No es Excel, y hay que actualizarlo a mano cuando cambian los datos, pero cálculos hace. · Las otras tres son ciertas y describen las tres formas de crear una tabla: la cuadrícula y el cuadro «Insertar tabla…», la conversión de un texto ya escrito y el lápiz de «Dibujar tabla». · Incrustar una hoja de Excel es una posibilidad más, para cuando hace falta recálculo automático."
   },
   {
     "sourceFile": "insertar.json",
@@ -1488,27 +1511,28 @@
     "id": "insertar-467",
     "sourceQuestionId": "web-insertar-tabla-67",
     "tipo": "opcion_unica",
-    "enunciado": "En el cuadro «Convertir texto en tabla», la seccion «Separar texto en» ofrece estas opciones:",
+    "revisada": true,
+    "enunciado": "En el cuadro «Convertir texto en tabla», el bloque «Separar texto en» ofrece cuatro alternativas. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Parrafos, Tabulaciones, Punto y coma y «Otro» (un caracter a elegir)"
+        "text": "Párrafos · Tabulaciones · Punto y coma · Otro (un carácter a elegir)"
       },
       {
         "letter": "B",
-        "text": "Solo Tabulaciones y Comas"
+        "text": "Párrafos · Tabulaciones · Comas · Otro (un carácter a elegir)"
       },
       {
         "letter": "C",
-        "text": "Espacios, Tabulaciones, Comas y Puntos"
+        "text": "Saltos de línea · Tabulaciones · Punto y coma · Espacios"
       },
       {
         "letter": "D",
-        "text": "Saltos de linea, Tabulaciones y Guiones"
+        "text": "Tabulaciones · Punto y coma · Espacios · Otro (un carácter a elegir)"
       }
     ],
     "respuesta": "A",
-    "explicacion": "El cuadro «Convertir texto en tabla» separa las columnas por Parrafos, Tabulaciones, Punto y coma o el caracter que se escriba en «Otro» (por ejemplo una coma). Word propone automaticamente el numero de columnas segun el separador mas frecuente del texto seleccionado."
+    "explicacion": "Word propone además el número de columnas que ha deducido del separador más repetido en el texto seleccionado. · El descarte más peligroso es el que cambia «Punto y coma» por «Comas»: la coma es de largo el separador más habitual en la práctica, pero aquí no tiene botón propio, se escribe en el campo «Otro». La razón es que en la configuración española el separador de listas es el punto y coma, y ese es el que aparece de serie. · El párrafo sí es una de las cuatro y suele olvidarse: sirve para pasar una lista escrita en renglones a una tabla de una sola columna."
   },
   {
     "sourceFile": "insertar.json",
@@ -1524,27 +1548,28 @@
     "id": "insertar-478",
     "sourceQuestionId": "capt-ins-478",
     "tipo": "opcion_unica",
-    "enunciado": "Al hacer clic dentro de una tabla aparecen dos pestanas contextuales. ¿Como se llaman en Word 365?",
+    "revisada": true,
+    "enunciado": "Haces clic dentro de una tabla y en la cinta aparecen dos pestañas nuevas. ¿Cómo se llaman en este Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "«Diseno de tabla» y «Disposicion de tabla»"
+        "text": "«Diseño de tabla» y «Disposición de tabla»"
       },
       {
         "letter": "B",
-        "text": "«Herramientas de tabla» y «Formato»"
+        "text": "«Herramientas de tabla», con las fichas «Diseño» y «Presentación» debajo"
       },
       {
         "letter": "C",
-        "text": "«Diseno» y «Presentacion»"
+        "text": "«Diseño de tabla» y «Formato de tabla»"
       },
       {
         "letter": "D",
-        "text": "«Tabla» y «Bordes»"
+        "text": "«Tabla» y «Bordes y sombreado»"
       }
     ],
     "respuesta": "A",
-    "explicacion": "«Diseno de tabla» (3 grupos: Opciones de estilo de tabla · Estilos de tabla · Bordes) y «Disposicion de tabla» (7 grupos: Tabla · Dibujar · Filas y columnas · Combinar · Tamano de celda · Alineacion · Datos)."
+    "explicacion": "La primera reúne el aspecto (Opciones de estilo de tabla, la galería de Estilos de tabla y el grupo Bordes) y la segunda la estructura, con siete grupos: Tabla, Dibujar, Filas y columnas, Combinar, Tamaño de celda, Alineación y Datos. Las dos desaparecen en cuanto el cursor sale de la tabla. · El descarte de «Herramientas de tabla» con dos fichas debajo es exactamente como se llamaban y se agrupaban en las versiones anteriores de Word, así que aparece en muchísimo material de estudio; aquí el rótulo que englobaba las dos ya no está y cada pestaña va suelta."
   },
   {
     "sourceFile": "insertar.json",
@@ -1560,7 +1585,8 @@
     "id": "insertar-480",
     "sourceQuestionId": "capt-ins-480",
     "tipo": "opcion_unica",
-    "enunciado": "¿En que grupo de la pestana «Disposicion de tabla» estan «Combinar celdas», «Dividir celdas» y «Dividir tabla»?",
+    "revisada": true,
+    "enunciado": "Seleccionas dos celdas contiguas y quieres fundirlas en una. ¿En qué grupo de «Disposición de tabla» está el comando?",
     "opciones": [
       {
         "letter": "A",
@@ -1572,15 +1598,15 @@
       },
       {
         "letter": "C",
-        "text": "Tamano de celda"
+        "text": "Tamaño de celda"
       },
       {
         "letter": "D",
-        "text": "Datos"
+        "text": "Tabla"
       }
     ],
     "respuesta": "A",
-    "explicacion": "«Dividir tabla» parte la tabla en dos a partir de la fila del cursor; «Combinar/Dividir celdas» actua sobre la seleccion."
+    "explicacion": "El grupo Combinar tiene tres botones: «Combinar celdas» funde la selección en una sola, «Dividir celdas» abre un cuadro donde se pide en cuántas filas y columnas partirla, y «Dividir tabla» parte la tabla entera en dos por la fila donde esté el cursor. · «Filas y columnas» es el descarte natural, porque también añade y quita, pero lo suyo son filas o columnas enteras: insertar arriba, debajo, a la izquierda, a la derecha, y el menú Eliminar. · «Tamaño de celda» solo mide: alto, ancho, distribuir y autoajustar. · Y «Tabla» es el primer grupo: Seleccionar, Ver cuadrículas y Propiedades."
   },
   {
     "sourceFile": "insertar.json",
@@ -1596,27 +1622,28 @@
     "id": "insertar-481",
     "sourceQuestionId": "capt-ins-481",
     "tipo": "opcion_unica",
-    "enunciado": "En «Disposicion de tabla ▸ Tamano de celda», ¿que hacen «Distribuir filas» y «Distribuir columnas»?",
+    "revisada": true,
+    "enunciado": "Una tabla ha quedado con filas de alturas dispares después de varias ediciones y quieres igualarlas. ¿Qué comando lo hace de golpe?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Igualan el alto de todas las filas / el ancho de todas las columnas seleccionadas"
+        "text": "Disposición de tabla ▸ Tamaño de celda ▸ Distribuir filas"
       },
       {
         "letter": "B",
-        "text": "Reparten la tabla entre varias paginas"
+        "text": "Disposición de tabla ▸ Tamaño de celda ▸ Autoajustar ▸ Autoajustar al contenido"
       },
       {
         "letter": "C",
-        "text": "Ordenan filas y columnas alfabeticamente"
+        "text": "Disposición de tabla ▸ Alineación ▸ Alinear verticalmente"
       },
       {
         "letter": "D",
-        "text": "Convierten la tabla en columnas de texto"
+        "text": "Disposición de tabla ▸ Datos ▸ Ordenar"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Junto a ellos estan «Autoajustar» (al contenido / a la ventana / ancho de columna fijo) y los campos Alto y Ancho."
+    "explicacion": "«Distribuir filas» reparte el alto total a partes iguales entre las filas seleccionadas, y su compañero «Distribuir columnas» hace lo propio con el ancho. En el mismo grupo están los campos de Alto y Ancho para fijar una medida concreta. · «Autoajustar al contenido» va en la dirección contraria: encoge cada fila y columna hasta lo que ocupe su texto, con lo que las diferencias se acentúan en vez de desaparecer. Es el descarte que decide la pregunta. · Los comandos de Alineación no cambian el tamaño, solo dónde se apoya el texto dentro de la celda. · Y ordenar reordena las filas sin tocar su alto."
   },
   {
     "sourceFile": "insertar.json",
@@ -1632,27 +1659,28 @@
     "id": "insertar-482",
     "sourceQuestionId": "capt-ins-482",
     "tipo": "opcion_unica",
-    "enunciado": "El comando «Repetir filas de titulo» de «Disposicion de tabla ▸ Datos», ¿para que sirve?",
+    "revisada": true,
+    "enunciado": "Una tabla de cien filas se parte entre varias páginas y quieres que el encabezado se vea también en las siguientes. ¿Qué comando lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Repite automaticamente la fila (o filas) de encabezado al principio de cada pagina cuando la tabla ocupa varias"
+        "text": "Disposición de tabla ▸ Datos ▸ Repetir filas de título"
       },
       {
         "letter": "B",
-        "text": "Duplica la primera fila de la tabla"
+        "text": "Diseño de tabla ▸ Opciones de estilo de tabla ▸ Fila de encabezado"
       },
       {
         "letter": "C",
-        "text": "Bloquea la primera fila para que no se pueda editar"
+        "text": "Disposición de tabla ▸ Filas y columnas ▸ Insertar arriba, en cada página"
       },
       {
         "letter": "D",
-        "text": "Ordena la tabla por la primera columna"
+        "text": "Insertar ▸ Encabezado y pie ▸ Encabezado"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Requiere que el cursor este en la primera fila (o en las filas de encabezado seleccionadas). En el mismo grupo Datos: Ordenar, Convertir en texto y Formula."
+    "explicacion": "Hay que poner antes el cursor en la primera fila, o seleccionar las que hagan de encabezado; a partir de ahí Word las repinta arriba en cada página, y siguen siendo una sola fila real, así que al editarlas cambian todas a la vez. En el mismo grupo Datos están Ordenar, Convertir en texto y Fórmula. · La casilla «Con encabezado» del otro lado es el descarte que decide la pregunta: solo aplica al formato de la primera fila que trae el estilo de tabla, y no la repite en ningún sitio. · Insertar filas a mano en cada página se descuadra al añadir o quitar contenido. · Y el encabezado de página es la banda superior del documento, fuera de la tabla."
   },
   {
     "sourceFile": "insertar.json",
@@ -1668,27 +1696,28 @@
     "id": "insertar-483",
     "sourceQuestionId": "capt-ins-483",
     "tipo": "opcion_unica",
-    "enunciado": "En «Disposicion de tabla ▸ Alineacion», ¿cuantos botones de alineacion de contenido de celda hay?",
+    "revisada": true,
+    "enunciado": "El grupo «Alineación» de la cinta Disposición de tabla enseña una rejilla de botones para colocar el contenido de la celda. ¿Cuántos son y por qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": "9 (combinando arriba/centro/abajo con izquierda/centro/derecha)"
+        "text": "9: las tres posiciones verticales cruzadas con las tres horizontales"
       },
       {
         "letter": "B",
-        "text": "3 (izquierda, centro, derecha)"
+        "text": "3: izquierda, centro y derecha, como en el grupo Párrafo de Inicio"
       },
       {
         "letter": "C",
-        "text": "4 (las 4 esquinas)"
+        "text": "4: uno por cada esquina de la celda"
       },
       {
         "letter": "D",
-        "text": "6"
+        "text": "6: los cuatro de párrafo más arriba y abajo"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Ademas de los 9 botones, el grupo Alineacion tiene «Direccion del texto» (gira el texto de la celda 90 grados) y «Margenes de celda»."
+    "explicacion": "Dentro de una celda hay dos ejes que colocar: si el texto se apoya arriba, en medio o abajo, y si va a la izquierda, centrado o a la derecha. Tres por tres dan las nueve combinaciones, y cada botón dibuja precisamente en qué rincón queda el texto. · El descarte de los tres botones es el de Inicio ▸ Párrafo, que solo maneja el eje horizontal porque un párrafo suelto no tiene alto que repartir; es justo lo que añade la tabla. · A su lado, en el mismo grupo, están «Dirección del texto» y «Márgenes de celda»."
   },
   {
     "sourceFile": "insertar.json",
@@ -1704,27 +1733,28 @@
     "id": "insertar-485",
     "sourceQuestionId": "capt-tabctx-485",
     "tipo": "opcion_unica",
-    "enunciado": "El cuadro «Propiedades de tabla» (Disposicion de tabla ▸ Propiedades), ¿cuantas fichas tiene y cuales?",
+    "revisada": true,
+    "enunciado": "Abres «Propiedades de tabla» desde el grupo Tabla. ¿Qué fichas tiene el cuadro?",
     "opciones": [
       {
         "letter": "A",
-        "text": "5: Tabla · Fila · Columna · Celda · Texto alternativo"
+        "text": "Tabla · Fila · Columna · Celda · Texto alternativo"
       },
       {
         "letter": "B",
-        "text": "3: Tabla · Fila · Columna"
+        "text": "Tabla · Fila · Columna · Celda"
       },
       {
         "letter": "C",
-        "text": "4: Tabla · Fila · Columna · Celda"
+        "text": "Tabla · Fila · Columna · Celda · Bordes"
       },
       {
         "letter": "D",
-        "text": "2: Diseno · Disposicion"
+        "text": "Diseño · Disposición · Texto alternativo"
       }
     ],
     "respuesta": "A",
-    "explicacion": "La ficha «Texto alternativo» (Titulo + Descripcion) es para accesibilidad. En la ficha Tabla estan el «Ajuste del texto» (Ninguno/Alrededor) y el boton «Posicionamiento…»."
+    "explicacion": "Las cuatro primeras van de mayor a menor: la tabla entera, la fila, la columna y la celda, y cada una repite la idea de ancho o alto en su escala. La quinta, «Texto alternativo», tiene Título y Descripción y sirve para accesibilidad, para que un lector de pantalla pueda describir la tabla. · El descarte de cuatro fichas es el que más cae, porque es el reparto que uno espera y era el del cuadro en versiones anteriores. · No hay ficha de bordes: el formato se toca desde el botón «Bordes y sombreado…» que hay dentro de la ficha Tabla, y desde la cinta Diseño de tabla."
   },
   {
     "sourceFile": "insertar.json",
@@ -1740,27 +1770,28 @@
     "id": "insertar-486",
     "sourceQuestionId": "capt-tabctx-486",
     "tipo": "opcion_unica",
-    "enunciado": "En la ficha «Fila» del cuadro Propiedades de tabla, el desplegable «Alto de fila» ofrece:",
+    "revisada": true,
+    "enunciado": "En la ficha «Fila» de Propiedades de tabla marcas «Especificar alto» y pones 1 cm. El desplegable de al lado decide qué pasa si el texto no cabe. ¿Qué dos valores ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Minimo y Exacto"
+        "text": "Mínimo (la fila crece) y Exacto (la fila no crece y el texto se corta)"
       },
       {
         "letter": "B",
-        "text": "Automatico y Fijo"
+        "text": "Automático (la fila crece) y Fijo (la fila no crece)"
       },
       {
         "letter": "C",
-        "text": "Sencillo y Doble"
+        "text": "Mínimo, Exacto y Múltiple, como el interlineado"
       },
       {
         "letter": "D",
-        "text": "Ajustado y Libre"
+        "text": "Ajustado (la fila crece) y Libre (la fila no crece)"
       }
     ],
     "respuesta": "A",
-    "explicacion": "«Minimo» = la fila crece si el contenido no cabe; «Exacto» = alto fijo aunque el contenido se corte. En la misma ficha: «Permitir dividir las filas entre paginas» y «Repetir como fila de encabezado en cada pagina»."
+    "explicacion": "Con «Mínimo», el centímetro es un suelo: la fila nunca será más baja, pero se estira si hace falta. Con «Exacto» es una medida cerrada, y lo que sobra deja de verse, que es de donde salen esas tablas con texto misteriosamente cortado. · «Automático» y «Fijo» describen bien las dos conductas y por eso engañan, pero no son los rótulos de este cuadro. · «Múltiple» sí existe, pero en el interlineado del cuadro Párrafo, junto a Mínimo y Exacto: de ahí viene la confusión. En el alto de fila solo hay dos."
   },
   {
     "sourceFile": "insertar.json",
@@ -1776,27 +1807,28 @@
     "id": "insertar-487",
     "sourceQuestionId": "capt-tabctx-487",
     "tipo": "opcion_unica",
-    "enunciado": "En la ficha «Celda» del cuadro Propiedades de tabla, ¿que 3 opciones de «Alineacion vertical» hay?",
+    "revisada": true,
+    "enunciado": "Quieres que los títulos de una fila se lean en vertical, girados dentro de sus celdas. ¿Qué comando lo hace y cómo se usa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Arriba · Centro · Abajo"
+        "text": "«Dirección del texto», en el grupo Alineación: se pulsa varias veces y va rotando"
       },
       {
         "letter": "B",
-        "text": "Izquierda · Centro · Derecha"
+        "text": "«Dirección del texto», en el grupo Alineación: abre un cuadro donde se escriben los grados"
       },
       {
         "letter": "C",
-        "text": "Superior · Media · Inferior · Justificada"
+        "text": "Los botones de alineación vertical del grupo Alineación"
       },
       {
         "letter": "D",
-        "text": "Solo Centro"
+        "text": "«Márgenes de celda», en el grupo Alineación"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Es la alineacion del contenido dentro de la celda en el eje vertical. La horizontal (izq/centro/der) se combina con estas 3 en los 9 botones del grupo Alineacion de la cinta."
+    "explicacion": "Es un botón cíclico, sin menú: cada clic pasa a la siguiente orientación (horizontal, vertical leyendo de abajo arriba, vertical leyendo de arriba abajo) y a la cuarta vuelve al principio. Por eso el propio globo de ayuda invita a pulsarlo varias veces. · Escribir los grados es lo que se hace con un cuadro de texto o una forma, no con una celda: ese es el descarte que decide la pregunta. · Los botones de alineación no giran nada, solo mueven el texto por la celda. · Y «Márgenes de celda» ajusta la separación entre el borde y el texto."
   },
   {
     "sourceFile": "insertar.json",
@@ -1812,7 +1844,8 @@
     "id": "insertar-489",
     "sourceQuestionId": "capt-tabctx-489",
     "tipo": "opcion_unica",
-    "enunciado": "El desplegable «Eliminar» del grupo «Filas y columnas», ¿que 4 opciones tiene?",
+    "revisada": true,
+    "enunciado": "Pulsas el botón «Eliminar» del grupo Filas y columnas. ¿Qué ofrece su desplegable?",
     "opciones": [
       {
         "letter": "A",
@@ -1820,19 +1853,19 @@
       },
       {
         "letter": "B",
-        "text": "Eliminar borde · Eliminar sombreado · Eliminar estilo · Eliminar tabla"
+        "text": "Eliminar celdas… · Eliminar columnas · Eliminar filas · Eliminar contenido"
       },
       {
         "letter": "C",
-        "text": "Deshacer · Cortar · Borrar contenido · Eliminar tabla"
+        "text": "Eliminar filas · Eliminar columnas · Eliminar bordes · Eliminar estilo"
       },
       {
         "letter": "D",
-        "text": "Solo «Eliminar filas» y «Eliminar columnas»"
+        "text": "Eliminar filas y Eliminar columnas, solamente"
       }
     ],
     "respuesta": "A",
-    "explicacion": "«Eliminar celdas…» abre un cuadro para elegir como se recolocan las celdas restantes."
+    "explicacion": "Van de menor a mayor: unas celdas sueltas, la columna, la fila y la tabla entera. Solo la primera lleva puntos suspensivos, porque quitar una celda deja un hueco y hay que decidir cómo se recolocan las demás; las otras tres actúan al momento. · «Eliminar contenido» es el descarte que decide la pregunta, y es tentador porque esa operación existe de verdad: se hace con la tecla Suprimir sobre la selección, que vacía las celdas dejando la estructura en pie. Lo que no tiene es entrada en este menú, donde todo borra estructura."
   },
   {
     "sourceFile": "insertar.json",
@@ -1848,27 +1881,28 @@
     "id": "insertar-490",
     "sourceQuestionId": "capt-tabctx-490",
     "tipo": "opcion_unica",
-    "enunciado": "El lanzador (flecha ↘) del grupo «Filas y columnas» abre el cuadro «Insertar celdas». ¿Que 4 opciones ofrece?",
+    "revisada": true,
+    "enunciado": "Eliges «Eliminar celdas…» sobre una celda suelta y Word abre un cuadro. ¿Qué te está preguntando?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Desplazar las celdas hacia la derecha · Desplazar las celdas hacia abajo · Insertar una fila completa · Insertar una columna completa"
+        "text": "Cómo tapar el hueco: desplazando las de al lado, o quitando la fila o la columna entera"
       },
       {
         "letter": "B",
-        "text": "Arriba · Abajo · Izquierda · Derecha"
+        "text": "Si borrar solo el contenido de la celda, o también su formato y sus bordes"
       },
       {
         "letter": "C",
-        "text": "1 fila · 2 filas · 1 columna · 2 columnas"
+        "text": "Cuántas celdas contiguas hay que eliminar, además de la que está seleccionada"
       },
       {
         "letter": "D",
-        "text": "Combinar · Dividir · Insertar · Eliminar"
+        "text": "Si el hueco debe rellenarse con una celda vacía o quedarse sin celda alguna"
       }
     ],
     "respuesta": "A",
-    "explicacion": "El mismo cuadro «Insertar celdas» aparece tambien al elegir «Insertar celdas…» del menu Eliminar (mal nombre) o desde el menu contextual ▸ Insertar."
+    "explicacion": "Quitar una celda de una rejilla deja un agujero que hay que tapar de alguna manera, y por eso es la única entrada del menú Eliminar con puntos suspensivos: las demás no tienen nada que decidir. Las dos primeras respuestas descuadran esa fila o esa columna respecto a las demás; las otras dos evitan el descuadre llevándose la línea completa. · Su cuadro gemelo es «Insertar celdas», con las mismas cuatro elecciones en sentido contrario: desplazar a la derecha, hacia abajo, o insertar la fila o la columna entera. · Para vaciar una celda sin tocar la estructura basta con Suprimir."
   },
   {
     "sourceFile": "insertar.json",
@@ -1884,27 +1918,28 @@
     "id": "insertar-491",
     "sourceQuestionId": "capt-tabctx-491",
     "tipo": "opcion_unica",
-    "enunciado": "¿Que hace «Dividir tabla» (grupo Combinar de Disposicion de tabla)?",
+    "revisada": true,
+    "enunciado": "Con el cursor en la fila 8 de una tabla pulsas «Dividir tabla». ¿Qué queda?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Parte la tabla en dos: la fila donde esta el cursor pasa a ser la primera fila de la nueva tabla"
+        "text": "Dos tablas separadas por un párrafo vacío; la fila 8 encabeza la segunda"
       },
       {
         "letter": "B",
-        "text": "Divide cada celda de la tabla en dos"
+        "text": "Dos tablas pegadas; la fila 8 cierra la primera"
       },
       {
         "letter": "C",
-        "text": "Reparte la tabla entre dos columnas de la pagina"
+        "text": "La misma tabla, con la fila 8 partida en dos filas"
       },
       {
         "letter": "D",
-        "text": "Separa el texto de la tabla en parrafos"
+        "text": "La tabla repartida en dos columnas de texto de la página"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Entre las dos tablas queda un parrafo vacio. «Dividir celdas», en cambio, parte la celda seleccionada en el numero de filas/columnas que se indique."
+    "explicacion": "El corte se hace por ENCIMA de la fila donde esté el cursor, y Word intercala un párrafo vacío entre las dos mitades, que es lo que permite escribir algo entre ellas o darles formatos distintos. Si se borra ese párrafo, las tablas vuelven a unirse. · El descarte de partir la fila es «Dividir celdas», el botón de al lado en el mismo grupo, que pregunta en cuántas filas y columnas trocear lo seleccionado: uno parte la tabla, el otro parte una celda. · Repartir contenido en columnas de página es cosa de Disposición ▸ Configurar página ▸ Columnas."
   },
   {
     "sourceFile": "insertar.json",
@@ -1920,27 +1955,28 @@
     "id": "insertar-492",
     "sourceQuestionId": "capt-tabctx-492",
     "tipo": "opcion_unica",
-    "enunciado": "El desplegable «Autoajustar» del grupo «Tamano de celda» tiene 3 opciones. ¿Cuales?",
+    "revisada": true,
+    "enunciado": "El botón «Autoajustar» de la cinta y el bloque «Autoajuste» del cuadro «Insertar tabla» ofrecen las mismas tres opciones. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Autoajustar al contenido · Autoajustar a la ventana · Ancho de columna fijo"
+        "text": "El de la cinta se aplica a una tabla que ya existe; el del cuadro, a la que se está creando"
       },
       {
         "letter": "B",
-        "text": "Al texto · A la pagina · Al margen"
+        "text": "El de la cinta solo tiene efecto sobre las celdas seleccionadas; el del cuadro, sobre toda la tabla"
       },
       {
         "letter": "C",
-        "text": "Pequeno · Mediano · Grande"
+        "text": "El de la cinta es permanente; el del cuadro se pierde al cerrar el documento"
       },
       {
         "letter": "D",
-        "text": "Filas · Columnas · Celdas"
+        "text": "En nada: el botón de la cinta abre el cuadro «Insertar tabla»"
       }
     ],
     "respuesta": "A",
-    "explicacion": "«Al contenido» encoge/agranda las columnas segun lo que contienen; «A la ventana» estira la tabla al ancho de la pagina; «Ancho de columna fijo» congela los anchos actuales."
+    "explicacion": "Son el mismo ajuste en dos momentos: al crear la tabla se decide de antemano y luego se puede cambiar de opinión desde Disposición de tabla ▸ Tamaño de celda, cuantas veces haga falta. Las tres alternativas son idénticas: ancho fijo, ajustar al contenido y ajustar a la ventana. · Lo de las celdas seleccionadas es el descarte que decide la pregunta, y es falso: el autoajuste trabaja siempre con columnas enteras, aunque solo haya una celda marcada. · Y el botón de la cinta no abre ningún cuadro, es un desplegable de tres entradas que actúa al instante."
   },
   {
     "sourceFile": "insertar.json",
@@ -1956,27 +1992,28 @@
     "id": "insertar-494",
     "sourceQuestionId": "capt-tabctx-494",
     "tipo": "opcion_unica",
-    "enunciado": "«Repetir filas de titulo» (grupo Datos de Disposicion de tabla), ¿para que sirve y que requisito tiene?",
+    "revisada": true,
+    "enunciado": "Una fila con mucho texto queda partida entre dos páginas y quieres que no se corte nunca, que salte entera a la página siguiente. ¿Dónde se decide?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Repite la fila (o filas) de encabezado al principio de cada pagina cuando la tabla ocupa varias; el cursor debe estar en la primera fila"
+        "text": "Propiedades de tabla ▸ Fila, desmarcando «Permitir dividir las filas entre páginas»"
       },
       {
         "letter": "B",
-        "text": "Duplica la primera fila justo debajo de si misma"
+        "text": "Propiedades de tabla ▸ Fila, poniendo el alto en «Exacto»"
       },
       {
         "letter": "C",
-        "text": "Bloquea la fila de encabezado para que no se edite"
+        "text": "Disposición de tabla ▸ Datos ▸ Repetir filas de título"
       },
       {
         "letter": "D",
-        "text": "Aplica el estilo «Fila de encabezado» a todas las filas"
+        "text": "Disposición ▸ Párrafo, con el lanzador ▸ Líneas y saltos de página"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Es la misma opcion que la casilla «Repetir como fila de encabezado en cada pagina» de Propiedades de tabla ▸ Fila. Solo tiene efecto si la tabla se parte entre paginas."
+    "explicacion": "La casilla viene marcada de fábrica, así que por defecto Word sí parte una fila larga por la mitad al llegar al final de la página. Al desmarcarla, la fila entera se va abajo antes que cortarse. · Un alto «Exacto» corta el texto que sobra dentro de la propia fila, que es otro problema distinto: ahí no se pierde por el salto de página, se pierde siempre. · «Repetir filas de título» solo duplica el encabezado arriba de cada página. · Y las opciones de «Conservar líneas juntas» del cuadro Párrafo actúan sobre párrafos, no sobre la estructura de la tabla."
   },
   {
     "sourceFile": "insertar.json",
@@ -1992,27 +2029,28 @@
     "id": "insertar-495",
     "sourceQuestionId": "capt-tabctx-495",
     "tipo": "opcion_unica",
-    "enunciado": "«Convertir en texto» (grupo Datos), al deshacer una tabla, ¿que permite elegir?",
+    "revisada": true,
+    "enunciado": "Usas «Convertir en texto» sobre una tabla de tres columnas. ¿Qué te pregunta Word y cómo queda el resultado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El caracter que separara las columnas (marca de parrafo, tabulacion, punto y coma u otro)"
+        "text": "Con qué carácter separar las columnas; queda una línea de texto por cada fila"
       },
       {
         "letter": "B",
-        "text": "El tipo de letra del texto resultante"
+        "text": "Cuántas de las columnas conservar; queda una tabla más estrecha que la anterior"
       },
       {
         "letter": "C",
-        "text": "Si conservar o no los bordes"
+        "text": "Si conservar los bordes de la tabla; queda el texto recuadrado como estaba"
       },
       {
         "letter": "D",
-        "text": "El numero de columnas de destino"
+        "text": "Qué fuente aplicar al resultado; queda un párrafo suelto por cada celda"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Es la operacion inversa de «Insertar ▸ Tabla ▸ Convertir texto en tabla»."
+    "explicacion": "Las opciones de separación son las mismas cuatro del camino de ida: marcas de párrafo, tabulaciones, punto y coma u otro carácter escrito a mano. La tabla desaparece por completo, bordes incluidos, y con las tabulaciones el resultado sigue pareciendo alineado en columnas aunque ya no lo esté. · Elegir marcas de párrafo es lo que rompe esa apariencia: cada celda cae en un renglón propio, que es el descarte del final. · La operación se deshace con «Convertir texto en tabla…», del menú Tabla, siempre que el separador siga estando ahí."
   },
   {
     "sourceFile": "insertar.json",
@@ -2028,27 +2066,28 @@
     "id": "insertar-496",
     "sourceQuestionId": "capt-tabctx-496",
     "tipo": "opcion_unica",
-    "enunciado": "El comando «Formula» (fx, grupo Datos), ¿que calculos permite y con que sintaxis?",
+    "revisada": true,
+    "enunciado": "Al final de una columna de importes pones el cursor y pulsas «Fórmula» en el grupo Datos. ¿Qué puedes hacer y qué limitación tiene?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Calculos simples (SUMA, PROMEDIO, RECUENTO…) con expresiones como =SUM(ABOVE) o =AVERAGE(LEFT)"
+        "text": "Cálculos simples como =SUM(ABOVE) o =AVERAGE(LEFT); no se recalculan solos al cambiar un dato"
       },
       {
         "letter": "B",
-        "text": "Solo sumar la columna de la izquierda"
+        "text": "Cálculos simples como =SUM(ABOVE); se recalculan solos, igual que en Excel"
       },
       {
         "letter": "C",
-        "text": "Cualquier formula de Excel copiada tal cual"
+        "text": "Cualquier fórmula de Excel pegada tal cual, con referencias de hoja incluidas"
       },
       {
         "letter": "D",
-        "text": "Solo contar el numero de filas"
+        "text": "Solo contar cuántas filas tiene la tabla"
       }
     ],
     "respuesta": "A",
-    "explicacion": "ABOVE/BELOW/LEFT/RIGHT indican el rango de celdas. Word NO recalcula solo: hay que actualizar el campo (F9)."
+    "explicacion": "El cuadro propone la fórmula que le parece más probable según dónde esté el cursor, y ofrece una lista de funciones y un formato de número. Las palabras ABOVE, BELOW, LEFT y RIGHT marcan qué celdas entran en el cálculo. · Lo que no hay es recálculo automático: el resultado es un campo, y hay que actualizarlo, lo que se hace con F9 sobre él. Ese es el descarte que decide la pregunta, porque es lo que uno da por hecho viniendo de una hoja de cálculo. · Si se necesita recálculo de verdad, la salida es incrustar una hoja de Excel con «Hoja de cálculo de Excel»."
   },
   {
     "sourceFile": "insertar.json",
@@ -2064,27 +2103,28 @@
     "id": "insertar-497",
     "sourceQuestionId": "capt-tabctx-497",
     "tipo": "opcion_unica",
-    "enunciado": "«Ver cuadriculas» (grupo Tabla de Disposicion de tabla), ¿que muestra?",
+    "revisada": true,
+    "enunciado": "Trabajas con una tabla sin bordes y en pantalla no distingues dónde acaba cada celda. ¿Qué comando te enseña la estructura?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Las lineas de division de la tabla que no tienen borde, como guia en pantalla; no se imprimen"
+        "text": "«Ver cuadrículas», del grupo Tabla: marca las divisiones en pantalla y no se imprimen"
       },
       {
         "letter": "B",
-        "text": "La cuadricula de fondo del documento entero"
+        "text": "«Ver cuadrículas», del grupo Tabla: aplica un borde fino que sí se imprime"
       },
       {
         "letter": "C",
-        "text": "Una regla dentro de cada celda"
+        "text": "Diseño de tabla ▸ Bordes ▸ Todos los bordes"
       },
       {
         "letter": "D",
-        "text": "Los margenes de celda en rojo"
+        "text": "Inicio ▸ Párrafo ▸ Mostrar todo, con Ctrl+Mayús+8"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Utiles para trabajar con tablas sin bordes. Son las mismas «lineas de cuadricula» de tabla que en versiones antiguas estaban en el menu Tabla."
+    "explicacion": "Son unas líneas discontinuas de ayuda que solo existen en la pantalla: no salen en la impresión ni en la vista previa, y el conmutador afecta a todas las tablas del documento, no solo a la de al lado del cursor. · «Todos los bordes» sí dibuja bordes de verdad, que se ven al imprimir: ese es exactamente el descarte que decide la pregunta, porque el resultado en pantalla se parece bastante. · Y «Mostrar todo» enseña las marcas de párrafo y tabulación, incluida la crucecita de fin de celda, pero no dibuja las divisiones de la tabla."
   },
   {
     "sourceFile": "insertar.json",
@@ -2100,27 +2140,28 @@
     "id": "insertar-498",
     "sourceQuestionId": "capt-tabctx-498",
     "tipo": "opcion_unica",
-    "enunciado": "En «Bordes y sombreado» abierto desde una tabla (ficha «Bordes»), el campo «Valor» ofrece 5 opciones. ¿Cuales, y en que se diferencia de la ficha «Borde de pagina»?",
+    "revisada": true,
+    "enunciado": "Abres «Bordes y sombreado» desde una tabla y miras la columna «Valor» de la ficha Bordes. ¿En qué se diferencia de la que ofrece la ficha «Borde de página»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ninguno · Cuadro · Todos · Cuadricula · Personalizado (la ficha Borde de pagina cambia «Todos»/«Cuadricula» por «Sombra»/«3D»)"
+        "text": "La de tabla tiene Todos y Cuadrícula; la de página los cambia por Sombra y 3D"
       },
       {
         "letter": "B",
-        "text": "Son exactamente los mismos 5 valores en las dos fichas"
+        "text": "Son los cinco mismos valores en las dos fichas"
       },
       {
         "letter": "C",
-        "text": "Ninguno · Simple · Doble · Triple · Personalizado"
+        "text": "La de tabla tiene Sombra y 3D; la de página los cambia por Todos y Cuadrícula"
       },
       {
         "letter": "D",
-        "text": "Solo tiene «Ninguno» y «Cuadro»"
+        "text": "La de tabla solo ofrece Ninguno y Cuadro; el resto son de la ficha de página"
       }
     ],
     "respuesta": "A",
-    "explicacion": "«Todos» pone borde a todas las lineas (exteriores e interiores); «Cuadricula» pone borde grueso exterior y fino interior. «Sombra» y «3D» solo tienen sentido para el borde de la pagina."
+    "explicacion": "Las dos fichas comparten Ninguno, Cuadro y Personalizado, y se separan en las dos del medio, porque cada una tiene sentido solo en su sitio: una tabla tiene líneas interiores que pintar, y de ahí «Todos» (todas las líneas iguales) y «Cuadrícula» (contorno grueso e interior fino); una página no las tiene, y en su lugar admite los relieves de «Sombra» y «3D». · La versión con los pares cambiados de sitio es el reflejo exacto y hay que leerla con calma. · La ficha Borde de página añade además el desplegable «Arte», con 164 diseños."
   },
   {
     "sourceFile": "insertar.json",
@@ -2136,6 +2177,7 @@
     "id": "insertar-534",
     "sourceQuestionId": "img-distab-01",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAApCAYAAABDV7v1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGLSURBVFhH7dc/bsIwFMfxHqtibWFsYazYG+7QBsYmbKWcoajcIXORypqBA2TIFbK4+lqOBFFTFfvZUVF+0pPIH0sfvRDbuVL/JD1UOj1UOpcNXSxi8ytcrKCDwbWaz5/NUZhYQ6PoMWhnraFVVak4flLT6YMqy9Jc8RcnaEisM5RKkhfvWBEotdm8q+HwRu33X+Yu2YhBfWNFoRTYyeReHCsOpXa7T93Z7fbDjHCPFygljfUGpcDyN5DAeoVSRVHoqStNEzPaLt6hVI112R8EgVKu2GDQulhyZ7Po7FUsOJSy2R90AqXOxXqHjsd3+v62+usqJgpl3myeY0mV2GCLQUGORrca1rxG1w6HgxltFxFovVwul6lGHV+jJLrqDG2u6bwgWZadQJlDucelq07QJpLwmw+/Yyi1Wr06ddUa+hOyDufzPD+Bcsw4265aQ3nEbbui9fpNz5MAeex0Ezwdtd1QW0PbkIRJnHvAMhOwvnfy1v+GrMO2js5KfZlaQbtID5VOD5VOD5WNUt/hI+15++U6yAAAAABJRU5ErkJggg==",
     "opciones": [
@@ -2145,11 +2187,11 @@
       },
       {
         "letter": "B",
-        "text": "Propiedades"
+        "text": "Ver cuadrículas"
       },
       {
         "letter": "C",
-        "text": "Ver cuadriculas"
+        "text": "Propiedades"
       },
       {
         "letter": "D",
@@ -2157,7 +2199,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Seleccionar.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Tabla. Selecciona la celda, la columna, la fila o toda la tabla segun la opcion del desplegable."
+    "explicacion": "Es el botón **Seleccionar**, primero del grupo Tabla en la cinta contextual «Disposición de tabla», la que aparece al poner el cursor dentro de una tabla. Su desplegable ofrece seleccionar la celda, la columna, la fila o la tabla entera, siempre a partir de donde esté el cursor. · Los otros dos botones de ese mismo grupo son «Ver cuadrículas», que muestra las divisiones que no tienen borde, y «Propiedades», que abre el cuadro de cinco fichas. · «Dibujar tabla» está en el grupo siguiente, Dibujar, y su icono es un lápiz sobre una rejilla."
   },
   {
     "sourceFile": "insertar.json",
@@ -2173,6 +2215,7 @@
     "id": "insertar-535",
     "sourceQuestionId": "img-distab-02",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAlCAYAAAA9ftv0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB3SURBVFhH7dCxDYAwDAVRJmEOlBWZjXHcpAlyFYrEofqB6IrXWJZ88mZm5Y8IVyNcbc3wlA6pVkPPMDznHNrPqzl/erNDuCOc8GrdcD+qwMcd4YRXhEemhPtRBT7uCCe8IjwyJVyp1dAThn8Z4WqEqxGuRriWlRtA1YF1/wz1TAAAAABJRU5ErkJggg==",
     "opciones": [
@@ -2194,7 +2237,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Ver cuadriculas.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Tabla. Muestra u oculta las lineas de division de la tabla que no tienen borde (guia en pantalla; no se imprimen)."
+    "explicacion": "Es **Ver cuadrículas**, del grupo Tabla de la cinta contextual «Disposición de tabla». Enseña u oculta las líneas de división de las celdas que no tienen borde: son una guía de pantalla, no se imprimen, y el conmutador vale para todas las tablas del documento. · «Seleccionar», su vecino de la izquierda, marca celda, fila, columna o tabla. · «Propiedades» abre el cuadro de cinco fichas. · Y «Dibujar tabla», ya en el grupo Dibujar, traza bordes a mano en vez de mostrar los que faltan: es el descarte más parecido, porque los dos van de líneas de celda."
   },
   {
     "sourceFile": "insertar.json",
@@ -2210,6 +2253,7 @@
     "id": "insertar-536",
     "sourceQuestionId": "img-distab-03",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAYAAACoYAD2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADSSURBVFhH7dFBCsIwEIVhT+I5pOcSxDN4LRE3XiibyCxGhjAZ02Q6NfIe/BRqGz/0kCcYkF4D0mtV5LKcQrNmIp+Pe0hAejWEjMyaiUwpmV0vZ/W+rOUZIIEUA5ICkl6kL4jo/39J7UDZN4DXNkfSOWvSFoLUPtMCspY853h7fSqf47qQhBiJzyEA4+RV1o2kF60Iot3n5DklSGt3ZEtA1pLnTPF3M05eZXTvJ5ASpLU7sqUu5Gh8jgbS4nfKVZFemwa5Jm2bIz0GpNeA9NoEyJzfekDT3IMeG1MAAAAASUVORK5CYII=",
     "opciones": [
@@ -2231,7 +2275,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Propiedades.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Tabla. Abre el cuadro «Propiedades de tabla» (5 fichas: Tabla, Fila, Columna, Celda, Texto alternativo)."
+    "explicacion": "Es **Propiedades**, el tercero del grupo Tabla en la cinta contextual «Disposición de tabla». Abre el cuadro «Propiedades de tabla», con sus cinco fichas: Tabla, Fila, Columna, Celda y Texto alternativo. · Sus dos compañeros de grupo son «Seleccionar», que marca celda, fila, columna o tabla entera, y «Ver cuadrículas», que enseña las divisiones sin borde. · «Fórmula» está muy lejos, al final de la cinta, en el grupo Datos, y su icono es el símbolo fx. · Al mismo cuadro se llega también con el lanzador del grupo Tamaño de celda."
   },
   {
     "sourceFile": "insertar.json",
@@ -2247,6 +2291,7 @@
     "id": "insertar-537",
     "sourceQuestionId": "img-distab-04",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAoCAYAAACIC2hQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHrSURBVFhH7dZNSwJBHAbwPkmnOlVUBBH2AYK+QZ26dOgehMewugQFaoVFkNRBD4Jdern0cqkuoZtRJEkRQkThpZsv/OsZnBjX3XXVmd2EfeBBdnZ2/TGzynZRh8SDyo4HtZOVyzwNb2jUvXpLs8lcddQ4rkGBHN/O0EWuQE8f3zQdz1piXYECiVX0n75SsVj8K8bM4jhUXElf5I6Wzt8YEsdD4XR1Vn0chXIktho4fAKLlcV48Pq9OrM+plCfb0xK4/EYu58eyYuVxJbjvFUsoeINjepfmDcc5y2Xy+xeZkgcY7wRElEGlYlElECbRfLHwyrSoc0iMR/f1ShSoa0gMe4otFUk2jYUEDs9OT5i19hFYr54vSMr2s5K8iqHHuxH2Vwg8BbUChJVDr25vqLkY4F611M0upWhvmCaEvef7JxdJKociuDVbDKapcDZF03FXhi2GSSqFFoqldg8wOYO8wyKDoQ09hhwJH44RteLVQqtVCps2wfDGgMCi5XtWUvVrCR+cEbXi20bKv6FiF0OLLI5M4lnGtnM/L5HatQfSrPHAHiEbzfm62H6KltRvu0Tew81OARAnOdzXYVi28XocWJdhSLA7e5EDM+LdRXKawfhQXk6CupkG8UU+t/iQWXHg8qOB5UdDyo3RD9JZZhVk5ASdAAAAABJRU5ErkJggg==",
     "opciones": [
@@ -2268,7 +2313,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Dibujar tabla.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Dibujar. Permite trazar a mano los bordes de celda, fila y columna, e incluso lineas diagonales."
+    "explicacion": "Es **Dibujar tabla**, primero del grupo Dibujar en la cinta contextual «Disposición de tabla». Convierte el puntero en un lápiz para trazar a mano bordes de celda, fila y columna, incluidas líneas diagonales o celdas dentro de otras celdas. · Su pareja en el mismo grupo es el **Borrador**, que hace lo contrario: quitar bordes ya trazados, que es la forma manual de combinar celdas. Ese es el descarte que decide la pregunta, porque los dos iconos comparten la misma rejilla de fondo y solo cambia la herramienta que la acompaña. · «Combinar» y «Dividir celdas» están en el grupo Combinar y actúan sobre lo seleccionado, sin dibujar nada."
   },
   {
     "sourceFile": "insertar.json",
@@ -2284,6 +2329,7 @@
     "id": "insertar-538",
     "sourceQuestionId": "img-distab-05",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAnCAYAAABwtnr/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFsSURBVFhH7dRBSgMxGAXgXkoo3Qi61au4UZAewAPoouiiikLFcSEVV7rpSko7KC5cuPMC4gGGgcgLE4hpOvkTMkkKefDodPJP5oOW9NiGJsNDJ8Ndsrx4Z4vzt+abXaLBgb7Zv2fXe4UTPgpcoH++f3mBfx7OmlVagsNldFVVvAL/dPDSTJkTFK5Du+JJ8MGg79yiuON7tKFFbfBkuO5FcofHRyv36rrmz1PQolR8Z3AXNCrgppOmE7iMHu9OvKMR73AZfblzy0ZbV2w+Klfm1dqgEa9wFV2efLDZ4asRb4tGvMEfpw98VkZ/nn3xtuFVtDiFTPEOn5+WbLw9+Qdfh1fR+MXwLko6+atQ8Do09okCxycVj9NGRaPR4GgbHte4hzVERqNR4agOb0Kj0eGoijeh0STgqIw3odFk4KjAIzg2MbuuScFR4IHWrclNDo5SZjIcyfAMt4CHLCUkeIrJ8NDJ8NDJ8NDZUDhjfyUEdOK9w+u+AAAAAElFTkSuQmCC",
     "opciones": [
@@ -2305,7 +2351,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Borrador.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Dibujar. Borra bordes concretos de la tabla para crear celdas combinadas."
+    "explicacion": "Es el **Borrador**, segundo del grupo Dibujar en la cinta contextual «Disposición de tabla». Borra bordes concretos pasando por encima de ellos, que es la manera manual de fundir dos celdas en una. · Su pareja es «Dibujar tabla», la del lápiz, que traza en lugar de borrar: el fondo del icono es la misma rejilla y solo cambia la herramienta, así que es el descarte que decide la pregunta. · «Eliminar», del grupo Filas y columnas, se lleva celdas, filas, columnas o la tabla entera, estructura incluida, no solo la línea. · Y «Dividir celdas» parte una celda pidiendo antes cuántas filas y columnas."
   },
   {
     "sourceFile": "insertar.json",
@@ -2321,6 +2367,7 @@
     "id": "insertar-539",
     "sourceQuestionId": "img-distab-06",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAoCAYAAACB4MgqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVFhH7dZtCoJAFIXhlhVGW4j2UT+DCMJ9RNheXEG1kIj+BPnBxBkaEHH0TthB6b5wsexSD1LhxIw0hbNTODuFsxPBo2hKHUlieJZlrbPbbhrPV0eyo3CkcIX/Axwfyhi94kjhCifCy7I0yfHQ+Fp1BgUH2pXneeOOmzjefzbbE8MB+2aul7N9j8d6ZV5pah/78DiPsIf9tn5+xauY+3Lhxfv2fFG+Kl34UDSi/Th9uKIo7DEEjWhwjA8fikZUOKaOf56SYDSiwzHu6wH0bT6zx9DE8L7G/U9TrnjfObTD1p9LosN9yFA8Fd6FC8HT4FKUdI8Gr96rdIW9Xu5VhpjC2Smc3UjhxrwBWlEqeIqGR8QAAAAASUVORK5CYII=",
     "opciones": [
@@ -2342,7 +2389,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Eliminar.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Filas y columnas. Elimina celdas, columnas, filas o toda la tabla (segun el desplegable)."
+    "explicacion": "Es **Eliminar**, primero del grupo Filas y columnas en la cinta contextual «Disposición de tabla». Su desplegable ofrece eliminar celdas, columnas, filas o la tabla completa. · El **Borrador** del grupo Dibujar es el descarte que decide la pregunta: también quita cosas, pero solo bordes, y las celdas siguen ahí, unidas. Aquí desaparece la estructura. · «Dividir tabla» no borra nada, parte la tabla en dos. · Y «Combinar celdas» funde la selección en una sola, que tampoco es lo mismo que eliminarla."
   },
   {
     "sourceFile": "insertar.json",
@@ -2358,6 +2405,7 @@
     "id": "insertar-540",
     "sourceQuestionId": "img-distab-07",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAoCAYAAAC4h3lxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEzSURBVFhH7ZVNSgNBEEZzLMlaspWcwRsYIQiSjacxOy/gBcxRPMH80PIaS9qmbFqdms5PPfhoZqpr+N4mWYQTxwVaYyZwOLyF9fomnpaYCFB6tboOy+VVPC0lJheQ8vv9cxTgtJSYVCAtDwiApcRkAnl5EAGwkqgWoEye3e4xzvLywzDEkzsgz7kE+/k3JbX8SqDrum8ZxzHONpu7r/J938cZSBGeeQ/c4z6wn35PMpsAEQmQ8gRSASIS8FN5MqsAoUxansgOpO+5VypPZhfQIjugzUtxAY2zEFjcvlRHdkCbl2Im8PT6Xh3ZAW1eigto/EVA0OalHIXAf+ICGmchoP3kWcRMQPvTSfOwvVffp6m54wIaLvAZF8i4LIE5U0u1wLHiAq1xgda4QGtcoDUnLhDCB6Ds5P5PLbAEAAAAAElFTkSuQmCC",
     "opciones": [
@@ -2379,7 +2427,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Insertar fila arriba.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Filas y columnas. Agrega una fila nueva justo por encima de la fila actual."
+    "explicacion": "Es **Insertar fila Arriba**, del grupo Filas y columnas en la cinta contextual «Disposición de tabla». Añade una fila nueva justo encima de aquella en la que esté el cursor, con tantas celdas como tenga la tabla. · Los cuatro botones de inserción de ese grupo se distinguen entre sí por la flecha del icono, y su pareja simétrica, «Insertar fila Inferior», es el descarte que decide la pregunta. · Los de columna añaden a izquierda o derecha, en el otro eje. · «Dividir tabla», del grupo Combinar, no añade filas: corta la tabla en dos por la fila del cursor."
   },
   {
     "sourceFile": "insertar.json",
@@ -2395,6 +2443,7 @@
     "id": "insertar-541",
     "sourceQuestionId": "img-distab-08",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAoCAYAAACB4MgqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEmSURBVFhH7dVNagJBEEBhjyWug9vgGXIDFSQQ3OQ0mZ0XyAX0KJ5gfujwBko6TU/PhHSXjNaDQp2ulm+lCzfTDK6dwbUzuHaT4avVUnXG+hO8ruvkvB/20ef+TNkxOBnc4BObNXzxdlKZ7PDP76vKGJyeBu4XO0/N3eECiJ2nxuDEl8V+uoZG7lDsPDXZ4bE/i6GROxQ7T43B6SHhXde5pml+PZM75D9nj33/WTgqcBCSj6cQzrmUwheHC3q327qq+urfC558uKDZY5+G8Nnh4RyPH/3Z5XJ26/XLDd+2bf/KDslnztljn7gffqfMWJPhY4V48gEh+r9lg1OIF3huNGWFk48HXgJN2eEkeOAl0FQETmA3m9ciaCoGL53BtTO4djOFO/cDe8emLxo2VTwAAAAASUVORK5CYII=",
     "opciones": [
@@ -2416,7 +2465,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Insertar fila inferior.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Filas y columnas. Agrega una fila nueva justo por debajo de la fila actual."
+    "explicacion": "Es **Insertar fila Inferior**, del grupo Filas y columnas en la cinta contextual «Disposición de tabla». Añade una fila nueva justo debajo de aquella en la que esté el cursor. · Su pareja simétrica, «Insertar fila Arriba», es el descarte que decide la pregunta: los iconos son casi iguales y solo cambia hacia dónde apunta la flecha. Merece la pena saber que esta misma acción se consigue también pulsando el tabulador en la última celda de la tabla. · Los otros dos botones del grupo trabajan con columnas, no con filas. · Y «Combinar celdas» funde lo seleccionado en lugar de añadir nada."
   },
   {
     "sourceFile": "insertar.json",
@@ -2432,6 +2481,7 @@
     "id": "insertar-542",
     "sourceQuestionId": "img-distab-09",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAoCAYAAABuIqMUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEHSURBVFhH7ZZBCoMwEEU9VnFd3JaeoSeoFkrXPU3d9QK9QL2I0BMokvYHAmmQaEp0MnQefIxgJm9EYjLFGJGnQuSpEHkq/kc+zzerZopg+a7rvMkOd3V9vLzBM2Nz7Swq3/e9Gobha0EkeXmIG9wGkpY34k3zVFVV6rHdQLLyZXnUV4gXxVbV9U3foyGzaLLybdt6xZFk5afEkbnyl/PJm6jyc8RD5Mfm2okm74qHQiq/3+90sV8CSOVZv3nA9ps3xNxt3HluosvH3OfHtkc70eVZ/2FREKIADbA626AgCpsGAKtTpSmOBlie530R+U8WkV8zUwTJp4bIUyHyVIg8FSJPBWN5pd5J2kiSeOB1sAAAAABJRU5ErkJggg==",
     "opciones": [
@@ -2453,7 +2503,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Insertar columna a la izquierda.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Filas y columnas. Agrega una columna nueva a la izquierda de la columna actual."
+    "explicacion": "Es **Insertar columna a la izquierda**, del grupo Filas y columnas en la cinta contextual «Disposición de tabla». Añade una columna nueva a la izquierda de aquella en la que esté el cursor, con tantas celdas como filas tenga la tabla. · Su pareja simétrica, «Insertar columna a la derecha», es el descarte que decide la pregunta, porque los iconos solo se diferencian en el lado de la flecha. · Los otros dos del grupo trabajan en el otro eje, añadiendo filas arriba o abajo. · Y «Distribuir columnas», del grupo Tamaño de celda, no añade ninguna: reparte el ancho a partes iguales entre las que ya hay."
   },
   {
     "sourceFile": "insertar.json",
@@ -2469,6 +2519,7 @@
     "id": "insertar-543",
     "sourceQuestionId": "img-distab-10",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAnCAYAAACbgcH8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD0SURBVFhH7ZZLCoMwEEA9VnFd3BbP0BM0FkrXPY3ueoFeoF5E6AkUmTKBiJSYpIGMGZgHDz8YfASJKYAhEk2FRFMh0VR4o8vyQGoIQdHjODotzk94vD5O8Rnb2LUsoud5hmmaluvsozHYYMKzjjbBTaOg79/6HMOzjsZApOtaqKrjEq7URR997PZ52MKHYdD3fARF329XpzHRW+Eh7DbTxpjwZNExhIYnjcaxMdb1SY/fQmbaJYtv+ldbdNLVw7bMrY2JTr5Or19m89/orRnO+o/Icu+BstvlGdntp21KNKUheKNzRKKpkGgqJJoKiaaCYTTAF/L3Vmg1RsnvAAAAAElFTkSuQmCC",
     "opciones": [
@@ -2490,7 +2541,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Insertar columna a la derecha.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Filas y columnas. Agrega una columna nueva a la derecha de la columna actual."
+    "explicacion": "Es **Insertar columna a la derecha**, del grupo Filas y columnas en la cinta contextual «Disposición de tabla». Añade una columna nueva a la derecha de aquella en la que esté el cursor. · Su pareja simétrica, «Insertar columna a la izquierda», es el descarte que decide la pregunta: mismo icono, flecha al otro lado. · «Insertar fila Inferior» pertenece al otro eje, el de las filas. · Y «Distribuir columnas» no crea ninguna columna, solo iguala el ancho de las existentes; se confunde porque su icono también muestra columnas con flechas, pero apuntando hacia fuera a ambos lados."
   },
   {
     "sourceFile": "insertar.json",
@@ -2506,6 +2557,7 @@
     "id": "insertar-544",
     "sourceQuestionId": "img-distab-11",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAYAAACoYAD2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACWSURBVFhH7Zi7DcAgDAWzPB0LwAIMwGYs4MgdheV8/JBC9E66hgIfDUgcsgGMRMFIFPtH1lqllLJcnePhRuoGY4xH9t7NdU+d48HIuzLSkpEWjJwMReacpbW2XJ3jcRlpnRwtI1EyEiUjUYYjrXsNbSiSz+IkIy0ZacHIyf9HvvnBSCmZ656hH4yvwEgUjETBSBQbRIqc/gYU/cEWW+wAAAAASUVORK5CYII=",
     "opciones": [
@@ -2527,7 +2579,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Combinar celdas.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Combinar. Une las celdas seleccionadas en una sola celda."
+    "explicacion": "Es **Combinar celdas**, primero del grupo Combinar en la cinta contextual «Disposición de tabla». Funde las celdas seleccionadas en una sola, conservando dentro todo el contenido de cada una, cada uno en su párrafo. · «Dividir celdas», el botón de al lado, hace lo contrario y es el descarte que decide la pregunta: pide en cuántas filas y columnas trocear lo seleccionado. · «Dividir tabla», el tercero del grupo, no toca celdas: parte la tabla entera en dos. · Y el **Borrador** del grupo Dibujar llega al mismo resultado que este por otro camino, borrando el borde que separa dos celdas."
   },
   {
     "sourceFile": "insertar.json",
@@ -2543,6 +2595,7 @@
     "id": "insertar-545",
     "sourceQuestionId": "img-distab-12",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAApCAYAAABDV7v1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACISURBVFhH7dVBCoAgEEZhjxVepysE0bG6nhtDcCXTDMVgWe/Bj2AQH20KeZCAegfUu29AY5y6zcqEppQubVsX8V4bUG1A6ykGtBlQbY9Aw7x3m5UJlb7A2X3ZnWdAgSoBlQa0vKDXrFQov9BmQLUBracY0Gb/gvaalQp9U0C9A+odUO8GgeZ8AIMbJEMb9rZkAAAAAElFTkSuQmCC",
     "opciones": [
@@ -2564,7 +2617,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Dividir celdas.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Combinar. Parte la celda seleccionada en el numero de filas y columnas que se indique."
+    "explicacion": "Es **Dividir celdas**, segundo del grupo Combinar en la cinta contextual «Disposición de tabla». Abre un cuadro donde se indica en cuántas columnas y cuántas filas partir lo seleccionado. · «Combinar celdas», su vecino, es la operación inversa y el descarte que decide la pregunta. · «Dividir tabla», el tercero del mismo grupo, se parece mucho en el nombre pero actúa en otra escala: parte la tabla entera en dos por la fila del cursor, y no pregunta nada. · Y «Distribuir columnas» no divide ninguna celda: iguala el ancho de las columnas que ya existen."
   },
   {
     "sourceFile": "insertar.json",
@@ -2580,6 +2633,7 @@
     "id": "insertar-546",
     "sourceQuestionId": "img-distab-13",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAApCAYAAACsldDLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACKSURBVFhH7dRBCoAgEEbhTtI5wnMF0Rk6WxdyY7iLwdE2M6i9B/8mwj4iWtJAgbUKrFVgrapiQ9hc16qJjTFWdx578fp7X+4BKwdWCaycC3a9bte1qmJ7C6xV83yz/LqUgZUDqzQXNj/IY/97s6WD3wOrBFYOrCwf4LlWVWxvgbUKrFVgrRoIm9IDbrjGSL+QEjEAAAAASUVORK5CYII=",
     "opciones": [
@@ -2601,7 +2655,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Dividir tabla.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Combinar. Parte la tabla en dos: la fila del cursor pasa a ser la primera fila de la nueva tabla."
+    "explicacion": "Es **Dividir tabla**, tercero del grupo Combinar en la cinta contextual «Disposición de tabla». Parte la tabla en dos: la fila donde esté el cursor encabeza la segunda, y entre ambas queda un párrafo vacío. · «Dividir celdas», su vecino, es el descarte que decide la pregunta: mismo verbo, otra escala, porque trocea una celda en varias y antes pregunta cuántas. · «Combinar celdas» va en sentido contrario, fundiendo la selección. · Y «Eliminar» no separa nada: se lleva por delante celdas, filas, columnas o la tabla completa."
   },
   {
     "sourceFile": "insertar.json",
@@ -2617,6 +2671,7 @@
     "id": "insertar-547",
     "sourceQuestionId": "img-distab-14",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAChSURBVEhLY/hPRzBqGVXA4LJsw/V3/w2nXgTTMGBlZQHH6HxkjA7wWgayQGPC+f9y3WfBNLKFyABk8K9fv1AwyZa5L7j2v+3gE7BlIBrkQ2yAKpbBAMgyELj79juYRgc0sQwXGLWMKMsIgaFr2WgCwWfZihUr8FsGy8QwyyjJ1NHR0fgtAxVPdCuu6FoQgwDIArpUMdQGo5ZRBQxXy/7/BwCWvr/GImfVbQAAAABJRU5ErkJggg==",
     "opciones": [
@@ -2638,7 +2693,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Alto (de fila).** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Tamano de celda. Fija el alto de las filas seleccionadas en centimetros."
+    "explicacion": "Es el campo **Alto**, del grupo Tamaño de celda en la cinta contextual «Disposición de tabla». Fija en centímetros el alto de las filas seleccionadas, y su icono lleva la flecha en vertical. · El campo **Ancho**, justo debajo, es el descarte que decide la pregunta: mismo aspecto, flecha en horizontal. · «Distribuir filas» está a su lado y también toca el alto, pero no fija una medida: reparte el que ya hay a partes iguales. · Y «Combinar celdas», de otro grupo, no mide nada. · Para decidir si ese alto es un mínimo o una medida cerrada hay que ir a Propiedades de tabla ▸ Fila."
   },
   {
     "sourceFile": "insertar.json",
@@ -2654,6 +2709,7 @@
     "id": "insertar-548",
     "sourceQuestionId": "img-distab-15",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACdSURBVEhLY/hPYzBqAUFAfwusrCwowugAqwW/fv0iC49aQBATbQElGB1gWEBtgNUH5AKifDD0LaA2wGrBhuvv/htOvfj/7tvvUBHcAKQGpBakBx2sWLEC0wKQQo0J5/+3HXwCFSEMQGpBetAtiY6OxrQA5Bq57rNYMQxgkwNhkF50QFMfgADFcQAC7guuYTUcBLBaQE0wagEB8P8/AK5uvay+ItFPAAAAAElFTkSuQmCC",
     "opciones": [
@@ -2675,7 +2731,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Ancho (de columna).** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Tamano de celda. Fija el ancho de las columnas seleccionadas en centimetros."
+    "explicacion": "Es el campo **Ancho**, del grupo Tamaño de celda en la cinta contextual «Disposición de tabla». Fija en centímetros el ancho de las columnas seleccionadas, y su icono lleva la flecha en horizontal. · El campo **Alto**, justo encima, es el descarte que decide la pregunta: mismo aspecto, flecha en vertical. · «Distribuir columnas» también trabaja el ancho, pero igualando el existente en lugar de imponer una medida. · Y «Autoajustar» deja que sea el contenido o la ventana quien decida el ancho, que es justo lo contrario de escribir una cifra aquí."
   },
   {
     "sourceFile": "insertar.json",
@@ -2691,6 +2747,7 @@
     "id": "insertar-549",
     "sourceQuestionId": "img-distab-16",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABlSURBVEhL7ZFBCoAwDAR9ia8UxDf4LREv/VAukYABodOWIoJgBgZy2jlk0JeJgI5rui4mCyzzVNWwUZLAgIigHrhTGnYi8NHAsW+oB2yUJOIHfw3UNGyUJLJAL6Vh53GgRQQaqJ6/i8YcYmolrAAAAABJRU5ErkJggg==",
     "opciones": [
@@ -2712,7 +2769,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Distribuir filas.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Tamano de celda. Iguala el alto de las filas seleccionadas."
+    "explicacion": "Es **Distribuir filas**, del grupo Tamaño de celda en la cinta contextual «Disposición de tabla». Reparte el alto total a partes iguales entre las filas seleccionadas, útil cuando varias ediciones las han dejado desparejas. · **Distribuir columnas**, justo debajo, hace lo mismo en el otro eje y es el descarte que decide la pregunta: los dos iconos son la misma tabla con flechas, unas horizontales y otras verticales. · El campo **Alto** también toca el alto, pero imponiendo una medida en centímetros en lugar de igualar la que ya hay. · Y «Insertar fila Arriba» añade filas, que es otra cosa."
   },
   {
     "sourceFile": "insertar.json",
@@ -2728,6 +2785,7 @@
     "id": "insertar-550",
     "sourceQuestionId": "img-distab-17",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABeSURBVEhLY/hPJzBqEdlgcFgk130WykIFpIqDwMBbBNJELsYGRlDQgQDdLKImwGtRZXkJyRgXIGjRr1+/MPCJY0ewio9aBAejFlFkEakYF8BrETXBqEVkg+Fm0f//AFzOE/mQYO1pAAAAAElFTkSuQmCC",
     "opciones": [
@@ -2749,7 +2807,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Distribuir columnas.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Tamano de celda. Iguala el ancho de las columnas seleccionadas."
+    "explicacion": "Es **Distribuir columnas**, del grupo Tamaño de celda en la cinta contextual «Disposición de tabla». Iguala el ancho de las columnas seleccionadas repartiendo entre ellas el que ya ocupaban. · **Distribuir filas**, justo encima, es su gemelo en el otro eje y el descarte que decide la pregunta. · El campo **Ancho** fija una medida concreta en centímetros, en vez de igualar. · Y «Insertar columna a la derecha» crea una columna nueva; se confunde porque su icono también lleva columnas y flecha, pero apuntando hacia un solo lado, no hacia fuera por los dos."
   },
   {
     "sourceFile": "insertar.json",
@@ -2765,6 +2823,7 @@
     "id": "insertar-551",
     "sourceQuestionId": "img-distab-18",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAoCAYAAABq13MpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFNSURBVFhH7ZUxawJBEIXzS6zTpgumDaZMrK3T26dPkyYIaay0sMhVNlZWgYBFTESEIAQJEUEuYGNjOeEdq0g8vd3xZvBwP1ju3LP4eDxmTiiDeGktjku6/vFL5da3+aULW/qq9km5h3eqdKbmRg+W9OvPPBK+aQypFHyZWz1Y0qgFhJEy5EezhfmiA0v67KlP9y+TjXcOYRhSsXhN3e6buUnGWRrpnj72VuneNkd0UR1E71yC4JkKhUtrcWdpdHi9x8t+47kPLuJO0kg3bmIgaSQeRz5/7nRQlSScpNFdVOM/d+1x1O19EEsaiSLpbYc7s8U6ndRdjEAcV0SnR9KU0JzZ1tLoMrq7C5v/pIGVtG2KnJmtslwkEF8uUqQ+8uKWgNRJfblIIrZcpMhcpzM7PVzx0hz8ctHGLxct/HKRxi+XQ8ZLa+GltcigNNEfKoPibmjx5OgAAAAASUVORK5CYII=",
     "opciones": [
@@ -2786,7 +2845,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Direccion del texto.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Alineacion. Gira el texto de las celdas seleccionadas (horizontal / vertical de abajo arriba / de arriba abajo); se pulsa varias veces."
+    "explicacion": "Es **Dirección del texto**, del grupo Alineación en la cinta contextual «Disposición de tabla». Gira el texto de las celdas seleccionadas y funciona por clics sucesivos: horizontal, vertical leyéndose de abajo arriba, vertical de arriba abajo, y vuelta a empezar. No abre ningún menú ni pide grados. · **Márgenes de celda**, su vecino, ajusta la separación entre el borde de la celda y el texto: es el descarte que decide la pregunta porque los dos son los únicos botones con nombre de ese grupo. · «Ordenar» está en el grupo Datos. · Y «Ajustar texto» es de las cintas de imagen y forma, no de tabla."
   },
   {
     "sourceFile": "insertar.json",
@@ -2802,6 +2861,7 @@
     "id": "insertar-552",
     "sourceQuestionId": "img-distab-19",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAApCAYAAACyXOB4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB6SURBVFhH7ZDLCYAwEAWtxDokLVqbDeUSyUHws6zvkGBMZmAuITyGnVKDEKVClMr/okJYqunxGhVjvDiv2+PN0/pPlOU4UXm0tH1e6j5IlAVRJ4g6JMqSKFWiVIlSHScqj5a2z0vdB4myaDaqlh5u1FcQpUKUClEaKe2I+hZn44BN7wAAAABJRU5ErkJggg==",
     "opciones": [
@@ -2823,7 +2883,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Margenes de celda.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Alineacion. Personaliza los margenes internos de las celdas y el espaciado entre ellas."
+    "explicacion": "Es **Márgenes de celda**, del grupo Alineación en la cinta contextual «Disposición de tabla». Abre el cuadro «Opciones de la tabla», donde se fijan los márgenes internos de todas las celdas (de fábrica, 0 arriba y abajo y 0,19 cm a izquierda y derecha) y se puede permitir espaciado entre ellas. · **Dirección del texto**, su vecino de grupo, gira el texto y es el descarte que decide la pregunta. · «Distribuir columnas» reparte anchos, que es separación entre columnas, no dentro de la celda. · Y «Ver cuadrículas» solo enseña las divisiones sin borde."
   },
   {
     "sourceFile": "insertar.json",
@@ -2839,6 +2899,7 @@
     "id": "insertar-553",
     "sourceQuestionId": "img-distab-20",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAApCAYAAABZa1t7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVFhH7ZS/SwMxFMf9S5xd3aSuUkftql3Fju7uLi6idXGwXRy8qYuTkyA4WBER1EOKKILcoIOL45PvmcBx3I/30pdSJB8I5F5y4ZP3kszQlBLEpAQxKRMVazQWTK8ekdjqyRMt9x/MlxwvYpev3zR/eEdze7dp3wUvYtvnb7QxGNF69ExbZy8mKsOLGLI1ePxKG/ouqIvlZaykFHUxlA9ltNiSSlEXw4HPZgh9xKSoiu1ffdDs7k1h27l4N7N4qIrh7cKNzIMYxiSoiY0+f9LMFL1biGEMc7ioiSErVS89xoqyWYaa2OLRfeU5whjmcFE9Y5r8f7Fu9yBdrKy122tmJg/8w8UpY3EcU7O5RMPhtYnw8C7W6Wym2ZTiVazXOxaX0OJNDKVrtVbEJbR4E0OmkDFXvIjhTOFsjYO6GEqHW4jbyAWbiKJT8/VHXgzjZZtlibmU0G4mK5cVQ7zqyakVG6eEeTkrVicFKsXswkmSmIicrBzEOFKgUgxPAxYra9xMWjn8w5ECrDOmAWQkb+DExKQEMSlBTEoQkzKlYkS/hrJhIB0tBEoAAAAASUVORK5CYII=",
     "opciones": [
@@ -2860,7 +2921,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Ordenar.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Datos. Organiza la seleccion por orden alfabetico o numerico (hasta 3 criterios, con o sin fila de encabezado)."
+    "explicacion": "Es **Ordenar**, primero del grupo Datos en la cinta contextual «Disposición de tabla». Abre un cuadro donde se eligen hasta tres criterios encadenados, el tipo de dato de cada uno (texto, número o fecha), el sentido ascendente o descendente, y si la primera fila es un encabezado que debe quedarse arriba. · «Repetir filas de título», su vecino, también trabaja con el encabezado pero no reordena nada. · «Convertir en texto» deshace la tabla. · Y «Fórmula» calcula: su icono es el símbolo fx, muy distinto de las flechas de ordenación."
   },
   {
     "sourceFile": "insertar.json",
@@ -2876,6 +2937,7 @@
     "id": "insertar-554",
     "sourceQuestionId": "img-distab-21",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAqCAYAAAAu9HJYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADWSURBVFhH7ZLBCcMwDEUzVsk6XaFQes5EXSATdQJfXHQQOD+qoiDhYqIP72K+7OfEUx0gKRmVlIzK2JLzfAvDG1WylOImJY8ke8YkOd3fO7gThRaz5LJ+NmDHw7UkEex4CJGUZLAjXeQInu0qiU9C47qSr+djA3bo0LO0+2sJ+5JSh6ALSes4qyUlia6S/BYZS0cDZ7Xk7yZSEjdBpA6/Nws4q8UkKYGdX30SktZTksHO3yQ1uNMedBa3pCXtQR5SchjJKLS4JHslJaOSklFJyagMIFnrF3h+ZsKpti/UAAAAAElFTkSuQmCC",
     "opciones": [
@@ -2897,7 +2959,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Repetir filas de titulo.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Datos. Repite la fila de encabezado al principio de cada pagina cuando la tabla ocupa varias."
+    "explicacion": "Es **Repetir filas de título**, del grupo Datos en la cinta contextual «Disposición de tabla». Marca como encabezado la fila donde esté el cursor, y si la tabla se extiende por varias páginas, esa fila reaparece arriba en todas ellas. Sigue siendo una sola fila real: al editarla cambia en todas. · Es la misma casilla que «Repetir como fila de encabezado en cada página», en Propiedades de tabla ▸ Fila. · «Ordenar» también mira el encabezado, pero para dejarlo fuera de la ordenación, y es el descarte que decide la pregunta. · «Dividir tabla» y «Convertir en texto» rompen la tabla, no la repiten."
   },
   {
     "sourceFile": "insertar.json",
@@ -2913,6 +2975,7 @@
     "id": "insertar-555",
     "sourceQuestionId": "img-distab-22",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAArCAYAAAAOnxr+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVFhH7ZSxSgNBEIZ9EmtbO8kLpE1vbW8hiBBS2tiIwUJE0MLGKo0PELDVYKOCBAmkErSwEe6KlX+5g/Wclc3Ov0cC+8EPeyl2PmZnsmZWhCzKJouyyaJsFhLtdLaSJISFRYuioCaLSsU0yaJukYP9vai4d+SOSsU0yaJuEWn+QuLekUR0ODz5VYSRJKJAKqYJVfTq4d30rl/sWSqmCU10++bVbJ4+msPx3H67RaT5C4l7B0UUkt3LJzP9+K5+WcKO4rnRSVcSlGUpFoyNWhQzWT93E6asWnTjeGLuZl/V118gK81fSKii60f31ckPo7NJO4qxGD1/2rNWVi2KjffNKCSxaAxZtahv62uashfnZ+I8SqGKgp3R1D5zqGxMZymiALKQwRhIwlpZmijAGGBmsWD4N5AC2RpJyBeq6H8sVUd9aCWR5KJNycGgb4vGJIQo0aZkG0SJ7t6+tSoJ1MvUFlmUTRZlsyKixvwAjU20Y+9ikjMAAAAASUVORK5CYII=",
     "opciones": [
@@ -2934,7 +2997,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Convertir en texto.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Datos. Deshace la tabla y la convierte en texto normal, eligiendo el caracter separador de columnas."
+    "explicacion": "Es **Convertir en texto**, del grupo Datos en la cinta contextual «Disposición de tabla». Deshace la tabla y deja su contenido como texto corriente, preguntando antes con qué carácter separar lo que estaba en columnas: marcas de párrafo, tabulaciones, punto y coma u otro a elegir. · Es la operación inversa de «Convertir texto en tabla…», del menú Tabla. · «Dividir tabla» también parte algo, pero deja dos tablas, no texto: es el descarte que decide la pregunta. · «Ordenar» reordena filas sin deshacer nada. · Y «Fórmula» calcula dentro de una celda."
   },
   {
     "sourceFile": "insertar.json",
@@ -2950,6 +3013,7 @@
     "id": "insertar-556",
     "sourceQuestionId": "img-distab-23",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAArCAYAAADlqKH9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHaSURBVFhH7ZaxTsMwEED5LNQZdUVdUXc60xl1piud6UxnunenP5BPyFcYvZJDxoqT+HwJVPKTEIntKi/nu4tv3BVQJK0oklYUSStGkzydTm69fnK73evl//n82cykM4rkZvPslssHV9f15Z7r+fzu5z4Vc0kEF4v7X0II/hvJ4/HDzWa37nB4b0a+qapKLQhmkkgQLaJojZkkBUIUt9uXZsQOE0mJIpI5VRwjWxJBqhdBRMdALUkfRKztD2lLTLZbtjqsaiuyJclBiSCtRuCaaNOWQhjf79+au36yJXkYgn7rodJp6hJhpATG5aX88S6yJfku80AeHsL2M8caYA0vRXR5kaENPluyLx9lHrGULfbJkozlo49EerV6bEbSyZJsy8cQWcP2asmS7MpHQQ4dfxZJP99i8CKyTota0s/HWJWyxbQZosg67XddLSmnHmkvIQjJiUjWSnUT+RRhtaREx289SJGfCCAvEZao8xsEU49zakkeSq75UOWMc8AIW5LMdRVZDJWkVGzYVohc7FPH3KQ5STSI4tDPWi69koj4MlwjONaxrI1OSfIKIT/3KAhNXuUwSBIxcg057SEhh97tRpQCYXunysEQVeFMTZG0okhaUSStuAJJ574A6QhpgoLu1KwAAAAASUVORK5CYII=",
     "opciones": [
@@ -2971,7 +3035,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Formula.** Cinta contextual «Disposicion de tabla» (aparece con el cursor dentro de una tabla) ▸ grupo Datos. Agrega una formula a una celda para calculos simples: =SUM(ABOVE), =AVERAGE(LEFT)..."
+    "explicacion": "Es **Fórmula**, último del grupo Datos en la cinta contextual «Disposición de tabla», y su icono es el símbolo fx. Inserta en la celda expresiones como =SUM(ABOVE) o =AVERAGE(LEFT), donde ABOVE, BELOW, LEFT y RIGHT indican qué celdas entran en el cálculo. · El resultado es un campo y no se recalcula solo: hay que actualizarlo con F9 cuando cambian los datos. · «Ordenar», el otro comando del grupo que trabaja con números, los reordena en vez de operarlos, y es el descarte que decide la pregunta. · Para recálculo automático de verdad hay que incrustar una hoja de Excel."
   },
   {
     "sourceFile": "insertar.json",
@@ -2987,6 +3051,7 @@
     "id": "insertar-557",
     "sourceQuestionId": "img-distab-des-01",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAnCAYAAACIVoEIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB6SURBVFhH7ZJBCoAwEMT2WdL/v6qXlR4E2TIwFqweEgg9SHEIjfwhjHJhlMs0qrUje+9bTsU0alzYpUKWeuLqHQWl7lLKlVKulHKllOtSqetHb51DBW+qqqBUVUGpqoJSVQWlqgpKVRXTqIjYpkJ/+RBGuTDKhVEemSd5EXDjoZBE3AAAAABJRU5ErkJggg==",
     "opciones": [
@@ -3008,7 +3073,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Bordes.** Cinta contextual «Diseno de tabla» ▸ grupo Bordes. Aplica o quita bordes de la tabla o la celda seleccionada (inferior, superior, todos, sin borde, «Bordes y sombreado…»)."
+    "explicacion": "Es **Bordes**, del grupo Bordes en la cinta contextual «Diseño de tabla». Su desplegable aplica o quita bordes de la selección uno a uno (inferior, superior, izquierdo, todos, sin borde…) y al final ofrece «Bordes y sombreado…», que abre el cuadro completo. · **Estilos de borde** es el descarte que decide la pregunta: no decide QUÉ bordes se pintan, sino CON QUÉ línea. · «Copiar borde» es un pincel que replica el formato de un borde en otros. · Y «Sombreado» está en el grupo de al lado y colorea el fondo de la celda, no sus líneas."
   },
   {
     "sourceFile": "insertar.json",
@@ -3024,6 +3089,7 @@
     "id": "insertar-558",
     "sourceQuestionId": "img-distab-des-02",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAASCAYAAADypDaEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABDSURBVEhL7ZKxCQAxEMO8/9C5b9MplQIfC1QbgTMHrMsSjbAkGmFJNMKSeDMiieK+SfROlkQjLIlGWBKNsCR+EDHzAdObaySTuLlSAAAAAElFTkSuQmCC",
     "opciones": [
@@ -3045,7 +3111,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Estilos de borde.** Cinta contextual «Diseno de tabla» ▸ grupo Bordes. Aplica a bordes concretos un estilo de linea comun (o uno usado recientemente) sin abrir el cuadro Bordes y sombreado."
+    "explicacion": "Es **Estilos de borde**, del grupo Bordes en la cinta contextual «Diseño de tabla». Ofrece una galería de líneas ya combinadas (grosor y color) para aplicarlas sin pasar por el cuadro «Bordes y sombreado», y recuerda las usadas recientemente. · **Bordes**, su vecino, elige a qué lados se aplican, y es el descarte que decide la pregunta: uno decide el aspecto de la línea y el otro dónde va. · «Copiar borde» clona el formato de un borde ya pintado. · Y «Color de la pluma» solo cambia el color, sin tocar el grosor ni el tipo de línea."
   },
   {
     "sourceFile": "insertar.json",
@@ -3061,6 +3127,7 @@
     "id": "insertar-559",
     "sourceQuestionId": "img-distab-des-03",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAYAAACoYAD2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJaSURBVFhH7ZY/aBNRHMc76uSgIC7iJLg6la7ajrVFEDRxKlqLgxqLBSVkULGOxg5CI1QKlmZTEyg0ukhpxIiIRIhIBjFDUEeX/Pvq93m/5DV9eY3m5ULhPvDjuHu5ex++7373MoRdQCDpikDSFbtfcmjqGSqVCkZGhvt+tNGVpB9lw7mkpPMvFSRpqiBJE0GSbWUjSLLbqtVq3oxmBp5kvV5XcyWTq5icPIVQ6Kw61xlYktVqFY1GA+VyGZHINUxPX0Q2u4mxsZPe7C0GkqQI5nJvEQ6fw/z8PXU9Hn+AWCzqzd6iK0mZ2MWRgoSCo6MnsLLyVI3l83lMTIyjUCiocR1fk+wkyOJyLyw8VOPt+PZO6oJsEF0wkVg0NozgS5K6IJeUDSJj0iymZRb6nqTeJO1LXCqVVKrpdMqb0Uxfk7QJsmzvoU7fktxJMBq91fzcDGTHEUF+qE2C0igc545j+oDrOJWUBiEUoEi7IM/5ARdBuW7DmaQIxjNF7L+ypu7dd/kFZlc/Nn+jCzJp3sPrTN+GM0lO+mTjK/bOpHE68Qm3X/3AhWQRB6+vK1FufbLEuqCUDSeS8uIfuLrWFJSiKBO1CTpNkg+nEI9S8ldraukDDs+93CIoxed0EpSysaOkXkdvZryRFsXvv3D+8XvsuZRC5Pm3bYJMlgmT8Xh22zOlbFglbcws/0nuRkZNcCz22ijIpT40u66aqRf+W5Jwidkox+9ubnkXQ8ufMXz/jRq7k+q8J3dLT5Jk48tPhBff4cjc31RZTPjMo5wac0HPkn4QSLoikHQD8Bux3r8P9an6SQAAAABJRU5ErkJggg==",
     "opciones": [
@@ -3082,7 +3149,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Copiar borde.** Cinta contextual «Diseno de tabla» ▸ grupo Bordes. Copia el formato de un borde (estilo, grosor y color de pluma) para aplicarlo a otros bordes con el pincel."
+    "explicacion": "Es **Copiar borde**, del grupo Bordes en la cinta contextual «Diseño de tabla». Funciona como un pincel: se toma el formato de un borde ya pintado (estilo de línea, grosor y color de pluma) y se va aplicando a otros bordes con el puntero. · **Estilos de borde** es el descarte que decide la pregunta, porque también sirve para repetir un aspecto de línea, pero eligiéndolo de una galería en lugar de copiarlo de la propia tabla. · «Bordes» decide a qué lados se aplica. · Y «Sombreado» es color de fondo, no de línea."
   },
   {
     "sourceFile": "insertar.json",
@@ -3098,6 +3165,7 @@
     "id": "insertar-560",
     "sourceQuestionId": "img-distab-des-04",
     "tipo": "opcion_unica",
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAqCAYAAAAeeGN5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVGhD7dYxSBtRHMfxbHZ2F+zQyUEULFYIGBMdRFJF6OJWByMOnZSARUq1UC0ZTIUuRRICzSClGjI4hKhIGjUB26FKizi4OGjHLgnhb3+P98SGeHl3966XC/eFP+c748OPdznjoSbKxTRqLka2YrFAodAU9fX1siPWVmYpBoC1tffsaxyxtjJLMbgid6teq87FyIZfvlKp8JWDMXizDw76qVQqUblcZucciQFkbOwpHRzkGUaAHIepBRFzF5P6dkldr/fp0fwOeZe/Ujx3wb9jPKUYQEZHgzUhAoMrNLP6mR6E0hSIHtP4xxPyRorU8nf98ssp38lYyjBaV0QMMDj2Dw3Ts5VNWsxe385E4hcD5s5+8x31pwQjA8EIDF43EgzS7Hr2H1D3mzxNJ77zXfVnGiMLwQgMJpXaooGAn57MJtjtBgxuuc5Xu3xn/ZnC6IHUmmTyE3l9Pmp7/oEevz1kmI6FHb67/gxjzEIw+FnsEU9l2fvFNkyhcKT55Ko3AoI/CvJMbjFMz+IeWxvJltusGoJaX2xT7/Ih+d7l+Bn9/dcHAKYWBOH2ag9n7X2aIVnQfRDkj+TZrRbNnPMz+lOCQfVAWhCEKwLM+dUffkZ/yjDoPlA9CFpK/6SH4QxfGUspBlWDZCAIHzTnNn7wlbGUY5AA4Z+iDAThM5mZz2XIEgwSIBmIqizD2JEUJhaL2TqySWPsysVo5WIU5WK0ajqMnSObFMYpuZhGzcU0ak2EIboBZr0k7Cq0EqMAAAAASUVORK5CYII=",
     "opciones": [
@@ -3119,7 +3187,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "**Sombreado.** Cinta contextual «Diseno de tabla» ▸ grupo Estilos de tabla. Cambia el color de fondo de la celda, la fila o la tabla seleccionada."
+    "explicacion": "Es **Sombreado**, del grupo Estilos de tabla en la cinta contextual «Diseño de tabla». Cambia el color de FONDO de la celda, la fila o la tabla seleccionada, y su icono es un cubo de pintura sobre una celda rellena. · Todos los demás descartes están en el grupo Bordes y trabajan las LÍNEAS, no el relleno: «Bordes» elige a qué lados, «Estilos de borde» con qué línea y «Color de la pluma» de qué color se dibuja. · La distinción se repite en el cuadro «Bordes y sombreado», donde son dos fichas separadas. · Y no debe confundirse con el resaltado de Inicio, que es un rotulador sobre los caracteres."
   },
   {
     "sourceFile": "insertar.json",
@@ -3135,7 +3203,8 @@
     "id": "insertar-479",
     "sourceQuestionId": "capt-ins-479",
     "tipo": "seleccion_multiple",
-    "enunciado": "El grupo «Opciones de estilo de tabla» (pestana Diseno de tabla) tiene 6 casillas. ¿Cuales?",
+    "revisada": true,
+    "enunciado": "El grupo «Opciones de estilo de tabla» de la pestaña Diseño de tabla son seis casillas. ¿Cuáles de estas lo son de verdad?",
     "opciones": [
       {
         "letter": "A",
@@ -3151,11 +3220,19 @@
       },
       {
         "letter": "D",
-        "text": "Primera columna / Ultima columna / Columnas con bandas"
+        "text": "Columnas con bandas"
       },
       {
         "letter": "E",
-        "text": "Diagonal de celda"
+        "text": "Fila de subtotales"
+      },
+      {
+        "letter": "F",
+        "text": "Celdas con bandas"
+      },
+      {
+        "letter": "G",
+        "text": "Primera fila destacada"
       }
     ],
     "respuesta": [
@@ -3164,7 +3241,7 @@
       "C",
       "D"
     ],
-    "explicacion": "Las 6 casillas activan o desactivan el formato especial de cada zona del estilo de tabla aplicado. «Diagonal de celda» no es una de ellas."
+    "explicacion": "Las seis casillas van por pares y por zonas: la primera fila y la última, la primera columna y la última, y las bandas de filas y de columnas, que alternan el formato entre pares e impares. En la lista faltan «Primera columna» y «Última columna» para completarlas. · Ninguna de ellas crea nada: solo encienden o apagan el formato especial que el estilo de tabla aplicado ya trae previsto para esa zona, así que marcar «Fila de totales» no suma nada, solo destaca la última fila. · Las tres inventadas suenan a Excel, donde sí hay subtotales, y a un supuesto formato por celdas que aquí no existe: las bandas son siempre de filas o de columnas enteras."
   },
   {
     "sourceFile": "insertar.json",
@@ -3180,27 +3257,32 @@
     "id": "insertar-488",
     "sourceQuestionId": "capt-tabctx-488",
     "tipo": "seleccion_multiple",
-    "enunciado": "El grupo «Alineacion» de la pestana «Disposicion de tabla» contiene:",
+    "revisada": true,
+    "enunciado": "¿Qué contiene el grupo «Alineación» de la pestaña Disposición de tabla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "9 botones de alineacion del contenido de la celda"
+        "text": "Nueve botones para colocar el contenido de la celda"
       },
       {
         "letter": "B",
-        "text": "«Direccion del texto» (gira el texto de la celda; se pulsa varias veces)"
+        "text": "«Dirección del texto», que gira el texto de la celda a cada clic"
       },
       {
         "letter": "C",
-        "text": "«Margenes de celda»"
+        "text": "«Márgenes de celda»"
       },
       {
         "letter": "D",
-        "text": "«Ordenar»"
+        "text": "«Distribuir filas» y «Distribuir columnas»"
       },
       {
         "letter": "E",
-        "text": "«Sangria francesa»"
+        "text": "«Ordenar»"
+      },
+      {
+        "letter": "F",
+        "text": "«Sangría francesa»"
       }
     ],
     "respuesta": [
@@ -3208,7 +3290,7 @@
       "B",
       "C"
     ],
-    "explicacion": "«Ordenar» esta en el grupo Datos. «Direccion del texto» cicla entre horizontal, vertical de abajo arriba y vertical de arriba abajo."
+    "explicacion": "El grupo es corto: la rejilla de nueve posiciones, que cruza arriba, centro y abajo con izquierda, centro y derecha, más los dos botones que la acompañan. «Márgenes de celda» abre el cuadro de espaciado interior de las celdas. · Los descartes son todos comandos reales, pero de otros sitios: distribuir filas y columnas está en «Tamaño de celda» y trabaja medidas, no posiciones; «Ordenar» está en «Datos» y reordena filas enteras; y la sangría francesa vive en el cuadro Párrafo, fuera de las cintas de tabla. Que existan de verdad es lo que hace la pregunta difícil: hay que saber en qué grupo cae cada uno."
   },
   {
     "id": "insertar-214",
@@ -3223,11 +3305,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-10",
     "generado": true,
-    "enunciado": "La opción Autoajustar a la ventana hace que el ancho total de la tabla se adapte al ancho del área de texto del documento.",
+    "revisada": true,
+    "enunciado": "Una tabla creada con «Autoajustar a la ventana» ocupa los 14 cm que dejan los márgenes. Si luego amplías los márgenes del documento, la tabla se ensancha sola para seguir ocupando todo el ancho útil.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Si el margen del documento deja 14 cm de ancho útil, la tabla ocupa exactamente esos 14 cm, repartiéndolos entre todas las columnas. Si cambias los márgenes, la tabla se reajusta automáticamente."
+    "explicacion": "Esa opción no fija centímetros, fija una proporción: la tabla vale el 100 % del ancho disponible, así que cualquier cambio de márgenes, de tamaño de papel o de orientación la recalcula al momento y reparte el nuevo ancho entre las columnas. · Es lo contrario de «Ancho de columna fijo», donde las medidas quedan escritas en centímetros y una tabla puede acabar sobresaliendo del margen o quedándose corta. · Por eso es la opción recomendable cuando el documento se va a leer en pantalla o se va a exportar, y no se sabe con qué ancho acabará viéndose."
   },
   {
     "id": "insertar-215",
@@ -3242,11 +3325,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-11",
     "generado": true,
-    "enunciado": "La opción Autoajustar al contenido establece un ancho fijo que el usuario introduce manualmente antes de crear la tabla.",
+    "revisada": true,
+    "enunciado": "«Autoajustar al contenido» sirve para escribir a mano el ancho exacto que tendrán las columnas antes de crear la tabla.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Con Autoajustar al contenido, las columnas empiezan siendo muy estrechas y se van ampliando solas a medida que escribes. Una columna con \"Sí\" quedará mucho más estrecha que una con \"Administración General del Estado\". El ancho lo decide el contenido, no tú. La que fija un ancho manual es Ancho de columna fijo."
+    "explicacion": "Precisamente hace lo contrario: no se escribe ninguna medida, es el texto el que manda. Las columnas nacen estrechas y cada una se va ensanchando sola según lo que se teclea, de modo que una columna de «Sí» y «No» queda mucho más fina que una de «Administración General del Estado». · La opción donde sí se escribe una cifra es «Ancho de columna fijo», que además admite el valor «Autom.» para repartir el espacio a partes iguales. · Las dos están en el mismo bloque Autoajuste del cuadro «Insertar tabla», una encima de la otra, que es lo que hace fácil confundirlas."
   },
   {
     "id": "insertar-216",
@@ -3261,11 +3345,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-12",
     "generado": true,
-    "enunciado": "El comando Convertir texto en tabla solo admite el tabulador como separador de columna.",
+    "revisada": true,
+    "enunciado": "El cuadro «Convertir texto en tabla» ofrece cuatro maneras de separar las columnas: párrafos, tabulaciones, punto y coma, y un carácter cualquiera que se escriba a mano.",
     "opciones": [],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "Falso: admite tabulaciones, punto y coma, coma o un carácter definido por el usuario."
+    "respuesta": true,
+    "explicacion": "Los tres primeros tienen su botón propio y el cuarto es el campo «Otro», donde se teclea el carácter que haga falta. · Llama la atención que la coma, que es el separador más habitual en la práctica, no tenga botón: hay que escribirla en «Otro». La razón es que en la configuración española el separador de listas es el punto y coma, y ese es el que aparece de serie. · El párrafo suele olvidarse y es útil: convierte una lista escrita en renglones sueltos en una tabla de una sola columna. · Word propone además cuántas columnas deduce del separador más repetido en lo seleccionado."
   },
   {
     "id": "insertar-217",
@@ -3280,11 +3365,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-13",
     "generado": true,
-    "enunciado": "Al usar Hoja de cálculo de Excel desde la pestaña Insertar, el resultado es un gráfico de Excel incrustado en el documento.",
+    "revisada": true,
+    "enunciado": "«Hoja de cálculo de Excel», en el menú Tabla, inserta un gráfico de Excel dentro del documento.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Al usar ese comando aparece dentro del documento Word una hoja de cálculo con filas, columnas y celdas, exactamente igual que si abrieras Excel. Puedes escribir fórmulas como =SUMA(A1:A5) y funcionan. Para insertar un gráfico hay que ir a Insertar > Ilustraciones > Gráfico."
+    "explicacion": "Lo que inserta es una hoja: una rejilla de filas y columnas con la que se trabaja como en Excel, con sus fórmulas funcionando y recalculando solas. Al hacer doble clic sobre ella, la cinta de Word se sustituye por la de Excel; al pinchar fuera, vuelve a verse como un bloque dentro del texto. · Para un gráfico hay que ir a Insertar ▸ Ilustraciones ▸ Gráfico, que abre una hoja de datos de ejemplo y devuelve el dibujo, no la tabla. · La diferencia importa porque las dos cosas se apoyan en Excel y las dos se editan dentro de Word."
   },
   {
     "id": "insertar-218",
@@ -3299,11 +3385,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-14",
     "generado": true,
-    "enunciado": "La galería de Tablas rápidas incluye exactamente tres modelos de calendarios listos para insertar.",
+    "revisada": true,
+    "enunciado": "La galería de Tablas rápidas de este Word trae tres modelos de calendario listos para insertar.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: son cuatro (Calendario 1, 2, 3 y 4)."
+    "explicacion": "Son cuatro, numerados del 1 al 4, y en esta instalación es todo lo que hay bajo el epígrafe «Integrado». · Debajo de ellos está «Guardar selección en galería de tablas rápidas», que es la vía para añadir modelos propios: se selecciona una tabla ya montada, se le da un nombre y aparece ahí junto a los calendarios. · Es la misma mecánica de bloques de creación de las portadas o de Elementos rápidos. · Otras versiones y traducciones de Word muestran en esa galería listas tabulares o matrices, y de ahí viene la idea de que hay más variedad de la que se ve aquí."
   },
   {
     "id": "insertar-219",
@@ -3318,11 +3405,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-15",
     "generado": true,
-    "enunciado": "La casilla Recordar dimensiones para tablas nuevas del cuadro Insertar tabla guarda la configuración solo para el documento actual.",
+    "revisada": true,
+    "enunciado": "La casilla «Recordar dimensiones para tablas nuevas» solo afecta al documento en el que se marca.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Marcas esa casilla con 3 columnas, 5 filas y autoajuste al contenido. La próxima vez que abras el cuadro Insertar tabla en cualquier documento, ya aparecerán esos valores por defecto. Afecta a toda la aplicación, no solo al documento en curso."
+    "explicacion": "El ajuste es del programa, no del archivo: si se marca con 3 columnas, 5 filas y autoajuste al contenido, el cuadro «Insertar tabla» se abrirá con esos valores en cualquier documento y también después de cerrar y volver a abrir Word, hasta que se cambien. · Lo que guarda son las medidas de partida, nunca el formato: los colores, los bordes o los encabezados de una tabla concreta se reutilizan de otra manera, guardándola en la galería de tablas rápidas o creando un estilo de tabla. · Sin marcar, el cuadro vuelve siempre a las 5 columnas por 2 filas de fábrica."
   },
   {
     "id": "insertar-220",
@@ -3337,11 +3425,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-16",
     "generado": true,
-    "enunciado": "Las tres opciones de autoajuste disponibles en el cuadro Insertar tabla son: Ancho de columna fijo, Autoajustar al contenido y Autoajustar a la ventana.",
+    "revisada": true,
+    "enunciado": "El bloque Autoajuste del cuadro «Insertar tabla» tiene exactamente tres opciones: ancho de columna fijo, autoajustar al contenido y autoajustar a la ventana.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Abres el cuadro Insertar tabla y en la sección Autoajuste ves exactamente esas tres opciones y ninguna más. No existe Autoajustar al margen ni Autoajustar a la página como opciones independientes."
+    "explicacion": "Son tres y ninguna más: una con la medida escrita, otra que la decide el texto y otra que la decide el espacio disponible. · Nombres como «autoajustar al margen» o «autoajustar a la página» suenan de lo más razonable y no existen, aunque describan bastante bien lo que hace la tercera, porque el ancho de la ventana de texto es justamente el que dejan los márgenes. · La cuarta entrada del cuadro no pertenece a este bloque: es la casilla «Recordar dimensiones para tablas nuevas». · Las mismas tres opciones vuelven a aparecer luego en el botón «Autoajustar» de la cinta Disposición de tabla, para cambiarlas sobre una tabla ya creada."
   },
   {
     "id": "insertar-221",
@@ -3356,11 +3445,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-17",
     "generado": true,
-    "enunciado": "El comando Dibujar tabla de la pestaña Insertar permite crear tablas con una estructura irregular, donde las celdas no tienen por qué seguir una cuadrícula uniforme.",
+    "revisada": true,
+    "enunciado": "«Dibujar tabla» permite crear tablas irregulares, en las que una fila puede tener dos celdas y la siguiente cuatro.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Necesitas una tabla donde la primera fila tiene dos celdas pero la segunda tiene cuatro. Con Dibujar tabla trazas tú las líneas con el cursor, dibujando exactamente la estructura que necesitas. Con Insertar tabla solo puedes crear cuadrículas regulares."
+    "explicacion": "El puntero se convierte en un lápiz: primero se traza el rectángulo exterior y después las líneas interiores donde se quiera, sin obligación de que coincidan de una fila a otra. Admite incluso líneas diagonales y celdas dentro de otras celdas. · Su compañero en el mismo grupo es el Borrador, para quitar líneas ya trazadas, que es la forma manual de fundir dos celdas. · «Insertar tabla…» solo sabe hacer rejillas regulares de tantas filas por tantas columnas, y la irregularidad hay que conseguirla después combinando y dividiendo celdas."
   },
   {
     "id": "insertar-360",
@@ -3375,11 +3465,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-182",
     "generado": true,
-    "enunciado": "En el cuadro Insertar tabla, el valor predeterminado del campo Número de columnas es 3.",
+    "revisada": true,
+    "enunciado": "El campo «Número de columnas» del cuadro «Insertar tabla» aparece con el valor 3.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: el valor predeterminado es 5 columnas (y 2 filas)."
+    "explicacion": "Aparece con 5, acompañado de 2 en el campo de filas: esa rejilla de cinco por dos es lo que Word propone de partida en esta instalación. · Se puede cambiar y, si se marca la casilla «Recordar dimensiones para tablas nuevas», lo que se escriba pasa a ser la nueva propuesta para todos los documentos. · Conviene fijar los dos números juntos porque se preguntan cruzados: la trampa habitual es intercambiarlos y decir que son 2 columnas por 5 filas. · La cuadrícula que se despliega encima del cuadro llega hasta diez columnas, y para pasar de ahí hay que usar este cuadro."
   },
   {
     "id": "insertar-361",
@@ -3394,11 +3485,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-183",
     "generado": true,
-    "enunciado": "En el cuadro Insertar tabla, el valor predeterminado del campo Número de filas es 5.",
+    "revisada": true,
+    "enunciado": "El campo «Número de filas» del cuadro «Insertar tabla» aparece con el valor 2.",
     "opciones": [],
     "matching": null,
-    "respuesta": false,
-    "explicacion": "El campo Número de filas aparece con el valor 2, no con 5. Si quieres más filas tienes que cambiarlo manualmente. El valor 2 es el que trae por defecto en esta instalación."
+    "respuesta": true,
+    "explicacion": "Dos filas y cinco columnas es la propuesta de partida de este cuadro. Se entiende pensando en el uso típico: una fila de encabezados y otra de datos, a la que se van añadiendo más con el tabulador. · La confusión frecuente es cambiar los dos números de sitio y quedarse con cinco filas por dos columnas. · Si se necesita otra medida a menudo, la casilla «Recordar dimensiones para tablas nuevas» hace que el cuadro se abra ya con la última usada, en cualquier documento."
   },
   {
     "id": "insertar-362",
@@ -3413,11 +3505,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-184",
     "generado": true,
-    "enunciado": "La opción Autoajuste predeterminada en el cuadro Insertar tabla es \"Autoajustar al contenido\".",
+    "revisada": true,
+    "enunciado": "Al abrir el cuadro «Insertar tabla», la opción de autoajuste marcada de partida es «Autoajustar al contenido».",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Al abrir el cuadro, la opción marcada por defecto es \"Ancho de columna fijo (Autom.)\". No está marcado \"Autoajustar al contenido\" ni \"Autoajustar a la ventana\" de forma predeterminada."
+    "explicacion": "La que viene marcada es «Ancho de columna fijo», con el valor «Autom.», que reparte el ancho disponible a partes iguales entre las columnas pedidas y ya no lo mueve al escribir. · «Autoajustar al contenido» es justo la que se comporta al revés, dejando que cada columna crezca con su texto, y por eso es el descarte más creíble: mucha gente da por hecho que Word ajusta solo. · La tercera, «Autoajustar a la ventana», tampoco está marcada. · Si se prefiere otra de partida, se elige y se marca la casilla «Recordar dimensiones para tablas nuevas»."
   },
   {
     "id": "insertar-363",
@@ -3432,11 +3525,12 @@
     "tema": "Tablas",
     "sourceQuestionId": "vf-insertar-185",
     "generado": true,
-    "enunciado": "El cuadro Insertar tabla incluye una casilla llamada \"Recordar dimensiones para tablas nuevas\".",
+    "revisada": true,
+    "enunciado": "Debajo de las opciones de autoajuste, el cuadro «Insertar tabla» tiene una casilla llamada «Recordar dimensiones para tablas nuevas».",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Justo debajo de las opciones de autoajuste, aparece una casilla con ese texto. Si la marcas, Word recordará el número de columnas, filas y el autoajuste elegido para futuras tablas."
+    "explicacion": "Es la última fila del cuadro y guarda las columnas, las filas y el tipo de autoajuste elegidos, de modo que la próxima vez el cuadro se abre con ellos en lugar de con las 5 por 2 de fábrica, en cualquier documento. · Nombres como «Establecer como tabla predeterminada» o «Guardar configuración de tabla» copian el patrón de «Establecer como predeterminado» que sí existe en los cuadros Fuente y Párrafo, y por eso resultan creíbles; en este cuadro no hay ninguno. · Lo que se recuerda son medidas: el formato de una tabla se reutiliza guardándola como tabla rápida o creando un estilo de tabla."
   },
   {
     "sourceFile": "insertar.json",
@@ -3452,10 +3546,11 @@
     "id": "insertar-468",
     "sourceQuestionId": "web-insertar-tabla-68",
     "tipo": "verdadero_falso",
-    "enunciado": "Una tabla de Word puede hacer sumas y otros calculos sencillos con el comando «Formula» de la cinta contextual de tabla.",
+    "revisada": true,
+    "enunciado": "El cuadro «Ordenar» de una tabla permite encadenar hasta tres criterios sucesivos, para desempatar el primero con el segundo y el segundo con el tercero.",
     "opciones": [],
     "respuesta": true,
-    "explicacion": "Verdadero. En «Herramientas de tabla ▸ Presentacion ▸ Datos ▸ Formula» se pueden usar funciones como =SUM(ABOVE), =AVERAGE(LEFT), etc. No hace falta Excel para calculos basicos dentro de una tabla."
+    "explicacion": "Cada criterio se elige por columna e indica su tipo de dato (texto, número o fecha) y el sentido, ascendente o descendente, de manera que se puede ordenar por apellido y, dentro de cada apellido, por fecha. · Arriba del todo hay que decir si «La lista tiene» encabezado o no: si se marca que sí, la primera fila se queda arriba en lugar de mezclarse con los datos, y los criterios pasan a llamarse por el nombre de cada columna. · El comando está en el grupo Datos de la cinta Disposición de tabla, junto a «Repetir filas de título», «Convertir en texto» y «Fórmula»."
   },
   {
     "sourceFile": "insertar.json",
@@ -3471,10 +3566,11 @@
     "id": "insertar-484",
     "sourceQuestionId": "capt-ins-484",
     "tipo": "verdadero_falso",
-    "enunciado": "El comando «Ver cuadriculas» de «Disposicion de tabla» muestra u oculta las lineas de division de la tabla que NO tienen borde, y esas lineas no se imprimen.",
+    "revisada": true,
+    "enunciado": "«Ver cuadrículas» enseña las divisiones de una tabla que no tienen borde, y esas líneas no salen impresas.",
     "opciones": [],
     "respuesta": true,
-    "explicacion": "Son una ayuda visual (lineas de puntos azules) para ver la estructura de una tabla sin bordes; nunca salen en el papel."
+    "explicacion": "Son una guía de pantalla, discontinua, para poder trabajar con tablas sin bordes sin ir a ciegas: no aparecen ni en la impresión ni en la vista previa. · El conmutador es global: afecta a todas las tablas del documento, no solo a aquella en la que esté el cursor. · Conviene no confundirlas con los bordes de verdad, que se aplican desde el botón Bordes de la cinta Diseño de tabla y sí se imprimen: en pantalla el resultado se parece bastante, y es el error clásico de dar por buena una tabla que luego sale en blanco en el papel."
   },
   {
     "sourceFile": "insertar.json",
@@ -3490,10 +3586,11 @@
     "id": "insertar-493",
     "sourceQuestionId": "capt-tabctx-493",
     "tipo": "verdadero_falso",
-    "enunciado": "«Distribuir filas» iguala el alto de las filas seleccionadas y «Distribuir columnas» iguala el ancho de las columnas seleccionadas.",
+    "revisada": true,
+    "enunciado": "«Distribuir filas» iguala el ancho de las columnas seleccionadas y «Distribuir columnas» iguala el alto de las filas.",
     "opciones": [],
-    "respuesta": true,
-    "explicacion": "Estan en el grupo «Tamano de celda», junto a los campos Alto y Ancho y al menu Autoajustar."
+    "respuesta": false,
+    "explicacion": "Están cambiados: cada comando trabaja sobre aquello que nombra, de modo que distribuir filas iguala el ALTO de las filas y distribuir columnas iguala el ANCHO de las columnas. · Los dos viven en el grupo Tamaño de celda de la cinta Disposición de tabla, junto a los campos Alto y Ancho, que en lugar de igualar imponen una medida en centímetros, y al menú «Autoajustar», que deja decidir al contenido o a la ventana. · Son la salida rápida cuando una tabla se ha quedado con filas o columnas desparejas después de varias ediciones."
   },
   {
     "id": "insertar-462",
@@ -3508,7 +3605,8 @@
     "tema": "Tablas",
     "sourceQuestionId": "rell-insertar-02",
     "generado": true,
-    "enunciado": "Escribe el atajo de movimiento dentro de una tabla: ir al inicio de la fila → [1]. ir al final de la fila → [2]. ir al inicio de la columna → [3].",
+    "revisada": true,
+    "enunciado": "Completa las combinaciones para moverse por una tabla: a la primera celda de la fila, [1]; a la última celda de la fila, [2]; a la primera celda de la columna, [3].",
     "opciones": [],
     "matching": null,
     "respuesta": [
@@ -3525,7 +3623,7 @@
         "Alt+RePág"
       ]
     ],
-    "explicacion": "Alt+Inicio/Alt+Fin van al inicio/final de la fila; Alt+Re Pág va al inicio de la columna."
+    "explicacion": "Son cuatro combinaciones y dos ejes: la tecla Alt convierte el movimiento de texto en movimiento de tabla, Inicio y Fin recorren la fila, y Re Pág y Av Pág recorren la columna, con Alt+Av Pág para bajar a la última celda. · Sin Alt, esas mismas teclas no salen de la celda: se mueven por la línea como en cualquier párrafo. · Añadiendo Mayús a las de fila, la prueba en vivo muestra que extienden la selección en lugar de solo mover, aunque el cuadro Personalizar teclado las liste bajo el mismo comando."
   },
   {
     "id": "insertar-59",
