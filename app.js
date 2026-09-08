@@ -277,7 +277,13 @@ function escapeHtml(str){
     .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 }
 function renderBlank(text){
-  return escapeHtml(text).replace(/_{3,}/g, '<span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>');
+  // Los saltos de línea se convierten DESPUÉS de escapar: el HTML colapsa los
+  // saltos a un espacio, así que sin esto no se vería lo que se escribe al
+  // editar una pregunta. Convertir después de escapeHtml no abre ninguna vía
+  // de inyección, porque a esas alturas ya no queda marcado del usuario.
+  return escapeHtml(text)
+    .replace(/\r\n?|\n/g, "<br>")
+    .replace(/_{3,}/g, '<span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>');
 }
 function fmtTime(sec){
   sec = Math.max(0, Math.round(sec));

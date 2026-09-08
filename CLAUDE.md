@@ -1665,6 +1665,25 @@ archivo, añádele preguntas a ese archivo renumerando la cola.
   que `PROGRESS.answers`, los conceptos del motor y `contentHash` (runtime)
   no se ven afectados. Se carga entre app.js y engine.js. Test:
   `tests/test_content_edit.js`.
+  - **Saltos de línea al editar (sep-2026)**: los saltos escritos con Intro o
+    Mayús+Intro en el enunciado o la explicación se guardaban pero NO se veían,
+    por dos motivos distintos. `renderBlank()` escapaba el texto y lo metía en
+    HTML, donde los saltos colapsan a un espacio; y `cleanExplic()` hacía
+    `\s{2,} → " "`, y `\n` es whitespace, así que la explicación los perdía
+    antes siquiera de llegar al HTML. Ahora: `renderBlank` convierte los saltos
+    en `<br>` **después** de escapar (no abre vía de inyección, ya no queda
+    marcado del usuario); `truncate()` los aplana a espacio, porque las seis
+    vistas que previsualizan un enunciado en una fila de lista pasan por ahí y
+    una fila no puede crecer a dos renglones; `cleanExplic` colapsa espacios y
+    tabuladores pero conserva los saltos; y `splitExpl` los trata como
+    separador igual que el « · » que ya usaba, de modo que una explicación en
+    varias líneas sale como una viñeta por línea. Las opciones son `<input>`,
+    así que ahí Intro no inserta nada y no hay nada que arreglar. Ninguna
+    pregunta del banco tenía saltos (0 de 2.843), así que el cambio no altera
+    cómo se ve nada de lo existente. Tests: `tests/test_saltos_linea.js` (17
+    comprobaciones; 6 fallan con el código anterior) y
+    `tests/manual_saltos_qa.mjs` (Chromium: teclea de verdad Intro y
+    Mayús+Intro en el ✎, guarda y comprueba el resultado).
   - **Marcador de respuesta correcta (sep-2026)**: el formulario de edición
     (`qEditFormHtml`, modal ✎ y panel del Editor del banco) ya NO usa un
     `<select>`/lista aparte para la respuesta correcta — ese control se

@@ -398,7 +398,11 @@ function populateTopicSelect(sel, secId, chosen){
 
 function tipoLabel(t){ return O.TYPE_LABELS[t] || t; }
 function categoriaLabel(c){ return O.CATEGORY_LABELS[c] || c; }
-function truncate(s,n){ return s.length>n ? s.slice(0,n-1)+"…" : s; }
+/* Aplana los saltos: por aquí pasan las seis vistas que previsualizan un
+   enunciado en una fila de lista, y una fila no puede crecer a dos renglones.
+   Donde el enunciado se muestra entero (runner, repaso, multijugador) NO se
+   pasa por truncate, así que allí los saltos sí se ven. */
+function truncate(s,n){ const t = String(s==null?"":s).replace(/\s*[\r\n]+\s*/g, " "); return t.length>n ? t.slice(0,n-1)+"…" : t; }
 function badgeClass(qid){ const st=O.getQuestionState(qid); return st==="correct"?"badge-correct":st==="incorrect"?"badge-incorrect":"badge-unanswered"; }
 function badgeGlyph(qid){ const st=O.getQuestionState(qid); return st==="correct"?"✓":st==="incorrect"?"✕":"–"; }
 function toggleMark(qid){ if(O.PROGRESS.marked[qid]) delete O.PROGRESS.marked[qid]; else O.PROGRESS.marked[qid]=true; O.persist(); }
@@ -1684,7 +1688,11 @@ function cleanExplic(s){
   return String(s||"")
     .replace(/={2,}\s*BLOQUE[\s\S]*$/i, "")
     .replace(/={2,}[^=]*={2,}/g, " ")
-    .replace(/\s{2,}/g, " ")
+    // Colapsa espacios y tabuladores, pero CONSERVA los saltos de línea: antes
+    // un \s{2,} genérico se comía los saltos de párrafo escritos a mano.
+    .replace(/[ \t]{2,}/g, " ")
+    .replace(/[ \t]*[\r\n]+[ \t]*/g, "\n")
+    .replace(/\n{2,}/g, "\n")
     .trim();
 }
 /* resalta atajos de teclado (Ctrl+…, Alt+…, F1-F12) como <kbd> */
@@ -1701,7 +1709,9 @@ const EXPL_ABBR = /(?:\bp|\bej|\bp[aá]g|\bn[uú]m|\bart|\bcap|\bfig|\bvol|\bpto
    « · », « ; » y en «. » cuando lo que sigue empieza por mayúscula, «(», «¿»,
    comilla o un atajo — evitando las abreviaturas y los fragmentos muy cortos. */
 function splitExpl(raw){
-  const parts = raw.split(/\s+·\s+/).flatMap(chunk=>{
+  // El salto de línea separa igual que el « · » que ya usaba el banco: quien
+  // escriba la explicación en varias líneas obtiene una viñeta por línea.
+  const parts = raw.split(/\n+|\s+·\s+/).flatMap(chunk=>{
     const out = []; let buf = "";
     chunk.split(/(?<=[.;])\s+(?=[«"“¿(A-ZÁÉÍÓÚÑ]|Ctrl\b|Alt\b|May[uú]s\b|Mays\b|Win|F\d)/)
       .forEach(seg=>{
