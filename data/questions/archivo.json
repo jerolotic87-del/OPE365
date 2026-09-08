@@ -12,7 +12,7 @@
     "tema": "Vista Backstage",
     "sourceQuestionId": "8-1",
     "revisada": true,
-    "enunciado": "Con un documento abierto y sin tocar el ratón, quieres pasar a la Vista Backstage. ¿Cuál de estos atajos te deja dentro de ella?",
+    "enunciado": "En Word 365, con un documento abierto, ¿qué acción abre la Vista Backstage?",
     "opciones": [
       {
         "letter": "A",
@@ -33,7 +33,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+P abre la Vista Backstage directamente en el panel Imprimir, con la vista previa a la derecha: es la forma más rápida de entrar en Backstage con el teclado. · Ctrl+F1 contrae o expande la cinta de opciones, pero no sale del documento. · Ctrl+W no cierra nada en esta instalación: quita el formato de párrafo de la selección (prueba en vivo del usuario). Es la trampa más eficaz de las cuatro, porque el esquema internacional lo asocia a cerrar. · Alt+F4 cierra el documento activo y, si es el único abierto, cierra Word; nunca abre Backstage. · El par que más confunde es C y D: los dos suenan a «cerrar», que es una entrada del propio Backstage, pero ninguno lo abre."
+    "explicacion": "La Vista Backstage se abre haciendo clic en la ficha Archivo, que es la única pestaña de la cinta que no muestra comandos en la cinta sino que lleva a una pantalla completa con opciones de gestión del documento (guardar, abrir, imprimir, compartir, etc.)."
   },
   {
     "id": "archivo-10",
@@ -84,28 +84,28 @@
     "tema": "Vista Backstage",
     "sourceQuestionId": "8-3",
     "revisada": true,
-    "enunciado": "Estás en la Vista Backstage y pulsas «Cerrar» con cambios sin guardar en el documento. ¿Qué ocurre?",
+    "enunciado": "Indique qué sucede en Word 365 al pulsar «Cerrar» desde la Vista Backstage cuando el documento activo tiene cambios sin guardar.",
     "opciones": [
       {
         "letter": "A",
-        "text": "Word pregunta si quieres guardar y después cierra el documento, dejando Word abierto"
+        "text": "Cerrar"
       },
       {
         "letter": "B",
-        "text": "Word pregunta si quieres guardar y después cierra el documento y la aplicación"
+        "text": "Terminar sesión"
       },
       {
         "letter": "C",
-        "text": "Word guarda los cambios sin preguntar y después cierra el documento y la aplicación"
+        "text": "Cerrar ventana"
       },
       {
         "letter": "D",
-        "text": "Word cierra el documento descartando los cambios y vuelve al panel Inicio"
+        "text": "Cerrar documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "«Cerrar» actúa solo sobre el documento activo: pregunta si guardar cuando hay cambios pendientes y, tras responder, cierra ese documento y deja Word en marcha. · La opción que además cierra la APLICACIÓN describe lo que hace Alt+F4 cuando solo queda un documento abierto: ahí sí se va también el programa, y es la que más se marca porque el resto de la frase es idéntico. · La que guarda sin preguntar sería el comportamiento del Autoguardado de la nube, que solo actúa sobre archivos de OneDrive y que, aun así, no cierra Word. · La que descarta los cambios describe una pérdida silenciosa que Word no hace nunca desde «Cerrar»: perder trabajo sin avisar sería un fallo, no una función. · La diferencia que decide la pregunta no está en si Word pregunta, sino en si se lleva por delante la aplicación."
+    "explicacion": "La opción Cerrar del panel izquierdo cierra el documento activo sin cerrar Word. Cerrar ventana no existe en el panel. Cerrar documento no existe en Backstage. Terminar sesión pertenece a la sección Cuenta y no cierra el documento."
   },
   {
     "id": "archivo-12",
@@ -1089,7 +1089,7 @@
     "tema": "Información",
     "sourceQuestionId": "8-20",
     "revisada": true,
-    "enunciado": "Quieres comprobar quién figura como autor de un documento. ¿En qué grupo del panel Información lo encuentras?",
+    "enunciado": "Un usuario necesita comprobar quién figura como autor antes de enviar el documento. Accede a la Vista Backstage sin abrir ningún cuadro de diálogo. ¿En qué grupo de la pantalla Información lo encuentra?",
     "opciones": [
       {
         "letter": "A",
@@ -1101,16 +1101,16 @@
       },
       {
         "letter": "C",
-        "text": "Fechas relacionadas"
+        "text": "Datos de autoría y revisión"
       },
       {
         "letter": "D",
-        "text": "Documentos relacionados"
+        "text": "Información del autor"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Personas relacionadas contiene Autor y Última modificación realizada por: los dos únicos datos del panel que son nombres de persona. · Propiedades lleva las cifras del archivo (Tamaño, Páginas, Palabras, Tiempo de edición) y los campos de texto Título, Etiquetas y Comentarios; el autor no está ahí, aunque sí aparece en la ficha Resumen de las Propiedades avanzadas. · Fechas relacionadas guarda solo fechas. · Documentos relacionados es el enlace a la carpeta del archivo. · Los cuatro grupos existen, así que la respuesta no se puede sacar descartando nombres raros."
+    "explicacion": "Personas relacionadas contiene Autor y Última modificación realizada por: los dos únicos datos del panel que son nombres de persona. · Propiedades lleva las cifras del archivo (Tamaño, Páginas, Palabras, Tiempo de edición) y los campos de texto Título, Etiquetas y Comentarios; el autor no está ahí, aunque sí aparece en la ficha Resumen de las Propiedades avanzadas."
   },
   {
     "id": "archivo-29",
@@ -2645,7 +2645,7 @@
     "tema": "Guardar y Guardar como",
     "sourceQuestionId": "8-152",
     "revisada": true,
-    "enunciado": "Además de Ctrl+F12, hay otra combinación que lleva al cuadro de diálogo Abrir. ¿Cuál?",
+    "enunciado": "Además de Ctrl + F12, ¿qué otra combinación de teclas abre el cuadro de\ndiálogo Abrir en Word 365?",
     "opciones": [
       {
         "letter": "A",
@@ -2666,7 +2666,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+F2 está asignado al mismo comando que Ctrl+F12: abrir un documento existente. Muchos comandos de Archivo tienen dos o tres combinaciones. · Alt+Mayús+F2 es el distractor de máximo nivel: se diferencia en una sola tecla y también es real, pero guarda el documento, igual que Ctrl+G y Mayús+F12. Un dedo de más y en vez de abrir has guardado. · Alt+F2 y Ctrl+Mayús+F2 no tienen función asignada. · Las cuatro son combinaciones sobre F2 con modificadores distintos: aquí no hay forma de descartar por la forma."
+    "explicacion": "Alt + Ctrl + F2 está asignada al mismo comando que Ctrl + F12: abrir un documento existente.\nAlt + Mayús + F2 → distractor de máximo nivel: se diferencia en una sola tecla y también es real, pero GUARDA el documento (igual que Ctrl + G y Mayús + F12).\nAlt + F2 → sin función asignada.\nCtrl + Mayús + F2 → sin función asignada."
   },
   {
     "id": "archivo-129",
@@ -3144,7 +3144,7 @@
     "difficulty": "alta",
     "sourceQuestionId": "Q-007",
     "revisada": true,
-    "enunciado": "Quieres ver cómo va a quedar el documento impreso antes de mandarlo a la impresora. ¿Dónde está esa vista previa en Word 365?",
+    "enunciado": "En Word 365, antes de imprimir, quieres comprobar los saltos de página y la distribución del texto viendo varias páginas a la vez. ¿Qué vista debe usar?",
     "opciones": [
       {
         "letter": "A",
@@ -3182,7 +3182,7 @@
     "sourceQuestionId": "Q-067",
     "generado": true,
     "revisada": true,
-    "enunciado": "Además de Ctrl+P, ¿qué combinación lleva directamente al panel Imprimir con su vista previa?",
+    "enunciado": "Un opositor afirma que la Vista Preliminar en Word 365 es un botón del grupo Vistas con el atajo Ctrl+Alt+I. ¿La afirmación es correcta o incorrecta?",
     "opciones": [
       {
         "letter": "A",
@@ -3218,7 +3218,7 @@
     "tema": "Imprimir",
     "sourceQuestionId": "8-40",
     "revisada": true,
-    "enunciado": "Buscas dónde configurar copias, impresora y márgenes antes de imprimir. ¿Dónde está el panel Imprimir?",
+    "enunciado": "En Word 365, con la Vista Backstage abierta, ¿Dónde se encuentra el comando Imprimir?",
     "opciones": [
       {
         "letter": "A",
@@ -3254,7 +3254,7 @@
     "tema": "Imprimir",
     "sourceQuestionId": "8-41",
     "revisada": true,
-    "enunciado": "Word tiene varias combinaciones que abren el panel Imprimir. ¿Cuál de estas NO lo hace?",
+    "enunciado": "En Word 365, quieres abrir el panel de impresión con el teclado. ¿Cuál de estos atajos NO lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -3649,28 +3649,28 @@
     "tema": "Compartir",
     "sourceQuestionId": "3-10",
     "revisada": true,
-    "enunciado": "Quieres que otra persona edite contigo un documento en tiempo real desde Word 365. ¿Qué es imprescindible antes de poder invitarla?",
+    "enunciado": "En Word 365, para compartir un documento en la nube en tiempo real, ¿qué paso previo es imprescindible?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Haber iniciado sesión con una cuenta Microsoft y tener el archivo en la nube"
+        "text": "Iniciar sesión con una cuenta Microsoft"
       },
       {
         "letter": "B",
-        "text": "Haber guardado el documento en formato .docx en una carpeta de tu equipo"
+        "text": "Guardar el documento en formato .docx"
       },
       {
         "letter": "C",
-        "text": "Haber activado el control de cambios desde la pestaña Revisar del documento"
+        "text": "Activar el control de cambios"
       },
       {
         "letter": "D",
-        "text": "Haber añadido a esa persona como contacto en el panel Cuenta de Backstage"
+        "text": "Tener el documento abierto en modo lectura"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La coautoría necesita las dos cosas a la vez: sesión iniciada con una cuenta Microsoft y el archivo alojado en la nube. Si el documento está solo en el equipo, el panel Compartir no ofrece invitar a nadie: propone primero cargarlo a OneDrive. · El formato .docx hace falta para editar en Word, pero un .docx guardado solo en local no se puede coeditar: el problema no es el formato, es dónde está el archivo. · El control de cambios registra quién modifica qué, pero es independiente de la coautoría: funciona igual en un documento local que nadie más abre. · El panel Cuenta no tiene lista de contactos; gestiona la cuenta, los servicios conectados y la información del producto. · El par que más confunde es A y C: los dos suenan a «trabajar con otros»."
+    "explicacion": ""
   },
   {
     "id": "archivo-4",
@@ -3685,19 +3685,19 @@
     "tema": "Compartir",
     "sourceQuestionId": "3-11",
     "revisada": true,
-    "enunciado": "Trabajas en Word 365 con tu cuenta Microsoft personal y abres «Guardar una copia» para dejar el documento en la nube. ¿Qué destino de nube te ofrece Word directamente en ese panel?",
+    "enunciado": "En Word 365, tras iniciar sesión con tu cuenta Microsoft, ¿a través de qué servicio puedes compartir documentos y trabajar en tiempo real con otros usuarios?",
     "opciones": [
       {
         "letter": "A",
-        "text": "OneDrive Personal"
-      },
-      {
-        "letter": "B",
         "text": "SharePoint Online"
       },
       {
-        "letter": "C",
+        "letter": "B",
         "text": "Microsoft Teams"
+      },
+      {
+        "letter": "C",
+        "text": "OneDrive"
       },
       {
         "letter": "D",
@@ -3721,28 +3721,28 @@
     "tema": "Compartir",
     "sourceQuestionId": "3-12",
     "revisada": true,
-    "enunciado": "Tienes un documento guardado en OneDrive en lugar de solo en tu equipo. ¿Qué ventaja concreta te da eso?",
+    "enunciado": "En Word 365, tienes un documento guardado en OneDrive. ¿Qué ventaja principal te ofrece eso frente a guardarlo solo en tu equipo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Puedes abrirlo desde cualquier dispositivo donde inicies sesión, si hay conexión"
+        "text": "Puedes abrirlo desde cualquier dispositivo con conexión a Internet"
       },
       {
         "letter": "B",
-        "text": "Puedes abrirlo desde cualquier equipo de tu red local aunque no haya conexión"
+        "text": "Puedes compartirlo con otros usuarios de la misma red local"
       },
       {
         "letter": "C",
-        "text": "Word guarda una copia de seguridad en otra unidad del mismo equipo cada hora"
+        "text": "El documento se guarda automáticamente en un disco de seguridad"
       },
       {
         "letter": "D",
-        "text": "Puedes abrirlo desde otro dispositivo distinto aunque no tengas conexión"
+        "text": "Puedes acceder a él aunque tu equipo no tenga conexión a Internet"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La ventaja de OneDrive es el acceso desde cualquier dispositivo en el que inicies sesión con la misma cuenta, y para eso hace falta conexión a Internet. · La opción «Puedes abrirlo desde cualquier equipo de tu…» confunde nube con red local: una carpeta compartida de la red sí funciona sin Internet, pero eso no es OneDrive. · La opción «Word guarda una copia de seguridad en…» describe una copia de seguridad local, que es justo lo contrario de tener el archivo fuera del equipo; Autorrecuperación guarda en el propio equipo y no es una ventaja de OneDrive. · La opción «Puedes abrirlo desde otro dispositivo distinto aunque…» es la trampa: invierte el requisito. Los archivos sincronizados están disponibles sin conexión solo en el dispositivo donde ya se descargaron; en uno distinto, sin conexión, no hay nada que abrir. · El par que más confunde es A y D: solo cambia una palabra, y esa palabra es toda la respuesta."
+    "explicacion": "OneDrive es un servicio de almacenamiento en la nube de Microsoft que permite acceder a los archivos en cualquier momento y desde cualquier dispositivo con conexión a Internet. Esa es su ventaja diferencial frente al guardado local."
   },
   {
     "id": "archivo-6",
@@ -3757,28 +3757,28 @@
     "tema": "Compartir",
     "sourceQuestionId": "3-32",
     "revisada": true,
-    "enunciado": "Abres el panel Compartir con un documento guardado solo en tu equipo. ¿Qué te ofrece Word?",
+    "enunciado": "En Word 365, para poder compartir un documento en tiempo real y permitir la coautoría con otros usuarios a través de OneDrive, ¿qué paso es imprescindible antes de compartir?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cargarlo a OneDrive, o adjuntar una copia en su lugar"
+        "text": "Activar el control de cambios"
       },
       {
         "letter": "B",
-        "text": "Invitar por correo, y avisar de que el archivo se subirá al enviar"
+        "text": "Guardar el documento en OneDrive"
       },
       {
         "letter": "C",
-        "text": "Copiar un vínculo de acceso que caduca a los siete días"
+        "text": "Convertir el documento a PDF"
       },
       {
         "letter": "D",
-        "text": "Elegir permisos de edición o de solo lectura antes de subirlo"
+        "text": "Cerrar y volver a abrir el documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Con el archivo en local, el panel se parte en dos: arriba «Cargue el documento para compartirlo», con OneDrive como destino, y debajo «Adjuntar una copia en su lugar», que manda el archivo por correo como Documento de Word o como PDF. · La opción «Invitar por correo, y avisar de que…» describe un comportamiento razonable que Word no tiene: no sube nada por su cuenta; primero se carga y después se comparte. · Los vínculos con caducidad existen en OneDrive, pero se configuran allí y no en este panel, ni con ese plazo fijo. · Los permisos de edición o solo lectura se eligen al invitar, es decir DESPUÉS de que el archivo esté en la nube: aquí todavía no hay nada que permitir."
+    "explicacion": "Para que la coautoría en tiempo real funcione a través de OneDrive, el documento debe estar guardado previamente en ese servicio de almacenamiento en la nube. Sin ese paso, Word no puede generar el enlace de compartición ni sincronizar los cambios entre usuarios en tiempo real. El control de cambios (B) es una herramienta de revisión independiente, convertir a PDF (C) impide la edición colaborativa, y cerrar y reabrir el documento (D) no tiene ningún efecto sobre la coautoría."
   },
   {
     "id": "archivo-7",
@@ -3793,28 +3793,28 @@
     "tema": "Compartir",
     "sourceQuestionId": "3-49",
     "revisada": true,
-    "enunciado": "Compartes un documento desde OneDrive y eliges «Cualquier persona con el vínculo puede editar». ¿Qué implica eso?",
+    "enunciado": "En Word 365, desde la opción Compartir, ¿qué servicio de almacenamiento en la nube de Microsoft debes usar para compartir documentos en tiempo real?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Quien reciba el vínculo puede editar aunque no tenga cuenta Microsoft"
+        "text": "SharePoint Online"
       },
       {
         "letter": "B",
-        "text": "Solo pueden editar quienes tengan cuenta Microsoft e inicien sesión"
+        "text": "Microsoft Teams"
       },
       {
         "letter": "C",
-        "text": "Cada persona recibe un vínculo distinto ligado a su dirección de correo"
+        "text": "OneDrive"
       },
       {
         "letter": "D",
-        "text": "El vínculo deja de funcionar en cuanto lo abre la primera persona"
+        "text": "Azure Storage"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Es la diferencia clave entre los dos tipos de vínculo. «Cualquier persona con el vínculo» es abierto: quien lo tenga entra, sin identificarse, y si se reenvía sigue funcionando para el siguiente. · La opción «Solo pueden editar quienes tengan cuenta Microsoft…» describe el otro tipo, el vínculo restringido a personas concretas, que sí exige iniciar sesión y no sirve reenviado. Confundir los dos es el error que de verdad importa aquí, porque uno de ellos deja el documento a merced de cualquiera que reciba la dirección. · Los vínculos no son personales por defecto ni de un solo uso. · Cuando el documento está solo en el equipo, este panel ni siquiera aparece: primero hay que cargarlo."
+    "explicacion": "OneDrive es el servicio de almacenamiento en la nube de Microsoft integrado en Word 365 que permite guardar documentos y compartirlos en tiempo real con otros usuarios"
   },
   {
     "id": "archivo-8",
@@ -3829,28 +3829,28 @@
     "tema": "Compartir",
     "sourceQuestionId": "3-50",
     "revisada": true,
-    "enunciado": "Un compañero y tú tenéis abierto a la vez el mismo documento en OneDrive. ¿Qué pasa mientras los dos escribís?",
+    "enunciado": "En Word 365, tienes un documento guardado en OneDrive y lo estás editando. ¿Qué ocurre con los cambios que realizas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cada uno ve el cursor del otro y los cambios van apareciendo mientras escribe"
+        "text": "Se guardan automáticamente en la nube en tiempo real"
       },
       {
         "letter": "B",
-        "text": "El segundo en abrirlo lo recibe en solo lectura hasta que el primero lo cierre"
+        "text": "Se guardan solo al cerrar el documento"
       },
       {
         "letter": "C",
-        "text": "Los cambios de cada uno se ven al guardar, y Word avisa si chocan"
+        "text": "Se guardan en una copia local hasta que pulses Guardar"
       },
       {
         "letter": "D",
-        "text": "Word bloquea el párrafo que cada uno está tocando y avisa al otro con un icono"
+        "text": "Se guardan cada vez que pulsas Ctrl+G manualmente"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Eso es la coautoría: Word muestra un cursor de color con el nombre de cada persona y va propagando lo que escribe, sin que nadie tenga que guardar. · La opción «El segundo en abrirlo lo recibe en…» describe lo que pasaba con los documentos en una carpeta de red compartida, y sigue pasando hoy con un archivo local abierto por dos personas: es la respuesta correcta para el escenario equivocado, y por eso es el mejor distractor. · La opción «Los cambios de cada uno se ven…» describe un modelo de sincronización por guardado, que no es como funciona. · Word no bloquea párrafos; sí lo hace SharePoint con la desprotección de archivos, pero eso es otra cosa y hay que activarlo."
+    "explicacion": "Cuando un documento está guardado en OneDrive y se edita desde Word 365, el autoguardado se activa automáticamente y los cambios se sincronizan en la nube en tiempo real, sin necesidad de pulsar Guardar manualmente. Esto lo diferencia del guardado local, donde los cambios solo se registran al guardar explícitamente."
   },
   {
     "id": "archivo-53",
@@ -4760,28 +4760,28 @@
     "sourceQuestionId": "opc-gen-05",
     "generado": true,
     "revisada": true,
-    "enunciado": "Al arrastrar una imagen por el documento, el texto no se recoloca hasta que sueltas el botón, y quieres verlo fluir mientras arrastras. ¿Qué casilla activas?",
+    "enunciado": "Indique la ruta de la casilla que, en Word 365, hace que el texto fluya y se recoloque mientras se arrastra un objeto, sin esperar a que se suelte el botón del ratón.",
     "opciones": [
       {
         "letter": "A",
-        "text": "Actualizar el contenido del documento al arrastrar"
+        "text": "Archivo → Opciones → General → Actualizar el contenido del documento mientras se arrastra"
       },
       {
         "letter": "B",
-        "text": "Contraer el cuadro de Búsqueda de Microsoft de manera predeterminada"
+        "text": "Archivo → Opciones → Avanzadas → Opciones de edición → Actualizar el contenido del documento mientras se arrastra"
       },
       {
         "letter": "C",
-        "text": "Estilo de información en pantalla"
+        "text": "Archivo → Opciones → General → Actualizar el diseño del documento al mover objetos"
       },
       {
         "letter": "D",
-        "text": "Habilitar vista previa activa"
+        "text": "Archivo → Opciones → General → Habilitar vista previa dinámica al arrastrar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Con esta casilla activada, Word recalcula el flujo del texto en cada píxel del arrastre; desactivada, espera a que sueltes el botón. Es un ajuste de rendimiento: en documentos largos o con muchas imágenes, apagarlo va bastante más suave. · «Habilitar vista previa activa» es la previsualización hermana, pero de la cinta: cambia el aspecto del texto al pasar por una galería de estilos. Las dos anticipan un resultado antes de confirmarlo, y ahí está la confusión; una responde al arrastre y la otra al puntero sobre la cinta. · «Estilo de información en pantalla» decide cuánto texto llevan los emergentes de la cinta. · «Contraer el cuadro de Búsqueda de Microsoft» encoge el buscador de la barra de título. · Las cuatro conviven en Opciones → General → Opciones de interfaz de usuario."
+    "explicacion": "Con esta casilla activada, Word recalcula el flujo del texto en cada píxel del arrastre; desactivada, espera a que sueltes el botón. Es un ajuste de rendimiento: en documentos largos o con muchas imágenes, apagarlo va bastante más suave."
   },
   {
     "id": "archivo-139",
@@ -5204,28 +5204,28 @@
     "sourceQuestionId": "opc-gen-20",
     "generado": true,
     "revisada": true,
-    "enunciado": "Por política de tu organización tienes que dejar Word sin ninguna función que dependa de servicios en la nube, de una sola vez. ¿Qué desactivas?",
+    "enunciado": "En Word 365, ¿cuál es la ruta qué nos lleva a la casilla para activar/desactivar de una sola vez todas las funciones que dependen de servicios en la nube?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Activar todas las experiencias conectadas"
+        "text": "Archivo → Cuenta → Administrar configuración → Activar todas las experiencias conectadas"
       },
       {
         "letter": "B",
-        "text": "Activar experiencias que analizan su contenido"
+        "text": "Archivo → Opciones → Centro de confianza → Configuración del Centro de confianza → Privacidad → Desactivar todas las experiencias conectadas"
       },
       {
         "letter": "C",
-        "text": "Activar experiencias que descargan contenido en línea"
+        "text": "Archivo → Cuenta → Administrar configuración → Activar experiencias conectadas opcionales adicionales"
       },
       {
         "letter": "D",
-        "text": "Enviar datos de uso y diagnóstico adicionales a Microsoft"
+        "text": "Archivo → Cuenta → Administrar configuración → Activar experiencias que analizan su contenido"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Es el interruptor que engloba a los otros dos: al quitarlo se van a la vez las experiencias que analizan el contenido y las que descargan material, y las dos casillas de debajo quedan deshabilitadas. · Las opciones «Activar experiencias que analizan su contenido» y «Activar experiencias que descargan contenido en línea» son cada una la mitad del trabajo: desactivar solo una deja la otra viva, y el enunciado pide dejarlo todo apagado de una vez. Son correctas a medias, que es la forma más limpia de montar un distractor. · Los datos de diagnóstico son telemetría: quitarlos no desactiva ninguna función, y dejarlos no reactiva ninguna."
+    "explicacion": "Es el interruptor que engloba a los otros dos: al quitarlo se van a la vez las experiencias que analizan el contenido y las que descargan material, y las dos casillas de debajo quedan deshabilitadas."
   },
   {
     "sourceFile": "archivo.json",
@@ -5728,28 +5728,28 @@
     "sourceQuestionId": "opc-pres-13",
     "generado": true,
     "revisada": true,
-    "enunciado": "Quieres que cada vez que imprimas salga además una hoja con el título, el autor y demás datos del archivo. ¿Qué casilla activas?",
+    "enunciado": "En Word 365, ¿qué casilla debes activar para que cada impresión incluya una hoja adicional con el título, el autor y demás propiedades del archivo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Imprimir propiedades del documento"
+        "text": "Archivo → Opciones → Mostrar → Imprimir propiedades del documento"
       },
       {
         "letter": "B",
-        "text": "Imprimir dibujos creados en Word"
+        "text": "Archivo → Opciones → Mostrar → Actualizar campos antes de imprimir"
       },
       {
         "letter": "C",
-        "text": "Imprimir texto oculto"
+        "text": "Archivo → Opciones → Avanzadas → Imprimir propiedades del documento"
       },
       {
         "letter": "D",
-        "text": "Actualizar datos vinculados antes de imprimir"
+        "text": "Archivo → Opciones → Mostrar → Imprimir texto oculto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Añade una página aparte, al final del trabajo, con la información de resumen del documento: título, autor, asunto, fechas y demás propiedades. Es lo mismo que se ve en Información y en el cuadro Propiedades avanzadas, pero en papel. · No confundirlo con «Información del documento» del desplegable del panel Imprimir, que imprime ESO EN LUGAR del documento; esta casilla lo imprime ADEMÁS. Es la distinción que se pregunta. · Las otras tres son casillas vecinas de Opciones de impresión."
+    "explicacion": "La casilla está en Archivo → Opciones → Mostrar, dentro de la sección Opciones de impresión. Al activarla, Word añade una hoja final con los metadatos del archivo en cada impresión: título, autor, asunto, palabras clave y fecha."
   },
   {
     "id": "archivo-161",
@@ -6040,27 +6040,27 @@
     "tema": "Opciones",
     "sourceQuestionId": "8-67",
     "revisada": true,
-    "enunciado": "Has abierto Word en un equipo nuevo y no aparecen los subrayados rojos al escribir mal una palabra. ¿Qué casilla del panel Revisión lo devuelve?",
+    "enunciado": "Un usuario observa que Word 365 ya no subraya en rojo las faltas de ortografía mientras escribe. ¿Qué casilla debe activar/desactivar para restaurar ese comportamiento?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Revisar ortografía mientras escribe"
+        "text": "Archivo → Opciones → Revisión → Volver a revisar documento"
       },
       {
         "letter": "B",
-        "text": "Marcar errores gramaticales mientras escribe"
+        "text": "Archivo → Opciones → Revisión → Revisar ortografía mientras escribe"
       },
       {
         "letter": "C",
-        "text": "Ocultar errores de ortografía solo en este documento"
+        "text": "Archivo → Opciones → Revisión → Marcar errores gramaticales mientras escribe"
       },
       {
         "letter": "D",
-        "text": "Volver a revisar documento"
+        "text": "Archivo → Opciones → Revisión → Revisar gramática con ortografía"
       }
     ],
     "matching": null,
-    "respuesta": "A",
+    "respuesta": "B",
     "explicacion": "Sin esa casilla no hay subrayado rojo en ningún documento: la revisión al vuelo queda apagada para todo Word. · «Marcar errores gramaticales mientras escribe» es su gemela para el subrayado de gramática, que en Word 365 es azul: la ortografía y la gramática se encienden por separado. · La opción «Ocultar errores de ortografía solo en este…» es la trampa buena, porque produce exactamente el mismo síntoma pero solo en un archivo: está en el bloque «Excepciones para», al final del panel, y conviene mirarla cuando el problema aparece en un documento y no en los demás. · «Volver a revisar documento» limpia lo que se ignoró antes, pero no enciende nada."
   },
   {
@@ -10414,24 +10414,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "No crear hipervínculo automático en la captura de pantalla"
+        "text": "Archivo → Opciones → Avanzadas → Opciones de edición → No crear hipervínculo automático en la captura de pantalla"
       },
       {
         "letter": "B",
-        "text": "Utilizar CTRL + clic del mouse para seguir hipervínculo"
+        "text": "Archivo → Opciones → Revisión → Opciones de Autocorrección → No crear hipervínculo automático en la captura de pantalla"
       },
       {
         "letter": "C",
-        "text": "Abrir hipervínculos admitidos a archivos de Office"
+        "text": "Archivo → Opciones → Avanzadas → Opciones de visualización → No crear hipervínculo automático en la captura de pantalla"
       },
       {
         "letter": "D",
-        "text": "Rutas de red e Internet por hipervínculos"
+        "text": "Archivo → Opciones → Avanzadas → Opciones de edición → No crear hipervínculo automático al insertar imágenes"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Es una casilla muy concreta de «Opciones de edición», y solo actúa sobre el comando Captura de pantalla de la pestaña Insertar. · La opción «Rutas de red e Internet por hipervínculos» es el distractor de más nivel: también crea hipervínculos automáticos, pero al escribir una dirección, y además está en otro sitio, en la ficha «Autoformato mientras escribe» del cuadro Autocorrección. Dos automatismos de hipervínculo en dos paneles distintos. · La opción «Utilizar CTRL + clic del mouse para…» decide cómo se SIGUE un vínculo, no si se crea. · La opción «Abrir hipervínculos admitidos a archivos de Office» es de la apertura de vínculos a archivos de Office."
+    "explicacion": "No crear hipervínculo automático en la captura de pantalla es una casilla muy concreta de Opciones de edición dentro de Avanzadas, y solo actúa sobre el comando Captura de pantalla de la pestaña Insertar.\n\nLa opción A es el distractor de más nivel: el nombre de la casilla es idéntico a la correcta, pero la ruta mete al opositor en Revisión → Opciones de Autocorrección, que es donde vive la otra casilla de hipervínculos automáticos, la de las URLs escritas a mano. Mismo nombre, panel completamente distinto.\n\nLa opción C mantiene la ruta casi intacta pero cambia Opciones de edición por Opciones de visualización, dos secciones reales dentro de Avanzadas. Un solo tramo de ruta alterado y la respuesta es incorrecta.\n\nLa opción D mantiene la ruta exacta hasta el final pero cambia el nombre de la casilla: las imágenes insertadas desde archivo nunca generan hipervínculo automático. Solo lo hace el comando Captura de pantalla, y solo esa casilla lo desactiva."
   },
   {
     "id": "archivo-420",
