@@ -52,7 +52,7 @@ def main(patch_path):
             tipo = q.get("tipo")
             ops = q.get("opciones") or []
             letras = [o["letter"] for o in ops]
-            textos = [o["text"].strip().lower() for o in ops]
+            textos = [o["text"].strip() for o in ops]
             if tipo == "opcion_unica":
                 if len(ops) != 4:
                     print("  !!", qid, "tiene", len(ops), "opciones (deben ser 4)"); return 1
@@ -80,6 +80,10 @@ def main(patch_path):
                         print("  !!", qid, "etiquetas repetidas en la columna", col); return 1
             if len(set(textos)) != len(textos):
                 print("  !!", qid, "tiene opciones repetidas"); return 1
+            bajas = [t.lower() for t in textos]
+            if len(set(bajas)) != len(bajas):
+                avisos.append("%s: dos opciones solo se diferencian en mayúsculas "
+                              "(correcto si la pregunta va de eso)" % qid)
             # Lo que delata una pregunta no es que las opciones midan distinto
             # (los nombres reales de la interfaz miden lo que miden), sino que
             # la CORRECTA sea la única larga o la única corta. Se avisa solo

@@ -1930,28 +1930,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0011",
-    "enunciado": "¿Cual es la fuente y el tamano predeterminados en Word 365?",
+    "enunciado": "Abres un documento en blanco en esta instalación de Word 365 y miras el grupo Fuente sin haber tocado nada todavía. ¿Qué fuente y qué tamaño aparecen?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Times New Roman 12 pt"
+        "text": "Aptos, 12 puntos"
       },
       {
         "letter": "B",
-        "text": "Arial 11 pt"
+        "text": "Calibri, 11 puntos"
       },
       {
         "letter": "C",
-        "text": "Calibri 11 pt"
+        "text": "Aptos, 11 puntos"
       },
       {
         "letter": "D",
-        "text": "Aptos 12 pt"
+        "text": "Calibri, 12 puntos"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La fuente predeterminada de Word 365 es Calibri en tamano 11 pt. Aptos es la fuente predeterminada en versiones mas recientes del entorno Microsoft 365, pero para el examen la referencia documentada es Calibri 11 pt."
+    "respuesta": "A",
+    "explicacion": "La fuente del cuerpo del tema es Aptos y el tamaño de partida, 12 puntos. En la cinta no se lee «Aptos» a secas sino «Aptos (Cuerpo)», y en el cuadro de diálogo Fuente aparece como «+Cuerpo», con la nota «Esta es la fuente del tema del cuerpo. El tema del documento actual define qué fuente se utilizará». · Calibri con 11 puntos fue la pareja predeterminada durante más de una década, y por eso es la respuesta que sale sola: es exactamente la combinación anterior, sustituida de golpe al cambiar el tema. · Las otras dos mezclan una mitad de cada época, que es el error más fácil si solo se recuerda que «algo cambió» pero no qué."
   },
   {
     "id": "inicio-12",
@@ -1966,28 +1966,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0012",
-    "enunciado": "¿Entre que valores se puede fijar el tamano de fuente en Word 365?",
+    "enunciado": "En vez de elegir un valor de la lista, escribes a mano el tamaño en el cuadro Tamaño de fuente. ¿Entre qué valores te lo acepta Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "De 1 a 999"
+        "text": "De 1 a 1.638 puntos"
       },
       {
         "letter": "B",
-        "text": "De 1 a 1.638"
+        "text": "De 1 a 999 puntos"
       },
       {
         "letter": "C",
-        "text": "De 6 a 96"
+        "text": "De 8 a 72 puntos"
       },
       {
         "letter": "D",
-        "text": "De 8 a 72"
+        "text": "De 6 a 96 puntos"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El rango del campo Tamano de fuente en Word 365 va de 1 a 1.638 puntos. Los valores intermedios de 0,5 en 0,5 deben escribirse manualmente ya que no aparecen en la lista desplegable."
+    "respuesta": "A",
+    "explicacion": "El campo admite de 1 a 1.638 puntos, y también medios puntos —10,5 por ejemplo—, que hay que escribir porque la lista no los ofrece. · «De 8 a 72» es justo lo que enseña esa lista desplegable, y ahí está la trampa: se confunde lo que Word propone con lo que Word acepta. Escribir 300 funciona perfectamente aunque 300 no aparezca en ningún sitio. · «De 1 a 999» tiene el tope redondo que uno esperaría de un campo así, y por eso resulta creíble. · «De 6 a 96» no corresponde a ningún límite de Word."
   },
   {
     "id": "inicio-14",
@@ -2002,28 +2002,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0014",
-    "enunciado": "¿Cuantos tipos de subrayado diferentes ofrece Word 365?",
+    "enunciado": "Abres el cuadro de diálogo Fuente y despliegas «Estilo de subrayado». ¿Cuántos estilos ofrece, sin contar la entrada «(ninguno)»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "3"
-      },
-      {
-        "letter": "B",
-        "text": "8"
-      },
-      {
-        "letter": "C",
         "text": "17"
       },
       {
-        "letter": "D",
+        "letter": "B",
+        "text": "9"
+      },
+      {
+        "letter": "C",
         "text": "24"
+      },
+      {
+        "letter": "D",
+        "text": "3"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Word 365 ofrece 17 tipos de subrayado diferentes. De ellos, solo los tres primeros tienen atajo de teclado asignado: sencillo (Ctrl+S), doble (Ctrl+Mayus+D) y solo palabras (Ctrl+Mayus+P)."
+    "respuesta": "A",
+    "explicacion": "Ese desplegable ofrece 17 estilos de línea, que con «(ninguno)» hacen 18 entradas en total. · «9» es aproximadamente lo que enseña el desplegable rápido del botón Subrayado de la cinta, una selección corta rematada con «Más subrayados…»: confundir el atajo de la cinta con el cuadro completo es el error clásico de esta pregunta, y las dos cifras son reales. · «24» son los estilos de línea del cuadro Bordes y sombreado, otra lista larga de rayas de aspecto casi idéntico. · Y «3» son los subrayados que además tienen combinación propia: sencillo con Ctrl+S, doble con Ctrl+Mayús+D y solo palabras con Ctrl+Mayús+P."
   },
   {
     "id": "inicio-16",
@@ -2038,28 +2038,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0275",
-    "enunciado": "En la seccion Efectos del cuadro de dialogo Fuente, ¿que restriccion existe al combinar efectos?",
+    "enunciado": "La sección Efectos del cuadro de diálogo Fuente tiene siete casillas repartidas en dos columnas. ¿Qué regla siguen al combinarse entre ellas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Todos los efectos son mutuamente excluyentes: solo puede haber uno activo a la vez"
+        "text": "Se excluyen por parejas: hay tres pares incompatibles y una casilla libre"
       },
       {
         "letter": "B",
-        "text": "Hay tres parejas incompatibles (Tachado/Doble tachado, Superindice/Subindice y Versalitas/Mayusculas): activar uno desactiva a su pareja; el resto se pueden combinar"
+        "text": "Se excluyen todas entre sí: solo puede haber una casilla marcada a la vez"
       },
       {
         "letter": "C",
-        "text": "El efecto Oculto no se puede combinar con ningun otro"
+        "text": "Se excluyen por columnas: como mucho una de la izquierda y una de la derecha"
       },
       {
         "letter": "D",
-        "text": "Los efectos solo se pueden combinar si el texto esta escrito en minusculas"
+        "text": "No se excluye ninguna: las siete se pueden marcar a la vez sin problema"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Solo tres parejas se excluyen entre si: Tachado/Doble tachado, Superindice/Subindice y Versalitas/Mayusculas (marcar una casilla desmarca automaticamente a su pareja). Los demas efectos son independientes: se puede tener, por ejemplo, texto tachado y en versalitas, u oculto y en superindice a la vez."
+    "respuesta": "A",
+    "explicacion": "Los tres pares incompatibles son Tachado y Doble tachado, Superíndice y Subíndice, y Versalitas y Mayúsculas: al marcar una casilla se desmarca sola su pareja, porque pedirle a Word las dos cosas a la vez no tendría sentido. La séptima, Oculto, se combina con cualquiera de las otras seis. · Que se excluyan todas es la respuesta que sale por generalización, y basta un contraejemplo para tirarla: se puede tener texto tachado y en versalitas al mismo tiempo. · Las columnas no dicen nada: Tachado y Doble tachado están los dos en la izquierda y sí se excluyen, mientras que Tachado y Versalitas están en columnas distintas y se combinan sin problema. · Y decir que no hay ninguna restricción falla en las tres parejas."
   },
   {
     "id": "inicio-17",
@@ -2074,28 +2074,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0276",
-    "enunciado": "Al aplicar el efecto Versalitas del cuadro de dialogo Fuente, ¿sobre que parte del texto tiene efecto visible?",
+    "enunciado": "Aplicas el efecto Versalitas a un texto escrito exactamente así: «Real Decreto». ¿Cómo queda en pantalla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sobre todo el texto seleccionado sin distincion"
+        "text": "REAL DECRETO, con la R y la D grandes y el resto en mayúsculas pequeñas"
       },
       {
         "letter": "B",
-        "text": "Solo sobre las letras que estaban escritas en minusculas"
+        "text": "REAL DECRETO, con la R y la D pequeñas y el resto en mayúsculas grandes"
       },
       {
         "letter": "C",
-        "text": "Solo sobre las letras al inicio de cada palabra"
+        "text": "REAL DECRETO, todo en mayúsculas del mismo tamaño"
       },
       {
         "letter": "D",
-        "text": "Sobre todas las letras, convirtiendo las mayusculas en mayusculas grandes y las minusculas en mayusculas pequenas"
+        "text": "Real Decreto, sin cambio visible, por llevar ya mayúscula inicial"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Versalitas (Ctrl+Mayus+L) solo afecta al texto que esta escrito en minusculas, convirtiendolo en letras mayusculas de menor tamano. Las letras que ya eran mayusculas no cambian de apariencia."
+    "respuesta": "A",
+    "explicacion": "Versalitas actúa solo sobre lo que estaba en minúscula: lo convierte en mayúsculas de menor altura. Las letras que ya eran mayúsculas se quedan exactamente como estaban, a su tamaño normal, y por eso el resultado mezcla dos alturas y se reconoce a simple vista. · La versión con las iniciales pequeñas es el efecto al revés y no existe: es el distractor que más cuesta descartar, porque describe algo perfectamente imaginable. · Todo del mismo tamaño es lo que da la casilla Mayúsculas, que está justo al lado en el cuadro y además es su pareja incompatible. · Y que no cambie nada solo ocurriría si el texto estuviese ya escrito entero en mayúsculas, no por llevar la inicial."
   },
   {
     "id": "inicio-18",
@@ -2110,28 +2110,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0271",
-    "enunciado": "¿Cual es la diferencia de alcance entre pulsar Ctrl+Barra espaciadora y usar el boton Borrar todo el formato del grupo Fuente?",
+    "enunciado": "Un párrafo tiene negrita, color de letra, sangría de primera línea y el estilo Título 2 aplicados. ¿Qué diferencia hay entre pulsar Ctrl+Barra espaciadora y el botón Borrar todo el formato del grupo Fuente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ambos tienen exactamente el mismo efecto sobre el texto seleccionado"
+        "text": "El atajo quita solo el formato de carácter; el botón se lleva además el de párrafo y el estilo"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Barra espaciadora borra todo el formato; Borrar todo el formato solo borra el formato de fuente"
+        "text": "El atajo se lleva también el de párrafo y el estilo; el botón quita solo el de carácter"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Barra espaciadora borra solo el formato de fuente; Borrar todo el formato borra el formato completo incluyendo parrafo y estilos"
+        "text": "Los dos hacen exactamente lo mismo: solo cambia la forma de llegar hasta ello"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Barra espaciadora borra el formato y el texto; Borrar todo el formato solo borra el formato"
+        "text": "El atajo quita el de carácter y el de párrafo; el botón se lleva además el resaltado"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ctrl+Barra espaciadora tiene un alcance limitado al formato de fuente (caracter). El boton Borrar todo el formato va mas alla y elimina tambien formatos de parrafo y estilos aplicados."
+    "respuesta": "A",
+    "explicacion": "Ctrl+Barra espaciadora tiene un alcance corto y preciso: devuelve el texto al formato de carácter que le corresponde por su estilo, así que se llevaría la negrita y el color y dejaría intactos la sangría y el Título 2. El botón Borrar todo el formato va mucho más lejos y deja el párrafo en Normal, sin estilo ni formato de párrafo. Para quitar solo el formato de párrafo existe además Ctrl+W. Prueba en vivo del usuario. · La versión con los alcances cambiados es el error más común, porque el nombre del botón, «todo el formato», suena menos radical que un atajo. · Y el resaltado es precisamente lo que el botón NO se lleva: hay que quitarlo a mano desde el desplegable Color de resaltado."
   },
   {
     "id": "inicio-19",
@@ -2146,28 +2146,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0019",
-    "enunciado": "El color de resaltado de texto tiene una excepcion importante respecto a Borrar formato. ¿Cual es?",
+    "enunciado": "Marcas con el rotulador amarillo una frase que además está en negrita y en color rojo, y después pulsas el botón Borrar todo el formato. ¿Qué queda?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El resaltado solo puede borrarse con Ctrl+Barra espaciadora, no con el boton Borrar formato"
+        "text": "El texto limpio pero todavía en amarillo: el resaltado no se va con ese botón"
       },
       {
         "letter": "B",
-        "text": "El color de resaltado no se borra con el boton Borrar todo el formato"
+        "text": "El texto limpio y sin amarillo: el botón se lleva por delante también el resaltado"
       },
       {
         "letter": "C",
-        "text": "El resaltado se borra junto con todos los demas formatos al usar Ctrl+Z"
+        "text": "El texto limpio, y el amarillo convertido en sombreado del párrafo entero"
       },
       {
         "letter": "D",
-        "text": "El resaltado solo puede borrarse cerrando y volviendo a abrir el documento"
+        "text": "El texto tal como estaba: con resaltado puesto, el botón no llega a actuar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El color de resaltado es la unica excepcion documentada: no se elimina al usar el boton Borrar todo el formato. Para quitarlo hay que acceder al desplegable de Color de resaltado y seleccionar Sin color."
+    "respuesta": "A",
+    "explicacion": "El color de resaltado es la excepción de ese botón: la negrita y el rojo desaparecen, el amarillo se queda. Para quitarlo hay que desplegar Color de resaltado y elegir «Sin color», o pasar otra vez el rotulador con esa opción activa. · Que se lo lleve todo es lo que uno espera de un botón llamado «todo el formato», y por eso es el distractor que más cae. · Convertirse en sombreado tampoco pasa: el sombreado es otra cosa, vive en el grupo Párrafo y pinta el fondo del párrafo o de la celda entera, no los caracteres. · Y el botón sí actúa: lo que no toca es una sola de las propiedades."
   },
   {
     "id": "inicio-20",
@@ -2182,28 +2182,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0270",
-    "enunciado": "En la paleta de color de resaltado aparecen dos opciones al pie: Sin color y Detener resaltado. ¿Cual es la diferencia exacta entre ambas?",
+    "enunciado": "Despliegas Color de resaltado de texto y ves al pie dos entradas, «Sin color» y «Detener resaltado». ¿Qué hace cada una?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sin color elimina el resaltado del texto seleccionado; Detener resaltado desactiva el modo pincel de resaltado activo"
+        "text": "«Sin color» quita el resaltado de lo seleccionado; «Detener resaltado» apaga el rotulador"
       },
       {
         "letter": "B",
-        "text": "Sin color desactiva el modo pincel; Detener resaltado elimina el resaltado del texto seleccionado"
+        "text": "«Sin color» apaga el rotulador; «Detener resaltado» quita el resaltado de lo seleccionado"
       },
       {
         "letter": "C",
-        "text": "Ambas tienen el mismo efecto pero Sin color actua sobre el texto y Detener resaltado sobre todo el parrafo"
+        "text": "«Sin color» quita el resaltado del párrafo entero; «Detener resaltado», solo el de la selección"
       },
       {
         "letter": "D",
-        "text": "Sin color elimina tambien el color de fuente; Detener resaltado solo elimina el resaltado"
+        "text": "«Sin color» deja el rotulador cargado en blanco; «Detener resaltado» lo descarga del puntero"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Sin color elimina el resaltado ya aplicado al texto seleccionado. Detener resaltado desactiva el modo pincel activo, es decir, cuando el cursor esta en modo resaltado continuo, esta opcion lo detiene sin actuar sobre el texto ya resaltado."
+    "explicacion": "Son dos cosas de naturaleza distinta: «Sin color» actúa sobre el texto, quitándole el resaltado que ya tuviera, y también deja el rotulador preparado para borrar en vez de pintar; «Detener resaltado» no toca el texto en absoluto, solo devuelve el puntero a la normalidad cuando se ha quedado convertido en rotulador. · La versión con los papeles cambiados es el reflejo exacto de la buena y hay que leerla con cuidado. · Lo del párrafo entero no ocurre: el resaltado se aplica y se quita sobre lo seleccionado, carácter a carácter. · Y «Sin color» no es un blanco: no pinta nada encima, retira."
   },
   {
     "id": "inicio-21",
@@ -2218,28 +2218,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0022",
-    "enunciado": "¿Qué atajo resalta el texto seleccionado (rotulador) en Word 365?",
+    "enunciado": "Quieres marcar una frase con el rotulador sin soltar las manos del teclado. ¿Qué combinación aplica el resaltado al texto seleccionado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Mayus + H"
+        "text": "Alt+Ctrl+H"
       },
       {
         "letter": "B",
-        "text": "Alt + Ctrl + H"
+        "text": "Ctrl+Mayús+H"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Alt + R"
+        "text": "Ctrl+Alt+R"
       },
       {
         "letter": "D",
-        "text": "Mayus + F7"
+        "text": "Mayús+F7"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Alt+Ctrl+H aplica el resaltado (rotulador) al texto seleccionado, en el color activo del botón Color de resaltado (amarillo por defecto). Ctrl+Mayus+H reduce la sangría francesa. Ctrl+Alt+R y Mayus+F7 no resaltan (Mayus+F7 abre Sinónimos). Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Alt+Ctrl+H aplica el resaltado con el color que tenga cargado el botón Color de resaltado, amarillo si no se ha cambiado. ⚠️ Ojo: esta combinación no figura en el cuadro Personalizar teclado de esta instalación; está confirmada probándola en vivo. · Ctrl+Mayús+H es la que más se confunde, porque comparte la H: reduce la sangría francesa, que no tiene nada que ver con el color. · Ctrl+Alt+R no tiene ningún comando asignado, aunque la R de «resaltar» la haga sonar razonable. · Mayús+F7 sí hace algo, pero abre el panel de Sinónimos."
   },
   {
     "id": "inicio-22",
@@ -2254,28 +2254,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0023",
-    "enunciado": "En el menu de Color de fuente, ¿que diferencia existe entre los Colores del tema y los Colores estandar?",
+    "enunciado": "Despliegas Color de fuente y ves que la paleta está partida en dos bloques, «Colores del tema» arriba y «Colores estándar» debajo. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Los colores del tema cambian si se cambia el tema del documento desde la pestana Diseno; los colores estandar son siempre los mismos independientemente del tema"
+        "text": "Los del tema cambian si cambias el tema en Diseño; los estándar no cambian nunca"
       },
       {
         "letter": "B",
-        "text": "Los colores estandar cambian con el tema; los colores del tema son fijos"
+        "text": "Los estándar cambian si cambias el tema en Diseño; los del tema no cambian nunca"
       },
       {
         "letter": "C",
-        "text": "Ambos grupos cambian al cambiar el tema, pero los estandar lo hacen con un retraso"
+        "text": "Los dos cambian con el tema, pero los estándar solo al guardar el documento"
       },
       {
         "letter": "D",
-        "text": "Los colores del tema solo estan disponibles en documentos con diseno aplicado; los estandar siempre estan disponibles"
+        "text": "Los del tema solo aparecen si el documento tiene un tema aplicado; los estándar siempre"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Los colores del tema dependen del tema activo seleccionado en la pestana Diseno: si se cambia el tema, estos colores cambian. Los colores estandar son invariables y no se ven afectados por el tema del documento."
+    "explicacion": "El bloque de arriba es la paleta del tema activo: si en Diseño se cambia el tema o se elige otro juego de colores, ese texto cambia de color solo, sin tocarlo. El bloque de abajo son diez colores fijos —rojo, naranja, amarillo, verdes, azules, morado— que valen siempre lo mismo. · La versión con los papeles cambiados es el reflejo exacto y hay que leerla despacio. · Lo del retraso al guardar no existe: el cambio de tema se ve al instante. · Y el bloque del tema aparece siempre, porque todo documento tiene un tema aunque no se haya elegido ninguno: el de fábrica es el tema Office. Es el distractor con más fundamento, porque «tener un tema aplicado» suena a algo que hay que hacer."
   },
   {
     "id": "inicio-23",
@@ -2290,28 +2290,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0272",
-    "enunciado": "Al pulsar Mayus+F3 por tercera vez sobre un texto seleccionado, ¿que resultado se obtiene?",
+    "enunciado": "Pulsas Mayús+F3 por tercera vez seguida sobre el mismo texto seleccionado. ¿Con qué te encuentras?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Siempre aplica Tipo oracion independientemente del contenido"
+        "text": "Tipo oración si la selección termina en punto; si no, Poner En Mayúsculas Cada Palabra"
       },
       {
         "letter": "B",
-        "text": "Si el texto contiene punto al final aplica Tipo oracion; si no contiene punto aplica Poner En Mayusculas Cada Palabra"
+        "text": "Tipo oración siempre, sea cual sea el contenido de la selección"
       },
       {
         "letter": "C",
-        "text": "Siempre aplica Poner En Mayusculas Cada Palabra independientemente del contenido"
+        "text": "Poner En Mayúsculas Cada Palabra siempre, sea cual sea el contenido"
       },
       {
         "letter": "D",
-        "text": "Si el texto estaba en MAYUSCULAS vuelve al estado original; si estaba en minusculas aplica Tipo oracion"
+        "text": "El texto tal como estaba antes de la primera pulsación"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El ciclo de Mayus+F3 tiene tres estados: 1a pulsacion MAYUSCULAS, 2a minusculas, 3a estado condicional: Tipo oracion si el texto seleccionado contiene punto, o Poner En Mayusculas Cada Palabra si no contiene punto. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Mayús+F3 gira por tres estados: MAYÚSCULAS, minúsculas y un tercero que depende de lo seleccionado. Si hay un punto final, Word entiende que es una oración y aplica Tipo oración; si no lo hay, entiende que es un rótulo o un título y aplica Poner En Mayúsculas Cada Palabra. Prueba en vivo del usuario. · Por eso las dos opciones que dicen «siempre» son cada una la mitad de la verdad: describen bien uno de los dos casos y niegan el otro, y son las que más caen. · Y volver al estado de partida no es lo que hace el ciclo: la tercera pulsación entrega un estado nuevo, no el original. Para recuperar el texto exacto de antes hay que deshacer."
   },
   {
     "id": "inicio-24",
@@ -2326,28 +2326,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0279",
-    "enunciado": "¿Cual es la diferencia funcional entre el efecto Mayusculas del cuadro de dialogo Fuente y la opcion MAYUSCULAS del desplegable Cambiar mayusculas y minusculas?",
+    "enunciado": "Un texto tiene marcada la casilla Mayúsculas del cuadro Fuente y otro se pasó a MAYÚSCULAS con el desplegable Aa del grupo Fuente. En pantalla los dos se ven igual. ¿En qué se diferencian de verdad?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ambos tienen el mismo resultado final, solo difieren en la ruta de acceso"
+        "text": "El del cuadro Fuente es solo formato: por debajo los caracteres siguen en minúscula"
       },
       {
         "letter": "B",
-        "text": "Mayusculas del cuadro Fuente es solo un efecto visual y no cambia los caracteres reales; MAYUSCULAS de Cambiar mayusculas edita el texto realmente"
+        "text": "El del desplegable Aa es solo formato: por debajo los caracteres siguen en minúscula"
       },
       {
         "letter": "C",
-        "text": "Mayusculas del cuadro Fuente cambia los caracteres; MAYUSCULAS de Cambiar mayusculas es solo visual"
+        "text": "En nada: los dos reescriben los caracteres y solo cambia el camino para llegar"
       },
       {
         "letter": "D",
-        "text": "Mayusculas del cuadro Fuente afecta a todo el parrafo; MAYUSCULAS de Cambiar mayusculas solo al texto seleccionado"
+        "text": "El del cuadro Fuente afecta al párrafo entero; el del desplegable Aa, solo a lo seleccionado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El efecto Mayusculas del cuadro Fuente es formato visual: el texto subyacente no cambia. La opcion MAYUSCULAS del comando Cambiar mayusculas y minusculas edita realmente los caracteres del texto. Esta distincion es clave: uno es formato, el otro es edicion."
+    "respuesta": "A",
+    "explicacion": "La casilla del cuadro Fuente es un efecto de presentación: el texto sigue guardado como estaba escrito y basta desmarcarla para verlo volver a su forma original. El desplegable Aa edita de verdad, sustituye unos caracteres por otros, y de ahí no se vuelve más que deshaciendo. · Se comprueba copiando los dos y pegándolos con «Conservar solo el texto» en otro sitio: el del cuadro reaparece en minúsculas y el del desplegable llega ya en mayúsculas. · La versión con los papeles cambiados es el reflejo exacto de la buena. · Y ninguno de los dos actúa sobre el párrafo entero: los dos se aplican a lo que esté seleccionado."
   },
   {
     "id": "inicio-25",
@@ -2362,28 +2362,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0025",
-    "enunciado": "¿Qué atajo abre el cuadro de diálogo Fuente en la versión española de Word 365?",
+    "enunciado": "Quieres abrir el cuadro de diálogo Fuente con el teclado y aterrizar directamente en el campo del nombre de la fuente. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + F"
+        "text": "Ctrl+M"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Mayús + P"
+        "text": "Ctrl+Mayús+M"
       },
       {
         "letter": "C",
-        "text": "Ctrl + M"
+        "text": "Ctrl+F"
       },
       {
         "letter": "D",
-        "text": "Alt + F"
+        "text": "Ctrl+Mayús+P"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ctrl+M abre el cuadro de diálogo Fuente con el foco en el campo Fuente (nombre). Ctrl+Mayús+F hace lo mismo (también abre el diálogo con el nombre enfocado) y Ctrl+Mayús+M lo abre con el foco en el Tamaño. Ctrl+F aplica sangría francesa. Ctrl+Mayús+P activa/desactiva el subrayado de palabras. Alt+F abre el menú Archivo. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "Ctrl+M abre el cuadro Fuente con el foco puesto en el nombre; Ctrl+Mayús+F hace exactamente lo mismo, así que hay dos caminos válidos. Prueba en vivo del usuario. · Ctrl+Mayús+M abre ese mismo cuadro, pero con el foco en Tamaño: es la que hay que descartar con más cuidado, porque acierta el cuadro y falla el campo. · Ctrl+F no busca nada en esta instalación: aplica sangría francesa. · Y Ctrl+Mayús+P activa o desactiva el subrayado de palabras, que sí es formato de fuente pero no abre ningún cuadro. · ⚠️ Ojo: no existe ninguna combinación que lleve el foco a la caja de fuente de la cinta; todas estas abren el cuadro de diálogo."
   },
   {
     "id": "inicio-26",
@@ -2398,28 +2398,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0273",
-    "enunciado": "¿Cuantos estilos de fuente reales existen en Word 365, y cuantas opciones aparecen en la lista Estilo de fuente del cuadro de dialogo Fuente?",
+    "enunciado": "En el cuadro de diálogo Fuente, la lista «Estilo de fuente» tiene exactamente cuatro entradas. ¿Cuáles son?",
     "opciones": [
       {
         "letter": "A",
-        "text": "4 estilos reales y 4 opciones en la lista"
+        "text": "Normal, Cursiva, Negrita y Negrita Cursiva"
       },
       {
         "letter": "B",
-        "text": "2 estilos reales (Negrita y Cursiva) y 4 opciones en la lista (Normal, Cursiva, Negrita, Negrita Cursiva)"
+        "text": "Normal, Cursiva, Negrita y Subrayado"
       },
       {
         "letter": "C",
-        "text": "2 estilos reales (Normal y Negrita) y 4 opciones en la lista"
+        "text": "Normal, Cursiva, Negrita y Versalitas"
       },
       {
         "letter": "D",
-        "text": "3 estilos reales (Normal, Negrita y Cursiva) y 4 opciones en la lista"
+        "text": "Ninguno, Cursiva, Negrita y Negrita Cursiva"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Solo existen 2 estilos de fuente reales: Negrita y Cursiva. La lista muestra 4 opciones porque Normal es la ausencia de estilo y Negrita Cursiva es la combinacion de los dos estilos base, no un estilo independiente."
+    "respuesta": "A",
+    "explicacion": "Son esas cuatro, y detrás solo hay dos atributos de verdad: negrita y cursiva. La lista los presenta combinados, de forma que «Normal» es no tener ninguno de los dos y «Negrita Cursiva» es tenerlos los dos a la vez. · Subrayado no está en esa lista: tiene desplegable propio justo al lado, «Estilo de subrayado», con sus diecisiete estilos y su color. Es el distractor que más cae, porque en la cinta los botones N, K y S van pegados y parecen los tres de la misma familia. · Versalitas tampoco: es una casilla de la sección Efectos, más abajo en el mismo cuadro. · Y la primera entrada se llama «Normal»; «(ninguno)» es lo que pone el desplegable de subrayado cuando no hay ninguno aplicado."
   },
   {
     "id": "inicio-27",
@@ -2434,28 +2434,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0277",
-    "enunciado": "Las caracteristicas OpenType del cuadro de dialogo Fuente fueron creadas conjuntamente por dos empresas. ¿Cuales son y en que formato se basan?",
+    "enunciado": "Aplicas a un texto un conjunto estilístico desde la ficha Avanzado del cuadro Fuente y en pantalla no cambia absolutamente nada. ¿Cuál es la causa más probable?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Microsoft y Adobe; basadas en el formato TrueType creado por Apple"
+        "text": "Que la fuente aplicada no sea OpenType o no traiga esa variante"
       },
       {
         "letter": "B",
-        "text": "Microsoft y Apple; basadas en el formato Type 1 de Adobe"
+        "text": "Que el texto esté seleccionado solo en parte y no de principio a fin"
       },
       {
         "letter": "C",
-        "text": "Adobe y Apple; basadas en el estandar Unicode de ISO"
+        "text": "Que el documento tenga desactivado el seguimiento de formato en Opciones"
       },
       {
         "letter": "D",
-        "text": "Microsoft y Google; basadas en el formato OpenDocument de OASIS"
+        "text": "Que los conjuntos estilísticos solo se apliquen al imprimir, no en pantalla"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Las fuentes OpenType fueron creadas conjuntamente por Microsoft y Adobe, y estan basadas en el formato TrueType, que fue creado originalmente por Apple a finales de los anos 80 para competir con el formato Type 1 de Adobe."
+    "explicacion": "Las características OpenType de esa ficha —ligaduras, conjuntos estilísticos, espaciado de números y estilos de número— son variantes que tiene que traer la propia fuente. Word deja marcarlas siempre, pero si la fuente no las incluye no hay nada que aplicar y el texto se queda igual. · Una selección parcial cambiaría solo un tramo, pero se notaría en ese tramo: el síntoma no encaja. · El seguimiento de formato es otra cosa: una casilla de Opciones ▸ Avanzadas que sirve para que Word marque incoherencias de formato, y no impide aplicar nada. · Y ninguna de estas características se guarda para el momento de imprimir: lo que se ve en pantalla es lo que sale."
   },
   {
     "id": "inicio-28",
@@ -2470,28 +2470,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0280",
-    "enunciado": "¿Que son las ligaduras en el contexto de las caracteristicas OpenType de Word 365?",
+    "enunciado": "Un compañero te pregunta qué son las «ligaduras» que ha visto en la ficha Avanzado del cuadro Fuente. ¿Qué le respondes?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Efectos visuales de iluminado aplicados a caracteres individuales"
+        "text": "Uniones de dos o más caracteres fundidos en un solo símbolo tipográfico"
       },
       {
         "letter": "B",
-        "text": "Uniones visuales de dos o mas caracteres en un unico simbolo tipografico"
+        "text": "Variantes decorativas de una misma letra que la fuente trae de reserva"
       },
       {
         "letter": "C",
-        "text": "Conjuntos de formatos guardados con nombre para aplicar con un clic"
+        "text": "Números de altura desigual, pensados para alinearse con las minúsculas"
       },
       {
         "letter": "D",
-        "text": "Variantes de numeros con alturas distintas segun su posicion en el texto"
+        "text": "Uniones invisibles que impiden separar dos palabras al final de la línea"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Las ligaduras son uniones de dos o mas caracteres que se funden en un unico simbolo tipografico. Son una caracteristica OpenType y Word 365 ofrece cinco opciones: Ninguna, Solo estandar, Estandar y contextuales, Historicas y discrecionales, y Todas."
+    "respuesta": "A",
+    "explicacion": "Una ligadura funde caracteres contiguos en un único signo, como la «fi» o la «fl» de las fuentes con buena tipografía. El desplegable ofrece cinco opciones: Ninguna, Solo estándar, Estándar y contextuales, Históricas y discrecionales, y Todas las ligaduras. · Las variantes decorativas de reserva son los conjuntos estilísticos, otra característica OpenType del mismo sitio: es el distractor más difícil, porque también es real y también está a dos líneas de distancia. · Los números de altura desigual son el estilo antiguo del desplegable «Estilos de número», también ahí mismo. · Y lo que impide separar dos palabras al final de línea es el espacio de no separación, Ctrl+Mayús+Espacio, que no es una característica de la fuente sino un carácter especial."
   },
   {
     "id": "inicio-30",
@@ -2506,28 +2506,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0339",
-    "enunciado": "La opcion Escala de la pestana Avanzado del cuadro Fuente modifica el tamano del texto mediante un porcentaje. ¿Que dimension ajusta exactamente y cual es su valor predeterminado?",
+    "enunciado": "En la ficha Avanzado del cuadro Fuente bajas la Escala del texto seleccionado del 100 % al 80 %. ¿Qué le ocurre al texto?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ajusta el alto de los caracteres; predeterminado 100%"
+        "text": "Se estrecha: cada letra ocupa menos ancho y conserva su altura"
       },
       {
         "letter": "B",
-        "text": "Ajusta el ancho y el alto proporcionalmente; predeterminado 100%"
+        "text": "Se encoge entero: cada letra pierde ancho y altura en la misma proporción"
       },
       {
         "letter": "C",
-        "text": "Ajusta el ancho de los caracteres; predeterminado 100%"
+        "text": "Se achata: cada letra pierde altura y conserva su ancho"
       },
       {
         "letter": "D",
-        "text": "Ajusta el ancho de los caracteres; predeterminado 50%"
+        "text": "Se junta: las letras miden igual pero quedan más cerca unas de otras"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La opcion Escala aplica un porcentaje de ancho a los caracteres, no de alto. El valor predeterminado es 100%. Modificarla estira o comprime horizontalmente el texto sin cambiar su altura."
+    "respuesta": "A",
+    "explicacion": "La Escala es un porcentaje de ancho y solo de ancho; parte del 100 % y estira o estrecha las letras sin tocar su altura. Sirve para hacer caber un titular en una línea sin bajarlo de tamaño. · Encoger de forma proporcional es lo que hace cambiar el tamaño en puntos, en la cinta o en el propio cuadro. · Perder solo altura no lo hace ninguna opción de Word: no existe una escala vertical. · Y acercar las letras sin cambiarlas de tamaño es el campo Espaciado, dos líneas más abajo, en su valor Comprimido. Ese es el par que de verdad se confunde, porque los dos aprietan el texto y se ven parecidos de lejos: uno estrecha las letras, el otro reduce el hueco entre ellas."
   },
   {
     "id": "inicio-31",
@@ -2542,28 +2542,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0340",
-    "enunciado": "En la pestana Avanzado del cuadro Fuente, la opcion Posicion desplaza el texto respecto a la linea de escritura. ¿Que dos valores ofrece?",
+    "enunciado": "Quieres levantar unas palabras por encima de la línea de escritura sin que se hagan más pequeñas. ¿Qué usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Superindice y Subindice"
+        "text": "Posición: Elevado, en la ficha Avanzado del cuadro Fuente"
       },
       {
         "letter": "B",
-        "text": "Elevada y Bajada"
+        "text": "Superíndice, en la sección Efectos del cuadro Fuente"
       },
       {
         "letter": "C",
-        "text": "Expandida y Comprimida"
+        "text": "Espaciado: Expandido, en la ficha Avanzado del cuadro Fuente"
       },
       {
         "letter": "D",
-        "text": "Adelantada y Retrasada"
+        "text": "Escala por encima del 100 %, en la ficha Avanzado del cuadro Fuente"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La opcion Posicion ofrece dos valores: Elevada y Bajada. Desplaza el texto por encima o por debajo de la linea de escritura sin cambiar su tamano, a diferencia de Superindice y Subindice que ademas reducen el tamano del caracter. Expandida y Comprimida corresponden al campo Espaciado, no a Posicion."
+    "respuesta": "A",
+    "explicacion": "El campo Posición admite Elevado y Bajado, con una medida en puntos al lado, y desplaza el texto arriba o abajo respecto de la línea base sin cambiarle el tamaño ni un punto. · Superíndice también lo sube, pero además lo empequeñece, que es justo lo que el enunciado descarta: es el par confuso de esta pregunta, y la razón de que Posición exista aparte. · Espaciado no sube nada: separa las letras en horizontal. · Y la Escala las ensancha, también en horizontal. Las tres opciones descartadas son campos reales del mismo cuadro, pero ninguna mueve el texto en vertical."
   },
   {
     "id": "inicio-32",
@@ -2578,28 +2578,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0032",
-    "enunciado": "¿Cual es la diferencia entre el Espaciado Expandido y el Espaciado Comprimido en la pestana Avanzado del cuadro Fuente?",
+    "enunciado": "Un titular se te sale por una letra y quieres apretar el texto sin bajarlo de tamaño. En la ficha Avanzado eliges Espaciado: Comprimido. ¿Qué hace exactamente esa opción?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Expandido aumenta el espacio entre caracteres; Comprimido lo reduce"
+        "text": "Reduce el hueco entre caracteres sin tocar el tamaño de ninguno"
       },
       {
         "letter": "B",
-        "text": "Expandido aumenta el tamano de los caracteres; Comprimido lo reduce"
+        "text": "Reduce el ancho de cada carácter sin tocar el hueco entre ellos"
       },
       {
         "letter": "C",
-        "text": "Expandido separa palabras; Comprimido las une"
+        "text": "Reduce el hueco entre palabras y deja las letras justo como estaban"
       },
       {
         "letter": "D",
-        "text": "Son sinonimos que describen el mismo efecto con distinta intensidad"
+        "text": "Reduce a la vez el hueco y el ancho, en la proporción que se indique"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El campo Espaciado, tambien llamado Kerning o interletrado, controla el espacio entre caracteres. La opcion Expandido aumenta ese espacio separando las letras entre si, mientras que Comprimido lo reduce apretandolas. No afecta al tamano del caracter sino a la distancia entre ellos."
+    "explicacion": "Espaciado tiene tres valores —Normal, Expandido y Comprimido— y una casilla «En:» donde se pone cuántos puntos. Comprimido resta ese hueco entre todos los caracteres por igual; las letras siguen midiendo exactamente lo mismo. · Reducir el ancho de cada carácter es la Escala, un campo más arriba, y es el par que de verdad se confunde porque el resultado en pantalla se parece mucho. · El ajuste tampoco distingue palabras de letras: aprieta todos los caracteres, espacios incluidos. · Y no hace las dos cosas a la vez: para eso habría que tocar además la Escala. · No confundir con la casilla «Interletraje para fuentes» de más abajo, que deja a la propia fuente ajustar ciertos pares de letras a partir del tamaño que se indique."
   },
   {
     "id": "inicio-33",
@@ -2614,28 +2614,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0278",
-    "enunciado": "Al hacer clic en Establecer como predeterminado dentro del cuadro de dialogo Fuente, ¿a que documentos afecta el cambio?",
+    "enunciado": "Configuras en el cuadro Fuente una fuente y un tamaño y, en vez de Aceptar, pulsas «Establecer como predeterminado». ¿Qué pasa a continuación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Solo al documento actual y a sus copias guardadas"
+        "text": "Word pregunta si aplicarlo solo a este documento o a todos los basados en la plantilla Normal"
       },
       {
         "letter": "B",
-        "text": "A todos los documentos nuevos que se creen a partir de ese momento, no al documento actual"
+        "text": "Word lo aplica sin preguntar a los documentos nuevos y deja el actual como estaba"
       },
       {
         "letter": "C",
-        "text": "A todos los documentos ya existentes y a los nuevos"
+        "text": "Word lo aplica sin preguntar al documento actual y no cambia nada de los nuevos"
       },
       {
         "letter": "D",
-        "text": "Solo a los documentos basados en la plantilla Normal que ya tengan texto escrito"
+        "text": "Word pregunta si aplicarlo al documento entero o solo al texto que hay seleccionado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Establecer como predeterminado guarda el formato de fuente configurado para que todos los documentos nuevos que se creen a partir de ese momento lo usen directamente. No modifica el documento actual ni los documentos ya existentes."
+    "respuesta": "A",
+    "explicacion": "Sale un aviso con esas dos opciones, y la segunda es la que toca la plantilla Normal: a partir de ahí, todo documento nuevo nace con esa fuente. Word pregunta precisamente porque es una decisión que va más allá del archivo abierto. · Las dos opciones que dicen que lo hace sin preguntar son la creencia habitual, y cada una acierta una mitad —una, que afecta a los nuevos; la otra, que afecta al actual—, pero las dos se saltan el aviso, que es lo que la pregunta persigue. · Y no hay ninguna opción de aplicarlo solo a la selección: para eso está el botón Aceptar, que es lo que hace el cuadro de forma normal."
   },
   {
     "id": "inicio-34",
@@ -2650,28 +2650,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0341",
-    "enunciado": "¿Cuantos puntos de degradado se pueden definir como maximo al aplicar un degradado como color de fuente en Word 365?",
+    "enunciado": "En el desplegable Color de fuente eliges «Degradado» y, dentro, «Más degradados…». ¿Qué se abre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "3"
+        "text": "El panel «Formato de efectos de texto», con Relleno de texto y Contorno de texto"
       },
       {
         "letter": "B",
-        "text": "5"
+        "text": "El cuadro «Efectos de relleno», con las fichas Degradado, Textura, Trama e Imagen"
       },
       {
         "letter": "C",
-        "text": "10"
+        "text": "El panel «Formato de forma», con las secciones Relleno y Línea"
       },
       {
         "letter": "D",
-        "text": "24"
+        "text": "El cuadro de diálogo Fuente, directamente en su ficha Avanzado"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El numero maximo de puntos de degradado que se pueden definir para el color de fuente es 10. El distractor 24 corresponde a la capacidad del Portapapeles, no a los puntos de degradado."
+    "respuesta": "A",
+    "explicacion": "Se abre un panel a la derecha titulado «Formato de efectos de texto», con dos secciones desplegables: «Relleno de texto», que ofrece Sin relleno, Relleno sólido y Relleno degradado además de Color y Transparencia, y «Contorno de texto», con Sin línea, Línea sólida y Línea degradada. · «Efectos de relleno» existe y tiene exactamente esas cuatro fichas, pero es el cuadro al que se llega desde Diseño ▸ Color de página: es el distractor con más fundamento, porque también sirve para poner un degradado. · «Formato de forma» es el panel equivalente para una forma o un cuadro de texto, no para caracteres. · Y este camino no lleva al cuadro Fuente: es una rama del propio desplegable de color."
   },
   {
     "id": "inicio-152",
@@ -2686,35 +2686,35 @@
     "tema": "Fuente",
     "difficulty": "baja",
     "sourceQuestionId": "P-0406",
-    "enunciado": "Necesitas cambiar el tipo de letra de un párrafo, viendo antes cómo se vería cada tipografía instalada en el equipo con su propia apariencia. ¿Qué control debes utilizar en el grupo Fuente?",
+    "enunciado": "Despliegas el cuadro del nombre de fuente en la cinta y ves que, antes del listado general, la lista está partida en bloques con encabezado. ¿Cuáles son esos encabezados?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tipo de fuente"
+        "text": "Fuentes del tema, Fuentes usadas recientemente y Todas las fuentes"
       },
       {
         "letter": "B",
-        "text": "Tamaño de fuente"
+        "text": "Fuentes del tema, Fuentes favoritas y Todas las fuentes"
       },
       {
         "letter": "C",
-        "text": "Aumentar tamaño fuente"
+        "text": "Fuentes recomendadas, Fuentes usadas recientemente y Todas las fuentes"
       },
       {
         "letter": "D",
-        "text": "Disminuir tamaño fuente"
+        "text": "Fuentes del documento, Fuentes usadas recientemente y Todas las fuentes"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El desplegable Tipo de fuente muestra la lista de todas las tipografías instaladas en el equipo, con cada nombre escrito en su propia fuente para previsualizar su apariencia antes de aplicarla. Al pasar el cursor por la lista, el texto seleccionado muestra una vista previa en tiempo real."
+    "explicacion": "Los tres bloques son «Fuentes del tema», «Fuentes usadas recientemente» y «Todas las fuentes». El primero es corto: trae la fuente del cuerpo y la de los títulos del tema activo, que aparecen marcadas como (Cuerpo) y (Títulos) y cambian solas si se cambia el tema desde Diseño. · Word no tiene fuentes «favoritas»: no hay forma de marcar una para que suba a lo alto de la lista, y por eso el bloque de recientes cumple ese papel. Es el distractor que más cae. · Tampoco recomienda ninguna. · Y «Fuentes del documento» suena razonable, pero el rótulo real habla del tema, no del documento: es una diferencia que importa, porque esas dos fuentes vienen del tema y se van con él. · En el listado, cada nombre se escribe con su propia tipografía, y al pasar el ratón por encima el texto seleccionado enseña una vista previa."
   },
   {
     "id": "inicio-153",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
     "topic": "fuente",
@@ -2722,28 +2722,28 @@
     "tema": "Fuente",
     "difficulty": "baja",
     "sourceQuestionId": "P-0407",
-    "enunciado": "Quieres agrandar el texto seleccionado pasando al siguiente tamaño de la lista con un solo clic, sin escribir ningún número. ¿Qué botón debes utilizar en el grupo Fuente?",
+    "enunciado": "Quieres reducir el tamaño del texto seleccionado de punto en punto, no saltando al valor anterior de la lista de tamaños. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Aumentar tamaño fuente"
+        "text": "Ctrl+Alt+<"
       },
       {
         "letter": "B",
-        "text": "Disminuir tamaño fuente"
+        "text": "Ctrl+<"
       },
       {
         "letter": "C",
-        "text": "Tipo de fuente"
+        "text": "Ctrl+Mayús+<"
       },
       {
         "letter": "D",
-        "text": "Tamaño de fuente"
+        "text": "Ctrl+Alt+Mayús+<"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Aumentar tamaño fuente incrementa el tamaño del texto seleccionado al siguiente valor de la lista predefinida de tamaños con cada clic. Su atajo es Ctrl+Mayús+>. El botón Disminuir tamaño fuente hace lo contrario con el atajo Ctrl+Mayús+<."
+    "explicacion": "Ctrl+Alt+< baja el tamaño de punto en punto. Las cuatro combinaciones reales de esta familia son: Ctrl+Mayús+> agranda al siguiente valor de la lista, Ctrl+Alt+Mayús+> agranda de punto en punto, Ctrl+< reduce al valor anterior de la lista y Ctrl+Alt+< reduce de punto en punto. Prueba en vivo del usuario. · Ctrl+< es por eso el distractor difícil: hace lo mismo en apariencia, pero a saltos, y es la que se usa casi siempre sin pensar. · ⚠️ Ojo con la notación: en el teclado español la tecla que está a la izquierda de la Z da «<» sin Mayús y «>» con Mayús, así que pedir «<» pulsando Mayús es una contradicción. Por eso Ctrl+Mayús+< y Ctrl+Alt+Mayús+< no existen como pulsación, por muy simétricas que parezcan de las de agrandar."
   },
   {
     "id": "inicio-154",
@@ -2758,28 +2758,28 @@
     "tema": "Fuente",
     "difficulty": "baja",
     "sourceQuestionId": "P-0408",
-    "enunciado": "Has escrito sin querer un título entero con el bloqueo de mayúsculas activado y quieres ver las distintas formas en que Word puede transformar el uso de mayúsculas y minúsculas de ese texto, antes de elegir cuál aplicar. ¿Dónde puedes desplegar esas opciones?",
+    "enunciado": "Despliegas el botón Aa, «Cambiar mayúsculas y minúsculas», del grupo Fuente. ¿Cuáles son sus cinco entradas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Cambiar mayúsculas y minúsculas"
+        "text": "Tipo oración · minúscula · MAYÚSCULAS · Poner En Mayúsculas Cada Palabra · Alternar MAY/min"
       },
       {
         "letter": "B",
-        "text": "Borrar todo el formato"
+        "text": "Tipo oración · minúscula · MAYÚSCULAS · Poner En Mayúsculas Cada Palabra · Versalitas"
       },
       {
         "letter": "C",
-        "text": "Tipo de fuente"
+        "text": "Tipo oración · minúscula · MAYÚSCULAS · Tipo título · Alternar MAY/min"
       },
       {
         "letter": "D",
-        "text": "Tamaño de fuente"
+        "text": "Tipo título · minúscula · MAYÚSCULAS · Poner En Mayúsculas Cada Palabra · Alternar MAY/min"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Cambiar mayúsculas y minúsculas (icono Aa) despliega un menú con 5 opciones: Tipo oración, minúscula, MAYÚSCULAS, Poner En Mayúsculas Cada Palabra y Alternar mayúsculas y minúsculas. Su atajo directo es Mayús+F3, que cicla entre las opciones."
+    "explicacion": "Ese desplegable tiene cinco entradas y son exactamente esas; Mayús+F3 recorre parte de ellas sin abrir el menú. · Versalitas no está ahí: es una casilla de la sección Efectos del cuadro Fuente, y además hace algo de otra naturaleza —es formato, no reescritura del texto—, lo que la convierte en el distractor más instructivo de los tres. · «Tipo título» no existe en Word: lo que hace ese papel se llama «Poner En Mayúsculas Cada Palabra», con ese nombre largo, y por eso cambiarlo por uno corto y creíble cuela tan bien. · La primera entrada es «Tipo oración», que pone en mayúscula la letra siguiente a cada punto."
   },
   {
     "id": "inicio-155",
@@ -2794,28 +2794,28 @@
     "tema": "Fuente",
     "difficulty": "baja",
     "sourceQuestionId": "P-0409",
-    "enunciado": "Un párrafo tiene aplicados varios formatos manuales distintos (negrita, color, tamaño) y quieres quitárselos todos de golpe, dejándolo con el estilo Normal por defecto, sin borrar el texto. ¿Qué botón debes utilizar en el grupo Fuente?",
+    "enunciado": "Un párrafo está con estilo Título 1, centrado, en rojo y convertido en viñeta. Le aplicas «Borrar todo el formato». ¿Con qué te quedas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Borrar todo el formato"
+        "text": "Texto en estilo Normal, alineado a la izquierda, en negro y sin viñeta"
       },
       {
         "letter": "B",
-        "text": "Cambiar mayúsculas y minúsculas"
+        "text": "Texto en estilo Título 1, sin centrar, en negro y sin viñeta"
       },
       {
         "letter": "C",
-        "text": "Tipo de fuente"
+        "text": "Texto en estilo Normal, centrado, en negro y con la viñeta puesta"
       },
       {
         "letter": "D",
-        "text": "Tamaño de fuente"
+        "text": "Texto en estilo Normal, en negro y sin viñeta, pero conservando el centrado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Borrar todo el formato elimina todos los formatos manuales aplicados al texto seleccionado, incluyendo formato de fuente, de párrafo y estilos, dejando el texto con el estilo Normal. Es más completo que Ctrl+Barra espaciadora, que solo borra el formato de fuente."
+    "explicacion": "Ese botón deja el párrafo en Normal y se lleva por delante todo lo demás: el estilo, el formato de carácter y también el de párrafo, alineación y viñetas incluidas. Solo hay una cosa que no toca, el color de resaltado. · Conservar el estilo Título 1 es lo que ocurriría con Ctrl+Barra espaciadora, que se limita al formato de carácter: ahí está la diferencia entre los dos, y es lo que más se confunde. · Las otras dos dejan a medias el formato de párrafo, dejando la viñeta o el centrado: el botón no distingue, va a por todo. · Para quitar solo el formato de párrafo y respetar el de carácter existe Ctrl+W."
   },
   {
     "id": "inicio-156",
@@ -2830,35 +2830,35 @@
     "tema": "Fuente",
     "difficulty": "baja",
     "sourceQuestionId": "P-0410",
-    "enunciado": "Quieres marcar visualmente que un párrafo antiguo ya no es válido, cruzándolo con una línea horizontal, sin llegar a borrarlo del documento. ¿Qué botón debes utilizar en el grupo Fuente?",
+    "enunciado": "Necesitas aplicar doble tachado a un texto, esa línea doble que lo cruza. ¿Desde dónde se pone?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tachado"
+        "text": "Desde la sección Efectos de la ficha Fuente del cuadro de diálogo Fuente"
       },
       {
         "letter": "B",
-        "text": "Negrita"
+        "text": "Desde el botón Tachado de la cinta, pulsándolo dos veces seguidas"
       },
       {
         "letter": "C",
-        "text": "Cursiva"
+        "text": "Desde la flecha del botón Tachado, que despliega el sencillo y el doble"
       },
       {
         "letter": "D",
-        "text": "Subrayado"
+        "text": "Desde la ficha Avanzado del cuadro de diálogo Fuente"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Tachado aplica una línea horizontal que atraviesa el texto, indicando visualmente que ese contenido está obsoleto o eliminado sin borrarlo realmente. Es diferente del Doble tachado, que solo está disponible desde el cuadro de diálogo Fuente."
+    "explicacion": "«Doble tachado» es una casilla de la sección Efectos, en la primera ficha del cuadro Fuente, justo debajo de «Tachado»; son pareja incompatible, así que marcar una desmarca la otra. La cinta no llega hasta ahí. · Pulsar dos veces el botón de la cinta no dobla nada: la segunda pulsación quita el tachado que puso la primera, porque es un interruptor. Es el distractor más creíble de los tres, porque el gesto de «pulsar dos veces» sí significa algo en el grupo de al lado, con el pincel Copiar formato. · El botón Tachado no tiene flecha desplegable. · Y la ficha Avanzado no guarda ningún efecto: allí están el espaciado entre caracteres y las características OpenType."
   },
   {
     "id": "inicio-157",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
     "topic": "fuente",
@@ -2866,35 +2866,35 @@
     "tema": "Fuente",
     "difficulty": "baja",
     "sourceQuestionId": "P-0411",
-    "enunciado": "Necesitas escribir la fórmula química del agua, con el número 2 reducido de tamaño y por debajo de la línea de texto. ¿Qué botón debes utilizar en el grupo Fuente?",
+    "enunciado": "Estás escribiendo fórmulas químicas y quieres bajar los números sin soltar el teclado. ¿Qué combinación activa el subíndice en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Subíndice"
+        "text": "Ctrl+Mayús+-"
       },
       {
         "letter": "B",
-        "text": "Superíndice"
+        "text": "Ctrl+="
       },
       {
         "letter": "C",
-        "text": "Tachado"
+        "text": "Ctrl+Mayús+0"
       },
       {
         "letter": "D",
-        "text": "Subrayado"
+        "text": "Ctrl+-"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El subíndice reduce el tamaño del texto y lo coloca por debajo de la línea base, como en H₂O. Su atajo es Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión). El superíndice hace lo contrario, elevando el texto por encima de la línea, como en las potencias matemáticas — y no tiene atajo: se aplica desde el botón de la cinta o desde la casilla Superíndice del cuadro Fuente (Ctrl+M)."
+    "explicacion": "Ctrl+Mayús+- activa y desactiva el subíndice; se nombra la tecla, la del guión, no el carácter que saldría al pulsarla con Mayús. Prueba en vivo del usuario. · ⚠️ Ojo con Ctrl+=: es lo que dan casi todos los manuales, y hasta el mensaje emergente del propio botón Subíndice lo anuncia así, pero en esta instalación no hace nada. Es el esquema internacional y el distractor que más cae, precisamente porque lo respalda la propia interfaz. · Ctrl+Mayús+0 aparece en alguna tabla como subíndice y tampoco funciona aquí. · Ctrl+- hace otra cosa según se pulse en el teclado numérico o en la fila superior, pero en ninguno de los dos casos aplica subíndice."
   },
   {
     "id": "inicio-158",
     "sourceFile": "inicio.json",
     "bloque": "Inicio — Fuente",
     "tipo": "opcion_unica",
-    "categoria": "ruta",
+    "categoria": "atajo",
     "negativa": false,
     "section": "inicio",
     "topic": "fuente",
@@ -2902,28 +2902,28 @@
     "tema": "Fuente",
     "difficulty": "baja",
     "sourceQuestionId": "P-0412",
-    "enunciado": "Necesitas escribir una potencia matemática, con el exponente reducido de tamaño y por encima de la línea de texto. ¿Qué botón debes utilizar en el grupo Fuente?",
+    "enunciado": "Tienes que escribir x² y buscas el atajo del superíndice, el simétrico del que ya usas para el subíndice. ¿Cuál es en esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Superíndice"
+        "text": "Ninguno: solo se aplica desde el botón de la cinta o desde el cuadro Fuente"
       },
       {
         "letter": "B",
-        "text": "Subíndice"
+        "text": "Ctrl+Mayús++, la simétrica del subíndice en esa misma tecla"
       },
       {
         "letter": "C",
-        "text": "Tachado"
+        "text": "Ctrl+Alt++, con el signo más del teclado numérico"
       },
       {
         "letter": "D",
-        "text": "Subrayado"
+        "text": "Ctrl+Mayús+=, con el signo igual de la fila superior"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El superíndice reduce el tamaño del texto y lo eleva por encima de la línea base, como en x². En esta instalación NO tiene atajo de teclado: se aplica con el botón Superíndice del grupo Fuente o marcando la casilla Superíndice en el cuadro Fuente (Ctrl+M). El subíndice sí lo tiene: Ctrl+Mayús+-."
+    "explicacion": "Aquí el superíndice no tiene combinación asignada: se pone con el botón x² del grupo Fuente o marcando su casilla en la sección Efectos del cuadro Fuente. Las tres combinaciones descartadas se probaron una a una y ninguna hace nada. Prueba en vivo del usuario. · La asimetría es lo llamativo de esta pregunta, y es real: el subíndice sí tiene la suya, Ctrl+Mayús+-, y el superíndice se quedó sin ella. Por eso la opción que la inventa a partir de la del subíndice resulta tan convincente. · Las otras dos son las que dan los manuales que copian el esquema internacional de teclado, donde el signo igual y el más ocupan otro sitio."
   },
   {
     "id": "inicio-159",
@@ -2938,28 +2938,28 @@
     "tema": "Fuente",
     "difficulty": "baja",
     "sourceQuestionId": "P-0413",
-    "enunciado": "Quieres simular el efecto de un rotulador fluorescente sobre una frase importante de un documento, resaltándola con un color de fondo llamativo. ¿Qué botón debes utilizar en el grupo Fuente?",
+    "enunciado": "Quieres que una frase quede con fondo amarillo, como pasada con rotulador, y que ese amarillo cubra justo esas palabras y no la línea de margen a margen. ¿Qué usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Color de resaltado del texto"
+        "text": "Color de resaltado del texto, en el grupo Fuente"
       },
       {
         "letter": "B",
-        "text": "Color de fuente"
+        "text": "Sombreado, en el grupo Párrafo"
       },
       {
         "letter": "C",
-        "text": "Efectos de texto y tipografía"
+        "text": "Color de fuente, en el grupo Fuente"
       },
       {
         "letter": "D",
-        "text": "Cambiar mayúsculas y minúsculas"
+        "text": "Bordes y sombreado, en su ficha Sombreado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El Color de resaltado del texto aplica un color de fondo sobre el texto seleccionado, simulando el efecto de un rotulador fluorescente. A diferencia del color de fuente, actúa sobre el fondo de las letras. El atajo para aplicar resaltado amarillo directamente es Alt+Ctrl+H."
+    "explicacion": "El resaltado pinta el fondo de los caracteres seleccionados y se queda pegado a ellos: si después se mueve el texto, el amarillo viaja con él. · El Sombreado del grupo Párrafo pinta el fondo del párrafo entero, de margen a margen, y ese es el par que de verdad se confunde: sobre una frase suelta puede parecer el mismo efecto, hasta que se escribe una palabra más y el color se extiende. · Color de fuente pinta las letras, no lo que hay detrás. · Y la ficha Sombreado del cuadro Bordes y sombreado es la versión larga de ese mismo sombreado de párrafo, con tramas y todo: sigue siendo del párrafo, no del texto."
   },
   {
     "id": "inicio-160",
@@ -2974,28 +2974,28 @@
     "tema": "Fuente",
     "difficulty": "baja",
     "sourceQuestionId": "P-0414",
-    "enunciado": "Quieres cambiar el color de las letras de un título, sin tocar ni el tamaño ni el tipo de letra. ¿Qué botón debes utilizar en el grupo Fuente?",
+    "enunciado": "En el desplegable Color de fuente, encima de la paleta, está la entrada «Automático». ¿Qué color aplica exactamente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Color de fuente"
+        "text": "El que contraste con el fondo: negro sobre fondo claro y blanco sobre fondo oscuro"
       },
       {
         "letter": "B",
-        "text": "Color de resaltado del texto"
+        "text": "Siempre negro, sea cual sea el fondo que tenga el documento"
       },
       {
         "letter": "C",
-        "text": "Efectos de texto y tipografía"
+        "text": "El primer color del tema activo, el mismo que usan los títulos"
       },
       {
         "letter": "D",
-        "text": "Cambiar mayúsculas y minúsculas"
+        "text": "El último color de fuente que se haya aplicado en ese documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Color de fuente cambia el color de los propios caracteres del texto seleccionado. Ofrece acceso a colores del tema, colores estándar, la opción Automático y la opción Más colores para introducir valores RGB exactos. También permite aplicar degradados como color de fuente."
+    "explicacion": "«Automático» no es un color, es una instrucción: Word decide entre negro y blanco según el fondo para que el texto se lea siempre. Se comprueba poniendo un color de página oscuro desde Diseño, y viendo cómo el texto en Automático se vuelve blanco solo, sin tocarlo. · Darlo por negro fijo es lo natural, porque sobre papel blanco siempre lo es: por eso es la opción que más cae y por eso conviene probar el caso del fondo oscuro. · El primer color del tema es un color concreto de la paleta de abajo, y cambia al cambiar el tema; Automático no está en esa paleta. · Y repetir el último color usado no lo hace ninguna entrada del desplegable: para eso está el propio botón, que conserva el color en su franja inferior."
   },
   {
     "id": "inicio-161",
@@ -3010,28 +3010,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0415",
-    "enunciado": "Necesitas configurar a la vez el tipo de letra, el estilo de subrayado, el color y varios efectos como versalitas o tachado doble, y quieres abrir el cuadro completo que reúne todas esas opciones en un mismo sitio. ¿Dónde puedes abrirlo?",
+    "enunciado": "Necesitas aplicar Versalitas a un texto y compruebas que en el grupo Fuente de la cinta no hay ningún botón para ello. ¿Cómo se llega?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Iniciador de cuadro de diálogo del grupo Fuente"
+        "text": "Con el iniciador de la esquina del grupo Fuente, que abre su cuadro de diálogo"
       },
       {
         "letter": "B",
-        "text": "Tipo de fuente"
+        "text": "Con la flecha del botón Aa, que ofrece Versalitas entre sus cinco entradas"
       },
       {
         "letter": "C",
-        "text": "Tamaño de fuente"
+        "text": "Con la flecha del botón Efectos de texto y tipografía, en su galería"
       },
       {
         "letter": "D",
-        "text": "Color de fuente"
+        "text": "Con el iniciador de la esquina del grupo Estilos, que abre el panel Estilos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El iniciador de cuadro de diálogo del grupo Fuente (la pequeña flecha en la esquina inferior derecha del grupo) abre el cuadro de diálogo Fuente completo, con las pestañas Fuente y Avanzado. Reúne todas las opciones de formato de carácter incluyendo las que no tienen botón directo en la cinta como Doble tachado, Versalitas u Oculto. Su atajo es Ctrl+M."
+    "explicacion": "Versalitas es una de las cuatro casillas de la sección Efectos que no tienen botón en la cinta —las otras son Doble tachado, Mayúsculas y Oculto—, así que hay que abrir el cuadro con el iniciador de la esquina, o con Ctrl+M. · El botón Aa es el más creíble de los descartes porque también va de mayúsculas, pero sus cinco entradas reescriben el texto y ninguna se llama Versalitas: lo más parecido es MAYÚSCULAS, que iguala todas las letras a la misma altura. · Efectos de texto y tipografía lleva a contornos, sombras, reflejos e iluminados, y a las opciones OpenType; no a los efectos del cuadro Fuente. · Y el panel Estilos sirve para aplicar estilos con nombre, no para marcar un efecto suelto."
   },
   {
     "id": "inicio-162",
@@ -3046,28 +3046,28 @@
     "tema": "Fuente",
     "difficulty": "baja",
     "sourceQuestionId": "P-0416",
-    "enunciado": "Has pegado un párrafo escrito íntegramente en mayúsculas por error y quieres que Word lo transforme automáticamente para que solo la primera letra de cada frase quede en mayúscula, como se escribe normalmente. ¿Qué opción debes elegir dentro de Cambiar mayúsculas y minúsculas?",
+    "enunciado": "Pegas el título «PLAN DE MOVILIDAD URBANA. FASE 2» y le aplicas «Tipo oración». ¿Cómo queda?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tipo oración"
+        "text": "Plan de movilidad urbana. Fase 2"
       },
       {
         "letter": "B",
-        "text": "minúscula"
+        "text": "Plan De Movilidad Urbana. Fase 2"
       },
       {
         "letter": "C",
-        "text": "MAYÚSCULAS"
+        "text": "plan de movilidad urbana. fase 2"
       },
       {
         "letter": "D",
-        "text": "Poner En Mayúsculas Cada Palabra"
+        "text": "PLAN DE MOVILIDAD URBANA. Fase 2"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Tipo oración convierte el texto para que solo la primera letra de cada oración quede en mayúscula, dejando el resto en minúsculas. Es el formato estándar para texto narrativo. Word detecta el inicio de oración por los signos de puntuación."
+    "explicacion": "«Tipo oración» baja todo a minúscula y sube la primera letra de cada oración. Como en el título hay un punto en medio, la «F» de «Fase» también sube: son dos oraciones para Word, aunque sean dos trozos de un mismo rótulo. Ahí está el detalle que decide la pregunta. · Poner en mayúscula la inicial de cada palabra es otra entrada del mismo menú, «Poner En Mayúsculas Cada Palabra». · Dejarlo todo abajo es «minúscula». · Y respetar las mayúsculas ya escritas no lo hace ninguna de las cinco: todas reescriben el texto, no lo maquillan."
   },
   {
     "id": "inicio-163",
@@ -3082,28 +3082,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0417",
-    "enunciado": "Por una broma o para corregir un error de escritura curioso, quieres invertir el uso de mayúsculas y minúsculas de un texto: lo que estaba en mayúscula pasa a minúscula y viceversa. ¿Qué opción debes elegir dentro de Cambiar mayúsculas y minúsculas?",
+    "enunciado": "Aplicas «Alternar mayúsculas y minúsculas» a la palabra «Ayuntamiento». ¿Cómo queda?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alternar mayúsculas y minúsculas"
+        "text": "aYUNTAMIENTO"
       },
       {
         "letter": "B",
-        "text": "Tipo oración"
+        "text": "AYUNTAMIENTO"
       },
       {
         "letter": "C",
-        "text": "minúscula"
+        "text": "ayuntamiento"
       },
       {
         "letter": "D",
-        "text": "MAYÚSCULAS"
+        "text": "AyUnTaMiEnTo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alternar mayúsculas y minúsculas invierte el estado de cada letra del texto seleccionado: las que estaban en mayúscula pasan a minúscula y viceversa. Es útil para corregir textos escritos con el Bloq Mayús activado accidentalmente."
+    "explicacion": "La opción invierte el estado de cada letra una por una: la «A», que estaba en mayúscula, baja, y las once minúsculas suben. De ahí ese aspecto tan reconocible de palabra escrita con el Bloq Mayús puesto al revés, que es justo el estropicio que esta opción sirve para arreglar de un golpe. · Alternar una letra sí y otra no es lo que sugiere el nombre y no lo hace ninguna opción de Word: es el distractor que más cae, y la clave está en que lo que se alterna es el ESTADO de cada letra, no las letras entre sí. · Las otras dos igualan todo el texto hacia arriba o hacia abajo, que es lo que hacen MAYÚSCULAS y minúscula."
   },
   {
     "id": "inicio-164",
@@ -3118,28 +3118,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0418",
-    "enunciado": "Necesitas aplicar a un párrafo dos líneas horizontales paralelas atravesando el texto, un efecto que no existe como botón directo en la cinta y que solo puede activarse desde un cuadro de diálogo. ¿Qué casilla debes activar dentro del cuadro Fuente?",
+    "enunciado": "De las siete casillas de la sección Efectos del cuadro Fuente, algunas tienen además botón propio en el grupo Fuente de la cinta. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Doble tachado"
+        "text": "Tachado, Superíndice y Subíndice"
       },
       {
         "letter": "B",
-        "text": "Tachado"
+        "text": "Tachado, Doble tachado, Superíndice y Subíndice"
       },
       {
         "letter": "C",
-        "text": "Superíndice"
+        "text": "Tachado, Superíndice, Subíndice y Versalitas"
       },
       {
         "letter": "D",
-        "text": "Subíndice"
+        "text": "Tachado, Superíndice, Subíndice y Mayúsculas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Doble tachado aplica dos líneas horizontales paralelas que atraviesan el texto. A diferencia del Tachado simple que tiene botón directo en la cinta, el Doble tachado solo está disponible desde la sección Efectos del cuadro de diálogo Fuente (Ctrl+M)."
+    "explicacion": "Las siete casillas son Tachado, Doble tachado, Superíndice, Subíndice, Versalitas, Mayúsculas y Oculto, y solo tres de ellas tienen botón en la cinta: el tachado sencillo, el superíndice y el subíndice. Las otras cuatro obligan a abrir el cuadro. · Doble tachado es la que más se cuela, porque comparte nombre y sitio con la que sí está: el botón de la cinta hace tachado sencillo y no tiene flecha para elegir el doble. · Versalitas no tiene botón en ningún sitio. · Y Mayúsculas tampoco, aunque el desplegable Aa haga algo que se le parece: la diferencia es que Aa reescribe los caracteres y la casilla se limita a presentarlos así."
   },
   {
     "id": "inicio-165",
@@ -3154,28 +3154,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0419",
-    "enunciado": "Necesitas que un texto se muestre íntegramente en mayúsculas, pero con las que originalmente eran minúsculas representadas en un tamaño más pequeño que las mayúsculas reales, un efecto tipográfico distinto al de convertir directamente el texto a mayúsculas normales. ¿Qué casilla debes activar dentro del cuadro Fuente?",
+    "enunciado": "Tienes marcada la casilla Versalitas y, sin quitarla, marcas también la casilla Mayúsculas del mismo cuadro. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Versalitas"
+        "text": "Se desmarca Versalitas sola: las dos son pareja incompatible"
       },
       {
         "letter": "B",
-        "text": "MAYÚSCULAS"
+        "text": "Se aplican las dos y el texto queda en mayúsculas de dos alturas"
       },
       {
         "letter": "C",
-        "text": "Superíndice"
+        "text": "Word avisa de que son incompatibles y pide quedarse con una"
       },
       {
         "letter": "D",
-        "text": "Subíndice"
+        "text": "Se aplican las dos, pero solo se ve el efecto de la que se marcó primero"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Versalitas muestra todo el texto en forma de mayúsculas pero las letras originalmente en minúsculas aparecen en un tamaño menor que las mayúsculas reales. Es un efecto tipográfico elegante usado en títulos y cabeceras. Solo actúa sobre las letras escritas en minúscula; las que ya eran mayúsculas no cambian de apariencia."
+    "explicacion": "Versalitas y Mayúsculas son uno de los tres pares que se excluyen en esa sección, junto con Tachado y Doble tachado y con Superíndice y Subíndice: marcar una desmarca su pareja sin decir nada. Tiene sentido, porque las dos deciden lo mismo, cómo se presentan las letras, y no pueden decidirlo a la vez. · Las mayúsculas de dos alturas son precisamente lo que da Versalitas por sí sola: esa opción no describe una combinación, describe uno de los dos efectos. · Word no saca ningún aviso: resuelve el conflicto en silencio. · Y no hay ninguna regla de prioridad por orden de marcado: la que gana es la última que se marca, porque la anterior se apaga."
   },
   {
     "id": "inicio-166",
@@ -3190,28 +3190,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0420",
-    "enunciado": "Tienes una anotación interna en un borrador que no quieres que se vea en pantalla ni se imprima, pero que necesitas conservar guardada dentro del propio archivo por si hace falta recuperarla más adelante. ¿Qué casilla debes activar dentro del cuadro Fuente?",
+    "enunciado": "Marcas la casilla Oculto sobre una nota interna de tu borrador y el texto desaparece de la pantalla. ¿Qué ha pasado con él?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Oculto"
+        "text": "Sigue guardado en el archivo y se vuelve a ver activando Mostrar todo"
       },
       {
         "letter": "B",
-        "text": "Tachado"
+        "text": "Sigue en pantalla, pero con un sombreado gris, y solo se va al imprimir"
       },
       {
         "letter": "C",
-        "text": "Versalitas"
+        "text": "Se borra del archivo al guardar y cerrar, y ya no se puede recuperar"
       },
       {
         "letter": "D",
-        "text": "MAYÚSCULAS"
+        "text": "Sigue guardado, pero solo reaparece volviendo a desmarcar esa casilla"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El efecto Oculto hace que el texto no se muestre en pantalla ni se imprima, aunque sigue estando en el documento. Para visualizar el texto oculto hay que activar Mostrar todo (Ctrl+() o activar la opción correspondiente en las opciones de Word. Es útil para notas internas o contenido provisional."
+    "explicacion": "El texto oculto no se va a ninguna parte: sigue en el documento y reaparece al activar Mostrar todo con Ctrl+Mayús+8, marcado con un subrayado de puntos para distinguirlo del resto. De fábrica no se imprime, aunque eso se puede cambiar con la casilla «Imprimir texto oculto» de Opciones ▸ Mostrar. · Que solo reaparezca desmarcando la casilla es el distractor más difícil, porque describe algo que también funciona: se puede quitar así, pero entonces hay que encontrarlo antes, y para eso hace falta Mostrar todo. · Nada se borra al guardar: si el documento va a salir de tus manos, el texto oculto sigue ahí y hay que quitarlo a conciencia. · Y en pantalla no queda ningún rastro gris mientras Mostrar todo esté apagado."
   },
   {
     "id": "inicio-222",
@@ -3226,28 +3226,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0476",
-    "enunciado": "En la pestaña Avanzado del cuadro de diálogo Fuente, ¿qué opción permite ajustar el espacio entre caracteres aumentándolo o reduciéndolo respecto al valor normal?",
+    "enunciado": "En la ficha Avanzado eliges Espaciado: Expandido y en el campo «En:» que hay al lado escribes 2 pto. ¿Qué significa ese 2?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Espaciado"
+        "text": "Que se añaden 2 puntos de hueco entre cada par de caracteres"
       },
       {
         "letter": "B",
-        "text": "Posición"
+        "text": "Que cada carácter se ensancha 2 puntos"
       },
       {
         "letter": "C",
-        "text": "Escala"
+        "text": "Que se añaden 2 puntos de hueco solo entre palabras"
       },
       {
         "letter": "D",
-        "text": "Interletraje para fuentes"
+        "text": "Que el texto entero se desplaza 2 puntos hacia la derecha"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El campo Espaciado de la pestaña Avanzado controla el espacio entre caracteres (también llamado kerning manual o interletrado). Sus valores son Normal, Expandido (aumenta el espacio) y Comprimido (lo reduce). El valor numérico asociado indica cuántos puntos se añaden o restan al espacio normal entre cada par de caracteres."
+    "explicacion": "El campo «En:» es la medida del ajuste, y se aplica hueco a hueco: dos puntos más entre cada dos caracteres. Con Comprimido, esos mismos dos puntos se restan. Por eso una palabra larga se estira mucho más que una corta con el mismo valor. · Ensanchar los caracteres es la Escala, un campo más arriba, y ese es el par confuso de toda esta ficha. · El ajuste no distingue palabras de letras: el espacio entre palabras también es un carácter y también recibe lo suyo. · Y desplazar el texto entero no lo hace ningún campo de aquí; lo más parecido, Posición, lo mueve en vertical, no a la derecha."
   },
   {
     "id": "inicio-223",
@@ -3262,28 +3262,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0477",
-    "enunciado": "En la pestaña Avanzado del cuadro Fuente, ¿cuál es la diferencia entre el campo Posición con valor Elevada y el efecto Superíndice?",
+    "enunciado": "Sobre un texto de 12 puntos aplicas, en la ficha Avanzado, Posición: Elevado con 3 pto. ¿Cómo queda?",
     "opciones": [
       {
         "letter": "A",
-        "text": "No hay diferencia; ambos producen exactamente el mismo resultado visual"
+        "text": "Sube 3 puntos sobre la línea base y sigue midiendo 12 puntos"
       },
       {
         "letter": "B",
-        "text": "Posición Elevada desplaza el texto hacia arriba sin cambiar su tamaño; Superíndice desplaza el texto hacia arriba y además reduce su tamaño"
+        "text": "Sube 3 puntos sobre la línea base y se reduce a 3 puntos"
       },
       {
         "letter": "C",
-        "text": "Posición Elevada reduce el tamaño del texto; Superíndice no cambia el tamaño"
+        "text": "Sube hasta la altura de un superíndice y se reduce solo"
       },
       {
         "letter": "D",
-        "text": "Posición Elevada solo funciona con fuentes OpenType; Superíndice funciona con cualquier fuente"
+        "text": "Sube 3 puntos y baja a 9 puntos, la diferencia entre los dos valores"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Posición Elevada desplaza el texto por encima de la línea base sin modificar su tamaño, manteniendo el cuerpo original del carácter. Superíndice hace lo mismo pero además reduce el tamaño del carácter. Esta distinción es importante para usos tipográficos precisos donde no se quiere alterar el tamaño del texto elevado."
+    "respuesta": "A",
+    "explicacion": "Posición solo mueve: los 3 puntos son cuánto se levanta el texto respecto de la línea de escritura, y el tamaño no se toca. Es lo que se usa cuando hace falta subir algo sin que encoja, por ejemplo para cuadrar un símbolo con el resto de la línea. · Subir y encoger a la vez es lo que hace Superíndice, en la sección Efectos de la otra ficha, y ese es el par que hay que tener claro. · Las dos opciones que reinterpretan el 3 como un tamaño confunden la medida del desplazamiento con la del cuerpo de la letra: el campo dice cuánto sube, no cuánto mide."
   },
   {
     "id": "inicio-224",
@@ -3298,28 +3298,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0478",
-    "enunciado": "¿Qué hace exactamente la opción Interletraje para fuentes de la pestaña Avanzado del cuadro Fuente?",
+    "enunciado": "En la ficha Avanzado del cuadro Fuente hay una casilla «Interletraje para fuentes» con un campo de puntos al lado. ¿Qué hace al marcarla?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Aplica el mismo espaciado a todos los caracteres independientemente de su forma"
+        "text": "Deja que la fuente ajuste sola ciertos pares de letras, a partir de ese tamaño"
       },
       {
         "letter": "B",
-        "text": "Activa el ajuste automático del espacio entre pares de caracteres específicos a partir de un tamaño mínimo de fuente indicado en puntos"
+        "text": "Aplica el mismo hueco a todas las letras, sea cual sea su forma, desde ese tamaño"
       },
       {
         "letter": "C",
-        "text": "Cambia el espaciado entre palabras en vez de entre caracteres individuales"
+        "text": "Cambia el hueco entre palabras en vez de entre letras, a partir de ese tamaño"
       },
       {
         "letter": "D",
-        "text": "Activa las ligaduras automáticas para todas las fuentes instaladas"
+        "text": "Activa las ligaduras de la fuente para el texto de ese tamaño en adelante"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Interletraje para fuentes activa el ajuste automático del espacio entre pares de caracteres concretos (por ejemplo AV, To, We) que visualmente parecen demasiado separados o juntos. Solo se aplica cuando la fuente supera el tamaño mínimo especificado en el campo adyacente, expresado en puntos."
+    "respuesta": "A",
+    "explicacion": "El interletraje es el ajuste fino que la propia fuente lleva previsto para pares concretos como AV, To o We, que sin él quedan visualmente demasiado separados. El campo de puntos dice a partir de qué tamaño conviene aplicarlo, porque en cuerpos pequeños el ajuste no se aprecia y en titulares sí canta. · Aplicar el mismo hueco a todas es justo lo contrario, y además es lo que hace el campo Espaciado unas líneas más arriba: ese es el par que se confunde. · Las palabras no entran en juego: el ajuste va por pares de caracteres. · Y las ligaduras son otra característica OpenType distinta, con su propio desplegable en la misma ficha."
   },
   {
     "id": "inicio-225",
@@ -3334,28 +3334,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0479",
-    "enunciado": "Las características OpenType del cuadro de diálogo Fuente solo están disponibles para un tipo específico de fuentes. ¿Cuáles?",
+    "enunciado": "Con una fuente concreta aplicada, abres la ficha Avanzado y ves varias opciones OpenType en gris, sin poder tocarlas. ¿Qué significa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Solo para fuentes de mapa de bits instaladas en el sistema"
+        "text": "Que esa fuente no trae esas características, aunque sea de tipo OpenType"
       },
       {
         "letter": "B",
-        "text": "Solo para fuentes OpenType que incluyan esas características en su diseño"
+        "text": "Que el documento está en modo de compatibilidad con una versión antigua"
       },
       {
         "letter": "C",
-        "text": "Para todas las fuentes instaladas en el equipo sin excepción"
+        "text": "Que hay que marcar antes la casilla «Usar alternativas contextuales»"
       },
       {
         "letter": "D",
-        "text": "Solo para las fuentes incluidas por defecto en Word 365"
+        "text": "Que la fuente no está instalada, solo va incrustada dentro del archivo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Las características OpenType como ligaduras, conjuntos estilísticos, estilos de número y espaciado entre números solo están disponibles para fuentes de tipo OpenType que hayan sido diseñadas incluyendo esas características. Una fuente OpenType puede no incluir todas las características; en ese caso las opciones aparecen en gris en el cuadro de diálogo."
+    "respuesta": "A",
+    "explicacion": "Ser OpenType no garantiza traerlo todo: cada fuente incorpora las variantes que su diseñador quiso, así que una puede tener ligaduras y no tener conjuntos estilísticos. Lo que no está, Word lo enseña apagado. · El modo de compatibilidad limita otras cosas del documento, pero no decide qué variantes tiene una fuente: es el distractor más creíble porque también «apaga» opciones en Word. · La casilla de alternativas contextuales es una opción más de esa misma ficha, no un interruptor general que habilite a las demás. · Y una fuente incrustada funciona igual que una instalada mientras el documento esté abierto."
   },
   {
     "id": "inicio-226",
@@ -3370,28 +3370,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0480",
-    "enunciado": "En el desplegable Ligaduras de la pestaña Avanzado, ¿cuántas opciones están disponibles y cuál es la que activa únicamente las combinaciones de caracteres más habituales como fi o fl?",
+    "enunciado": "Quieres que Word una solo las combinaciones corrientes, como «fi» o «fl», sin meterse en filigranas de sabor antiguo. ¿Qué entrada del desplegable Ligaduras eliges?",
     "opciones": [
       {
         "letter": "A",
-        "text": "3 opciones; la que activa las más habituales es Estandar y contextuales"
+        "text": "Solo estándar"
       },
       {
         "letter": "B",
-        "text": "4 opciones; la que activa las más habituales es Solo estandar"
+        "text": "Estándar y contextuales"
       },
       {
         "letter": "C",
-        "text": "5 opciones; la que activa las más habituales es Solo estandar"
+        "text": "Históricas y discrecionales"
       },
       {
         "letter": "D",
-        "text": "5 opciones; la que activa las más habituales es Todas"
+        "text": "Todas las ligaduras"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El desplegable Ligaduras ofrece 5 opciones: Ninguna, Solo estandar, Estandar y contextuales, Historicas y discrecionales, y Todas. Solo estandar activa únicamente las ligaduras más comunes como fi, fl, ff, ffi y ffl, que son las habituales en tipografía occidental."
+    "respuesta": "A",
+    "explicacion": "El desplegable tiene cinco entradas: Ninguna, Solo estándar, Estándar y contextuales, Históricas y discrecionales, y Todas las ligaduras. «Solo estándar» activa las de siempre —fi, fl, ff, ffi, ffl—, que es exactamente lo que pide el enunciado. · «Estándar y contextuales» añade uniones que la fuente decide según las letras vecinas: correcto para tipografía cuidada, pero es más de lo que se pedía. Es el distractor difícil, porque también incluye las estándar. · «Históricas y discrecionales» son las de adorno y las de sabor antiguo, justo lo que se quería evitar. · Y «Todas las ligaduras» las enciende todas, históricas incluidas."
   },
   {
     "id": "inicio-228",
@@ -3406,7 +3406,7 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0482",
-    "enunciado": "Al maquetar una tabla de cifras con decimales, ¿qué opción OpenType garantiza que todos los números ocupen exactamente el mismo ancho para que las columnas queden perfectamente alineadas verticalmente?",
+    "enunciado": "Estás maquetando una tabla de cifras con decimales y quieres que todos los dígitos ocupen el mismo ancho para que las columnas queden alineadas. ¿Qué opción OpenType lo garantiza?",
     "opciones": [
       {
         "letter": "A",
@@ -3422,12 +3422,12 @@
       },
       {
         "letter": "D",
-        "text": "Estilos de número: Antiguos"
+        "text": "Estilos de número: Estilo antiguo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Espaciado entre números Tabular hace que todos los dígitos (0-9) ocupen exactamente el mismo ancho. Esto garantiza que las cifras queden perfectamente alineadas en columnas verticales aunque tengan distinto valor. Es la opción correcta para tablas de datos numéricos. Proporcional asigna a cada dígito el ancho que le corresponde por su forma, lo que mejora la legibilidad en texto corrido pero desalinea las columnas."
+    "explicacion": "«Tabular» hace que del 0 al 9 todos midan lo mismo de ancho, que es lo que mantiene las columnas cuadradas aunque las cifras cambien. · «Proporcional» da a cada dígito el ancho que le pide su forma —el 1 estrecho, el 8 ancho—, lo que se lee mejor en texto corrido y desbarata cualquier columna. Es el par confuso, porque son las dos únicas opciones de ese mismo desplegable. · Los dos «Estilos de número» deciden otra cosa: la altura. «Alineados» los pone todos a la altura de las mayúsculas y «Estilo antiguo» los deja subir y bajar como si fueran minúsculas. Ninguno de los dos toca el ancho, que es lo único que alinea columnas."
   },
   {
     "id": "inicio-255",
@@ -3442,28 +3442,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0509",
-    "enunciado": "¿Qué atajo aumenta el tamaño de la fuente al siguiente valor de la lista predefinida en Word 365 (versión española)?",
+    "enunciado": "Quieres agrandar el texto seleccionado saltando al siguiente valor de la lista de tamaños, sin escribir ningún número. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Mayús + >"
+        "text": "Ctrl+Mayús+>"
       },
       {
         "letter": "B",
-        "text": "Ctrl + <"
+        "text": "Ctrl+Alt+Mayús+>"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Alt + Mayús + >"
+        "text": "Ctrl+>"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Mayús + M"
+        "text": "Ctrl+Mayús+<"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "En el teclado español la tecla «<>» (a la izquierda de la Z) da «<» sin Mayús y «>» con Mayús. Cuatro combinaciones controlan el tamaño de fuente: Ctrl+Mayús+> agranda al siguiente valor de la lista · Ctrl+Alt+Mayús+> agranda de punto en punto · Ctrl+< (sin Mayús) reduce al valor anterior de la lista · Ctrl+Alt+< reduce de punto en punto. \"Ctrl+Mayús+<\" y \"Ctrl+>\" no existen: son notaciones contradictorias. Prueba en vivo del usuario."
+    "explicacion": "Ctrl+Mayús+> sube al siguiente valor de la lista: de 12 pasa a 14, no a 13. Prueba en vivo del usuario. · Ctrl+Alt+Mayús+> también agranda, pero de punto en punto, así que de 12 pasa a 13: es el par que hay que distinguir, y lo único que los separa es la tecla Alt. · Las otras dos son notaciones imposibles en un teclado español: la tecla que está a la izquierda de la Z da «<» sin Mayús y «>» con Mayús, de modo que pedir «>» sin Mayús o «<» con Mayús es contradictorio. Aparecen con frecuencia en tablas copiadas de otros idiomas, donde esos dos signos ocupan teclas distintas."
   },
   {
     "id": "inicio-256",
@@ -3478,28 +3478,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0510",
-    "enunciado": "¿Qué atajo reduce el tamaño de la fuente al valor anterior de la lista predefinida en Word 365 (versión española)?",
+    "enunciado": "Quieres reducir el texto seleccionado al valor anterior de la lista de tamaños, sin escribir ningún número. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + <"
+        "text": "Ctrl+<"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Mayús + >"
+        "text": "Ctrl+Alt+<"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Alt + <"
+        "text": "Ctrl+Mayús+<"
       },
       {
         "letter": "D",
-        "text": "Ctrl + ["
+        "text": "Ctrl+["
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "En el teclado español la tecla «<>» (a la izquierda de la Z) da «<» sin Mayús y «>» con Mayús. Cuatro combinaciones controlan el tamaño de fuente: Ctrl+Mayús+> agranda al siguiente valor de la lista · Ctrl+Alt+Mayús+> agranda de punto en punto · Ctrl+< (sin Mayús) reduce al valor anterior de la lista · Ctrl+Alt+< reduce de punto en punto. \"Ctrl+Mayús+<\" y \"Ctrl+>\" no existen: son notaciones contradictorias. Prueba en vivo del usuario."
+    "explicacion": "Ctrl+< baja al valor anterior de la lista: de 14 pasa a 12, no a 13. Fíjate en que no lleva Mayús, a diferencia de su gemela de agrandar: es porque en el teclado español el signo «<» sale sin pulsar Mayús. Prueba en vivo del usuario. · Ctrl+Alt+< también reduce, pero de punto en punto, y es el par que hay que separar. · Ctrl+Mayús+< no existe como pulsación: con Mayús esa tecla da «>», no «<». · Y Ctrl+[ es la combinación de reducir de las tablas en inglés, donde los corchetes hacen ese papel; aquí no tiene comando asignado."
   },
   {
     "id": "inicio-257",
@@ -3514,28 +3514,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0511",
-    "enunciado": "¿Qué atajo aplica o quita el formato de subíndice en la versión española de Word 365?",
+    "enunciado": "En una tabla de atajos ves el subíndice escrito como «Ctrl+_» y en otra como «Ctrl+Mayús+-». Un compañero te pregunta cuál de las dos está bien.",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Mayús + -"
+        "text": "Las dos: es la misma pulsación, nombrada por la tecla o por el signo que sale"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Mayús + ="
+        "text": "Solo «Ctrl+Mayús+-»: «Ctrl+_» sería una combinación distinta y no existe"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Mayús + B"
+        "text": "Solo «Ctrl+_»: un atajo se nombra siempre por el signo que se obtiene"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Alt + ="
+        "text": "Ninguna: en esta instalación el subíndice se pone con Ctrl+="
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión; como Mayús+- da _, también se escribe Ctrl+_) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario (sep 2026). ⚠️ Ojo: el volcado también lista Ctrl+= para subíndice, pero esa combinación no funciona en este Word."
+    "explicacion": "En el teclado español el guión bajo se obtiene pulsando Mayús y la tecla del guión, así que «Ctrl+_» y «Ctrl+Mayús+-» describen exactamente el mismo gesto de los dedos. La convención de este temario es nombrar la tecla, no el signo, porque así se evita la trampa de creer que hay dos atajos distintos. Prueba en vivo del usuario. · Las dos opciones que descartan una de las dos notaciones confunden la escritura con el hecho: no hay dos combinaciones, hay dos maneras de escribir la misma. · ⚠️ Y Ctrl+= no funciona aquí para el subíndice, aunque lo anuncie el mensaje emergente del propio botón: es el esquema internacional."
   },
   {
     "id": "inicio-262",
@@ -3550,28 +3550,28 @@
     "tema": "Fuente",
     "difficulty": "media",
     "sourceQuestionId": "P-0516",
-    "enunciado": "¿Qué atajo elimina todo el formato de carácter manual del texto seleccionado en la versión española de Word 365, equivalente a pulsar el botón Borrar todo el formato pero con alcance limitado al formato de fuente?",
+    "enunciado": "Un párrafo con estilo Título 2 tiene además negrita, color rojo y una sangría puestas a mano. Quieres devolverle solo el formato de carácter que le toca por su estilo, dejando la sangría como está. ¿Qué combinación usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Barra espaciadora"
+        "text": "Ctrl+Barra espaciadora"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Mayús + Z"
+        "text": "Ctrl+W"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Q"
+        "text": "Ctrl+Q"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Mayús + N"
+        "text": "Ctrl+Mayús+N"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Barra espaciadora elimina el formato de carácter manual del texto seleccionado, restaurando los atributos de fuente del estilo aplicado. Su alcance es más limitado que el botón Borrar todo el formato, que además elimina el formato de párrafo y los estilos. Ctrl+Q elimina solo el formato de párrafo manual. Prueba en vivo del usuario (sep 2026). ⚠️ Ojo: el cuadro Personalizar teclado lista Ctrl+W bajo dos comandos (cerrar documento y «quitar formato de párrafo»); en la práctica quita el formato de párrafo, no cierra nada."
+    "explicacion": "Ctrl+Barra espaciadora quita el formato de carácter puesto a mano y deja el que corresponde al estilo; Ctrl+Mayús+Z hace lo mismo. La negrita y el rojo se van, la sangría se queda. Prueba en vivo del usuario. · Ctrl+W es el equivalente para el párrafo: «aplica a la selección el formato de párrafo predeterminado del estilo aplicado», así que se llevaría precisamente la sangría que aquí hay que respetar. Es el par que hay que tener claro. ⚠️ Ojo: el cuadro Personalizar teclado también lo lista como cerrar la ventana, pero en vivo hace lo del párrafo y no cierra nada. · Ctrl+Q no borra nada: alinea el párrafo a la izquierda. · Y Ctrl+Mayús+N no aplica el estilo Normal como en el esquema internacional: aquí comparte comando con Ctrl+N y pone negrita."
   },
   {
     "id": "inicio-265",
@@ -3586,28 +3586,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0519",
-    "enunciado": "Un usuario quiere quitarle a un párrafo todo el formato de una vez: tanto el formato de carácter como el de párrafo y los estilos aplicados. ¿Cuál de las siguientes opciones logra ese resultado completo con una sola acción?",
+    "enunciado": "Quieres dejar un párrafo completamente limpio de una sola pasada: sin formato de carácter, sin formato de párrafo y sin el estilo que tenía. ¿Qué lo consigue?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Barra espaciadora"
+        "text": "El botón Borrar todo el formato del grupo Fuente"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Q"
+        "text": "Ctrl+Barra espaciadora"
       },
       {
         "letter": "C",
-        "text": "Botón Borrar todo el formato del grupo Fuente"
+        "text": "Ctrl+W"
       },
       {
         "letter": "D",
-        "text": "Aplicar el estilo Normal desde la galería"
+        "text": "Aplicar el estilo Normal desde la galería de estilos"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El botón Borrar todo el formato del grupo Fuente es la única opción que elimina en una sola acción el formato de carácter, el formato de párrafo y los estilos aplicados. Ctrl+Barra espaciadora solo borra el formato de carácter. Ctrl+Q solo borra el formato de párrafo. Aplicar el estilo Normal cambia el estilo pero puede dejar formato manual solapado."
+    "respuesta": "A",
+    "explicacion": "Solo ese botón se lleva las tres cosas de golpe y devuelve el párrafo a Normal sin nada encima. Lo único que respeta es el color de resaltado. · Ctrl+Barra espaciadora se queda en el formato de carácter y Ctrl+W en el de párrafo: cada uno hace una parte del trabajo, y harían falta los dos, más cambiar el estilo a mano. · Aplicar Normal desde la galería es el distractor con más fundamento, porque el resultado se parece mucho: cambia el estilo, sí, pero el formato manual que hubiera encima sobrevive, y el párrafo puede seguir en rojo y en negrita bajo un estilo llamado Normal. Esa es la diferencia entre cambiar de estilo y borrar el formato."
   },
   {
     "id": "inicio-278",
@@ -3622,28 +3622,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0532",
-    "enunciado": "¿Cuál de las siguientes afirmaciones describe correctamente la jerarquía completa de borrado de formato en Word 365, de menor a mayor alcance?",
+    "enunciado": "Ordena de menor a mayor alcance estas tres formas de quitar formato: Ctrl+Barra espaciadora, Ctrl+W y el botón Borrar todo el formato.",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Q < Ctrl+Barra espaciadora < Borrar todo el formato"
+        "text": "Ctrl+Barra espaciadora (carácter) · Ctrl+W (párrafo) · Borrar todo el formato (todo)"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Barra espaciadora (formato carácter) < Ctrl+Q (formato párrafo) < Borrar todo el formato (carácter + párrafo + estilos)"
+        "text": "Ctrl+W (carácter) · Ctrl+Barra espaciadora (párrafo) · Borrar todo el formato (todo)"
       },
       {
         "letter": "C",
-        "text": "Borrar todo el formato < Ctrl+Barra espaciadora < Ctrl+Q"
+        "text": "Borrar todo el formato (carácter) · Ctrl+Barra espaciadora (párrafo) · Ctrl+W (todo)"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Barra espaciadora = Ctrl+Q = Borrar todo el formato (todos tienen el mismo alcance)"
+        "text": "Los tres tienen el mismo alcance: solo cambia el camino para llegar a ellos"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La jerarquía correcta de menor a mayor alcance es: Ctrl+Barra espaciadora borra solo formato de carácter manual. Ctrl+Q borra solo formato de párrafo manual. El botón Borrar todo el formato borra formato de carácter + formato de párrafo + estilos aplicados. Excepción: el color de resaltado no se borra con ninguno de los tres; debe eliminarse desde el desplegable Color de resaltado → Sin color."
+    "respuesta": "A",
+    "explicacion": "Ctrl+Barra espaciadora se limita al formato de carácter manual; Ctrl+W devuelve el formato de párrafo predeterminado del estilo; y el botón se lleva carácter, párrafo y estilo, dejando el texto en Normal. · Las dos ordenaciones alternativas cambian de sitio los dos atajos o ponen el botón en el escalón más bajo, cuando es justo el que más abarca: son el error de quien recuerda que hay tres niveles pero no cuál es cuál. · Y desde luego no son equivalentes: se comprueba en un párrafo con sangría, donde uno la quita y el otro no. · Hay una excepción común a los tres: el color de resaltado no se va con ninguno; para quitarlo hay que ir al desplegable Color de resaltado y elegir «Sin color»."
   },
   {
     "id": "inicio-283",
@@ -3658,28 +3658,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0537",
-    "enunciado": "Un opositor lee esta afirmación en sus apuntes: 'Para abrir el cuadro de diálogo Fuente en Word 365 se usa Ctrl+M'. ¿Es correcta?",
+    "enunciado": "Un manual traducido del inglés asegura que Ctrl+M aumenta la sangría izquierda. Lo pruebas en esta instalación. ¿Qué ocurre en realidad?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sí, es correcta en la versión española de Word 365"
+        "text": "Se abre el cuadro de diálogo Fuente, con el foco en el nombre de la fuente"
       },
       {
         "letter": "B",
-        "text": "No, Ctrl+M aumenta la sangría izquierda"
+        "text": "Aumenta la sangría izquierda, igual que describe ese manual"
       },
       {
         "letter": "C",
-        "text": "No, Ctrl+M aplica negrita"
+        "text": "Se aplica negrita al texto que estuviera seleccionado"
       },
       {
         "letter": "D",
-        "text": "No, Ctrl+M no hace nada en la versión española"
+        "text": "Se abre el cuadro Párrafo, con el foco en el campo de la sangría"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Correcto. En la versión española de Word 365, Ctrl+M abre el cuadro de diálogo Fuente con el foco en el nombre de la tipografía (Ctrl+Mayús+F hace lo mismo). NO aplica sangría: la sangría se aumenta con Ctrl+H. En la versión inglesa Ctrl+M sí aumenta la sangría izquierda — de ahí la confusión. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+M abre el cuadro Fuente y deja el cursor en el nombre de la tipografía; Ctrl+Mayús+F hace lo mismo y Ctrl+Mayús+M lo abre con el foco en el Tamaño. Prueba en vivo del usuario. · La sangría izquierda se aumenta con Ctrl+H, que en el cuadro Personalizar teclado figura como «mueve la sangría izquierda a la tabulación siguiente». La confusión del manual no es casual: en el esquema inglés Ctrl+M sí es la sangría, y las traducciones lo copian sin probarlo. · La negrita es Ctrl+N. · Y al cuadro Párrafo se llega por el iniciador de su grupo, no con esta combinación."
   },
   {
     "id": "inicio-286",
@@ -3694,28 +3694,28 @@
     "tema": "Fuente",
     "difficulty": "alta",
     "sourceQuestionId": "P-0540",
-    "enunciado": "Un opositor tiene dudas sobre el ciclo de Mayús+F3. Afirma que 'la tercera pulsación siempre aplica Tipo oración'. ¿Es correcta esta afirmación?",
+    "enunciado": "Seleccionas un texto escrito enteramente en minúsculas y pulsas Mayús+F3 una sola vez. ¿Qué obtienes?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sí, la tercera pulsación siempre aplica Tipo oración"
+        "text": "MAYÚSCULAS"
       },
       {
         "letter": "B",
-        "text": "No; la tercera pulsación aplica Tipo oración si el texto contiene punto, o Poner En Mayúsculas Cada Palabra si no contiene punto"
+        "text": "Tipo oración"
       },
       {
         "letter": "C",
-        "text": "No; el ciclo de Mayús+F3 solo tiene dos estados: MAYÚSCULAS y minúscula"
+        "text": "Poner En Mayúsculas Cada Palabra"
       },
       {
         "letter": "D",
-        "text": "No; la tercera pulsación restaura el estado original del texto antes de la primera pulsación"
+        "text": "Nada: ya estaba en minúsculas y el ciclo empieza ahí"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La afirmación del opositor es incorrecta. El ciclo de Mayús+F3 tiene tres estados: 1ª pulsación MAYÚSCULAS, 2ª pulsación minúscula, 3ª pulsación condicional: aplica Tipo oración si el texto seleccionado contiene punto al final, o Poner En Mayúsculas Cada Palabra si no contiene punto. Prueba en vivo del usuario (sep 2026)."
+    "respuesta": "A",
+    "explicacion": "El ciclo entrega MAYÚSCULAS en la primera pulsación, minúsculas en la segunda y un tercer estado condicional en la tercera: Tipo oración si la selección termina en punto y Poner En Mayúsculas Cada Palabra si no. Prueba en vivo del usuario. · Por eso las dos opciones que adelantan el tercer estado a la primera pulsación describen bien lo que Word hace, pero dos pasos más tarde: es el error más común con este atajo. · Y el ciclo no se salta ningún paso por que el texto ya esté en ese estado: sigue el mismo orden pase lo que pase."
   },
   {
     "id": "inicio-290",
@@ -3729,7 +3729,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-107",
-    "enunciado": "¿Cuál de los siguientes atajos aplica subrayado al texto seleccionado en Word 365 versión española?",
+    "enunciado": "Quieres subrayar el texto seleccionado desde el teclado, con una línea continua por debajo de todo, espacios incluidos. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -3741,16 +3741,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+B"
+        "text": "Ctrl+K"
       },
       {
         "letter": "D",
-        "text": "Ctrl+N"
+        "text": "Ctrl+Mayús+P"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+S aplica subrayado en este Word. Ctrl+U crea un documento nuevo. Ctrl+B abre el panel de Navegación. Ctrl+N aplica negrita."
+    "explicacion": "Ctrl+S subraya, y Ctrl+Mayús+S hace exactamente lo mismo: comparten el comando Subrayado. · Ctrl+Mayús+P es el distractor más fino, porque también subraya: activa el subrayado de palabras, que deja los espacios sin línea. La pregunta lo descarta al pedir línea continua. · Ctrl+U es la trampa del esquema inglés, donde la U viene de «underline»; aquí crea un documento nuevo basado en la plantilla Normal, y quien se equivoque se encuentra otra ventana abierta. · Y Ctrl+K aplica cursiva en esta instalación; el hipervínculo, que es lo que hace en otros esquemas, aquí es Alt+Ctrl+K."
   },
   {
     "id": "inicio-291",
@@ -3764,11 +3764,11 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-108",
-    "enunciado": "¿Cuál de los siguientes atajos aplica negrita al texto seleccionado en Word 365 versión española?",
+    "enunciado": "Aplicas negrita con Ctrl+N y un compañero te dice que él usa otra combinación distinta para lo mismo. ¿Cuál puede ser?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+N"
+        "text": "Ctrl+Mayús+N"
       },
       {
         "letter": "B",
@@ -3780,12 +3780,12 @@
       },
       {
         "letter": "D",
-        "text": "Ctrl+S"
+        "text": "Ctrl+Mayús+B"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+N aplica negrita. Ctrl+B abre el panel de Navegación. Ctrl+G guarda el documento. Ctrl+S aplica subrayado."
+    "explicacion": "Ctrl+N y Ctrl+Mayús+N comparten el comando Negrita, igual que Ctrl+K y Ctrl+Mayús+K comparten Cursiva y Ctrl+S y Ctrl+Mayús+S comparten Subrayado: los tres botones del grupo Fuente tienen cada uno dos combinaciones. · ⚠️ Ojo: en el esquema internacional Ctrl+Mayús+N aplica el estilo Normal, y aquí no hace eso. · Ctrl+B es la que más se cuela, porque la B es la de «bold»: aquí abre el panel de Navegación. · Ctrl+G no formatea nada, guarda el documento, y también tiene su propia trampa, porque en Word estándar es «Ir a». · Y Ctrl+Mayús+B no tiene ningún comando asignado en esta instalación."
   },
   {
     "id": "inicio-292",
@@ -3799,7 +3799,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-109",
-    "enunciado": "¿Cuál de los siguientes atajos aplica cursiva al texto seleccionado en Word 365 versión española?",
+    "enunciado": "Estás citando el título de un libro dentro de un párrafo y quieres ponerlo en cursiva sin soltar el teclado. ¿Qué combinación lo hace en esta instalación?",
     "opciones": [
       {
         "letter": "A",
@@ -3811,16 +3811,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+C"
+        "text": "Ctrl+S"
       },
       {
         "letter": "D",
-        "text": "Ctrl+E"
+        "text": "Ctrl+N"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+K aplica cursiva en este Word. Ctrl+I abre «Ir a». Ctrl+C copia el contenido seleccionado. Ctrl+E selecciona todo el documento."
+    "explicacion": "Ctrl+K aplica y quita la cursiva, y Ctrl+Mayús+K hace exactamente lo mismo. · Ctrl+I es la trampa del esquema inglés, donde la I viene de «italic»: aquí abre «Ir a», igual que F5, y quien se equivoque se encuentra un cuadro de navegación en lugar de una letra inclinada. · Ctrl+S y Ctrl+N son los otros dos vértices del trío N, K y S del grupo Fuente: subrayar y negrita. Saber cuál es cuál en el esquema español es media pregunta, porque las tres letras son iniciales del nombre en castellano y no del inglés."
   },
   {
     "id": "inicio-300",
@@ -3834,7 +3834,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-125",
-    "enunciado": "¿Qué atajo muestra u oculta el panel Propiedades de formato («Revelar formato») en Word 365?",
+    "enunciado": "Quieres ver de un vistazo, en un panel lateral, todo el formato que tiene el texto donde está el cursor: fuente, párrafo y sección. ¿Qué combinación lo abre?",
     "opciones": [
       {
         "letter": "A",
@@ -3846,16 +3846,16 @@
       },
       {
         "letter": "C",
-        "text": "Alt+F1"
+        "text": "F1"
       },
       {
         "letter": "D",
-        "text": "F1"
+        "text": "Alt+Ctrl+Mayús+S"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+F1 muestra u oculta el panel Propiedades de formato del texto seleccionado. Ctrl+F1 no tiene función en este Word. Alt+F1 pasa al campo siguiente. F1 abre la Ayuda."
+    "explicacion": "Mayús+F1 abre el panel de Propiedades de formato, conocido también como «Mostrar formato» o «Revelar formato»: desglosa el formato aplicado en tres bloques y permite compararlo con otra selección. · Alt+Ctrl+Mayús+S es el distractor difícil, porque también abre un panel lateral de formato: el panel Estilos. La diferencia está en el sentido de la información, uno aplica estilos y el otro informa de lo que ya hay aplicado. · Ctrl+F1 no enseña nada del texto: contrae y despliega la cinta. · Y F1 abre la Ayuda de Word."
   },
   {
     "id": "inicio-301",
@@ -3869,7 +3869,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-147",
-    "enunciado": "¿Cuál de los siguientes atajos copia el formato de un texto seleccionado para aplicarlo a otro en Word 365?",
+    "enunciado": "Has dejado un título con la fuente, el tamaño y el color exactos que querías y quieres llevarte ese formato con el teclado para aplicarlo después a otro. ¿Qué combinación copia el formato?",
     "opciones": [
       {
         "letter": "A",
@@ -3877,20 +3877,20 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+C"
+        "text": "Alt+Ctrl+V"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+C"
+        "text": "Ctrl+C"
       },
       {
         "letter": "D",
-        "text": "Alt+C"
+        "text": "Ctrl+Mayús+C"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+C copia el formato del texto seleccionado (pincel). Ctrl+C copia el contenido. Ctrl+Mayús+C no tiene función en este Word. Alt+C tampoco."
+    "explicacion": "Alt+Ctrl+C copia el formato y Alt+Ctrl+V lo pega: son el pincel Copiar formato hecho con teclas. Prueba en vivo del usuario. · Alt+Ctrl+V es la otra mitad del mismo par y hace justo lo contrario, así que es el distractor más difícil: las dos pertenecen a la misma operación y solo las separa una letra. · Ctrl+C copia el contenido, no el aspecto: es el error de quien no distingue las dos cosas que se pueden copiar de un texto. · ⚠️ Y Ctrl+Mayús+C es la de copiar formato en el esquema internacional; en esta instalación no tiene ningún comando asignado, por mucho que la den por buena casi todos los manuales."
   },
   {
     "id": "inicio-302",
@@ -3904,28 +3904,28 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-148",
-    "enunciado": "¿Cuál de los siguientes atajos pega el formato copiado sobre el texto seleccionado en Word 365?",
+    "enunciado": "Copias con Alt+Ctrl+C el formato de un párrafo que tenía negrita y además una sangría, y lo pegas con Alt+Ctrl+V sobre otro párrafo distinto. ¿Qué se le aplica al párrafo de destino?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Ctrl+V"
+        "text": "Solo el formato de párrafo: la sangría sí, la negrita no"
       },
       {
         "letter": "B",
-        "text": "Ctrl+V"
+        "text": "Los dos formatos: la sangría y también la negrita"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+V"
+        "text": "Solo el formato de carácter: la negrita sí, la sangría no"
       },
       {
         "letter": "D",
-        "text": "Alt+V"
+        "text": "Ninguno: el par solo funciona con texto seleccionado, no sobre un párrafo entero"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+V pega el formato copiado previamente con Alt+Ctrl+C. Ojo: si el origen mezcla formato de caracter (negrita, cursiva...) y de parrafo (sangria, interlineado), al pegarlo sobre otro parrafo solo se aplica el formato de parrafo. Ctrl+V pega el contenido del portapapeles. Prueba en vivo del usuario."
+    "explicacion": "Cuando el formato copiado mezcla lo de carácter y lo de párrafo, al soltarlo sobre otro párrafo solo se aplica lo de párrafo: llega la sangría y se queda por el camino la negrita. Prueba en vivo del usuario. · Esperar los dos es lo lógico, y es lo que hace que esta pregunta sorprenda: por eso conviene comprobar el resultado en vez de darlo por hecho. · Quedarse solo con el formato de carácter es el reverso exacto, y es lo que ocurriría al pegarlo sobre una selección de palabras dentro de un párrafo, no sobre el párrafo entero. · Y el par funciona en los dos casos: lo que cambia según lo seleccionado es cuánto se aplica, no si se aplica."
   },
   {
     "id": "inicio-303",
@@ -3939,28 +3939,28 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-150",
-    "enunciado": "¿Qué atajo resalta el texto seleccionado en Word 365?",
+    "enunciado": "Un manual traducido asegura que Ctrl+H abre Buscar y reemplazar. Lo pruebas en esta instalación. ¿Qué hace en realidad?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Ctrl+H"
+        "text": "Aumenta la sangría izquierda hasta la tabulación siguiente"
       },
       {
         "letter": "B",
-        "text": "Ctrl+H"
+        "text": "Abre Buscar y reemplazar en su ficha Reemplazar"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+H"
+        "text": "Aplica el resaltado al texto seleccionado"
       },
       {
         "letter": "D",
-        "text": "Alt+H"
+        "text": "Reduce la sangría francesa del párrafo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+H aplica el resaltado al texto seleccionado. En la versión española Ctrl+H aplica sangría (Reemplazar es Ctrl+L). Ctrl+Mayus+H reduce la sangría francesa. Alt+H no resalta. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+H figura en el cuadro Personalizar teclado como «Sangría»: mueve la sangría izquierda a la tabulación siguiente. · Reemplazar es Ctrl+L aquí; la confusión del manual viene del esquema inglés, donde Ctrl+H es «replace», y es el distractor que más cae porque lo repite media internet. · El resaltado es Alt+Ctrl+H, la misma tecla con Alt delante: prueba en vivo del usuario. · Y reducir la sangría francesa es Ctrl+Mayús+H. Cuatro combinaciones con la misma letra y cuatro efectos distintos, tres de ellos de sangría: merece la pena fijarlas juntas."
   },
   {
     "id": "inicio-305",
@@ -3974,28 +3974,28 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-166",
-    "enunciado": "¿Qué atajo cambia mayúsculas y minúsculas del texto seleccionado en Word 365?",
+    "enunciado": "Te equivocas y pulsas F3 en vez de Mayús+F3 con una palabra suelta seleccionada. ¿Qué intenta hacer Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+F3"
+        "text": "Sustituirla por el elemento de Autotexto que se llame así"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+F3"
+        "text": "Cambiarle las mayúsculas y minúsculas, igual que Mayús+F3"
       },
       {
         "letter": "C",
-        "text": "F3"
+        "text": "Repetir la última acción, igual que F4"
       },
       {
         "letter": "D",
-        "text": "Alt+F3"
+        "text": "Abrir el cuadro Buscar con esa palabra ya escrita"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Mayús+F3 cicla entre tipos de capitalización. Ctrl+Mayús+F3 inserta el contenido del portapapeles especial. F3 inserta un bloque de creación. Alt+F3 crea un Autotexto."
+    "explicacion": "F3 es InsertarAutotexto: toma lo que hay escrito como si fuera el nombre de un elemento de Autotexto y lo cambia por su contenido. Si no existe ninguno con ese nombre, no ocurre nada, y de ahí la sensación de que la tecla «no va». Su hermana Alt+F3 es la que crea esos elementos, y Ctrl+F3 y Ctrl+Mayús+F3 manejan el Autotexto especial, el acumulador. · Mayús+F3 sí cambia mayúsculas y minúsculas, pero es la que el enunciado dice que no se pulsó. · Repetir es F4, junto con Ctrl+Y y Alt+Entrar. · Y Buscar no tiene nada que ver con esta familia de teclas."
   },
   {
     "id": "inicio-307",
@@ -4009,7 +4009,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-180",
-    "enunciado": "¿Qué atajo aplica el formato de texto oculto en Word 365?",
+    "enunciado": "Quieres marcar como texto oculto una nota interna del borrador sin abrir el cuadro Fuente. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -4017,11 +4017,11 @@
       },
       {
         "letter": "B",
-        "text": "Alt+Ctrl+Q"
+        "text": "Ctrl+Mayús+Q"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+Q"
+        "text": "Alt+Ctrl+Q"
       },
       {
         "letter": "D",
@@ -4030,7 +4030,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Mayús+Q activa o desactiva el formato de texto oculto. Alt+Ctrl+Q activa la vista Esquema. Ctrl+Mayús+Q aplica la fuente Symbol. Ctrl+Q alinea el párrafo a la izquierda."
+    "explicacion": "Alt+Mayús+Q activa y desactiva el formato de texto oculto, exactamente lo mismo que la casilla Oculto del cuadro Fuente. · Ctrl+Mayús+Q es el distractor más difícil, porque el resultado se parece: aplica la fuente Symbol, y el texto tampoco se puede leer, aunque siga a la vista convertido en símbolos griegos. · Alt+Ctrl+Q abre la vista Esquema. · Y Ctrl+Q alinea el párrafo a la izquierda. Cuatro combinaciones con la Q y cuatro efectos que no se parecen en nada, lo que las convierte en un grupo fácil de mezclar."
   },
   {
     "id": "inicio-344",
@@ -4044,28 +4044,28 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-275",
-    "enunciado": "¿Qué atajo aplica mayúsculas al texto seleccionado en Word 365?",
+    "enunciado": "Aplicas Ctrl+Mayús+U a un texto escrito en minúsculas y se ve todo en mayúsculas. Después lo copias y lo pegas con «Conservar solo el texto» en otro documento. ¿Cómo llega allí?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+U"
+        "text": "En minúsculas: era un efecto de presentación, no una reescritura"
       },
       {
         "letter": "B",
-        "text": "Ctrl+U"
+        "text": "En mayúsculas: la combinación reescribe los caracteres uno a uno"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+A"
+        "text": "En minúsculas, pero con la inicial de cada palabra en mayúscula"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+U"
+        "text": "En mayúsculas de dos alturas, como si fuesen versalitas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+U aplica mayúsculas al texto seleccionado. Ctrl+U crea un documento nuevo. Ctrl+Mayús+A aplica el estilo Normal al párrafo. Alt+Ctrl+U actualiza el formato automático del documento."
+    "explicacion": "Ctrl+Mayús+U activa y desactiva el formato de mayúsculas, que es la casilla Mayúsculas del cuadro Fuente: presenta el texto así, pero por debajo sigue escrito como estaba. Al pegar sin formato se cae el efecto y reaparecen las minúsculas. · Quien reescribe de verdad es el desplegable Aa del grupo Fuente: si el texto se hubiera pasado a mayúsculas por ahí, llegaría en mayúsculas. Esa es la diferencia que la pregunta persigue, y la razón de que existan las dos formas. · Poner la inicial de cada palabra es otra entrada de ese desplegable. · Y las versalitas son la casilla de al lado, incompatible con esta."
   },
   {
     "id": "inicio-345",
@@ -4079,7 +4079,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-276",
-    "enunciado": "¿Qué atajo aplica versalitas al texto seleccionado en Word 365?",
+    "enunciado": "Buscas la combinación de versalitas para no tener que abrir el cuadro Fuente cada vez. ¿Cuál figura para eso en esta instalación?",
     "opciones": [
       {
         "letter": "A",
@@ -4087,11 +4087,11 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+L"
+        "text": "Ctrl+Mayús+K"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+V"
+        "text": "Ctrl+L"
       },
       {
         "letter": "D",
@@ -4100,7 +4100,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+L aplica el formato de versalitas al texto seleccionado. Ctrl+L abre Buscar y reemplazar. Ctrl+Mayús+V pega solo texto sin formato. Alt+Ctrl+L inserta una nota al final."
+    "explicacion": "Ctrl+Mayús+L aparece como Versalitas en el cuadro Personalizar teclado. · ⚠️ Ojo: esa misma combinación figura además bajo «Lista con viñetas», un conflicto interno del propio cuadro que conviene conocer, porque explica que a veces aparezca una viñeta donde se esperaban versalitas. · Ctrl+L no tiene nada de formato: abre Buscar y reemplazar en la ficha Reemplazar, y es la que más se cuela por compartir letra. · Ctrl+Mayús+K aplica cursiva, igual que Ctrl+K. · Y Alt+Ctrl+L inserta una nota al final, de la pestaña Referencias."
   },
   {
     "id": "inicio-346",
@@ -4114,7 +4114,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-277",
-    "enunciado": "¿Qué atajo aplica subrayado de palabras al texto seleccionado en Word 365?",
+    "enunciado": "Quieres subrayar una frase de manera que la línea pase por debajo de las palabras pero no de los espacios que las separan. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -4122,20 +4122,20 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+S"
-      },
-      {
-        "letter": "C",
         "text": "Ctrl+Mayús+S"
       },
       {
+        "letter": "C",
+        "text": "Ctrl+Mayús+D"
+      },
+      {
         "letter": "D",
-        "text": "Alt+Ctrl+P"
+        "text": "Ctrl+Mayús+U"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+P aplica subrayado solo a las palabras sin subrayar los espacios entre ellas. Ctrl+S aplica subrayado completo incluyendo espacios. Ctrl+Mayús+S aplica también subrayado completo. Alt+Ctrl+P activa la vista Diseño de impresión."
+    "explicacion": "Ctrl+Mayús+P activa y desactiva el subrayado de palabras, que es justo eso: línea bajo las letras y hueco en los espacios. · Ctrl+Mayús+S subraya del tirón, espacios incluidos, exactamente igual que Ctrl+S: es el par que hay que distinguir, porque solo cambia una letra y el resultado se parece hasta que uno se fija en los huecos. · Ctrl+Mayús+D pone el subrayado doble, la tercera variante con atajo propio. De los diecisiete estilos que ofrece el cuadro Fuente, solo esos tres tienen combinación. · Y Ctrl+Mayús+U no subraya nada: activa el formato de mayúsculas."
   },
   {
     "id": "inicio-347",
@@ -4149,7 +4149,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-278",
-    "enunciado": "¿Qué atajo aplica subrayado doble al texto seleccionado en Word 365?",
+    "enunciado": "Necesitas poner subrayado doble a un importe, sin pasar por el cuadro Fuente. ¿Qué combinación lo aplica?",
     "opciones": [
       {
         "letter": "A",
@@ -4157,11 +4157,11 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+S"
+        "text": "Ctrl+D"
       },
       {
         "letter": "C",
-        "text": "Ctrl+D"
+        "text": "Ctrl+Mayús+S"
       },
       {
         "letter": "D",
@@ -4170,7 +4170,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+D aplica subrayado doble al texto seleccionado. Ctrl+S aplica subrayado simple. Ctrl+D alinea el párrafo a la derecha. Alt+Ctrl+D activa la vista Diseño de impresión."
+    "explicacion": "Ctrl+Mayús+D activa y desactiva el subrayado doble, una de las tres únicas variantes de subrayado con atajo. · Ctrl+D es la que más se cuela, y en español por partida doble: la D no es de «doble» sino de «derecha», porque alinea el párrafo a la derecha. Pulsarla por error no subraya nada y encima descoloca el párrafo. · Ctrl+Mayús+S subraya, pero sencillo. · Y Alt+Ctrl+D no formatea: cambia a la vista Diseño de impresión, junto con Alt+Ctrl+N para Borrador y Alt+Ctrl+Q para Esquema."
   },
   {
     "id": "inicio-353",
@@ -4184,28 +4184,28 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-285",
-    "enunciado": "¿Qué atajo aplica el formato de fuente Symbol al texto seleccionado en Word 365?",
+    "enunciado": "Pulsas Ctrl+Mayús+Q sobre una palabra y sus letras se convierten de golpe en símbolos griegos y matemáticos. ¿Qué ha pasado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+Q"
+        "text": "Word le ha aplicado la fuente Symbol"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Q"
+        "text": "Word le ha aplicado el formato de texto oculto"
       },
       {
         "letter": "C",
-        "text": "Alt+Ctrl+Q"
+        "text": "Word muestra el código del campo, no su resultado"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+S"
+        "text": "Word ha cambiado a la fuente de títulos del tema"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+Q aplica la fuente Symbol al texto seleccionado. Ctrl+Q alinea el párrafo a la izquierda. Alt+Ctrl+Q activa la vista Esquema. Ctrl+Mayús+S aplica subrayado."
+    "explicacion": "Ctrl+Mayús+Q aplica la fuente Symbol, en la que cada tecla latina dibuja un símbolo griego o matemático. La palabra sigue escrita igual por debajo; lo único que ha cambiado es con qué se dibuja, así que se deshace poniendo cualquier otra fuente. · El texto oculto se pone con Alt+Mayús+Q, comparte la Q y por eso se confunden, pero lo que hace es desaparecer, no cambiar de alfabeto. · Un código de campo se muestra con Alt+F9 y se reconoce por ir entre llaves, no por parecer griego. · Y la fuente de títulos del tema es otra tipografía latina normal y corriente."
   },
   {
     "id": "inicio-354",
@@ -4219,7 +4219,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-286",
-    "enunciado": "¿Qué atajo abre el cuadro de diálogo Fuente con el foco puesto directamente en el campo Tamaño en Word 365?",
+    "enunciado": "Quieres abrir el cuadro de diálogo Fuente aterrizando directamente en el campo Tamaño, para escribir un valor que no está en la lista. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -4227,20 +4227,20 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+F"
-      },
-      {
-        "letter": "C",
         "text": "Ctrl+M"
       },
       {
+        "letter": "C",
+        "text": "Ctrl+Mayús+F"
+      },
+      {
         "letter": "D",
-        "text": "Alt+Ctrl+M"
+        "text": "Ctrl+Mayús+>"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+M abre el cuadro de diálogo Fuente con el cursor ya en el campo Tamaño. Ctrl+M y Ctrl+Mayús+F abren el mismo cuadro pero con el foco en el campo Fuente (nombre). Alt+Ctrl+M inserta un comentario. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+Mayús+M abre el cuadro Fuente con el cursor puesto en Tamaño, listo para teclear un valor cualquiera entre 1 y 1.638. Prueba en vivo del usuario. · Ctrl+M y Ctrl+Mayús+F abren ese mismo cuadro, pero dejando el foco en el nombre de la fuente: las tres llegan al mismo sitio y solo se diferencian en dónde cae el cursor, que es exactamente lo que aquí se pregunta. Ese detalle es lo único que separa la respuesta buena de dos opciones que también «abren el cuadro Fuente». · Y Ctrl+Mayús+> no abre nada: agranda el texto al siguiente valor de la lista, sin pasar por ningún cuadro y sin dejar elegir el número."
   },
   {
     "id": "inicio-355",
@@ -4254,28 +4254,28 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-287",
-    "enunciado": "Al abrir el cuadro de diálogo Fuente por teclado, ¿dónde queda el foco con cada atajo en Word 365?",
+    "enunciado": "Tres combinaciones abren el cuadro de diálogo Fuente en esta instalación. ¿Dónde deja el foco cada una?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+M y Ctrl+Mayús+F → en el nombre de la fuente; Ctrl+Mayús+M → en el Tamaño"
+        "text": "Ctrl+M y Ctrl+Mayús+F en el nombre; Ctrl+Mayús+M en el Tamaño"
       },
       {
         "letter": "B",
-        "text": "Los tres dejan el foco en el nombre de la fuente"
+        "text": "Ctrl+M y Ctrl+Mayús+M en el nombre; Ctrl+Mayús+F en el Tamaño"
       },
       {
         "letter": "C",
-        "text": "Ctrl+M → en el Tamaño; Ctrl+Mayús+M → en el nombre"
+        "text": "Ctrl+M en el Tamaño; Ctrl+Mayús+F y Ctrl+Mayús+M en el nombre"
       },
       {
         "letter": "D",
-        "text": "Ninguno de los tres abre el cuadro de diálogo Fuente"
+        "text": "Las tres dejan el foco en el nombre de la fuente"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+M y Ctrl+Mayús+F abren el cuadro Fuente con el foco en el nombre de la tipografía; Ctrl+Mayús+M lo abre con el foco en el campo Tamaño. No existe un atajo que active la caja de fuente de la cinta: todos abren el diálogo. Prueba en vivo del usuario (sep 2026)."
+    "explicacion": "Ctrl+M y Ctrl+Mayús+F son equivalentes y aterrizan en el nombre de la tipografía; Ctrl+Mayús+M es la que cae en Tamaño. Prueba en vivo del usuario. La regla mnemotécnica está en la M de más: la combinación con la M y el Mayús juntos es la que va a la Medida. · Las dos opciones que reparten los papeles de otra forma son las que hay que descartar con cuidado, porque las tres combinaciones sí abren el cuadro y solo se distingue una por el campo en el que cae el cursor. · Y no es cierto que las tres acaben en el mismo sitio: si así fuera, no tendría sentido que existiera la tercera. · ⚠️ Ojo: ninguna de las tres lleva el foco a la caja de fuente de la cinta; no hay atajo para eso."
   },
   {
     "id": "inicio-356",
@@ -4289,28 +4289,28 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-288",
-    "enunciado": "¿Qué atajo aumenta el tamaño de la fuente de punto en punto en Word 365 (versión española)?",
+    "enunciado": "Estás ajustando un titular al milímetro y quieres subirlo de 12 a 13 puntos con el teclado, sin saltar al 14 de la lista. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Alt + Mayús + >"
+        "text": "Ctrl+Alt+Mayús+>"
       },
       {
         "letter": "B",
-        "text": "Ctrl + Mayús + >"
+        "text": "Ctrl+Mayús+>"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Alt + <"
+        "text": "Ctrl+Alt+<"
       },
       {
         "letter": "D",
-        "text": "Ctrl + <"
+        "text": "Ctrl+Alt+Mayús+<"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "En el teclado español la tecla «<>» (a la izquierda de la Z) da «<» sin Mayús y «>» con Mayús. Cuatro combinaciones controlan el tamaño de fuente: Ctrl+Mayús+> agranda al siguiente valor de la lista · Ctrl+Alt+Mayús+> agranda de punto en punto · Ctrl+< (sin Mayús) reduce al valor anterior de la lista · Ctrl+Alt+< reduce de punto en punto. \"Ctrl+Mayús+<\" y \"Ctrl+>\" no existen: son notaciones contradictorias. Prueba en vivo del usuario."
+    "explicacion": "Ctrl+Alt+Mayús+> sube de punto en punto: la tecla Alt es la que convierte el salto de lista en un incremento fino. Prueba en vivo del usuario. · Ctrl+Mayús+>, sin Alt, es la misma familia pero saltando al siguiente valor de la lista, que desde 12 lleva al 14 y se pasa del objetivo. Es el par que hay que separar. · Ctrl+Alt+< va de punto en punto también, pero hacia abajo. · Y Ctrl+Alt+Mayús+< es una notación imposible: en el teclado español esa tecla da «>» cuando se pulsa con Mayús, no «<»."
   },
   {
     "id": "inicio-357",
@@ -4324,28 +4324,28 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-289",
-    "enunciado": "¿Qué atajo reduce el tamaño de la fuente de punto en punto en Word 365 (versión española)?",
+    "enunciado": "Un texto está en 11 puntos y lo quieres en 10, sin que Word te lo baje directamente a 10 saltándose nada ni te lleve al 9. ¿Qué combinación baja de punto en punto?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + Alt + <"
+        "text": "Ctrl+Alt+<"
       },
       {
         "letter": "B",
-        "text": "Ctrl + <"
+        "text": "Ctrl+<"
       },
       {
         "letter": "C",
-        "text": "Ctrl + Alt + Mayús + >"
+        "text": "Ctrl+Alt+Mayús+>"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Mayús + >"
+        "text": "Ctrl+Mayús+<"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "En el teclado español la tecla «<>» (a la izquierda de la Z) da «<» sin Mayús y «>» con Mayús. Cuatro combinaciones controlan el tamaño de fuente: Ctrl+Mayús+> agranda al siguiente valor de la lista · Ctrl+Alt+Mayús+> agranda de punto en punto · Ctrl+< (sin Mayús) reduce al valor anterior de la lista · Ctrl+Alt+< reduce de punto en punto. \"Ctrl+Mayús+<\" y \"Ctrl+>\" no existen: son notaciones contradictorias. Prueba en vivo del usuario."
+    "explicacion": "Ctrl+Alt+< baja un punto por pulsación. Fíjate en que aquí no hay Mayús, mientras que su gemela de subir sí la lleva: es porque en el teclado español el «<» sale sin Mayús y el «>» con Mayús, así que la asimetría de las combinaciones es solo aparente. Prueba en vivo del usuario. · Ctrl+< baja al valor anterior de la lista, que desde 11 lleva a 10 por casualidad y desde 14 llevaría a 12: parece la misma y no lo es. · Ctrl+Alt+Mayús+> también va de punto en punto, pero subiendo. · Y Ctrl+Mayús+< no existe como pulsación."
   },
   {
     "id": "inicio-361",
@@ -4359,11 +4359,11 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-295",
-    "enunciado": "¿Qué atajo aplica subíndice al texto seleccionado en Word 365?",
+    "enunciado": "En un manual encuentras que el subíndice se aplica con Ctrl+igual. Lo pruebas en esta instalación y no ocurre nada. ¿Cuál es la combinación real?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+igual"
+        "text": "Ctrl+Mayús+guión"
       },
       {
         "letter": "B",
@@ -4371,16 +4371,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+menos"
+        "text": "Ctrl+guión"
       },
       {
         "letter": "D",
-        "text": "Ctrl+menos"
+        "text": "Alt+Ctrl+guión"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión; = Ctrl+_) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario (sep 2026). ⚠️ Ojo: el volcado también lista Ctrl+= para subíndice, pero esa combinación no funciona en este Word."
+    "respuesta": "A",
+    "explicacion": "El subíndice se aplica y se quita con Ctrl+Mayús y la tecla del guión, que también se escribe Ctrl+_ porque ese es el signo que sale al pulsar Mayús con ella. Prueba en vivo del usuario. · ⚠️ Ojo: Ctrl+igual es lo que dan casi todos los manuales, y hasta el mensaje emergente del propio botón Subíndice lo anuncia así; en esta instalación no hace nada, porque pertenece al esquema internacional. Que lo repita la propia interfaz es lo que hace tan sólido el error. · Ctrl+Mayús+igual sería su simétrica para el superíndice en ese mismo esquema, y tampoco funciona: aquí el superíndice no tiene atajo. · Y las combinaciones con el guión y Alt o Ctrl a secas insertan guiones de distinto tipo, no formatean nada."
   },
   {
     "id": "inicio-362",
@@ -4394,28 +4394,28 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-296",
-    "enunciado": "¿Qué atajo aplica o quita el subíndice del texto seleccionado en Word 365 (versión española)?",
+    "enunciado": "Escribes «H2O» y quieres bajar el 2 sin ratón. Seleccionas el 2 y pulsas Ctrl+Mayús+guión. Luego te das cuenta de que querías dejarlo normal. ¿Qué haces?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+menos"
+        "text": "Volver a pulsar Ctrl+Mayús+guión: la misma combinación lo pone y lo quita"
       },
       {
         "letter": "B",
-        "text": "Ctrl+menos"
+        "text": "Pulsar Ctrl+Mayús+igual, que es la combinación inversa del subíndice"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+igual"
+        "text": "Pulsar Ctrl+Barra espaciadora, la única forma de deshacer un subíndice"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+menos"
+        "text": "Volver al cuadro Fuente, porque el atajo solo pone y nunca quita"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayús+- (Ctrl + Mayús + la tecla del guión) aplica o quita el subíndice. Ctrl+= NO funciona en esta instalación — era el esquema internacional. Prueba en vivo del usuario."
+    "explicacion": "Es un interruptor: la misma combinación activa y desactiva el subíndice, igual que ocurre con la negrita, la cursiva o el subrayado. Prueba en vivo del usuario. · Ctrl+Mayús+igual no es la inversa de nada aquí: pertenece al esquema internacional, donde sería el superíndice, y en esta instalación no hace nada. · Ctrl+Barra espaciadora sí lo quitaría, porque limpia todo el formato de carácter, pero se llevaría por delante también la negrita o el color que hubiera: no es «la única forma», es una manera bastante bruta. Ese matiz es lo que la convierte en el distractor difícil. · Y ningún atajo de formato de este grupo es de un solo sentido."
   },
   {
     "id": "inicio-363",
@@ -4429,28 +4429,28 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-297",
-    "enunciado": "¿Qué atajo restablece el formato de carácter del texto seleccionado en Word 365?",
+    "enunciado": "Un texto tiene negrita, cursiva, subrayado, color, otra fuente y otro tamaño puestos a mano. Quieres devolverle el formato de carácter que le toca por su estilo, sin abrir ningún cuadro. ¿Qué combinación usas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Espacio"
+        "text": "Ctrl+Barra espaciadora"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+Z"
+        "text": "Ctrl+W"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Q"
+        "text": "Ctrl+Z"
       },
       {
         "letter": "D",
-        "text": "Alt+Ctrl+Espacio"
+        "text": "Alt+Ctrl+Barra espaciadora"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Barra espaciadora (Ctrl+Espacio) restablece el formato de carácter: quita negrita, cursiva, subrayado, etc. y deja los atributos del estilo. Ctrl+Mayús+Z hace exactamente lo mismo (segunda combinación asignada a DefinirCarácter). Ctrl+Q es el de PÁRRAFO. Prueba en vivo del usuario (sep 2026); Confirmado en el volcado de Personalizar teclado de tu Word 365 (v2608)."
+    "explicacion": "Ctrl+Barra espaciadora devuelve el formato de carácter del estilo y se lleva de un golpe las seis cosas puestas a mano. Ctrl+Mayús+Z hace exactamente lo mismo: las dos apuntan al mismo comando. Prueba en vivo del usuario. · Ctrl+W es el equivalente del párrafo, no del carácter: aplica el formato de párrafo predeterminado del estilo, así que dejaría intactas la negrita y la cursiva y en cambio se llevaría sangrías e interlineados. Es el par que hay que tener claro. · Ctrl+Z deshace la última acción, que es otra cosa: con seis formatos aplicados haría falta pulsarlo seis veces, y arrastraría también lo que se hubiera hecho por el camino. · Y Alt+Ctrl+Barra espaciadora no limpia nada: pone en marcha «Leer en voz alta»."
   },
   {
     "id": "inicio-364",
@@ -4464,7 +4464,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-298",
-    "enunciado": "¿Qué atajo alternativo también restablece el formato de carácter además de Ctrl+Espacio en Word 365?",
+    "enunciado": "Sabes que Ctrl+Barra espaciadora limpia el formato de carácter y buscas la otra combinación que hace exactamente lo mismo. ¿Cuál es?",
     "opciones": [
       {
         "letter": "A",
@@ -4476,7 +4476,7 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Q"
+        "text": "Ctrl+W"
       },
       {
         "letter": "D",
@@ -4485,7 +4485,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Ctrl+Mayus+Z restablece el formato de caracter, igual que Ctrl+Espacio (las dos apuntan al comando DefinirCaracter). Prueba en vivo del usuario (sep-2026): sobre texto con negrita+cursiva+subrayado+color+fuente+tamano, lo devuelve todo al formato del parrafo. Ctrl+Z deshace; Ctrl+Q restablece el formato de PARRAFO; Alt+Mayus+Z no tiene funcion."
+    "explicacion": "Ctrl+Mayús+Z comparte comando con Ctrl+Barra espaciadora: sobre un texto con negrita, cursiva, subrayado, color, fuente y tamaño cambiados a mano, lo devuelve todo al formato de carácter del párrafo. Prueba en vivo del usuario. · Ctrl+Z es el distractor que más cae, porque comparte la Z y porque «deshacer» suena a lo mismo: pero deshacer va acción por acción y afecta a todo lo hecho, mientras que este limpia el formato de la selección de una vez, sin importar cuándo se aplicó. · Ctrl+W hace la operación equivalente pero sobre el formato de párrafo. · Y Alt+Mayús+Z no tiene ningún comando asignado en esta instalación."
   },
   {
     "id": "inicio-365",
@@ -4499,7 +4499,7 @@
     "subtopic": null,
     "tema": "Fuente",
     "sourceQuestionId": "8-315",
-    "enunciado": "¿Qué atajo abre el panel de formato en Word 365?",
+    "enunciado": "Quieres abrir el panel lateral desde el que se aplican, se crean y se modifican los estilos del documento. ¿Qué combinación lo abre?",
     "opciones": [
       {
         "letter": "A",
@@ -4507,20 +4507,20 @@
       },
       {
         "letter": "B",
-        "text": "Alt+Ctrl+S"
+        "text": "Mayús+F1"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+S"
+        "text": "Ctrl+Mayús+W"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+S"
+        "text": "Ctrl+Mayús+S"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Ctrl+Mayús+S abre el panel de formato que muestra el formato del texto seleccionado. Alt+Ctrl+S no tiene función asignada para abrir el panel de formato. Ctrl+Mayús+S aplica subrayado al texto. Alt+Mayús+S no tiene función asignada."
+    "explicacion": "Alt+Ctrl+Mayús+S abre el panel Estilos, el que permite aplicar, crear y modificar estilos, y desde el que se llega al Inspector de estilo y a Administrar estilos. · Mayús+F1 abre el otro panel de formato, «Propiedades de formato», que no aplica nada: solo informa de qué formato tiene el texto y de dónde le viene. Es el distractor difícil, porque los dos son paneles laterales sobre formato. · Ctrl+Mayús+W abre «Aplicar estilos», que es una barra pequeña para escribir el nombre de un estilo, no el panel completo. · Y Ctrl+Mayús+S subraya, igual que Ctrl+S."
   },
   {
     "id": "inicio-377",
@@ -4535,7 +4535,7 @@
     "tema": "Fuente",
     "sourceQuestionId": "gen-atajo-1",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado actualiza el formato automático en el texto ya escrito en Word 365?",
+    "enunciado": "Has cambiado los estilos de tabla del documento y quieres que una tabla ya insertada adopte el nuevo juego de formatos sin rehacerla. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -4543,20 +4543,20 @@
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+O"
+        "text": "Ctrl+O"
       },
       {
         "letter": "C",
-        "text": "Ctrl+Mayús+M"
+        "text": "Ctrl+U"
       },
       {
         "letter": "D",
-        "text": "Alt+Mayús+X"
+        "text": "Alt+Ctrl+O"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Aplica de forma retroactiva las reglas de autoformato de Word (las mismas que se aplican mientras escribes) al texto ya existente en el documento."
+    "explicacion": "Alt+Ctrl+U es TablaActualizarAutoformato: actualiza el formato de la tabla para que coincida con la serie de formatos aplicados. Es un comando de tabla, no de texto corrido. · Ctrl+O es el autoformato general del documento, y ese es el par que se confunde: los dos «dan formato automáticamente», pero uno trabaja sobre la tabla en la que está el cursor y el otro sobre el documento entero. · Ctrl+U no formatea nada: crea un documento nuevo basado en la plantilla Normal. · Y Alt+Ctrl+O inserta una nota al pie, de la pestaña Referencias."
   },
   {
     "id": "inicio-380",
@@ -4571,28 +4571,28 @@
     "tema": "Fuente",
     "sourceQuestionId": "gen-atajo-6",
     "generado": true,
-    "enunciado": "¿Qué atajo de teclado aplica el formato automático a la selección en Word 365?",
+    "enunciado": "Quieres que Word repase el documento y le aplique de golpe sus reglas de formato automático: títulos, listas, comillas tipográficas y demás. ¿Qué combinación lanza ese comando?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+5"
-      },
-      {
-        "letter": "B",
         "text": "Ctrl+O"
       },
       {
+        "letter": "B",
+        "text": "Alt+Ctrl+U"
+      },
+      {
         "letter": "C",
-        "text": "Ctrl+F2"
+        "text": "Ctrl+U"
       },
       {
         "letter": "D",
-        "text": "Mayús+Av Pág"
+        "text": "Ctrl+Mayús+O"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ejecuta el comando Autoformato sobre el texto seleccionado o el documento activo."
+    "respuesta": "A",
+    "explicacion": "Ctrl+O ejecuta el comando Autoformato, que en el cuadro Personalizar teclado figura como «da formato a un documento automáticamente»: aplica de una pasada al texto ya escrito las mismas reglas que Word aplicaría al ir escribiendo. · Alt+Ctrl+U hace algo parecido pero limitado a una tabla, y es por eso el distractor con más fundamento. · Ctrl+U es el que más se cuela por la letra, porque la O y la U están pegadas y las dos suenan a «abrir» en otros esquemas: aquí crea un documento nuevo basado en la plantilla Normal. · Y Ctrl+Mayús+O no tiene ningún comando asignado en esta instalación."
   },
   {
     "id": "inicio-387",
@@ -4607,28 +4607,28 @@
     "tema": "Fuente",
     "sourceQuestionId": "gen-atajo-22",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también aplica cursiva en Word 365, además de Ctrl+K?",
+    "enunciado": "Un compañero aplica cursiva con una combinación que no es Ctrl+K y te dice que funciona igual. ¿Cuál puede estar usando?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Mayús+M"
-      },
-      {
-        "letter": "B",
         "text": "Ctrl+Mayús+K"
       },
       {
+        "letter": "B",
+        "text": "Ctrl+I"
+      },
+      {
         "letter": "C",
-        "text": "Alt+Mayús+8"
+        "text": "Ctrl+Mayús+I"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+E"
+        "text": "Alt+Ctrl+K"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Aplica o quita el formato de cursiva al texto seleccionado; es una segunda combinación asignada a la misma función que Ctrl+K."
+    "respuesta": "A",
+    "explicacion": "Ctrl+K y Ctrl+Mayús+K comparten el comando Cursiva, igual que ocurre con Ctrl+N y Ctrl+Mayús+N en la negrita y con Ctrl+S y Ctrl+Mayús+S en el subrayado: los tres botones del grupo Fuente tienen cada uno dos combinaciones. · Ctrl+I es la del esquema inglés, por «italic», y aquí abre «Ir a». · Ctrl+Mayús+I no tiene comando asignado, aunque parezca la versión con Mayús de la anterior. · Y Alt+Ctrl+K es el distractor con más fundamento porque sí existe y sí es de la misma tecla: inserta un hipervínculo."
   },
   {
     "id": "inicio-389",
@@ -4643,28 +4643,28 @@
     "tema": "Fuente",
     "sourceQuestionId": "gen-atajo-30",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también aplica negrita en Word 365, además de Ctrl+N?",
+    "enunciado": "Buscas la segunda combinación que aplica negrita en esta instalación, además de Ctrl+N. ¿Cuál es?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt+Mayús+F6"
+        "text": "Ctrl+Mayús+N"
       },
       {
         "letter": "B",
-        "text": "Ctrl+Mayús+Y"
+        "text": "Ctrl+Mayús+B"
       },
       {
         "letter": "C",
-        "text": "Alt+Mayús+- (numérico)"
+        "text": "Ctrl+Mayús+A"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+N"
+        "text": "Alt+Ctrl+N"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Aplica o quita el formato de negrita al texto seleccionado; es una segunda combinación asignada a la misma función que Ctrl+N."
+    "respuesta": "A",
+    "explicacion": "Ctrl+Mayús+N comparte el comando Negrita con Ctrl+N. · ⚠️ Ojo: en el esquema internacional esa misma combinación aplica el estilo Normal, así que quien venga de ahí espera lo contrario de lo que ocurre. Aquí el estilo Normal se aplica con Ctrl+Mayús+A. · Ctrl+Mayús+B es la que se busca por la B de «bold» y no tiene ningún comando asignado. · Y Alt+Ctrl+N tampoco pone negrita: cambia a la vista Borrador, junto con Alt+Ctrl+D para Diseño de impresión y Alt+Ctrl+Q para Esquema."
   },
   {
     "id": "inicio-393",
@@ -4679,28 +4679,28 @@
     "tema": "Fuente",
     "sourceQuestionId": "gen-atajo-36",
     "generado": true,
-    "enunciado": "¿Qué atajo alternativo también aplica subrayado en Word 365, además de Ctrl+S?",
+    "enunciado": "Buscas la segunda combinación que aplica subrayado sencillo, además de Ctrl+S. ¿Cuál es?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+Mayús+P"
-      },
-      {
-        "letter": "B",
         "text": "Ctrl+Mayús+S"
       },
       {
+        "letter": "B",
+        "text": "Ctrl+Mayús+P"
+      },
+      {
         "letter": "C",
-        "text": "Ctrl++"
+        "text": "Ctrl+Mayús+D"
       },
       {
         "letter": "D",
-        "text": "Ctrl+Mayús+Terminar"
+        "text": "Ctrl+Mayús+U"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Aplica o quita el subrayado simple al texto seleccionado; es una segunda combinación asignada a la misma función que Ctrl+S."
+    "respuesta": "A",
+    "explicacion": "Ctrl+S y Ctrl+Mayús+S comparten el comando Subrayado, con línea continua bajo todo, espacios incluidos. · Ctrl+Mayús+P y Ctrl+Mayús+D también subrayan, y ahí está la dificultad: la primera solo bajo las palabras, saltándose los espacios, y la segunda con línea doble. Son las otras dos variantes de subrayado que tienen atajo, de las diecisiete que ofrece el cuadro Fuente. · Y Ctrl+Mayús+U no subraya: activa el formato de mayúsculas, aunque la U invite a pensar en «underline»."
   },
   {
     "id": "inicio-398",
@@ -4720,15 +4720,15 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Reducir el tamaño de la fuente"
+        "text": "Efectos de texto y tipografía"
       },
       {
         "letter": "B",
-        "text": "Fuente (nombre)"
+        "text": "Color de fuente"
       },
       {
         "letter": "C",
-        "text": "Negrita"
+        "text": "Color de resaltado del texto"
       },
       {
         "letter": "D",
@@ -4737,7 +4737,7 @@
     ],
     "matching": null,
     "respuesta": "D",
-    "explicacion": "**Borrar todo el formato.** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. Quita todo el formato de la selección y la deja con el del estilo base. (Ctrl+Barra espaciadora quita solo el formato de carácter.)"
+    "explicacion": "**Borrar todo el formato.** Pestaña Inicio ▸ Fuente, a la derecha del tamaño. La goma que acompaña a la «A» es lo que lo distingue: deja la selección con el formato del estilo base, quitando carácter, párrafo y estilo. No tiene atajo asignado; lo más parecido es Ctrl+Barra espaciadora, que solo limpia el formato de carácter. · Los otros tres iconos del grupo también llevan una «A», y esa es toda la dificultad: la de Efectos de texto la lleva azul y con brillo, la de Color de fuente sobre una franja de color, y la de resaltado va con un rotulador. · Y una diferencia de fondo: este es el único de los cuatro que QUITA formato; los otros tres lo ponen."
   },
   {
     "id": "inicio-399",
@@ -4757,24 +4757,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Mayús+F3"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+Entrar"
-      },
-      {
-        "letter": "C",
         "text": "Ctrl+N"
       },
       {
+        "letter": "B",
+        "text": "Ctrl+K"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+S"
+      },
+      {
         "letter": "D",
-        "text": "Ctrl+L"
+        "text": "Ctrl+B"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Negrita.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+N. Pone en negrita la selección. En el Word en español es «N», no «B»."
+    "respuesta": "A",
+    "explicacion": "**Negrita.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+N, y también Ctrl+Mayús+N. En el Word en español el botón es una «N», no una «B», y el atajo sigue esa misma inicial. · Ctrl+K y Ctrl+S son sus dos vecinos inmediatos en la cinta, cursiva y subrayado: los tres botones van pegados y los tres atajos son la inicial del nombre en castellano. · Ctrl+B es la trampa del esquema inglés, donde la B es de «bold»; aquí abre el panel de Navegación, así que quien la pulse por costumbre se encuentra un panel lateral en vez de una letra gruesa."
   },
   {
     "id": "inicio-400",
@@ -4794,11 +4794,11 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Tachado"
+        "text": "Negrita"
       },
       {
         "letter": "B",
-        "text": "Subíndice"
+        "text": "Subrayado"
       },
       {
         "letter": "C",
@@ -4806,12 +4806,12 @@
       },
       {
         "letter": "D",
-        "text": "Agrandar fuente"
+        "text": "Tachado"
       }
     ],
     "matching": null,
     "respuesta": "C",
-    "explicacion": "**Cursiva.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+K. Pone en cursiva la selección. En esta instalación Ctrl+K es Cursiva, no «insertar hipervínculo»."
+    "explicacion": "**Cursiva.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+K, y también Ctrl+Mayús+K. El icono es la letra inclinada, y en la versión española esa letra es una «K», no la «I» de «italic» a la que uno tiende. · Los otros tres son sus vecinos de fila: la «N» recta de la negrita, la «S» con línea debajo del subrayado y el «abc» cruzado del tachado. Se distinguen por el trazo, no por la letra, y esa es toda la pregunta. · Conviene fijar que Ctrl+K aquí es cursiva y no «insertar hipervínculo», que es lo que hace en otros esquemas; el hipervínculo se inserta con Alt+Ctrl+K."
   },
   {
     "id": "inicio-401",
@@ -4831,24 +4831,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Disposición ▸ Configurar página"
-      },
-      {
-        "letter": "B",
         "text": "Inicio ▸ Fuente"
       },
       {
+        "letter": "B",
+        "text": "Inicio ▸ Párrafo"
+      },
+      {
         "letter": "C",
-        "text": "Inicio ▸ Portapapeles"
+        "text": "Inicio ▸ Estilos"
       },
       {
         "letter": "D",
-        "text": "Insertar ▸ Texto"
+        "text": "Insertar ▸ Vínculos"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "**Subrayado.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+S. Subraya la selección. La flecha permite elegir el tipo y el color de subrayado."
+    "respuesta": "A",
+    "explicacion": "**Subrayado.** Pestaña Inicio ▸ **Fuente**, junto a la negrita y la cursiva. Atajo: Ctrl+S, también Ctrl+Mayús+S; su flecha despliega los tipos de línea y el color. · Párrafo y Estilos son los dos grupos que vienen justo después en esa misma pestaña, y ahí está la dificultad: los tres son de formato y están uno al lado del otro. Lo que los separa es el alcance: Fuente actúa sobre caracteres sueltos, Párrafo sobre el párrafo entero y Estilos sobre conjuntos con nombre. · Insertar ▸ Vínculos es el grupo de los hipervínculos, que aparecen subrayados en el documento: por eso resulta creíble, aunque ese subrayado sea consecuencia del estilo Hipervínculo y no de este botón."
   },
   {
     "id": "inicio-402",
@@ -4868,7 +4868,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Bordes"
+        "text": "Subrayado"
       },
       {
         "letter": "B",
@@ -4876,16 +4876,16 @@
       },
       {
         "letter": "C",
-        "text": "Justificar"
+        "text": "Doble tachado"
       },
       {
         "letter": "D",
-        "text": "Mostrar todo"
+        "text": "Color de resaltado del texto"
       }
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "**Tachado.** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. Traza una línea sobre el texto seleccionado. No tiene atajo directo (se puede activar desde el cuadro Fuente)."
+    "explicacion": "**Tachado.** Pestaña Inicio ▸ Fuente. Traza una línea que atraviesa el texto para marcarlo como anulado sin borrarlo. No tiene atajo asignado en esta instalación: se pone con este botón o desde la casilla Tachado del cuadro Fuente. · «Doble tachado» es el distractor con más fundamento porque existe de verdad, pero no como botón: solo se llega a él por la sección Efectos del cuadro Fuente, y es la pareja incompatible de este. El botón de la cinta no tiene flecha para elegir entre uno y otro. · El subrayado lleva la línea debajo, no encima. · Y el resaltado pinta un fondo de color, no una raya."
   },
   {
     "id": "inicio-403",
@@ -4905,24 +4905,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Seleccionar"
-      },
-      {
-        "letter": "B",
-        "text": "Cursiva"
-      },
-      {
-        "letter": "C",
         "text": "Superíndice"
       },
       {
-        "letter": "D",
+        "letter": "B",
         "text": "Subíndice"
+      },
+      {
+        "letter": "C",
+        "text": "Tachado"
+      },
+      {
+        "letter": "D",
+        "text": "Posición: Bajado"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "**Subíndice.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+Mayús+-. Baja el texto y lo hace más pequeño (H₂O). El atajo es Ctrl + Mayús + la tecla del guión (= Ctrl+_)."
+    "respuesta": "B",
+    "explicacion": "**Subíndice.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+Mayús y la tecla del guión, que también se escribe Ctrl+_. Baja el texto por debajo de la línea y lo empequeñece, como el 2 de H₂O. · El superíndice es su espejo, está pegado a él en la cinta y su icono solo se diferencia en si el numerito va arriba o abajo: es el par que decide esta pregunta. Además tiene una asimetría útil de recordar, porque el superíndice no tiene atajo. · «Posición: Bajado» es el distractor fino: existe, en la ficha Avanzado del cuadro Fuente, y también baja el texto, pero sin empequeñecerlo y sin botón en la cinta. · El tachado cruza el texto, no lo mueve."
   },
   {
     "id": "inicio-404",
@@ -4942,7 +4942,7 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Subrayado"
+        "text": "Subíndice"
       },
       {
         "letter": "B",
@@ -4950,16 +4950,16 @@
       },
       {
         "letter": "C",
-        "text": "Mostrar todo"
+        "text": "Posición: Elevado"
       },
       {
         "letter": "D",
-        "text": "Negrita"
+        "text": "Aumentar tamaño de fuente"
       }
     ],
     "matching": null,
     "respuesta": "B",
-    "explicacion": "**Superíndice.** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. Sube el texto y lo hace más pequeño (x²). En esta instalación NO tiene atajo de teclado: solo el botón o la casilla del cuadro Fuente."
+    "explicacion": "**Superíndice.** Pestaña Inicio ▸ Fuente. Sube el texto por encima de la línea y lo empequeñece, como el 2 de x². En esta instalación NO tiene atajo de teclado: se aplica con este botón o con la casilla Superíndice del cuadro Fuente. · El subíndice es su espejo exacto, está justo al lado y sí tiene atajo, Ctrl+Mayús+guión: esa asimetría es lo más preguntable del par. · «Posición: Elevado» es el distractor fino, porque también sube el texto: la diferencia es que respeta su tamaño, y que vive en la ficha Avanzado del cuadro Fuente, sin botón propio. · Aumentar el tamaño lo agranda sin moverlo de la línea."
   },
   {
     "id": "inicio-405",
@@ -4979,24 +4979,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+S"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+L"
-      },
-      {
-        "letter": "C",
         "text": "Alt+Ctrl+H"
       },
       {
+        "letter": "B",
+        "text": "Ctrl+H"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Mayús+H"
+      },
+      {
         "letter": "D",
-        "text": "F7"
+        "text": "Alt+Ctrl+R"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Color de resaltado del texto.** Pestaña Inicio ▸ Fuente. Atajo: Alt+Ctrl+H. Marca el texto como con un rotulador fluorescente. Atajo confirmado en vivo (no figura en el volcado)."
+    "respuesta": "A",
+    "explicacion": "**Color de resaltado del texto.** Pestaña Inicio ▸ Fuente. Atajo: Alt+Ctrl+H, que aplica el color cargado en el botón, amarillo si no se ha cambiado. ⚠️ Ojo: esta combinación no figura en el cuadro Personalizar teclado de esta instalación; está confirmada probándola en vivo. · Ctrl+H es la que más se cuela por compartir letra, y no tiene nada que ver: aumenta la sangría izquierda hasta la tabulación siguiente. · Ctrl+Mayús+H es otra de sangría, la que reduce la francesa. · Y Alt+Ctrl+R no tiene comando asignado, aunque la R de «resaltar» la haga sonar razonable."
   },
   {
     "id": "inicio-406",
@@ -5020,20 +5020,20 @@
       },
       {
         "letter": "B",
-        "text": "Seleccionar"
+        "text": "Color de resaltado del texto"
       },
       {
         "letter": "C",
-        "text": "Centrar"
+        "text": "Efectos de texto y tipografía"
       },
       {
         "letter": "D",
-        "text": "Aumentar sangría"
+        "text": "Sombreado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Color de fuente.** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. Cambia el color del texto. La flecha abre la paleta; no tiene atajo directo."
+    "explicacion": "**Color de fuente.** Pestaña Inicio ▸ Fuente. Pinta los propios caracteres; la franja de color bajo la «A» avisa de con qué color va cargado, y la flecha abre la paleta con los colores del tema, los estándar, «Automático», «Más colores» y «Degradado». No tiene atajo. · El resaltado, su vecino inmediato, pinta el fondo de las letras en vez de las letras, y su icono lleva un rotulador: es el par que hay que separar. · Efectos de texto y tipografía es la otra «A» del grupo, la azul con brillo, y lleva a sombras, reflejos y contornos. · Y el sombreado no está en este grupo: es del grupo Párrafo, y pinta el fondo del párrafo entero."
   },
   {
     "id": "inicio-407",
@@ -5057,20 +5057,20 @@
       },
       {
         "letter": "B",
-        "text": "Diseño ▸ Formato del documento"
+        "text": "Inicio ▸ Párrafo"
       },
       {
         "letter": "C",
-        "text": "Insertar ▸ Vínculos"
+        "text": "Diseño ▸ Formato del documento"
       },
       {
         "letter": "D",
-        "text": "Disposición ▸ Organizar"
+        "text": "Disposición ▸ Configurar página"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Agrandar fuente.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+Mayús+>. Sube el tamaño de letra al siguiente valor de la lista. Ctrl+Alt+Mayús+> lo sube de punto en punto."
+    "explicacion": "**Aumentar tamaño de fuente.** Pestaña Inicio ▸ **Fuente**, a la derecha del cuadro del tamaño. Atajo: Ctrl+Mayús+>, que salta al siguiente valor de la lista; Ctrl+Alt+Mayús+> sube de punto en punto. · Párrafo es el grupo siguiente de esa misma pestaña y también toca el aspecto del texto, pero mide interlineados y sangrías, no el cuerpo de la letra. · Diseño ▸ Formato del documento es el distractor con más fundamento, porque desde allí se cambian de golpe las fuentes y el espaciado de todo el documento a través del tema: la diferencia es que aquello afecta al documento entero y esto solo a lo seleccionado. · Y Configurar página trabaja con márgenes y tamaño de papel."
   },
   {
     "id": "inicio-408",
@@ -5090,24 +5090,24 @@
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl+K"
-      },
-      {
-        "letter": "B",
-        "text": "Ctrl+B"
-      },
-      {
-        "letter": "C",
         "text": "Ctrl+<"
       },
       {
+        "letter": "B",
+        "text": "Ctrl+Mayús+>"
+      },
+      {
+        "letter": "C",
+        "text": "Ctrl+Alt+<"
+      },
+      {
         "letter": "D",
-        "text": "Ctrl+G"
+        "text": "Ctrl+Mayús+<"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Reducir el tamaño de la fuente.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+<. Baja el tamaño de letra al valor anterior de la lista. Ctrl+Alt+< lo baja de punto en punto."
+    "respuesta": "A",
+    "explicacion": "**Reducir el tamaño de la fuente.** Pestaña Inicio ▸ Fuente. Atajo: Ctrl+<, sin Mayús, que baja al valor anterior de la lista. · Ctrl+Mayús+> es el botón gemelo, el de agrandar, y por eso es el descarte que más cuesta: es la misma tecla, con Mayús, y en sentido contrario. · Ctrl+Alt+< también reduce, pero de punto en punto en vez de por saltos de lista: hace lo mismo que este botón solo por casualidad, cuando los valores están seguidos. · Y Ctrl+Mayús+< no existe como pulsación: en el teclado español esa tecla da «>» cuando se pulsa con Mayús."
   },
   {
     "id": "inicio-409",
@@ -5131,20 +5131,20 @@
       },
       {
         "letter": "B",
-        "text": "Color de fuente"
+        "text": "Efectos de texto y tipografía"
       },
       {
         "letter": "C",
-        "text": "Disminuir sangría"
+        "text": "Borrar todo el formato"
       },
       {
         "letter": "D",
-        "text": "Sombreado"
+        "text": "Color de fuente"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Cambiar mayúsculas y minúsculas.** Pestaña Inicio ▸ Fuente. Atajo: Mayús+F3. Rota la selección entre MAYÚSCULAS, minúsculas y Tipo Oración. También ofrece «Poner en mayúsculas cada palabra»."
+    "explicacion": "**Cambiar mayúsculas y minúsculas.** Pestaña Inicio ▸ Fuente. El icono es la pareja «Aa» y despliega cinco entradas: Tipo oración, minúscula, MAYÚSCULAS, Poner En Mayúsculas Cada Palabra y Alternar mayúsculas y minúsculas. Su atajo, Mayús+F3, recorre esos estados sin abrir el menú: MAYÚSCULAS, minúsculas y un tercero que depende de si el texto acaba en punto. · Los otros tres también llevan una «A» en su icono, y esa es la trampa visual del grupo entero: solo este lleva dos, una grande y otra pequeña, porque de eso trata. · Y hay una diferencia de fondo: este reescribe el texto, mientras que los demás solo lo presentan de otra manera."
   },
   {
     "id": "inicio-410",
@@ -5168,7 +5168,7 @@
       },
       {
         "letter": "B",
-        "text": "Reducir el tamaño de la fuente"
+        "text": "Color de fuente"
       },
       {
         "letter": "C",
@@ -5176,12 +5176,12 @@
       },
       {
         "letter": "D",
-        "text": "Ordenar"
+        "text": "Color de resaltado del texto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Efectos de texto y tipografía.** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. La «A» azul con flecha: aplica sombra, reflejo, iluminado y contorno al texto, además de ligaduras y estilos tipográficos."
+    "explicacion": "**Efectos de texto y tipografía.** Pestaña Inicio ▸ Fuente. Es la «A» azul con brillo, y despliega una galería de estilos más los submenús de Esquema, Sombra, Reflejo, Iluminado, Estilos de número, Ligaduras y Conjuntos de estilos. No tiene atajo. · Los otros tres iconos del grupo comparten con este la letra «A», que es justo lo que hace difícil la pregunta: se distinguen por lo que la acompaña —una franja de color, una goma, un rotulador—, no por la letra. · De los cuatro, este es el único que lleva a las características tipográficas OpenType; los demás se quedan en color o en limpieza."
   },
   {
     "id": "inicio-411",
@@ -5205,20 +5205,20 @@
       },
       {
         "letter": "B",
-        "text": "Insertar ▸ Multimedia"
+        "text": "Inicio ▸ Estilos"
       },
       {
         "letter": "C",
-        "text": "Inicio ▸ Editor"
+        "text": "Diseño ▸ Formato del documento"
       },
       {
         "letter": "D",
-        "text": "Insertar ▸ Vínculos"
+        "text": "Insertar ▸ Texto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "**Fuente (nombre).** Pestaña Inicio ▸ Fuente. Atajo: no tiene atajo de teclado en esta instalación. La caja del nombre de fuente. No tiene atajo que la active; Ctrl+M y Ctrl+Mayús+F abren el cuadro de diálogo Fuente con el foco en el nombre, y Ctrl+Mayús+M con el foco en el tamaño."
+    "explicacion": "**Fuente (nombre).** Pestaña Inicio ▸ **Fuente**: es el cuadro con el que abre el grupo, y de él toma el grupo su nombre. Enseña «Aptos (Cuerpo)» en un documento recién creado, y su lista viene partida en Fuentes del tema, Fuentes usadas recientemente y Todas las fuentes. · Diseño ▸ Formato del documento es el descarte más difícil, porque desde allí se cambian también las fuentes: pero lo hace a través del tema y para el documento entero, mientras que esta caja aplica una fuente a lo seleccionado. · El grupo Estilos aplica conjuntos de formato con nombre, y una de las cosas que un estilo lleva dentro es precisamente la fuente. · Insertar ▸ Texto es el de WordArt, Letra capital y Elementos rápidos."
   },
   {
     "id": "inicio-431",
