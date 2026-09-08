@@ -3441,28 +3441,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "1-97",
-    "enunciado": "¿Cuándo aparecen las fichas contextuales en la cinta de opciones de Word 365?",
+    "revisada": true,
+    "enunciado": "¿Cuándo aparecen en la cinta las fichas contextuales?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Al hacer clic en la pestaña Vista"
+        "text": "Al seleccionar un objeto insertado en el documento"
       },
       {
         "letter": "B",
-        "text": "Al seleccionar elementos insertados en el documento"
+        "text": "Al hacer clic en la pestaña Vista"
       },
       {
         "letter": "C",
-        "text": "Al activar el modo de acceso por teclado"
+        "text": "Al activar el modo de acceso por teclado con Alt"
       },
       {
         "letter": "D",
-        "text": "Al pulsar la tecla F1"
+        "text": "Al pulsar F1"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Las fichas contextuales aparecen automáticamente al seleccionar elementos insertados en el documento."
+    "respuesta": "A",
+    "explicacion": "Salen solas al pinchar una imagen, una tabla, una forma, un gráfico o una ecuación, y desaparecen al pinchar fuera: son las herramientas que solo tienen sentido con ese objeto delante. · **El modo de acceso por teclado** es el descarte que decide la pregunta, porque también hace aparecer algo encima de la cinta —las letras de acceso—, pero eso son etiquetas sobre las pestañas que ya había, no pestañas nuevas. · F1 abre la ayuda."
   },
   {
     "id": "interfaz-94",
@@ -3476,28 +3477,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "1-98",
-    "enunciado": "¿Cuál de las siguientes NO es una ficha contextual mencionada en el temario?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estos NO es el nombre de una ficha contextual de este Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ficha de herramientas de dibujo"
+        "text": "Herramientas de imagen"
       },
       {
         "letter": "B",
-        "text": "Ficha de herramientas de imagen"
+        "text": "Formato de imagen"
       },
       {
         "letter": "C",
-        "text": "Ficha de herramientas de Tablas"
+        "text": "Diseño de tabla"
       },
       {
         "letter": "D",
-        "text": "Ficha de herramientas de Gráficos"
+        "text": "Formato de forma"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El temario menciona explícitamente las fichas de dibujo, imagen y tablas. La ficha de gráficos no se cita."
+    "respuesta": "A",
+    "explicacion": "«Herramientas de…» era el rótulo que englobaba las fichas contextuales en las versiones anteriores, con las pestañas verdaderas colgando debajo. En Word 365 ese rótulo ha desaparecido y cada ficha va suelta con su nombre completo. · Las que existen se llaman «Formato de imagen», «Formato de forma», «Diseño de tabla», «Disposición de tabla», «Ecuación», «Encabezado y pie de página» y «Eliminación del fondo». · El nombre antiguo sigue en casi todo el material de estudio, y por eso es el distractor perfecto."
   },
   {
     "id": "interfaz-95",
@@ -3511,28 +3513,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "1-99",
-    "enunciado": "¿Cuándo aparece la Minibarra de herramientas en Word 365?",
+    "revisada": true,
+    "enunciado": "¿Cuándo aparece la minibarra de herramientas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Al pasar el ratón por la Barra de estado"
+        "text": "Al seleccionar texto con el ratón, atenuada junto a la selección"
       },
       {
         "letter": "B",
-        "text": "Al hacer clic derecho sobre la cinta de opciones"
+        "text": "Al pasar el ratón por la barra de estado"
       },
       {
         "letter": "C",
-        "text": "Junto a un elemento del documento que ha sido seleccionado"
+        "text": "Al hacer clic derecho sobre la cinta de opciones"
       },
       {
         "letter": "D",
-        "text": "Al pulsar la combinación de teclas Ctrl+F1"
+        "text": "Al pulsar Ctrl+F1"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La Minibarra de herramientas aparece junto a cualquier elemento que el usuario haya seleccionado en el documento."
+    "respuesta": "A",
+    "explicacion": "Surge medio transparente al soltar la selección y se vuelve nítida al acercar el puntero; si se aleja, se desvanece. También sale al hacer clic derecho sobre el texto, encima del menú contextual. · Su gracia es tener a mano lo más usado sin subir hasta la cinta. · **Ctrl+F1** es el descarte que decide la pregunta y hace algo relacionado con la cinta, pero opuesto: la contrae, dejando solo los nombres de las pestañas."
   },
   {
     "id": "interfaz-96",
@@ -3546,28 +3549,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "1-100",
-    "enunciado": "¿Qué comandos muestra la Minibarra de herramientas?",
+    "revisada": true,
+    "enunciado": "¿Qué clase de comandos trae la minibarra de herramientas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Centrar, Estilos, Nuevo comentario y Definir \"texto\""
+        "text": "Los de formato más usados: fuente, tamaño, negrita, cursiva, color, estilos"
       },
       {
         "letter": "B",
-        "text": "Centrar, Nuevo comentario, Ancho de página y Toda la página"
+        "text": "Los de la pestaña activa en ese momento, en versión reducida"
       },
       {
         "letter": "C",
-        "text": "Estilos, Nuevo comentario, Insertar tabla y Definir \"texto\""
+        "text": "Los que el usuario haya añadido a la barra de acceso rápido"
       },
       {
         "letter": "D",
-        "text": "Centrar, Estilos, Espaciado entre líneas y Nuevo comentario"
+        "text": "Los de insertar objetos: tabla, imagen, forma y gráfico"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La Minibarra de herramientas del temario muestra: Centrar, Estilos, Nuevo comentario y Definir \"texto\"."
+    "explicacion": "Es un resumen de lo que más se toca al escribir, sacado sobre todo de los grupos Fuente y Párrafo de la pestaña Inicio, y suele traer también algo para comentar el texto seleccionado. · **La barra de acceso rápido** es el descarte que decide la pregunta, porque las dos son atajos a comandos frecuentes; la diferencia es que aquella la configura el usuario y vive fija arriba, y esta viene fija de fábrica y aparece donde está la selección. · Su contenido cambia según lo que se haya seleccionado."
   },
   {
     "id": "interfaz-113",
@@ -3581,15 +3585,16 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-1",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana es responsable de mostrar el nombre del documento actual?",
+    "revisada": true,
+    "enunciado": "¿Qué elemento de la ventana muestra el nombre del documento abierto?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La barra de herramientas de acceso rápido"
+        "text": "La barra de título"
       },
       {
         "letter": "B",
-        "text": "La barra de título"
+        "text": "La barra de herramientas de acceso rápido"
       },
       {
         "letter": "C",
@@ -3601,8 +3606,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La barra de título se sitúa en la parte superior central y muestra el nombre del documento. El error típico es confundirla con la barra de herramientas (arriba a la izquierda)."
+    "respuesta": "A",
+    "explicacion": "Ocupa la franja superior y muestra el nombre del archivo seguido de «Word», más los avisos sobre su estado: «[Modo de compatibilidad]» si es un formato antiguo, «[Solo lectura]» o «[Guardado]» según el caso. · **La barra de acceso rápido** es el descarte que decide la pregunta: comparte esa franja, pegada a la izquierda o justo debajo, y por eso se confunden; pero ahí solo hay botones, ningún texto. · En la barra de estado, abajo, van el número de página, el recuento de palabras y el idioma."
   },
   {
     "id": "interfaz-117",
@@ -3616,28 +3621,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-5",
-    "enunciado": "En Word 365, el comando para activar el \"Modo táctil\" se encuentra específicamente en:",
+    "revisada": true,
+    "enunciado": "¿Desde dónde se activa el modo táctil de la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La pestaña Vista, dentro del grupo \"Vistas\""
+        "text": "Desde el desplegable de la barra de herramientas de acceso rápido"
       },
       {
         "letter": "B",
-        "text": "El desplegable de la barra de herramientas de acceso rápido"
+        "text": "Desde la pestaña Vista, en el grupo Vistas"
       },
       {
         "letter": "C",
-        "text": "El cuadro de diálogo \"Opciones de Word\", categoría \"General\""
+        "text": "Desde Archivo ▸ Opciones ▸ General"
       },
       {
         "letter": "D",
-        "text": "El menú contextual que abre la cinta de opciones"
+        "text": "Desde el menú contextual de la cinta de opciones"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Se activa pulsando el botón \"Modo táctil\" en la barra de acceso rápido."
+    "respuesta": "A",
+    "explicacion": "El desplegable que personaliza esa barra incluye la entrada «Modo mouse/táctil»; al marcarla aparece un botón en la propia barra desde el que se alterna entre los dos modos. Si no se ha marcado nunca, el botón no está y de ahí que cueste encontrarlo. · **El menú contextual de la cinta** es el descarte que decide la pregunta: existe y sirve para cosas parecidas —personalizar la cinta, contraerla, personalizar la barra de acceso rápido—, pero el modo táctil no está ahí."
   },
   {
     "id": "interfaz-118",
@@ -3651,28 +3657,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-6",
-    "enunciado": "En Word 365, ¿cuál es la finalidad principal del \"Modo táctil\"?",
+    "revisada": true,
+    "enunciado": "¿Para qué sirve el modo táctil de la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Aumentar el número de comandos visibles en la cinta"
+        "text": "Para separar y agrandar los botones, de modo que se acierte con el dedo"
       },
       {
         "letter": "B",
-        "text": "Facilitar el uso en dispositivos táctiles o en personas con visión reducida"
+        "text": "Para que quepan más comandos en el mismo espacio de cinta"
       },
       {
         "letter": "C",
-        "text": "Reducir el consumo de recursos del sistema"
+        "text": "Para que Word consuma menos recursos del sistema"
       },
       {
         "letter": "D",
-        "text": "Cambiar el diseño de la página a un formato para tabletas"
+        "text": "Para cambiar el diseño de la página a un formato de tableta"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo táctil está pensado para dispositivos táctiles o visión reducida. La opción «Aumentar el número de comandos visibles en…» describe el modo mouse."
+    "respuesta": "A",
+    "explicacion": "Un dedo es mucho menos preciso que un puntero, así que el modo táctil deja más aire entre los botones aunque quepan menos en la cinta. De rebote ayuda a quien tenga poca vista o dificultades de motricidad fina, aunque use ratón. · **Que quepan más comandos** es el descarte que decide la pregunta porque describe justo lo contrario, que es el modo mouse. · Y no toca el documento en absoluto: solo cambia la interfaz, no el diseño de la página."
   },
   {
     "id": "interfaz-119",
@@ -3686,28 +3693,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-7",
-    "enunciado": "En Word 365, en el modo mouse, ¿cómo se caracteriza la disposición de los comandos en la cinta?",
+    "revisada": true,
+    "enunciado": "¿Cómo se ve la cinta en modo mouse?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tienen un tamaño mayor y una densidad menor"
+        "text": "Con los botones pequeños y juntos, de modo que caben más"
       },
       {
         "letter": "B",
-        "text": "Son más pequeños y aprovechan mejor el espacio para caber más"
+        "text": "Con los botones grandes y separados, de modo que caben menos"
       },
       {
         "letter": "C",
-        "text": "Se agrupan en un menú desplegable para ahorrar espacio"
+        "text": "Con los comandos recogidos en un menú desplegable"
       },
       {
         "letter": "D",
-        "text": "Aparecen en una barra lateral independiente"
+        "text": "Con los comandos en una barra lateral aparte"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "En modo mouse los comandos son más pequeños y caben más. La opción «Tienen un tamaño mayor y una densidad menor» es la característica del modo táctil."
+    "respuesta": "A",
+    "explicacion": "Es el modo de siempre, el pensado para trabajar con ratón: como el puntero es preciso, no hace falta reservar espacio alrededor de cada botón y se aprovecha la cinta al máximo. · **La descripción invertida** es el descarte que decide la pregunta y corresponde al modo táctil: menos comandos a la vista, pero más grandes y separados. Es una relación de intercambio, y hay que tener claro qué se gana y qué se pierde en cada modo. · Se alterna entre los dos desde la barra de acceso rápido."
   },
   {
     "id": "interfaz-120",
@@ -3721,28 +3729,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-8",
-    "enunciado": "En Word 365, ¿cuál de los siguientes elementos NO aparece en la lista de \"Elementos principales\" de la ventana?",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO es un elemento estructural de la ventana de Word:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Regla"
+        "text": "El portapapeles"
       },
       {
         "letter": "B",
-        "text": "Cintas de opciones"
+        "text": "La regla"
       },
       {
         "letter": "C",
-        "text": "Portapapeles"
+        "text": "La cinta de opciones"
       },
       {
         "letter": "D",
-        "text": "Barra de título"
+        "text": "La barra de título"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El Portapapeles es un grupo dentro de la pestaña Inicio, no un elemento estructural de la ventana. Los otros tres sí aparecen en el esquema."
+    "respuesta": "A",
+    "explicacion": "El portapapeles no es una parte de la ventana, sino un grupo de comandos dentro de la pestaña Inicio; su panel se abre con el lanzador de ese grupo y se cierra cuando se quiera. · Los otros tres sí están siempre ahí: la barra de título arriba, la cinta debajo y la regla en los bordes del área de trabajo, esta última si se activa en Vista ▸ Mostrar. · Los demás elementos estructurales son el área de trabajo, las barras de desplazamiento y la barra de estado."
   },
   {
     "id": "interfaz-122",
@@ -3756,28 +3765,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-10",
-    "enunciado": "En Word 365, un usuario con dificultades de visión desea trabajar en un portátil sin pantalla táctil. ¿Qué opción es la más adecuada?",
+    "revisada": true,
+    "enunciado": "Alguien con poca vista trabaja en un portátil sin pantalla táctil y no acierta con los botones de la cinta. ¿Qué le conviene?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Activar el Modo táctil para agrandar los comandos"
+        "text": "Activar el modo táctil, aunque no tenga pantalla táctil"
       },
       {
         "letter": "B",
-        "text": "Activar el Modo mouse, que es el convencional"
+        "text": "Activar el modo mouse, que es el convencional"
       },
       {
         "letter": "C",
-        "text": "Usar la vista \"Modo lectura\" para ampliar el texto"
+        "text": "Usar el Modo de lectura, que amplía el contenido"
       },
       {
         "letter": "D",
-        "text": "Aumentar el zoom al 200% para ver los botones"
+        "text": "Subir el zoom del documento al 200 %"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El modo táctil agranda los comandos de la cinta, siendo la opción correcta. La vista Modo lectura (C) amplía el texto, no los botones de la interfaz."
+    "explicacion": "El modo táctil no exige pantalla táctil: es un ajuste de la interfaz y se puede activar en cualquier equipo desde la barra de acceso rápido. · **El zoom** es el descarte que decide la pregunta, y es el error más frecuente: agranda el CONTENIDO del documento, no los botones de la cinta, que se quedan exactamente igual. Lo mismo pasa con el Modo de lectura. · Word tiene además otras ayudas de accesibilidad, como el panel de texto alternativo y el comprobador de la pestaña Revisar."
   },
   {
     "id": "interfaz-123",
@@ -3791,15 +3801,16 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-11",
-    "enunciado": "En Word 365 ¿cuáles son los dos elementos que se encuentran ubicados en la parte inferior derecha de la ventana?",
+    "revisada": true,
+    "enunciado": "¿Qué hay en el extremo derecho de la barra de estado, abajo del todo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La barra de estado y la barra de desplazamiento"
+        "text": "Los botones de vista del documento y el control del zoom"
       },
       {
         "letter": "B",
-        "text": "El área de vistas y el zoom"
+        "text": "La barra de desplazamiento vertical y el zoom"
       },
       {
         "letter": "C",
@@ -3811,8 +3822,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El área de vistas y el zoom están agrupados en la esquina inferior derecha de la barra de estado."
+    "respuesta": "A",
+    "explicacion": "Son los botones que cambian entre Modo de lectura, Diseño de impresión y Diseño web, más el deslizador del zoom con su porcentaje, que al pulsarlo abre el cuadro Zoom. · A la izquierda de esa misma barra van el número de página, el recuento de palabras y el idioma. · **La barra de desplazamiento** es el descarte que decide la pregunta: está pegada al lado derecho, sí, pero en vertical y por encima, fuera de la barra de estado. · Esquema y Borrador no tienen botón aquí: se eligen en la pestaña Vista."
   },
   {
     "id": "interfaz-124",
@@ -3826,28 +3837,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-12",
-    "enunciado": "En Word 365, ¿qué diferencia fundamental existe entre el modo mouse y el modo táctil?",
+    "revisada": true,
+    "enunciado": "¿Qué se gana y qué se pierde al pasar del modo mouse al modo táctil?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El táctil muestra menos comandos pero más grandes; el mouse muestra más comandos pero más pequeños"
+        "text": "Se ganan botones más grandes y separados; se pierde cantidad de comandos a la vista"
       },
       {
         "letter": "B",
-        "text": "El táctil muestra más comandos pero más pequeños; el mouse muestra menos comandos pero más grandes"
+        "text": "Se ganan más comandos a la vista; se pierde tamaño de los botones"
       },
       {
         "letter": "C",
-        "text": "El táctil muestra menos comandos y más pequeños; el mouse muestra más comandos y más grandes"
+        "text": "Se pierden las dos cosas: menos comandos y más pequeños"
       },
       {
         "letter": "D",
-        "text": "El táctil y el mouse muestran los mismos comandos con distinto color"
+        "text": "No se gana ni se pierde nada: solo cambia el color de la cinta"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La opción «El táctil muestra más comandos pero más…» invierte la relación tamaño/densidad (trampa de inversión)."
+    "explicacion": "Es un intercambio: el espacio de la cinta es el que es, así que agrandar y separar los botones obliga a mostrar menos. Por eso hay dos modos y no uno mejor que otro. · **La versión invertida** es el descarte que decide la pregunta y hay que leerla con calma, porque las dos frases usan las mismas palabras en distinto orden. · Se alterna desde la barra de acceso rápido, marcando antes «Modo mouse/táctil» en su desplegable de personalización."
   },
   {
     "id": "interfaz-128",
@@ -3861,28 +3873,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-16",
-    "enunciado": "En Word 365, ¿qué ocurre con la interfaz de la cinta de opciones cuando se activa el modo táctil?",
+    "revisada": true,
+    "enunciado": "Activas el modo táctil. ¿Qué le pasa a la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Los comandos se vuelven más pequeños para aprovechar el espacio"
+        "text": "Los botones crecen y se separan entre sí"
       },
       {
         "letter": "B",
-        "text": "Los comandos se vuelven más grandes y hay más espacio entre ellos"
+        "text": "Los botones se encogen para que quepan más"
       },
       {
         "letter": "C",
-        "text": "La cinta de opciones se oculta automáticamente"
+        "text": "La cinta se oculta y solo quedan los nombres de las pestañas"
       },
       {
         "letter": "D",
-        "text": "Los comandos se alinean verticalmente en una columna"
+        "text": "Los comandos se ordenan en una columna vertical"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "En modo táctil los comandos son más grandes y espaciados. La opción «Los comandos se alinean verticalmente en una…» es una falsedad plausible."
+    "respuesta": "A",
+    "explicacion": "Es lo que hace falta para acertar con el dedo, y de rebote ayuda a quien tenga poca vista aunque use ratón. Como el espacio no crece, caben menos comandos a la vista. · **Ocultar la cinta** es el descarte que decide la pregunta, y es algo que sí ocurre de verdad, pero con otro comando: Ctrl+F1, un doble clic en la pestaña activa o el menú contextual de la cinta. · Lo de la columna vertical no existe en Word: la cinta siempre es horizontal."
   },
   {
     "id": "interfaz-131",
@@ -3896,28 +3909,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-19",
-    "enunciado": "En Word 365, el material afirma que el modo mouse es el modo convencional. ¿Qué implica esto?",
+    "revisada": true,
+    "enunciado": "Al modo mouse se le llama el modo «convencional». ¿Por qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Que es el modo por defecto para todos los dispositivos, incluidos los táctiles"
+        "text": "Porque es el pensado para trabajar con ratón, y el que Word usa de partida"
       },
       {
         "letter": "B",
-        "text": "Que está diseñado para ser usado con un ratón físico"
+        "text": "Porque es el que se activa por defecto también en los dispositivos táctiles"
       },
       {
         "letter": "C",
-        "text": "Que es el modo más rápido y optimizado"
+        "text": "Porque es el que menos recursos consume de los dos"
       },
       {
         "letter": "D",
-        "text": "Que es el modo que usan las personas con visión reducida"
+        "text": "Porque es el que se recomienda a quien tiene poca vista"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo mouse es el convencional para dispositivos con ratón. La opción «Que es el modo por defecto para…» es una generalización incorrecta pero plausible."
+    "respuesta": "A",
+    "explicacion": "El puntero de un ratón es preciso, así que no hace falta reservar espacio alrededor de los botones y la cinta puede mostrar más comandos. Es lo que se ve en un ordenador de sobremesa o un portátil corriente. · **Lo del dispositivo táctil** es el descarte que decide la pregunta: ahí Word suele proponer el otro modo, precisamente porque el dedo es menos preciso. · Y a quien tiene poca vista le conviene el táctil, que agranda los botones aunque no haya pantalla táctil."
   },
   {
     "id": "interfaz-132",
@@ -3931,28 +3945,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-20",
-    "enunciado": "En Word 365, ¿cuál de los siguientes elementos NO está etiquetado en la imagen de los \"Elementos principales\"?",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO es un elemento fijo de la ventana de Word:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Área de trabajo"
+        "text": "El panel de navegación"
       },
       {
         "letter": "B",
-        "text": "Barra de estado"
+        "text": "El área de trabajo"
       },
       {
         "letter": "C",
-        "text": "Barra de título"
+        "text": "La barra de estado"
       },
       {
         "letter": "D",
-        "text": "Panel de navegación"
+        "text": "La barra de título"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El panel de navegación no aparece en el esquema. Es un elemento real de Word, lo que aumenta su poder de confusión."
+    "respuesta": "A",
+    "explicacion": "El panel de navegación existe, y es muy útil —muestra los títulos, las páginas y los resultados de una búsqueda—, pero es un panel que se abre y se cierra a voluntad, con Ctrl+B o desde Vista ▸ Mostrar. No forma parte de la estructura de la ventana. · Que sea real es lo que lo hace buen distractor. · Los elementos fijos son la barra de título, la de acceso rápido, la cinta, las reglas, el área de trabajo, las barras de desplazamiento y la barra de estado con sus vistas y su zoom."
   },
   {
     "id": "interfaz-135",
@@ -3966,28 +3981,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-23",
-    "enunciado": "Un usuario tiene un portátil con pantalla táctil, pero utiliza un ratón externo y observa que los botones de la cinta de opciones son demasiado grandes y ocupan mucho espacio. ¿Qué debe activar para que los comandos se vuelvan más pequeños y se aproveche mejor el espacio en pantalla?",
+    "revisada": true,
+    "enunciado": "Trabajas en un portátil con pantalla táctil pero usas ratón, y los botones de la cinta te parecen enormes. ¿Qué hay que hacer?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Activar el Modo táctil, porque está diseñado para pantallas táctiles."
+        "text": "Cambiar al modo mouse desde la barra de acceso rápido"
       },
       {
         "letter": "B",
-        "text": "Activar el Modo mouse, que es el modo convencional para ratón."
+        "text": "Cambiar al modo táctil desde la barra de acceso rápido"
       },
       {
         "letter": "C",
-        "text": "Desactivar la Barra de herramientas de acceso rápido."
+        "text": "Quitar la barra de herramientas de acceso rápido"
       },
       {
         "letter": "D",
-        "text": "Cambiar la vista a \"Diseño web\"."
+        "text": "Cambiar a la vista Diseño web"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo mouse reduce el tamaño de los comandos y aumenta la densidad. La opción «Cambiar la vista a \"Diseño web\"» es una creencia común pero falsa en este contexto."
+    "respuesta": "A",
+    "explicacion": "En un equipo con pantalla táctil Word puede haber elegido el modo táctil, que agranda y separa los botones a costa de mostrar menos. Con ratón no hace falta ese margen, y el modo mouse recupera la cinta compacta de siempre. · **La vista Diseño web** es el descarte que decide la pregunta: cambia cómo se ve el DOCUMENTO, no la cinta, y esa confusión entre interfaz y contenido es la que se repite en todo este asunto. · El alternador está en el desplegable de la barra de acceso rápido."
   },
   {
     "id": "interfaz-137",
@@ -4001,28 +4017,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-25",
-    "enunciado": "En Word 365, si un usuario activa el \"Modo táctil\" en un dispositivo con pantalla no táctil, ¿qué beneficio obtendrá?",
+    "revisada": true,
+    "enunciado": "Quieres ganar espacio en pantalla dejando solo los nombres de las pestañas, sin los botones. ¿Cómo se hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Un mayor número de comandos visibles en la cinta de opciones"
+        "text": "Con Ctrl+F1, o haciendo doble clic en la pestaña activa"
       },
       {
         "letter": "B",
-        "text": "Un mayor tamaño y separación de los comandos de la cinta"
+        "text": "Con Ctrl+F2, o haciendo doble clic en la barra de título"
       },
       {
         "letter": "C",
-        "text": "Un cambio automático en la orientación de la página"
+        "text": "Activando el modo táctil desde la barra de acceso rápido"
       },
       {
         "letter": "D",
-        "text": "Un aumento automático del zoom del documento activo"
+        "text": "Desde Vista ▸ Mostrar, desmarcando la cinta"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo táctil agranda los comandos; la opción «Un mayor número de comandos visibles en…» es la característica del modo mouse."
+    "respuesta": "A",
+    "explicacion": "La cinta se contrae y deja solo la fila de nombres; al pinchar una pestaña vuelve a desplegarse temporalmente y se recoge al hacer clic en el documento. Se restituye con la misma tecla, con otro doble clic o desde el menú contextual de la cinta. · **El modo táctil** es el descarte que decide la pregunta: también cambia el aspecto de la cinta, pero para agrandarla, no para esconderla. · En Vista ▸ Mostrar están las casillas de la regla, las líneas de cuadrícula y el panel de navegación, no la cinta."
   },
   {
     "id": "interfaz-140",
@@ -4036,28 +4053,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-28",
-    "enunciado": "En Word 365, ¿qué relación existe entre el \"Modo mouse\" y el \"Modo táctil\"?",
+    "revisada": true,
+    "enunciado": "¿Cómo se organiza por dentro la cinta de opciones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Son dos vistas del documento, como Impresión y Diseño web"
+        "text": "En pestañas, que contienen grupos, que contienen comandos"
       },
       {
         "letter": "B",
-        "text": "Son dos modos que cambian la disposición de la cinta de opciones"
+        "text": "En grupos, que contienen pestañas, que contienen comandos"
       },
       {
         "letter": "C",
-        "text": "El táctil es una versión anterior y obsoleta del modo mouse"
+        "text": "En comandos sueltos, ordenados por frecuencia de uso"
       },
       {
         "letter": "D",
-        "text": "El mouse sirve para editar y el táctil solo para leer"
+        "text": "En menús desplegables encadenados, como en las versiones anteriores"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Ambos modos modifican la interfaz de la cinta. La opción «Son dos vistas del documento, como Impresión…» confunde con las vistas."
+    "respuesta": "A",
+    "explicacion": "Es la jerarquía que hay detrás de cualquier ruta de Word: pestaña, grupo y comando, como en «Inicio ▸ Párrafo ▸ Centrar». El nombre del grupo va escrito debajo de sus botones, y algunos grupos llevan una flechita en su esquina que abre el cuadro de diálogo completo. · La versión con pestañas y grupos intercambiados es el descarte que decide la pregunta. · Los menús encadenados son lo que la cinta vino a sustituir en 2007, y de ahí que el material antiguo hable de menús."
   },
   {
     "id": "interfaz-141",
@@ -4071,19 +4089,20 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-29",
-    "enunciado": "En Word 365, ¿cuál de los siguientes elementos se encuentra en la parte superior de la ventana, justo por encima de las cintas de opciones?",
+    "revisada": true,
+    "enunciado": "¿Qué elemento ocupa la franja más alta de la ventana de Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La barra de herramientas de acceso rápido"
-      },
-      {
-        "letter": "B",
         "text": "La barra de título"
       },
       {
+        "letter": "B",
+        "text": "La cinta de opciones"
+      },
+      {
         "letter": "C",
-        "text": "La regla"
+        "text": "La regla horizontal"
       },
       {
         "letter": "D",
@@ -4091,8 +4110,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La barra de título es el elemento más alto. La barra de acceso rápido (A) está en la misma fila que el título pero a la izquierda, no \"justo por encima\"."
+    "respuesta": "A",
+    "explicacion": "Muestra el nombre del documento seguido de «Word», el cuadro de búsqueda de Microsoft Search, los botones de la ventana y, según la configuración, la barra de acceso rápido. · Esta última es el matiz que decide la pregunta: comparte la misma franja, pegada a la izquierda, así que no está «encima» de nada, sino al lado. También se puede colocar debajo de la cinta. · Por debajo van la cinta, la regla horizontal, el área de trabajo y, abajo del todo, la barra de estado con las vistas y el zoom."
   },
   {
     "id": "interfaz-142",
@@ -4106,28 +4125,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-30",
-    "enunciado": "En Word 365, ¿dónde se encuentra exactamente el botón para activar el \"Modo táctil\"?",
+    "revisada": true,
+    "enunciado": "El botón que alterna entre modo mouse y modo táctil no aparece en tu Word. ¿Por qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": "En la pestaña \"Insertar\", en el grupo \"Texto\""
+        "text": "Porque hay que marcarlo antes en el desplegable de personalización de la barra de acceso rápido"
       },
       {
         "letter": "B",
-        "text": "En la barra de herramientas de acceso rápido"
+        "text": "Porque solo aparece en equipos con pantalla táctil"
       },
       {
         "letter": "C",
-        "text": "En la pestaña \"Vista\", en el grupo \"Vistas\""
+        "text": "Porque hay que activarlo en Archivo ▸ Opciones ▸ General"
       },
       {
         "letter": "D",
-        "text": "En el menú \"Archivo\", en el panel de información"
+        "text": "Porque está en la pestaña Vista y no en la barra de acceso rápido"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El botón está en la barra de acceso rápido. La opción «En la pestaña \"Vista\", en el grupo \"Vistas\"» es la ubicación más lógica para configuraciones, pero es incorrecta."
+    "respuesta": "A",
+    "explicacion": "Ese desplegable es una lista de comandos que se pueden mostrar u ocultar en la barra, y «Modo mouse/táctil» es uno de ellos: si nunca se ha marcado, el botón no está y no hay manera de encontrarlo por la cinta. · **Que solo salga en equipos táctiles** es el descarte que decide la pregunta: se puede marcar y usar en cualquier equipo, y de hecho el modo táctil sirve también a quien tenga poca vista aunque use ratón. · En la pestaña Vista están las vistas del documento, no los modos de la cinta."
   },
   {
     "id": "interfaz-144",
@@ -4141,28 +4161,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-32",
-    "enunciado": "En Word 365 ¿qué diferencia de espaciado existe entre el modo mouse y el modo táctil?",
+    "revisada": true,
+    "enunciado": "Haces doble clic sobre la pestaña que ya está activa en la cinta. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "En el modo mouse hay más espacio entre los comandos que en el táctil"
+        "text": "La cinta se contrae y deja solo la fila de nombres de pestaña"
       },
       {
         "letter": "B",
-        "text": "En el modo táctil hay más espacio entre los comandos que en el mouse"
+        "text": "Se abre el cuadro de personalización de la cinta"
       },
       {
         "letter": "C",
-        "text": "No hay diferencia de espaciado, solo de tamaño"
+        "text": "Se cambia entre modo mouse y modo táctil"
       },
       {
         "letter": "D",
-        "text": "En el modo táctil los comandos están alineados verticalmente"
+        "text": "No ocurre nada: hay que usar el menú contextual"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo táctil tiene mayor espaciado. La opción «En el modo mouse hay más espacio…» es la inversión exacta (trampa)."
+    "respuesta": "A",
+    "explicacion": "Es lo mismo que hace Ctrl+F1, y se deshace con otro doble clic. Con la cinta contraída, un clic simple en una pestaña la despliega un momento y se recoge al volver al documento. · Personalizar la cinta sí está en el menú contextual, que se abre con el clic DERECHO sobre ella, y también en Archivo ▸ Opciones. · Es un descubrimiento accidental muy común: se hace doble clic sin querer, desaparecen los botones y cuesta entender qué ha pasado."
   },
   {
     "id": "interfaz-145",
@@ -4176,19 +4197,20 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-33",
-    "enunciado": "En Word 365, ¿cuál de los siguientes elementos se encuentra ubicado en la parte izquierda de la ventana?",
+    "revisada": true,
+    "enunciado": "¿Qué hay en el borde izquierdo del área de trabajo?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La barra de herramientas de acceso rápido"
-      },
-      {
-        "letter": "B",
         "text": "La regla vertical"
       },
       {
-        "letter": "C",
+        "letter": "B",
         "text": "La barra de desplazamiento"
+      },
+      {
+        "letter": "C",
+        "text": "La barra de herramientas de acceso rápido"
       },
       {
         "letter": "D",
@@ -4196,8 +4218,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La regla vertical se encuentra en el lateral izquierdo. La barra de desplazamiento (C) está a la derecha."
+    "respuesta": "A",
+    "explicacion": "Hay dos reglas, la horizontal arriba y la vertical a la izquierda, y las dos se muestran u ocultan con la misma casilla, en Vista ▸ Mostrar ▸ Regla. La vertical solo aparece en la vista Diseño de impresión. · **La barra de desplazamiento** es el descarte que decide la pregunta: está en el otro lado, a la derecha. · La barra de acceso rápido va arriba y el área de vistas abajo a la derecha, dentro de la barra de estado."
   },
   {
     "id": "interfaz-146",
@@ -4211,28 +4233,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-34",
-    "enunciado": "En Word 365, ¿por qué el modo táctil está pensado para \"personas con visión reducida\"?",
+    "revisada": true,
+    "enunciado": "¿Por qué se recomienda el modo táctil a quien tiene poca vista, aunque no use pantalla táctil?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Porque aumenta el tamaño del texto del documento"
+        "text": "Porque agranda y separa los botones de la cinta, que son lo que cuesta distinguir"
       },
       {
         "letter": "B",
-        "text": "Porque aumenta el tamaño y el espaciado de los comandos de la interfaz, haciéndolos más fáciles de ver y pulsar"
+        "text": "Porque aumenta el tamaño del texto del documento"
       },
       {
         "letter": "C",
-        "text": "Porque cambia el color de la interfaz a alto contraste"
+        "text": "Porque pone la interfaz en alto contraste"
       },
       {
         "letter": "D",
-        "text": "Porque activa el narrador para leer el texto"
+        "text": "Porque activa el narrador para que lea el texto en voz alta"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El modo táctil agranda los comandos. La opción «Porque aumenta el tamaño del texto del…» se refiere al zoom del documento."
+    "respuesta": "A",
+    "explicacion": "Los botones de la cinta tienen un tamaño fijo que no depende del zoom, así que agrandar el documento no ayuda nada a distinguirlos: el modo táctil es lo único que actúa sobre ellos. · **El zoom del documento** es el descarte que decide la pregunta y es el error más frecuente. · El alto contraste es una opción del sistema operativo, no de Word, y leer en voz alta es otra herramienta distinta, en Revisar ▸ Voz, con Alt+Ctrl+Espacio."
   },
   {
     "id": "interfaz-147",
@@ -4246,28 +4269,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-35",
-    "enunciado": "En Word 365, ¿cuál de los siguientes NO es un elemento principal de la ventana según el esquema?",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO existe en la ventana de Word:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Regla"
+        "text": "La barra de fórmulas"
       },
       {
         "letter": "B",
-        "text": "Cintas de opciones"
+        "text": "La regla"
       },
       {
         "letter": "C",
-        "text": "Barra de fórmulas"
+        "text": "La cinta de opciones"
       },
       {
         "letter": "D",
-        "text": "Barra de desplazamiento"
+        "text": "La barra de desplazamiento"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La barra de fórmulas es un elemento de Excel, no de Word. Es un distractor clásico de \"aplicación cruzada\"."
+    "respuesta": "A",
+    "explicacion": "La barra de fórmulas es de Excel: la franja bajo la cinta donde se ve y se edita el contenido real de la celda seleccionada. En Word no hay nada equivalente porque no hay celdas con fórmula detrás. · Es el distractor clásico de traer un elemento de otro programa del paquete, y funciona porque las ventanas de Word y Excel se parecen mucho: las dos tienen barra de título, cinta, área de trabajo y barra de estado. · Word sí calcula un poco, con «Fórmula» en la cinta de tabla, pero sin barra."
   },
   {
     "id": "interfaz-149",
@@ -4281,28 +4305,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-37",
-    "enunciado": "En Word 365, ¿cuál de las siguientes afirmaciones es INCORRECTA sobre el modo mouse y el modo táctil?",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre los modos de la cinta:",
     "opciones": [
       {
         "letter": "A",
-        "text": "En modo mouse los comandos son más pequeños y caben más en la cinta"
+        "text": "El modo táctil viene activado de fábrica y no se puede desactivar"
       },
       {
         "letter": "B",
-        "text": "En modo táctil los comandos son más grandes y hay más espacio entre ellos"
+        "text": "En modo mouse los botones son más pequeños y caben más"
       },
       {
         "letter": "C",
-        "text": "El modo táctil está pensado para facilitar el uso en dispositivos táctiles"
+        "text": "En modo táctil los botones son más grandes y están más separados"
       },
       {
         "letter": "D",
-        "text": "El modo táctil es el modo predeterminado y no puede desactivarse"
+        "text": "El modo táctil facilita el uso con el dedo en pantallas táctiles"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El modo táctil puede activarse o desactivarse desde la barra de acceso rápido, no es fijo."
+    "respuesta": "A",
+    "explicacion": "Se alterna cuantas veces se quiera desde la barra de acceso rápido, y lo habitual es justo lo contrario: si no se ha marcado antes «Modo mouse/táctil» en el desplegable de esa barra, el botón ni siquiera está a la vista. · Las otras tres son ciertas y describen el intercambio entre los dos modos: el espacio de la cinta es el que es, así que agrandar los botones obliga a mostrar menos. · El modo táctil también sirve a quien tenga poca vista, aunque use ratón."
   },
   {
     "id": "interfaz-160",
@@ -4310,34 +4335,35 @@
     "bloque": "Interfaz — Ventana y cinta de opciones",
     "tipo": "opcion_unica",
     "categoria": "ruta",
-    "negativa": false,
+    "negativa": true,
     "section": "interfaz",
     "topic": "ventana-cinta",
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-48",
-    "enunciado": "En Word 365, según el esquema de \"Elementos principales\", ¿cuántos elementos distintos de la interfaz se señalan en total?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estos NO es uno de los elementos que componen la ventana de Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "7"
+        "text": "El panel de estilos"
       },
       {
         "letter": "B",
-        "text": "8"
+        "text": "El área de trabajo"
       },
       {
         "letter": "C",
-        "text": "9"
+        "text": "El área de vistas"
       },
       {
         "letter": "D",
-        "text": "10"
+        "text": "El control de zoom"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Barra de acceso rápido, Barra de título, Cintas, Regla (x2), Área de trabajo, Barra de estado, Área de vistas, Barra de desplazamiento, Zoom."
+    "respuesta": "A",
+    "explicacion": "El panel de estilos existe y se abre con el lanzador del grupo Estilos, pero es un panel que va y viene, no una parte de la ventana. · Los elementos que sí lo son: barra de título, barra de acceso rápido, cinta de opciones, las dos reglas, área de trabajo, barras de desplazamiento y barra de estado, que a su vez contiene el área de vistas y el control de zoom. · La regla se cuenta a veces como uno y a veces como dos, según se separe la horizontal de la vertical."
   },
   {
     "id": "interfaz-161",
@@ -4351,28 +4377,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-49",
-    "enunciado": "En Word 365, ¿cuántos modos de uso de la cinta de opciones se describen en el texto?",
+    "revisada": true,
+    "enunciado": "Sin contar las fichas contextuales ni las que hay que activar a mano, ¿cuántas pestañas fijas hay entre Archivo y Ayuda?",
     "opciones": [
       {
         "letter": "A",
-        "text": "1"
+        "text": "Ocho: de Inicio a Vista, con Correspondencia entre ellas"
       },
       {
         "letter": "B",
-        "text": "2"
+        "text": "Nueve: las mismas más una pestaña Dibujar"
       },
       {
         "letter": "C",
-        "text": "3"
+        "text": "Siete: las mismas pero sin Correspondencia"
       },
       {
         "letter": "D",
-        "text": "4"
+        "text": "Diez: las mismas más Dibujar y Programador"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Modo mouse y modo táctil."
+    "respuesta": "A",
+    "explicacion": "Son Inicio, Insertar, Diseño, Disposición, Referencias, Correspondencia, Revisar y Vista. Archivo va a la izquierda y no es una pestaña normal, porque abre la vista Backstage a pantalla completa; Ayuda cierra la fila por la derecha. Esas ocho son las que dan nombre a los bloques del temario. · **Programador** es el descarte que decide la pregunta: existe, pero no está visible de fábrica y hay que encenderla en Opciones ▸ Personalizar cinta. · A ellas se suman las contextuales, que solo salen con un objeto seleccionado."
   },
   {
     "id": "interfaz-165",
@@ -4386,28 +4413,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-53",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "La barra de acceso rápido es personalizable"
+        "text": "El modo mouse es el pensado para quien tiene visión reducida"
       },
       {
         "letter": "B",
-        "text": "El modo táctil facilita el uso en dispositivos táctiles"
+        "text": "La barra de acceso rápido se puede personalizar"
       },
       {
         "letter": "C",
-        "text": "El modo mouse es el modo pensado para personas con visión reducida"
+        "text": "El modo táctil facilita el manejo con el dedo"
       },
       {
         "letter": "D",
-        "text": "El último botón de la barra de acceso rápido abre el menú de personalización"
+        "text": "El último botón de la barra de acceso rápido abre su menú de personalización"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El modo táctil es el pensado para visión reducida, no el mouse."
+    "respuesta": "A",
+    "explicacion": "Están cambiados: el que agranda y separa los botones es el táctil, y por eso es el que ayuda a quien ve poco, aunque trabaje con ratón. El modo mouse hace lo contrario, apretar la cinta para que quepan más comandos. · Las otras tres son ciertas. · Ese último botón de la barra, la flechita, es además donde se marca «Modo mouse/táctil» para que aparezca el alternador, así que las dos cosas están más relacionadas de lo que parece."
   },
   {
     "id": "interfaz-166",
@@ -4421,28 +4449,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-54",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre la ventana de Word:",
     "opciones": [
       {
         "letter": "A",
-        "text": "La Regla ayuda a medir márgenes y tabulaciones"
+        "text": "La barra de estado está en la parte superior de la ventana"
       },
       {
         "letter": "B",
-        "text": "La Barra de estado se sitúa en la parte superior de la ventana"
+        "text": "La regla ayuda a colocar márgenes, sangrías y tabulaciones"
       },
       {
         "letter": "C",
-        "text": "El Área de trabajo es la zona central donde se edita el documento"
+        "text": "El área de trabajo es la zona central donde se escribe"
       },
       {
         "letter": "D",
-        "text": "La Barra de desplazamiento permite moverse por el documento"
+        "text": "La barra de desplazamiento permite recorrer el documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La barra de estado está abajo, no arriba."
+    "respuesta": "A",
+    "explicacion": "La barra de estado está abajo del todo: a la izquierda lleva el número de página, el recuento de palabras y el idioma, y a la derecha los botones de vista y el zoom. Arriba está la barra de TÍTULO, y confundir los dos nombres es el error que se busca aquí. · Las otras tres son ciertas. · La regla es además interactiva: los márgenes y las sangrías se arrastran directamente sobre ella, y su selector permite elegir el tipo de tabulación."
   },
   {
     "id": "interfaz-167",
@@ -4456,28 +4485,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-55",
-    "enunciado": "En Word 365, señale la afirmación que NO es correcta sobre las diferencias mouse/táctil:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre los modos mouse y táctil:",
     "opciones": [
       {
         "letter": "A",
-        "text": "En modo mouse caben más comandos porque son más pequeños"
+        "text": "En modo táctil hay menos espacio entre los comandos que en modo mouse"
       },
       {
         "letter": "B",
-        "text": "En modo táctil los comandos son más grandes"
+        "text": "En modo mouse caben más comandos porque son más pequeños"
       },
       {
         "letter": "C",
-        "text": "En modo táctil hay menos espacio entre comandos que en modo mouse"
+        "text": "En modo táctil los comandos son más grandes"
       },
       {
         "letter": "D",
-        "text": "Ambos modos pueden alternarse desde la barra de acceso rápido"
+        "text": "Se alterna entre los dos desde la barra de acceso rápido"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "En modo táctil hay más espacio, no menos."
+    "respuesta": "A",
+    "explicacion": "Está al revés: el modo táctil deja MÁS espacio entre botones, que es justo lo que hace falta para acertar con el dedo, y como la cinta no crece, caben menos comandos. · Tamaño y separación van juntos y en la misma dirección: los dos aumentan en táctil y disminuyen en mouse. Las afirmaciones que los separan o los cruzan son siempre falsas. · Las otras tres son ciertas. · El alternador hay que marcarlo antes en el desplegable de personalización de esa barra."
   },
   {
     "id": "interfaz-169",
@@ -4491,28 +4521,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-57",
-    "enunciado": "En Word 365, el elemento que muestra el nombre del documento y del programa (p. ej. \"Documento1 - Word\") es:",
+    "revisada": true,
+    "enunciado": "Ves arriba del todo el texto «Documento1 - Word». ¿Qué elemento de la ventana es?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Barra de herramientas de acceso rápido"
+        "text": "La barra de título"
       },
       {
         "letter": "B",
-        "text": "Cintas de opciones"
+        "text": "La barra de herramientas de acceso rápido"
       },
       {
         "letter": "C",
-        "text": "Barra de título"
+        "text": "La cinta de opciones"
       },
       {
         "letter": "D",
-        "text": "Barra de estado"
+        "text": "La barra de estado"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La respuesta correcta es «Barra de título»."
+    "respuesta": "A",
+    "explicacion": "Muestra el nombre del archivo y el del programa, y añade avisos entre corchetes según el estado: «[Modo de compatibilidad]» con un formato antiguo, «[Solo lectura]» si no se puede editar. · «Documento1» es el nombre provisional que Word da a un documento nuevo hasta que se guarda por primera vez, y va numerando. · La barra de acceso rápido comparte esa misma franja, pero solo lleva botones; y la de estado está abajo del todo, con la página, las palabras y el idioma."
   },
   {
     "id": "interfaz-170",
@@ -4526,28 +4557,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-58",
-    "enunciado": "En Word 365, el elemento que agrupa las pestañas Inicio, Insertar, Diseño, Disposición, Referencias, etc. se denomina:",
+    "revisada": true,
+    "enunciado": "¿Cómo se llama la banda que agrupa las pestañas Inicio, Insertar, Diseño, Disposición, Referencias y demás?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Barra de título"
+        "text": "La cinta de opciones"
       },
       {
         "letter": "B",
-        "text": "Cintas de opciones"
+        "text": "La barra de título"
       },
       {
         "letter": "C",
-        "text": "Barra de estado"
+        "text": "La barra de estado"
       },
       {
         "letter": "D",
-        "text": "Área de trabajo"
+        "text": "El área de trabajo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La respuesta correcta es «Cintas de opciones»."
+    "respuesta": "A",
+    "explicacion": "Es el sistema que sustituyó a los menús desplegables en 2007, y se organiza en tres niveles: pestañas, que contienen grupos, que contienen comandos. El nombre del grupo va escrito debajo de sus botones. · A las ocho pestañas fijas se suman Archivo a la izquierda, que abre el Backstage a pantalla completa, y Ayuda a la derecha, más las contextuales que aparecen al seleccionar un objeto. · Se contrae con Ctrl+F1 o con un doble clic en la pestaña activa."
   },
   {
     "id": "interfaz-175",
@@ -4561,28 +4593,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-63",
-    "enunciado": "En Word 365, señale el elemento que NO forma parte de los \"Elementos principales\" señalados en la interfaz:",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO es una parte de la ventana de Word:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Regla"
+        "text": "El portapapeles"
       },
       {
         "letter": "B",
-        "text": "Cintas de opciones"
+        "text": "La regla"
       },
       {
         "letter": "C",
-        "text": "Portapapeles"
+        "text": "La cinta de opciones"
       },
       {
         "letter": "D",
-        "text": "Barra de título"
+        "text": "La barra de título"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La opción que cumple el enunciado es «Portapapeles». Las otras tres sí corresponden a lo que se pregunta."
+    "respuesta": "A",
+    "explicacion": "El portapapeles es un GRUPO de comandos dentro de la pestaña Inicio, el primero por la izquierda, con Pegar, Cortar, Copiar y el pincel. Su panel lateral, que guarda hasta 24 elementos, se abre con el lanzador de ese grupo y se cierra cuando se quiere. · Las partes de la ventana son otra cosa: están siempre, con documento o sin él. La confusión viene de que el panel también ocupa un lado de la pantalla, como si formara parte de la estructura."
   },
   {
     "id": "interfaz-176",
@@ -4596,28 +4629,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-64",
-    "enunciado": "En Word 365, señale el elemento que NO aparece marcado como elemento principal de la ventana en el esquema:",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO existe en la ventana de Word:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Área de vistas"
+        "text": "La barra de fórmulas"
       },
       {
         "letter": "B",
-        "text": "Zoom"
+        "text": "El área de vistas"
       },
       {
         "letter": "C",
-        "text": "Barra de fórmulas"
+        "text": "El control de zoom"
       },
       {
         "letter": "D",
-        "text": "Barra de desplazamiento"
+        "text": "La barra de desplazamiento"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La opción que cumple el enunciado es «Barra de fórmulas». Las otras tres sí corresponden a lo que se pregunta."
+    "respuesta": "A",
+    "explicacion": "La barra de fórmulas es de Excel: la franja bajo la cinta donde se ve el contenido real de la celda seleccionada. Word no la necesita porque no hay celdas con una fórmula detrás de lo que se muestra. · Los otros tres sí están, y los dos primeros comparten sitio: el área de vistas y el zoom ocupan el extremo derecho de la barra de estado. · Es el distractor clásico de traer un elemento de otro programa del paquete, y funciona porque las dos ventanas se parecen mucho."
   },
   {
     "id": "interfaz-178",
@@ -4631,28 +4665,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-66",
-    "enunciado": "En Word 365, \"El modo mouse es el modo convencional utilizado para dispositivos que utilizan el ______.\" (Completar)",
+    "revisada": true,
+    "enunciado": "El modo mouse es el modo convencional, pensado para usar Word con…",
     "opciones": [
       {
         "letter": "A",
-        "text": "teclado"
+        "text": "el ratón"
       },
       {
         "letter": "B",
-        "text": "ratón"
+        "text": "el teclado"
       },
       {
         "letter": "C",
-        "text": "lápiz óptico"
+        "text": "un lápiz óptico"
       },
       {
         "letter": "D",
-        "text": "micrófono"
+        "text": "el micrófono"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La respuesta correcta es «ratón»."
+    "respuesta": "A",
+    "explicacion": "El puntero del ratón es preciso, así que no hace falta dejar aire alrededor de cada botón y la cinta puede mostrar más comandos a la vez. · **El teclado** es el descarte que decide la pregunta, y merece un matiz: Word tiene todo un sistema de manejo por teclado, las letras de acceso que salen al pulsar Alt, pero eso funciona igual en los dos modos y no es lo que distingue a este. · El lápiz óptico se comporta como un dedo, así que con él conviene el modo táctil."
   },
   {
     "id": "interfaz-179",
@@ -4666,28 +4701,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-67",
-    "enunciado": "En Word 365, \"El modo táctil está pensado para ser utilizado en dispositivos táctiles o para personas con ______.\" (Completar)",
+    "revisada": true,
+    "enunciado": "Además de para pantallas táctiles, el modo táctil se recomienda a personas con…",
     "opciones": [
       {
         "letter": "A",
-        "text": "discapacidad auditiva"
-      },
-      {
-        "letter": "B",
         "text": "visión reducida"
       },
       {
+        "letter": "B",
+        "text": "discapacidad auditiva"
+      },
+      {
         "letter": "C",
-        "text": "movilidad reducida"
+        "text": "daltonismo"
       },
       {
         "letter": "D",
-        "text": "daltonismo"
+        "text": "dificultades de comprensión lectora"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La respuesta correcta es «visión reducida»."
+    "respuesta": "A",
+    "explicacion": "Al agrandar y separar los botones, se distinguen y se aciertan mejor, y eso vale igual con ratón que con el dedo. · Los tres descartes nombran necesidades reales para las que Word tiene otras respuestas: para quien no oye, los subtítulos y la transcripción; para el daltonismo, los ajustes de contraste del sistema; y para la comprensión lectora, el Lector inmersivo de la pestaña Vista, con su espaciado de texto y su lectura en voz alta. Cada ayuda actúa sobre una cosa distinta."
   },
   {
     "id": "interfaz-181",
@@ -4701,28 +4737,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-69",
-    "enunciado": "En Word 365, \"En el modo táctil los comandos son más grandes y hay más espacio entre ellos, lo que facilita su uso en dispositivos ______.\" (Completar)",
+    "revisada": true,
+    "enunciado": "En modo táctil los comandos son más grandes y hay más espacio entre ellos. ¿Qué se pierde a cambio?",
     "opciones": [
       {
         "letter": "A",
-        "text": "de escritorio"
+        "text": "Que caben menos comandos a la vista en la cinta"
       },
       {
         "letter": "B",
-        "text": "táctiles"
+        "text": "Que se pierden pestañas enteras de la cinta"
       },
       {
         "letter": "C",
-        "text": "externos"
+        "text": "Que el documento se ve con menos zoom"
       },
       {
         "letter": "D",
-        "text": "móviles antiguos"
+        "text": "Que no se puede usar el teclado para nada"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La respuesta correcta es «táctiles»."
+    "respuesta": "A",
+    "explicacion": "El ancho de la cinta no cambia, así que agrandar y separar los botones obliga a que quepan menos: algunos grupos se recogen en un solo botón desplegable. Es un intercambio, y por eso hay dos modos en vez de uno mejor. · **Perder pestañas** es el descarte que decide la pregunta: las pestañas siguen todas ahí, lo que se compacta es su contenido. · Y el documento no se entera de nada: el modo solo toca la interfaz."
   },
   {
     "id": "interfaz-182",
@@ -4736,28 +4773,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-70",
-    "enunciado": "En Word 365, ¿cuál de las siguientes afirmaciones sobre el modo táctil es VERDADERA?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas afirmaciones sobre el modo táctil es VERDADERA?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Los comandos son más pequeños que en modo mouse"
+        "text": "Aumenta el tamaño de los comandos de la cinta"
       },
       {
         "letter": "B",
-        "text": "Reduce el número de pestañas"
+        "text": "Reduce el número de pestañas de la cinta"
       },
       {
         "letter": "C",
-        "text": "Aumenta el tamaño de los comandos"
+        "text": "Hace los comandos más pequeños que en modo mouse"
       },
       {
         "letter": "D",
-        "text": "Solo se activa en tablets"
+        "text": "Solo se puede activar en tabletas"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La respuesta correcta es «Aumenta el tamaño de los comandos»."
+    "respuesta": "A",
+    "explicacion": "Los agranda y los separa, para poder acertar con el dedo; de rebote ayuda a quien tiene poca vista, aunque use ratón. · **Que solo funcione en tabletas** es el descarte que decide la pregunta y es falso: se activa en cualquier equipo desde la barra de acceso rápido, siempre que se haya marcado antes «Modo mouse/táctil» en su desplegable de personalización. · Las pestañas no desaparecen: lo que ocurre es que en cada una caben menos comandos a la vista."
   },
   {
     "id": "interfaz-187",
@@ -4771,28 +4809,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-5",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana nos indica el nombre del documento en el que estamos trabajando?",
+    "revisada": true,
+    "enunciado": "¿Qué elemento de la ventana indica en qué documento se está trabajando?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Barra de herramientas de acceso rápido"
+        "text": "La barra de título"
       },
       {
         "letter": "B",
-        "text": "Barra de título"
+        "text": "La barra de estado"
       },
       {
         "letter": "C",
-        "text": "Cinta de opciones"
+        "text": "La barra de herramientas de acceso rápido"
       },
       {
         "letter": "D",
-        "text": "Barra de estado"
+        "text": "La cinta de opciones"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El material dice \"Nos indica el nombre del documento en el que estamos trabajando\" bajo el epígrafe \"Barra de título\"."
+    "respuesta": "A",
+    "explicacion": "Da el nombre del archivo seguido de «Word», y avisa entre corchetes si está en modo de compatibilidad o en solo lectura. · **La barra de estado** es el descarte que decide la pregunta, porque también informa constantemente: número de página, recuento de palabras, idioma y estado del control de cambios; pero nada de eso identifica el archivo. · Una manera de recordarlo: arriba va QUÉ documento es, y abajo CÓMO está."
   },
   {
     "id": "interfaz-188",
@@ -4806,7 +4845,8 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-6",
-    "enunciado": "En Word 365, ¿cuáles son los botones de control de ventana mencionados en el material?",
+    "revisada": true,
+    "enunciado": "¿Cuáles son los tres botones de control de la ventana, arriba a la derecha?",
     "opciones": [
       {
         "letter": "A",
@@ -4827,7 +4867,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El material enumera Minimizar, Restaurar/Maximizar tamaño y Cerrar."
+    "explicacion": "Son los de cualquier ventana de Windows, y el del medio cambia de dibujo y de nombre según el estado: maximiza si la ventana está en un tamaño intermedio y restaura si está a pantalla completa. · Guardar, imprimir y la ayuda son cosas de Word, no de la ventana: los dos primeros están en la barra de acceso rápido o en la pestaña Archivo, y la ayuda tiene pestaña propia al final de la cinta, además de responder a F1."
   },
   {
     "id": "interfaz-189",
@@ -4841,28 +4881,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-7",
-    "enunciado": "En Word 365, ¿qué botón permite restaurar o maximizar el tamaño de la ventana?",
+    "revisada": true,
+    "enunciado": "El botón del medio de los tres de control de ventana cambia de nombre y de dibujo. ¿De qué depende?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Minimizar"
+        "text": "Del estado de la ventana: maximiza si no lo está, y restaura si está a pantalla completa"
       },
       {
         "letter": "B",
-        "text": "Restaurar/Maximizar tamaño"
+        "text": "Del modo de la cinta: maximiza en modo mouse y restaura en modo táctil"
       },
       {
         "letter": "C",
-        "text": "Cerrar"
+        "text": "De si hay o no un documento abierto"
       },
       {
         "letter": "D",
-        "text": "Iniciar sesión"
+        "text": "De si el documento se ha guardado o tiene cambios pendientes"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Es uno de los botones de control de ventana listados."
+    "respuesta": "A",
+    "explicacion": "Es un botón de dos caras: llena la pantalla o devuelve la ventana al tamaño intermedio que tenía antes, y el icono cambia entre un cuadrado y dos cuadrados superpuestos según lo que vaya a hacer. Sus vecinos, Minimizar y Cerrar, no cambian nunca. · Lo mismo se consigue con un doble clic en la barra de título, o desde el menú de control de la ventana, que se abre con Alt+Barra espaciadora. · Ninguna de las tres cosas de los descartes influye en él."
   },
   {
     "id": "interfaz-190",
@@ -4876,28 +4917,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-8",
-    "enunciado": "En Word 365, ¿qué combinación de teclas permite restaurar o maximizar el tamaño de la ventana?",
+    "revisada": true,
+    "enunciado": "Tienes tres documentos abiertos y vas pulsando Alt+F4. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + F10"
+        "text": "Se van cerrando los documentos uno a uno, y con el último se cierra Word"
       },
       {
         "letter": "B",
-        "text": "Alt + F4"
+        "text": "Se cierra Word entero al primer intento, con los tres documentos"
       },
       {
         "letter": "C",
-        "text": "Alt + Barra espaciadora"
+        "text": "Se cierra solo el documento activo y Word sigue abierto en todos los casos"
       },
       {
         "letter": "D",
-        "text": "Ctrl + F1"
+        "text": "No hace nada: hay que usar el botón Cerrar de la barra de título"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El material asocia \"Restaurar/Maximizar tamaño\" con Ctrl + F10. Nota: Correcto. Ctrl+F10 maximiza la ventana del documento (término heredado de la antigua interfaz MDI; en Word actual la ventana del documento coincide con la de la aplicación)."
+    "explicacion": "Prueba en vivo del usuario. Cada pulsación se lleva una ventana, y cuando solo queda una, la siguiente cierra el programa. · **Cerrar solo el documento** es el descarte que decide la pregunta, y describe a **Ctrl+F4**, que cierra el documento activo sin cerrar Word nunca. Las dos combinaciones se parecen y hacen cosas distintas en el último paso. · Y **Ctrl+W** no cierra nada en esta instalación: quita el formato de párrafo, contra lo que dicen muchos manuales."
   },
   {
     "id": "interfaz-191",
@@ -4911,28 +4953,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-9",
-    "enunciado": "En Word 365, ¿qué combinación de teclas abre el menú de control de la ventana?",
+    "revisada": true,
+    "enunciado": "¿Qué hace Alt+Barra espaciadora sobre la ventana de Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt + Barra espaciadora"
+        "text": "Abre el menú de control de la ventana (Mover, Tamaño, Cerrar…)"
       },
       {
         "letter": "B",
-        "text": "Ctrl + F10"
+        "text": "Cierra la ventana activa sin preguntar nada"
       },
       {
         "letter": "C",
-        "text": "Alt + F4"
+        "text": "Contrae la cinta de opciones dejando las pestañas"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Z"
+        "text": "Activa el modo de acceso por teclado de la cinta"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El material dice \"también podemos abrir este menú Alt + Barra espaciadora\"."
+    "explicacion": "No es un atajo de Word sino de Windows: funciona igual en cualquier ventana del sistema, y por eso no figura en el cuadro Personalizar teclado, que solo recoge comandos de Word. · Sirve para mover o redimensionar una ventana sin ratón, con las flechas. · **Contraer la cinta** es Ctrl+F1, y el modo de acceso por teclado se activa con Alt, que es lo que hace que las dos se confundan: las dos empiezan por esa tecla."
   },
   {
     "id": "interfaz-192",
@@ -4946,28 +4989,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-13",
-    "enunciado": "En Word 365, ¿qué elemento se encuentra a la izquierda de la barra de título?",
+    "revisada": true,
+    "enunciado": "En el extremo derecho de la fila de pestañas, ¿qué botones aparecen en este Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El icono de OneDrive"
+        "text": "Comentarios, el estado de Revisión y Compartir"
       },
       {
         "letter": "B",
-        "text": "El símbolo de Word"
+        "text": "Guardar, Deshacer y Rehacer"
       },
       {
         "letter": "C",
-        "text": "El botón de Minimizar"
+        "text": "Minimizar, Maximizar y Cerrar"
       },
       {
         "letter": "D",
-        "text": "El botón de Ayuda"
+        "text": "Zoom, vistas del documento y recuento de palabras"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "\"A la izquierda de la barra de título podemos encontrar el símbolo de Word\"."
+    "respuesta": "A",
+    "explicacion": "Están alineados con las pestañas pero al otro extremo: «Comentarios» abre el panel lateral de comentarios, el indicador de «Revisión» resume el estado del control de cambios y «Compartir» lleva a las opciones de envío y trabajo en la nube. · **Guardar, Deshacer y Rehacer** es el descarte que decide la pregunta: son los botones de fábrica de la barra de acceso rápido, que está arriba pero a la IZQUIERDA. · Los de control de ventana están más arriba, en la barra de título, y el zoom abajo."
   },
   {
     "id": "interfaz-193",
@@ -4981,28 +5025,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-14",
-    "enunciado": "En Word 365, ¿qué ocurre al hacer clic sobre el símbolo de Word situado a la izquierda de la barra de título?",
+    "revisada": true,
+    "enunciado": "En la pestaña Vista ves «Ver en paralelo» escrito en gris claro y no responde al hacer clic. ¿Qué significa?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Se abre el menú Archivo"
+        "text": "Que ahora no se puede usar: le falta una condición"
       },
       {
         "letter": "B",
-        "text": "Se abre el menú de control de la ventana"
+        "text": "Que no está disponible en esta versión de Word"
       },
       {
         "letter": "C",
-        "text": "Se cierra el documento"
+        "text": "Que hay que encenderlo en Personalizar cinta"
       },
       {
         "letter": "D",
-        "text": "Se maximiza la ventana"
+        "text": "Que solo funciona con el modo táctil activo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El material dice que el símbolo \"nos abrirá el menú de control de la ventana\"."
+    "respuesta": "A",
+    "explicacion": "Word atenúa los comandos que en ese momento no tienen sentido, en lugar de esconderlos: con un solo documento abierto no hay nada con lo que comparar, así que «Ver en paralelo», «Desplazamiento sincrónico» y «Restablecer posición de la ventana» se quedan apagados hasta que se abra otro. · Es un patrón general: pasa con «Combinar celdas» sin varias celdas seleccionadas o con «Agrupar» sin dos objetos. · Que el botón siga a la vista es intencionado: así se aprende que existe y qué le falta."
   },
   {
     "id": "interfaz-194",
@@ -5016,19 +5061,20 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-15",
-    "enunciado": "En Word 365, dentro del menú de control de la ventana, ¿qué opción aparece asociada a Alt + F4?",
+    "revisada": true,
+    "enunciado": "En el menú de control de la ventana, ¿qué entrada lleva escrito Alt+F4 al lado?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Restaurar"
+        "text": "Cerrar"
       },
       {
         "letter": "B",
-        "text": "Minimizar"
+        "text": "Restaurar"
       },
       {
         "letter": "C",
-        "text": "Cerrar"
+        "text": "Minimizar"
       },
       {
         "letter": "D",
@@ -5036,8 +5082,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "La imagen del menú muestra \"Cerrar Alt+F4\"."
+    "respuesta": "A",
+    "explicacion": "Ese menú es de Windows, no de Word, y por eso no figura en el cuadro Personalizar teclado: se abre con Alt+Barra espaciadora y trae Restaurar, Mover, Tamaño, Minimizar, Maximizar y Cerrar, con su atajo anotado. · En Word, Alt+F4 va cerrando los documentos abiertos uno a uno y con el último cierra el programa. Prueba en vivo del usuario. · No hay que confundirlo con **Ctrl+F4**, que cierra el documento activo pero nunca cierra Word."
   },
   {
     "id": "interfaz-195",
@@ -5051,28 +5097,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-16",
-    "enunciado": "En Word 365, ¿qué elemento es la parte más importante de la ventana?",
+    "revisada": true,
+    "enunciado": "¿Qué contiene la cinta de opciones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "La barra de título"
+        "text": "La gran mayoría de los comandos para trabajar con el texto y el documento"
       },
       {
         "letter": "B",
-        "text": "La cinta de opciones"
+        "text": "Solo los comandos de formato de texto"
       },
       {
         "letter": "C",
-        "text": "La barra de estado"
+        "text": "Solo los comandos que el usuario haya añadido"
       },
       {
         "letter": "D",
-        "text": "El área de trabajo"
+        "text": "Los comandos de la aplicación, pero no los de edición del documento"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El material dice \"Es la parte más importante de la ventana puesto que en ella se encuentran la gran mayoría de los comandos\"."
+    "respuesta": "A",
+    "explicacion": "Es el sustituto de los menús desplegables desde 2007 y concentra casi todo: escribir, dar formato, insertar objetos, revisar, maquetar la página. · Lo que queda fuera son las operaciones sobre el ARCHIVO —abrir, guardar, imprimir, exportar, opciones—, que viven en la pestaña Archivo, es decir, en la vista Backstage a pantalla completa. Esa es la división que conviene tener clara. · **Lo que añade el usuario** es la barra de acceso rápido, que es otra cosa y va aparte."
   },
   {
     "id": "interfaz-196",
@@ -5086,28 +5133,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-17",
-    "enunciado": "En Word 365, ¿cuáles son los componentes básicos de la cinta de opciones?",
+    "revisada": true,
+    "enunciado": "¿Cuáles son los tres componentes básicos de la cinta de opciones?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Fichas/Pestañas, Grupos/Paneles y Comandos"
+        "text": "Fichas o pestañas, grupos o paneles, y comandos"
       },
       {
         "letter": "B",
-        "text": "Botones, Menús y Barras"
+        "text": "Botones, menús desplegables y barras de herramientas"
       },
       {
         "letter": "C",
-        "text": "Vistas, Zoom y Regla"
+        "text": "Vistas del documento, control de zoom y reglas"
       },
       {
         "letter": "D",
-        "text": "Páginas, Secciones y Capítulos"
+        "text": "Páginas, secciones del documento y capítulos"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "\"Los componentes básicos son las fichas o pestañas, grupos o paneles y comandos\"."
+    "explicacion": "Van encajados de mayor a menor: la ficha reúne grupos y el grupo reúne comandos, con su nombre escrito debajo. Esa es la estructura de cualquier ruta de Word, como «Inicio ▸ Párrafo ▸ Centrar». · Los dos primeros nivel tienen dos nombres cada uno, y en un examen pueden aparecer con cualquiera de ellos. · **Vistas, zoom y regla** es el descarte que decide la pregunta: son elementos reales de la ventana, pero de la barra de estado y del área de trabajo, no de la cinta."
   },
   {
     "id": "interfaz-197",
@@ -5121,28 +5169,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-18",
-    "enunciado": "En Word 365, ¿qué término usa el material como sinónimo de \"Ficha\"?",
+    "revisada": true,
+    "enunciado": "«Ficha» y «pestaña» son dos nombres para lo mismo dentro de la cinta. ¿Para qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Grupo"
+        "text": "Para cada una de las solapas superiores: Inicio, Insertar, Diseño…"
       },
       {
         "letter": "B",
-        "text": "Pestaña"
+        "text": "Para cada bloque de comandos con su nombre debajo"
       },
       {
         "letter": "C",
-        "text": "Comando"
+        "text": "Para cada botón que ejecuta una acción"
       },
       {
         "letter": "D",
-        "text": "Panel"
+        "text": "Para la banda entera que contiene todo lo anterior"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El material dice \"fichas o pestañas\"."
+    "respuesta": "A",
+    "explicacion": "Es el nivel de arriba, el que se pincha para cambiar de conjunto de herramientas. · **El bloque con su nombre debajo** es el descarte que decide la pregunta y también tiene dos nombres: grupo o panel. Ese doble juego de sinónimos es lo que se pregunta, porque un enunciado puede llamar a lo mismo de dos maneras. · El botón que ejecuta es el comando, y la banda entera es la cinta de opciones."
   },
   {
     "id": "interfaz-198",
@@ -5156,28 +5205,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-19",
-    "enunciado": "En Word 365, ¿qué término usa el material como sinónimo de \"Grupo\"?",
+    "revisada": true,
+    "enunciado": "«Grupo» y «panel» son dos nombres para lo mismo dentro de la cinta. ¿Para qué?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Panel"
+        "text": "Para cada bloque de comandos afines, con su nombre escrito debajo"
       },
       {
         "letter": "B",
-        "text": "Pestaña"
+        "text": "Para cada una de las solapas superiores de la cinta"
       },
       {
         "letter": "C",
-        "text": "Comando"
+        "text": "Para cada botón que ejecuta una acción"
       },
       {
         "letter": "D",
-        "text": "Área"
+        "text": "Para las ventanas laterales que se abren a la derecha del documento"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El material dice \"grupos o paneles\"."
+    "explicacion": "Es el nivel intermedio: dentro de la ficha Inicio están los grupos Portapapeles, Fuente, Párrafo, Estilos, Edición y Voz, y el nombre de cada uno aparece debajo de sus botones. · **Las ventanas laterales** son el descarte que decide la pregunta, y es de los buenos: en Word se llaman literalmente paneles —el panel de navegación, el de estilos, el de comentarios—, así que la misma palabra nombra dos cosas distintas según el contexto."
   },
   {
     "id": "interfaz-199",
@@ -5191,28 +5241,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-20",
-    "enunciado": "En Word 365, ¿cuál es el orden jerárquico de los componentes de la cinta?",
+    "revisada": true,
+    "enunciado": "Algunos grupos de la cinta llevan una flechita diagonal en su esquina inferior derecha. ¿Qué hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Comando → Grupo → Ficha"
+        "text": "Abre el cuadro de diálogo completo de ese grupo, con opciones que no caben en la cinta"
       },
       {
         "letter": "B",
-        "text": "Ficha → Grupo → Comando"
+        "text": "Contrae el grupo para ganar espacio en la cinta"
       },
       {
         "letter": "C",
-        "text": "Grupo → Comando → Ficha"
+        "text": "Añade ese grupo a la barra de herramientas de acceso rápido"
       },
       {
         "letter": "D",
-        "text": "Ficha → Comando → Grupo"
+        "text": "Muestra la ayuda de los comandos de ese grupo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "La cinta se organiza en fichas, dentro de ellas grupos, y dentro de estos comandos."
+    "respuesta": "A",
+    "explicacion": "Es el iniciador o lanzador de cuadro de diálogo, y da acceso a los ajustes finos: la flechita del grupo Fuente abre el cuadro Fuente, la del grupo Párrafo el cuadro Párrafo, la del grupo Portapapeles su panel lateral. · **No todos los grupos la tienen**: solo aquellos cuyos comandos dan para más de lo que cabe en la cinta, y ese detalle es preguntable. · Contraer no es cosa suya: la cinta entera se contrae con Ctrl+F1 o con un doble clic en la pestaña activa."
   },
   {
     "id": "interfaz-200",
@@ -5226,28 +5277,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-21",
-    "enunciado": "En Word 365, ¿cuál de las siguientes afirmaciones sobre la cinta de opciones es VERDADERA?",
+    "revisada": true,
+    "enunciado": "Señale la afirmación VERDADERA sobre la cinta de opciones:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Contiene la gran mayoría de los comandos para operar con el texto y el documento."
+        "text": "Se puede personalizar con pestañas y grupos propios"
       },
       {
         "letter": "B",
-        "text": "Solo muestra los comandos de formato de texto."
+        "text": "Es fija: sus pestañas y grupos no se pueden cambiar"
       },
       {
         "letter": "C",
-        "text": "Es fija y no se puede personalizar."
+        "text": "Solo muestra los comandos de formato de texto"
       },
       {
         "letter": "D",
-        "text": "Solo se activa al seleccionar texto."
+        "text": "Solo aparece cuando hay texto seleccionado"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El material indica que contiene la gran mayoría de comandos."
+    "explicacion": "Se hace desde Archivo ▸ Opciones ▸ Personalizar cinta, o con el clic derecho sobre la propia cinta. Ahí es donde se enciende la ficha **Programador**, que no está visible de fábrica, y donde se pueden crear pestañas y grupos a medida con los comandos que uno elija. · **Aparecer solo con texto seleccionado** es el descarte que decide la pregunta, y describe a otras dos cosas: la minibarra de herramientas y las fichas contextuales."
   },
   {
     "id": "interfaz-201",
@@ -5261,28 +5313,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-22",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana se encuentra situado en la parte superior derecha y permite cerrar la aplicación?",
+    "revisada": true,
+    "enunciado": "Pulsas el botón Cerrar de la ventana con cambios sin guardar. ¿Qué ocurre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Minimizar"
+        "text": "Word pregunta si se quieren guardar los cambios antes de cerrar"
       },
       {
         "letter": "B",
-        "text": "Restaurar/Maximizar"
+        "text": "Se cierra sin más y los cambios se pierden"
       },
       {
         "letter": "C",
-        "text": "Cerrar"
+        "text": "Se guarda automáticamente y se cierra"
       },
       {
         "letter": "D",
-        "text": "Iniciar sesión"
+        "text": "El botón no responde hasta que se guarde el documento"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El botón Cerrar (X) está en la esquina superior derecha."
+    "respuesta": "A",
+    "explicacion": "El aviso ofrece guardar, no guardar o cancelar, así que cerrar sin querer no destruye nada. · **El guardado automático** es el descarte que decide la pregunta y merece un matiz: existe, pero solo con el documento en OneDrive o SharePoint, donde el interruptor «Autoguardado» de la barra de título va guardando solo y ese aviso ya no aparece. En un archivo local, no. · Word mantiene además copias de autorrecuperación, que es otra red distinta."
   },
   {
     "id": "interfaz-202",
@@ -5296,28 +5349,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-23",
-    "enunciado": "En Word 365, ¿qué botón de control reduce la ventana a la barra de tareas?",
+    "revisada": true,
+    "enunciado": "¿Qué hace el botón Minimizar de la barra de título?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Minimizar"
+        "text": "Manda la ventana a la barra de tareas sin cerrar el documento"
       },
       {
         "letter": "B",
-        "text": "Maximizar"
+        "text": "Reduce el tamaño de la ventana a la mitad de la pantalla"
       },
       {
         "letter": "C",
-        "text": "Cerrar"
+        "text": "Contrae la cinta para ganar espacio"
       },
       {
         "letter": "D",
-        "text": "Restaurar"
+        "text": "Cierra el documento pero deja Word abierto"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El botón Minimizar reduce la ventana."
+    "explicacion": "El documento sigue abierto y todo sigue como estaba; solo desaparece de la vista hasta que se pulsa su icono en la barra de tareas. · **Contraer la cinta** es el descarte que decide la pregunta, y también «esconde» algo para ganar espacio, pero dentro de la ventana: se hace con Ctrl+F1 o con un doble clic en la pestaña activa. · Cerrar el documento dejando Word abierto es lo que hace Ctrl+F4."
   },
   {
     "id": "interfaz-203",
@@ -5331,28 +5385,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-24",
-    "enunciado": "En Word 365, ¿qué botón de control agranda la ventana para que ocupe toda la pantalla?",
+    "revisada": true,
+    "enunciado": "Además de con el botón, ¿cómo se maximiza o se restaura la ventana con el ratón?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Minimizar"
+        "text": "Haciendo doble clic en una zona vacía de la barra de título"
       },
       {
         "letter": "B",
-        "text": "Restaurar/Maximizar"
+        "text": "Haciendo doble clic en la pestaña activa de la cinta"
       },
       {
         "letter": "C",
-        "text": "Cerrar"
+        "text": "Haciendo doble clic en la barra de estado"
       },
       {
         "letter": "D",
-        "text": "Mover"
+        "text": "Haciendo doble clic en el área de trabajo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El botón Restaurar/Maximizar permite maximizar la ventana."
+    "respuesta": "A",
+    "explicacion": "Es el gesto de siempre en cualquier ventana de Windows, y alterna entre pantalla completa y el tamaño anterior. · **El doble clic en la pestaña activa** es el descarte que decide la pregunta, porque es el mismo gesto en un sitio muy cercano y hace algo distinto: contrae la cinta, dejando solo la fila de nombres. Confundirlos es facilísimo. · Y el doble clic en el área de trabajo, sobre una palabra, la selecciona entera."
   },
   {
     "id": "interfaz-204",
@@ -5366,28 +5421,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-25",
-    "enunciado": "En Word 365, ¿qué opción aparece en el menú de control de la ventana pero NO es un botón directo de la barra de título?",
+    "revisada": true,
+    "enunciado": "¿Qué opción del menú de control de la ventana NO tiene botón propio en la barra de título?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Minimizar"
-      },
-      {
-        "letter": "B",
         "text": "Mover"
       },
       {
+        "letter": "B",
+        "text": "Minimizar"
+      },
+      {
         "letter": "C",
-        "text": "Cerrar"
+        "text": "Maximizar"
       },
       {
         "letter": "D",
-        "text": "Maximizar"
+        "text": "Cerrar"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El menú de control incluye \"Mover\", pero no es un botón de la barra de título."
+    "respuesta": "A",
+    "explicacion": "El menú de control, que se abre con Alt+Barra espaciadora, incluye Restaurar, Mover, Tamaño, Minimizar, Maximizar y Cerrar. Las dos primeras que faltan arriba, «Mover» y «Tamaño», son precisamente las que se hacen con el ratón arrastrando la barra o los bordes, y por eso solo tienen sentido cuando no se puede usar el ratón: al elegirlas, la ventana se mueve o se redimensiona con las flechas del teclado. · Los botones de la barra de título son solo tres."
   },
   {
     "id": "interfaz-205",
@@ -5401,28 +5457,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-26",
-    "enunciado": "En Word 365, ¿qué combinación de teclas permite cerrar la ventana de Word?",
+    "revisada": true,
+    "enunciado": "¿Qué combinación cierra la ventana de Word?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + F10"
+        "text": "Alt+F4"
       },
       {
         "letter": "B",
-        "text": "Alt + F4"
+        "text": "Ctrl+F4"
       },
       {
         "letter": "C",
-        "text": "Alt + Barra espaciadora"
+        "text": "Ctrl+W"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Z"
+        "text": "Alt+Barra espaciadora"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "Alt + F4 cierra la ventana (y aparece en el menú de control)."
+    "respuesta": "A",
+    "explicacion": "Va cerrando los documentos abiertos uno a uno y, cuando solo queda uno, la siguiente pulsación cierra el programa. Prueba en vivo del usuario. Aparece también anotada en el menú de control de la ventana. · **Ctrl+F4** es el descarte que decide la pregunta: cierra el documento activo pero nunca cierra Word. · Y **Ctrl+W** no cierra nada en esta instalación: quita el formato de párrafo, aunque muchos manuales lo den como cerrar documento."
   },
   {
     "id": "interfaz-206",
@@ -5436,7 +5493,980 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-27",
-    "enunciado": "En Word 365, ¿cuál de los siguientes NO es un botón de control de ventana?",
+    "revisada": true,
+    "enunciado": "De estos cuatro, señale el que NO es un botón de control de la ventana:",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Cambiar nombre"
+      },
+      {
+        "letter": "B",
+        "text": "Minimizar"
+      },
+      {
+        "letter": "C",
+        "text": "Restaurar/Maximizar"
+      },
+      {
+        "letter": "D",
+        "text": "Cerrar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Son tres y solo tres, los mismos de cualquier ventana de Windows. · Cambiar el nombre de un documento sí se puede desde dentro de Word, pero por otro camino: con Archivo ▸ Guardar como, escribiendo otro nombre, o pulsando el propio nombre en la barra de título si el archivo está en OneDrive. No es un botón de control de ventana. · El único que cambia de aspecto es el del medio, según la ventana esté a pantalla completa o no."
+  },
+  {
+    "id": "interfaz-207",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-28",
+    "revisada": true,
+    "enunciado": "Dentro de una ficha de la cinta, ¿cómo se llama cada bloque de comandos afines?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Grupo"
+      },
+      {
+        "letter": "B",
+        "text": "Ficha"
+      },
+      {
+        "letter": "C",
+        "text": "Comando"
+      },
+      {
+        "letter": "D",
+        "text": "Barra de herramientas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "También se le llama panel, y su nombre aparece escrito debajo de sus botones: en Inicio están Portapapeles, Fuente, Párrafo, Estilos, Edición y Voz. · Algunos llevan además una flechita en la esquina, el lanzador, que abre el cuadro de diálogo completo. · **La barra de herramientas** es el descarte que decide la pregunta, y es un término real pero de la interfaz ANTERIOR a 2007, cuando los comandos se repartían en barras sueltas en vez de en una cinta con fichas."
+  },
+  {
+    "id": "interfaz-208",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-29",
+    "revisada": true,
+    "enunciado": "En la cinta, ¿cómo se llama el elemento que ejecuta una acción concreta al pulsarlo?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Comando"
+      },
+      {
+        "letter": "B",
+        "text": "Grupo"
+      },
+      {
+        "letter": "C",
+        "text": "Ficha"
+      },
+      {
+        "letter": "D",
+        "text": "Panel"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es el nivel más bajo de los tres y la unidad de acción: el botón de negrita, el de centrar, el de insertar tabla. Puede ser un botón simple, un botón con flecha que además despliega opciones, una casilla, una galería o un campo donde escribir un valor. · Los otros dos niveles son la ficha, arriba, y el grupo, en medio. · **«Panel»** es el descarte que decide la pregunta, porque es el otro nombre del grupo, no del comando."
+  },
+  {
+    "id": "interfaz-209",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-30",
+    "revisada": true,
+    "enunciado": "¿Cómo se abre el menú de control de la ventana sin usar el ratón?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Con Alt+Barra espaciadora"
+      },
+      {
+        "letter": "B",
+        "text": "Con Ctrl+Barra espaciadora"
+      },
+      {
+        "letter": "C",
+        "text": "Con Alt, que muestra las letras de acceso"
+      },
+      {
+        "letter": "D",
+        "text": "Con Ctrl+F1"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es un atajo de Windows, común a cualquier ventana, y por eso no figura en el cuadro Personalizar teclado, que solo recoge comandos de Word. Abre Restaurar, Mover, Tamaño, Minimizar, Maximizar y Cerrar. · **Ctrl+Barra espaciadora** es el descarte que decide la pregunta y sí es de Word: quita el formato de carácter de la selección. · Alt a secas activa las letras de acceso de la cinta, y Ctrl+F1 la contrae."
+  },
+  {
+    "id": "interfaz-211",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-33",
+    "revisada": true,
+    "enunciado": "En el menú de control de la ventana, ¿qué opción permite cambiar el ancho y el alto usando solo las flechas del teclado?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Tamaño"
+      },
+      {
+        "letter": "B",
+        "text": "Mover"
+      },
+      {
+        "letter": "C",
+        "text": "Restaurar"
+      },
+      {
+        "letter": "D",
+        "text": "Maximizar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Al elegirla, el puntero cambia y las flechas empiezan a arrastrar el borde que se indique; se confirma con Intro o se cancela con Esc. · **«Mover»** es el descarte que decide la pregunta y funciona igual pero desplazando la ventana entera sin cambiarle el tamaño. Las dos existen precisamente para poder manejar la ventana sin ratón, que es cuando tienen sentido. · «Restaurar» y «Maximizar» sí tienen botón propio en la barra de título; estas dos no."
+  },
+  {
+    "id": "interfaz-212",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-35",
+    "revisada": true,
+    "enunciado": "¿Qué hay en la esquina superior izquierda de la ventana, con botones como Guardar o Deshacer?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "La barra de herramientas de acceso rápido"
+      },
+      {
+        "letter": "B",
+        "text": "La barra de título"
+      },
+      {
+        "letter": "C",
+        "text": "La cinta de opciones"
+      },
+      {
+        "letter": "D",
+        "text": "La minibarra de herramientas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es la única parte de la interfaz que el usuario compone a su gusto: se le añaden y se le quitan comandos desde su flechita de personalización, y se puede colocar encima o debajo de la cinta. Ahí es donde se marca «Modo mouse/táctil» para que aparezca el alternador. · **La minibarra** es el descarte que decide la pregunta: también reúne comandos frecuentes, pero viene fija de fábrica y aparece flotando junto al texto seleccionado, no en una esquina."
+  },
+  {
+    "id": "interfaz-213",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-36",
+    "revisada": true,
+    "enunciado": "¿Qué elemento, abajo del todo, muestra el número de página y el recuento de palabras?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "La barra de estado"
+      },
+      {
+        "letter": "B",
+        "text": "La barra de título"
+      },
+      {
+        "letter": "C",
+        "text": "La barra de desplazamiento"
+      },
+      {
+        "letter": "D",
+        "text": "La barra de herramientas de acceso rápido"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "A la izquierda lleva la página actual y el total, el recuento de palabras y el idioma, y a la derecha los botones de vista y el zoom. Con el clic derecho sobre ella se elige qué información mostrar: se pueden añadir el número de línea, la columna o el estado del control de cambios. · Pulsar el recuento de palabras abre el cuadro «Contar palabras», y pulsar el número de página abre el panel de navegación. Es informativa y a la vez un atajo."
+  },
+  {
+    "id": "interfaz-215",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-38",
+    "revisada": true,
+    "enunciado": "¿Qué elemento de la ventana amplía o reduce cómo se ve el documento, sin cambiar su tamaño real?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El control de zoom"
+      },
+      {
+        "letter": "B",
+        "text": "La regla"
+      },
+      {
+        "letter": "C",
+        "text": "La barra de desplazamiento"
+      },
+      {
+        "letter": "D",
+        "text": "El área de vistas"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Está en el extremo derecho de la barra de estado, con un deslizador y el porcentaje; al pulsar el porcentaje se abre el cuadro Zoom. También se maneja con Ctrl y la rueda del ratón, de diez en diez. · **El área de vistas** es el descarte que decide la pregunta: está justo al lado y también cambia cómo se ve el documento, pero elige el MODO —lectura, impresión, web—, no el aumento. · Lo que se ve grande sigue imprimiéndose igual: el zoom no toca el documento."
+  },
+  {
+    "id": "interfaz-217",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-40",
+    "revisada": true,
+    "enunciado": "¿Para qué sirven las reglas horizontal y vertical?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Para ver y arrastrar los márgenes, las sangrías y las tabulaciones"
+      },
+      {
+        "letter": "B",
+        "text": "Para medir el documento pero sin poder cambiar nada desde ellas"
+      },
+      {
+        "letter": "C",
+        "text": "Para elegir el tamaño del papel y la orientación"
+      },
+      {
+        "letter": "D",
+        "text": "Para desplazarse por el documento arrastrando"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "No son solo una escala: los márgenes se arrastran por la frontera entre la zona gris y la blanca, y las sangrías por los tres marcadores triangulares de la horizontal. Su selector, a la izquierda, permite además elegir el tipo de tabulación antes de pincharla en la regla. · **Que solo midan** es el descarte que decide la pregunta y es el error más común. · Se muestran u ocultan desde Vista ▸ Mostrar ▸ Regla, y la vertical solo aparece en la vista Diseño de impresión."
+  },
+  {
+    "id": "interfaz-223",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-46",
+    "revisada": true,
+    "enunciado": "¿Qué aspecto tienen los comandos de la cinta en modo mouse?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Más pequeños y juntos, de modo que caben más"
+      },
+      {
+        "letter": "B",
+        "text": "Más grandes y separados, de modo que caben menos"
+      },
+      {
+        "letter": "C",
+        "text": "Se ocultan y solo quedan los nombres de las pestañas"
+      },
+      {
+        "letter": "D",
+        "text": "Se agrupan todos en una barra lateral"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es el aspecto de siempre, el de un equipo con ratón: como el puntero es preciso, no hace falta reservar margen alrededor de cada botón y se aprovecha la cinta al máximo. · **Ocultar la cinta** es el descarte que decide la pregunta y ocurre de verdad, pero con otro comando: Ctrl+F1 o un doble clic en la pestaña activa. · El otro modo, el táctil, agranda y separa a costa de mostrar menos, y se alterna desde la barra de acceso rápido."
+  },
+  {
+    "id": "interfaz-224",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-47",
+    "revisada": true,
+    "enunciado": "¿Qué aspecto tienen los comandos de la cinta en modo táctil?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Más grandes y separados, de modo que caben menos"
+      },
+      {
+        "letter": "B",
+        "text": "Más pequeños y juntos, de modo que caben más"
+      },
+      {
+        "letter": "C",
+        "text": "Convertidos en iconos, sin texto ni nombres de grupo"
+      },
+      {
+        "letter": "D",
+        "text": "Ocultos hasta que se pulsa una pestaña"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Un dedo tapa mucho más que la punta de un puntero, así que hace falta margen alrededor de cada botón para no pulsar el de al lado. Como la cinta no crece, algunos grupos se recogen en un solo botón desplegable. · **Quedarse solo con los iconos** es el descarte que decide la pregunta: eso sí pasa, pero por otro motivo, cuando la ventana de Word se estrecha tanto que un grupo no cabe. Es un ajuste automático, no un modo."
+  },
+  {
+    "id": "interfaz-225",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-48",
+    "revisada": true,
+    "enunciado": "¿Desde dónde se alterna entre el modo mouse y el modo táctil?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Desde la barra de herramientas de acceso rápido"
+      },
+      {
+        "letter": "B",
+        "text": "Desde la pestaña Vista"
+      },
+      {
+        "letter": "C",
+        "text": "Desde Archivo ▸ Opciones ▸ General"
+      },
+      {
+        "letter": "D",
+        "text": "Desde la barra de estado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "El botón no está de fábrica: hay que marcar antes «Modo mouse/táctil» en el desplegable de personalización de esa barra, y solo entonces aparece. Por eso mucha gente no lo encuentra. · **La pestaña Vista** es el descarte que decide la pregunta, y es donde uno lo buscaría: allí están las vistas del documento, el zoom y las ventanas, pero nada que toque el aspecto de la cinta. · Personalizar la cinta sí está en Opciones, pero eso es otra cosa: añadir o quitar pestañas y grupos."
+  },
+  {
+    "id": "interfaz-226",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-51",
+    "revisada": true,
+    "enunciado": "Seleccionas una imagen insertada. ¿Qué ficha contextual aparece en la cinta y cómo se llama en este Word?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Formato de imagen»"
+      },
+      {
+        "letter": "B",
+        "text": "«Herramientas de imagen», con una ficha «Formato» debajo"
+      },
+      {
+        "letter": "C",
+        "text": "«Diseño de imagen»"
+      },
+      {
+        "letter": "D",
+        "text": "«Formato de forma»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Aparece al final de la fila de pestañas y desaparece al pinchar fuera. Sus cinco grupos son Ajustar, Estilos de imagen, Accesibilidad, Organizar y Tamaño. · **«Herramientas de imagen» con una ficha «Formato» debajo** es el descarte que decide la pregunta: así se llamaba y se agrupaba en las versiones anteriores, y así aparece todavía en casi todo el material de estudio. En Word 365 ese rótulo englobador ha desaparecido y la ficha va suelta con su nombre completo."
+  },
+  {
+    "id": "interfaz-227",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-52",
+    "revisada": true,
+    "enunciado": "Pones el cursor dentro de una tabla. ¿Qué fichas contextuales aparecen?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Dos: «Diseño de tabla» y «Disposición de tabla»"
+      },
+      {
+        "letter": "B",
+        "text": "Una sola: «Herramientas de tabla»"
+      },
+      {
+        "letter": "C",
+        "text": "Dos: «Formato de tabla» y «Diseño de tabla»"
+      },
+      {
+        "letter": "D",
+        "text": "Una sola: «Formato de tabla»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es el único objeto que abre DOS fichas a la vez: una para el aspecto —estilos, bordes, sombreado— y otra para la estructura —filas, columnas, combinar, tamaño de celda, alineación y datos. · **«Herramientas de tabla»** es el descarte que decide la pregunta: era el rótulo que englobaba las dos en las versiones anteriores, con «Diseño» y «Presentación» colgando debajo. Hoy cada una va suelta y con su nombre completo, y «Presentación» se llama «Disposición»."
+  },
+  {
+    "id": "interfaz-228",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-53",
+    "revisada": true,
+    "enunciado": "Seleccionas una forma dibujada. ¿Qué ficha contextual aparece y cómo se llama?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "«Formato de forma»"
+      },
+      {
+        "letter": "B",
+        "text": "«Herramientas de dibujo», con una ficha «Formato» debajo"
+      },
+      {
+        "letter": "C",
+        "text": "«Formato de imagen»"
+      },
+      {
+        "letter": "D",
+        "text": "«Diseño de forma»"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Tiene siete grupos: Insertar formas, Estilos de forma, Estilos de WordArt, Texto, Accesibilidad, Organizar y Tamaño. · **«Herramientas de dibujo»** es el descarte que decide la pregunta: es el nombre antiguo, el de las versiones anteriores a 365, y sigue apareciendo en el material de estudio. · **«Formato de imagen»** es la ficha de las fotografías, que comparte con esta los grupos Organizar, Tamaño y Accesibilidad pero cambia los demás."
+  },
+  {
+    "id": "interfaz-229",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-54",
+    "revisada": true,
+    "enunciado": "Al seleccionar una imagen aparece una ficha contextual; al poner el cursor en una tabla aparecen dos. ¿Por qué la diferencia?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Porque la tabla reparte sus herramientas en dos: las de aspecto y las de estructura"
+      },
+      {
+        "letter": "B",
+        "text": "Porque la tabla tiene más comandos y no caben en una sola ficha"
+      },
+      {
+        "letter": "C",
+        "text": "Porque una de las dos fichas de tabla es en realidad una pestaña fija"
+      },
+      {
+        "letter": "D",
+        "text": "Porque la segunda ficha solo aparece si la tabla tiene estilo aplicado"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "«Diseño de tabla» se ocupa de cómo se ve —estilos, bordes, sombreado— y «Disposición de tabla» de cómo está montada: filas, columnas, combinar, tamaño de celda, alineación y datos. Son dos criterios distintos, no una división por falta de sitio. · La imagen no necesita ese reparto: «Formato de imagen» junta en cinco grupos el retoque, el estilo, la accesibilidad, la colocación y el tamaño. · Las dos de tabla aparecen y desaparecen juntas, en cuanto el cursor entra o sale."
+  },
+  {
+    "id": "interfaz-230",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-55",
+    "revisada": true,
+    "enunciado": "¿Qué pasa con una ficha contextual cuando se hace clic fuera del objeto?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Desaparece de la cinta, y vuelve al seleccionar el objeto otra vez"
+      },
+      {
+        "letter": "B",
+        "text": "Se queda en la cinta hasta cerrar el documento"
+      },
+      {
+        "letter": "C",
+        "text": "Se queda pero con todos sus comandos atenuados"
+      },
+      {
+        "letter": "D",
+        "text": "Se convierte en una pestaña fija más"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Por eso se llaman contextuales: existen mientras hay contexto para ellas. La fila de pestañas se acorta y Word vuelve a la que estuviera activa antes. · **Quedarse con los comandos atenuados** es el descarte que decide la pregunta, y es lo que Word hace con los comandos sueltos de una pestaña fija que en ese momento no aplican, como «Ver en paralelo» con un solo documento abierto. Con una ficha entera, en cambio, la solución es esconderla."
+  },
+  {
+    "id": "interfaz-231",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-56",
+    "revisada": true,
+    "enunciado": "¿Qué es la minibarra de herramientas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Una barra flotante que sale junto a la selección"
+      },
+      {
+        "letter": "B",
+        "text": "Una barra fija en la parte superior de la ventana"
+      },
+      {
+        "letter": "C",
+        "text": "Una barra fija en la parte inferior de la ventana"
+      },
+      {
+        "letter": "D",
+        "text": "Un cuadro de diálogo con opciones de formato"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Aparece medio transparente al soltar la selección y se vuelve nítida al acercar el puntero; si se aleja, se desvanece. Su gracia es tener a mano lo más usado sin subir hasta la cinta. · **La barra fija de arriba** es el descarte que decide la pregunta: esa es la de acceso rápido, y las dos se parecen en la idea —comandos frecuentes a un clic— pero no en nada más, porque aquella la compone el usuario y está siempre en el mismo sitio."
+  },
+  {
+    "id": "interfaz-232",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-57",
+    "revisada": true,
+    "enunciado": "Además de al seleccionar texto, ¿cuándo aparece la minibarra de herramientas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Al hacer clic derecho sobre el texto"
+      },
+      {
+        "letter": "B",
+        "text": "Al pasar el ratón por la barra de estado"
+      },
+      {
+        "letter": "C",
+        "text": "Al pulsar Alt sobre el documento"
+      },
+      {
+        "letter": "D",
+        "text": "Al activar el modo táctil de la cinta"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Las dos cosas salen a la vez: arriba la minibarra con el formato, y debajo el menú contextual con las acciones —cortar, copiar, pegar, sinónimos, vínculo, comentario. Así se cubren de un solo gesto las dos necesidades más frecuentes. · **Pulsar Alt** es el descarte que decide la pregunta: también hace aparecer algo, las letras de acceso de la cinta, pero eso son etiquetas sobre las pestañas, no una barra junto al texto."
+  },
+  {
+    "id": "interfaz-233",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-58",
+    "revisada": true,
+    "enunciado": "¿Qué diferencia hay entre la minibarra de herramientas y el menú contextual?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "La minibarra ofrece formato; el menú contextual, acciones como cortar, pegar o comentar"
+      },
+      {
+        "letter": "B",
+        "text": "La minibarra ofrece acciones; el menú contextual, formato"
+      },
+      {
+        "letter": "C",
+        "text": "Son lo mismo con dos nombres distintos"
+      },
+      {
+        "letter": "D",
+        "text": "La minibarra solo sale con el clic derecho y el menú contextual solo al seleccionar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Aparecen juntos al hacer clic derecho, uno encima del otro, y se reparten el trabajo: fuente, tamaño, negrita, color y estilos en la barra de arriba; cortar, copiar, opciones de pegado, sinónimos, traducir, vínculo y comentario en la lista de abajo. · La versión invertida es el descarte que decide la pregunta. · La minibarra sale además al seleccionar con el ratón, sin pulsar nada; el menú contextual, solo con el clic derecho."
+  },
+  {
+    "id": "interfaz-234",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-59",
+    "revisada": true,
+    "enunciado": "¿Qué diferencia a la minibarra de herramientas de la barra de acceso rápido?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "La minibarra es flotante; la de acceso rápido, fija y a medida"
+      },
+      {
+        "letter": "B",
+        "text": "La minibarra es fija arriba; la de acceso rápido, fija abajo"
+      },
+      {
+        "letter": "C",
+        "text": "La minibarra sustituye a la cinta mientras está visible"
+      },
+      {
+        "letter": "D",
+        "text": "La de acceso rápido solo sale al seleccionar texto"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Las dos son atajos a comandos frecuentes y ahí acaba el parecido. La minibarra trae lo que Word considera más usado y su contenido cambia según lo seleccionado; la de acceso rápido trae lo que uno decida, con Guardar, Deshacer y Rehacer de fábrica, y se puede colocar encima o debajo de la cinta. · Ninguna de las dos sustituye a la cinta: la contracción de la cinta es otra cosa, y se hace con Ctrl+F1 o con un doble clic en la pestaña activa."
+  },
+  {
+    "id": "interfaz-235",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-60",
+    "revisada": true,
+    "enunciado": "Haces clic derecho sobre la barra de estado. ¿Qué aparece?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Una lista para elegir qué información se muestra en ella"
+      },
+      {
+        "letter": "B",
+        "text": "El menú contextual del documento, con cortar, copiar y pegar"
+      },
+      {
+        "letter": "C",
+        "text": "El menú de personalización de la cinta de opciones"
+      },
+      {
+        "letter": "D",
+        "text": "Nada: la barra de estado no responde al clic derecho"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "La lista es larga y cada entrada se marca o se desmarca: número de página, sección, número de línea, columna, recuento de palabras, idioma, estado del control de cambios, del bloqueo de mayúsculas o de sobrescritura. Al lado de cada una se ve su valor actual, así que la lista informa aunque no se toque nada. · Es de las personalizaciones más útiles y menos conocidas: la columna y la línea, por ejemplo, no se muestran de fábrica y se activan aquí."
+  },
+  {
+    "id": "interfaz-238",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-63",
+    "revisada": true,
+    "enunciado": "Además del nombre del documento y los botones de ventana, ¿qué más hay en la barra de título?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "El cuadro de búsqueda de Microsoft Search"
+      },
+      {
+        "letter": "B",
+        "text": "El control de zoom del documento"
+      },
+      {
+        "letter": "C",
+        "text": "Los botones de vista del documento"
+      },
+      {
+        "letter": "D",
+        "text": "La regla horizontal del documento"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es el cuadro que busca comandos, ayuda y contenido a la vez: se escribe lo que se quiere hacer y ofrece el comando para ejecutarlo sin saber en qué pestaña estaba. **Alt+Q** lleva el foco hasta él, confirmado en vivo por el usuario. · En esa franja va también la barra de acceso rápido, según la configuración. · El zoom y las vistas están abajo, en la barra de estado, y la regla bordea el área de trabajo."
+  },
+  {
+    "id": "interfaz-241",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-66",
+    "revisada": true,
+    "enunciado": "¿Dónde se puede colocar la barra de herramientas de acceso rápido?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Encima de la cinta o debajo de ella, a elección del usuario"
+      },
+      {
+        "letter": "B",
+        "text": "Solo encima de la cinta: su posición es fija"
+      },
+      {
+        "letter": "C",
+        "text": "En cualquiera de los cuatro bordes de la ventana"
+      },
+      {
+        "letter": "D",
+        "text": "Flotando sobre el documento, donde se arrastre"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Su desplegable de personalización, la flechita del final, ofrece «Mostrar debajo de la cinta de opciones» y, cuando ya está abajo, la opción contraria. Debajo se ve mejor y queda más cerca del documento; encima ahorra una línea de alto. · **Flotar** es el descarte que decide la pregunta, y describe a la minibarra de herramientas, que sí aparece junto a la selección. · Ese mismo desplegable es donde se marcan los comandos que se quieren tener en la barra."
+  },
+  {
+    "id": "interfaz-242",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-67",
+    "revisada": true,
+    "enunciado": "La pestaña Archivo se comporta distinto de las demás. ¿En qué?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "En que no cambia la cinta: abre la vista Backstage, que ocupa toda la pantalla"
+      },
+      {
+        "letter": "B",
+        "text": "En que sus comandos aparecen atenuados hasta seleccionar texto"
+      },
+      {
+        "letter": "C",
+        "text": "En que solo aparece cuando el documento se ha guardado"
+      },
+      {
+        "letter": "D",
+        "text": "En nada: funciona igual que Inicio o Insertar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Al pulsarla desaparece el documento y aparece una pantalla completa con Inicio, Nuevo, Abrir, Información, Guardar, Guardar como, Imprimir, Exportar, Compartir, Cerrar, Cuenta y Opciones; se sale con la flecha de arriba a la izquierda o con Esc. · La razón del cambio es que ahí no se trabaja SOBRE el documento sino CON el archivo: abrirlo, guardarlo, imprimirlo, protegerlo. Esa es la división que separa el Backstage de la cinta."
+  },
+  {
+    "id": "interfaz-244",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-69",
+    "revisada": true,
+    "enunciado": "Cuando aparece una ficha contextual, ¿qué pasa con las pestañas fijas?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Siguen todas ahí: la contextual se añade al final de la fila"
+      },
+      {
+        "letter": "B",
+        "text": "Se ocultan mientras el objeto esté seleccionado"
+      },
+      {
+        "letter": "C",
+        "text": "Se quedan visibles pero atenuadas y sin responder"
+      },
+      {
+        "letter": "D",
+        "text": "Se reducen a Inicio y Archivo"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "La fila se alarga y Word suele saltar a la ficha nueva, pero todas las anteriores siguen accesibles: se puede seguir poniendo negrita desde Inicio con la imagen seleccionada. · Es lo razonable, porque muchas operaciones sobre un objeto necesitan comandos de las dos partes. · Con la tabla se añaden dos fichas de golpe, y desaparecen juntas al sacar el cursor de ella."
+  },
+  {
+    "id": "interfaz-245",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-70",
+    "revisada": true,
+    "enunciado": "¿Qué opción del menú de control de la ventana devuelve una ventana maximizada a su tamaño anterior?",
+    "opciones": [
+      {
+        "letter": "A",
+        "text": "Restaurar"
+      },
+      {
+        "letter": "B",
+        "text": "Mover"
+      },
+      {
+        "letter": "C",
+        "text": "Tamaño"
+      },
+      {
+        "letter": "D",
+        "text": "Minimizar"
+      }
+    ],
+    "matching": null,
+    "respuesta": "A",
+    "explicacion": "Es la primera del menú, y solo está disponible cuando la ventana está a pantalla completa; con la ventana ya restaurada aparece atenuada y se activa «Maximizar» en su lugar. · **«Tamaño»** es el descarte que decide la pregunta: también cambia las dimensiones, pero a mano y con las flechas, sin volver a ningún tamaño anterior. · «Minimizar» la manda a la barra de tareas y «Mover» la desplaza sin cambiarle el tamaño."
+  },
+  {
+    "id": "interfaz-246",
+    "sourceFile": "interfaz.json",
+    "bloque": "Interfaz — Ventana y cinta de opciones",
+    "tipo": "opcion_unica",
+    "categoria": "ruta",
+    "negativa": false,
+    "section": "interfaz",
+    "topic": "ventana-cinta",
+    "subtopic": null,
+    "tema": "Ventana y cinta de opciones",
+    "sourceQuestionId": "3-71",
+    "revisada": true,
+    "enunciado": "Tienes Word a pantalla completa y necesitas ver un archivo del escritorio sin cerrar el documento. ¿Qué botón lo resuelve más rápido?",
     "opciones": [
       {
         "letter": "A",
@@ -5452,957 +6482,12 @@
       },
       {
         "letter": "D",
-        "text": "Cambiar nombre"
-      }
-    ],
-    "matching": null,
-    "respuesta": "D",
-    "explicacion": "\"Cambiar nombre\" no aparece en la lista de botones de control."
-  },
-  {
-    "id": "interfaz-207",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-28",
-    "enunciado": "En Word 365, ¿qué elemento de la cinta de opciones agrupa varios comandos relacionados?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "La ficha"
-      },
-      {
-        "letter": "B",
-        "text": "El grupo"
-      },
-      {
-        "letter": "C",
-        "text": "El comando"
-      },
-      {
-        "letter": "D",
-        "text": "La barra de herramientas"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Los comandos se agrupan en grupos o paneles."
-  },
-  {
-    "id": "interfaz-208",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-29",
-    "enunciado": "En Word 365, ¿qué elemento de la cinta de opciones es la unidad básica de acción?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "La ficha"
-      },
-      {
-        "letter": "B",
-        "text": "El grupo"
-      },
-      {
-        "letter": "C",
-        "text": "El comando"
-      },
-      {
-        "letter": "D",
-        "text": "La pestaña"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "El comando es el elemento individual que ejecuta una acción."
-  },
-  {
-    "id": "interfaz-209",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-30",
-    "enunciado": "En Word 365, ¿dónde se encuentra el símbolo de Word que abre el menú de control de la ventana?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "A la derecha de la barra de título"
-      },
-      {
-        "letter": "B",
-        "text": "A la izquierda de la barra de título"
-      },
-      {
-        "letter": "C",
-        "text": "En la barra de estado"
-      },
-      {
-        "letter": "D",
-        "text": "En la cinta de opciones"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "El material indica que el símbolo de Word está a la izquierda de la barra de título."
-  },
-  {
-    "id": "interfaz-211",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-33",
-    "enunciado": "En Word 365, al hacer clic sobre el símbolo de Word situado en el extremo izquierdo de la barra de título, se despliega el menú de control de la ventana. Dentro de este menú, ¿qué opción permite al usuario modificar el ancho y alto de la ventana utilizando únicamente las teclas de flecha del teclado?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Mover"
-      },
-      {
-        "letter": "B",
-        "text": "Tamaño"
-      },
-      {
-        "letter": "C",
-        "text": "Restaurar"
-      },
-      {
-        "letter": "D",
-        "text": "Minimizar"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "El menú de control contiene las opciones: Restaurar, Mover, Tamaño, Minimizar, Maximizar y Cerrar. La opción \"Tamaño\" activa el modo de redimensionado con teclado."
-  },
-  {
-    "id": "interfaz-212",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-35",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana se encuentra en la parte superior izquierda y contiene botones de acceso rápido?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Barra de título"
-      },
-      {
-        "letter": "B",
-        "text": "Barra de herramientas de acceso rápido"
-      },
-      {
-        "letter": "C",
-        "text": "Cinta de opciones"
-      },
-      {
-        "letter": "D",
-        "text": "Barra de estado"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "La barra de acceso rápido está en la esquina superior izquierda."
-  },
-  {
-    "id": "interfaz-213",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-36",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana se encuentra en la parte inferior y muestra información como el número de página?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Barra de título"
-      },
-      {
-        "letter": "B",
-        "text": "Barra de estado"
-      },
-      {
-        "letter": "C",
-        "text": "Cinta de opciones"
-      },
-      {
-        "letter": "D",
-        "text": "Barra de herramientas de acceso rápido"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "La barra de estado se sitúa abajo y muestra información del documento."
-  },
-  {
-    "id": "interfaz-215",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-38",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana permite ampliar o reducir la visualización del documento?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Regla"
-      },
-      {
-        "letter": "B",
-        "text": "Barra de desplazamiento"
-      },
-      {
-        "letter": "C",
-        "text": "Zoom"
-      },
-      {
-        "letter": "D",
-        "text": "Barra de estado"
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "El control de Zoom está en la esquina inferior derecha."
-  },
-  {
-    "id": "interfaz-217",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-40",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana se encuentra en la parte superior e izquierda y sirve para medir y alinear?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Barra de estado"
-      },
-      {
-        "letter": "B",
-        "text": "Regla"
-      },
-      {
-        "letter": "C",
-        "text": "Zoom"
-      },
-      {
-        "letter": "D",
-        "text": "Barra de título"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "La regla aparece en la parte superior e izquierda."
-  },
-  {
-    "id": "interfaz-223",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-46",
-    "enunciado": "En Word 365, ¿qué ocurre en el modo mouse con los comandos de la cinta?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Son más grandes y hay más espacio entre ellos"
-      },
-      {
-        "letter": "B",
-        "text": "Son más pequeños y caben más"
-      },
-      {
-        "letter": "C",
-        "text": "Desaparecen"
-      },
-      {
-        "letter": "D",
-        "text": "Se mueven a la barra lateral"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "En modo mouse los comandos son más pequeños y aprovechan mejor el espacio."
-  },
-  {
-    "id": "interfaz-224",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-47",
-    "enunciado": "En Word 365, ¿qué ocurre en el modo táctil con los comandos de la cinta?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Son más pequeños"
-      },
-      {
-        "letter": "B",
-        "text": "Son más grandes y hay más espacio entre ellos"
-      },
-      {
-        "letter": "C",
-        "text": "Se ocultan automáticamente"
-      },
-      {
-        "letter": "D",
-        "text": "Se convierten en iconos"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "En modo táctil los comandos son más grandes y espaciados."
-  },
-  {
-    "id": "interfaz-225",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-48",
-    "enunciado": "En Word 365, ¿desde dónde se puede activar el modo táctil?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Desde la barra de herramientas de acceso rápido"
-      },
-      {
-        "letter": "B",
-        "text": "Desde la pestaña Vista"
-      },
-      {
-        "letter": "C",
-        "text": "Desde el menú Archivo"
-      },
-      {
-        "letter": "D",
-        "text": "Desde la barra de estado"
+        "text": "Ninguno: hay que cerrar Word y volver a abrirlo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "El material indica que se activa pulsando el botón \"Modo táctil\" en la barra de acceso rápido."
-  },
-  {
-    "id": "interfaz-226",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-51",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana se activa al seleccionar una imagen insertada?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "La barra de título"
-      },
-      {
-        "letter": "B",
-        "text": "La ficha contextual de herramientas de imagen"
-      },
-      {
-        "letter": "C",
-        "text": "La barra de estado"
-      },
-      {
-        "letter": "D",
-        "text": "El zoom"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Al seleccionar elementos insertados aparecen fichas contextuales."
-  },
-  {
-    "id": "interfaz-227",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-52",
-    "enunciado": "En Word 365, ¿qué tipo de ficha aparece al seleccionar una tabla?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ficha de herramientas de tabla"
-      },
-      {
-        "letter": "B",
-        "text": "Ficha de herramientas de imagen"
-      },
-      {
-        "letter": "C",
-        "text": "Ficha de herramientas de dibujo"
-      },
-      {
-        "letter": "D",
-        "text": "Ficha de herramientas de gráficos"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "El material menciona fichas de herramientas de Tablas."
-  },
-  {
-    "id": "interfaz-228",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-53",
-    "enunciado": "En Word 365, ¿qué tipo de ficha aparece al seleccionar un dibujo?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ficha de herramientas de imagen"
-      },
-      {
-        "letter": "B",
-        "text": "Ficha de herramientas de dibujo"
-      },
-      {
-        "letter": "C",
-        "text": "Ficha de herramientas de tabla"
-      },
-      {
-        "letter": "D",
-        "text": "Ficha de herramientas de formato"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "El material menciona fichas de herramientas de dibujo."
-  },
-  {
-    "id": "interfaz-229",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-54",
-    "enunciado": "En Word 365, ¿qué tipo de ficha aparece al seleccionar una imagen?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ficha de herramientas de imagen"
-      },
-      {
-        "letter": "B",
-        "text": "Ficha de herramientas de dibujo"
-      },
-      {
-        "letter": "C",
-        "text": "Ficha de herramientas de tabla"
-      },
-      {
-        "letter": "D",
-        "text": "Ficha de herramientas de texto"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "El material menciona fichas de herramientas de imagen."
-  },
-  {
-    "id": "interfaz-230",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-55",
-    "enunciado": "En Word 365, ¿cuándo se activan las fichas contextuales?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Al seleccionar elementos insertados"
-      },
-      {
-        "letter": "B",
-        "text": "Al pulsar F1"
-      },
-      {
-        "letter": "C",
-        "text": "Al abrir el menú Archivo"
-      },
-      {
-        "letter": "D",
-        "text": "Al activar el modo táctil"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Se activan al seleccionar elementos insertados."
-  },
-  {
-    "id": "interfaz-231",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-56",
-    "enunciado": "En Word 365, ¿qué es la Minibarra de herramientas?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Una barra que aparece junto a un elemento seleccionado con opciones rápidas"
-      },
-      {
-        "letter": "B",
-        "text": "Una barra fija en la parte superior"
-      },
-      {
-        "letter": "C",
-        "text": "Una barra en la parte inferior"
-      },
-      {
-        "letter": "D",
-        "text": "Un cuadro de diálogo"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "La minibarra aparece junto a un elemento seleccionado."
-  },
-  {
-    "id": "interfaz-232",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-57",
-    "enunciado": "En Word 365, ¿qué opciones aparecen en la Minibarra de herramientas?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Fuente, tamaño, negrita y cursiva"
-      },
-      {
-        "letter": "B",
-        "text": "Guardar, imprimir y deshacer"
-      },
-      {
-        "letter": "C",
-        "text": "Zoom, vista y regla"
-      },
-      {
-        "letter": "D",
-        "text": "Insertar tabla, imagen y gráfico"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "La minibarra muestra opciones de formato de texto."
-  },
-  {
-    "id": "interfaz-233",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-58",
-    "enunciado": "En Word 365, ¿qué elemento aparece al pasar el ratón por encima de un texto seleccionado?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "La cinta de opciones"
-      },
-      {
-        "letter": "B",
-        "text": "La Minibarra de herramientas"
-      },
-      {
-        "letter": "C",
-        "text": "La barra de estado"
-      },
-      {
-        "letter": "D",
-        "text": "El menú contextual"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "La minibarra aparece junto a la selección."
-  },
-  {
-    "id": "interfaz-234",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-59",
-    "enunciado": "En Word 365, ¿qué diferencia hay entre la Minibarra y la barra de herramientas de acceso rápido?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "La minibarra es flotante y aparece junto a la selección; la de acceso rápido es fija"
-      },
-      {
-        "letter": "B",
-        "text": "La minibarra es fija arriba; la de acceso rápido es fija abajo"
-      },
-      {
-        "letter": "C",
-        "text": "La minibarra sustituye a la cinta; la de acceso rápido no"
-      },
-      {
-        "letter": "D",
-        "text": "La de acceso rápido solo aparece al seleccionar texto; la minibarra no"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "La minibarra es contextual y flotante; la de acceso rápido es fija."
-  },
-  {
-    "id": "interfaz-235",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-60",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana muestra información como el número de palabras?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Barra de título"
-      },
-      {
-        "letter": "B",
-        "text": "Barra de estado"
-      },
-      {
-        "letter": "C",
-        "text": "Cinta de opciones"
-      },
-      {
-        "letter": "D",
-        "text": "Regla"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "La barra de estado muestra el número de palabras."
-  },
-  {
-    "id": "interfaz-238",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-63",
-    "enunciado": "En Word 365, ¿qué elemento agrupa los botones Minimizar, Restaurar/Maximizar y Cerrar?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "La barra de estado"
-      },
-      {
-        "letter": "B",
-        "text": "La barra de título"
-      },
-      {
-        "letter": "C",
-        "text": "La cinta de opciones"
-      },
-      {
-        "letter": "D",
-        "text": "El área de vistas"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "Los botones de control de ventana se ubican en la barra de título."
-  },
-  {
-    "id": "interfaz-241",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-66",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana se encuentra en la parte superior izquierda?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Barra de herramientas de acceso rápido"
-      },
-      {
-        "letter": "B",
-        "text": "Barra de título"
-      },
-      {
-        "letter": "C",
-        "text": "Barra de estado"
-      },
-      {
-        "letter": "D",
-        "text": "Cinta de opciones"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "La barra de acceso rápido está arriba a la izquierda."
-  },
-  {
-    "id": "interfaz-242",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-67",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana contiene las pestañas Inicio, Insertar, etc.?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Barra de título"
-      },
-      {
-        "letter": "B",
-        "text": "Cinta de opciones"
-      },
-      {
-        "letter": "C",
-        "text": "Barra de estado"
-      },
-      {
-        "letter": "D",
-        "text": "Área de trabajo"
-      }
-    ],
-    "matching": null,
-    "respuesta": "B",
-    "explicacion": "La cinta de opciones contiene las pestañas."
-  },
-  {
-    "id": "interfaz-244",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-69",
-    "enunciado": "En Word 365, ¿qué elemento se activa al seleccionar un elemento insertado?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Ficha contextual"
-      },
-      {
-        "letter": "B",
-        "text": "Barra de estado"
-      },
-      {
-        "letter": "C",
-        "text": "Zoom"
-      },
-      {
-        "letter": "D",
-        "text": "Regla"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "Las fichas contextuales aparecen al seleccionar elementos."
-  },
-  {
-    "id": "interfaz-245",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-70",
-    "enunciado": "En Word 365, ¿qué opción del menú de control de ventana permite reubicar la ventana en pantalla?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Mover"
-      },
-      {
-        "letter": "B",
-        "text": "Cerrar"
-      },
-      {
-        "letter": "C",
-        "text": "Minimizar"
-      },
-      {
-        "letter": "D",
-        "text": "Maximizar"
-      }
-    ],
-    "matching": null,
-    "respuesta": "A",
-    "explicacion": "El menú de control incluye \"Mover\", que no es un botón directo de la barra de título."
-  },
-  {
-    "id": "interfaz-246",
-    "sourceFile": "interfaz.json",
-    "bloque": "Interfaz — Ventana y cinta de opciones",
-    "tipo": "opcion_unica",
-    "categoria": "ruta",
-    "negativa": false,
-    "section": "interfaz",
-    "topic": "ventana-cinta",
-    "subtopic": null,
-    "tema": "Ventana y cinta de opciones",
-    "sourceQuestionId": "3-71",
-    "enunciado": "En Word 365, un usuario tiene la ventana del programa ocupando toda la pantalla (maximizada) y necesita consultar un archivo que tiene en el escritorio, pero no quiere cerrar el documento de Word. ¿Qué botón de control de ventana debe pulsar para lograr esto de forma rápida y reversible?",
-    "opciones": [
-      {
-        "letter": "A",
-        "text": "Cerrar (X), para salir de Word y luego abrirlo de nuevo."
-      },
-      {
-        "letter": "B",
-        "text": "Restaurar/Maximizar, para poder arrastrar la ventana y ver el escritorio detrás."
-      },
-      {
-        "letter": "C",
-        "text": "Minimizar, para reducir la ventana a la barra de tareas y dejar el escritorio visible."
-      },
-      {
-        "letter": "D",
-        "text": "Iniciar sesión, para activar el modo de escritorio remoto."
-      }
-    ],
-    "matching": null,
-    "respuesta": "C",
-    "explicacion": "El botón Minimizar reduce la ventana a la barra de tareas, dejando el escritorio al descubierto sin cerrar la aplicación."
+    "explicacion": "Manda la ventana a la barra de tareas dejando el escritorio a la vista, y con un clic en su icono vuelve todo como estaba. · **Restaurar** es el descarte que decide la pregunta: también deja ver algo del escritorio, pero solo lo que asome por los lados, y encima obliga a mover la ventana a mano. Funciona, pero es el camino largo. · Cerrar sería perder el sitio del documento para nada, porque minimizar no lo cierra."
   },
   {
     "id": "interfaz-247",
@@ -6416,28 +6501,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-72",
-    "enunciado": "En Word 365, un usuario está redactando un documento y, por comodidad, decide no usar el ratón en ese momento. Necesita abrir el menú de control de la ventana utilizando exclusivamente el teclado. ¿Qué combinación de teclas debe pulsar?",
+    "revisada": true,
+    "enunciado": "Quieres abrir el menú de control de la ventana sin tocar el ratón. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + F10"
+        "text": "Alt+Barra espaciadora"
       },
       {
         "letter": "B",
-        "text": "Alt + F4"
+        "text": "Ctrl+Barra espaciadora"
       },
       {
         "letter": "C",
-        "text": "Alt + Barra espaciadora"
+        "text": "Alt+F4"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Z"
+        "text": "Ctrl+Mayús+Espacio"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El material recoge que, además del clic en el símbolo de Word, podemos abrir este menú pulsando Alt + Barra espaciadora."
+    "respuesta": "A",
+    "explicacion": "Es un atajo del sistema, común a cualquier ventana de Windows, y por eso no figura en el cuadro Personalizar teclado, que solo recoge comandos de Word. Trae Restaurar, Mover, Tamaño, Minimizar, Maximizar y Cerrar. · Los tres descartes SÍ son de Word y hacen cosas muy distintas: **Ctrl+Barra espaciadora** quita el formato de carácter, **Ctrl+Mayús+Espacio** inserta un espacio de no separación y **Alt+F4** cierra los documentos uno a uno."
   },
   {
     "id": "interfaz-248",
@@ -6451,28 +6537,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-73",
-    "enunciado": "En Word 365, al insertar una tabla en el documento y hacer clic dentro de ella, aparece automáticamente una nueva pestaña en la cinta de opciones que permite diseñar y modificar la estructura de la tabla. ¿Cómo se denomina este tipo de pestaña y qué la diferencia de las pestañas estándar (como \"Inicio\" o \"Insertar\")?",
+    "revisada": true,
+    "enunciado": "Al poner el cursor dentro de una tabla aparecen pestañas nuevas en la cinta. ¿Cómo se llama ese tipo de pestaña?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Pestaña de acceso rápido, porque siempre está visible en la barra de título."
+        "text": "Pestaña o ficha contextual, porque solo aparece con el objeto seleccionado"
       },
       {
         "letter": "B",
-        "text": "Pestaña contextual o Ficha de herramientas, porque se activa solo al seleccionar elementos insertados concretos."
+        "text": "Pestaña de acceso rápido, porque está siempre a mano en la barra de título"
       },
       {
         "letter": "C",
-        "text": "Pestaña de diseño de impresión, porque solo aparece en la vista de impresión."
+        "text": "Pestaña de diseño de impresión, porque solo aparece en esa vista"
       },
       {
         "letter": "D",
-        "text": "Pestaña de OneDrive, porque aparece al guardar el documento en la nube."
+        "text": "Pestaña de complementos, porque la añade un complemento instalado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "El material indica que al seleccionar elementos insertados (imágenes, tablas, dibujos) aparecen fichas contextuales o \"Fichas de herramientas\" (ej. Herramientas de tabla)."
+    "respuesta": "A",
+    "explicacion": "Se añaden al final de la fila sin quitar ninguna de las fijas, y desaparecen al sacar el cursor de la tabla. Las de tabla son dos, «Diseño de tabla» y «Disposición de tabla». · **La pestaña de complementos** es el descarte que decide la pregunta, porque también aparece y desaparece: existe de verdad, pero solo si hay instalado algún complemento que coloque botones ahí, y una vez presente se queda. Las contextuales dependen de la selección, no de lo instalado."
   },
   {
     "id": "interfaz-250",
@@ -6486,28 +6573,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-75",
-    "enunciado": "En Word 365, ¿qué tecla abre el menú de control de la ventana?",
+    "revisada": true,
+    "enunciado": "¿Qué se puede hacer desde el menú de control de la ventana que NO tiene botón en la barra de título?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt + Barra espaciadora"
+        "text": "Mover la ventana y redimensionarla con las flechas"
       },
       {
         "letter": "B",
-        "text": "Ctrl + F10"
+        "text": "Minimizar la ventana y también cerrarla"
       },
       {
         "letter": "C",
-        "text": "Alt + F4"
+        "text": "Contraer la cinta de opciones de Word"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Z"
+        "text": "Cambiar entre el modo mouse y el táctil"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La respuesta correcta es «Alt + Barra espaciadora»."
+    "explicacion": "Las entradas «Mover» y «Tamaño» solo tienen sentido sin ratón: al elegirlas, las flechas empiezan a desplazar la ventana o a arrastrar uno de sus bordes, y se confirma con Intro o se cancela con Esc. · Minimizar, maximizar, restaurar y cerrar están en las dos partes. · Contraer la cinta y cambiar de modo son cosas de Word, no de la ventana, y ese menú es de Windows: se abre con Alt+Barra espaciadora."
   },
   {
     "id": "interfaz-251",
@@ -6521,28 +6609,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-76",
-    "enunciado": "En Word 365, ¿qué tecla cierra la ventana?",
+    "revisada": true,
+    "enunciado": "Comparas Alt+F4 con Ctrl+F4 teniendo varios documentos abiertos. ¿En qué se diferencian?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alt + F4"
+        "text": "Alt+F4 acaba cerrando Word con el último documento; Ctrl+F4 nunca cierra Word"
       },
       {
         "letter": "B",
-        "text": "Ctrl + F10"
+        "text": "Ctrl+F4 acaba cerrando Word; Alt+F4 solo cierra documentos"
       },
       {
         "letter": "C",
-        "text": "Alt + Barra espaciadora"
+        "text": "Las dos cierran Word entero de golpe"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Z"
+        "text": "Las dos cierran solo el documento activo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La respuesta correcta es «Alt + F4»."
+    "explicacion": "Prueba en vivo del usuario. Alt+F4 va cerrando ventanas una a una y, cuando solo queda una, la siguiente pulsación cierra el programa; Ctrl+F4 cierra el documento activo y deja Word abierto, aunque se quede sin documentos. · La versión invertida es el descarte que decide la pregunta. · Conviene recordar además que **Ctrl+W no cierra nada** en esta instalación, pese a lo que dicen muchos manuales: quita el formato de párrafo."
   },
   {
     "id": "interfaz-252",
@@ -6550,34 +6639,35 @@
     "bloque": "Interfaz — Ventana y cinta de opciones",
     "tipo": "opcion_unica",
     "categoria": "atajo",
-    "negativa": false,
+    "negativa": true,
     "section": "interfaz",
     "topic": "ventana-cinta",
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-77",
-    "enunciado": "En Word 365, ¿qué tecla maximiza/restaura la ventana?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas combinaciones NO figura en el cuadro «Personalizar teclado» de esta instalación?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ctrl + F10"
+        "text": "Ctrl+F10"
       },
       {
         "letter": "B",
-        "text": "Alt + F4"
+        "text": "Alt+Mayús+C"
       },
       {
         "letter": "C",
-        "text": "Alt + Barra espaciadora"
+        "text": "Ctrl+Mayús+X"
       },
       {
         "letter": "D",
-        "text": "Ctrl + Z"
+        "text": "Ctrl+F4"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La respuesta correcta es «Ctrl + F10»."
+    "explicacion": "Ctrl+F10 se da por sentado en mucho material como «maximizar la ventana del documento», herencia de cuando Word abría cada documento en una ventana dentro de otra; en el cuadro de esta instalación no aparece, así que no se puede dar por buena. · Las otras tres sí están: **Alt+Mayús+C** cierra el panel de la ventana activa, **Ctrl+Mayús+X** alterna la vista de etiquetas XML y **Ctrl+F4** cierra el documento sin cerrar Word. · Maximizar o restaurar se hace con el botón, con doble clic en la barra de título o desde el menú de control."
   },
   {
     "id": "interfaz-253",
@@ -6591,28 +6681,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-78",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana muestra el nombre del documento?",
+    "revisada": true,
+    "enunciado": "Abres Word y creas un documento nuevo sin guardarlo. ¿Qué nombre muestra la barra de título?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Barra de título"
+        "text": "«Documento1», un nombre provisional que Word va numerando"
       },
       {
         "letter": "B",
-        "text": "Barra de estado"
+        "text": "«Sin título», hasta que se guarde por primera vez"
       },
       {
         "letter": "C",
-        "text": "Cinta de opciones"
+        "text": "«Nuevo documento de Word»"
       },
       {
         "letter": "D",
-        "text": "Barra de herramientas de acceso rápido"
+        "text": "Nada: la barra de título queda vacía hasta guardar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La respuesta correcta es «Barra de título»."
+    "explicacion": "Si se crean varios seguidos, la numeración sigue: Documento2, Documento3. Al guardar por primera vez, ese nombre es el que Word propone en el cuadro Guardar como, aunque suele sustituirse por la primera línea del texto si la hay. · La barra de título añade avisos entre corchetes según el estado del archivo: «[Modo de compatibilidad]» con un formato antiguo o «[Solo lectura]» si no se puede editar. · «Sin título» es como llaman a esto otros programas."
   },
   {
     "id": "interfaz-254",
@@ -6626,28 +6717,29 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "3-79",
-    "enunciado": "En Word 365, ¿qué elemento de la ventana contiene los botones de control?",
+    "revisada": true,
+    "enunciado": "Los tres botones de control de la ventana están en la barra de título. ¿Dónde exactamente?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Barra de título"
+        "text": "En su extremo derecho"
       },
       {
         "letter": "B",
-        "text": "Barra de estado"
+        "text": "En su extremo izquierdo"
       },
       {
         "letter": "C",
-        "text": "Cinta de opciones"
+        "text": "Centrados, junto al nombre del documento"
       },
       {
         "letter": "D",
-        "text": "Área de trabajo"
+        "text": "En el extremo derecho de la fila de pestañas"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "La respuesta correcta es «Barra de título»."
+    "explicacion": "Es la posición de cualquier ventana de Windows: minimizar, restaurar o maximizar, y cerrar, de izquierda a derecha. · **El extremo derecho de la fila de pestañas** es el descarte que decide la pregunta, y también tiene botones —«Comentarios», el estado de «Revisión» y «Compartir»—, pero una línea más abajo y con otra función. · En el extremo izquierdo de la barra de título va la barra de acceso rápido, y en el centro el nombre del documento y el cuadro de búsqueda."
   },
   {
     "id": "interfaz-497",
@@ -6661,11 +6753,12 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "8-174",
-    "enunciado": "¿Qué atajo cancela una acción o cierra un cuadro de diálogo en Word 365?",
+    "revisada": true,
+    "enunciado": "Has abierto un cuadro de diálogo por error y quieres salir sin aplicar nada. ¿Qué tecla lo cierra?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Escape"
+        "text": "Esc"
       },
       {
         "letter": "B",
@@ -6682,7 +6775,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Escape cancela la acción actual o cierra un cuadro de diálogo. Supr elimina el carácter siguiente o el contenido seleccionado. Retroceso elimina el carácter anterior. F10 activa las teclas de la cinta de opciones."
+    "explicacion": "Figura en el cuadro Personalizar teclado como «Cancelar»: interrumpe una acción. Sirve para cerrar cuadros y menús sin aplicar cambios, para salir del modo de acceso por teclado y para abandonar el Backstage. · Supr y Retroceso borran, uno hacia delante y otro hacia atrás, y son el descarte fácil porque también «quitan» algo. · F10 activa las letras de acceso de la cinta, igual que Alt, así que ahí abriría más cosas en vez de cerrarlas."
   },
   {
     "id": "interfaz-500",
@@ -6696,7 +6789,8 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "8-226",
-    "enunciado": "¿Qué atajo cierra el panel activo en Word 365?",
+    "revisada": true,
+    "enunciado": "Tienes abierto un panel lateral, como el de navegación o el de estilos, y quieres cerrarlo con el teclado. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -6717,7 +6811,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+Mayús+C cierra el panel de la ventana activa. Ctrl+W quita el formato de párrafo. Ctrl+Mayús+C no tiene función asignada. Alt+Ctrl+C copia el formato de la selección (pincel)."
+    "explicacion": "Figura en el cuadro Personalizar teclado como CerrarPanel: cierra el panel de la ventana activa. · **Ctrl+W** es el descarte que decide la pregunta, porque en muchos programas cierra la ventana o la pestaña activa; en esta instalación de Word no cierra nada: quita el formato de párrafo, y así está comprobado en vivo. · Alt+Ctrl+C es el pincel de copiar formato, y Ctrl+Mayús+C es cursiva, como Ctrl+K."
   },
   {
     "sourceFile": "interfaz.json",
@@ -6733,7 +6827,8 @@
     "id": "interfaz-529",
     "sourceQuestionId": "web-interfaz-529",
     "tipo": "opcion_unica",
-    "enunciado": "¿Cual de estas pestanas NO aparece en la cinta de Word 365 de forma predeterminada y hay que habilitarla?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas pestañas NO se ve en la cinta de fábrica y hay que activarla?",
     "opciones": [
       {
         "letter": "A",
@@ -6745,7 +6840,7 @@
       },
       {
         "letter": "C",
-        "text": "Disposicion"
+        "text": "Disposición"
       },
       {
         "letter": "D",
@@ -6753,7 +6848,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "La ficha «Programador» (macros, controles de formulario, XML, complementos COM) se activa en Archivo ▸ Opciones ▸ Personalizar cinta de opciones, marcando su casilla en la lista de la derecha."
+    "explicacion": "Reúne lo que solo necesita quien automatiza: macros, el editor de Visual Basic, los controles de formulario, el marcado XML y los complementos COM. Se enciende en Archivo ▸ Opciones ▸ Personalizar cinta de opciones, marcando su casilla en la lista de la derecha. · Las otras tres son de las ocho fijas, junto a Inicio, Insertar, Diseño, Referencias y Vista. · Esta pregunta es de las que caen en oposición precisamente porque sorprende que una pestaña esté escondida."
   },
   {
     "sourceFile": "interfaz.json",
@@ -6769,15 +6864,16 @@
     "id": "interfaz-530",
     "sourceQuestionId": "web-interfaz-530",
     "tipo": "opcion_unica",
-    "enunciado": "Para mostrar la ficha «Programador» en la cinta, ¿que ruta se sigue?",
+    "revisada": true,
+    "enunciado": "¿Qué ruta permite mostrar u ocultar pestañas de la cinta y crear pestañas propias?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Archivo ▸ Opciones ▸ Personalizar cinta de opciones ▸ marcar «Programador»"
+        "text": "Archivo ▸ Opciones ▸ Personalizar cinta de opciones"
       },
       {
         "letter": "B",
-        "text": "Vista ▸ Mostrar ▸ Programador"
+        "text": "Vista ▸ Mostrar"
       },
       {
         "letter": "C",
@@ -6789,7 +6885,7 @@
       }
     ],
     "respuesta": "A",
-    "explicacion": "En ese panel, la lista de la derecha son las «Fichas principales»; se marca o desmarca la casilla de cada una y se pueden crear fichas y grupos propios."
+    "explicacion": "La lista de la derecha son las «Fichas principales», cada una con su casilla; debajo están «Nueva pestaña» y «Nuevo grupo» para montar una propia con los comandos que se elijan de la lista de la izquierda. · Se llega también con el clic derecho sobre la cinta, eligiendo «Personalizar la cinta de opciones»: ese menú existe, pero no tiene ninguna entrada llamada «Mostrar todas las fichas». · **Vista ▸ Mostrar** es el descarte que decide la pregunta, y lleva las casillas de la regla, las líneas de cuadrícula y el panel de navegación."
   },
   {
     "sourceFile": "interfaz.json",
@@ -6805,27 +6901,28 @@
     "id": "interfaz-531",
     "sourceQuestionId": "web-interfaz-531",
     "tipo": "opcion_unica",
-    "enunciado": "La flecha diagonal pequena en la esquina inferior derecha de algunos grupos de la cinta se llama:",
+    "revisada": true,
+    "enunciado": "¿Cómo se llama la flechita diagonal de la esquina inferior derecha de algunos grupos de la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Iniciador (o lanzador) de cuadro de dialogo"
+        "text": "Iniciador de cuadro de diálogo"
       },
       {
         "letter": "B",
-        "text": "Selector de grupo"
+        "text": "Selector de grupo de la cinta"
       },
       {
         "letter": "C",
-        "text": "Boton de mas opciones"
+        "text": "Botón de más opciones"
       },
       {
         "letter": "D",
-        "text": "Ancla de grupo"
+        "text": "Ancla de grupo de comandos"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Abre el cuadro de dialogo (o el panel) completo con todas las opciones de ese grupo (p. ej. el iniciador del grupo Fuente abre el cuadro Fuente). No todos los grupos lo tienen."
+    "explicacion": "Abre el cuadro de diálogo o el panel completo de ese grupo: la del grupo Fuente abre el cuadro Fuente, la del grupo Párrafo el cuadro Párrafo, la del grupo Portapapeles su panel lateral. Es donde están las opciones que no caben en la cinta. · **«Botón de más opciones»** es el descarte que decide la pregunta, porque describe bien lo que hace y suena a nombre oficial. · No todos los grupos lo tienen: solo aquellos cuyo cuadro aporta algo más."
   },
   {
     "sourceFile": "interfaz.json",
@@ -6841,15 +6938,16 @@
     "id": "interfaz-533",
     "sourceQuestionId": "web-interfaz-533",
     "tipo": "opcion_unica",
-    "enunciado": "La ficha «Complementos» de la cinta de Word 365, ¿cuando aparece?",
+    "revisada": true,
+    "enunciado": "¿Cuándo aparece la ficha «Complementos» en la cinta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Solo cuando hay instalado algun complemento que anade comandos a la cinta"
+        "text": "Solo si hay instalado algún complemento que coloque botones ahí"
       },
       {
         "letter": "B",
-        "text": "Siempre, es una ficha fija"
+        "text": "Siempre: es una de las pestañas fijas"
       },
       {
         "letter": "C",
@@ -6857,11 +6955,11 @@
       },
       {
         "letter": "D",
-        "text": "Solo si se activa en Personalizar cinta"
+        "text": "Solo si se activa en Personalizar cinta de opciones"
       }
     ],
     "respuesta": "A",
-    "explicacion": "Es una ficha que Word muestra automaticamente si un complemento coloca botones ahi; si no hay complementos de ese tipo, no se ve."
+    "explicacion": "Es la papelera donde van a parar los botones de los complementos que no tienen sitio propio; sin complementos de ese tipo, la ficha no existe. · **Activarla en Personalizar cinta** es el descarte que decide la pregunta, y es lo que ocurre con **Programador**, que sí está en esa lista con su casilla. Son dos maneras distintas de que una pestaña no se vea: una porque está apagada y otra porque no tiene nada que mostrar. · Y no es contextual: no depende de lo seleccionado."
   },
   {
     "id": "interfaz-163",
@@ -6875,23 +6973,28 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-51",
-    "enunciado": "En Word 365, señale las características correctas del modo táctil (puede haber más de una):",
+    "revisada": true,
+    "enunciado": "¿Cuáles de estas son características del modo táctil?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Comandos más grandes"
+        "text": "Los comandos son más grandes"
       },
       {
         "letter": "B",
-        "text": "Más espacio entre comandos"
+        "text": "Hay más espacio entre los comandos"
       },
       {
         "letter": "C",
-        "text": "Pensado para dispositivos táctiles o visión reducida"
+        "text": "Ayuda también a quien tiene poca vista, aunque use ratón"
       },
       {
         "letter": "D",
-        "text": "Reduce el número de pestañas disponibles"
+        "text": "Reduce el número de pestañas de la cinta"
+      },
+      {
+        "letter": "E",
+        "text": "Aumenta el zoom del documento"
       }
     ],
     "matching": null,
@@ -6900,7 +7003,7 @@
       "B",
       "C"
     ],
-    "explicacion": "El modo táctil no reduce pestañas."
+    "explicacion": "Tamaño y separación van siempre juntos y en la misma dirección, y de ahí sale el tercer punto: unos botones más grandes y despejados se distinguen mejor, se use el dedo o el ratón. · Los dos descartes son los errores clásicos: las pestañas no desaparecen, lo que ocurre es que en cada una caben menos comandos y algunos grupos se recogen en un desplegable; y el documento no se entera de nada, porque el modo solo toca la interfaz. El zoom es otra cosa, y está en la barra de estado."
   },
   {
     "id": "interfaz-152",
@@ -6914,11 +7017,12 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-40",
-    "enunciado": "En Word 365, el modo mouse está pensado para dispositivos táctiles. (Verdadero/Falso)",
+    "revisada": true,
+    "enunciado": "El modo mouse está pensado para los dispositivos táctiles.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "El modo mouse es para ratón; el táctil para pantallas táctiles."
+    "explicacion": "Está pensado para trabajar con ratón: como el puntero es preciso, no hace falta dejar margen alrededor de los botones y la cinta muestra más comandos. El de las pantallas táctiles es el otro. · La confusión viene del nombre en inglés, que se ha quedado sin traducir en la interfaz. · Se alterna entre los dos desde la barra de acceso rápido, y el botón solo aparece si antes se ha marcado «Modo mouse/táctil» en su desplegable de personalización."
   },
   {
     "id": "interfaz-153",
@@ -6932,11 +7036,12 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-41",
-    "enunciado": "En Word 365, en el modo táctil, los comandos son más grandes y hay más espacio entre ellos que en modo mouse. (Verdadero/Falso)",
+    "revisada": true,
+    "enunciado": "En modo táctil los comandos son más grandes y están más separados que en modo mouse.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Es una de las características del modo táctil."
+    "explicacion": "Un dedo tapa mucho más que la punta de un puntero, así que hace falta margen alrededor de cada botón para no pulsar el de al lado. · Tamaño y separación aumentan los dos a la vez: cualquier afirmación que los separe o los cruce es falsa. · Lo que se pierde a cambio es cantidad, porque la cinta no crece: algunos grupos se recogen en un solo botón desplegable. Por eso hay dos modos y no uno mejor que otro. · De rebote ayuda a quien tiene poca vista, aunque use ratón."
   },
   {
     "id": "interfaz-154",
@@ -6950,11 +7055,12 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-42",
-    "enunciado": "En Word 365, el modo táctil puede activarse desde la barra de herramientas de acceso rápido mediante el botón \"Modo táctil\". (Verdadero/Falso)",
+    "revisada": true,
+    "enunciado": "El modo táctil se activa desde un botón de la barra de herramientas de acceso rápido.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "El texto lo indica expresamente."
+    "explicacion": "Pero el botón no está de fábrica: hay que marcar antes «Modo mouse/táctil» en el desplegable de personalización de esa barra, y solo entonces aparece. Por eso mucha gente no lo encuentra y lo busca en la pestaña Vista, donde no está. · Ese desplegable, la flechita del final de la barra, es una lista de comandos que se pueden mostrar u ocultar. · No hace falta pantalla táctil para usarlo: funciona en cualquier equipo."
   },
   {
     "id": "interfaz-155",
@@ -6968,11 +7074,12 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-43",
-    "enunciado": "En Word 365, en modo mouse la cinta de opciones ocupa más espacio y caben menos comandos. (Verdadero/Falso)",
+    "revisada": true,
+    "enunciado": "En modo mouse la cinta ocupa más espacio y caben menos comandos.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "En modo mouse caben más comandos porque son más pequeños."
+    "explicacion": "Es al revés: en modo mouse los botones son pequeños y van juntos, así que caben más. Los que ocupan más espacio y dejan hueco entre ellos son los del modo táctil. · La cinta mide siempre lo mismo de alto y de ancho: lo que cambia es cuánto ocupa cada botón dentro de ella, y por tanto cuántos entran. · Es una relación de intercambio, y en un examen suele preguntarse enunciada al revés, que es exactamente lo que ocurre aquí."
   },
   {
     "id": "interfaz-518",
@@ -6987,11 +7094,12 @@
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "bal-interfaz-02",
     "generado": true,
-    "enunciado": "El modo táctil, una vez activado, no se puede desactivar sin reiniciar Word.",
+    "revisada": true,
+    "enunciado": "Una vez activado el modo táctil, hay que reiniciar Word para volver al modo mouse.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: se desactiva de la misma forma que se activa, desde el desplegable de la barra de herramientas de acceso rápido."
+    "explicacion": "Se alterna cuantas veces se quiera y el cambio es inmediato, desde el mismo botón de la barra de acceso rápido con el que se activó. · Nada de lo que cambia la apariencia de la cinta necesita reiniciar: ni el modo, ni contraerla con Ctrl+F1, ni añadir o quitar pestañas desde Personalizar cinta. · Lo que sí puede pedir reiniciar Word es instalar un complemento, que es otra cosa: eso puede añadir una ficha «Complementos» a la cinta."
   },
   {
     "sourceFile": "interfaz.json",
@@ -7007,10 +7115,11 @@
     "id": "interfaz-532",
     "sourceQuestionId": "web-interfaz-532",
     "tipo": "verdadero_falso",
-    "enunciado": "Todos los grupos de todas las pestanas de la cinta tienen un iniciador de cuadro de dialogo (la flechita de la esquina).",
+    "revisada": true,
+    "enunciado": "Todos los grupos de la cinta tienen la flechita del iniciador de cuadro de diálogo en su esquina.",
     "opciones": [],
     "respuesta": false,
-    "explicacion": "Falso: solo lo tienen los grupos cuyo cuadro de dialogo aporta opciones que no caben en la cinta (Portapapeles, Fuente, Parrafo, Estilos, Configurar pagina...). Grupos como «Zoom» o «Ventana» no lo tienen."
+    "explicacion": "Solo la tienen aquellos cuyo cuadro de diálogo aporta opciones que no caben en la cinta: Portapapeles, Fuente, Párrafo y Estilos en la pestaña Inicio, o Configurar página y Párrafo en Disposición. · Grupos como Zoom o Ventana, en la pestaña Vista, no la llevan, porque todo lo suyo ya está a la vista en forma de botón. · Es un detalle que se pregunta precisamente porque uno tiende a generalizar: la flechita es frecuente, pero no universal."
   },
   {
     "id": "interfaz-158",
@@ -7024,6 +7133,7 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-46",
+    "revisada": true,
     "enunciado": "En Word 365, relacione cada elemento de la interfaz con su función:",
     "opciones": [],
     "matching": {
@@ -7076,7 +7186,7 @@
       "3": "C",
       "4": "D"
     },
-    "explicacion": "Emparejamiento correcto: Regla → Permite medir márgenes y tabulaciones · Barra de título → Muestra el nombre del documento · Área de trabajo → Zona central de edición del documento · Barra de estado → Muestra sección, página y número de palabras."
+    "explicacion": "Cada uno ocupa su sitio: la regla bordea el área de trabajo por arriba y por la izquierda, la barra de título va en la franja superior, el área de trabajo es el centro y la barra de estado cierra por abajo. · La regla es la única de las cuatro con la que se puede ACTUAR además de mirar: los márgenes y las sangrías se arrastran directamente sobre ella. · Y la barra de estado también responde al clic: pulsar el recuento de palabras abre el cuadro «Contar palabras», y el clic derecho permite elegir qué información muestra."
   },
   {
     "id": "interfaz-159",
@@ -7090,6 +7200,7 @@
     "subtopic": null,
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "2-47",
+    "revisada": true,
     "enunciado": "En Word 365, relacione cada modo con su característica:",
     "opciones": [],
     "matching": {
@@ -7122,7 +7233,7 @@
       "1": "B",
       "2": "A"
     },
-    "explicacion": "Emparejamiento correcto: Modo mouse → Comandos más pequeños, aprovecha mejor el espacio · Modo táctil → Comandos más grandes, más espacio entre ellos."
+    "explicacion": "Es un intercambio, no una mejora: la cinta mide siempre lo mismo, así que agrandar y separar los botones obliga a mostrar menos, y viceversa. Tamaño y separación se mueven siempre juntos. · El modo táctil sirve además a quien tiene poca vista, aunque trabaje con ratón, porque los botones de la cinta no cambian de tamaño con el zoom del documento. · Se alterna desde la barra de acceso rápido, marcando antes «Modo mouse/táctil» en su desplegable de personalización."
   },
   {
     "id": "interfaz-524",
@@ -7137,20 +7248,21 @@
     "tema": "Ventana y cinta de opciones",
     "sourceQuestionId": "rell-interfaz-01",
     "generado": true,
-    "enunciado": "Escribe el atajo de cada acción: restaurar o maximizar el tamaño de la ventana de Word → [1]. activar o desactivar la vista de etiquetas XML → [2].",
+    "revisada": true,
+    "enunciado": "Completa: cerrar el panel lateral activo, [1]; alternar la vista de etiquetas XML, [2].",
     "opciones": [],
     "matching": null,
     "respuesta": [
       [
-        "Ctrl+F10",
-        "Ctrl + F10"
+        "Alt+Mayús+C",
+        "Alt + Mayús + C"
       ],
       [
         "Ctrl+Mayús+X",
         "Ctrl + Mayús + X"
       ]
     ],
-    "explicacion": "Ctrl+F10 restaura/maximiza la ventana; Ctrl+Mayús+X activa/desactiva las etiquetas XML."
+    "explicacion": "Los dos figuran en el cuadro Personalizar teclado de esta instalación, como CerrarPanel y AlternarVistaEtiquetasXML. · El primero sirve para cualquier panel lateral: el de navegación, el de estilos, el de comentarios o el del portapapeles. · Cuidado con **Ctrl+W**, que en otros programas cierra la ventana o la pestaña activa y aquí no cierra nada: quita el formato de párrafo. · Y el segundo solo tiene efecto en documentos con un esquema XML asociado, que es un uso poco frecuente."
   },
   {
     "id": "interfaz-256",
