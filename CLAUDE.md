@@ -287,6 +287,102 @@ negativas; concepto 255 · ruta 163 · atajo 160; **0 explicaciones de menos de
 topics con menos de 2 framings** (el mínimo son 3, en complementos; ocho de
 los trece llegan a 6 o más, así que ninguno se atasca en «consolidando»).
 
+**`insertar` TERMINADO (sep-2026): 552/552 reescritas a mano.** Tercera sección
+completa, y la más plagada de repeticiones mecánicas: once grupos cerrados uno a
+uno — paginas (21), tablas (86), ilustraciones (130), formato-forma (37),
+vinculos (51), comentarios (8), encabezado-pie (63), texto (82), simbolos (58),
+multimedia (9), esignature (7). Estado final auditado: 349 opción única · 192
+V/F (100V/92F) · 6 selección múltiple · 4 relleno · 1 emparejamiento · 34
+negativas; concepto 302 · ruta 204 · atajo 46; **0 citas de letra de opción, 0
+explicaciones de menos de 120 caracteres, 0 citas de fuente externa, 0 opciones
+repetidas y ningún topic por debajo de 3 framings** (mínimo 3 en formato-forma y
+multimedia; cuatro grupos llegan a 6 o 7).
+
+**Errores de HECHO destapados al reescribir `insertar`** (contrastados contra el
+volcado v2608, `data/rutas/*.txt` y las capturas del usuario; ya corregidos):
+- **`insertar-319` decía que la galería «Integrado» del botón Ecuación tiene 5
+  ecuaciones y que el teorema de Pitágoras NO está.** Son **9** y sí está —
+  restos de la tanda de minado P- que ya se había corregido en `insertar-98`,
+  `-318` y las flashcards F-135/136, pero que había sobrevivido aquí. Las dos
+  preguntas se contradecían entre sí dentro del mismo banco.
+- **`insertar-466` afirmaba que `Ctrl+Mayús+P` «no es un atajo real».** Sí lo
+  es: el volcado lo registra como **SubrayadoPalabras** (subraya las palabras
+  sin subrayar los espacios). Lo que no es es un atajo de la pestaña Insertar,
+  que era lo que preguntaba.
+- **`insertar-159` daba «Conservar formato al actualizar» como la casilla que
+  impide que cambie el VALOR de un campo.** Conserva el FORMATO; el valor se
+  actualiza igual. Congelarlo es bloquear (`Ctrl+3`) o desvincular (`Ctrl+6`), y
+  ninguna de las dos cosas está en ese cuadro. `insertar-381` ya lo decía bien.
+- **`insertar-30` decía que `Ctrl+F1` «no tiene función en este Word»**: contrae
+  la cinta, ya documentado desde `inicio-300`.
+- **`insertar-457` situaba el editar texto de una forma en `F2`**: `F2` está
+  verificada en vivo como «mover texto». Se escribe seleccionando la forma o con
+  «Modificar texto» del menú contextual.
+- **`insertar-234` decía que «Conoce al equipo» es un subtipo dentro de la
+  categoría Jerarquía de SmartArt**, mientras `insertar-237` decía —bien— que es
+  una categoría propia del panel. Manda el volcado: categoría propia.
+- **`insertar-458` e `insertar-468` situaban el comando «Fórmula» en
+  «Herramientas de tabla ▸ Presentación»**, que es el nombre de la cinta en
+  versiones anteriores. Aquí es **Disposición de tabla ▸ Datos**.
+- **`insertar-216` daba la coma como separador con botón propio de «Convertir
+  texto en tabla»**: los cuatro son párrafos, tabulaciones, punto y coma y
+  «Otro»; la coma hay que escribirla a mano.
+- **`insertar-411`** enumeraba los apartados del menú Formas sin «Formas de
+  ecuación»; **`insertar-347`** decía que el Panel de selección lista los objetos
+  del DOCUMENTO (son los de la página, y solo los flotantes).
+- **`insertar-133` e `insertar-135` parecían la misma pregunta** con dos nombres
+  para lo mismo. No lo son, y el volcado tiene los dos controles: la opción «Más
+  adelante o más atrás» del desplegable «Referencia a» (inserta SOLO esa palabra)
+  y la casilla «Incluir más adelante o más atrás» (la añade junto al número).
+
+**Afirmaciones sin fuente propia retiradas en `insertar`**: que «Formas básicas»
+sea la subcategoría MÁS amplia del menú Formas (`insertar-249` dice ahora lo que
+sí se ve: que es el cajón de sastre); la lista exacta de puntas de estrella de
+«Cintas y estrellas» (`insertar-243`); que la cinta contextual de un icono se
+llame «Formato de imagen» (`insertar-247`); que las cuadrículas de tabla se vean
+como «líneas de puntos AZULES» (`insertar-484`, ahora «discontinua»); y
+«Resumen del documento» como categoría del cuadro Campo (`insertar-477`).
+
+**Lo que más trabajo dio: los bloques de clones del minado P-.** Esta sección
+traía tandas enteras de preguntas idénticas en forma («¿cuál de estos nombres
+existe realmente?») sobre listas de galería: 14 sobre categorías de SmartArt,
+gráficos y modelos 3D, 13 sobre a qué grupo de «Formato de forma» pertenece cada
+comando, 8 sobre propiedades del documento, 6 sobre diseños de número de página,
+7 sobre estructuras del editor de ecuaciones. Regla que se siguió: **no se
+borran** (el usuario ya rechazó podar preguntas correctas por parecerse), sino
+que cada una se reapunta a un hecho DISTINTO y comprobable — qué representa cada
+tipo de gráfico, para qué sirve cada categoría de SmartArt, qué distingue
+«Relleno de forma» de «Relleno de texto», por qué todos los diseños de número al
+margen van en pareja izquierda/derecha. Los nombres inventados se conservan como
+distractores, que era lo único bueno que tenían. De paso se cubrieron huecos que
+no tenía ninguna pregunta: «Permitir dividir las filas entre páginas», el cuadro
+Ordenar con sus tres criterios, el cuadro «Insertar celdas», y los dos requisitos
+que hacen fallar la numeración por capítulos (lista multinivel enlazada a los
+estilos, y salto de SECCIÓN para que «Iniciar en» no afecte a todo).
+
+**`insertar-44` queda deliberadamente sin afirmar** qué hacen las variantes con
+Mayús de la navegación por columna de tabla (`Alt+Mayús+Re Pág` / `Av Pág`): el
+volcado las da como equivalentes a las de sin Mayús, pero con las de FILA la
+prueba en vivo demostró que no lo son (extienden la selección). La pregunta dice
+exactamente eso y señala que está pendiente de comprobar. Sigue siendo el único
+hueco abierto de la sección.
+
+**Herramienta nueva: `scripts/auditar_grupo.py`.** Reúne en un solo sitio las
+lentes que se venían pasando a mano al cerrar cada grupo: citas de letra de
+opción (solo en los tipos con opciones rotuladas — en un V/F, «la B» puede ser la
+tecla de un atajo), explicaciones de menos de 120 caracteres, citas de fuente
+externa, opciones repetidas, coherencia `tipo`↔`respuesta`, balance V/F, reparto
+de tipo y categoría, y **framings por topic**. Se usa como
+`py -3.11 scripts/auditar_grupo.py <seccion> [topic]`. Dos falsos positivos ya
+afinados: «SlideShare» es una de las cuatro plataformas reales del cuadro
+«Insertar vídeo en línea», no una cita de fuente (solo cuenta el dominio), y
+«según la fuente» no es cita cuando habla de la fuente TIPOGRÁFICA.
+
+**`tests/test_revisada.js` actualizado**: su paso A exigía que ninguna sección
+quedara a medias, cierto mientras se marcaba sección entera. Ahora se sube GRUPO
+a grupo para que el usuario pueda estudiar lo terminado sin esperar a la pestaña
+completa, así que lo que se comprueba es que ningún **topic** quede a medias.
+
 **Errores de HECHO destapados al reescribir `inicio`** (todos contrastados
 contra el volcado v2608, las capturas del usuario o pruebas en vivo; ya
 corregidos, no reabrir):
@@ -750,8 +846,10 @@ fuese otra pestaña (Vista Preliminar → `archivo.json`, `bloque`
 **Recuento actual** (`data/questions/<section>.json`, sep-2026):
 inicio 578, insertar 552, interfaz 530, archivo 431, referencias 166, vista 154,
 disposicion 143, revisar 128, diseno 100, correspondencia 61.
-Total 2843. De ellas, **1.009 reescritas a mano** bajo la guía de estilo:
-`archivo` (431) e `inicio` (578), las dos secciones TERMINADAS.
+Total 2843. De ellas, **1.561 reescritas a mano** bajo la guía de estilo:
+`archivo` (431), `inicio` (578) e `insertar` (552), las tres secciones
+TERMINADAS. Quedan 1.282: interfaz (530), referencias (166), vista (154),
+disposicion (143), revisar (128), diseno (100), correspondencia (61).
 **Volcado de rutas de la pestaña Inicio + minado (sep-2026)**: el usuario
 aportó 156 capturas de la cinta Inicio (`data/imagenes_rutas/inicio/`, rama
 a rama + todos los cuadros de diálogo/desplegables). Se creó

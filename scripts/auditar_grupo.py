@@ -33,7 +33,11 @@ def framing(q):
     return "concepto"
 
 LETRA = re.compile(r"(?:opci[oó]n|respuesta|apartado|alternativa)\s+[A-Ha-h]\b|\b[A-H]\)\s|\bla\s+[A-H]\b")
-FUENTE = re.compile(r"aulaclic|aulaClic|scribd|slideshare|linkedin|ionos|support\.microsoft|seg[uú]n la fuente|xataka|profesionalreview|daypo", re.I)
+FUENTE = re.compile(
+    r"aulaclic|scribd|slideshare\.net|linkedin|ionos|support\.microsoft"
+    r"|xataka|profesionalreview|daypo"
+    r"|seg[uú]n la fuente(?!\s+(elegida|seleccionada|del tema|activa))",
+    re.I)
 
 def main():
     sec = sys.argv[1]

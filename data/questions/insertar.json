@@ -15016,7 +15016,8 @@
     "subtopic": null,
     "tema": "Símbolos",
     "sourceQuestionId": "8-158",
-    "enunciado": "¿Qué atajo alterna entre el código de caracteres Unicode y el carácter correspondiente en Word 365?",
+    "revisada": true,
+    "enunciado": "Has escrito 20AC en el documento y quieres que se convierta en el símbolo del euro sin abrir ningún cuadro. ¿Qué combinación lo hace?",
     "opciones": [
       {
         "letter": "A",
@@ -15028,16 +15029,16 @@
       },
       {
         "letter": "C",
-        "text": "Ctrl+Alt+X"
+        "text": "Alt+Ctrl+X"
       },
       {
         "letter": "D",
-        "text": "Mayús+Alt+X"
+        "text": "Alt+Mayús+X"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Alt+X alterna entre el código Unicode y el carácter. Ctrl+X corta. Ctrl+Alt+X no tiene esa función. Mayús+Alt+X no tiene función asignada para conversión Unicode."
+    "explicacion": "Es ActDesactCódigoCaracteres, y funciona en los dos sentidos: sobre un código lo convierte en carácter, y pulsada justo detrás de un carácter enseña su código. Es la vía rápida para meter un símbolo raro sin pasar por «Más símbolos…». · **Ctrl+X** es el descarte que decide la pregunta: corta la selección, cosa que uno hace mil veces al día, así que el error se paga caro. · Alt+Mayús+X sí existe, pero es MarcarElementoÍndice, de la pestaña Referencias."
   },
   {
     "id": "insertar-98",
@@ -15052,15 +15053,16 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-56",
     "generado": true,
-    "enunciado": "¿Cual de las siguientes ecuaciones integradas existe realmente en la galeria del boton Ecuacion de Word 365?",
+    "revisada": true,
+    "enunciado": "Despliegas el botón «Ecuación» y miras su galería «Integrado». ¿Cuál de estas está?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Teorema de Pitagoras"
+        "text": "Teorema de Pitágoras"
       },
       {
         "letter": "B",
-        "text": "Ecuacion de Schrodinger"
+        "text": "Ecuación de Schrödinger"
       },
       {
         "letter": "C",
@@ -15073,7 +15075,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "Confirmado con captura: la galeria «Integrado» del boton Ecuacion trae 9 ecuaciones: Area del circulo, Expansion de una suma, Expansion Taylor, Formula cuadratica, Identidad trigonometrica 1, Identidad trigonometrica 2, Serie de Fourier, Teorema binomial y Teorema de Pitagoras. «Ecuacion de Schrodinger», «Ley de Ohm» y «Teorema de Bayes» no estan (habria que escribirlas o buscarlas en «Mas ecuaciones de Office.com»)."
+    "explicacion": "La galería trae nueve: área del círculo, expansión de una suma, expansión de Taylor, fórmula cuadrática, dos identidades trigonométricas, serie de Fourier, teorema binomial y teorema de Pitágoras. Confirmado con captura del usuario. · Las tres descartadas son fórmulas conocidísimas, y por eso engañan: uno espera que estén, pero la galería es corta y tira a lo matemático clásico, no a la física ni a la estadística. Habría que escribirlas a mano o buscar en «Más ecuaciones de Office.com». · Debajo está «Guardar selección en galería de ecuaciones…»."
   },
   {
     "id": "insertar-99",
@@ -15088,28 +15090,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-57",
     "generado": true,
-    "enunciado": "¿Qué ruta permite insertar una nueva ecuación en blanco para construirla con el editor de ecuaciones de Word?",
+    "revisada": true,
+    "enunciado": "Quieres montar tu propia fórmula desde cero con el editor de ecuaciones. ¿Qué entrada del botón Ecuación la abre?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Símbolos > Ecuación > Insertar nueva ecuación"
+        "text": "Insertar nueva ecuación"
       },
       {
         "letter": "B",
-        "text": "Insertar > Símbolos > Ecuación > Nueva ecuación en blanco"
+        "text": "Nueva ecuación en blanco"
       },
       {
         "letter": "C",
-        "text": "Insertar > Símbolos > Ecuación > Crear ecuación..."
+        "text": "Crear ecuación…"
       },
       {
         "letter": "D",
-        "text": "Insertar > Texto > Ecuación > Insertar"
+        "text": "Entrada de lápiz de ecuación"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B usa \"en blanco\" que no es el nombre exacto. C no existe. D sitúa Ecuación en el grupo Texto."
+    "explicacion": "Está debajo de la galería «Integrado» y de «Más ecuaciones de Office.com», y coloca un marco vacío en el documento abriendo la cinta contextual «Ecuación», con sus símbolos y estructuras. · **«Entrada de lápiz de ecuación»** es el descarte que decide la pregunta: también crea una ecuación desde cero, pero dibujándola a mano en un cuadro aparte para que Word la reconozca; no es escribir con el editor. · Al mismo marco vacío se llega pulsando el botón Ecuación directamente, sin desplegar el menú."
   },
   {
     "id": "insertar-100",
@@ -15124,28 +15127,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-58",
     "generado": true,
-    "enunciado": "¿Qué ruta permite escribir una ecuación a mano (reconocimiento de escritura manual) en Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres dibujar la fórmula a mano con el ratón o el lápiz y que Word la reconozca. ¿Cómo se llama esa entrada?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Símbolos > Ecuación > Ecuación manuscrita"
+        "text": "Entrada de lápiz de ecuación"
       },
       {
         "letter": "B",
-        "text": "Insertar > Símbolos > Ecuación > Entrada de lápiz de ecuación"
+        "text": "Ecuación manuscrita"
       },
       {
         "letter": "C",
-        "text": "Insertar > Símbolos > Ecuación > Dibujar ecuación"
+        "text": "Dibujar ecuación"
       },
       {
         "letter": "D",
-        "text": "Insertar > Símbolos > Ecuación > Reconocimiento de fórmula"
+        "text": "Reconocimiento de fórmula"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A \"manuscrita\" no es el término real. C \"Dibujar ecuación\" no existe con ese nombre. D no existe."
+    "respuesta": "A",
+    "explicacion": "Abre el cuadro «Control de entrada matemática», con una zona para trazar y cuatro herramientas: Escribir, Borrar, Seleccionar y corregir, y Eliminar. Word va mostrando arriba lo que interpreta, y «Seleccionar y corregir» sirve para arreglar lo que haya leído mal. · La misma entrada está en el menú del botón y en el grupo Herramientas de la cinta contextual. · Los tres descartes describen la idea con palabras razonables; el nombre real usa «entrada de lápiz», que es como Word llama a todo lo que se dibuja a mano, también en la pestaña Revisar."
   },
   {
     "id": "insertar-101",
@@ -15160,28 +15164,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-59",
     "generado": true,
-    "enunciado": "¿Cuáles son los formatos de conversión disponibles en la cinta contextual de Ecuación en Word 365?",
+    "revisada": true,
+    "enunciado": "El grupo «Conversiones» de la cinta contextual Ecuación permite pasar la fórmula de un formato a otro. ¿Cuáles ofrece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "MathML, LaTeX y Texto"
+        "text": "Unicode · LaTeX · Texto"
       },
       {
         "letter": "B",
-        "text": "Unicode, LaTeX y Texto"
+        "text": "Unicode · MathML · Texto"
       },
       {
         "letter": "C",
-        "text": "HTML, Unicode y LaTeX"
+        "text": "HTML · Unicode · LaTeX"
       },
       {
         "letter": "D",
-        "text": "TeX, MathML y Unicode"
+        "text": "TeX · MathML · Unicode"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A MathML no figura en la extracción real. C HTML no existe como opción de conversión. D TeX no existe como opción diferenciada de LaTeX. Las opciones reales son: Unicode, LaTeX y Texto."
+    "respuesta": "A",
+    "explicacion": "Unicode y LaTeX son dos maneras de escribir la fórmula con caracteres, y se puede alternar entre ellas mientras se trabaja; «Texto» la convierte en texto normal y deja de ser una ecuación. · **MathML** es el descarte que decide la pregunta: es un estándar real para escribir matemáticas, se usa en páginas web y Word lo entiende al pegar, pero no está como botón de conversión aquí. · LaTeX es la novedad de las versiones recientes y permite teclear la fórmula con su sintaxis en lugar de ir pinchando estructuras."
   },
   {
     "id": "insertar-102",
@@ -15196,19 +15201,20 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-60",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras matemáticas está disponible directamente en la cinta contextual de Ecuación de Word 365?",
+    "revisada": true,
+    "enunciado": "En el grupo «Estructuras» de la cinta Ecuación, ¿cuál de estas está?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Diagrama de árbol"
+        "text": "Límite y logaritmo"
       },
       {
         "letter": "B",
-        "text": "Tabla de valores"
+        "text": "Diagrama de árbol"
       },
       {
         "letter": "C",
-        "text": "Límite y logaritmo"
+        "text": "Tabla de valores"
       },
       {
         "letter": "D",
@@ -15216,8 +15222,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A y D no son estructuras del editor de ecuaciones. B tampoco. Las estructuras reales incluyen: Fracción, Índice, Radical, Integral, Operador grande, Corchete, Función, Acento, Límite y logaritmo, Operador, Matriz."
+    "respuesta": "A",
+    "explicacion": "Las estructuras son once: fracción, índice, radical, integral, operador grande, corchete, función, acento, límite y logaritmo, operador y matriz. Cada una despliega variantes con huecos que se rellenan. · Los tres descartes son cosas del terreno matemático que no son estructuras de fórmula: un diagrama se hace con SmartArt, una tabla de valores con una tabla normal, y la transformada de Fourier es una fórmula concreta —de hecho, la serie de Fourier está en la galería «Integrado»—, no una pieza para construir otras."
   },
   {
     "id": "insertar-103",
@@ -15232,15 +15238,16 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-61",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes caracteres aparece en la galería de símbolos recientes que muestra el menú de Símbolo en la extracción de Word 365?",
+    "revisada": true,
+    "enunciado": "El menú del botón «Símbolo» muestra directamente una veintena de símbolos de uso frecuente. ¿Cuál de estos está?",
     "opciones": [
       {
         "letter": "A",
-        "text": "∂ (derivada parcial)"
+        "text": "Σ (sigma mayúscula)"
       },
       {
         "letter": "B",
-        "text": "Σ (sigma mayúscula)"
+        "text": "∂ (derivada parcial)"
       },
       {
         "letter": "C",
@@ -15252,8 +15259,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son símbolos matemáticos reales pero no figuran en la galería de recientes de la extracción. Los símbolos de la galería real incluyen: €, £, ¥, ©, ®, ™, ±, ≠, ≤, ≥, ÷, ×, ∞, µ, α, β, π, Ω, Σ, ☺."
+    "respuesta": "A",
+    "explicacion": "La galería recoge lo que se usa a diario en un documento de oficina: monedas (€, £, ¥), marcas legales (©, ®, ™), operadores corrientes (±, ≠, ≤, ≥, ÷, ×), unas cuantas letras griegas (µ, α, β, π, Ω, Σ) y hasta una carita. · Los tres descartes son símbolos de matemática avanzada: existen y se pueden insertar, pero desde «Más símbolos…» eligiendo el subconjunto «Operadores matemáticos», o desde el editor de ecuaciones. La galería del menú es corta y va cambiando con lo que uno usa."
   },
   {
     "id": "insertar-104",
@@ -15268,28 +15275,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-62",
     "generado": true,
-    "enunciado": "¿Qué ruta abre el cuadro completo de símbolos donde se puede buscar por fuente y subconjunto Unicode?",
+    "revisada": true,
+    "enunciado": "Buscas un símbolo que no está en el menú y necesitas rebuscar por fuente y por subconjunto Unicode. ¿Qué entrada abre ese cuadro?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Símbolos > Símbolo > Galería de símbolos"
+        "text": "Más símbolos…"
       },
       {
         "letter": "B",
-        "text": "Insertar > Símbolos > Símbolo > Más símbolos..."
+        "text": "Galería de símbolos"
       },
       {
         "letter": "C",
-        "text": "Insertar > Símbolos > Símbolo > Buscar símbolo..."
+        "text": "Buscar símbolo…"
       },
       {
         "letter": "D",
-        "text": "Insertar > Texto > Símbolo > Cuadro de símbolos..."
+        "text": "Insertar ▸ Texto ▸ Símbolo ▸ Cuadro de símbolos…"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A \"Galería de símbolos\" no existe como opción. C \"Buscar símbolo\" no existe. D sitúa el comando en el grupo Texto."
+    "respuesta": "A",
+    "explicacion": "Es la única entrada del menú aparte de la galería, y abre el cuadro «Símbolo», con dos fichas: «Símbolos», donde se elige fuente y subconjunto, y «Caracteres especiales». Abajo tiene los botones «Autocorrección…», «Teclas…» e «Insertar», y muestra el código del símbolo seleccionado. · El cuadro no se cierra al insertar, así que se pueden meter varios seguidos. · El grupo se llama «Símbolos», no «Texto», y es el último de la pestaña Insertar."
   },
   {
     "id": "insertar-105",
@@ -15304,15 +15312,16 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-63",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes caracteres especiales existe realmente en la pestaña Caracteres especiales del cuadro Símbolo de Word 365?",
+    "revisada": true,
+    "enunciado": "En la ficha «Caracteres especiales» del cuadro Símbolo, ¿cuál de estos aparece?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Punto de enumeración (bullet)"
+        "text": "Guion de no separación"
       },
       {
         "letter": "B",
-        "text": "Guión de no separación"
+        "text": "Punto de enumeración"
       },
       {
         "letter": "C",
@@ -15320,12 +15329,12 @@
       },
       {
         "letter": "D",
-        "text": "Símbolo de grado (°)"
+        "text": "Símbolo de grado"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A el bullet es un carácter pero no figura en la pestaña Caracteres especiales con ese nombre. C no existe en esa pestaña. D el símbolo de grado es un símbolo Unicode pero no es un \"carácter especial\" de esa pestaña. Los caracteres especiales reales incluyen: Guión largo, Guión corto, Guión de no separación, Guión opcional, Espacio de no separación, Copyright, Registrado, Marca registrada, Sección, Párrafo, Puntos suspensivos, Comillas tipográficas."
+    "respuesta": "A",
+    "explicacion": "Esa ficha no lista símbolos cualesquiera, sino caracteres con COMPORTAMIENTO: guiones (largo, corto, de no separación, opcional), espacios de varias anchuras, el de no separación, marcas legales, sección, párrafo, puntos suspensivos y comillas tipográficas. Casi todos traen su atajo escrito al lado. · El grado y el punto de enumeración son símbolos normales y están en la otra ficha, que es lo que decide la pregunta: si el carácter solo se dibuja, va en «Símbolos»; si además cambia cómo se comporta el texto, en «Caracteres especiales»."
   },
   {
     "id": "insertar-106",
@@ -15340,28 +15349,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-64",
     "generado": true,
-    "enunciado": "¿Qué dos funciones ofrece el botón Teclas... dentro del cuadro Símbolo de Word 365?",
+    "revisada": true,
+    "enunciado": "En el cuadro Símbolo, el botón «Teclas…» abre otro cuadro. ¿Para qué sirve?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Ver el código Unicode del símbolo y asignarle una macro"
+        "text": "Para consultar el atajo que ya tiene el símbolo y asignarle uno propio"
       },
       {
         "letter": "B",
-        "text": "Consultar el atajo actual del símbolo y asignarle un atajo de teclado personalizado"
+        "text": "Para ver su código Unicode y asignarle una macro"
       },
       {
         "letter": "C",
-        "text": "Exportar el símbolo a Autocorrección y asignarle un nombre"
+        "text": "Para guardarlo en Autocorrección con un nombre"
       },
       {
         "letter": "D",
-        "text": "Ver la fuente del símbolo y vincularlo a un campo"
+        "text": "Para ver de qué fuente sale y vincularlo a un campo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A la asignación de macros no es la función de ese botón. C describe Autocorrección, que es otro botón del mismo cuadro. D no existe."
+    "respuesta": "A",
+    "explicacion": "Lleva al cuadro «Personalizar teclado» con el símbolo ya seleccionado, mostrando la combinación actual si la tiene y permitiendo escribir una nueva. Es el mismo cuadro cuyo volcado es la referencia de atajos de esta instalación. · **Autocorrección** es el descarte que decide la pregunta: hace algo parecidísimo, asociar el símbolo a algo que se teclea, pero a una palabra en vez de a una combinación de teclas, y tiene su propio botón justo al lado. · El código Unicode se ve en el propio cuadro, sin abrir nada."
   },
   {
     "id": "insertar-171",
@@ -15376,28 +15386,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-138",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras existe realmente en el grupo Estructuras de la cinta contextual Ecuación de Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres escribir un sumatorio con sus límites arriba y abajo. ¿Qué estructura del editor de ecuaciones lo da?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Suma acumulada"
-      },
-      {
-        "letter": "B",
         "text": "Operador grande"
       },
       {
+        "letter": "B",
+        "text": "Operador"
+      },
+      {
         "letter": "C",
-        "text": "Serie numérica"
+        "text": "Suma acumulada"
       },
       {
         "letter": "D",
-        "text": "Expresión compuesta"
+        "text": "Función"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no son estructuras reales del editor de ecuaciones. \"Operador grande\" sí figura en la extracción."
+    "respuesta": "A",
+    "explicacion": "«Operador grande» agrupa los signos que crecen y llevan límites: sumatorio, productorio, unión, intersección. · **«Operador»**, a secas, es el descarte que decide la pregunta y es otra estructura distinta de la misma lista: sirve para colocar texto encima o debajo de un signo, como una flecha con una palabra encima. Los nombres se parecen y hacen cosas muy distintas. · «Función» es para seno, coseno y demás, con su nombre en redonda. · «Suma acumulada» no existe."
   },
   {
     "id": "insertar-172",
@@ -15412,15 +15423,16 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-139",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras existe realmente en el grupo Estructuras de la cinta contextual Ecuación?",
+    "revisada": true,
+    "enunciado": "Quieres escribir una raíz cúbica. ¿Qué estructura del editor de ecuaciones la trae?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Exponente"
+        "text": "Radical"
       },
       {
         "letter": "B",
-        "text": "Radical"
+        "text": "Índice"
       },
       {
         "letter": "C",
@@ -15428,12 +15440,12 @@
       },
       {
         "letter": "D",
-        "text": "Raíz cuadrada simplificada"
+        "text": "Operador grande"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A \"Exponente\" no es el nombre de la estructura; se accede al exponente desde \"Índice\". C \"Potencia\" tampoco es el nombre. D no existe. \"Radical\" sí figura como estructura real."
+    "respuesta": "A",
+    "explicacion": "«Radical» ofrece la raíz cuadrada y la de índice cualquiera, con el hueco para el número de la izquierda. · **«Índice»** es el descarte que decide la pregunta, porque es la estructura de los subíndices y superíndices, y una raíz cúbica lleva un tres arriba a la izquierda: se parecen a la vista y son cosas distintas. · «Potencia» no es el nombre de ninguna estructura: un exponente se pone con «Índice». · Las once estructuras son fracción, índice, radical, integral, operador grande, corchete, función, acento, límite y logaritmo, operador y matriz."
   },
   {
     "id": "insertar-173",
@@ -15448,7 +15460,8 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-140",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras existe realmente en el grupo Estructuras de la cinta contextual Ecuación?",
+    "revisada": true,
+    "enunciado": "Necesitas unos paréntesis que crezcan con la fracción que encierran. ¿Qué estructura los da?",
     "opciones": [
       {
         "letter": "A",
@@ -15456,11 +15469,11 @@
       },
       {
         "letter": "B",
-        "text": "Paréntesis matemático"
+        "text": "Delimitador"
       },
       {
         "letter": "C",
-        "text": "Delimitador"
+        "text": "Paréntesis matemático"
       },
       {
         "letter": "D",
@@ -15469,7 +15482,7 @@
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B, C y D son denominaciones alternativas pero el nombre real de la estructura es \"Corchete\"."
+    "explicacion": "La estructura se llama «Corchete» aunque incluya también paréntesis, llaves, barras de valor absoluto y las combinaciones de una sola pieza, como la llave de un sistema de ecuaciones. Todos se estiran solos según lo que encierren, que es la diferencia con teclear el paréntesis a mano. · Los tres descartes son nombres genéricos de lo más razonables —«delimitador» es incluso el término tipográfico correcto— y ninguno es el rótulo. Es un caso más de nombre escueto ganando a la descripción precisa."
   },
   {
     "id": "insertar-174",
@@ -15484,28 +15497,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-141",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras existe realmente en el grupo Estructuras de la cinta contextual Ecuación?",
+    "revisada": true,
+    "enunciado": "Quieres escribir un límite cuando x tiende a infinito. ¿Qué estructura lo trae?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Logaritmo natural"
-      },
-      {
-        "letter": "B",
         "text": "Límite y logaritmo"
       },
       {
+        "letter": "B",
+        "text": "Función"
+      },
+      {
         "letter": "C",
-        "text": "Funciones logarítmicas"
+        "text": "Operador grande"
       },
       {
         "letter": "D",
-        "text": "Expresiones de límite"
+        "text": "Operador"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no son nombres de estructura. El nombre real es \"Límite y logaritmo\"."
+    "respuesta": "A",
+    "explicacion": "Una sola estructura reúne las dos cosas porque comparten forma: un nombre en redonda con algo debajo, «lím» con la tendencia o «log» con la base. · **«Función»** es el descarte que decide la pregunta: también escribe nombres de función en redonda —sen, cos, tg—, pero sin nada debajo. · «Operador grande» es para sumatorios e integrales con límites arriba y abajo, que se parecen bastante en el resultado. · Y «Operador», a secas, coloca texto sobre o bajo un signo."
   },
   {
     "id": "insertar-175",
@@ -15520,28 +15534,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-142",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras existe realmente en el grupo Estructuras de la cinta contextual Ecuación de Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres escribir x elevado a 2 con el editor de ecuaciones. ¿Qué estructura lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Subíndice y superíndice combinados"
-      },
-      {
-        "letter": "B",
         "text": "Índice"
       },
       {
+        "letter": "B",
+        "text": "Radical"
+      },
+      {
         "letter": "C",
-        "text": "Exponente libre"
+        "text": "Acento"
       },
       {
         "letter": "D",
-        "text": "Superíndice flotante"
+        "text": "Operador"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A describe una función del editor pero no es el nombre de la estructura. C y D no existen. El nombre real es \"Índice\"."
+    "respuesta": "A",
+    "explicacion": "«Índice» reúne todo lo que va arriba o abajo pegado a un símbolo: superíndices, subíndices, los dos a la vez y las combinaciones a izquierda y derecha, que es lo que hace falta para un isótopo o una notación tensorial. · «Radical» es el descarte que decide la pregunta, porque una raíz de índice cualquiera también lleva un número pequeño arriba, aunque a la izquierda del signo. · «Acento» pone marcas ENCIMA de la letra, como el vector o la media, sin ser exponentes. · Y «Operador» coloca texto sobre un signo."
   },
   {
     "id": "insertar-176",
@@ -15556,28 +15571,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-143",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras existe realmente en el grupo Estructuras de la cinta contextual Ecuación?",
+    "revisada": true,
+    "enunciado": "Quieres escribir una integral definida, con sus límites. ¿Qué estructura la trae?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Suma con límites"
-      },
-      {
-        "letter": "B",
         "text": "Integral"
       },
       {
+        "letter": "B",
+        "text": "Operador grande"
+      },
+      {
         "letter": "C",
-        "text": "Operador de integración"
+        "text": "Límite y logaritmo"
       },
       {
         "letter": "D",
-        "text": "Símbolo de área bajo la curva"
+        "text": "Radical"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no son nombres de estructura. El nombre real es \"Integral\"."
+    "respuesta": "A",
+    "explicacion": "«Integral» tiene grupo propio en la lista de estructuras, con la simple, la doble, la triple, la de contorno y sus versiones con límites arriba y abajo o al lado. · **«Operador grande»** es el descarte que decide la pregunta y es un caso límite: el signo de integral se comporta igual que un sumatorio, crece y admite límites, y en muchas explicaciones se meten en el mismo saco. En esta cinta van separados. · «Límite y logaritmo» es para lím y log, y «Radical» para las raíces."
   },
   {
     "id": "insertar-177",
@@ -15592,15 +15608,16 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-144",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras existe realmente en el grupo Estructuras de la cinta contextual Ecuación?",
+    "revisada": true,
+    "enunciado": "Quieres escribir una fracción con numerador y denominador uno encima del otro. ¿Qué estructura del editor la da?",
     "opciones": [
       {
         "letter": "A",
-        "text": "División en línea"
+        "text": "Fracción"
       },
       {
         "letter": "B",
-        "text": "Fracción"
+        "text": "División en línea"
       },
       {
         "letter": "C",
@@ -15612,8 +15629,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son denominaciones alternativas pero el nombre real de la estructura es \"Fracción\"."
+    "respuesta": "A",
+    "explicacion": "Es la primera de las once estructuras, y ofrece varias formas: la apilada de toda la vida, la escrita en línea con la barra inclinada, la pequeña para meterla dentro de otra expresión y la de barra horizontal sin línea. · Los tres descartes son maneras razonables de nombrar lo mismo y ninguno figura, que es lo habitual en esta cinta: los rótulos son de una sola palabra y muy escuetos, como Radical, Corchete, Función, Acento, Operador o Matriz."
   },
   {
     "id": "insertar-178",
@@ -15628,28 +15645,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-145",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras existe realmente en el grupo Estructuras de la cinta contextual Ecuación?",
+    "revisada": true,
+    "enunciado": "Quieres escribir una matriz de dos por dos entre paréntesis. ¿Qué estructura del editor la crea?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tabla de valores matemáticos"
-      },
-      {
-        "letter": "B",
-        "text": "Cuadrícula de expresiones"
-      },
-      {
-        "letter": "C",
         "text": "Matriz"
       },
       {
+        "letter": "B",
+        "text": "Tabla de valores matemáticos"
+      },
+      {
+        "letter": "C",
+        "text": "Cuadrícula de expresiones"
+      },
+      {
         "letter": "D",
-        "text": "Arreglo numérico"
+        "text": "Corchete"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A, B y D son denominaciones plausibles pero incorrectas. El nombre real de la estructura es \"Matriz\"."
+    "respuesta": "A",
+    "explicacion": "«Matriz» es la última de las once estructuras y ofrece rejillas de varios tamaños, además de los puntos suspensivos alineados que se usan para las matrices genéricas. · **«Corchete»** es el descarte que decide la pregunta: hace falta para encerrar la matriz entre paréntesis, porque la estructura de matriz solo pone la rejilla; son dos piezas que se combinan. · Nada de esto es una tabla de Word: una matriz es parte de la fórmula y se alinea con el resto de la ecuación."
   },
   {
     "id": "insertar-179",
@@ -15664,28 +15682,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-146",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras existe realmente en el grupo Estructuras de la cinta contextual Ecuación?",
+    "revisada": true,
+    "enunciado": "Quieres poner la flecha de vector encima de una letra. ¿Qué estructura del editor lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tilde matemático"
-      },
-      {
-        "letter": "B",
         "text": "Acento"
       },
       {
+        "letter": "B",
+        "text": "Índice"
+      },
+      {
         "letter": "C",
-        "text": "Marca diacrítica"
+        "text": "Operador"
       },
       {
         "letter": "D",
-        "text": "Modificador superior"
+        "text": "Marca diacrítica"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no son nombres de estructura en el editor de ecuaciones. El nombre real es \"Acento\"."
+    "respuesta": "A",
+    "explicacion": "«Acento» reúne todo lo que se dibuja pegado encima o debajo de un símbolo: la flecha de vector, la barra de la media, el sombrero, la tilde, el punto de derivada y las llaves de agrupación. · **«Operador»** es el descarte que decide la pregunta, porque también coloca cosas encima, pero de un signo y con texto propio, como una flecha con «def» escrito encima. · «Índice» pone exponentes y subíndices, que van a un lado, no centrados encima. · «Marca diacrítica» es el término correcto en tipografía y no es el rótulo."
   },
   {
     "id": "insertar-180",
@@ -15700,28 +15719,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-147",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras existe realmente en el grupo Estructuras de la cinta contextual Ecuación?",
+    "revisada": true,
+    "enunciado": "Quieres que «sen» aparezca en redonda, como corresponde a un nombre de función, y no en cursiva como las variables. ¿Qué estructura lo garantiza?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Función matemática"
-      },
-      {
-        "letter": "B",
-        "text": "Expresión funcional"
-      },
-      {
-        "letter": "C",
         "text": "Función"
       },
       {
+        "letter": "B",
+        "text": "Operador"
+      },
+      {
+        "letter": "C",
+        "text": "Límite y logaritmo"
+      },
+      {
         "letter": "D",
-        "text": "Operador de función"
+        "text": "Función matemática"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A y D añaden palabras innecesarias. B es una descripción, no el nombre. El nombre real y exacto de la estructura es simplemente \"Función\"."
+    "respuesta": "A",
+    "explicacion": "El editor pone en cursiva todo lo que se teclea, porque asume que son variables; las funciones deben ir en redonda por convención, y esta estructura las inserta ya bien puestas: seno, coseno, tangente y sus inversas e hiperbólicas. · **«Límite y logaritmo»** es el descarte que decide la pregunta, porque lím y log son también nombres en redonda y están en otra estructura, la que además admite algo debajo. · El nombre del rótulo es una sola palabra, sin el «matemática» del último descarte."
   },
   {
     "id": "insertar-181",
@@ -15736,28 +15756,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-148",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes estructuras existe realmente en el grupo Estructuras de la cinta contextual Ecuación?",
+    "revisada": true,
+    "enunciado": "Quieres una flecha con la palabra «def» escrita encima, para indicar una definición. ¿Qué estructura lo permite?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Sumatoria con rango"
-      },
-      {
-        "letter": "B",
         "text": "Operador"
       },
       {
+        "letter": "B",
+        "text": "Operador grande"
+      },
+      {
         "letter": "C",
-        "text": "Símbolo de operación binaria"
+        "text": "Acento"
       },
       {
         "letter": "D",
-        "text": "Expresión de operación"
+        "text": "Función"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no son nombres de estructura. El nombre real es \"Operador\"."
+    "respuesta": "A",
+    "explicacion": "«Operador» coloca texto encima, debajo o a ambos lados de un signo, y trae varias flechas y signos de igualdad preparados para eso. · **«Operador grande»** es el descarte que decide la pregunta: los nombres se diferencian en una palabra y hacen cosas distintas, porque aquel es el de los sumatorios, productorios y uniones, que crecen y llevan límites. · «Acento» pone marcas pegadas encima de una letra, no texto. · Las once estructuras son fracción, índice, radical, integral, operador grande, corchete, función, acento, límite y logaritmo, operador y matriz."
   },
   {
     "id": "insertar-182",
@@ -15772,28 +15793,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-149",
     "generado": true,
-    "enunciado": "¿Cuáles son las opciones disponibles dentro del cuadro Control de entrada matemática que aparece al usar la entrada de lápiz de ecuación?",
+    "revisada": true,
+    "enunciado": "El cuadro «Control de entrada matemática» de la entrada de lápiz tiene cuatro herramientas. ¿Cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Escribir, Borrar, Seleccionar y corregir, Eliminar"
+        "text": "Escribir · Borrar · Seleccionar y corregir · Eliminar"
       },
       {
         "letter": "B",
-        "text": "Escribir, Deshacer, Corregir, Aceptar"
+        "text": "Escribir · Deshacer · Corregir · Aceptar"
       },
       {
         "letter": "C",
-        "text": "Dibujar, Borrar, Confirmar, Cancelar"
+        "text": "Dibujar · Borrar · Confirmar · Cancelar"
       },
       {
         "letter": "D",
-        "text": "Trazar, Limpiar, Revisar, Insertar"
+        "text": "Trazar · Limpiar · Revisar · Insertar"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B, C y D mezclan términos plausibles con nombres incorrectos. Las cuatro opciones reales son exactamente: Escribir, Borrar, Seleccionar y corregir, Eliminar. SÍMBOLOS — CUADRO SÍMBOLO (SUBRUTAS)"
+    "explicacion": "«Escribir» activa el lápiz, «Borrar» quita trazos, «Eliminar» vacía la zona entera y «Seleccionar y corregir» es la interesante: se rodea un trozo de lo escrito y Word ofrece las otras lecturas posibles, que es como se arregla una x que ha leído como un por. · Mientras se dibuja, la parte de arriba muestra en tiempo real cómo lo está interpretando. · Los tres descartes usan verbos de lo más razonables para un cuadro así, y ninguno es el rótulo."
   },
   {
     "id": "insertar-183",
@@ -15808,15 +15830,16 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-150",
     "generado": true,
-    "enunciado": "¿Qué subconjunto Unicode aparece como opción dentro del cuadro Símbolo cuando la fuente seleccionada es \"(Texto normal)\"?",
+    "revisada": true,
+    "enunciado": "En el cuadro Símbolo, con la fuente «(Texto normal)», el desplegable «Subconjunto» agrupa los caracteres por bloques Unicode. ¿Cuál de estos nombres es real?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Alfabeto latino extendido"
+        "text": "Latín básico"
       },
       {
         "letter": "B",
-        "text": "Latín básico"
+        "text": "Alfabeto latino extendido"
       },
       {
         "letter": "C",
@@ -15828,8 +15851,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D no son nombres de subconjunto reales en ese cuadro. \"Latín básico\" sí figura en la extracción."
+    "respuesta": "A",
+    "explicacion": "Es el primero de la lista y contiene las letras y signos de siempre, los del teclado. Debajo van «Suplemento Latín-1», «Latín extendido A», «Latín extendido B», «Griego», «Cirílico», «Puntuación general», «Operadores matemáticos», «Símbolos de moneda» y muchos más. · El desplegable depende de qué tipo de letra se haya elegido arriba: con una simbólica como Wingdings desaparece, porque esas no siguen el reparto de Unicode. · Moverse por subconjuntos es lo que evita recorrer miles de caracteres uno a uno."
   },
   {
     "id": "insertar-184",
@@ -15844,28 +15867,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-151",
     "generado": true,
-    "enunciado": "¿Qué botón del cuadro Símbolo permite asignar al símbolo seleccionado una secuencia de Autocorrección, de modo que al escribir esa secuencia Word la sustituya automáticamente por el símbolo?",
+    "revisada": true,
+    "enunciado": "Quieres que al escribir «(c)» Word lo cambie solo por ©. ¿Qué botón del cuadro Símbolo lo configura?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Teclas..."
+        "text": "Autocorrección…"
       },
       {
         "letter": "B",
-        "text": "Autocorrección..."
+        "text": "Teclas…"
       },
       {
         "letter": "C",
-        "text": "Asignar secuencia..."
+        "text": "Asignar secuencia…"
       },
       {
         "letter": "D",
-        "text": "Atajo rápido..."
+        "text": "Atajo rápido…"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A \"Teclas\" permite asignar un atajo de teclado, no una Autocorrección. C y D no existen como botones en ese cuadro. Los dos botones reales de acción son \"Autocorrección...\" y \"Teclas...\"."
+    "respuesta": "A",
+    "explicacion": "Abre el cuadro de Autocorrección con el símbolo ya puesto en la casilla de reemplazo, solo hay que escribir el texto que lo disparará. A partir de ahí funciona en cualquier documento y sin pulsar nada más. · **«Teclas…»** es el descarte que decide la pregunta y hace algo parecidísimo: asociar el símbolo a una COMBINACIÓN de teclas en vez de a un texto escrito, llevando al cuadro Personalizar teclado. Los dos botones están uno al lado del otro y esa es toda la diferencia."
   },
   {
     "id": "insertar-185",
@@ -15880,28 +15904,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-152",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes caracteres especiales existe realmente en la pestaña Caracteres especiales del cuadro Símbolo de Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres que «Real Decreto 3/2010» no se parta al final de una línea. ¿Qué carácter especial del cuadro Símbolo lo evita?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Flecha de retorno de carro"
-      },
-      {
-        "letter": "B",
         "text": "Espacio de no separación"
       },
       {
+        "letter": "B",
+        "text": "Espacio largo"
+      },
+      {
         "letter": "C",
-        "text": "Espacio en blanco ampliado"
+        "text": "1/4 espacio largo"
       },
       {
         "letter": "D",
-        "text": "Carácter de tabulación especial"
+        "text": "Guion opcional"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A no existe en esa pestaña. C y D tampoco. \"Espacio de no separación\" sí figura en la extracción real."
+    "respuesta": "A",
+    "explicacion": "Se ve como un espacio normal pero Word lo trata como si uniera las dos palabras, así que se van juntas al renglón siguiente en lugar de quedarse una arriba y otra abajo. Con las marcas de formato activadas se distingue: es un pequeño círculo en vez de un punto. · Los espacios largo y corto son de anchura fija y sí permiten el corte: son el descarte que decide la pregunta. · «Guion opcional» hace lo contrario que su primo el de no separación: marca por dónde SÍ se puede partir una palabra, y solo se ve si hace falta."
   },
   {
     "id": "insertar-186",
@@ -15916,28 +15941,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-153",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes caracteres especiales existe realmente en la pestaña Caracteres especiales del cuadro Símbolo de Word 365?",
+    "revisada": true,
+    "enunciado": "Quieres que «Ministerio de Hacienda-Función Pública» no se corte por el guion al final de la línea. ¿Qué carácter especial lo impide?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guión de no separación"
+        "text": "Guion de no separación"
       },
       {
         "letter": "B",
-        "text": "Guión tipográfico"
+        "text": "Guion opcional"
       },
       {
         "letter": "C",
-        "text": "Guión de línea"
+        "text": "Guion corto"
       },
       {
         "letter": "D",
-        "text": "Guión de separación de sílabas"
+        "text": "Guion largo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B, C y D son denominaciones plausibles pero incorrectas. El nombre real es \"Guión de no separación\"."
+    "explicacion": "Es un guion normal a la vista, pero Word no corta la línea por él, de modo que la expresión viaja entera al renglón siguiente. Es el hermano del espacio de no separación y sirve para códigos, referencias legales y nombres compuestos. · **«Guion opcional»** es el descarte que decide la pregunta porque hace justo lo contrario: marca un sitio por donde SÍ se puede partir una palabra larga, y solo se ve si Word decide usarlo. · Los guiones corto y largo son signos de puntuación, de distinta longitud, y no cambian el comportamiento."
   },
   {
     "id": "insertar-187",
@@ -15952,28 +15978,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-154",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes caracteres especiales existe realmente en la pestaña Caracteres especiales del cuadro Símbolo de Word 365?",
+    "revisada": true,
+    "enunciado": "En la ficha «Caracteres especiales» aparecen las comillas curvas. ¿Cómo se llaman las entradas?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Comilla francesa de apertura"
+        "text": "Comilla de apertura y de cierre, y comillas de apertura y de cierre"
       },
       {
         "letter": "B",
-        "text": "Comillas de apertura"
+        "text": "Comilla francesa de apertura y comilla francesa de cierre"
       },
       {
         "letter": "C",
-        "text": "Comilla tipográfica doble"
+        "text": "Comilla tipográfica simple y comilla tipográfica doble"
       },
       {
         "letter": "D",
-        "text": "Comilla española de inicio"
+        "text": "Comilla española de inicio y comilla española de fin"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son denominaciones alternativas pero el nombre real que figura en la extracción es \"Comillas de apertura\"."
+    "respuesta": "A",
+    "explicacion": "Son cuatro entradas: las simples y las dobles, cada una en su versión de abrir y de cerrar. Word las llama así, en singular y en plural, que es una manera poco intuitiva de distinguir la simple de la doble. · Normalmente no hace falta insertarlas desde aquí porque Autocorrección convierte sola las rectas en curvas al escribir; la ficha sirve cuando esa opción está desactivada. · Las comillas angulares, las españolas de toda la vida, no están en esta ficha: se buscan en la otra."
   },
   {
     "id": "insertar-188",
@@ -15988,28 +16015,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-155",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes caracteres especiales existe realmente en la pestaña Caracteres especiales del cuadro Símbolo de Word 365?",
+    "revisada": true,
+    "enunciado": "En la ficha «Caracteres especiales» hay una entrada para los tres puntos. ¿Qué la hace distinta de teclear tres puntos seguidos?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Puntos suspensivos"
+        "text": "Que es un solo carácter, con su propio espaciado, y no se puede partir"
       },
       {
         "letter": "B",
-        "text": "Elipsis tipográfica"
+        "text": "Que se ve igual pero ocupa menos en el archivo"
       },
       {
         "letter": "C",
-        "text": "Tres puntos continuos"
+        "text": "Que Word la corrige sola si falta un punto"
       },
       {
         "letter": "D",
-        "text": "Puntos de omisión"
+        "text": "En nada: es exactamente lo mismo escrito de otra forma"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B, C y D son denominaciones alternativas. El nombre real que figura en la extracción es \"Puntos suspensivos\"."
+    "explicacion": "Los puntos suspensivos son un único carácter tipográfico, con la separación entre puntos ya calculada, y al ser uno solo la línea no puede cortarse por en medio. Tres puntos tecleados son tres caracteres y pueden quedar repartidos entre dos renglones. · La entrada se llama «Puntos suspensivos», no «elipsis», que es como se les llama en inglés. · Autocorrección los pone solos al escribir tres puntos, si esa opción está activada, y de ahí que casi nunca haga falta este camino."
   },
   {
     "id": "insertar-189",
@@ -16024,28 +16052,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-156",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes caracteres especiales existe realmente en la pestaña Caracteres especiales del cuadro Símbolo de Word 365?",
+    "revisada": true,
+    "enunciado": "En la ficha «Caracteres especiales» hay dos guiones de puntuación de distinta longitud. ¿Cómo se llaman?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guión corto"
+        "text": "Guion corto y guion largo"
       },
       {
         "letter": "B",
-        "text": "Guión medio"
+        "text": "Guion medio y raya tipográfica"
       },
       {
         "letter": "C",
-        "text": "Guión tipográfico corto"
+        "text": "Guion tipográfico corto y guion tipográfico largo"
       },
       {
         "letter": "D",
-        "text": "Guión de separación"
+        "text": "Guion de separación y guion de párrafo"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B \"Guión medio\" es otra denominación común pero no es el nombre exacto en Word. C y D no existen. El nombre real es \"Guión corto\"."
+    "explicacion": "Word los nombra por su longitud, sin más. El corto se usa para intervalos, como «páginas 12-15», y el largo para los incisos y los diálogos, donde en español sustituye a los paréntesis. · En tipografía se llaman raya y semirraya, o en inglés em dash y en dash, y esos nombres alternativos son los descartes: son correctos fuera de Word y no son lo que pone en la ficha. · No hay que confundirlos con el guion de no separación ni con el opcional, que están en la misma lista pero cambian cómo se parte la línea."
   },
   {
     "id": "insertar-190",
@@ -16060,28 +16089,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-157",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes caracteres especiales existe realmente en la pestaña Caracteres especiales del cuadro Símbolo de Word 365?",
+    "revisada": true,
+    "enunciado": "¿Para qué sirve el «guion largo» de la ficha «Caracteres especiales»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Guión largo"
+        "text": "Para los incisos y los diálogos, donde en español hace de paréntesis"
       },
       {
         "letter": "B",
-        "text": "Raya tipográfica"
+        "text": "Para separar intervalos numéricos, como «páginas 12-15»"
       },
       {
         "letter": "C",
-        "text": "Guión extendido"
+        "text": "Para impedir que la línea se corte por él"
       },
       {
         "letter": "D",
-        "text": "Guión de párrafo"
+        "text": "Para marcar por dónde puede partirse una palabra larga"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B es otra denominación común pero no la oficial en Word. C y D no existen. El nombre real es \"Guión largo\"."
+    "explicacion": "Es la raya tipográfica, más larga que el guion normal, y en español abre y cierra incisos —«el plazo —de quince días— empieza mañana»— y marca las intervenciones de un diálogo. · Los intervalos son cosa del guion corto, y es el descarte que decide la pregunta: los dos están en la misma lista y la única diferencia visible es la longitud. · Los otros dos descartes son el guion de no separación y el opcional, que no se ven distintos pero cambian el comportamiento del texto."
   },
   {
     "id": "insertar-191",
@@ -16096,28 +16126,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-158",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes caracteres especiales existe realmente en la pestaña Caracteres especiales del cuadro Símbolo de Word 365?",
+    "revisada": true,
+    "enunciado": "La ficha «Caracteres especiales» incluye varios espacios de anchura fija. ¿Cuáles son sus nombres?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Espacio largo"
+        "text": "Espacio largo, espacio corto y 1/4 de espacio largo"
       },
       {
         "letter": "B",
-        "text": "Espacio em"
+        "text": "Espacio em, espacio en y espacio fino"
       },
       {
         "letter": "C",
-        "text": "Espacio tipográfico de cuadratín"
+        "text": "Espacio de cuadratín, de medio cuadratín y de cuarto"
       },
       {
         "letter": "D",
-        "text": "Espacio de separación máxima"
+        "text": "Espacio simple, doble y triple"
       }
     ],
     "matching": null,
     "respuesta": "A",
-    "explicacion": "B es la denominación en inglés (em space). C y D son denominaciones técnicas alternativas. El nombre real en la extracción en español es \"Espacio largo\"."
+    "explicacion": "Los tres miden siempre lo mismo, a diferencia del espacio de la barra espaciadora, que se estira al justificar un párrafo. Se usan para alineaciones finas en las que un espacio normal bailaría. · Los nombres del segundo y el tercer descarte son los términos tipográficos de siempre —em, en, cuadratín— y son correctos fuera de Word, pero la ficha los traduce por su longitud. · En la misma lista está el espacio de no separación, que no es de anchura fija: es un espacio normal que impide el corte de línea."
   },
   {
     "id": "insertar-192",
@@ -16132,15 +16163,16 @@
     "tema": "Símbolos",
     "sourceQuestionId": "P-159",
     "generado": true,
-    "enunciado": "¿Cuál de los siguientes caracteres especiales existe realmente en la pestaña Caracteres especiales del cuadro Símbolo de Word 365?",
+    "revisada": true,
+    "enunciado": "Necesitas el símbolo § para citar un artículo. ¿Cómo se llama en la ficha «Caracteres especiales»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Símbolo de sección jurídica"
+        "text": "Sección"
       },
       {
         "letter": "B",
-        "text": "Sección"
+        "text": "Símbolo de sección jurídica"
       },
       {
         "letter": "C",
@@ -16152,8 +16184,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son denominaciones alternativas. El nombre real y exacto en la extracción es simplemente \"Sección\"."
+    "respuesta": "A",
+    "explicacion": "Una palabra, sin adornos, como casi todo en esa lista. Justo debajo está «Párrafo», que es el símbolo ¶, el mismo que aparece al activar las marcas de formato. · Los tres descartes son descripciones razonables del uso que se le da al signo, y ninguno es el rótulo. · No hay que confundir este § con las SECCIONES de Word, que son las divisiones del documento con sus propios márgenes y encabezados: aquí es solo un carácter que se imprime."
   },
   {
     "id": "insertar-432",
@@ -16168,29 +16200,30 @@
     "tema": "Símbolos",
     "sourceQuestionId": "img-insertar-27",
     "generado": true,
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAAqCAYAAAATZhM+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE8SURBVGhD7dm/boJQFMfxX7vaVXYgYSJ2RR2YeAT7EvYZGucao4n4CHWoQ13qzmCYa1gYyg4PwGrL7Zkr3t6mPeZ8EnP/wPKVaBSujp9wYa5pvCgSxYVEcSFRXEgUFxLFhfZvv6qqsNu9IssyFMU7yrKkI2bs9ynNzqcdNRz21eg4DlzXRbdrYb1+Qq93C9/31bFTvjt/PL6nmYYmSkccL495ntPqy2AQqP22zj2/Le3PVPNOep5Hq/9Fvv24kCguJIoLieJCoriQKC4k6jfUdU0zc/40qvmDeTi80cocY1FJkqjRtm01thEEfRRFgc3mmXbMMH6lOp0bmp02Gt2pq7VYzDGZPGC1ijGdPqrXTxiLqqpS3W8Iw5B2TrMsC7PZHFEUIU1Tdc9iu32ho/rkSSIXEsWFRHEhUTwAH/1fGMHSAYfmAAAAAElFTkSuQmCC",
     "opciones": [
       {
         "letter": "A",
-        "text": "Página en blanco"
-      },
-      {
-        "letter": "B",
-        "text": "WordArt"
-      },
-      {
-        "letter": "C",
         "text": "Ecuación"
       },
       {
+        "letter": "B",
+        "text": "Símbolo"
+      },
+      {
+        "letter": "C",
+        "text": "WordArt"
+      },
+      {
         "letter": "D",
-        "text": "Captura"
+        "text": "Fórmula"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Ecuación.** Pestaña Insertar ▸ Símbolos. Atajo: no tiene atajo de teclado en esta instalación. Inserta una ecuación (integradas: Área del círculo, Fórmula cuadrática, Expansión Taylor…) y abre la cinta contextual Ecuación."
+    "respuesta": "A",
+    "explicacion": "Es **Ecuación**, primero del grupo Símbolos en la pestaña Insertar. Su menú trae la galería «Integrado» con nueve fórmulas, «Más ecuaciones de Office.com», «Insertar nueva ecuación», «Entrada de lápiz de ecuación» y «Guardar selección en galería de ecuaciones…», y al usarlo se abre la cinta contextual «Ecuación». No tiene atajo de teclado en esta instalación. · **«Fórmula»** es el descarte que decide la pregunta: existe, pero en la cinta de tabla, grupo Datos, y sirve para calcular, no para escribir matemáticas."
   },
   {
     "id": "insertar-433",
@@ -16205,29 +16238,30 @@
     "tema": "Símbolos",
     "sourceQuestionId": "img-insertar-28",
     "generado": true,
+    "revisada": true,
     "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAsCAYAAAAq/ZsdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKGSURBVGhD7Zm/axphGMefdo1rvK5acJJ0SEj1XHsGUkjIGHEMbSCdGkgn8T9ohpr8BcVQA6EgydBbdDBFmiEaF4XGtWdWM1/9Pry2pSbEPO87HHIfOJ733vN98fPe+1Of+CNohniq4swQCgWdUCjohEJBJxQKOjMnZHzr0+v16Py8QZ1Oh66vf5LneeoJkWVZFI8/p2QySbadoUQioZ6Yw5jQYDCgw8MSua7L9+m0TbFYjK+5uQjd3g6p3+/zdXXVpuFwSI7jUC6XNysGIV1qtZqfzb7iq1T65I/einpyP5XKF39jY53LIG0KbSHI2HbKz+dzfrfbVbnTAfHd3fdc3pSUlhAE0MKQmeat3AekUM9jG+QutGa5cvkzx0KhSNFolNMS9vY+cNzf/8hRB7EQZjNMAGtr69qDGo2BetrtFterg1gIUzNwnCxHXcb1uO43jlLEQs1mc7SmxI1NuagnEonw+qWDWAiLpmU9U3dmwKLreb/UnQyxEBZGLJqm+XdnIUEsFFS0hG5uBiplDuz3dBALLSy8GHUPs0IYP7rjUixkWVFeN0yB9QfjBztxHcRCy8svOZ6dnXLUpdW65JhKpThKEQutrr7m/l6tVlWOHkdHZV7XFheXVI4MrUlhczPH3a5er6scGcfHFe5uW1tvVI4GapMqBjttnGuku22Uw057e/utytFDW2h8hMARQAIaBOWlDfI/Rk6sFxc/+EsViwWVMx34PMqhvCmMCIGxFLrOQ62N5+M3Y1IGiH8kOTgoqdRfsHPAGQmz38nJV5U7ycqK8+dHkvn5yYPhzs47lXo8YqFMJq1Sd9NofFepSXTKPkT4l2TQCYWCTigUdEKhoDNjQkS/AXiuD+MKTqthAAAAAElFTkSuQmCC",
     "opciones": [
       {
         "letter": "A",
-        "text": "Disposición ▸ Configurar página (esquina)"
-      },
-      {
-        "letter": "B",
-        "text": "Inicio ▸ Fuente"
-      },
-      {
-        "letter": "C",
         "text": "Insertar ▸ Símbolos"
       },
       {
-        "letter": "D",
+        "letter": "B",
         "text": "Insertar ▸ Texto"
+      },
+      {
+        "letter": "C",
+        "text": "Inicio ▸ Fuente"
+      },
+      {
+        "letter": "D",
+        "text": "Insertar ▸ Ilustraciones"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "**Símbolo.** Pestaña Insertar ▸ Símbolos. Atajo: no tiene atajo de teclado en esta instalación. Inserta caracteres que no están en el teclado (€, ©, ½, letras griegas…). «Más símbolos…» abre el cuadro con las fichas Símbolos y Caracteres especiales."
+    "respuesta": "A",
+    "explicacion": "Es **Símbolo**, del grupo Símbolos, el último de la pestaña Insertar, donde comparte sitio con Ecuación. Su menú muestra una veintena de símbolos frecuentes y «Más símbolos…», que abre el cuadro de dos fichas. No tiene atajo de teclado en esta instalación. · «Inicio ▸ Fuente» es el descarte que decide la pregunta, porque un símbolo acaba siendo un carácter más y depende de la fuente elegida; de hecho el cuadro tiene su propio desplegable de fuentes. Pero el botón está en Insertar."
   },
   {
     "id": "insertar-444",
@@ -16242,28 +16276,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "neg-insertar-10",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre el cuadro Símbolo es FALSA?",
+    "revisada": true,
+    "enunciado": "Señale la afirmación FALSA sobre el cuadro Símbolo:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Tiene una ficha Símbolos y otra Caracteres especiales"
+        "text": "Tiene tres fichas: Símbolos, Caracteres especiales y Ecuaciones"
       },
       {
         "letter": "B",
-        "text": "Muestra una fila de símbolos usados recientemente"
+        "text": "El botón «Teclas…» lleva al cuadro Personalizar teclado"
       },
       {
         "letter": "C",
-        "text": "El botón Teclas... abre Personalizar teclado"
+        "text": "El menú del botón muestra arriba los símbolos usados recientemente"
       },
       {
         "letter": "D",
-        "text": "Tiene una tercera ficha llamada Ecuaciones"
+        "text": "Permite elegir la fuente y el subconjunto Unicode"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "El cuadro Símbolo solo tiene dos fichas: Símbolos y Caracteres especiales. No existe una ficha «Ecuaciones» ahí (la ecuación es un comando aparte, en el mismo grupo Símbolos)."
+    "respuesta": "A",
+    "explicacion": "Solo tiene dos fichas: «Símbolos», con sus desplegables de fuente y subconjunto, y «Caracteres especiales». · Las ecuaciones no están ahí: son un comando aparte del mismo grupo de la cinta, con su propia galería y su cinta contextual. Que compartan grupo es lo que hace creíble la tercera ficha inventada. · Las otras tres afirmaciones son ciertas. · Abajo del cuadro están el código de carácter, el origen y los botones «Autocorrección…», «Teclas…» e «Insertar»."
   },
   {
     "id": "insertar-454",
@@ -16278,28 +16313,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "neg2-insertar-08",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre símbolos y ecuaciones:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar ▸ Símbolo abre una galería con los símbolos usados recientemente arriba."
+        "text": "Un símbolo no se puede localizar por su código Unicode"
       },
       {
         "letter": "B",
-        "text": "«Más símbolos» abre el cuadro de diálogo completo con distintas fuentes y subconjuntos."
+        "text": "El menú de Símbolo muestra arriba los usados recientemente"
       },
       {
         "letter": "C",
-        "text": "Los símbolos insertados no se pueden buscar por su código de carácter Unicode."
+        "text": "«Más símbolos…» abre el cuadro con sus fuentes y subconjuntos"
       },
       {
         "letter": "D",
-        "text": "Insertar ▸ Ecuación abre una cinta contextual propia para escribir fórmulas matemáticas."
+        "text": "«Ecuación» abre una cinta contextual propia para escribir fórmulas"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El cuadro de diálogo Símbolo tiene un campo «Código de carácter» para localizar un símbolo por su código Unicode."
+    "respuesta": "A",
+    "explicacion": "El cuadro tiene un campo «Código de carácter» donde se escribe el código y salta directamente al símbolo, con un desplegable al lado para elegir si se da en Unicode hexadecimal o en ASCII. · Hay un camino aún más rápido y sin abrir nada: escribir el código en el documento y pulsar **Alt+X**, que lo convierte en el carácter, y al revés. · Las otras tres afirmaciones son ciertas."
   },
   {
     "id": "insertar-455",
@@ -16314,28 +16350,29 @@
     "tema": "Símbolos",
     "sourceQuestionId": "neg2-insertar-09",
     "generado": true,
+    "revisada": true,
     "enunciado": "Señale la afirmación INCORRECTA:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Word trae ecuaciones predefinidas listas para insertar (por ejemplo el área de un círculo)."
+        "text": "A un símbolo no se le puede asignar un atajo de teclado propio"
       },
       {
         "letter": "B",
-        "text": "Se puede convertir una ecuación a su forma manuscrita para editarla a mano."
+        "text": "Word trae ecuaciones ya preparadas, como el área del círculo"
       },
       {
         "letter": "C",
-        "text": "Una vez insertado un símbolo, no se le puede asignar un atajo de teclado propio para repetirlo."
+        "text": "Una fórmula se puede escribir a mano y dejar que Word la reconozca"
       },
       {
         "letter": "D",
-        "text": "El cuadro de diálogo Símbolo recuerda los últimos símbolos usados en la fila superior."
+        "text": "El menú de Símbolo recuerda los últimos símbolos usados"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "El propio cuadro de diálogo Símbolo tiene un botón «Teclas» para asignarle una combinación propia a un símbolo."
+    "respuesta": "A",
+    "explicacion": "El cuadro Símbolo tiene un botón «Teclas…» que lleva a «Personalizar teclado» con el símbolo ya seleccionado, para asignarle la combinación que se quiera. Y al lado está «Autocorrección…», que consigue lo mismo asociándolo a un texto escrito. · Las otras tres son ciertas: la galería integrada trae nueve ecuaciones, «Entrada de lápiz de ecuación» reconoce lo dibujado a mano, y el menú del botón Símbolo va cambiando con lo que se usa."
   },
   {
     "sourceFile": "insertar.json",
@@ -16351,27 +16388,28 @@
     "id": "insertar-472",
     "sourceQuestionId": "dlgcross-insertar-472",
     "tipo": "opcion_unica",
-    "enunciado": "Desde el cuadro «Simbolo» (Insertar ▸ Simbolos ▸ Mas simbolos), ¿a que otros cuadros se puede saltar con sus botones?",
+    "revisada": true,
+    "enunciado": "El cuadro «Símbolo» tiene dos botones que llevan a otros cuadros. ¿A cuáles?",
     "opciones": [
       {
         "letter": "A",
-        "text": "«Teclas…» → Personalizar teclado; «Autocorreccion…» → Autocorreccion"
+        "text": "«Teclas…» a Personalizar teclado y «Autocorrección…» a Autocorrección"
       },
       {
         "letter": "B",
-        "text": "«Teclas…» → Opciones de Word; «Autocorreccion…» → Buscar y reemplazar"
+        "text": "«Teclas…» a Opciones de Word y «Autocorrección…» a Buscar y reemplazar"
       },
       {
         "letter": "C",
-        "text": "Solo se puede insertar el simbolo, no hay botones a otros cuadros"
+        "text": "«Fuente…» al cuadro Fuente y «Teclas…» a Personalizar teclado"
       },
       {
         "letter": "D",
-        "text": "«Fuente…» → cuadro Fuente y nada mas"
+        "text": "Ninguno: el cuadro solo permite insertar el símbolo"
       }
     ],
     "respuesta": "A",
-    "explicacion": "«Teclas…» abre «Personalizar teclado» para asignar un atajo al simbolo seleccionado; «Autocorreccion…» crea una entrada de autocorreccion para el."
+    "explicacion": "Los dos consiguen lo mismo por caminos distintos: asociar el símbolo a algo que se teclea. «Teclas…» lo asocia a una combinación y «Autocorrección…» a un texto, como «(c)» para ©. · «Personalizar teclado» es el mismo cuadro cuyo volcado es la referencia de atajos de esta instalación, y también se abre desde Opciones ▸ Personalizar cinta. · La fuente no lleva a ningún cuadro: se elige en un desplegable dentro del propio cuadro Símbolo, junto al de subconjunto."
   },
   {
     "id": "insertar-313",
@@ -16386,11 +16424,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-113",
     "generado": true,
-    "enunciado": "El comando Ecuación está en el grupo Símbolos de la pestaña Insertar y el comando Símbolo está en el grupo Texto.",
+    "revisada": true,
+    "enunciado": "«Ecuación» está en el grupo Símbolos y «Símbolo» en el grupo Texto.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: los dos están en el grupo Símbolos."
+    "explicacion": "Los dos están en el grupo **Símbolos**, el último de la pestaña Insertar, y son sus dos únicos botones. · El grupo Texto es el anterior y tiene otros siete: Cuadro de texto, Elementos rápidos, WordArt, Letra capital, Línea de firma, Fecha y hora y Objeto. · La confusión es fácil porque los dos grupos insertan cosas que acaban siendo texto, y porque están pegados en la cinta. El orden completo ayuda: Páginas, Tablas, Ilustraciones, Multimedia, Vínculos, Comentarios, Encabezado y pie, Texto y Símbolos."
   },
   {
     "id": "insertar-314",
@@ -16405,11 +16444,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-114",
     "generado": true,
-    "enunciado": "Al insertar una ecuación en Word 365 aparece una cinta contextual llamada Ecuación con herramientas específicas para editar fórmulas.",
+    "revisada": true,
+    "enunciado": "Al insertar una ecuación aparece una cinta contextual «Ecuación» con herramientas propias.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Insertas una ecuación nueva en blanco. Inmediatamente aparece la pestaña Ecuación en la cinta con cuatro grupos: Herramientas, Conversiones, Símbolos matemáticos y Estructuras. Esa pestaña desaparece en cuanto haces clic fuera de la ecuación."
+    "explicacion": "Tiene cuatro grupos: Herramientas, con la entrada de lápiz; Conversiones, con Unicode, LaTeX y Texto; Símbolos matemáticos, con una galería enorme de signos; y Estructuras, con las once piezas para construir la fórmula. · Como toda cinta contextual, desaparece al pinchar fuera de la ecuación y vuelve al pinchar dentro. · Es la misma mecánica de «Formato de imagen», «Formato de forma» o las dos de tabla."
   },
   {
     "id": "insertar-315",
@@ -16424,11 +16464,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-115",
     "generado": true,
-    "enunciado": "La Entrada de lápiz de ecuación permite escribir fórmulas matemáticas a mano en pantalla y que Word las reconozca y convierta automáticamente.",
+    "revisada": true,
+    "enunciado": "La «Entrada de lápiz de ecuación» reconoce una fórmula escrita a mano y la convierte en una ecuación de Word.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "En una tableta con pantalla táctil activas Entrada de lápiz de ecuación y escribes a mano la integral de f(x). Word reconoce tu escritura y la convierte en la fórmula correctamente formateada con el símbolo de integral, el diferencial dx y los límites de integración."
+    "explicacion": "Abre el cuadro «Control de entrada matemática», donde se traza con el ratón o con el lápiz y Word va mostrando arriba cómo lo interpreta. Sus cuatro herramientas son Escribir, Borrar, Seleccionar y corregir, y Eliminar. · «Seleccionar y corregir» es la que salva la papeleta: se rodea un trozo mal leído y ofrece las otras lecturas posibles, que es lo que hace falta cuando confunde una x con un por. · El resultado es una ecuación normal, editable después con las estructuras."
   },
   {
     "id": "insertar-316",
@@ -16443,11 +16484,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-117",
     "generado": true,
-    "enunciado": "Desde la cinta contextual de Ecuación es posible convertir una ecuación al formato LaTeX.",
+    "revisada": true,
+    "enunciado": "La cinta contextual de Ecuación permite convertir una fórmula al formato LaTeX.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Tienes una ecuación compleja creada con el editor visual de Word. La seleccionas, vas al grupo Conversiones de la cinta contextual y haces clic en LaTeX. Word convierte la ecuación a su representación en código LaTeX, que puedes copiar para usarlo en un editor externo."
+    "explicacion": "El grupo «Conversiones» tiene tres botones: Unicode, LaTeX y Texto. Los dos primeros son dos maneras de escribir la misma fórmula con caracteres, y se puede alternar entre ellas cuantas veces se quiera. · Con LaTeX activo se puede además teclear la fórmula con su sintaxis en lugar de ir pinchando estructuras, que es mucho más rápido para quien la conozca. · «Texto» es distinto y conviene no pulsarlo por error: convierte la ecuación en texto normal y deja de ser una ecuación."
   },
   {
     "id": "insertar-317",
@@ -16462,11 +16504,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-118",
     "generado": true,
-    "enunciado": "Las tres opciones de conversión disponibles en la cinta contextual de Ecuación son Unicode, LaTeX y HTML.",
+    "revisada": true,
+    "enunciado": "Los tres botones del grupo «Conversiones» de la cinta Ecuación son Unicode, LaTeX y HTML.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Abres la cinta contextual de Ecuación y miras el grupo Conversiones. Aparecen exactamente tres opciones: Unicode, LaTeX y Texto. HTML no es ninguna de ellas. Texto convierte la ecuación a una representación en texto plano legible, no a código HTML."
+    "explicacion": "El tercero es **Texto**, no HTML. Unicode y LaTeX son dos formas de escribir la fórmula con caracteres, y Texto la convierte en texto corriente, con lo que deja de ser una ecuación editable. · HTML no aparece por ningún lado en esta cinta. Tampoco MathML, que sería el candidato más razonable por ser el estándar de las matemáticas en la web: Word lo entiende al pegar, pero no lo ofrece como botón de conversión. · Los otros tres grupos de la cinta son Herramientas, Símbolos y Estructuras."
   },
   {
     "id": "insertar-318",
@@ -16481,11 +16524,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-119",
     "generado": true,
-    "enunciado": "El Teorema de Pitágoras es una de las ecuaciones integradas disponibles en la galería de Ecuación de Word 365.",
+    "revisada": true,
+    "enunciado": "El teorema de Pitágoras es una de las ecuaciones de la galería «Integrado» del botón Ecuación.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Verdadero (confirmado con captura). Las 9 integradas son: Area del circulo, Expansion de una suma, Expansion Taylor, Formula cuadratica, Identidad trigonometrica 1, Identidad trigonometrica 2, Serie de Fourier, Teorema binomial y Teorema de Pitagoras."
+    "explicacion": "Son nueve: área del círculo, expansión de una suma, expansión de Taylor, fórmula cuadrática, dos identidades trigonométricas, serie de Fourier, teorema binomial y teorema de Pitágoras. Confirmado con captura del usuario. · La galería tira a lo matemático clásico y deja fuera fórmulas conocidísimas de física o estadística, como la ley de Ohm o el teorema de Bayes: para esas hay que escribirlas o mirar en «Más ecuaciones de Office.com». · Se pueden añadir propias con «Guardar selección en galería de ecuaciones…»."
   },
   {
     "id": "insertar-319",
@@ -16500,11 +16544,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-120",
     "generado": true,
-    "enunciado": "La galería integrada de Ecuación de Word 365 incluye la Ley de Ohm y el Teorema de Pitágoras.",
+    "revisada": true,
+    "enunciado": "La galería «Integrado» del botón Ecuación incluye la ley de Ohm.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "La galería integrada real contiene: Área del círculo, Expansión de una suma, Expansión Taylor, Fórmula cuadrática e Identidad trigonométrica 1. La Ley de Ohm y el Teorema de Pitágoras no están incluidos. Si los necesitas tienes que construirlos con el editor o buscarlos en Más ecuaciones de Office.com."
+    "explicacion": "Sus nueve ecuaciones son área del círculo, expansión de una suma, expansión de Taylor, fórmula cuadrática, las dos identidades trigonométricas, serie de Fourier, teorema binomial y teorema de Pitágoras. Confirmado con captura del usuario. · La ley de Ohm no está, ni ninguna otra fórmula de física: la selección es puramente matemática. Tampoco está el teorema de Bayes. · Lo que sí puede hacerse es escribirla con el editor y guardarla en la galería con «Guardar selección en galería de ecuaciones…», y a partir de ahí aparece junto a las nueve de fábrica."
   },
   {
     "id": "insertar-320",
@@ -16519,11 +16564,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-121",
     "generado": true,
-    "enunciado": "El cuadro Símbolo de Word permite asignar un atajo de teclado personalizado a cualquier símbolo.",
+    "revisada": true,
+    "enunciado": "El cuadro Símbolo permite asignar a un símbolo un atajo de teclado propio.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Usas frecuentemente el símbolo de marca registrada. En el cuadro Símbolo lo seleccionas, haces clic en Teclas y asignas una combinación personalizada. A partir de ese momento la insertas directamente sin abrir el cuadro cada vez."
+    "explicacion": "El botón «Teclas…» lleva al cuadro «Personalizar teclado» con el símbolo ya seleccionado, y ahí se escribe la combinación que se quiera; queda guardada y funciona en cualquier documento. · Al lado está «Autocorrección…», que consigue algo parecido asociándolo a un texto en vez de a unas teclas, como «(c)» para ©. · Y hay un tercer camino sin configurar nada: escribir el código Unicode del símbolo y pulsar Alt+X. Tres maneras de no volver a abrir el cuadro."
   },
   {
     "id": "insertar-321",
@@ -16538,11 +16584,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-122",
     "generado": true,
-    "enunciado": "El carácter Guión de no separación impide que Word divida en dos líneas las palabras unidas por ese guión.",
+    "revisada": true,
+    "enunciado": "El guion de no separación impide que Word parta la línea por ese guion.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Escribes art.-5 con un guión de no separación entre art. y 5. Aunque ese punto de la línea quede justo al final del renglón, Word nunca lo partirá ahí. Con un guión normal Word podría separar art.- al final de una línea y 5 al principio de la siguiente."
+    "explicacion": "A la vista es un guion normal, pero las dos partes que une viajan siempre juntas al renglón siguiente. Sirve para referencias legales, códigos y nombres compuestos que quedarían ilegibles partidos. · Su pariente de la misma lista es el espacio de no separación, que hace lo mismo sin guion. · Y su contrario es el guion opcional, que marca un sitio por donde SÍ se puede partir una palabra larga y solo se ve cuando Word decide usarlo. Los tres están en la ficha «Caracteres especiales»."
   },
   {
     "id": "insertar-322",
@@ -16557,11 +16604,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-123",
     "generado": true,
-    "enunciado": "La diferencia entre Guión largo, Guión corto y Guión de no separación es solo visual: uno es más ancho que otro.",
+    "revisada": true,
+    "enunciado": "La diferencia entre guion largo, guion corto y guion de no separación es solo de anchura.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "El guión largo se usa para incisos: \"El expediente —que llegó tarde— fue rechazado\". El guión corto se usa para rangos: \"páginas 15-23\" o \"2020-2026\". El guión de no separación tiene el mismo ancho visual que un guión normal pero impide el salto de línea. Tienen usos tipográficos distintos y códigos Unicode diferentes."
+    "explicacion": "Los dos primeros sí se distinguen por la longitud, y cada uno tiene su uso: el largo abre y cierra incisos —«el plazo —de quince días— empieza mañana»— y el corto marca intervalos, «páginas 15-23». Pero el de no separación mide exactamente igual que un guion normal: lo que cambia es el COMPORTAMIENTO, porque impide que la línea se corte por ahí. · Además cada uno es un carácter Unicode distinto, así que una búsqueda de guiones normales no encuentra los otros."
   },
   {
     "id": "insertar-323",
@@ -16576,11 +16624,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-124",
     "generado": true,
-    "enunciado": "El Espacio de no separación impide que Word divida en dos líneas las palabras o cifras separadas por ese espacio.",
+    "revisada": true,
+    "enunciado": "El espacio de no separación impide que se separen en dos líneas las palabras o cifras que une.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Escribes \"Real Decreto 1/2026\" con un espacio de no separación entre Decreto y 1/2026. Aunque esa cadena quede al final de una línea, Word nunca la dividirá dejando \"Real Decreto\" en una línea y \"1/2026\" en la siguiente. El texto completo pasará siempre a la línea siguiente si no cabe."
+    "explicacion": "«Real Decreto 1/2026» escrito con él no se parte nunca: si no cabe, se va entero al renglón siguiente. Es lo correcto para referencias normativas, cifras con su unidad, o un nombre con su tratamiento. · Se distingue del espacio normal con las marcas de formato activadas: es un pequeño círculo en vez de un punto. · No hay que confundirlo con los espacios largo, corto y de un cuarto, que son de anchura fija pero sí permiten el corte."
   },
   {
     "id": "insertar-324",
@@ -16595,11 +16644,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-125",
     "generado": true,
-    "enunciado": "La estructura Radical del editor de ecuaciones permite crear tanto superíndices como subíndices.",
+    "revisada": true,
+    "enunciado": "La estructura «Radical» del editor de ecuaciones sirve para poner superíndices y subíndices.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: eso lo hace la estructura Índice. Radical sirve para raíces."
+    "explicacion": "«Radical» es la de las raíces: la cuadrada y la de índice cualquiera, con su hueco para el número de la izquierda. Los superíndices y subíndices los pone **«Índice»**, que además ofrece las combinaciones de los dos a la vez y a ambos lados. · Se confunden porque una raíz cúbica también lleva un número pequeño arriba, aunque colocado a la izquierda del signo. · «Exponente» y «Potencia» no son estructuras: no hay ninguna con esos nombres, todo eso sale de «Índice»."
   },
   {
     "id": "insertar-325",
@@ -16614,11 +16664,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-126",
     "generado": true,
-    "enunciado": "La estructura Radical del editor de ecuaciones permite insertar raíces de cualquier índice, no solo la raíz cuadrada.",
+    "revisada": true,
+    "enunciado": "La estructura «Radical» permite raíces de cualquier índice, no solo la cuadrada.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Con la estructura Radical puedes insertar la raíz cuadrada, la raíz cúbica o una raíz de índice n. El editor permite especificar el índice de la raíz encima del símbolo. No estás limitado a la raíz cuadrada."
+    "explicacion": "Su galería trae la raíz cuadrada, la cúbica y la de índice n, con un hueco a la izquierda del signo para escribir el que se quiera, además de la versión con exponente dentro. · El signo se estira solo para cubrir todo el radicando, por largo que sea, que es la diferencia con teclear el símbolo a mano. · Es una de las once estructuras: fracción, índice, radical, integral, operador grande, corchete, función, acento, límite y logaritmo, operador y matriz."
   },
   {
     "id": "insertar-326",
@@ -16633,11 +16684,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-127",
     "generado": true,
-    "enunciado": "La galería de símbolos recientes del menú Símbolo es fija y siempre muestra los mismos símbolos.",
+    "revisada": true,
+    "enunciado": "La galería que muestra el menú del botón Símbolo es fija y siempre enseña los mismos caracteres.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: muestra los últimos símbolos que hayas insertado, por eso cambia con el uso."
+    "explicacion": "Va cambiando con el uso: recoge los últimos símbolos insertados, de modo que lo que se necesita a menudo acaba a un clic. De partida trae una selección de lo más corriente —monedas, marcas legales, operadores, letras griegas— y se va renovando. · Es el mismo mecanismo que las «Formas usadas recientemente» del menú Formas o la sección «Reciente» del cuadro «Insertar gráfico»: Word repite ese patrón en las galerías largas. · Para lo que no aparezca ahí está «Más símbolos…»."
   },
   {
     "id": "insertar-327",
@@ -16652,11 +16704,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-128",
     "generado": true,
-    "enunciado": "El atajo Alt+X convierte el código Unicode escrito antes del cursor en el carácter correspondiente.",
+    "revisada": true,
+    "enunciado": "Alt+X convierte el código Unicode escrito antes del cursor en el carácter correspondiente.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Escribes 00A9 en el documento y pulsas Alt+X. Word sustituye ese texto por el símbolo de copyright, que es el carácter Unicode U+00A9. También funciona al revés: si tienes el cursor junto a un símbolo y pulsas Alt+X, Word muestra su código Unicode."
+    "explicacion": "Se teclea 00A9, se pulsa y aparece ©. Y funciona en los dos sentidos: pulsada justo detrás de un carácter, lo sustituye por su código, que es la manera rápida de averiguarlo. · Es el atajo más útil del grupo Símbolos porque evita abrir cuadros, y su comando se llama ActDesactCódigoCaracteres. · Ojo con no pulsar Ctrl+X en su lugar, que corta la selección. · El mismo código se puede consultar en el campo «Código de carácter» del cuadro Símbolo."
   },
   {
     "id": "insertar-328",
@@ -16671,11 +16724,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-129",
     "generado": true,
-    "enunciado": "El botón Autocorrección del cuadro Símbolo y el botón Teclas realizan la misma función: asignar un acceso directo al símbolo seleccionado.",
+    "revisada": true,
+    "enunciado": "Los botones «Autocorrección…» y «Teclas…» del cuadro Símbolo hacen lo mismo.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Con Teclas asignas una combinación de teclado como Alt+R para insertar el símbolo de marca registrada pulsando esas teclas. Con Autocorrección defines una secuencia de texto como (r) para que Word la sustituya automáticamente por el símbolo al escribirla. Son dos mecanismos de acceso rápido distintos."
+    "explicacion": "Los dos crean un acceso rápido al símbolo, pero de distinta clase. «Teclas…» lo asocia a una COMBINACIÓN de teclas, llevando al cuadro Personalizar teclado. «Autocorrección…» lo asocia a un TEXTO que, al escribirlo, Word sustituye solo, como «(c)» por ©. · La diferencia práctica importa: la autocorrección puede dispararse cuando no se quiere, y el atajo nunca. · Están uno al lado del otro en la parte de abajo del cuadro, junto al botón «Insertar»."
   },
   {
     "id": "insertar-329",
@@ -16690,11 +16744,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-130",
     "generado": true,
-    "enunciado": "Las estructuras disponibles en la cinta contextual de Ecuación son doce, incluyendo Exponente como estructura propia.",
+    "revisada": true,
+    "enunciado": "Las estructuras de la cinta Ecuación son doce, con «Exponente» entre ellas.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: son once. El exponente no es una estructura propia: se crea desde Índice."
+    "explicacion": "Son **once** y ninguna se llama así: fracción, índice, radical, integral, operador grande, corchete, función, acento, límite y logaritmo, operador y matriz. · El exponente se pone con «Índice», que es la estructura de todo lo que va arriba o abajo pegado a un símbolo, subíndices incluidos. Que no tenga estructura propia sorprende porque es de lo más usado, y de ahí que la afirmación resulte creíble. · Un error parecido es esperar «Potencia» o «Raíz cuadrada» como estructuras sueltas."
   },
   {
     "id": "insertar-382",
@@ -16709,11 +16764,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-204",
     "generado": true,
-    "enunciado": "En el cuadro Símbolo, la pestaña \"Caracteres especiales\" incluye el carácter \"Guión de no separación\" entre otros.",
+    "revisada": true,
+    "enunciado": "La ficha «Caracteres especiales» del cuadro Símbolo incluye el guion de no separación.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Si abres Más símbolos... y vas a la pestaña Caracteres especiales, verás una lista con: Guión largo, Guión corto, Guión de no separación, Guión opcional, Espacio de no separación, Copyright, Registrado, etc. El guión de no separación está ahí."
+    "explicacion": "La lista completa son guiones (largo, corto, de no separación y opcional), espacios (largo, corto, de un cuarto y de no separación), marcas legales (copyright, registrado, marca registrada), sección, párrafo, puntos suspensivos y las cuatro comillas tipográficas. · Lo que reúne esa ficha no son símbolos cualesquiera, sino caracteres con COMPORTAMIENTO o con función tipográfica: por eso el símbolo de grado o una letra griega están en la otra ficha. · Casi todos traen escrito al lado su atajo de teclado."
   },
   {
     "id": "insertar-383",
@@ -16728,11 +16784,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-205",
     "generado": true,
-    "enunciado": "En el cuadro Símbolo, el botón \"Teclas\" permite asignar un atajo de teclado personalizado al símbolo seleccionado.",
+    "revisada": true,
+    "enunciado": "El botón «Teclas…» del cuadro Símbolo abre el cuadro «Personalizar teclado» con el símbolo ya seleccionado.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Si seleccionas un símbolo y haces clic en Teclas, se abre el cuadro Personalizar teclado, donde puedes definir una combinación para insertar ese símbolo directamente."
+    "explicacion": "Desde ahí se le asigna la combinación que se quiera, y queda guardada para cualquier documento. · Es el mismo cuadro al que se llega por Opciones ▸ Personalizar cinta ▸ «Personalizar…», y también con Alt+Ctrl y el signo más del teclado numérico: el cuadro cuyo volcado es la referencia de atajos de esta instalación. · Su vecino, «Autocorrección…», hace lo equivalente con un texto en vez de con teclas. · El propio cuadro Símbolo muestra además el código del carácter y su atajo actual, si tiene."
   },
   {
     "id": "insertar-392",
@@ -16747,11 +16804,12 @@
     "tema": "Símbolos",
     "sourceQuestionId": "vf-insertar-214",
     "generado": true,
-    "enunciado": "El cuadro Control de entrada matemática (Entrada de lápiz de ecuación) incluye botones para Escribir, Borrar, Seleccionar y corregir, y Eliminar.",
+    "revisada": true,
+    "enunciado": "El cuadro «Control de entrada matemática» tiene cuatro herramientas: Escribir, Borrar, Seleccionar y corregir, y Eliminar.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Cuando activas Entrada de lápiz de ecuación, se abre un cuadro con esos cuatro botones en la parte inferior. Puedes escribir a mano, borrar trazos, seleccionar partes para corregir o eliminar toda la escritura."
+    "explicacion": "Se abre con «Entrada de lápiz de ecuación» y sirve para trazar la fórmula a mano con el ratón o con un lápiz. · «Escribir» activa el trazo, «Borrar» quita partes, «Eliminar» vacía la zona entera, y «Seleccionar y corregir» es la que salva la papeleta: se rodea un trozo mal interpretado y Word ofrece las otras lecturas posibles, que es lo que hace falta cuando confunde una x con un por. · Arriba se ve en todo momento cómo lo está leyendo, antes de aceptar."
   },
   {
     "id": "insertar-71",
@@ -16766,28 +16824,29 @@
     "tema": "Multimedia",
     "sourceQuestionId": "P-29",
     "generado": true,
-    "enunciado": "¿Qué ruta permite insertar en un documento Word un vídeo alojado en Vimeo?",
+    "revisada": true,
+    "enunciado": "Quieres incrustar en el documento un vídeo alojado en Vimeo. ¿Qué ruta lo hace?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Multimedia > Vídeo > Vimeo"
+        "text": "Insertar ▸ Multimedia ▸ Vídeo en línea, pegando la dirección"
       },
       {
         "letter": "B",
-        "text": "Insertar > Multimedia > Videos en línea > [URL de Vimeo]"
+        "text": "Insertar ▸ Multimedia ▸ Vídeo ▸ Vimeo"
       },
       {
         "letter": "C",
-        "text": "Insertar > Objetos > Vídeo en línea > Vimeo"
+        "text": "Insertar ▸ Ilustraciones ▸ Vídeo ▸ Plataformas en línea"
       },
       {
         "letter": "D",
-        "text": "Insertar > Ilustraciones > Vídeo > Plataformas en línea"
+        "text": "Insertar ▸ Objeto ▸ Vídeo en línea ▸ Vimeo"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A y C tienen grupos que no existen en Insertar. D coloca el vídeo en Ilustraciones, que no contiene ese comando."
+    "respuesta": "A",
+    "explicacion": "El grupo Multimedia tiene un solo botón, y lo que pide es la dirección del vídeo: no hay un submenú por plataforma. Word reconoce la dirección y coloca una miniatura con un reproductor dentro del documento. · Las plataformas admitidas son YouTube, SlideShare, Vimeo y TED, pero eso se nota al pegar la dirección, no al elegir en un menú, que es lo que hace creíble el segundo descarte. · Un vídeo del propio disco duro no se puede insertar así: para eso hay que incrustarlo como objeto."
   },
   {
     "id": "insertar-396",
@@ -16802,15 +16861,16 @@
     "tema": "Multimedia",
     "sourceQuestionId": "P-28",
     "generado": true,
-    "enunciado": "¿Cuál de las siguientes plataformas de vídeo está disponible como opción directa en el cuadro Insertar video en línea de Word 365?",
+    "revisada": true,
+    "enunciado": "¿Cuál de estas plataformas admite el cuadro «Insertar vídeo en línea»?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Dailymotion"
+        "text": "TED"
       },
       {
         "letter": "B",
-        "text": "TED"
+        "text": "Dailymotion"
       },
       {
         "letter": "C",
@@ -16822,8 +16882,8 @@
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A, C y D son plataformas de vídeo reales pero no están en ese cuadro. Las disponibles son: YouTube, SlideShare, Vimeo y TED. ⚠️ Nota: las galerías en línea de Microsoft (Imágenes de archivo, Modelos 3D) cambian con el tiempo."
+    "respuesta": "A",
+    "explicacion": "Las cuatro admitidas son YouTube, SlideShare, Vimeo y TED, una mezcla que se entiende por el uso al que apunta Word: vídeo general, presentaciones, vídeo profesional y charlas. · Las tres descartadas son plataformas reales y muy conocidas, y ese es el motivo de que engañen; sus direcciones simplemente no se reconocen. · ⚠️ Ojo: la lista de proveedores admitidos la decide Microsoft y ha cambiado con el tiempo, así que conviene tomarla como el estado de esta versión."
   },
   {
     "id": "insertar-417",
@@ -16838,29 +16898,30 @@
     "tema": "Multimedia",
     "sourceQuestionId": "img-insertar-12",
     "generado": true,
+    "revisada": true,
     "enunciado": "El comando del icono de la imagen, ¿en qué pestaña y grupo de la cinta se encuentra?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAArCAYAAAAzDXuYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKNSURBVGhD7ZbNaxNBGMaffNSvrB9FDMZIqaAogggFRZsaclI8lV7Fg/+BJ4t68WbBHrzZgwc9FK9Fb73FaigoFgS/AkUrJH5EbKtNrMbU6DPMLGuwuLPb7nbD/mCYed73nZCn03cykeYf0IZE5dx2hMaCRmgsaITGgkZoLGiExoJG2xpz9AjOZI7LlTcUCpNyZR/HxvL5CbHO5bJiVtotrZ9H7cRY+K9oxXpiq014Yi24Nsa/qOqLlWClPi/sMSthj/nImuixSCSCaDRqDmq3+HpiNBGPx8WIxWLmUDHmDcOQ1Xr40mM8ERrgPDRRxqNSFVPvajIL9OxK4OhuA5eyaVQqFSSTSZmxj+cnpkzdK86j7+Yz5F9/QaVaR1/XZkyfPyRmasaZn5ztkDv18LzHlKmL429xet9WXM6mMLu4hCu5lMhzpmacedbdfTUncjp4emLqYhh+UMbZw9sxmNmJ8emv6EklsKdzvajhTM0486xjvS6ujbHX7PYbjbGnEh1R8aXJi0+LOJLeJNYKasYJ61jPfTp4dnnwpHjTDdwp/nVR2IUXytiZ/VLZgMZ06e091qzX62JwbdXLjUajIfZ2DT9pFj8umHFqa92/4qyn1sGX3zHVT3bRrSeOjbXehkovN0ZGbshK4M3cD7myh249cdRjbljTPeaGq/dLzZO3npv90z/6snn9YcnUHNSMK8167tPB8x7jM6n28xeuFT4IfXDHRjwufxNrBTXjhHWs5z4dfLk8LpxIY/TpZ/GlT+3dgqn3NbOPOFMzzjzrWK+L5z2m4DOJLwr++FbrS+jetgG3B7pxbmwGM/PfYayLiZOiqf4DnXKXfXwzpvjf694pvhtbLXzpMS8IjQUL4Dd7Lpth0ywxygAAAABJRU5ErkJggg==",
     "opciones": [
       {
         "letter": "A",
-        "text": "Inicio ▸ Fuente"
-      },
-      {
-        "letter": "B",
         "text": "Insertar ▸ Multimedia"
       },
       {
+        "letter": "B",
+        "text": "Insertar ▸ Ilustraciones"
+      },
+      {
         "letter": "C",
-        "text": "Disposición ▸ Organizar"
+        "text": "Insertar ▸ Vínculos"
       },
       {
         "letter": "D",
-        "text": "Insertar ▸ Comentarios"
+        "text": "Insertar ▸ Texto"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "**Vídeos en línea.** Pestaña Insertar ▸ Multimedia. Atajo: no tiene atajo de teclado en esta instalación. Inserta un vídeo desde una URL (YouTube, SlideShare, Vimeo, TED) que se reproduce dentro del documento."
+    "respuesta": "A",
+    "explicacion": "Es **Vídeo en línea**, único botón del grupo Multimedia en la pestaña Insertar, que va entre Ilustraciones y Vínculos. Pide la dirección del vídeo y coloca una miniatura con reproductor dentro del documento; funciona con YouTube, SlideShare, Vimeo y TED. No tiene atajo de teclado en esta instalación. · «Insertar ▸ Vínculos» es el descarte que decide la pregunta, porque un vídeo en línea necesita internet y podría parecer un enlace; la diferencia es que aquí el vídeo se ve y se reproduce sin salir del documento."
   },
   {
     "id": "insertar-445",
@@ -16875,28 +16936,29 @@
     "tema": "Multimedia",
     "sourceQuestionId": "neg-insertar-11",
     "generado": true,
-    "enunciado": "¿Cuál de estas plataformas de vídeo NO aparece en el cuadro Insertar vídeo en línea?",
+    "revisada": true,
+    "enunciado": "De estas cuatro, señale la plataforma que NO admite el cuadro «Insertar vídeo en línea»:",
     "opciones": [
       {
         "letter": "A",
-        "text": "YouTube"
+        "text": "Dailymotion"
       },
       {
         "letter": "B",
-        "text": "Vimeo"
+        "text": "YouTube"
       },
       {
         "letter": "C",
-        "text": "TED"
+        "text": "SlideShare"
       },
       {
         "letter": "D",
-        "text": "Dailymotion"
+        "text": "TED"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "Las plataformas disponibles son YouTube, SlideShare, Vimeo y TED. Dailymotion no aparece en la lista."
+    "respuesta": "A",
+    "explicacion": "Las admitidas son cuatro: YouTube, SlideShare, Vimeo y TED. · Dailymotion es una plataforma real y conocida, y por eso encaja en la lista sin llamar la atención: simplemente Word no reconoce sus direcciones. · La que suele olvidarse de las verdaderas es SlideShare, porque no es de vídeo sino de presentaciones, y sin embargo está. · ⚠️ Ojo: la lista la decide Microsoft y puede cambiar, así que vale como estado de esta versión."
   },
   {
     "id": "insertar-460",
@@ -16911,28 +16973,29 @@
     "tema": "Multimedia",
     "sourceQuestionId": "neg2-insertar-14",
     "generado": true,
-    "enunciado": "Señale la afirmación INCORRECTA:",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre el vídeo en línea:",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar ▸ Vídeo en línea permite incrustar un vídeo desde una URL."
+        "text": "Un vídeo insertado no se puede redimensionar: conserva su tamaño original"
       },
       {
         "letter": "B",
-        "text": "Un clip de audio se puede insertar en el documento igual que una imagen."
+        "text": "Se incrusta pegando la dirección del vídeo en el cuadro que aparece"
       },
       {
         "letter": "C",
-        "text": "Los vídeos insertados no se pueden redimensionar; mantienen siempre su tamaño original."
+        "text": "Sobre la miniatura aparece un control para reproducirlo desde el documento"
       },
       {
         "letter": "D",
-        "text": "Al insertar un vídeo en línea aparece un control de reproducción sobre el propio documento."
+        "text": "El grupo Multimedia está entre Ilustraciones y Vínculos en la pestaña Insertar"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Un vídeo insertado se redimensiona igual que una imagen, arrastrando sus tiradores o desde Formato."
+    "respuesta": "A",
+    "explicacion": "Una vez insertado se comporta como una imagen: tiene tiradores para estirarlo, admite ajuste de texto, bordes y efectos, y se coloca con el grupo Organizar. De hecho, al seleccionarlo aparece la cinta «Formato de imagen». · Las otras tres son ciertas. · Lo que sí necesita es conexión: sin internet la miniatura sigue ahí pero el vídeo no se reproduce, porque el documento no lo guarda dentro, solo guarda el enlace."
   },
   {
     "id": "insertar-266",
@@ -16947,11 +17010,12 @@
     "tema": "Multimedia",
     "sourceQuestionId": "vf-insertar-62",
     "generado": true,
-    "enunciado": "Desde Insertar > Multimedia > Videos en línea es posible insertar vídeos de YouTube directamente en un documento Word.",
+    "revisada": true,
+    "enunciado": "«Vídeo en línea» permite incrustar un vídeo de YouTube dentro del documento.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Copias la URL de un vídeo de YouTube sobre procedimiento administrativo, vas a Insertar > Multimedia > Videos en línea, pegas la URL en el campo correspondiente y Word incrusta el reproductor del vídeo en el documento. El lector puede reproducirlo sin salir de Word."
+    "explicacion": "Se pega la dirección, Word la reconoce y coloca una miniatura con un botón de reproducción; al pulsarlo, el vídeo se ve dentro del propio documento sin abrir el navegador. · Lo que se guarda es el enlace, no el vídeo, así que el archivo apenas engorda pero hace falta conexión para verlo. · Las otras plataformas admitidas son SlideShare, Vimeo y TED. · El botón es el único del grupo Multimedia, entre Ilustraciones y Vínculos."
   },
   {
     "id": "insertar-267",
@@ -16966,11 +17030,12 @@
     "tema": "Multimedia",
     "sourceQuestionId": "vf-insertar-63",
     "generado": true,
-    "enunciado": "El cuadro Insertar video en línea permite insertar vídeos almacenados en el disco duro del equipo.",
+    "revisada": true,
+    "enunciado": "El cuadro «Insertar vídeo en línea» admite también vídeos guardados en el disco duro.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Si intentas pegar la ruta de un vídeo local como C:\\Videos\\formacion.mp4 en el cuadro de URL, Word no lo acepta. Este comando solo funciona con vídeos alojados en plataformas en línea como YouTube, Vimeo, SlideShare o TED."
+    "explicacion": "Solo acepta direcciones de las plataformas que reconoce —YouTube, SlideShare, Vimeo y TED—; una ruta local como C:\\Vídeos\\formacion.mp4 no la admite, y el nombre del comando lo advierte. · Un vídeo del propio equipo sí se puede meter en un documento, pero por otra vía: Insertar ▸ Texto ▸ Objeto ▸ «Crear desde un archivo», que lo incrusta o lo vincula como objeto. Con eso el archivo de Word crece mucho, que es justamente lo que evita el vídeo en línea."
   },
   {
     "id": "insertar-268",
@@ -16985,11 +17050,12 @@
     "tema": "Multimedia",
     "sourceQuestionId": "vf-insertar-64",
     "generado": true,
-    "enunciado": "Las cuatro plataformas disponibles en el cuadro Insertar vídeo en línea de Word 365 son YouTube, Vimeo, Dailymotion y TED.",
+    "revisada": true,
+    "enunciado": "Las cuatro plataformas del cuadro «Insertar vídeo en línea» son YouTube, Vimeo, Dailymotion y TED.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: son YouTube, SlideShare, Vimeo y TED. Dailymotion no está."
+    "explicacion": "La cuarta no es Dailymotion sino **SlideShare**, que además es la que suele olvidarse porque no es de vídeo sino de presentaciones. Las otras tres sí están. · Dailymotion es una plataforma real y bastante conocida, lo que hace que pase desapercibida en la lista. · ⚠️ Ojo: los proveedores admitidos los decide Microsoft y han cambiado con el tiempo, así que esta lista vale como estado de esta versión."
   },
   {
     "id": "insertar-386",
@@ -17004,11 +17070,12 @@
     "tema": "Multimedia",
     "sourceQuestionId": "vf-insertar-208",
     "generado": true,
-    "enunciado": "En el cuadro Insertar video en línea, los únicos proveedores disponibles son YouTube, SlideShare, Vimeo y TED.",
+    "revisada": true,
+    "enunciado": "Los únicos proveedores del cuadro «Insertar vídeo en línea» son YouTube, SlideShare, Vimeo y TED.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Si abres Insertar > Multimedia > Videos en línea, el cuadro que aparece solo muestra esos cuatro proveedores. No hay opción para Dailymotion, Twitch ni ningún otro."
+    "explicacion": "Cubren cuatro usos distintos: vídeo general, presentaciones, vídeo profesional y charlas. Cualquier otra dirección no se reconoce y el cuadro no la acepta. · SlideShare es la que más se olvida al enumerarlos, precisamente por no ser de vídeo. · ⚠️ Ojo: la lista la decide Microsoft y puede cambiar con las versiones, así que conviene tomarla como el estado de esta instalación y no como una regla permanente."
   },
   {
     "id": "insertar-107",
@@ -17023,28 +17090,29 @@
     "tema": "eSignature",
     "sourceQuestionId": "P-65",
     "generado": true,
-    "enunciado": "¿Qué ruta permite iniciar el proceso de solicitud de firma electrónica mediante el servicio eSignature de Microsoft 365?",
+    "revisada": true,
+    "enunciado": "Quieres mandar el documento a alguien para que lo firme electrónicamente con el servicio de Microsoft 365. ¿Qué ruta lo inicia?",
     "opciones": [
       {
         "letter": "A",
-        "text": "Insertar > Texto > Línea de firma > Agregar servicios de firma..."
+        "text": "Insertar ▸ eSignature ▸ Campos de eSignature ▸ Crear una solicitud de firma"
       },
       {
         "letter": "B",
-        "text": "Insertar > eSignature > Campos de eSignature > Crear una solicitud de firma"
+        "text": "Insertar ▸ Texto ▸ Línea de firma ▸ Agregar servicios de firma…"
       },
       {
         "letter": "C",
-        "text": "Insertar > Vínculos > eSignature > Solicitar firma"
+        "text": "Insertar ▸ Vínculos ▸ eSignature ▸ Solicitar firma"
       },
       {
         "letter": "D",
-        "text": "Archivo > Proteger documento > Solicitar firma electrónica"
+        "text": "Archivo ▸ Proteger documento ▸ Solicitar firma electrónica"
       }
     ],
     "matching": null,
-    "respuesta": "B",
-    "explicacion": "A \"Agregar servicios de firma\" es una opción real del menú Línea de firma, pero lanza un asistente de configuración de proveedores, no una solicitud de firma concreta. C el grupo Vínculos no contiene eSignature. D no existe como ruta."
+    "respuesta": "A",
+    "explicacion": "eSignature tiene grupo propio en la pestaña Insertar, con un solo botón. · **«Agregar servicios de firma…»** es el descarte que decide la pregunta y existe de verdad, en el menú de Línea de firma: lo que abre es un asistente para contratar o configurar un proveedor de firma, no una solicitud concreta. · La línea de firma y eSignature son dos cosas distintas: aquella prepara un hueco para firmar en el propio equipo con un certificado, y esta manda el documento a un firmante por internet."
   },
   {
     "id": "insertar-108",
@@ -17059,28 +17127,29 @@
     "tema": "eSignature",
     "sourceQuestionId": "P-66",
     "generado": true,
-    "enunciado": "¿Qué condición técnica exige el servicio eSignature de Word 365 para poder crear una solicitud de firma?",
+    "revisada": true,
+    "enunciado": "Intentas crear una solicitud de firma con eSignature y Word no te deja. ¿Qué condición falta?",
     "opciones": [
       {
         "letter": "A",
-        "text": "El documento debe estar en formato .pdf"
+        "text": "Que el documento esté guardado como .docx"
       },
       {
         "letter": "B",
-        "text": "El documento debe estar guardado en OneDrive con permisos de edición compartidos"
+        "text": "Que el documento esté guardado como .pdf"
       },
       {
         "letter": "C",
-        "text": "El documento debe estar guardado como archivo .docx"
+        "text": "Que el documento esté en OneDrive con permisos de edición compartidos"
       },
       {
         "letter": "D",
-        "text": "El documento debe tener al menos una Línea de firma de Microsoft Office insertada"
+        "text": "Que el documento tenga ya insertada una Línea de firma de Microsoft Office"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "A el formato PDF no es el requerido. B OneDrive no es un requisito explícito del comando. D la Línea de firma de Microsoft Office es una función diferente; eSignature no la requiere. El mensaje real de la extracción indica: \"Save this document as a .docx file to use eSignature\"."
+    "respuesta": "A",
+    "explicacion": "El mensaje que aparece lo dice literalmente: «Save this document as a .docx file to use eSignature». Con un .doc antiguo el botón no continúa, y Word no lo convierte solo: hay que guardarlo a mano. · **La línea de firma** es el descarte que decide la pregunta, porque las dos cosas van de firmar y están en la misma pestaña; pero son independientes y eSignature no necesita ninguna. · Estar en OneDrive ayuda a compartir, pero no es lo que reclama este mensaje."
   },
   {
     "id": "insertar-434",
@@ -17095,29 +17164,30 @@
     "tema": "eSignature",
     "sourceQuestionId": "img-insertar-29",
     "generado": true,
+    "revisada": true,
     "enunciado": "Observa el icono de la imagen. ¿Qué comando de Word representa?",
     "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAArCAYAAADBsS49AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALtSURBVGhD7ZkxTBpRGIB/ukJX6ExXsIONFBaW6mCHgolNoK62GpsoRZvUpHGpdpGoKS7FpC6FFAfTpLiw4CCEFJNCwoBJ2WFiwPl6/+9Dj1OpkHuPa/K+5OXe/dyZ+N3//v94WFqtlgKSSyyNRkMK0WBRVNhconKPHSUMKUSHFKJDCtEhheiQQnRIITqkEB1SiA5Tv6keHKShWCzS3OPxwPT0C5rzxJRCms0mRKMRqNfrLHKB0+mEWGwL7HY7ixiP6ZaMVsbs7Cs4OSnQwDnGMGu4ghliFvCb98xMWPH5nijp9HcWvQI/w8ET02SINjOWliI31gub7T5dxxNTCLmLjNPTkvr5H3C7R1iEEyxThsa/lglSKv1SJiae0sA5T4YqxGwykKEJMaMMZCg15K41Y3X1PbTbbRYRg3Ah/chA8BqUkkql6Jw7LFOEMOgymZt7TUMEwoQMKiOXy9E9a2sf6Jw3QoQMKkMbq9VqFOMNdyFGyOjERMBdCK79fmUgeJ9oGQhXIZjmvdZ/ryzAzMIhGq5tN58/oePYmIeOWrStdWPjE4yOPqZ5B9zz4LnvcStMDBewduDT19MrM4YNtww5Ozujly+v18siFzHc4OmVGfjitr//Febn5+goGm5biPjPJBJfYHx8nM4rlQqoNYHmNpvtRhlHRxnY2dnuel0PBIKwsvKOnfGHmxB8wpVKmZ0BjIw8ApfLpQ43+P1+Fr1idzcOyeQ3cDgcsLgYoWuWl6NQKOTh8PBHVz3BLEulkuB0PoTNzRiLGgQK4UEm81OJxz/Tm2YvsJNEo2+pG2Gr1XYW/Bvalo1dq9PGg8Hn9LnRcN91x7pRLv+G8/NzmJx8du1J7+0laInctjSmpgJ0L9aibDZLsXD4JSwsvKG50XAXcnx8rNaFrcv6gUvC4XhwuZy0S+QmsD2vr3+k+71eH4RCoWu1x0iE/S6DBbNarVLnQaxWq7Afn/pBmJD/BVPsupsJKUSHFKJDCukC4C9W4SF178G1hAAAAABJRU5ErkJggg==",
     "opciones": [
       {
         "letter": "A",
-        "text": "Formas"
+        "text": "Campos de eSignature"
       },
       {
         "letter": "B",
-        "text": "Número de página"
+        "text": "Línea de firma"
       },
       {
         "letter": "C",
-        "text": "Imágenes"
+        "text": "Objeto"
       },
       {
         "letter": "D",
-        "text": "Campos de eSignature"
+        "text": "Comentario"
       }
     ],
     "matching": null,
-    "respuesta": "D",
-    "explicacion": "**Campos de eSignature.** Pestaña Insertar ▸ eSignature. Atajo: no tiene atajo de teclado en esta instalación. Crea una solicitud de firma electrónica. Exige que el documento esté guardado en .docx."
+    "respuesta": "A",
+    "explicacion": "Es **Campos de eSignature**, único botón del grupo eSignature en la pestaña Insertar. Abre el panel «Crear una solicitud de firma», y exige que el documento esté guardado como .docx. No tiene atajo de teclado en esta instalación. · **Línea de firma** es el descarte que decide la pregunta: está en el grupo Texto de esta misma pestaña y también va de firmas, pero prepara un hueco para firmar en el propio equipo con un certificado, mientras que esto manda el documento a un firmante por internet."
   },
   {
     "id": "insertar-446",
@@ -17132,28 +17202,29 @@
     "tema": "eSignature",
     "sourceQuestionId": "neg-insertar-12",
     "generado": true,
-    "enunciado": "¿Cuál de estas afirmaciones sobre eSignature es INCORRECTA?",
+    "revisada": true,
+    "enunciado": "Señale la afirmación INCORRECTA sobre eSignature:",
     "opciones": [
       {
         "letter": "A",
-        "text": "El grupo tiene el comando «Campos de eSignature»"
+        "text": "Si el documento está en .doc, Word lo convierte solo a .docx para poder seguir"
       },
       {
         "letter": "B",
-        "text": "Exige que el documento esté guardado en .docx"
+        "text": "Su grupo, en la pestaña Insertar, tiene el botón «Campos de eSignature»"
       },
       {
         "letter": "C",
-        "text": "Si el documento está en .doc, Word lo convierte automáticamente a .docx"
+        "text": "Exige que el documento esté guardado como .docx"
       },
       {
         "letter": "D",
-        "text": "Abre un panel «Crear una solicitud de firma»"
+        "text": "Abre un panel titulado «Crear una solicitud de firma»"
       }
     ],
     "matching": null,
-    "respuesta": "C",
-    "explicacion": "Word NO convierte el .doc automáticamente: muestra el mensaje «Save this document as a .docx file to use eSignature» y no deja continuar hasta que lo guardes tú en .docx."
+    "respuesta": "A",
+    "explicacion": "No convierte nada: muestra el aviso «Save this document as a .docx file to use eSignature» y se queda parado hasta que se guarde a mano en ese formato. · Es creíble lo contrario porque Word sí ofrece convertir en otras situaciones, como al abrir un documento en modo de compatibilidad, donde aparece un botón «Convertir» en Archivo ▸ Información. · Las otras tres son ciertas. · No hay que confundir eSignature con la línea de firma, que es local y está en el grupo Texto."
   },
   {
     "id": "insertar-330",
@@ -17168,11 +17239,12 @@
     "tema": "eSignature",
     "sourceQuestionId": "vf-insertar-131",
     "generado": true,
-    "enunciado": "Para poder usar eSignature desde Word 365, el documento debe estar guardado en formato .docx.",
+    "revisada": true,
+    "enunciado": "Para usar eSignature el documento tiene que estar guardado como .docx.",
     "opciones": [],
     "matching": null,
     "respuesta": true,
-    "explicacion": "Intentas crear una solicitud de firma con un documento guardado en formato .doc. Word muestra el mensaje: \"Save this document as a .docx file to use eSignature\". Tienes que guardarlo primero en .docx para poder continuar."
+    "explicacion": "Con un .doc antiguo, el botón muestra «Save this document as a .docx file to use eSignature» y no continúa. · La razón es que el formato antiguo no admite todo lo que el servicio necesita guardar dentro del archivo. · Convertirlo es sencillo: Archivo ▸ Guardar como, eligiendo «Documento de Word», o el botón «Convertir» que aparece en Archivo ▸ Información cuando el documento está en modo de compatibilidad. Lo que no hace Word es convertirlo por su cuenta."
   },
   {
     "id": "insertar-331",
@@ -17187,11 +17259,12 @@
     "tema": "eSignature",
     "sourceQuestionId": "vf-insertar-132",
     "generado": true,
-    "enunciado": "Agregar servicios de firma del menú Línea de firma crea directamente una solicitud de firma para un destinatario concreto.",
+    "revisada": true,
+    "enunciado": "«Agregar servicios de firma…», del menú Línea de firma, crea directamente una solicitud de firma para un destinatario.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Haces clic en Agregar servicios de firma esperando poder enviar el documento para que alguien lo firme. En su lugar se abre un asistente para configurar y contratar un proveedor de servicios de firma digital. Para crear la solicitud de firma hay que ir a Insertar > eSignature > Campos de eSignature > Crear una solicitud de firma."
+    "explicacion": "Abre un asistente para configurar o contratar un proveedor de servicios de firma digital: prepara la herramienta, no manda nada a nadie. · La solicitud concreta se crea desde el otro sitio, Insertar ▸ eSignature ▸ Campos de eSignature. · La confusión es razonable porque los dos comandos están en la misma pestaña y los dos hablan de servicios de firma, pero uno es configuración y el otro el envío. · La tercera pieza es la propia «Línea de firma de Microsoft Office», que solo coloca el hueco en el documento."
   },
   {
     "id": "insertar-387",
@@ -17206,10 +17279,11 @@
     "tema": "eSignature",
     "sourceQuestionId": "vf-insertar-209",
     "generado": true,
-    "enunciado": "Al intentar usar eSignature con un documento guardado en formato .doc, Word lo convierte automáticamente a .docx.",
+    "revisada": true,
+    "enunciado": "Con un documento en .doc, Word lo convierte automáticamente a .docx al usar eSignature.",
     "opciones": [],
     "matching": null,
     "respuesta": false,
-    "explicacion": "Falso: Word muestra el mensaje «Save this document as a .docx file to use eSignature» y no continúa hasta que lo guardes en .docx."
+    "explicacion": "Muestra el aviso «Save this document as a .docx file to use eSignature» y se detiene ahí: la conversión la tiene que hacer el usuario. · Resulta creíble lo contrario porque Word sí propone convertir en otros momentos, como al abrir un archivo antiguo en modo de compatibilidad, donde ofrece el botón «Convertir». · Aquí no: el servicio simplemente no arranca. · Se resuelve con Archivo ▸ Guardar como, eligiendo «Documento de Word (*.docx)»."
   }
 ]
